@@ -1,0 +1,52 @@
+name: Fetch Canonical Hayez Il Bacio
+on:
+  push:
+    paths: ['.github/workflows/fetch-hayez-canonical.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch public-domain Hayez and convert to JPG
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pillow
+          python - <<'PY'
+          import requests, json, re, hashlib, time
+          from PIL import Image
+          from io import BytesIO
+          from pathlib import Path
+          S=requests.Session(); S.headers['User-Agent']='BoundaryBayClassics/1.0 public-domain source acquisition'
+          API='https://commons.wikimedia.org/w/api.php'
+          p={'action':'query','format':'json','formatversion':2,'prop':'imageinfo','iiprop':'url|size|mime|extmetadata','iiurlwidth':1600,'titles':'File:Hayez, Il bacio (1859).png'}
+          j=S.get(API,params=p,timeout=90).json(); page=j['query']['pages'][0]; ii=page['imageinfo'][0]
+          url=(ii.get('thumburl') or ii['url']).split('?',1)[0]
+          for a in range(8):
+              r=S.get(url,timeout=180)
+              if r.status_code==429: time.sleep(10*(a+1)); continue
+              r.raise_for_status(); break
+          else: raise RuntimeError('download failed')
+          im=Image.open(BytesIO(r.content)).convert('RGB')
+          Path('artwork').mkdir()
+          out=Path('artwork/vecchie_03.jpg'); im.save(out,'JPEG',quality=88,optimize=True,progressive=True)
+          def cv(m):
+              z={}
+              for k,v in m.items():
+                  q=v.get('value') if isinstance(v,dict) else v
+                  if isinstance(q,str): q=re.sub(r'<[^>]+>',' ',q); q=re.sub(r'\s+',' ',q).strip()
+                  z[k]=q
+              return z
+          m=cv(ii.get('extmetadata',{}))
+          meta={'slug':'vecchie_03','requested_title':'File:Hayez, Il bacio (1859).png','resolved_title':page['title'],'book':'Vecchie_storie_d_amore','role':'plate','commons_page':'https://commons.wikimedia.org/wiki/'+page['title'].replace(' ','_'),'archival_original_url':ii['url'].split('?',1)[0],'acquired_url':url,'original_width':ii['width'],'original_height':ii['height'],'normalized_file':'artwork/vecchie_03.jpg','normalized_width':im.width,'normalized_height':im.height,'normalized_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'artist':m.get('Artist'),'license_short_name':m.get('LicenseShortName'),'license_url':m.get('LicenseUrl'),'usage_terms':m.get('UsageTerms'),'copyrighted':m.get('Copyrighted'),'description':m.get('ImageDescription')}
+          Path('artwork/metadata.json').write_text(json.dumps([meta],ensure_ascii=False,indent=2),encoding='utf-8')
+          print(meta)
+          assert str(meta['license_short_name']).lower() in ('public domain','public domain mark') or meta['copyrighted'] in (False,'False')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-hayez-il-bacio
+          path: artwork/
+          retention-days: 7
