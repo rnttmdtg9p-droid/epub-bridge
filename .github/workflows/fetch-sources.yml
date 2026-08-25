@@ -1,0 +1,54 @@
+name: Fetch Italian EPUB Sources
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch complete GITenberg source repositories
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p sources official
+
+          git clone --depth 1 https://github.com/GITenberg/La-Divina-Commedia-di-Dante_1012.git sources/1012-divina-commedia
+          git clone --depth 1 https://github.com/GITenberg/L-amore-che-torna_38720.git sources/38720-amore-che-torna
+          git clone --depth 1 https://github.com/GITenberg/Vecchie-storie-d-amore_38628.git sources/38628-vecchie-storie
+          git clone --depth 1 https://github.com/GITenberg/Damiano--Storia-di-una-povera-famiglia_25178.git sources/25178-damiano
+          git clone --depth 1 https://github.com/GITenberg/Fino-a-Dogali_22501.git sources/22501-fino-a-dogali
+
+          find sources -type d -name .git -prune -exec rm -rf {} +
+
+          # Also try to fetch the current official Project Gutenberg EPUB3 files.
+          # Failure of an individual mirror download does not invalidate the
+          # complete GITenberg source repositories above.
+          for id in 1012 38720 38628 25178 22501; do
+            curl -L --fail --retry 4 --retry-delay 3 \
+              -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+              "https://www.gutenberg.org/ebooks/${id}.epub3.images" \
+              -o "official/${id}.epub" || true
+          done
+
+          find sources official -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
+          du -ah sources official | sort -h | tail -n 50 > FILE_SIZES.txt
+          find sources official -type f | sort > FILE_LIST.txt
+
+      - name: Upload source bridge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: italian-public-domain-sources
+          path: |
+            sources/
+            official/
+            SHA256SUMS.txt
+            FILE_SIZES.txt
+            FILE_LIST.txt
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
