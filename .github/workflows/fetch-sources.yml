@@ -23,20 +23,29 @@ jobs:
           git clone --depth 1 https://github.com/GITenberg/Damiano--Storia-di-una-povera-famiglia_25178.git sources/25178-damiano
           git clone --depth 1 https://github.com/GITenberg/Fino-a-Dogali_22501.git sources/22501-fino-a-dogali
 
+          # Original Gustave Dore illustrated Divine Comedy source.
+          # Keep the complete repository so the full-size original JPEG plates,
+          # source HTML, captions, and ordering information are preserved.
+          git clone --depth 1 https://github.com/GITenberg/The-Divine-Comedy-by-Dante-Illustrated_8800.git sources/8800-divine-comedy-dore
+
           find sources -type d -name .git -prune -exec rm -rf {} +
 
-          # Also try to fetch the current official Project Gutenberg EPUB3 files.
-          # Failure of an individual mirror download does not invalidate the
-          # complete GITenberg source repositories above.
-          for id in 1012 38720 38628 25178 22501; do
+          # Fetch current official Project Gutenberg EPUB3 files as well.
+          for id in 1012 38720 38628 25178 22501 8800; do
             curl -L --fail --retry 4 --retry-delay 3 \
               -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
               "https://www.gutenberg.org/ebooks/${id}.epub3.images" \
               -o "official/${id}.epub" || true
           done
 
+          # Keep an official illustrated HTML archive too when available.
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://www.gutenberg.org/cache/epub/8800/pg8800-h.zip' \
+            -o official/pg8800-h.zip || true
+
           find sources official -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
-          du -ah sources official | sort -h | tail -n 50 > FILE_SIZES.txt
+          du -ah sources official | sort -h | tail -n 100 > FILE_SIZES.txt
           find sources official -type f | sort > FILE_LIST.txt
 
       - name: Upload source bridge artifact
