@@ -20,37 +20,33 @@ jobs:
           python -m pip install --quiet pillow requests
           mkdir -p artwork
           cat > /tmp/fetch_art.py <<'PY'
-          import json, os, re, hashlib, requests
+          import json, re, hashlib, requests, time
           from pathlib import Path
           from PIL import Image, ImageOps
           from io import BytesIO
 
           API='https://commons.wikimedia.org/w/api.php'
-          UA='BoundaryBayClassics/1.0 (public-domain ebook source acquisition)'
-          S=requests.Session(); S.headers['User-Agent']=UA
+          UA='BoundaryBayClassics/1.0 (public-domain ebook source acquisition; contact via GitHub rnttmdtg9p-droid/epub-bridge)'
+          S=requests.Session(); S.headers.update({'User-Agent':UA,'Accept':'*/*'})
 
-          # slug, exact Commons title, book, role
           picks = [
             ('amore_01','File:Boldini Marthe de Florian.jpg','L_amore_che_torna','plate'),
             ('amore_02','File:Boldini - Ava Lister, Baroness Ribblesdale (The Black Sash).jpg','L_amore_che_torna','plate'),
             ('amore_03','File:Boldini - lady-with-flowers.jpg','L_amore_che_torna','plate'),
             ('amore_04','File:Boldini - Lady Nanne Schrader.jpg','L_amore_che_torna','plate'),
             ('amore_05','File:Boldini - La signorina Concha de Ossa, 1888.jpg','L_amore_che_torna','plate'),
-
             ('vecchie_01','File:Francesco Hayez Romeo and Juliet.jpg','Vecchie_storie_d_amore','plate'),
             ('vecchie_02','File:Hayez, Francesco – Accusa segreta – 1847 1848.jpg','Vecchie_storie_d_amore','plate'),
             ('vecchie_03','File:Hayez - Il bacio, dopo 1859.jpg','Vecchie_storie_d_amore','plate'),
             ('vecchie_04','File:Francisco Hayez - Vengeance is Sworn.jpg','Vecchie_storie_d_amore','plate'),
             ('vecchie_05','File:Francesco Hayez - Meditation on the History of Italy - WGA11216.jpg','Vecchie_storie_d_amore','plate'),
             ('vecchie_author','File:Albertazzi - Top, 1922 (page 7 crop).jpg','Vecchie_storie_d_amore','candidate_author'),
-
             ('damiano_01','File:Induno Domenico (Italian, 1815-1878) «Pane e lacrime» 1855.jpg','Damiano','plate'),
             ('damiano_02','File:Motherhood (1862-63), by Domenico Induno.jpg','Damiano','plate'),
             ('damiano_03','File:Milanese life scene in an interior (19th century), by Domenico Induno.jpg','Damiano','plate'),
             ('damiano_04','File:Domenico Induno - Il rosario, 1850 - Olio su tela.JPG','Damiano','plate'),
             ('damiano_05','File:The letter (1869), by Domenico Induno.jpg','Damiano','plate'),
             ('damiano_author','File:Giulio Carcano foto.jpg','Damiano','author'),
-
             ('dogali_01','File:Don Giovanni Verità.jpg','Fino_a_Dogali','plate'),
             ('dogali_02','File:Concordia - Via Emilia.jpg','Fino_a_Dogali','plate'),
             ('dogali_03','File:Portrait of Niccolò Machiavelli by Santi di Tito.jpg','Fino_a_Dogali','plate'),
@@ -60,23 +56,27 @@ jobs:
             ('dogali_author','File:Alfredo Oriani.jpg','Fino_a_Dogali','author'),
           ]
 
+          def api_get(params):
+              for attempt in range(6):
+                  r=S.get(API,params=params,timeout=90)
+                  if r.status_code==429:
+                      time.sleep(4*(attempt+1)); continue
+                  r.raise_for_status(); return r.json()
+              raise RuntimeError('Commons API rate limit persisted')
+
           def query_title(title):
-              p={'action':'query','format':'json','formatversion':2,'prop':'imageinfo',
+              p={'action':'query','format':'json','formatversion':2,'redirects':1,'prop':'imageinfo',
                  'iiprop':'url|size|mime|extmetadata','titles':title}
-              j=S.get(API,params=p,timeout=60).json()
-              page=j['query']['pages'][0]
-              if page.get('missing'):
-                  return None
+              j=api_get(p); page=j['query']['pages'][0]
+              if page.get('missing'): return None
               ii=page.get('imageinfo',[{}])[0]
               return page,ii
 
           def search_file(q):
               p={'action':'query','format':'json','formatversion':2,'generator':'search','gsrsearch':q,
                  'gsrnamespace':6,'gsrlimit':10,'prop':'imageinfo','iiprop':'url|size|mime|extmetadata'}
-              j=S.get(API,params=p,timeout=60).json()
-              pages=j.get('query',{}).get('pages',[])
+              j=api_get(p); pages=j.get('query',{}).get('pages',[])
               if not pages: return None
-              # Prefer exact-ish normalized title and larger raster files
               pages.sort(key=lambda p: p.get('imageinfo',[{}])[0].get('width',0)*p.get('imageinfo',[{}])[0].get('height',0), reverse=True)
               return pages[0], pages[0].get('imageinfo',[{}])[0]
 
@@ -85,75 +85,64 @@ jobs:
               for k,v in (m or {}).items():
                   val=v.get('value') if isinstance(v,dict) else v
                   if isinstance(val,str):
-                      val=re.sub('<[^>]+>',' ',val)
-                      val=re.sub(r'\s+',' ',val).strip()
+                      val=re.sub('<[^>]+>',' ',val); val=re.sub(r'\s+',' ',val).strip()
                   out[k]=val
               return out
 
+          def download(url):
+              # Commons recently appends analytics parameters to imageinfo URLs; strip them.
+              url=url.split('?',1)[0]
+              for attempt in range(8):
+                  r=S.get(url,timeout=180)
+                  if r.status_code==429:
+                      wait=8*(attempt+1); print('429; sleeping',wait,url); time.sleep(wait); continue
+                  if r.status_code in (502,503,504):
+                      time.sleep(5*(attempt+1)); continue
+                  r.raise_for_status(); time.sleep(2.0); return r.content,url
+              raise RuntimeError('download retries exhausted: '+url)
+
           records=[]; failures=[]
           for slug,title,book,role in picks:
-              got=query_title(title)
-              if not got:
-                  got=search_file(title.replace('File:',''))
-              if not got:
-                  failures.append({'slug':slug,'title':title,'reason':'not found'})
-                  continue
-              page,ii=got
-              url=ii.get('url')
-              if not url:
-                  failures.append({'slug':slug,'title':title,'reason':'no original URL'})
-                  continue
-              r=S.get(url,timeout=120); r.raise_for_status(); raw=r.content
-              rawsha=hashlib.sha256(raw).hexdigest()
               try:
-                  im=Image.open(BytesIO(raw))
-                  im=ImageOps.exif_transpose(im)
+                  got=query_title(title) or search_file(title.replace('File:',''))
+                  if not got: raise RuntimeError('not found')
+                  page,ii=got; url=ii.get('url')
+                  if not url: raise RuntimeError('no original URL')
+                  raw,clean_url=download(url); rawsha=hashlib.sha256(raw).hexdigest()
+                  im=ImageOps.exif_transpose(Image.open(BytesIO(raw)))
                   if im.mode not in ('RGB','L'):
-                      # composite transparent images over white
                       if 'A' in im.getbands():
                           bg=Image.new('RGB',im.size,'white'); bg.paste(im,mask=im.getchannel('A')); im=bg
-                      else:
-                          im=im.convert('RGB')
-                  elif im.mode=='L':
-                      im=im.convert('RGB')
-                  maxdim=1800
-                  scale=min(1.0,maxdim/max(im.size))
+                      else: im=im.convert('RGB')
+                  elif im.mode=='L': im=im.convert('RGB')
+                  scale=min(1.0,1800/max(im.size))
                   if scale < 1:
                       im=im.resize((round(im.width*scale),round(im.height*scale)),Image.Resampling.LANCZOS)
-                  outdir=Path('artwork')/book
-                  outdir.mkdir(parents=True,exist_ok=True)
+                  outdir=Path('artwork')/book; outdir.mkdir(parents=True,exist_ok=True)
                   outpath=outdir/f'{slug}.jpg'
                   im.save(outpath,'JPEG',quality=86,optimize=True,progressive=True,subsampling='4:2:0')
-                  normsha=hashlib.sha256(outpath.read_bytes()).hexdigest()
+                  normsha=hashlib.sha256(outpath.read_bytes()).hexdigest(); meta=clean_meta(ii.get('extmetadata'))
+                  records.append({'slug':slug,'requested_title':title,'resolved_title':page.get('title'),'book':book,'role':role,
+                    'commons_page':'https://commons.wikimedia.org/wiki/'+page.get('title','').replace(' ','_'),'original_url':clean_url,
+                    'original_width':ii.get('width'),'original_height':ii.get('height'),'mime':ii.get('mime'),'raw_sha256':rawsha,
+                    'normalized_file':str(outpath),'normalized_width':im.width,'normalized_height':im.height,'normalized_sha256':normsha,
+                    'artist':meta.get('Artist'),'date_time_original':meta.get('DateTimeOriginal'),'credit':meta.get('Credit'),
+                    'license_short_name':meta.get('LicenseShortName'),'license_url':meta.get('LicenseUrl'),'usage_terms':meta.get('UsageTerms'),
+                    'copyrighted':meta.get('Copyrighted'),'attribution':meta.get('Attribution'),'description':meta.get('ImageDescription')})
+                  print('OK',slug,page.get('title'),ii.get('width'),ii.get('height'),'->',im.size,meta.get('LicenseShortName'))
               except Exception as e:
-                  failures.append({'slug':slug,'title':title,'reason':f'image processing: {e}'})
-                  continue
-              meta=clean_meta(ii.get('extmetadata'))
-              records.append({
-                  'slug':slug,'requested_title':title,'resolved_title':page.get('title'),
-                  'book':book,'role':role,'commons_page':'https://commons.wikimedia.org/wiki/'+page.get('title','').replace(' ','_'),
-                  'original_url':url,'original_width':ii.get('width'),'original_height':ii.get('height'),
-                  'mime':ii.get('mime'),'raw_sha256':rawsha,'normalized_file':str(outpath),
-                  'normalized_width':im.width,'normalized_height':im.height,'normalized_sha256':normsha,
-                  'artist':meta.get('Artist'),'date_time_original':meta.get('DateTimeOriginal'),'credit':meta.get('Credit'),
-                  'license_short_name':meta.get('LicenseShortName'),'license_url':meta.get('LicenseUrl'),
-                  'usage_terms':meta.get('UsageTerms'),'copyrighted':meta.get('Copyrighted'),
-                  'attribution':meta.get('Attribution'),'description':meta.get('ImageDescription'),
-              })
-              print('OK',slug,page.get('title'),ii.get('width'),ii.get('height'),'->',im.size, meta.get('LicenseShortName'))
+                  failures.append({'slug':slug,'title':title,'book':book,'role':role,'reason':str(e)})
+                  print('FAIL',slug,e)
+              time.sleep(2)
 
           Path('artwork/metadata.json').write_text(json.dumps(records,ensure_ascii=False,indent=2),encoding='utf-8')
           Path('artwork/failures.json').write_text(json.dumps(failures,ensure_ascii=False,indent=2),encoding='utf-8')
           with open('artwork/SHA256SUMS.txt','w',encoding='utf-8') as f:
-              for rec in records:
-                  f.write(f"{rec['normalized_sha256']}  {rec['normalized_file']}\n")
-          if failures:
-              print('FAILURES',json.dumps(failures,ensure_ascii=False,indent=2))
-          # Require at least 5 plates for each main book, author images optional.
+              for rec in records: f.write(f"{rec['normalized_sha256']}  {rec['normalized_file']}\n")
+          print('Failures:',json.dumps(failures,ensure_ascii=False,indent=2))
           for book,min_count in [('L_amore_che_torna',5),('Vecchie_storie_d_amore',5),('Damiano',5),('Fino_a_Dogali',5)]:
               n=sum(1 for r in records if r['book']==book and r['role']=='plate')
-              if n < min_count:
-                  raise SystemExit(f'{book}: only {n} plate images acquired')
+              if n < min_count: raise SystemExit(f'{book}: only {n} plate images acquired')
           PY
           python /tmp/fetch_art.py
 
