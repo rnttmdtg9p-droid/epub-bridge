@@ -1,0 +1,37 @@
+name: Fetch L'Innocente Sartorio Gallery
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Acquire first-edition gallery candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p gallery
+          base='https://www.libreriapontremoli.it/filemanager/img/libri/26364'
+          for i in $(seq 0 15); do
+            url="${base}-${i}.jpg"
+            if curl -L --fail --retry 2 --retry-delay 2 -A 'Mozilla/5.0' "$url" -o "gallery/26364-${i}.jpg"; then
+              file "gallery/26364-${i}.jpg" >> gallery/fileinfo.txt
+            else
+              rm -f "gallery/26364-${i}.jpg"
+            fi
+          done
+          find gallery -type f -print0 | sort -z | xargs -0 sha256sum > gallery/SHA256SUMS.txt
+          find gallery -type f | sort > gallery/FILE_LIST.txt
+      - name: Upload gallery artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linnocente-sartorio-gallery
+          path: gallery/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
