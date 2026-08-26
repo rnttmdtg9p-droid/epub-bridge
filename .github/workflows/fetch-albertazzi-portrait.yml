@@ -1,0 +1,38 @@
+name: Fetch Albertazzi Portrait
+on:
+  push:
+    paths: ['.github/workflows/fetch-albertazzi-portrait.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download public-domain Commons portrait
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pillow requests
+          mkdir -p portrait
+          python - <<'PY'
+          import requests,json
+          from pathlib import Path
+          from PIL import Image
+          from io import BytesIO
+          S=requests.Session(); S.headers['User-Agent']='BoundaryBayClassics/1.0 public-domain research'
+          API='https://commons.wikimedia.org/w/api.php'
+          p={'action':'query','format':'json','formatversion':2,'prop':'imageinfo','iiprop':'url|size|mime|extmetadata','titles':'File:Adolfo Albertazzi.jpg'}
+          j=S.get(API,params=p,timeout=90).json(); page=j['query']['pages'][0]; ii=page['imageinfo'][0]
+          print(page['title'],ii.get('width'),ii.get('height'),ii.get('url'))
+          r=S.get(ii['url'].split('?',1)[0],timeout=120); r.raise_for_status()
+          im=Image.open(BytesIO(r.content)).convert('RGB')
+          im.save('portrait/albertazzi_author.jpg','JPEG',quality=90,optimize=True,progressive=True)
+          Path('portrait/metadata.json').write_text(json.dumps(j,ensure_ascii=False,indent=2),encoding='utf-8')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: albertazzi-author-portrait
+          path: portrait/
+          if-no-files-found: error
+          retention-days: 7
