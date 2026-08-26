@@ -1,0 +1,104 @@
+name: Fetch Author Portraits
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-author-portraits.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Acquire portraits
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils >/dev/null
+          python -m pip install --quiet pillow requests
+          mkdir -p portraits/albertazzi_candidates
+          python - <<'PY'
+          import requests, json, os, re, time
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          from io import BytesIO
+
+          UA='BoundaryBayClassics/1.0 public-domain source acquisition'
+          S=requests.Session(); S.headers.update({'User-Agent':UA})
+
+          def save_jpg(url, out, maxdim=1800):
+              r=S.get(url, timeout=180); r.raise_for_status()
+              im=ImageOps.exif_transpose(Image.open(BytesIO(r.content)))
+              if im.mode!='RGB': im=im.convert('RGB')
+              scale=min(1.0,maxdim/max(im.size))
+              if scale<1: im=im.resize((round(im.width*scale),round(im.height*scale)),Image.Resampling.LANCZOS)
+              Path(out).parent.mkdir(parents=True,exist_ok=True)
+              im.save(out,'JPEG',quality=88,optimize=True,progressive=True)
+              print('saved',out,im.size)
+
+          # Dante: canonical Botticelli portrait, public domain.
+          api='https://commons.wikimedia.org/w/api.php'
+          p={'action':'query','format':'json','formatversion':2,'prop':'imageinfo','iiprop':'url|size|mime|extmetadata','titles':'File:Sandro Botticelli - Ritratto di Dante Alighieri.jpg'}
+          j=S.get(api,params=p,timeout=90).json(); ii=j['query']['pages'][0]['imageinfo'][0]
+          save_jpg(ii['url'].split('?',1)[0],'portraits/dante_author.jpg')
+          Path('portraits/dante_metadata.json').write_text(json.dumps(j,ensure_ascii=False,indent=2),encoding='utf-8')
+
+          # Guido da Verona: Mario Bazzi portrait/caricature, 1923. Bazzi died 1954.
+          save_jpg('https://laricerca.loescher.it/images/stories/letteratura/Donati/guido_da_verona_2.jpg','portraits/guido_author.jpg')
+          Path('portraits/guido_source.txt').write_text('Mario Bazzi, Ritratto di Guido da Verona, 1923. Source reproduction: https://laricerca.loescher.it/images/stories/letteratura/Donati/guido_da_verona_2.jpg\n',encoding='utf-8')
+
+          # Albertazzi: locate public-domain Internet Archive scans likely containing an author frontispiece.
+          q='title:("Sotto il sole") AND creator:("Albertazzi, Adolfo")'
+          params={'q':q,'fl[]':['identifier','title','creator','date'],'rows':20,'page':1,'output':'json'}
+          sr=S.get('https://archive.org/advancedsearch.php',params=params,timeout=90).json()
+          Path('portraits/albertazzi_search.json').write_text(json.dumps(sr,ensure_ascii=False,indent=2),encoding='utf-8')
+          docs=sr.get('response',{}).get('docs',[])
+          ids=[d['identifier'] for d in docs if d.get('identifier')]
+          if not ids:
+              q='creator:("Albertazzi, Adolfo") AND date:[1910 TO 1925]'
+              params={'q':q,'fl[]':['identifier','title','creator','date'],'rows':50,'page':1,'output':'json'}
+              sr=S.get('https://archive.org/advancedsearch.php',params=params,timeout=90).json()
+              Path('portraits/albertazzi_search.json').write_text(json.dumps(sr,ensure_ascii=False,indent=2),encoding='utf-8')
+              ids=[d['identifier'] for d in sr.get('response',{}).get('docs',[]) if d.get('identifier')]
+          print('Albertazzi candidates',ids[:10])
+          for ident in ids[:8]:
+              try:
+                  md=S.get(f'https://archive.org/metadata/{ident}',timeout=90).json()
+                  files=md.get('files',[])
+                  # Prefer scanned PDF.
+                  pdfs=[]
+                  for f in files:
+                      n=f.get('name',''); fmt=(f.get('format') or '').lower()
+                      if n.lower().endswith('.pdf') and ('text pdf' in fmt or 'pdf' in fmt):
+                          pdfs.append(n)
+                  if not pdfs: continue
+                  # smallest reasonable PDF first to limit traffic
+                  pdfs=sorted(pdfs,key=lambda n: next((int(f.get('size','999999999')) for f in files if f.get('name')==n and str(f.get('size','')).isdigit()),999999999))
+                  n=pdfs[0]
+                  url='https://archive.org/download/'+ident+'/'+requests.utils.quote(n,safe='/')
+                  r=S.get(url,timeout=240); r.raise_for_status()
+                  if len(r.content)>35_000_000: continue
+                  pth=Path('/tmp/albertazzi.pdf'); pth.write_bytes(r.content)
+                  Path('portraits/albertazzi_identifier.txt').write_text(ident+'\n'+n+'\n'+url+'\n',encoding='utf-8')
+                  break
+              except Exception as e:
+                  print('candidate fail',ident,e)
+          PY
+
+          if [ -f /tmp/albertazzi.pdf ]; then
+            pdftoppm -f 1 -l 16 -jpeg -jpegopt quality=82 -r 110 /tmp/albertazzi.pdf portraits/albertazzi_candidates/page >/dev/null 2>&1 || true
+          fi
+          find portraits -type f -maxdepth 3 -print
+
+      - name: Upload portraits artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: boundary-bay-author-portraits
+          path: portraits/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
