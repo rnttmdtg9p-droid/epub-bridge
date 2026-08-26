@@ -1,0 +1,61 @@
+name: Fetch L'Innocente Book 6 Sources
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install PDF tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+
+      - name: Acquire public-domain sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p bundle/text bundle/reference bundle/frontmatter bundle/author
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://www.gutenberg.org/ebooks/22642.txt.utf-8' \
+            -o bundle/text/linnocente_pg22642.txt
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://www.gutenberg.org/ebooks/22642.epub3.images' \
+            -o bundle/reference/linnocente_pg22642.epub
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://archive.org/download/linnocente00annugoog/linnocente00annugoog.pdf' \
+            -o bundle/reference/linnocente_1895_treves.pdf
+
+          pdfinfo bundle/reference/linnocente_1895_treves.pdf > bundle/reference/pdfinfo.txt || true
+          pdftotext -f 1 -l 24 -layout bundle/reference/linnocente_1895_treves.pdf bundle/frontmatter/frontmatter.txt || true
+          pdftoppm -f 1 -l 24 -jpeg -jpegopt quality=90 -r 170 \
+            bundle/reference/linnocente_1895_treves.pdf bundle/frontmatter/page >/dev/null 2>&1 || true
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gabriele_D%27Annunzio%27s_Portrait.jpg?width=1200' \
+            -o bundle/author/gabriele_dannunzio_portrait.jpg
+
+          file bundle/author/gabriele_dannunzio_portrait.jpg > bundle/author/fileinfo.txt
+          find bundle -type f -print0 | sort -z | xargs -0 sha256sum > bundle/SHA256SUMS.txt
+          find bundle -type f | sort > bundle/FILE_LIST.txt
+
+      - name: Upload source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linnocente-book6-sources
+          path: bundle/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
