@@ -1,0 +1,83 @@
+name: Find Albertazzi Scan
+on:
+  push:
+    paths: ['.github/workflows/find-albertazzi-scan.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Search Internet Archive and acquire front matter
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils >/dev/null
+          python -m pip install --quiet requests
+          mkdir -p result/pages
+          python - <<'PY'
+          import requests, json, urllib.parse, re, os
+          from pathlib import Path
+          S=requests.Session(); S.headers['User-Agent']='BoundaryBayClassics/1.0 public-domain research'
+          queries=[
+            'title:("Sotto il sole") AND creator:(Albertazzi)',
+            'title:("Sotto il sole") AND (Albertazzi)',
+            'creator:("Albertazzi, Adolfo") AND date:[1918 TO 1924]',
+            'creator:("Adolfo Albertazzi") AND date:[1918 TO 1924]',
+            'title:("Adolfo Albertazzi") AND date:[1924 TO 1928]'
+          ]
+          all_docs=[]
+          for q in queries:
+            params={'q':q,'fl[]':['identifier','title','creator','date','description'],'rows':100,'page':1,'output':'json'}
+            j=S.get('https://archive.org/advancedsearch.php',params=params,timeout=90).json()
+            docs=j.get('response',{}).get('docs',[])
+            print('\nQUERY',q,'COUNT',len(docs))
+            for d in docs[:30]: print(d.get('identifier'),d.get('date'),d.get('title'),d.get('creator'))
+            all_docs += docs
+          Path('result/search.json').write_text(json.dumps(all_docs,ensure_ascii=False,indent=2),encoding='utf-8')
+          # Dedup and prioritize Albertazzi-only records / likely Sotto il sole / biography.
+          seen=set(); cand=[]
+          for d in all_docs:
+            ident=d.get('identifier'); text=' '.join(str(d.get(k,'')) for k in ('title','creator','description')).lower()
+            if not ident or ident in seen: continue
+            seen.add(ident)
+            score=0
+            if 'sotto il sole' in text: score+=100
+            if 'adolfo albertazzi' in text: score+=50
+            if 'albertazzi' in text: score+=20
+            cand.append((score,ident,d))
+          cand.sort(reverse=True,key=lambda x:x[0])
+          Path('result/candidates.json').write_text(json.dumps([x[2] for x in cand],ensure_ascii=False,indent=2),encoding='utf-8')
+          for score,ident,d in cand[:15]:
+            try:
+              md=S.get(f'https://archive.org/metadata/{ident}',timeout=90).json()
+              files=md.get('files',[])
+              pdfs=[]
+              for f in files:
+                n=f.get('name',''); size=int(f.get('size') or 0) if str(f.get('size') or '').isdigit() else 0
+                if n.lower().endswith('.pdf') and size and size < 80_000_000:
+                  pdfs.append((size,n))
+              if not pdfs: continue
+              pdfs.sort()
+              size,n=pdfs[0]
+              url='https://archive.org/download/'+ident+'/'+urllib.parse.quote(n,safe='/')
+              print('DOWNLOADING',ident,n,size,url)
+              r=S.get(url,timeout=240); r.raise_for_status()
+              p=Path('/tmp/candidate.pdf'); p.write_bytes(r.content)
+              Path('result/selected.txt').write_text(f'{ident}\n{n}\n{url}\n{d}\n',encoding='utf-8')
+              break
+            except Exception as e: print('FAIL',ident,e)
+          PY
+          if [ -f /tmp/candidate.pdf ]; then
+            pdftoppm -f 1 -l 20 -jpeg -jpegopt quality=88 -r 130 /tmp/candidate.pdf result/pages/page >/dev/null 2>&1 || true
+          fi
+          find result -type f -maxdepth 2 -print
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: albertazzi-scan-research
+          path: result/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
