@@ -1,0 +1,81 @@
+name: Fetch Pinocchio Book 6 Sources
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y unzip jq poppler-utils
+
+      - name: Acquire public-domain sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p bundle/text bundle/official_epub bundle/unpacked_epub bundle/archive bundle/reference
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://www.gutenberg.org/ebooks/52484.txt.utf-8' \
+            -o bundle/text/pinocchio_pg52484.txt
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://www.gutenberg.org/ebooks/52484.epub3.images' \
+            -o bundle/official_epub/pinocchio_pg52484.epub
+
+          unzip -q bundle/official_epub/pinocchio_pg52484.epub -d bundle/unpacked_epub
+
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://archive.org/metadata/LeAvventureDiPinocchio1C.Collodi' \
+            -o bundle/archive/internet_archive_metadata.json
+
+          python3 - <<'PY'
+          import json, pathlib, urllib.parse, subprocess
+          meta=json.load(open('bundle/archive/internet_archive_metadata.json','r',encoding='utf-8'))
+          names=[f.get('name','') for f in meta.get('files',[])]
+          pathlib.Path('bundle/archive/FILE_NAMES.txt').write_text('\n'.join(names),encoding='utf-8')
+          preferred=[]
+          for n in names:
+              low=n.lower()
+              if low.endswith('.pdf') and not any(x in low for x in ['_text.pdf','_bw.pdf']):
+                  preferred.append(n)
+          if not preferred:
+              preferred=[n for n in names if n.lower().endswith('.pdf')]
+          if preferred:
+              n=preferred[0]
+              url='https://archive.org/download/LeAvventureDiPinocchio1C.Collodi/'+urllib.parse.quote(n)
+              print('Fetching IA PDF:', n)
+              subprocess.run(['curl','-L','--fail','--retry','4','--retry-delay','3','-A','Mozilla/5.0 BoundaryBaySourceBridge/1.0',url,'-o','bundle/archive/pinocchio_chiostri_1902_scan.pdf'],check=False)
+          PY
+
+          if [ -s bundle/archive/pinocchio_chiostri_1902_scan.pdf ]; then
+            pdfinfo bundle/archive/pinocchio_chiostri_1902_scan.pdf > bundle/archive/pdfinfo.txt || true
+            pdftoppm -f 1 -l 16 -jpeg -jpegopt quality=90 -r 160 \
+              bundle/archive/pinocchio_chiostri_1902_scan.pdf bundle/reference/frontmatter >/dev/null 2>&1 || true
+          fi
+
+          # Record image inventory from the official illustrated Gutenberg EPUB.
+          find bundle/unpacked_epub -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.svg' \) \
+            | sort > bundle/reference/IMAGE_FILE_LIST.txt
+
+          find bundle -type f -print0 | sort -z | xargs -0 sha256sum > bundle/SHA256SUMS.txt
+          find bundle -type f | sort > bundle/FILE_LIST.txt
+
+      - name: Upload source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pinocchio-book6-sources
+          path: bundle/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
