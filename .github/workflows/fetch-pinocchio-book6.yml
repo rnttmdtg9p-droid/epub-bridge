@@ -64,6 +64,11 @@ jobs:
               bundle/archive/pinocchio_chiostri_1902_scan.pdf bundle/reference/frontmatter >/dev/null 2>&1 || true
           fi
 
+          curl -L --fail --retry 4 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://upload.wikimedia.org/wikipedia/commons/6/60/Carlo_Collodi.jpg' \
+            -o bundle/reference/carlo_collodi_author.jpg
+
           # Record image inventory from the official illustrated Gutenberg EPUB.
           find bundle/unpacked_epub -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.svg' \) \
             | sort > bundle/reference/IMAGE_FILE_LIST.txt
