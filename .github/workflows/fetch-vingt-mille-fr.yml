@@ -1,0 +1,80 @@
+name: Fetch Vingt mille lieues French Source
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-vingt-mille-fr.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch complete public-domain source package
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p source/source-repository source/official source/portrait
+
+          curl -L --fail --retry 5 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://github.com/GITenberg/Vingt-mille-lieues-sous-les-mers_54873/releases/download/0.1.0/book.epub' \
+            -o source/gitenberg-54873.epub
+
+          curl -L --fail --retry 5 --retry-delay 3 \
+            -A 'Mozilla/5.0 BoundaryBaySourceBridge/1.0' \
+            'https://www.gutenberg.org/ebooks/54873.epub3.images' \
+            -o source/official/pg54873.epub || true
+
+          git clone --depth 1 \
+            'https://github.com/GITenberg/Vingt-mille-lieues-sous-les-mers_54873.git' \
+            source/source-repository/GITenberg-54873
+          rm -rf source/source-repository/GITenberg-54873/.git
+
+          python3 - <<'PY'
+          import json, pathlib, urllib.parse, urllib.request
+          title = 'File:Jules Verne by Étienne Carjat.jpg'
+          params = urllib.parse.urlencode({
+              'action': 'query',
+              'format': 'json',
+              'prop': 'imageinfo',
+              'iiprop': 'url|size|mime|sha1',
+              'iiurlwidth': '1400',
+              'titles': title,
+          })
+          api = 'https://commons.wikimedia.org/w/api.php?' + params
+          req = urllib.request.Request(api, headers={'User-Agent': 'BoundaryBaySourceBridge/1.0'})
+          with urllib.request.urlopen(req, timeout=60) as response:
+              data = json.load(response)
+          page = next(iter(data['query']['pages'].values()))
+          info = page['imageinfo'][0]
+          url = info.get('thumburl') or info['url']
+          out = pathlib.Path('source/portrait/jules-verne-etienne-carjat.jpg')
+          req = urllib.request.Request(url, headers={'User-Agent': 'BoundaryBaySourceBridge/1.0'})
+          with urllib.request.urlopen(req, timeout=120) as response:
+              out.write_bytes(response.read())
+          pathlib.Path('source/portrait/commons-metadata.json').write_text(
+              json.dumps({'title': title, 'description_page': info['descriptionurl'], **info}, ensure_ascii=False, indent=2),
+              encoding='utf-8'
+          )
+          PY
+
+          find source -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
+          find source -type f | sort > FILE_LIST.txt
+          du -ah source | sort -h > FILE_SIZES.txt
+
+      - name: Upload source bridge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vingt-mille-french-source-54873
+          path: |
+            source/
+            SHA256SUMS.txt
+            FILE_LIST.txt
+            FILE_SIZES.txt
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
