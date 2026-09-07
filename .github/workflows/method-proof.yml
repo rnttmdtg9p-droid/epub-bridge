@@ -1,0 +1,154 @@
+name: BB alternate methods - verified transfer proof
+on:
+  push:
+    branches: ['bb-source-proof-20260907']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - run: python -m pip install --quiet requests==2.32.4 beautifulsoup4==4.13.4
+      - name: Acquire source files using published download links and revisioned pages
+        run: |
+          mkdir -p output
+          python - <<'PY'
+          import requests,json,time,hashlib,zipfile,io,re,concurrent.futures,threading
+          from pathlib import Path
+          from urllib.parse import urlencode,quote,urljoin,urlparse,unquote
+          from bs4 import BeautifulSoup
+          R=Path('output');L=threading.Lock();NEXT={}
+          def get(url,rel,limit=45000000):
+              dest=R/rel;dest.parent.mkdir(parents=True,exist_ok=True)
+              host=urlparse(url).hostname
+              for attempt in range(3):
+                  with L:
+                      wait=max(0,NEXT.get(host,0)-time.monotonic());NEXT[host]=time.monotonic()+wait+2.5
+                  if wait:time.sleep(wait)
+                  try:
+                      r=requests.get(url,headers={'User-Agent':'BoundaryBaySourceResearch/2.1 (rate-limited public source acquisition)'},timeout=(15,60),stream=True)
+                      if r.status_code==429 and attempt<2:
+                          delay=max(60,int(r.headers.get('Retry-After','60')) if r.headers.get('Retry-After','').isdigit() else 90)
+                          with L:NEXT[host]=time.monotonic()+delay
+                          continue
+                      r.raise_for_status();data=bytearray()
+                      for ch in r.iter_content(65536):
+                          data.extend(ch)
+                          if len(data)>limit:raise ValueError('size limit')
+                      b=bytes(data)
+                      record={'url':url,'final_url':r.url,'http_status':r.status_code,'path':str(rel),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'status':'SAVED'}
+                      dest.write_bytes(b)
+                      with L:
+                          with (R/'transfers.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(record,ensure_ascii=False)+'\n')
+                      return b
+                  except Exception as e:
+                      if attempt==2 or (getattr(e,'response',None) is not None and e.response.status_code in (400,403,404)):
+                          with L:
+                              with (R/'transfers.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps({'url':url,'path':str(rel),'status':'FAILED','error':str(e)})+'\n')
+                          raise
+                      time.sleep(3)
+          def ws():
+              results=[]
+              for rank,title in [(4,'Il fu Mattia Pascal'),(45,'Orgoglio e pregiudizio (1945)'),(68,"L'uniforme")]:
+                  folder=Path('wikisource')/f'{rank:03d}';queue=[title];seen=set();pages=[];errors=[]
+                  while queue and len(seen)<160:
+                      t=queue.pop(0)
+                      if t in seen:continue
+                      seen.add(t);key=hashlib.sha256(t.encode()).hexdigest()[:16]
+                      url='https://it.wikisource.org/w/api.php?'+urlencode({'action':'parse','page':t,'prop':'text|links|revid','format':'json','redirects':1,'disableeditsection':1,'maxlag':5},quote_via=quote)
+                      try:
+                          raw=get(url,folder/'raw'/f'{key}.json');obj=json.loads(raw)
+                          if 'parse' not in obj:raise ValueError(str(obj.get('error')))
+                          p=obj['parse'];markup=p.get('text',{}).get('*','');s=BeautifulSoup(markup,'html.parser')
+                          htmlrel=folder/'raw'/f'{key}.html';(R/htmlrel).write_text(markup,encoding='utf-8')
+                          links=[]
+                          for a in s.find_all('a',href=True):
+                              h=unquote(a['href']).split('#')[0]
+                              if h.startswith('/wiki/'):
+                                  x=h[6:].replace('_',' ')
+                                  if x.startswith(title+'/') and 'redlink=1' not in h and x not in links:links.append(x)
+                          for x in p.get('links',[]):
+                              v=x.get('*','')
+                              if x.get('ns')==0 and v.startswith(title+'/') and v not in links:links.append(v)
+                          for x in links:
+                              if x not in seen and x not in queue:queue.append(x)
+                          for e in s.select('script,style'):e.decompose()
+                          txt=s.get_text('\n',strip=True)
+                          (R/folder/'raw'/f'{key}.txt').write_text(txt,encoding='utf-8')
+                          quality=BeautifulSoup(markup,'html.parser').find(id='textquality')
+                          pages.append({'requested_title':t,'resolved_title':p.get('title'),'revid':p.get('revid'),'url':url,'html_path':str(htmlrel),'words_including_site_matter':len(txt.split()),'child_links':links,'source_quality':quality.get('class') if quality else None})
+                      except Exception as e:errors.append({'title':t,'error':str(e)})
+                  result={'rank':rank,'title':title,'pages':pages,'errors':errors,'unfetched':queue,'status':'ALL_DISCOVERED_PAGES_SAVED' if pages and not errors and not queue else 'PARTIAL','edition_and_rights_review':'REQUIRED'}
+                  (R/folder).mkdir(parents=True,exist_ok=True);(R/folder/'manifest.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');results.append(result)
+                  print('WS',rank,len(pages),'pages',len(errors),'errors',flush=True)
+              (R/'wikisource_summary.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
+          def ia():
+              results=[]
+              for rank,identifier in [(80,'zola-nana-pavia'),(97,'bub_gb_axvyIonP35cC'),(97,'bub_gb_gweVKjWSJt8C'),(98,'favolediesopofr00aesogoog')]:
+                  folder=Path('archive')/f'{rank:03d}'/identifier
+                  rec={'rank':rank,'identifier':identifier,'assets':[],'status':'METADATA_ONLY'}
+                  try:
+                      obj=json.loads(get('https://archive.org/metadata/'+identifier,folder/'metadata.json'));md=obj.get('metadata',{});rec['metadata']=md
+                      if str(md.get('access-restricted-item','')).lower()=='true' or obj.get('is_dark'):
+                          rec['status']='RESTRICTED_NOT_DOWNLOADED';results.append(rec);continue
+                      available=[x for x in obj.get('files',[]) if not x.get('private')]
+                      text=[x for x in available if x.get('format')=='DjVuTXT' or x['name'].endswith('_djvu.txt')]
+                      epubs=[x for x in available if x['name'].endswith('.epub')]
+                      pdfs=[x for x in available if x['name'].lower().endswith('.pdf') and int(x.get('size') or 0)<45000000]
+                      pdfs.sort(key=lambda x:(x.get('source')!='original',int(x.get('size') or 0)))
+                      picks=text[:1]+epubs[:1]+pdfs[:1]
+                      for x in picks:
+                          name=x['name'];url='https://archive.org/download/'+identifier+'/'+quote(name,safe='/')
+                          try:
+                              b=get(url,folder/'files'/Path(name).name);expected=x.get('sha1');actual=hashlib.sha1(b).hexdigest()
+                              if expected and expected!=actual:raise ValueError('SHA1 mismatch')
+                              if name.endswith('.pdf') and not b.startswith(b'%PDF'):raise ValueError('Not PDF')
+                              crc=None
+                              if name.endswith('.epub'):
+                                  with zipfile.ZipFile(io.BytesIO(b)) as z:
+                                      if z.testzip() is not None:raise ValueError('EPUB CRC')
+                                      crc='PASS'
+                              rec['assets'].append({'url':url,'path':str(folder/'files'/Path(name).name),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'sha1_match':expected==actual if expected else None,'format':x.get('format'),'source_kind':x.get('source'),'epub_crc':crc})
+                          except Exception as e:rec.setdefault('errors',[]).append({'file':name,'error':str(e)})
+                      if rec['assets']:rec['status']='FILES_SAVED_COMPLETENESS_REVIEW_REQUIRED'
+                  except Exception as e:rec['error']=str(e)
+                  (R/folder).mkdir(parents=True,exist_ok=True);(R/folder/'manifest.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2),encoding='utf-8');results.append(rec);print('IA',rank,len(rec['assets']),'assets',flush=True)
+              (R/'archive_summary.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
+          def legacy():
+              rows=[]
+              urls=['https://www.liberliber.eu/mediateca/libri/p/parini/il_giorno/rtf/il_gio_r.zip','https://liberliber.it/opere/download/?op=2346798&type=opera_url_txt']
+              for i,url in enumerate(urls):
+                  rec={'rank':33,'url':url}
+                  try:
+                      b=get(url,Path('legacy')/f'il_giorno_{i}.response')
+                      if zipfile.is_zipfile(io.BytesIO(b)):
+                          (R/'legacy'/f'il_giorno_{i}.zip').write_bytes(b)
+                          with zipfile.ZipFile(io.BytesIO(b)) as z:rec.update(members=z.namelist(),crc='PASS' if z.testzip() is None else 'FAIL')
+                      else:
+                          s=BeautifulSoup(b,'html.parser');links=[]
+                          for a in s.find_all('a',href=True):
+                              u=urljoin(url,a['href'])
+                              if re.search(r'\.(txt|zip)$',urlparse(u).path.lower()) and urlparse(u).hostname in ['liberliber.it','www.liberliber.eu','liberliber.eu']:links.append(u)
+                          rec['links']=list(dict.fromkeys(links))
+                          for j,u in enumerate(rec['links'][:2]):get(u,Path('legacy')/f'text_{j}_{Path(urlparse(u).path).name}')
+                      rec['status']='SAVED_REVIEW_REQUIRED'
+                  except Exception as e:rec.update(status='FAILED',error=str(e))
+                  rows.append(rec)
+              (R/'legacy_summary.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:
+              fs=[ex.submit(ws),ex.submit(ia),ex.submit(legacy)]
+              for f in fs:
+                  try:f.result()
+                  except Exception as e:print('METHOD FAILURE',str(e),flush=True)
+          PY
+      - name: Upload real source material and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-alternate-source-proof
+          path: output/
+          retention-days: 14
+          compression-level: 6
+          if-no-files-found: error
