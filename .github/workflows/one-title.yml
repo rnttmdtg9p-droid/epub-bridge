@@ -1,4 +1,4 @@
-name: BB single title 074 - historical edition discovery
+name: BB single title 085 - Schiller Maffei 1846
 on:
   push:
     branches: ['bb-onebyone-sources-20260907']
@@ -8,47 +8,52 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
-      - name: Identify source editions without assuming title matches are complete novels
+      - name: Download one unrestricted historical edition with provider checksum comparison
         run: |
-          mkdir -p output
+          mkdir -p output/files
           python - <<'PY'
-          from urllib.request import urlopen,Request
-          from urllib.parse import urlencode,quote
           from pathlib import Path
-          import json,time,hashlib
-          root=Path('output');results=[]
-          queries=['title:(camelie) AND mediatype:texts','title:(camelie) AND creator:(Dumas)','title:(camellie) AND mediatype:texts']
-          for i,q in enumerate(queries):
-            url='https://archive.org/advancedsearch.php?'+urlencode({'q':q,'fl[]':['identifier','title','creator','date','language','description','collection'],'rows':100,'output':'json'},doseq=True)
+          from urllib.request import Request,urlopen
+          from urllib.parse import quote
+          import json,hashlib,time
+          iid='imasnadieridramm00schi';root=Path('output');events=[]
+          def get(url,path,limit=65000000):
+            for attempt in range(3):
+              try:
+                with urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian literature)'}),timeout=90) as r:data=r.read(limit+1)
+                if len(data)>limit:raise ValueError('File too large for this transfer')
+                path.write_bytes(data);return data
+              except Exception as e:
+                if attempt==2:raise
+                time.sleep(8*(attempt+1))
+          u='https://archive.org/metadata/'+iid
+          raw=get(u,root/'metadata.json');obj=json.loads(raw)
+          md=obj.get('metadata',{});print(json.dumps(md,ensure_ascii=False),flush=True)
+          if str(md.get('access-restricted-item','false')).lower()=='true':raise ValueError('restricted item')
+          pdfs=[f for f in obj['files'] if f.get('format') in ['Text PDF','Image Container PDF'] and not f.get('private')]
+          pdfs=sorted(pdfs,key=lambda f:(not f['name'].endswith('_bw.pdf'),int(f.get('size',999999999))))
+          picks=pdfs[:1]+[f for f in obj['files'] if not f.get('private') and (f['name'].endswith(('_djvu.txt','_djvu.xml','_scandata.xml')))]
+          for f in picks:
+            name=f['name'];url='https://archive.org/download/'+iid+'/'+quote(name)
+            rec={'url':url,'name':name,'format':f.get('format'),'upstream_size':f.get('size'),'upstream_md5':f.get('md5'),'upstream_sha1':f.get('sha1')}
             try:
-              data=urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0'}),timeout=60).read()
-              (root/f'ia_search_{i}.json').write_bytes(data)
-              docs=json.loads(data)['response']['docs']
-              print(json.dumps({'query':q,'docs':docs},ensure_ascii=False),flush=True)
-              results.extend(docs)
-            except Exception as e:print(str(e),flush=True)
-            time.sleep(2)
-          seen=set()
-          for d in results:
-            iid=d['identifier']
-            if iid in seen:continue
-            seen.add(iid)
-            date=str(d.get('date',''))
-            if date and date[:4].isdigit() and int(date[:4])>1930:continue
-            try:
-              data=urlopen(Request('https://archive.org/metadata/'+quote(iid),headers={'User-Agent':'BoundaryBaySourceResearch/1.0'}),timeout=60).read()
-              (root/(iid+'_metadata.json')).write_bytes(data)
-              obj=json.loads(data)
-              fs=[{k:f.get(k) for k in ['name','format','size','md5','sha1','private']} for f in obj.get('files',[]) if f.get('format') in ['Text PDF','Image Container PDF','DjVuTXT','Djvu XML','EPUB','Abbyy GZ','Scandata'] or f.get('name','').endswith('_djvu.txt')]
-              print(json.dumps({'id':iid,'metadata':obj.get('metadata'),'files':fs},ensure_ascii=False),flush=True)
-            except Exception as e:print(iid,str(e),flush=True)
-            time.sleep(1)
+              b=get(url,root/'files'/Path(name).name)
+              rec.update(status='SAVED',bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),md5=hashlib.md5(b).hexdigest(),sha1=hashlib.sha1(b).hexdigest())
+              rec['provider_size_match']=int(f['size'])==len(b) if f.get('size') else None
+              rec['provider_md5_match']=rec['md5']==f.get('md5') if f.get('md5') else None
+              rec['provider_sha1_match']=rec['sha1']==f.get('sha1') if f.get('sha1') else None
+            except Exception as e:rec.update(status='FAILED',error=str(e))
+            events.append(rec);print(json.dumps(rec),flush=True);time.sleep(2)
+          (root/'transfer_log.json').write_text(json.dumps(events,ensure_ascii=False,indent=2),encoding='utf-8')
+          if not any(x['status']=='SAVED' and x['name'].endswith('.pdf') for x in events):raise ValueError('No scan saved')
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: bb-single-074-discovery
+          name: bb-single-085-masnadieri-maffei
           path: output/
           retention-days: 14
+          compression-level: 6
           if-no-files-found: error
