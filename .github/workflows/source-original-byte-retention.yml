@@ -1,0 +1,41 @@
+name: BB raw source preservation and Moricca scan
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/source-original-byte-retention.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,json,hashlib,zipfile,io,time
+          R=Path('out');R.mkdir();results=[]
+          urls=[(78,'stendhal_la_certosa_di_parma.epub','https://www.liberliber.eu/mediateca/libri/s/stendhal/la_certosa_di_parma/epub/stendhal_la_certosa_di_parma.epub'),(99,'MarcoAurelioRicordiMoricca_text.pdf','https://archive.org/download/marco-aurelio-ricordi-moricca/MarcoAurelioRicordiMoricca_text.pdf')]
+          for rank,name,u in urls:
+            o={'rank':rank,'url':u,'path':f'{rank:03d}/{name}'}
+            try:
+              r=requests.get(u,headers={'User-Agent':'BoundaryBayHistoricalTextResearch/1.1'},timeout=(15,150));r.raise_for_status();b=r.content;d=R/f'{rank:03d}';d.mkdir(exist_ok=True);(d/name).write_bytes(b)
+              o.update(status='RAW_BYTES_SAVED',bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),sha1=hashlib.sha1(b).hexdigest(),content_type=r.headers.get('content-type'))
+              if name.endswith('.epub'):
+                with zipfile.ZipFile(io.BytesIO(b)) as z:
+                  o.update(zip_crc_bad_member=z.testzip(),members=z.namelist(),mimetype_repr=repr(z.read('mimetype')))
+                  opfs=[n for n in z.namelist() if n.endswith('.opf')]
+                  if opfs:(d/'source_opf.xml').write_bytes(z.read(opfs[0]))
+              elif name.endswith('.pdf'):o['pdf_magic']=b.startswith(b'%PDF')
+            except Exception as e:o['error']=str(e)
+            results.append(o);time.sleep(1)
+          (R/'manifest.json').write_text(json.dumps(results,ensure_ascii=False,indent=2));print(json.dumps(results,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-source-original-byte-retention
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
