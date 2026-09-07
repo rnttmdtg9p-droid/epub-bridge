@@ -1,4 +1,4 @@
-name: BB remaining93 source acquisition
+name: BB remaining93 published source downloads
 on:
   push:
     branches: ['bb-source93-20260906']
@@ -8,20 +8,24 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Install HTML acquisition dependencies
-        run: python -m pip install --quiet requests==2.32.4 beautifulsoup4==4.13.4
-      - name: Retrieve Italian source candidates and bibliographic evidence for all 93 titles
-        run: python acquire93.py
-      - name: Upload acquired source files and full per-title status
+      - run: python -m pip install --quiet beautifulsoup4==4.13.4
+      - name: Acquire through published book-page download links with request spacing
+        run: python acquire_ll93.py
+      - name: Preserve exact acquisition code
+        if: always()
+        run: |
+          mkdir -p output/code
+          cp acquire_ll93.py roster.json output/code/
+      - name: Upload immutable source candidates and progress ledger
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-remaining93-source-candidates
+          name: bb-remaining93-liberliber-sources
           path: output/
           compression-level: 6
           retention-days: 14
