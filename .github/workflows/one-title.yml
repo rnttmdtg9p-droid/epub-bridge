@@ -1,4 +1,4 @@
-name: BB single title 075 - Goriot edition discovery
+name: BB single title 075 - alternative historical titles
 on:
   push:
     branches: ['bb-onebyone-sources-20260907']
@@ -10,39 +10,41 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Find precise Italian source editions before attempting download
+      - name: Search alternate titles and legitimate full-view catalogues
         run: |
           mkdir -p output
           python - <<'PY'
-          from urllib.request import urlopen,Request
+          from urllib.request import Request,urlopen
           from urllib.parse import urlencode,quote
           from pathlib import Path
           import json,time,hashlib
           root=Path('output');logs=[]
           def get(url,name):
-            try:
-              data=urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian literature)'}),timeout=60).read(14000000)
-              (root/name).write_bytes(data);logs.append({'url':url,'name':name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'SAVED'});return json.loads(data)
-            except Exception as e:logs.append({'url':url,'name':name,'status':'FAILED','error':str(e)});return {}
-          queries=['title:goriot AND mediatype:texts AND (language:ita OR language:Italian)','title:(goriot) AND (title:(papa OR padre OR babbo)) AND mediatype:texts']
+            for a in range(2):
+              try:
+                b=urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0'}),timeout=60).read(12000000);(root/name).write_bytes(b);logs.append({'url':url,'path':name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'status':'SAVED'});return json.loads(b)
+              except Exception as e:
+                logs.append({'url':url,'path':name,'status':'FAILED','error':str(e)})
+                if a==0:time.sleep(15)
+            return {}
+          qs=['title:goriot AND (language:ita OR language:Italian)','title:(scene della vita parigina) AND creator:balzac','title:(societa parigina) AND creator:balzac']
           seen=set()
-          for i,q in enumerate(queries):
-            url='https://archive.org/advancedsearch.php?'+urlencode({'q':q,'fl[]':['identifier','title','creator','date','language','description','collection'],'rows':100,'output':'json'},doseq=True)
-            obj=get(url,f'ia_search_{i}.json');docs=obj.get('response',{}).get('docs',[]);print(json.dumps(docs,ensure_ascii=False),flush=True)
+          for i,q in enumerate(qs):
+            url='https://archive.org/advancedsearch.php?'+urlencode({'q':q,'fl[]':['identifier','title','creator','date','language','description'],'rows':100,'output':'json'},doseq=True)
+            o=get(url,f'ia_alt_{i}.json');docs=o.get('response',{}).get('docs',[])
             for d in docs:
               iid=d['identifier'];date=str(d.get('date',''))
-              if iid in seen:continue
-              seen.add(iid)
-              if date[:4].isdigit() and int(date[:4])>1930:continue
-              obj=get('https://archive.org/metadata/'+quote(iid),iid+'_metadata.json')
-              fs=[{k:f.get(k) for k in ['name','format','size','md5','sha1','private']} for f in obj.get('files',[]) if f.get('format') in ['Text PDF','Image Container PDF','DjVuTXT','Djvu XML','EPUB','Scandata']]
-              print(json.dumps({'id':iid,'metadata':obj.get('metadata'),'files':fs},ensure_ascii=False),flush=True);time.sleep(2)
+              if iid in seen or (date[:4].isdigit() and int(date[:4])>1930):continue
+              seen.add(iid);get('https://archive.org/metadata/'+quote(iid),iid+'_metadata.json');time.sleep(2)
+          for i,q in enumerate(['intitle:Goriot inauthor:Balzac','intitle:Goriot Masieri','intitle:Goriot Nagel']):
+            url='https://www.googleapis.com/books/v1/volumes?'+urlencode({'q':q,'langRestrict':'it','filter':'free-ebooks','maxResults':40})
+            o=get(url,f'google_books_{i}.json');print(json.dumps(o,ensure_ascii=False)[:10000],flush=True);time.sleep(2)
           (root/'transfer_log.json').write_text(json.dumps(logs,ensure_ascii=False,indent=2),encoding='utf-8')
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: bb-single-075-discovery
+          name: bb-single-075-alternative-discovery
           path: output/
           retention-days: 14
           compression-level: 6
