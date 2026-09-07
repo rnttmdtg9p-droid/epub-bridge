@@ -1,0 +1,61 @@
+name: BB historical Hugo Ovid Plato sources
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/historical-three-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Preserve exact historical source files with provider hashes
+        run: |
+          python - <<'PY'
+          import requests,json,hashlib,time,zipfile,io
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          from pathlib import Path
+          from urllib.parse import quote
+          R=Path('out');R.mkdir()
+          chosen=[(70,'hugo-nostra-donna-di-parigi'),(96,'bub_gb_69JHHjV1JRcC'),(96,'bub_gb_aGWaoAobQlcC'),(96,'bub_gb_ILki5EB1py0C'),(100,'bub_gb_6BwNdTsQQvoC')]
+          def get(u):
+            for i in range(3):
+              r=requests.get(u,headers={'User-Agent':'BoundaryBayHistoricalTextResearch/1.1'},timeout=(15,110))
+              if r.status_code in [429,502,503,504]:time.sleep(7);continue
+              r.raise_for_status();return r.content
+            raise RuntimeError('temporary transfer failure')
+          def acquire(row):
+            rank,ident=row;d=R/f'{rank:03d}'/ident;d.mkdir(parents=True)
+            out={'rank':rank,'identifier':ident,'assets':[],'errors':[],'editorial_status':'SOURCE_CANDIDATE; NOT A BOUNDARY BAY EPUB'}
+            try:
+              b=get('https://archive.org/metadata/'+ident);(d/'metadata.json').write_bytes(b);m=json.loads(b);out['metadata']=m.get('metadata',{})
+              if m.get('is_dark') or str(out['metadata'].get('access-restricted-item','')).lower()=='true':raise ValueError('restricted item not acquired')
+              formats=['DjVuTXT','Text PDF','Scandata','DjVu XML']
+              for fmt in formats:
+                candidates=[f for f in m.get('files',[]) if f.get('format')==fmt and not f.get('private') and int(f.get('size',0))<80000000]
+                if not candidates:continue
+                f=candidates[0];name=f['name'];u='https://archive.org/download/'+ident+'/'+quote(name)
+                try:
+                  data=get(u);sha1=hashlib.sha1(data).hexdigest()
+                  if f.get('sha1') and sha1!=f['sha1']:raise ValueError('provider SHA1 mismatch')
+                  if fmt=='Text PDF' and not data.startswith(b'%PDF'):raise ValueError('not PDF')
+                  (d/name).write_bytes(data)
+                  out['assets'].append({'url':u,'path':str((d/name).relative_to(R)),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'sha1':sha1,'expected_sha1':f.get('sha1'),'sha1_match':not f.get('sha1') or sha1==f['sha1'],'format':fmt})
+                except Exception as e:out['errors'].append({'url':u,'error':str(e)})
+                time.sleep(.7)
+            except Exception as e:out['errors'].append(str(e))
+            (d/'manifest.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(rank,ident,len(out['assets']),out['errors'],flush=True);return out
+          results=[]
+          with ThreadPoolExecutor(max_workers=2) as ex:
+            for f in as_completed([ex.submit(acquire,r) for r in chosen]):results.append(f.result())
+          (R/'manifest.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-historical-hugo-ovid-plato
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
