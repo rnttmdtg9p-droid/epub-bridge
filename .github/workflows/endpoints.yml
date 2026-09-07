@@ -1,0 +1,52 @@
+name: BB acquisition endpoint compatibility probe
+on:
+  push:
+    branches: ['bb-source93-endpoints-20260906']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Test published source endpoints without batch API parameters
+        shell: bash
+        run: |
+          mkdir -p output
+          python - <<'PY'
+          from pathlib import Path
+          import urllib.request,urllib.error,json,time,hashlib
+          urls=[
+          ('ll_search20.json','https://liberliber.it/wp-json/wp/v2/search?search=Il%20fu%20Mattia%20Pascal&per_page=20'),
+          ('ll_page_api.json','https://liberliber.it/wp-json/wp/v2/pages/2346907'),
+          ('ll_book_page.html','https://liberliber.it/autori/autori-p/luigi-pirandello/il-fu-mattia-pascal/'),
+          ('ws_mattia.epub','https://ws-export.wmcloud.org/?format=epub&lang=it&page=Il_fu_Mattia_Pascal'),
+          ('ws_mattia_chapter.html','https://it.wikisource.org/wiki/Il_fu_Mattia_Pascal/1'),
+          ]
+          rows=[]
+          for name,url in urls:
+            rec={'file':name,'url':url}
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBaySourceAcquisition/1.0 (public-domain text research)'})
+              with urllib.request.urlopen(req,timeout=90) as r:
+                b=r.read(35000001)
+                if len(b)>35000000:raise ValueError('size limit')
+                rec.update(status=r.status,final_url=r.url,content_type=r.headers.get('Content-Type'),bytes=len(b),sha256=hashlib.sha256(b).hexdigest())
+              Path('output',name).write_bytes(b)
+            except urllib.error.HTTPError as e:
+              b=e.read(150000);Path('output',name+'.error.txt').write_bytes(b)
+              rec.update(status=e.code,error=str(e),retry_after=e.headers.get('Retry-After'))
+              if e.code==429:
+                wait=e.headers.get('Retry-After','60');time.sleep(min(180,int(wait)) if wait.isdigit() else 60)
+            except Exception as e:rec['error']=str(e)
+            rows.append(rec);print(json.dumps(rec),flush=True);time.sleep(8)
+          Path('output/report.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-source93-endpoint-evidence
+          path: output/
+          retention-days: 14
+          compression-level: 6
