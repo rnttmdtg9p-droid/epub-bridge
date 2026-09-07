@@ -1,4 +1,4 @@
-name: BB single title 096 - complete rate-limited pages
+name: BB single title 074 - historical edition discovery
 on:
   push:
     branches: ['bb-onebyone-sources-20260907']
@@ -8,61 +8,47 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      - name: Respect cooldown and retrieve only missing pages
+      - name: Identify source editions without assuming title matches are complete novels
         run: |
-          mkdir -p output/pages
+          mkdir -p output
           python - <<'PY'
-          from pathlib import Path
-          from urllib.request import Request,urlopen
-          from urllib.error import HTTPError
+          from urllib.request import urlopen,Request
           from urllib.parse import urlencode,quote
-          from email.utils import parsedate_to_datetime
-          from datetime import datetime,timezone
-          import json,hashlib,time,re
-          root=Path('output');events=[];page_map=[]
-          print('Cooling down for 90 seconds after prior HTTP 429 responses.',flush=True);time.sleep(90)
-          for idx,part in [(14,'Libro Duodecimo'),(15,'Libro Terzodecimo'),(16,'Libro Quartodecimo'),(17,'Libro Quintodecimo'),(18,'Registro')]:
-            title='Le Metamorfosi/'+part;slug=f'{idx:02d}_'+re.sub(r'[^A-Za-z0-9]+','_',title).strip('_')
-            url='https://it.wikisource.org/w/api.php?'+urlencode({'action':'parse','page':title,'prop':'text|wikitext|links|revid|categories|images','format':'json','redirects':1,'disableeditsection':1,'maxlag':5})
-            rec={'order':idx,'requested_page':title,'json':'pages/'+slug+'.json','status':'FAILED'}
-            for attempt in range(4):
-              try:
-                req=Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian editions; polite sequential retrieval)'})
-                with urlopen(req,timeout=65) as r:data=r.read(5000001)
-                if len(data)>5000000:raise ValueError('page too large')
-                obj=json.loads(data)
-                if 'parse' not in obj:raise ValueError(str(obj.get('error',obj)))
-                p=obj['parse'];markup=p.get('text',{}).get('*','')
-                (root/'pages'/(slug+'.json')).write_bytes(data)
-                (root/'pages'/(slug+'.html')).write_text(markup,encoding='utf-8')
-                (root/'pages'/(slug+'.wikitext')).write_text(p.get('wikitext',{}).get('*',''),encoding='utf-8')
-                events.append({'url':url,'path':'pages/'+slug+'.json','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'SAVED'})
-                rec.update(status='PAGE_SAVED',title=p.get('title'),revid=p.get('revid'),html='pages/'+slug+'.html',wikitext='pages/'+slug+'.wikitext',html_bytes=len(markup.encode()),sha256=hashlib.sha256(markup.encode()).hexdigest(),canonical_url='https://it.wikisource.org/wiki/'+quote(title.replace(' ','_')),revision_url='https://it.wikisource.org/w/index.php?oldid='+str(p.get('revid')),categories=[x.get('*') for x in p.get('categories',[])])
-                break
-              except Exception as e:
-                event={'url':url,'path':'pages/'+slug+'.json','attempt':attempt+1,'status':'FAILED','error':str(e)}
-                events.append(event);print(json.dumps(event),flush=True)
-                if attempt<3:
-                  delay=60*(attempt+1)
-                  if isinstance(e,HTTPError) and e.headers.get('Retry-After'):
-                    ra=e.headers['Retry-After']
-                    try:delay=max(delay,int(ra))
-                    except ValueError:
-                      try:delay=max(delay,(parsedate_to_datetime(ra)-datetime.now(timezone.utc)).total_seconds())
-                      except Exception:pass
-                  print('Backoff seconds:',delay,flush=True);time.sleep(delay)
-            page_map.append(rec);print(json.dumps(rec,ensure_ascii=False),flush=True);time.sleep(8)
-          (root/'reading_map_completion.json').write_text(json.dumps(page_map,ensure_ascii=False,indent=2),encoding='utf-8')
-          (root/'transfer_log_completion.json').write_text(json.dumps(events,ensure_ascii=False,indent=2),encoding='utf-8')
+          from pathlib import Path
+          import json,time,hashlib
+          root=Path('output');results=[]
+          queries=['title:(camelie) AND mediatype:texts','title:(camelie) AND creator:(Dumas)','title:(camellie) AND mediatype:texts']
+          for i,q in enumerate(queries):
+            url='https://archive.org/advancedsearch.php?'+urlencode({'q':q,'fl[]':['identifier','title','creator','date','language','description','collection'],'rows':100,'output':'json'},doseq=True)
+            try:
+              data=urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0'}),timeout=60).read()
+              (root/f'ia_search_{i}.json').write_bytes(data)
+              docs=json.loads(data)['response']['docs']
+              print(json.dumps({'query':q,'docs':docs},ensure_ascii=False),flush=True)
+              results.extend(docs)
+            except Exception as e:print(str(e),flush=True)
+            time.sleep(2)
+          seen=set()
+          for d in results:
+            iid=d['identifier']
+            if iid in seen:continue
+            seen.add(iid)
+            date=str(d.get('date',''))
+            if date and date[:4].isdigit() and int(date[:4])>1930:continue
+            try:
+              data=urlopen(Request('https://archive.org/metadata/'+quote(iid),headers={'User-Agent':'BoundaryBaySourceResearch/1.0'}),timeout=60).read()
+              (root/(iid+'_metadata.json')).write_bytes(data)
+              obj=json.loads(data)
+              fs=[{k:f.get(k) for k in ['name','format','size','md5','sha1','private']} for f in obj.get('files',[]) if f.get('format') in ['Text PDF','Image Container PDF','DjVuTXT','Djvu XML','EPUB','Abbyy GZ','Scandata'] or f.get('name','').endswith('_djvu.txt')]
+              print(json.dumps({'id':iid,'metadata':obj.get('metadata'),'files':fs},ensure_ascii=False),flush=True)
+            except Exception as e:print(iid,str(e),flush=True)
+            time.sleep(1)
           PY
-      - name: Upload completion files and retry evidence
-        if: always()
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: bb-single-096-ovid-completion
+          name: bb-single-074-discovery
           path: output/
           retention-days: 14
-          compression-level: 6
           if-no-files-found: error
