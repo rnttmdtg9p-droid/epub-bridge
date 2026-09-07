@@ -1,4 +1,4 @@
-name: BB single title 099 - I Ricordi Moricca 1923
+name: BB single title 096 - Ovidio Metamorfosi Anguillara
 on:
   push:
     branches: ['bb-onebyone-sources-20260907']
@@ -8,51 +8,73 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
-      - name: Retrieve one complete historical scan and provider text derivatives
+      - name: Retrieve complete page sequence for one historical Italian translation
         run: |
-          mkdir -p output
+          mkdir -p output/pages output/evidence
           python - <<'PY'
           from pathlib import Path
           from urllib.request import Request,urlopen
-          from urllib.parse import quote
-          import json,hashlib,time,zipfile,io
-          root=Path('output');events=[];identifier='marco-aurelio-ricordi-moricca'
-          def fetch(url,name,expected=None):
+          from urllib.parse import urlencode,quote
+          from html.parser import HTMLParser
+          import json,hashlib,time,unicodedata,re
+          root=Path('output');records=[];base='https://it.wikisource.org/w/api.php'
+          headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian editions; immutable source research)'}
+          def get(url,path,limit=65000000):
             for attempt in range(3):
               try:
-                with urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0'}),timeout=60) as r:
-                  b=r.read(85000001)
-                  if len(b)>85000000:raise ValueError('size limit')
-                  entry={'url':url,'file':name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'sha1':hashlib.sha1(b).hexdigest(),'md5':hashlib.md5(b).hexdigest(),'status':'SAVED'}
-                if expected:
-                  entry['upstream_hash_checks']={k:entry[k]==expected[k] for k in ['sha1','md5'] if expected.get(k)}
-                  if not all(entry['upstream_hash_checks'].values()):raise ValueError('upstream hash mismatch')
-                (root/name).write_bytes(b);events.append(entry);print(json.dumps(entry),flush=True);return b
+                with urlopen(Request(url,headers=headers),timeout=65) as r:
+                  b=r.read(limit+1)
+                  if len(b)>limit:raise ValueError('source safety size limit')
+                path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b)
+                records.append({'url':url,'path':str(path.relative_to(root)),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'status':'SAVED'})
+                return b
               except Exception as e:
-                if attempt<2:time.sleep(3)
-                else:events.append({'url':url,'file':name,'status':'FAILED','error':str(e)});return b''
-          data=fetch('https://archive.org/metadata/'+identifier,'archive_metadata.json')
-          if data:
-            md=json.loads(data);files={f['name']:f for f in md.get('files',[])}
-            wanted=['MarcoAurelioRicordiMoricca.pdf','MarcoAurelioRicordiMoricca_text.pdf','MarcoAurelioRicordiMoricca_djvu.txt','MarcoAurelioRicordiMoricca_djvu.xml','MarcoAurelioRicordiMoricca.epub','MarcoAurelioRicordiMoricca_scandata.xml','MarcoAurelioRicordiMoricca_page_numbers.json']
-            for name in wanted:
-              f=files.get(name)
-              if not f or f.get('private') in ('true',True):
-                events.append({'file':name,'status':'NOT_PUBLICLY_LISTED'});continue
-              b=fetch('https://archive.org/download/'+identifier+'/'+quote(name),name,f)
-              if b and name.endswith('.epub'):
-                with zipfile.ZipFile(io.BytesIO(b)) as z:
-                  events.append({'file':name,'epub_crc':'PASS' if z.testzip() is None else 'FAIL','members':len(z.namelist())})
-          (root/'transfer_log.json').write_text(json.dumps(events,ensure_ascii=False,indent=2),encoding='utf-8')
-          (root/'scope.json').write_text(json.dumps({'rank':99,'requested':'Meditazioni','source_title':'I Ricordi','translator':'Umberto Moricca','edition':'Torino: Chiantore, 1923','status':'ACQUIRED_FILES_REQUIRE_LOCAL_INSPECTION','ocr':'Provider OCR, not proofread','rights':'REVIEW_REQUIRED'},ensure_ascii=False,indent=2),encoding='utf-8')
+                if attempt<2:time.sleep(3+attempt*2)
+                else:records.append({'url':url,'path':str(path.relative_to(root)),'status':'FAILED','error':str(e)});return b''
+          ordinal=['Primo','Secondo','Terzo','Quarto','Quinto','Sesto','Settimo','Ottavo','Nono','Decimo','Undecimo','Duodecimo','Terzodecimo','Quartodecimo','Quintodecimo']
+          titles=['Le Metamorfosi','Le Metamorfosi/Dedica','Le Metamorfosi/Tavola']+['Le Metamorfosi/Libro '+x for x in ordinal]+['Le Metamorfosi/Registro']
+          page_map=[]
+          for idx,title in enumerate(titles):
+            slug=f'{idx:02d}_'+re.sub(r'[^A-Za-z0-9]+','_',unicodedata.normalize('NFKD',title).encode('ascii','ignore').decode()).strip('_')
+            params={'action':'parse','page':title,'prop':'text|wikitext|links|revid|categories|images','format':'json','redirects':1,'disableeditsection':1,'maxlag':5}
+            url=base+'?'+urlencode(params)
+            b=get(url,root/'pages'/(slug+'.json'))
+            rec={'order':idx,'requested_page':title,'json':'pages/'+slug+'.json','status':'FAILED'}
+            if b:
+              obj=json.loads(b)
+              if 'parse' in obj:
+                parsed=obj['parse'];markup=parsed.get('text',{}).get('*','')
+                (root/'pages'/(slug+'.html')).write_text(markup,encoding='utf-8')
+                (root/'pages'/(slug+'.wikitext')).write_text(parsed.get('wikitext',{}).get('*',''),encoding='utf-8')
+                rec.update(status='PAGE_SAVED',title=parsed.get('title'),revid=parsed.get('revid'),html='pages/'+slug+'.html',wikitext='pages/'+slug+'.wikitext',html_bytes=len(markup.encode()),sha256=hashlib.sha256(markup.encode()).hexdigest(),canonical_url='https://it.wikisource.org/wiki/'+quote(parsed.get('title',title).replace(' ','_')),revision_url='https://it.wikisource.org/w/index.php?oldid='+str(parsed.get('revid')),categories=[x.get('*') for x in parsed.get('categories',[])])
+              else:rec['api_error']=obj.get('error',obj)
+            page_map.append(rec);print(json.dumps(rec,ensure_ascii=False),flush=True);time.sleep(.7)
+          # Preserve source index metadata and current source-scan attribution/licence info.
+          params={'action':'parse','page':'Indice:Ovidio - Le metamorfosi.djvu','prop':'text|wikitext|links|revid','format':'json'}
+          get(base+'?'+urlencode(params),root/'evidence'/'source_scan_index.json')
+          params={'action':'query','titles':'File:Ovidio - Le metamorfosi.djvu','prop':'imageinfo','iiprop':'url|size|sha1|extmetadata','format':'json'}
+          for site,tag in [('https://commons.wikimedia.org/w/api.php','commons'),(base,'itwikisource')]:
+            b=get(site+'?'+urlencode(params),root/'evidence'/(tag+'_scan_metadata.json'))
+            if not b:continue
+            obj=json.loads(b)
+            found=False
+            for page in obj.get('query',{}).get('pages',{}).values():
+              for info in page.get('imageinfo',[]):
+                if info.get('url') and 0<int(info.get('size',0))<65000000:
+                  got=get(info['url'],root/'scan'/Path(info['url']).name)
+                  if got:found=True
+            if found:break
+          (root/'reading_map.json').write_text(json.dumps(page_map,ensure_ascii=False,indent=2),encoding='utf-8')
+          (root/'transfer_log.json').write_text(json.dumps(records,ensure_ascii=False,indent=2),encoding='utf-8')
+          (root/'scope.json').write_text(json.dumps({'rank':96,'requested':'Metamorfosi','author':'Publio Ovidio Nasone','source_title':'Le Metamorfosi','translator':'Giovanni Andrea dell\u0027Anguillara','edition':'Venezia: Francesco de Franceschi Senese, 1569 (third edition)','notes':'Anguillara ottava-rima translation/recasting with Horologgi annotations, not a modern literal prose translation. Preserve source scope.','source_status':'SOURCE_CANDIDATE; local inspection pending','transcription_status':'Wikisource complete but awaiting rereading','rights':'Retain Wikisource CC BY-SA/GFDL notices and contributor attribution; no commercial edition certification'},ensure_ascii=False,indent=2),encoding='utf-8')
           PY
-      - name: Upload exact files and evidence
+      - name: Upload complete text snapshots and evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-single-099-ricordi-moricca
+          name: bb-single-096-ovid-anguillara
           path: output/
           retention-days: 14
           compression-level: 6
