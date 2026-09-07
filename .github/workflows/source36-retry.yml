@@ -1,0 +1,72 @@
+name: BB recover three failed official source transfers
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/source36-retry.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: python -m pip install --quiet beautifulsoup4==4.13.4
+      - name: Retrieve official freely offered files, not store links
+        run: |
+          python - <<'PY'
+          import requests, json, time, hashlib, zipfile, io, re
+          from pathlib import Path
+          from urllib.parse import urlparse,parse_qs,urljoin
+          from bs4 import BeautifulSoup
+          R=Path('out');R.mkdir()
+          items=[(64,2414757,"L'idiota"),(78,2347594,'La Certosa di Parma'),(97,2346537,'Le mille e una notte')]
+          results=[]
+          S=requests.Session();S.headers['User-Agent']='BoundaryBaySourceResearch/1.1 (published free source downloads; original notices retained)'
+          def get(u):
+            for i in range(3):
+              r=S.get(u,timeout=(15,70))
+              if r.status_code in [429,502,503,504]:time.sleep(8);continue
+              r.raise_for_status();return r
+            raise RuntimeError('Temporary failure after respectful retries')
+          for rank,pid,title in items:
+            d=R/f'{rank:03d}';d.mkdir();o={'rank':rank,'title':title,'assets':[],'errors':[],'reuse_status':'ORIGINAL_SOURCE_NOTICES_RETAINED; COMMERCIAL_EDITION_REVIEW_REQUIRED'}
+            try:
+              p=get('https://liberliber.it/wp-json/wp/v2/pages/'+str(pid));(d/'page.json').write_bytes(p.content)
+            except Exception as e:o['errors'].append(str(e))
+            for fmt in ['epub','odt','pdf']:
+              url=f'https://liberliber.it/opere/download/?op={pid}&type=opera_url_{fmt}'
+              try:
+                landing=get(url);(d/f'landing_{fmt}.html').write_bytes(landing.content)
+                soup=BeautifulSoup(landing.content,'html.parser');links=[]
+                for a in soup.find_all('a',href=True):
+                  u=urljoin(landing.url,a['href'])
+                  if 'liberliber.eu/mediateca/' in u and urlparse(u).path.lower().endswith('.'+fmt):links.append(u)
+                if not links:
+                  for m in soup.find_all('meta'):
+                    c=m.get('content',''); mt=re.search(r'url\s*=\s*(.+)',c,re.I)
+                    if mt:
+                      u=mt.group(1).strip(' \'\"');
+                      if 'liberliber.eu/mediateca/' in u and u.lower().endswith('.'+fmt):links.append(u)
+                if not links:raise ValueError('No published direct '+fmt+' link found')
+                u=links[0];r=get(u);data=r.content
+                if len(data)<2000:raise ValueError('unexpected short document')
+                if fmt in ['epub','odt']:
+                  with zipfile.ZipFile(io.BytesIO(data)) as z:
+                    if z.testzip():raise ValueError('CRC failed')
+                    if fmt=='epub' and z.read('mimetype')!=b'application/epub+zip':raise ValueError('not EPUB')
+                elif not data.startswith(b'%PDF'):raise ValueError('not PDF')
+                p=d/(f'original_{pid}.'+fmt);p.write_bytes(data)
+                o['assets'].append({'url':u,'path':str(p.relative_to(R)),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'crc':'PASS' if fmt in ['epub','odt'] else None})
+              except Exception as e:o['errors'].append({'format':fmt,'error':str(e)})
+              time.sleep(1.5)
+            (d/'manifest.json').write_text(json.dumps(o,ensure_ascii=False,indent=2));results.append(o);print(title,len(o['assets']),o['errors'],flush=True)
+          (R/'results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-three-source-transfers
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
