@@ -1,0 +1,51 @@
+name: BB source format fallbacks
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/source-format-fallbacks.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: |
+          import_unused=0
+          python - <<'PY'
+          import requests,json,hashlib,time,zipfile,io
+          from pathlib import Path
+          from urllib.parse import quote
+          R=Path('out');R.mkdir();res=[]
+          def get(u):
+            r=requests.get(u,headers={'User-Agent':'BoundaryBaySourceFormatReview/1.1'},timeout=(15,150));r.raise_for_status();return r.content
+          for fmt in ['odt','pdf']:
+            # The official title page explicitly offers both formats. Test corresponding static files.
+            u=f'https://www.liberliber.eu/mediateca/libri/s/stendhal/la_certosa_di_parma/{fmt}/stendhal_la_certosa_di_parma.{fmt}'
+            try:
+              b=get(u);d=R/'078';d.mkdir(exist_ok=True);name=f'certosa_source.{fmt}';(d/name).write_bytes(b);o={'rank':78,'url':u,'path':'078/'+name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'status':'SAVED'}
+              if fmt=='odt':
+                with zipfile.ZipFile(io.BytesIO(b)) as z:o['crc_bad_member']=z.testzip();o['mimetype']=repr(z.read('mimetype'))
+              else:o['pdf_magic']=b.startswith(b'%PDF')
+              res.append(o)
+            except Exception as e:res.append({'rank':78,'url':u,'status':'FAILED','error':str(e)})
+            time.sleep(2)
+          ident='hugo-nostra-donna-di-parigi'
+          try:
+            raw=get('https://archive.org/metadata/'+ident);m=json.loads(raw);d=R/'070';d.mkdir();(d/'metadata.json').write_bytes(raw)
+            ff=[f for f in m.get('files',[]) if f.get('format') in ['Additional Text PDF','Image Container PDF','Text PDF'] and not f.get('private') and int(f.get('size',0))<80000000];ff.sort(key=lambda f:(f.get('format')=='Image Container PDF',int(f.get('size',0))))
+            if not ff:raise ValueError('No suitable public scan')
+            f=ff[0];u='https://archive.org/download/'+ident+'/'+quote(f['name']);b=get(u);sha1=hashlib.sha1(b).hexdigest()
+            if f.get('sha1') and sha1!=f['sha1']:raise ValueError('SHA1 mismatch')
+            (d/f['name']).write_bytes(b);res.append({'rank':70,'url':u,'path':'070/'+f['name'],'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'sha1':sha1,'expected_sha1':f.get('sha1'),'sha1_match':True,'status':'SAVED'})
+          except Exception as e:res.append({'rank':70,'status':'FAILED','error':str(e)})
+          (R/'manifest.json').write_text(json.dumps(res,ensure_ascii=False,indent=2));print(json.dumps(res,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-source-format-fallbacks
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
