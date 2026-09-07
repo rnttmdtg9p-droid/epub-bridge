@@ -1,0 +1,40 @@
+name: BB Italian historical author catalogues
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/author-catalogues.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - run: |
+          python - <<'PY'
+          import requests,json,time
+          from pathlib import Path
+          from urllib.parse import urlencode
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          R=Path('out');R.mkdir()
+          authors={'twain':'Twain OR Clemens','austen':'Austen','bronte':'Bront*','shelley':'Shelley','dickens':'Dickens','doyle':'Doyle','wilde':'Wilde','tolstoi':'Tolst*','dostoevskij':'Dosto*','balzac':'Balzac','stendhal':'Stendhal OR Beyle','zola':'Zola','maupassant':'Maupassant','schiller':'Schiller','cechov':'Cech* OR Chek* OR Tchek* OR Tchec*','dumas':'Dumas','kafka':'Kafka','hesse':'Hesse'}
+          def run(item):
+            key,query=item;q=f'mediatype:texts AND creator:({query}) AND (language:ita OR language:Italian OR language:it) AND date:[1500-01-01T00:00:00Z TO 1930-12-31T23:59:59Z]'
+            params=[('q',q),('rows',200),('output','json'),('sort[]','date asc')]+[('fl[]',k) for k in ['identifier','title','creator','date','language','description','access-restricted-item']]
+            try:
+              r=requests.get('https://archive.org/advancedsearch.php?'+urlencode(params),headers={'User-Agent':'BoundaryBayBibliography/1.1'},timeout=(15,90));r.raise_for_status();d=r.json();(R/(key+'.json')).write_bytes(r.content);print(key,d.get('response',{}).get('numFound'),flush=True)
+              return {'author':key,'response':d}
+            except Exception as e:return {'author':key,'error':str(e)}
+          out=[]
+          with ThreadPoolExecutor(max_workers=2) as ex:
+            for f in as_completed([ex.submit(run,x) for x in authors.items()]):out.append(f.result())
+          (R/'results.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-historical-author-catalogues
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
