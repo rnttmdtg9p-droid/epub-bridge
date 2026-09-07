@@ -1,4 +1,4 @@
-name: BB single title 082 - anthology text check
+name: BB single title 100 - Plato Italian edition discovery
 on:
   push:
     branches: ['bb-onebyone-sources-20260907']
@@ -8,58 +8,44 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 8
     steps:
-      - name: Save historical anthology OCR and matched scan candidates for title-scope review
+      - name: Discover historical complete Italian Republic editions
         run: |
           mkdir -p output
           python - <<'PY'
-          from urllib.request import Request,urlopen
-          from urllib.parse import quote
           from pathlib import Path
-          import json,re,hashlib,time
-          root=Path('output');logs=[];results=[]
-          def get(url,path,limit=40000000):
-            for n in range(2):
-              try:
-                with urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian editions)'}),timeout=80) as r:b=r.read(limit+1)
-                if len(b)>limit:raise ValueError('size safety limit')
-                path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(b);return b
-              except Exception:
-                if n==1:raise
-                time.sleep(15)
-          for iid in ['maupassant-racconti-novelle','maupassant-racconti-cinti','maupassant-dolore-segreto']:
-            d=root/iid;d.mkdir(exist_ok=True);rec={'id':iid}
+          from urllib.request import Request,urlopen
+          from urllib.parse import urlencode
+          import json,time,hashlib
+          root=Path('output');log=[];summ=[]
+          targets=[]
+          queries=['title:repubblica AND creator:(Plato OR Platone)','title:(republica OR repubblica) AND language:ita','creator:Fraccaroli AND (Plato OR Platone)','title:repubblica AND (Zambelli OR Bembo OR Martini)','title:republica AND creator:(Plato OR Platone)']
+          for i,q in enumerate(queries):
+            targets.append((f'ia_search_{i}.json','https://archive.org/advancedsearch.php?'+urlencode({'q':q,'rows':100,'output':'json','fl[]':['identifier','title','creator','date','language','collection','access-restricted-item']},doseq=True),'ia'))
+          for i,t in enumerate(['Autore:Platone','La Repubblica','Repubblica']):
+            targets.append((f'ws_{i}.json','https://it.wikisource.org/w/api.php?'+urlencode({'action':'parse','page':t,'prop':'text|links|revid|wikitext','format':'json','redirects':1,'maxlag':5}),'ws'))
+          for name,url,typ in targets:
             try:
-              md=json.loads(get('https://archive.org/metadata/'+iid,d/'metadata.json'))
-              if str(md['metadata'].get('access-restricted-item','false')).lower()=='true':raise ValueError('restricted item')
-              textfiles=[f for f in md['files'] if f['name'].endswith('_djvu.txt') and not f.get('private')]
-              matches=[]
-              for f in textfiles:
-                url='https://archive.org/download/'+iid+'/'+quote(f['name']);b=get(url,d/f['name'])
-                h=hashlib.md5(b).hexdigest();ok=h==f.get('md5');logs.append({'url':url,'path':str((d/f['name']).relative_to(root)),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'upstream_md5':f.get('md5'),'md5_match':ok,'status':'SAVED'})
-                if not ok:raise ValueError('checksum mismatch')
-                text=b.decode('utf8',errors='replace')
-                matches=[{'offset':m.start(),'context':text[max(0,m.start()-150):m.end()+300]} for m in re.finditer(r'boule|pallina|palla\s+di\s+(?:sego|burro)|rouen|cornudet',text,re.I)]
-                rec['matches']=matches;rec['text_bytes']=len(b)
-              if any(re.search(r'pallina|palla\s+di\s+sego|cornudet',x['context'],re.I) for x in matches):
-                picks=[f for f in md['files'] if not f.get('private') and (f.get('format')=='Image Container PDF' or f['name'].endswith(('_djvu.xml','_scandata.xml')))]
-                for f in picks:
-                  url='https://archive.org/download/'+iid+'/'+quote(f['name']);b=get(url,d/f['name'])
-                  ok=hashlib.md5(b).hexdigest()==f.get('md5')
-                  logs.append({'url':url,'path':str((d/f['name']).relative_to(root)),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'upstream_md5':f.get('md5'),'md5_match':ok,'status':'SAVED'})
-                  if not ok:raise ValueError('checksum mismatch')
-                  time.sleep(2)
-            except Exception as e:rec['error']=str(e)
-            results.append(rec);print(json.dumps(rec,ensure_ascii=False),flush=True);time.sleep(2)
-          (root/'results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
-          (root/'transfer_log.json').write_text(json.dumps(logs,ensure_ascii=False,indent=2),encoding='utf-8')
+              with urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (sequential historical-edition acquisition)'}),timeout=45) as r:data=r.read(8000001)
+              if len(data)>8000000:raise ValueError('response size limit')
+              obj=json.loads(data);(root/name).write_bytes(data)
+              row={'path':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'SAVED'}
+              if typ=='ia':
+                summ.append({'file':name,'found':obj.get('response',{}).get('numFound'),'docs':obj.get('response',{}).get('docs',[])})
+              else:
+                p=obj.get('parse',{});summ.append({'file':name,'title':p.get('title'),'links':p.get('links',[]),'error':obj.get('error')})
+            except Exception as e:row={'path':name,'url':url,'status':'FAILED','error':str(e)}
+            log.append(row);print(json.dumps(row),flush=True);time.sleep(4)
+          (root/'DISCOVERY_SUMMARY.json').write_text(json.dumps(summ,ensure_ascii=False,indent=2),encoding='utf8')
+          (root/'transfer_log.json').write_text(json.dumps(log,ensure_ascii=False,indent=2),encoding='utf8')
           PY
-      - uses: actions/upload-artifact@v4
+      - name: Upload discovery evidence, not a completed source
         if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: bb-single-082-anthology-check
+          name: bb-single-100-discovery
           path: output/
-          retention-days: 14
           compression-level: 6
+          retention-days: 14
           if-no-files-found: error
