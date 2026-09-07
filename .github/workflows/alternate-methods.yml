@@ -1,0 +1,137 @@
+name: BB alternate source methods - Wikimedia and archive metadata
+on:
+  push:
+    branches: ['bb-alt-methods-20260907']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Install parser
+        run: python -m pip install --quiet requests==2.32.4 beautifulsoup4==4.13.4
+      - name: Test complete text export and archival catalogue methods
+        shell: bash
+        run: |
+          mkdir -p output
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import urlencode,quote,urlparse,urljoin,unquote
+          import requests,json,time,re,hashlib,zipfile,io,concurrent.futures,threading
+          from bs4 import BeautifulSoup
+          ROOT=Path('output');LOCK=threading.Lock();NEXT={};EVENTS=[]
+          UA='BoundaryBaySourceResearch/2.0 (public-domain edition discovery; rate-limited)'
+          def fetch(url,path,limit=18000000):
+            path=ROOT/path;path.parent.mkdir(parents=True,exist_ok=True)
+            if path.exists():return path.read_bytes()
+            host=urlparse(url).hostname
+            for attempt in range(3):
+              with LOCK:
+                delay=max(0,NEXT.get(host,0)-time.monotonic());NEXT[host]=time.monotonic()+delay+2.5
+              if delay:time.sleep(delay)
+              try:
+                r=requests.get(url,headers={'User-Agent':UA},timeout=(15,60),stream=True)
+                if r.status_code==429:
+                  wait=max(60,int(r.headers.get('Retry-After','60')) if r.headers.get('Retry-After','').isdigit() else 90)
+                  with LOCK:NEXT[host]=time.monotonic()+wait
+                  if attempt<2:continue
+                r.raise_for_status();data=bytearray()
+                for chunk in r.iter_content(65536):
+                  data.extend(chunk)
+                  if len(data)>limit:raise ValueError('Safety size cap')
+                b=bytes(data);path.write_bytes(b)
+                rec={'url':url,'final_url':r.url,'path':str(path.relative_to(ROOT)),'status':r.status,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()}
+                with LOCK:
+                  EVENTS.append(rec)
+                  with (ROOT/'transfers.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(rec,ensure_ascii=False)+'\n')
+                return b
+              except Exception as e:
+                if attempt==2 or (hasattr(e,'response') and e.response is not None and e.response.status_code in (400,403,404)):
+                  with LOCK:
+                    rec={'url':url,'status':'FAILED','error':str(e)};EVENTS.append(rec)
+                    with (ROOT/'transfers.jsonl').open('a',encoding='utf-8') as f:f.write(json.dumps(rec,ensure_ascii=False)+'\n')
+                  raise
+                time.sleep(3)
+          missing=[[35,'Le avventure di Tom Sawyer','Twain'],[36,'Le avventure di Huckleberry Finn','Twain'],[44,'Frankenstein','Shelley'],[45,'Orgoglio e pregiudizio','Austen'],[46,'Ragione e sentimento','Austen'],[47,'Emma','Austen'],[49,'Cime tempestose','Bronte'],[50,'Grandi speranze','Dickens'],[55,'Il mastino dei Baskerville','Doyle'],[56,'Uno studio in rosso','Doyle'],[58,"L'importanza di chiamarsi Ernesto",'Wilde'],[61,'La morte di Ivan','Tolstoi'],[63,'I fratelli Karamazov','Dostoevsky'],[64,"L'idiota",'Dostoevsky'],[65,'Memorie dal sottosuolo','Dostoevsky'],[68,'Il cappotto','Gogol'],[70,'Notre Dame de Paris','Hugo'],[74,'La signora delle camelie','Dumas'],[75,'Papa Goriot','Balzac'],[78,'La Certosa di Parma','Stendhal'],[79,'Germinale','Zola'],[80,'Nana','Zola'],[81,'Bel Ami','Maupassant'],[82,'Boule de suif','Maupassant'],[85,'I masnadieri','Schiller'],[87,'Il gabbiano','Chekhov'],[88,'Il giardino dei ciliegi','Chekhov'],[89,'Zio Vanja','Chekhov'],[90,'Il processo','Kafka'],[91,'La metamorfosi','Kafka'],[92,'Il castello','Kafka'],[93,'Siddhartha','Hesse'],[94,'Demian','Hesse'],[95,'Il lupo della steppa','Hesse'],[96,'Metamorfosi','Ovid'],[97,'Le mille e una notte',''],[98,'Favole','Aesop'],[99,'Meditazioni','Marcus Aurelius'],[100,'La Repubblica','Plato']]
+          def archive_discovery():
+            results=[]
+            for rank,title,author in missing:
+              q='mediatype:texts AND (language:ita OR language:Italian OR language:it) AND title:("'+title.replace('"','')+'")'
+              params=[('q',q),('fl[]','identifier'),('fl[]','title'),('fl[]','creator'),('fl[]','date'),('fl[]','language'),('fl[]','rights'),('fl[]','licenseurl'),('fl[]','access-restricted-item'),('rows','10'),('output','json')]
+              url='https://archive.org/advancedsearch.php?'+urlencode(params,quote_via=quote)
+              rec={'rank':rank,'title':title,'url':url,'status':'NOT_SEARCHED'}
+              try:
+                b=fetch(url,Path('archive')/f'{rank:03d}_search.json')
+                d=json.loads(b);rec['matches']=d.get('response',{}).get('docs',[]);rec['count']=d.get('response',{}).get('numFound');rec['status']='CATALOGUE_SEARCHED_NOT_DOWNLOADED'
+              except Exception as e:rec.update(status='FAILED',error=str(e))
+              results.append(rec)
+              (ROOT/'archive_results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
+            return results
+          def ws_probe():
+            results=[]
+            # Restrict retrieval to requested books and same-work subpages. No unrelated wiki crawl.
+            for rank,title in [(68,'Il cappotto'),(91,'La metamorfosi'),(45,'Orgoglio e pregiudizio'),(4,'Il fu Mattia Pascal')]:
+              base=Path('wikisource')/f'{rank:03d}';todo=[title];seen=set();pages=[];failures=[]
+              while todo and len(seen)<150:
+                t=todo.pop(0)
+                if t in seen:continue
+                seen.add(t)
+                u='https://it.wikisource.org/w/api.php?'+urlencode({'action':'parse','page':t,'prop':'text|links|revid','format':'json','redirects':1,'disableeditsection':1,'maxlag':5},quote_via=quote)
+                fn=hashlib.sha256(t.encode()).hexdigest()[:16]
+                try:
+                  raw=fetch(u,base/'raw'/f'{fn}.json');obj=json.loads(raw)
+                  if 'parse' not in obj:raise ValueError(str(obj.get('error')))
+                  p=obj['parse'];markup=p.get('text',{}).get('*','');soup=BeautifulSoup(markup,'html.parser')
+                  (ROOT/base/'raw'/f'{fn}.html').write_text(markup,encoding='utf-8')
+                  direct=[]
+                  for a in soup.find_all('a',href=True):
+                    href=unquote(a['href']).split('#')[0]
+                    if href.startswith('/wiki/'):
+                      linked=href[6:].replace('_',' ')
+                      if linked.startswith(title+'/') and 'redlink=1' not in href and linked not in direct:direct.append(linked)
+                  for x in p.get('links',[]):
+                    tt=x.get('*','')
+                    if x.get('ns')==0 and tt.startswith(title+'/') and tt not in direct:direct.append(tt)
+                  for tt in direct:
+                    if tt not in seen and tt not in todo:todo.append(tt)
+                  # Keep raw API/HTML immutable; extracted text is an explicitly labelled derivative.
+                  for el in soup.select('script,style,.noprint,.ws-noexport,.mw-editsection,.mw-empty-elt'):el.decompose()
+                  content=soup.select_one('.testo') or soup.select_one('.mw-parser-output') or soup
+                  txt=content.get_text('\n',strip=True)
+                  (ROOT/base/'raw'/f'{fn}.txt').write_text(txt,encoding='utf-8')
+                  pages.append({'title':p.get('title'), 'revid':p.get('revid'),'url':u,'path':str(base/'raw'/f'{fn}.html'),'words':len(txt.split()),'child_links':direct})
+                except Exception as e:failures.append({'title':t,'error':str(e)})
+              result={'rank':rank,'title':title,'pages':pages,'failures':failures,'unfetched':todo,'status':'LINKED_PAGES_SAVED_REVIEW_REQUIRED' if pages and not failures and not todo else 'PARTIAL_OR_UNRESOLVED','complete_book_not_certified':True}
+              (ROOT/base).mkdir(parents=True,exist_ok=True)
+              (ROOT/base/'manifest.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+              results.append(result)
+              (ROOT/'wikisource_results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
+              print('WIKISOURCE',rank,len(pages),'pages',len(failures),'errors',flush=True)
+            # Public exporter: try once, retain response and identify challenge instead of treating it as an EPUB.
+            u='https://ws-export.wmcloud.org/?'+urlencode({'lang':'it','page':'Il_fu_Mattia_Pascal','format':'epub-3'},quote_via=quote)
+            try:
+              b=fetch(u,Path('exporter')/'mattia_response.bin')
+              valid=zipfile.is_zipfile(io.BytesIO(b))
+              (ROOT/'exporter/status.json').write_text(json.dumps({'url':u,'epub_zip':valid,'status':'ZIP_SAVED_REQUIRES_INSPECTION' if valid else 'NOT_AN_EPUB'},indent=2))
+            except Exception as e:
+              (ROOT/'exporter').mkdir(exist_ok=True)
+              (ROOT/'exporter/status.json').write_text(json.dumps({'url':u,'status':'FAILED','error':str(e)},indent=2))
+            return results
+          with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:
+            f1=ex.submit(archive_discovery);f2=ex.submit(ws_probe)
+            for f in [f1,f2]:
+              try:f.result()
+              except Exception as e:print('METHOD ERROR',str(e),flush=True)
+          print('Done. Source files and catalogue records are distinguished; no production or copyright clearance claimed.',flush=True)
+          PY
+      - name: Upload original downloads and per-method evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-alternate-method-results
+          path: output/
+          retention-days: 14
+          compression-level: 6
+          if-no-files-found: error
