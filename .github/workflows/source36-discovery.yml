@@ -1,0 +1,129 @@
+name: BB remaining36 historical edition discovery
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/source36-discovery.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Find alternate titles, older editions, and exact download inventories
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from concurrent.futures import ThreadPoolExecutor, as_completed
+          import requests, json, re, time, hashlib, unicodedata
+          from urllib.parse import urlencode
+          R=Path('out'); R.mkdir()
+          rows=[
+          [35,'Tom Sawyer','Twain',['Tom Sawyer','Tom Soyer','Tom Sojer']],
+          [36,'Huckleberry Finn','Twain',['Huckleberry','Huck Finn']],
+          [44,'Frankenstein','Shelley',['Frankenstein','Prometeo moderno']],
+          [45,'Orgoglio e pregiudizio','Austen',['Orgoglio pregiudizio','Orgoglio e prevenzione']],
+          [46,'Ragione e sentimento','Austen',['Ragione sentimento','Senno sensibilita','Sensibilita buon senso']],
+          [47,'Emma','Austen',['Emma']],
+          [49,'Cime tempestose','Bronte',['Cime tempestose','La tempesta','La voce nella tempesta']],
+          [50,'Grandi speranze','Dickens',['Grandi speranze','Grandi aspettative','Grandi speranze di Pip']],
+          [55,'Il mastino dei Baskerville','Doyle',['Baskerville','Baskervilles','Il cane dei Baskerville']],
+          [56,'Uno studio in rosso','Doyle',['Studio rosso','Studio scarlatto']],
+          [58,'Importanza di chiamarsi Ernesto','Wilde',['Ernesto','Essere onesto','Serio','Onesta']],
+          [61,'La morte di Ivan Ilic','Tolstoi',['Ivan Ilic','Ivan Ilitch','Ivan Iljic','Ivan Ilitch','Ivan Ilich']],
+          [63,'I fratelli Karamazov','Dostoevskij',['Karamazov','Karamazoff']],
+          [64,'Idiota','Dostoevskij',['Idiota']],
+          [65,'Memorie dal sottosuolo','Dostoevskij',['Sottosuolo','Sotterraneo','Lo spirito sotterraneo']],
+          [70,'Notre-Dame de Paris','Hugo',['Notre Dame','Nostra Signora di Parigi','Nostra Donna di Parigi']],
+          [74,'La signora delle camelie','Dumas',['Camelie','Dame aux camelias']],
+          [75,'Papa Goriot','Balzac',['Goriot']],
+          [78,'La Certosa di Parma','Stendhal',['Certosa Parma','Certosa di Parma']],
+          [79,'Germinale','Zola',['Germinal','Germinale']],
+          [81,'Bel-Ami','Maupassant',['Bel Ami','Bell amico']],
+          [82,'Boule de suif','Maupassant',['Boule suif','Palla sego','Pallina','Palla di grasso','Palla di sevo']],
+          [85,'I masnadieri','Schiller',['Masnadieri','Raeuber']],
+          [87,'Il gabbiano','Cechov',['Gabbiano']],
+          [88,'Il giardino dei ciliegi','Cechov',['Giardino ciliegi']],
+          [89,'Zio Vanja','Cechov',['Zio Vania','Zio Vanja']],
+          [90,'Il processo','Kafka',['Processo']],
+          [91,'La metamorfosi','Kafka',['Metamorfosi','Trasformazione']],
+          [92,'Il castello','Kafka',['Castello']],
+          [93,'Siddhartha','Hesse',['Siddharta','Siddhartha']],
+          [94,'Demian','Hesse',['Demian']],
+          [95,'Il lupo della steppa','Hesse',['Lupo steppa']],
+          [96,'Metamorfosi','Ovidio',['Metamorfosi Ovidio','Metamorfosi Ovid','Trasformationi']],
+          [97,'Le mille e una notte','Galland',['Mille una notte']],
+          [99,'Meditazioni','Marco Aurelio',['Ricordi Marco Aurelio','Ricordi Aurelio','Ricordi Antonino','Pensieri Marco Aurelio']],
+          [100,'La Repubblica','Platone',['Repubblica Platone','Repubblica Plato','Dialoghi Platone']]]
+          aliases={'Dostoevskij':['Dosto*','Dostoiev*'],'Tolstoi':['Tolst*'],'Cechov':['Cech*','Chek*','Tchek*','Tchec*'],'Bronte':['Bront*'],'Ovidio':['Ovid*'],'Marco Aurelio':['Aureli*','Antonin*'],'Galland':['Galland','Anon*'],'Platone':['Plato*']}
+          def norm(t):return unicodedata.normalize('NFKD',str(t)).encode('ascii','ignore').decode().lower()
+          def fetch(url,path):
+            for attempt in range(3):
+              try:
+                x=requests.get(url,headers={'User-Agent':'BoundaryBayArchiveResearch/1.1 (historical Italian editions; respectful metadata queries)'},timeout=(15,50))
+                if x.status_code==429:time.sleep(min(30,int(x.headers.get('Retry-After','8'))));continue
+                x.raise_for_status();path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(x.content)
+                return x.json()
+              except Exception as e:
+                if attempt==2:raise
+                time.sleep(2)
+            raise RuntimeError('rate limit unresolved')
+          def search(row):
+            rank,title,author,terms=row;out={'rank':rank,'title':title,'author':author,'results':[],'errors':[]}
+            words=' OR '.join('title:('+t+')' for t in terms)
+            auth=' OR '.join('creator:('+a+')' for a in aliases.get(author,[author]))
+            # Query both metadata-qualified Italian records and older records whose language is missing.
+            qs=[f'mediatype:texts AND ({words}) AND (language:ita OR language:Italian OR language:it)',f'mediatype:texts AND ({words}) AND ({auth}) AND date:[1500-01-01T00:00:00Z TO 1930-12-31T23:59:59Z]']
+            seen=set()
+            for i,q in enumerate(qs):
+              params=[('q',q),('rows',35),('output','json')]+[('fl[]',x) for x in ['identifier','title','creator','date','language','description','licenseurl','rights','access-restricted-item']]
+              try:
+                data=fetch('https://archive.org/advancedsearch.php?'+urlencode(params),R/f'{rank:03d}/search_{i}.json')
+                for d in data.get('response',{}).get('docs',[]):
+                  if d['identifier'] not in seen:seen.add(d['identifier']);out['results'].append(d)
+              except Exception as e:out['errors'].append(str(e))
+              time.sleep(.6)
+            # Wikisource search is bibliographic discovery, not a claim of complete text.
+            try:
+              params={'action':'query','list':'search','srsearch':title+' '+author,'srnamespace':0,'srlimit':12,'format':'json','maxlag':5}
+              out['wikisource']=fetch('https://it.wikisource.org/w/api.php?'+urlencode(params),R/f'{rank:03d}/wikisource_search.json')
+            except Exception as e:out['errors'].append('Wikisource '+str(e))
+            # Preserve exact inventories only for historical candidates; never fetch restricted full texts.
+            out['inventories']=[]
+            candidates=[]
+            for d in out['results']:
+              date=str(d.get('date',''));year=re.match(r'(1[5-9]\d\d)',date)
+              if not year or int(year.group(1))>1930 or str(d.get('access-restricted-item','')).lower()=='true':continue
+              lang=norm(d.get('language',''))
+              dtitle=norm(d.get('title',''));creator=norm(d.get('creator',''))
+              author_match=any(a.replace('*','').lower() in creator for a in aliases.get(author,[author]))
+              italian=any(x in lang for x in ['ita','italian'])
+              if italian or author_match:candidates.append(d)
+            for d in candidates[:12]:
+              ident=d['identifier']
+              try:
+                meta=fetch('https://archive.org/metadata/'+ident,R/f'{rank:03d}/metadata_{ident}.json')
+                files=[{k:f.get(k) for k in ['name','size','sha1','md5','format','source','private']} for f in meta.get('files',[]) if f.get('format') in ['DjVuTXT','Text PDF','EPUB','DjVu XML','Abbyy GZ','Single Page Processed JP2 ZIP','Scandata']]
+                out['inventories'].append({'identifier':ident,'metadata':meta.get('metadata',{}),'files':files,'is_dark':meta.get('is_dark',False)})
+              except Exception as e:out['errors'].append(ident+': '+str(e))
+              time.sleep(.35)
+            (R/f'{rank:03d}/result.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+            print(rank,title,len(out['results']),'candidates',len(out['inventories']),'inventories',flush=True)
+            return out
+          results=[]
+          with ThreadPoolExecutor(max_workers=3) as ex:
+            for f in as_completed([ex.submit(search,r) for r in rows]):
+              try:results.append(f.result())
+              except Exception as e:print('ERROR',repr(e),flush=True)
+          (R/'results.json').write_text(json.dumps(sorted(results,key=lambda x:x['rank']),ensure_ascii=False,indent=2))
+          (R/'README.txt').write_text('Metadata-only search. No source is approved by search score; no restricted or protected full text copied. Complete source transfer and edition checks follow explicit selection.\n')
+          PY
+      - name: Preserve discovery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-remaining36-discovery
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
