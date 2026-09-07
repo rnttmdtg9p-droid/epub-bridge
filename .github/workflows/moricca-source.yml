@@ -1,0 +1,65 @@
+name: BB complete Moricca 1923 source
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/moricca-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Download selected historical original and verify archive-provided hashes
+        run: |
+          python - <<'PY'
+          import requests, json, hashlib, time, zipfile, io
+          from pathlib import Path
+          from urllib.parse import quote
+          R=Path('out');R.mkdir();log=[]
+          def get(u):
+            for i in range(3):
+              x=requests.get(u,headers={'User-Agent':'BoundaryBayArchiveResearch/1.1 (historical edition preservation)'},timeout=(15,100))
+              if x.status_code in (429,502,503,504):time.sleep(8);continue
+              x.raise_for_status();return x
+            raise RuntimeError('temporary failure')
+          ident='marco-aurelio-ricordi-moricca';d=R/'099';d.mkdir()
+          try:
+            raw=get('https://archive.org/metadata/'+ident).content;(d/'metadata.json').write_bytes(raw);meta=json.loads(raw)
+            if meta.get('is_dark') or str(meta.get('metadata',{}).get('access-restricted-item','')).lower()=='true':raise ValueError('restricted item not acquired')
+            files=meta.get('files',[])
+            chosen=[]
+            for fmt in ['DjVuTXT','DjVu XML','Text PDF','EPUB','Scandata']:
+              cand=[f for f in files if f.get('format')==fmt and not f.get('private')]
+              if cand:chosen.append(cand[0])
+            for f in chosen:
+              name=f['name'];size=int(f.get('size',0))
+              if size>90000000:continue
+              u='https://archive.org/download/'+ident+'/'+quote(name)
+              try:
+                b=get(u).content
+                sha=hashlib.sha1(b).hexdigest();good=not f.get('sha1') or f['sha1']==sha
+                if not good:raise ValueError('archive SHA1 mismatch')
+                (d/name).write_bytes(b);log.append({'rank':99,'identifier':ident,'url':u,'path':str((d/name).relative_to(R)),'bytes':len(b),'sha1':sha,'expected_sha1':f.get('sha1'),'sha1_match':good,'sha256':hashlib.sha256(b).hexdigest(),'format':f.get('format'),'status':'SAVED'})
+              except Exception as e:log.append({'rank':99,'url':u,'status':'FAILED','error':str(e)})
+              time.sleep(.7)
+          except Exception as e:log.append({'rank':99,'status':'FAILED','error':str(e)})
+          # Direct file URL was exposed by the publisher's public free-download landing page in the earlier acquisition evidence.
+          u='https://www.liberliber.eu/mediateca/libri/s/stendhal/la_certosa_di_parma/epub/stendhal_la_certosa_di_parma.epub'
+          try:
+            b=get(u).content
+            with zipfile.ZipFile(io.BytesIO(b)) as z:
+              if z.testzip() or z.read('mimetype')!=b'application/epub+zip':raise ValueError('EPUB invalid')
+            d=R/'078';d.mkdir();(d/'stendhal_la_certosa_di_parma.epub').write_bytes(b)
+            log.append({'rank':78,'url':u,'path':'078/stendhal_la_certosa_di_parma.epub','bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'status':'SAVED','reuse':'Original notices retained; review literary versus editorial rights'})
+          except Exception as e:log.append({'rank':78,'url':u,'status':'FAILED','error':str(e)})
+          (R/'manifest.json').write_text(json.dumps(log,ensure_ascii=False,indent=2));print(json.dumps(log,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-moricca-and-certosa-source
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
