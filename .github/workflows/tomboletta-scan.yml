@@ -1,0 +1,36 @@
+name: BB Tomboletta verified anthology scan
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/tomboletta-scan.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - run: |
+          python - <<'PY'
+          import requests,hashlib,json
+          from pathlib import Path
+          R=Path('out/082');R.mkdir(parents=True)
+          url='https://archive.org/download/maupassant-racconti-novelle/MaupassantRaccontiNovelle_text.pdf'
+          out={'rank':82,'identifier':'maupassant-racconti-novelle','url':url,'expected_sha1':'3435823adbe1e96c706121e9afcf78f0775eab5b'}
+          try:
+            r=requests.get(url,headers={'User-Agent':'BoundaryBaySourceScopeReview/1.1'},timeout=(15,150));r.raise_for_status();b=r.content
+            assert b.startswith(b'%PDF')
+            assert hashlib.sha1(b).hexdigest()==out['expected_sha1']
+            (R/'MaupassantRaccontiNovelle_text.pdf').write_bytes(b)
+            out.update(status='SAVED',bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),sha1_match=True,path='082/MaupassantRaccontiNovelle_text.pdf')
+          except Exception as e:out.update(status='FAILED',error=str(e))
+          Path('out/manifest.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-tomboletta-scan
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
