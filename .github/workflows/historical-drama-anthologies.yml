@@ -1,0 +1,63 @@
+name: BB historical drama and anthology sources
+on:
+  push:
+    branches: ['bb-source36-continue-20260907']
+    paths: ['.github/workflows/historical-drama-anthologies.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          from urllib.parse import quote
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          import requests,json,hashlib,time
+          R=Path('out');R.mkdir()
+          items=[(85,'imasnadieridramm00schi',True),(79,'zola-germinal-mercatelli',True),(61,'tolstoi-le-novelle-della-morte',True),(58,'wilde-salome-altri-drammi',False),(82,'maupassant-racconti-novelle',False),(82,'maupassant-racconti-cinti',False),(82,'maupassant-dolore-segreto',False)]
+          def get(u):
+            for i in range(3):
+              r=requests.get(u,headers={'User-Agent':'BoundaryBayHistoricalTextResearch/1.1'},timeout=(15,130))
+              if r.status_code in [429,502,503,504]:time.sleep(7);continue
+              r.raise_for_status();return r.content
+            raise RuntimeError('temporary transfer failure')
+          def run(item):
+            rank,ident,scan=item;d=R/f'{rank:03d}'/ident;d.mkdir(parents=True);o={'rank':rank,'identifier':ident,'assets':[],'errors':[],'scope_status':'REQUIRES_CONTENTS_REVIEW; anthology is not presumed to contain target'}
+            try:
+              raw=get('https://archive.org/metadata/'+ident);(d/'metadata.json').write_bytes(raw);m=json.loads(raw);o['metadata']=m.get('metadata',{})
+              if m.get('is_dark') or str(o['metadata'].get('access-restricted-item','')).lower()=='true':raise ValueError('restricted source not downloaded')
+              ff=[f for f in m.get('files',[]) if not f.get('private')]
+              picks=[]
+              for fmt in ['DjVuTXT','Scandata']:
+                cand=[f for f in ff if f.get('format')==fmt]
+                if cand:picks.append(cand[0])
+              if scan:
+                cand=[f for f in ff if f.get('format') in ['Text PDF','Additional Text PDF','Image Container PDF'] and int(f.get('size',0))<65000000]
+                cand.sort(key=lambda f:(f.get('format')=='Image Container PDF',int(f.get('size',0))))
+                if cand:picks.append(cand[0])
+              for f in picks:
+                name=f['name'];u='https://archive.org/download/'+ident+'/'+quote(name)
+                try:
+                  b=get(u);s=hashlib.sha1(b).hexdigest()
+                  if f.get('sha1') and s!=f['sha1']:raise ValueError('provider SHA1 mismatch')
+                  (d/name).write_bytes(b);o['assets'].append({'url':u,'path':str((d/name).relative_to(R)),'format':f.get('format'),'bytes':len(b),'sha1':s,'expected_sha1':f.get('sha1'),'sha1_match':not f.get('sha1') or s==f['sha1'],'sha256':hashlib.sha256(b).hexdigest()})
+                except Exception as e:o['errors'].append(str(e))
+                time.sleep(.5)
+            except Exception as e:o['errors'].append(str(e))
+            (d/'manifest.json').write_text(json.dumps(o,ensure_ascii=False,indent=2));print(rank,ident,len(o['assets']),o['errors'],flush=True);return o
+          out=[]
+          with ThreadPoolExecutor(max_workers=2) as ex:
+            for f in as_completed([ex.submit(run,i) for i in items]):out.append(f.result())
+          (R/'manifest.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-historical-drama-anthologies
+          path: out/
+          retention-days: 14
+          if-no-files-found: error
