@@ -1,4 +1,4 @@
-name: BB single title 079 - Germinal two-volume discovery
+name: BB single title 079 - Germinal Mercatelli 1893
 on:
   push:
     branches: ['bb-onebyone-sources-20260907']
@@ -8,43 +8,50 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
-      - name: Identify both Italian volumes and exact unrestricted scan filenames
+      - name: Download unrestricted Italian source scan and provider text, retain hash evidence
         run: |
-          mkdir -p output
+          mkdir -p output/files
           python - <<'PY'
-          from urllib.request import urlopen,Request
-          from urllib.parse import urlencode,quote
           from pathlib import Path
-          import json,time,hashlib
-          root=Path('output');logs=[]
-          def get(url,name):
+          from urllib.request import Request,urlopen
+          from urllib.parse import quote
+          import json,hashlib,time
+          iid='zola-germinal-mercatelli';root=Path('output');events=[]
+          def get(url,path,limit=65000000):
+            for attempt in range(3):
+              try:
+                with urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian literature)'}),timeout=90) as r:data=r.read(limit+1)
+                if len(data)>limit:raise ValueError('File exceeds transfer limit')
+                path.write_bytes(data);return data
+              except Exception:
+                if attempt==2:raise
+                time.sleep(8*(attempt+1))
+          raw=get('https://archive.org/metadata/'+iid,root/'metadata.json');obj=json.loads(raw);md=obj.get('metadata',{})
+          if str(md.get('access-restricted-item','false')).lower()=='true':raise ValueError('restricted item')
+          if md.get('language') not in ['ita','Italian','it']:raise ValueError('language mismatch')
+          picks=[f for f in obj['files'] if not f.get('private') and (f['name']=='ZolaGerminalMercatelli.pdf' or f['name'].endswith(('_djvu.txt','_djvu.xml','_scandata.xml')))]
+          for f in picks:
+            name=f['name'];url='https://archive.org/download/'+iid+'/'+quote(name)
+            rec={'url':url,'name':name,'format':f.get('format'),'upstream_size':f.get('size'),'upstream_md5':f.get('md5'),'upstream_sha1':f.get('sha1')}
             try:
-              data=urlopen(Request(url,headers={'User-Agent':'BoundaryBaySourceResearch/1.0 (historical Italian editions)'}),timeout=65).read(12000000)
-              (root/name).write_bytes(data);obj=json.loads(data)
-              logs.append({'url':url,'name':name,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'SAVED'})
-              return obj
-            except Exception as e:logs.append({'url':url,'name':name,'status':'FAILED','error':str(e)});return {}
-          for vol in [1,2]:
-            title=f'File:Zola - Germinal. {vol}, dopo il 1885.djvu'
-            url='https://commons.wikimedia.org/w/api.php?'+urlencode({'action':'query','titles':title,'prop':'imageinfo|revisions','iiprop':'url|size|sha1|extmetadata','rvprop':'content','format':'json'})
-            obj=get(url,f'commons_vol{vol}.json');print(json.dumps(obj,ensure_ascii=False)[:35000],flush=True);time.sleep(3)
-          query='title:(germinal OR germinale) AND (language:ita OR language:Italian) AND mediatype:texts'
-          url='https://archive.org/advancedsearch.php?'+urlencode({'q':query,'fl[]':['identifier','title','creator','date','language','description','collection'],'rows':100,'output':'json'},doseq=True)
-          obj=get(url,'ia_search.json');docs=obj.get('response',{}).get('docs',[]);print(json.dumps(docs,ensure_ascii=False),flush=True)
-          for d in docs:
-            iid=d['identifier'];date=str(d.get('date',''))
-            if date[:4].isdigit() and int(date[:4])>1930:continue
-            obj=get('https://archive.org/metadata/'+quote(iid),iid+'_metadata.json')
-            fs=[{k:f.get(k) for k in ['name','format','size','md5','sha1','private']} for f in obj.get('files',[]) if f.get('format') in ['Text PDF','Image Container PDF','DjVuTXT','Djvu XML','EPUB','Scandata'] or f.get('name','').endswith('_djvu.txt')]
-            print(json.dumps({'id':iid,'metadata':obj.get('metadata'),'files':fs},ensure_ascii=False),flush=True);time.sleep(1)
-          (root/'transfer_log.json').write_text(json.dumps(logs,ensure_ascii=False,indent=2),encoding='utf-8')
+              b=get(url,root/'files'/Path(name).name)
+              rec.update(status='SAVED',bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),md5=hashlib.md5(b).hexdigest(),sha1=hashlib.sha1(b).hexdigest())
+              rec['provider_size_match']=int(f['size'])==len(b) if f.get('size') else None
+              rec['provider_md5_match']=rec['md5']==f.get('md5') if f.get('md5') else None
+              rec['provider_sha1_match']=rec['sha1']==f.get('sha1') if f.get('sha1') else None
+              if False in (rec['provider_size_match'],rec['provider_md5_match'],rec['provider_sha1_match']):raise ValueError('Provider checksum mismatch')
+            except Exception as e:rec.update(status='FAILED',error=str(e))
+            events.append(rec);print(json.dumps(rec),flush=True);time.sleep(2)
+          (root/'transfer_log.json').write_text(json.dumps(events,ensure_ascii=False,indent=2),encoding='utf-8')
+          (root/'selection_notes.txt').write_text('The initial two-volume Commons lead (germinal01zola/germinal02zola) was identified as FRENCH and was not downloaded or accepted. This acquisition is the separate Italian Luigi Mercatelli translation, Treves 1893. No encrypted/restricted EPUB was requested. Source completeness and final commercial edition clearance require independent review.\n')
+          if not any(x['status']=='SAVED' and x['name'].endswith('.pdf') for x in events):raise ValueError('No scan saved')
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: bb-single-079-discovery
+          name: bb-single-079-germinal-mercatelli
           path: output/
           retention-days: 14
           compression-level: 6
