@@ -1,0 +1,104 @@
+name: Fetch Candido 1759 Source
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-candide-1759.yml'
+      - 'trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install OCR tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-ita poppler-utils jq
+
+      - name: Fetch complete 1759 Italian first volume
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p candide/source candide/pages candide/ocr candide/evidence
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36'
+          ID='QD6zh3qO9w4C'
+          COMBINED='GkgGAAAAQAAJ'
+
+          # Capture Google Books/Play metadata pages as provenance.
+          curl -L --fail --retry 5 --retry-all-errors -A "$UA"             "https://play.google.com/store/books/details?id=$ID"             -o candide/evidence/google-play-volume-1.html
+          curl -L --fail --retry 5 --retry-all-errors -A "$UA"             "https://www.googleapis.com/books/v1/volumes/$ID"             -o candide/evidence/google-books-api-volume-1.json
+          curl -L --fail --retry 5 --retry-all-errors -A "$UA"             "https://www.googleapis.com/books/v1/volumes/$COMBINED"             -o candide/evidence/google-books-api-combined.json
+
+          # Try the publisher-supplied full-view EPUB/PDF endpoints first.
+          for host in books.google.com books.google.co.ug books.google.it; do
+            curl -L --retry 2 --retry-all-errors -A "$UA"               "https://$host/books/download/Candido_o_L_ottimismo.epub?id=$ID&output=epub"               -o "candide/source/candido-1759-$host.epub.bin" || true
+          done
+
+          # Fetch viewer JSON in spaced groups. The public full-view reader
+          # returns signed scan-image URLs for current/adjacent pages.
+          python3 - <<'PY'
+          import concurrent.futures, json, pathlib, time, urllib.parse, urllib.request
+          out = pathlib.Path('candide')
+          ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36'
+          volume = 'QD6zh3qO9w4C'
+          hosts = ['books.google.com','books.google.co.ug','books.google.it','books.google.ca','books.google.co.uk']
+          # Volume 1 is 191 pages; retrieve physical pages PA1..PA191 plus front matter.
+          wanted = [f'PA{i}' for i in range(1,192)]
+          found = {}
+          def get(url, timeout=90):
+              req=urllib.request.Request(url,headers={'User-Agent':ua,'Accept':'*/*'})
+              with urllib.request.urlopen(req,timeout=timeout) as r:return r.read()
+          for n,pid in enumerate(wanted[::4]):
+              host=hosts[n%len(hosts)]
+              q=urllib.parse.urlencode({'id':volume,'pg':pid,'jscmd':'click3'})
+              raw=get(f'https://{host}/books?{q}')
+              (out/'evidence'/f'click3-{n:03d}-{pid}.json').write_bytes(raw)
+              data=json.loads(raw)
+              for p in data.get('page',[]):
+                  if p.get('pid') in wanted and p.get('src'): found[p['pid']]=p['src']
+              time.sleep(.25)
+          for n,pid in enumerate([p for p in wanted if p not in found]):
+              host=hosts[n%len(hosts)]
+              q=urllib.parse.urlencode({'id':volume,'pg':pid,'jscmd':'click3'})
+              raw=get(f'https://{host}/books?{q}')
+              data=json.loads(raw)
+              for p in data.get('page',[]):
+                  if p.get('pid') in wanted and p.get('src'): found[p['pid']]=p['src']
+              time.sleep(.25)
+          missing=[p for p in wanted if p not in found]
+          if missing: raise SystemExit(f'Missing signed URLs: {missing}')
+          (out/'evidence'/'signed-page-urls.json').write_text(json.dumps(found,indent=2))
+          def dl(args):
+              i,pid=args
+              raw=get(found[pid])
+              if len(raw)<10000 or not raw.startswith((b'\x89PNG',b'\xff\xd8\xff')):
+                  raise RuntimeError((pid,len(raw),raw[:40]))
+              suffix='.png' if raw.startswith(b'\x89PNG') else '.jpg'
+              (out/'pages'/f'{i:03d}-{pid}{suffix}').write_bytes(raw)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex:
+              list(ex.map(dl,enumerate(wanted,1)))
+          PY
+
+          # OCR each source page; keep page boundaries for source verification.
+          for image in candide/pages/*; do
+            base="$(basename "$image")"
+            tesseract "$image" "candide/ocr/${base%.*}" -l ita --psm 6 2>/dev/null
+          done
+          find candide/ocr -type f -name '*.txt' -print0 | sort -z | xargs -0 cat             > candide/source/Candido_1759_Italian_OCR_raw.txt
+
+          find candide -type f -print0 | sort -z | xargs -0 sha256sum > candide/SHA256SUMS.txt
+          find candide -type f | sort > candide/FILE_LIST.txt
+          du -ah candide | sort -h | tail -100 > candide/FILE_SIZES.txt
+
+      - name: Upload Candido source
+        uses: actions/upload-artifact@v4
+        with:
+          name: candido-1759-complete-source
+          path: candide/
+          compression-level: 6
+          if-no-files-found: error
+          retention-days: 7
