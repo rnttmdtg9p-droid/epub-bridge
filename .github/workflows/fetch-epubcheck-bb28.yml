@@ -1,0 +1,29 @@
+name: Fetch EPUBCheck for BB28
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-epubcheck-bb28.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Download official pinned validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p acquired
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 180 https://github.com/w3c/epubcheck/releases/download/v5.3.0/epubcheck-5.3.0.zip -o acquired/epubcheck-5.3.0.zip
+          unzip -t acquired/epubcheck-5.3.0.zip
+          cd acquired
+          sha256sum epubcheck-5.3.0.zip > SHA256SUMS.txt
+          printf '%s\n' 'Official W3C EPUBCheck release v5.3.0' 'https://github.com/w3c/epubcheck/releases/tag/v5.3.0' > SOURCE.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb28-epubcheck-5.3.0
+          path: acquired/
+          retention-days: 30
+          if-no-files-found: error
