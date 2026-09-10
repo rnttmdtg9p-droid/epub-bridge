@@ -1,0 +1,81 @@
+name: Fetch Frankenstein Public-Domain Cover Source
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-frankenstein-cover-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Download original artwork with a pinned public mirror fallback
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p frankenstein-source
+          python - <<'PY'
+          import urllib.request, json, hashlib, datetime
+          from pathlib import Path
+          root = Path('frankenstein-source')
+          original_url = 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg'
+          source_page = 'https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg'
+          mirror_url = 'https://raw.githubusercontent.com/SPWilliford/GraphicsProject/6a699114e3ebb873a1ebf000487fd11440fdd9d7/artwork/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg'
+          headers = {'User-Agent': 'BoundaryBayClassics-SourceBridge/1.0 (public-domain art acquisition)'}
+          failures = []
+          for url in [original_url, mirror_url]:
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=35) as response:
+                      data = response.read(25_000_001)
+                      resolved_url = response.geturl()
+                  if not data.startswith(b'\xff\xd8') or len(data) < 100_000 or len(data) > 25_000_000:
+                      raise ValueError('Response is not an acceptable original JPEG')
+                  path = root / 'Friedrich_Wanderer_above_the_Sea_of_Fog_ORIGINAL.jpg'
+                  path.write_bytes(data)
+                  git_blob_sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+                  manifest = {
+                      'work': 'Wanderer above the Sea of Fog',
+                      'artist': 'Caspar David Friedrich',
+                      'date': 'circa 1817-1818',
+                      'acquired_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                      'source_record': source_page,
+                      'original_file_url': original_url,
+                      'downloaded_from': url,
+                      'resolved_url': resolved_url,
+                      'bytes': len(data),
+                      'sha256': hashlib.sha256(data).hexdigest(),
+                      'sha1': hashlib.sha1(data).hexdigest(),
+                      'git_blob_sha1': git_blob_sha,
+                      'matches_inspected_mirror_blob': git_blob_sha == '50da15ca8518722a7d3ad8f9e918d7ee79f05200',
+                      'commons_recorded_dimensions': [2327, 2980],
+                      'rights_basis': 'Commons source record identifies the underlying painting as public domain and the image as a faithful two-dimensional reproduction. See the linked PD-Art and Public Domain Mark record; no new rights claim is made here.',
+                      'use_note': 'Thematic cover art, not an original illustration of Frankenstein.',
+                      'previous_download_errors': failures
+                  }
+                  (root / 'source_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+                  print(json.dumps(manifest, ensure_ascii=False, indent=2))
+                  break
+              except Exception as exc:
+                  failures.append({'url': url, 'error': str(exc)})
+          else:
+              raise RuntimeError(json.dumps(failures))
+          try:
+              with urllib.request.urlopen(urllib.request.Request(source_page, headers=headers), timeout=20) as response:
+                  page = response.read(2_000_000)
+              (root / 'commons_source_record.html').write_bytes(page)
+          except Exception as exc:
+              (root / 'commons_record_retrieval_note.txt').write_text(str(exc), encoding='utf-8')
+          PY
+      - name: Transfer verified source image and provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: frankenstein-friedrich-public-domain-source
+          path: frankenstein-source/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
