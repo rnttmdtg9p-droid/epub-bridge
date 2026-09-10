@@ -1,0 +1,50 @@
+name: BB28 Fal individual asset acquisition
+on:
+  push:
+    paths:
+      - '.github/workflows/bb28-fal-assets.yml'
+      - 'bb28-fal-assets/*.json'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download only the requested generated image files
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib, urllib.request, urllib.parse, hashlib, time
+          paths=sorted(pathlib.Path('bb28-fal-assets').glob('*.json'))
+          requests=json.loads(paths[-1].read_text()) if paths else [{'file':'004_01_attempt01.jpg','url':'https://v3b.fal.media/files/b/0aa9eb68/Tqs02S6iONoDPFa0Sd8yn_bwKmi6XX.jpg','request_id':'01a08d7b-8c48-7ad1-acc9-735a16eed611'}]
+          assert 1 <= len(requests) <= 24
+          out=pathlib.Path('acquired'); out.mkdir(exist_ok=True)
+          report=[]
+          for item in requests:
+              name=item['file']; u=item['url']; p=urllib.parse.urlparse(u)
+              assert p.scheme=='https' and (p.hostname=='fal.media' or p.hostname.endswith('.fal.media'))
+              assert pathlib.Path(name).name==name and name.endswith(('.jpg','.png','.webp'))
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(u,headers={'User-Agent':'BoundaryBay-AssetAcquisition/1.0'})
+                      with urllib.request.urlopen(req,timeout=45) as r:
+                          raw=r.read(16000001)
+                      assert 1000 < len(raw) < 16000000
+                      assert raw[:2]==b'\xff\xd8' or raw[:8]==b'\x89PNG\r\n\x1a\n' or raw[:4]==b'RIFF'
+                      (out/name).write_bytes(raw)
+                      report.append(dict(item,bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()))
+                      break
+                  except Exception:
+                      if attempt==2: raise
+                      time.sleep(2*(attempt+1))
+          (out/'asset_acquisition.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({'files':len(report),'bytes':sum(x['bytes'] for x in report)}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb28-fal-assets-${{ github.run_id }}
+          path: acquired/
+          retention-days: 30
+          if-no-files-found: error
