@@ -1,0 +1,44 @@
+name: Test Italian translation batching
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test-huck-translation.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Translate sample and validate separators
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet requests
+          python3 - <<'PY'
+          import json, re, requests
+          samples = [
+              "You don’t know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain’t no matter.",
+              "The widow she cried over me, and called me a poor lost lamb, but she never meant no harm by it.",
+              "Pretty soon I wanted to smoke, and asked the widow to let me. But she wouldn’t."
+          ]
+          marker = "\n\n[[[BBSEP]]] \n\n"
+          joined = marker.join(samples)
+          url = "https://translate.googleapis.com/translate_a/single"
+          params = {"client":"gtx","sl":"en","tl":"it","dt":"t","q":joined}
+          response = requests.get(url, params=params, timeout=60, headers={"User-Agent":"Mozilla/5.0"})
+          response.raise_for_status()
+          data = response.json()
+          translated = "".join(part[0] for part in data[0] if part and part[0])
+          normalized = re.sub(r"\s*\[\[\[\s*BBSEP\s*\]\]\]\s*", "[[[BBSEP]]]", translated, flags=re.I)
+          parts = normalized.split("[[[BBSEP]]]")
+          result = {"status":response.status_code,"raw":translated,"parts":parts,"part_count":len(parts)}
+          open("translation-test.json","w",encoding="utf-8").write(json.dumps(result,ensure_ascii=False,indent=2))
+          if len(parts) != len(samples):
+              raise SystemExit(f"separator failure: expected {len(samples)}, got {len(parts)}")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: huck-translation-test
+          path: translation-test.json
+          retention-days: 2
