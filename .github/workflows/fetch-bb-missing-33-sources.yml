@@ -1,0 +1,223 @@
+name: Fetch BB Italian Missing 33 Sources
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-bb-missing-33-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Run three-attempt source recovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, re, time, unicodedata, urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          from difflib import SequenceMatcher
+
+          books = [
+            (36,"Le avventure di Huckleberry Finn","Mark Twain"),
+            (43,"Dracula","Bram Stoker"),
+            (46,"Ragione e sentimento","Jane Austen"),
+            (47,"Emma","Jane Austen"),
+            (49,"Cime tempestose","Emily Brontë"),
+            (50,"Grandi speranze","Charles Dickens"),
+            (54,"Le avventure di Sherlock Holmes","Arthur Conan Doyle"),
+            (55,"Il mastino dei Baskerville","Arthur Conan Doyle"),
+            (58,"L'importanza di chiamarsi Ernesto","Oscar Wilde"),
+            (59,"Il fantasma di Canterville","Oscar Wilde"),
+            (61,"La morte di Ivan Il'ič","Lev Tolstoj"),
+            (63,"I fratelli Karamazov","Fëdor Dostoevskij"),
+            (64,"L'idiota","Fëdor Dostoevskij"),
+            (65,"Memorie dal sottosuolo","Fëdor Dostoevskij"),
+            (70,"Notre-Dame de Paris","Victor Hugo"),
+            (74,"La signora delle camelie","Alexandre Dumas figlio"),
+            (75,"Papà Goriot","Honoré de Balzac"),
+            (78,"La Certosa di Parma","Stendhal"),
+            (79,"Germinale","Émile Zola"),
+            (81,"Bel-Ami","Guy de Maupassant"),
+            (82,"Boule de suif","Guy de Maupassant"),
+            (85,"I masnadieri","Friedrich Schiller"),
+            (87,"Il gabbiano","Anton Čechov"),
+            (88,"Il giardino dei ciliegi","Anton Čechov"),
+            (89,"Zio Vanja","Anton Čechov"),
+            (90,"Il processo","Franz Kafka"),
+            (91,"La metamorfosi","Franz Kafka"),
+            (92,"Il castello","Franz Kafka"),
+            (93,"Siddhartha","Hermann Hesse"),
+            (94,"Demian","Hermann Hesse"),
+            (95,"Il lupo della steppa","Hermann Hesse"),
+            (100,"La Repubblica","Platone"),
+          ]
+          out=Path("recovery"); out.mkdir()
+          ses=requests.Session(); ses.headers["User-Agent"]="BoundaryBaySourceRecovery/5.0.10 (+public-domain research)"
+          ledger=[]
+
+          def norm(s):
+            s=unicodedata.normalize("NFKD",s or "").encode("ascii","ignore").decode().lower()
+            return re.sub(r"[^a-z0-9]+"," ",s).strip()
+
+          def score(a,b):
+            return SequenceMatcher(None,norm(a),norm(b)).ratio()
+
+          def save_response(rank, label, url, resp):
+            ext=".bin"
+            ct=resp.headers.get("content-type","").lower()
+            cd=resp.headers.get("content-disposition","")
+            m=re.search(r'filename="?([^";]+)',cd,re.I)
+            if m: ext=Path(m.group(1)).suffix or ext
+            elif "epub" in ct or resp.content[:2]==b"PK": ext=".epub"
+            elif "pdf" in ct or resp.content[:4]==b"%PDF": ext=".pdf"
+            elif "text/plain" in ct: ext=".txt"
+            elif "html" in ct: ext=".html"
+            p=out/f"{rank:03d}_{label}{ext}"
+            p.write_bytes(resp.content)
+            return str(p), len(resp.content), ct
+
+          def valid_payload(resp):
+            return resp.status_code==200 and len(resp.content)>5000 and (
+              resp.content[:2]==b"PK" or resp.content[:4]==b"%PDF" or
+              "epub" in resp.headers.get("content-type","").lower() or
+              "text/plain" in resp.headers.get("content-type","").lower())
+
+          for rank,title,author in books:
+            rec={"rank":rank,"title":title,"author":author,"status":"SOURCE_NOT_FOUND","accepted":None,"attempts":[]}
+
+            # Attempt 1: Liber Liber title/author search and downloadable file discovery.
+            att={"attempt":1,"strategy":"Liber Liber search and work-page download discovery","queries":[],"candidates":[]}
+            q=f'"{title}" {author}'
+            url="https://liberliber.it/?s="+urllib.parse.quote_plus(q)
+            att["queries"].append(url)
+            try:
+              r=ses.get(url,timeout=30); att["http_status"]=r.status_code
+              soup=BeautifulSoup(r.text,"html.parser")
+              links=[]
+              for a in soup.select("a[href]"):
+                h=urllib.parse.urljoin(url,a.get("href"))
+                txt=a.get_text(" ",strip=True)
+                if "liberliber.it" in h and score(txt+" "+h,title)>=0.30:
+                  links.append(h)
+              for page in list(dict.fromkeys(links))[:8]:
+                try:
+                  pr=ses.get(page,timeout=30)
+                  ps=BeautifulSoup(pr.text,"html.parser")
+                  for a in ps.select("a[href]"):
+                    h=urllib.parse.urljoin(page,a.get("href"))
+                    if re.search(r"\.(epub|pdf|odt|txt)(?:$|\?)",h,re.I):
+                      att["candidates"].append({"page":page,"url":h})
+                      dr=ses.get(h,timeout=60)
+                      if valid_payload(dr):
+                        path,size,ct=save_response(rank,"attempt1_liberliber",h,dr)
+                        rec["accepted"]={"attempt":1,"repository":"Liber Liber","url":h,"landing_page":page,"path":path,"bytes":size,"content_type":ct,"rights_basis":"Liber Liber public-domain library; final edition review required"}
+                        rec["status"]="SOURCE_CANDIDATE_FOUND"; break
+                  if rec["accepted"]: break
+                except Exception as e: att.setdefault("errors",[]).append(f"{page}: {type(e).__name__}: {e}")
+            except Exception as e: att.setdefault("errors",[]).append(f"{type(e).__name__}: {e}")
+            rec["attempts"].append(att)
+
+            # Attempt 2: Italian Wikisource search and WS Export.
+            if not rec["accepted"]:
+              att={"attempt":2,"strategy":"Italian Wikisource API plus WS Export EPUB","queries":[],"candidates":[]}
+              api="https://it.wikisource.org/w/api.php"
+              params={"action":"query","list":"search","srnamespace":0,"srlimit":10,"srsearch":f'intitle:"{title}" {author}',"format":"json"}
+              att["queries"].append(api+"?"+urllib.parse.urlencode(params))
+              try:
+                r=ses.get(api,params=params,timeout=30); att["http_status"]=r.status_code
+                hits=r.json().get("query",{}).get("search",[])
+                hits=sorted(hits,key=lambda x:score(x.get("title",""),title),reverse=True)
+                for hit in hits[:5]:
+                  page=hit.get("title","")
+                  att["candidates"].append({"page":page,"score":score(page,title),"url":"https://it.wikisource.org/wiki/"+urllib.parse.quote(page.replace(" ","_"))})
+                  for export_url in [
+                    "https://ws-export.wmcloud.org/?"+urllib.parse.urlencode({"lang":"it","format":"epub","page":page}),
+                    "https://ws-export.wmcloud.org/tool/book.php?"+urllib.parse.urlencode({"lang":"it","format":"epub","page":page}),
+                  ]:
+                    try:
+                      dr=ses.get(export_url,timeout=120)
+                      if valid_payload(dr):
+                        path,size,ct=save_response(rank,"attempt2_wikisource",export_url,dr)
+                        rec["accepted"]={"attempt":2,"repository":"Italian Wikisource / WS Export","url":export_url,"landing_page":"https://it.wikisource.org/wiki/"+urllib.parse.quote(page.replace(" ","_")),"path":path,"bytes":size,"content_type":ct,"rights_basis":"Wikisource CC BY-SA/public-domain source; page and export completeness review required"}
+                        rec["status"]="SOURCE_CANDIDATE_FOUND"; break
+                    except Exception as e: att.setdefault("errors",[]).append(f"{export_url}: {type(e).__name__}: {e}")
+                  if rec["accepted"]: break
+              except Exception as e: att.setdefault("errors",[]).append(f"{type(e).__name__}: {e}")
+              rec["attempts"].append(att)
+
+            # Attempt 3: Project Gutenberg Italian catalogue, then IA Italian scans.
+            if not rec["accepted"]:
+              att={"attempt":3,"strategy":"Gutendex Italian catalogue plus Internet Archive Italian edition search","queries":[],"candidates":[]}
+              gu="https://gutendex.com/books?"+urllib.parse.urlencode({"languages":"it","search":title+" "+author})
+              att["queries"].append(gu)
+              try:
+                r=ses.get(gu,timeout=30); att["gutendex_http_status"]=r.status_code
+                results=r.json().get("results",[])
+                results=sorted(results,key=lambda x:score(x.get("title",""),title)+0.2*max([score(a.get("name",""),author) for a in x.get("authors",[])] or [0]),reverse=True)
+                for b in results[:10]:
+                  cand={"id":b.get("id"),"title":b.get("title"),"authors":[a.get("name") for a in b.get("authors",[])],"languages":b.get("languages"),"formats":b.get("formats",{})}
+                  att["candidates"].append(cand)
+                  if score(b.get("title",""),title)<0.48 or "it" not in b.get("languages",[]): continue
+                  fm=b.get("formats",{})
+                  h=fm.get("application/epub+zip") or next((v for k,v in fm.items() if "epub" in k and v),None)
+                  if h:
+                    dr=ses.get(h,timeout=90)
+                    if valid_payload(dr):
+                      path,size,ct=save_response(rank,"attempt3_gutenberg",h,dr)
+                      rec["accepted"]={"attempt":3,"repository":"Project Gutenberg via Gutendex","url":h,"landing_page":f"https://www.gutenberg.org/ebooks/{b.get('id')}","path":path,"bytes":size,"content_type":ct,"rights_basis":"Project Gutenberg public-domain catalogue; Italian edition and completeness review required"}
+                      rec["status"]="SOURCE_CANDIDATE_FOUND"; break
+              except Exception as e: att.setdefault("errors",[]).append(f"Gutendex: {type(e).__name__}: {e}")
+
+              if not rec["accepted"]:
+                iaq=f'title:("{title}") AND (creator:("{author}") OR description:("{author}")) AND (language:ita OR language:Italian)'
+                ia="https://archive.org/advancedsearch.php?"+urllib.parse.urlencode({"q":iaq,"fl[]":["identifier","title","creator","date","year","rights","licenseurl"],"rows":10,"output":"json"})
+                att["queries"].append(ia)
+                try:
+                  rr=ses.get(ia,timeout=45); att["ia_http_status"]=rr.status_code
+                  docs=rr.json().get("response",{}).get("docs",[])
+                  for d in docs:
+                    ident=d.get("identifier")
+                    c={"identifier":ident,"title":d.get("title"),"creator":d.get("creator"),"date":d.get("date") or d.get("year"),"rights":d.get("rights"),"licenseurl":d.get("licenseurl"),"url":f"https://archive.org/details/{ident}"}
+                    att["candidates"].append(c)
+                    if not ident or score(str(d.get("title","")),title)<0.45: continue
+                    md=ses.get(f"https://archive.org/metadata/{ident}",timeout=45).json()
+                    files=md.get("files",[])
+                    choices=[f.get("name") for f in files if re.search(r"\.(epub|pdf|txt)$",f.get("name",""),re.I) and "text pdf" not in f.get("name","").lower()]
+                    if choices:
+                      h=f"https://archive.org/download/{ident}/"+urllib.parse.quote(choices[0])
+                      dr=ses.get(h,timeout=120)
+                      if valid_payload(dr):
+                        path,size,ct=save_response(rank,"attempt3_archive",h,dr)
+                        rec["accepted"]={"attempt":3,"repository":"Internet Archive","url":h,"landing_page":f"https://archive.org/details/{ident}","path":path,"bytes":size,"content_type":ct,"rights_basis":"Candidate only; edition date, completeness and reuse status require manual review"}
+                        rec["status"]="SOURCE_CANDIDATE_REVIEW_REQUIRED"; break
+                except Exception as e: att.setdefault("errors",[]).append(f"Internet Archive: {type(e).__name__}: {e}")
+              rec["attempts"].append(att)
+
+            ledger.append(rec)
+            (out/"source_recovery_ledger.json").write_text(json.dumps(ledger,ensure_ascii=False,indent=2),encoding="utf-8")
+            print(rank,title,rec["status"],rec["accepted"] and rec["accepted"]["repository"],flush=True)
+            time.sleep(0.5)
+
+          summary={"titles":len(ledger),"found":sum(x["accepted"] is not None for x in ledger),"unresolved":sum(x["accepted"] is None for x in ledger),"found_ranks":[x["rank"] for x in ledger if x["accepted"]],"unresolved_ranks":[x["rank"] for x in ledger if not x["accepted"]]}
+          (out/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
+          PY
+
+          find recovery -type f -print0 | sort -z | xargs -0 sha256sum > recovery/SHA256SUMS.txt
+          find recovery -type f | sort > recovery/FILE_LIST.txt
+
+      - name: Upload recovered source candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-italian-missing-33-source-recovery
+          path: recovery/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
