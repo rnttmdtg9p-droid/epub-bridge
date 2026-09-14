@@ -10,32 +10,31 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Translate sample and validate separators
+      - name: Install Argos and translate sample
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m pip install --quiet requests
+          python3 -m pip install --quiet argostranslate
           python3 - <<'PY'
-          import json, re, requests
+          import json
+          import argostranslate.package
+          import argostranslate.translate
+          argostranslate.package.update_package_index()
+          packages = argostranslate.package.get_available_packages()
+          package = next(p for p in packages if p.from_code == "en" and p.to_code == "it")
+          path = package.download()
+          argostranslate.package.install_from_path(path)
+          src = next(x for x in argostranslate.translate.get_installed_languages() if x.code == "en")
+          dst = next(x for x in argostranslate.translate.get_installed_languages() if x.code == "it")
+          engine = src.get_translation(dst)
           samples = [
               "You don’t know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain’t no matter.",
               "The widow she cried over me, and called me a poor lost lamb, but she never meant no harm by it.",
               "Pretty soon I wanted to smoke, and asked the widow to let me. But she wouldn’t."
           ]
-          marker = "\n\n[[[BBSEP]]] \n\n"
-          joined = marker.join(samples)
-          url = "https://translate.googleapis.com/translate_a/single"
-          params = {"client":"gtx","sl":"en","tl":"it","dt":"t","q":joined}
-          response = requests.get(url, params=params, timeout=60, headers={"User-Agent":"Mozilla/5.0"})
-          response.raise_for_status()
-          data = response.json()
-          translated = "".join(part[0] for part in data[0] if part and part[0])
-          normalized = re.sub(r"\s*\[\[\[\s*BBSEP\s*\]\]\]\s*", "[[[BBSEP]]]", translated, flags=re.I)
-          parts = normalized.split("[[[BBSEP]]]")
-          result = {"status":response.status_code,"raw":translated,"parts":parts,"part_count":len(parts)}
+          result = {"package":str(package),"parts":[engine.translate(s) for s in samples]}
           open("translation-test.json","w",encoding="utf-8").write(json.dumps(result,ensure_ascii=False,indent=2))
-          if len(parts) != len(samples):
-              raise SystemExit(f"separator failure: expected {len(samples)}, got {len(parts)}")
+          print(json.dumps(result,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
