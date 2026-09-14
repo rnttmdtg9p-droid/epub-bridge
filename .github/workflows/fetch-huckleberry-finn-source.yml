@@ -1,0 +1,44 @@
+name: Fetch Huckleberry Finn source
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fetch-huckleberry-finn-source.yml'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download immutable source files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifact
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://www.gutenberg.org/cache/epub/76/pg76-images-3.epub' \
+            -o artifact/pg76-images-3.epub
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://www.gutenberg.org/cache/epub/76/pg76.txt' \
+            -o artifact/pg76.txt
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://www.gutenberg.org/ebooks/76' \
+            -o artifact/project-gutenberg-record.html
+          sha256sum artifact/* > artifact/SHA256SUMS.txt
+          python3 - <<'PY'
+          import zipfile
+          p='artifact/pg76-images-3.epub'
+          with zipfile.ZipFile(p) as z:
+              bad=z.testzip()
+              if bad:
+                  raise SystemExit(f'CRC failure: {bad}')
+              names=z.namelist()
+          print(f'EPUB members: {len(names)}')
+          PY
+      - name: Upload source bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: huckleberry-finn-source-76
+          path: artifact/
+          if-no-files-found: error
+          retention-days: 7
