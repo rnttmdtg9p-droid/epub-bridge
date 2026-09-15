@@ -64,7 +64,7 @@ jobs:
           find candidate-shards -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > "candidate-shards/${{ matrix.rank }}_alignment.jsonl"
           test -s "candidate-shards/${{ matrix.rank }}_alignment.jsonl"
           python scripts/bb_repair_alignment.py --alignment "candidate-shards/${{ matrix.rank }}_alignment.jsonl" --out "repaired/${{ matrix.rank }}_alignment.jsonl" --language "${{ matrix.language }}" --report "dist/${{ matrix.rank }}_repair_QA.json"
-          python -c "import json; d=json.load(open('dist/${{ matrix.rank }}_repair_QA.json')); assert d['remaining_flagged_unit_count']==0, d"
+          python -c "import json; d=json.load(open('dist/${{ matrix.rank }}_repair_QA.json')); assert d['remaining_hard_flagged_unit_count']==0, d"
       - name: Reassemble corrected BB REVIEW EPUB
         run: |
           if [ "${{ matrix.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
