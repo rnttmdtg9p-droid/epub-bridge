@@ -9,6 +9,7 @@ import json
 import re
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -41,6 +42,17 @@ def api_json(lang: str, params: dict, retries: int = 4) -> dict:
             request = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
             with urllib.request.urlopen(request, timeout=90) as response:
                 return json.load(response)
+        except urllib.error.HTTPError as exc:
+            error = exc
+            if exc.code == 429:
+                retry_after = exc.headers.get("Retry-After", "")
+                try:
+                    delay = max(12, int(retry_after))
+                except ValueError:
+                    delay = 20
+                time.sleep(delay * (attempt + 1))
+            else:
+                time.sleep(2 ** attempt)
         except Exception as exc:
             error = exc
             time.sleep(2 ** attempt)
@@ -91,7 +103,7 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
                 walk(child, depth + 1)
         else:
             ordered.append(page)
-        time.sleep(0.05)
+        time.sleep(2.5)
 
     start_children = child_links(root_page, canonical_root)
     if start_children:
@@ -101,6 +113,7 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
         level_two = [s for s in root_page.get("sections", []) if str(s.get("level")) == "2"]
         if expected > 1 and len(level_two) >= expected:
             for section in level_two[:expected]:
+                time.sleep(2.5)
                 virtual = parse_page(lang, canonical_root, str(section["index"]))
                 virtual["title"] = f'{canonical_root}/{section.get("line", section["index"])}'
                 ordered.append(virtual)
