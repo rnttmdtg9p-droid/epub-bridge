@@ -103,11 +103,16 @@ def split_long_block(text: str, limit: int = 1500) -> list[str]:
     return out
 
 
-def extract_units(body: str) -> tuple[str, list[list[Unit]]]:
-    matches = list(ROMAN_CHAPTER.finditer(body))
+def extract_units(body: str, meta: dict) -> tuple[str, list[list[Unit]]]:
+    pattern = re.compile(meta.get("section_pattern", ROMAN_CHAPTER.pattern), re.I | re.M)
+    matches = list(pattern.finditer(body))
+    expected = int(meta.get("expected_chapters", 0))
+    if meta.get("take_last_matches") and expected and len(matches) >= expected:
+        matches = matches[-expected:]
     if len(matches) < 2:
         raise ValueError(f"Expected a chaptered source; found {len(matches)} chapter headings")
-    preface_start = body.find("How these papers")
+    preface_marker = meta.get("preface_marker", "How these papers")
+    preface_start = body.find(preface_marker) if preface_marker else -1
     preface = body[preface_start:matches[0].start()].strip() if preface_start >= 0 else ""
     chapters: list[list[Unit]] = []
     for idx, match in enumerate(matches):
@@ -117,6 +122,8 @@ def extract_units(body: str) -> tuple[str, list[list[Unit]]]:
         blocks = [b for b in blocks if b]
         chapter_units: list[Unit] = []
         ordinal = 0
+        if meta.get("include_source_heading"):
+            chapter_units.append(Unit(f"c{idx+1:02d}-u0000", idx + 1, "heading", normalize_block(match.group(0))))
         for block in blocks:
             kind = "heading" if ordinal < 3 and len(block) < 140 and "\n" not in block else "paragraph"
             for piece in split_long_block(block):
@@ -256,6 +263,7 @@ html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;co
 
     title = meta["italian_title"]
     author = meta["author"]
+    section_label = meta.get("section_label", "Capitolo")
     pub_uuid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"boundarybay:italian:{meta['rank']}:{title}:{source['source_sha256']}"))
     pages: list[tuple[str, str, str]] = []
     pages.append(("cover", "Copertina", xhtml_page("Copertina", '<div class="cover"><img src="../images/cover.jpg" alt="Copertina"/></div>')))
@@ -263,13 +271,14 @@ html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;co
     rights = "Testo originale di pubblico dominio negli Stati Uniti e nell’Unione europea. Traduzione italiana e apparati editoriali © 2026 Boundary Bay Classics."
     pages.append(("copyright", "Copyright e fonte", xhtml_page("Copyright e fonte", f'<section><h1>Copyright e fonte</h1><p class="noindent">{esc(rights)}</p><p class="source-note">Fonte primaria: Project Gutenberg eBook #{source["pg_id"]}, <i>{esc(meta["original_title"])}</i>, in {esc(meta["source_language_label"])}. Record: {esc(source["metadata_url"])}. SHA-256 del testo UTF-8: <code>{source["source_sha256"]}</code>.</p><p class="source-note">Traduzione moderna, capitolo per capitolo, assistita da {MADLAD}. Non viene attribuita a un traduttore umano. Il precedente secondo passaggio Gemini non era configurato per questa esecuzione; nessun modello sostitutivo è stato usato.</p></section>')))
     pages.append(("author", "L’autore", xhtml_page("L’autore", f'<section><h1>{esc(author)}</h1><p class="noindent">{esc(meta["author_note"])}</p></section>')))
-    toc_links = ''.join(f'<li><a href="chapter_{i:02d}.xhtml">Capitolo {i}</a></li>' for i in range(1, len(chapters)+1))
+    toc_links = ''.join(f'<li><a href="chapter_{i:02d}.xhtml">{esc(section_label)} {i}</a></li>' for i in range(1, len(chapters)+1))
     pages.append(("contents", "Indice", xhtml_page("Indice", f'<nav epub:type="toc" xmlns:epub="http://www.idpf.org/2007/ops"><h1>Indice</h1><ol>{toc_links}</ol></nav>')))
     if preface:
         pages.append(("notice", "Nota iniziale", xhtml_page("Nota iniziale", '<section><h1>Nota iniziale</h1><p class="noindent">Questa breve nota introduttiva appartiene alla fonte originale; è conservata nel registro di allineamento e sarà sottoposta alla revisione editoriale finale.</p></section>')))
     for i, chapter in enumerate(chapters, 1):
-        body = f'<section epub:type="chapter" xmlns:epub="http://www.idpf.org/2007/ops"><h1>Capitolo {i}</h1>' + ''.join(paragraph_html(u) for u in chapter) + '</section>'
-        pages.append((f"chapter_{i:02d}", f"Capitolo {i}", xhtml_page(f"Capitolo {i}", body, "source-text bb-chapter-document chapter")))
+        label = f"{section_label} {i}"
+        body = f'<section epub:type="chapter" xmlns:epub="http://www.idpf.org/2007/ops"><h1>{esc(label)}</h1>' + ''.join(paragraph_html(u) for u in chapter) + '</section>'
+        pages.append((f"chapter_{i:02d}", label, xhtml_page(label, body, "source-text bb-chapter-document chapter")))
     apparatus = f'''<section><h1>Nota editoriale</h1><p class="noindent">Questa edizione segue integralmente la struttura in {len(chapters)} capitoli della fonte inglese autenticata. La prima bozza italiana è stata prodotta per unità semantiche con <i>{MADLAD}</i>, lo stesso traduttore di prima passata usato per <i>Le avventure di Huckleberry Finn</i>. Nomi, date, documenti e cambi di voce dell’originale sono mantenuti come elementi strutturali dell’opera.</p><p class="noindent">Non sono state inserite illustrazioni narrative generate. La ricerca della fonte ha privilegiato l’edizione testuale completa; questa copia di revisione adotta quindi un assetto onestamente privo di tavole storiche finché una serie illustrata, esatta per l’opera e chiaramente riutilizzabile, non venga autenticata.</p></section>'''
     pages.append(("afterword", "Nota editoriale", xhtml_page("Nota editoriale", apparatus)))
     pages.append(("credits", "Crediti", xhtml_page("Crediti", f'<section><h1>Crediti</h1><p class="noindent">Fonte e trascrizione: Project Gutenberg. Traduzione assistita: {MADLAD}. Progetto editoriale e produzione EPUB: Boundary Bay Classics.</p></section>')))
@@ -359,7 +368,7 @@ def main() -> None:
     raw = fetch(source_url)
     text = raw.decode("utf-8-sig")
     body = strip_pg(text)
-    preface, chapters = extract_units(body)
+    preface, chapters = extract_units(body, meta)
     source = {
         "provider": "Project Gutenberg",
         "pg_id": meta["pg_id"],
