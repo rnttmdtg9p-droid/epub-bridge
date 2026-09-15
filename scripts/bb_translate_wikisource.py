@@ -104,12 +104,22 @@ def ordered_links(titles: list[str]) -> list[str]:
         "пятая": 5, "шестая": 6, "седьмая": 7, "восьмая": 8,
         "девятая": 9, "десятая": 10, "одиннадцатая": 11,
         "двенадцатая": 12, "эпилог": 90,
+        "erste": 1, "zweite": 2, "dritte": 3, "vierte": 4,
+        "fünfte": 5, "sechste": 6, "siebente": 7, "siebte": 7,
+        "achte": 8, "neunte": 9, "zehnte": 10, "elfte": 11,
+        "zwölfte": 12, "dreizehnte": 13, "vierzehnte": 14,
+        "fünfzehnte": 15, "sechzehnte": 16, "siebzehnte": 17,
+        "achtzehnte": 18,
+        "α": 1, "β": 2, "γ": 3, "δ": 4, "ε": 5,
+        "στ": 6, "ζ": 7, "η": 8, "θ": 9, "ι": 10,
     }
 
     def key(title: str) -> tuple:
         leaf = title.rsplit("/", 1)[-1].casefold().replace("ё", "е")
         for word, value in words.items():
-            if word.replace("ё", "е") in leaf:
+            if re.search(
+                rf"(?<!\w){re.escape(word.replace('ё', 'е'))}(?!\w)", leaf
+            ):
                 return (0, value, leaf)
         roman = re.fullmatch(r"[ivxlcdm]+", leaf, re.I)
         if roman:
