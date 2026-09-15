@@ -9,6 +9,7 @@ import html
 import io
 import json
 import os
+import posixpath
 import re
 import shutil
 import subprocess
@@ -242,7 +243,7 @@ def make_cover(path: Path, title: str, author: str, genre: str) -> None:
     image.save(path, "JPEG", quality=93, optimize=True, progressive=True)
 
 
-def write_epub(outdir: Path, meta: dict, preface: str, chapters: list[list[Unit]], source: dict) -> tuple[Path, dict]:
+def write_epub(outdir: Path, meta: dict, preface: str, chapters: list[list[Unit]], source: dict, source_images: list[dict] | None = None) -> tuple[Path, dict]:
     root = outdir / "epub"
     epub = root / "EPUB"
     for directory in [root / "META-INF", epub / "text", epub / "css", epub / "images", epub / "fonts"]:
@@ -252,7 +253,7 @@ def write_epub(outdir: Path, meta: dict, preface: str, chapters: list[list[Unit]
 <container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles><rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml"/></rootfiles></container>''', encoding="utf-8")
 
     css = '''@font-face{font-family:Spectral;src:url(../fonts/Spectral-Regular.ttf)}@font-face{font-family:Spectral;font-weight:bold;src:url(../fonts/Spectral-Bold.ttf)}
-html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;color:#171717}p{margin:.35em 0;text-indent:1.2em;text-align:justify;orphans:2;widows:2}h1,h2{text-align:center;break-after:avoid}h1{font-size:1.7em;margin:1.8em 0 1.2em}.subhead{text-align:center;text-indent:0;font-variant:small-caps;margin:.7em 0}.noindent,.center,.source-note{text-indent:0}.center{text-align:center}.source-note{font-size:.85em}.chapter{break-before:page}.cover{margin:0;padding:0;text-align:center}.cover img{max-width:100%;max-height:100vh}.badge{border:.08em solid #6d5730;padding:.35em .7em;display:inline-block}.ornament{text-align:center;text-indent:0;color:#8a6b35}.bb-chapter-document h1:after{content:'◆';display:block;font-size:.45em;color:#8a6b35;margin-top:1em}a{color:inherit}'''
+html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;color:#171717}p{margin:.35em 0;text-indent:1.2em;text-align:justify;orphans:2;widows:2}h1,h2{text-align:center;break-after:avoid}h1{font-size:1.7em;margin:1.8em 0 1.2em}.subhead{text-align:center;text-indent:0;font-variant:small-caps;margin:.7em 0}.noindent,.center,.source-note{text-indent:0}.center{text-align:center}.source-note{font-size:.85em}.chapter{break-before:page}.cover{margin:0;padding:0;text-align:center}.cover img,figure img{max-width:100%;max-height:90vh}figure{text-align:center;margin:1.4em auto;break-inside:avoid}figcaption{font-size:.82em;font-style:italic;margin-top:.5em}.badge{border:.08em solid #6d5730;padding:.35em .7em;display:inline-block}.ornament{text-align:center;text-indent:0;color:#8a6b35}.bb-chapter-document h1:after{content:'◆';display:block;font-size:.45em;color:#8a6b35;margin-top:1em}a{color:inherit}'''
     (epub / "css/bb.css").write_text(css, encoding="utf-8")
     for name in ["Spectral-Regular.ttf", "Spectral-Bold.ttf"]:
         src = Path("assets/fonts") / name
@@ -260,6 +261,9 @@ html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;co
             shutil.copyfile(src, epub / "fonts" / name)
     cover = epub / "images/cover.jpg"
     make_cover(cover, meta["italian_title"], meta["author"], meta["genre"])
+    source_images = source_images or []
+    for item in source_images:
+        shutil.copyfile(item["path"], epub / "images" / item["name"])
 
     title = meta["italian_title"]
     author = meta["author"]
@@ -276,10 +280,22 @@ html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;co
     pages.append(("contents", "Indice", xhtml_page("Indice", f'<nav epub:type="toc" xmlns:epub="http://www.idpf.org/2007/ops"><h1>Indice</h1><ol>{toc_links}</ol></nav>')))
     if preface:
         pages.append(("notice", "Nota iniziale", xhtml_page("Nota iniziale", '<section><h1>Nota iniziale</h1><p class="noindent">Questa breve nota introduttiva appartiene alla fonte originale; è conservata nel registro di allineamento e sarà sottoposta alla revisione editoriale finale.</p></section>')))
+    image_cursor = 0
     for i, chapter in enumerate(chapters, 1):
         label = f"{section_label} {i}"
-        body = f'<section epub:type="chapter" xmlns:epub="http://www.idpf.org/2007/ops"><h1>{esc(label)}</h1>' + ''.join(paragraph_html(u) for u in chapter) + '</section>'
+        rendered = []
+        for unit in chapter:
+            if re.match(r"^\s*\[\s*Illustration\s*:", unit.source, re.I) and image_cursor < len(source_images):
+                item = source_images[image_cursor]
+                image_cursor += 1
+                rendered.append(f'<figure><img src="../images/{esc(item["name"])}" alt="{esc(item["caption"])}"/><figcaption>{esc(item["caption"])}</figcaption></figure>')
+            else:
+                rendered.append(paragraph_html(unit))
+        body = f'<section epub:type="chapter" xmlns:epub="http://www.idpf.org/2007/ops"><h1>{esc(label)}</h1>' + ''.join(rendered) + '</section>'
         pages.append((f"chapter_{i:02d}", label, xhtml_page(label, body, "source-text bb-chapter-document chapter")))
+    if source_images:
+        figures = ''.join(f'<figure><img src="../images/{esc(item["name"])}" alt="{esc(item["caption"])}"/><figcaption>{esc(item["caption"])}</figcaption></figure>' for item in source_images)
+        pages.append(("illustrations", "Illustrazioni storiche", xhtml_page("Illustrazioni storiche", f'<section><h1>Illustrazioni storiche</h1>{figures}</section>')))
     apparatus = f'''<section><h1>Nota editoriale</h1><p class="noindent">Questa edizione segue integralmente la struttura in {len(chapters)} sezioni della fonte autenticata in {esc(meta["source_language_label"])}. La prima bozza italiana è stata prodotta per unità semantiche con <i>{MADLAD}</i>, lo stesso traduttore di prima passata usato per <i>Le avventure di Huckleberry Finn</i>. Nomi, date, documenti e cambi di voce dell’originale sono mantenuti come elementi strutturali dell’opera.</p><p class="noindent">Non sono state inserite illustrazioni narrative generate. La ricerca della fonte ha privilegiato l’edizione testuale completa; questa copia di revisione adotta quindi un assetto onestamente privo di tavole storiche finché una serie illustrata, esatta per l’opera e chiaramente riutilizzabile, non venga autenticata.</p></section>'''
     pages.append(("afterword", "Nota editoriale", xhtml_page("Nota editoriale", apparatus)))
     pages.append(("credits", "Crediti", xhtml_page("Crediti", f'<section><h1>Crediti</h1><p class="noindent">Fonte e trascrizione: {esc(source.get("provider", "fonte digitale autenticata"))}. Traduzione assistita: {MADLAD}. Progetto editoriale e produzione EPUB: Boundary Bay Classics.</p></section>')))
@@ -295,6 +311,8 @@ html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;co
     for name in ["Spectral-Regular.ttf", "Spectral-Bold.ttf"]:
         if (epub / "fonts" / name).exists():
             manifest.append(f'<item id="font-{len(manifest)}" href="fonts/{name}" media-type="font/ttf"/>')
+    for idx, item in enumerate(source_images, 1):
+        manifest.append(f'<item id="historical-image-{idx:03d}" href="images/{esc(item["name"])}" media-type="{esc(item["media_type"])}"/>')
     spine = []
     for idx, (pid, _, _) in enumerate(pages, 1):
         manifest.append(f'<item id="text-{idx:03d}" href="text/{pid}.xhtml" media-type="application/xhtml+xml"/>')
@@ -311,7 +329,7 @@ html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;co
         for path in sorted(root.rglob("*")):
             if path.is_file() and path.name != "mimetype":
                 zf.write(path, path.relative_to(root).as_posix(), compress_type=zipfile.ZIP_DEFLATED)
-    report = {"epub": target.name, "publication_uuid": pub_uuid, "page_count": len(pages), "chapter_count": len(chapters), "zip_sha256": sha(target.read_bytes())}
+    report = {"epub": target.name, "publication_uuid": pub_uuid, "page_count": len(pages), "chapter_count": len(chapters), "historical_image_count": len(source_images), "zip_sha256": sha(target.read_bytes())}
     return target, report
 
 
@@ -351,10 +369,56 @@ def qa(meta: dict, chapters: list[list[Unit]], source: dict, epub: Path, build: 
         "editorial_pass": {"model": "google/gemini-3-flash-preview", "status": "NOT_CONFIGURED", "substitute_used": False},
         "fal_used": False,
         "isbn_status": "ISBN_NOT_FOUND",
-        "historical_art": {"count": 0, "status": "HONEST_ZERO_ART_PENDING_EXACT_WORK_AUTHENTICATION"},
+        "historical_art": {"count": build.get("historical_image_count", 0), "status": "PRESERVED_FROM_EXACT_WORK_SOURCE" if build.get("historical_image_count", 0) else "HONEST_ZERO_ART_PENDING_EXACT_WORK_AUTHENTICATION"},
         "epub": build,
         "failures": failures,
     }
+
+
+def extract_historical_images(source_epub: bytes, outdir: Path) -> list[dict]:
+    """Preserve non-cover raster images from an exact-work source EPUB."""
+    target = outdir / "historical_source_images"
+    target.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(io.BytesIO(source_epub)) as zf:
+        container = ET.fromstring(zf.read("META-INF/container.xml"))
+        rootfile = container.find(".//{*}rootfile")
+        if rootfile is None:
+            raise ValueError("Source EPUB has no rootfile")
+        opf_name = rootfile.attrib["full-path"]
+        opf_dir = posixpath.dirname(opf_name)
+        package = ET.fromstring(zf.read(opf_name))
+        items = []
+        for item in package.findall(".//{*}manifest/{*}item"):
+            media = item.attrib.get("media-type", "")
+            href = item.attrib.get("href", "")
+            props = item.attrib.get("properties", "")
+            if not media.startswith("image/") or "cover-image" in props or "cover" in href.casefold():
+                continue
+            member = posixpath.normpath(posixpath.join(opf_dir, href))
+            if member not in zf.namelist():
+                continue
+            data = zf.read(member)
+            if len(data) < 1200:
+                continue
+            try:
+                with Image.open(io.BytesIO(data)) as image:
+                    if image.width < 180 or image.height < 180:
+                        continue
+            except Exception:
+                continue
+            suffix = Path(href).suffix.lower() or ".jpg"
+            name = f"historical-{len(items)+1:03d}{suffix}"
+            path = target / name
+            path.write_bytes(data)
+            items.append({
+                "path": str(path),
+                "name": name,
+                "media_type": media,
+                "caption": f"Illustrazione storica dall’edizione fonte ({Path(href).name})",
+                "source_member": member,
+                "sha256": sha(data),
+            })
+        return items
 
 
 def main() -> None:
@@ -381,6 +445,15 @@ def main() -> None:
         "language": meta["source_language"],
         "citation": f'Project Gutenberg eBook #{meta["pg_id"]}, <i>{esc(meta["original_title"])}</i>',
     }
+    source_images = []
+    if meta.get("preserve_source_images"):
+        source_epub_url = f'https://www.gutenberg.org/ebooks/{meta["pg_id"]}.epub3.images'
+        source_epub = fetch(source_epub_url)
+        (out / f'{meta["rank"]:03d}_source_images.epub').write_bytes(source_epub)
+        source["source_epub_url"] = source_epub_url
+        source["source_epub_sha256"] = sha(source_epub)
+        source_images = extract_historical_images(source_epub, out)
+        source["historical_images"] = [{k: v for k, v in item.items() if k != "path"} for item in source_images]
     (out / f'{meta["rank"]:03d}_source.txt').write_text(body, encoding="utf-8")
     model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
     tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
@@ -398,7 +471,7 @@ def main() -> None:
                     "translation": unit.translation,
                     "translation_sha256": sha(unit.translation.encode()),
                 }, ensure_ascii=False) + "\n")
-    epub, build = write_epub(out, meta, preface, chapters, source)
+    epub, build = write_epub(out, meta, preface, chapters, source, source_images=source_images)
     report = qa(meta, chapters, source, epub, build)
     report["runtime"] = runtime
     qa_path = out / f'{meta["rank"]:03d}_{meta["slug"]}_QA.json'
