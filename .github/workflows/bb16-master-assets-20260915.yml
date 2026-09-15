@@ -1,0 +1,74 @@
+name: BB16 Master reference acquisition 20260915
+on:
+  push:
+    paths:
+      - '.github/workflows/bb16-master-assets-20260915.yml'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fetch public portraits, source witnesses and official checker
+        shell: bash
+        run: |
+          mkdir -p bundle/portraits bundle/sources bundle/tools
+          cat > /tmp/acquire.py <<'PY'
+          import requests,json,hashlib,time,re,html
+          from pathlib import Path
+          from urllib.parse import quote,unquote,urlparse
+          from concurrent.futures import ThreadPoolExecutor
+          B=Path('bundle'); S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorialReference/1.0 (public-domain publication asset review)'
+          def get(url,**kw):
+              last=None
+              for i in range(3):
+                  try:
+                      r=S.get(url,timeout=45,**kw);r.raise_for_status();return r
+                  except Exception as e:last=e;time.sleep(i+1)
+              raise last
+          def save(path,data):
+              path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data);return hashlib.sha256(data).hexdigest()
+          names={44:'Mary Shelley',46:'Jane Austen',50:'Charles Dickens',54:'Arthur Conan Doyle',59:'Oscar Wilde',65:'Fyodor Dostoevsky',70:'Victor Hugo',74:'Alexandre Dumas fils',75:'Honoré de Balzac',78:'Stendhal',81:'Guy de Maupassant',87:'Anton Chekhov',91:'Franz Kafka'}
+          fixed={44:'RothwellMaryShelley.jpg',46:'CassandraAusten-JaneAusten(c.1810) hires.jpg'}
+          def portrait(item):
+              rank,name=item;rec={'rank':rank,'name':name}
+              try:
+                  wiki=get('https://en.wikipedia.org/w/api.php',params={'action':'query','format':'json','redirects':1,'titles':name,'prop':'pageimages|extracts','piprop':'name|original','exintro':1,'explaintext':1}).json();rec['wiki']=wiki
+                  page=next(iter(wiki['query']['pages'].values()));filename=fixed.get(rank,page.get('pageimage'));rec['filename']=filename
+                  api=get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','redirects':1,'titles':'File:'+filename,'prop':'imageinfo','iiprop':'url|extmetadata|size','iiurlwidth':1500}).json();rec['commons']=api
+                  info=next(iter(api['query']['pages'].values()))['imageinfo'][0];url=info.get('thumburl',info['url']);data=get(url).content;ext=Path(urlparse(url).path).suffix or '.jpg';dest=B/'portraits'/('%03d'%rank+ext);rec['path']=str(dest);rec['sha256']=save(dest,data);rec['selected_url']=url;rec['status']='DOWNLOADED_UNREVIEWED'
+              except Exception as e:rec['status']='FAILED';rec['error']=str(e)
+              (B/'portraits'/('%03d'%rank+'.json')).write_text(json.dumps(rec,ensure_ascii=False,indent=2));print('PORTRAIT',rank,rec['status'],flush=True)
+          with ThreadPoolExecutor(max_workers=3) as pool:list(pool.map(portrait,names.items()))
+          pg={44:84,46:161,50:1400,54:1661,59:14522,70:19657,74:2419,78:796,82:10746,91:22367}
+          def source(item):
+              rank,num=item;url=f'https://www.gutenberg.org/ebooks/{num}.txt.utf-8';rec={'rank':rank,'url':url}
+              try:rec['sha256']=save(B/'sources'/('%03d'%rank+'.txt'),get(url).content);rec['status']='DOWNLOADED'
+              except Exception as e:rec.update(status='FAILED',error=str(e))
+              (B/'sources'/('%03d'%rank+'.json')).write_text(json.dumps(rec,indent=2));print('SOURCE',rank,rec['status'],flush=True)
+          with ThreadPoolExecutor(max_workers=3) as pool:list(pool.map(source,pg.items()))
+          ws={65:('ru','Записки из подполья (Достоевский)'),75:('fr','Le Père Goriot (1910)'),81:('fr','Bel-Ami/Édition Ollendorff, 1901'),87:('ru','Чайка (Чехов)'),88:('ru','Вишнёвый сад (Чехов)'),89:('ru','Дядя Ваня (Чехов)/Версия 2')}
+          for rank,(lang,title) in ws.items():
+              rec={'rank':rank,'language':lang,'title':title,'pages':[]}
+              try:
+                  root=get(f'https://{lang}.wikisource.org/w/api.php',params={'action':'parse','format':'json','page':title,'prop':'text|links|revid'}).json();save(B/'sources'/('%03d'%rank+'_root.json'),json.dumps(root,ensure_ascii=False).encode());rec['pages'].append(title)
+                  links=[x['*'] for x in root.get('parse',{}).get('links',[]) if x.get('ns')==0 and x['*'].startswith(title+'/')][:90]
+                  for j,t in enumerate(dict.fromkeys(links)):
+                      try:
+                          p=get(f'https://{lang}.wikisource.org/w/api.php',params={'action':'parse','format':'json','page':t,'prop':'text|links|revid'}).json();save(B/'sources'/('%03d_%03d.json'%(rank,j)),json.dumps(p,ensure_ascii=False).encode());rec['pages'].append(t)
+                      except Exception as e:rec.setdefault('errors',[]).append(str(e))
+                  rec['status']='DOWNLOADED'
+              except Exception as e:rec.update(status='FAILED',error=str(e))
+              (B/'sources'/('%03d'%rank+'_wikisource.json')).write_text(json.dumps(rec,ensure_ascii=False,indent=2));print('WIKISOURCE',rank,rec['status'],len(rec['pages']),flush=True)
+          url='https://github.com/w3c/epubcheck/releases/download/v5.3.0/epubcheck-5.3.0.zip'
+          try:
+              sha=save(B/'tools/epubcheck-5.3.0.zip',get(url).content);(B/'tools/checker.json').write_text(json.dumps({'url':url,'sha256':sha}))
+          except Exception as e:(B/'tools/error.txt').write_text(str(e))
+          PY
+          python /tmp/acquire.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb16-master-reference-assets
+          path: bundle
+          retention-days: 7
