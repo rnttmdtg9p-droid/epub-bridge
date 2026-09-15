@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: bb-061-ivan-ilyich-production
+  cancel-in-progress: true
+
 jobs:
   translate-build-qa:
     runs-on: ubuntu-latest
