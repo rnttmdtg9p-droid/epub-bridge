@@ -318,15 +318,40 @@ def clean_blocks(raw_html: str) -> list[str]:
     return blocks
 
 
-def page_units(pages: list[dict]) -> tuple[list[list[Unit]], list[dict]]:
+def page_units(pages: list[dict], meta: dict) -> tuple[list[list[Unit]], list[dict]]:
     chapters: list[list[Unit]] = []
     records: list[dict] = []
+    end_marker = re.sub(r"\s+", " ", meta.get("source_end_marker", "")).strip()
+    stop_after_page = False
     for index, page in enumerate(pages, 1):
         blocks = clean_blocks(page["html"])
+        # Wikisource sometimes exports a rights-template sentence as visible
+        # prose. It is site apparatus, not part of the authenticated work.
+        blocks = [
+            block for block in blocks
+            if not re.sub(r"\s+", " ", block).startswith(
+                "Если произведение является переводом, или иным производным произведением"
+            )
+        ]
+        heading = page["title"].split("/")[-1].replace("_", " ")
+        if blocks and re.sub(r"\W+", " ", blocks[0].casefold()).strip() == re.sub(
+            r"\W+", " ", heading.casefold()
+        ).strip():
+            blocks = blocks[1:]
+        if index == 1 and meta.get("skip_first_chapter_blocks"):
+            blocks = blocks[int(meta["skip_first_chapter_blocks"]):]
+        if end_marker:
+            retained = []
+            for block in blocks:
+                retained.append(block)
+                if end_marker in re.sub(r"\s+", " ", block):
+                    stop_after_page = True
+                    break
+            blocks = retained
         chars = sum(len(b) for b in blocks)
         if chars < 180:
             continue
-        units = [Unit(f"c{index:03d}-u0000", index, "heading", page["title"].split("/")[-1].replace("_", " "))]
+        units = [Unit(f"c{index:03d}-u0000", index, "heading", heading)]
         ordinal = 0
         for block in blocks:
             for piece in split_long_block(block):
@@ -334,6 +359,8 @@ def page_units(pages: list[dict]) -> tuple[list[list[Unit]], list[dict]]:
                 units.append(Unit(f"c{index:03d}-u{ordinal:04d}", index, "paragraph", piece))
         chapters.append(units)
         records.append({"title": page["title"], "revid": page["revid"], "block_count": len(blocks), "character_count": chars})
+        if stop_after_page:
+            break
     # Renumber after filtering tiny apparatus leaves.
     for chapter_index, chapter in enumerate(chapters, 1):
         for unit_index, unit in enumerate(chapter):
@@ -344,7 +371,7 @@ def page_units(pages: list[dict]) -> tuple[list[list[Unit]], list[dict]]:
 
 def acquire_wikisource(meta: dict) -> tuple[str, list[list[Unit]], dict, list[dict]]:
     root, leaves = leaf_pages(meta["wikisource_lang"], meta["wikisource_title"], int(meta["expected_chapters"]))
-    chapters, page_records = page_units(leaves)
+    chapters, page_records = page_units(leaves, meta)
     expected = int(meta["expected_chapters"])
     if len(chapters) != expected:
         raise ValueError(json.dumps({
