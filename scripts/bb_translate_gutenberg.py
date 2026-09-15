@@ -268,7 +268,7 @@ def repair_risky_units(
             outputs = translator.translate_batch(
                 encoded,
                 beam_size=beam_size,
-                max_decoding_length=640,
+                max_decoding_length=min(384, max(96, max(map(len, encoded)) * 2)),
                 batch_type="tokens",
                 max_batch_size=2048 if beam_size == 1 else 1024,
             )
@@ -377,7 +377,7 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         outputs = translator.translate_batch(
             tokens,
             beam_size=1,
-            max_decoding_length=640,
+            max_decoding_length=min(384, max(96, max(map(len, tokens)) * 2)),
             batch_type="tokens",
             max_batch_size=2048,
         )
@@ -392,7 +392,8 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         for unit in retry:
             tokens = processor.encode("<2it> " + unit.source, out_type=str)
             result = translator.translate_batch(
-                [tokens], beam_size=1, max_decoding_length=640,
+                [tokens], beam_size=1,
+                max_decoding_length=min(384, max(96, len(tokens) * 2)),
                 batch_type="tokens", max_batch_size=1024,
             )[0]
             unit.translation = collapse_decoder_repetitions(
@@ -406,7 +407,7 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
     return {
         "model": MADLAD,
         "runtime_model": MADLAD_RUNTIME,
-        "decoding": {"beam_size": 1, "max_decoding_length": 640},
+        "decoding": {"beam_size": 1, "max_decoding_length": "dynamic_96_to_384_2x_source_tokens"},
         "unit_count": len(all_units),
         "model_translated_unit_count": len(flat),
         "sentence_level_repair_count": repaired,
@@ -878,7 +879,7 @@ def main() -> None:
     else:
         runtime = {
             "model": MADLAD, "runtime_model": MADLAD_RUNTIME,
-            "decoding": {"beam_size": 1, "max_decoding_length": 640},
+            "decoding": {"beam_size": 1, "max_decoding_length": "dynamic_96_to_384_2x_source_tokens"},
             "unit_count": len(flat), "assembled_from_shards": True,
             "sentence_level_repair_requested": bool(args.repair_risky),
             "sentence_level_repair_count": assembled_repaired,
