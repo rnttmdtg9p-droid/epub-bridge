@@ -76,7 +76,7 @@ jobs:
       max-parallel: 12
       matrix: ${{ fromJSON(needs.prepare.outputs.translate) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 29
+    timeout-minutes: 59
     steps:
       - uses: actions/checkout@v4
       - name: Install exact translation runtime
