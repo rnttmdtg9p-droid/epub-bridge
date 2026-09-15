@@ -344,6 +344,10 @@ def page_units(pages: list[dict], meta: dict) -> tuple[list[list[Unit]], list[di
             )
         ]
         heading = page["title"].split("/")[-1].replace("_", " ")
+        # Some Russian scan transclusions use a terminal /ДО suffix for the
+        # proofread layer. The first visible block is the actual section title.
+        if heading.casefold() == "до" and blocks:
+            heading = blocks.pop(0)
         if blocks and re.sub(r"\W+", " ", blocks[0].casefold()).strip() == re.sub(
             r"\W+", " ", heading.casefold()
         ).strip():
