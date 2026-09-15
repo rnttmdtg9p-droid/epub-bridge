@@ -11,6 +11,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: bb-043-dracula-production
+  cancel-in-progress: true
+
 jobs:
   translate-build-qa:
     runs-on: ubuntu-latest
