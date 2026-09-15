@@ -80,7 +80,7 @@ def normalize_block(block: str) -> str:
     return " ".join(line.strip() for line in lines if line.strip())
 
 
-def split_long_block(text: str, limit: int = 1500) -> list[str]:
+def split_long_block(text: str, limit: int = 520) -> list[str]:
     if len(text) <= limit:
         return [text]
     pieces = re.split(r"(?<=[.!?…])\s+(?=[\"“‘A-ZÀ-ÖØ-Þ])", text)
@@ -128,9 +128,11 @@ def extract_units(body: str, meta: dict) -> tuple[str, list[list[Unit]]]:
         ordinal = 0
         for block in blocks:
             kind = "heading" if ordinal < 3 and len(block) < 140 and "\n" not in block else "paragraph"
-            for piece in split_long_block(block):
+            pieces = split_long_block(block)
+            for piece_index, piece in enumerate(pieces):
                 ordinal += 1
-                units.append(Unit(f"c01-u{ordinal:04d}", 1, kind, piece))
+                piece_kind = "continuation" if kind == "paragraph" and piece_index else kind
+                units.append(Unit(f"c01-u{ordinal:04d}", 1, piece_kind, piece))
         if sum(len(unit.source) for unit in units) < 1000:
             raise ValueError("Single-section source is implausibly short")
         return "", [units]
@@ -157,9 +159,11 @@ def extract_units(body: str, meta: dict) -> tuple[str, list[list[Unit]]]:
             chapter_units.append(Unit(f"c{idx+1:02d}-u0000", idx + 1, "heading", normalize_block(match.group(0))))
         for block in blocks:
             kind = "heading" if ordinal < 3 and len(block) < 140 and "\n" not in block else "paragraph"
-            for piece in split_long_block(block):
+            pieces = split_long_block(block)
+            for piece_index, piece in enumerate(pieces):
                 ordinal += 1
-                chapter_units.append(Unit(f"c{idx+1:02d}-u{ordinal:04d}", idx + 1, kind, piece))
+                piece_kind = "continuation" if kind == "paragraph" and piece_index else kind
+                chapter_units.append(Unit(f"c{idx+1:02d}-u{ordinal:04d}", idx + 1, piece_kind, piece))
         chapters.append(chapter_units)
     return preface, chapters
 
@@ -173,11 +177,17 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         # One translator worker with all available CPU lanes avoids the severe
         # oversubscription caused by inter_threads × intra_threads on hosted
         # four-core runners.
-        inter_threads=1,
-        intra_threads=max(1, min(4, os.cpu_count() or 2)),
+        inter_threads=max(1, min(4, (os.cpu_count() or 2) // 2)),
+        intra_threads=2,
     )
-    flat = [unit for chapter in chapters for unit in chapter]
-    batch_size = 24
+    all_units = [unit for chapter in chapters for unit in chapter]
+    # Roman-numeral structural labels are identifiers, not prose. Sending them
+    # through greedy decoding can trigger pathological repetition in MADLAD.
+    for unit in all_units:
+        if unit.kind == "heading" and re.fullmatch(r"[IVXLCDM]+\.?", unit.source.strip(), re.I):
+            unit.translation = unit.source.strip()
+    flat = [unit for unit in all_units if not unit.translation]
+    batch_size = 32
     for offset in range(0, len(flat), batch_size):
         batch = flat[offset:offset + batch_size]
         tokens = [processor.encode("<2it> " + unit.source, out_type=str) for unit in batch]
@@ -190,16 +200,45 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         )
         for unit, result in zip(batch, outputs):
             unit.translation = processor.decode(result.hypotheses[0]).strip()
-        if offset % 120 == 0:
+        retry = [unit for unit in batch if (
+            len(unit.translation) > max(220, int(len(unit.source) * 2.4))
+            or len(unit.translation) < max(2, int(len(unit.source) * 0.18))
+        )]
+        for unit in retry:
+            tokens = processor.encode("<2it> " + unit.source, out_type=str)
+            result = translator.translate_batch(
+                [tokens], beam_size=4, max_decoding_length=640,
+                batch_type="tokens", max_batch_size=1024,
+            )[0]
+            unit.translation = processor.decode(result.hypotheses[0]).strip()
+        if offset % 128 == 0:
             print(f"translated {min(offset + batch_size, len(flat))}/{len(flat)} semantic units", flush=True)
     return {
         "model": MADLAD,
         "runtime_model": MADLAD_RUNTIME,
         "decoding": {"beam_size": 1, "max_decoding_length": 640},
-        "unit_count": len(flat),
-        "source_chars": sum(len(u.source) for u in flat),
-        "translation_chars": sum(len(u.translation) for u in flat),
+        "unit_count": len(all_units),
+        "model_translated_unit_count": len(flat),
+        "source_chars": sum(len(u.source) for u in all_units),
+        "translation_chars": sum(len(u.translation) for u in all_units),
     }
+
+
+def materialize_runtime() -> tuple[str, str]:
+    model_target = Path(os.environ.get("BB_MADLAD_MODEL_DIR", "madlad_ct2"))
+    tokenizer_target = Path(os.environ.get("BB_MADLAD_TOKENIZER_DIR", "madlad_tokenizer"))
+    model_dir = snapshot_download(
+        repo_id=MADLAD_RUNTIME,
+        local_dir=str(model_target),
+        local_files_only=(model_target / "model.bin").exists(),
+    )
+    tokenizer = hf_hub_download(
+        repo_id=MADLAD,
+        filename="spiece.model",
+        local_dir=str(tokenizer_target),
+        local_files_only=(tokenizer_target / "spiece.model").exists(),
+    )
+    return model_dir, tokenizer
 
 
 def esc(value: str) -> str:
@@ -220,6 +259,8 @@ def paragraph_html(unit: Unit) -> str:
     value = esc(unit.translation).replace("\n", "<br/>")
     if unit.kind == "heading":
         return f'<p class="subhead">{value}</p>'
+    if unit.kind == "continuation":
+        return f'<p class="continued">{value}</p>'
     return f"<p>{value}</p>"
 
 
@@ -287,7 +328,7 @@ def write_epub(outdir: Path, meta: dict, preface: str, chapters: list[list[Unit]
 <container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles><rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml"/></rootfiles></container>''', encoding="utf-8")
 
     css = '''@font-face{font-family:Spectral;src:url(../fonts/Spectral-Regular.ttf)}@font-face{font-family:Spectral;font-weight:bold;src:url(../fonts/Spectral-Bold.ttf)}
-html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;color:#171717}p{margin:.35em 0;text-indent:1.2em;text-align:justify;orphans:2;widows:2}h1,h2{text-align:center;break-after:avoid}h1{font-size:1.7em;margin:1.8em 0 1.2em}.subhead{text-align:center;text-indent:0;font-variant:small-caps;margin:.7em 0}.noindent,.center,.source-note{text-indent:0}.center{text-align:center}.source-note{font-size:.85em}.chapter{break-before:page}.cover{margin:0;padding:0;text-align:center}.cover img,figure img{max-width:100%;max-height:90vh}figure{text-align:center;margin:1.4em auto;break-inside:avoid}figcaption{font-size:.82em;font-style:italic;margin-top:.5em}.badge{border:.08em solid #6d5730;padding:.35em .7em;display:inline-block}.ornament{text-align:center;text-indent:0;color:#8a6b35}.bb-chapter-document h1:after{content:'◆';display:block;font-size:.45em;color:#8a6b35;margin-top:1em}a{color:inherit}'''
+html{font-size:100%}body{font-family:Spectral,serif;line-height:1.5;margin:5%;color:#171717}p{margin:.35em 0;text-indent:1.2em;text-align:justify;orphans:2;widows:2}p.continued{margin-top:-.35em;text-indent:0}h1,h2{text-align:center;break-after:avoid}h1{font-size:1.7em;margin:1.8em 0 1.2em}.subhead{text-align:center;text-indent:0;font-variant:small-caps;margin:.7em 0}.noindent,.center,.source-note{text-indent:0}.center{text-align:center}.source-note{font-size:.85em}.chapter{break-before:page}.cover{margin:0;padding:0;text-align:center}.cover img,figure img{max-width:100%;max-height:90vh}figure{text-align:center;margin:1.4em auto;break-inside:avoid}figcaption{font-size:.82em;font-style:italic;margin-top:.5em}.badge{border:.08em solid #6d5730;padding:.35em .7em;display:inline-block}.ornament{text-align:center;text-indent:0;color:#8a6b35}.bb-chapter-document h1:after{content:'◆';display:block;font-size:.45em;color:#8a6b35;margin-top:1em}a{color:inherit}'''
     (epub / "css/bb.css").write_text(css, encoding="utf-8")
     for name in ["Spectral-Regular.ttf", "Spectral-Bold.ttf"]:
         src = Path("assets/fonts") / name
@@ -575,8 +616,7 @@ def main() -> None:
         selected = flat[start:start + args.shard_size]
         if not selected:
             raise ValueError(f"Shard {args.shard_index} starts beyond {len(flat)} units")
-        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
-        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        model_dir, tokenizer = materialize_runtime()
         runtime = translate_units([selected], model_dir, tokenizer)
         alignment_path = out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_alignment.jsonl'
         write_alignment(alignment_path, selected)
@@ -619,8 +659,7 @@ def main() -> None:
     (out / f'{meta["rank"]:03d}_source_record.json').write_text(
         json.dumps(source, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if args.mode == "full":
-        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
-        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        model_dir, tokenizer = materialize_runtime()
         runtime = translate_units(chapters, model_dir, tokenizer)
     else:
         runtime = {

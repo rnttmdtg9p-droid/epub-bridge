@@ -1,0 +1,28 @@
+name: BB Wikisource corrected sharded production
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-sharded-wikisource-retry.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bb-top100-italian-wikisource-sharded-retry
+  cancel-in-progress: true
+
+jobs:
+  russian-novels:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: wikisource
+      batch_key: bb-ru-novels-r2
+      configs: '["configs/061_smert_ivana.json","configs/063_karamazov.json","configs/064_idiota.json","configs/065_sottosuolo.json"]'
+  other-wikisource:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: wikisource
+      batch_key: bb-wikisource-b-r2
+      configs: '["configs/075_papa_goriot.json","configs/081_bel_ami.json","configs/087_gabbiano.json","configs/088_giardino_ciliegi.json","configs/089_zio_vanja.json","configs/092_castello.json","configs/100_repubblica.json"]'

@@ -25,6 +25,7 @@ from bb_translate_gutenberg import (
     Unit,
     load_shard_translations,
     load_source_bundle,
+    materialize_runtime,
     qa,
     save_source_bundle,
     sha,
@@ -91,6 +92,38 @@ def child_links(page: dict, root: str) -> list[str]:
     return results
 
 
+def ordered_links(titles: list[str]) -> list[str]:
+    words = {
+        "от автора": 0,
+        "первая": 1, "первый": 1, "вторая": 2, "второй": 2,
+        "третья": 3, "третий": 3, "четвертая": 4, "четвёртая": 4,
+        "пятая": 5, "шестая": 6, "седьмая": 7, "восьмая": 8,
+        "девятая": 9, "десятая": 10, "одиннадцатая": 11,
+        "двенадцатая": 12, "эпилог": 90,
+    }
+
+    def key(title: str) -> tuple:
+        leaf = title.rsplit("/", 1)[-1].casefold().replace("ё", "е")
+        for word, value in words.items():
+            if word.replace("ё", "е") in leaf:
+                return (0, value, leaf)
+        roman = re.fullmatch(r"[ivxlcdm]+", leaf, re.I)
+        if roman:
+            values = {"i": 1, "v": 5, "x": 10, "l": 50, "c": 100, "d": 500, "m": 1000}
+            total, prior = 0, 0
+            for char in reversed(leaf):
+                value = values[char]
+                total += -value if value < prior else value
+                prior = max(prior, value)
+            return (0, total, leaf)
+        match = re.search(r"\d+", leaf)
+        if match:
+            return (0, int(match.group()), leaf)
+        return (1, leaf)
+
+    return sorted(titles, key=key)
+
+
 def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tuple[dict, list[dict]]:
     root_page = parse_page(lang, root)
     canonical_root = root_page["title"]
@@ -102,28 +135,35 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
             return
         visited.add(title)
         page = root_page if title == canonical_root else parse_page(lang, title)
-        children = child_links(page, canonical_root)
+        children = ordered_links(child_links(page, page["title"]))
         if children and depth < 4:
             for child in children:
                 walk(child, depth + 1)
         else:
-            ordered.append(page)
+            level_two = [s for s in page.get("sections", []) if str(s.get("level")) == "2"]
+            if len(level_two) > 1:
+                for section in level_two:
+                    time.sleep(2.5)
+                    virtual = parse_page(lang, page["title"], str(section["index"]))
+                    virtual["title"] = f'{page["title"]}/{section.get("line", section["index"])}'
+                    ordered.append(virtual)
+            else:
+                ordered.append(page)
         time.sleep(2.5)
 
-    start_children = child_links(root_page, canonical_root)
-    if start_children:
+    root_level_two = [s for s in root_page.get("sections", []) if str(s.get("level")) == "2"]
+    start_children = ordered_links(child_links(root_page, canonical_root))
+    if expected > 1 and len(root_level_two) >= expected:
+        for section in root_level_two[:expected]:
+            time.sleep(2.5)
+            virtual = parse_page(lang, canonical_root, str(section["index"]))
+            virtual["title"] = f'{canonical_root}/{section.get("line", section["index"])}'
+            ordered.append(virtual)
+    elif start_children:
         for child in start_children:
             walk(child, 1)
     else:
-        level_two = [s for s in root_page.get("sections", []) if str(s.get("level")) == "2"]
-        if expected > 1 and len(level_two) >= expected:
-            for section in level_two[:expected]:
-                time.sleep(2.5)
-                virtual = parse_page(lang, canonical_root, str(section["index"]))
-                virtual["title"] = f'{canonical_root}/{section.get("line", section["index"])}'
-                ordered.append(virtual)
-        else:
-            ordered.append(root_page)
+        ordered.append(root_page)
     return root_page, ordered
 
 
@@ -258,8 +298,7 @@ def main() -> None:
         selected = flat[start:start + args.shard_size]
         if not selected:
             raise ValueError(f"Shard {args.shard_index} starts beyond {len(flat)} units")
-        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
-        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        model_dir, tokenizer = materialize_runtime()
         runtime = translate_units([selected], model_dir, tokenizer)
         alignment = out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_alignment.jsonl'
         write_alignment(alignment, selected)
@@ -292,8 +331,7 @@ def main() -> None:
     (out / f'{meta["rank"]:03d}_source.txt').write_text(joined, encoding="utf-8")
     (out / f'{meta["rank"]:03d}_source_record.json').write_text(json.dumps(source, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if args.mode == "full":
-        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
-        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        model_dir, tokenizer = materialize_runtime()
         runtime = translate_units(chapters, model_dir, tokenizer)
     else:
         runtime = {
