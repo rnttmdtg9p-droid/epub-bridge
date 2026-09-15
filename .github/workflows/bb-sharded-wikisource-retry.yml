@@ -1,4 +1,5 @@
 name: BB Wikisource corrected sharded production
+# Launch after hierarchical source-boundary correction.
 
 on:
   workflow_dispatch:
