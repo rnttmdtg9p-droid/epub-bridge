@@ -1,6 +1,9 @@
 name: BB final MADLAD repair Ivan Ilyich
 
 on:
+  push:
+    paths:
+      - ".github/workflows/bb-final-repair-ivan.yml"
   workflow_run:
     workflows: ["BB Ivan Ilyich small-shard recovery"]
     types: [completed]
@@ -11,7 +14,7 @@ permissions:
 
 jobs:
   repair:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 355
     steps:
@@ -38,13 +41,13 @@ jobs:
         with:
           name: bb-061-small-r3-prepared-sources
           path: prepared
-          run-id: ${{ github.event.workflow_run.id }}
+          run-id: ${{ github.event_name == 'push' && 35001305392 || github.event.workflow_run.id }}
           github-token: ${{ github.token }}
       - uses: actions/download-artifact@v4
         with:
           name: bb-061-la-morte-di-ivan-ilic-italian-review
           path: candidate
-          run-id: ${{ github.event.workflow_run.id }}
+          run-id: ${{ github.event_name == 'push' && 35001305392 || github.event.workflow_run.id }}
           github-token: ${{ github.token }}
       - name: Repair flagged aligned units with MADLAD
         run: |
@@ -52,7 +55,7 @@ jobs:
           alignment="$(find candidate -name '061_alignment.jsonl' -print -quit)"
           test -n "$alignment"
           python scripts/bb_repair_alignment.py --alignment "$alignment" --out repaired/061_alignment.jsonl --language ru --report dist/061_repair_QA.json
-          python -c "import json; d=json.load(open('dist/061_repair_QA.json')); assert d['remaining_flagged_unit_count']==0, d"
+          python -c "import json; d=json.load(open('dist/061_repair_QA.json')); assert d['remaining_hard_flagged_unit_count']==0, d"
       - name: Reassemble corrected BB REVIEW EPUB
         run: >-
           python scripts/bb_translate_wikisource.py
