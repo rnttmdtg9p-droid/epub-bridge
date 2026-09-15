@@ -1,0 +1,22 @@
+name: BB Ivan Ilyich small-shard recovery
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bb-ivan-small-shards.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bb-ivan-ilyich-small-shard-recovery
+  cancel-in-progress: false
+
+jobs:
+  ivan:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: wikisource
+      shard_size: 64
+      batch_key: bb-061-small-r3
+      configs: '["configs/061_smert_ivana.json"]'
