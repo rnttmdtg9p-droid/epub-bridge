@@ -1,0 +1,61 @@
+name: BB Master16 portrait retry 20260915
+on:
+  push:
+    paths: ['.github/workflows/bb-master16-portraits-retry-20260915.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Paced public acquisition
+        run: |
+          python -m pip -q install requests pillow
+          mkdir -p assets/portraits assets/records assets/sources
+          python - <<'PY'
+          import requests,json,pathlib,io,time,hashlib,urllib.parse
+          from PIL import Image,ImageOps
+          root=pathlib.Path('assets')
+          session=requests.Session();session.headers['User-Agent']='BoundaryBayLibrary/1.0 (https://github.com/rnttmdtg9p-droid/epub-bridge)'
+          def get(url,**kw):
+              for attempt in range(4):
+                  r=session.get(url,timeout=40,**kw)
+                  if r.status_code==429:time.sleep(12*(attempt+1));continue
+                  r.raise_for_status();return r
+              r.raise_for_status()
+          names=['Mary Shelley','Jane Austen','Charles Dickens','Arthur Conan Doyle','Oscar Wilde','Fyodor Dostoevsky','Victor Hugo','Alexandre Dumas fils','Honoré de Balzac','Stendhal','Guy de Maupassant','Anton Chekhov','Franz Kafka']
+          try:
+              obj=get('https://en.wikipedia.org/w/api.php',params={'action':'query','format':'json','prop':'pageimages|extracts','piprop':'name|original','explaintext':1,'exintro':1,'redirects':1,'titles':'|'.join(names)}).json()
+              (root/'records/biographies.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+              pages=list(obj['query']['pages'].values());titles=['File:'+p['pageimage'] for p in pages if 'pageimage' in p]
+              overrides={'Mary Shelley':'File:Mary Shelley.jpeg','Jane Austen':'File:Jane Austen 1870 cropped.jpg','Franz Kafka':'File:Kafka1906.jpg'}
+              titles += list(overrides.values());time.sleep(5)
+              meta=get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':1200,'titles':'|'.join(titles)}).json()
+              (root/'records/image_metadata.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
+              mp={p['title']:p for p in meta['query']['pages'].values()}
+              for p in pages:
+                  name=p['title'];slug=name.replace(' ','_');rec={'author':name,'biography':p.get('extract'),'retrieved':'2026-09-15','status':'FAILED'}
+                  try:
+                      title=overrides.get(name,'File:'+p['pageimage']);info=mp.get(title,{}).get('imageinfo')
+                      if not info: title='File:'+p['pageimage'];info=mp[title]['imageinfo']
+                      inf=info[0];rec['imageinfo']=inf;rec['file_title']=title
+                      u=inf.get('thumburl',inf['url']).split('?')[0];time.sleep(3)
+                      try:raw=get(u).content
+                      except Exception:raw=get(inf['url'].split('?')[0]).content
+                      im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert('RGB');rec['download_size']=list(im.size);im.thumbnail((1400,1800));dest=root/'portraits'/f'{slug}.jpg';im.save(dest,'JPEG',quality=94,subsampling=0)
+                      rec.update(status='DOWNLOADED_PENDING_REVIEW',sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),download_url=u)
+                  except Exception as e:rec['error']=str(e)
+                  (root/'records'/f'{slug}.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2));print(name,rec['status'],flush=True)
+          except Exception as e:(root/'records/failure.txt').write_text(str(e))
+          for n in [14522,10746,22367]:
+              try:
+                  raw=get(f'https://www.gutenberg.org/ebooks/{n}.txt.utf-8').content;(root/'sources'/f'{n}.txt').write_bytes(raw)
+              except Exception as e:print('source',n,e)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-master16-portrait-retry-20260915
+          path: assets
+          retention-days: 14
