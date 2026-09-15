@@ -91,6 +91,52 @@ def score(source: str, target: str, kind: str, language: str) -> float:
     return value
 
 
+def repeated_target_span(target: str) -> bool:
+    """Detect exact or near-exact repeated target sentences, not ordinary expansion."""
+    segments = sentence_segments(target)
+    seen: list[str] = []
+    for segment in segments:
+        value = normalized(segment)
+        if len(value) < 35:
+            continue
+        if any(
+            value == prior or difflib.SequenceMatcher(None, value, prior).ratio() >= 0.93
+            for prior in seen
+        ):
+            return True
+        seen.append(value)
+    return False
+
+
+def hard_flags(record: dict, language: str) -> list[str]:
+    """Release-blocking MT faults; heuristic similarity/length stays review evidence."""
+    source = str(record.get("source", ""))
+    target = str(record.get("translation", ""))
+    found: list[str] = []
+    if not target.strip():
+        found.append("empty")
+    if source_script_count(target, language):
+        found.append("source_script_spillover")
+    ratio = len(target) / max(1, len(source))
+    if len(source) >= 90 and (ratio < 0.30 or ratio > 2.75):
+        found.append("severe_length_anomaly")
+    if repeated_target_span(target):
+        found.append("decoder_repetition")
+    return found
+
+
+def atomic_segments(source: str) -> list[str]:
+    """Use smaller complete clauses only when a normal sentence still decodes badly."""
+    out: list[str] = []
+    for sentence in sentence_segments(source) or [source]:
+        if len(sentence) <= 180:
+            out.append(sentence)
+            continue
+        parts = [p.strip() for p in re.split(r"(?<=[;:!?…—–])\s+", sentence) if p.strip()]
+        out.extend(parts if len(parts) > 1 else [sentence])
+    return out
+
+
 def runtime() -> tuple[ctranslate2.Translator, spm.SentencePieceProcessor]:
     model_target = Path(os.environ.get("BB_MADLAD_MODEL_DIR", "madlad_ct2"))
     tokenizer_target = Path(os.environ.get("BB_MADLAD_TOKENIZER_DIR", "madlad_tokenizer"))
@@ -160,6 +206,14 @@ def main() -> None:
         if initial_flags:
             candidates.append(translate_segments(translator, processor, record["source"], 1, False))
             candidates.append(translate_segments(translator, processor, record["source"], 4, True))
+            atomic = atomic_segments(record["source"])
+            if atomic != (sentence_segments(record["source"]) or [record["source"]]):
+                candidates.append(translate_segments(
+                    translator, processor, " ".join(atomic), 1, True
+                ))
+                candidates.append(translate_segments(
+                    translator, processor, " ".join(atomic), 4, True
+                ))
         best = min(
             (candidate for candidate in candidates if candidate.strip()),
             key=lambda value: score(record["source"], value, record.get("kind", "paragraph"), args.language),
@@ -173,6 +227,8 @@ def main() -> None:
 
     after = {r["unit_id"]: flags(r, args.language) for r in records}
     after = {key: value for key, value in after.items() if value}
+    hard_after = {r["unit_id"]: hard_flags(r, args.language) for r in records}
+    hard_after = {key: value for key, value in hard_after.items() if value}
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(
@@ -180,7 +236,7 @@ def main() -> None:
         encoding="utf-8",
     )
     report = {
-        "status": "PASS" if not after else "REVIEW_REQUIRED",
+        "status": "FAIL" if hard_after else ("PASS" if not after else "REVIEW_REQUIRED"),
         "translator": MADLAD,
         "runtime_model": MADLAD_RUNTIME,
         "language": args.language,
@@ -189,6 +245,8 @@ def main() -> None:
         "changed_unit_count": len(changed),
         "remaining_flagged_unit_count": len(after),
         "remaining_flags": dict(list(after.items())[:100]),
+        "remaining_hard_flagged_unit_count": len(hard_after),
+        "remaining_hard_flags": dict(list(hard_after.items())[:100]),
         "input_alignment_sha256": hashlib.sha256(source_path.read_bytes()).hexdigest(),
         "output_alignment_sha256": hashlib.sha256(out.read_bytes()).hexdigest(),
     }
