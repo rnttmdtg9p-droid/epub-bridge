@@ -81,6 +81,14 @@ def normalize_block(block: str) -> str:
     return " ".join(line.strip() for line in lines if line.strip())
 
 
+def seed_structural_translations(units: list[Unit], meta: dict) -> None:
+    original = re.sub(r"\W+", " ", meta["original_title"].casefold()).strip()
+    for unit in units:
+        source = re.sub(r"\W+", " ", unit.source.casefold()).strip()
+        if unit.kind == "heading" and source == original:
+            unit.translation = meta["italian_title"]
+
+
 def split_long_block(text: str, limit: int = 1400) -> list[str]:
     # One sentence per semantic unit sharply reduces the chance that an MT
     # decoder silently skips a clause while still producing plausible prose.
@@ -114,15 +122,28 @@ def sentence_segments(text: str) -> list[str]:
     boundary = re.compile(
         r"([.!?…]+[»«”\"’]*)(\s+)(?=[«„“\"A-ZÀ-ÖØ-ÞА-ЯЁ])"
     )
+    abbreviations = {
+        "mr", "mrs", "ms", "dr", "rev", "prof", "capt", "col", "gen",
+        "st", "ste", "jr", "sr", "no", "nos", "mme", "mlle", "mons",
+        "herr", "fr", "hr", "dott", "sig", "sigg", "signor", "signora",
+        "e.g", "i.e", "etc", "vs",
+    }
+    raw = text.strip()
     out: list[str] = []
     start = 0
-    for match in boundary.finditer(text.strip()):
+    for match in boundary.finditer(raw):
         end = match.start(2)
-        piece = text.strip()[start:end].strip()
+        piece = raw[start:end].strip()
+        before = re.sub(r"[»«”\"’]+$", "", piece).rstrip()
+        word_match = re.search(r"([A-Za-zÀ-ÖØ-öø-ÿ]+)\.$", before)
+        if word_match:
+            word = word_match.group(1)
+            if word.casefold() in abbreviations or (len(word) == 1 and word.isupper()):
+                continue
         if piece:
             out.append(piece)
         start = match.end(2)
-    tail = text.strip()[start:].strip()
+    tail = raw[start:].strip()
     if tail:
         out.append(tail)
     return out
@@ -773,6 +794,7 @@ def main() -> None:
     else:
         raw, body, preface, chapters, source = acquire_gutenberg(meta)
     flat = [unit for chapter in chapters for unit in chapter]
+    seed_structural_translations(flat, meta)
     if args.mode in {"plan", "prepare"}:
         plan = {
             "rank": meta["rank"], "config": args.config, "unit_count": len(flat),
@@ -826,6 +848,7 @@ def main() -> None:
                 unit.translation = record["translation"]
         if missing:
             raise ValueError(f"Missing or source-mismatched aligned translations: {len(missing)}; first={missing[:8]}")
+        seed_structural_translations(flat, meta)
         if args.repair_risky:
             model_dir, tokenizer = materialize_runtime()
             processor = spm.SentencePieceProcessor(model_file=tokenizer)
