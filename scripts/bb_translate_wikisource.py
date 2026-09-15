@@ -266,7 +266,7 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
             for other in descendants
         )
     ]
-    if not start_children and len(terminals) == expected:
+    if len(terminals) == expected:
         for title in terminals:
             walk(title, 1)
     elif start_children and len(start_children) >= expected:
