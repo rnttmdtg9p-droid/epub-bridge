@@ -1,5 +1,5 @@
 name: BB Gutenberg corrected sharded production
-# Launch after abbreviation-safe sentence unitization, revision 1.
+# Launch after abbreviation-safe sentence unitization and matrix sizing, revision 2.
 
 on:
   workflow_dispatch:
@@ -19,17 +19,20 @@ jobs:
     uses: ./.github/workflows/bb-sharded-engine.yml
     with:
       engine: gutenberg
+      shard_size: 192
       batch_key: bb-en-a-r2
       configs: '["configs/043_dracula.json","configs/044_frankenstein.json","configs/046_ragione_e_sentimento.json","configs/047_emma.json","configs/049_cime_tempestose.json"]'
   english-b:
     uses: ./.github/workflows/bb-sharded-engine.yml
     with:
       engine: gutenberg
+      shard_size: 192
       batch_key: bb-en-b-r2
       configs: '["configs/050_grandi_speranze.json","configs/054_sherlock_holmes.json","configs/055_mastino_baskervilles.json","configs/058_importanza_ernesto.json"]'
   multilingual:
     uses: ./.github/workflows/bb-sharded-engine.yml
     with:
       engine: gutenberg
+      shard_size: 192
       batch_key: bb-multi-pg-r2
       configs: '["configs/070_notre_dame.json","configs/074_signora_camelie.json","configs/078_certosa_parma.json","configs/079_germinale.json","configs/085_masnadieri.json","configs/090_processo.json"]'
