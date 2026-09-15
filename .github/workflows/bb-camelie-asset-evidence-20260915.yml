@@ -1,0 +1,58 @@
+name: BB Camelie asset evidence 20260915
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-camelie-asset-evidence-20260915.yml'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - run: |
+          python -m pip -q install requests beautifulsoup4
+          mkdir -p evidence
+          python - <<'PY'
+          import requests,pathlib,json,re,concurrent.futures
+          from bs4 import BeautifulSoup
+          root=pathlib.Path('evidence');outlog=[]
+          s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain book research; github.com/rnttmdtg9p-droid/epub-bridge)'
+          def fetch(name,url):
+              try:
+                  r=s.get(url,timeout=45);r.raise_for_status();(root/name).write_bytes(r.content);outlog.append({'file':name,'url':url,'status':r.status_code,'bytes':len(r.content)});return r
+              except Exception as e:outlog.append({'file':name,'url':url,'error':str(e)});return None
+          r=fetch('loc1858.json','https://www.loc.gov/item/19000906/?fo=json')
+          if r:
+              obj=r.json()
+              for i,res in enumerate(obj.get('resources',[])):
+                  if res.get('url'):fetch('loc_resource_'+str(i)+'.json',res['url']+('&' if '?' in res['url'] else '?')+'fo=json')
+                  u=res.get('url','');m=re.search(r'gdcmassbookdig\.([^/?]+)',u)
+                  if m:
+                      ident=m.group(1);a=fetch('ia1858.json','https://archive.org/metadata/'+ident)
+                      if a:
+                          for f in a.json().get('files',[]):
+                              n=f['name']
+                              if n.endswith(('_scandata.xml','_djvu.txt','_page_numbers.json','_meta.xml')):fetch(n,'https://archive.org/download/'+ident+'/'+n)
+          for key,url in [('photo','https://parismuseescollections.paris.fr/en/node/173770'),('litho','https://parismuseescollections.paris.fr/en/node/214592')]:
+              r=fetch('paris_'+key+'.html',url)
+              if r:
+                  soup=BeautifulSoup(r.text,'html.parser')
+                  links=[a.get('href') for a in soup.find_all('a',href=True) if '/iiif/' in a.get('href','') and 'manifest' in a.get('href','')]
+                  for j,u in enumerate(links[:2]):
+                      m=fetch('paris_'+key+'_manifest_'+str(j)+'.json',u)
+                      if m:
+                          ob=m.json();canvases=ob.get('sequences',[{}])[0].get('canvases',[])
+                          for ci,c in enumerate(canvases[:1]):
+                              resource=c.get('images',[{}])[0].get('resource',{});u=resource.get('@id') or resource.get('id')
+                              if u:fetch('portrait_'+key+'.jpg',u)
+          fetch('paris_litho_manifest.json','https://apicollections.parismusees.paris.fr/iiif/280000359/manifest')
+          fetch('lynch1886_index.html','https://fr.wikisource.org/wiki/Livre:Dumas_fils_-_La_Dame_aux_cam%C3%A9lias,_1886.djvu')
+          (root/'acquisition_log.json').write_text(json.dumps(outlog,ensure_ascii=False,indent=2));print(json.dumps(outlog,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-camelie-asset-evidence-20260915
+          path: evidence
+          retention-days: 14
