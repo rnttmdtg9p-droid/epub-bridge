@@ -1,4 +1,5 @@
 name: BB 061 Ivan Ilyich Italian production
+# Retry 2: rate-limited Wikisource section acquisition.
 
 on:
   workflow_dispatch:
