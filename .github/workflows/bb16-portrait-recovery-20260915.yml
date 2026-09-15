@@ -1,0 +1,61 @@
+name: BB16 portrait recovery 20260915
+on:
+  push:
+    paths:
+      - '.github/workflows/bb16-portrait-recovery-20260915.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Recover public portrait assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m pip -q install requests pillow beautifulsoup4
+          python - <<'PY'
+          import requests,json,pathlib,io,time,hashlib,zipfile,os,urllib.parse
+          from PIL import Image,ImageOps
+          root=pathlib.Path('assets');root.mkdir(exist_ok=True)
+          r=requests.get('https://api.github.com/repos/rnttmdtg9p-droid/epub-bridge/actions/artifacts/10418628458/zip',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN']},timeout=90);r.raise_for_status()
+          with zipfile.ZipFile(io.BytesIO(r.content)) as z:
+              for n in z.namelist():
+                  if n.startswith(('records/','portraits/')):z.extract(n,root)
+          s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (https://github.com/rnttmdtg9p-droid/epub-bridge)'
+          def get(u,**kw):
+              for i in range(3):
+                  r=s.get(u,timeout=35,**kw)
+                  if r.status_code not in (429,502,503):r.raise_for_status();return r
+                  time.sleep(min(12,int(r.headers.get('Retry-After','3')) if r.headers.get('Retry-After','3').isdigit() else 3))
+              r.raise_for_status()
+          for rp in sorted((root/'records').glob('*.json')):
+              if rp.name=='validator.json':continue
+              rec=json.loads(rp.read_text());name=rec['author'];slug=name.replace(' ','_');out=root/'portraits'/f'{slug}.jpg'
+              if out.exists():continue
+              try:
+                  if not rec.get('page'):
+                      obj=get('https://en.wikipedia.org/w/api.php',params={'action':'query','format':'json','prop':'pageimages|extracts','piprop':'name|original|thumbnail','pithumbsize':1000,'explaintext':1,'exintro':1,'redirects':1,'titles':name}).json()
+                      rec['page']=next(iter(obj['query']['pages'].values()));rec['biography']=rec['page'].get('extract')
+                  if not rec.get('imageinfo'):
+                      obj=get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':1000,'titles':'File:'+rec['page']['pageimage']}).json()
+                      rec['imageinfo']=next(iter(obj['query']['pages'].values()))['imageinfo'][0]
+                  info=rec['imageinfo'];urls=[info.get('thumburl'),rec['page'].get('thumbnail',{}).get('source'),info.get('url','').split('?')[0]]
+                  last=None
+                  for u in filter(None,urls):
+                      try:
+                          raw=get(u).content;im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert('RGB');rec['retrieved_url']=u;break
+                      except Exception as e:last=e
+                  else:raise last or ValueError('No image URL')
+                  rec['download_sha256']=hashlib.sha256(raw).hexdigest();rec['download_size']=list(im.size);im.thumbnail((1400,1800));out.parent.mkdir(exist_ok=True);im.save(out,'JPEG',quality=94,subsampling=0);rec['output_sha256']=hashlib.sha256(out.read_bytes()).hexdigest();rec['status']='DOWNLOADED_PENDING_RIGHTS_REVIEW';rec.pop('error',None)
+              except Exception as e:rec['status']='FAILED';rec['error']=str(e)
+              rec['retrieved']='2026-09-15';rp.write_text(json.dumps(rec,ensure_ascii=False,indent=2));print(name,rec['status'],flush=True);time.sleep(2)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb16-portrait-recovery-20260915
+          path: assets
+          retention-days: 14
