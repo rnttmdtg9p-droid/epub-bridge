@@ -87,7 +87,8 @@ def child_links(page: dict, root: str) -> list[str]:
     results = []
     for title in page["links"]:
         normalized = title.replace(" ", "_")
-        if normalized.startswith(prefix) and title not in results:
+        remainder = normalized[len(prefix):] if normalized.startswith(prefix) else ""
+        if remainder and "/" not in remainder and title not in results:
             results.append(title)
     return results
 
@@ -95,8 +96,10 @@ def child_links(page: dict, root: str) -> list[str]:
 def ordered_links(titles: list[str]) -> list[str]:
     words = {
         "от автора": 0,
-        "первая": 1, "первый": 1, "вторая": 2, "второй": 2,
-        "третья": 3, "третий": 3, "четвертая": 4, "четвёртая": 4,
+        "первая": 1, "первый": 1, "первое": 1,
+        "вторая": 2, "второй": 2, "второе": 2,
+        "третья": 3, "третий": 3, "третье": 3,
+        "четвертая": 4, "четвёртая": 4, "четвертое": 4, "четвёртое": 4,
         "пятая": 5, "шестая": 6, "седьмая": 7, "восьмая": 8,
         "девятая": 9, "десятая": 10, "одиннадцатая": 11,
         "двенадцатая": 12, "эпилог": 90,
@@ -124,6 +127,90 @@ def ordered_links(titles: list[str]) -> list[str]:
     return sorted(titles, key=key)
 
 
+def split_marker_pages(page: dict, expected: int) -> list[dict]:
+    """Split single-page plays whose act labels are visual, not wiki sections."""
+    if expected <= 1:
+        return []
+    soup = BeautifulSoup(page["html"], "lxml")
+    root = soup.select_one(".prp-pages-output") or soup.select_one(".mw-parser-output") or soup
+    marker = re.compile(
+        r"^(?:ДЕЙСТВИЕ|АКТ)\s+(?:ПЕРВОЕ|ВТОРОЕ|ТРЕТЬЕ|ЧЕТВЕРТОЕ|ПЯТОЕ)\.?$",
+        re.I,
+    )
+    prelude: list[str] = []
+    groups: list[tuple[str, list[str]]] = []
+    current: list[str] | None = None
+    title = ""
+    for node in root.select("center, h2, h3, h4, p, blockquote, div.poem"):
+        if node.name == "p" and node.find_parent("div", class_="poem"):
+            continue
+        text = re.sub(r"\s+", " ", node.get_text(" ", strip=True)).strip()
+        if marker.fullmatch(text):
+            if current is not None:
+                groups.append((title, current))
+            title, current = text, []
+            continue
+        if current is None:
+            prelude.append(str(node))
+        else:
+            current.append(str(node))
+    if current is not None:
+        groups.append((title, current))
+    if len(groups) != expected:
+        return []
+    groups[0][1][:0] = prelude
+    return [{
+        "title": f'{page["title"]}/{group_title}',
+        "revid": page["revid"],
+        "html": '<div class="mw-parser-output">' + "".join(nodes) + "</div>",
+        "links": [],
+        "sections": [],
+    } for group_title, nodes in groups]
+
+
+def split_heading_pages(page: dict, expected: int) -> list[dict]:
+    """Split transcluded whole books at roman-numeral DOM headings."""
+    if expected <= 1:
+        return []
+    soup = BeautifulSoup(page["html"], "lxml")
+    root = soup.select_one(".prp-pages-output") or soup.select_one(".mw-parser-output") or soup
+    headings = [
+        node for node in root.select("h2")
+        if re.fullmatch(r"[IVXLCDM]+\.?", node.get_text(" ", strip=True), re.I)
+    ]
+    if len(headings) != expected:
+        return []
+    marker_ids = {id(node): node.get_text(" ", strip=True) for node in headings}
+    prelude: list[str] = []
+    groups: list[tuple[str, list[str]]] = []
+    current: list[str] | None = None
+    title = ""
+    for node in root.select("h2, h3, h4, p, blockquote, div.poem"):
+        if node.name == "p" and node.find_parent("div", class_="poem"):
+            continue
+        if id(node) in marker_ids:
+            if current is not None:
+                groups.append((title, current))
+            title, current = marker_ids[id(node)], []
+            continue
+        if current is None:
+            prelude.append(str(node))
+        else:
+            current.append(str(node))
+    if current is not None:
+        groups.append((title, current))
+    if len(groups) != expected:
+        return []
+    groups[0][1][:0] = prelude
+    return [{
+        "title": f'{page["title"]}/{group_title}',
+        "revid": page["revid"],
+        "html": '<div class="mw-parser-output">' + "".join(nodes) + "</div>",
+        "links": [],
+        "sections": [],
+    } for group_title, nodes in groups]
+
+
 def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tuple[dict, list[dict]]:
     root_page = parse_page(lang, root)
     canonical_root = root_page["title"]
@@ -135,25 +222,39 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
             return
         visited.add(title)
         page = root_page if title == canonical_root else parse_page(lang, title)
-        children = ordered_links(child_links(page, page["title"]))
+        children = child_links(page, page["title"])
+        # Index/root pages often expose the complete descendant tree while
+        # intermediate transclusion pages omit links to their own chapter
+        # leaves. Use the authenticated root index as a second directory.
+        for child in child_links(root_page, page["title"]):
+            if child not in children:
+                children.append(child)
+        children = ordered_links(children)
         if children and depth < 4:
             for child in children:
                 walk(child, depth + 1)
         else:
             level_two = [s for s in page.get("sections", []) if str(s.get("level")) == "2"]
-            if len(level_two) > 1:
+            if len(level_two) == expected:
                 for section in level_two:
                     time.sleep(2.5)
                     virtual = parse_page(lang, page["title"], str(section["index"]))
                     virtual["title"] = f'{page["title"]}/{section.get("line", section["index"])}'
                     ordered.append(virtual)
             else:
-                ordered.append(page)
+                ordered.extend(
+                    split_marker_pages(page, expected)
+                    or split_heading_pages(page, expected)
+                    or [page]
+                )
         time.sleep(2.5)
 
     root_level_two = [s for s in root_page.get("sections", []) if str(s.get("level")) == "2"]
     start_children = ordered_links(child_links(root_page, canonical_root))
-    if expected > 1 and len(root_level_two) >= expected:
+    if start_children and len(start_children) >= expected:
+        for child in start_children:
+            walk(child, 1)
+    elif expected > 1 and len(root_level_two) == expected:
         for section in root_level_two[:expected]:
             time.sleep(2.5)
             virtual = parse_page(lang, canonical_root, str(section["index"]))
@@ -163,7 +264,11 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
         for child in start_children:
             walk(child, 1)
     else:
-        ordered.append(root_page)
+        ordered.extend(
+            split_marker_pages(root_page, expected)
+            or split_heading_pages(root_page, expected)
+            or [root_page]
+        )
     return root_page, ordered
 
 
