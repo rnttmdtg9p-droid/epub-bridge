@@ -1,0 +1,50 @@
+name: BB Camelie scan inventory 20260915
+on:
+  push:
+    paths: ['.github/workflows/bb-camelie-scan-inventory-20260915.yml']
+permissions:
+  contents: read
+jobs:
+  camelie-scan-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - run: |
+          python -m pip -q install requests
+          mkdir -p inventory/thumbs inventory/candidates
+          python - <<'PY'
+          import requests,json,pathlib,re,time,concurrent.futures,hashlib
+          root=pathlib.Path('inventory');log=[]
+          headers={'User-Agent':'BoundaryBayEditorial/1.0 (public-domain illustration research; github.com/rnttmdtg9p-droid/epub-bridge)'}
+          def get(u):
+              for attempt in range(3):
+                  r=requests.get(u,headers=headers,timeout=45)
+                  if r.status_code in (429,502,503):time.sleep(3*(attempt+1));continue
+                  r.raise_for_status();return r
+              r.raise_for_status()
+          j=get('https://www.loc.gov/item/19000906/?fo=json').json();(root/'loc1858.json').write_text(json.dumps(j))
+          raw=get('https://archive.org/download/ladameauxcamlias00duma/ladameauxcamlias00duma_djvu.xml').content;(root/'source_djvu.xml').write_bytes(raw)
+          jobs=[]
+          for page in j['resources'][0]['files']:
+              alto=next((x for x in page if x.get('use')=='ocr'),{})
+              jp2=next(x for x in page if x.get('mimetype')=='image/jp2');n=int(re.search(r'_(\d+)\.jp2',jp2['url']).group(1))
+              ims=[x for x in page if x.get('mimetype')=='image/jpeg'];small=min(ims,key=lambda x:abs(x['width']-400));jobs.append(('thumbs/'+f'{n:04}.jpg',small['url']))
+              if alto.get('size',0)<12000:
+                  mid=min(ims,key=lambda x:abs(x['width']-800));jobs.append(('candidates/'+f'{n:04}.jpg',mid['url']))
+          def one(arg):
+              name,u=arg
+              try:
+                  raw=get(u).content;(root/name).write_bytes(raw);return {'file':name,'url':u,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()}
+              except Exception as e:return {'file':name,'url':u,'error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+              for i,item in enumerate(ex.map(one,jobs)):
+                  log.append(item)
+                  if i%40==0:print('fetched',i,'/',len(jobs),flush=True)
+          (root/'acquisition_log.json').write_text(json.dumps(log,indent=2));print('total',len(log),'errors',sum('error' in x for x in log))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-camelie-scan-inventory-20260915
+          path: inventory
+          retention-days: 14
