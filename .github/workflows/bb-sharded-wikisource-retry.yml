@@ -1,5 +1,5 @@
 name: BB Wikisource corrected sharded production
-# Launch after exact-terminal and sentence-boundary correction and matrix sizing, revision 8.
+# Launch after exact-terminal and sentence-boundary correction and matrix sizing and greedy retry, revision 9.
 
 on:
   workflow_dispatch:
