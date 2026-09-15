@@ -1,0 +1,46 @@
+name: BB 061 Ivan Ilyich Italian production
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-061-ivan-ilyich.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  translate-build-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translator and build tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Acquire Russian source, translate, and build
+        run: python scripts/bb_translate_wikisource.py --config configs/061_smert_ivana.json --out dist/061_ivan-ilyich
+      - name: EPUBCheck 5.2.1
+        continue-on-error: true
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$(find dist/061_ivan-ilyich -name '*.epub' -print -quit)" 2>&1 | tee dist/061_ivan-ilyich/061_EPUBCHECK.log
+      - name: Upload complete title checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-061-ivan-ilyich-italian-review
+          path: dist/061_ivan-ilyich
+          if-no-files-found: warn
+          retention-days: 30
