@@ -12,6 +12,10 @@ permissions:
   contents: read
   actions: read
 
+concurrency:
+  group: bb-final-madlad-repair-ivan
+  cancel-in-progress: true
+
 jobs:
   repair:
     if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
@@ -54,7 +58,7 @@ jobs:
           mkdir -p repaired dist
           alignment="$(find candidate -name '061_alignment.jsonl' -print -quit)"
           test -n "$alignment"
-          python scripts/bb_repair_alignment.py --alignment "$alignment" --out repaired/061_alignment.jsonl --language ru --report dist/061_repair_QA.json
+          python scripts/bb_repair_alignment.py --alignment "$alignment" --out repaired/061_shard_0000_alignment.jsonl --language ru --report dist/061_repair_QA.json
           python -c "import json; d=json.load(open('dist/061_repair_QA.json')); assert d['remaining_hard_flagged_unit_count']==0, d"
       - name: Reassemble corrected BB REVIEW EPUB
         run: >-
