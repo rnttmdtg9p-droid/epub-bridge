@@ -1,5 +1,5 @@
 name: BB Gutenberg corrected sharded production
-# Launch after abbreviation-safe sentence unitization and matrix sizing, revision 2.
+# Launch after abbreviation-safe sentence unitization and matrix sizing and greedy retry, revision 3.
 
 on:
   workflow_dispatch:
