@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 import time
 import urllib.parse
@@ -22,10 +23,14 @@ from bb_translate_gutenberg import (
     MADLAD,
     MADLAD_RUNTIME,
     Unit,
+    load_shard_translations,
+    load_source_bundle,
     qa,
+    save_source_bundle,
     sha,
     split_long_block,
     translate_units,
+    write_alignment,
     write_epub,
 )
 
@@ -173,28 +178,18 @@ def page_units(pages: list[dict]) -> tuple[list[list[Unit]], list[dict]]:
     return chapters, records
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--config", required=True)
-    parser.add_argument("--out", default="dist")
-    args = parser.parse_args()
-    meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
-    out = Path(args.out)
-    out.mkdir(parents=True, exist_ok=True)
+def acquire_wikisource(meta: dict) -> tuple[str, list[list[Unit]], dict, list[dict]]:
     root, leaves = leaf_pages(meta["wikisource_lang"], meta["wikisource_title"], int(meta["expected_chapters"]))
     chapters, page_records = page_units(leaves)
     expected = int(meta["expected_chapters"])
     if len(chapters) != expected:
-        discovery = {
+        raise ValueError(json.dumps({
             "status": "FAIL_SOURCE_EXTENT",
             "expected_sections": expected,
             "discovered_sections": len(chapters),
             "root": {"title": root["title"], "revid": root["revid"]},
             "leaves": page_records,
-        }
-        (out / f'{meta["rank"]:03d}_SOURCE_EXTENT_FAILURE.json').write_text(json.dumps(discovery, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        raise SystemExit(json.dumps(discovery, ensure_ascii=False, indent=2))
-
+        }, ensure_ascii=False, indent=2))
     joined = "\n\n".join(u.source for c in chapters for u in c)
     source_sha = sha(joined.encode("utf-8"))
     source_url = f'https://{meta["wikisource_lang"]}.wikisource.org/wiki/{urllib.parse.quote(root["title"].replace(" ", "_"))}'
@@ -210,24 +205,108 @@ def main() -> None:
         "root_revision": root["revid"],
         "page_revisions": page_records,
     }
+    return joined, chapters, source, page_records
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", required=True)
+    parser.add_argument("--out", default="dist")
+    parser.add_argument("--mode", choices=["full", "prepare", "shard", "assemble"], default="full")
+    parser.add_argument("--shard-index", type=int)
+    parser.add_argument("--shard-size", type=int, default=96)
+    parser.add_argument("--shards-dir")
+    parser.add_argument("--source-bundle")
+    args = parser.parse_args()
+    meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    try:
+        if args.source_bundle:
+            _, joined, _, chapters, source = load_source_bundle(Path(args.source_bundle), meta)
+            page_records = source.get("page_revisions", [])
+        else:
+            joined, chapters, source, page_records = acquire_wikisource(meta)
+    except ValueError as exc:
+        try:
+            discovery = json.loads(str(exc))
+        except Exception:
+            raise
+        (out / f'{meta["rank"]:03d}_SOURCE_EXTENT_FAILURE.json').write_text(
+            json.dumps(discovery, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        raise SystemExit(json.dumps(discovery, ensure_ascii=False, indent=2))
+    flat = [unit for chapter in chapters for unit in chapter]
+
+    if args.mode == "prepare":
+        plan = {
+            "rank": meta["rank"], "config": args.config, "unit_count": len(flat),
+            "chapter_count": len(chapters), "shard_size": args.shard_size,
+            "shard_count": math.ceil(len(flat) / args.shard_size),
+            "source_sha256": source["source_sha256"],
+            "source_bundle": f'{meta["rank"]:03d}_source_bundle.json',
+        }
+        save_source_bundle(out / plan["source_bundle"], meta, joined, "", chapters, source)
+        (out / f'{meta["rank"]:03d}_shard_plan.json').write_text(
+            json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(plan, ensure_ascii=False))
+        return
+
+    if args.mode == "shard":
+        if args.shard_index is None or args.shard_index < 0:
+            raise ValueError("--shard-index must be a non-negative integer in shard mode")
+        start = args.shard_index * args.shard_size
+        selected = flat[start:start + args.shard_size]
+        if not selected:
+            raise ValueError(f"Shard {args.shard_index} starts beyond {len(flat)} units")
+        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
+        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        runtime = translate_units([selected], model_dir, tokenizer)
+        alignment = out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_alignment.jsonl'
+        write_alignment(alignment, selected)
+        report = {
+            "status": "PASS", "rank": meta["rank"], "shard_index": args.shard_index,
+            "shard_size": args.shard_size, "start_unit": start, "translated_units": len(selected),
+            "first_unit": selected[0].unit_id, "last_unit": selected[-1].unit_id,
+            "source_sha256": source["source_sha256"], "translator": MADLAD,
+            "fal_used": False, "runtime": runtime,
+        }
+        (out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_QA.json').write_text(
+            json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(report, ensure_ascii=False))
+        return
+
+    if args.mode == "assemble":
+        if not args.shards_dir:
+            raise ValueError("--shards-dir is required in assemble mode")
+        records = load_shard_translations(Path(args.shards_dir), int(meta["rank"]))
+        missing = []
+        for unit in flat:
+            record = records.get(unit.unit_id)
+            if not record or record.get("source_sha256") != sha(unit.source.encode()):
+                missing.append(unit.unit_id)
+            else:
+                unit.translation = record["translation"]
+        if missing:
+            raise ValueError(f"Missing or source-mismatched aligned translations: {len(missing)}; first={missing[:8]}")
+
     (out / f'{meta["rank"]:03d}_source.txt').write_text(joined, encoding="utf-8")
     (out / f'{meta["rank"]:03d}_source_record.json').write_text(json.dumps(source, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
-    tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
-    runtime = translate_units(chapters, model_dir, tokenizer)
+    if args.mode == "full":
+        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
+        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        runtime = translate_units(chapters, model_dir, tokenizer)
+    else:
+        runtime = {
+            "model": MADLAD, "runtime_model": MADLAD_RUNTIME,
+            "decoding": {"beam_size": 1, "max_decoding_length": 640},
+            "unit_count": len(flat), "assembled_from_shards": True,
+        }
     alignment = out / f'{meta["rank"]:03d}_alignment.jsonl'
-    with alignment.open("w", encoding="utf-8") as handle:
-        for chapter in chapters:
-            for unit in chapter:
-                handle.write(json.dumps({
-                    "unit_id": unit.unit_id, "chapter": unit.chapter, "kind": unit.kind,
-                    "source_sha256": sha(unit.source.encode()), "source": unit.source,
-                    "translation": unit.translation, "translation_sha256": sha(unit.translation.encode()),
-                }, ensure_ascii=False) + "\n")
+    write_alignment(alignment, flat)
     epub, build = write_epub(out, meta, "", chapters, source)
     report = qa(meta, chapters, source, epub, build)
     report["runtime"] = runtime
-    report["source_extent"] = {"root_revision": root["revid"], "leaf_count": len(page_records), "leaves": page_records}
+    report["source_extent"] = {"root_revision": source.get("root_revision"), "leaf_count": len(page_records), "leaves": page_records}
     qa_path = out / f'{meta["rank"]:03d}_{meta["slug"]}_QA.json'
     qa_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if report["status"] != "PASS":

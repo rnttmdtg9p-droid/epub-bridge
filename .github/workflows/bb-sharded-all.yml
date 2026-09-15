@@ -1,0 +1,46 @@
+name: BB Top 100 Italian continuous sharded production
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-sharded-all.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bb-top100-italian-sharded-production
+  cancel-in-progress: true
+
+jobs:
+  english-a:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: gutenberg
+      batch_key: bb-en-a
+      configs: '["configs/043_dracula.json","configs/044_frankenstein.json","configs/046_ragione_e_sentimento.json","configs/047_emma.json","configs/049_cime_tempestose.json"]'
+  english-b:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: gutenberg
+      batch_key: bb-en-b
+      configs: '["configs/050_grandi_speranze.json","configs/054_sherlock_holmes.json","configs/055_mastino_baskervilles.json","configs/058_importanza_ernesto.json","configs/059_canterville.json"]'
+  multilingual-gutenberg:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: gutenberg
+      batch_key: bb-multi-pg
+      configs: '["configs/070_notre_dame.json","configs/074_signora_camelie.json","configs/078_certosa_parma.json","configs/079_germinale.json","configs/082_boule_suif.json","configs/085_masnadieri.json","configs/090_processo.json","configs/091_metamorfosi.json"]'
+  russian-novels:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: wikisource
+      batch_key: bb-ru-novels
+      configs: '["configs/061_smert_ivana.json","configs/063_karamazov.json","configs/064_idiota.json","configs/065_sottosuolo.json"]'
+  other-wikisource:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: wikisource
+      batch_key: bb-wikisource-b
+      configs: '["configs/075_papa_goriot.json","configs/081_bel_ami.json","configs/087_gabbiano.json","configs/088_giardino_ciliegi.json","configs/089_zio_vanja.json","configs/092_castello.json","configs/100_repubblica.json"]'

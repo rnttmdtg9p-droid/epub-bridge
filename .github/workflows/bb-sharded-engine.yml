@@ -1,0 +1,150 @@
+name: BB reusable sharded translation engine
+
+on:
+  workflow_call:
+    inputs:
+      engine:
+        required: true
+        type: string
+      configs:
+        required: true
+        type: string
+      batch_key:
+        required: true
+        type: string
+      shard_size:
+        required: false
+        type: number
+        default: 64
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 29
+    outputs:
+      translate: ${{ steps.matrix.outputs.translate }}
+      assemble: ${{ steps.matrix.outputs.assemble }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install source preparation tools
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Authenticate and freeze source bundles
+        id: matrix
+        run: >-
+          python scripts/bb_prepare_sharded_batch.py
+          --engine "${{ inputs.engine }}"
+          --configs-json '${{ inputs.configs }}'
+          --out prepared
+          --shard-size "${{ inputs.shard_size }}"
+          --github-output
+      - name: Upload authenticated source bundles
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.batch_key }}-prepared-sources
+          path: prepared
+          if-no-files-found: error
+          retention-days: 30
+
+  warm-model-cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 29
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation runtime
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4'
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Materialize exact MADLAD runtime
+        run: >-
+          python -c "from huggingface_hub import snapshot_download,hf_hub_download;
+          snapshot_download(repo_id='Heng666/madlad400-3b-mt-ct2-int8',local_dir='madlad_ct2');
+          hf_hub_download(repo_id='google/madlad400-3b-mt',filename='spiece.model',local_dir='madlad_tokenizer')"
+
+  translate-shards:
+    needs: [prepare, warm-model-cache]
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.prepare.outputs.translate) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 29
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation runtime
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.batch_key }}-prepared-sources
+          path: prepared
+      - name: Translate aligned semantic-unit shard
+        run: |
+          if [ "${{ inputs.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
+          python "$script" --config "${{ matrix.config }}" --out "shard-out" --mode shard --shard-index "${{ matrix.shard }}" --shard-size "${{ inputs.shard_size }}" --source-bundle "prepared/${{ matrix.rank }}/${{ matrix.rank }}_source_bundle.json"
+      - name: Upload immutable alignment shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-shard-${{ matrix.rank }}-${{ matrix.shard_padded }}
+          path: shard-out
+          if-no-files-found: error
+          retention-days: 30
+
+  assemble-books:
+    needs: [prepare, translate-shards]
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.assemble) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 29
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install BB build and validation tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.batch_key }}-prepared-sources
+          path: prepared
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bb-shard-${{ matrix.rank }}-*
+          path: shards
+          merge-multiple: true
+      - name: Deterministically reassemble translated book
+        run: |
+          if [ "${{ inputs.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
+          python "$script" --config "${{ matrix.config }}" --out "dist/${{ matrix.rank }}_${{ matrix.key }}" --mode assemble --source-bundle "prepared/${{ matrix.rank }}/${{ matrix.rank }}_source_bundle.json" --shards-dir shards
+      - name: EPUBCheck 5.2.1
+        continue-on-error: true
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$(find "dist/${{ matrix.rank }}_${{ matrix.key }}" -name '*.epub' -print -quit)" 2>&1 | tee "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_EPUBCHECK.log"
+      - name: Upload complete title checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-${{ matrix.rank }}-${{ matrix.key }}-italian-review
+          path: dist/${{ matrix.rank }}_${{ matrix.key }}
+          if-no-files-found: error
+          retention-days: 30

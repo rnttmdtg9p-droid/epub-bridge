@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import math
 import hashlib
 import html
 import io
@@ -454,14 +455,7 @@ def extract_historical_images(source_epub: bytes, outdir: Path) -> list[dict]:
         return items
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--config", required=True)
-    parser.add_argument("--out", default="dist")
-    args = parser.parse_args()
-    meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
-    out = Path(args.out)
-    out.mkdir(parents=True, exist_ok=True)
+def acquire_gutenberg(meta: dict) -> tuple[bytes, str, str, list[list[Unit]], dict]:
     source_url = meta.get("source_text_url") or f'https://www.gutenberg.org/ebooks/{meta["pg_id"]}.txt.utf-8'
     raw = fetch(source_url)
     text = raw.decode("utf-8-sig")
@@ -478,6 +472,140 @@ def main() -> None:
         "language": meta["source_language"],
         "citation": f'Project Gutenberg eBook #{meta["pg_id"]}, <i>{esc(meta["original_title"])}</i>',
     }
+    return raw, body, preface, chapters, source
+
+
+def write_alignment(path: Path, units: list[Unit]) -> None:
+    with path.open("w", encoding="utf-8") as handle:
+        for unit in units:
+            handle.write(json.dumps({
+                "unit_id": unit.unit_id,
+                "chapter": unit.chapter,
+                "kind": unit.kind,
+                "source_sha256": sha(unit.source.encode()),
+                "source": unit.source,
+                "translation": unit.translation,
+                "translation_sha256": sha(unit.translation.encode()),
+            }, ensure_ascii=False) + "\n")
+
+
+def load_shard_translations(shards_dir: Path, rank: int) -> dict[str, dict]:
+    records: dict[str, dict] = {}
+    pattern = f"{rank:03d}_shard_*_alignment.jsonl"
+    paths = sorted(shards_dir.rglob(pattern))
+    if not paths:
+        raise ValueError(f"No alignment shards found under {shards_dir} with pattern {pattern}")
+    for path in paths:
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            prior = records.get(record["unit_id"])
+            if prior and prior["translation_sha256"] != record["translation_sha256"]:
+                raise ValueError(f"Conflicting translations for {record['unit_id']}")
+            records[record["unit_id"]] = record
+    return records
+
+
+def save_source_bundle(path: Path, meta: dict, body: str, preface: str,
+                       chapters: list[list[Unit]], source: dict) -> None:
+    payload = {
+        "bundle_version": 1,
+        "rank": meta["rank"],
+        "original_title": meta["original_title"],
+        "body": body,
+        "preface": preface,
+        "source": source,
+        "chapters": [[{
+            "unit_id": unit.unit_id, "chapter": unit.chapter,
+            "kind": unit.kind, "source": unit.source,
+        } for unit in chapter] for chapter in chapters],
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def load_source_bundle(path: Path, meta: dict) -> tuple[bytes, str, str, list[list[Unit]], dict]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if int(payload.get("rank", -1)) != int(meta["rank"]):
+        raise ValueError(f"Source bundle rank mismatch: {payload.get('rank')} != {meta['rank']}")
+    chapters = [[Unit(
+        item["unit_id"], int(item["chapter"]), item["kind"], item["source"]
+    ) for item in chapter] for chapter in payload["chapters"]]
+    return b"", payload["body"], payload.get("preface", ""), chapters, payload["source"]
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", required=True)
+    parser.add_argument("--out", default="dist")
+    parser.add_argument("--mode", choices=["full", "plan", "prepare", "shard", "assemble"], default="full")
+    parser.add_argument("--shard-index", type=int)
+    parser.add_argument("--shard-size", type=int, default=96)
+    parser.add_argument("--shards-dir")
+    parser.add_argument("--source-bundle")
+    args = parser.parse_args()
+    meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    if args.source_bundle:
+        raw, body, preface, chapters, source = load_source_bundle(Path(args.source_bundle), meta)
+    else:
+        raw, body, preface, chapters, source = acquire_gutenberg(meta)
+    flat = [unit for chapter in chapters for unit in chapter]
+    if args.mode in {"plan", "prepare"}:
+        plan = {
+            "rank": meta["rank"], "config": args.config, "unit_count": len(flat),
+            "chapter_count": len(chapters), "shard_size": args.shard_size,
+            "shard_count": math.ceil(len(flat) / args.shard_size),
+            "source_sha256": source["source_sha256"],
+        }
+        if args.mode == "prepare":
+            bundle_path = out / f'{meta["rank"]:03d}_source_bundle.json'
+            save_source_bundle(bundle_path, meta, body, preface, chapters, source)
+            plan["source_bundle"] = bundle_path.name
+            (out / f'{meta["rank"]:03d}_shard_plan.json').write_text(
+                json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(plan, ensure_ascii=False))
+        return
+
+    if args.mode == "shard":
+        if args.shard_index is None or args.shard_index < 0:
+            raise ValueError("--shard-index must be a non-negative integer in shard mode")
+        start = args.shard_index * args.shard_size
+        selected = flat[start:start + args.shard_size]
+        if not selected:
+            raise ValueError(f"Shard {args.shard_index} starts beyond {len(flat)} units")
+        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
+        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        runtime = translate_units([selected], model_dir, tokenizer)
+        alignment_path = out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_alignment.jsonl'
+        write_alignment(alignment_path, selected)
+        shard_report = {
+            "status": "PASS", "rank": meta["rank"], "shard_index": args.shard_index,
+            "shard_size": args.shard_size, "start_unit": start,
+            "translated_units": len(selected), "first_unit": selected[0].unit_id,
+            "last_unit": selected[-1].unit_id, "source_sha256": source["source_sha256"],
+            "translator": MADLAD, "fal_used": False, "runtime": runtime,
+        }
+        (out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_QA.json').write_text(
+            json.dumps(shard_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(shard_report, ensure_ascii=False))
+        return
+
+    if args.mode == "assemble":
+        if not args.shards_dir:
+            raise ValueError("--shards-dir is required in assemble mode")
+        records = load_shard_translations(Path(args.shards_dir), int(meta["rank"]))
+        missing = []
+        for unit in flat:
+            record = records.get(unit.unit_id)
+            if not record or record.get("source_sha256") != sha(unit.source.encode()):
+                missing.append(unit.unit_id)
+            else:
+                unit.translation = record["translation"]
+        if missing:
+            raise ValueError(f"Missing or source-mismatched aligned translations: {len(missing)}; first={missing[:8]}")
+
     source_images = []
     if meta.get("preserve_source_images"):
         source_epub_url = f'https://www.gutenberg.org/ebooks/{meta["pg_id"]}.epub3.images'
@@ -488,22 +616,20 @@ def main() -> None:
         source_images = extract_historical_images(source_epub, out)
         source["historical_images"] = [{k: v for k, v in item.items() if k != "path"} for item in source_images]
     (out / f'{meta["rank"]:03d}_source.txt').write_text(body, encoding="utf-8")
-    model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
-    tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
-    runtime = translate_units(chapters, model_dir, tokenizer)
+    (out / f'{meta["rank"]:03d}_source_record.json').write_text(
+        json.dumps(source, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if args.mode == "full":
+        model_dir = snapshot_download(repo_id=MADLAD_RUNTIME, local_dir="madlad_ct2")
+        tokenizer = hf_hub_download(repo_id=MADLAD, filename="spiece.model", local_dir="madlad_tokenizer")
+        runtime = translate_units(chapters, model_dir, tokenizer)
+    else:
+        runtime = {
+            "model": MADLAD, "runtime_model": MADLAD_RUNTIME,
+            "decoding": {"beam_size": 1, "max_decoding_length": 640},
+            "unit_count": len(flat), "assembled_from_shards": True,
+        }
     alignment_path = out / f'{meta["rank"]:03d}_alignment.jsonl'
-    with alignment_path.open("w", encoding="utf-8") as handle:
-        for chapter in chapters:
-            for unit in chapter:
-                handle.write(json.dumps({
-                    "unit_id": unit.unit_id,
-                    "chapter": unit.chapter,
-                    "kind": unit.kind,
-                    "source_sha256": sha(unit.source.encode()),
-                    "source": unit.source,
-                    "translation": unit.translation,
-                    "translation_sha256": sha(unit.translation.encode()),
-                }, ensure_ascii=False) + "\n")
+    write_alignment(alignment_path, flat)
     epub, build = write_epub(out, meta, preface, chapters, source, source_images=source_images)
     report = qa(meta, chapters, source, epub, build)
     report["runtime"] = runtime
