@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: bb-final-madlad-repair-batch2
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   repair:
@@ -63,7 +63,7 @@ jobs:
           mkdir -p repaired dist
           find candidate-shards -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > "candidate-shards/${{ matrix.rank }}_alignment.jsonl"
           test -s "candidate-shards/${{ matrix.rank }}_alignment.jsonl"
-          python scripts/bb_repair_alignment.py --alignment "candidate-shards/${{ matrix.rank }}_alignment.jsonl" --out "repaired/${{ matrix.rank }}_alignment.jsonl" --language "${{ matrix.language }}" --report "dist/${{ matrix.rank }}_repair_QA.json"
+          python scripts/bb_repair_alignment.py --alignment "candidate-shards/${{ matrix.rank }}_alignment.jsonl" --out "repaired/${{ matrix.rank }}_shard_0000_alignment.jsonl" --language "${{ matrix.language }}" --report "dist/${{ matrix.rank }}_repair_QA.json"
           python -c "import json; d=json.load(open('dist/${{ matrix.rank }}_repair_QA.json')); assert d['remaining_hard_flagged_unit_count']==0, d"
       - name: Reassemble corrected BB REVIEW EPUB
         run: |
