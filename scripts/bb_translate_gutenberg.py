@@ -392,7 +392,7 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         for unit in retry:
             tokens = processor.encode("<2it> " + unit.source, out_type=str)
             result = translator.translate_batch(
-                [tokens], beam_size=4, max_decoding_length=640,
+                [tokens], beam_size=1, max_decoding_length=640,
                 batch_type="tokens", max_batch_size=1024,
             )[0]
             unit.translation = collapse_decoder_repetitions(
