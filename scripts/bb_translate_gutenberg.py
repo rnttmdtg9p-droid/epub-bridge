@@ -120,7 +120,7 @@ def split_long_block(text: str, limit: int = 1400) -> list[str]:
 def sentence_segments(text: str) -> list[str]:
     """Split prose conservatively for omission detection and targeted repair."""
     boundary = re.compile(
-        r"([.!?…]+[»«”\"’]*)(\s+)(?=[«„“\"A-ZÀ-ÖØ-ÞА-ЯЁ])"
+        r"([.!?…]+[»«”\"’]*)(\s+)(?=[«„“\"A-ZÀ-ÖØ-ÞА-ЯЁΑ-ΩΆΈΉΊΌΎΏ])"
     )
     abbreviations = {
         "mr", "mrs", "ms", "dr", "rev", "prof", "capt", "col", "gen",
@@ -135,7 +135,7 @@ def sentence_segments(text: str) -> list[str]:
         end = match.start(2)
         piece = raw[start:end].strip()
         before = re.sub(r"[»«”\"’]+$", "", piece).rstrip()
-        word_match = re.search(r"([A-Za-zÀ-ÖØ-öø-ÿ]+)\.$", before)
+        word_match = re.search(r"([^\W\d_]+)\.$", before, re.UNICODE)
         if word_match:
             word = word_match.group(1)
             if word.casefold() in abbreviations or (len(word) == 1 and word.isupper()):
@@ -360,8 +360,8 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         # One translator worker with all available CPU lanes avoids the severe
         # oversubscription caused by inter_threads × intra_threads on hosted
         # four-core runners.
-        inter_threads=max(1, min(4, (os.cpu_count() or 2) // 2)),
-        intra_threads=2,
+        inter_threads=1,
+        intra_threads=max(2, min(8, os.cpu_count() or 2)),
     )
     all_units = [unit for chapter in chapters for unit in chapter]
     # Roman-numeral structural labels are identifiers, not prose. Sending them
@@ -854,8 +854,8 @@ def main() -> None:
             processor = spm.SentencePieceProcessor(model_file=tokenizer)
             translator = ctranslate2.Translator(
                 model_dir, device="cpu", compute_type="int8",
-                inter_threads=max(1, min(4, (os.cpu_count() or 2) // 2)),
-                intra_threads=2,
+                inter_threads=1,
+                intra_threads=max(2, min(8, os.cpu_count() or 2)),
             )
             assembled_repaired = repair_risky_units(flat, translator, processor)
             print(f"sentence-level translation repair applied to {assembled_repaired} assembled units", flush=True)
