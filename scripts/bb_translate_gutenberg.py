@@ -105,6 +105,35 @@ def split_long_block(text: str, limit: int = 1500) -> list[str]:
 
 
 def extract_units(body: str, meta: dict) -> tuple[str, list[list[Unit]]]:
+    if meta.get("single_section"):
+        start_marker = meta.get("content_marker")
+        end_marker = meta.get("content_end_marker")
+        section = body
+        if start_marker:
+            start = section.find(start_marker)
+            if start < 0:
+                raise ValueError(f"Single-section start marker was not found: {start_marker!r}")
+            section = section[start if meta.get("include_content_marker") else start + len(start_marker):]
+        if end_marker:
+            end = section.find(end_marker)
+            if end < 0:
+                raise ValueError(f"Single-section end marker was not found: {end_marker!r}")
+            section = section[:end]
+        blocks = [normalize_block(b) for b in re.split(r"\n\s*\n+", section.strip())]
+        blocks = [b for b in blocks if b]
+        units: list[Unit] = []
+        if meta.get("include_source_heading", True):
+            units.append(Unit("c01-u0000", 1, "heading", meta["original_title"]))
+        ordinal = 0
+        for block in blocks:
+            kind = "heading" if ordinal < 3 and len(block) < 140 and "\n" not in block else "paragraph"
+            for piece in split_long_block(block):
+                ordinal += 1
+                units.append(Unit(f"c01-u{ordinal:04d}", 1, kind, piece))
+        if sum(len(unit.source) for unit in units) < 1000:
+            raise ValueError("Single-section source is implausibly short")
+        return "", [units]
+
     pattern = re.compile(meta.get("section_pattern", ROMAN_CHAPTER.pattern), re.I | re.M)
     matches = list(pattern.finditer(body))
     expected = int(meta.get("expected_chapters", 0))
@@ -429,7 +458,7 @@ def main() -> None:
     meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    source_url = f'https://www.gutenberg.org/cache/epub/{meta["pg_id"]}/pg{meta["pg_id"]}.txt'
+    source_url = meta.get("source_text_url") or f'https://www.gutenberg.org/ebooks/{meta["pg_id"]}.txt.utf-8'
     raw = fetch(source_url)
     text = raw.decode("utf-8-sig")
     body = strip_pg(text)

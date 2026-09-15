@@ -1,0 +1,61 @@
+name: BB original-language Wikisource Italian batch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-wikisource-batch.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  translate-build-qa:
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - {rank: "063", config: configs/063_karamazov.json, key: karamazov}
+          - {rank: "064", config: configs/064_idiota.json, key: idiota}
+          - {rank: "065", config: configs/065_sottosuolo.json, key: sottosuolo}
+          - {rank: "075", config: configs/075_papa_goriot.json, key: papa-goriot}
+          - {rank: "081", config: configs/081_bel_ami.json, key: bel-ami}
+          - {rank: "087", config: configs/087_gabbiano.json, key: gabbiano}
+          - {rank: "088", config: configs/088_giardino_ciliegi.json, key: giardino-ciliegi}
+          - {rank: "089", config: configs/089_zio_vanja.json, key: zio-vanja}
+          - {rank: "092", config: configs/092_castello.json, key: castello}
+          - {rank: "100", config: configs/100_repubblica.json, key: repubblica}
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translator and build tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Acquire source, translate, and build
+        run: python scripts/bb_translate_wikisource.py --config "${{ matrix.config }}" --out "dist/${{ matrix.rank }}_${{ matrix.key }}"
+      - name: EPUBCheck 5.2.1
+        continue-on-error: true
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$(find "dist/${{ matrix.rank }}_${{ matrix.key }}" -name '*.epub' -print -quit)" 2>&1 | tee "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_EPUBCHECK.log"
+      - name: Upload title checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-${{ matrix.rank }}-${{ matrix.key }}-italian-review
+          path: dist/${{ matrix.rank }}_${{ matrix.key }}
+          if-no-files-found: warn
+          retention-days: 30

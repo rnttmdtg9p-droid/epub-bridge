@@ -1,0 +1,59 @@
+name: BB original-language Gutenberg Italian batch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-multilingual-pg-batch.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  translate-build-qa:
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include:
+          - {rank: "070", config: configs/070_notre_dame.json, key: notre-dame}
+          - {rank: "074", config: configs/074_signora_camelie.json, key: signora-camelie}
+          - {rank: "078", config: configs/078_certosa_parma.json, key: certosa-parma}
+          - {rank: "079", config: configs/079_germinale.json, key: germinale}
+          - {rank: "082", config: configs/082_boule_suif.json, key: boule-de-suif}
+          - {rank: "085", config: configs/085_masnadieri.json, key: masnadieri}
+          - {rank: "090", config: configs/090_processo.json, key: processo}
+          - {rank: "091", config: configs/091_metamorfosi.json, key: metamorfosi}
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translator and build tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Translate and build
+        run: python scripts/bb_translate_gutenberg.py --config "${{ matrix.config }}" --out "dist/${{ matrix.rank }}_${{ matrix.key }}"
+      - name: EPUBCheck 5.2.1
+        continue-on-error: true
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$(find "dist/${{ matrix.rank }}_${{ matrix.key }}" -name '*.epub' -print -quit)" 2>&1 | tee "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_EPUBCHECK.log"
+      - name: Upload title checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-${{ matrix.rank }}-${{ matrix.key }}-italian-review
+          path: dist/${{ matrix.rank }}_${{ matrix.key }}
+          if-no-files-found: warn
+          retention-days: 30
