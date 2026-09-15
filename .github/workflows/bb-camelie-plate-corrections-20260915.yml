@@ -1,0 +1,33 @@
+name: BB Camelie plate corrections 20260915
+on:
+  push:
+    paths: ['.github/workflows/bb-camelie-plate-corrections-20260915.yml']
+permissions:
+  contents: read
+jobs:
+  camelie-plate-corrections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Retrieve two original page rasters
+        timeout-minutes: 4
+        run: |
+          mkdir -p plates
+          curl -L --fail --retry 1 --max-time 160 'https://archive.org/download/ladameauxcamlias00duma/ladameauxcamlias00duma_jp2.zip' -o /tmp/native.zip
+          python - <<'PY'
+          import zipfile,re,pathlib,json,hashlib
+          frames={49,137};out=pathlib.Path('plates');log=[]
+          with zipfile.ZipFile('/tmp/native.zip') as z:
+              for n in z.namelist():
+                  m=re.search(r'_(\d+)\.jp2$',n)
+                  if m and int(m[1]) in frames:
+                      raw=z.read(n);dest=out/(m[1]+'.jp2');dest.write_bytes(raw);log.append({'frame':int(m[1]),'member':n,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()})
+          (out/'native_correction_manifest.json').write_text(json.dumps({'source':'https://archive.org/download/ladameauxcamlias00duma/ladameauxcamlias00duma_jp2.zip','source_zip_sha256':hashlib.sha256(pathlib.Path('/tmp/native.zip').read_bytes()).hexdigest(),'members':log},indent=2))
+          assert {x['frame'] for x in log}==frames
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-camelie-plate-corrections-20260915
+          path: plates
+          retention-days: 14
