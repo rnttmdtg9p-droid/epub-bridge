@@ -1,0 +1,42 @@
+name: BB Master16 six portraits
+on:
+  push:
+    paths: ['.github/workflows/bb-master16-six-portraits-20260915.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Acquire six public portraits
+        run: |
+          python -m pip -q install requests pillow
+          mkdir -p assets/portraits assets/records
+          python - <<'PY'
+          import requests,json,pathlib,io,time,hashlib
+          from PIL import Image,ImageOps
+          root=pathlib.Path('assets');s=requests.Session();s.headers['User-Agent']='BoundaryBayProduction/1.0 (https://github.com/rnttmdtg9p-droid/epub-bridge)'
+          names={'Alexandre Dumas fils':'Alexandre Dumas fils.jpg','Anton Chekhov':'Anton Chekhov 1889.jpg','Guy de Maupassant':'Maupassant par Nadar.jpg','Oscar Wilde':'Oscar Wilde by Napoleon Sarony. Three-quarter-length photograph, seated (cropped).jpg','Fyodor Dostoevsky':'Vasily Perov - Портрет Ф.М.Достоевского - Google Art Project.jpg','Victor Hugo':'Victor Hugo by Étienne Carjat 1876 - full.jpg'}
+          def get(u,**kw):
+              r=s.get(u,timeout=45,**kw);r.raise_for_status();return r
+          d=get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':1200,'titles':'|'.join('File:'+v for v in names.values())}).json()
+          mp={p['title'].replace('_',' '):p for p in d['query']['pages'].values()}
+          for name,title in names.items():
+              rec={'author':name,'file_title':'File:'+title,'retrieved':'2026-09-15'}
+              try:
+                  i=mp['File:'+title]['imageinfo'][0];rec['imageinfo']=i;u=i.get('thumburl',i['url']).split('?')[0]
+                  time.sleep(3)
+                  try:raw=get(u).content
+                  except Exception:raw=get(i['url'].split('?')[0]).content
+                  im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert('RGB');rec['download_size']=list(im.size);im.thumbnail((1400,1800))
+                  p=root/'portraits'/(name.replace(' ','_')+'.jpg');im.save(p,'JPEG',quality=94,subsampling=0);rec.update(status='DOWNLOADED_PENDING_REVIEW',sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+              except Exception as e:rec.update(status='FAILED',error=str(e))
+              (root/'records'/(name.replace(' ','_')+'.json')).write_text(json.dumps(rec,ensure_ascii=False,indent=2));print(name,rec['status'])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-master16-six-portraits-20260915
+          path: assets
+          retention-days: 14
