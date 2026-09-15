@@ -1,0 +1,51 @@
+name: BB 043 Dracula Italian production
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/bb_translate_gutenberg.py"
+      - "configs/043_dracula.json"
+      - ".github/workflows/bb-043-dracula.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  translate-build-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install exact translation runtime and build tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+
+      - name: Translate chapter by chapter and build EPUB
+        run: python scripts/bb_translate_gutenberg.py --config configs/043_dracula.json --out dist/043_dracula
+
+      - name: EPUBCheck 5.2.1
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar dist/043_dracula/*.epub 2>&1 | tee dist/043_dracula/043_Dracula_EPUBCHECK.log
+
+      - name: Upload complete title checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-043-dracula-italian-review
+          path: dist/043_dracula
+          if-no-files-found: error
+          retention-days: 30
