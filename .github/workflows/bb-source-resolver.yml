@@ -1,0 +1,47 @@
+name: BB Top100 original source resolver
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/bb_source_resolver.py"
+      - ".github/workflows/bb-source-resolver.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out exact triggering revision
+        env:
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          TOKEN: ${{ github.token }}
+        run: |
+          git init .
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          git fetch --depth=1 origin "${SHA}"
+          git checkout --detach FETCH_HEAD
+
+      - name: Resolve source candidates
+        run: python scripts/bb_source_resolver.py
+
+      - name: Upload resolver ledger
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-top100-original-source-candidates
+          path: results/bb-top100-original-source-candidates.json
+          if-no-files-found: error
+
+      - name: Commit resolver ledger
+        env:
+          BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/bb-top100-original-source-candidates.json
+          git commit -m "Record BB Top100 original source candidates" || exit 0
+          git push origin "HEAD:${BRANCH}"
