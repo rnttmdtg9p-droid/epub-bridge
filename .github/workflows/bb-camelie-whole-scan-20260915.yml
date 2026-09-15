@@ -1,0 +1,24 @@
+name: BB Camelie whole scan 20260915
+on:
+  push:
+    paths: ['.github/workflows/bb-camelie-whole-scan-20260915.yml']
+permissions:
+  contents: read
+jobs:
+  camelie-whole-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Download complete scan and existing page OCR
+        timeout-minutes: 6
+        run: |
+          mkdir -p scan
+          curl -L --fail --retry 1 --max-time 160 'https://archive.org/download/ladameauxcamlias00duma/ladameauxcamlias00duma.pdf' -o scan/ladameauxcamlias00duma.pdf
+          curl -L --fail --retry 1 --max-time 120 'https://archive.org/download/ladameauxcamlias00duma/ladameauxcamlias00duma_djvu.xml' -o scan/source_djvu.xml
+          sha256sum scan/* > scan/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-camelie-whole-scan-20260915
+          path: scan
+          retention-days: 14
