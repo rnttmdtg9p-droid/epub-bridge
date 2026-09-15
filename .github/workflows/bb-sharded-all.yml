@@ -1,4 +1,5 @@
 name: BB Top 100 Italian continuous sharded production
+# Launch: resumable source-aligned production.
 
 on:
   workflow_dispatch:
