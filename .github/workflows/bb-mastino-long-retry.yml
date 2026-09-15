@@ -1,0 +1,23 @@
+name: BB Mastino long-shard retry
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-mastino-long-retry.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bb-mastino-long-retry
+  cancel-in-progress: true
+
+jobs:
+  mastino:
+    uses: ./.github/workflows/bb-sharded-engine.yml
+    with:
+      engine: gutenberg
+      shard_size: 96
+      batch_key: bb-055-long-r3
+      configs: '["configs/055_mastino_baskervilles.json"]'
