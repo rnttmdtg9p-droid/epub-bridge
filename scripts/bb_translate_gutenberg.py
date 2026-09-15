@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import math
 import hashlib
 import html
@@ -80,29 +81,190 @@ def normalize_block(block: str) -> str:
     return " ".join(line.strip() for line in lines if line.strip())
 
 
-def split_long_block(text: str, limit: int = 520) -> list[str]:
-    if len(text) <= limit:
-        return [text]
-    pieces = re.split(r"(?<=[.!?…])\s+(?=[\"“‘A-ZÀ-ÖØ-Þ])", text)
-    out, current = [], ""
-    for piece in pieces:
-        if len(piece) > limit:
-            words = piece.split()
-            for word in words:
-                if current and len(current) + len(word) + 1 > limit:
-                    out.append(current)
-                    current = word
-                else:
-                    current = f"{current} {word}".strip()
+def split_long_block(text: str, limit: int = 1400) -> list[str]:
+    # One sentence per semantic unit sharply reduces the chance that an MT
+    # decoder silently skips a clause while still producing plausible prose.
+    out: list[str] = []
+    for sentence in sentence_segments(text):
+        if len(sentence) <= limit:
+            out.append(sentence)
             continue
-        if current and len(current) + len(piece) + 1 > limit:
+        clauses = re.split(r"(?<=[;:,—–])\s+", sentence)
+        current = ""
+        for clause in clauses:
+            if len(clause) > limit:
+                for word in clause.split():
+                    if current and len(current) + len(word) + 1 > limit:
+                        out.append(current)
+                        current = word
+                    else:
+                        current = f"{current} {word}".strip()
+            elif current and len(current) + len(clause) + 1 > limit:
+                out.append(current)
+                current = clause
+            else:
+                current = f"{current} {clause}".strip()
+        if current:
             out.append(current)
-            current = piece
-        else:
-            current = f"{current} {piece}".strip()
-    if current:
-        out.append(current)
     return out
+
+
+def sentence_segments(text: str) -> list[str]:
+    """Split prose conservatively for omission detection and targeted repair."""
+    boundary = re.compile(
+        r"([.!?…]+[»«”\"’]*)(\s+)(?=[«„“\"A-ZÀ-ÖØ-ÞА-ЯЁ])"
+    )
+    out: list[str] = []
+    start = 0
+    for match in boundary.finditer(text.strip()):
+        end = match.start(2)
+        piece = text.strip()[start:end].strip()
+        if piece:
+            out.append(piece)
+        start = match.end(2)
+    tail = text.strip()[start:].strip()
+    if tail:
+        out.append(tail)
+    return out
+
+
+def omission_risk(source: str, translation: str) -> bool:
+    """Flag likely dropped prose without treating ordinary expansion as failure."""
+    if len(source) < 90:
+        return False
+    source_sentences = sentence_segments(source)
+    target_sentences = sentence_segments(translation)
+    ratio = len(translation) / max(1, len(source))
+    return (
+        len(source_sentences) >= 2
+        and len(target_sentences) < len(source_sentences)
+    ) or ratio < 0.62
+
+
+def repetition_risk(source: str, translation: str) -> bool:
+    """Detect obvious decoder loops and duplicated target sentences."""
+    segments = sentence_segments(translation)
+    normalized = [re.sub(r"\W+", " ", value.casefold()).strip() for value in segments]
+    if any(
+        len(normalized[index]) > 35
+        and normalized[index] == normalized[index - 1]
+        for index in range(1, len(normalized))
+    ):
+        return True
+    compact = re.sub(r"\s+", " ", translation).strip()
+    midpoint = len(compact) // 2
+    if len(compact) > 100 and abs(len(compact[:midpoint]) - len(compact[midpoint:])) <= 1:
+        left = re.sub(r"\W+", "", compact[:midpoint].casefold())
+        right = re.sub(r"\W+", "", compact[midpoint:].casefold())
+        if left and left == right:
+            return True
+    return len(translation) / max(1, len(source)) > 1.75
+
+
+def translation_risk(source: str, translation: str) -> bool:
+    return omission_risk(source, translation) or repetition_risk(source, translation)
+
+
+def normalize_translation(text: str) -> str:
+    text = re.sub(r"(?<=[.!?…»”\"])(?=[A-ZÀ-ÖØ-Þ])", " ", text.strip())
+    return re.sub(r"[ \t]+", " ", text)
+
+
+def collapse_decoder_repetitions(source: str, translation: str) -> str:
+    """Collapse adjacent near-identical target clauses absent from the source."""
+    text = normalize_translation(translation)
+    chunk_pattern = re.compile(r".+?(?:[.!?…;:]+[»«”\"’]*(?=\s|$)|$)", re.S)
+    source_chunks = [m.group(0).strip() for m in chunk_pattern.finditer(source) if m.group(0).strip()]
+    target_chunks = [m.group(0).strip() for m in chunk_pattern.finditer(text) if m.group(0).strip()]
+
+    def normalized(value: str) -> str:
+        return re.sub(r"\W+", " ", value.casefold()).strip()
+
+    kept: list[str] = []
+    for chunk in target_chunks:
+        if kept and len(target_chunks) > len(source_chunks):
+            right = normalized(chunk)
+            duplicate = False
+            for prior in kept:
+                left = normalized(prior)
+                similarity = difflib.SequenceMatcher(None, left, right).ratio()
+                short = max(len(left.split()), len(right.split())) <= 4
+                left_words, right_words = left.split(), right.split()
+                shorter, longer = (
+                    (left_words, right_words)
+                    if len(left_words) <= len(right_words)
+                    else (right_words, left_words)
+                )
+                word_iter = iter(longer)
+                subsequence_repeat = (
+                    len(shorter) >= 3
+                    and all(any(word == candidate for candidate in word_iter) for word in shorter)
+                )
+                suffix_repeat = (
+                    min(len(left), len(right)) >= 14
+                    and (left.endswith(right) or right.endswith(left))
+                )
+                if left and right and (
+                    left == right
+                    or similarity >= (0.80 if short else 0.88)
+                    or suffix_repeat
+                    or subsequence_repeat
+                ):
+                    duplicate = True
+                    break
+            if duplicate:
+                continue
+        kept.append(chunk)
+    return normalize_translation(" ".join(kept))
+
+
+def repair_risky_units(
+    units: list[Unit], translator: ctranslate2.Translator,
+    processor: spm.SentencePieceProcessor,
+) -> int:
+    """Retranslate suspected omissions sentence-by-sentence with stronger search."""
+    repaired = 0
+    tasks: list[tuple[Unit, bool, list[str]]] = []
+    for unit in units:
+        cleaned = collapse_decoder_repetitions(unit.source, unit.translation)
+        if cleaned != unit.translation:
+            unit.translation = cleaned
+            repaired += 1
+        sentences = sentence_segments(unit.source)
+        risky = translation_risk(unit.source, unit.translation)
+        if unit.kind != "heading" and (len(sentences) >= 2 or risky):
+            tasks.append((unit, risky, sentences))
+    # Sentence-level greedy decoding matches the reference first pass and is
+    # materially less prone to MADLAD beam-search loops on short dialogue.
+    for risky_value, beam_size in ((False, 1), (True, 1)):
+        group = [task for task in tasks if task[1] is risky_value]
+        for offset in range(0, len(group), 32):
+            chunk = group[offset:offset + 32]
+            encoded = [
+                processor.encode("<2it> " + sentence, out_type=str)
+                for _, _, sentences in chunk for sentence in sentences
+            ]
+            outputs = translator.translate_batch(
+                encoded,
+                beam_size=beam_size,
+                max_decoding_length=640,
+                batch_type="tokens",
+                max_batch_size=2048 if beam_size == 1 else 1024,
+            )
+            cursor = 0
+            for unit, risky, sentences in chunk:
+                translated = outputs[cursor:cursor + len(sentences)]
+                cursor += len(sentences)
+                candidate = collapse_decoder_repetitions(unit.source, " ".join(
+                    processor.decode(result.hypotheses[0]).strip()
+                    for result in translated
+                ))
+                if candidate and (
+                    risky or len(candidate) >= len(unit.translation) * 1.06
+                ):
+                    unit.translation = candidate
+                    repaired += 1
+    return repaired
 
 
 def extract_units(body: str, meta: dict) -> tuple[str, list[list[Unit]]]:
@@ -199,7 +361,9 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
             max_batch_size=2048,
         )
         for unit, result in zip(batch, outputs):
-            unit.translation = processor.decode(result.hypotheses[0]).strip()
+            unit.translation = collapse_decoder_repetitions(
+                unit.source, processor.decode(result.hypotheses[0])
+            )
         retry = [unit for unit in batch if (
             len(unit.translation) > max(220, int(len(unit.source) * 2.4))
             or len(unit.translation) < max(2, int(len(unit.source) * 0.18))
@@ -210,15 +374,21 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
                 [tokens], beam_size=4, max_decoding_length=640,
                 batch_type="tokens", max_batch_size=1024,
             )[0]
-            unit.translation = processor.decode(result.hypotheses[0]).strip()
+            unit.translation = collapse_decoder_repetitions(
+                unit.source, processor.decode(result.hypotheses[0])
+            )
         if offset % 128 == 0:
             print(f"translated {min(offset + batch_size, len(flat))}/{len(flat)} semantic units", flush=True)
+    repaired = repair_risky_units(all_units, translator, processor)
+    if repaired:
+        print(f"sentence-level omission repair applied to {repaired} units", flush=True)
     return {
         "model": MADLAD,
         "runtime_model": MADLAD_RUNTIME,
         "decoding": {"beam_size": 1, "max_decoding_length": 640},
         "unit_count": len(all_units),
         "model_translated_unit_count": len(flat),
+        "sentence_level_repair_count": repaired,
         "source_chars": sum(len(u.source) for u in all_units),
         "translation_chars": sum(len(u.translation) for u in all_units),
     }
@@ -419,6 +589,10 @@ def qa(meta: dict, chapters: list[list[Unit]], source: dict, epub: Path, build: 
     ratio = sum(len(u.translation) for u in flat) / max(1, sum(len(u.source) for u in flat))
     if ratio < 0.55 or ratio > 1.65:
         failures.append(f"translation_length_ratio={ratio:.3f}")
+    translation_risks = [
+        u.unit_id for u in flat
+        if u.kind != "heading" and translation_risk(u.source, u.translation)
+    ]
     with zipfile.ZipFile(epub) as zf:
         names = zf.namelist()
         if names[0] != "mimetype" or zf.getinfo("mimetype").compress_type != zipfile.ZIP_STORED:
@@ -440,6 +614,8 @@ def qa(meta: dict, chapters: list[list[Unit]], source: dict, epub: Path, build: 
         "source_chars": sum(len(u.source) for u in flat),
         "translation_chars": sum(len(u.translation) for u in flat),
         "translation_length_ratio": ratio,
+        "remaining_translation_risk_count": len(translation_risks),
+        "remaining_translation_risk_units": translation_risks[:40],
         "translator": MADLAD,
         "editorial_pass": {"model": "google/gemini-3-flash-preview", "status": "NOT_CONFIGURED", "substitute_used": False},
         "fal_used": False,
@@ -584,6 +760,10 @@ def main() -> None:
     parser.add_argument("--shard-size", type=int, default=96)
     parser.add_argument("--shards-dir")
     parser.add_argument("--source-bundle")
+    parser.add_argument(
+        "--repair-risky", action="store_true",
+        help="In assemble mode, repair likely omissions with sentence-level MADLAD decoding",
+    )
     args = parser.parse_args()
     meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
     out = Path(args.out)
@@ -632,6 +812,7 @@ def main() -> None:
         print(json.dumps(shard_report, ensure_ascii=False))
         return
 
+    assembled_repaired = 0
     if args.mode == "assemble":
         if not args.shards_dir:
             raise ValueError("--shards-dir is required in assemble mode")
@@ -645,6 +826,16 @@ def main() -> None:
                 unit.translation = record["translation"]
         if missing:
             raise ValueError(f"Missing or source-mismatched aligned translations: {len(missing)}; first={missing[:8]}")
+        if args.repair_risky:
+            model_dir, tokenizer = materialize_runtime()
+            processor = spm.SentencePieceProcessor(model_file=tokenizer)
+            translator = ctranslate2.Translator(
+                model_dir, device="cpu", compute_type="int8",
+                inter_threads=max(1, min(4, (os.cpu_count() or 2) // 2)),
+                intra_threads=2,
+            )
+            assembled_repaired = repair_risky_units(flat, translator, processor)
+            print(f"sentence-level translation repair applied to {assembled_repaired} assembled units", flush=True)
 
     source_images = []
     if meta.get("preserve_source_images"):
@@ -666,6 +857,8 @@ def main() -> None:
             "model": MADLAD, "runtime_model": MADLAD_RUNTIME,
             "decoding": {"beam_size": 1, "max_decoding_length": 640},
             "unit_count": len(flat), "assembled_from_shards": True,
+            "sentence_level_repair_requested": bool(args.repair_risky),
+            "sentence_level_repair_count": assembled_repaired,
         }
     alignment_path = out / f'{meta["rank"]:03d}_alignment.jsonl'
     write_alignment(alignment_path, flat)
