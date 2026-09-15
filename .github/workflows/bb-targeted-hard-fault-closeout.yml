@@ -1,0 +1,102 @@
+name: BB targeted hard-fault closeout
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bb-targeted-hard-fault-closeout.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-targeted-hard-fault-closeout
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        include:
+          - {rank: "043", config: "configs/043_dracula.json", engine: "gutenberg", language: "en", source_run: 34933138834, prepared: "bb-en-a-r2-prepared-sources", mode: "candidate", candidate: "bb-043-dracula-italian-review"}
+          - {rank: "049", config: "configs/049_cime_tempestose.json", engine: "gutenberg", language: "en", source_run: 34933138834, prepared: "bb-en-a-r2-prepared-sources", mode: "candidate", candidate: "bb-049-cime-tempestose-italian-review"}
+          - {rank: "090", config: "configs/090_processo.json", engine: "gutenberg", language: "de", source_run: 34933138834, prepared: "bb-multi-pg-r2-prepared-sources", mode: "candidate", candidate: "bb-090-il-processo-italian-review"}
+          - {rank: "063", config: "configs/063_karamazov.json", engine: "wikisource", language: "ru", source_run: 34933391806, prepared: "bb-ru-novels-r2-prepared-sources", mode: "shards", candidate: ""}
+          - {rank: "064", config: "configs/064_idiota.json", engine: "wikisource", language: "ru", source_run: 34933391806, prepared: "bb-ru-novels-r2-prepared-sources", mode: "shards", candidate: ""}
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation and EPUB tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Materialize exact MADLAD runtime
+        run: >-
+          python -c "from huggingface_hub import snapshot_download,hf_hub_download;
+          snapshot_download(repo_id='Heng666/madlad400-3b-mt-ct2-int8',local_dir='madlad_ct2');
+          hf_hub_download(repo_id='google/madlad400-3b-mt',filename='spiece.model',local_dir='madlad_tokenizer')"
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.prepared }}
+          path: prepared
+          run-id: ${{ matrix.source_run }}
+          github-token: ${{ github.token }}
+      - name: Download single candidate alignment
+        if: ${{ matrix.mode == 'candidate' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.candidate }}
+          path: candidate
+          run-id: ${{ matrix.source_run }}
+          github-token: ${{ github.token }}
+      - name: Download sharded candidate alignments
+        if: ${{ matrix.mode == 'shards' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: bb-shard-${{ matrix.rank }}-*
+          path: candidate-shards
+          merge-multiple: true
+          run-id: ${{ matrix.source_run }}
+          github-token: ${{ github.token }}
+      - name: Assemble input and repair hard faults
+        run: |
+          mkdir -p repaired dist
+          if [ "${{ matrix.mode }}" = "candidate" ]; then
+            alignment="$(find candidate -name '${{ matrix.rank }}_alignment.jsonl' -print -quit)"
+            test -n "$alignment"
+          else
+            find candidate-shards -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > "candidate-shards/${{ matrix.rank }}_alignment.jsonl"
+            alignment="candidate-shards/${{ matrix.rank }}_alignment.jsonl"
+            test -s "$alignment"
+          fi
+          python scripts/bb_repair_alignment.py --alignment "$alignment" --out "repaired/${{ matrix.rank }}_shard_0000_alignment.jsonl" --language "${{ matrix.language }}" --report "dist/${{ matrix.rank }}_repair_QA.json"
+          python -c "import json; d=json.load(open('dist/${{ matrix.rank }}_repair_QA.json')); assert d['remaining_hard_flagged_unit_count']==0, d"
+      - name: Reassemble corrected BB REVIEW EPUB
+        run: |
+          if [ "${{ matrix.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
+          python "$script" --config "${{ matrix.config }}" --out "dist/${{ matrix.rank }}" --mode assemble --source-bundle "prepared/${{ matrix.rank }}/${{ matrix.rank }}_source_bundle.json" --shards-dir repaired
+      - name: EPUBCheck 5.2.1
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$(find "dist/${{ matrix.rank }}" -name '*.epub' -print -quit)" 2>&1 | tee "dist/${{ matrix.rank }}/${{ matrix.rank }}_EPUBCHECK.log"
+      - name: Upload corrected title checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-closeout-${{ matrix.rank }}-italian-review
+          path: dist
+          if-no-files-found: error
+          retention-days: 30
