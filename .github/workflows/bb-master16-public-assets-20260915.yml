@@ -1,0 +1,45 @@
+name: BB Master16 public assets 20260915
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-master16-public-assets-20260915.yml'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch public assets only
+        run: |
+          python -m pip -q install requests pillow
+          mkdir -p assets/portraits assets/records assets/tools
+          python - <<'PY'
+          import requests,json,pathlib,io,time,hashlib,concurrent.futures
+          from PIL import Image,ImageOps
+          root=pathlib.Path('assets')
+          def get(url,**kw):
+              r=requests.get(url,timeout=45,headers={'User-Agent':'BoundaryBayProduction/1.0 (public-domain publishing research; github.com/rnttmdtg9p-droid/epub-bridge)'},**kw);r.raise_for_status();return r
+          u='https://github.com/w3c/epubcheck/releases/download/v5.3.0/epubcheck-5.3.0.zip'
+          r=get(u);(root/'tools/epubcheck-5.3.0.zip').write_bytes(r.content)
+          authors=['Mary Shelley','Jane Austen','Charles Dickens','Arthur Conan Doyle','Oscar Wilde','Fyodor Dostoevsky','Victor Hugo','Alexandre Dumas fils','Honoré de Balzac','Stendhal','Guy de Maupassant','Anton Chekhov','Franz Kafka']
+          def acquire(name):
+              record={'author':name,'retrieved':'2026-09-15'};slug=name.replace(' ','_')
+              try:
+                  obj=get('https://en.wikipedia.org/w/api.php',params={'action':'query','format':'json','prop':'pageimages|extracts','piprop':'name|original','explaintext':1,'exintro':1,'redirects':1,'titles':name}).json()
+                  p=next(iter(obj['query']['pages'].values()));record['biography']=p.get('extract');record['page']=p
+                  fn=p['pageimage'];imeta=get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','titles':'File:'+fn}).json()
+                  info=next(iter(imeta['query']['pages'].values()))['imageinfo'][0];record['imageinfo']=info
+                  raw=get(info['url']).content;record['original_sha256']=hashlib.sha256(raw).hexdigest()
+                  im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert('RGB');record['original_size']=list(im.size);im.thumbnail((1400,1800))
+                  dest=root/'portraits'/f'{slug}.jpg';im.save(dest,'JPEG',quality=94,subsampling=0);record['output_sha256']=hashlib.sha256(dest.read_bytes()).hexdigest();record['status']='DOWNLOADED_PENDING_RIGHTS_REVIEW'
+              except Exception as e:record['status']='FAILED';record['error']=str(e)
+              (root/'records'/f'{slug}.json').write_text(json.dumps(record,ensure_ascii=False,indent=2));print(name,record['status'],flush=True)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:list(ex.map(acquire,authors))
+          (root/'records/validator.json').write_text(json.dumps({'url':u,'version':'5.3.0','sha256':hashlib.sha256(r.content).hexdigest()}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb-master16-public-assets-20260915
+          path: assets
+          retention-days: 14
