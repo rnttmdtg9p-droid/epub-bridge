@@ -1,0 +1,20 @@
+name: Cancel obsolete BB sharded production
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-cancel-obsolete-sharded.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bb-top100-italian-sharded-production
+  cancel-in-progress: true
+
+jobs:
+  supersede:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Superseded by corrected Gutenberg and Wikisource retry workflows."
