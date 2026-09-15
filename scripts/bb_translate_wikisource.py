@@ -28,6 +28,7 @@ from bb_translate_gutenberg import (
     materialize_runtime,
     qa,
     save_source_bundle,
+    seed_structural_translations,
     sha,
     split_long_block,
     translate_units,
@@ -251,7 +252,24 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
 
     root_level_two = [s for s in root_page.get("sections", []) if str(s.get("level")) == "2"]
     start_children = ordered_links(child_links(root_page, canonical_root))
-    if start_children and len(start_children) >= expected:
+    prefix = canonical_root.replace(" ", "_") + "/"
+    descendants = []
+    for title in root_page["links"]:
+        normalized = title.replace(" ", "_")
+        if normalized.startswith(prefix) and title not in descendants:
+            descendants.append(title)
+    terminals = [
+        title for title in descendants
+        if not any(
+            other != title
+            and other.replace(" ", "_").startswith(title.replace(" ", "_") + "/")
+            for other in descendants
+        )
+    ]
+    if not start_children and len(terminals) == expected:
+        for title in terminals:
+            walk(title, 1)
+    elif start_children and len(start_children) >= expected:
         for child in start_children:
             walk(child, 1)
     elif expected > 1 and len(root_level_two) == expected:
@@ -382,6 +400,7 @@ def main() -> None:
             json.dumps(discovery, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         raise SystemExit(json.dumps(discovery, ensure_ascii=False, indent=2))
     flat = [unit for chapter in chapters for unit in chapter]
+    seed_structural_translations(flat, meta)
 
     if args.mode == "prepare":
         plan = {
@@ -433,6 +452,7 @@ def main() -> None:
                 unit.translation = record["translation"]
         if missing:
             raise ValueError(f"Missing or source-mismatched aligned translations: {len(missing)}; first={missing[:8]}")
+        seed_structural_translations(flat, meta)
 
     (out / f'{meta["rank"]:03d}_source.txt').write_text(joined, encoding="utf-8")
     (out / f'{meta["rank"]:03d}_source_record.json').write_text(json.dumps(source, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
