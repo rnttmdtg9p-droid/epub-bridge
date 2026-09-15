@@ -1,0 +1,61 @@
+name: BB Mastino targeted shard recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-mastino-targeted-recovery.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-mastino-targeted-shard-recovery
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        include:
+          - {shard: 0, padded: "0000"}
+          - {shard: 1, padded: "0001"}
+          - {shard: 6, padded: "0006"}
+          - {shard: 11, padded: "0011"}
+          - {shard: 14, padded: "0014"}
+          - {shard: 17, padded: "0017"}
+          - {shard: 18, padded: "0018"}
+          - {shard: 19, padded: "0019"}
+    runs-on: ubuntu-latest
+    timeout-minutes: 59
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation runtime
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Download authenticated source bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: bb-en-b-r2-prepared-sources
+          path: prepared
+          run-id: 34933138834
+          github-token: ${{ github.token }}
+      - name: Translate exact Mastino shard
+        run: python scripts/bb_translate_gutenberg.py --config configs/055_mastino_baskervilles.json --out shard-out --mode shard --shard-index "${{ matrix.shard }}" --shard-size 192 --source-bundle prepared/055/055_source_bundle.json
+      - name: Upload recovered alignment shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-recovery-shard-055-${{ matrix.padded }}
+          path: shard-out
+          if-no-files-found: error
+          retention-days: 30
