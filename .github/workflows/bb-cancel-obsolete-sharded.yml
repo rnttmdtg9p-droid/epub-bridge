@@ -1,20 +1,26 @@
-name: Cancel obsolete BB sharded production
+name: Cancel obsolete BB production runs
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - ".github/workflows/bb-cancel-obsolete-sharded.yml"
 
 permissions:
   contents: read
-
-concurrency:
-  group: bb-top100-italian-sharded-production
-  cancel-in-progress: true
+  actions: write
 
 jobs:
-  supersede:
+  cancel-obsolete:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Superseded by corrected Gutenberg and Wikisource retry workflows."
+      - name: Cancel superseded stalled runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          for run_id in 35000731554 35006641733; do
+            status="$(gh api "repos/$GH_REPO/actions/runs/$run_id" --jq .status)"
+            if [ "$status" != "completed" ]; then
+              gh api --method POST "repos/$GH_REPO/actions/runs/$run_id/cancel"
+            fi
+          done
