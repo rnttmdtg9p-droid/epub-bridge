@@ -126,14 +126,29 @@ def hard_flags(record: dict, language: str) -> list[str]:
 
 
 def atomic_segments(source: str) -> list[str]:
-    """Use smaller complete clauses only when a normal sentence still decodes badly."""
+    """Split difficult units into bounded clauses for a genuinely different decode."""
     out: list[str] = []
     for sentence in sentence_segments(source) or [source]:
-        if len(sentence) <= 180:
-            out.append(sentence)
-            continue
-        parts = [p.strip() for p in re.split(r"(?<=[;:!?…—–])\s+", sentence) if p.strip()]
-        out.extend(parts if len(parts) > 1 else [sentence])
+        clauses = [
+            part.strip()
+            for part in re.split(r"(?<=[,;:!?…—–])\s+", sentence)
+            if part.strip()
+        ]
+        for clause in clauses or [sentence]:
+            if len(clause) <= 180:
+                out.append(clause)
+                continue
+            words = clause.split()
+            chunk: list[str] = []
+            size = 0
+            for word in words:
+                if chunk and size + 1 + len(word) > 150:
+                    out.append(" ".join(chunk))
+                    chunk, size = [], 0
+                chunk.append(word)
+                size += len(word) + (1 if size else 0)
+            if chunk:
+                out.append(" ".join(chunk))
     return out
 
 
@@ -162,6 +177,32 @@ def runtime() -> tuple[ctranslate2.Translator, spm.SentencePieceProcessor]:
     return translator, processor
 
 
+def translate_parts(
+    translator: ctranslate2.Translator,
+    processor: spm.SentencePieceProcessor,
+    source: str,
+    parts: list[str],
+    beam_size: int,
+    repetition_penalty: float = 1.0,
+) -> str:
+    """Translate supplied parts directly so retry segmentation is preserved."""
+    encoded = [processor.encode("<2it> " + part, out_type=str) for part in parts]
+    kwargs = {
+        "beam_size": beam_size,
+        "max_decoding_length": min(512, max(96, max(map(len, encoded)) * 2)),
+        "batch_type": "tokens",
+        "max_batch_size": 1024,
+    }
+    if repetition_penalty > 1.0:
+        kwargs.update(
+            repetition_penalty=repetition_penalty,
+            no_repeat_ngram_size=3,
+        )
+    outputs = translator.translate_batch(encoded, **kwargs)
+    value = " ".join(processor.decode(item.hypotheses[0]).strip() for item in outputs)
+    return collapse_decoder_repetitions(source, value)
+
+
 def translate_segments(
     translator: ctranslate2.Translator,
     processor: spm.SentencePieceProcessor,
@@ -169,19 +210,14 @@ def translate_segments(
     beam_size: int,
     penalized: bool,
 ) -> str:
-    segments = sentence_segments(source) or [source]
-    encoded = [processor.encode("<2it> " + part, out_type=str) for part in segments]
-    kwargs = {
-        "beam_size": beam_size,
-        "max_decoding_length": min(512, max(96, max(map(len, encoded)) * 2)),
-        "batch_type": "tokens",
-        "max_batch_size": 1024,
-    }
-    if penalized:
-        kwargs.update(repetition_penalty=1.18, no_repeat_ngram_size=3)
-    outputs = translator.translate_batch(encoded, **kwargs)
-    value = " ".join(processor.decode(item.hypotheses[0]).strip() for item in outputs)
-    return collapse_decoder_repetitions(source, value)
+    return translate_parts(
+        translator,
+        processor,
+        source,
+        sentence_segments(source) or [source],
+        beam_size,
+        1.18 if penalized else 1.0,
+    )
 
 
 def main() -> None:
@@ -208,11 +244,11 @@ def main() -> None:
             candidates.append(translate_segments(translator, processor, record["source"], 4, True))
             atomic = atomic_segments(record["source"])
             if atomic != (sentence_segments(record["source"]) or [record["source"]]):
-                candidates.append(translate_segments(
-                    translator, processor, " ".join(atomic), 1, True
+                candidates.append(translate_parts(
+                    translator, processor, record["source"], atomic, 2, 1.25
                 ))
-                candidates.append(translate_segments(
-                    translator, processor, " ".join(atomic), 4, True
+                candidates.append(translate_parts(
+                    translator, processor, record["source"], atomic, 6, 1.35
                 ))
         best = min(
             (candidate for candidate in candidates if candidate.strip()),
