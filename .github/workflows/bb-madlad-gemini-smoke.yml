@@ -1,0 +1,138 @@
+name: BB MADLAD Gemini translation smoke
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-madlad-gemini-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - name: Install exact translation runtimes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'google-genai>=1.0.0'
+      - name: Run multilingual MADLAD and optional Gemini smoke test
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p results
+          python3 - <<'PY'
+          import datetime, hashlib, json, os, platform
+          from pathlib import Path
+          import ctranslate2
+          import sentencepiece as spm
+          from huggingface_hub import snapshot_download, hf_hub_download
+
+          model_dir = snapshot_download(
+              repo_id="Heng666/madlad400-3b-mt-ct2-int8",
+              local_dir="madlad_ct2",
+          )
+          spiece = hf_hub_download(
+              repo_id="google/madlad400-3b-mt",
+              filename="spiece.model",
+              local_dir="madlad_tokenizer",
+          )
+          sp = spm.SentencePieceProcessor(model_file=spiece)
+          translator = ctranslate2.Translator(
+              model_dir,
+              device="cpu",
+              compute_type="int8",
+              inter_threads=2,
+              intra_threads=2,
+          )
+          samples = [
+              {"language":"en","text":"The rain had stopped, but the river remained high and dark."},
+              {"language":"fr","text":"La cloche sonna lentement au-dessus de la ville endormie."},
+              {"language":"de","text":"Am Morgen lag ein dichter Nebel über dem stillen Tal."},
+              {"language":"ru","text":"К вечеру ветер стих, и дорога снова стала видна."},
+              {"language":"grc","text":"Ἐν ἀρχῇ ἦν ὁ λόγος."},
+          ]
+          for item in samples:
+              tokens = sp.encode("<2it> " + item["text"], out_type=str)
+              out = translator.translate_batch(
+                  [tokens],
+                  beam_size=4,
+                  max_decoding_length=256,
+              )[0].hypotheses[0]
+              item["madlad_it"] = sp.decode(out)
+
+          gemini = {"model":"gemini-3-flash-preview","status":"NOT_CONFIGURED","results":[]}
+          key = os.environ.get("GEMINI_API_KEY","").strip()
+          if key:
+              try:
+                  from google import genai
+                  client = genai.Client(api_key=key)
+                  for item in samples:
+                      prompt = (
+                          "Revisiona la bozza italiana confrontandola con l'originale. "
+                          "Conserva integralmente significato, nomi, tempo, tono e dettagli; "
+                          "non riassumere e non aggiungere nulla. Restituisci soltanto l'italiano.\n\n"
+                          f"Originale ({item['language']}): {item['text']}\n"
+                          f"Bozza MADLAD: {item['madlad_it']}"
+                      )
+                      response = client.models.generate_content(
+                          model="gemini-3-flash-preview",
+                          contents=prompt,
+                      )
+                      gemini["results"].append({
+                          "language":item["language"],
+                          "revised_it":(response.text or "").strip(),
+                      })
+                  gemini["status"]="PASS"
+              except Exception as exc:
+                  gemini["status"]="ERROR"
+                  gemini["error"]=f"{type(exc).__name__}: {exc}"[:1000]
+
+          record = {
+              "status":"PASS" if all(x.get("madlad_it") for x in samples) else "FAIL",
+              "created_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "python":platform.python_version(),
+              "ctranslate2":ctranslate2.__version__,
+              "sentencepiece":spm.__version__,
+              "first_pass_model":"google/madlad400-3b-mt",
+              "runtime_model_repo":"Heng666/madlad400-3b-mt-ct2-int8",
+              "model_files":{
+                  str(p.relative_to(model_dir)):hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in sorted(Path(model_dir).rglob("*")) if p.is_file()
+              },
+              "samples":samples,
+              "editorial_pass":gemini,
+          }
+          Path("results/bb-madlad-gemini-smoke.json").write_text(
+              json.dumps(record,ensure_ascii=False,indent=2),
+              encoding="utf-8",
+          )
+          print(json.dumps({
+              "status":record["status"],
+              "languages":[x["language"] for x in samples],
+              "gemini_status":gemini["status"],
+          },ensure_ascii=False))
+          PY
+      - name: Commit smoke-test evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_REF_NAME}"
+          git checkout -B "${GITHUB_REF_NAME}" FETCH_HEAD
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/bb-madlad-gemini-smoke.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Record BB MADLAD Gemini smoke result"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
