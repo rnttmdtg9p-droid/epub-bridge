@@ -152,6 +152,22 @@ def atomic_segments(source: str) -> list[str]:
     return out
 
 
+def bounded_segments(source: str, limit: int) -> list[str]:
+    """Split source into short, punctuation-aware pieces for hard-fault retries."""
+    pieces: list[str] = []
+    pending = ""
+    for token in re.split(r"(\s+)", source):
+        if not token:
+            continue
+        if pending and len(pending) + len(token) > limit:
+            pieces.append(pending.strip())
+            pending = ""
+        pending += token
+    if pending.strip():
+        pieces.append(pending.strip())
+    return pieces or [source]
+
+
 def runtime() -> tuple[ctranslate2.Translator, spm.SentencePieceProcessor]:
     model_target = Path(os.environ.get("BB_MADLAD_MODEL_DIR", "madlad_ct2"))
     tokenizer_target = Path(os.environ.get("BB_MADLAD_TOKENIZER_DIR", "madlad_tokenizer"))
@@ -250,8 +266,34 @@ def main() -> None:
                 candidates.append(translate_parts(
                     translator, processor, record["source"], atomic, 6, 1.35
                 ))
+
+            # Escalate only release-blocking units. Short independent decodes avoid
+            # carrying source-script spillover and decoder loops across clauses.
+            if not any(
+                not hard_flags(
+                    {"source": record["source"], "translation": candidate,
+                     "kind": record.get("kind", "paragraph")},
+                    args.language,
+                )
+                for candidate in candidates if candidate.strip()
+            ):
+                for limit, beam, penalty in ((110, 3, 1.25), (70, 5, 1.35), (42, 8, 1.45)):
+                    candidates.append(translate_parts(
+                        translator, processor, record["source"],
+                        bounded_segments(record["source"], limit), beam, penalty
+                    ))
+
+        valid_candidates = [candidate for candidate in candidates if candidate.strip()]
+        hard_clear = [
+            candidate for candidate in valid_candidates
+            if not hard_flags(
+                {"source": record["source"], "translation": candidate,
+                 "kind": record.get("kind", "paragraph")},
+                args.language,
+            )
+        ]
         best = min(
-            (candidate for candidate in candidates if candidate.strip()),
+            hard_clear or valid_candidates,
             key=lambda value: score(record["source"], value, record.get("kind", "paragraph"), args.language),
         )
         if best != record.get("translation", ""):
