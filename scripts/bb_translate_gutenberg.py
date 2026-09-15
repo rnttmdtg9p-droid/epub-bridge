@@ -169,17 +169,20 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         model_dir,
         device="cpu",
         compute_type="int8",
-        inter_threads=max(1, min(4, os.cpu_count() or 2)),
+        # One translator worker with all available CPU lanes avoids the severe
+        # oversubscription caused by inter_threads × intra_threads on hosted
+        # four-core runners.
+        inter_threads=1,
         intra_threads=max(1, min(4, os.cpu_count() or 2)),
     )
     flat = [unit for chapter in chapters for unit in chapter]
-    batch_size = 12
+    batch_size = 24
     for offset in range(0, len(flat), batch_size):
         batch = flat[offset:offset + batch_size]
         tokens = [processor.encode("<2it> " + unit.source, out_type=str) for unit in batch]
         outputs = translator.translate_batch(
             tokens,
-            beam_size=4,
+            beam_size=1,
             max_decoding_length=640,
             batch_type="tokens",
             max_batch_size=2048,
@@ -191,6 +194,7 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
     return {
         "model": MADLAD,
         "runtime_model": MADLAD_RUNTIME,
+        "decoding": {"beam_size": 1, "max_decoding_length": 640},
         "unit_count": len(flat),
         "source_chars": sum(len(u.source) for u in flat),
         "translation_chars": sum(len(u.translation) for u in flat),
