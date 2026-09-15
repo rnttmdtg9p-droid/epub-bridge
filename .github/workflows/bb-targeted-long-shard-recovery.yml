@@ -1,0 +1,64 @@
+name: BB targeted long-shard recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-targeted-long-shard-recovery.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-targeted-long-shard-recovery
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    strategy:
+      fail-fast: false
+      max-parallel: 9
+      matrix:
+        include:
+          - {engine: gutenberg, run_id: 34933138834, batch: bb-multi-pg-r2-prepared-sources, rank: "079", config: configs/079_germinale.json, shard: 21, padded: "0021"}
+          - {engine: gutenberg, run_id: 34933138834, batch: bb-en-a-r2-prepared-sources, rank: "047", config: configs/047_emma.json, shard: 33, padded: "0033"}
+          - {engine: gutenberg, run_id: 34933138834, batch: bb-en-a-r2-prepared-sources, rank: "047", config: configs/047_emma.json, shard: 34, padded: "0034"}
+          - {engine: gutenberg, run_id: 34933138834, batch: bb-en-a-r2-prepared-sources, rank: "047", config: configs/047_emma.json, shard: 36, padded: "0036"}
+          - {engine: gutenberg, run_id: 34933138834, batch: bb-en-b-r2-prepared-sources, rank: "058", config: configs/058_importanza_ernesto.json, shard: 4, padded: "0004"}
+          - {engine: gutenberg, run_id: 34933138834, batch: bb-en-b-r2-prepared-sources, rank: "058", config: configs/058_importanza_ernesto.json, shard: 5, padded: "0005"}
+          - {engine: wikisource, run_id: 34933391806, batch: bb-wikisource-b-r2-prepared-sources, rank: "092", config: configs/092_castello.json, shard: 10, padded: "0010"}
+          - {engine: wikisource, run_id: 34933391806, batch: bb-ru-novels-r2-prepared-sources, rank: "063", config: configs/063_karamazov.json, shard: 94, padded: "0094"}
+          - {engine: wikisource, run_id: 34933391806, batch: bb-ru-novels-r2-prepared-sources, rank: "063", config: configs/063_karamazov.json, shard: 95, padded: "0095"}
+    runs-on: ubuntu-latest
+    timeout-minutes: 59
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation runtime
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Download authenticated source bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.batch }}
+          path: prepared
+          run-id: ${{ matrix.run_id }}
+          github-token: ${{ github.token }}
+      - name: Translate exact failed shard
+        run: |
+          if [ "${{ matrix.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
+          python "$script" --config "${{ matrix.config }}" --out shard-out --mode shard --shard-index "${{ matrix.shard }}" --shard-size 192 --source-bundle "prepared/${{ matrix.rank }}/${{ matrix.rank }}_source_bundle.json"
+      - name: Upload recovered alignment shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-recovery-shard-${{ matrix.rank }}-${{ matrix.padded }}
+          path: shard-out
+          if-no-files-found: error
+          retention-days: 30
