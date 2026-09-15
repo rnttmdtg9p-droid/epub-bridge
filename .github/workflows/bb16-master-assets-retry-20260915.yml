@@ -1,0 +1,57 @@
+name: BB16 grouped public reference retry
+on:
+  push:
+    paths: ['.github/workflows/bb16-master-assets-retry-20260915.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Grouped reference fetch
+        shell: bash
+        run: |
+          mkdir -p bundle/portraits bundle/sources bundle/licenses
+          python - <<'PY'
+          import requests,json,time,hashlib
+          from pathlib import Path
+          from urllib.parse import urlparse
+          B=Path('bundle');S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorialReference/1.0 (reference review)'
+          def get(u,**kw):
+              for i in range(4):
+                  r=S.get(u,timeout=35,**kw)
+                  if r.status_code==429:time.sleep(max(20,min(int(r.headers.get('Retry-After','30')),60)));continue
+                  r.raise_for_status();return r
+              r.raise_for_status()
+          names={65:'Fyodor Dostoevsky',70:'Victor Hugo',74:'Alexandre Dumas fils',75:'Honoré de Balzac',78:'Stendhal',81:'Guy de Maupassant'}
+          query=get('https://en.wikipedia.org/w/api.php',params={'action':'query','format':'json','redirects':1,'titles':'|'.join(names.values()),'prop':'pageimages|extracts','piprop':'name|original','exintro':1,'explaintext':1,'exlimit':20}).json();(B/'portraits/wiki_batch.json').write_text(json.dumps(query,ensure_ascii=False));pages=list(query['query']['pages'].values())
+          resolved={}
+          for rank,name in names.items():
+              page=next((p for p in pages if p['title'].casefold()==name.casefold()),None)
+              if page is None:
+                  red=next((x['to'] for x in query['query'].get('redirects',[]) if x['from']==name),name);page=next((p for p in pages if p['title']==red),None)
+              if page and page.get('pageimage'):resolved[rank]=page
+          co=get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','redirects':1,'titles':'|'.join('File:'+p['pageimage'] for p in resolved.values()),'prop':'imageinfo','iiprop':'url|extmetadata|size','iiurlwidth':1500}).json();(B/'portraits/commons_batch.json').write_text(json.dumps(co,ensure_ascii=False));cp=list(co['query']['pages'].values())
+          for rank,page in resolved.items():
+              rec={'rank':rank,'name':names[rank],'wiki':{'query':{'pages':{str(page['pageid']):page}}},'filename':page['pageimage']}
+              try:
+                  c=next(x for x in cp if x['title'].replace('_',' ')==('File:'+page['pageimage']).replace('_',' '));rec['commons']={'query':{'pages':{str(c['pageid']):c}}};ii=c['imageinfo'][0];u=ii.get('thumburl',ii['url']);data=get(u).content;ext=Path(urlparse(u).path).suffix;dest=B/'portraits'/('%03d'%rank+ext);dest.write_bytes(data);rec.update(status='DOWNLOADED_UNREVIEWED',sha256=hashlib.sha256(data).hexdigest(),path=str(dest),selected_url=u)
+              except Exception as e:rec.update(status='FAILED',error=str(e))
+              (B/'portraits'/('%03d'%rank+'.json')).write_text(json.dumps(rec,ensure_ascii=False,indent=2));time.sleep(2)
+          ws={81:('fr','Bel-Ami/Édition Ollendorff, 1901'),87:('ru','Чайка (Чехов)'),88:('ru','Вишнёвый сад (Чехов)'),89:('ru','Дядя Ваня (Чехов)/Версия 2')}
+          for rank,(lang,title) in ws.items():
+              rec={'rank':rank,'title':title,'language':lang,'pages':[]}
+              try:
+                  root=get(f'https://{lang}.wikisource.org/w/api.php',params={'action':'parse','format':'json','page':title,'prop':'text|links|revid'}).json();(B/'sources'/('%03d'%rank+'_root.json')).write_text(json.dumps(root,ensure_ascii=False));rec['pages'].append(title);rec['status']='DOWNLOADED'
+              except Exception as e:rec.update(status='FAILED',error=str(e))
+              (B/'sources'/('%03d'%rank+'_wikisource.json')).write_text(json.dumps(rec,ensure_ascii=False,indent=2));time.sleep(4)
+          for fam in ['spectral','spectralsc']:
+              try:(B/'licenses'/('OFL-'+fam+'.txt')).write_bytes(get('https://raw.githubusercontent.com/google/fonts/main/ofl/'+fam+'/OFL.txt').content)
+              except Exception as e:print(e)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb16-master-reference-retry
+          path: bundle
+          retention-days: 7
