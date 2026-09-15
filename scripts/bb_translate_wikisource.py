@@ -275,8 +275,9 @@ def leaf_pages(lang: str, root: str, expected: int, max_pages: int = 240) -> tup
 def clean_blocks(raw_html: str) -> list[str]:
     soup = BeautifulSoup(raw_html, "lxml")
     for selector in [
-        "style", "script", "table", "sup.reference", ".ws-noexport", ".noprint",
+        "style", "script", "sup.reference", ".ws-noexport", ".noprint",
         ".header", ".subpages", ".mw-editsection", ".printfooter", ".catlinks",
+        ".PageNumber", ".pagenum", ".ws-pagenum",
     ]:
         for node in soup.select(selector):
             node.decompose()
