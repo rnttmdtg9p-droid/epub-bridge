@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   probe:
@@ -23,7 +24,15 @@ jobs:
             madlad_ct2
             madlad_tokenizer
           key: bb-madlad400-3b-mt-ct2-int8-v1
-      - name: Compare deterministic decoder settings
+      - name: Download exact failed Mastino shard
+        uses: actions/download-artifact@v4
+        with:
+          name: bb-final3-055-20260916-repaired-shard-055-0006
+          path: probe-input
+          repository: rnttmdtg9p-droid/epub-bridge
+          run-id: 35128754290
+          github-token: ${{ github.token }}
+      - name: Compare full-shard decoder settings
         run: |
           python - <<'PY'
           import hashlib
@@ -34,6 +43,12 @@ jobs:
           import sentencepiece as spm
           from huggingface_hub import hf_hub_download, snapshot_download
 
+          records = [
+              json.loads(line)
+              for line in next(Path("probe-input").rglob("*_alignment.jsonl")).read_text(encoding="utf-8").splitlines()
+              if line.strip()
+          ]
+          sources = [record["source"] for record in records]
           model_dir = snapshot_download(
               repo_id="Heng666/madlad400-3b-mt-ct2-int8",
               local_dir="madlad_ct2",
@@ -50,38 +65,51 @@ jobs:
               model_dir, device="cpu", compute_type="int8",
               inter_threads=1, intra_threads=4,
           )
-
-          samples = [
-              "He chanced to be at his hall door.",
-              "The idea of some ghastly presence constantly haunted him, and on more than one occasion he has asked me whether I had on my medical journeys at night ever seen any strange creature or heard the baying of a hound.",
-              "I whisked round and had just time to catch a glimpse of something which I took to be a large black calf passing at the head of the drive.",
-              "I mention this small episode because it assumes some importance in view of the tragedy which followed, but I was convinced at the time that the matter was entirely trivial and that his excitement had no justification.",
-          ]
           settings = [
               ("current", dict(beam_size=1)),
               ("model_card", dict(beam_size=1, no_repeat_ngram_size=1, repetition_penalty=2.0)),
               ("balanced_beam2", dict(beam_size=2, no_repeat_ngram_size=3, repetition_penalty=1.3)),
               ("balanced_beam4", dict(beam_size=4, no_repeat_ngram_size=3, repetition_penalty=1.2)),
-              ("strong_beam4", dict(beam_size=4, no_repeat_ngram_size=2, repetition_penalty=1.5)),
           ]
-          encoded = [processor.encode("<2it> " + source, out_type=str) for source in samples]
+          encoded = [processor.encode("<2it> " + source, out_type=str) for source in sources]
           print(json.dumps({
+              "unit_count": len(records),
               "tokenizer_sha256": hashlib.sha256(Path(tokenizer_file).read_bytes()).hexdigest(),
               "prefix_tokens": encoded[0][:6],
           }, ensure_ascii=False))
           for label, options in settings:
-              outputs = translator.translate_batch(
-                  encoded,
-                  max_decoding_length=256,
-                  batch_type="tokens",
-                  max_batch_size=1024,
-                  **options,
-              )
-              print(json.dumps({
-                  "setting": label,
-                  "translations": [
+              all_outputs = []
+              for offset in range(0, len(encoded), 32):
+                  chunk = encoded[offset:offset + 32]
+                  outputs = translator.translate_batch(
+                      chunk,
+                      max_decoding_length=min(384, max(96, max(map(len, chunk)) * 2)),
+                      batch_type="tokens",
+                      max_batch_size=2048,
+                      **options,
+                  )
+                  all_outputs.extend(
                       processor.decode(result.hypotheses[0]).strip()
                       for result in outputs
+                  )
+              ratios = [
+                  len(target) / max(1, len(source))
+                  for source, target in zip(sources, all_outputs)
+              ]
+              print(json.dumps({
+                  "setting": label,
+                  "aggregate_ratio": sum(map(len, all_outputs)) / sum(map(len, sources)),
+                  "risk_over_1_75": sum(ratio > 1.75 for ratio in ratios),
+                  "hard_over_2_75": sum(ratio > 2.75 for ratio in ratios),
+                  "max_ratio": max(ratios),
+                  "samples": [
+                      {
+                          "unit_id": records[index]["unit_id"],
+                          "source": sources[index],
+                          "translation": all_outputs[index],
+                          "ratio": ratios[index],
+                      }
+                      for index in range(min(8, len(records)))
                   ],
               }, ensure_ascii=False))
           PY
