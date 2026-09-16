@@ -1,0 +1,24 @@
+name: BB16 v5.0.14 asset acquisition main
+on:
+  push:
+    paths:
+      - '.github/workflows/bb16-v5014-assets-main.yml'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Install dependencies
+        run: python -m pip -q install requests beautifulsoup4 pillow
+      - name: Fetch acquisition script
+        run: curl -fL -o acquire.py https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/bb16-v5014-assets-20260915/tools/bb16_v5014_acquire_assets.py
+      - name: Acquire exact-work assets
+        run: python acquire.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb16-v5014-assets-main
+          path: assets
+          retention-days: 14
