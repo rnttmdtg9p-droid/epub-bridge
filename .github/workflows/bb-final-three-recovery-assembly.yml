@@ -72,6 +72,42 @@ jobs:
           path: fresh-shards
           merge-multiple: true
 
+      - name: Backfill artifacts beyond action listing cap
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          expected="${{ matrix.shard_count }}"
+          rank="${{ matrix.rank }}"
+          prefix="${{ matrix.batch_key }}-repaired-shard-${rank}-"
+          mkdir -p fresh-shards/final
+          gh api --paginate \
+            "repos/${GITHUB_REPOSITORY}/actions/runs/${SOURCE_RUN_ID}/artifacts?per_page=100" \
+            --jq '.artifacts[] | [.name, (.id | tostring)] | @tsv' \
+            > /tmp/source-artifacts.tsv
+          backfilled=0
+          for index in $(seq 0 $((expected - 1))); do
+            padded="$(printf '%04d' "$index")"
+            final="fresh-shards/final/${rank}_shard_${padded}_alignment.jsonl"
+            if [ -f "$final" ]; then
+              continue
+            fi
+            name="${prefix}${padded}"
+            artifact_id="$(awk -F '\t' -v name="$name" '$1 == name { print $2; exit }' /tmp/source-artifacts.tsv)"
+            test -n "$artifact_id" || {
+              echo "Missing source artifact $name" >&2
+              exit 1
+            }
+            zip_path="/tmp/${artifact_id}.zip"
+            curl --fail --location --retry 3 \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              -o "$zip_path" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip"
+            unzip -oq "$zip_path" -d fresh-shards
+            backfilled=$((backfilled + 1))
+          done
+          echo "Backfilled $backfilled shard artifacts beyond the action listing cap."
+
       - name: Verify shard inventory
         run: |
           actual="$(find fresh-shards/final -type f -name '${{ matrix.rank }}_shard_*_alignment.jsonl' | wc -l | tr -d ' ')"
