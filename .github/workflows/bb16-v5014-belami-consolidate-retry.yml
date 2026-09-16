@@ -1,0 +1,47 @@
+name: BB16 v5.0.14 Bel-Ami consolidate retry
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-belami-consolidate-retry.yml']
+permissions:
+  actions: read
+  contents: read
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and verify all 102 recovered Bel-Ami plates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import subprocess,json,os,zipfile,glob,hashlib
+          repo=os.environ['GITHUB_REPOSITORY'];run=35074261759
+          raw=subprocess.check_output(['gh','api','--paginate','--slurp',f'repos/{repo}/actions/runs/{run}/artifacts?per_page=100'],text=True)
+          pages=json.loads(raw);arts=[]
+          for p in pages: arts.extend(p.get('artifacts',[]))
+          arts=[a for a in arts if a['name'].startswith('belami-ia-')]
+          latest={}
+          for a in arts:
+            if a['name'] not in latest or a['id']>latest[a['name']]['id']: latest[a['name']]=a
+          print('Bel-Ami matrix artifacts:',len(latest))
+          assert len(latest)==102,len(latest)
+          os.makedirs('zips',exist_ok=True);os.makedirs('bundle',exist_ok=True)
+          for name,a in sorted(latest.items()):
+            z=f'zips/{name}.zip'
+            with open(z,'wb') as out:
+              subprocess.check_call(['gh','api','-H','Accept: application/vnd.github+json',f'repos/{repo}/actions/artifacts/{a["id"]}/zip'],stdout=out)
+            with zipfile.ZipFile(z) as zz: zz.extractall('bundle')
+          imgs=sorted(glob.glob('bundle/belami_*.jpg'));recs=sorted(glob.glob('bundle/belami_*.json'))
+          print('images',len(imgs),'records',len(recs))
+          assert len(imgs)==102 and len(recs)==102,(len(imgs),len(recs))
+          manifest=[]
+          for p in imgs:
+            manifest.append({'file':os.path.basename(p),'bytes':os.path.getsize(p),'sha256':hashlib.sha256(open(p,'rb').read()).hexdigest()})
+          json.dump({'count':102,'source_run':run,'files':manifest},open('bundle/manifest.json','w'),indent=2)
+          PY
+          (cd bundle && zip -qr ../BB16_v5.0.14_BEL_AMI_COMPLETE_102.zip .)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-Bel-Ami-complete-102-consolidated-retry
+          path: BB16_v5.0.14_BEL_AMI_COMPLETE_102.zip
