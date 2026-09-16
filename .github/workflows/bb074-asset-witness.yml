@@ -1,0 +1,42 @@
+name: BB074 asset witness
+on:
+  push:
+    paths: ['.github/workflows/bb074-asset-witness.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Acquire public records and witnesses only
+        run: |
+          python -m pip -q install requests
+          python - <<'PY'
+          import requests,json,pathlib,time,concurrent.futures
+          root=pathlib.Path('assets');root.mkdir()
+          def get(u,params=None):
+              r=requests.get(u,params=params,headers={'User-Agent':'BoundaryBayEditorial/1.0 (https://github.com/rnttmdtg9p-droid/epub-bridge)'},timeout=90);r.raise_for_status();return r
+          def commons():
+              titles=['File:Meissonier - Alexandre Dumas, fils.jpg','File:Dumas fils - La Dame aux camélias, 1886.djvu']
+              for i,t in enumerate(titles):
+                  try:
+                      obj=get('https://commons.wikimedia.org/w/api.php',{'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata|size','titles':t}).json();(root/f'commons_{i}.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+                      info=next(iter(obj['query']['pages'].values()))['imageinfo'][0]
+                      u=info['url'].split('?')[0];r=get(u);(root/('portrait_meissonier.jpg' if i==0 else 'dame_camelias_1886.djvu')).write_bytes(r.content)
+                      print(t,len(r.content),flush=True)
+                  except Exception as e:(root/f'error_{i}.txt').write_text(str(e));print(t,str(e),flush=True)
+          def archive():
+              try:
+                  q='(title:camille OR title:"dame aux camelias" OR title:"dame aux camélias") AND creator:Dumas AND mediatype:texts'
+                  obj=get('https://archive.org/advancedsearch.php',{'q':q,'output':'json','rows':80,'fl[]':['identifier','title','date','creator','publisher']}).json();(root/'ia_search.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+                  print('IA',obj.get('response',{}).get('numFound'),flush=True)
+              except Exception as e:(root/'error_ia.txt').write_text(str(e))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:list(ex.map(lambda f:f(),[commons,archive]))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb074-asset-witness
+          path: assets
+          retention-days: 14
