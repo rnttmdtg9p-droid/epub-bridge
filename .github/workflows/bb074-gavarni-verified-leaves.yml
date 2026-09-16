@@ -1,0 +1,43 @@
+name: BB074 verified twenty plates
+on:
+  push:
+    paths: ['.github/workflows/bb074-gavarni-verified-leaves.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Resolve exact source leaves and retrieve native plates
+        run: |
+          python -m pip -q install requests pillow lxml
+          python - <<'PY'
+          import requests,json,pathlib,io,hashlib,urllib.parse,concurrent.futures
+          from lxml import etree as E
+          from PIL import Image
+          root=pathlib.Path('plates');root.mkdir();(root/'originals').mkdir()
+          ident='ladameauxcamlias00duma';base='https://archive.org/download/'+ident+'/'
+          def get(u):
+              r=requests.get(u,timeout=90,headers={'User-Agent':'BoundaryBayEditorial/1.0 (public-domain literary edition research)'});r.raise_for_status();return r
+          m=get('https://archive.org/metadata/'+ident).json();(root/'metadata.json').write_text(json.dumps(m,ensure_ascii=False,indent=2));fn=next(f['name'] for f in m['files'] if f['name'].endswith('_djvu.xml'));raw=get(base+fn).content;(root/'source_djvu.xml').write_bytes(raw);ps=E.fromstring(raw).findall('.//OBJECT');zname=next(f['name'] for f in m['files'] if f['name'].endswith('_jp2.zip'));zb=zname[:-4]
+          indexes=[13,45,48,51,55,81,85,93,96,105,126,136,155,162,213,279,292,327,377,384]
+          def acquire(pair):
+              seq,i=pair;o=ps[i];pn=o.find('PARAM[@name="PAGE"]').get('value');leaf=int(pn.rsplit('_',1)[1].split('.')[0]);member=f'{zb}/{ident}_{leaf:04d}.jp2';query=urllib.parse.urlencode({'zip':m['dir']+'/'+zname,'file':member,'id':ident,'scale':1,'rotate':0});url=f'https://{m["d1"]}/BookReader/BookReaderImages.php?'+query
+              rec={'sequence':seq,'ocr_object_index':i,'native_leaf':leaf,'source_param':pn,'url':url,'source_text':' '.join(o.xpath('.//WORD/text()')),'preceding_text':' '.join(ps[i-1].xpath('.//WORD/text()')),'following_text':' '.join(ps[i+1].xpath('.//WORD/text()'))}
+              try:
+                  r=get(url);im=Image.open(io.BytesIO(r.content));im.load();rec['dimensions']=list(im.size);rec['decoded_type']=im.format;rec['sha256']=hashlib.sha256(r.content).hexdigest();out=root/'originals'/f'{seq:02d}_n{leaf:04d}.jpg'
+                  if im.format=='JPEG':out.write_bytes(r.content)
+                  else:im.convert('RGB').save(out,'JPEG',quality=97,subsampling=0)
+                  rec['file_sha256']=hashlib.sha256(out.read_bytes()).hexdigest();rec['status']='DOWNLOADED_PENDING_REVIEW';print(seq,leaf,im.size,flush=True)
+              except Exception as e:rec['status']='FAILED';rec['error']=str(e)
+              return rec
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:res=list(ex.map(acquire,enumerate(indexes,1)))
+          (root/'plates.json').write_text(json.dumps(res,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb074-twenty-gavarni-plates
+          path: plates
+          retention-days: 14
