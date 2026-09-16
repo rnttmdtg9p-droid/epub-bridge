@@ -1,0 +1,39 @@
+name: BB16 v5.0.14 Bel-Ami IA matrix
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-belami-ia-matrix.yml']
+permissions:
+  contents: read
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        page: ['007','009','011','018','026','029','030','031','033','037','038','039','046','049','050','051','055','058','063','071','075','076','082','093','094','103','109','115','119','125','131','138','140','141','145','149','160','164','170','176','179','180','183','195','198','203','204','205','215','222','232','233','235','242','247','252','257','265','266','271','277','285','286','293','301','307','312','313','317','321','328','331','332','339','349','354','359','360','363','373','374','381','388','392','395','398','399','404','406','408','410','411','417','418','424','425','433','436','437','443','449','452']
+    steps:
+      - name: Fetch exact Internet Archive scan illustration
+        env:
+          P: ${{ matrix.page }}
+        run: |
+          python - <<'PY'
+          import os,requests,time,json,hashlib
+          p=os.environ['P'];title=f'File:Maupassant - Bel-ami, 1901 page {p}.jpg';api='https://commons.wikimedia.org/w/api.php';s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          j=s.get(api,params={'action':'query','format':'json','titles':title,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1800},timeout=60).json();pg=next(iter(j['query']['pages'].values()));assert 'missing' not in pg,pg;ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url']
+          for k in range(12):
+            r=s.get(url,timeout=120)
+            if r.status_code==200:open(f'belami_{p}.jpg','wb').write(r.content);break
+            if r.status_code==429:time.sleep(3+k*2);continue
+            r.raise_for_status()
+          else:raise SystemExit('download failed')
+          rec={'title':pg['title'],'file':f'belami_{p}.jpg','descriptionurl':ii.get('descriptionurl'),'source_width':ii.get('width'),'source_height':ii.get('height'),'sha256':hashlib.sha256(open(f'belami_{p}.jpg','rb').read()).hexdigest(),'bytes':os.path.getsize(f'belami_{p}.jpg'),'extmetadata':ii.get('extmetadata',{})}
+          json.dump(rec,open(f'belami_{p}.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: belami-ia-${{ matrix.page }}
+          path: |
+            belami_${{ matrix.page }}.jpg
+            belami_${{ matrix.page }}.json
