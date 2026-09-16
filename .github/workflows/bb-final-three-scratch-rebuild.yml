@@ -1,0 +1,40 @@
+name: BB final three EPUB scratch rebuilds
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-final-three-scratch-rebuild.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-final-three-scratch-rebuild-20260916
+  cancel-in-progress: true
+
+jobs:
+  mastino:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine-v2.yml
+    with:
+      engine: gutenberg
+      shard_size: 48
+      batch_key: bb-final3-055-20260916
+      configs: '["configs/055_mastino_baskervilles.json"]'
+
+  ivan-ilyich:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine-v2.yml
+    with:
+      engine: wikisource
+      shard_size: 48
+      batch_key: bb-final3-061-20260916
+      configs: '["configs/061_smert_ivana.json"]'
+
+  idiota:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine-v2.yml
+    with:
+      engine: wikisource
+      shard_size: 64
+      batch_key: bb-final3-064-20260916
+      configs: '["configs/064_idiota.json"]'
