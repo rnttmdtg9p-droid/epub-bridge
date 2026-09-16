@@ -1,4 +1,4 @@
-name: BB16 v5.0.14 portraits now
+name: BB16 v5.0.14 final source maps and portraits
 on:
   push:
     branches: [bb16-v5014-assets-20260915]
@@ -6,39 +6,75 @@ on:
 permissions:
   contents: read
 jobs:
-  portraits:
+  assets:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch authenticated public-domain author portraits
+      - name: Fetch author portraits and exact-source page text maps
         run: |
           python - <<'PY'
-          import requests,os,time,json
-          os.makedirs('portraits',exist_ok=True)
-          api='https://commons.wikimedia.org/w/api.php'
+          import requests,os,time,json,re,html as htmllib
+          from html.parser import HTMLParser
+          os.makedirs('bundle/portraits',exist_ok=True);os.makedirs('bundle/maps',exist_ok=True)
           s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          commons='https://commons.wikimedia.org/w/api.php';ws='https://fr.wikisource.org/w/api.php'
           files={
-            'balzac_portrait.jpg':'Honore_de_Balzac_daguerreotype.jpg',
-            'stendhal_portrait.jpg':'Stendhal.jpg',
-            'maupassant_portrait.jpg':'Guy_de_Maupassant_1888.jpg',
+            'balzac_portrait.jpg':'Honoré_de_Balzac_(1842)_detail.jpg',
+            'stendhal_portrait.jpg':'Stendhal_-_Luigi_Calamatta_-_1837.jpg',
+            'maupassant_portrait.jpeg':'Guy_de_Maupassant_Foto_Dornac.jpeg',
           }
           manifest=[]
           for out,name in files.items():
-            j=s.get(api,params={'action':'query','format':'json','titles':'File:'+name,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1200},timeout=60).json()
-            pg=next(iter(j['query']['pages'].values()))
+            j=s.get(commons,params={'action':'query','format':'json','titles':'File:'+name,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1200},timeout=60).json();pg=next(iter(j['query']['pages'].values()))
             if 'missing' in pg: raise SystemExit('missing '+name)
             ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url']
-            for k in range(8):
+            for k in range(10):
               r=s.get(url,timeout=90)
-              if r.status_code==200:
-                open('portraits/'+out,'wb').write(r.content);break
+              if r.status_code==200: open('bundle/portraits/'+out,'wb').write(r.content);break
               if r.status_code in (429,500,502,503,504): time.sleep(3+k*2);continue
               r.raise_for_status()
             else: raise SystemExit('download failed '+name)
-            m=ii.get('extmetadata',{})
-            manifest.append({'output':out,'commons_title':pg['title'],'descriptionurl':ii.get('descriptionurl'),'width':ii.get('width'),'height':ii.get('height'),'license':m.get('LicenseShortName',{}).get('value'),'artist':m.get('Artist',{}).get('value')})
-          json.dump(manifest,open('portraits/manifest.json','w'),ensure_ascii=False,indent=2)
+            m=ii.get('extmetadata',{});manifest.append({'output':out,'commons_title':pg['title'],'descriptionurl':ii.get('descriptionurl'),'width':ii.get('width'),'height':ii.get('height'),'license':m.get('LicenseShortName',{}).get('value'),'artist':m.get('Artist',{}).get('value')})
+          json.dump(manifest,open('bundle/portraits/manifest.json','w'),ensure_ascii=False,indent=2)
+          class T(HTMLParser):
+            def __init__(self): super().__init__(); self.parts=[]; self.skip=0
+            def handle_starttag(self,tag,attrs):
+              if tag in ('style','script','table'): self.skip+=1
+              if tag in ('p','div','br','li','h1','h2','h3','h4'): self.parts.append('\n')
+            def handle_endtag(self,tag):
+              if tag in ('style','script','table') and self.skip: self.skip-=1
+              if tag in ('p','div','li','h1','h2','h3','h4'): self.parts.append('\n')
+            def handle_data(self,data):
+              if not self.skip: self.parts.append(data)
+          def parse_page(title):
+            for k in range(6):
+              r=s.get(ws,params={'action':'parse','format':'json','page':title,'prop':'text'},timeout=60)
+              if r.status_code==200:
+                j=r.json()
+                if 'parse' in j:
+                  raw=j['parse']['text']['*'];t=T();t.feed(raw);txt=' '.join(''.join(t.parts).split());return txt
+              time.sleep(2+k)
+            return ''
+          bel_pages=['007','009','011','018','026','029','030','031','033','037','038','039','046','049','050','051','055','058','063','071','075','076','082','093','094','103','109','115','119','125','131','138','140','141','145','149','160','164','170','176','179','180','183','195','198','203','204','205','215','222','232','233','235','242','247','252','257','265','266','271','277','285','286','293','301','307','312','313','317','321','328','331','332','339','349','354','359','360','363','373','374','381','388','392','395','398','399','404','406','408','410','411','417','418','424','425','433','436','437','443','449','452']
+          bel=[]
+          for i,p in enumerate(bel_pages):
+            title=f'Page:Maupassant Bel-ami.djvu/{int(p)}';bel.append({'scan_page':int(p),'title':title,'text':parse_page(title)});time.sleep(.08)
+          json.dump(bel,open('bundle/maps/belami_page_text.json','w'),ensure_ascii=False,indent=2)
+          v1=['001','023','055','081','113','149','209','239','263','277','289','325','349','386'];v2=['001','033','059','085','107','127','165','203','235','263','297','327','357','383','407','432']
+          cert=[]
+          for p in v1:
+            scan=int(p)+36;title=f'Page:Stendhal - La chartreuse de Parme (Tome 1), 1883.djvu/{scan}';cert.append({'volume':1,'printed_page':int(p),'scan_page':scan,'title':title,'text':parse_page(title)})
+          for p in v2:
+            scan=int(p)+4;title=f'Page:Stendhal - La chartreuse de Parme (Tome 2), 1883.djvu/{scan}';cert.append({'volume':2,'printed_page':int(p),'scan_page':scan,'title':title,'text':parse_page(title)})
+          json.dump(cert,open('bundle/maps/certosa_page_text.json','w'),ensure_ascii=False,indent=2)
+          # Search Wikisource for the exact 1897 Magnier/Thevenot Boule de Suif edition and save Gallica metadata probes.
+          q=s.get(ws,params={'action':'query','format':'json','list':'search','srsearch':'Boule de Suif Armand Magnier Thévenot 1897','srlimit':50},timeout=60).json()
+          json.dump(q,open('bundle/maps/boule_wikisource_search.json','w'),ensure_ascii=False,indent=2)
+          for url,name in [('https://gallica.bnf.fr/services/OAIRecord?ark=btv1b2200227p','boule_gallica_oai.xml'),('https://gallica.bnf.fr/ark:/12148/btv1b2200227p.iiif/manifest.json','boule_gallica_iiif.json')]:
+            try:
+              r=s.get(url,timeout=90);open('bundle/maps/'+name,'wb').write(r.content)
+            except Exception as e: open('bundle/maps/'+name+'.error.txt','w').write(repr(e))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: bb16-v5014-portraits-now
-          path: portraits
+          name: bb16-v5014-final-source-maps-and-portraits
+          path: bundle
