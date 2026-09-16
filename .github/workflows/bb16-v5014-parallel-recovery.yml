@@ -1,0 +1,154 @@
+name: BB16 v5.0.14 parallel recovery
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-parallel-recovery.yml']
+permissions:
+  contents: read
+jobs:
+  epubcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch official EPUBCheck 5.3.0
+        run: |
+          curl -fL --retry 5 --retry-delay 2 -o epubcheck-5.3.0.zip https://github.com/w3c/epubcheck/releases/download/v5.3.0/epubcheck-5.3.0.zip
+          echo '6C07E68584B2E2CE2F89FE06E1246DFEAD3EB36B46B340E7D93524F29DCFF6C5  epubcheck-5.3.0.zip' | sha256sum -c -
+      - uses: actions/upload-artifact@v4
+        with:
+          name: epubcheck-5.3.0-official
+          path: epubcheck-5.3.0.zip
+  goriot:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        n: ['06','07','08','09','10']
+    steps:
+      - name: Fetch missing Le Pere Goriot plate
+        env:
+          N: ${{ matrix.n }}
+        run: |
+          python - <<'PY'
+          import os,requests,time
+          from urllib.parse import quote
+          n=os.environ['N']
+          name=f'Illustrations_de_Le_Père_Goriot;_scènes_de_la_vie_parisienne_-_Lynch,_dess._;_E._Abot,_grav._;_Honoré_de_Balzac,_aut._du_texte_-_btv1b2200166f_({n}_of_10).jpg'
+          api='https://commons.wikimedia.org/w/api.php'
+          s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          j=s.get(api,params={'action':'query','format':'json','titles':'File:'+name,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1600},timeout=60).json()
+          pg=next(iter(j['query']['pages'].values()));ii=pg['imageinfo'][0]
+          url=ii.get('thumburl') or ii['url']
+          for k in range(12):
+            r=s.get(url,timeout=90)
+            if r.status_code==200:
+              open(f'{n}.jpg','wb').write(r.content);break
+            if r.status_code==429: time.sleep(5+k*3);continue
+            r.raise_for_status()
+          else: raise SystemExit('download failed')
+          open(f'{n}.txt','w').write(pg['title']+'\n'+ii.get('descriptionurl','')+'\n'+str(ii.get('width'))+'x'+str(ii.get('height')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: goriot-${{ matrix.n }}
+          path: |
+            ${{ matrix.n }}.jpg
+            ${{ matrix.n }}.txt
+  certosa:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        file: ['000Frontispice','001','023','055','081','113','149','209','239','263','277','289','325','349','386','II-357','II-383','II-407','II-432']
+    steps:
+      - name: Fetch remaining Chartreuse plate
+        env:
+          F: ${{ matrix.file }}
+        run: |
+          python - <<'PY'
+          import os,requests,time,re
+          f=os.environ['F']
+          if f.startswith('II-'):
+            num=f[3:]; name=f'Chartreuse de Parme 1883 - II - Valentin Foulquier - {num}.jpg'
+          elif f=='000Frontispice': name='Chartreuse de Parme 1883 - Valentin Foulquier - 000Frontispice.jpg'
+          else: name=f'Chartreuse de Parme 1883 - Valentin Foulquier - {f}.jpg'
+          api='https://commons.wikimedia.org/w/api.php';s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          j=s.get(api,params={'action':'query','format':'json','titles':'File:'+name,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1600},timeout=60).json();pg=next(iter(j['query']['pages'].values()));ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url']
+          for k in range(12):
+            r=s.get(url,timeout=90)
+            if r.status_code==200: open('plate.jpg','wb').write(r.content);break
+            if r.status_code==429: time.sleep(5+k*3);continue
+            r.raise_for_status()
+          else: raise SystemExit('download failed')
+          open('meta.txt','w').write(pg['title']+'\n'+ii.get('descriptionurl','')+'\n'+str(ii.get('width'))+'x'+str(ii.get('height')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: certosa-${{ matrix.file }}
+          path: |
+            plate.jpg
+            meta.txt
+  belami:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        page: ['0007','0009','0011','0018','0026','0029','0030','0031','0033','0037','0038','0039','0046','0049','0050','0051','0055','0058','0063','0071','0075','0076','0082','0093','0094','0103','0109','0115','0119','0125','0131','0138','0140','0141','0145','0149','0160','0164','0170','0176','0179','0180','0183','0195','0198','0203','0204','0205','0215','0222','0232','0233','0235','0242','0247','0252','0257','0265','0266','0271','0277','0285','0286','0293','0301','0307','0312','0313','0317','0321','0328','0331','0332','0339','0349','0354','0359','0360','0363','0373','0374','0381','0388','0392','0395','0398','0399','0404','0406','0408','0410','0411','0417','0418','0424','0425','0433','0436','0437','0443','0449','0452']
+    steps:
+      - name: Fetch Bel-Ami exact-work plate
+        env:
+          P: ${{ matrix.page }}
+        run: |
+          python - <<'PY'
+          import os,requests,time
+          p=os.environ['P'];name=f'Maupassant Bel-ami {p}.jpg';api='https://commons.wikimedia.org/w/api.php';s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          j=s.get(api,params={'action':'query','format':'json','titles':'File:'+name,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1600},timeout=60).json();pg=next(iter(j['query']['pages'].values()));ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url']
+          for k in range(10):
+            r=s.get(url,timeout=90)
+            if r.status_code==200: open(f'{p}.jpg','wb').write(r.content);break
+            if r.status_code==429: time.sleep(4+k*2);continue
+            r.raise_for_status()
+          else: raise SystemExit('download failed')
+          open(f'{p}.txt','w').write(pg['title']+'\n'+ii.get('descriptionurl','')+'\n'+str(ii.get('width'))+'x'+str(ii.get('height')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: belami-${{ matrix.page }}
+          path: |
+            ${{ matrix.page }}.jpg
+            ${{ matrix.page }}.txt
+  boule:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        n: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57']
+    steps:
+      - name: Fetch Boule de suif exact-work plate
+        env:
+          N: ${{ matrix.n }}
+        run: |
+          python - <<'PY'
+          import os,requests,time
+          n=os.environ['N'];q=f'Illustrations de Boule de Suif btv1b2200227p ({n} of 57)';api='https://commons.wikimedia.org/w/api.php';s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          j=s.get(api,params={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':10,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1600},timeout=60).json();pages=list(j.get('query',{}).get('pages',{}).values())
+          hit=None
+          for pg in pages:
+            if f'({n} of 57)' in pg.get('title','') or f'({int(n)} of 57)' in pg.get('title',''): hit=pg;break
+          if not hit: raise SystemExit('not found')
+          ii=hit['imageinfo'][0];url=ii.get('thumburl') or ii['url']
+          for k in range(10):
+            r=s.get(url,timeout=90)
+            if r.status_code==200: open(f'{n}.jpg','wb').write(r.content);break
+            if r.status_code==429: time.sleep(4+k*2);continue
+            r.raise_for_status()
+          else: raise SystemExit('download failed')
+          open(f'{n}.txt','w').write(hit['title']+'\n'+ii.get('descriptionurl','')+'\n'+str(ii.get('width'))+'x'+str(ii.get('height')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: boule-${{ matrix.n }}
+          path: |
+            ${{ matrix.n }}.jpg
+            ${{ matrix.n }}.txt
