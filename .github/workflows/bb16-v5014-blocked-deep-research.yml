@@ -1,0 +1,49 @@
+name: BB16 v5.0.14 blocked exact-work deep research
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-blocked-deep-research.yml']
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        work: [underground, metamorphosis]
+    steps:
+      - name: Search Commons and Internet Archive in multiple languages
+        env:
+          WORK: ${{ matrix.work }}
+        run: |
+          python - <<'PY'
+          import requests,json,os,time
+          W=os.environ['WORK'];S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          Q={
+           'underground':['Notes from Underground illustration Dostoevsky','Записки из подполья иллюстрации Достоевский','Записки из подполья художник','Aufzeichnungen aus dem Kellerloch Illustration Dostojewski','Memorie dal sottosuolo illustrazioni Dostoevskij'],
+           'metamorphosis':['Die Verwandlung Kafka illustration','The Metamorphosis Kafka illustration','La metamorfosi Kafka illustrazione','Превращение Кафка иллюстрации','Die Verwandlung Kafka illustriert']
+          }[W]
+          commons=[]
+          for q in Q:
+            try:
+              j=S.get('https://commons.wikimedia.org/w/api.php',params={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':50,'prop':'imageinfo|categories','iiprop':'url|size|extmetadata','cllimit':'max'},timeout=90).json()
+              for pg in j.get('query',{}).get('pages',{}).values():commons.append({'query':q,'page':pg})
+            except Exception as e:commons.append({'query':q,'error':repr(e)})
+            time.sleep(.25)
+          # Internet Archive metadata discovery; no candidate is accepted merely from search metadata.
+          ia=[]
+          iaq={
+           'underground':['title:(Notes from Underground) AND mediatype:texts','title:(Записки из подполья) AND mediatype:texts','title:(Aufzeichnungen aus dem Kellerloch) AND mediatype:texts'],
+           'metamorphosis':['title:(Die Verwandlung) AND creator:(Kafka) AND mediatype:texts','title:(Metamorphosis) AND creator:(Kafka) AND mediatype:texts','title:(La metamorfosi) AND creator:(Kafka) AND mediatype:texts']
+          }[W]
+          for q in iaq:
+            try:
+              j=S.get('https://archive.org/advancedsearch.php',params={'q':q,'fl[]':['identifier','title','creator','date','language','description'],'rows':100,'page':1,'output':'json'},timeout=90).json();ia.append({'query':q,'docs':j.get('response',{}).get('docs',[])})
+            except Exception as e:ia.append({'query':q,'error':repr(e)})
+          json.dump({'work':W,'queries':Q,'commons_results':commons,'internet_archive_results':ia},open(f'{W}_deep_research.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-${{ matrix.work }}-deep-research
+          path: ${{ matrix.work }}_deep_research.json
