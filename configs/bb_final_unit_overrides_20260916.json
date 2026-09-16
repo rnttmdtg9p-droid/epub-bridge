@@ -4,6 +4,14 @@
   "scope": "Final source-bound overrides for the September 16 three-title scratch rebuild",
   "overrides": [
     {
+      "rank": 55,
+      "unit_id": "c02-u0137",
+      "source_sha256": "c7d848fc28222c2af6723787290e66a39085694c143f7b723dbe172229915f83",
+      "source_text": "The latter\nquestion he put to me several times, and always with a voice\nwhich vibrated with excitement.",
+      "translation": "Quest’ultima domanda me la rivolse più volte, sempre con una voce vibrante d’emozione.",
+      "reason": "Persistent MADLAD English decoder loop after bounded shard repair; manually translated from the frozen source unit."
+    },
+    {
       "rank": 61,
       "unit_id": "c002-u0082",
       "source_sha256": "7d476292188a5e930dd5e74df244c1b2ad34c3e0670255d764b408e5d5633cf0",
