@@ -242,6 +242,7 @@ def main() -> None:
     parser.add_argument("--out", required=True)
     parser.add_argument("--language", required=True)
     parser.add_argument("--report", required=True)
+    parser.add_argument("--hard-only", action="store_true", help="Retranslate only release-blocking units")
     args = parser.parse_args()
 
     source_path = Path(args.alignment)
@@ -252,7 +253,7 @@ def main() -> None:
     changed = []
 
     for index, record in enumerate(records, 1):
-        initial_flags = flags(record, args.language)
+        initial_flags = hard_flags(record, args.language) if args.hard_only else flags(record, args.language)
         cleaned = collapse_decoder_repetitions(record["source"], record.get("translation", ""))
         candidates = [record.get("translation", ""), cleaned]
         if initial_flags:
