@@ -182,7 +182,7 @@ jobs:
         run: |
           epub_path="$(find "dist/${{ matrix.rank }}_${{ matrix.key }}" -name '*.epub' -print -quit)"
           unzip -t "$epub_path" > "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_ZIP_TEST.log"
-          sha256sum "$epub_path" > "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_SHA256SUMS.txt"
+          sha256sum "$epub_path" | tee "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_SHA256SUMS.txt"
       - name: Upload completed scratch rebuild
         if: always()
         uses: actions/upload-artifact@v4
