@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "launched_at": "2026-09-16T21:08:31.749Z",
+  "source_run_id": 35128754290,
+  "source_head_sha": "da3ccd851d1330871ef3a6b4254d14ecdfd3fc6e",
+  "override_registry": "configs/bb_final_unit_overrides_20260916.json",
+  "override_commit": "cb71d28a5009e507b33435ca1c3c5d63ca68245e",
+  "override_count": 364,
+  "verified_shard_artifacts": {
+    "055": 80,
+    "061": 25,
+    "064": 212
+  },
+  "recovery_workflow": ".github/workflows/bb-final-three-recovery-assembly.yml",
+  "gates": [
+    "zero_hard_repair_flags",
+    "all_source_bound_overrides_applied",
+    "EPUBCheck_5.2.1",
+    "zip_integrity",
+    "sha256"
+  ]
+}
