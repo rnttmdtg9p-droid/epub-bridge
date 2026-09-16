@@ -1,0 +1,83 @@
+name: BB Idiota final anomaly recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-idiota-final-recovery.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-idiota-final-anomaly-recovery
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation and EPUB tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Materialize exact MADLAD runtime
+        run: >-
+          python -c "from huggingface_hub import snapshot_download,hf_hub_download;
+          snapshot_download(repo_id='Heng666/madlad400-3b-mt-ct2-int8',local_dir='madlad_ct2');
+          hf_hub_download(repo_id='google/madlad400-3b-mt',filename='spiece.model',local_dir='madlad_tokenizer')"
+      - name: Download fresh Idiota source bundle
+        uses: actions/download-artifact@v4
+        with:
+          name: bb-scratch-064-20260916-prepared-sources
+          path: prepared
+          run-id: 35055548139
+          github-token: ${{ github.token }}
+      - name: Download all fresh Idiota translation shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: bb-scratch-064-20260916-shard-064-*
+          path: fresh-shards
+          merge-multiple: true
+          run-id: 35055548139
+          github-token: ${{ github.token }}
+      - name: Repair final hard anomaly
+        run: |
+          mkdir -p combined repaired dist
+          find fresh-shards -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > combined/064_alignment.jsonl
+          test -s combined/064_alignment.jsonl
+          python scripts/bb_repair_alignment.py --hard-only --alignment combined/064_alignment.jsonl --out repaired/064_shard_0000_alignment.jsonl --language ru --report dist/064_repair_QA.json
+          python -c "import json; d=json.load(open('dist/064_repair_QA.json')); assert d['remaining_hard_flagged_unit_count']==0, d"
+      - name: Assemble corrected Idiota EPUB
+        run: >-
+          python scripts/bb_translate_wikisource.py
+          --config configs/064_idiota.json
+          --out dist/064_l-idiota
+          --mode assemble
+          --source-bundle prepared/064/064_source_bundle.json
+          --shards-dir repaired
+      - name: EPUBCheck 5.2.1
+        run: |
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$(find dist/064_l-idiota -name '*.epub' -print -quit)" 2>&1 | tee dist/064_l-idiota/064_EPUBCHECK.log
+      - name: Upload completed Idiota EPUB
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-idiota-final-italian-review
+          path: dist
+          if-no-files-found: error
+          retention-days: 30
