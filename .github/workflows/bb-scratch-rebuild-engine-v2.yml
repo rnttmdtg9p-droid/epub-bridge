@@ -1,0 +1,193 @@
+name: BB scratch rebuild engine v2
+
+on:
+  workflow_call:
+    inputs:
+      engine:
+        required: true
+        type: string
+      configs:
+        required: true
+        type: string
+      batch_key:
+        required: true
+        type: string
+      shard_size:
+        required: false
+        type: number
+        default: 48
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      translate: \${{ steps.matrix.outputs.translate }}
+      assemble: \${{ steps.matrix.outputs.assemble }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install source preparation tools
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Retrieve and freeze fresh source bundles
+        id: matrix
+        run: >-
+          python scripts/bb_prepare_sharded_batch.py
+          --engine "\${{ inputs.engine }}"
+          --configs-json '\${{ inputs.configs }}'
+          --out prepared
+          --shard-size "\${{ inputs.shard_size }}"
+          --github-output
+      - name: Upload fresh authenticated source bundles
+        uses: actions/upload-artifact@v4
+        with:
+          name: \${{ inputs.batch_key }}-prepared-sources
+          path: prepared
+          if-no-files-found: error
+          retention-days: 30
+
+  warm-model-cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation runtime
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4'
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Materialize exact MADLAD runtime
+        run: >-
+          python -c "from huggingface_hub import snapshot_download,hf_hub_download;
+          snapshot_download(repo_id='Heng666/madlad400-3b-mt-ct2-int8',local_dir='madlad_ct2');
+          hf_hub_download(repo_id='google/madlad400-3b-mt',filename='spiece.model',local_dir='madlad_tokenizer')"
+
+  translate-repair-shards:
+    needs: [prepare, warm-model-cache]
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix: \${{ fromJSON(needs.prepare.outputs.translate) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact translation runtime
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Restore MADLAD runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            madlad_ct2
+            madlad_tokenizer
+          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - uses: actions/download-artifact@v4
+        with:
+          name: \${{ inputs.batch_key }}-prepared-sources
+          path: prepared
+      - name: Translate fresh semantic-unit shard
+        run: |
+          if [ "\${{ inputs.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
+          python "$script" --config "\${{ matrix.config }}" --out shard-out --mode shard --shard-index "\${{ matrix.shard }}" --shard-size "\${{ inputs.shard_size }}" --source-bundle "prepared/\${{ matrix.rank }}/\${{ matrix.rank }}_source_bundle.json"
+      - name: Repair and gate this shard
+        run: |
+          alignment="$(find shard-out -name '*_alignment.jsonl' -print -quit)"
+          test -n "$alignment"
+          language="$(python -c "import json; print(json.load(open('\${{ matrix.config }}', encoding='utf-8'))['source_language'])")"
+          mkdir -p repaired-temp shard-artifact/final shard-artifact/qa
+          python scripts/bb_repair_alignment.py \
+            --hard-only \
+            --alignment "$alignment" \
+            --out "repaired-temp/\${{ matrix.rank }}_shard_\${{ matrix.shard_padded }}_alignment.jsonl" \
+            --language "$language" \
+            --report "shard-artifact/qa/\${{ matrix.rank }}_shard_\${{ matrix.shard_padded }}_model_repair_QA.json"
+          python scripts/bb_finalize_alignment.py \
+            --alignment "repaired-temp/\${{ matrix.rank }}_shard_\${{ matrix.shard_padded }}_alignment.jsonl" \
+            --out "shard-artifact/final/\${{ matrix.rank }}_shard_\${{ matrix.shard_padded }}_alignment.jsonl" \
+            --language "$language" \
+            --rank "\${{ matrix.rank }}" \
+            --overrides configs/bb_final_unit_overrides_20260916.json \
+            --report "shard-artifact/qa/\${{ matrix.rank }}_shard_\${{ matrix.shard_padded }}_final_QA.json" \
+            --require-zero-hard
+          find shard-out -name '*_QA.json' -exec cp {} shard-artifact/qa/ \;
+      - name: Upload repaired immutable alignment shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: \${{ inputs.batch_key }}-repaired-shard-\${{ matrix.rank }}-\${{ matrix.shard_padded }}
+          path: shard-artifact
+          if-no-files-found: error
+          retention-days: 30
+
+  assemble-validate:
+    needs: [prepare, translate-repair-shards]
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: \${{ fromJSON(needs.prepare.outputs.assemble) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install EPUB assembly tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - uses: actions/download-artifact@v4
+        with:
+          name: \${{ inputs.batch_key }}-prepared-sources
+          path: prepared
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: \${{ inputs.batch_key }}-repaired-shard-\${{ matrix.rank }}-*
+          path: fresh-shards
+          merge-multiple: true
+      - name: Combine shards and enforce final hard-fault gate
+        run: |
+          language="$(python -c "import json; print(json.load(open('\${{ matrix.config }}', encoding='utf-8'))['source_language'])")"
+          mkdir -p combined repaired dist
+          find fresh-shards/final -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > "combined/\${{ matrix.rank }}_alignment.jsonl"
+          test -s "combined/\${{ matrix.rank }}_alignment.jsonl"
+          python scripts/bb_finalize_alignment.py \
+            --alignment "combined/\${{ matrix.rank }}_alignment.jsonl" \
+            --out "repaired/\${{ matrix.rank }}_shard_0000_alignment.jsonl" \
+            --language "$language" \
+            --rank "\${{ matrix.rank }}" \
+            --overrides configs/bb_final_unit_overrides_20260916.json \
+            --report "dist/\${{ matrix.rank }}_repair_QA.json" \
+            --require-zero-hard \
+            --require-all-overrides
+      - name: Assemble fresh BB REVIEW EPUB
+        run: |
+          if [ "\${{ inputs.engine }}" = "gutenberg" ]; then script=scripts/bb_translate_gutenberg.py; else script=scripts/bb_translate_wikisource.py; fi
+          python "$script" --config "\${{ matrix.config }}" --out "dist/\${{ matrix.rank }}_\${{ matrix.key }}" --mode assemble --source-bundle "prepared/\${{ matrix.rank }}/\${{ matrix.rank }}_source_bundle.json" --shards-dir repaired
+      - name: EPUBCheck 5.2.1
+        run: |
+          set -o pipefail
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          epub_path="$(find "dist/\${{ matrix.rank }}_\${{ matrix.key }}" -name '*.epub' -print -quit)"
+          test -n "$epub_path"
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$epub_path" 2>&1 | tee "dist/\${{ matrix.rank }}_\${{ matrix.key }}/\${{ matrix.rank }}_EPUBCHECK.log"
+      - name: Verify archive and record SHA-256
+        run: |
+          epub_path="$(find "dist/\${{ matrix.rank }}_\${{ matrix.key }}" -name '*.epub' -print -quit)"
+          unzip -t "$epub_path" > "dist/\${{ matrix.rank }}_\${{ matrix.key }}/\${{ matrix.rank }}_ZIP_TEST.log"
+          sha256sum "$epub_path" > "dist/\${{ matrix.rank }}_\${{ matrix.key }}/\${{ matrix.rank }}_SHA256SUMS.txt"
+      - name: Upload completed scratch rebuild
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-scratch-\${{ matrix.rank }}-\${{ matrix.key }}-italian-review
+          path: dist
+          if-no-files-found: error
+          retention-days: 30
