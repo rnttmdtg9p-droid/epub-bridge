@@ -1,0 +1,32 @@
+name: BB failed EPUBs scratch rebuild
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-failed-epubs-scratch-rebuild.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-failed-epubs-scratch-rebuild
+  cancel-in-progress: true
+
+jobs:
+  gutenberg:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: gutenberg
+      shard_size: 48
+      batch_key: bb-scratch-gutenberg-20260916
+      configs: '["configs/043_dracula.json","configs/049_cime_tempestose.json","configs/055_mastino_baskervilles.json"]'
+
+  wikisource:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: wikisource
+      shard_size: 48
+      batch_key: bb-scratch-wikisource-20260916
+      configs: '["configs/061_smert_ivana.json","configs/063_karamazov.json","configs/064_idiota.json","configs/100_repubblica.json"]'
