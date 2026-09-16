@@ -15,26 +15,34 @@ jobs:
           python - <<'PY'
           import requests,json,pathlib,re,time
           out=pathlib.Path('maps');out.mkdir()
-          S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (source mapping research)'
-          def api(host,params):
-            r=S.get(host+'/w/api.php',params=params,timeout=30);r.raise_for_status();return r.json()
-          # Bel-Ami: same Ollendorff 1901 edition used as source. Capture raw transclusion markup per chapter.
+          S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (source mapping research; github.com/rnttmdtg9p-droid/epub-bridge)'
           host='https://fr.wikisource.org'
+          romans=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII']
+          titles=['Bel-Ami/Édition Ollendorff, 1901/Texte entier/'+r for r in romans]
+          def api(params):
+            for i in range(6):
+              rr=S.get(host+'/w/api.php',params=params,timeout=30)
+              if rr.status_code!=429:rr.raise_for_status();return rr.json()
+              time.sleep(4+i*3)
+            rr.raise_for_status()
+          # One batched request instead of eighteen requests.
+          j=api({'action':'query','format':'json','prop':'revisions','rvprop':'ids|content','rvslots':'main','titles':'|'.join(titles)})
+          pages={p.get('title'):p for p in j.get('query',{}).get('pages',{}).values()}
           bel=[]
-          for roman in ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII']:
-            title='Bel-Ami/Édition Ollendorff, 1901/Texte entier/'+roman
-            j=api(host,{'action':'query','format':'json','prop':'revisions','rvprop':'ids|content','rvslots':'main','titles':title})
-            p=next(iter(j['query']['pages'].values()));txt=p.get('revisions',[{}])[0].get('slots',{}).get('main',{}).get('*','')
-            bel.append({'chapter':roman,'title':title,'revid':p.get('revisions',[{}])[0].get('revid'),'wikitext':txt,'pages_tags':re.findall(r'<pages[^>]+>',txt,re.I)})
+          for roman,title in zip(romans,titles):
+            p=pages.get(title,{})
+            rev=(p.get('revisions') or [{}])[0];txt=rev.get('slots',{}).get('main',{}).get('*','')
+            bel.append({'chapter':roman,'title':title,'revid':rev.get('revid'),'wikitext':txt,'pages_tags':re.findall(r'<pages[^>]+>',txt,re.I)})
           (out/'bel_ami_1901_page_map.json').write_text(json.dumps(bel,ensure_ascii=False,indent=2))
-          # Chartreuse: search Wikisource main and Index namespaces for the 1883 Foulquier/Conquet witness.
+          # Two search namespaces in one generator-free request each, with retry.
           results={}
           for ns in [0,106]:
-            j=api(host,{'action':'query','format':'json','list':'search','srsearch':'"Chartreuse de Parme" 1883 Foulquier','srnamespace':ns,'srlimit':50})
-            results[str(ns)]=j.get('query',{}).get('search',[])
+            q=api({'action':'query','format':'json','list':'search','srsearch':'"Chartreuse de Parme" 1883 Foulquier','srnamespace':ns,'srlimit':50})
+            results[str(ns)]=q.get('query',{}).get('search',[]);time.sleep(2)
           (out/'chartreuse_1883_search.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: bb16-v5014-source-page-maps
           path: maps
