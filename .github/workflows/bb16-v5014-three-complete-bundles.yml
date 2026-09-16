@@ -1,0 +1,69 @@
+name: BB16 v5.0.14 three complete bundles
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-three-complete-bundles.yml']
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        title: [goriot, certosa, boule]
+    steps:
+      - name: Download coherent exact-work program
+        env:
+          TITLE: ${{ matrix.title }}
+        run: |
+          python - <<'PY'
+          import requests,json,os,re,time,hashlib,html
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          T=os.environ['TITLE'];S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)';api='https://commons.wikimedia.org/w/api.php'
+          q={'goriot':'Illustrations de Le Père Goriot Lynch Abot btv1b2200166f','certosa':'Chartreuse de Parme 1883 Valentin Foulquier','boule':'Illustrations de Boule de Suif Thévenot Romagnol btv1b2200227p'}[T]
+          lim={'goriot':20,'certosa':60,'boule':100}[T]
+          pages=[];cont={}
+          while True:
+            p={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':min(50,lim-len(pages)),'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1800};p.update(cont)
+            j=S.get(api,params=p,timeout=90).json();pages.extend(j.get('query',{}).get('pages',{}).values())
+            if len(pages)>=lim or 'continue' not in j:break
+            cont=j['continue']
+          if T=='goriot': pages=[p for p in pages if 'btv1b2200166f' in p['title']]
+          if T=='boule': pages=[p for p in pages if 'btv1b2200227p' in p['title']]
+          if T=='certosa':
+            pages=[p for p in pages if 'Chartreuse de Parme 1883' in p['title']]
+            pages=[p for p in pages if not p['title'].endswith(' - frontispice.jpg')]
+          expected={'goriot':10,'certosa':31,'boule':57}[T]
+          # dedupe by title
+          pages={p['title']:p for p in pages};pages=list(pages.values())
+          assert len(pages)==expected,(T,len(pages),[p['title'] for p in pages])
+          os.makedirs('images',exist_ok=True)
+          def key(title):
+            if T in ('goriot','boule'):
+              m=re.search(r'\((\d+) of \d+\)',title);return f'{int(m.group(1)):03d}'
+            m=re.search(r' - (II - )?([^/]+?)\.jpg$',title)
+            if m:return ('II_' if m.group(1) else 'I_')+re.sub(r'\W+','_',m.group(2)).strip('_')
+            return re.sub(r'\W+','_',title)
+          def fetch(pg):
+            ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url'];k=key(pg['title']);path=f'images/{T}_{k}.jpg';s=requests.Session();s.headers['User-Agent']=S.headers['User-Agent']
+            for n in range(12):
+              r=s.get(url,timeout=120)
+              if r.status_code==200:open(path,'wb').write(r.content);break
+              if r.status_code==429:time.sleep(3+n*2);continue
+              r.raise_for_status()
+            else:raise RuntimeError(pg['title'])
+            return {'title':pg['title'],'file':path,'descriptionurl':ii.get('descriptionurl'),'source_width':ii.get('width'),'source_height':ii.get('height'),'sha256':hashlib.sha256(open(path,'rb').read()).hexdigest(),'bytes':os.path.getsize(path),'extmetadata':ii.get('extmetadata',{})}
+          rec=[]
+          with ThreadPoolExecutor(max_workers=10) as ex:
+            fut=[ex.submit(fetch,p) for p in pages]
+            for f in as_completed(fut):rec.append(f.result())
+          rec.sort(key=lambda r:r['file']);assert len(rec)==expected and all(r['bytes']>10000 for r in rec)
+          json.dump({'title':T,'query':q,'count':len(rec),'records':rec},open(f'{T}_complete_records.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-${{ matrix.title }}-complete
+          path: |
+            images/
+            ${{ matrix.title }}_complete_records.json
