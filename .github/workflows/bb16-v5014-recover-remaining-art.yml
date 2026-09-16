@@ -1,0 +1,77 @@
+name: BB16 v5.0.14 recover remaining art
+on:
+  push:
+    paths:
+      - '.github/workflows/bb16-v5014-recover-remaining-art.yml'
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Download verified Commons exact-work programs
+        run: |
+          python -m pip -q install requests pillow
+          cat > /tmp/get.py <<'PY'
+          import requests, pathlib, json, re, time, hashlib, io
+          from PIL import Image,ImageOps
+          S=requests.Session(); S.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research; github.com/rnttmdtg9p-droid/epub-bridge)'
+          API='https://commons.wikimedia.org/w/api.php'
+          plans={
+            '075_Papa_Goriot': {'query':'Illustrations de Le Père Goriot Lynch Abot','accept':lambda t:t.startswith('File:Illustrations de Le Père Goriot')},
+            '078_Certosa_di_Parma': {'query':'Chartreuse de Parme 1883 Valentin Foulquier','accept':lambda t:'Chartreuse de Parme 1883' in t and 'Valentin Foulquier' in t},
+            '081_Bel_Ami': {'query':'Maupassant Bel-ami','accept':lambda t:t.startswith('File:Maupassant Bel-ami')},
+            '082_Boule_de_suif': {'query':'Illustrations de Boule de Suif Thévenot Romagnol','accept':lambda t:t.startswith('File:Illustrations de Boule de Suif')},
+            '088_Giardino_dei_ciliegi': {'query':'The Cherry Orchard Moscow Art Theatre','accept':lambda t:'Cherry Orchard' in t},
+            '065_Memorie_dal_sottosuolo': {'query':'Записки из подполья Достоевского иллюстрации','accept':lambda t:True},
+            '091_La_metamorfosi': {'query':'Kafka Die Verwandlung illustration 1915','accept':lambda t:True},
+          }
+          root=pathlib.Path('assets'); root.mkdir()
+          def api(params):
+            for i in range(5):
+              r=S.get(API,params=params,timeout=40)
+              if r.status_code not in (429,502,503): r.raise_for_status(); return r.json()
+              time.sleep(2+i*2)
+            r.raise_for_status()
+          def search(q,limit=200):
+            out=[]; cont={}
+            while len(out)<limit:
+              p={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':50,'prop':'imageinfo','iiprop':'url|size|extmetadata'};p.update(cont)
+              j=api(p)
+              for pg in j.get('query',{}).get('pages',{}).values():
+                if pg.get('imageinfo'): out.append((pg.get('title',''),pg['imageinfo'][0]))
+              if 'continue' not in j:break
+              cont=j['continue']
+            return out
+          def clean(v):
+            if isinstance(v,dict):v=v.get('value','')
+            return re.sub('<[^>]+>',' ',str(v or '')).replace('&nbsp;',' ').strip()
+          for book,cfg in plans.items():
+            d=root/book;d.mkdir(); rec=[]
+            results=search(cfg['query'])
+            for title,ii in results:
+              em=ii.get('extmetadata',{}) or {}; lic=clean(em.get('LicenseShortName'))+' '+clean(em.get('UsageTerms')); desc=clean(em.get('ImageDescription'))+' '+clean(em.get('Categories'))
+              row={'title':title,'descriptionurl':ii.get('descriptionurl'),'url':ii.get('url'),'width':ii.get('width'),'height':ii.get('height'),'license':lic.strip(),'artist':clean(em.get('Artist')),'date':clean(em.get('DateTimeOriginal')),'description':desc,'accepted_title':bool(cfg['accept'](title))}
+              # Only public-domain material is eligible in this acquisition pass.
+              row['rights_pass']='public domain' in lic.lower() or 'pd-' in desc.lower() or 'cc-pd' in desc.lower()
+              # Reject obvious title pages/covers and non-image media from selected programs.
+              low=title.lower(); row['role_reject']=any(x in low for x in ['.pdf','.djvu','cover','couverture','обложка'])
+              if row['accepted_title'] and row['rights_pass'] and not row['role_reject'] and ii.get('url'):
+                try:
+                  rr=S.get(ii['url'],timeout=60);rr.raise_for_status(); raw=rr.content
+                  im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert('RGB');row['source_sha256']=hashlib.sha256(raw).hexdigest();row['source_dimensions']=list(im.size)
+                  im.thumbnail((1600,2000)); fn=re.sub(r'[^A-Za-z0-9._-]+','_',title[5:])[:170]; fn=re.sub(r'\.(png|tif|tiff|gif|webp)$','.jpg',fn,flags=re.I)
+                  if not fn.lower().endswith(('.jpg','.jpeg')):fn+='.jpg'
+                  out=d/fn;im.save(out,'JPEG',quality=92,optimize=True,subsampling=0);row['file']=fn;row['output_sha256']=hashlib.sha256(out.read_bytes()).hexdigest();row['output_dimensions']=list(im.size);row['download']='PASS'
+                except Exception as e:row['download']='FAIL';row['error']=str(e)
+              rec.append(row)
+            (d/'records.json').write_text(json.dumps({'book':book,'query':cfg['query'],'records':rec},ensure_ascii=False,indent=2))
+            print(book,'search',len(results),'downloaded',sum(r.get('download')=='PASS' for r in rec),flush=True)
+          PY
+          python /tmp/get.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb16-v5014-remaining-art
+          path: assets
+          retention-days: 14
