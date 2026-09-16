@@ -11,11 +11,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - run: python -m pip -q install requests pymupdf
-      - run: curl -fL -o ge.py https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/bb16-v5014-assets-20260915/tools/bb050_great_expectations.py
+      - run: curl -fL -o ge.py 'https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/bb16-v5014-assets-20260915/tools/bb050_great_expectations.py?v=6231f4daec1ff5b7015068c6ea24b4bf4f8fe69f'
       - run: python ge.py
       - uses: actions/upload-artifact@v4
         with:
           name: bb050-great-expectations
           path: great_expectations
           retention-days: 14
-# retry with Wikimedia UA
