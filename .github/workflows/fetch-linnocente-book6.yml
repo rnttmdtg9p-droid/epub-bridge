@@ -8,13 +8,13 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - run: python -m pip -q install requests beautifulsoup4 pillow
-      - run: curl -fL -o pg.py https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/bb16-v5014-assets-20260915/tools/bb16_pg_only.py
-      - run: python pg.py
+      - run: curl -fL -o n2.py https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/bb16-v5014-assets-20260915/tools/bb070_notre2.py
+      - run: python n2.py
       - uses: actions/upload-artifact@v4
         with:
-          name: bb16-v5014-pg-assets
-          path: pg_assets
+          name: bb070-notre2-assets
+          path: notre2
           retention-days: 14
