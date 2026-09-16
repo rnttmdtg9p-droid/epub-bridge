@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "production_job": "bb-final-three-scratch-rebuild-20260916",
+  "repository": "rnttmdtg9p-droid/epub-bridge",
+  "status": "in_progress",
+  "created_at": "2026-09-16T17:30:32.952Z",
+  "governing_profile": "Boundary Bay REVIEW scratch rebuild; zero hard MADLAD flags plus EPUBCheck 5.2.1",
+  "source_policy": "Fresh source acquisition and full fresh semantic-unit translation for every title",
+  "translator": "google/madlad400-3b-mt via Heng666/madlad400-3b-mt-ct2-int8",
+  "engine_workflow": ".github/workflows/bb-scratch-rebuild-engine-v2.yml",
+  "completion_checks": [
+    "fresh source bundle created",
+    "every fresh shard translated and source-bound hard repair completed",
+    "remaining_hard_flagged_unit_count equals 0",
+    "EPUB assembled",
+    "EPUBCheck 5.2.1 exits successfully",
+    "EPUB ZIP integrity passes",
+    "SHA-256 recorded",
+    "downloadable workflow artifact contains an EPUB"
+  ],
+  "items": [
+    {
+      "rank": 55,
+      "title": "Il mastino dei Baskerville",
+      "config": "configs/055_mastino_baskervilles.json",
+      "engine": "gutenberg",
+      "shard_size": 48,
+      "attempt": 2,
+      "prior_run_id": 35055548139,
+      "prior_job_id": 104685477632,
+      "prior_failure": "serial hard-fault repair cancelled after six hours at 2000/3821 units; no EPUB artifact",
+      "stages": {
+        "source": "pending",
+        "translate_repair_shards": "pending",
+        "assemble": "pending",
+        "hard_gate": "pending",
+        "epubcheck": "pending",
+        "artifact": "pending"
+      },
+      "next_action": "launch clean shard-parallel rebuild"
+    },
+    {
+      "rank": 61,
+      "title": "La morte di Ivan Il’ič",
+      "config": "configs/061_smert_ivana.json",
+      "engine": "wikisource",
+      "shard_size": 48,
+      "attempt": 2,
+      "prior_run_id": 35055548139,
+      "prior_job_id": 104674995722,
+      "prior_failure": "one persistent severe-length/Cyrillic decoder anomaly at c002-u0082",
+      "source_bound_override": {
+        "unit_id": "c002-u0082",
+        "source_sha256": "7d476292188a5e930dd5e74df244c1b2ad34c3e0670255d764b408e5d5633cf0"
+      },
+      "stages": {
+        "source": "pending",
+        "translate_repair_shards": "pending",
+        "assemble": "pending",
+        "hard_gate": "pending",
+        "epubcheck": "pending",
+        "artifact": "pending"
+      },
+      "next_action": "launch clean shard-parallel rebuild"
+    },
+    {
+      "rank": 64,
+      "title": "L’idiota",
+      "config": "configs/064_idiota.json",
+      "engine": "wikisource",
+      "shard_size": 64,
+      "attempt": 3,
+      "prior_run_id": 35068904279,
+      "prior_failure": "one persistent severe-length/Cyrillic decoder anomaly at c023-u0018 after ultra-bounded recovery",
+      "source_bound_override": {
+        "unit_id": "c023-u0018",
+        "source_sha256": "35c079f26c7f3830d4ba86e6b2e71bb44b4638b6c5b225a4984acdca578a4516"
+      },
+      "stages": {
+        "source": "pending",
+        "translate_repair_shards": "pending",
+        "assemble": "pending",
+        "hard_gate": "pending",
+        "epubcheck": "pending",
+        "artifact": "pending"
+      },
+      "next_action": "launch clean shard-parallel rebuild"
+    }
+  ]
+}
