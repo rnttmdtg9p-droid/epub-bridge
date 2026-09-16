@@ -2,6 +2,9 @@ name: BB final three recovery assembly
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "reports/bb_final_three_recovery_launch_20260916.json"
 
 permissions:
   contents: read
