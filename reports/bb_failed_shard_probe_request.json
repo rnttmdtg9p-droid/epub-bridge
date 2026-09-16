@@ -1,0 +1,13 @@
+{
+  "source_run_id": 35128754290,
+  "requested_at": "2026-09-16T18:55:00Z",
+  "purpose": "Print exact source-bound units from completed failed shard artifacts while local extraction service is unavailable.",
+  "expected_failed_jobs": [
+    104904476970,
+    104904494584,
+    104904494616,
+    104904494637,
+    104904494867,
+    104904494536
+  ]
+}
