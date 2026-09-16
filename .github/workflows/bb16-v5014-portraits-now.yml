@@ -1,0 +1,44 @@
+name: BB16 v5.0.14 portraits now
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-portraits-now.yml']
+permissions:
+  contents: read
+jobs:
+  portraits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch authenticated public-domain author portraits
+        run: |
+          python - <<'PY'
+          import requests,os,time,json
+          os.makedirs('portraits',exist_ok=True)
+          api='https://commons.wikimedia.org/w/api.php'
+          s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          files={
+            'balzac_portrait.jpg':'Honore_de_Balzac_daguerreotype.jpg',
+            'stendhal_portrait.jpg':'Stendhal.jpg',
+            'maupassant_portrait.jpg':'Guy_de_Maupassant_1888.jpg',
+          }
+          manifest=[]
+          for out,name in files.items():
+            j=s.get(api,params={'action':'query','format':'json','titles':'File:'+name,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1200},timeout=60).json()
+            pg=next(iter(j['query']['pages'].values()))
+            if 'missing' in pg: raise SystemExit('missing '+name)
+            ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url']
+            for k in range(8):
+              r=s.get(url,timeout=90)
+              if r.status_code==200:
+                open('portraits/'+out,'wb').write(r.content);break
+              if r.status_code in (429,500,502,503,504): time.sleep(3+k*2);continue
+              r.raise_for_status()
+            else: raise SystemExit('download failed '+name)
+            m=ii.get('extmetadata',{})
+            manifest.append({'output':out,'commons_title':pg['title'],'descriptionurl':ii.get('descriptionurl'),'width':ii.get('width'),'height':ii.get('height'),'license':m.get('LicenseShortName',{}).get('value'),'artist':m.get('Artist',{}).get('value')})
+          json.dump(manifest,open('portraits/manifest.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb16-v5014-portraits-now
+          path: portraits
