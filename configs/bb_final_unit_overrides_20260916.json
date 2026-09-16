@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-16T17:00:00Z",
+  "scope": "Final source-bound overrides for the September 16 three-title scratch rebuild",
+  "overrides": [
+    {
+      "rank": 61,
+      "unit_id": "c002-u0082",
+      "source_sha256": "7d476292188a5e930dd5e74df244c1b2ad34c3e0670255d764b408e5d5633cf0",
+      "source_text": "Оставались\nтолько те редкие периоды влюбленности, которые находили на супругов, но\nпродолжались недолго.",
+      "translation": "Restavano soltanto quei rari momenti d’innamoramento che di tanto in tanto coglievano i coniugi, ma duravano poco.",
+      "reason": "Persistent MADLAD Cyrillic decoder loop after bounded retries; manually translated from the frozen Russian unit."
+    },
+    {
+      "rank": 64,
+      "unit_id": "c023-u0018",
+      "source_sha256": "35c079f26c7f3830d4ba86e6b2e71bb44b4638b6c5b225a4984acdca578a4516",
+      "source_text": "Он себе на шею четки\nВместо шарфа навязал,\nИ с лица стальной решетки\nНи пред кем не подымал.",
+      "translation": "Si legò al collo un rosario\nal posto d’una sciarpa;\ne dal volto la grata d’acciaio\nnon sollevava davanti a nessuno.",
+      "reason": "Persistent MADLAD Cyrillic decoder loop after ultra-bounded retries; manually translated with the four-line verse structure preserved."
+    }
+  ]
+}
