@@ -1,0 +1,24 @@
+name: BB Mastino stable scratch rebuild 20260916
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bb-mastino-stable-scratch-rebuild-20260916.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-mastino-stable-scratch-rebuild-20260916
+  cancel-in-progress: true
+
+jobs:
+  mastino:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine-v2.yml
+    with:
+      engine: gutenberg
+      shard_size: 48
+      batch_key: bb-mastino-stable-055-20260916
+      configs: '["configs/055_mastino_baskervilles.json"]'
