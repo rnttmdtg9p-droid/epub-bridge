@@ -1,0 +1,24 @@
+name: BB Karamazov scratch restart
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/bb-karamazov-scratch-restart.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-karamazov-scratch-restart
+  cancel-in-progress: true
+
+jobs:
+  karamazov:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: wikisource
+      shard_size: 80
+      batch_key: bb-scratch-063-r2-20260916
+      configs: '["configs/063_karamazov.json"]'
