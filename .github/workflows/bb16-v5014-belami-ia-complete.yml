@@ -1,0 +1,58 @@
+name: BB16 v5.0.14 Bel-Ami complete IA program
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-belami-ia-complete.yml']
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all 102 exact-work category images
+        run: |
+          python - <<'PY'
+          import requests,json,os,re,time,hashlib
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          api='https://commons.wikimedia.org/w/api.php';cat='Category:Bel-Ami illustrations (Internet Archive scans)'
+          members=[];cont={}
+          while True:
+            p={'action':'query','format':'json','list':'categorymembers','cmtitle':cat,'cmtype':'file','cmlimit':'max'};p.update(cont)
+            j=S.get(api,params=p,timeout=60).json();members.extend(j['query']['categorymembers'])
+            if 'continue' not in j:break
+            cont=j['continue']
+          assert len(members)==102, len(members)
+          titles=[m['title'] for m in members]
+          infos={}
+          for i in range(0,len(titles),40):
+            batch=titles[i:i+40]
+            j=S.get(api,params={'action':'query','format':'json','titles':'|'.join(batch),'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1800},timeout=90).json()
+            for pg in j['query']['pages'].values(): infos[pg['title']]=pg['imageinfo'][0]
+          os.makedirs('images',exist_ok=True)
+          def fetch(title):
+            ii=infos[title];url=ii.get('thumburl') or ii['url'];m=re.search(r'page (\d+)\.jpg$',title);key=m.group(1) if m else re.sub(r'\W+','_',title)
+            path=f'images/belami_{key}.jpg'
+            s=requests.Session();s.headers['User-Agent']=S.headers['User-Agent']
+            for k in range(12):
+              r=s.get(url,timeout=120)
+              if r.status_code==200:
+                open(path,'wb').write(r.content);return title,path,ii
+              if r.status_code==429:time.sleep(3+k*2);continue
+              r.raise_for_status()
+            raise RuntimeError(title)
+          rec=[]
+          with ThreadPoolExecutor(max_workers=12) as ex:
+            fut=[ex.submit(fetch,t) for t in titles]
+            for f in as_completed(fut):
+              title,path,ii=f.result();rec.append({'title':title,'file':path,'descriptionurl':ii.get('descriptionurl'),'source_width':ii.get('width'),'source_height':ii.get('height'),'sha256':hashlib.sha256(open(path,'rb').read()).hexdigest(),'bytes':os.path.getsize(path),'extmetadata':ii.get('extmetadata',{})})
+          rec.sort(key=lambda r:r['title'])
+          assert len(rec)==102 and all(r['bytes']>10000 for r in rec)
+          json.dump({'category':cat,'count':len(rec),'records':rec},open('belami_complete_records.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-Bel-Ami-complete-102
+          path: |
+            images/
+            belami_complete_records.json
