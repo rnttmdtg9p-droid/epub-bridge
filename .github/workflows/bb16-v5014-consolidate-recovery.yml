@@ -1,0 +1,84 @@
+name: BB16 v5.0.14 consolidate recovery
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-consolidate-recovery.yml']
+permissions:
+  actions: read
+  contents: read
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for parallel recovery retries to settle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 90); do
+            s=$(gh api repos/${{ github.repository }}/actions/runs/35069321294 --jq .status)
+            echo "recovery status=$s"
+            [ "$s" = completed ] && break
+            sleep 10
+          done
+      - name: Download latest successful artifacts from both recovery runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p zips unpack
+          python - <<'PY'
+          import json,subprocess,os
+          repo=os.environ['GITHUB_REPOSITORY']
+          runs=[35068188706,35069321294]
+          selected={}
+          for run in runs:
+            raw=subprocess.check_output(['gh','api','--paginate','--slurp',f'repos/{repo}/actions/runs/{run}/artifacts?per_page=100'],text=True)
+            pages=json.loads(raw)
+            arts=[]
+            for page in pages:
+              arts.extend(page.get('artifacts',[]))
+            for a in arts:
+              name=a['name']
+              wanted=(name.startswith(('bb16-v5014-075_Papa_Goriot-art','bb16-v5014-078_Certosa_di_Parma-art','bb16-v5014-081_Bel_Ami-art','bb16-v5014-082_Boule_de_suif-art','goriot-','certosa-','belami-','boule-','epubcheck-5.3.0-official')))
+              if wanted and (name not in selected or a['id']>selected[name]['id']): selected[name]=a
+          os.makedirs('zips',exist_ok=True)
+          with open('selected_artifacts.json','w') as f: json.dump(selected,f,indent=2)
+          for name,a in sorted(selected.items()):
+            path=f'zips/{name}.zip'
+            print('download',a['id'],name)
+            with open(path,'wb') as out:
+              subprocess.check_call(['gh','api','-H','Accept: application/vnd.github+json',f'repos/{repo}/actions/artifacts/{a["id"]}/zip'],stdout=out)
+          PY
+          for z in zips/*.zip; do d="unpack/$(basename "$z" .zip)"; mkdir -p "$d"; unzip -oq "$z" -d "$d"; done
+      - name: Verify complete expected artifact roster
+        run: |
+          python - <<'PY'
+          import json,os,glob,hashlib
+          s=json.load(open('selected_artifacts.json'))
+          bel=['0007','0009','0011','0018','0026','0029','0030','0031','0033','0037','0038','0039','0046','0049','0050','0051','0055','0058','0063','0071','0075','0076','0082','0093','0094','0103','0109','0115','0119','0125','0131','0138','0140','0141','0145','0149','0160','0164','0170','0176','0179','0180','0183','0195','0198','0203','0204','0205','0215','0222','0232','0233','0235','0242','0247','0252','0257','0265','0266','0271','0277','0285','0286','0293','0301','0307','0312','0313','0317','0321','0328','0331','0332','0339','0349','0354','0359','0360','0363','0373','0374','0381','0388','0392','0395','0398','0399','0404','0406','0408','0410','0411','0417','0418','0424','0425','0433','0436','0437','0443','0449','0452']
+          cert=['000Frontispice','001','023','055','081','113','149','209','239','263','277','289','325','349','386','II-357','II-383','II-407','II-432']
+          expected=['epubcheck-5.3.0-official']+[f'goriot-{x}' for x in ['06','07','08','09','10']]+[f'certosa-{x}' for x in cert]+[f'belami-{x}' for x in bel]+[f'boule-{x:02d}' for x in range(1,58)]
+          aggregates=['bb16-v5014-075_Papa_Goriot-art','bb16-v5014-078_Certosa_di_Parma-art','bb16-v5014-081_Bel_Ami-art','bb16-v5014-082_Boule_de_suif-art']
+          missing=[x for x in expected+aggregates if x not in s]
+          files=[]
+          for p in glob.glob('unpack/**/*',recursive=True):
+            if os.path.isfile(p):
+              h=hashlib.sha256(open(p,'rb').read()).hexdigest();files.append({'path':p,'bytes':os.path.getsize(p),'sha256':h})
+          report={'expected_parallel':len(expected),'expected_aggregates':len(aggregates),'selected':len(s),'missing':missing,'files':files}
+          json.dump(report,open('recovery_manifest.json','w'),indent=2)
+          print(json.dumps({'selected':len(s),'missing':missing,'file_count':len(files)},indent=2))
+          if missing: raise SystemExit(2)
+          PY
+      - name: Assemble recovery bundle
+        if: always()
+        run: |
+          cp selected_artifacts.json unpack/ || true
+          cp recovery_manifest.json unpack/ || true
+          (cd unpack && zip -qr ../BB16_v5.0.14_COMPLETE_RECOVERY_ASSETS.zip .)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: BB16-v5.0.14-complete-recovery-assets
+          path: |
+            BB16_v5.0.14_COMPLETE_RECOVERY_ASSETS.zip
+            recovery_manifest.json
+            selected_artifacts.json
