@@ -1,0 +1,67 @@
+name: BB16 v5.0.14 context maps
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-context-maps.yml']
+permissions:
+  contents: read
+jobs:
+  maps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query Commons descriptions and Wikisource usage
+        run: |
+          python - <<'PY'
+          import requests,json,re,time,html,os
+          S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          commons='https://commons.wikimedia.org/w/api.php';ws='https://fr.wikisource.org/w/api.php'
+          def search_commons(q,limit=200):
+            out=[];cont={}
+            while True:
+              p={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':min(limit-len(out),50),'prop':'imageinfo','iiprop':'url|size|extmetadata'};p.update(cont)
+              j=S.get(commons,params=p,timeout=90).json();out.extend(j.get('query',{}).get('pages',{}).values())
+              if len(out)>=limit or 'continue' not in j:break
+              cont=j['continue'];time.sleep(.2)
+            return out
+          g=search_commons('Illustrations de Le Père Goriot Lynch Abot btv1b2200166f',30)
+          b=search_commons('Illustrations de Boule de Suif Thévenot Romagnol btv1b2200227p',100)
+          json.dump(g,open('goriot_commons.json','w'),ensure_ascii=False,indent=2)
+          json.dump(b,open('boule_commons.json','w'),ensure_ascii=False,indent=2)
+          bel=['0007','0009','0011','0018','0026','0029','0030','0031','0033','0037','0038','0039','0046','0049','0050','0051','0055','0058','0063','0071','0075','0076','0082','0093','0094','0103','0109','0115','0119','0125','0131','0138','0140','0141','0145','0149','0160','0164','0170','0176','0179','0180','0183','0195','0198','0203','0204','0205','0215','0222','0232','0233','0235','0242','0247','0252','0257','0265','0266','0271','0277','0285','0286','0293','0301','0307','0312','0313','0317','0321','0328','0331','0332','0339','0349','0354','0359','0360','0363','0373','0374','0381','0388','0392','0395','0398','0399','0404','0406','0408','0410','0411','0417','0418','0424','0425','0433','0436','0437','0443','0449','0452']
+          cert=['000Frontispice','001','023','055','081','113','149','209','239','263','277','289','325','349','386','II-001','II-033','II-059','II-085','II-107','II-127','II-165','II-203','II-235','II-263','II-297','II-327','II-357','II-383','II-407','II-432']
+          def usage(title):
+            p={'action':'query','format':'json','list':'imageusage','iutitle':'File:'+title,'iulimit':'max','iunamespace':'0|104'}
+            try:return S.get(ws,params=p,timeout=60).json().get('query',{}).get('imageusage',[])
+            except Exception:return []
+          bm={}
+          for i,p in enumerate(bel):
+            title=f'Maupassant Bel-ami {p}.jpg';bm[p]={'title':title,'usage':usage(title)}
+            if i%15==0:time.sleep(.4)
+          cm={}
+          for i,p in enumerate(cert):
+            if p=='000Frontispice': title='Chartreuse de Parme 1883 - Valentin Foulquier - 000Frontispice.jpg'
+            elif p.startswith('II-'): title=f'Chartreuse de Parme 1883 - II - Valentin Foulquier - {p[3:]}.jpg'
+            else:title=f'Chartreuse de Parme 1883 - Valentin Foulquier - {p}.jpg'
+            cm[p]={'title':title,'usage':usage(title)}
+            if i%10==0:time.sleep(.4)
+          json.dump(bm,open('belami_imageusage.json','w'),ensure_ascii=False,indent=2)
+          json.dump(cm,open('certosa_imageusage.json','w'),ensure_ascii=False,indent=2)
+          # Human-readable summary of BnF description fields for exact-work page/caption evidence.
+          def desc(pages):
+            rows=[]
+            for pg in pages:
+              ii=(pg.get('imageinfo') or [{}])[0];m=ii.get('extmetadata',{});rows.append({'title':pg.get('title'),'description':html.unescape(re.sub('<[^>]+>',' ',m.get('ImageDescription',{}).get('value',''))),'artist':html.unescape(re.sub('<[^>]+>',' ',m.get('Artist',{}).get('value',''))),'license':m.get('LicenseShortName',{}).get('value'),'descriptionurl':ii.get('descriptionurl')})
+            return rows
+          json.dump(desc(g),open('goriot_context.json','w'),ensure_ascii=False,indent=2)
+          json.dump(desc(b),open('boule_context.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-source-context-maps
+          path: |
+            goriot_commons.json
+            boule_commons.json
+            belami_imageusage.json
+            certosa_imageusage.json
+            goriot_context.json
+            boule_context.json
