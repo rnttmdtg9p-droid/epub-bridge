@@ -1,0 +1,42 @@
+name: BB074 CC0 portrait
+on:
+  push:
+    paths: ['.github/workflows/bb074-cc0-portrait.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Acquire institutional CC0 source
+        run: |
+          python -m pip -q install requests beautifulsoup4 pillow
+          python - <<'PY'
+          import requests,json,re,pathlib,io,hashlib
+          from bs4 import BeautifulSoup
+          from PIL import Image
+          root=pathlib.Path('portrait');root.mkdir()
+          urls=['https://www.parismuseescollections.paris.fr/fr/petit-palais/oeuvres/alexandre-dumas-fils','https://www.parismuseescollections.paris.fr/en/node/152245']
+          s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0'
+          for i,url in enumerate(urls):
+              try:
+                  r=s.get(url,timeout=70);r.raise_for_status();(root/f'page{i}.html').write_text(r.text);soup=BeautifulSoup(r.text,'html.parser');(root/f'page{i}.txt').write_text(soup.get_text(' ',strip=True))
+                  manifests=re.findall(r'https?[^\s<>"\x27]+/iiif/\d+/manifest',r.text)
+                  candidates=[a.get('href') for a in soup.select('a[href]') if 'manifest' in a.get('href','')]
+                  ims=[dict(t.attrs) for t in soup.select('img') if 'Alexandre' in t.get('alt','')]
+                  rec={'source':url,'manifests':list(dict.fromkeys(manifests+candidates)),'images':ims,'cc0':'CC0' in r.text}
+                  (root/f'record{i}.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2))
+                  for murl in rec['manifests'][:1]:
+                      m=s.get(murl.replace('http:','https:'),timeout=60);m.raise_for_status();data=m.json();(root/f'manifest{i}.json').write_text(json.dumps(data,ensure_ascii=False,indent=2));canvases=data.get('sequences',[{}])[0].get('canvases',[])
+                      for j,c in enumerate(canvases[:3]):
+                          res=c['images'][0]['resource'];u=res.get('@id') or res.get('id');rr=s.get(u,timeout=80);rr.raise_for_status();im=Image.open(io.BytesIO(rr.content)).convert('RGB');out=root/f'portrait{i}_{j}.jpg';im.save(out,'JPEG',quality=96,subsampling=0);(root/f'image{i}_{j}.json').write_text(json.dumps({'url':u,'canvas':c,'size':im.size,'source_sha256':hashlib.sha256(rr.content).hexdigest(),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest()},ensure_ascii=False,indent=2))
+                  print(i,'downloaded',flush=True)
+              except Exception as e:(root/f'error{i}.txt').write_text(str(e));print(i,str(e),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb074-cc0-portrait
+          path: portrait
+          retention-days: 14
