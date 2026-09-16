@@ -1,0 +1,49 @@
+name: BB16 v5.0.14 Boule de suif complete
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-boule-complete.yml']
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve and download all 57 sequence images
+        run: |
+          python - <<'PY'
+          import requests,json,os,re,time,hashlib
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          api='https://commons.wikimedia.org/w/api.php';ua='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          s=requests.Session();s.headers['User-Agent']=ua
+          pages=[]
+          for n in range(1,58):
+            q=f'Illustrations de Boule de Suif btv1b2200227p ({n:02d} of 57)'
+            j=s.get(api,params={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':10,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1800},timeout=60).json();cand=list(j.get('query',{}).get('pages',{}).values());hit=None
+            for pg in cand:
+              if f'({n:02d} of 57)' in pg.get('title','') or f'({n} of 57)' in pg.get('title',''):hit=pg;break
+            if not hit: raise SystemExit(f'not found {n}: {[x.get("title") for x in cand]}')
+            pages.append((n,hit));time.sleep(.12)
+          os.makedirs('images',exist_ok=True)
+          def fetch(pair):
+            n,pg=pair;ii=pg['imageinfo'][0];url=ii.get('thumburl') or ii['url'];path=f'images/boule_{n:02d}.jpg';ss=requests.Session();ss.headers['User-Agent']=ua
+            for k in range(12):
+              r=ss.get(url,timeout=120)
+              if r.status_code==200:open(path,'wb').write(r.content);break
+              if r.status_code==429:time.sleep(3+k*2);continue
+              r.raise_for_status()
+            else:raise RuntimeError(n)
+            return {'sequence':n,'title':pg['title'],'file':path,'descriptionurl':ii.get('descriptionurl'),'source_width':ii.get('width'),'source_height':ii.get('height'),'sha256':hashlib.sha256(open(path,'rb').read()).hexdigest(),'bytes':os.path.getsize(path),'extmetadata':ii.get('extmetadata',{})}
+          rec=[]
+          with ThreadPoolExecutor(max_workers=8) as ex:
+            fut=[ex.submit(fetch,p) for p in pages]
+            for f in as_completed(fut):rec.append(f.result())
+          rec.sort(key=lambda r:r['sequence']);assert len(rec)==57 and all(r['bytes']>10000 for r in rec)
+          json.dump({'count':57,'records':rec},open('boule_complete_records.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-Boule-complete-57
+          path: |
+            images/
+            boule_complete_records.json
