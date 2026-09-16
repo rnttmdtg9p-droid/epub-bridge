@@ -1,0 +1,57 @@
+name: BB074 Gavarni acquisition
+on:
+  push:
+    paths: ['.github/workflows/bb074-gavarni-acquisition.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Retrieve public source evidence and candidate plates
+        run: |
+          python -m pip -q install requests pillow lxml
+          python - <<'PY'
+          import requests,json,pathlib,io,time,hashlib,urllib.parse,concurrent.futures
+          from lxml import etree as E
+          from PIL import Image,ImageOps,ImageDraw
+          root=pathlib.Path('gavarni');root.mkdir();(root/'pages').mkdir();(root/'evidence').mkdir()
+          ident='ladameauxcamlias00duma';base='https://archive.org/download/'+ident+'/'
+          def get(u,timeout=80):
+              r=requests.get(u,timeout=timeout,headers={'User-Agent':'BoundaryBayEditorial/1.0 (public-domain literary edition research)'});r.raise_for_status();return r
+          meta=get('https://archive.org/metadata/'+ident).json();(root/'evidence/metadata.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
+          files=meta['files'];xmlname=next(f['name'] for f in files if f['name'].endswith('_djvu.xml'));raw=get(base+xmlname).content;(root/'evidence/source_djvu.xml').write_bytes(raw)
+          tx=E.fromstring(raw);pages=tx.findall('.//OBJECT');scanname=next((f['name'] for f in files if f['name'].endswith('_scandata.xml')),None);scans={}
+          if scanname:
+              rr=get(base+scanname).content;(root/'evidence/scandata.xml').write_bytes(rr)
+              for p in E.fromstring(rr).findall('.//pageData/page'):scans[int(p.get('leafNum'))]={'type':p.findtext('pageType'),'number':p.findtext('pageNumber')}
+          inventory=[];candidate=[]
+          for i,p in enumerate(pages):
+              text=' '.join(p.itertext());words=p.findall('.//WORD');imageareas=p.xpath('.//REGION[@TYPE="PICTURE"]');rec={'leaf':i,'words':len(words),'text':' '.join(w.text or '' for w in words),'scan':scans.get(i,{}),'source_dimensions':[p.get('width'),p.get('height')],'picture_regions':len(imageareas)};inventory.append(rec)
+              if i<14 or len(words)<110 or 'gavarn' in rec['text'].lower() or rec['scan'].get('type') in ('Illustration','Frontispiece'):candidate.append(rec)
+          (root/'evidence/page_inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2));(root/'evidence/candidates.json').write_text(json.dumps(candidate,ensure_ascii=False,indent=2));print('PAGES',len(pages),'CANDIDATES',len(candidate),flush=True)
+          zipname=next(f['name'] for f in files if f['name'].endswith('_jp2.zip'));zbase=zipname[:-4]
+          def acquire(rec):
+              i=rec['leaf'];member=f'{zbase}/{ident}_{i:04d}.jp2';query=urllib.parse.urlencode({'zip':meta['dir']+'/'+zipname,'file':member,'id':ident,'scale':1,'rotate':0})
+              urls=[f'https://{meta["d1"]}/BookReader/BookReaderImages.php?'+query,base+zipname+'/'+urllib.parse.quote(member,safe='/')]
+              for u in urls:
+                  try:
+                      r=get(u);im=Image.open(io.BytesIO(r.content));im.load();rec['retrieved_url']=u;rec['native_download_size']=list(im.size);rec['download_sha256']=hashlib.sha256(r.content).hexdigest();im=ImageOps.exif_transpose(im).convert('RGB');out=root/'pages'/f'n{i:04d}.jpg';im.save(out,'JPEG',quality=96,subsampling=0);rec['output_sha256']=hashlib.sha256(out.read_bytes()).hexdigest();rec['status']='DOWNLOADED_PENDING_VISUAL_REVIEW';print(i,len(words) if False else rec['words'],im.size,flush=True);return rec
+                  except Exception as e:rec['error']=str(e)
+              rec['status']='FAILED';print('FAILED',i,rec['error'],flush=True);return rec
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:res=list(ex.map(acquire,candidate))
+          (root/'evidence/downloads.json').write_text(json.dumps(res,ensure_ascii=False,indent=2))
+          # Comparison edition metadata and text only; no translation is imported.
+          for other in ['ladywithcamellia00duma','ladameauxcamli00dumauoft']:
+              try:
+                  m=get('https://archive.org/metadata/'+other).json();(root/'evidence'/f'{other}_metadata.json').write_text(json.dumps(m,ensure_ascii=False,indent=2))
+                  n=next(f['name'] for f in m['files'] if f['name'].endswith('_djvu.txt'));(root/'evidence'/f'{other}_text.txt').write_bytes(get('https://archive.org/download/'+other+'/'+n).content)
+              except Exception as e:print('COMPARISON',other,str(e),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb074-gavarni-native-plates
+          path: gavarni
+          retention-days: 14
