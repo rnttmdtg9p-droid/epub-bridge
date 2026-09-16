@@ -8,14 +8,14 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - run: python -m pip -q install requests
-      - run: curl -fL -o cf.py https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/68d3324ae41dc651c7a826ab21e0705780c00ec2/tools/bb16_commons_fast.py
-      - run: python cf.py
+      - run: curl -fL -o a.py https://raw.githubusercontent.com/rnttmdtg9p-droid/epub-bridge/57ca945ca8e88baf436970aed4a635087b8d02fe/tools/bb075_goriot.py
+      - run: python a.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: bb16-v5014-commons-fast
-          path: commons_fast
+          name: bb075-goriot
+          path: goriot
           retention-days: 14
