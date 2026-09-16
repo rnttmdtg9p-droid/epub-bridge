@@ -1,0 +1,61 @@
+name: BB probe failed shards
+
+on:
+  push:
+    paths:
+      - "reports/bb_failed_shard_probe_request.json"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-failed-shard-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download current shard artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: "35128754290"
+          pattern: bb-final3-*-20260916-repaired-shard-*
+          path: fresh-shards
+          merge-multiple: true
+      - name: Print exact hard-fault source units
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          found = 0
+          for qa_path in sorted(Path("fresh-shards/qa").glob("*_final_QA.json")):
+              qa = json.loads(qa_path.read_text(encoding="utf-8"))
+              hard = qa.get("remaining_hard_flags") or {}
+              if not hard:
+                  continue
+              prefix = qa_path.name.removesuffix("_final_QA.json")
+              alignment = Path("fresh-shards/final") / f"{prefix}_alignment.jsonl"
+              records = {
+                  row["unit_id"]: row
+                  for row in (json.loads(line) for line in alignment.read_text(encoding="utf-8").splitlines() if line.strip())
+              }
+              for unit_id, flags in hard.items():
+                  row = records[unit_id]
+                  print("BB_HARD_UNIT " + json.dumps({
+                      "alignment": alignment.name,
+                      "unit_id": unit_id,
+                      "flags": flags,
+                      "source_sha256": row["source_sha256"],
+                      "source": row["source"],
+                      "translation": row.get("translation", ""),
+                  }, ensure_ascii=False), flush=True)
+                  found += 1
+          print(f"BB_HARD_UNIT_COUNT {found}", flush=True)
+          PY
