@@ -1,0 +1,83 @@
+name: BB16 v5.0.14 split exact-work art recovery
+on:
+  push:
+    paths:
+      - '.github/workflows/bb16-v5014-art-split.yml'
+permissions:
+  contents: read
+jobs:
+  recover:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - key: 075_Papa_Goriot
+            query: Illustrations de Le Père Goriot Lynch Abot
+            prefix: Illustrations de Le Père Goriot
+          - key: 078_Certosa_di_Parma
+            query: Chartreuse de Parme 1883 Valentin Foulquier
+            prefix: Chartreuse de Parme 1883
+          - key: 081_Bel_Ami
+            query: Maupassant Bel-ami
+            prefix: Maupassant Bel-ami
+          - key: 082_Boule_de_suif
+            query: Illustrations de Boule de Suif Thévenot Romagnol
+            prefix: Illustrations de Boule de Suif
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Acquire ${{ matrix.key }}
+        env:
+          BOOK: ${{ matrix.key }}
+          QUERY: ${{ matrix.query }}
+          PREFIX: ${{ matrix.prefix }}
+        run: |
+          python -m pip -q install requests pillow
+          python - <<'PY'
+          import requests,pathlib,json,re,time,hashlib,io,os
+          from PIL import Image,ImageOps
+          book,q,prefix=os.environ['BOOK'],os.environ['QUERY'],os.environ['PREFIX']
+          d=pathlib.Path('assets')/book;d.mkdir(parents=True)
+          S=requests.Session();S.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research; github.com/rnttmdtg9p-droid/epub-bridge)'
+          API='https://commons.wikimedia.org/w/api.php'
+          def api(p):
+            for i in range(8):
+              r=S.get(API,params=p,timeout=35)
+              if r.status_code==200:return r.json()
+              if r.status_code==429:time.sleep(3+i*2);continue
+              r.raise_for_status()
+            return {'query':{}}
+          def val(x):return re.sub('<[^>]+>',' ',str((x or {}).get('value','') if isinstance(x,dict) else x or '')).strip()
+          p={'action':'query','format':'json','generator':'search','gsrsearch':q,'gsrnamespace':6,'gsrlimit':50,'prop':'imageinfo','iiprop':'url|size|extmetadata','iiurlwidth':1200}
+          j=api(p); rec=[]; selected=[]
+          for pg in j.get('query',{}).get('pages',{}).values():
+            title=pg.get('title',''); ii=(pg.get('imageinfo') or [{}])[0]
+            if prefix not in title:continue
+            em=ii.get('extmetadata',{}) or {};lic=(val(em.get('LicenseShortName'))+' '+val(em.get('UsageTerms'))).strip();cats=val(em.get('Categories')).lower()
+            rights='public domain' in lic.lower() or 'pd-' in cats or 'cc-pd' in cats
+            low=title.lower(); reject=any(x in low for x in ['.pdf','.djvu','cover','couverture'])
+            row={'title':title,'descriptionurl':ii.get('descriptionurl'),'source_url':ii.get('url'),'thumburl':ii.get('thumburl'),'source_dimensions':[ii.get('width'),ii.get('height')],'license':lic,'artist':val(em.get('Artist')),'rights_pass':rights,'role_reject':reject}
+            if rights and not reject and ii.get('thumburl') and len(selected)<12:
+              try:
+                raw=None
+                for z in range(5):
+                  rr=S.get(ii['thumburl'],timeout=45)
+                  if rr.status_code==200:raw=rr.content;break
+                  if rr.status_code==429:time.sleep(3+z*3);continue
+                  rr.raise_for_status()
+                if raw:
+                  im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert('RGB');fn=f'{len(selected)+1:02d}_'+re.sub(r'[^A-Za-z0-9._-]+','_',title[5:])[:130];fn=re.sub(r'\.(png|tif|tiff|gif|webp)$','.jpg',fn,flags=re.I)
+                  if not fn.lower().endswith(('.jpg','.jpeg')):fn+='.jpg'
+                  out=d/fn;im.save(out,'JPEG',quality=91,optimize=True);row.update(file=fn,output_dimensions=list(im.size),output_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),download='PASS');selected.append(fn)
+              except Exception as e:row.update(download='FAIL',error=str(e))
+              time.sleep(.35)
+            rec.append(row)
+          (d/'records.json').write_text(json.dumps({'book':book,'query':q,'records':rec,'downloaded':selected},ensure_ascii=False,indent=2))
+          print(book,'candidates',len(rec),'downloaded',len(selected),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb16-v5014-${{ matrix.key }}-art
+          path: assets/${{ matrix.key }}
+          retention-days: 14
