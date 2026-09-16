@@ -15,18 +15,58 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  gutenberg:
+  dracula:
     uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
     with:
       engine: gutenberg
       shard_size: 48
-      batch_key: bb-scratch-gutenberg-20260916
-      configs: '["configs/043_dracula.json","configs/049_cime_tempestose.json","configs/055_mastino_baskervilles.json"]'
+      batch_key: bb-scratch-043-20260916
+      configs: '["configs/043_dracula.json"]'
 
-  wikisource:
+  cime-tempestose:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: gutenberg
+      shard_size: 48
+      batch_key: bb-scratch-049-20260916
+      configs: '["configs/049_cime_tempestose.json"]'
+
+  mastino:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: gutenberg
+      shard_size: 48
+      batch_key: bb-scratch-055-20260916
+      configs: '["configs/055_mastino_baskervilles.json"]'
+
+  ivan-ilyich:
     uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
     with:
       engine: wikisource
       shard_size: 48
-      batch_key: bb-scratch-wikisource-20260916
-      configs: '["configs/061_smert_ivana.json","configs/063_karamazov.json","configs/064_idiota.json","configs/100_repubblica.json"]'
+      batch_key: bb-scratch-061-20260916
+      configs: '["configs/061_smert_ivana.json"]'
+
+  karamazov:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: wikisource
+      shard_size: 72
+      batch_key: bb-scratch-063-20260916
+      configs: '["configs/063_karamazov.json"]'
+
+  idiota:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: wikisource
+      shard_size: 64
+      batch_key: bb-scratch-064-20260916
+      configs: '["configs/064_idiota.json"]'
+
+  repubblica:
+    uses: ./.github/workflows/bb-scratch-rebuild-engine.yml
+    with:
+      engine: wikisource
+      shard_size: 48
+      batch_key: bb-scratch-100-20260916
+      configs: '["configs/100_repubblica.json"]'
