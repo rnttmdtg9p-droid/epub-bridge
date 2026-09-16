@@ -278,7 +278,7 @@ def main() -> None:
                 )
                 for candidate in candidates if candidate.strip()
             ):
-                for limit, beam, penalty in ((110, 3, 1.25), (70, 5, 1.35), (42, 8, 1.45)):
+                for limit, beam, penalty in ((110, 3, 1.25), (70, 5, 1.35), (42, 8, 1.45), (28, 10, 1.55), (18, 12, 1.65)):
                     candidates.append(translate_parts(
                         translator, processor, record["source"],
                         bounded_segments(record["source"], limit), beam, penalty
