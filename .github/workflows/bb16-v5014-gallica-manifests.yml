@@ -1,0 +1,46 @@
+name: BB16 v5.0.14 Gallica manifests
+on:
+  push:
+    branches: [bb16-v5014-assets-20260915]
+    paths: ['.github/workflows/bb16-v5014-gallica-manifests.yml']
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch IIIF manifests and summarize canvases
+        run: |
+          python - <<'PY'
+          import requests,json,os,re
+          s=requests.Session();s.headers['User-Agent']='BoundaryBayEditorial/1.0 (public-domain publishing research)'
+          ids={'goriot':'btv1b2200166f','boule':'btv1b2200227p'}
+          for key,ark in ids.items():
+            urls=[f'https://gallica.bnf.fr/iiif/ark:/12148/{ark}/manifest.json',f'https://gallica.bnf.fr/iiif/ark:/12148/{ark}/manifest']
+            j=None;used=None
+            for u in urls:
+              r=s.get(u,timeout=90)
+              if r.status_code==200 and 'json' in r.headers.get('content-type',''):
+                j=r.json();used=u;break
+            if j is None: raise SystemExit(f'no manifest {key}')
+            json.dump(j,open(f'{key}_manifest.json','w'),ensure_ascii=False,indent=2)
+            canv=[]
+            seq=(j.get('sequences') or [{}])[0].get('canvases',[])
+            if not seq and 'items' in j: seq=j['items']
+            for i,c in enumerate(seq,1):
+              label=c.get('label');meta=c.get('metadata');cid=c.get('@id') or c.get('id');imgs=[]
+              for im in c.get('images',[]):
+                res=im.get('resource',{});imgs.append(res.get('@id') or res.get('id'))
+              if not imgs:
+                for ap in c.get('items',[]):
+                  for an in ap.get('items',[]):
+                    b=an.get('body',{});imgs.append(b.get('id') or b.get('@id'))
+              canv.append({'index':i,'id':cid,'label':label,'metadata':meta,'images':imgs})
+            json.dump({'manifest_url':used,'count':len(canv),'canvases':canv},open(f'{key}_canvas_summary.json','w'),ensure_ascii=False,indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BB16-v5.0.14-Gallica-manifests
+          path: |
+            *_manifest.json
+            *_canvas_summary.json
