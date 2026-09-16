@@ -255,9 +255,9 @@ def repair_risky_units(
         risky = translation_risk(unit.source, unit.translation)
         if unit.kind != "heading" and (len(sentences) >= 2 or risky):
             tasks.append((unit, risky, sentences))
-    # Sentence-level greedy decoding matches the reference first pass and is
-    # materially less prone to MADLAD beam-search loops on short dialogue.
-    for risky_value, beam_size in ((False, 1), (True, 1)):
+    # A small deterministic beam plus anti-repetition controls prevents the
+    # converted MADLAD runtime from falling into source-language decoder loops.
+    for risky_value, beam_size in ((False, 2), (True, 2)):
         group = [task for task in tasks if task[1] is risky_value]
         for offset in range(0, len(group), 32):
             chunk = group[offset:offset + 32]
@@ -268,9 +268,11 @@ def repair_risky_units(
             outputs = translator.translate_batch(
                 encoded,
                 beam_size=beam_size,
+                repetition_penalty=1.3,
+                no_repeat_ngram_size=3,
                 max_decoding_length=min(384, max(96, max(map(len, encoded)) * 2)),
                 batch_type="tokens",
-                max_batch_size=2048 if beam_size == 1 else 1024,
+                max_batch_size=1024,
             )
             cursor = 0
             for unit, risky, sentences in chunk:
@@ -376,10 +378,12 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         tokens = [processor.encode("<2it> " + unit.source, out_type=str) for unit in batch]
         outputs = translator.translate_batch(
             tokens,
-            beam_size=1,
+            beam_size=2,
+            repetition_penalty=1.3,
+            no_repeat_ngram_size=3,
             max_decoding_length=min(384, max(96, max(map(len, tokens)) * 2)),
             batch_type="tokens",
-            max_batch_size=2048,
+            max_batch_size=1024,
         )
         for unit, result in zip(batch, outputs):
             unit.translation = collapse_decoder_repetitions(
@@ -392,9 +396,13 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
         for unit in retry:
             tokens = processor.encode("<2it> " + unit.source, out_type=str)
             result = translator.translate_batch(
-                [tokens], beam_size=1,
+                [tokens],
+                beam_size=2,
+                repetition_penalty=1.3,
+                no_repeat_ngram_size=3,
                 max_decoding_length=min(384, max(96, len(tokens) * 2)),
-                batch_type="tokens", max_batch_size=1024,
+                batch_type="tokens",
+                max_batch_size=1024,
             )[0]
             unit.translation = collapse_decoder_repetitions(
                 unit.source, processor.decode(result.hypotheses[0])
@@ -407,7 +415,12 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
     return {
         "model": MADLAD,
         "runtime_model": MADLAD_RUNTIME,
-        "decoding": {"beam_size": 1, "max_decoding_length": "dynamic_96_to_384_2x_source_tokens"},
+        "decoding": {
+            "beam_size": 2,
+            "repetition_penalty": 1.3,
+            "no_repeat_ngram_size": 3,
+            "max_decoding_length": "dynamic_96_to_384_2x_source_tokens",
+        },
         "unit_count": len(all_units),
         "model_translated_unit_count": len(flat),
         "sentence_level_repair_count": repaired,
@@ -879,7 +892,12 @@ def main() -> None:
     else:
         runtime = {
             "model": MADLAD, "runtime_model": MADLAD_RUNTIME,
-            "decoding": {"beam_size": 1, "max_decoding_length": "dynamic_96_to_384_2x_source_tokens"},
+            "decoding": {
+            "beam_size": 2,
+            "repetition_penalty": 1.3,
+            "no_repeat_ngram_size": 3,
+            "max_decoding_length": "dynamic_96_to_384_2x_source_tokens",
+        },
             "unit_count": len(flat), "assembled_from_shards": True,
             "sentence_level_repair_requested": bool(args.repair_risky),
             "sentence_level_repair_count": assembled_repaired,
