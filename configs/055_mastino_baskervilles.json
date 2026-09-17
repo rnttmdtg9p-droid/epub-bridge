@@ -1,1 +1,17 @@
-{"rank":55,"italian_title":"Il mastino dei Baskerville","original_title":"The Hound of the Baskervilles","author":"Arthur Conan Doyle","source_language":"en","source_language_label":"inglese","pg_id":2852,"expected_chapters":15,"section_pattern":"^\\s*Chapter\\s+(?:[IVXLCDM]+|[0-9]+)\\.?\\s*$","take_last_matches":true,"genre":"Romanzo giallo","slug":"Il_mastino_dei_Baskerville","author_note":"Arthur Conan Doyle (1859–1930) fu uno scrittore britannico. Il mastino dei Baskerville porta l’indagine di Holmes e Watson dalla Londra razionale alla brughiera del Devon, dove leggenda e prova si contendono i fatti."}
+{
+  "rank": 55,
+  "italian_title": "Il mastino dei Baskerville",
+  "original_title": "The Hound of the Baskervilles",
+  "author": "Arthur Conan Doyle",
+  "source_language": "en",
+  "source_language_label": "inglese",
+  "pg_id": 2852,
+  "expected_chapters": 15,
+  "section_pattern": "^\\s*Chapter\\s+(?:[IVXLCDM]+|[0-9]+)\\.?\\s*$",
+  "take_last_matches": true,
+  "genre": "Romanzo giallo",
+  "slug": "Il_mastino_dei_Baskerville",
+  "author_note": "Arthur Conan Doyle (1859–1930) fu uno scrittore britannico. Il mastino dei Baskerville porta l’indagine di Holmes e Watson dalla Londra razionale alla brughiera del Devon, dove leggenda e prova si contendono i fatti.",
+  "translation_backend": "marian-en-it",
+  "translator_model": "Helsinki-NLP/opus-mt-en-it"
+}
