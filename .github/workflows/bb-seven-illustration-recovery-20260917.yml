@@ -1,0 +1,278 @@
+name: BB seven exact-work illustration recovery 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-seven-illustration-recovery-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rank: '043'
+            slug: dracula
+            author: Bram Stoker
+            original: Dracula
+            italian: Dracula
+            alternate: Dracula Bram Stoker illustrated
+          - rank: '049'
+            slug: cime-tempestose
+            author: Emily Bronte
+            original: Wuthering Heights
+            italian: Cime tempestose
+            alternate: Wuthering Heights illustrated edition
+          - rank: '055'
+            slug: mastino-baskerville
+            author: Arthur Conan Doyle
+            original: The Hound of the Baskervilles
+            italian: Il mastino dei Baskerville
+            alternate: Hound Baskervilles Sidney Paget 1902
+          - rank: '061'
+            slug: morte-ivan-ilic
+            author: Leo Tolstoy
+            original: The Death of Ivan Ilyich
+            italian: La morte di Ivan Ilic
+            alternate: Smert Ivana Ilicha illustrated
+          - rank: '063'
+            slug: fratelli-karamazov
+            author: Fyodor Dostoevsky
+            original: Brothers Karamazov
+            italian: I fratelli Karamazov
+            alternate: Bratya Karamazovy illustrated
+          - rank: '064'
+            slug: idiota
+            author: Fyodor Dostoevsky
+            original: The Idiot
+            italian: L idiota Dostoevskij
+            alternate: Idiot Dostoevsky illustrated
+          - rank: '100'
+            slug: repubblica
+            author: Plato
+            original: Republic Plato
+            italian: La Repubblica Platone
+            alternate: Politeia Plato illustrated
+    steps:
+      - name: Search three materially distinct exact-work routes
+        shell: bash
+        env:
+          RANK: ${{ matrix.rank }}
+          SLUG: ${{ matrix.slug }}
+          AUTHOR: ${{ matrix.author }}
+          ORIGINAL_TITLE: ${{ matrix.original }}
+          ITALIAN_TITLE: ${{ matrix.italian }}
+          ALTERNATE_TITLE: ${{ matrix.alternate }}
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests
+          python - <<'PY'
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import re
+          import time
+          import urllib.parse
+
+          import requests
+
+          rank = os.environ['RANK']
+          root = pathlib.Path('illustration-recovery') / rank
+          root.mkdir(parents=True, exist_ok=True)
+          session = requests.Session()
+          session.headers['User-Agent'] = (
+              'BoundaryBayProduction/1.0 '
+              '(exact-work illustration research; github.com/rnttmdtg9p-droid/epub-bridge)'
+          )
+
+          def request(url, *, params=None, attempts=5):
+              last = None
+              for attempt in range(attempts):
+                  try:
+                      response = session.get(url, params=params, timeout=90)
+                      if response.status_code in {429, 500, 502, 503, 504}:
+                          time.sleep(2 + attempt * 3)
+                          continue
+                      response.raise_for_status()
+                      return response
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 + attempt * 3)
+              raise last or RuntimeError(url)
+
+          def save_json(name, payload):
+              path = root / name
+              data = json.dumps(payload, ensure_ascii=False, indent=2).encode('utf-8')
+              path.write_bytes(data)
+              return {
+                  'path': str(path),
+                  'sha256': hashlib.sha256(data).hexdigest(),
+                  'size_bytes': len(data),
+              }
+
+          def ia_attempt():
+              queries = [
+                  f'title:("{os.environ["ORIGINAL_TITLE"]}") AND creator:("{os.environ["AUTHOR"]}") AND mediatype:texts',
+                  f'title:("{os.environ["ALTERNATE_TITLE"]}") AND mediatype:texts',
+              ]
+              records = []
+              for index, query in enumerate(queries, 1):
+                  payload = request(
+                      'https://archive.org/advancedsearch.php',
+                      params={
+                          'q': query,
+                          'fl[]': ['identifier', 'title', 'creator', 'date', 'language', 'rights', 'description', 'publicdate'],
+                          'rows': 100,
+                          'page': 1,
+                          'output': 'json',
+                      },
+                  ).json()
+                  save_json(f'attempt-1-ia-search-{index}.json', payload)
+                  for doc in payload.get('response', {}).get('docs', []):
+                      identifier = doc.get('identifier')
+                      if not identifier:
+                          continue
+                      try:
+                          metadata = request(f'https://archive.org/metadata/{identifier}').json()
+                          files = []
+                          for item in metadata.get('files', []):
+                              name = str(item.get('name', ''))
+                              low = name.casefold()
+                              if low.endswith(('_scandata.xml', '_files.xml', '.pdf', '_bw.pdf', '_jp2.zip', '_djvu.xml')):
+                                  files.append({
+                                      'name': name,
+                                      'size': item.get('size'),
+                                      'format': item.get('format'),
+                                      'source': item.get('source'),
+                                      'sha1': item.get('sha1'),
+                                      'md5': item.get('md5'),
+                                  })
+                          records.append({
+                              'identifier': identifier,
+                              'details_url': f'https://archive.org/details/{identifier}',
+                              'metadata': metadata.get('metadata', {}),
+                              'candidate_files': files,
+                          })
+                      except Exception as exc:
+                          records.append({'identifier': identifier, 'error': str(exc)})
+              return {
+                  'route': 'Internet Archive original-language/variant exact-title catalogue and scan metadata',
+                  'queries': queries,
+                  'results': records,
+              }
+
+          def commons_attempt():
+              queries = [
+                  f'filetype:bitmap "{os.environ["ITALIAN_TITLE"]}"',
+                  f'filetype:drawing "{os.environ["ITALIAN_TITLE"]}"',
+                  f'filetype:office "{os.environ["ITALIAN_TITLE"]}"',
+              ]
+              records = []
+              for index, query in enumerate(queries, 1):
+                  payload = request(
+                      'https://commons.wikimedia.org/w/api.php',
+                      params={
+                          'action': 'query',
+                          'format': 'json',
+                          'formatversion': 2,
+                          'generator': 'search',
+                          'gsrsearch': query,
+                          'gsrnamespace': 6,
+                          'gsrlimit': 100,
+                          'prop': 'imageinfo|categories',
+                          'iiprop': 'url|size|mime|sha1|extmetadata',
+                          'iiextmetadatafilter': 'LicenseShortName|LicenseUrl|UsageTerms|Artist|Credit|DateTimeOriginal|ImageDescription|AttributionRequired|Copyrighted',
+                          'cllimit': 100,
+                      },
+                  ).json()
+                  save_json(f'attempt-2-commons-search-{index}.json', payload)
+                  for page in payload.get('query', {}).get('pages', []):
+                      info = (page.get('imageinfo') or [{}])[0]
+                      records.append({
+                          'title': page.get('title'),
+                          'pageid': page.get('pageid'),
+                          'page_url': 'https://commons.wikimedia.org/wiki/' + urllib.parse.quote(str(page.get('title', '')).replace(' ', '_')),
+                          'imageinfo': info,
+                          'categories': [item.get('title') for item in page.get('categories', [])],
+                      })
+              return {
+                  'route': 'Wikimedia Commons Italian-title media and rights metadata',
+                  'queries': queries,
+                  'results': records,
+              }
+
+          def catalogue_attempt():
+              google_query = f'intitle:"{os.environ["ORIGINAL_TITLE"]}" inauthor:"{os.environ["AUTHOR"]}"'
+              google = request(
+                  'https://www.googleapis.com/books/v1/volumes',
+                  params={'q': google_query, 'filter': 'free-ebooks', 'printType': 'books', 'maxResults': 40},
+              ).json()
+              save_json('attempt-3-google-books.json', google)
+              openlibrary = request(
+                  'https://openlibrary.org/search.json',
+                  params={
+                      'title': os.environ['ORIGINAL_TITLE'],
+                      'author': os.environ['AUTHOR'],
+                      'fields': 'key,title,author_name,first_publish_year,edition_key,language,ia,ia_collection_s,public_scan_b,cover_edition_key',
+                      'limit': 100,
+                  },
+              ).json()
+              save_json('attempt-3-open-library.json', openlibrary)
+              return {
+                  'route': 'Google Books free-ebook and Open Library public-scan catalogues',
+                  'queries': [google_query, f'{os.environ["ORIGINAL_TITLE"]} / {os.environ["AUTHOR"]}'],
+                  'results': {
+                      'google_books': google.get('items', []),
+                      'open_library': openlibrary.get('docs', []),
+                  },
+              }
+
+          attempts = []
+          for number, function in enumerate((ia_attempt, commons_attempt, catalogue_attempt), 1):
+              try:
+                  result = function()
+                  result['status'] = 'SEARCH_COMPLETE_REVIEW_REQUIRED'
+              except Exception as exc:
+                  result = {'status': 'SEARCH_FAILED', 'error': str(exc)}
+              result['attempt'] = number
+              result['searched_utc'] = dt.datetime.now(dt.timezone.utc).isoformat()
+              attempts.append(result)
+
+          ledger = {
+              'schema': 'bb-exact-work-illustration-recovery-1.0',
+              'rank': int(rank),
+              'slug': os.environ['SLUG'],
+              'work': {
+                  'author': os.environ['AUTHOR'],
+                  'original_title': os.environ['ORIGINAL_TITLE'],
+                  'italian_title': os.environ['ITALIAN_TITLE'],
+                  'alternate_query': os.environ['ALTERNATE_TITLE'],
+              },
+              'policy': {
+                  'generic_period_art_prohibited': True,
+                  'isolated_images_do_not_form_a_program': True,
+                  'candidate_search_is_not_asset_acceptance': True,
+                  'acceptance_requires_exact_work_identity_rights_extent_sequence_and_visual_review': True,
+              },
+              'attempts': attempts,
+              'disposition': 'CANDIDATE_REVIEW_PENDING',
+          }
+          save_json('illustration-search-ledger.json', ledger)
+          PY
+
+      - name: Upload title illustration evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-exact-work-illustration-${{ matrix.rank }}-${{ matrix.slug }}
+          path: illustration-recovery/${{ matrix.rank }}/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 14
