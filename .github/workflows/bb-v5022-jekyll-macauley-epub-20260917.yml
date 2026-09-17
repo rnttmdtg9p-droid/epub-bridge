@@ -1,0 +1,77 @@
+name: BB v5022 Jekyll Macauley EPUB set
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-v5022-jekyll-macauley-epub-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Acquire complete 1904 Macauley program
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pillow
+          python - <<'PY'
+          import json, pathlib, re, time
+          from io import BytesIO
+          from PIL import Image
+          import requests
+
+          API = "https://commons.wikimedia.org/w/api.php"
+          CATEGORY = "Category:Illustrations of The Strange Case of Dr Jekyll and Mr Hyde by Charles Raymond Macauley (1904)"
+          OUT = pathlib.Path("jekyll-hyde-macauley-1904")
+          OUT.mkdir(exist_ok=True)
+          session = requests.Session()
+          session.headers["User-Agent"] = "BoundaryBayEPUB/5.0.22 illustration-audit boundarybaybooks.com"
+
+          params = {
+              "action": "query", "format": "json", "formatversion": "2",
+              "generator": "categorymembers", "gcmtitle": CATEGORY,
+              "gcmtype": "file", "gcmlimit": "50",
+              "prop": "imageinfo", "iiprop": "url|mime|size|extmetadata",
+              "iiurlwidth": "1600",
+          }
+          data = session.get(API, params=params, timeout=120).json()
+          records = []
+          for page in data.get("query", {}).get("pages", []):
+              info = (page.get("imageinfo") or [{}])[0]
+              records.append({"title": page.get("title"), "category": CATEGORY, "imageinfo": info})
+          if len(records) < 20:
+              raise RuntimeError(f"incomplete category: {len(records)} records")
+
+          for idx, rec in enumerate(sorted(records, key=lambda r: r["title"]), 1):
+              info = rec["imageinfo"]
+              url = info.get("thumburl") or info.get("url")
+              if not url:
+                  continue
+              response = session.get(url, timeout=180)
+              response.raise_for_status()
+              image = Image.open(BytesIO(response.content)).convert("RGB")
+              safe = re.sub(r"[^A-Za-z0-9._-]+", "_", rec["title"].removeprefix("File:"))[:130]
+              output = OUT / f"{idx:03d}_{pathlib.Path(safe).stem}.jpg"
+              image.save(output, "JPEG", quality=88, optimize=True, progressive=False)
+              time.sleep(1)
+          (OUT / "provenance.json").write_text(
+              json.dumps({"category": CATEGORY, "files": records, "acquisition": "Wikimedia Commons 1600px thumbnail derivative, JPEG quality 88"}, ensure_ascii=False, indent=2),
+              encoding="utf-8")
+          print("records", len(records), "images", len(list(OUT.glob("*.jpg"))))
+          PY
+          find jekyll-hyde-macauley-1904 -type f -print0 | sort -z | xargs -0 sha256sum > jekyll-hyde-macauley-1904/SHA256SUMS.txt
+
+      - name: Upload program and provenance
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-v5022-jekyll-macauley-epub
+          path: jekyll-hyde-macauley-1904/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
