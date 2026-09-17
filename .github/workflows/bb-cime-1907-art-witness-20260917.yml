@@ -1,0 +1,71 @@
+name: BB Cime 1907 art witness 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-cime-1907-art-witness-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Acquire and render the public-domain 1907 candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p cime-1907/pages cime-1907/contact
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://archive.org/download/in.ernet.dli.2015.208433/2015.208433.Wuthering-Heights.pdf' \
+            --output cime-1907/Wuthering_Heights_John_Grant_1907.pdf
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://archive.org/metadata/in.ernet.dli.2015.208433' \
+            --output cime-1907/archive_metadata.json
+          sha256sum cime-1907/Wuthering_Heights_John_Grant_1907.pdf \
+            cime-1907/archive_metadata.json \
+            > cime-1907/SHA256SUMS.txt
+          pdfinfo cime-1907/Wuthering_Heights_John_Grant_1907.pdf \
+            > cime-1907/pdfinfo.txt
+          pdftoppm -jpeg -r 60 -jpegopt quality=68 \
+            cime-1907/Wuthering_Heights_John_Grant_1907.pdf \
+            cime-1907/pages/page
+          python - <<'PY'
+          from PIL import Image, ImageDraw
+          import math
+          import pathlib
+
+          pages = sorted(pathlib.Path('cime-1907/pages').glob('page-*.jpg'))
+          thumb_w, thumb_h = 180, 250
+          cols, per_sheet = 6, 48
+          for start in range(0, len(pages), per_sheet):
+              group = pages[start:start + per_sheet]
+              rows = math.ceil(len(group) / cols)
+              sheet = Image.new('RGB', (cols * thumb_w, rows * (thumb_h + 25)), 'white')
+              draw = ImageDraw.Draw(sheet)
+              for offset, path in enumerate(group):
+                  image = Image.open(path).convert('RGB')
+                  image.thumbnail((thumb_w - 8, thumb_h - 8))
+                  x = (offset % cols) * thumb_w + (thumb_w - image.width) // 2
+                  y = (offset // cols) * (thumb_h + 25) + (thumb_h - image.height) // 2
+                  sheet.paste(image, (x, y))
+                  draw.text(((offset % cols) * thumb_w + 5, (offset // cols) * (thumb_h + 25) + thumb_h + 3), path.stem, fill='black')
+              sheet.save(f'cime-1907/contact/contact-{start + 1:03d}-{start + len(group):03d}.jpg', quality=86)
+          PY
+
+      - name: Upload candidate witness and contact sheets
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-cime-1907-art-witness
+          path: |
+            cime-1907/Wuthering_Heights_John_Grant_1907.pdf
+            cime-1907/archive_metadata.json
+            cime-1907/SHA256SUMS.txt
+            cime-1907/pdfinfo.txt
+            cime-1907/contact/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
