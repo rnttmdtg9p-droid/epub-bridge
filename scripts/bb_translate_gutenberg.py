@@ -34,6 +34,7 @@ from PIL import Image, ImageDraw, ImageFont
 BB_MASTER = "5.0.13"
 MADLAD = "google/madlad400-3b-mt"
 MADLAD_RUNTIME = "Heng666/madlad400-3b-mt-ct2-int8"
+MARIAN_EN_IT = "Helsinki-NLP/opus-mt-en-it"
 PG_START = re.compile(r"^\*\*\* START OF (?:THE|THIS) PROJECT GUTENBERG EBOOK.*?\*\*\*\s*$", re.I | re.M)
 PG_END = re.compile(r"^\*\*\* END OF (?:THE|THIS) PROJECT GUTENBERG EBOOK.*?\*\*\*\s*$", re.I | re.M)
 ROMAN_CHAPTER = re.compile(r"(?mi)^\s*CHAPTER\s+([IVXLCDM]+)\s*\.?\s*$")
@@ -429,6 +430,80 @@ def translate_units(chapters: list[list[Unit]], model_dir: str, tokenizer_file: 
     }
 
 
+def translate_units_marian(chapters: list[list[Unit]]) -> dict:
+    """Translate English semantic units to Italian with the dedicated OPUS Marian model."""
+    import torch
+    from transformers import MarianMTModel, MarianTokenizer
+
+    tokenizer = MarianTokenizer.from_pretrained(MARIAN_EN_IT)
+    model = MarianMTModel.from_pretrained(MARIAN_EN_IT)
+    model.eval()
+    all_units = [unit for chapter in chapters for unit in chapter]
+    for unit in all_units:
+        if unit.kind == "heading" and re.fullmatch(r"[IVXLCDM]+\.?", unit.source.strip(), re.I):
+            unit.translation = unit.source.strip()
+    flat = [unit for unit in all_units if not unit.translation]
+
+    def generate(batch: list[Unit], beams: int = 4) -> list[str]:
+        encoded = tokenizer(
+            [unit.source for unit in batch],
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=256,
+        )
+        with torch.inference_mode():
+            output = model.generate(
+                **encoded,
+                num_beams=beams,
+                max_new_tokens=256,
+                no_repeat_ngram_size=3,
+                repetition_penalty=1.1,
+                early_stopping=True,
+            )
+        return tokenizer.batch_decode(output, skip_special_tokens=True)
+
+    batch_size = 16
+    for offset in range(0, len(flat), batch_size):
+        batch = flat[offset:offset + batch_size]
+        for unit, target in zip(batch, generate(batch)):
+            unit.translation = collapse_decoder_repetitions(unit.source, target)
+        if offset % 128 == 0:
+            print(f"translated {min(offset + batch_size, len(flat))}/{len(flat)} semantic units", flush=True)
+
+    risky = [unit for unit in flat if unit.kind != "heading" and translation_risk(unit.source, unit.translation)]
+    repaired = 0
+    for offset in range(0, len(risky), 8):
+        batch = risky[offset:offset + 8]
+        for unit, target in zip(batch, generate(batch, beams=6)):
+            candidate = collapse_decoder_repetitions(unit.source, target)
+            current_ratio = len(unit.translation) / max(1, len(unit.source))
+            candidate_ratio = len(candidate) / max(1, len(unit.source))
+            current_score = (2 if translation_risk(unit.source, unit.translation) else 0) + abs(current_ratio - 1.05)
+            candidate_score = (2 if translation_risk(unit.source, candidate) else 0) + abs(candidate_ratio - 1.05)
+            if candidate and candidate_score < current_score:
+                unit.translation = candidate
+                repaired += 1
+
+    return {
+        "model": MARIAN_EN_IT,
+        "runtime_model": MARIAN_EN_IT,
+        "decoding": {
+            "beam_size": 4,
+            "retry_beam_size": 6,
+            "repetition_penalty": 1.1,
+            "no_repeat_ngram_size": 3,
+            "max_source_tokens": 256,
+            "max_new_tokens": 256,
+        },
+        "unit_count": len(all_units),
+        "model_translated_unit_count": len(flat),
+        "sentence_level_repair_count": repaired,
+        "source_chars": sum(len(u.source) for u in all_units),
+        "translation_chars": sum(len(u.translation) for u in all_units),
+    }
+
+
 def materialize_runtime() -> tuple[str, str]:
     model_target = Path(os.environ.get("BB_MADLAD_MODEL_DIR", "madlad_ct2"))
     tokenizer_target = Path(os.environ.get("BB_MADLAD_TOKENIZER_DIR", "madlad_tokenizer"))
@@ -651,7 +726,7 @@ def qa(meta: dict, chapters: list[list[Unit]], source: dict, epub: Path, build: 
         "translation_length_ratio": ratio,
         "remaining_translation_risk_count": len(translation_risks),
         "remaining_translation_risk_units": translation_risks[:40],
-        "translator": MADLAD,
+        "translator": meta.get("translator_model", MADLAD),
         "editorial_pass": {"model": "google/gemini-3-flash-preview", "status": "NOT_CONFIGURED", "substitute_used": False},
         "fal_used": False,
         "isbn_status": "ISBN_NOT_FOUND",
@@ -801,6 +876,7 @@ def main() -> None:
     )
     args = parser.parse_args()
     meta = json.loads(Path(args.config).read_text(encoding="utf-8"))
+    translation_backend = meta.get("translation_backend", "madlad")
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     if args.source_bundle:
@@ -832,8 +908,11 @@ def main() -> None:
         selected = flat[start:start + args.shard_size]
         if not selected:
             raise ValueError(f"Shard {args.shard_index} starts beyond {len(flat)} units")
-        model_dir, tokenizer = materialize_runtime()
-        runtime = translate_units([selected], model_dir, tokenizer)
+        if translation_backend == "marian-en-it":
+            runtime = translate_units_marian([selected])
+        else:
+            model_dir, tokenizer = materialize_runtime()
+            runtime = translate_units([selected], model_dir, tokenizer)
         alignment_path = out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_alignment.jsonl'
         write_alignment(alignment_path, selected)
         shard_report = {
@@ -841,7 +920,7 @@ def main() -> None:
             "shard_size": args.shard_size, "start_unit": start,
             "translated_units": len(selected), "first_unit": selected[0].unit_id,
             "last_unit": selected[-1].unit_id, "source_sha256": source["source_sha256"],
-            "translator": MADLAD, "fal_used": False, "runtime": runtime,
+            "translator": meta.get("translator_model", MADLAD), "fal_used": False, "runtime": runtime,
         }
         (out / f'{meta["rank"]:03d}_shard_{args.shard_index:04d}_QA.json').write_text(
             json.dumps(shard_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -887,11 +966,15 @@ def main() -> None:
     (out / f'{meta["rank"]:03d}_source_record.json').write_text(
         json.dumps(source, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if args.mode == "full":
-        model_dir, tokenizer = materialize_runtime()
-        runtime = translate_units(chapters, model_dir, tokenizer)
+        if translation_backend == "marian-en-it":
+            runtime = translate_units_marian(chapters)
+        else:
+            model_dir, tokenizer = materialize_runtime()
+            runtime = translate_units(chapters, model_dir, tokenizer)
     else:
+        runtime_model = meta.get("translator_model", MADLAD)
         runtime = {
-            "model": MADLAD, "runtime_model": MADLAD_RUNTIME,
+            "model": runtime_model, "runtime_model": runtime_model,
             "decoding": {
             "beam_size": 2,
             "repetition_penalty": 1.3,
