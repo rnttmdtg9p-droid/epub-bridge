@@ -104,7 +104,7 @@ jobs:
           alignment="$(find shard-out -name '*_alignment.jsonl' -print -quit)"
           test -n "$alignment"
           mkdir -p shard-artifact/final shard-artifact/qa
-          python scripts/bb_finalize_alignment.py +            --alignment "$alignment" +            --out "shard-artifact/final/${{ matrix.rank }}_shard_${{ matrix.shard_padded }}_alignment.jsonl" +            --language en +            --rank "${{ matrix.rank }}" +            --overrides configs/bb_final_unit_overrides_20260916.json +            --report "shard-artifact/qa/${{ matrix.rank }}_shard_${{ matrix.shard_padded }}_final_QA.json" +            --require-zero-hard
+          python scripts/bb_finalize_alignment.py --alignment "$alignment" --out "shard-artifact/final/${{ matrix.rank }}_shard_${{ matrix.shard_padded }}_alignment.jsonl" --language en --rank "${{ matrix.rank }}" --overrides configs/bb_final_unit_overrides_20260916.json --report "shard-artifact/qa/${{ matrix.rank }}_shard_${{ matrix.shard_padded }}_final_QA.json" --require-zero-hard
           find shard-out -name '*_QA.json' -exec cp {} shard-artifact/qa/ \;
       - name: Upload gated immutable alignment shard
         if: always()
@@ -144,7 +144,7 @@ jobs:
           mkdir -p combined repaired dist
           find fresh-shards/final -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > "combined/${{ matrix.rank }}_alignment.jsonl"
           test -s "combined/${{ matrix.rank }}_alignment.jsonl"
-          python scripts/bb_finalize_alignment.py +            --alignment "combined/${{ matrix.rank }}_alignment.jsonl" +            --out "repaired/${{ matrix.rank }}_shard_0000_alignment.jsonl" +            --language en +            --rank "${{ matrix.rank }}" +            --overrides configs/bb_final_unit_overrides_20260916.json +            --report "dist/${{ matrix.rank }}_repair_QA.json" +            --require-zero-hard +            --require-all-overrides
+          python scripts/bb_finalize_alignment.py --alignment "combined/${{ matrix.rank }}_alignment.jsonl" --out "repaired/${{ matrix.rank }}_shard_0000_alignment.jsonl" --language en --rank "${{ matrix.rank }}" --overrides configs/bb_final_unit_overrides_20260916.json --report "dist/${{ matrix.rank }}_repair_QA.json" --require-zero-hard --require-all-overrides
       - name: Assemble fresh BB REVIEW EPUB
         run: >-
           python scripts/bb_translate_gutenberg.py
