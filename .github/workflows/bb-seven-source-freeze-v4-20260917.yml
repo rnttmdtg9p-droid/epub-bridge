@@ -1,0 +1,167 @@
+name: BB seven source freeze v4 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-seven-source-freeze-v4-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freeze-accepted:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Acquire immutable Italian witnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p source-freeze/043 source-freeze/100
+          curl --fail --location --retry 5 --retry-all-errors \
+            'https://ws-export.wmcloud.org/?lang=it&format=epub&page=Dracula' \
+            --output source-freeze/043/Dracula_Nessi_Sonzogno_1922_Wikisource.epub
+          curl --fail --location --retry 5 --retry-all-errors \
+            'https://archive.org/download/BonghiRepubblicaPlatone/BonghiRepubblicaPlatone.epub' \
+            --output source-freeze/100/Repubblica_Bonghi_1900_IA.epub
+          curl --fail --location --retry 5 --retry-all-errors \
+            'https://archive.org/download/BonghiRepubblicaPlatone/BonghiRepubblicaPlatone_djvu.txt' \
+            --output source-freeze/100/Repubblica_Bonghi_1900_IA_djvu.txt
+          curl --fail --location --retry 5 --retry-all-errors \
+            'https://archive.org/metadata/BonghiRepubblicaPlatone' \
+            --output source-freeze/100/archive_metadata.json
+          find source-freeze -type f -print0 | sort -z | xargs -0 sha256sum > source-freeze/SHA256SUMS.txt
+          python - <<'PY'
+          import json, pathlib, zipfile
+          root = pathlib.Path('source-freeze')
+          rows = []
+          for epub in sorted(root.glob('*/*.epub')):
+              with zipfile.ZipFile(epub) as archive:
+                  names = archive.namelist()
+                  text_names = [n for n in names if n.lower().endswith(('.xhtml', '.html', '.htm'))]
+                  text_bytes = sum(len(archive.read(n)) for n in text_names)
+              rows.append({
+                  'path': str(epub),
+                  'size_bytes': epub.stat().st_size,
+                  'zip_entries': len(names),
+                  'text_documents': len(text_names),
+                  'text_bytes': text_bytes,
+              })
+          (root / 'extent-preflight.json').write_text(
+              json.dumps({'schema': 'bb-source-freeze-v4-1.0', 'records': rows}, indent=2),
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Upload accepted source witnesses
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-seven-source-freeze-v4
+          path: source-freeze/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 30
+
+  targeted-catalog-recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rank: '049'
+            slug: cime-tempestose
+            terms: '"La tempestosa" Bronte|"Cime tempestose" Bronte|Emily Bronte Treves Piceni'
+          - rank: '055'
+            slug: mastino-baskerville
+            terms: '"La fiera dei Baskerville"|"Il cane dei Baskerville"|"Il mastino dei Baskerville" Conan Doyle'
+          - rank: '061'
+            slug: morte-ivan-ilic
+            terms: '"La morte di Ivan Ilitch" Tolstoi|"La morte di Ivan Ilic" Tolstoi|Tolstoi Ivan Ilitch italiano'
+          - rank: '063'
+            slug: fratelli-karamazov
+            terms: '"I fratelli Karamazoff" Treves|"I fratelli Karamazov" Dostoevskij|Karamasoff Dostoevsky italiano'
+          - rank: '064'
+            slug: idiota
+            terms: '"L idiota" Dostoevsky Treves|"L idiota" Dostoiewsky 1902|"L idiota" Verdinois'
+    steps:
+      - name: Query Google Books Open Library and Internet Archive
+        shell: bash
+        env:
+          RANK: ${{ matrix.rank }}
+          SLUG: ${{ matrix.slug }}
+          TERMS: ${{ matrix.terms }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import time
+          import urllib.parse
+          import urllib.request
+
+          rank = os.environ['RANK']
+          root = pathlib.Path('targeted-catalog') / rank
+          root.mkdir(parents=True, exist_ok=True)
+          terms = os.environ['TERMS'].split('|')
+          headers = {'User-Agent': 'BoundaryBayProduction/1.0 source-rights-audit'}
+
+          def get(url, params=None, attempts=5):
+              if params:
+                  url += '?' + urllib.parse.urlencode(params, doseq=True)
+              last = None
+              for attempt in range(attempts):
+                  try:
+                      req = urllib.request.Request(url, headers=headers)
+                      with urllib.request.urlopen(req, timeout=90) as response:
+                          return json.load(response)
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 + attempt * 2)
+              raise last
+
+          evidence = []
+          for index, term in enumerate(terms, 1):
+              sources = {
+                  'google_books': get('https://www.googleapis.com/books/v1/volumes', {
+                      'q': term, 'maxResults': 40, 'printType': 'books', 'orderBy': 'relevance'
+                  }),
+                  'open_library': get('https://openlibrary.org/search.json', {
+                      'q': term, 'limit': 100, 'fields': 'key,title,author_name,first_publish_year,publish_year,publisher,language,ia,ia_collection_s,public_scan_b'
+                  }),
+                  'internet_archive': get('https://archive.org/advancedsearch.php', {
+                      'q': f'({term}) AND mediatype:texts',
+                      'fl[]': ['identifier','title','creator','date','year','language','publisher','rights','licenseurl','description','collection'],
+                      'rows': 200, 'sort[]': ['date asc'], 'output': 'json'
+                  }),
+              }
+              for source, payload in sources.items():
+                  data = json.dumps(payload, ensure_ascii=False, indent=2).encode('utf-8')
+                  path = root / f'{index:02d}-{source}.json'
+                  path.write_bytes(data)
+                  evidence.append({'term': term, 'source': source, 'path': str(path), 'sha256': hashlib.sha256(data).hexdigest()})
+
+          record = {
+              'schema': 'bb-targeted-catalog-recovery-v4-1.0',
+              'searched_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
+              'rank': int(rank),
+              'slug': os.environ['SLUG'],
+              'terms': terms,
+              'evidence': evidence,
+              'disposition': 'HUMAN_SOURCE_AND_RIGHTS_REVIEW_REQUIRED',
+          }
+          (root / 'record.json').write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
+          PY
+
+      - name: Upload targeted catalog evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-source-catalog-v4-${{ matrix.rank }}-${{ matrix.slug }}
+          path: targeted-catalog/${{ matrix.rank }}/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 30
