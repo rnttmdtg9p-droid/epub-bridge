@@ -32,7 +32,7 @@ jobs:
           repository: rnttmdtg9p-droid/epub-bridge
           run-id: 35128754290
           github-token: ${{ github.token }}
-      - name: Compare official converted-model tokenizer with current tokenizer
+      - name: Compare target-prefix tokenization variants
         run: |
           python - <<'PY'
           import hashlib
@@ -55,12 +55,6 @@ jobs:
               local_dir="madlad_ct2",
               local_files_only=Path("madlad_ct2/model.bin").exists(),
           )
-          runtime_tokenizer = hf_hub_download(
-              repo_id=runtime_repo,
-              filename="sentencepiece.model",
-              local_dir="madlad_ct2",
-              local_files_only=Path("madlad_ct2/sentencepiece.model").exists(),
-          )
           google_tokenizer = hf_hub_download(
               repo_id="google/madlad400-3b-mt",
               filename="spiece.model",
@@ -73,15 +67,13 @@ jobs:
           )
 
           print(json.dumps({
-              "runtime_tokenizer_sha256": hashlib.sha256(Path(runtime_tokenizer).read_bytes()).hexdigest(),
               "google_tokenizer_sha256": hashlib.sha256(Path(google_tokenizer).read_bytes()).hexdigest(),
-              "same_tokenizer_bytes": Path(runtime_tokenizer).read_bytes() == Path(google_tokenizer).read_bytes(),
+              "runtime_files": sorted(str(path.relative_to(model_dir)) for path in Path(model_dir).rglob("*") if path.is_file()),
           }))
 
           for label, tokenizer_path, strip_dummy in [
-              ("runtime_tokenizer", runtime_tokenizer, False),
-              ("runtime_tokenizer_strip_dummy_prefix", runtime_tokenizer, True),
               ("google_tokenizer_current", google_tokenizer, False),
+              ("google_tokenizer_strip_dummy_prefix", google_tokenizer, True),
           ]:
               processor = spm.SentencePieceProcessor(model_file=tokenizer_path)
               encoded = [processor.encode("<2it> " + source, out_type=str) for source in sources]
