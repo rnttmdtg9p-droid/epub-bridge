@@ -1,0 +1,336 @@
+name: BB seven latest-master assets 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-seven-master-assets-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Acquire verified portrait candidates and research exact-work art
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pillow
+          mkdir -p assets/portraits assets/portrait-records assets/illustration-searches
+          python - <<'PY'
+          import hashlib
+          import io
+          import json
+          import pathlib
+          import re
+          import time
+          import unicodedata
+          import urllib.parse
+
+          import requests
+          from PIL import Image, ImageOps
+
+          ROOT = pathlib.Path("assets")
+          SESSION = requests.Session()
+          SESSION.headers["User-Agent"] = (
+              "BoundaryBayProduction/1.0 "
+              "(public-domain publishing research; github.com/rnttmdtg9p-droid/epub-bridge)"
+          )
+
+          AUTHORS = {
+              "bram_stoker": "Bram Stoker",
+              "emily_bronte": "Emily Brontë",
+              "arthur_conan_doyle": "Arthur Conan Doyle",
+              "leo_tolstoy": "Leo Tolstoy",
+              "fyodor_dostoevsky": "Fyodor Dostoevsky",
+              "plato": "Plato",
+          }
+
+          WORKS = [
+              {
+                  "rank": 43,
+                  "author": "Bram Stoker",
+                  "original": "Dracula",
+                  "italian": "Dracula",
+                  "alternate": "Dracula illustrated edition",
+              },
+              {
+                  "rank": 49,
+                  "author": "Emily Brontë",
+                  "original": "Wuthering Heights",
+                  "italian": "Cime tempestose",
+                  "alternate": "Les Hauts de Hurlevent illustrated edition",
+              },
+              {
+                  "rank": 55,
+                  "author": "Arthur Conan Doyle",
+                  "original": "The Hound of the Baskervilles",
+                  "italian": "Il mastino dei Baskerville",
+                  "alternate": "Le Chien des Baskerville illustrated edition",
+              },
+              {
+                  "rank": 61,
+                  "author": "Leo Tolstoy",
+                  "original": "Смерть Ивана Ильича",
+                  "italian": "La morte di Ivan Il'ič",
+                  "alternate": "The Death of Ivan Ilyich illustrated edition",
+              },
+              {
+                  "rank": 63,
+                  "author": "Fyodor Dostoevsky",
+                  "original": "Братья Карамазовы",
+                  "italian": "I fratelli Karamazov",
+                  "alternate": "The Brothers Karamazov illustrated edition",
+              },
+              {
+                  "rank": 64,
+                  "author": "Fyodor Dostoevsky",
+                  "original": "Идиот",
+                  "italian": "L'idiota",
+                  "alternate": "The Idiot Dostoevsky illustrated edition",
+              },
+              {
+                  "rank": 100,
+                  "author": "Plato",
+                  "original": "Πολιτεία",
+                  "italian": "La Repubblica",
+                  "alternate": "The Republic Plato illustrated edition",
+              },
+          ]
+
+          def request(url, *, params=None, attempts=4):
+              last = None
+              for index in range(attempts):
+                  try:
+                      response = SESSION.get(url, params=params, timeout=60)
+                      if response.status_code in (429, 502, 503, 504):
+                          time.sleep(4 + 3 * index)
+                          continue
+                      response.raise_for_status()
+                      return response
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(3 + 2 * index)
+              raise last or RuntimeError(f"request failed: {url}")
+
+          def clean_html(value):
+              return re.sub(r"<[^>]+>", "", value or "").strip()
+
+          def save_portrait(slug, subject):
+              record = {
+                  "subject": subject,
+                  "retrieved_utc": "2026-09-17",
+                  "routes": [
+                      "English Wikipedia subject record",
+                      "Wikimedia Commons file record",
+                  ],
+              }
+              try:
+                  wiki = request(
+                      "https://en.wikipedia.org/w/api.php",
+                      params={
+                          "action": "query",
+                          "format": "json",
+                          "formatversion": 2,
+                          "redirects": 1,
+                          "prop": "pageimages|info",
+                          "piprop": "name|original|thumbnail",
+                          "pithumbsize": 1600,
+                          "inprop": "url",
+                          "titles": subject,
+                      },
+                  ).json()
+                  page = wiki["query"]["pages"][0]
+                  if page.get("missing"):
+                      raise RuntimeError("subject page missing")
+                  record["subject_record"] = page
+                  filename = page.get("pageimage")
+                  if not filename:
+                      raise RuntimeError("subject page has no page image")
+                  commons = request(
+                      "https://commons.wikimedia.org/w/api.php",
+                      params={
+                          "action": "query",
+                          "format": "json",
+                          "formatversion": 2,
+                          "redirects": 1,
+                          "prop": "imageinfo",
+                          "iiprop": "url|size|mime|extmetadata",
+                          "iiurlwidth": 1600,
+                          "titles": "File:" + filename,
+                      },
+                  ).json()
+                  commons_page = commons["query"]["pages"][0]
+                  info = commons_page["imageinfo"][0]
+                  metadata = info.get("extmetadata", {})
+                  record["commons_file"] = commons_page.get("title")
+                  record["commons_page_url"] = (
+                      "https://commons.wikimedia.org/wiki/"
+                      + urllib.parse.quote((commons_page.get("title") or "").replace(" ", "_"))
+                  )
+                  record["imageinfo"] = info
+                  license_name = clean_html(metadata.get("LicenseShortName", {}).get("value"))
+                  usage_terms = clean_html(metadata.get("UsageTerms", {}).get("value"))
+                  restrictions = " ".join((license_name, usage_terms)).casefold()
+                  if any(token in restrictions for token in ("noncommercial", "no derivatives", "fair use")):
+                      raise RuntimeError(f"reuse restriction rejected: {license_name} {usage_terms}")
+                  if not any(
+                      token in restrictions
+                      for token in ("public domain", "cc0", "cc by", "cc-by", "pd-old", "pdm")
+                  ):
+                      raise RuntimeError(f"license requires manual decision: {license_name} {usage_terms}")
+                  selected_url = (info.get("thumburl") or info["url"]).split("?", 1)[0]
+                  raw = request(selected_url).content
+                  source_sha = hashlib.sha256(raw).hexdigest()
+                  image = ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert("RGB")
+                  image.thumbnail((1400, 1800), Image.Resampling.LANCZOS)
+                  output = ROOT / "portraits" / f"{slug}.jpg"
+                  image.save(output, "JPEG", quality=94, subsampling=0, optimize=True)
+                  record.update(
+                      {
+                          "status": "ACQUIRED_FOR_IDENTITY_RIGHTS_PIXEL_REVIEW",
+                          "selected_url": selected_url,
+                          "source_sha256": source_sha,
+                          "output_sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
+                          "output_dimensions": list(image.size),
+                          "output_mode": image.mode,
+                          "license_short_name": license_name,
+                          "usage_terms": usage_terms,
+                          "artist": clean_html(metadata.get("Artist", {}).get("value")),
+                          "date": clean_html(metadata.get("DateTimeOriginal", {}).get("value"))
+                          or clean_html(metadata.get("DateTime", {}).get("value")),
+                          "credit": clean_html(metadata.get("Credit", {}).get("value")),
+                      }
+                  )
+              except Exception as exc:
+                  record["status"] = "FAILED"
+                  record["error"] = str(exc)
+              (ROOT / "portrait-records" / f"{slug}.json").write_text(
+                  json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8"
+              )
+              print(subject, record["status"], flush=True)
+              time.sleep(2)
+
+          for slug, subject in AUTHORS.items():
+              save_portrait(slug, subject)
+
+          searches = []
+          for work in WORKS:
+              entry = {
+                  **work,
+                  "searched_utc": "2026-09-17",
+                  "attempts": [],
+              }
+
+              # Route 1: Wikimedia Commons exact-work file search.
+              commons_query = f'"{work["original"]}" {work["author"]}'
+              attempt = {
+                  "route": "Wikimedia Commons MediaSearch/API",
+                  "language": "original title",
+                  "query": commons_query,
+              }
+              try:
+                  data = request(
+                      "https://commons.wikimedia.org/w/api.php",
+                      params={
+                          "action": "query",
+                          "format": "json",
+                          "formatversion": 2,
+                          "generator": "search",
+                          "gsrnamespace": 6,
+                          "gsrlimit": 12,
+                          "gsrsearch": commons_query,
+                          "prop": "imageinfo",
+                          "iiprop": "url|size|mime|extmetadata",
+                      },
+                  ).json()
+                  attempt["results"] = data.get("query", {}).get("pages", [])
+                  attempt["status"] = "CAPTURED_FOR_EXACT_WORK_RIGHTS_SEQUENCE_REVIEW"
+              except Exception as exc:
+                  attempt.update(status="ROUTE_FAILED", error=str(exc))
+              entry["attempts"].append(attempt)
+
+              # Route 2: Internet Archive historical edition search in Italian.
+              ia_query = f'title:("{work["italian"]}") AND mediatype:texts'
+              attempt = {
+                  "route": "Internet Archive advanced search",
+                  "language": "Italian title",
+                  "query": ia_query,
+              }
+              try:
+                  data = request(
+                      "https://archive.org/advancedsearch.php",
+                      params={
+                          "q": ia_query,
+                          "fl[]": ["identifier", "title", "creator", "date", "language", "rights"],
+                          "rows": 20,
+                          "page": 1,
+                          "output": "json",
+                      },
+                  ).json()
+                  attempt["results"] = data.get("response", {}).get("docs", [])
+                  attempt["status"] = "CAPTURED_FOR_EXACT_WORK_RIGHTS_SEQUENCE_REVIEW"
+              except Exception as exc:
+                  attempt.update(status="ROUTE_FAILED", error=str(exc))
+              entry["attempts"].append(attempt)
+
+              # Route 3: Google Books free-ebook catalogue using a distinct title variant.
+              gb_query = f'intitle:"{work["alternate"]}" inauthor:"{work["author"]}"'
+              attempt = {
+                  "route": "Google Books volumes catalogue",
+                  "language": "English or alternate title",
+                  "query": gb_query,
+              }
+              try:
+                  data = request(
+                      "https://www.googleapis.com/books/v1/volumes",
+                      params={
+                          "q": gb_query,
+                          "filter": "free-ebooks",
+                          "printType": "books",
+                          "maxResults": 20,
+                      },
+                  ).json()
+                  attempt["results"] = data.get("items", [])
+                  attempt["status"] = "CAPTURED_FOR_EXACT_WORK_RIGHTS_SEQUENCE_REVIEW"
+              except Exception as exc:
+                  attempt.update(status="ROUTE_FAILED", error=str(exc))
+              entry["attempts"].append(attempt)
+
+              searches.append(entry)
+              (ROOT / "illustration-searches" / f'{work["rank"]:03d}.json').write_text(
+                  json.dumps(entry, ensure_ascii=False, indent=2), encoding="utf-8"
+              )
+              print("searched", work["rank"], work["italian"], flush=True)
+              time.sleep(3)
+
+          (ROOT / "asset-index.json").write_text(
+              json.dumps(
+                  {
+                      "schema": "bb-seven-master-assets-1.0",
+                      "created_utc": "2026-09-17",
+                      "authors": AUTHORS,
+                      "works": WORKS,
+                      "note": (
+                          "Portrait candidates require final human identity/rights/pixel review. "
+                          "Illustration search capture is evidence input, not automatic acceptance."
+                      ),
+                  },
+                  ensure_ascii=False,
+                  indent=2,
+              ),
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Upload asset-recovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-seven-master-assets-20260917
+          path: assets/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 14
