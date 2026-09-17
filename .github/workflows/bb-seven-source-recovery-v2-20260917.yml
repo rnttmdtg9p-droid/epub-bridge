@@ -1,0 +1,270 @@
+name: BB seven Italian source recovery v2 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-seven-source-recovery-v2-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rank: '043'
+            slug: dracula
+            author: Bram Stoker
+            terms: 'Dracula|Stoker Dracula Sonzogno 1922|Dracula Stoker Angelo Nessi'
+          - rank: '049'
+            slug: cime-tempestose
+            author: Emily Bronte
+            terms: 'Cime tempestose|La tempestosa Bronte|Wuthering Heights italiano'
+          - rank: '055'
+            slug: mastino-baskerville
+            author: Arthur Conan Doyle
+            terms: 'Il mastino dei Baskerville|Il cane dei Baskerville|La fiera di Baskerville'
+          - rank: '061'
+            slug: morte-ivan-ilic
+            author: Lev Tolstoj
+            terms: 'La morte di Ivan Ilic|La morte di Ivan Ilitsch|Morte Ivan Tolstoi italiano'
+          - rank: '063'
+            slug: fratelli-karamazov
+            author: Fedor Dostoevskij
+            terms: 'I fratelli Karamazov|Fratelli Karamazoff Verdinois|Karamasov Dostoevskij italiano'
+          - rank: '064'
+            slug: idiota
+            author: Fedor Dostoevskij
+            terms: 'L idiota Dostoevskij|Idiota Verdinois Carabba|L idiota Dostoiewski italiano'
+          - rank: '100'
+            slug: repubblica
+            author: Platone
+            terms: 'La Repubblica Platone|Repubblica Platone Bonghi|La repubblica di Platone italiano'
+    steps:
+      - name: Discover Italian reading-source candidates without bulk acquisition
+        shell: bash
+        env:
+          RANK: ${{ matrix.rank }}
+          SLUG: ${{ matrix.slug }}
+          AUTHOR: ${{ matrix.author }}
+          TERMS: ${{ matrix.terms }}
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests beautifulsoup4 lxml
+          python - <<'PY'
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import re
+          import time
+          import urllib.parse
+
+          import requests
+          from bs4 import BeautifulSoup
+
+          rank = os.environ['RANK']
+          terms = os.environ['TERMS'].split('|')
+          root = pathlib.Path('source-recovery-v2') / rank
+          root.mkdir(parents=True, exist_ok=True)
+          session = requests.Session()
+          session.headers['User-Agent'] = (
+              'BoundaryBayProduction/1.0 '
+              '(Italian public-domain source discovery; github.com/rnttmdtg9p-droid/epub-bridge)'
+          )
+
+          def get(url, *, params=None, attempts=4):
+              last = None
+              for attempt in range(attempts):
+                  try:
+                      response = session.get(url, params=params, timeout=60)
+                      if response.status_code in {429, 500, 502, 503, 504}:
+                          time.sleep(2 + attempt * 2)
+                          continue
+                      response.raise_for_status()
+                      return response
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 + attempt * 2)
+              raise last or RuntimeError(url)
+
+          def save(name, payload):
+              path = root / name
+              data = json.dumps(payload, ensure_ascii=False, indent=2).encode('utf-8')
+              path.write_bytes(data)
+              return {'path': str(path), 'sha256': hashlib.sha256(data).hexdigest(), 'size_bytes': len(data)}
+
+          def slug(value):
+              return re.sub(r'[^a-z0-9]+', '-', value.casefold()).strip('-')[:80]
+
+          def wikisource():
+              candidates = {}
+              for term in terms:
+                  payload = get(
+                      'https://it.wikisource.org/w/api.php',
+                      params={
+                          'action': 'query', 'format': 'json', 'formatversion': 2,
+                          'list': 'search', 'srsearch': term, 'srnamespace': '0|106',
+                          'srlimit': 50,
+                      },
+                  ).json()
+                  save(f'wikisource-search-{slug(term)}.json', payload)
+                  for hit in payload.get('query', {}).get('search', []):
+                      title = hit.get('title')
+                      if title:
+                          candidates[title] = hit
+              records = []
+              for title, hit in list(candidates.items())[:80]:
+                  record = {'search_hit': hit, 'title': title}
+                  if hit.get('ns') == 0:
+                      try:
+                          parsed = get(
+                              'https://it.wikisource.org/w/api.php',
+                              params={
+                                  'action': 'parse', 'format': 'json', 'formatversion': 2,
+                                  'page': title, 'prop': 'sections|categories|links|wikitext|text',
+                                  'disableeditsection': 1, 'disabletoc': 1,
+                              },
+                          ).json().get('parse', {})
+                          visible = BeautifulSoup(parsed.get('text', ''), 'lxml').get_text('\n')
+                          record.update({
+                              'pageid': parsed.get('pageid'),
+                              'revid': parsed.get('revid'),
+                              'section_count': len(parsed.get('sections', [])),
+                              'visible_characters': len(visible),
+                              'categories': parsed.get('categories', []),
+                              'links': parsed.get('links', []),
+                              'wikitext': parsed.get('wikitext', ''),
+                              'page_url': 'https://it.wikisource.org/wiki/' + urllib.parse.quote(title.replace(' ', '_')),
+                              'export_epub_url': 'https://ws-export.wmcloud.org/?lang=it&format=epub&page=' + urllib.parse.quote(title),
+                          })
+                      except Exception as exc:
+                          record['parse_error'] = str(exc)
+                  records.append(record)
+              return records
+
+          def internet_archive():
+              docs = {}
+              for term in terms:
+                  queries = [
+                      f'title:("{term}") AND mediatype:texts',
+                      f'("{term}" AND creator:("{os.environ["AUTHOR"]}")) AND mediatype:texts',
+                  ]
+                  for query in queries:
+                      payload = get(
+                          'https://archive.org/advancedsearch.php',
+                          params={
+                              'q': query,
+                              'fl[]': ['identifier', 'title', 'creator', 'date', 'language', 'rights', 'licenseurl', 'description', 'collection'],
+                              'rows': 100, 'page': 1, 'output': 'json',
+                          },
+                      ).json()
+                      save(f'ia-search-{slug(query)}.json', payload)
+                      for doc in payload.get('response', {}).get('docs', []):
+                          if doc.get('identifier'):
+                              docs[doc['identifier']] = doc
+              records = []
+              for identifier, doc in list(docs.items())[:120]:
+                  try:
+                      metadata = get(f'https://archive.org/metadata/{identifier}').json()
+                      files = []
+                      for item in metadata.get('files', []):
+                          name = str(item.get('name', ''))
+                          low = name.casefold()
+                          if low.endswith(('.epub', '.pdf', '_djvu.txt', '_text.txt', '_djvu.xml', '_scandata.xml')):
+                              files.append({
+                                  'name': name, 'size': item.get('size'), 'format': item.get('format'),
+                                  'source': item.get('source'), 'sha1': item.get('sha1'), 'md5': item.get('md5'),
+                                  'download_url': 'https://archive.org/download/' + urllib.parse.quote(identifier) + '/' + urllib.parse.quote(name),
+                              })
+                      records.append({
+                          'identifier': identifier,
+                          'details_url': f'https://archive.org/details/{identifier}',
+                          'search_record': doc,
+                          'metadata': metadata.get('metadata', {}),
+                          'candidate_files': files,
+                      })
+                  except Exception as exc:
+                      records.append({'identifier': identifier, 'search_record': doc, 'metadata_error': str(exc)})
+              return records
+
+          def gutendex():
+              records = []
+              for term in terms:
+                  payload = get('https://gutendex.com/books', params={'search': term, 'languages': 'it'}).json()
+                  save(f'gutendex-{slug(term)}.json', payload)
+                  records.extend(payload.get('results', []))
+              return records
+
+          def google_books():
+              records = []
+              for term in terms:
+                  payload = get(
+                      'https://www.googleapis.com/books/v1/volumes',
+                      params={
+                          'q': f'"{term}"', 'filter': 'free-ebooks', 'printType': 'books',
+                          'langRestrict': 'it', 'maxResults': 40,
+                      },
+                  ).json()
+                  save(f'google-books-{slug(term)}.json', payload)
+                  records.extend(payload.get('items', []))
+              return records
+
+          def liberliber():
+              records = []
+              for term in terms:
+                  payload = get(
+                      'https://liberliber.it/wp-json/wp/v2/search',
+                      params={'search': term, 'per_page': 100, 'subtype': 'page,post'},
+                  ).json()
+                  save(f'liberliber-{slug(term)}.json', payload)
+                  records.extend(payload)
+              return records
+
+          routes = {}
+          for name, function in [
+              ('italian_wikisource', wikisource),
+              ('internet_archive', internet_archive),
+              ('gutendex_project_gutenberg', gutendex),
+              ('google_books_free_ebooks', google_books),
+              ('liberliber_catalogue', liberliber),
+          ]:
+              try:
+                  results = function()
+                  routes[name] = {'status': 'SEARCH_COMPLETE_REVIEW_REQUIRED', 'results': results}
+              except Exception as exc:
+                  routes[name] = {'status': 'SEARCH_FAILED', 'error': str(exc), 'results': []}
+              print(rank, name, routes[name]['status'], len(routes[name]['results']), flush=True)
+
+          record = {
+              'schema': 'bb-italian-source-recovery-v2-1.0',
+              'searched_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
+              'rank': int(rank),
+              'slug': os.environ['SLUG'],
+              'author_query': os.environ['AUTHOR'],
+              'terms': terms,
+              'routes': routes,
+              'disposition': 'CANDIDATE_REVIEW_PENDING',
+              'acceptance_requirements': [
+                  'Italian reading text', 'complete work extent', 'identified edition',
+                  'rights compatible with planned distribution', 'no unrelated matter',
+                  'frozen immutable source bytes', 'full reading-map and quality review',
+              ],
+          }
+          save('source-recovery-record.json', record)
+          PY
+
+      - name: Upload title source-recovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-italian-source-recovery-v2-${{ matrix.rank }}-${{ matrix.slug }}
+          path: source-recovery-v2/${{ matrix.rank }}/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 14
