@@ -23,7 +23,7 @@ from pathlib import Path
 
 MODEL_BY_LANGUAGE = {
     "en": ["Helsinki-NLP/opus-mt-en-it"],
-    "fr": ["Helsinki-NLP/opus-mt-fr-it"],
+    "fr": ["Helsinki-NLP/opus-mt-fr-en", "Helsinki-NLP/opus-mt-en-it"],
     "de": ["Helsinki-NLP/opus-mt-de-it"],
     "ru": ["Helsinki-NLP/opus-mt-ru-en", "Helsinki-NLP/opus-mt-en-it"],
 }
