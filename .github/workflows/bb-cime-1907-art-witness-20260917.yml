@@ -18,6 +18,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python -m pip install --quiet pillow
           mkdir -p cime-1907/pages cime-1907/contact
           curl --fail --location --retry 5 --retry-delay 3 \
             'https://archive.org/download/in.ernet.dli.2015.208433/2015.208433.Wuthering-Heights.pdf' \
