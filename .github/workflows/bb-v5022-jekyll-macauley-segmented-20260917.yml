@@ -1,0 +1,85 @@
+name: BB v5022 Jekyll Macauley segmented
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-v5022-jekyll-macauley-segmented-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    strategy:
+      fail-fast: false
+      matrix:
+        segment: [0, 1, 2, 3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Acquire Macauley segment
+        shell: bash
+        env:
+          SEGMENT: ${{ matrix.segment }}
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pillow
+          python - <<'PY'
+          import json, os, pathlib, re, time
+          from io import BytesIO
+          from PIL import Image
+          import requests
+
+          segment = int(os.environ["SEGMENT"])
+          API = "https://commons.wikimedia.org/w/api.php"
+          CATEGORY = "Category:Illustrations of The Strange Case of Dr Jekyll and Mr Hyde by Charles Raymond Macauley (1904)"
+          OUT = pathlib.Path(f"segment-{segment}")
+          OUT.mkdir(exist_ok=True)
+          session = requests.Session()
+          session.headers["User-Agent"] = "BoundaryBayEPUB/5.0.22 illustration-audit boundarybaybooks.com"
+          params = {
+              "action": "query", "format": "json", "formatversion": "2",
+              "generator": "categorymembers", "gcmtitle": CATEGORY,
+              "gcmtype": "file", "gcmlimit": "50",
+              "prop": "imageinfo", "iiprop": "url|mime|size|extmetadata",
+              "iiurlwidth": "1600",
+          }
+          response = session.get(API, params=params, timeout=120)
+          response.raise_for_status()
+          pages = response.json().get("query", {}).get("pages", [])
+          records = sorted(
+              [{"title": p.get("title"), "category": CATEGORY, "imageinfo": (p.get("imageinfo") or [{}])[0]} for p in pages],
+              key=lambda r: r["title"])
+          selected = [r for index, r in enumerate(records) if index % 4 == segment]
+          if len(records) < 20 or len(selected) < 5:
+              raise RuntimeError(f"incomplete category: {len(records)} records, segment {len(selected)}")
+          for global_index, rec in [(i, r) for i, r in enumerate(records, 1) if (i - 1) % 4 == segment]:
+              url = rec["imageinfo"].get("thumburl") or rec["imageinfo"].get("url")
+              for attempt in range(10):
+                  response = session.get(url, timeout=180)
+                  if response.ok:
+                      break
+                  wait = max(int(response.headers.get("retry-after", "0") or 0), 10 + 5 * attempt)
+                  print("retry", response.status_code, wait, rec["title"])
+                  time.sleep(wait)
+              response.raise_for_status()
+              image = Image.open(BytesIO(response.content)).convert("RGB")
+              safe = re.sub(r"[^A-Za-z0-9._-]+", "_", rec["title"].removeprefix("File:"))[:130]
+              image.save(OUT / f"{global_index:03d}_{pathlib.Path(safe).stem}.jpg", "JPEG", quality=88, optimize=True, progressive=False)
+              time.sleep(4)
+          (OUT / f"provenance-{segment}.json").write_text(
+              json.dumps({"category": CATEGORY, "all_files": records, "selected_files": selected, "segment": segment, "acquisition": "Wikimedia Commons 1600px thumbnail derivative, JPEG quality 88"}, ensure_ascii=False, indent=2),
+              encoding="utf-8")
+          print("records", len(records), "selected", len(selected))
+          PY
+
+      - name: Upload segment
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-v5022-jekyll-segment-${{ matrix.segment }}
+          path: segment-${{ matrix.segment }}/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
