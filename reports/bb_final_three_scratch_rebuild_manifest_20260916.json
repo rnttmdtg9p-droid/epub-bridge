@@ -24,31 +24,33 @@
       "title": "Il mastino dei Baskerville",
       "config": "configs/055_mastino_baskervilles.json",
       "engine": "gutenberg",
-      "shard_size": 48,
-      "attempt": 4,
+      "shard_size": 192,
+      "attempt": 5,
       "prior_run_id": 35055548139,
       "prior_job_id": 104685477632,
       "prior_failure": "serial hard-fault repair cancelled after six hours at 2000/3821 units; no EPUB artifact",
       "stages": {
-        "source": "in_progress",
+        "source": "pending",
         "translate_repair_shards": "pending",
         "assemble": "pending",
         "hard_gate": "pending",
         "epubcheck": "pending",
         "artifact": "pending"
       },
-      "next_action": "complete Marian scratch rebuild run 35178194838 and verify zero hard flags, EPUBCheck 5.2.1, ZIP integrity, and SHA-256",
-      "run_id": 35178194838,
-      "job_id": 105012468905,
+      "next_action": "complete corrected Marian scratch rebuild run 35178463553 and verify zero hard flags, EPUBCheck 5.2.1, ZIP integrity, and SHA-256",
+      "run_id": 35178463553,
+      "job_id": null,
       "validation": {
-        "remaining_hard_flagged_unit_count": 0,
-        "translation_length_ratio": 2.1346701657582487,
-        "translation_risk_unit_count": 1937,
-        "assembly_failure": "translation_length_ratio=2.135",
-        "epubcheck": "skipped",
-        "diagnostic_artifact_id": 10473257951,
-        "diagnostic_artifact_size_bytes": 2195686,
-        "diagnostic_artifact_digest": "sha256:987c1552a9c6842a58ebdacf74780c3034bbe9f8967628935309910dd0923ef8"
+        "previous_run_id": 35178194838,
+        "previous_run_result": "translation succeeded; gate command failed because workflow YAML contained literal plus tokens",
+        "completed_shard_sample": {
+          "shard": 7,
+          "unit_count": 192,
+          "source_chars": 13825,
+          "translation_chars": 14524,
+          "translation_length_ratio": 1.0505605786618446,
+          "translation_status": "PASS"
+        }
       },
       "translation_backend": "Helsinki-NLP/opus-mt-en-it",
       "probe": {
@@ -126,7 +128,7 @@
       }
     }
   ],
-  "updated_at": "2026-09-17T03:27:04.070Z",
+  "updated_at": "2026-09-17T03:31:33.848Z",
   "history": [
     {
       "timestamp": "2026-09-17T03:17:11.308Z",
@@ -137,6 +139,11 @@
       "timestamp": "2026-09-17T03:27:04.070Z",
       "event": "mastino_backend_recovery_launched",
       "summary": "MADLAD decoder probe reproduced widespread English spillover and expansion. Helsinki-NLP/opus-mt-en-it passed the exact frozen-unit probe at aggregate ratio 1.061 with zero sample language-marker failures; full Mastino scratch run 35178194838 launched."
+    },
+    {
+      "timestamp": "2026-09-17T03:31:33.848Z",
+      "event": "mastino_gate_command_restart",
+      "summary": "Run 35178194838 proved Marian shard translation quality but exposed literal plus tokens in the finalizer command. Workflow command fixed at commit f987a006b09a3a6f0a9f42b28aeb92bdd4c4e368; clean replacement run 35178463553 launched under cancel-in-progress concurrency."
     }
   ]
 }
