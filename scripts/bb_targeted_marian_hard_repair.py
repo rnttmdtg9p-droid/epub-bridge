@@ -17,8 +17,10 @@ from pathlib import Path
 
 
 MODEL_BY_LANGUAGE = {
-    "en": "Helsinki-NLP/opus-mt-en-it",
-    "ru": "Helsinki-NLP/opus-mt-ru-it",
+    "en": ["Helsinki-NLP/opus-mt-en-it"],
+    # OPUS-MT does not publish a direct ru-it checkpoint.  Use the two
+    # documented public Marian checkpoints and retain the full provenance.
+    "ru": ["Helsinki-NLP/opus-mt-ru-en", "Helsinki-NLP/opus-mt-en-it"],
 }
 
 REPEAT = re.compile(
@@ -101,7 +103,7 @@ def source_segments(value: str, max_chars: int = 760) -> list[str]:
     return chunks
 
 
-def translate_records(records: list[dict], model_id: str) -> list[str]:
+def translate_batch(texts: list[str], model_id: str) -> list[str]:
     import torch
     from transformers import MarianMTModel, MarianTokenizer
 
@@ -109,19 +111,13 @@ def translate_records(records: list[dict], model_id: str) -> list[str]:
     model = MarianMTModel.from_pretrained(model_id)
     model.eval()
 
-    segments: list[tuple[int, int, str]] = []
-    by_record: list[list[str]] = []
-    for record_index, record in enumerate(records):
-        pieces = source_segments(record["source"])
-        by_record.append([""] * len(pieces))
-        for piece_index, piece in enumerate(pieces):
-            segments.append((record_index, piece_index, piece))
-
-    segments.sort(key=lambda row: len(row[2]))
-    for offset in range(0, len(segments), 12):
-        batch = segments[offset:offset + 12]
-        text = [row[2] for row in batch]
-        encoded = tokenizer(text, return_tensors="pt", padding=True, truncation=True, max_length=480)
+    translated_all: list[str] = []
+    ordered = sorted(enumerate(texts), key=lambda row: len(row[1]))
+    translated_by_index = [""] * len(texts)
+    for offset in range(0, len(ordered), 12):
+        batch = ordered[offset:offset + 12]
+        batch_text = [row[1] for row in batch]
+        encoded = tokenizer(batch_text, return_tensors="pt", padding=True, truncation=True, max_length=480)
         longest = int(encoded["attention_mask"].sum(dim=1).max().item())
         with torch.inference_mode():
             output = model.generate(
@@ -133,10 +129,29 @@ def translate_records(records: list[dict], model_id: str) -> list[str]:
                 length_penalty=1.0,
                 early_stopping=True,
             )
-        translated = tokenizer.batch_decode(output, skip_special_tokens=True)
-        for (record_index, piece_index, _), target in zip(batch, translated):
-            by_record[record_index][piece_index] = re.sub(r"\s+", " ", target).strip()
-        print(f"translated {min(offset + len(batch), len(segments))}/{len(segments)} segments", flush=True)
+        decoded = tokenizer.batch_decode(output, skip_special_tokens=True)
+        for (original_index, _), target in zip(batch, decoded):
+            translated_by_index[original_index] = re.sub(r"\s+", " ", target).strip()
+        print(f"{model_id}: translated {min(offset + len(batch), len(ordered))}/{len(ordered)} segments", flush=True)
+    del model
+    return translated_by_index
+
+
+def translate_records(records: list[dict], model_ids: list[str]) -> list[str]:
+
+    segments: list[tuple[int, int, str]] = []
+    by_record: list[list[str]] = []
+    for record_index, record in enumerate(records):
+        pieces = source_segments(record["source"])
+        by_record.append([""] * len(pieces))
+        for piece_index, piece in enumerate(pieces):
+            segments.append((record_index, piece_index, piece))
+
+    translated_segments = [row[2] for row in segments]
+    for model_id in model_ids:
+        translated_segments = translate_batch(translated_segments, model_id)
+    for (record_index, piece_index, _), target in zip(segments, translated_segments):
+        by_record[record_index][piece_index] = target
     return [" ".join(pieces).strip() for pieces in by_record]
 
 
@@ -162,7 +177,9 @@ def repair(args: argparse.Namespace) -> None:
             "items": flagged,
         }
 
-    translations = translate_records(candidates, MODEL_BY_LANGUAGE[args.language]) if candidates else []
+    model_ids = MODEL_BY_LANGUAGE[args.language]
+    model_provenance = " -> ".join(model_ids)
+    translations = translate_records(candidates, model_ids) if candidates else []
     corrections: dict[str, dict] = {rank: {} for rank in sorted(ranks)}
     failures = []
     for record, translation in zip(candidates, translations):
@@ -179,7 +196,7 @@ def repair(args: argparse.Namespace) -> None:
             "translation_sha256": sha256_text(translation),
             "pre_flags": record["pre_flags"],
             "post_flags": post_flags,
-            "model": MODEL_BY_LANGUAGE[args.language],
+            "model": model_provenance,
             "editorial_status": "REVIEW_REQUIRED",
         }
         corrections[record["rank"]][record["unit_id"]] = correction
@@ -191,7 +208,7 @@ def repair(args: argparse.Namespace) -> None:
     payload = {
         "schema": "bb-targeted-source-bound-corrections-v1",
         "language": args.language,
-        "model": MODEL_BY_LANGUAGE[args.language],
+        "model": model_provenance,
         "scope": "blatant hard flags and severe length anomalies only",
         "editorial_status": "REVIEW_REQUIRED",
         "corrections": corrections,
@@ -202,7 +219,7 @@ def repair(args: argparse.Namespace) -> None:
     qa = {
         "status": "PASS" if not failures else "FAIL",
         "language": args.language,
-        "model": MODEL_BY_LANGUAGE[args.language],
+        "model": model_provenance,
         "preflight": preflight,
         "replacement_count": sum(len(value) for value in corrections.values()),
         "remaining_hard_failures": failures,
