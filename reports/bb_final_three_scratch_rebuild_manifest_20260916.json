@@ -25,20 +25,20 @@
       "config": "configs/055_mastino_baskervilles.json",
       "engine": "gutenberg",
       "shard_size": 48,
-      "attempt": 3,
+      "attempt": 4,
       "prior_run_id": 35055548139,
       "prior_job_id": 104685477632,
       "prior_failure": "serial hard-fault repair cancelled after six hours at 2000/3821 units; no EPUB artifact",
       "stages": {
-        "source": "complete",
-        "translate_repair_shards": "complete",
-        "assemble": "failed",
-        "hard_gate": "complete",
+        "source": "in_progress",
+        "translate_repair_shards": "pending",
+        "assemble": "pending",
+        "hard_gate": "pending",
         "epubcheck": "pending",
-        "artifact": "needs_review"
+        "artifact": "pending"
       },
-      "next_action": "validate corrected English-to-Italian decoder/tokenization on frozen Mastino units, then relaunch clean title-only rebuild",
-      "run_id": 35152384676,
+      "next_action": "complete Marian scratch rebuild run 35178194838 and verify zero hard flags, EPUBCheck 5.2.1, ZIP integrity, and SHA-256",
+      "run_id": 35178194838,
       "job_id": 105012468905,
       "validation": {
         "remaining_hard_flagged_unit_count": 0,
@@ -49,6 +49,15 @@
         "diagnostic_artifact_id": 10473257951,
         "diagnostic_artifact_size_bytes": 2195686,
         "diagnostic_artifact_digest": "sha256:987c1552a9c6842a58ebdacf74780c3034bbe9f8967628935309910dd0923ef8"
+      },
+      "translation_backend": "Helsinki-NLP/opus-mt-en-it",
+      "probe": {
+        "run_id": 35177948619,
+        "status": "PASS",
+        "aggregate_ratio": 1.0611785874943769,
+        "bad_ratio_count": 0,
+        "zero_italian_marker_count": 0,
+        "sample_count": 17
       }
     },
     {
@@ -117,12 +126,17 @@
       }
     }
   ],
-  "updated_at": "2026-09-17T03:17:11.308Z",
+  "updated_at": "2026-09-17T03:27:04.070Z",
   "history": [
     {
       "timestamp": "2026-09-17T03:17:11.308Z",
       "event": "status_checkpoint",
       "summary": "Ivan Il’ič and L’idiota completed all mandatory gates in run 35150931250. Mastino run 35152384676 cleared hard flags but failed translation-length quality gate; EPUBCheck skipped."
+    },
+    {
+      "timestamp": "2026-09-17T03:27:04.070Z",
+      "event": "mastino_backend_recovery_launched",
+      "summary": "MADLAD decoder probe reproduced widespread English spillover and expansion. Helsinki-NLP/opus-mt-en-it passed the exact frozen-unit probe at aggregate ratio 1.061 with zero sample language-marker failures; full Mastino scratch run 35178194838 launched."
     }
   ]
 }
