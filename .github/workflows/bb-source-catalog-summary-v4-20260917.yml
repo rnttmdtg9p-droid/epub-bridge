@@ -1,0 +1,105 @@
+name: BB source catalog summary v4 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-source-catalog-summary-v4-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Download and summarize catalog evidence
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p evidence summary
+          cat > artifacts.tsv <<'EOF'
+          049	10513169226
+          055	10513678969
+          061	10512768480
+          063	10512708568
+          064	10513199269
+          EOF
+          while IFS=$'\t' read -r rank artifact; do
+            mkdir -p "evidence/$rank"
+            gh api "/repos/${{ github.repository }}/actions/artifacts/$artifact/zip" > "evidence/$rank.zip"
+            unzip -q "evidence/$rank.zip" -d "evidence/$rank"
+          done < artifacts.tsv
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('evidence')
+          out = []
+          for rank_dir in sorted(p for p in root.iterdir() if p.is_dir()):
+              rank = rank_dir.name
+              block = {'rank': int(rank), 'catalogs': [], 'candidates': []}
+              for path in sorted(rank_dir.glob('*.json')):
+                  if path.name == 'record.json':
+                      continue
+                  payload = json.loads(path.read_text(encoding='utf-8'))
+                  if '_request_error' in payload:
+                      block['catalogs'].append({'file': path.name, 'error': payload['_request_error']})
+                      continue
+                  source = path.stem.split('-', 1)[1]
+                  if source == 'google_books':
+                      items = payload.get('items', [])
+                      block['catalogs'].append({'file': path.name, 'results': len(items)})
+                      for item in items[:12]:
+                          v = item.get('volumeInfo', {})
+                          a = item.get('accessInfo', {})
+                          block['candidates'].append({
+                              'source': source, 'query_file': path.name, 'id': item.get('id'),
+                              'title': v.get('title'), 'authors': v.get('authors'),
+                              'date': v.get('publishedDate'), 'publisher': v.get('publisher'),
+                              'language': v.get('language'), 'viewability': a.get('viewability'),
+                              'public_domain': a.get('publicDomain'),
+                              'epub_available': a.get('epub', {}).get('isAvailable'),
+                              'pdf_available': a.get('pdf', {}).get('isAvailable'),
+                          })
+                  elif source == 'open_library':
+                      docs = payload.get('docs', [])
+                      block['catalogs'].append({'file': path.name, 'results': len(docs)})
+                      for item in docs[:12]:
+                          block['candidates'].append({
+                              'source': source, 'query_file': path.name, 'key': item.get('key'),
+                              'title': item.get('title'), 'authors': item.get('author_name'),
+                              'first_publish_year': item.get('first_publish_year'),
+                              'publisher': (item.get('publisher') or [])[:5],
+                              'language': item.get('language'),
+                              'public_scan': item.get('public_scan_b'), 'ia': item.get('ia'),
+                          })
+                  elif source == 'internet_archive':
+                      docs = payload.get('response', {}).get('docs', [])
+                      block['catalogs'].append({'file': path.name, 'results': len(docs)})
+                      for item in docs[:20]:
+                          block['candidates'].append({
+                              'source': source, 'query_file': path.name,
+                              'id': item.get('identifier'), 'title': item.get('title'),
+                              'creator': item.get('creator'), 'date': item.get('date') or item.get('year'),
+                              'publisher': item.get('publisher'), 'language': item.get('language'),
+                              'rights': item.get('rights'), 'license': item.get('licenseurl'),
+                          })
+              out.append(block)
+          report = {'schema': 'bb-source-catalog-summary-v4-1.0', 'records': out}
+          pathlib.Path('summary/catalog-summary.json').write_text(
+              json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+          for block in out:
+              print('===', block['rank'], '===')
+              print(json.dumps(block, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload source catalog summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-source-catalog-summary-v4-20260917
+          path: summary/catalog-summary.json
+          if-no-files-found: error
+          retention-days: 30
