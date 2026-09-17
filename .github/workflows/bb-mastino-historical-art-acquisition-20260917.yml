@@ -1,0 +1,80 @@
+name: BB Mastino 1902 historical art acquisition 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-mastino-historical-art-acquisition-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Acquire and render the verified 1902 exact-work witness
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p mastino-1902/pages mastino-1902/contact
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://archive.org/download/doyle-1902-the-hound-of-the-baskervilles/Doyle_%281902%29_The_Hound_of_the_Baskervilles.pdf' \
+            --output mastino-1902/Doyle_1902_Hound_of_the_Baskervilles.pdf
+          curl --fail --location --retry 5 --retry-delay 3 \
+            'https://archive.org/metadata/doyle-1902-the-hound-of-the-baskervilles' \
+            --output mastino-1902/archive_metadata.json
+          printf '%s\n' \
+            'Exact work: The Hound of the Baskervilles' \
+            'Edition: New York, McClure, Phillips & Co., 1902, first American edition' \
+            'Extent statement: frontispiece and seven internal plates' \
+            'Repository: Internet Archive, identifier doyle-1902-the-hound-of-the-baskervilles' \
+            'Rights marker: https://creativecommons.org/publicdomain/mark/1.0/' \
+            'Digitizer credit requested by repository record: Curtis Philips' \
+            > mastino-1902/acquisition-record.txt
+          sha256sum mastino-1902/Doyle_1902_Hound_of_the_Baskervilles.pdf \
+            mastino-1902/archive_metadata.json \
+            > mastino-1902/SHA256SUMS.txt
+          pdfinfo mastino-1902/Doyle_1902_Hound_of_the_Baskervilles.pdf \
+            > mastino-1902/pdfinfo.txt
+          pdftoppm -jpeg -r 72 -jpegopt quality=72 \
+            mastino-1902/Doyle_1902_Hound_of_the_Baskervilles.pdf \
+            mastino-1902/pages/page
+          python - <<'PY'
+          from PIL import Image, ImageDraw
+          import math
+          import pathlib
+
+          pages = sorted(pathlib.Path('mastino-1902/pages').glob('page-*.jpg'))
+          thumb_w, thumb_h = 220, 300
+          cols, per_sheet = 5, 30
+          for start in range(0, len(pages), per_sheet):
+              group = pages[start:start + per_sheet]
+              rows = math.ceil(len(group) / cols)
+              sheet = Image.new('RGB', (cols * thumb_w, rows * (thumb_h + 28)), 'white')
+              draw = ImageDraw.Draw(sheet)
+              for offset, path in enumerate(group):
+                  image = Image.open(path).convert('RGB')
+                  image.thumbnail((thumb_w - 10, thumb_h - 10))
+                  x = (offset % cols) * thumb_w + (thumb_w - image.width) // 2
+                  y = (offset // cols) * (thumb_h + 28) + (thumb_h - image.height) // 2
+                  sheet.paste(image, (x, y))
+                  draw.text(((offset % cols) * thumb_w + 6, (offset // cols) * (thumb_h + 28) + thumb_h + 4), path.stem, fill='black')
+              sheet.save(f'mastino-1902/contact/contact-{start + 1:03d}-{start + len(group):03d}.jpg', quality=88)
+          PY
+
+      - name: Upload exact-work witness and contact sheets
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-mastino-1902-historical-art-witness
+          path: |
+            mastino-1902/Doyle_1902_Hound_of_the_Baskervilles.pdf
+            mastino-1902/archive_metadata.json
+            mastino-1902/acquisition-record.txt
+            mastino-1902/SHA256SUMS.txt
+            mastino-1902/pdfinfo.txt
+            mastino-1902/contact/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
