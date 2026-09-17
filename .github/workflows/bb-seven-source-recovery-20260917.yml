@@ -1,0 +1,298 @@
+name: BB seven Italian source recovery 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-seven-source-recovery-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Search and freeze Italian public-domain source candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests beautifulsoup4 lxml
+          mkdir -p source-recovery
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import time
+          import unicodedata
+          import urllib.parse
+
+          import requests
+          from bs4 import BeautifulSoup
+
+          ROOT = pathlib.Path('source-recovery')
+          SESSION = requests.Session()
+          SESSION.headers['User-Agent'] = (
+              'BoundaryBayProduction/1.0 '
+              '(public-domain source recovery; github.com/rnttmdtg9p-droid/epub-bridge)'
+          )
+
+          WORKS = [
+              {
+                  'rank': 43,
+                  'title': 'Dracula',
+                  'author': 'Bram Stoker',
+                  'terms': ['Dracula', 'Dracula uomo della notte', 'Stoker Dracula Sonzogno 1922'],
+              },
+              {
+                  'rank': 49,
+                  'title': 'Cime tempestose',
+                  'author': 'Emily Brontë',
+                  'terms': ['Cime tempestose', 'Wuthering Heights italiano', 'Tempeste del cuore Bronte'],
+              },
+              {
+                  'rank': 55,
+                  'title': 'Il mastino dei Baskerville',
+                  'author': 'Arthur Conan Doyle',
+                  'terms': ['Il mastino dei Baskerville', 'Il cane dei Baskerville', 'Baskerville Conan Doyle italiano'],
+              },
+              {
+                  'rank': 61,
+                  'title': "La morte di Ivan Il'ič",
+                  'author': 'Lev Tolstoj',
+                  'terms': ["La morte di Ivan Il'ič", 'La morte di Ivan Ilic', 'La morte di Ivan Iljic Tolstoj'],
+              },
+              {
+                  'rank': 63,
+                  'title': 'I fratelli Karamazov',
+                  'author': 'Fëdor Dostoevskij',
+                  'terms': ['I fratelli Karamazov', 'I fratelli Karamazoff', 'Fratelli Karamasov Dostoevskij'],
+              },
+              {
+                  'rank': 64,
+                  'title': "L'idiota",
+                  'author': 'Fëdor Dostoevskij',
+                  'terms': ["L'idiota Dostoevskij", 'Idiota Dostoievski italiano', 'Idiot romanzo Dostoevskij'],
+              },
+              {
+                  'rank': 100,
+                  'title': 'La Repubblica',
+                  'author': 'Platone',
+                  'terms': ['La Repubblica Platone', 'Repubblica di Platone', 'Politeia Platone italiano'],
+              },
+          ]
+
+          def slug(value):
+              value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+              return re.sub(r'[^a-z0-9]+', '-', value.casefold()).strip('-')[:100]
+
+          def get(url, *, params=None, attempts=5, stream=False):
+              last = None
+              for attempt in range(attempts):
+                  try:
+                      response = SESSION.get(url, params=params, timeout=90, stream=stream)
+                      if response.status_code in {429, 500, 502, 503, 504}:
+                          time.sleep(3 + attempt * 3)
+                          continue
+                      response.raise_for_status()
+                      return response
+                  except Exception as exc:
+                      last = exc
+                      time.sleep(2 + attempt * 3)
+              raise last or RuntimeError(url)
+
+          def write_bytes(path, data):
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_bytes(data)
+              return {
+                  'path': str(path.relative_to(ROOT)),
+                  'size_bytes': len(data),
+                  'sha256': hashlib.sha256(data).hexdigest(),
+              }
+
+          def query_wikisource(work, out_dir):
+              records = []
+              seen_titles = set()
+              for term in work['terms']:
+                  payload = get(
+                      'https://it.wikisource.org/w/api.php',
+                      params={
+                          'action': 'query', 'format': 'json', 'formatversion': 2,
+                          'list': 'search', 'srsearch': term, 'srnamespace': '0|106', 'srlimit': 20,
+                      },
+                  ).json()
+                  search_path = out_dir / 'wikisource' / f'search-{slug(term)}.json'
+                  search_path.parent.mkdir(parents=True, exist_ok=True)
+                  search_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+                  for result in payload.get('query', {}).get('search', []):
+                      title = result.get('title')
+                      if not title or title in seen_titles:
+                          continue
+                      seen_titles.add(title)
+                      if result.get('ns') != 0:
+                          continue
+                      try:
+                          parsed = get(
+                              'https://it.wikisource.org/w/api.php',
+                              params={
+                                  'action': 'parse', 'format': 'json', 'formatversion': 2,
+                                  'page': title, 'prop': 'text|sections|categories|links|wikitext',
+                                  'disableeditsection': 1, 'disabletoc': 1,
+                              },
+                          ).json()
+                          page = parsed.get('parse', {})
+                          html = page.get('text', '')
+                          text = BeautifulSoup(html, 'lxml').get_text('\n')
+                          text = re.sub(r'\n{3,}', '\n\n', text).strip()
+                          candidate = {
+                              'title': title,
+                              'pageid': page.get('pageid'),
+                              'revid': page.get('revid'),
+                              'text_characters': len(text),
+                              'section_count': len(page.get('sections', [])),
+                              'url': 'https://it.wikisource.org/wiki/' + urllib.parse.quote(title.replace(' ', '_')),
+                          }
+                          candidate_path = out_dir / 'wikisource' / f'candidate-{slug(title)}.json'
+                          candidate_path.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding='utf-8')
+                          if len(text) >= 8000:
+                              text_path = out_dir / 'wikisource' / f'candidate-{slug(title)}.txt'
+                              candidate['frozen_text'] = write_bytes(text_path, text.encode('utf-8'))
+                          records.append(candidate)
+                      except Exception as exc:
+                          records.append({'title': title, 'status': 'parse_failed', 'error': str(exc)})
+                      time.sleep(1)
+              return records
+
+          def ia_downloadable(files):
+              selected = []
+              for item in files:
+                  name = item.get('name', '')
+                  size = int(item.get('size') or 0)
+                  low = name.casefold()
+                  if size <= 0 or size > 40_000_000:
+                      continue
+                  if low.endswith(('_djvu.txt', '_text.txt', '.epub')):
+                      selected.append(item)
+              return sorted(selected, key=lambda x: (not x.get('name', '').casefold().endswith('.epub'), int(x.get('size') or 0)))
+
+          def query_archive(work, out_dir):
+              docs = {}
+              for term in work['terms']:
+                  for query in (
+                      f'title:("{term}") AND mediatype:texts',
+                      f'("{term}" AND creator:("{work["author"]}")) AND mediatype:texts',
+                  ):
+                      payload = get(
+                          'https://archive.org/advancedsearch.php',
+                          params={
+                              'q': query,
+                              'fl[]': ['identifier', 'title', 'creator', 'date', 'language', 'rights', 'description'],
+                              'rows': 50, 'page': 1, 'output': 'json',
+                          },
+                      ).json()
+                      qpath = out_dir / 'internet-archive' / f'search-{slug(query)}.json'
+                      qpath.parent.mkdir(parents=True, exist_ok=True)
+                      qpath.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+                      for doc in payload.get('response', {}).get('docs', []):
+                          identifier = doc.get('identifier')
+                          if identifier:
+                              docs[identifier] = doc
+              records = []
+              title_tokens = set(slug(work['title']).split('-'))
+              for identifier, doc in list(docs.items())[:80]:
+                  candidate_title = slug(str(doc.get('title', '')))
+                  overlap = len(title_tokens.intersection(candidate_title.split('-')))
+                  creator_text = str(doc.get('creator', '')).casefold()
+                  author_family = slug(work['author']).split('-')[-1]
+                  score = overlap * 10 + (8 if author_family in slug(creator_text) else 0)
+                  language = str(doc.get('language', '')).casefold()
+                  if any(x in language for x in ('italian', 'ita', 'italiano')):
+                      score += 6
+                  if score < 10:
+                      continue
+                  try:
+                      metadata = get(f'https://archive.org/metadata/{identifier}').json()
+                      mpath = out_dir / 'internet-archive' / f'metadata-{slug(identifier)}.json'
+                      mpath.write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding='utf-8')
+                      downloads = []
+                      for file_record in ia_downloadable(metadata.get('files', []))[:3]:
+                          name = file_record['name']
+                          data = get(
+                              'https://archive.org/download/' + urllib.parse.quote(identifier) + '/' + urllib.parse.quote(name),
+                          ).content
+                          dpath = out_dir / 'internet-archive' / 'files' / f'{slug(identifier)}--{pathlib.Path(name).name}'
+                          downloads.append({**file_record, 'frozen': write_bytes(dpath, data)})
+                      records.append({'identifier': identifier, 'score': score, 'metadata': doc, 'downloads': downloads})
+                  except Exception as exc:
+                      records.append({'identifier': identifier, 'score': score, 'metadata': doc, 'error': str(exc)})
+                  time.sleep(1)
+              return sorted(records, key=lambda x: x.get('score', 0), reverse=True)
+
+          def query_gutendex(work, out_dir):
+              records = []
+              for term in work['terms']:
+                  try:
+                      payload = get('https://gutendex.com/books', params={'search': term, 'languages': 'it'}).json()
+                      path = out_dir / 'gutendex' / f'search-{slug(term)}.json'
+                      path.parent.mkdir(parents=True, exist_ok=True)
+                      path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+                      records.extend(payload.get('results', []))
+                  except Exception as exc:
+                      records.append({'query': term, 'error': str(exc)})
+              return records
+
+          def query_google_books(work, out_dir):
+              records = []
+              for term in work['terms']:
+                  try:
+                      payload = get(
+                          'https://www.googleapis.com/books/v1/volumes',
+                          params={
+                              'q': f'intitle:"{term}" inauthor:"{work["author"]}"',
+                              'filter': 'free-ebooks', 'printType': 'books',
+                              'langRestrict': 'it', 'maxResults': 40,
+                          },
+                      ).json()
+                      path = out_dir / 'google-books' / f'search-{slug(term)}.json'
+                      path.parent.mkdir(parents=True, exist_ok=True)
+                      path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+                      records.extend(payload.get('items', []))
+                  except Exception as exc:
+                      records.append({'query': term, 'error': str(exc)})
+              return records
+
+          index = {
+              'schema': 'bb-seven-italian-source-recovery-1.0',
+              'created_utc': '2026-09-17',
+              'records': [],
+          }
+          for work in WORKS:
+              out_dir = ROOT / f'{work["rank"]:03d}'
+              out_dir.mkdir(parents=True, exist_ok=True)
+              record = {**work, 'routes': {}}
+              for name, function in (
+                  ('italian_wikisource', query_wikisource),
+                  ('internet_archive', query_archive),
+                  ('gutendex_project_gutenberg', query_gutendex),
+                  ('google_books_free_ebooks', query_google_books),
+              ):
+                  try:
+                      record['routes'][name] = {'status': 'complete', 'results': function(work, out_dir)}
+                  except Exception as exc:
+                      record['routes'][name] = {'status': 'failed', 'error': str(exc)}
+                  print(work['rank'], name, record['routes'][name]['status'], flush=True)
+              (out_dir / 'record.json').write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
+              index['records'].append(record)
+          (ROOT / 'source-recovery-index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding='utf-8')
+          PY
+
+      - name: Upload source-recovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-seven-italian-source-recovery-20260917
+          path: source-recovery/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 14
