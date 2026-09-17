@@ -18,16 +18,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m pip install --quiet requests pillow
+          python -m pip install --quiet requests
           python - <<'PY'
           import json, pathlib, re, time
           import requests
+          from urllib.parse import quote
 
           API = "https://commons.wikimedia.org/w/api.php"
           OUT = pathlib.Path("candidate-programs")
           OUT.mkdir(exist_ok=True)
           session = requests.Session()
-          session.headers["User-Agent"] = "BoundaryBayEPUB/5.0.22 (illustration provenance audit)"
+          session.headers["User-Agent"] = "BoundaryBayEPUB/5.0.22 illustration-audit boundarybaybooks.com"
 
           programs = {
               "jekyll-hyde-macauley-1904":
@@ -36,49 +37,51 @@ jobs:
                   "Category:Um Crime Estrano (1905, Correio da Manha)",
           }
 
-          def members(category):
-              found, cmcontinue = [], None
+          def get_json(params):
+              for attempt in range(8):
+                  response = session.get(API, params=params, timeout=90)
+                  if response.ok and response.headers.get("content-type", "").startswith("application/json"):
+                      return response.json()
+                  time.sleep(min(20, 2 ** attempt))
+              raise RuntimeError(f"Commons API failed: {response.status_code} {response.text[:200]}")
+
+          def records(category):
+              found, cont = [], {}
               while True:
-                  p = {
-                      "action": "query", "format": "json", "list": "categorymembers",
-                      "cmtitle": category, "cmtype": "file", "cmlimit": "500",
+                  params = {
+                      "action": "query", "format": "json", "formatversion": "2",
+                      "generator": "categorymembers", "gcmtitle": category,
+                      "gcmtype": "file", "gcmlimit": "50",
+                      "prop": "imageinfo", "iiprop": "url|mime|size|extmetadata",
                   }
-                  if cmcontinue:
-                      p["cmcontinue"] = cmcontinue
-                  data = session.get(API, params=p, timeout=60).json()
-                  found.extend(x["title"] for x in data["query"]["categorymembers"])
-                  cmcontinue = data.get("continue", {}).get("cmcontinue")
-                  if not cmcontinue:
+                  params.update(cont)
+                  data = get_json(params)
+                  for page in data.get("query", {}).get("pages", []):
+                      info = (page.get("imageinfo") or [{}])[0]
+                      found.append({"title": page.get("title"), "category": category, "imageinfo": info})
+                  cont = data.get("continue") or {}
+                  if not cont:
                       return found
+                  time.sleep(1)
 
           for slug, category in programs.items():
               dest = OUT / slug
               dest.mkdir(exist_ok=True)
-              titles = members(category)
-              records = []
-              for idx, title in enumerate(titles, 1):
-                  data = session.get(API, params={
-                      "action": "query", "format": "json", "prop": "imageinfo",
-                      "titles": title, "iiprop": "url|mime|size|extmetadata",
-                  }, timeout=60).json()
-                  page = next(iter(data["query"]["pages"].values()))
-                  info = page.get("imageinfo", [{}])[0]
-                  url = info.get("url")
-                  rec = {"title": title, "category": category, "imageinfo": info}
-                  records.append(rec)
+              recs = records(category)
+              for idx, rec in enumerate(recs, 1):
+                  title = rec["title"]
+                  url = rec["imageinfo"].get("url")
                   if not url:
                       continue
-                  ext = pathlib.Path(url.split("?", 1)[0]).suffix or ".bin"
-                  safe = re.sub(r"[^A-Za-z0-9._-]+", "_", title.removeprefix("File:"))[:140]
-                  if not pathlib.Path(safe).suffix:
-                      safe += ext
-                  content = session.get(url, timeout=120).content
-                  (dest / f"{idx:03d}_{safe}").write_bytes(content)
-                  time.sleep(0.1)
+                  safe = re.sub(r"[^A-Za-z0-9._-]+", "_", title.removeprefix("File:"))[:150]
+                  response = session.get(url, timeout=180)
+                  response.raise_for_status()
+                  (dest / f"{idx:03d}_{safe}").write_bytes(response.content)
+                  time.sleep(0.25)
               (dest / "provenance.json").write_text(
-                  json.dumps({"category": category, "files": records}, ensure_ascii=False, indent=2),
+                  json.dumps({"category": category, "files": recs}, ensure_ascii=False, indent=2),
                   encoding="utf-8")
-              print(slug, len(records))
+              print(slug, len(recs))
           PY
           find candidate-programs -type f -print0 | sort -z | xargs -0 sha256sum > candidate-programs/SHA256SUMS.txt
 
