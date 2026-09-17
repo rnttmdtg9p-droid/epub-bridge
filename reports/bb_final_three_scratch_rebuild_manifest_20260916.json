@@ -6,7 +6,7 @@
   "created_at": "2026-09-16T17:30:32.952Z",
   "governing_profile": "Boundary Bay REVIEW scratch rebuild; zero hard MADLAD flags plus EPUBCheck 5.2.1",
   "source_policy": "Fresh source acquisition and full fresh semantic-unit translation for every title",
-  "translator": "google/madlad400-3b-mt via Heng666/madlad400-3b-mt-ct2-int8",
+  "translator": "MADLAD scratch rebuild; Mastino English→Italian path under corrective decoder validation",
   "engine_workflow": ".github/workflows/bb-scratch-rebuild-engine-v2.yml",
   "completion_checks": [
     "fresh source bundle created",
@@ -25,19 +25,31 @@
       "config": "configs/055_mastino_baskervilles.json",
       "engine": "gutenberg",
       "shard_size": 48,
-      "attempt": 2,
+      "attempt": 3,
       "prior_run_id": 35055548139,
       "prior_job_id": 104685477632,
       "prior_failure": "serial hard-fault repair cancelled after six hours at 2000/3821 units; no EPUB artifact",
       "stages": {
-        "source": "pending",
-        "translate_repair_shards": "pending",
-        "assemble": "pending",
-        "hard_gate": "pending",
+        "source": "complete",
+        "translate_repair_shards": "complete",
+        "assemble": "failed",
+        "hard_gate": "complete",
         "epubcheck": "pending",
-        "artifact": "pending"
+        "artifact": "needs_review"
       },
-      "next_action": "launch clean shard-parallel rebuild"
+      "next_action": "validate corrected English-to-Italian decoder/tokenization on frozen Mastino units, then relaunch clean title-only rebuild",
+      "run_id": 35152384676,
+      "job_id": 105012468905,
+      "validation": {
+        "remaining_hard_flagged_unit_count": 0,
+        "translation_length_ratio": 2.1346701657582487,
+        "translation_risk_unit_count": 1937,
+        "assembly_failure": "translation_length_ratio=2.135",
+        "epubcheck": "skipped",
+        "diagnostic_artifact_id": 10473257951,
+        "diagnostic_artifact_size_bytes": 2195686,
+        "diagnostic_artifact_digest": "sha256:987c1552a9c6842a58ebdacf74780c3034bbe9f8967628935309910dd0923ef8"
+      }
     },
     {
       "rank": 61,
@@ -45,7 +57,7 @@
       "config": "configs/061_smert_ivana.json",
       "engine": "wikisource",
       "shard_size": 48,
-      "attempt": 2,
+      "attempt": 3,
       "prior_run_id": 35055548139,
       "prior_job_id": 104674995722,
       "prior_failure": "one persistent severe-length/Cyrillic decoder anomaly at c002-u0082",
@@ -54,14 +66,23 @@
         "source_sha256": "7d476292188a5e930dd5e74df244c1b2ad34c3e0670255d764b408e5d5633cf0"
       },
       "stages": {
-        "source": "pending",
-        "translate_repair_shards": "pending",
-        "assemble": "pending",
-        "hard_gate": "pending",
-        "epubcheck": "pending",
-        "artifact": "pending"
+        "source": "complete",
+        "translate_repair_shards": "complete",
+        "assemble": "complete",
+        "hard_gate": "complete",
+        "epubcheck": "complete",
+        "artifact": "complete"
       },
-      "next_action": "launch clean shard-parallel rebuild"
+      "next_action": "none",
+      "run_id": 35150931250,
+      "job_id": 104978760074,
+      "validation": {
+        "remaining_hard_flagged_unit_count": 0,
+        "epubcheck": "5.2.1: 0 fatals / 0 errors / 0 warnings / 0 infos",
+        "artifact_id": 10468694881,
+        "artifact_size_bytes": 1167958,
+        "artifact_digest": "sha256:4fbb8cd0b854b0e3ff69ee43c6360a2680c27f3048929f46ce970d1902837bf0"
+      }
     },
     {
       "rank": 64,
@@ -69,7 +90,7 @@
       "config": "configs/064_idiota.json",
       "engine": "wikisource",
       "shard_size": 64,
-      "attempt": 3,
+      "attempt": 4,
       "prior_run_id": 35068904279,
       "prior_failure": "one persistent severe-length/Cyrillic decoder anomaly at c023-u0018 after ultra-bounded recovery",
       "source_bound_override": {
@@ -77,14 +98,31 @@
         "source_sha256": "35c079f26c7f3830d4ba86e6b2e71bb44b4638b6c5b225a4984acdca578a4516"
       },
       "stages": {
-        "source": "pending",
-        "translate_repair_shards": "pending",
-        "assemble": "pending",
-        "hard_gate": "pending",
-        "epubcheck": "pending",
-        "artifact": "pending"
+        "source": "complete",
+        "translate_repair_shards": "complete",
+        "assemble": "complete",
+        "hard_gate": "complete",
+        "epubcheck": "complete",
+        "artifact": "complete"
       },
-      "next_action": "launch clean shard-parallel rebuild"
+      "next_action": "none",
+      "run_id": 35150931250,
+      "job_id": 104978759669,
+      "validation": {
+        "remaining_hard_flagged_unit_count": 0,
+        "epubcheck": "5.2.1: 0 fatals / 0 errors / 0 warnings / 0 infos",
+        "artifact_id": 10469221277,
+        "artifact_size_bytes": 5157584,
+        "artifact_digest": "sha256:c57a14977de1b7a8a91eaed9e7fa5bb20af1477a911a5eb8e1e5287b2dfcabaf"
+      }
+    }
+  ],
+  "updated_at": "2026-09-17T03:17:11.308Z",
+  "history": [
+    {
+      "timestamp": "2026-09-17T03:17:11.308Z",
+      "event": "status_checkpoint",
+      "summary": "Ivan Il’ič and L’idiota completed all mandatory gates in run 35150931250. Mastino run 35152384676 cleared hard flags but failed translation-length quality gate; EPUBCheck skipped."
     }
   ]
 }
