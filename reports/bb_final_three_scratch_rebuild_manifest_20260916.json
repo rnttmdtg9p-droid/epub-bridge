@@ -2,11 +2,11 @@
   "schema_version": 1,
   "production_job": "bb-final-three-scratch-rebuild-20260916",
   "repository": "rnttmdtg9p-droid/epub-bridge",
-  "status": "in_progress",
+  "status": "complete",
   "created_at": "2026-09-16T17:30:32.952Z",
   "governing_profile": "Boundary Bay REVIEW scratch rebuild; zero hard MADLAD flags plus EPUBCheck 5.2.1",
   "source_policy": "Fresh source acquisition and full fresh semantic-unit translation for every title",
-  "translator": "MADLAD scratch rebuild; Mastino English→Italian path under corrective decoder validation",
+  "translator": "MADLAD scratch rebuild for Russian sources; Helsinki-NLP/opus-mt-en-it scratch rebuild for Mastino",
   "engine_workflow": ".github/workflows/bb-scratch-rebuild-engine-v2.yml",
   "completion_checks": [
     "fresh source bundle created",
@@ -30,27 +30,28 @@
       "prior_job_id": 104685477632,
       "prior_failure": "serial hard-fault repair cancelled after six hours at 2000/3821 units; no EPUB artifact",
       "stages": {
-        "source": "pending",
-        "translate_repair_shards": "pending",
-        "assemble": "pending",
-        "hard_gate": "pending",
-        "epubcheck": "pending",
-        "artifact": "pending"
+        "source": "complete",
+        "translate_repair_shards": "complete",
+        "assemble": "complete",
+        "hard_gate": "complete",
+        "epubcheck": "complete",
+        "artifact": "complete"
       },
-      "next_action": "complete corrected Marian scratch rebuild run 35178463553 and verify zero hard flags, EPUBCheck 5.2.1, ZIP integrity, and SHA-256",
+      "next_action": "none",
       "run_id": 35178463553,
-      "job_id": null,
+      "job_id": 105066392984,
       "validation": {
-        "previous_run_id": 35178194838,
-        "previous_run_result": "translation succeeded; gate command failed because workflow YAML contained literal plus tokens",
-        "completed_shard_sample": {
-          "shard": 7,
-          "unit_count": 192,
-          "source_chars": 13825,
-          "translation_chars": 14524,
-          "translation_length_ratio": 1.0505605786618446,
-          "translation_status": "PASS"
-        }
+        "unit_count": 3821,
+        "initial_hard_flagged_unit_count": 0,
+        "remaining_hard_flagged_unit_count": 0,
+        "remaining_nonhard_review_flag_count": 44,
+        "assembly": "PASS",
+        "epubcheck": "5.2.1: 0 fatals / 0 errors / 0 warnings / 0 infos",
+        "zip_integrity": "PASS",
+        "artifact_id": 10479613003,
+        "artifact_size_bytes": 1806666,
+        "artifact_digest": "sha256:e41774785d9ed1d888f0fd70fae7e91753a0d14869b66aba9df8f45997c0377c",
+        "epub_sha256": "9756ddd0f12723f6c94b4fe62d4cae6935bb9e7e7f574739a50b21cf27b9c492"
       },
       "translation_backend": "Helsinki-NLP/opus-mt-en-it",
       "probe": {
@@ -128,7 +129,7 @@
       }
     }
   ],
-  "updated_at": "2026-09-17T03:31:33.848Z",
+  "updated_at": "2026-09-17T03:43:34.476Z",
   "history": [
     {
       "timestamp": "2026-09-17T03:17:11.308Z",
@@ -144,6 +145,11 @@
       "timestamp": "2026-09-17T03:31:33.848Z",
       "event": "mastino_gate_command_restart",
       "summary": "Run 35178194838 proved Marian shard translation quality but exposed literal plus tokens in the finalizer command. Workflow command fixed at commit f987a006b09a3a6f0a9f42b28aeb92bdd4c4e368; clean replacement run 35178463553 launched under cancel-in-progress concurrency."
+    },
+    {
+      "timestamp": "2026-09-17T03:43:34.476Z",
+      "event": "production_complete",
+      "summary": "All three titles completed from fresh sources. Mastino run 35178463553 passed all 20 source-bound shard gates, whole-book zero-hard gate, EPUB assembly, EPUBCheck 5.2.1, ZIP integrity, and artifact upload. Ivan Il’ič and L’idiota were already complete in run 35150931250."
     }
   ]
 }
