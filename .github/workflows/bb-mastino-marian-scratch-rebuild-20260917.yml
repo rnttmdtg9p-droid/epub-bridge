@@ -1,0 +1,176 @@
+name: BB Mastino Marian scratch rebuild 20260917
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bb-mastino-marian-scratch-rebuild-20260917.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: bb-mastino-marian-scratch-rebuild-20260917
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      translate: ${{ steps.matrix.outputs.translate }}
+      assemble: ${{ steps.matrix.outputs.assemble }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install source preparation tools
+        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Retrieve and freeze fresh source bundle
+        id: matrix
+        run: >-
+          python scripts/bb_prepare_sharded_batch.py
+          --engine gutenberg
+          --configs-json '["configs/055_mastino_baskervilles.json"]'
+          --out prepared
+          --shard-size 192
+          --github-output
+      - name: Upload fresh authenticated source bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-mastino-marian-055-20260917-prepared-sources
+          path: prepared
+          if-no-files-found: error
+          retention-days: 30
+
+  warm-marian-cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Marian runtime
+        run: |
+          python -m pip install --quiet 'torch==2.8.0' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install --quiet 'transformers==4.56.2' 'sentencepiece==0.2.1' 'sacremoses==0.1.1'
+      - name: Restore Marian model cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: bb-helsinki-opus-mt-en-it-transformers-4.56.2-v1
+      - name: Materialize pinned model
+        run: |
+          python - <<'PY'
+          from transformers import MarianMTModel, MarianTokenizer
+          model_id = "Helsinki-NLP/opus-mt-en-it"
+          MarianTokenizer.from_pretrained(model_id)
+          MarianMTModel.from_pretrained(model_id)
+          print(model_id)
+          PY
+
+  translate-gate-shards:
+    needs: [prepare, warm-marian-cache]
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.prepare.outputs.translate) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned translation runtime
+        run: |
+          python -m pip install --quiet 'torch==2.8.0' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install --quiet 'transformers==4.56.2' 'sentencepiece==0.2.1' 'sacremoses==0.1.1' 'ctranslate2==4.6.0' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+      - name: Restore Marian model cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: bb-helsinki-opus-mt-en-it-transformers-4.56.2-v1
+          fail-on-cache-miss: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: bb-mastino-marian-055-20260917-prepared-sources
+          path: prepared
+      - name: Translate fresh semantic-unit shard
+        run: >-
+          python scripts/bb_translate_gutenberg.py
+          --config "${{ matrix.config }}"
+          --out shard-out
+          --mode shard
+          --shard-index "${{ matrix.shard }}"
+          --shard-size 192
+          --source-bundle "prepared/${{ matrix.rank }}/${{ matrix.rank }}_source_bundle.json"
+      - name: Enforce source-bound zero-hard gate
+        run: |
+          alignment="$(find shard-out -name '*_alignment.jsonl' -print -quit)"
+          test -n "$alignment"
+          mkdir -p shard-artifact/final shard-artifact/qa
+          python scripts/bb_finalize_alignment.py +            --alignment "$alignment" +            --out "shard-artifact/final/${{ matrix.rank }}_shard_${{ matrix.shard_padded }}_alignment.jsonl" +            --language en +            --rank "${{ matrix.rank }}" +            --overrides configs/bb_final_unit_overrides_20260916.json +            --report "shard-artifact/qa/${{ matrix.rank }}_shard_${{ matrix.shard_padded }}_final_QA.json" +            --require-zero-hard
+          find shard-out -name '*_QA.json' -exec cp {} shard-artifact/qa/ \;
+      - name: Upload gated immutable alignment shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-mastino-marian-055-20260917-repaired-shard-${{ matrix.rank }}-${{ matrix.shard_padded }}
+          path: shard-artifact
+          if-no-files-found: error
+          retention-days: 30
+
+  assemble-validate:
+    needs: [prepare, translate-gate-shards]
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.prepare.outputs.assemble) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install EPUB assembly tools
+        run: |
+          python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4' 'Pillow>=11,<13' 'beautifulsoup4>=4.12,<5' 'lxml>=5,<7'
+          mkdir -p assets/fonts
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Regular.ttf
+          curl --fail --location --retry 3 -o assets/fonts/Spectral-Bold.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/Spectral-Bold.ttf
+      - uses: actions/download-artifact@v4
+        with:
+          name: bb-mastino-marian-055-20260917-prepared-sources
+          path: prepared
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bb-mastino-marian-055-20260917-repaired-shard-${{ matrix.rank }}-*
+          path: fresh-shards
+          merge-multiple: true
+      - name: Combine shards and enforce final hard-fault gate
+        run: |
+          mkdir -p combined repaired dist
+          find fresh-shards/final -name '*_alignment.jsonl' -print0 | sort -z | xargs -0 cat > "combined/${{ matrix.rank }}_alignment.jsonl"
+          test -s "combined/${{ matrix.rank }}_alignment.jsonl"
+          python scripts/bb_finalize_alignment.py +            --alignment "combined/${{ matrix.rank }}_alignment.jsonl" +            --out "repaired/${{ matrix.rank }}_shard_0000_alignment.jsonl" +            --language en +            --rank "${{ matrix.rank }}" +            --overrides configs/bb_final_unit_overrides_20260916.json +            --report "dist/${{ matrix.rank }}_repair_QA.json" +            --require-zero-hard +            --require-all-overrides
+      - name: Assemble fresh BB REVIEW EPUB
+        run: >-
+          python scripts/bb_translate_gutenberg.py
+          --config "${{ matrix.config }}"
+          --out "dist/${{ matrix.rank }}_${{ matrix.key }}"
+          --mode assemble
+          --source-bundle "prepared/${{ matrix.rank }}/${{ matrix.rank }}_source_bundle.json"
+          --shards-dir repaired
+      - name: EPUBCheck 5.2.1
+        run: |
+          set -o pipefail
+          curl --fail --location --retry 3 -o /tmp/epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.2.1/epubcheck-5.2.1.zip
+          unzip -q /tmp/epubcheck.zip -d /tmp/epubcheck
+          epub_path="$(find "dist/${{ matrix.rank }}_${{ matrix.key }}" -name '*.epub' -print -quit)"
+          test -n "$epub_path"
+          java -jar /tmp/epubcheck/epubcheck-5.2.1/epubcheck.jar "$epub_path" 2>&1 | tee "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_EPUBCHECK.log"
+      - name: Verify archive and record SHA-256
+        run: |
+          epub_path="$(find "dist/${{ matrix.rank }}_${{ matrix.key }}" -name '*.epub' -print -quit)"
+          unzip -t "$epub_path" > "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_ZIP_TEST.log"
+          sha256sum "$epub_path" | tee "dist/${{ matrix.rank }}_${{ matrix.key }}/${{ matrix.rank }}_SHA256SUMS.txt"
+      - name: Upload completed scratch rebuild
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-mastino-marian-055-italian-review
+          path: dist
+          if-no-files-found: error
+          retention-days: 30
