@@ -1,0 +1,61 @@
+name: BB scratch cover hash audit 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-scratch-cover-hash-audit-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Compare embedded covers with approved collection hashes
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p audit
+          cat > audit/expected.tsv <<'EOF'
+          043	10433572596	4454de8478f1d7d22a08ce5ba03c9e0ed456ddd830be77469592043842725271
+          049	10432619947	1fcc7e3426d82938c1f00538ada4618c075a731933e64bccbeff251b91d24725
+          055	10479613003	8aabfde132960bf80d6c27518d1ed35d1e0a333b1288b97a590bf78d2fd156e3
+          063	10435059960	08b40c014c05d1d5d2834fab54b0e56581d524aabb4181ca2aee3ad7fbd8d529
+          100	10432219432	4735b39a8a3e2614069d77ccc44267a4992908522b623ea7c297377241141de3
+          EOF
+          printf 'rank\tartifact_id\texpected\tactual\tmatch\tepub\n' > audit/cover-hash-audit.tsv
+          while IFS=$'\t' read -r rank artifact expected; do
+            dest="audit/$rank"
+            mkdir -p "$dest"
+            gh api "/repos/${{ github.repository }}/actions/artifacts/$artifact/zip" > "$dest/artifact.zip"
+            unzip -q "$dest/artifact.zip" -d "$dest/unpacked"
+            epub=$(find "$dest/unpacked" -type f -iname '*.epub' | head -n 1 || true)
+            if [[ -z "$epub" ]]; then
+              printf '%s\t%s\t%s\tMISSING\tfalse\t\n' "$rank" "$artifact" "$expected" >> audit/cover-hash-audit.tsv
+              continue
+            fi
+            cover_path=$(unzip -Z1 "$epub" | awk 'tolower($0) ~ /(^|\/)cover\.(jpg|jpeg|png)$/ {print; exit}')
+            if [[ -z "$cover_path" ]]; then
+              printf '%s\t%s\t%s\tNO_COVER\tfalse\t%s\n' "$rank" "$artifact" "$expected" "$epub" >> audit/cover-hash-audit.tsv
+              continue
+            fi
+            actual=$(unzip -p "$epub" "$cover_path" | sha256sum | awk '{print $1}')
+            match=false
+            [[ "$actual" == "$expected" ]] && match=true
+            printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$rank" "$artifact" "$expected" "$actual" "$match" "$epub" >> audit/cover-hash-audit.tsv
+          done < audit/expected.tsv
+          cat audit/cover-hash-audit.tsv
+
+      - name: Upload cover audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-scratch-cover-hash-audit-20260917
+          path: audit/cover-hash-audit.tsv
+          if-no-files-found: error
+          retention-days: 30
