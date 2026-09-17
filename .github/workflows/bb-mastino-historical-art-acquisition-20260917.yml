@@ -18,6 +18,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python -m pip install --quiet pillow
           mkdir -p mastino-1902/pages mastino-1902/contact
           curl --fail --location --retry 5 --retry-delay 3 \
             'https://archive.org/download/doyle-1902-the-hound-of-the-baskervilles/Doyle_%281902%29_The_Hound_of_the_Baskervilles.pdf' \
