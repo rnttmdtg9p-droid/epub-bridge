@@ -1,4 +1,4 @@
-name: BB Mastino tokenizer integrity probe 20260917
+name: BB Mastino Marian English-Italian probe 20260917
 
 on:
   push:
@@ -12,18 +12,13 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - name: Install exact translation runtime
-        run: python -m pip install --quiet 'ctranslate2==4.6.0' 'sentencepiece==0.2.1' 'huggingface_hub==0.34.4'
-      - name: Restore MADLAD runtime cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            madlad_ct2
-            madlad_tokenizer
-          key: bb-madlad400-3b-mt-ct2-int8-v1
+      - name: Install pinned Marian runtime
+        run: |
+          python -m pip install --quiet 'torch==2.8.0' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install --quiet 'transformers==4.56.2' 'sentencepiece==0.2.1' 'sacremoses==0.1.1'
       - name: Download exact Mastino shard
         uses: actions/download-artifact@v4
         with:
@@ -32,70 +27,65 @@ jobs:
           repository: rnttmdtg9p-droid/epub-bridge
           run-id: 35128754290
           github-token: ${{ github.token }}
-      - name: Compare target-prefix tokenization variants
+      - name: Translate exact frozen source samples
         run: |
           python - <<'PY'
-          import hashlib
           import json
+          import re
           from pathlib import Path
 
-          import ctranslate2
-          import sentencepiece as spm
-          from huggingface_hub import hf_hub_download, snapshot_download
+          import torch
+          from transformers import MarianMTModel, MarianTokenizer
 
-          runtime_repo = "Heng666/madlad400-3b-mt-ct2-int8"
           records = [
               json.loads(line)
               for line in next(Path("probe-input").rglob("*_alignment.jsonl")).read_text(encoding="utf-8").splitlines()
               if line.strip()
-          ][:8]
+          ][:16]
           sources = ["I love pizza!"] + [record["source"] for record in records]
-          model_dir = snapshot_download(
-              repo_id=runtime_repo,
-              local_dir="madlad_ct2",
-              local_files_only=Path("madlad_ct2/model.bin").exists(),
+          model_id = "Helsinki-NLP/opus-mt-en-it"
+          tokenizer = MarianTokenizer.from_pretrained(model_id)
+          model = MarianMTModel.from_pretrained(model_id)
+          model.eval()
+          encoded = tokenizer(
+              sources,
+              return_tensors="pt",
+              padding=True,
+              truncation=True,
+              max_length=256,
           )
-          google_tokenizer = hf_hub_download(
-              repo_id="google/madlad400-3b-mt",
-              filename="spiece.model",
-              local_dir="madlad_tokenizer",
-              local_files_only=Path("madlad_tokenizer/spiece.model").exists(),
-          )
-          translator = ctranslate2.Translator(
-              model_dir, device="cpu", compute_type="int8",
-              inter_threads=1, intra_threads=4,
-          )
-
-          print(json.dumps({
-              "google_tokenizer_sha256": hashlib.sha256(Path(google_tokenizer).read_bytes()).hexdigest(),
-              "runtime_files": sorted(str(path.relative_to(model_dir)) for path in Path(model_dir).rglob("*") if path.is_file()),
-          }))
-
-          for label, tokenizer_path, strip_dummy in [
-              ("google_tokenizer_current", google_tokenizer, False),
-              ("google_tokenizer_strip_dummy_prefix", google_tokenizer, True),
-          ]:
-              processor = spm.SentencePieceProcessor(model_file=tokenizer_path)
-              encoded = [processor.encode("<2it> " + source, out_type=str) for source in sources]
-              if strip_dummy:
-                  encoded = [tokens[1:] if len(tokens) > 1 and tokens[0] == "▁" and tokens[1] == "<2it>" else tokens for tokens in encoded]
-              outputs = translator.translate_batch(
-                  encoded,
-                  beam_size=1,
-                  no_repeat_ngram_size=1,
-                  repetition_penalty=2.0,
-                  max_decoding_length=min(256, max(48, max(map(len, encoded)) * 2)),
-                  batch_type="tokens",
-                  max_batch_size=1024,
+          with torch.inference_mode():
+              generated = model.generate(
+                  **encoded,
+                  num_beams=4,
+                  max_new_tokens=256,
+                  no_repeat_ngram_size=3,
+                  repetition_penalty=1.1,
+                  early_stopping=True,
               )
-              translations = [processor.decode(result.hypotheses[0]).strip() for result in outputs]
-              print(json.dumps({
-                  "setting": label,
-                  "prefix_tokens": encoded[0][:6],
-                  "aggregate_ratio": sum(map(len, translations)) / sum(map(len, sources)),
-                  "translations": [
-                      {"source": source, "translation": target, "ratio": len(target) / max(1, len(source))}
-                      for source, target in zip(sources, translations)
-                  ],
-              }, ensure_ascii=False))
+          translations = tokenizer.batch_decode(generated, skip_special_tokens=True)
+          italian_markers = re.compile(r"\b(?:il|lo|la|i|gli|le|un|uno|una|di|del|della|che|non|era|aveva|con|per|nel|nella|suo|sua)\b", re.I)
+          rows = []
+          for source, target in zip(sources, translations):
+              rows.append({
+                  "source": source,
+                  "translation": target,
+                  "ratio": len(target) / max(1, len(source)),
+                  "italian_marker_count": len(italian_markers.findall(target)),
+              })
+          aggregate_ratio = sum(len(row["translation"]) for row in rows) / sum(len(row["source"]) for row in rows)
+          bad_ratio_count = sum(row["ratio"] < 0.55 or row["ratio"] > 1.65 for row in rows)
+          zero_italian_marker_count = sum(row["italian_marker_count"] == 0 for row in rows[1:])
+          report = {
+              "status": "PASS" if 0.55 <= aggregate_ratio <= 1.65 and bad_ratio_count <= 2 and zero_italian_marker_count == 0 else "FAIL",
+              "model": model_id,
+              "torch": torch.__version__,
+              "aggregate_ratio": aggregate_ratio,
+              "bad_ratio_count": bad_ratio_count,
+              "zero_italian_marker_count": zero_italian_marker_count,
+              "translations": rows,
+          }
+          print(json.dumps(report, ensure_ascii=False))
+          if report["status"] != "PASS":
+              raise SystemExit(1)
           PY
