@@ -1,0 +1,92 @@
+name: BB v5022 exact work illustration candidates
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-v5022-exact-work-candidates-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Acquire Wikimedia Commons candidate programs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet requests pillow
+          python - <<'PY'
+          import json, pathlib, re, time
+          import requests
+
+          API = "https://commons.wikimedia.org/w/api.php"
+          OUT = pathlib.Path("candidate-programs")
+          OUT.mkdir(exist_ok=True)
+          session = requests.Session()
+          session.headers["User-Agent"] = "BoundaryBayEPUB/5.0.22 (illustration provenance audit)"
+
+          programs = {
+              "jekyll-hyde-macauley-1904":
+                  "Category:Illustrations of The Strange Case of Dr Jekyll and Mr Hyde by Charles Raymond Macauley (1904)",
+              "study-in-scarlet-um-crime-estrano-1905":
+                  "Category:Um Crime Estrano (1905, Correio da Manha)",
+          }
+
+          def members(category):
+              found, cmcontinue = [], None
+              while True:
+                  p = {
+                      "action": "query", "format": "json", "list": "categorymembers",
+                      "cmtitle": category, "cmtype": "file", "cmlimit": "500",
+                  }
+                  if cmcontinue:
+                      p["cmcontinue"] = cmcontinue
+                  data = session.get(API, params=p, timeout=60).json()
+                  found.extend(x["title"] for x in data["query"]["categorymembers"])
+                  cmcontinue = data.get("continue", {}).get("cmcontinue")
+                  if not cmcontinue:
+                      return found
+
+          for slug, category in programs.items():
+              dest = OUT / slug
+              dest.mkdir(exist_ok=True)
+              titles = members(category)
+              records = []
+              for idx, title in enumerate(titles, 1):
+                  data = session.get(API, params={
+                      "action": "query", "format": "json", "prop": "imageinfo",
+                      "titles": title, "iiprop": "url|mime|size|extmetadata",
+                  }, timeout=60).json()
+                  page = next(iter(data["query"]["pages"].values()))
+                  info = page.get("imageinfo", [{}])[0]
+                  url = info.get("url")
+                  rec = {"title": title, "category": category, "imageinfo": info}
+                  records.append(rec)
+                  if not url:
+                      continue
+                  ext = pathlib.Path(url.split("?", 1)[0]).suffix or ".bin"
+                  safe = re.sub(r"[^A-Za-z0-9._-]+", "_", title.removeprefix("File:"))[:140]
+                  if not pathlib.Path(safe).suffix:
+                      safe += ext
+                  content = session.get(url, timeout=120).content
+                  (dest / f"{idx:03d}_{safe}").write_bytes(content)
+                  time.sleep(0.1)
+              (dest / "provenance.json").write_text(
+                  json.dumps({"category": category, "files": records}, ensure_ascii=False, indent=2),
+                  encoding="utf-8")
+              print(slug, len(records))
+          PY
+          find candidate-programs -type f -print0 | sort -z | xargs -0 sha256sum > candidate-programs/SHA256SUMS.txt
+
+      - name: Upload candidates and provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-v5022-exact-work-candidates
+          path: candidate-programs/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
