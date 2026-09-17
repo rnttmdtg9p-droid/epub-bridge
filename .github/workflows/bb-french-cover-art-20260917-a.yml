@@ -1,0 +1,51 @@
+name: BB French cover art acquisition 20260917
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-french-cover-art-20260917-a.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Acquire six generated French-cover illustration panels
+        shell: bash
+        run: |
+          mkdir -p artwork
+          python - <<'PY'
+          from pathlib import Path
+          from concurrent.futures import ThreadPoolExecutor
+          from urllib.request import Request, urlopen
+          import hashlib, json
+          items = [
+              ('01_Madame_Bovary','https://v3b.fal.media/files/b/0aaad6bd/K94qCu1dim0zzG--XpAbO_f7Ifpbd8.png'),
+              ('02_Arsene_Lupin','https://v3b.fal.media/files/b/0aaad6be/UCgZtYvaiHavyK-nn7uIV_JeEV8bpW.png'),
+              ('03_La_Belle_et_la_Bete','https://v3b.fal.media/files/b/0aaad6bf/9tNgfy0Nexw9LJR3upRFM_QtoKtnfe.png'),
+              ('04_De_la_Terre_a_la_Lune','https://v3b.fal.media/files/b/0aaad6c0/nApv2hyas7tNHFT2p_gKW_l8MQHkdq.png'),
+              ('05_Les_Trois_Mousquetaires','https://v3b.fal.media/files/b/0aaad6c1/2S5I6AUmBcSFI2-l9gN3A_GKmATFEU.png'),
+              ('06_Les_Malheurs_de_Sophie','https://v3b.fal.media/files/b/0aaad6c2/CcGM8WEMNb2iIGH9qpWVf_M0o643jP.png')
+          ]
+          def acquire(item):
+              name, url = item
+              with urlopen(Request(url, headers={'User-Agent':'BoundaryBay-Cover-Art-Acquisition/1.0'}), timeout=60) as response:
+                  data=response.read(30000000)
+              if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+                  raise RuntimeError('Not a PNG: '+name)
+              output=Path('artwork')/(name+'.png')
+              output.write_bytes(data)
+              return {'file':output.name,'source_url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
+          with ThreadPoolExecutor(max_workers=6) as pool:
+              rows=list(pool.map(acquire,items))
+          Path('artwork/acquisition_manifest.json').write_text(json.dumps(rows, indent=2))
+          print(json.dumps(rows, indent=2))
+          PY
+      - name: Package original illustration panels
+        uses: actions/upload-artifact@v4
+        with:
+          name: BB-French-Cover-Art-20260917
+          path: artwork/
+          if-no-files-found: error
+          retention-days: 7
