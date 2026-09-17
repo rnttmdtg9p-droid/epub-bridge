@@ -1,0 +1,169 @@
+name: BB seven Italian source recovery v3 20260917
+
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-seven-source-recovery-v3-20260917.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rank: '043'
+            slug: dracula
+            queries: 'title:(Dracula) AND (language:ita OR language:Italian OR language:it)|Dracula AND (Nessi OR Sonzogno)'
+          - rank: '049'
+            slug: cime-tempestose
+            queries: 'title:("Cime tempestose" OR "La tempestosa" OR "Wuthering Heights") AND (language:ita OR language:Italian OR language:it)|("Cime tempestose" OR "La tempestosa")'
+          - rank: '055'
+            slug: mastino-baskerville
+            queries: 'title:(Baskerville OR Baskervilles) AND (language:ita OR language:Italian OR language:it)|("La fiera dei Baskerville" OR "Il cane dei Baskerville" OR "Il mastino dei Baskerville")'
+          - rank: '061'
+            slug: morte-ivan-ilic
+            queries: 'title:(Ivan AND (Ilic OR Ilitch OR Iljitsch OR Ilyich))|("La morte di Ivan" OR "La morte d Ivan")'
+          - rank: '063'
+            slug: fratelli-karamazov
+            queries: 'title:(Karamazov OR Karamazoff OR Karamasov)|((Karamazov OR Karamazoff OR Karamasov) AND (language:ita OR language:Italian OR language:it))'
+          - rank: '064'
+            slug: idiota
+            queries: 'title:(Idiota) AND (language:ita OR language:Italian OR language:it)|title:(Idiota) AND (Dostoevsky OR Dostoevskij OR Dostoiewski OR Dostoievski OR Verdinois)'
+          - rank: '100'
+            slug: repubblica
+            queries: 'title:(Repubblica) AND (Platone OR Plato)|("La Repubblica" AND (Bonghi OR Platone))'
+    steps:
+      - name: Search broad historical metadata and freeze candidate records
+        shell: bash
+        env:
+          RANK: ${{ matrix.rank }}
+          SLUG: ${{ matrix.slug }}
+          QUERIES: ${{ matrix.queries }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import re
+          import time
+          import urllib.parse
+          import urllib.request
+
+          rank = os.environ['RANK']
+          root = pathlib.Path('source-recovery-v3') / rank
+          root.mkdir(parents=True, exist_ok=True)
+          queries = os.environ['QUERIES'].split('|')
+          headers = {'User-Agent': 'BoundaryBayProduction/1.0 (Italian public-domain source discovery)'}
+
+          def fetch_json(url, params=None, attempts=5):
+              if params:
+                  url += '?' + urllib.parse.urlencode(params, doseq=True)
+              error = None
+              for attempt in range(attempts):
+                  try:
+                      request = urllib.request.Request(url, headers=headers)
+                      with urllib.request.urlopen(request, timeout=90) as response:
+                          return json.load(response)
+                  except Exception as exc:
+                      error = exc
+                      time.sleep(2 + attempt * 2)
+              raise error
+
+          def save(name, payload):
+              data = json.dumps(payload, ensure_ascii=False, indent=2).encode('utf-8')
+              path = root / name
+              path.write_bytes(data)
+              return {'path': str(path), 'sha256': hashlib.sha256(data).hexdigest(), 'size_bytes': len(data)}
+
+          def slug(value):
+              return re.sub(r'[^a-z0-9]+', '-', value.casefold()).strip('-')[:100]
+
+          docs = {}
+          query_evidence = []
+          for query in queries:
+              full_query = f'({query}) AND mediatype:texts'
+              payload = fetch_json(
+                  'https://archive.org/advancedsearch.php',
+                  {
+                      'q': full_query,
+                      'fl[]': ['identifier', 'title', 'creator', 'contributor', 'date', 'year',
+                               'language', 'publisher', 'rights', 'licenseurl', 'description',
+                               'subject', 'collection'],
+                      'rows': 200,
+                      'page': 1,
+                      'sort[]': ['date asc'],
+                      'output': 'json',
+                  },
+              )
+              evidence = save(f'ia-broad-search-{slug(query)}.json', payload)
+              evidence['query'] = full_query
+              evidence['num_found'] = payload.get('response', {}).get('numFound', 0)
+              query_evidence.append(evidence)
+              for doc in payload.get('response', {}).get('docs', []):
+                  identifier = doc.get('identifier')
+                  if identifier:
+                      docs[identifier] = doc
+
+          candidates = []
+          for identifier, search_record in list(docs.items())[:250]:
+              try:
+                  metadata = fetch_json('https://archive.org/metadata/' + urllib.parse.quote(identifier))
+                  files = []
+                  for item in metadata.get('files', []):
+                      name = str(item.get('name', ''))
+                      if name.casefold().endswith(('.epub', '.pdf', '_djvu.txt', '_text.txt', '_djvu.xml', '_scandata.xml')):
+                          files.append({
+                              'name': name,
+                              'size': item.get('size'),
+                              'format': item.get('format'),
+                              'source': item.get('source'),
+                              'sha1': item.get('sha1'),
+                              'md5': item.get('md5'),
+                              'download_url': 'https://archive.org/download/' + urllib.parse.quote(identifier) + '/' + urllib.parse.quote(name),
+                          })
+                  candidates.append({
+                      'identifier': identifier,
+                      'details_url': 'https://archive.org/details/' + urllib.parse.quote(identifier),
+                      'search_record': search_record,
+                      'metadata': metadata.get('metadata', {}),
+                      'candidate_files': files,
+                  })
+              except Exception as exc:
+                  candidates.append({'identifier': identifier, 'search_record': search_record, 'metadata_error': str(exc)})
+
+          record = {
+              'schema': 'bb-italian-source-recovery-v3-1.0',
+              'searched_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
+              'rank': int(rank),
+              'slug': os.environ['SLUG'],
+              'query_evidence': query_evidence,
+              'candidate_count': len(candidates),
+              'candidates': candidates,
+              'disposition': 'CANDIDATE_REVIEW_PENDING',
+              'acceptance_requirements': [
+                  'Italian reading text', 'complete work extent', 'identified edition and translator',
+                  'rights compatible with planned distribution', 'no unrelated matter',
+                  'frozen immutable source bytes', 'reading-map and quality review',
+              ],
+          }
+          save('source-recovery-v3-record.json', record)
+          print(rank, len(candidates), flush=True)
+          PY
+
+      - name: Upload broad source-recovery evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-italian-source-recovery-v3-${{ matrix.rank }}-${{ matrix.slug }}
+          path: source-recovery-v3/${{ matrix.rank }}/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 14
