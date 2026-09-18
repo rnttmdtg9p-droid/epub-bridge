@@ -1,0 +1,27 @@
+name: BB alternate source catalogs
+on:
+  push:
+    paths: ['.github/workflows/bb-alternate-sep18.yml']
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,urllib.parse,concurrent.futures
+          P=pathlib.Path('alternate');P.mkdir(exist_ok=True)
+          Q={'hamlet':'title:amleto AND year:[1800 TO 1900]','macbeth':'title:macbeth AND year:[1800 TO 1910] AND (description:illustrated OR description:illustrations)','dead-souls':'title:(dead souls) AND year:[1840 TO 1930]','dead-souls-ru':'title:(Мертвые души) AND year:[1840 TO 1929]','germinal':'title:germinal AND year:[1885 TO 1929]','war-peace':'title:(война мир) AND year:[1800 TO 1915]','kaulbach':'identifier:femalecharacters00kaul','canzoniere':'title:(rime petrarca) AND year:1739'}
+          def run(k,q):
+           try:
+            u='https://archive.org/advancedsearch.php?'+urllib.parse.urlencode({'q':q,'output':'json','rows':50,'fl[]':['identifier','title','date','creator','description']},doseq=True);r=requests.get(u,timeout=60);r.raise_for_status();d=r.json()
+           except Exception as e:d={'error':str(e)}
+           (P/(k+'.json')).write_text(json.dumps(d));print(k,flush=True)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:list(ex.map(lambda kv:run(*kv),Q.items()))
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-alternate-sep18
+          path: alternate/
+          retention-days: 7
