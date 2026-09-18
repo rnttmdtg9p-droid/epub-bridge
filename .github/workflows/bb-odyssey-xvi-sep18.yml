@@ -1,0 +1,35 @@
+name: BB Odyssey Canto XVI plate
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-odyssey-xvi-sep18.yml'
+  workflow_dispatch:
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch plate and metadata
+        shell: bash
+        run: |
+          mkdir -p out
+          python - <<'PY'
+          import json,urllib.request,time
+          api='https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url|extmetadata&titles=File%3AOmero%20-%20L%27Odissea%20%28Romagnoli%29%20II%20%28page%2064%20crop%29.jpg'
+          req=urllib.request.Request(api,headers={'User-Agent':'BoundaryBayResearch/1.0'})
+          d=json.load(urllib.request.urlopen(req))
+          open('out/metadata.json','w').write(json.dumps(d,indent=2))
+          u=next(iter(d['query']['pages'].values()))['imageinfo'][0]['url']
+          for attempt in range(8):
+            try:
+              req=urllib.request.Request(u,headers={'User-Agent':'BoundaryBayResearch/1.0'})
+              with urllib.request.urlopen(req,timeout=60) as r: data=r.read()
+              if len(data)>10000:
+                open('out/canto-xvi.jpg','wb').write(data); break
+            except Exception:
+              time.sleep(10+attempt*5)
+          else: raise SystemExit('download failed')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb-odyssey-xvi
+          path: out
