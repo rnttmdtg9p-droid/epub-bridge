@@ -7,27 +7,40 @@ permissions:
 jobs:
   fetch-sytin:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
-      - name: Probe RSL viewer API
+      - name: Download complete RSL viewer scan
         shell: bash
         run: |
-          set -u
-          mkdir -p source
+          set -euo pipefail
+          mkdir -p source/pages
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
-          for id in rsl01004182390 01004182390; do
-            curl -A "$UA" -L --retry 1 --max-time 120 -D "source/info-$id.headers" "https://viewer.rsl.ru/api/v1/document/$id/info" -o "source/info-$id.body" || true
-            for suffix in '' /image /preview /file /full; do
-              tag=$(printf '%s' "$suffix" | tr '/' '_' | sed 's/^$/_root/')
-              curl -A "$UA" -L --retry 1 --max-time 120 -D "source/page-$id-$tag.headers" "https://viewer.rsl.ru/api/v1/document/$id/page/1$suffix" -o "source/page-$id-$tag.body" || true
-            done
-          done
-          find source -type f -size 0 -delete
-          file source/* > source/FILE_TYPES.txt 2>&1 || true
-          sha256sum $(find source -type f | sort) > source/SHA256SUMS.txt
+          curl -A "$UA" -L --retry 3 --retry-all-errors --max-time 120             "https://viewer.rsl.ru/api/v1/document/rsl01004182390/info"             -o source/info.json
+          seq 1 432 | xargs -P 6 -I{} bash -c '
+            page="$1"
+            ua="$2"
+            out=$(printf "source/pages/%03d.jpg" "$page")
+            curl -A "$ua" -L --fail --retry 4 --retry-all-errors --max-time 120               "https://viewer.rsl.ru/api/v1/document/rsl01004182390/page/$page"               -o "$out"
+          ' _ {} "$UA"
+          test "$(find source/pages -type f -name '*.jpg' | wc -l)" -eq 432
+          find source/pages -type f -name '*.jpg' -size -100k -print > source/SMALL_FILES.txt
+          test ! -s source/SMALL_FILES.txt
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import csv, hashlib
+          rows=[]
+          for p in sorted(Path("source/pages").glob("*.jpg")):
+              with Image.open(p) as im:
+                  rows.append([p.name, im.width, im.height, im.mode, p.stat().st_size,
+                               hashlib.sha256(p.read_bytes()).hexdigest()])
+          with open("source/inventory.csv","w",newline="",encoding="utf-8") as f:
+              w=csv.writer(f); w.writerow(["file","width","height","mode","bytes","sha256"]); w.writerows(rows)
+          PY
+          sha256sum source/info.json source/inventory.csv > source/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: bb-anna-sytin-viewer-api-20260918
+          name: bb-anna-sytin-complete-scan-20260918
           path: source
           retention-days: 14
+          compression-level: 0
