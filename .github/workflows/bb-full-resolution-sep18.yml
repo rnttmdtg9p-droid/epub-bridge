@@ -1,0 +1,29 @@
+name: BB full-resolution original plates Sep18
+on:
+  push:
+    paths: ['.github/workflows/bb-full-resolution-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,pathlib,json,hashlib,time
+          ROOT=pathlib.Path('highres');ROOT.mkdir(exist_ok=True)
+          URLS=[['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0028.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0033.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0041a.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0041.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0051.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0059.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0065.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0075.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0081.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0087.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0093.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0103.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0111.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0117.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0125.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0131.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0137.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0141.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0145.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0153.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0159.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0163.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0171.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0179.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0187.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0195.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0201.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0207.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0213.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0223.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0229.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0237.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0219.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0247.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0255.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0259.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0267.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0273.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0285.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0291.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0301.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0309.jpg'], ['new-041', 'https://www.gutenberg.org/cache/epub/120/images/0317.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p30b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p107b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p140b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p184b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p190b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p272b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p311b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p316b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p323b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p369b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p389b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p413b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p422b.jpg'], ['new-048', 'https://www.gutenberg.org/cache/epub/1260/images/p435b.jpg'], ['new-044', 'https://www.gutenberg.org/cache/epub/42324/images/illus2-big.jpg'], ['new-044', 'https://www.gutenberg.org/cache/epub/42324/images/illus1-big.jpg']]
+          log=[]
+          for key,url in URLS:
+           d={'key':key,'url':url};out=ROOT/key;out.mkdir(exist_ok=True)
+           try:
+            r=requests.get(url,timeout=60);r.raise_for_status();out.joinpath(url.split('/')[-1]).write_bytes(r.content);d['sha256']=hashlib.sha256(r.content).hexdigest()
+           except Exception as e:d['error']=str(e)
+           log.append(d)
+          ROOT.joinpath('metadata.json').write_text(json.dumps(log,indent=2))
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-full-resolution-sep18
+          path: highres/
+          retention-days: 7
