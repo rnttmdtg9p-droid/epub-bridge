@@ -9,23 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Inspect RSL viewer application
+      - name: Probe RSL viewer API
         shell: bash
         run: |
           set -u
-          mkdir -p source/js
+          mkdir -p source
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
-          for f in app.0f697f0d.js pdfModule.2b47014e.js epubModule.585aa71d.js chunk-vendors.bcbb31f1.js; do
-            curl -A "$UA" -L --fail --retry 2 --max-time 180 "https://viewer.rsl.ru/js/$f" -o "source/js/$f" || true
+          for id in rsl01004182390 01004182390; do
+            curl -A "$UA" -L --retry 1 --max-time 120 -D "source/info-$id.headers" "https://viewer.rsl.ru/api/v1/document/$id/info" -o "source/info-$id.body" || true
+            for suffix in '' /image /preview /file /full; do
+              tag=$(printf '%s' "$suffix" | tr '/' '_' | sed 's/^$/_root/')
+              curl -A "$UA" -L --retry 1 --max-time 120 -D "source/page-$id-$tag.headers" "https://viewer.rsl.ru/api/v1/document/$id/page/1$suffix" -o "source/page-$id-$tag.body" || true
+            done
           done
-          grep -aEo 'https?[^"[:space:]]+|/[A-Za-z0-9_./?&=%{}:-]*(api|document|page|image|tile|manifest|content|download)[A-Za-z0-9_./?&=%{}:-]*' source/js/*.js | sort -u > source/ENDPOINT_HITS.txt || true
-          grep -aEo '.{0,180}(rsl01004182390|documentId|docId|pageCount|pagesCount|pageUrl|imageUrl|manifest|tile).{0,260}' source/js/*.js > source/CONTEXT_HITS.txt || true
           find source -type f -size 0 -delete
-          file source/js/* > source/FILE_TYPES.txt 2>&1 || true
+          file source/* > source/FILE_TYPES.txt 2>&1 || true
           sha256sum $(find source -type f | sort) > source/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: bb-anna-sytin-viewer-js-20260918
+          name: bb-anna-sytin-viewer-api-20260918
           path: source
           retention-days: 14
