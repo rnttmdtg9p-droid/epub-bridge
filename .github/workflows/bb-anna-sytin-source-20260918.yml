@@ -9,36 +9,41 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Download complete RSL viewer scan
+      - name: Download and validate complete RSL viewer scan
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p source/pages
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
-          curl -A "$UA" -L --retry 3 --retry-all-errors --max-time 120             "https://viewer.rsl.ru/api/v1/document/rsl01004182390/info"             -o source/info.json
+          curl -A "$UA" -L --fail --retry 3 --retry-all-errors --max-time 120             "https://viewer.rsl.ru/api/v1/document/rsl01004182390/info"             -o source/info.json
           seq 1 432 | xargs -P 6 -I{} bash -c '
             page="$1"
             ua="$2"
             out=$(printf "source/pages/%03d.jpg" "$page")
-            curl -A "$ua" -L --fail --retry 4 --retry-all-errors --max-time 120               "https://viewer.rsl.ru/api/v1/document/rsl01004182390/page/$page"               -o "$out"
+            curl -A "$ua" -L --fail --silent --show-error --retry 4 --retry-all-errors --max-time 120               "https://viewer.rsl.ru/api/v1/document/rsl01004182390/page/$page"               -o "$out"
           ' _ {} "$UA"
           test "$(find source/pages -type f -name '*.jpg' | wc -l)" -eq 432
-          find source/pages -type f -name '*.jpg' -size -100k -print > source/SMALL_FILES.txt
-          test ! -s source/SMALL_FILES.txt
           python - <<'PY'
           from pathlib import Path
           from PIL import Image
-          import csv, hashlib
+          import csv, hashlib, json
           rows=[]
-          for p in sorted(Path("source/pages").glob("*.jpg")):
+          files=sorted(Path("source/pages").glob("*.jpg"))
+          assert len(files)==432, len(files)
+          for p in files:
+              with Image.open(p) as im:
+                  im.verify()
               with Image.open(p) as im:
                   rows.append([p.name, im.width, im.height, im.mode, p.stat().st_size,
                                hashlib.sha256(p.read_bytes()).hexdigest()])
           with open("source/inventory.csv","w",newline="",encoding="utf-8") as f:
               w=csv.writer(f); w.writerow(["file","width","height","mode","bytes","sha256"]); w.writerows(rows)
+          info=json.loads(Path("source/info.json").read_text(encoding="utf-8"))
+          assert info["pageCount"]==432
           PY
           sha256sum source/info.json source/inventory.csv > source/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: bb-anna-sytin-complete-scan-20260918
           path: source
