@@ -1,0 +1,29 @@
+name: BB Hamlet historical scan
+on:
+  push:
+    paths: ['.github/workflows/bb-scan-hamlet-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,time,urllib.parse
+          P=pathlib.Path('scan-hamlet');P.mkdir(exist_ok=True)
+          ITEMS={'new-023':'amletoprincipedi00shak'}
+          for key,ident in ITEMS.items():
+           out=P/key;out.mkdir(exist_ok=True)
+           try:
+            r=requests.get('https://archive.org/metadata/'+ident,timeout=40);r.raise_for_status();d=r.json();out.joinpath('metadata.json').write_text(json.dumps(d));fs=d['files'];selected=[x for x in fs if x['name'].endswith(('_djvu.txt','_scandata.xml'))]
+            pdf=[x for x in fs if x['name'].endswith('.pdf') and int(x.get('size',0))<300000000 and not x.get('private')];pdf.sort(key=lambda x:(x.get('format')!='Text PDF',int(x.get('size',0))));selected+=pdf[:1]
+            for x in selected:
+             u='https://archive.org/download/'+ident+'/'+urllib.parse.quote(x['name']);r=requests.get(u,timeout=150);r.raise_for_status();out.joinpath(x['name']).write_bytes(r.content);print(key,x['name'],len(r.content),flush=True)
+           except Exception as e:out.joinpath('error.txt').write_text(str(e));print(key,str(e),flush=True)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-scan-hamlet-sep18
+          path: scan-hamlet/
+          retention-days: 7
