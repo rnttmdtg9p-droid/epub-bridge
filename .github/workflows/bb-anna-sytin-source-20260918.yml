@@ -1,0 +1,36 @@
+name: BB Anna Karenina Sytin source 20260918
+on:
+  push:
+    paths: ['.github/workflows/bb-anna-sytin-source-20260918.yml']
+permissions:
+  contents: read
+jobs:
+  fetch-sytin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fetch RSL and NEB source evidence
+        shell: bash
+        run: |
+          set -u
+          mkdir -p source/html source/artefact
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
+          curl -A "$UA" -L --fail --retry 2 --max-time 360 'https://dlib.rsl.ru/rsl01004000000/rsl01004182000/rsl01004182390/rsl01004182390.pdf' -o source/anna-karenina-sytin-1914-v1.pdf || true
+          curl -A "$UA" -L --fail --retry 2 --max-time 120 'https://search.rsl.ru/ru/record/01004174054' -o source/html/rsl-parent-01004174054.html || true
+          curl -A "$UA" -L --fail --retry 2 --max-time 120 'https://search.rsl.ru/ru/record/01004182390' -o source/html/rsl-v1-01004182390.html || true
+          curl -A "$UA" -L --fail --retry 2 --max-time 120 'https://rusneb.ru/catalog/002178_000020_BGUNB-RU_%D0%91%D0%93%D0%AE%D0%91_EK_16136/' -o source/html/rusneb-record.html || true
+          for id in 6a2148185156b7ef94973d2b 6a1fc8116f5bea824c1c20b1 6a32ab0ba6b1921e67e97eb1 6a32ab2893527a267fc84b4f 6a32ab42e7564425fee2c96f 6a32ab54e7564425fee2c985; do
+            curl -A "$UA" -L --fail --retry 2 --max-time 90 "https://ar.culture.ru/attachments/attachment/preview/${id}-preview.jpg" -o "source/artefact/${id}.jpg" || true
+          done
+          find source -type f -size 0 -delete
+          file source/* source/artefact/* source/html/* > source/FILE_TYPES.txt 2>&1 || true
+          if command -v pdfinfo >/dev/null && [ -f source/anna-karenina-sytin-1914-v1.pdf ]; then
+            pdfinfo source/anna-karenina-sytin-1914-v1.pdf > source/PDFINFO.txt || true
+          fi
+          sha256sum $(find source -type f | sort) > source/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-anna-sytin-source-20260918
+          path: source
+          retention-days: 14
