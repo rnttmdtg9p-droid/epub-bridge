@@ -1,0 +1,29 @@
+name: BB full-resolution original plates Sep18
+on:
+  push:
+    paths: ['.github/workflows/bb-full-resolution-more-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,pathlib,json,hashlib,time
+          ROOT=pathlib.Path('highres');ROOT.mkdir(exist_ok=True)
+          URLS=[['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/I.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/023.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/057.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/077.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/113.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/160.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/182.jpg'], ['new-039', 'https://www.gutenberg.org/cache/epub/11866/Images/199.jpg']]
+          log=[]
+          for key,url in URLS:
+           d={'key':key,'url':url};out=ROOT/key;out.mkdir(exist_ok=True)
+           try:
+            r=requests.get(url,timeout=60);r.raise_for_status();out.joinpath(url.split('/')[-1]).write_bytes(r.content);d['sha256']=hashlib.sha256(r.content).hexdigest()
+           except Exception as e:d['error']=str(e)
+           log.append(d)
+          ROOT.joinpath('metadata.json').write_text(json.dumps(log,indent=2))
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-full-resolution-more-sep18
+          path: highres/
+          retention-days: 7
