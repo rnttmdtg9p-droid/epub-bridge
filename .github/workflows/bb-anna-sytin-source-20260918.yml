@@ -7,45 +7,41 @@ permissions:
 jobs:
   fetch-sytin:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
-      - name: Download and validate complete RSL viewer scan
+      - name: Download OCR context around the 21 Sytin plates
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p source/pages
+          mkdir -p source/word-coords
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
-          curl -A "$UA" -L --fail --retry 3 --retry-all-errors --max-time 120             "https://viewer.rsl.ru/api/v1/document/rsl01004182390/info"             -o source/info.json
-          seq 1 432 | xargs -P 6 -I{} bash -c '
+          plates='15 39 51 75 87 99 113 137 171 195 211 223 247 263 299 319 339 359 371 383 411'
+          for plate in $plates; do
+            seq $((plate-3)) $((plate+3))
+          done | sort -n -u > source/pages.txt
+          cat source/pages.txt | xargs -P 6 -I{} bash -c '
             page="$1"
             ua="$2"
-            out=$(printf "source/pages/%03d.jpg" "$page")
-            curl -A "$ua" -L --fail --silent --show-error --retry 4 --retry-all-errors --max-time 120               "https://viewer.rsl.ru/api/v1/document/rsl01004182390/page/$page"               -o "$out"
+            out=$(printf "source/word-coords/%03d.json" "$page")
+            curl -A "$ua" -L --fail --silent --show-error --retry 4 --retry-all-errors --max-time 120               "https://viewer.rsl.ru/api/v1/document/rsl01004182390/page/$page/word-coords"               -o "$out"
           ' _ {} "$UA"
-          test "$(find source/pages -type f -name '*.jpg' | wc -l)" -eq 432
           python - <<'PY'
           from pathlib import Path
-          from PIL import Image
-          import csv, hashlib, json
+          import json, csv
+          expected=[int(x) for x in Path("source/pages.txt").read_text().split()]
           rows=[]
-          files=sorted(Path("source/pages").glob("*.jpg"))
-          assert len(files)==432, len(files)
-          for p in files:
-              with Image.open(p) as im:
-                  im.verify()
-              with Image.open(p) as im:
-                  rows.append([p.name, im.width, im.height, im.mode, p.stat().st_size,
-                               hashlib.sha256(p.read_bytes()).hexdigest()])
-          with open("source/inventory.csv","w",newline="",encoding="utf-8") as f:
-              w=csv.writer(f); w.writerow(["file","width","height","mode","bytes","sha256"]); w.writerows(rows)
-          info=json.loads(Path("source/info.json").read_text(encoding="utf-8"))
-          assert info["pageCount"]==432
+          for page in expected:
+              p=Path(f"source/word-coords/{page:03d}.json")
+              data=json.loads(p.read_text(encoding="utf-8"))
+              text=" ".join(item.get("text","") for item in data)
+              rows.append([page,len(data),text])
+          with open("source/ocr-index.csv","w",newline="",encoding="utf-8") as f:
+              w=csv.writer(f); w.writerow(["viewer_page","word_count","text"]); w.writerows(rows)
           PY
-          sha256sum source/info.json source/inventory.csv > source/SHA256SUMS.txt
+          sha256sum source/pages.txt source/ocr-index.csv > source/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: bb-anna-sytin-complete-scan-20260918
+          name: bb-anna-sytin-ocr-context-20260918
           path: source
           retention-days: 14
-          compression-level: 0
