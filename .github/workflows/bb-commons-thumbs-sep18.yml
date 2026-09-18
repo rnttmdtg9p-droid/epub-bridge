@@ -1,0 +1,40 @@
+name: BB supported Commons thumbnails
+on:
+  push:
+    paths: ['.github/workflows/bb-commons-thumbs-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,time,urllib.parse
+          ROOT=pathlib.Path('commons-thumbs');ROOT.mkdir(exist_ok=True)
+          FILES={'new-010': ["File:Omero - L'Odissea (Romagnoli) I-0100.png", "File:Omero - L'Odissea (Romagnoli) I-0172.png", "File:Omero - L'Odissea (Romagnoli) II-0218.png", "File:Omero - L'Odissea (Romagnoli) II-0124.png", "File:Omero - L'Odissea (Romagnoli) I-0244.png", "File:Omero - L'Odissea (Romagnoli) II-0202.png", "File:Omero - L'Odissea (Romagnoli) II-0148.png", "File:Omero - L'Odissea (Romagnoli) II-0004.png", "File:Omero - L'Odissea (Romagnoli) I-0152.png", "File:Omero - L'Odissea (Romagnoli) I-0222.png", "File:Omero - L'Odissea (Romagnoli) I-0186.png", "File:Omero - L'Odissea (Romagnoli) I-0266.png", "File:Omero - L'Odissea (Romagnoli) II-0182.png", "File:Omero - L'Odissea (Romagnoli) II-0084.png", "File:Omero - L'Odissea (Romagnoli) I-0064.png", "File:Omero - L'Odissea (Romagnoli) II-0164.png", "File:Omero - L'Odissea (Romagnoli) I-0082.png", "File:Omero - L'Odissea (Romagnoli) I-0288.png", "File:Omero - L'Odissea (Romagnoli) II-0042.png", "File:Omero - L'Odissea (Romagnoli) I-0120.png", "File:Omero - L'Odissea (Romagnoli) II-0106.png", "File:Omero - L'Odissea (Romagnoli) II-0022.png", "File:Omero - L'Odissea (Romagnoli) I-0200.png", "File:Omero - L'Odissea (Romagnoli) II (page 64 crop).jpg"], 'new-025': ['File:Jean-Michel Moreau illustration Candide Voltaire édition de Kehl 1787.jpg', 'File:Candide Moreau a III.jpg', 'File:Candide Moreau a I.jpg', 'File:Candide Moreau b III.jpg', 'File:Candide Moreau b VII.jpg', 'File:Candide Moreau a IV.jpg', 'File:Candide Moreau b I.jpg', 'File:Candide Moreau b II.jpg', 'File:Candide Moreau b IV.jpg', 'File:Candide Moreau b VI.jpg', 'File:Candide Moreau a II.jpg', 'File:Candide Moreau b V.jpg', 'File:Moreau, Triere - Candide, chapter 9.jpg', 'File:Adrien Moreau « mais il faut cultiver notre jardin » (Voltaire, Candide, 1893).jpg', 'File:Voltaire - Candide - Trière - Moreau.jpg', 'File:Voltaire - Candide - Dambrun - Moreau.jpg', 'File:Voltaire - Candide - Delignon - Moreau.jpg', 'File:Voltaire - Candide - Baquoy - Moreau.jpg', 'File:Moreau Monkeys.jpg', 'File:Moreau Sucre.jpg', 'File:Moreau Sucre crop.jpg', 'File:Moreau Monkeys crop.jpg'], 'new-085': ['File:De Schiller Die Räuber Illustration 03.jpg', 'File:De Schiller Die Räuber Illustration 04.jpg', 'File:De Schiller Die Räuber Illustration 07.jpg', 'File:De Schiller Die Räuber Illustration 06.jpg', 'File:De Schiller Die Räuber Illustration 05.jpg', 'File:De Schiller Die Räuber Illustration 02.jpg', 'File:De Schiller Die Räuber Illustration 01.gif'], 'new-069': ['File:Leandre - Madame Bovary p323.jpg', 'File:Leandre - Madame Bovary p295.jpg', 'File:Leandre - Madame Bovary p33.jpg', 'File:Leandre - Madame Bovary p213.jpg', 'File:Leandre - Madame Bovary p379.jpg'], 'new-076': ['File:Balzac - Œuvres complètes Tome 5 (1855) Eugénie Grandet (page 249).jpg', 'File:Balzac - Œuvres complètes Tome 5 (1855) La Grande Nanon (page 219).jpg', 'File:Balzac - Œuvres complètes Tome 5 (1855) Le Père Grandet (page 207).jpg']}
+          def get(url):
+           for i in range(2):
+            try:
+             r=requests.get(url,timeout=30,headers={'User-Agent':'BoundaryBayBookResearch/1.0'});r.raise_for_status();return r
+            except Exception:
+             if i==1:raise
+             time.sleep(5)
+          for key,names in FILES.items():
+           out=ROOT/key;out.mkdir(exist_ok=True)
+           for i,name in enumerate(names):
+            d={'title':name};url='https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode({'action':'query','format':'json','titles':name,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':1280})
+            try:
+             meta=get(url).json();d['metadata']=meta
+             for p in meta.get('query',{}).get('pages',{}).values():
+              for info in p.get('imageinfo',[]):
+               if info.get('url'):
+                u=info.get('thumburl',info['url']);b=get(u).content;fn=f'{i+1:03d}'+pathlib.Path(urllib.parse.urlsplit(u).path).suffix;out.joinpath(fn).write_bytes(b);d['filename']=fn
+            except Exception as e:d['error']=str(e)
+            out.joinpath(f'{i+1:03d}.json').write_text(json.dumps(d,ensure_ascii=False,indent=2));print(key,i,name,flush=True);time.sleep(5)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-commons-thumbs-sep18
+          path: commons-thumbs/
+          retention-days: 7
