@@ -1,0 +1,40 @@
+name: BB inspect source-edition artwork Sep18
+on:
+  push:
+    paths: ['.github/workflows/bb-source-artwork-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - run: pip install requests beautifulsoup4
+      - shell: python
+        run: |
+          import pathlib,requests,json,hashlib,urllib.parse,concurrent.futures,time
+          from bs4 import BeautifulSoup
+          ROOT=pathlib.Path('pg-art');ROOT.mkdir(exist_ok=True)
+          programs={'old-082': 79208, 'old-079': 58579, 'old-049': 26166, 'old-020': 22024, 'old-016': 26961, 'old-074': 37719, 'old-008': 22642, 'old-025': 22507, 'old-018': 26171, 'old-047': 22502, 'old-030': 27358, 'old-068': 61548, 'old-050': 25175, 'old-013': 25180, 'old-021': 25181, 'old-091': 76598, 'old-078': 30984, 'old-053': 25211, 'old-056': 26453, 'old-033': 25209, 'old-036': 26452, 'old-094': 45565, 'old-051': 25197, 'old-058': 25312, 'old-014': 22499, 'old-012': 22026, 'old-081': 37720, 'old-019': 25179, 'old-010': 25182, 'old-032': 27433, 'old-087': 62400, 'old-060': 22506, 'old-009': 25587, 'new-006': 57037, 'new-018': 54684, 'new-025': 19942, 'new-027': 392, 'new-067': 1081, 'new-069': 27575, 'new-079': 56528, 'new-083': 14591, 'new-056': 79454}
+          def run(pair):
+           key,eid=pair;out=ROOT/key;out.mkdir(exist_ok=True);url=f'https://www.gutenberg.org/cache/epub/{eid}/pg{eid}-images.html';rec={'key':key,'gutenberg_id':eid,'url':url,'images':[]}
+           try:
+            s=requests.Session();s.headers['User-Agent']='BoundaryBayIllustrationRecovery/1.0';res=s.get(url,timeout=60);res.raise_for_status();out.joinpath('source.html').write_bytes(res.content);soup=BeautifulSoup(res.content,'html.parser');rec['title']=soup.title.get_text() if soup.title else '';seen=set()
+            for i,im in enumerate(soup.find_all('img'),1):
+             src=urllib.parse.urljoin(url,im.get('src',''))
+             if src in seen:continue
+             seen.add(src);nm=f'{i:03d}-'+pathlib.Path(urllib.parse.urlsplit(src).path).name;plate={'filename':nm,'url':src,'alt':im.get('alt',''),'title':im.get('title','')}
+             prev=im.find_previous(['h1','h2','h3','h4']);plate['heading']=prev.get_text(' ',strip=True) if prev else ''
+             pars=im.find_parent(['figure','div']);plate['caption']=pars.get_text(' ',strip=True)[:1800] if pars else ''
+             preceding=im.find_previous('p');following=im.find_next('p');plate['previous_paragraph']=preceding.get_text(' ',strip=True)[:1500] if preceding else '';plate['next_paragraph']=following.get_text(' ',strip=True)[:1500] if following else ''
+             try:
+              b=s.get(src,timeout=60);b.raise_for_status();out.joinpath(nm).write_bytes(b.content);plate['sha256']=hashlib.sha256(b.content).hexdigest()
+             except Exception as e:plate['error']=str(e)
+             rec['images'].append(plate)
+           except Exception as e:rec['error']=str(e)
+           out.joinpath('metadata.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2));print(key,len(rec['images']),flush=True)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:list(pool.map(run,programs.items()))
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-source-artwork-sep18
+          path: pg-art/
+          retention-days: 7
