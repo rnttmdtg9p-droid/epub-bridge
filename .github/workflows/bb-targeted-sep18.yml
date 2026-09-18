@@ -1,0 +1,31 @@
+name: BB targeted historical source recovery
+on:
+  push:
+    paths: ['.github/workflows/bb-targeted-sep18.yml']
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,time,urllib.parse
+          P=pathlib.Path('targeted');P.mkdir(exist_ok=True)
+          queries={'emma':'title:Emma AND (creator:Austen) AND year:[1895 TO 1910]','faust':'title:Faust AND (creator:Clarke OR description:Clarke) AND year:[1900 TO 1930]','midsummer':'title:(midsummer) AND creator:Rackham AND year:[1908 TO 1914]'}
+          for k,q in queries.items():
+           u='https://archive.org/advancedsearch.php?'+urllib.parse.urlencode({'q':q,'output':'json','rows':50,'fl[]':['identifier','title','date','creator','description']},doseq=True)
+           try:r=requests.get(u,timeout=60);r.raise_for_status();d=r.json()
+           except Exception as e:d={'error':str(e)}
+           (P/(k+'.json')).write_text(json.dumps(d));print(k,flush=True)
+          for k,q in [('dead-souls','"Мёртвые души" Агин'),('dead-souls2','"Dead Souls" Agin'),('germinal','"Germinal" illustrated Zola')]:
+           u='https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode({'action':'query','format':'json','list':'search','srsearch':q,'srnamespace':'6|14','srlimit':100})
+           try:r=requests.get(u,timeout=60);r.raise_for_status();d=r.json()
+           except Exception as e:d={'error':str(e)}
+           (P/(k+'.json')).write_text(json.dumps(d));print(k,flush=True);time.sleep(10)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-targeted-sep18
+          path: targeted/
+          retention-days: 7
