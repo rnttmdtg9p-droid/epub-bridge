@@ -1,0 +1,40 @@
+name: BB additional illustrated editions Sep18
+on:
+  push:
+    paths: ['.github/workflows/bb-additional-plates-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - run: pip install requests beautifulsoup4
+      - shell: python
+        run: |
+          import pathlib,requests,json,hashlib,urllib.parse,concurrent.futures,time
+          from bs4 import BeautifulSoup
+          ROOT=pathlib.Path('pg-art');ROOT.mkdir(exist_ok=True)
+          programs={'new-047':19839,'new-051':46675,'old-029':22505,'old-003':61885,'new-012':135,'new-010':28797,'new-023':27761,'new-039':11866}
+          def run(pair):
+           key,eid=pair;out=ROOT/key;out.mkdir(exist_ok=True);url=f'https://www.gutenberg.org/cache/epub/{eid}/pg{eid}-images.html';rec={'key':key,'gutenberg_id':eid,'url':url,'images':[]}
+           try:
+            s=requests.Session();s.headers['User-Agent']='BoundaryBayIllustrationRecovery/1.0';res=s.get(url,timeout=60);res.raise_for_status();out.joinpath('source.html').write_bytes(res.content);soup=BeautifulSoup(res.content,'html.parser');rec['title']=soup.title.get_text() if soup.title else '';seen=set()
+            for i,im in enumerate(soup.find_all('img'),1):
+             src=urllib.parse.urljoin(url,im.get('src',''))
+             if src in seen:continue
+             seen.add(src);nm=f'{i:03d}-'+pathlib.Path(urllib.parse.urlsplit(src).path).name;plate={'filename':nm,'url':src,'alt':im.get('alt',''),'title':im.get('title','')}
+             prev=im.find_previous(['h1','h2','h3','h4']);plate['heading']=prev.get_text(' ',strip=True) if prev else ''
+             pars=im.find_parent(['figure','div']);plate['caption']=pars.get_text(' ',strip=True)[:1800] if pars else ''
+             preceding=im.find_previous('p');following=im.find_next('p');plate['previous_paragraph']=preceding.get_text(' ',strip=True)[:1500] if preceding else '';plate['next_paragraph']=following.get_text(' ',strip=True)[:1500] if following else ''
+             try:
+              b=s.get(src,timeout=60);b.raise_for_status();out.joinpath(nm).write_bytes(b.content);plate['sha256']=hashlib.sha256(b.content).hexdigest()
+             except Exception as e:plate['error']=str(e)
+             rec['images'].append(plate)
+           except Exception as e:rec['error']=str(e)
+           out.joinpath('metadata.json').write_text(json.dumps(rec,ensure_ascii=False,indent=2));print(key,len(rec['images']),flush=True)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:list(pool.map(run,programs.items()))
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-additional-plates-sep18
+          path: pg-art/
+          retention-days: 7
