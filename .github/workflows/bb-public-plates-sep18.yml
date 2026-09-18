@@ -1,0 +1,29 @@
+name: BB targeted historical source recovery
+on:
+  push:
+    paths: ['.github/workflows/bb-public-plates-sep18.yml']
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,time,urllib.parse,hashlib
+          P=pathlib.Path('public-plates');P.mkdir(exist_ok=True)
+          FILES={'new-056':['A Study in Scarlet Friston 01.jpg','A Study in Scarlet Friston 02.jpg','A Study in Scarlet Friston 03.jpg','A Study in Scarlet Friston 04.jpg'],'old-029':['Guidi Riconciliazione p%03d.jpg'%i for i in [17,33,49,65,81,113,129]]}
+          for key,names in FILES.items():
+           out=P/key;out.mkdir(exist_ok=True)
+           for name in names:
+            name=name.replace(' ','_');h=hashlib.md5(name.encode()).hexdigest();u='https://upload.wikimedia.org/wikipedia/commons/'+h[0]+'/'+h[:2]+'/'+urllib.parse.quote(name);d={'filename':name,'url':u,'file_page':'https://commons.wikimedia.org/wiki/File:'+urllib.parse.quote(name)}
+            try:
+             r=requests.get(u,timeout=30);r.raise_for_status();out.joinpath(name).write_bytes(r.content);d['sha256']=hashlib.sha256(r.content).hexdigest();d['type']=r.headers.get('Content-Type')
+            except Exception as e:d['error']=str(e)
+            out.joinpath(name+'.json').write_text(json.dumps(d));print(name,d.get('error','downloaded'),flush=True);time.sleep(2)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-public-plates-sep18
+          path: public-plates/
+          retention-days: 7
