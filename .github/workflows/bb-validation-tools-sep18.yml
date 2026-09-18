@@ -1,0 +1,18 @@
+name: BB validation tools Sep18
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-validation-tools-sep18.yml'
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir -p tools
+          curl -fL --retry 3 https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.34/linux64/chrome-linux64.zip -o tools/chrome-linux64.zip
+          curl -fL --retry 3 https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip -o tools/epubcheck.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb-validation-tools-sep18
+          path: tools/
+          retention-days: 7
