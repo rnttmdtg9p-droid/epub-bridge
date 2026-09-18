@@ -7,43 +7,25 @@ permissions:
 jobs:
   fetch-sytin:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      - name: Inspect RSL viewer endpoints
+      - name: Inspect RSL viewer application
         shell: bash
         run: |
           set -u
-          mkdir -p source/html source/assets
+          mkdir -p source/js
           UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'
-          curl -A "$UA" -L --fail --retry 2 --max-time 180 -D source/html/loader-headers.txt 'https://dlib.rsl.ru/loader/view/01004182390?get=online' -o source/html/viewer-loader.html || true
-          curl -A "$UA" -L --fail --retry 2 --max-time 180 -D source/html/viewer-id-headers.txt 'https://viewer.rsl.ru/rsl01004182390' -o source/html/viewer-id.html || true
-          curl -A "$UA" -L --fail --retry 2 --max-time 180 -D source/html/viewer-path-headers.txt 'https://viewer.rsl.ru/rsl/rsl01004000000/rsl01004182000/rsl01004182390/rsl01004182390.pdf' -o source/html/viewer-path.html || true
-          grep -Eo '(src|href)="[^"]+"' source/html/*.html | sed -E 's/^[^:]+://' | sort -u > source/html/linked-resources.txt || true
-          python3 - <<'PY'
-          import pathlib,re,urllib.parse,urllib.request
-          out=pathlib.Path('source/assets')
-          out.mkdir(parents=True,exist_ok=True)
-          for html in pathlib.Path('source/html').glob('*.html'):
-              text=html.read_text('utf-8',errors='ignore')
-              base='https://viewer.rsl.ru/'
-              for raw in sorted(set(re.findall(r'(?:src|href)=["\x27]([^"\x27?#]+)',text))):
-                  if not any(raw.lower().endswith(x) for x in ('.js','.css','.json','.xml')): continue
-                  url=urllib.parse.urljoin(base,raw)
-                  name=re.sub(r'[^A-Za-z0-9_.-]+','_',raw.strip('/'))[-180:] or 'asset'
-                  try:
-                      req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
-                      data=urllib.request.urlopen(req,timeout=45).read()
-                      (out/name).write_bytes(data)
-                  except Exception as e:
-                      (out/(name+'.error.txt')).write_text(f'{url}\n{e}\n')
-          PY
-          rg -n 'page|image|tile|manifest|json|jpg|jpeg|png|rsl01004182390|01004182390' source/html source/assets > source/ENDPOINT_HITS.txt || true
+          for f in app.0f697f0d.js pdfModule.2b47014e.js epubModule.585aa71d.js chunk-vendors.bcbb31f1.js; do
+            curl -A "$UA" -L --fail --retry 2 --max-time 180 "https://viewer.rsl.ru/js/$f" -o "source/js/$f" || true
+          done
+          grep -aEo 'https?[^"[:space:]]+|/[A-Za-z0-9_./?&=%{}:-]*(api|document|page|image|tile|manifest|content|download)[A-Za-z0-9_./?&=%{}:-]*' source/js/*.js | sort -u > source/ENDPOINT_HITS.txt || true
+          grep -aEo '.{0,180}(rsl01004182390|documentId|docId|pageCount|pagesCount|pageUrl|imageUrl|manifest|tile).{0,260}' source/js/*.js > source/CONTEXT_HITS.txt || true
           find source -type f -size 0 -delete
-          file source/html/* source/assets/* > source/FILE_TYPES.txt 2>&1 || true
+          file source/js/* > source/FILE_TYPES.txt 2>&1 || true
           sha256sum $(find source -type f | sort) > source/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: bb-anna-sytin-viewer-inspect-20260918
+          name: bb-anna-sytin-viewer-js-20260918
           path: source
           retention-days: 14
