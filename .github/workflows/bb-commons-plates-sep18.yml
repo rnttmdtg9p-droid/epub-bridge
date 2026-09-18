@@ -1,0 +1,40 @@
+name: BB verified Commons programs Sep18
+on:
+  push:
+    paths: ['.github/workflows/bb-commons-plates-sep18.yml']
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,time,urllib.parse
+          ROOT=pathlib.Path('commons-art');ROOT.mkdir(exist_ok=True)
+          FILES={'old-029': ['File:Guidi Riconciliazione p049.jpg', 'File:Guidi Riconciliazione p017.jpg', 'File:Guidi Riconciliazione p081.jpg', 'File:Guidi Riconciliazione p129.jpg', 'File:Guidi Riconciliazione p033.jpg', 'File:Guidi Riconciliazione p113.jpg', 'File:Guidi Riconciliazione p065.jpg'], 'new-056': ['File:A Study in Scarlet Friston 01.jpg', 'File:A Study in Scarlet Friston 02.jpg', 'File:A Study in Scarlet Friston 03.jpg', 'File:A Study in Scarlet Friston 04.jpg'], 'new-060': ['File:Artillery battery of Captain Tushin at the Battle of Schöngrabern.jpg', 'File:French troops are sooting down Russian arsonists at Fire of Moscow (1812).jpg', 'File:Nataly Rostova and Andrey Bolkonsky in Mytishchi.jpg', 'File:Petya Rostov dies.jpg', 'File:Rostovs family trip to visit Melyukovs family.jpg'], 'new-011': ['File:Anna Karenina Wrubel.jpg', 'File:Anna Karenina p9.jpg', 'File:Тырса Н. А. «Анна Каренина». Скачки.jpg', 'File:Тырса Анна Каренина 1939.jpg', 'File:Anna Karenina by H. Manizer.jpg']}
+          def get(url):
+           for i in range(5):
+            try:
+             r=requests.get(url,timeout=80,headers={'User-Agent':'BoundaryBayBookResearch/1.0'});r.raise_for_status();return r
+            except Exception:
+             if i==4:raise
+             time.sleep(15*(i+1))
+          for key,names in FILES.items():
+           out=ROOT/key;out.mkdir(exist_ok=True)
+           for i,name in enumerate(names):
+            d={'title':name};url='https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode({'action':'query','format':'json','titles':name,'prop':'imageinfo','iiprop':'url|extmetadata'})
+            try:
+             meta=get(url).json();d['metadata']=meta
+             for p in meta.get('query',{}).get('pages',{}).values():
+              for info in p.get('imageinfo',[]):
+               if info.get('url'):
+                u=info['url'];b=get(u).content;fn=f'{i+1:03d}'+pathlib.Path(urllib.parse.urlsplit(u).path).suffix;out.joinpath(fn).write_bytes(b);d['filename']=fn
+            except Exception as e:d['error']=str(e)
+            out.joinpath(f'{i+1:03d}.json').write_text(json.dumps(d,ensure_ascii=False,indent=2));print(key,i,name,flush=True);time.sleep(5)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-commons-plates-sep18
+          path: commons-art/
+          retention-days: 7
