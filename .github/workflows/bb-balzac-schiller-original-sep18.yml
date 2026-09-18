@@ -1,0 +1,36 @@
+name: BB Balzac Schiller original plates retry
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-balzac-schiller-original-sep18.yml'
+  workflow_dispatch:
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch originals with independent retries
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.parse,json,pathlib,time
+          sets={'new-076':["File:Balzac - Œuvres complètes Tome 5 (1855) Eugénie Grandet (page 249).jpg","File:Balzac - Œuvres complètes Tome 5 (1855) La Grande Nanon (page 219).jpg","File:Balzac - Œuvres complètes Tome 5 (1855) Le Père Grandet (page 207).jpg"],'new-085':["File:De Schiller Die Räuber Illustration 03.jpg","File:De Schiller Die Räuber Illustration 04.jpg","File:De Schiller Die Räuber Illustration 07.jpg","File:De Schiller Die Räuber Illustration 06.jpg","File:De Schiller Die Räuber Illustration 05.jpg","File:De Schiller Die Räuber Illustration 02.jpg","File:De Schiller Die Räuber Illustration 01.gif"]}
+          for key,titles in sets.items():
+            pathlib.Path('out',key).mkdir(parents=True,exist_ok=True)
+            for i,title in enumerate(titles,1):
+              try:
+                q={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata|size','titles':title}
+                api='https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(q)
+                d=json.load(urllib.request.urlopen(urllib.request.Request(api,headers={'User-Agent':'BoundaryBayResearch/1.0'})))
+                info=next(iter(d['query']['pages'].values()))['imageinfo'][0];open(f'out/{key}/{i:03}.json','w').write(json.dumps(d,indent=2))
+                ext=pathlib.Path(urllib.parse.urlparse(info['url']).path).suffix
+                for a in range(10):
+                  try:
+                    data=urllib.request.urlopen(urllib.request.Request(info['url'],headers={'User-Agent':'BoundaryBayResearch/1.0'}),timeout=90).read()
+                    if len(data)>4000:open(f'out/{key}/{i:03}{ext}','wb').write(data);break
+                  except Exception:time.sleep(10+a*5)
+              except Exception as e:open(f'out/{key}/{i:03}.error.txt','w').write(str(e))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb-balzac-schiller-originals
+          path: out
