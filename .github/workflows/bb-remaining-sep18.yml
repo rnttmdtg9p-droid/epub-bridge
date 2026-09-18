@@ -1,0 +1,27 @@
+name: BB remaining exact-work catalogs
+on:
+  push:
+    paths: ['.github/workflows/bb-remaining-sep18.yml']
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - run: pip install requests
+      - shell: python
+        run: |
+          import requests,json,pathlib,urllib.parse,concurrent.futures
+          P=pathlib.Path('remaining');P.mkdir(exist_ok=True)
+          Q={'hamlet-1876':'title:(amleto OR hamlet) AND year:1876','hamlet-rusconi':'title:amleto AND creator:Shakespeare','germinal-illustrated':'title:germinal AND (description:illustrations OR description:illustrated) AND year:[1885 TO 1929]','innocente-sartorio':'title:innocente AND (creator:Annunzio OR description:Sartorio)','anna-manizer':'title:(Анна Каренина) AND year:[1870 TO 1929]','milione-illustrated':'title:(milione OR marco polo) AND (description:illustrated OR description:illustrations) AND year:[1700 TO 1929]'}
+          def run(k,q):
+           try:
+            u='https://archive.org/advancedsearch.php?'+urllib.parse.urlencode({'q':q,'output':'json','rows':50,'fl[]':['identifier','title','date','creator','description']},doseq=True);r=requests.get(u,timeout=60);r.raise_for_status();d=r.json()
+           except Exception as e:d={'error':str(e)}
+           (P/(k+'.json')).write_text(json.dumps(d));print(k,flush=True)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:list(ex.map(lambda kv:run(*kv),Q.items()))
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-remaining-sep18
+          path: remaining/
+          retention-days: 7
