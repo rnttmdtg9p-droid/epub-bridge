@@ -1,0 +1,66 @@
+name: Fetch Mario Pratesi Portrait
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-mario-pratesi-portrait-20260920.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Acquire and validate portrait
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pillow requests
+          mkdir -p portrait
+          python - <<'PY'
+          from pathlib import Path
+          from io import BytesIO
+          import hashlib, json, requests
+          from PIL import Image, ImageOps
+
+          url = 'https://library.vicu.utoronto.ca/exhibitions/pratesi_centenary/images/exhibition/introduction/RS16814_m_pratesi_2009_19_b05_fi07_Page_1.jpg'
+          source_page = 'https://library.vicu.utoronto.ca/exhibitions/pratesi_centenary/ita/introduction.html'
+          response = requests.get(url, headers={'User-Agent': 'BoundaryBayClassics/1.0 public-domain source acquisition'}, timeout=180)
+          response.raise_for_status()
+          raw = response.content
+          image = ImageOps.exif_transpose(Image.open(BytesIO(raw)))
+          image.load()
+          if image.width < 300 or image.height < 300:
+              raise RuntimeError(f'Portrait unexpectedly small: {image.size}')
+          if image.mode != 'RGB':
+              image = image.convert('RGB')
+          output = Path('portrait/mario-pratesi-1861.jpg')
+          image.save(output, 'JPEG', quality=92, optimize=True, progressive=True)
+          data = output.read_bytes()
+          provenance = {
+              'subject': 'Mario Pratesi',
+              'date': '1861',
+              'institution': 'Victoria University Library Special Collections',
+              'collection': 'Mario Pratesi fonds, F69, 2009.19, Box 5, File 7, P04',
+              'source_page': source_page,
+              'image_url': url,
+              'dimensions': {'width': image.width, 'height': image.height},
+              'sha256': hashlib.sha256(data).hexdigest(),
+              'rights_note': 'Historical 1861 photograph; source institution and archival identifier retained for release documentation.'
+          }
+          Path('portrait/mario-pratesi-1861.provenance.json').write_text(json.dumps(provenance, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(provenance, ensure_ascii=False))
+          PY
+          file portrait/mario-pratesi-1861.jpg
+          sha256sum portrait/mario-pratesi-1861.jpg
+
+      - name: Upload portrait artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mario-pratesi-portrait-20260920
+          path: portrait/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
