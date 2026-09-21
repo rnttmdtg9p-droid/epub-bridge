@@ -1,0 +1,136 @@
+name: BB Russian 45 DeepL complete translation
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru45-deepl-full.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: bb-ru45-deepl-full
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reuse approved first story
+        uses: actions/download-artifact@v4
+        with:
+          name: ru45-deepl-story01
+          path: results/ru45-deepl
+          run-id: 35552038444
+          github-token: ${{ github.token }}
+      - name: Translate remaining complete stories
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,sys,gzip,base64,hashlib,time,threading,concurrent.futures,datetime
+          from pathlib import Path
+          out=Path('results/ru45-deepl');out.mkdir(parents=True,exist_ok=True)
+          encoded=Path('inputs/ru45-deepl-source.json.gz.b64').read_text()
+          packed=base64.b64decode(encoded)
+          assert hashlib.sha256(packed).hexdigest()=='026c958a87334c5f391ad0f8e9d0f1cf488c99399364c0d347cff037d362172b'
+          books=json.loads(gzip.decompress(packed))
+          manifest={'rank':45,'master':'5.0.42','engine':'DeepL quality_optimized','authorization':'User accepted complete first-story pilot and requested entire book translation and rebuild','state':'IN_PROGRESS','expected_stories':12,'expected_paragraphs':2530,'stories':{},'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          lock=threading.Lock()
+          def save_manifest():
+              p=out/'manifest.json';tmp=out/'manifest.tmp';tmp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2));tmp.replace(p)
+          key=os.environ.get('DEEPL_AUTH_KEY','').strip()
+          if not key:raise SystemExit('MISSING_DEEPL_AUTH_KEY')
+          host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
+          def call(path,payload=None):
+              for attempt in range(3):
+                  req=urllib.request.Request(host+path,data=json.dumps(payload).encode() if payload is not None else None,headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=120) as r:return json.load(r)
+                  except urllib.error.HTTPError as e:
+                      if e.code==429 and attempt<2:time.sleep(3*(attempt+1));continue
+                      raise RuntimeError('DEEPL_HTTP_'+str(e.code)) from None
+                  except Exception as e:raise RuntimeError('DEEPL_NETWORK_'+type(e).__name__) from None
+              raise RuntimeError('RETRY_EXHAUSTED')
+          pending=[]
+          for d in books:
+              path=out/f"{d['story']:02}.json"
+              if path.exists():
+                  previous=json.loads(path.read_text())
+                  assert len(previous['paragraphs'])==len(d['paragraphs'])
+                  for a,b in zip(previous['paragraphs'],d['paragraphs']):
+                      assert a['id']==b['id'] and a['source']==b['source'] and a['source_sha256']==b['source_sha256']
+                  d=previous
+              d['engine']='DeepL quality_optimized EN-RU'
+              d['review']='User-approved automatic translation method; full literary review not performed'
+              count=sum(bool(p.get('target')) for p in d['paragraphs'])
+              manifest['stories'][str(d['story'])]={'paragraphs':len(d['paragraphs']),'translated':count,'status':'COMPLETE' if count==len(d['paragraphs']) else 'PENDING'}
+              pending.append(d)
+          save_manifest()
+          try:usage=call('/v2/usage')
+          except Exception as e:
+              manifest.update(state='BLOCKED',reason=str(e));save_manifest();raise
+          needed=sum(len(p['source']) for d in pending for p in d['paragraphs'] if not p.get('target'))
+          manifest.update(remaining_source_characters=needed,usage_before=usage)
+          limit=usage.get('character_limit');used=usage.get('character_count',0)
+          if limit is not None and used+needed>limit:
+              manifest.update(state='BLOCKED_QUOTA',quota_shortfall=used+needed-limit)
+              save_manifest();print('QUOTA_CHECK',json.dumps({'needed':needed,'remaining':limit-used,'shortfall':used+needed-limit}),flush=True)
+              raise SystemExit(2)
+          save_manifest()
+          def translate(d):
+              paras=d['paragraphs'];story=d['story'];path=out/f'{story:02}.json'
+              for start in range(0,len(paras),8):
+                  batch=[p for p in paras[start:start+8] if not p.get('target')]
+                  if not batch:continue
+                  context='Arthur Conan Doyle, The Adventures of Sherlock Holmes. Story: '+d['heading']+'. Victorian detective fiction, usually narrated by Dr Watson. Sherlock Holmes: Шерлок Холмс; Watson: Ватсон. Surrounding original passage:\n'+'\n\n'.join(p['source'] for p in paras[max(0,start-3):min(len(paras),start+11)])
+                  result=call('/v2/translate',{'text':[p['source'] for p in batch],'source_lang':'EN','target_lang':'RU','model_type':'quality_optimized','context':context})
+                  rows=result.get('translations',[])
+                  if len(rows)!=len(batch):raise RuntimeError('PARAGRAPH_COUNT_MISMATCH')
+                  for p,row in zip(batch,rows):
+                      target=row.get('text','').strip()
+                      if not target:raise RuntimeError('EMPTY_TRANSLATION')
+                      if row.get('model_type_used')!='quality_optimized':raise RuntimeError('UNEXPECTED_MODEL')
+                      p.update(target=target,target_sha256=hashlib.sha256(target.encode()).hexdigest(),model_type_used=row['model_type_used'])
+                  path.write_text(json.dumps(d,ensure_ascii=False,indent=2))
+                  count=sum(bool(p.get('target')) for p in paras)
+                  with lock:
+                      manifest['stories'][str(story)].update(translated=count,status='COMPLETE' if count==len(paras) else 'IN_PROGRESS');save_manifest()
+                  print('STORY',story,'PARAGRAPHS',count,'OF',len(paras),flush=True)
+              return story
+          errors=[]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              jobs={pool.submit(translate,d):d['story'] for d in pending}
+              for job in concurrent.futures.as_completed(jobs):
+                  try:print('STORY_COMPLETE',job.result(),flush=True)
+                  except Exception as e:
+                      errors.append({'story':jobs[job],'error':str(e)})
+                      with lock:manifest['stories'][str(jobs[job])]['status']='FAILED';save_manifest()
+          manifest.update(state='TRANSLATION_COMPLETE' if not errors else 'PARTIAL_FAILURE',errors=errors,finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
+          try:manifest['usage_after']=call('/v2/usage')
+          except Exception:manifest['usage_after']='UNAVAILABLE'
+          save_manifest()
+          print('FINAL_STATUS',manifest['state'])
+          if errors:raise SystemExit(1)
+          
+          PY
+      - name: Save translation checkpoint
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ru45-deepl/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Save approved DeepL Russian Holmes translation checkpoint"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Preserve translation artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru45-deepl-complete-checkpoint
+          path: results/ru45-deepl/
+          if-no-files-found: warn
+          retention-days: 30
