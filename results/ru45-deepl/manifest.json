@@ -1,0 +1,171 @@
+{
+  "rank": 45,
+  "master": "5.0.42",
+  "engine": "DeepL quality_optimized",
+  "authorization": "User accepted complete first-story pilot and requested entire book translation and rebuild",
+  "state": "TRANSLATION_COMPLETE",
+  "expected_stories": 12,
+  "expected_paragraphs": 2530,
+  "stories": {
+    "1": {
+      "paragraphs": 262,
+      "translated": 262,
+      "status": "COMPLETE"
+    },
+    "2": {
+      "paragraphs": 215,
+      "translated": 215,
+      "status": "COMPLETE"
+    },
+    "3": {
+      "paragraphs": 137,
+      "translated": 137,
+      "status": "COMPLETE"
+    },
+    "4": {
+      "paragraphs": 215,
+      "translated": 215,
+      "status": "COMPLETE"
+    },
+    "5": {
+      "paragraphs": 178,
+      "translated": 178,
+      "status": "COMPLETE"
+    },
+    "6": {
+      "paragraphs": 222,
+      "translated": 222,
+      "status": "COMPLETE"
+    },
+    "7": {
+      "paragraphs": 214,
+      "translated": 214,
+      "status": "COMPLETE"
+    },
+    "8": {
+      "paragraphs": 251,
+      "translated": 251,
+      "status": "COMPLETE"
+    },
+    "9": {
+      "paragraphs": 176,
+      "translated": 176,
+      "status": "COMPLETE"
+    },
+    "10": {
+      "paragraphs": 226,
+      "translated": 226,
+      "status": "COMPLETE"
+    },
+    "11": {
+      "paragraphs": 222,
+      "translated": 222,
+      "status": "COMPLETE"
+    },
+    "12": {
+      "paragraphs": 212,
+      "translated": 212,
+      "status": "COMPLETE"
+    }
+  },
+  "started_utc": "2026-09-21T01:59:18.851276+00:00",
+  "remaining_source_characters": 509953,
+  "usage_before": {
+    "products": [
+      {
+        "product_type": "write",
+        "billing_unit": "characters",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "translate",
+        "billing_unit": "characters",
+        "api_key_unit_count": 46108,
+        "account_unit_count": 46108,
+        "api_key_character_count": 46108,
+        "character_count": 46108
+      },
+      {
+        "product_type": "speechToText",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "speechToSpeech",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      }
+    ],
+    "api_key_character_count": 46108,
+    "api_key_character_limit": 1000000000000,
+    "start_time": "2026-09-21T01:38:46Z",
+    "end_time": "2026-10-21T01:38:46Z",
+    "character_count": 46108,
+    "character_limit": 1000000000000,
+    "speech_to_text_milliseconds_count": 0,
+    "speech_to_text_milliseconds_limit": 0,
+    "speech_to_text_minutes_count": 0,
+    "speech_to_text_minutes_limit": 1800000,
+    "speech_to_speech_minutes_count": 0,
+    "speech_to_speech_minutes_limit": 1800000
+  },
+  "errors": [],
+  "finished_utc": "2026-09-21T02:01:21.233105+00:00",
+  "usage_after": {
+    "products": [
+      {
+        "product_type": "write",
+        "billing_unit": "characters",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "translate",
+        "billing_unit": "characters",
+        "api_key_unit_count": 556061,
+        "account_unit_count": 556061,
+        "api_key_character_count": 556061,
+        "character_count": 556061
+      },
+      {
+        "product_type": "speechToText",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "speechToSpeech",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      }
+    ],
+    "api_key_character_count": 556061,
+    "api_key_character_limit": 1000000000000,
+    "start_time": "2026-09-21T01:38:46Z",
+    "end_time": "2026-10-21T01:38:46Z",
+    "character_count": 556061,
+    "character_limit": 1000000000000,
+    "speech_to_text_milliseconds_count": 0,
+    "speech_to_text_milliseconds_limit": 0,
+    "speech_to_text_minutes_count": 0,
+    "speech_to_text_minutes_limit": 1800000,
+    "speech_to_speech_minutes_count": 0,
+    "speech_to_speech_minutes_limit": 1800000
+  }
+}
