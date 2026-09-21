@@ -1,0 +1,45 @@
+name: BB Russian 45 DeepL connection test
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru45-deepl-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Test DeepL quality optimized English to Russian
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,sys
+          key=os.environ.get("DEEPL_AUTH_KEY","").strip()
+          if not key:
+              print("DEEPL_TEST: MISSING_SECRET");sys.exit(1)
+          host="https://api-free.deepl.com" if key.endswith(":fx") else "https://api.deepl.com"
+          samples=[
+              "To Sherlock Holmes she is always the woman.",
+              "It was not that he felt any emotion akin to love for Irene Adler.",
+              "All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind.",
+              "Yes, I have been dragging the Serpentine."
+          ]
+          body={"text":samples,"source_lang":"EN","target_lang":"RU","model_type":"quality_optimized","context":"The Adventures of Sherlock Holmes by Arthur Conan Doyle. Literary detective fiction narrated by Dr Watson. Irene Adler is a woman. The Serpentine is a lake in London; the police are searching its bottom for a missing person."}
+          req=urllib.request.Request(host+"/v2/translate",data=json.dumps(body).encode(),headers={"Authorization":"DeepL-Auth-Key "+key,"Content-Type":"application/json"})
+          try:
+              with urllib.request.urlopen(req,timeout=90) as r:result=json.load(r)
+          except urllib.error.HTTPError as e:
+              print("DEEPL_TEST: HTTP_ERROR",e.code);sys.exit(1)
+          except Exception as e:
+              print("DEEPL_TEST: NETWORK_ERROR",type(e).__name__);sys.exit(1)
+          rows=result.get("translations",[])
+          if len(rows)!=len(samples) or not all(x.get("text","").strip() for x in rows):
+              print("DEEPL_TEST: INVALID_RESPONSE");sys.exit(1)
+          print("DEEPL_TEST: CONNECTION_PASS; literary review pending")
+          for source,row in zip(samples,rows):
+              print(json.dumps({"source":source,"target":row["text"],"model_type_used":row.get("model_type_used","not_reported")},ensure_ascii=False))
+          PY
