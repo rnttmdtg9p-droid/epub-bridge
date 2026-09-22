@@ -1,0 +1,24 @@
+name: Retry historical illustration recovery
+on:
+  push:
+    paths: ['.github/workflows/bb-ru29-art-retry.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -u scripts/ru29-art-retry.py
+      - name: Preserve sources
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ru29-art/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Save selected Russian translation sources"
+          git pull --rebase origin main
+          git push origin HEAD:main
