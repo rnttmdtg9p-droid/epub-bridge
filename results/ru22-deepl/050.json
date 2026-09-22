@@ -1,0 +1,1142 @@
+{
+  "chapter": 50,
+  "number": "L",
+  "source_url": "https://www.gutenberg.org/files/17990/17990-h/17990-h.htm",
+  "source_document_sha256": "700fcb6bcd69debf776685ce286462b3800e002aa789ee71dd533bbd5b3ce59e",
+  "paragraphs": [
+    {
+      "id": "050-0000",
+      "role": "heading",
+      "source_html": "<h3><a href=\"#table\">La famille Morrel.</a></h3>",
+      "source": "La famille Morrel.",
+      "source_sha256": "98d13ed221a9ee9b1e0a5b3dd47a17fb833cc221b58ed14e79f3289ccb54f00a",
+      "target_html": "<h3><a href=\"#table\">Семья Моррель.</a></h3>",
+      "target_sha256": "0f0464e914f35ccf9e2d3f5f1f092122250859ab6aac240329ff3ed252f99dac",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0001",
+      "role": "body",
+      "source_html": "<p>Le comte arriva en quelques minutes rue Meslay, n° 7.</p>",
+      "source": "Le comte arriva en quelques minutes rue Meslay, n° 7.",
+      "source_sha256": "2029d48a92c2750bbd4cf96e2d665c2b21d2bbee32bb184861a62d12430166a7",
+      "target_html": "<p>Через несколько минут граф прибыл на улицу Месле, № 7.</p>",
+      "target_sha256": "e64ea86040f688f380db7d95d2749abb604daff19706a7eac7c9b064d7b59ba3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0002",
+      "role": "body",
+      "source_html": "<p>La maison était blanche, riante et précédée d'une cour dans laquelle\ndeux petits massifs contenaient d'assez belles fleurs.</p>",
+      "source": "La maison était blanche, riante et précédée d'une cour dans laquelle\ndeux petits massifs contenaient d'assez belles fleurs.",
+      "source_sha256": "41f20d279f69c22ed0cc1a26baabbfd956544efb995810f8c86b1eabc96ad6b2",
+      "target_html": "<p>Дом был белым, уютным, а перед ним находился дворик, в котором\nна двух небольших клумбах росли довольно красивые цветы.</p>",
+      "target_sha256": "c30688cc6f5eb6f8160886313f7488105a3f710bfe5a120722b18aed95ebc317",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0003",
+      "role": "body",
+      "source_html": "<p>Dans le concierge qui lui ouvrit cette porte le comte reconnut le vieux\nCoclès. Mais comme celui-ci on se le rappelle, n'avait qu'un œil, et\nque depuis neuf ans cet œil avait encore considérablement faibli,\nCoclès ne reconnut pas le comte.</p>",
+      "source": "Dans le concierge qui lui ouvrit cette porte le comte reconnut le vieux\nCoclès. Mais comme celui-ci on se le rappelle, n'avait qu'un œil, et\nque depuis neuf ans cet œil avait encore considérablement faibli,\nCoclès ne reconnut pas le comte.",
+      "source_sha256": "268500e7c83879d72dbe70f4713402213549bc59c2db1d3c870bd5f880943b81",
+      "target_html": "<p>В консьерже, открывшем ему дверь, граф узнал старого\nКоклеса. Но поскольку, как мы помним, у того был только один глаз, и\nза последние девять лет зрение этого глаза значительно ослабло,\nКоклес не узнал графа.</p>",
+      "target_sha256": "6ee19ca3b0d4b7597009f8c95801fcce1dcff9c86c159f6b9885d8ecd277f36e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0004",
+      "role": "body",
+      "source_html": "<p>Les voitures, pour s'arrêter devant l'entrée, devaient tourner, afin\nd'éviter un petit jet d'eau jaillissant d'un bassin en rocaille,\nmagnificence qui avait excité bien des jalousies dans le quartier, et\nqui était cause qu'on appelait cette maison le <i>Petit-Versailles</i>.</p>",
+      "source": "Les voitures, pour s'arrêter devant l'entrée, devaient tourner, afin\nd'éviter un petit jet d'eau jaillissant d'un bassin en rocaille,\nmagnificence qui avait excité bien des jalousies dans le quartier, et\nqui était cause qu'on appelait cette maison le Petit-Versailles.",
+      "source_sha256": "2f8326e4d2668816ecb4767eaf8cb731ceed9568d1036955527152d6e6242671",
+      "target_html": "<p>Чтобы остановиться у входа, кареты должны были развернуться, чтобы\nобойти небольшой фонтанчик, бьющий из каменного бассейна —\nвеликолепие, которое вызывало немало зависти в окрестностях и\nиз-за которого этот дом называли <i>«Маленьким</i> <i>Версалем</i>».</p>",
+      "target_sha256": "20daef92d69e5e7f6b5bc95e2f138e8795776a2d6d55cb6fefc39169ea123d32",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0005",
+      "role": "body",
+      "source_html": "<p>Inutile de dire que dans le bassin manœuvraient une foule de poissons\nrouges et jaunes.</p>",
+      "source": "Inutile de dire que dans le bassin manœuvraient une foule de poissons\nrouges et jaunes.",
+      "source_sha256": "e012b05053e310622af2305b5ef62b095aab7a3b54d3f98158d2d8357c9557f8",
+      "target_html": "<p>Само собой разумеется, что в аквариуме плавала целая толпа рыбок\nкрасного и желтого цветов.</p>",
+      "target_sha256": "f8558bb2e3ab6303dc08f29f4d37f2e84d6dad0c17bed1ad507fc92678823caf",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0006",
+      "role": "body",
+      "source_html": "<p>La maison, élevée au-dessus d'un étage de cuisines et caveaux, avait,\noutre le rez-de-chaussée, deux étages pleins et des combles; les jeunes\ngens l'avaient achetée avec les dépendances, qui consistaient en un\nimmense atelier, en deux pavillons au fond d'un jardin et dans le\njardin lui-même. Emmanuel avait, du premier coup d'œil, vu dans cette\ndisposition une petite spéculation à faire; il s'était réservé la\nmaison, la moitié du jardin, et avait tiré une ligne, c'est-à-dire qu'il\navait bâti un mur entre lui et les ateliers qu'il avait loués à bail\navec les pavillons et la portion du jardin qui y était afférente; de\nsorte qu'il se trouvait logé pour une somme assez modique, et aussi bien\nclos chez lui que le plus minutieux propriétaire d'un hôtel du faubourg\nSaint-Germain.</p>",
+      "source": "La maison, élevée au-dessus d'un étage de cuisines et caveaux, avait,\noutre le rez-de-chaussée, deux étages pleins et des combles; les jeunes\ngens l'avaient achetée avec les dépendances, qui consistaient en un\nimmense atelier, en deux pavillons au fond d'un jardin et dans le\njardin lui-même. Emmanuel avait, du premier coup d'œil, vu dans cette\ndisposition une petite spéculation à faire; il s'était réservé la\nmaison, la moitié du jardin, et avait tiré une ligne, c'est-à-dire qu'il\navait bâti un mur entre lui et les ateliers qu'il avait loués à bail\navec les pavillons et la portion du jardin qui y était afférente; de\nsorte qu'il se trouvait logé pour une somme assez modique, et aussi bien\nclos chez lui que le plus minutieux propriétaire d'un hôtel du faubourg\nSaint-Germain.",
+      "source_sha256": "4e991da76675f9242450d49f9c04609bde6ba50a94cb89552a84a2dae0502e32",
+      "target_html": "<p>Дом, возвышавшийся над этажом, занимаемым кухнями и погребами, имел,\nпомимо первого этажа, два полных этажа и чердак; молодые\nлюди купили его вместе с пристройками, которые состояли из\nогромной мастерской, двух павильонов в глубине сада и самого\nсада. Эммануэль с первого взгляда усмотрел в таком\nрасположении возможность небольшой спекуляции; он оставил за собой\nдом, половину сада и провел границу, то есть\nпостроил стену между собой и мастерскими, которые сдал в аренду\nвместе с павильонами и прилегающей к ним частью сада; таким\nобразом, что он жил за довольно скромную сумму и был так же\nхорошо ограждён у себя дома, как и самый щепетильный владелец отеля в\nпредгорье Сен-Жермен.</p>",
+      "target_sha256": "6ab08aa5f515a82018723da1920942593b75533f7d2f3805bc345c95b19e777e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0007",
+      "role": "body",
+      "source_html": "<p>La salle à manger était de chêne, le salon d'acajou et de velours bleu;\nla chambre à coucher de citronnier et de damas vert; il y avait en outre\nun cabinet de travail pour Emmanuel, qui ne travaillait pas, et un salon\nde musique pour Julie, qui n'était pas musicienne.</p>",
+      "source": "La salle à manger était de chêne, le salon d'acajou et de velours bleu;\nla chambre à coucher de citronnier et de damas vert; il y avait en outre\nun cabinet de travail pour Emmanuel, qui ne travaillait pas, et un salon\nde musique pour Julie, qui n'était pas musicienne.",
+      "source_sha256": "5204543b4d1edf29e1f2711136677a2abf94c9c8226ae090dee5e75ec309cf7c",
+      "target_html": "<p>Столовая была обставлена мебелью из дуба, гостиная — из красного дерева и синего бархата;\nспальня — из лимонного дерева и зелёного дамаста; кроме того, там был\nрабочий кабинет для Эммануэля, который не работал, и музыкальный\nсалон для Жюли, которая не была музыканткой.</p>",
+      "target_sha256": "0e810ed6648eb5f485372f14989f44034a18f5fb5051620014800033f17e5693",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0008",
+      "role": "body",
+      "source_html": "<p>Le second étage tout entier était consacré à Maximilien: il y avait là\nune répétition exacte du logement de sa sœur, la salle à manger\nseulement avait été convertie en une salle de billard où il amenait ses\namis.</p>",
+      "source": "Le second étage tout entier était consacré à Maximilien: il y avait là\nune répétition exacte du logement de sa sœur, la salle à manger\nseulement avait été convertie en une salle de billard où il amenait ses\namis.",
+      "source_sha256": "7f37664b1044bfa70f84a3a3836191c6ca8cb90c14fe4258f83c939634cb72dc",
+      "target_html": "<p>Весь второй этаж был отведён для Максимилиана: там находилась\nточная копия квартиры его сестры, только столовая\nбыла преобразована в бильярдную, куда он приводил своих\nдрузей.</p>",
+      "target_sha256": "de009bc331a7bf2c56126997fe93d855b581378b38161198682cc1e686756ac1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0009",
+      "role": "body",
+      "source_html": "<p>Il surveillait lui-même le pansage de son cheval, et fumait son cigare à\nl'entrée du jardin quand la voiture du comte s'arrêta à la porte.</p>",
+      "source": "Il surveillait lui-même le pansage de son cheval, et fumait son cigare à\nl'entrée du jardin quand la voiture du comte s'arrêta à la porte.",
+      "source_sha256": "b64871b4b78b99d7a36adc85cb81a08daa70f33cfa742cc6e9d562a0c273cb9a",
+      "target_html": "<p>Он сам наблюдал за чисткой своей лошади и курил сигару у\nвхода в сад, когда карета графа остановилась у ворот.</p>",
+      "target_sha256": "df19901665b037e3bb8660283985c32cfe9ac453d9fa6c57aec44cddfa978c3e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0010",
+      "role": "body",
+      "source_html": "<p>Coclès ouvrit la porte, comme l'avons dit, et Baptistin, s'élançant de\nson siège, demanda si M. et Mme Herbault et M. Maximilien Morrel étaient\nvisibles pour le comte de Monte-Cristo. </p>",
+      "source": "Coclès ouvrit la porte, comme l'avons dit, et Baptistin, s'élançant de\nson siège, demanda si M. et Mme Herbault et M. Maximilien Morrel étaient\nvisibles pour le comte de Monte-Cristo. ",
+      "source_sha256": "1baac4ae6e57375af0f6bf7361054321378e326c9e44d8b98f0365df51c60f72",
+      "target_html": "<p>Коклёс открыл дверь, как мы уже говорили, и Баптистин, вскочив со\nсвоего кресла, спросил, можно ли графу Монте-Кристо увидеться с\nгосподином и госпожой Эрбо и господином Максимилианом Моррелем. </p>",
+      "target_sha256": "68b0dbc48d94b2ad8400a8f639a93a1bd98de2bfaeb6d4726a501bdfc99aa438",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0011",
+      "role": "body",
+      "source_html": "<p>«Pour le comte de Monte-Cristo! s'écria Morrel en jetant son cigare et\nen s'élançant au-devant de son visiteur: je le crois bien que nous\nsommes visibles pour lui! Ah! merci, cent fois merci, monsieur le comte,\nde ne pas avoir oublié votre promesse.»</p>",
+      "source": "«Pour le comte de Monte-Cristo! s'écria Morrel en jetant son cigare et\nen s'élançant au-devant de son visiteur: je le crois bien que nous\nsommes visibles pour lui! Ah! merci, cent fois merci, monsieur le comte,\nde ne pas avoir oublié votre promesse.»",
+      "source_sha256": "619c34f72af2b2cd4e883672759466e0c0635488293d063c96fcb8616e5ad3a7",
+      "target_html": "<p>«Граф Монте-Кристо! — воскликнул Моррель, отбросив сигару и\nбросившись навстречу гостю. — Я и думал, что мы\nготовы принять его! Ах! Спасибо, стократно спасибо, господин граф,\nза то, что вы не забыли о своём обещании».</p>",
+      "target_sha256": "19f90f7a1270f9d35b5d22dda7a07a82339a9b1035910e2a004446470acdb3c0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0012",
+      "role": "body",
+      "source_html": "<p>Et le jeune officier serra si cordialement la main du comte, que\ncelui-ci ne put se méprendre à la franchise de la manifestation, et il\nvit bien qu'il avait été attendu avec impatience et reçu avec\nempressement.</p>",
+      "source": "Et le jeune officier serra si cordialement la main du comte, que\ncelui-ci ne put se méprendre à la franchise de la manifestation, et il\nvit bien qu'il avait été attendu avec impatience et reçu avec\nempressement.",
+      "source_sha256": "8573674169df6006e9b4538e8df5cf6cb1681d0a571e034ccf2bd2967c38eb1e",
+      "target_html": "<p>И молодой офицер так сердечно пожал руку графу, что\nтот не мог не заметить искренности этого жеста и\nпонял, что его с нетерпением ждали и встретили с\nрадушием.</p>",
+      "target_sha256": "a0f67ec410c121c4f3ccab7c169591a94d5282f0a7166008e2f040ee62e6b931",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0013",
+      "role": "body",
+      "source_html": "<p>«Venez, venez, dit Maximilien, je veux vous servir d'introducteur; un\nhomme comme vous ne doit pas être annoncé par un domestique, ma sœur\nest dans son jardin, elle casse des roses fanées; mon frère lit ses\ndeux journaux, <i>La Presse</i> et <i>les Débats</i>, à six pas d'elle, car\npartout où l'on voit Mme Herbault, on n'a qu'à regarder dans un rayon de\nquatre mètres, M. Emmanuel s'y trouve, et réciproquement, comme on dit à\nl'École polytechnique.»</p>",
+      "source": "«Venez, venez, dit Maximilien, je veux vous servir d'introducteur; un\nhomme comme vous ne doit pas être annoncé par un domestique, ma sœur\nest dans son jardin, elle casse des roses fanées; mon frère lit ses\ndeux journaux, La Presse et les Débats, à six pas d'elle, car\npartout où l'on voit Mme Herbault, on n'a qu'à regarder dans un rayon de\nquatre mètres, M. Emmanuel s'y trouve, et réciproquement, comme on dit à\nl'École polytechnique.»",
+      "source_sha256": "d2301803aca0d26296ed110292a7a29bb063ff3ebacf924b23c325f38fe80624",
+      "target_html": "<p>«Идите, идите, — сказал Максимилиан, — я хочу сам вас представить; такого\nчеловека, как вы, не должен объявлять слуга. Моя сестра\nнаходится в саду, она обрывает увядшие розы; мой брат читает свои\nдве газеты, <i>„La Presse“</i> и <i>„Les Débats“</i>, в шести шагах от неё, ибо\nвезде, где появляется мадам Эрбо, достаточно оглянуться в радиусе\nчетырёх метров — и там будет месье Эммануэль, и наоборот, как говорят в\nПолитехнической школе».</p>",
+      "target_sha256": "2062a0f28a3ec9d9849af3a786723ec6d0bed6bab38758b7cb86a49ab3e8968c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0014",
+      "role": "body",
+      "source_html": "<p>Le bruit des pas fit lever la tête à une jeune femme de vingt à\nvingt-cinq ans, vêtue d'une robe de chambre de soie, et épluchant avec\nun soin tout particulier un rosier noisette.</p>",
+      "source": "Le bruit des pas fit lever la tête à une jeune femme de vingt à\nvingt-cinq ans, vêtue d'une robe de chambre de soie, et épluchant avec\nun soin tout particulier un rosier noisette.",
+      "source_sha256": "09f7e013dc788614913df039c2645851bb8c248e3cdf3d96b9aff50260e7abe8",
+      "target_html": "<p>Шум шагов заставил поднять голову молодую женщину лет двадцати–\nдвадцати пяти, одетую в шелковое халатик и с\nособой тщательностью обрезающую розы орехового цвета.</p>",
+      "target_sha256": "f90b46f72037967cc6ddd3269ce31bbf083f75de10b49e266d980c0669319803",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0015",
+      "role": "body",
+      "source_html": "<p>Cette femme, c'était notre petite Julie, devenue, comme le lui avait\nprédit le mandataire de la maison Thomson et French, Mme Emmanuel\nHerbault.</p>",
+      "source": "Cette femme, c'était notre petite Julie, devenue, comme le lui avait\nprédit le mandataire de la maison Thomson et French, Mme Emmanuel\nHerbault.",
+      "source_sha256": "c783937447ab7a99ad26f7abdc28589853e44879d8dbaaadb2f62fcd648a2f03",
+      "target_html": "<p>Эта женщина была нашей маленькой Жюли, ставшей, как и предсказал ей\nпредставитель фирмы «Томсон и Френч», мадам Эммануэль\nЭрбо.</p>",
+      "target_sha256": "011d6b2b8b62fe06c7aca6f2ca574d498e6967fe71c3ac21c73d3a7b8d58552b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0016",
+      "role": "body",
+      "source_html": "<p>Elle poussa un cri en voyant un étranger. Maximilien se mit à rire. </p>",
+      "source": "Elle poussa un cri en voyant un étranger. Maximilien se mit à rire. ",
+      "source_sha256": "3a67ba4459ce0d2500fe1223b135583ace38b46ad76c7b46fb1e60d3f3890ccc",
+      "target_html": "<p>Увидев незнакомца, она вскрикнула. Максимилиан рассмеялся. </p>",
+      "target_sha256": "43e078214c5018ddf57b0b9537be7d6bec4c1d73564803d2a4e793dedcf87820",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0017",
+      "role": "body",
+      "source_html": "<p>«Ne te dérange pas, ma sœur, dit-il, monsieur le comte n'est que depuis\ndeux ou trois jours à Paris, mais il sait déjà ce que c'est qu'une\nrentière du Marais, et s'il ne le sait pas, tu vas le lui apprendre.</p>",
+      "source": "«Ne te dérange pas, ma sœur, dit-il, monsieur le comte n'est que depuis\ndeux ou trois jours à Paris, mais il sait déjà ce que c'est qu'une\nrentière du Marais, et s'il ne le sait pas, tu vas le lui apprendre.",
+      "source_sha256": "92f862119a0780df09aa00eca252c35e7c952beee4194a1d23033a6ca85ae5cc",
+      "target_html": "<p>«Не беспокойся, сестра, — сказал он, — граф находится в Париже всего\nдва или три дня, но он уже знает, что такое\nрентирша из Маре, а если он этого не знает, ты ему это объяснишь».</p>",
+      "target_sha256": "3c24a57a75488c0443bcb17abb1d9f626e5875ffba56fcca94b1d57384579052",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0018",
+      "role": "body",
+      "source_html": "<p>—Ah! monsieur, dit Julie, vous amener ainsi, c'est une trahison de mon\nfrère, qui n'a pas pour sa pauvre sœur la moindre coquetterie....\nPenelon!... Penelon!...»</p>",
+      "source": "—Ah! monsieur, dit Julie, vous amener ainsi, c'est une trahison de mon\nfrère, qui n'a pas pour sa pauvre sœur la moindre coquetterie....\nPenelon!... Penelon!...»",
+      "source_sha256": "5499af997454c240a4ccb6a775da40c2880168fce598fbf0b78d4c3762d8ca54",
+      "target_html": "<p>—Ах, месье, — сказала Жюли, — привести вас таким образом — это предательство со стороны моего\nбрата, у которого нет ни капли кокетства по отношению к своей бедной сестре...\nПенелон!... Пенелон!...»</p>",
+      "target_sha256": "ec3022e93519cc10f3bd81b6fcc8186ce4eaa498eefdda7bf846af6c7b24ab55",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0019",
+      "role": "body",
+      "source_html": "<p>Un vieillard qui bêchait une plate-bande de rosiers du Bengale ficha sa\nbêche en terre et s'approcha, la casquette à la main, en dissimulant du\nmieux qu'il le pouvait une chique enfoncée momentanément dans les\nprofondeurs de ses joues. Quelques mèches blanches argentaient sa\nchevelure encore épaisse, tandis que son teint bronzé et son œil hardi\net vif annonçaient le vieux marin, bruni au soleil de l'équateur et hâlé\nau souffle des tempêtes.</p>",
+      "source": "Un vieillard qui bêchait une plate-bande de rosiers du Bengale ficha sa\nbêche en terre et s'approcha, la casquette à la main, en dissimulant du\nmieux qu'il le pouvait une chique enfoncée momentanément dans les\nprofondeurs de ses joues. Quelques mèches blanches argentaient sa\nchevelure encore épaisse, tandis que son teint bronzé et son œil hardi\net vif annonçaient le vieux marin, bruni au soleil de l'équateur et hâlé\nau souffle des tempêtes.",
+      "source_sha256": "845c2c97e20fbccb38be1501800c8aafef9598049dbff2745c3e899f73dbb157",
+      "target_html": "<p>Пожилой мужчина, который перекапывал грядку с бенгальскими розами, воткнул\nлопату в землю и подошел, держа кепку в руке, стараясь как\nмог скрыть жвачку, на мгновение засунутую в\nглубину щеки. Несколько седых прядей серебрили его\nвсе ещё густую шевелюру, а загорелый цвет лица и смелый,\nживой взгляд свидетельствовали о том, что перед нами старый моряк, закалённый солнцем экватора и загорелый\nпод дуновением штормов.</p>",
+      "target_sha256": "b340cfe39772fb2816e5133f91efc600a8251b95203326215d812cd3859f20b4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0020",
+      "role": "body",
+      "source_html": "<p>«Je crois que vous m'avez hélé, mademoiselle Julie, dit-il, me voilà.»</p>",
+      "source": "«Je crois que vous m'avez hélé, mademoiselle Julie, dit-il, me voilà.»",
+      "source_sha256": "34655e132f261e6c18e59ce58c70834d403bf66b84e179251b02d18c13759e69",
+      "target_html": "<p>«По-моему, вы меня звали, мадемуазель Жюли, — сказал он, — вот я и здесь».</p>",
+      "target_sha256": "e05fb29cabd982889fa39883f2be7d86421d9aa6eac69c6b623a44d6b459e7fc",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0021",
+      "role": "body",
+      "source_html": "<p>Penelon avait conservé l'habitude d'appeler la fille de son patron Mlle\nJulie, et n'avait jamais pu prendre celle de l'appeler Mme Herbault.</p>",
+      "source": "Penelon avait conservé l'habitude d'appeler la fille de son patron Mlle\nJulie, et n'avait jamais pu prendre celle de l'appeler Mme Herbault.",
+      "source_sha256": "5ea989ecd0260c72f0da50029b0ff38e32d989635c7c56ed0da49ee8d27d8c52",
+      "target_html": "<p>Пенелон сохранил привычку называть дочь своего хозяина мадемуазель\nЖюли и так и не смог привыкнуть называть её мадам Эрбо.</p>",
+      "target_sha256": "89cc998ca103a2105391107a11c23e9d5239711f7e242880f24f8ecfa038a1e5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0022",
+      "role": "body",
+      "source_html": "<p>«Penelon, dit Julie, allez prévenir M. Emmanuel de la bonne visite qui\nnous arrive, tandis que M. Maximilien conduira monsieur au salon.»</p>",
+      "source": "«Penelon, dit Julie, allez prévenir M. Emmanuel de la bonne visite qui\nnous arrive, tandis que M. Maximilien conduira monsieur au salon.»",
+      "source_sha256": "1e45fed7b04c5e4e4f21b1bc28079ffc84f7316ee16bd8aeb5957db6f3e4b6c6",
+      "target_html": "<p>«Пенелон, — сказала Жюли, — сходи предупреди господина Эммануила о том, что к\nнам прибыл уважаемый гость, а господин Максимилиан проводит его в гостиную».</p>",
+      "target_sha256": "bc5e83c3b54f9f4c12cf4c6c3e8047fc760d4ea31f63070e514ea646ff443bd9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0023",
+      "role": "body",
+      "source_html": "<p>Puis se tournant vers Monte-Cristo:</p>",
+      "source": "Puis se tournant vers Monte-Cristo:",
+      "source_sha256": "f52676b35d49dceb2995e43194ece176a7464fd7c97be21bce7e0dd9767dee0c",
+      "target_html": "<p>Затем, обратившись к Монте-Кристо:</p>",
+      "target_sha256": "5656083b522771f603c7cc97aef8253880ca1575a6404493511af12e296e6506",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0024",
+      "role": "body",
+      "source_html": "<p>«Monsieur me permettra bien de m'enfuir une minute, n'est-ce pas?»</p>",
+      "source": "«Monsieur me permettra bien de m'enfuir une minute, n'est-ce pas?»",
+      "source_sha256": "b64132b619bbeb4b9b44d93c625d93278c33766ab6ae9d159aa8d9c1908bdb34",
+      "target_html": "<p>«Господин, позвольте мне на минутку отлучиться, не возражаете?»</p>",
+      "target_sha256": "989a222773ffac29cf95e5a260575e31172184f457dd70e4ebac72bf73206d8e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0025",
+      "role": "body",
+      "source_html": "<p>Et sans attendre l'assentiment du comte, elle s'élança derrière un\nmassif et gagna la maison par une allée latérale.</p>",
+      "source": "Et sans attendre l'assentiment du comte, elle s'élança derrière un\nmassif et gagna la maison par une allée latérale.",
+      "source_sha256": "4e09c36d5e6012aec73602a719bf89db3743a196bc284553d4cbf05f33b27285",
+      "target_html": "<p>И, не дожидаясь согласия графа, она бросилась за\nкустарник и добралась до дома по боковой аллее.</p>",
+      "target_sha256": "bac340e8dff5b6bcdbea0ecb1b4e9c8ad8b3be7dac39698b11fab9d21f3c9a2c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0026",
+      "role": "body",
+      "source_html": "<p>«Ah çà! mon cher monsieur Morrel, dit Monte-Cristo, je m'aperçois avec\ndouleur que je fais révolution dans votre famille.</p>",
+      "source": "«Ah çà! mon cher monsieur Morrel, dit Monte-Cristo, je m'aperçois avec\ndouleur que je fais révolution dans votre famille.",
+      "source_sha256": "de1600822cab6ece377c34fe1dac515dbe5ab6e4ddbfdc6b0e2be91d0d5e7e45",
+      "target_html": "<p>«Ну что ж, мой дорогой господин Моррель, — сказал Монте-Кристо, — я с\nпечалью констатирую, что вызываю настоящий переворот в вашей семье.</p>",
+      "target_sha256": "c8e42ac3620c1edb05c369a2b813333af97800a65fa3321e494392a99fd79ddf",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0027",
+      "role": "body",
+      "source_html": "<p>—Tenez, tenez, dit Maximilien en riant, voyez-vous là-bas le mari qui,\nde son côté, va troquer sa veste contre une redingote? Oh! c'est qu'on\nvous connaît rue Meslay, vous étiez annoncé, je vous prie de le croire.</p>",
+      "source": "—Tenez, tenez, dit Maximilien en riant, voyez-vous là-bas le mari qui,\nde son côté, va troquer sa veste contre une redingote? Oh! c'est qu'on\nvous connaît rue Meslay, vous étiez annoncé, je vous prie de le croire.",
+      "source_sha256": "fa852cac0a9e17a720a1b6d243b0324ca40c4aca8ba16db3f82e10f63aa6ac9e",
+      "target_html": "<p>—Ну-ну, — сказал Максимилиан, смеясь, — видите там того мужа, который,\nв свою очередь, собирается сменить жилет на фрак? О! Дело в том, что\nвас знают на улице Месле, вас анонсировали, поверьте мне.</p>",
+      "target_sha256": "1466610c6a9521c8b2f7e8b8eecfbe7450c15d38af912994f8bb97786c28338c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0028",
+      "role": "body",
+      "source_html": "<p>—Vous me paraissez avoir là, monsieur, une heureuse famille, dit le\ncomte, répondant à sa propre pensée.</p>",
+      "source": "—Vous me paraissez avoir là, monsieur, une heureuse famille, dit le\ncomte, répondant à sa propre pensée.",
+      "source_sha256": "10fa5a04aed2889ec4983d54f9d7edc71ca70172bcf092cf3e1a93637e967150",
+      "target_html": "<p>—Мне кажется, месье, что у вас здесь счастливая семья, — сказал\nграф, выразив вслух свои собственные мысли.</p>",
+      "target_sha256": "185ca2cc1e6b97a871ae7a666b49285a52b29f8012c3640257bcd4781155bcb3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0029",
+      "role": "body",
+      "source_html": "<p>—Oh! oui, je vous en réponds, monsieur le comte, que voulez-vous? il ne\nleur manque rien pour être heureux: ils sont jeunes, ils sont gais, ils\ns'aiment, et avec leurs vingt-cinq mille livres de rente ils se\nfigurent, eux qui ont cependant côtoyé tant d'immenses fortunes, ils se\nfigurent posséder la richesse des Rothschild.</p>",
+      "source": "—Oh! oui, je vous en réponds, monsieur le comte, que voulez-vous? il ne\nleur manque rien pour être heureux: ils sont jeunes, ils sont gais, ils\ns'aiment, et avec leurs vingt-cinq mille livres de rente ils se\nfigurent, eux qui ont cependant côtoyé tant d'immenses fortunes, ils se\nfigurent posséder la richesse des Rothschild.",
+      "source_sha256": "f75e4e455e785b4bac6f8fb12ebd48125b28b4ae868ee6846b77632e007c5b37",
+      "target_html": "<p>—О да, я вам гарантирую, господин граф, что, как бы то ни было,\nим ничего не недостает для счастья: они молоды, они веселы, они\nлюбят друг друга, и со своими двадцатью пятью тысячами ливров ренты они\nвоображают себе — они, которые, тем не менее, общались со столькими\nневероятными состояниями, — они воображают, что обладают богатством Ротшильдов.</p>",
+      "target_sha256": "2753e3ae0c0067d9f4b23bdc7b77f14dd5f00e7ec84edcc980a96789fd7fdf57",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0030",
+      "role": "body",
+      "source_html": "<p>—C'est peu, cependant, vingt-cinq mille livres de rente, dit\nMonte-Cristo avec une douceur si suave qu'elle pénétra le cœur de\nMaximilien comme eût pu le faire la voix d'un tendre père; mais ils ne\ns'arrêteront pas là, nos jeunes gens, ils deviendront à leur tour\nmillionnaires. Monsieur votre beau-frère est avocat... médecin?...</p>",
+      "source": "—C'est peu, cependant, vingt-cinq mille livres de rente, dit\nMonte-Cristo avec une douceur si suave qu'elle pénétra le cœur de\nMaximilien comme eût pu le faire la voix d'un tendre père; mais ils ne\ns'arrêteront pas là, nos jeunes gens, ils deviendront à leur tour\nmillionnaires. Monsieur votre beau-frère est avocat... médecin?...",
+      "source_sha256": "a0a2b4bc1c4f36b7b3606ba3124b0bbfd841ee12ece506b6251c41099ac6c0fd",
+      "target_html": "<p>—Двадцать пять тысяч ливров ренты — это, однако, немного, — сказал\nМонте-Кристо с такой мягкостью, что она проникла в сердце\nМаксимилиана, как мог бы сделать это голос нежного отца; но наши\nмолодые люди не остановятся на этом, они, в свою очередь,\nстанут миллионерами. Ваш шурин — адвокат… врач?…</p>",
+      "target_sha256": "cf188851d8b309e8c46b70629e8dc75b190e4efe5678c8d711a73e4a035e5874",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0031",
+      "role": "body",
+      "source_html": "<p>—Il était négociant, monsieur le comte, et avait pris la maison de mon\npauvre père. M. Morrel est mort en laissant cinq cent mille francs de\nfortune; j'en avais une moitié et ma sœur l'autre, car nous n'étions\nque deux enfants. Son mari, qui l'avait épousée sans avoir d'autre\npatrimoine que sa noble probité, son intelligence de premier ordre et sa\nréputation sans tache, a voulu posséder autant que sa femme. Il a\ntravaillé jusqu'à ce qu'il eût amassé deux cent cinquante mille francs;\nsix ans ont suffi. C'était, je vous le jure monsieur le comte, un\ntouchant spectacle que celui de ces deux enfants si laborieux, si unis,\ndestinés par leur capacité à la plus haute fortune, et qui, n'ayant rien\nvoulu changer aux habitudes de la maison paternelle, ont mis six ans à\nfaire ce que les novateurs eussent pu faire en deux ou trois, aussi\nMarseille retentit encore des louanges qu'on n'a pu refuser à tant de\ncourageuse abnégation. Enfin, un jour, Emmanuel vint trouver sa femme,\nqui achevait de payer l'échéance.</p>",
+      "source": "—Il était négociant, monsieur le comte, et avait pris la maison de mon\npauvre père. M. Morrel est mort en laissant cinq cent mille francs de\nfortune; j'en avais une moitié et ma sœur l'autre, car nous n'étions\nque deux enfants. Son mari, qui l'avait épousée sans avoir d'autre\npatrimoine que sa noble probité, son intelligence de premier ordre et sa\nréputation sans tache, a voulu posséder autant que sa femme. Il a\ntravaillé jusqu'à ce qu'il eût amassé deux cent cinquante mille francs;\nsix ans ont suffi. C'était, je vous le jure monsieur le comte, un\ntouchant spectacle que celui de ces deux enfants si laborieux, si unis,\ndestinés par leur capacité à la plus haute fortune, et qui, n'ayant rien\nvoulu changer aux habitudes de la maison paternelle, ont mis six ans à\nfaire ce que les novateurs eussent pu faire en deux ou trois, aussi\nMarseille retentit encore des louanges qu'on n'a pu refuser à tant de\ncourageuse abnégation. Enfin, un jour, Emmanuel vint trouver sa femme,\nqui achevait de payer l'échéance.",
+      "source_sha256": "9ba29be33049087b2d58e35b6d887129589a677b8e28cbaf92b5fd02af5056b4",
+      "target_html": "<p>—Он был купцом, граф, и купил дом у моего\nбедного отца. Месье Моррель умер, оставив после себя пятьсот тысяч франков\nсостояния; половина досталась мне, а другая — моей сестре, так как нас было\nвсего двое детей. Ее муж, который женился на ней, не имея иного\nдостояния, кроме своей благородной честности, первоклассного ума и\nбезупречной репутации, захотел обладать столько же, сколько и его жена. Он\nтрудился, пока не накопил двести пятьдесят тысяч франков;\nна это хватило шести лет. Это было, клянусь вам, господин граф,\nтрогательное зрелище — эти двое детей, столь трудолюбивых, столь сплочённых,\nпредназначенных по своим способностям к величайшему богатству, и которые, не\nжелая ничего менять в привычках отцовского дома, потратили шесть лет на то,\nчто новаторы смогли бы сделать за два или три, так же\nМарсель до сих пор гремит похвалами, которые невозможно было не выразить столь\nмужественному самоотречению. Наконец, однажды Эммануэль пришёл к своей жене,\nкоторая как раз заканчивала выплачивать очередной взнос.</p>",
+      "target_sha256": "7714a168f48baceb845b1d34ce72159c2f15dfb7970eaed4776b3f59968de377",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0032",
+      "role": "body",
+      "source_html": "<p>«—Julie, lui dit-il, voici le dernier rouleau de cent francs que vient\nde me remettre Coclès et qui complète les deux cent cinquante mille\nfrancs que nous avons fixés comme limite de nos gains. Seras-tu contente\nde ce peu dont il va falloir nous contenter désormais? Écoute, la maison\nfait pour un million d'affaires par an, et peut rapporter quarante mille\nfrancs de bénéfices. Nous vendrons, si nous le voulons, la clientèle,\ntrois cent mille francs dans une heure, car voici une lettre de M.\nDelaunay, qui nous les offre en échange de notre fonds qu'il veut\nréunir au sien. Vois ce que tu penses qu'il y ait à faire.</p>",
+      "source": "«—Julie, lui dit-il, voici le dernier rouleau de cent francs que vient\nde me remettre Coclès et qui complète les deux cent cinquante mille\nfrancs que nous avons fixés comme limite de nos gains. Seras-tu contente\nde ce peu dont il va falloir nous contenter désormais? Écoute, la maison\nfait pour un million d'affaires par an, et peut rapporter quarante mille\nfrancs de bénéfices. Nous vendrons, si nous le voulons, la clientèle,\ntrois cent mille francs dans une heure, car voici une lettre de M.\nDelaunay, qui nous les offre en échange de notre fonds qu'il veut\nréunir au sien. Vois ce que tu penses qu'il y ait à faire.",
+      "source_sha256": "29ab757f2b67e4118de52d3d130a7500446be92406c455d95022782e5f7a4544",
+      "target_html": "<p>«—Жюли, — сказал он ей, — вот последний рулон сотенных франков, который только что\nпередал мне Кокль и который дополняет двести пятьдесят тысяч\nфранков, которые мы установили в качестве предела наших доходов. Будешь ли ты довольна\nэтой небольшой суммой, которой нам отныне придётся довольствоваться? Послушай, дом\nосуществляет сделок на миллион в год и может приносить сорок тысяч\nфранков прибыли. Если захотим, мы сможем продать клиентскую базу —\nтриста тысяч франков за час, ведь вот письмо от господина\nДелоне, который предлагает нам эту сумму в обмен на наш капитал, который он хочет\nобъединить со своим. Подумай, как, по-твоему, следует поступить.</p>",
+      "target_sha256": "d8eba4c1d826ccb0cb3ce652e60edea81b750da0ac2202fcdbb527195a5cbc90",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0033",
+      "role": "body",
+      "source_html": "<p>«—Mon ami, dit ma sœur, la maison Morrel ne peut être tenue que par un\nMorrel. Sauver à tout jamais des mauvaises chances de la fortune le nom\nde notre père, cela ne vaut-il pas bien trois cent mille francs?</p>",
+      "source": "«—Mon ami, dit ma sœur, la maison Morrel ne peut être tenue que par un\nMorrel. Sauver à tout jamais des mauvaises chances de la fortune le nom\nde notre père, cela ne vaut-il pas bien trois cent mille francs?",
+      "source_sha256": "d96088a1aead5cecbb5fa4e8f082f637b5ff7bad809977d05c079ab26422c3ef",
+      "target_html": "<p>«—Друг мой, — сказала моя сестра, — дом Моррелей может вести только\nсам Моррель. Спасти навсегда от невзгод судьбы имя\nнашего отца — разве это не стоит триста тысяч франков?</p>",
+      "target_sha256": "45ebafbc6b8db3a49ae5a5ecd47f6dca11487cac081a04c924dbe0c8fb5f48da",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0034",
+      "role": "body",
+      "source_html": "<p>«—Je le pensais, répondit Emmanuel; cependant je voulais prendre ton\navis.</p>",
+      "source": "«—Je le pensais, répondit Emmanuel; cependant je voulais prendre ton\navis.",
+      "source_sha256": "8dac14ca1124353e87e0c5b599e91f74bf2518699d451d3974a60cb8ae5a0bfd",
+      "target_html": "<p>«—Я так и думал, — ответил Эммануэль, — однако я хотел узнать твое\nмнение.</p>",
+      "target_sha256": "be9ecce772ab124b12e00b45b43962aad6ab4f37af6186f35e7797ec39a0f77f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0035",
+      "role": "body",
+      "source_html": "<p>«—Eh bien, mon ami, le voilà. Toutes nos rentrées sont faites, tous nos\nbillets sont payés; nous pouvons tirer une barre au-dessous du compte de\ncette quinzaine et fermer nos comptoirs; tirons cette barre et\nfermons-le.» Ce qui fut fait à l'instant même. Il était trois heures: à\ntrois heures un quart, un client se présenta pour faire assurer le\npassage de deux navires; c'était un bénéfice de quinze mille francs\ncomptant.</p>",
+      "source": "«—Eh bien, mon ami, le voilà. Toutes nos rentrées sont faites, tous nos\nbillets sont payés; nous pouvons tirer une barre au-dessous du compte de\ncette quinzaine et fermer nos comptoirs; tirons cette barre et\nfermons-le.» Ce qui fut fait à l'instant même. Il était trois heures: à\ntrois heures un quart, un client se présenta pour faire assurer le\npassage de deux navires; c'était un bénéfice de quinze mille francs\ncomptant.",
+      "source_sha256": "2c202e682ac5c290207e85104c7f423b3d12a6c0aaef59e1484fd4cafd024eba",
+      "target_html": "<p>«—Ну что ж, мой друг, вот и он. Все наши поступления получены, все наши\nвекселя оплачены; мы можем перечеркнуть счёт за\nэту полумесяц и закрыть наши кассы; давайте перечеркнём этот счёт и\nзакроем его». Что и было сделано в ту же минуту. Было три часа; в\nчетверть четвертого появился клиент, чтобы застраховать\nперевозку на двух судах; это была прибыль в пятнадцать тысяч франков\nналичными.</p>",
+      "target_sha256": "ced65210564412f32e9f9e0734ebd408fcf0b54c4cad62b838b38cb0e192e296",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0036",
+      "role": "body",
+      "source_html": "<p>«—Monsieur, dit Emmanuel, veuillez vous adresser pour cette assurance à\nnotre confrère M. Delaunay. Quant à nous, nous avons quitté les\naffaires.</p>",
+      "source": "«—Monsieur, dit Emmanuel, veuillez vous adresser pour cette assurance à\nnotre confrère M. Delaunay. Quant à nous, nous avons quitté les\naffaires.",
+      "source_sha256": "cf3db8fb0c068d8d7ed9b9a15aa9eae593c7d4a6be538afdf7849b2bdcb6713b",
+      "target_html": "<p>«—Месье, — сказал Эммануэль, — по поводу этой страховки обратитесь, пожалуйста, к\nнашему коллеге, месье Делоне. Что касается нас, то мы ушли из\nбизнеса.</p>",
+      "target_sha256": "efa5ef015cc8b361adee62fdd13b9c89d8d5fe5bdf960950c02e04e138003965",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0037",
+      "role": "body",
+      "source_html": "<p>«—Et depuis quand? demanda le client étonné.</p>",
+      "source": "«—Et depuis quand? demanda le client étonné.",
+      "source_sha256": "4c02a76dcc70f4fc494cc0780795e7a3a2f3d274fa7e28e55447a9695a696c7a",
+      "target_html": "<p>«—А с каких пор? — удивлённо спросил гость.</p>",
+      "target_sha256": "101fc0010853b9e6ec2439f7752fa61f9850cbe0527b5db4955c20d97431efbc",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0038",
+      "role": "body",
+      "source_html": "<p>«—Depuis un quart d'heure.</p>",
+      "source": "«—Depuis un quart d'heure.",
+      "source_sha256": "55e8f67ba2ff5fe025e161480fd7e7469d43b6b7a0a0ca278b0614ab5c57fe37",
+      "target_html": "<p>«—Уже четверть часа.</p>",
+      "target_sha256": "ea61ab168a8d31ef514186e393769ab27ffe2b9c9c53e6a86d14d6671262176c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0039",
+      "role": "body",
+      "source_html": "<p>«Et voilà, monsieur, continua en souriant Maximilien, comment ma sœur\net mon beau-frère n'ont que vingt-cinq mille livres de rente.» </p>",
+      "source": "«Et voilà, monsieur, continua en souriant Maximilien, comment ma sœur\net mon beau-frère n'ont que vingt-cinq mille livres de rente.» ",
+      "source_sha256": "d607a4c997bbd2d658972fc1f6fdf3f3a3d583c36a78320e4ac16047075831ec",
+      "target_html": "<p>«Вот так, месье, — продолжил с улыбкой Максимилиан, — вот почему у моей сестры\nи моего зятя доход составляет всего двадцать пять тысяч ливров». </p>",
+      "target_sha256": "77a1c7c6fe231ae9ff2369e779d79cffc336e843617fdc7d53c2abf4c06d232b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0040",
+      "role": "body",
+      "source_html": "<p>Maximilien achevait à peine sa narration pendant laquelle le cœur du\ncomte s'était dilaté de plus en plus, lorsque Emmanuel reparut, restauré\nd'un chapeau et d'une redingote.</p>",
+      "source": "Maximilien achevait à peine sa narration pendant laquelle le cœur du\ncomte s'était dilaté de plus en plus, lorsque Emmanuel reparut, restauré\nd'un chapeau et d'une redingote.",
+      "source_sha256": "cfa794a0179f957df9312a04c3637ae267a124d22c5450362ba9f353c2344f4e",
+      "target_html": "<p>Максимилиан едва закончил своё повествование, во время которого сердце\nграфа все больше и больше наполнялось радостью, как вновь появился Эммануэль,\nодетый в шляпу и фрак.</p>",
+      "target_sha256": "be7823f258e5e625ea35f54301f815cc235dcf2ab3de2bf644862017e857d4c1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0041",
+      "role": "body",
+      "source_html": "<p>Il salua en homme qui connaît la qualité du visiteur; puis, après avoir\nfait faire au comte le tour du petit enclos fleuri, il le ramena vers la\nmaison.</p>",
+      "source": "Il salua en homme qui connaît la qualité du visiteur; puis, après avoir\nfait faire au comte le tour du petit enclos fleuri, il le ramena vers la\nmaison.",
+      "source_sha256": "2a11b63f663a704aee84ce3cd354a3f7ccd2afd6613b1220100f3193bfa0da55",
+      "target_html": "<p>Он поклонился, как человек, знающий о высоком положении гостя; затем,\nпроведя графа по маленькому цветущему саду, он проводил его обратно к\nдому.</p>",
+      "target_sha256": "fe4ddeeffe136ccfebea85bba8228d131a55da82651170e4d1706b02012c86c9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0042",
+      "role": "body",
+      "source_html": "<p>Le salon était déjà embaumé de fleurs contenues à grand-peine dans un\nimmense vase du Japon à anses naturelles. Julie, convenablement vêtue et\ncoquettement coiffée (elle avait accompli ce tour de force en dix\nminutes), se présenta pour recevoir le comte à son entrée. </p>",
+      "source": "Le salon était déjà embaumé de fleurs contenues à grand-peine dans un\nimmense vase du Japon à anses naturelles. Julie, convenablement vêtue et\ncoquettement coiffée (elle avait accompli ce tour de force en dix\nminutes), se présenta pour recevoir le comte à son entrée. ",
+      "source_sha256": "5588a0d9de2ec2c6f4ee1016166c8985659c910f2c92d665766399c1107cb743",
+      "target_html": "<p>Салон уже был наполнен ароматом цветов, с трудом удерживаемых в\nогромном японском вазе с естественными ручками. Жюли, одетая по случаю и\nкокетливо причесанная (ей удалось совершить этот подвиг за десять\nминут), вышла встречать графа, когда тот вошёл. </p>",
+      "target_sha256": "8c22c84f590d7e40acd62f366e519d3def294e63905cda5594784dee693ddfd9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0043",
+      "role": "body",
+      "source_html": "<p>On entendait caqueter les oiseaux d'une volière voisine; les branches\ndes faux ébéniers et des acacias roses venaient border de leurs grappes\nles rideaux de velours bleu: tout dans cette charmante petite retraite\nrespirait le calme, depuis le chant de l'oiseau jusqu'au sourire des\nmaîtres.</p>",
+      "source": "On entendait caqueter les oiseaux d'une volière voisine; les branches\ndes faux ébéniers et des acacias roses venaient border de leurs grappes\nles rideaux de velours bleu: tout dans cette charmante petite retraite\nrespirait le calme, depuis le chant de l'oiseau jusqu'au sourire des\nmaîtres.",
+      "source_sha256": "05b5d6289633020a003b356e14e57e8b445dc06734a618fe99230d778175c965",
+      "target_html": "<p>Слышалось щебетание птиц из соседнего вольера; ветви\nискусственных эбеновых деревьев и розовых акаций своими гроздьями\nобрамляли синие бархатные занавеси: всё в этом очаровательном маленьком укрытии\nдышало спокойствием, от пения птиц до улыбок\nхозяев.</p>",
+      "target_sha256": "5e75f7d4de62e8dc83643cd55568cd6766dcef714d00b85bb934baf34b93bbd7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0044",
+      "role": "body",
+      "source_html": "<p>Le comte depuis son entrée dans la maison s'était déjà imprégné de ce\nbonheur; aussi restait-il muet, rêveur, oubliant qu'on l'attendait pour\nreprendre la conversation interrompue après les premiers compliments.</p>",
+      "source": "Le comte depuis son entrée dans la maison s'était déjà imprégné de ce\nbonheur; aussi restait-il muet, rêveur, oubliant qu'on l'attendait pour\nreprendre la conversation interrompue après les premiers compliments.",
+      "source_sha256": "14a48f1b43214e55a0a7dcd3da20921aeec0655705dfd1ed8b5230ecc29295ac",
+      "target_html": "<p>Граф с самого момента входа в дом уже проникся этим\nсчастьем; поэтому он молчал, погруженный в раздумья, забыв, что его ждут, чтобы\nвозобновить разговор, прерванный после первых приветствий.</p>",
+      "target_sha256": "cff26454e10cbc00326ea0d621efbcb5ff5d55f9c5840a4a5213276866e91c11",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0045",
+      "role": "body",
+      "source_html": "<p>Il s'aperçut de ce silence devenue presque inconvenant, et s'arrachant\navec effort à sa rêverie:</p>",
+      "source": "Il s'aperçut de ce silence devenue presque inconvenant, et s'arrachant\navec effort à sa rêverie:",
+      "source_sha256": "8fda3f78cd1db00f0418ced4f43aac9f1918c8b5e9b5b3051152239804509ab7",
+      "target_html": "<p>Он заметил это молчание, ставшее почти неуместным, и, с трудом\nвырвавшись из своих размышлений:</p>",
+      "target_sha256": "b7f19f3fc8c9d39e4834d2c90e2dc4a6837f295f187467a54abeae252fc8bb14",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0046",
+      "role": "body",
+      "source_html": "<p>«Madame, dit-il enfin, pardonnez-moi une émotion qui doit vous étonner,\nvous, accoutumée à cette paix et à ce bonheur que je rencontre ici, mais\npour moi, c'est chose si nouvelle que la satisfaction sur un visage\nhumain, que je ne me lasse pas de vous regarder, vous et votre mari.</p>",
+      "source": "«Madame, dit-il enfin, pardonnez-moi une émotion qui doit vous étonner,\nvous, accoutumée à cette paix et à ce bonheur que je rencontre ici, mais\npour moi, c'est chose si nouvelle que la satisfaction sur un visage\nhumain, que je ne me lasse pas de vous regarder, vous et votre mari.",
+      "source_sha256": "7697808b403443a05e4a4e6f4c982c20b9591608704900468af6974baa02b633",
+      "target_html": "<p>«Мадам, — сказал он наконец, — простите меня за волнение, которое, должно быть, удивляет вас,\nпривыкшую к тому покою и счастью, которые я здесь нахожу, но\nдля меня столь ново видеть удовлетворение на человеческом лице,\nчто я не устаю смотреть на вас и на вашего мужа».</p>",
+      "target_sha256": "a0720cca53a04c7ca284f5d04f71a40f0498462f9fc35e4474ac8ee41851248d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0047",
+      "role": "body",
+      "source_html": "<p>—Nous sommes bien heureux, en effet, monsieur, répliqua Julie; mais\nnous avons été longtemps à souffrir, et peu de gens ont acheté leur\nbonheur aussi cher que nous.»</p>",
+      "source": "—Nous sommes bien heureux, en effet, monsieur, répliqua Julie; mais\nnous avons été longtemps à souffrir, et peu de gens ont acheté leur\nbonheur aussi cher que nous.»",
+      "source_sha256": "567686bc26f346152897c59eac5259870bc3a9991f3dd4d520fd89d68631dfdd",
+      "target_html": "<p>—Мы действительно очень счастливы, месье, — ответила Жюли, — но\nнам пришлось долго страдать, и немногие заплатили за своё\nсчастье столь высокую цену, как мы».</p>",
+      "target_sha256": "83405122027e2cca8679a12c3a0e990079bab33d4633179180dc311a676cab1a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0048",
+      "role": "body",
+      "source_html": "<p>La curiosité se peignit sur les traits du comte.</p>",
+      "source": "La curiosité se peignit sur les traits du comte.",
+      "source_sha256": "045f740e243927104d6b4c467d4dc2dd9b1fc4fb7ca8258cc209ad356a15b1d2",
+      "target_html": "<p>На лице графа отразилось любопытство.</p>",
+      "target_sha256": "91e0aa2b9c8dbfc675feca7597ce5cf52681c7ce8b7ae9cf16f0dbd707984a97",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0049",
+      "role": "body",
+      "source_html": "<p>«Oh! c'est toute une histoire de famille, comme vous le disait l'autre\njour Château-Renaud, reprit Maximilien; pour vous, monsieur le comte,\nhabitué à voir d'illustres malheurs et des joies splendides, il y\naurait peu d'intérêt dans ce tableau d'intérieur. Toutefois nous avons,\ncomme vient de vous le dire Julie, souffert de bien vives douleurs,\nquoiqu'elles fussent renfermées dans ce petit cadre....</p>",
+      "source": "«Oh! c'est toute une histoire de famille, comme vous le disait l'autre\njour Château-Renaud, reprit Maximilien; pour vous, monsieur le comte,\nhabitué à voir d'illustres malheurs et des joies splendides, il y\naurait peu d'intérêt dans ce tableau d'intérieur. Toutefois nous avons,\ncomme vient de vous le dire Julie, souffert de bien vives douleurs,\nquoiqu'elles fussent renfermées dans ce petit cadre....",
+      "source_sha256": "fe2d8720624185c497e17cd980858aeb640e4a9f2d3a534347eb57d2e2452f10",
+      "target_html": "<p>«О! Это целая семейная история, как вам говорил на днях\nШато-Рено, — продолжил Максимилиан; для вас, господин граф,\nпривыкшего видеть громкие несчастья и великолепные радости, в этой\nкартине из семейной жизни вряд ли найдётся что-то интересное. Тем не менее мы,\nкак только что сказала вам Жюли, испытали весьма острые страдания,\nхотя они и были заключены в этих скромных рамках…</p>",
+      "target_sha256": "5484eb049be87c30af20d1b3fb10c27083dc9a5594de8983344a640ec9a90dc8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0050",
+      "role": "body",
+      "source_html": "<p>—Et Dieu vous a versé, comme il le fait pour tous, la consolation sur\nla souffrance? demanda Monte-Cristo.</p>",
+      "source": "—Et Dieu vous a versé, comme il le fait pour tous, la consolation sur\nla souffrance? demanda Monte-Cristo.",
+      "source_sha256": "276b82d3ba4b4860f352f2f99ec9742d28934d4197ae2cae6fac32bca074ce14",
+      "target_html": "<p>—И Бог даровал вам, как и всем, утешение в\nстрадании? — спросил Монте-Кристо.</p>",
+      "target_sha256": "8248ed19e644046bfede34c052daa06b951dd3848ed373d435eac64566e503ec",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0051",
+      "role": "body",
+      "source_html": "<p>—Oui, monsieur le comte, dit Julie; nous pouvons le dire, car il a\nfait pour nous ce qu'il ne fait que pour ses élus; il nous a envoyé un\nde ses anges.»</p>",
+      "source": "—Oui, monsieur le comte, dit Julie; nous pouvons le dire, car il a\nfait pour nous ce qu'il ne fait que pour ses élus; il nous a envoyé un\nde ses anges.»",
+      "source_sha256": "a2a60f1b0e461e45037742af4e462bc9fc79fc3b5897feb18a78fb0ae5fa379c",
+      "target_html": "<p>—Да, господин граф, — сказала Жюли, — мы можем так сказать, ведь он\nсделал для нас то, что делает только для своих избранных; он послал нам\nодного из своих ангелов.</p>",
+      "target_sha256": "75fbe71364c980439ab920ab68a807bfe83fb266aa2a893a9f89e49f64c37376",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0052",
+      "role": "body",
+      "source_html": "<p>Le rouge monta aux joues du comte, et il toussa pour avoir un moyen de\ndissimuler son émotion en portant son mouchoir à sa bouche.</p>",
+      "source": "Le rouge monta aux joues du comte, et il toussa pour avoir un moyen de\ndissimuler son émotion en portant son mouchoir à sa bouche.",
+      "source_sha256": "81e452870346c44eb17c4e6162b0cd8ba2a98745f87e026d511dd5e2c360e7de",
+      "target_html": "<p>Круги на щеках графа покраснели, и он кашлянул, чтобы найти способ\nскрыть своё волнение, поднеся платок ко рту.</p>",
+      "target_sha256": "55ec8e10c2c4ef7ebf9a6bbbb3ad328e06f358d6f1f5d5b8533a949591618a37",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0053",
+      "role": "body",
+      "source_html": "<p>«Ceux qui sont nés dans un berceau de pourpre et qui n'ont jamais rien\ndésiré, dit Emmanuel, ne savent pas ce que c'est que le bonheur de\nvivre; de même que ceux-là ne connaissent pas le prix d'un ciel pur, qui\nn'ont jamais livré leur vie à la merci de quatre planches jetées sur une\nmer en fureur.»</p>",
+      "source": "«Ceux qui sont nés dans un berceau de pourpre et qui n'ont jamais rien\ndésiré, dit Emmanuel, ne savent pas ce que c'est que le bonheur de\nvivre; de même que ceux-là ne connaissent pas le prix d'un ciel pur, qui\nn'ont jamais livré leur vie à la merci de quatre planches jetées sur une\nmer en fureur.»",
+      "source_sha256": "6bd3b21e57289d7bbff380e2b96820757f321b546d44fa3c1d9ce1ca584f12a6",
+      "target_html": "<p>«Те, кто родился в пурпурной колыбели и никогда ни о чём\nне мечтал, — сказал Эммануэль, — не знают, что такое счастье\nжить; так же, как те, кто никогда не отдавал свою жизнь на милость четырёх досок, брошенных на\nбушующее море, не знают ценности чистого неба».</p>",
+      "target_sha256": "7d6f24e69f20c5a12e4013acedca1ba04bb19744b3339de636ab066c235bd700",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0054",
+      "role": "body",
+      "source_html": "<p>Monte-Cristo se leva, et, sans rien répondre, car au tremblement de sa\nvoix on eût pu reconnaître l'émotion dont il était agité, il se mit à\nparcourir pas à pas le salon.</p>",
+      "source": "Monte-Cristo se leva, et, sans rien répondre, car au tremblement de sa\nvoix on eût pu reconnaître l'émotion dont il était agité, il se mit à\nparcourir pas à pas le salon.",
+      "source_sha256": "377b4d0bc48999032a196a5d5789097dd4057fce323a8cf595af81fe24619213",
+      "target_html": "<p>Монте-Кристо встал и, не отвечая ни слова, ибо по дрожи его\nголоса можно было бы распознать волнение, которое им овладело, начал\nшагать по салону.</p>",
+      "target_sha256": "da33cd46816e08e0d4fda24a808ecd5cc6058ac476b028d3852e93edf0ce6606",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0055",
+      "role": "body",
+      "source_html": "<p>«Notre magnificence vous fait sourire, monsieur le comte, dit\nMaximilien, qui suivait Monte-Cristo des yeux.</p>",
+      "source": "«Notre magnificence vous fait sourire, monsieur le comte, dit\nMaximilien, qui suivait Monte-Cristo des yeux.",
+      "source_sha256": "1b65303e0175611ddbf3c1cdb1f0c559ee8a174aab3004b56e9e530d0a4f4661",
+      "target_html": "<p>«Наша великолепие заставляет вас улыбаться, господин граф, — сказал\nМаксимилиан, следя взглядом за Монте-Кристо.</p>",
+      "target_sha256": "d5fd65186e31f08fcfc11afeb3c646a1f6d22b04f564bbd06623a19547cf6875",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0056",
+      "role": "body",
+      "source_html": "<p>—Non, non, répondit Monte-Cristo fort pâle et comprimant d'une main\nles battements de son cœur, tandis que, de l'autre, il montrait au\njeune homme un globe de cristal sous lequel une bourse de soie reposait\nprécieusement couchée sur un coussin de velours noir. Je me demandais\nseulement à quoi sert cette bourse, qui, d'un côté, contient un papier,\nce me semble, et de l'autre un assez beau diamant.»</p>",
+      "source": "—Non, non, répondit Monte-Cristo fort pâle et comprimant d'une main\nles battements de son cœur, tandis que, de l'autre, il montrait au\njeune homme un globe de cristal sous lequel une bourse de soie reposait\nprécieusement couchée sur un coussin de velours noir. Je me demandais\nseulement à quoi sert cette bourse, qui, d'un côté, contient un papier,\nce me semble, et de l'autre un assez beau diamant.»",
+      "source_sha256": "255d0b5196a35f4fe8c8d5c8df7933f7a3b52531ea6acf4b69cd11c3580447f2",
+      "target_html": "<p>—Нет, нет, — ответил Монте-Кристо, сильно побледнев и одной рукой\nсдерживая биение своего сердца, а другой показывая\nмолодому человеку хрустальный шар, под которым шелковый кошелек\nбережно лежал на черной бархатной подушке. «Я просто\nзадался вопросом, для чего нужен этот кошелек, в котором, с одной стороны, лежит,\nкак мне кажется, бумага, а с другой — довольно красивый бриллиант».</p>",
+      "target_sha256": "ef7bb225d0970b26d99159e174cb851ee967743937869a2c8d3dddef6732422b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0057",
+      "role": "body",
+      "source_html": "<p>Maximilien prit un air grave et répondit:</p>",
+      "source": "Maximilien prit un air grave et répondit:",
+      "source_sha256": "adfe1280d98b9096d449c71ee6d2c021389bbe48d6722aa5d76282101ff231d5",
+      "target_html": "<p>Максимилиан принял серьёзный вид и ответил:</p>",
+      "target_sha256": "7ab3b878fd55e5fd0280b18107fa95e36098f15d9a0df7004f548049fe7f1ad4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0058",
+      "role": "body",
+      "source_html": "<p>«Ceci, monsieur le comte, c'est le plus précieux de nos trésors de\nfamille.</p>",
+      "source": "«Ceci, monsieur le comte, c'est le plus précieux de nos trésors de\nfamille.",
+      "source_sha256": "178e44d123182163413a8e2ab3dddb8e70e86e2f95fdba6d5bf225726d8caa32",
+      "target_html": "<p>«Это, господин граф, — самое ценное из наших\nсемейных сокровищ.</p>",
+      "target_sha256": "88e2710fe2a32f3aeaa7587bb3fbd42166d1d5047f18d7bf14b203a2c52261bd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0059",
+      "role": "body",
+      "source_html": "<p>—En effet, ce diamant est assez beau, répliqua Monte-Cristo. </p>",
+      "source": "—En effet, ce diamant est assez beau, répliqua Monte-Cristo. ",
+      "source_sha256": "efb4cf51f47b1cf94776ef0e2e4bf1bde70d6d54db53ba4d2d8b20024426db77",
+      "target_html": "<p>—Действительно, этот бриллиант довольно красив, — ответил Монте-Кристо. </p>",
+      "target_sha256": "dcdbd203e1a3aa9c5f1ca8bc10870d1a45ac8663d1ecf4b633641f8fe652eaa5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0060",
+      "role": "body",
+      "source_html": "<p>—Oh! mon frère ne vous parle pas du prix de la pierre, quoiqu'elle soit\nestimée cent mille francs, monsieur le comte; il veut seulement vous\ndire que les objets que renferme cette bourse sont les reliques; de\nl'ange dont nous vous parlions tout à l'heure.</p>",
+      "source": "—Oh! mon frère ne vous parle pas du prix de la pierre, quoiqu'elle soit\nestimée cent mille francs, monsieur le comte; il veut seulement vous\ndire que les objets que renferme cette bourse sont les reliques; de\nl'ange dont nous vous parlions tout à l'heure.",
+      "source_sha256": "dbc8243c2bed33d71dc5cbc846f866e04e36ab4932ffe09327226eb90de1b30a",
+      "target_html": "<p>—О! Мой брат не говорит вам о цене камня, хотя он\nоценивается в сто тысяч франков, господин граф; он хочет лишь\nсказать вам, что предметы, которые хранится в этом кошельке, являются реликвиями\nангела, о котором мы вам рассказывали совсем недавно.</p>",
+      "target_sha256": "920445d4431e34d4035bdc2fad74d3531502c73d118afcade9de062b331ff542",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0061",
+      "role": "body",
+      "source_html": "<p>—Voilà ce que je ne saurais comprendre, et cependant ce que je ne dois\npas demander, madame, répliqua Monte-Cristo en s'inclinant;\npardonnez-moi, je n'ai pas voulu être indiscret.</p>",
+      "source": "—Voilà ce que je ne saurais comprendre, et cependant ce que je ne dois\npas demander, madame, répliqua Monte-Cristo en s'inclinant;\npardonnez-moi, je n'ai pas voulu être indiscret.",
+      "source_sha256": "827ce9751ea73919af4f1b6271ea4b9356bfa83934c29167e2368106890bd1a6",
+      "target_html": "<p>—Вот чего я не могу понять, и, тем не менее, о чём я не должен\nспрашивать, мадам, — ответил Монте-Кристо, поклонившись;\nпростите меня, я не хотел быть назойливым.</p>",
+      "target_sha256": "12004353140de6d203607cdac75e82135514accde99523a574408d991396f9dd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0062",
+      "role": "body",
+      "source_html": "<p>—Indiscret, dites-vous? oh! que vous nous rendez heureux, monsieur le\ncomte, au contraire, en nous offrant une occasion de nous étendre sur ce\nsujet! Si nous cachions comme un secret la belle action que rappelle\ncette bourse nous ne l'exposerions pas ainsi à la vue. Oh! nous\nvoudrions pouvoir la publier dans tout l'univers, pour qu'un\ntressaillement de notre bienfaiteur inconnu nous révélât sa présence.</p>",
+      "source": "—Indiscret, dites-vous? oh! que vous nous rendez heureux, monsieur le\ncomte, au contraire, en nous offrant une occasion de nous étendre sur ce\nsujet! Si nous cachions comme un secret la belle action que rappelle\ncette bourse nous ne l'exposerions pas ainsi à la vue. Oh! nous\nvoudrions pouvoir la publier dans tout l'univers, pour qu'un\ntressaillement de notre bienfaiteur inconnu nous révélât sa présence.",
+      "source_sha256": "77ed55213545b36459aeb694f7b1421ded620691c1163c0ba8ce55e47d40ede5",
+      "target_html": "<p>—Нескромно, говорите вы? О! Как же вы делаете нас счастливыми, господин\nграф, напротив, давая нам возможность подробнее остановиться на этой\nтеме! Если бы мы скрывали как тайну тот благородный поступок, о котором\nнапоминает этот кошелек, мы не выставляли бы его так на всеобщее обозрение. О! Мы\nхотели бы обнародовать её на весь мир, чтобы\nтрепет от присутствия нашего неизвестного благодетеля открыл нам его присутствие.</p>",
+      "target_sha256": "01527b921512007c105bc5e2996f2b400e58d2108f9561808a18959eeaba2004",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0063",
+      "role": "body",
+      "source_html": "<p>—Ah! vraiment! fit Monte-Cristo d'une voix étouffée.</p>",
+      "source": "—Ah! vraiment! fit Monte-Cristo d'une voix étouffée.",
+      "source_sha256": "93178d1a14145a8ed4b90f9b4bfb5c41e53a63534ad74f033b8590cb6983466e",
+      "target_html": "<p>—Ах! Правда! — произнес Монте-Кристо приглушенным голосом.</p>",
+      "target_sha256": "1e74dec66f6a53fee1a7920af22237f20d681727bde689c110512472686298fb",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0064",
+      "role": "body",
+      "source_html": "<p>—Monsieur, dit Maximilien en soulevant le globe de cristal et en\nbaisant religieusement la bourse de soie, ceci a touché la main d'un\nhomme par lequel mon père a été sauvé de la mort, nous de la ruine, et\nnotre nom de la honte; d'un homme grâce auquel nous autres, pauvres\nenfants voués à la misère et aux larmes, nous pouvons entendre\naujourd'hui des gens s'extasier sur notre bonheur. Cette lettre—et\nMaximilien tirant un billet de la bourse le présenta au comte—cette\nlettre fut écrite par lui un jour où mon père avait pris une résolution\nbien désespérée, et ce diamant fut donné en dot à ma sœur par ce\ngénéreux inconnu.»</p>",
+      "source": "—Monsieur, dit Maximilien en soulevant le globe de cristal et en\nbaisant religieusement la bourse de soie, ceci a touché la main d'un\nhomme par lequel mon père a été sauvé de la mort, nous de la ruine, et\nnotre nom de la honte; d'un homme grâce auquel nous autres, pauvres\nenfants voués à la misère et aux larmes, nous pouvons entendre\naujourd'hui des gens s'extasier sur notre bonheur. Cette lettre—et\nMaximilien tirant un billet de la bourse le présenta au comte—cette\nlettre fut écrite par lui un jour où mon père avait pris une résolution\nbien désespérée, et ce diamant fut donné en dot à ma sœur par ce\ngénéreux inconnu.»",
+      "source_sha256": "8f068be852e3c8863b0a6a26226fbde97f7eaf3374da64ca3b22dfa8c6c6ada2",
+      "target_html": "<p>—Сэр, — сказал Максимилиан, поднимая хрустальный шар и\nблагоговейно целуя шелковый мешочек, — это коснулось руки человека,\nблагодаря которому мой отец был спасен от смерти, мы — от разорения, а\nнаш род — от позора; человека, благодаря которому мы, бедные\nдети, обречённые на нищету и слёзы, можем сегодня слышать,\nкак люди восторженно говорят о нашем счастье. Это письмо — и\nМаксимилиан, вынув записку из кошелька, протянул её графу, — это\nписьмо было написано им в тот день, когда мой отец принял\nсовершенно отчаянное решение, а этот бриллиант был подарен в приданое моей сестре этим\nщедрым незнакомцем».</p>",
+      "target_sha256": "f3e613f23e21f1b346c91b0981cb95c0096422460042945a9eb22f14c7886c6e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0065",
+      "role": "body",
+      "source_html": "<p>Monte-Cristo ouvrit la lettre et la lut avec une indéfinissable\nexpression de bonheur, c'était le billet que nos lecteurs connaissent,\nadressé à Julie et signé Simbad le marin.</p>",
+      "source": "Monte-Cristo ouvrit la lettre et la lut avec une indéfinissable\nexpression de bonheur, c'était le billet que nos lecteurs connaissent,\nadressé à Julie et signé Simbad le marin.",
+      "source_sha256": "0a16ec81b7df47cf9c06c4f479409b7bb33db7fd60c917b5e56b778b07a60534",
+      "target_html": "<p>Монте-Кристо открыл письмо и прочитал его с неописуемым\nвыражением счастья; это была та записка, которую знают наши читатели,\nадресованная Жюли и подписанная «Синдбадом-моряком».</p>",
+      "target_sha256": "89ccb8159b45ba458bc3f371b0af8608c0e3e964691916a51e97748be9a1f254",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0066",
+      "role": "body",
+      "source_html": "<p>—Inconnu, dites-vous? Ainsi l'homme qui vous a rendu ce service est\nresté inconnu pour vous?</p>",
+      "source": "—Inconnu, dites-vous? Ainsi l'homme qui vous a rendu ce service est\nresté inconnu pour vous?",
+      "source_sha256": "61e18870b7371033436c0eddd8d5c46b702520a5ab614bb938d9f7e29b4c634a",
+      "target_html": "<p>—Неизвестный, говорите вы? Значит, человек, оказавший вам эту услугу,\nостался для вас неизвестным?</p>",
+      "target_sha256": "c10db522ac39be94b6c1c1950acb8306e7f8af05b3e13fd598a4debe8944477d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0067",
+      "role": "body",
+      "source_html": "<p>—Oui, monsieur, jamais nous n'avons eu le bonheur de serrer sa main; ce\nn'est pas faute cependant d'avoir demandé à Dieu cette faveur, reprit\nMaximilien; mais il y a eu dans toute cette aventure une mystérieuse\ndirection que nous ne pouvons comprendre encore; tout a été conduit par\nune main invisible, puissante comme celle d'un enchanteur.</p>",
+      "source": "—Oui, monsieur, jamais nous n'avons eu le bonheur de serrer sa main; ce\nn'est pas faute cependant d'avoir demandé à Dieu cette faveur, reprit\nMaximilien; mais il y a eu dans toute cette aventure une mystérieuse\ndirection que nous ne pouvons comprendre encore; tout a été conduit par\nune main invisible, puissante comme celle d'un enchanteur.",
+      "source_sha256": "75ba9e1f10ddebc790ba2f356b8fc526891f742d7c01069b380c19e27d337065",
+      "target_html": "<p>—Да, месье, нам так и не посчастливилось пожать ему руку; хотя\nне потому, что мы не просили у Бога этой милости, — продолжил\nМаксимилиан; — но во всей этой истории было нечто таинственное,\nчего мы до сих пор не можем понять; всё было направлено\nневидимой рукой, могущественной, как рука волшебника.</p>",
+      "target_sha256": "779f37db953a0171319366ccd533dadc1ca68eedff4b840b65b482c57c752060",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0068",
+      "role": "body",
+      "source_html": "<p>—Oh! dit Julie, je n'ai pas encore perdu tout espoir de baiser un jour\ncette main comme je baise la bourse qu'elle a touchée. Il y a quatre\nans, Penelon était à Trieste: Penelon, monsieur le comte, c'est ce brave\nmarin que vous avez vu une bêche à la main, et qui, de contremaître,\ns'est fait jardinier. Penelon, étant donc à Trieste, vit sur le quai un\nAnglais qui allait s'embarquer sur un yacht, et il reconnut celui qui\nvint chez mon père le 5 juin 1829, et qui m'écrivit ce billet le 5\nseptembre. C'était bien le même, à ce qu'il assure, mais il n'osa point\nlui parler.</p>",
+      "source": "—Oh! dit Julie, je n'ai pas encore perdu tout espoir de baiser un jour\ncette main comme je baise la bourse qu'elle a touchée. Il y a quatre\nans, Penelon était à Trieste: Penelon, monsieur le comte, c'est ce brave\nmarin que vous avez vu une bêche à la main, et qui, de contremaître,\ns'est fait jardinier. Penelon, étant donc à Trieste, vit sur le quai un\nAnglais qui allait s'embarquer sur un yacht, et il reconnut celui qui\nvint chez mon père le 5 juin 1829, et qui m'écrivit ce billet le 5\nseptembre. C'était bien le même, à ce qu'il assure, mais il n'osa point\nlui parler.",
+      "source_sha256": "e12ff83716aac1f73fcfeb05f62b8c0e6498e42ae2a56e28a739e467d42d801e",
+      "target_html": "<p>—О! — сказала Жюли, — я ещё не потеряла всякой надежды когда-нибудь поцеловать\nэту руку, как я целую кошелек, к которому она прикоснулась. Четыре\nгода назад Пенелон был в Триесте: Пенелон, господин граф, — это тот храбрый\nморяк, которого вы видели с лопатой в руке и который из бригадира\nстал садовником. Итак, находясь в Триесте, Пенелон увидел на набережной\nангличанина, который собирался сесть на яхту, и узнал в нём того, кто\nпришёл к моему отцу 5 июня 1829 года и написал мне эту записку 5\nсентября. По его словам, это был действительно тот же самый человек, но он не осмелился\nс ним заговорить.</p>",
+      "target_sha256": "cee86d49dff5baccac8255428449fca5735bca534f0d66b84ed7bf8d562c1ac3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0069",
+      "role": "body",
+      "source_html": "<p>—Un Anglais! fit Monte-Cristo rêveur et qui s'inquiétait de chaque\nregard de Julie; un Anglais, dites-vous? </p>",
+      "source": "—Un Anglais! fit Monte-Cristo rêveur et qui s'inquiétait de chaque\nregard de Julie; un Anglais, dites-vous? ",
+      "source_sha256": "3257ca6f8080a68c6534fd1a2fde0d07c98a3692d73009f8cc6c886552fdd18e",
+      "target_html": "<p>—Англичанин! — задумчиво произнес Монте-Кристо, беспокоясь о каждом\nвзгляде Жюли; — англичанин, говорите? </p>",
+      "target_sha256": "d19c8bf0ae1b70721e42bfca8083078f82e9bd79b1cc8d8460367956f4147671",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0070",
+      "role": "body",
+      "source_html": "<p>—Oui, reprit Maximilien, un Anglais qui se présenta chez nous comme\nmandataire de la maison Thomson et French, de Rome. Voilà pourquoi,\nlorsque vous avez dit l'autre jour chez M. de Morcerf que MM. Thomson et\nFrench étaient vos banquiers, vous m'avez vu tressaillir. Au nom du\nCiel, monsieur, cela se passait, comme nous vous l'avons dit, en 1829;\navez-vous connu cet Anglais?</p>",
+      "source": "—Oui, reprit Maximilien, un Anglais qui se présenta chez nous comme\nmandataire de la maison Thomson et French, de Rome. Voilà pourquoi,\nlorsque vous avez dit l'autre jour chez M. de Morcerf que MM. Thomson et\nFrench étaient vos banquiers, vous m'avez vu tressaillir. Au nom du\nCiel, monsieur, cela se passait, comme nous vous l'avons dit, en 1829;\navez-vous connu cet Anglais?",
+      "source_sha256": "efac180dd9f2cde80040865699105c6c3b758d802d93be3ed2f58e236a88fbc9",
+      "target_html": "<p>—Да, — продолжил Максимилиан, — англичанин, который представился у нас как\nпредставитель фирмы «Томсон и Френч» из Рима. Вот почему,\nкогда вы на днях у господина де Морсерфа сказали, что господа Томсон и\nФренч были вашими банкирами, я вздрогнул. Ради\nнеба, месье, это происходило, как мы вам уже говорили, в 1829 году;\nвы знали этого англичанина?</p>",
+      "target_sha256": "13550ceb1050144156548b4d444277c1f45ba5f45263c0bd772a97555b9759fe",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0071",
+      "role": "body",
+      "source_html": "<p>—Mais ne m'avez-vous pas dit aussi que la maison Thomson et French\navait constamment nié vous avoir rendu ce service?</p>",
+      "source": "—Mais ne m'avez-vous pas dit aussi que la maison Thomson et French\navait constamment nié vous avoir rendu ce service?",
+      "source_sha256": "1fb7a66cf72d210f3b48275fde53976fa60a16b5598f59f62ea9cfe8d5541e5b",
+      "target_html": "<p>—Но разве вы не говорили мне также, что компания «Томсон и Френч»\nпостоянно отрицала, что оказала вам эту услугу?</p>",
+      "target_sha256": "909afcb3d3c983944f8a20d0a32d96f71e02b8a1cb83e7da9def42937b4a4f77",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0072",
+      "role": "body",
+      "source_html": "<p>—Oui.</p>",
+      "source": "—Oui.",
+      "source_sha256": "2052638ec88bc735c3d8e304acbc9110e71e900e5e07a8b3358f9eba77a4d232",
+      "target_html": "<p>—Да.</p>",
+      "target_sha256": "641fc71bd51d4f44f25e6af18151c234ab6061248a2cfaf6d32db82e193cade5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0073",
+      "role": "body",
+      "source_html": "<p>—Alors cet Anglais ne serait-il pas un homme qui reconnaissant envers\nvotre père de quelque bonne action qu'il aurait oubliée lui-même,\naurait pris ce prétexte pour lui rendre un service?</p>",
+      "source": "—Alors cet Anglais ne serait-il pas un homme qui reconnaissant envers\nvotre père de quelque bonne action qu'il aurait oubliée lui-même,\naurait pris ce prétexte pour lui rendre un service?",
+      "source_sha256": "18be18681f9b2b1c975437a5c250f0a2a9099208e5e165318ab2393b9e334192",
+      "target_html": "<p>—Так, может быть, этот англичанин — человек, который, будучи благодарным\nвашему отцу за какой-то добрый поступок, о котором он сам уже забыл,\nвоспользовался этим предлогом, чтобы оказать ему услугу?</p>",
+      "target_sha256": "4f4d0e2181ad1f80dd256193bb44c44a09f6e1af82c28ad35f1245c09e96b173",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0074",
+      "role": "body",
+      "source_html": "<p>—Tout est supposable, monsieur, en pareille circonstance, même un\nmiracle.</p>",
+      "source": "—Tout est supposable, monsieur, en pareille circonstance, même un\nmiracle.",
+      "source_sha256": "a3ea8b9ab6c5c50a42f6d32a21ba8c890703fde3a9218ca37ffedbcc315b2e1e",
+      "target_html": "<p>—В таких обстоятельствах возможно всё, месье, даже\nчудо.</p>",
+      "target_sha256": "f5053e7908ec9fa175873d11ab80b3b2c2705699dd996f1acfc79d3b83f6a44a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0075",
+      "role": "body",
+      "source_html": "<p>—Comment s'appelait-il? demanda Monte-Cristo.</p>",
+      "source": "—Comment s'appelait-il? demanda Monte-Cristo.",
+      "source_sha256": "ffb17cd48dd4793ab954e306deee577ddcfbef025a4aa1fbdf2ca9d1f1b32346",
+      "target_html": "<p>—Как его звали? — спросил Монте-Кристо.</p>",
+      "target_sha256": "ca2c1603b1f5be6e485d5ead271c29e13e13e7d634803c671a9b2a94b6b76886",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0076",
+      "role": "body",
+      "source_html": "<p>—Il n'a laissé d'autre nom, répondit Julie en regardant le comte avec\nune profonde attention, que le nom qu'il a signé au bas du billet:\nSimbad le marin.</p>",
+      "source": "—Il n'a laissé d'autre nom, répondit Julie en regardant le comte avec\nune profonde attention, que le nom qu'il a signé au bas du billet:\nSimbad le marin.",
+      "source_sha256": "a6e67994af4c4172fc8ac71e36cd08e85b737ecab1acf86c4d08ed75837cec86",
+      "target_html": "<p>—Он не оставил другого имени, — ответила Жюли, глядя на графа с\nглубоким вниманием, — кроме того, которым он подписал внизу записки:\n«Симбад-мореход».</p>",
+      "target_sha256": "86fb2e277c6859e1a48221e8faccf6a023e0c94da53ad8ced73930d6601f0ef7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0077",
+      "role": "body",
+      "source_html": "<p>—Ce qui n'est pas un nom évidemment, mais un pseudonyme.»</p>",
+      "source": "—Ce qui n'est pas un nom évidemment, mais un pseudonyme.»",
+      "source_sha256": "709020125596acff88e1a0292df6cf376020096e7f987a523d92cc5362c1e2f3",
+      "target_html": "<p>—Что, очевидно, не имя, а псевдоним».</p>",
+      "target_sha256": "6b6ec0a923fb04cab8bf029b5bf1cd56d58952d930247dd0f3e7e29acf47bd70",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0078",
+      "role": "body",
+      "source_html": "<p>Puis, comme Julie le regardait plus attentivement encore et essayait de\nsaisir au vol et de rassembler quelques notes de sa voix:</p>",
+      "source": "Puis, comme Julie le regardait plus attentivement encore et essayait de\nsaisir au vol et de rassembler quelques notes de sa voix:",
+      "source_sha256": "d3663a5f11fcf6af443c895753702223afea57c95c8e79cfc730defef749a921",
+      "target_html": "<p>Затем, когда Жюли стала смотреть на него ещё внимательнее и пыталась\nуловить и собрать воедино несколько ноток его голоса:</p>",
+      "target_sha256": "c55eee072f8f923c48cc460de31abf070358484cee39cbef8c8605ff6af87efc",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0079",
+      "role": "body",
+      "source_html": "<p>«Voyons, continua-t-il, n'est-ce point un homme de ma taille à peu près,\nun peu plus grand peut-être, un peu plus mince, emprisonné dans une\nhaute cravate, boutonné, corseté, sanglé et toujours le crayon à la\nmain?</p>",
+      "source": "«Voyons, continua-t-il, n'est-ce point un homme de ma taille à peu près,\nun peu plus grand peut-être, un peu plus mince, emprisonné dans une\nhaute cravate, boutonné, corseté, sanglé et toujours le crayon à la\nmain?",
+      "source_sha256": "de9bdd53b3633a2036872d7fee1acbeafd8fa2718a46917b1ab8fc59605bbdcb",
+      "target_html": "<p>«Послушайте, — продолжил он, — разве это не человек примерно моего роста,\nможет быть, чуть выше, чуть стройнее, с затянутым\nвысоким галстуком, застегнутый на все пуговицы, в корсете, с ремнями и всегда с карандашом в\nруке?»</p>",
+      "target_sha256": "dcbe32d1912186311672b15e93760546cbeb60b80219e97e5a9718dd7dd77877",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0080",
+      "role": "body",
+      "source_html": "<p>—Oh! mais vous le connaissez donc? s'écria Julie les yeux étincelants\nde joie.</p>",
+      "source": "—Oh! mais vous le connaissez donc? s'écria Julie les yeux étincelants\nde joie.",
+      "source_sha256": "661147d593f0ba63bb29327e95eb9000501fb1bd96a04b313db63b9ed026194d",
+      "target_html": "<p>—О! Так вы его знаете? — воскликнула Жюли, глаза которой сияли\nот радости.</p>",
+      "target_sha256": "55c9b5c27c6810f2bb497306bcb35ee3fdb549e55e8a921100eb1e8dc88a52ff",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0081",
+      "role": "body",
+      "source_html": "<p>—Non, dit Monte-Cristo, je suppose seulement. J'ai connu un Lord\nWilmore qui semait ainsi des traits de générosité.</p>",
+      "source": "—Non, dit Monte-Cristo, je suppose seulement. J'ai connu un Lord\nWilmore qui semait ainsi des traits de générosité.",
+      "source_sha256": "935b60e57d00cac72ab5320fd52153a29fbbb002986622753f3a28ddc19a23b8",
+      "target_html": "<p>—Нет, — сказал Монте-Кристо, — я только предполагаю. Я знал одного лорда\nУилмора, который так же разбрасывался знаками великодушия.</p>",
+      "target_sha256": "c56b655530f9a19777e22f8aedc850fa05005213daa6e0a7ccb58b8c2834393b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0082",
+      "role": "body",
+      "source_html": "<p>—Sans se faire connaître! </p>",
+      "source": "—Sans se faire connaître! ",
+      "source_sha256": "8b6b723c0fbf992df02b9851ebae97d957e9dd50f6b192096e2febdf7ad2561a",
+      "target_html": "<p>—Не раскрывая себя! </p>",
+      "target_sha256": "341c85e5e13fd3d049592f6c79b5051eb51beabcfb429548991e603979936ebe",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0083",
+      "role": "body",
+      "source_html": "<p>—C'était un homme bizarre qui ne croyait pas à la reconnaissance.</p>",
+      "source": "—C'était un homme bizarre qui ne croyait pas à la reconnaissance.",
+      "source_sha256": "0cf3f2177abb05320ce0e7bebfb63af8cd4c91842d69767df17b9c42ba0c6c85",
+      "target_html": "<p>—Это был странный человек, который не верил в благодарность.</p>",
+      "target_sha256": "69c8e1cbf681b8a0f5130dd8b9788b3d3a74f5eba6585efec1213efdc725f5b3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0084",
+      "role": "body",
+      "source_html": "<p>—Oh! s'écria Julie avec un accent sublime et en joignant les mains, à\nquoi croit-il donc, le malheureux!</p>",
+      "source": "—Oh! s'écria Julie avec un accent sublime et en joignant les mains, à\nquoi croit-il donc, le malheureux!",
+      "source_sha256": "ad99f38d512ec57eee87baba6e8ad6795642793fa755887ddc1a288c8c2a8d5a",
+      "target_html": "<p>—О! — воскликнула Жюли с возвышенным тоном, сложив руки, —\nво что же он верит, бедняга!</p>",
+      "target_sha256": "06f80cd3e9833a2d552869589526e8afb09948777afe947983ab07e0a968f382",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0085",
+      "role": "body",
+      "source_html": "<p>—Il n'y croyait pas, du moins à l'époque où je l'ai connu, dit\nMonte-Cristo, que cette voix partie du fond de l'âme avait remué jusqu'à\nla dernière fibre; mais depuis ce temps peut-être a-t-il eu quelque\npreuve que la reconnaissance existait.</p>",
+      "source": "—Il n'y croyait pas, du moins à l'époque où je l'ai connu, dit\nMonte-Cristo, que cette voix partie du fond de l'âme avait remué jusqu'à\nla dernière fibre; mais depuis ce temps peut-être a-t-il eu quelque\npreuve que la reconnaissance existait.",
+      "source_sha256": "4dc90476ef71c54a2fc3ecc3879c005571b9028cedad4033c876512001016eab",
+      "target_html": "<p>—Он не верил, по крайней мере в то время, когда я его знал, — сказал\nМонте-Кристо, — что этот голос, исходящий из глубины души, всколыхнул его до\nсамой последней струны; но с тех пор, возможно, у него появились какие-то\nдоказательства того, что эта признательность существовала.</p>",
+      "target_sha256": "b5d7e01ec696733da5ca24fa0104da7d5b0df0f03b3c701b8fce723147ce8d51",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0086",
+      "role": "body",
+      "source_html": "<p>—Et vous connaissez cet homme, monsieur? demanda Emmanuel.</p>",
+      "source": "—Et vous connaissez cet homme, monsieur? demanda Emmanuel.",
+      "source_sha256": "8744055b4df3d73d818f565dec71615e5f06dca82ba29a2296082e4485e365bd",
+      "target_html": "<p>—А вы знаете этого человека, месье? — спросил Эммануэль.</p>",
+      "target_sha256": "64780c7e701ecfbd9cd425abebf01b5c2b40a874f81c5fc84c6bc375a467ee79",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0087",
+      "role": "body",
+      "source_html": "<p>—Oh! si vous le connaissez, monsieur, s'écria Julie, dites, dites,\npouvez-vous nous mener à lui, nous le montrer, nous dire où il est? Dis\ndonc, Maximilien, dis donc, Emmanuel, si nous le retrouvions jamais, il\nfaudrait bien qu'il crût à la mémoire du cœur.»</p>",
+      "source": "—Oh! si vous le connaissez, monsieur, s'écria Julie, dites, dites,\npouvez-vous nous mener à lui, nous le montrer, nous dire où il est? Dis\ndonc, Maximilien, dis donc, Emmanuel, si nous le retrouvions jamais, il\nfaudrait bien qu'il crût à la mémoire du cœur.»",
+      "source_sha256": "9a5bf44dc54ebe0918ce7753c9085d6a7edb2693d857e74649069d32b1980599",
+      "target_html": "<p>—О! Если вы его знаете, месье, — воскликнула Жюли, — скажите, скажите,\nможете ли вы привести нас к нему, показать его нам, сказать, где он? Скажи\nже, Максимилиан, скажи же, Эммануил, если бы мы когда-нибудь его нашли, ему\nпришлось бы поверить в память сердца.</p>",
+      "target_sha256": "704c83174e3fb8bbb2f80f48a3ca7d644789a63f3113a758d9cf95caae8a3fb3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0088",
+      "role": "body",
+      "source_html": "<p>Monte-Cristo sentit deux larmes rouler dans ses yeux; il fit encore\nquelques pas dans le salon.</p>",
+      "source": "Monte-Cristo sentit deux larmes rouler dans ses yeux; il fit encore\nquelques pas dans le salon.",
+      "source_sha256": "49b9db334bba2cc33406aa4871bb0adde748bcc8393171b700ddb218b1df5ffa",
+      "target_html": "<p>Монте-Кристо почувствовал, как две слёзы навернулись ему на глаза; он сделал ещё\nнесколько шагов по салону.</p>",
+      "target_sha256": "918b456cd000a96a01d0514f68b860ae619c462eb074e429e07a6b5413ff2006",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0089",
+      "role": "body",
+      "source_html": "<p>«Au nom du Ciel! monsieur, dit Maximilien, si vous savez quelque chose\nde cet homme, dites-nous ce que vous en savez!</p>",
+      "source": "«Au nom du Ciel! monsieur, dit Maximilien, si vous savez quelque chose\nde cet homme, dites-nous ce que vous en savez!",
+      "source_sha256": "6576211592f397e20523bab5eddec708cad57c5b017174893a4798db80cdd85a",
+      "target_html": "<p>«Ради всего святого, месье, — сказал Максимилиан, — если вы что-то знаете\nоб этом человеке, скажите нам, что вы знаете!»</p>",
+      "target_sha256": "ae7e96ac146f5fdf95d2e92f34237d95225870b776a80c16bd4faeda5c5f6c0b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0090",
+      "role": "body",
+      "source_html": "<p>—Hélas! dit Monte-Cristo en comprimant l'émotion de sa voix, si c'est\nLord Wilmore votre bienfaiteur, je crains bien que jamais vous ne le\nretrouviez. Je l'ai quitté il y a deux ou trois ans à Palerme et il\npartait pour les pays les plus fabuleux; si bien que je doute fort qu'il\nen revienne jamais.</p>",
+      "source": "—Hélas! dit Monte-Cristo en comprimant l'émotion de sa voix, si c'est\nLord Wilmore votre bienfaiteur, je crains bien que jamais vous ne le\nretrouviez. Je l'ai quitté il y a deux ou trois ans à Palerme et il\npartait pour les pays les plus fabuleux; si bien que je doute fort qu'il\nen revienne jamais.",
+      "source_sha256": "43f2b1ecafcd92f4b7433b96617cfc1da029062ed74756a33e39e8849fcbdac8",
+      "target_html": "<p>—Увы! — сказал Монте-Кристо, сдерживая волнение в голосе, — если это\nлорд Уилмор — ваш благодетель, то боюсь, что вы его\nникогда не найдете. Я расстался с ним два или три года назад в Палермо, и он\nотправлялся в самые невероятные страны; так что я сильно сомневаюсь, что он\nкогда-нибудь вернётся.</p>",
+      "target_sha256": "526278abeddc0c49b1ce6ba29a5b1bfb832f951e5e714ea4789333fa5fda5017",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0091",
+      "role": "body",
+      "source_html": "<p>—Ah! monsieur, vous êtes cruel!» s'écria Julie avec effroi.</p>",
+      "source": "—Ah! monsieur, vous êtes cruel!» s'écria Julie avec effroi.",
+      "source_sha256": "5c61484e780775c27ab4f7bc6cf6847b3ca82627e7582804648dfd635fd230f7",
+      "target_html": "<p>—Ах, месье, вы жестоки! — воскликнула Жюли с испугом.</p>",
+      "target_sha256": "b0f9ce3316c30391c5c600a6b2cc4b9a093a94bf50a385b57022d249634bcd9f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0092",
+      "role": "body",
+      "source_html": "<p>Et les larmes vinrent aux yeux de la jeune femme.</p>",
+      "source": "Et les larmes vinrent aux yeux de la jeune femme.",
+      "source_sha256": "d66a1e79c119d3e3b5cb0fa64a62908a986d03ff7c70d6f75acd00ba8523c1cb",
+      "target_html": "<p>И слезы навернулись на глаза молодой женщины.</p>",
+      "target_sha256": "1dea6ef4b882a8a7e2f1b63b70cf87ad077ce627ba1f0fde2ffc8b906c0b6d55",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0093",
+      "role": "body",
+      "source_html": "<p>«Madame, dit gravement Monte-Cristo en dévorant du regard les deux\nperles liquides qui roulaient sur les joues de Julie, si Lord Wilmore\navait vu ce que je viens de voir ici, il aimerait encore la vie, car les\nlarmes que vous versez le raccommoderaient avec le genre humain.»</p>",
+      "source": "«Madame, dit gravement Monte-Cristo en dévorant du regard les deux\nperles liquides qui roulaient sur les joues de Julie, si Lord Wilmore\navait vu ce que je viens de voir ici, il aimerait encore la vie, car les\nlarmes que vous versez le raccommoderaient avec le genre humain.»",
+      "source_sha256": "c84f6004ffed9497112367295e5b97d3c945cd725460150cebbba5235c5b00a9",
+      "target_html": "<p>«Мадам, — торжественно сказал Монте-Кристо, не отрывая взгляда от двух\nжидких жемчужин, скатывавшихся по щекам Жюли, — если бы лорд Уилмор\nувидел то, что я только что увидел здесь, он бы по-прежнему любил жизнь, ибо\nслезы, которые вы проливаете, примирили бы его с человечеством».</p>",
+      "target_sha256": "3180de0cabb1ee348c46b322c22cbe3ad10e87dcb8bcf9c2ab1d482f35412e34",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0094",
+      "role": "body",
+      "source_html": "<p>Et il tendit la main à Julie, qui lui donna la sienne, entraînée\nqu'elle se trouvait par le regard et par l'accent du comte.</p>",
+      "source": "Et il tendit la main à Julie, qui lui donna la sienne, entraînée\nqu'elle se trouvait par le regard et par l'accent du comte.",
+      "source_sha256": "4423b34f114e0b3509004d22cbf9128f08d14c35ce6819ab7d0ccb7cdc3171d4",
+      "target_html": "<p>И он протянул руку Жюли, которая ответила ему тем же, увлечённая\nвзглядом и интонацией графа.</p>",
+      "target_sha256": "7b69920a119d27501883eacb63be60c695d87a5764dfd18576457122a01d9d15",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0095",
+      "role": "body",
+      "source_html": "<p>«Mais ce Lord Wilmore, dit-elle, se rattachant à une dernière espérance,\nil avait un pays, une famille, des parents, il était connu enfin? Est-ce\nque nous ne pourrions pas...?</p>",
+      "source": "«Mais ce Lord Wilmore, dit-elle, se rattachant à une dernière espérance,\nil avait un pays, une famille, des parents, il était connu enfin? Est-ce\nque nous ne pourrions pas...?",
+      "source_sha256": "3c3d56ee989172ca8dc066dad703715a210417543cdad24e8cf3c04386ab9202",
+      "target_html": "<p>«Но этот лорд Уилмор, — сказала она, цепляясь за последнюю надежду,\n— у него была родина, семья, родственники, он был, наконец, известен? Не\nмогли бы мы…?»</p>",
+      "target_sha256": "e2728b5a2c8087014b744d3f76eb3b71af8ce9d22543bdc1e31a2e9bc99d4d75",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0096",
+      "role": "body",
+      "source_html": "<p>—Oh! ne cherchez point, madame, dit le comte, ne bâtissez point de\ndouces chimères sur cette parole que j'ai laissé échapper. Non, Lord\nWilmore n'est probablement pas l'homme que vous cherchez: il était mon\nami, je connaissais tous ses secrets, il m'eût raconté celui-là.</p>",
+      "source": "—Oh! ne cherchez point, madame, dit le comte, ne bâtissez point de\ndouces chimères sur cette parole que j'ai laissé échapper. Non, Lord\nWilmore n'est probablement pas l'homme que vous cherchez: il était mon\nami, je connaissais tous ses secrets, il m'eût raconté celui-là.",
+      "source_sha256": "372b50212e4541e316687d78512cbd941eb3cb362ba7d7169015d06f300ba1df",
+      "target_html": "<p>—О! Не ищите ничего, мадам, — сказал граф, — не стройте\nсладких иллюзий на основе того слова, которое я проговорился. Нет, лорд\nУилмор, вероятно, не тот человек, которого вы ищете: он был моим\nдругом, я знал все его секреты, он рассказал бы мне об этом.</p>",
+      "target_sha256": "072a56d341c1503eb726d52428afcca872125fcaef5c175fac49111454502f65",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0097",
+      "role": "body",
+      "source_html": "<p>—Et il ne vous en a rien dit? s'écria Julie.</p>",
+      "source": "—Et il ne vous en a rien dit? s'écria Julie.",
+      "source_sha256": "30627ad02c0ba0fd90edfcbf742f1cd3ca224b22e6dae2a223bf4f36fb232a9c",
+      "target_html": "<p>—И он вам ничего не говорил? — воскликнула Жюли.</p>",
+      "target_sha256": "697cc750beb41f87a2b46b1ae458d07ccfed846e62c0da2128bd38dac7b30037",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0098",
+      "role": "body",
+      "source_html": "<p>—Rien. </p>",
+      "source": "—Rien. ",
+      "source_sha256": "74214c6e4373c492e6dde5dcaf34883a285b1c87c47e40de4b936898c4c13477",
+      "target_html": "<p>—Ничего. </p>",
+      "target_sha256": "fb17861fad01aa6c4bbaf02b573bd8872d49a11245798e31150076d5bfd35ed7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0099",
+      "role": "body",
+      "source_html": "<p>—Jamais un mot qui pût vous faire supposer?...</p>",
+      "source": "—Jamais un mot qui pût vous faire supposer?...",
+      "source_sha256": "ecbc3a76be4df21021c59eb3cb93406e68c990c6e23947ecd3f5da01bd39c860",
+      "target_html": "<p>—Ни слова, которое могло бы натолкнуть вас на догадку?...</p>",
+      "target_sha256": "6f60d8b2f83867c0ac53a33c0f30e06b5f051422f4d95d90163c096026157e41",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0100",
+      "role": "body",
+      "source_html": "<p>—Jamais.</p>",
+      "source": "—Jamais.",
+      "source_sha256": "644a25539244b3e106c0c6e13fca94c34488b28ab8ce400345030fd64c67b601",
+      "target_html": "<p>—Никогда.</p>",
+      "target_sha256": "f535e07bd93fa17c6226ad26ef58e2428940b873a37882d8c71eb2e239fd3eef",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0101",
+      "role": "body",
+      "source_html": "<p>—Cependant vous l'avez nommé tout de suite.</p>",
+      "source": "—Cependant vous l'avez nommé tout de suite.",
+      "source_sha256": "8f7f0bef5118418d2cf1d68a08240dc83653217106883e0f7bdf8ea38fdb5471",
+      "target_html": "<p>—Тем не менее вы сразу назвали его имя.</p>",
+      "target_sha256": "1445a53639b5af478ee061eb43272a2476e9f290e4d515c4984168166d86e32d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0102",
+      "role": "body",
+      "source_html": "<p>—Ah! vous savez... en pareil cas, on suppose.</p>",
+      "source": "—Ah! vous savez... en pareil cas, on suppose.",
+      "source_sha256": "7ae2e7a54cb69da41113dacf31fc3a015aac27c4ef99603e2191f19e6ef070ae",
+      "target_html": "<p>—Ах! Вы знаете… в таких случаях люди склонны предполагать.</p>",
+      "target_sha256": "286bc44dce1b3549705e07f38f97dea30a33b97d028ba20d8cdfbbcbcb2cd0dd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0103",
+      "role": "body",
+      "source_html": "<p>—Ma sœur, ma sœur, dit Maximilien venant en aide au comte, monsieur a\nraison. Rappelle-toi ce que nous a dit si souvent notre bon père: «Ce\nn'est pas un Anglais qui nous a fait ce bonheur.»</p>",
+      "source": "—Ma sœur, ma sœur, dit Maximilien venant en aide au comte, monsieur a\nraison. Rappelle-toi ce que nous a dit si souvent notre bon père: «Ce\nn'est pas un Anglais qui nous a fait ce bonheur.»",
+      "source_sha256": "319144f7e4420277929a6c51e79849dfcfdd344dca7f282e2d1906fc4a5a3d0a",
+      "target_html": "<p>—Сестра, сестра, — сказал Максимилиан, придя на помощь графу, — месье\nправ. Вспомни, что так часто говорил нам наш добрый отец: «Это\nне англичанин принёс нам это счастье».</p>",
+      "target_sha256": "dc147477c9eae054d5d86eee8f32b07720883e75ab7a2130fb7d32e24345ece0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0104",
+      "role": "body",
+      "source_html": "<p>Monte-Cristo tressaillit. </p>",
+      "source": "Monte-Cristo tressaillit. ",
+      "source_sha256": "d077bfd61c29372ae855a26c0d618888fc1acfec98d3e7cd2fc9371ccb9d9d08",
+      "target_html": "<p>Монте-Кристо вздрогнул. </p>",
+      "target_sha256": "62639f5e0dd1afcda61931c654b06f004e13b820011d2f383a4eb0ae374d4de8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0105",
+      "role": "body",
+      "source_html": "<p>«Votre père vous disait... monsieur Morrel?... reprit-il vivement.</p>",
+      "source": "«Votre père vous disait... monsieur Morrel?... reprit-il vivement.",
+      "source_sha256": "441d2bbc7ef172bf5cfe17b0660fab9683bd72311d32cc8edc31609d574ade7c",
+      "target_html": "<p>«Ваш отец говорил вам… месье Моррель?… — быстро перебил он.</p>",
+      "target_sha256": "4a1738d927ce657a2ac55cda8f25167fd0cf3d32484c896ab16a225bc51a521f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0106",
+      "role": "body",
+      "source_html": "<p>—Mon père, monsieur, voyait dans cette action un miracle. Mon père\ncroyait à un bienfaiteur sorti pour nous de la tombe. Oh! la touchante\nsuperstition, monsieur, que celle-là, et comme, tout en n'y croyant pas\nmoi-même, j'étais loin de vouloir détruire cette croyance dans son noble\ncœur! Aussi combien de fois y rêva-t-il en prononçant tout bas un nom\nd'ami bien cher, un nom d'ami perdu; et lorsqu'il fut près de mourir,\nlorsque l'approche de l'éternité eût donné à son esprit quelque chose de\nl'illumination de la tombe, cette pensée, qui n'avait jusque-là été\nqu'un doute, devint une conviction, et les dernières paroles qu'il\nprononça en mourant furent celles-ci: «Maximilien, c'était Edmond\nDantès!»</p>",
+      "source": "—Mon père, monsieur, voyait dans cette action un miracle. Mon père\ncroyait à un bienfaiteur sorti pour nous de la tombe. Oh! la touchante\nsuperstition, monsieur, que celle-là, et comme, tout en n'y croyant pas\nmoi-même, j'étais loin de vouloir détruire cette croyance dans son noble\ncœur! Aussi combien de fois y rêva-t-il en prononçant tout bas un nom\nd'ami bien cher, un nom d'ami perdu; et lorsqu'il fut près de mourir,\nlorsque l'approche de l'éternité eût donné à son esprit quelque chose de\nl'illumination de la tombe, cette pensée, qui n'avait jusque-là été\nqu'un doute, devint une conviction, et les dernières paroles qu'il\nprononça en mourant furent celles-ci: «Maximilien, c'était Edmond\nDantès!»",
+      "source_sha256": "2f777557a506b6f38ee9fbaf5ca64a7476e2b20eecfdc0dcd7ef9adf3b2365a3",
+      "target_html": "<p>—Мой отец, месье, считал этот поступок чудом. Мой отец\nверил в благодетеля, восставшего для нас из могилы. О, какое трогательное\nсуеверие, месье, и как, хотя сам я в это не верил,\nя был далек от того, чтобы разрушить эту веру в его благородном\nсердце! Сколько раз он мечтал об этом, тихо произнося имя\nочень дорогого друга, имя утраченного друга; и когда он был близок к смерти,\nкогда приближение вечности придало его духу нечто от\nозарения могилы, эта мысль, которая до тех пор была\nлишь сомнением, стала убеждением, и последними словами, которые он\nпроизнес, умирая, были следующие: «Максимилиан, это был Эдмон\nДантес!»</p>",
+      "target_sha256": "0e77262a0d941256e6c805c29fca1da217e526e36940b11d09dc3f65b93e1b0f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0107",
+      "role": "body",
+      "source_html": "<p>La pâleur du comte, qui depuis quelques secondes allait croissant,\ndevint effrayante à ces paroles. Tout son sang venait d'affluer au\ncœur, il ne pouvait parler, il tira sa montre comme s'il eût oublié\nl'heure, prit son chapeau, présenta à Mme Herbault un compliment brusque\net embarrassé, et serrant les mains d'Emmanuel et de Maximilien:</p>",
+      "source": "La pâleur du comte, qui depuis quelques secondes allait croissant,\ndevint effrayante à ces paroles. Tout son sang venait d'affluer au\ncœur, il ne pouvait parler, il tira sa montre comme s'il eût oublié\nl'heure, prit son chapeau, présenta à Mme Herbault un compliment brusque\net embarrassé, et serrant les mains d'Emmanuel et de Maximilien:",
+      "source_sha256": "9290f07ea423ecd92e7faf63ab11975e910fabddb186a8175108a2b7c9ab0f73",
+      "target_html": "<p>Бледность графа, которая в течение нескольких секунд становилась всё сильнее,\nпри этих словах стала пугающей. Вся его кровь прилила к\nсердцу, он не мог говорить, достал часы, словно забыв\nо времени, взял шляпу, резко и\nнеловко поклонился мадам Эрбо, а затем, пожимая руки Эммануилу и Максимилиану:</p>",
+      "target_sha256": "f91c4de2138a553187b83a198278af8fd59b2b4f8d4a49c52fe9ab38a2fc3764",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0108",
+      "role": "body",
+      "source_html": "<p>«Madame, dit-il, permettez-moi de venir quelque fois vous rendre mes\ndevoirs. J'aime votre maison, et je vous suis reconnaissant de votre\naccueil, car voici la première fois que je me suis oublié depuis bien\ndes années.»</p>",
+      "source": "«Madame, dit-il, permettez-moi de venir quelque fois vous rendre mes\ndevoirs. J'aime votre maison, et je vous suis reconnaissant de votre\naccueil, car voici la première fois que je me suis oublié depuis bien\ndes années.»",
+      "source_sha256": "5e56a323c3bb686d2ec680a7ff59ac1224a4ae0bafacb83d8ec86c501c35750c",
+      "target_html": "<p>«Мадам, — сказал он, — позвольте мне иногда приходить к вам, чтобы выразить\nсвою благодарность. Мне нравится ваш дом, и я благодарен вам за\nгостеприимство, ведь это первый раз, когда я забылся за долгие\nгоды».</p>",
+      "target_sha256": "ab47d6b283f3404b3eb7fee023076d1783e6b4b204cc9c6e0b6b7b418e9452fb",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0109",
+      "role": "body",
+      "source_html": "<p>Et il sortit à grands pas.</p>",
+      "source": "Et il sortit à grands pas.",
+      "source_sha256": "6dbce9ea349296462d0a2e7ed34839968373df7c67f79d2c0b84fd0c3578643d",
+      "target_html": "<p>И он вышел быстрыми шагами.</p>",
+      "target_sha256": "127c981f9e086841d8210ece0186d233a4d73ea824d3bb1b13cb95792d284160",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0110",
+      "role": "body",
+      "source_html": "<p>«C'est un homme singulier que ce comte de Monte-Cristo, dit Emmanuel.</p>",
+      "source": "«C'est un homme singulier que ce comte de Monte-Cristo, dit Emmanuel.",
+      "source_sha256": "b2ad18e32a268711fb9a71e3c0a4adc2982b47b3cae92541a7a9e00f9f746c4a",
+      "target_html": "<p>«Какой необычный человек — этот граф Монте-Кристо, — сказал Эммануэль.</p>",
+      "target_sha256": "4a4aff88530ad922b20e50c0d1d701922b9a237ccdf1db7474752ee9b917a8b4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0111",
+      "role": "body",
+      "source_html": "<p>—Oui, répondit Maximilien, mais je crois qu'il a un cœur excellent, et\nje suis sûr qu'il nous aime.</p>",
+      "source": "—Oui, répondit Maximilien, mais je crois qu'il a un cœur excellent, et\nje suis sûr qu'il nous aime.",
+      "source_sha256": "426028d9f3994ec14e15cbdb0e41886c16b4dce32394379fa81815ff948780c6",
+      "target_html": "<p>— Да, — ответил Максимилиан, — но я думаю, что у него прекрасное сердце, и\nя уверен, что он нас любит.</p>",
+      "target_sha256": "9287afebd1f734485d9e738efddd50151af2767add75226201e0542bdc720321",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "050-0112",
+      "role": "body",
+      "source_html": "<p>—Et moi! dit Julie, sa voix m'a été au cœur, et deux ou trois fois il\nm'a semblé que ce n'était pas la première fois que je l'entendais.»</p>",
+      "source": "—Et moi! dit Julie, sa voix m'a été au cœur, et deux ou trois fois il\nm'a semblé que ce n'était pas la première fois que je l'entendais.»",
+      "source_sha256": "13ad661cc5548f49c76a666942dfce8c6461294bc8b0f25b9dd1e7a258fcbf8b",
+      "target_html": "<p>— И я! — сказала Жюли. — Его голос тронул меня до глубины души, и два или три раза мне\nпоказалось, что я слышу его не в первый раз».</p>",
+      "target_sha256": "d123440d45a6cb6ab9ca12b00a4eba852399bc8926bc7a381ec3d86c882d86d4",
+      "model_type_used": "quality_optimized"
+    }
+  ],
+  "engine": "DeepL",
+  "requested_model": "quality_optimized",
+  "source_language": "FR",
+  "target_language": "RU"
+}

@@ -1,0 +1,802 @@
+{
+  "chapter": 9,
+  "number": "IX",
+  "source_url": "https://www.gutenberg.org/files/17989/17989-h/17989-h.htm",
+  "source_document_sha256": "48e1da16e9740ab420e40b8ecc70b45e7ec698e04171c7466c0eeddeff6c6e0a",
+  "paragraphs": [
+    {
+      "id": "009-0000",
+      "role": "heading",
+      "source_html": "<h3><a href=\"#table\">Le soir des fiançailles.</a></h3>",
+      "source": "Le soir des fiançailles.",
+      "source_sha256": "01b832a59700ca14c969c1395760ad66e8f6890ca2c09a9ee9671893d5967b70",
+      "target_html": "<h3><a href=\"#table\">Вечер помолвки.</a></h3>",
+      "target_sha256": "1a7c637ccbc21fb80558b0f3e30568fb324a98248b347baab98a8be799a8cae0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0001",
+      "role": "body",
+      "source_html": "<p>Villefort, comme nous l'avons dit, avait repris le chemin de la place du\nGrand-Cours, et en rentrant dans la maison de Mme de Saint-Méran, il\ntrouva les convives qu'il avait laissés à table passés au salon en\nprenant le café.</p>",
+      "source": "Villefort, comme nous l'avons dit, avait repris le chemin de la place du\nGrand-Cours, et en rentrant dans la maison de Mme de Saint-Méran, il\ntrouva les convives qu'il avait laissés à table passés au salon en\nprenant le café.",
+      "source_sha256": "ace1d500adfec0afb3ca43879cc8be142b094b08f1932208a89e4b3ab5156d5c",
+      "target_html": "<p>Вильфор, как мы уже говорили, вернулся на площадь\nГран-Кур, и, войдя в дом мадам де Сен-Меран, он\nзастал гостей, которых оставил за столом, уже перешедших в салон, где\nони пили кофе.</p>",
+      "target_sha256": "038c07f36ced259484da9176786d0584e267f6977ee1bca02e9423faea774060",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0002",
+      "role": "body",
+      "source_html": "<p>Renée l'attendait avec une impatience qui était partagée par tout le\nreste de la société. Aussi fut-il accueilli par une exclamation\ngénérale:</p>",
+      "source": "Renée l'attendait avec une impatience qui était partagée par tout le\nreste de la société. Aussi fut-il accueilli par une exclamation\ngénérale:",
+      "source_sha256": "23f6082ec97717d69df13fa62dd395b4cf8976fcaed6985f1a20a92aaf3de74c",
+      "target_html": "<p>Рене ждала его с нетерпением, которое разделяли все\nостальные гости. Поэтому его встретили всеобщим возгласом:\n—</p>",
+      "target_sha256": "fa8b02f53f2e18a9a281f5a40a3d0885f63b8be6a1f3f2572be6b7c22f706b25",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0003",
+      "role": "body",
+      "source_html": "<p>«Eh bien, trancheur de têtes, soutien de l'État, Brutus royaliste!\ns'écria l'un, qu'y a-t-il? voyons!</p>",
+      "source": "«Eh bien, trancheur de têtes, soutien de l'État, Brutus royaliste!\ns'écria l'un, qu'y a-t-il? voyons!",
+      "source_sha256": "843c69665658a370a860809b12b7054677455359c2b522ebc6332254858f8500",
+      "target_html": "<p>«Ну что ж, обезглавитель, опора государства, роялистский Брут!\n— воскликнул один, — в чём дело? Давайте посмотрим!</p>",
+      "target_sha256": "6a01c4896b4f92aa9d84492ce6b43ab1ca4f0c36ffd6aeac1717aaa918dc39e3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0004",
+      "role": "body",
+      "source_html": "<p>—Eh bien, sommes-nous menacés d'un nouveau régime de la Terreur?\ndemanda l'autre.</p>",
+      "source": "—Eh bien, sommes-nous menacés d'un nouveau régime de la Terreur?\ndemanda l'autre.",
+      "source_sha256": "76d93b4a63a6a9656072e5a39525bf02e7dfb518887a4c36804fcbf2305b0f43",
+      "target_html": "<p>—Ну так, нам грозит новый режим террора?\n— спросил другой.</p>",
+      "target_sha256": "bbe8f2c9635d59cd49ff64aedcee04085e63395735875edfa6a9d57e5dc62cd7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0005",
+      "role": "body",
+      "source_html": "<p>—L'ogre de Corse serait-il sorti de sa caverne? demanda un troisième.</p>",
+      "source": "—L'ogre de Corse serait-il sorti de sa caverne? demanda un troisième.",
+      "source_sha256": "d1ef7ca4a1f8f828093367af3e959ce69239ebd25599ea13c12e14f642d67d41",
+      "target_html": "<p>—Неужели корсиканский людоед выбрался из своей пещеры? — спросил третий.</p>",
+      "target_sha256": "d559e62004dfb7b0098e883dc43e86709e980141b178e0497f570a5c8ac17164",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0006",
+      "role": "body",
+      "source_html": "<p>—Madame la marquise, dit Villefort s'approchant de sa future\nbelle-mère, je viens vous prier de m'excuser si je suis forcé de vous\nquitter ainsi.... Monsieur le marquis, pourrais-je avoir l'honneur de\nvous dire deux mots en particulier?</p>",
+      "source": "—Madame la marquise, dit Villefort s'approchant de sa future\nbelle-mère, je viens vous prier de m'excuser si je suis forcé de vous\nquitter ainsi.... Monsieur le marquis, pourrais-je avoir l'honneur de\nvous dire deux mots en particulier?",
+      "source_sha256": "49a3e71c51cb7643bbdd1cccdb13d50ddf3353ed1a2df9e488b0bda79cf2da48",
+      "target_html": "<p>—Мадам маркиза, — сказал Вильфор, подойдя к своей будущей\nсвекрови, — я пришел попросить вас извинить меня, если я вынужден\nтак быстро вас покинуть… Господин маркиз, можно ли мне иметь честь\nперекинуться с вами парой слов наедине?</p>",
+      "target_sha256": "a7019a93cbdd42d670d224802be7d972ac608636d96b248bc9877a13439fbbb6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0007",
+      "role": "body",
+      "source_html": "<p>—Ah! mais c'est donc réellement grave? demanda la marquise, en\nremarquant le nuage qui obscurcissait le front de Villefort.</p>",
+      "source": "—Ah! mais c'est donc réellement grave? demanda la marquise, en\nremarquant le nuage qui obscurcissait le front de Villefort.",
+      "source_sha256": "71d9f031875b61a6532016b8eec7cd724616277cb39efd1edb5321a52539afbb",
+      "target_html": "<p>—Ах! Так дело действительно серьёзно? — спросила маркиза,\nзаметив тучу, омрачавшую лоб Вильфора.</p>",
+      "target_sha256": "07a63eb25d4d65cde87a4006b5accb20281beffbd988be0939e01d64042c4927",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0008",
+      "role": "body",
+      "source_html": "<p>—Si grave que je suis forcé de prendre congé de vous pour quelques\njours; ainsi, continua-t-il en se tournant vers Renée, voyez s'il faut\nque la chose soit grave.</p>",
+      "source": "—Si grave que je suis forcé de prendre congé de vous pour quelques\njours; ainsi, continua-t-il en se tournant vers Renée, voyez s'il faut\nque la chose soit grave.",
+      "source_sha256": "7af75df9be1e186dbd3a881119a07d5e0639b624f3e29ebf0242ab1c027376ce",
+      "target_html": "<p>—Дело настолько серьёзное, что я вынужден на несколько\nдней отлучиться от вас; вот, — продолжил он, обращаясь к Рене, — сами видите, насколько\nсерьёзно всё обстоит.</p>",
+      "target_sha256": "09bef4d76c5878875e64ffd6cea66ff4477393b155599e3badb57c22bc399d90",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0009",
+      "role": "body",
+      "source_html": "<p>—Vous partez, monsieur? s'écria Renée, incapable de cacher l'émotion\nque lui causait cette nouvelle inattendue.</p>",
+      "source": "—Vous partez, monsieur? s'écria Renée, incapable de cacher l'émotion\nque lui causait cette nouvelle inattendue.",
+      "source_sha256": "830a9e7764d8b9315d7b47fd07ff8388413580496644c6e31d45ab6814d77f1e",
+      "target_html": "<p>—Вы уезжаете, месье? — воскликнула Рене, не в силах скрыть волнение,\nкоторое вызвала у неё эта неожиданная новость.</p>",
+      "target_sha256": "61f819ddcb0cad01696d39b6317f07ccdf5b61c22f69d9b0640c3bc42a69a496",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0010",
+      "role": "body",
+      "source_html": "<p>—Hélas! oui, mademoiselle, répondit Villefort: il le faut.</p>",
+      "source": "—Hélas! oui, mademoiselle, répondit Villefort: il le faut.",
+      "source_sha256": "0a8ecbf56ae94aeb2a55c4e98781b8b7d92a5e5e1b25c793c5e1a35b87243597",
+      "target_html": "<p>—Увы! Да, мадемуазель, — ответил Вильфор, — это необходимо.</p>",
+      "target_sha256": "0a22fdae05f6b73bf8d1988f11bebc506517aa1fa2628d32365662ba37f6f1ff",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0011",
+      "role": "body",
+      "source_html": "<p>—Et où allez-vous donc? demanda la marquise.</p>",
+      "source": "—Et où allez-vous donc? demanda la marquise.",
+      "source_sha256": "a55ecdd57462d2afdf8c0e2e4edfc1e8364c5819e1b66cdafe4afe20cb102f75",
+      "target_html": "<p>—А куда же вы собираетесь? — спросила маркиза.</p>",
+      "target_sha256": "f17f8cc2d89d1f30ef8c06552892d8093af62c80828ee8c9f82617f04935404c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0012",
+      "role": "body",
+      "source_html": "<p>—C'est le secret de la justice, madame; cependant si quelqu'un d'ici a\ndes commissions pour Paris, j'ai un de mes amis qui partira ce soir et\nqui s'en chargera avec plaisir.»</p>",
+      "source": "—C'est le secret de la justice, madame; cependant si quelqu'un d'ici a\ndes commissions pour Paris, j'ai un de mes amis qui partira ce soir et\nqui s'en chargera avec plaisir.»",
+      "source_sha256": "3a66df3c861963035bfd6609c8981c437f3747684987689f2a26fee392605d8f",
+      "target_html": "<p>—Это судебная тайна, мадам; однако, если кто-нибудь отсюда\nотправляется в Париж по делам, у меня есть друг, который уезжает сегодня вечером и\nс удовольствием этим займется».</p>",
+      "target_sha256": "ba39645b64ed8a41cc91c92ebca86048ecfdcb0f7a6d897e11b71f1193a465ee",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0013",
+      "role": "body",
+      "source_html": "<p>Tout le monde se regarda.</p>",
+      "source": "Tout le monde se regarda.",
+      "source_sha256": "c11c4d4c275b0b7a40325361e9a763bcee4cdcb00035c40d3f84d3a110d6bb9b",
+      "target_html": "<p>Все переглянулись.</p>",
+      "target_sha256": "4fb648c9c0f772af4aa8194f5f6f90601fa1fb9b7a9c83a44b459d06b44b0d01",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0014",
+      "role": "body",
+      "source_html": "<p>«Vous m'avez demandé un moment d'entretien? dit le marquis.</p>",
+      "source": "«Vous m'avez demandé un moment d'entretien? dit le marquis.",
+      "source_sha256": "16c93c090418467c3a4db198ff82e7623ad2dd31b13d59b5a1429ea011f98329",
+      "target_html": "<p>«Вы просили меня о короткой беседе? — сказал маркиз.</p>",
+      "target_sha256": "c4d08414740fcc58d662701717e5ebcbf2bd27bb43f9a82194792d44ff3f61d9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0015",
+      "role": "body",
+      "source_html": "<p>—Oui, passons dans votre cabinet, s'il vous plaît.»</p>",
+      "source": "—Oui, passons dans votre cabinet, s'il vous plaît.»",
+      "source_sha256": "62dc05e26e85294698731eafe46416aa852b99d5276e981d9e5858001413a3e9",
+      "target_html": "<p>—Да, давайте пройдем в ваш кабинет, пожалуйста.»</p>",
+      "target_sha256": "0699f8796f11a00be4d6702f2ef93356e6efb5eada26a8684eb1c60383a4459f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0016",
+      "role": "body",
+      "source_html": "<p>Le marquis prit le bras de Villefort et sortit avec lui.</p>",
+      "source": "Le marquis prit le bras de Villefort et sortit avec lui.",
+      "source_sha256": "b2e45f62a15d40049aeb75a086e494dd54fd398fba46eb27d7ae91592d53e7f7",
+      "target_html": "<p>Маркиз взял Вильфора под руку и вышел вместе с ним.</p>",
+      "target_sha256": "1eb0e726c077bea8fbc370db8cc057be20edc025732aa30c12be90f3a2741358",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0017",
+      "role": "body",
+      "source_html": "<p>«Eh bien, demanda celui-ci en arrivant dans son cabinet, que se\npasse-t-il donc? parlez.</p>",
+      "source": "«Eh bien, demanda celui-ci en arrivant dans son cabinet, que se\npasse-t-il donc? parlez.",
+      "source_sha256": "356cb77376de6ad3a4a797d398f9d026f7fd7bef4d6ed83198673b516ba02bea",
+      "target_html": "<p>«Ну, — спросил тот, войдя в свой кабинет, — что же\nпроисходит? Говорите».</p>",
+      "target_sha256": "092caa4cfee946b07d92634427920eac52e9dca93f23073f65decba0a8a33b8c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0018",
+      "role": "body",
+      "source_html": "<p>—Des choses que je crois de la plus haute gravité, et qui nécessitent\nmon départ à l'instant même pour Paris. Maintenant, marquis, excusez\nl'indiscrète brutalité de la question, avez-vous des rentes sur l'État?</p>",
+      "source": "—Des choses que je crois de la plus haute gravité, et qui nécessitent\nmon départ à l'instant même pour Paris. Maintenant, marquis, excusez\nl'indiscrète brutalité de la question, avez-vous des rentes sur l'État?",
+      "source_sha256": "4e237fd1a47ad1efee5fd406610899e5de399a28b929523237ff36a2f7c00e9c",
+      "target_html": "<p>—Дела, которые, как я полагаю, носят крайне серьезный характер и требуют\nмоего немедленного отъезда в Париж. Итак, маркиз, простите\nза нескромную прямоту вопроса: есть ли у вас доходы от государственных облигаций?</p>",
+      "target_sha256": "814ac0e326225c1c41aea265366bc57b075961b76af50bad3be6f30fa9aa9eca",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0019",
+      "role": "body",
+      "source_html": "<p>—Toute ma fortune est en inscriptions; six à sept cent mille francs à\npeu près.</p>",
+      "source": "—Toute ma fortune est en inscriptions; six à sept cent mille francs à\npeu près.",
+      "source_sha256": "70df4d166af26a6ca622b97857ee8010485edd3f2cdd0eeecd730cd2760d7588",
+      "target_html": "<p>— Все моё состояние в ценных бумагах; примерно шесть-семьсот тысяч франков,\nпримерно.</p>",
+      "target_sha256": "9a60c16398ae97023ae0b404db7a7bee8aa92236c360dc1b0ca6cf3c4381d98b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0020",
+      "role": "body",
+      "source_html": "<p>—Eh bien, vendez, marquis, vendez, ou vous êtes ruiné.</p>",
+      "source": "—Eh bien, vendez, marquis, vendez, ou vous êtes ruiné.",
+      "source_sha256": "b0acee312f105d218f471ba79f133d0ce756fbe3ad52f137589685397045cd00",
+      "target_html": "<p>—Ну что ж, продавайте, маркиз, продавайте, иначе вы разоритесь.</p>",
+      "target_sha256": "6e4ade3198a9e73908a5b05b837c82e1dccf809e8d5f897bcd7ba56010fa75b1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0021",
+      "role": "body",
+      "source_html": "<p>—Mais, comment voulez-vous que je vende d'ici?</p>",
+      "source": "—Mais, comment voulez-vous que je vende d'ici?",
+      "source_sha256": "ec2b65bcd5350fa1f025b8c3db1af746a53ac44534d61bbe36fa1f0a9ef90156",
+      "target_html": "<p>—Но как же я могу продать его отсюда?</p>",
+      "target_sha256": "3b4a04fbfd498006f0489813b3ef40d88470b7f4a62294ae0edd61c282ed652c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0022",
+      "role": "body",
+      "source_html": "<p>—Vous avez un agent de change, n'est-ce pas?</p>",
+      "source": "—Vous avez un agent de change, n'est-ce pas?",
+      "source_sha256": "f0890edc41006dea634a75eeb140585c09ca38f674fcc0dd96ad2bf9abdcbde6",
+      "target_html": "<p>—У вас есть биржевой маклер, не так ли?</p>",
+      "target_sha256": "81b8f1d3aedad622199869996b749a321bbad6141c17ed7f1958412a3d2d264c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0023",
+      "role": "body",
+      "source_html": "<p>—Oui.</p>",
+      "source": "—Oui.",
+      "source_sha256": "2052638ec88bc735c3d8e304acbc9110e71e900e5e07a8b3358f9eba77a4d232",
+      "target_html": "<p>—Да.</p>",
+      "target_sha256": "641fc71bd51d4f44f25e6af18151c234ab6061248a2cfaf6d32db82e193cade5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0024",
+      "role": "body",
+      "source_html": "<p>—Donnez-moi une lettre pour lui, et qu'il vende sans perdre une minute,\nsans perdre une seconde; peut-être même arriverai-je trop tard.</p>",
+      "source": "—Donnez-moi une lettre pour lui, et qu'il vende sans perdre une minute,\nsans perdre une seconde; peut-être même arriverai-je trop tard.",
+      "source_sha256": "be0f5597627ba2adf11ddd6b449f358e0dd6a4b35c16205389de6de66c7220de",
+      "target_html": "<p>—Передайте ему письмо и пусть он отправляет его, не теряя ни минуты,\nни секунды; возможно, я даже опоздаю.</p>",
+      "target_sha256": "cdc9715f2f35929980dc05a136c6ed47120f7d5988f890f62703408912df1d4c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0025",
+      "role": "body",
+      "source_html": "<p>—Diable! dit le marquis, ne perdons pas de temps.»</p>",
+      "source": "—Diable! dit le marquis, ne perdons pas de temps.»",
+      "source_sha256": "cee8b9e021f035d0f681c3aab3a52915425b3dc14be3afaa6523bd632396147b",
+      "target_html": "<p>—Чёрт возьми! — сказал маркиз. — Не будем терять времени.</p>",
+      "target_sha256": "9cb8221936a697284b979c7be8951d584542218322f68c0c1febd636f7258642",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0026",
+      "role": "body",
+      "source_html": "<p>Et il se mit à table et écrivit une lettre à son agent de change, dans\nlaquelle il lui ordonnait de vendre à tout prix.</p>",
+      "source": "Et il se mit à table et écrivit une lettre à son agent de change, dans\nlaquelle il lui ordonnait de vendre à tout prix.",
+      "source_sha256": "e4af5ec74186b701ff8b209a619676b8dadaae236588b56b0e51d0e813c4baa5",
+      "target_html": "<p>И он сел за стол и написал письмо своему биржевому агенту, в\nкотором приказывал ему продать по любой цене.</p>",
+      "target_sha256": "25882d607867a6f15a99bf9e88c5079d5547455364795b56e446f9006a262a65",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0027",
+      "role": "body",
+      "source_html": "<p>«Maintenant que j'ai cette lettre, dit Villefort en la serrant\nsoigneusement dans son portefeuille, il m'en faut une autre.</p>",
+      "source": "«Maintenant que j'ai cette lettre, dit Villefort en la serrant\nsoigneusement dans son portefeuille, il m'en faut une autre.",
+      "source_sha256": "ec2d9b7b097b991e89a8973f7222ac5a662d74e2a51385536b1f03a02d23e3cd",
+      "target_html": "<p>«Теперь, когда у меня есть это письмо, — сказал Вильфор, тщательно\nубирая его в портфель, — мне нужно ещё одно».</p>",
+      "target_sha256": "8faf3c8d885c00d7ff3a0088af88c30887831fa7931776c801a061b3b984a83c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0028",
+      "role": "body",
+      "source_html": "<p>—Pour qui?</p>",
+      "source": "—Pour qui?",
+      "source_sha256": "68c0d9d8be55ad4b3b30468cd0a14e9abd35e39cba2aaa96ab831d280bdf2110",
+      "target_html": "<p>—К кому?</p>",
+      "target_sha256": "73fdf0e5ef8f6b814bf54931d20dba8c07c7ef412ff5a1afb25c04fd5cd901b9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0029",
+      "role": "body",
+      "source_html": "<p>—Pour le roi.</p>",
+      "source": "—Pour le roi.",
+      "source_sha256": "0090201a72e87050a4475cc2c61efb21ab87628d6d7fbe4e31d1c745c824b588",
+      "target_html": "<p>—Для короля.</p>",
+      "target_sha256": "b7106d46629021b25337b9583cb56a13bf779f583730dce4e47783ec26d5cd40",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0030",
+      "role": "body",
+      "source_html": "<p>—Pour le roi?</p>",
+      "source": "—Pour le roi?",
+      "source_sha256": "ac38e889e70c7ec902be8ae728cec2c3fa62e08ae8fbfc71d4c5428d52bb6fa5",
+      "target_html": "<p>—Для короля?</p>",
+      "target_sha256": "5d35fdd9b50a18d2d8a31c0aef0e451a8517cce1a96781b52ff4ef0c239ade69",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0031",
+      "role": "body",
+      "source_html": "<p>—Oui.</p>",
+      "source": "—Oui.",
+      "source_sha256": "2052638ec88bc735c3d8e304acbc9110e71e900e5e07a8b3358f9eba77a4d232",
+      "target_html": "<p>—Да.</p>",
+      "target_sha256": "641fc71bd51d4f44f25e6af18151c234ab6061248a2cfaf6d32db82e193cade5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0032",
+      "role": "body",
+      "source_html": "<p>—Mais je n'ose prendre sur moi d'écrire ainsi à Sa Majesté.</p>",
+      "source": "—Mais je n'ose prendre sur moi d'écrire ainsi à Sa Majesté.",
+      "source_sha256": "ece0413593c130b1c87bac28ba60eaaf2739a39a3c13e147479f22c1b51b8292",
+      "target_html": "<p>—Но я не осмелюсь взять на себя смелость написать такое Его Величеству.</p>",
+      "target_sha256": "d448b775c66ce558453c342e0bac1aa729c53042bccc3e370d0bac848e76ad19",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0033",
+      "role": "body",
+      "source_html": "<p>—Aussi, n'est-ce point à vous que je la demande, mais je vous charge\nde la demander à M. de Salvieux. Il faut qu'il me donne une lettre à\nl'aide de laquelle je puisse pénétrer près de Sa Majesté, sans être\nsoumis à toutes les formalités de demande d'audience, qui peuvent me\nfaire perdre un temps précieux.</p>",
+      "source": "—Aussi, n'est-ce point à vous que je la demande, mais je vous charge\nde la demander à M. de Salvieux. Il faut qu'il me donne une lettre à\nl'aide de laquelle je puisse pénétrer près de Sa Majesté, sans être\nsoumis à toutes les formalités de demande d'audience, qui peuvent me\nfaire perdre un temps précieux.",
+      "source_sha256": "4b6d65de4eafd44fe41b1d6b7075116885672054929a711f282bb9b2a351ac78",
+      "target_html": "<p>—Впрочем, я прошу не вас, а поручаю вам\nобратиться к господину де Сальвье. Он должен дать мне письмо,\nс помощью которого я смогу проникнуть в близость к Его Величеству, не\nподвергаясь всем формальностям просьбы об аудиенции, которые могут\nзаставить меня потерять драгоценное время.</p>",
+      "target_sha256": "215573ee87a6f7fb9d49eaa5d77c152ac11dfe005cb46efa2f093596a6f488fd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0034",
+      "role": "body",
+      "source_html": "<p>—Mais n'avez-vous pas le garde des Sceaux, qui a ses grandes entrées\naux Tuileries, et par l'intermédiaire duquel vous pouvez jour et nuit\nparvenir jusqu'au roi?</p>",
+      "source": "—Mais n'avez-vous pas le garde des Sceaux, qui a ses grandes entrées\naux Tuileries, et par l'intermédiaire duquel vous pouvez jour et nuit\nparvenir jusqu'au roi?",
+      "source_sha256": "0c24f7a750a9a0de91846630a7e3a9918ff09c7eff2dbdbea8c8c9c0c84394bc",
+      "target_html": "<p>—Но разве у вас нет министра юстиции, который имеет широкий доступ\nв Тюильри и через которого вы можете днём и ночью\nдостучаться до самого короля?</p>",
+      "target_sha256": "d39a8e106120729f3c526749dbcc8a802efd6fce6a7a37ec126476e4cc42fb15",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0035",
+      "role": "body",
+      "source_html": "<p>—Oui, sans doute, mais il est inutile que je partage avec un autre le\nmérite de la nouvelle que je porte. Comprenez-vous? le garde des Sceaux\nme reléguerait tout naturellement au second rang et m'enlèverait tout le\nbénéfice de la chose. Je ne vous dis qu'une chose, marquis: ma carrière\nest assurée si j'arrive le premier aux Tuileries, car j'aurai rendu au\nroi un service qu'il ne lui sera pas permis d'oublier.</p>",
+      "source": "—Oui, sans doute, mais il est inutile que je partage avec un autre le\nmérite de la nouvelle que je porte. Comprenez-vous? le garde des Sceaux\nme reléguerait tout naturellement au second rang et m'enlèverait tout le\nbénéfice de la chose. Je ne vous dis qu'une chose, marquis: ma carrière\nest assurée si j'arrive le premier aux Tuileries, car j'aurai rendu au\nroi un service qu'il ne lui sera pas permis d'oublier.",
+      "source_sha256": "c4c33e59698be32f3dee424ffa51072279c1258907eaacb77eaebff7c656e40a",
+      "target_html": "<p>—Да, конечно, но мне нет нужды делить с кем-то ещё\nзаслугу за новость, которую я принёс. Понимаете? Министр юстиции\nсовершенно естественно оттеснил бы меня на второй план и лишил бы меня всей\nвыгоды от этого дела. Скажу вам только одно, маркиз: моя карьера\nобеспечена, если я первым прибуду в Тюильри, ибо я окажу\nкоролю услугу, которую ему не позволится забыть.</p>",
+      "target_sha256": "3a8ff3508db8f60fa26b519cb2224b167499587a927afa0ce65feed8dbc8a84c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0036",
+      "role": "body",
+      "source_html": "<p>—En ce cas, mon cher, allez faire vos paquets; moi, j'appelle de\nSalvieux, et je lui fais écrire la lettre qui doit vous servir de\nlaissez-passer.</p>",
+      "source": "—En ce cas, mon cher, allez faire vos paquets; moi, j'appelle de\nSalvieux, et je lui fais écrire la lettre qui doit vous servir de\nlaissez-passer.",
+      "source_sha256": "a5f0de3bb8c1011388eec65b67da6e6f772f8e93263be30f2cbccd75f702ee3f",
+      "target_html": "<p>—В таком случае, мой дорогой, идите собирайте вещи; а я позову\nСальвье и поручу ему написать письмо, которое послужит вам\nпропуском.</p>",
+      "target_sha256": "86e26025375b17c8201db070e8916eba72e6dd9de3759aaec66d2216533b0cb1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0037",
+      "role": "body",
+      "source_html": "<p>—Bien, ne perdez pas de temps, car dans un quart d'heure il faut que je\nsois en chaise de poste.</p>",
+      "source": "—Bien, ne perdez pas de temps, car dans un quart d'heure il faut que je\nsois en chaise de poste.",
+      "source_sha256": "bd7e109faaeefada6ce91dd3c51d96bf41ccc06b9520d85402c60bd3817a60e8",
+      "target_html": "<p>—Хорошо, не теряйте времени, ведь через четверть часа я должен\nуехать на почтовой карете.</p>",
+      "target_sha256": "a28050bb72c40ce88c71552cb81b91ebe26d5f8c67f0b724a86c48f210474694",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0038",
+      "role": "body",
+      "source_html": "<p>—Faites arrêter votre voiture devant la porte.</p>",
+      "source": "—Faites arrêter votre voiture devant la porte.",
+      "source_sha256": "cc0fbd889b94061a99dbe6f786de94e411416cdb476e7ad8f324ce34022e8be6",
+      "target_html": "<p>—Остановите вашу карету у ворот.</p>",
+      "target_sha256": "198456c6fe6fcef6a5c82a253050aa81919c37bfdf68ebb4af5d010910959e4f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0039",
+      "role": "body",
+      "source_html": "<p>—Sans aucun doute; vous m'excuserez auprès de la marquise, n'est-ce\npas? auprès de Mlle de Saint-Méran, que je quitte, dans un pareil jour,\navec un bien profond regret.</p>",
+      "source": "—Sans aucun doute; vous m'excuserez auprès de la marquise, n'est-ce\npas? auprès de Mlle de Saint-Méran, que je quitte, dans un pareil jour,\navec un bien profond regret.",
+      "source_sha256": "d32599c4a75f20f49589da2061a0602d27c13f2595f511f2681f93be6122015c",
+      "target_html": "<p>—Безусловно; вы извините меня перед маркизой, не так ли?\nИ перед мадемуазель де Сен-Меран, которую я покидаю в такой день\nс глубочайшим сожалением.</p>",
+      "target_sha256": "68e55b8f7da46d3edbd512b23d040c9a308270c59c724eef54941301d164b82b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0040",
+      "role": "body",
+      "source_html": "<p>—Vous les trouverez toutes deux dans mon cabinet, et vous pourrez leur\nfaire vos adieux.</p>",
+      "source": "—Vous les trouverez toutes deux dans mon cabinet, et vous pourrez leur\nfaire vos adieux.",
+      "source_sha256": "8b8dab34f2ffb96a2536bb5d929c8c813ea684ec871e288cba7d59310169bfa4",
+      "target_html": "<p>—Вы найдёте их обеих в моём кабинете, и сможете\nпопрощаться с ними.</p>",
+      "target_sha256": "98f8b498e8f4d85c222e95a8864e6e4b74f6f65ca162ce10427119563b6e608c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0041",
+      "role": "body",
+      "source_html": "<p>—Merci cent fois; occupez-vous de ma lettre.»</p>",
+      "source": "—Merci cent fois; occupez-vous de ma lettre.»",
+      "source_sha256": "f5652b24b3d3f20f2f43e9bf311a77568609a82161756f7f84135022c564976d",
+      "target_html": "<p>—Спасибо вам стократно; позаботьтесь о моём письме.</p>",
+      "target_sha256": "6fa2b7767af0fb28960c8cb013a17218c6902f6e1a1306d9858c422516d1f890",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0042",
+      "role": "body",
+      "source_html": "<p>Le marquis sonna; un laquais parut.</p>",
+      "source": "Le marquis sonna; un laquais parut.",
+      "source_sha256": "e2f8e5acfadd17d1ba3da87c03bbd0c7cca64c3fe75062ce911663dd6b47e5d7",
+      "target_html": "<p>Маркиз позвонил в дверь; появился лакей.</p>",
+      "target_sha256": "fa0891d50ed2554f1f86a2f48580c1b21997c6cea1932cbdd148b8e7950ccbce",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0043",
+      "role": "body",
+      "source_html": "<p>«Dites au comte de Salvieux que je l'attends.... Allez, maintenant,\ncontinua le marquis s'adressant à Villefort.</p>",
+      "source": "«Dites au comte de Salvieux que je l'attends.... Allez, maintenant,\ncontinua le marquis s'adressant à Villefort.",
+      "source_sha256": "856040e9328b90b0f822e701f96bc80471f4c96c8b4c1e68a772bf559f7ecf62",
+      "target_html": "<p>«Скажите графу де Сальвье, что я его жду… А теперь идите,\n— продолжил маркиз, обращаясь к Вильфору.</p>",
+      "target_sha256": "5510d4f891391f6dc9112a8b4db62d8163acf213950969d3aaf44bfdfe08b947",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0044",
+      "role": "body",
+      "source_html": "<p>—Bon, je ne fais qu'aller et venir.»</p>",
+      "source": "—Bon, je ne fais qu'aller et venir.»",
+      "source_sha256": "2a068e746eaa83427ee19a20ad19bec94a802b8df3b5dc2fb84576765c95c711",
+      "target_html": "<p>—Ну, я просто туда-сюда езжу.</p>",
+      "target_sha256": "de68543f6d4d7a55cb8297134b0f83a7eb7675b51a9e9f7ff3ffcd743d9983d2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0045",
+      "role": "body",
+      "source_html": "<p>Et Villefort sortit tout courant; mais à la porte il songea qu'un\nsubstitut du procureur du roi qui serait vu marchant à pas précipités\nrisquerait de troubler le repos de toute une ville; il reprit donc son\nallure ordinaire, qui était toute magistrale.</p>",
+      "source": "Et Villefort sortit tout courant; mais à la porte il songea qu'un\nsubstitut du procureur du roi qui serait vu marchant à pas précipités\nrisquerait de troubler le repos de toute une ville; il reprit donc son\nallure ordinaire, qui était toute magistrale.",
+      "source_sha256": "198b174657d720bbbc241cd35aba52e19b61dce790d38ffa167820a4f93397d9",
+      "target_html": "<p>И Вильфор выбежал из дома; но у двери он подумал, что\nзаместитель королевского прокурора, которого увидят идущим быстрым шагом,\nрискует нарушить покой всего города; поэтому он вернулся к своей\nобычной походке, которая была совершенно величественной.</p>",
+      "target_sha256": "3ca7d2ed4000f5d8a6a1ca9849ceabacad613c188724631baea255db9789c4e2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0046",
+      "role": "body",
+      "source_html": "<p>À sa porte, il aperçut dans l'ombre comme un blanc fantôme qui\nl'attendait debout et immobile.</p>",
+      "source": "À sa porte, il aperçut dans l'ombre comme un blanc fantôme qui\nl'attendait debout et immobile.",
+      "source_sha256": "d99de35723d1bd64d41b2e6392d071657ffd2602ec9cda5f745a25d52ac515f3",
+      "target_html": "<p>У его двери он заметил в тени нечто похожее на белого призрака, который\nстоял и ждал его, не шевелясь.</p>",
+      "target_sha256": "9279a3e30faffb5a1c83f2586606ef7abd1d40188b490f80fe13029e4eadb20d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0047",
+      "role": "body",
+      "source_html": "<p>C'était la belle fille catalane, qui,\nn'ayant pas de nouvelles d'Edmond, s'était échappée à la nuit tombante\ndu Pharo pour venir savoir elle-même la cause de l'arrestation de son\namant.</p>",
+      "source": "C'était la belle fille catalane, qui,\nn'ayant pas de nouvelles d'Edmond, s'était échappée à la nuit tombante\ndu Pharo pour venir savoir elle-même la cause de l'arrestation de son\namant.",
+      "source_sha256": "4e858b501f84ea884b751ce47b02b1f64915f69486628c80bf9e937ba99e9d3d",
+      "target_html": "<p>Это была та самая красивая каталонка, которая,\nне получив известий от Эдмона, с наступлением ночи\nускользнула из «Фаро», чтобы самой выяснить причину ареста своего\nвозлюбленного.</p>",
+      "target_sha256": "0461ccd5734d2c4cabf8a90cbe5ef5d3e92cc7a70557599085db7686e41b1a83",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0048",
+      "role": "body",
+      "source_html": "<p>À l'approche de Villefort, elle se détacha de la muraille contre\nlaquelle elle était appuyée et vint lui barrer le chemin.</p>",
+      "source": "À l'approche de Villefort, elle se détacha de la muraille contre\nlaquelle elle était appuyée et vint lui barrer le chemin.",
+      "source_sha256": "0bd41be53e6d8b7dd12eed21c8afc7a2281a5fac7c278e026ed8dc82f4068354",
+      "target_html": "<p>Когда Вильфор приблизился, она отстранилась от стены, к\nкоторой прислонилась, и вышла ему на встречу, перегородив путь.</p>",
+      "target_sha256": "b06b32e4e369c8c6698deb3844abe8c7f8b6817b3c814ebefc20aee2a1bec6b8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0049",
+      "role": "body",
+      "source_html": "<p>Dantès avait parlé au substitut de sa fiancée, et Mercédès n'eut point\nbesoin de se nommer pour que Villefort la reconnût. Il fut surpris de la\nbeauté et de la dignité de cette femme, et lorsqu'elle lui demanda ce\nqu'était devenu son amant, il lui sembla que c'était lui l'accusé, et\nque c'était elle le juge.</p>",
+      "source": "Dantès avait parlé au substitut de sa fiancée, et Mercédès n'eut point\nbesoin de se nommer pour que Villefort la reconnût. Il fut surpris de la\nbeauté et de la dignité de cette femme, et lorsqu'elle lui demanda ce\nqu'était devenu son amant, il lui sembla que c'était lui l'accusé, et\nque c'était elle le juge.",
+      "source_sha256": "09ff44d74e68fab59170c7919cf6ba09d7ce9aabfefa69e8a7cb7ebacdf6a8cd",
+      "target_html": "<p>Дантес рассказал заместителю прокурора о своей невесте, и Мерседес не пришлось\nназывать своего имени, чтобы Вильфор её узнал. Он был удивлён\nкрасотой и достоинством этой женщины, и когда она спросила его,\nчто стало с её возлюбленным, ему показалось, что именно он — обвиняемый,\nа она — судья.</p>",
+      "target_sha256": "491068d6c1d2adc179857efb326adb7fda4aa0c82b6fac8aed3e4b11d2fcf97f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0050",
+      "role": "body",
+      "source_html": "<p>«L'homme dont vous parlez, dit brusquement Villefort, est un grand\ncoupable, et je ne puis rien faire pour lui, mademoiselle.»</p>",
+      "source": "«L'homme dont vous parlez, dit brusquement Villefort, est un grand\ncoupable, et je ne puis rien faire pour lui, mademoiselle.»",
+      "source_sha256": "32fa2c6d88893cf7a8c46da6d8765d466923b7c26b48a817d21fa877147ad71e",
+      "target_html": "<p>«Человек, о котором вы говорите, — резко сказал Вильфор, — является\nтяжким преступником, и я ничего не могу для него сделать, мадемуазель».</p>",
+      "target_sha256": "b31df767b445a647427bb871709dfa8578e6d55653d5d470b540222dde4182ed",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0051",
+      "role": "body",
+      "source_html": "<p>Mercédès laissa échapper un sanglot, et, comme Villefort essayait de\npasser outre, elle l'arrêta une seconde fois.</p>",
+      "source": "Mercédès laissa échapper un sanglot, et, comme Villefort essayait de\npasser outre, elle l'arrêta une seconde fois.",
+      "source_sha256": "5188d9f399e99d883acaa94d216d9ddc94ac8f08066285d6bf82ac17524b74d5",
+      "target_html": "<p>Мерседес не сдержала рыдания, и, когда Вильфор попытался\nпройти мимо, она остановила его во второй раз.</p>",
+      "target_sha256": "63d0878653c5c3753bda085fe85cbed3591dc22684b802ca9128f1eb4cc00637",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0052",
+      "role": "body",
+      "source_html": "<p>«Mais où est-il du moins, demanda-t-elle, que je puisse m'informer s'il\nest mort ou vivant?</p>",
+      "source": "«Mais où est-il du moins, demanda-t-elle, que je puisse m'informer s'il\nest mort ou vivant?",
+      "source_sha256": "318d5cafb3901cf4f48daec5afbfc00be42e8e026f03b95e675ed2cafe7cbf78",
+      "target_html": "<p>«Но где он, по крайней мере, — спросила она, — чтобы я могла узнать,\nжив он или мертв?»</p>",
+      "target_sha256": "55780c2b7e4dd95278972685277482940d9683a0f8243dc788cb35a5da3a0a8a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0053",
+      "role": "body",
+      "source_html": "<p>—Je ne sais, il ne m'appartient plus», répondit Villefort.</p>",
+      "source": "—Je ne sais, il ne m'appartient plus», répondit Villefort.",
+      "source_sha256": "9e96ae6ee1bb29168b05157f2b3e14c0fec715e569996a8a0e384a12c8f1e2fc",
+      "target_html": "<p>— Не знаю, он больше не принадлежит мне, — ответил Вильфор.</p>",
+      "target_sha256": "d7789c2ae02f0eed3fb594c5c02a51a6dbe17bde44f1e33d5e7bc0fbe75e9149",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0054",
+      "role": "body",
+      "source_html": "<p>Et, gêné par ce regard fin et cette suppliante attitude, il repoussa\nMercédès et rentra, refermant vivement la porte, comme pour laisser\ndehors cette douleur qu'on lui apportait.</p>",
+      "source": "Et, gêné par ce regard fin et cette suppliante attitude, il repoussa\nMercédès et rentra, refermant vivement la porte, comme pour laisser\ndehors cette douleur qu'on lui apportait.",
+      "source_sha256": "2f7a8c4ab493096b8bc7945fcc4aa4655c59e85e0797a5cf59352f43802cc3ab",
+      "target_html": "<p>И, смущённый этим проницательным взглядом и этой умоляющей позой, он оттолкнул\nМерседес и вернулся в дом, резко закрыв за собой дверь, словно желая оставить\nснаружи ту боль, которую ему принесли.</p>",
+      "target_sha256": "ff163c2fa4643ce56aa4efcf30f63c57ec7f8f328532bbcd500308799f05e718",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0055",
+      "role": "body",
+      "source_html": "<p>Mais la douleur ne se laisse pas repousser ainsi. Comme le trait mortel\ndont parle Virgile, l'homme blessé l'emporte avec lui. Villefort rentra,\nreferma la porte, mais arrivé dans son salon les jambes lui manquèrent à\nson tour; il poussa un soupir qui ressemblait à un sanglot, et se laissa\ntomber dans un fauteuil.</p>",
+      "source": "Mais la douleur ne se laisse pas repousser ainsi. Comme le trait mortel\ndont parle Virgile, l'homme blessé l'emporte avec lui. Villefort rentra,\nreferma la porte, mais arrivé dans son salon les jambes lui manquèrent à\nson tour; il poussa un soupir qui ressemblait à un sanglot, et se laissa\ntomber dans un fauteuil.",
+      "source_sha256": "07b7cab4ee21997ee3213201b2e407e5f3e02af29c8cf2d1a6d67692a60b3224",
+      "target_html": "<p>Но боль не дает себя так легко отогнать. Подобно смертельному\nстреле, о котором говорит Вергилий, раненый человек уносит её с собой. Вильфор вернулся,\nзакрыл дверь, но, войдя в гостиную, у него\nв свою очередь подкосились ноги; он выдохнул вздох, походивший на рыдание, и\nупал в кресло.</p>",
+      "target_sha256": "946ddfcdcf9dcfd10e750de0dac15ef2e5acdf991c697c2718fe5fafe2ae9b9c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0056",
+      "role": "body",
+      "source_html": "<p>Alors, au fond de ce cœur malade naquit le premier germe d'un ulcère\nmortel. Cet homme qu'il sacrifiait à son ambition, cet innocent qui\npayait pour son père coupable, lui apparut pâle et menaçant, donnant la\nmain à sa fiancée, pâle comme lui, et traînant après lui le remords, non\npas celui qui fait bondir le malade comme les furieux de la fatalité\nantique, mais ce tintement sourd et douloureux qui, à de certains\nmoments, frappe sur le cœur et le meurtrit au souvenir d'une action\npassée, meurtrissure dont les lancinantes douleurs creusent un mal qui\nva s'approfondissant jusqu'à la mort.</p>",
+      "source": "Alors, au fond de ce cœur malade naquit le premier germe d'un ulcère\nmortel. Cet homme qu'il sacrifiait à son ambition, cet innocent qui\npayait pour son père coupable, lui apparut pâle et menaçant, donnant la\nmain à sa fiancée, pâle comme lui, et traînant après lui le remords, non\npas celui qui fait bondir le malade comme les furieux de la fatalité\nantique, mais ce tintement sourd et douloureux qui, à de certains\nmoments, frappe sur le cœur et le meurtrit au souvenir d'une action\npassée, meurtrissure dont les lancinantes douleurs creusent un mal qui\nva s'approfondissant jusqu'à la mort.",
+      "source_sha256": "7c16f25d8ff49120955af9cc5e75a02520c1953445296b6825206507316ab91b",
+      "target_html": "<p>И тогда в глубине этого больного сердца зародилась первая зародыш смертельной\nязвы. Тот человек, которого он приносил в жертву своей амбиции, тот невиновный, который\nрасплачивался за своего виновного отца, предстал перед ним бледным и угрожающим, держа за\nруку свою невесту, бледную, как и он сам, и таща за собой угрызения совести — не\nте, что заставляют больного вскакивать, словно безумцы, под ударами\n, а тот глухой и мучительный стук, который в определенные\nмоменты бьет по сердцу и ранит его воспоминанием о прошлом\nпоступке, рана, чьи пронзительные боли роют язву, которая\nуглубляется вплоть до самой смерти.</p>",
+      "target_sha256": "8ec0fcd05079adfd74ca8be4af61f086787aa8cb5a1bda170c953465d946c243",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0057",
+      "role": "body",
+      "source_html": "<p>Alors il y eut dans l'âme de cet homme encore un instant d'hésitation.\nDéjà plusieurs fois il avait requis, et cela sans autre émotion que\ncelle de la lutte du juge avec l'accusé, la peine de mort contre les\nprévenus; et ces prévenus, exécutés grâce à son éloquence foudroyante\nqui avait entraîné ou les juges ou le jury, n'avaient pas même laissé un\nnuage sur son front, car ces prévenus étaient coupables, ou du moins\nVillefort les croyait tels.</p>",
+      "source": "Alors il y eut dans l'âme de cet homme encore un instant d'hésitation.\nDéjà plusieurs fois il avait requis, et cela sans autre émotion que\ncelle de la lutte du juge avec l'accusé, la peine de mort contre les\nprévenus; et ces prévenus, exécutés grâce à son éloquence foudroyante\nqui avait entraîné ou les juges ou le jury, n'avaient pas même laissé un\nnuage sur son front, car ces prévenus étaient coupables, ou du moins\nVillefort les croyait tels.",
+      "source_sha256": "4328031089aa549472149cbe45867029e614a5a50cac8c5be9212ed2328739ec",
+      "target_html": "<p>И тогда в душе этого человека на мгновение вновь возникло колебание.\nУже несколько раз он требовал, причем без каких-либо других эмоций, кроме\nтех, что возникают в борьбе судьи с обвиняемым, смертной казни для\nподсудимых; и эти подсудимые, казненные благодаря его грозной красноречивости,\nкоторая склонила на свою сторону либо судей, либо присяжных, не оставили даже\nтени на его лице, ибо эти подсудимые были виновны, или, по крайней мере,\nВильфор считал их таковыми.</p>",
+      "target_sha256": "faa00cdf66e46ea6f4196644dd3bfbe5d2e8cbf480ffd215b7509f3c445032dd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0058",
+      "role": "body",
+      "source_html": "<p>Mais, cette fois, c'était bien autre chose: cette peine de la prison\nperpétuelle, il venait de l'appliquer à un innocent, un innocent qui\nallait être heureux, et dont il détruisait non seulement la liberté,\nmais le bonheur: cette fois, il n'était plus juge, il était bourreau.</p>",
+      "source": "Mais, cette fois, c'était bien autre chose: cette peine de la prison\nperpétuelle, il venait de l'appliquer à un innocent, un innocent qui\nallait être heureux, et dont il détruisait non seulement la liberté,\nmais le bonheur: cette fois, il n'était plus juge, il était bourreau.",
+      "source_sha256": "9a9c7ea4ffe733b6c6df67c9b82d9fd7fa54016f0f1bdcfb502843411a0ff844",
+      "target_html": "<p>Но на этот раз всё было совсем иначе: этот приговор к пожизненному\nзаключению он только что вынес невиновному человеку, невиновному, который\nдолжен был быть счастлив, и которому он лишал не только свободы,\nно и счастья: на этот раз он уже не был судьёй, он был палачом.</p>",
+      "target_sha256": "a712839e39b3c35de05a166df71c754e8962e7742d86663f1bc2e2a27b2184d4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0059",
+      "role": "body",
+      "source_html": "<p>En songeant à cela, il sentait ce battement sourd que nous avons décrit,\net qui lui était inconnu jusqu'alors, retentissant au fond de son cœur\net emplissant sa poitrine de vagues appréhensions. C'est ainsi que, par\nune violente souffrance instinctive, est averti le blessé, qui jamais\nn'approchera sans trembler le doigt de sa blessure ouverte et saignante\navant que sa blessure soit fermée.</p>",
+      "source": "En songeant à cela, il sentait ce battement sourd que nous avons décrit,\net qui lui était inconnu jusqu'alors, retentissant au fond de son cœur\net emplissant sa poitrine de vagues appréhensions. C'est ainsi que, par\nune violente souffrance instinctive, est averti le blessé, qui jamais\nn'approchera sans trembler le doigt de sa blessure ouverte et saignante\navant que sa blessure soit fermée.",
+      "source_sha256": "f9cfbc5cf4587b8641a775c3ab837debd5d98b9f579ace4d9a3f03b76a082bf6",
+      "target_html": "<p>Размышляя об этом, он чувствовал то глухое биение, которое мы описали,\nи которое до сих пор было ему незнакомо, раскатывающееся в глубине его сердца\nи наполняющее его грудь смутными опасениями. Именно так, через\nсильную инстинктивную боль, получает предупреждение раненый, который никогда\nне прикоснется, не задрожав, пальцем к своей открытой и кровоточащей ране,\nпока она не заживет.</p>",
+      "target_sha256": "dfd6bded3565aa85f53eab18a576eae19d2f328cec3d02199b23c5c2e35abe71",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0060",
+      "role": "body",
+      "source_html": "<p>Mais la blessure qu'avait reçue Villefort était de celles qui ne se\nferment pas, ou qui ne se ferment que pour se rouvrir plus sanglantes et\nplus douloureuses qu'auparavant.</p>",
+      "source": "Mais la blessure qu'avait reçue Villefort était de celles qui ne se\nferment pas, ou qui ne se ferment que pour se rouvrir plus sanglantes et\nplus douloureuses qu'auparavant.",
+      "source_sha256": "a1635f18d77c4b7e23d14cce174bf32104349a89c0b2f28c13be8c3903f99f98",
+      "target_html": "<p>Но рана, нанесенная Вильфорту, была из тех, что не\nзаживают, или заживают лишь для того, чтобы вновь раскрыться, став ещё более кровавыми и\nещё более мучительными, чем прежде.</p>",
+      "target_sha256": "95b5be5b47fa874d29bbffd2db5ab01035b64a525712ad1dec5e485fdabb2ca0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0061",
+      "role": "body",
+      "source_html": "<p>Si, dans ce moment, la douce voix de Renée eût retenti à son oreille\npour lui demander grâce; si la belle Mercédès fût entrée et lui eût dit:\n«Au nom du Dieu qui nous regarde et qui nous juge, rendez-moi mon\nfiancé», oui, ce front à moitié plié sous la nécessité s'y fût courbé\ntout à fait, et de ses mains glacées eût sans doute, au risque de tout\nce qui pouvait en résulter pour lui, signé l'ordre de mettre en liberté\nDantès; mais aucune voix ne murmura dans le silence, et la porte ne\ns'ouvrit que pour donner entrée au valet de chambre de Villefort, qui\nvint lui dire que les chevaux de poste étaient attelés à la calèche de\nvoyage.</p>",
+      "source": "Si, dans ce moment, la douce voix de Renée eût retenti à son oreille\npour lui demander grâce; si la belle Mercédès fût entrée et lui eût dit:\n«Au nom du Dieu qui nous regarde et qui nous juge, rendez-moi mon\nfiancé», oui, ce front à moitié plié sous la nécessité s'y fût courbé\ntout à fait, et de ses mains glacées eût sans doute, au risque de tout\nce qui pouvait en résulter pour lui, signé l'ordre de mettre en liberté\nDantès; mais aucune voix ne murmura dans le silence, et la porte ne\ns'ouvrit que pour donner entrée au valet de chambre de Villefort, qui\nvint lui dire que les chevaux de poste étaient attelés à la calèche de\nvoyage.",
+      "source_sha256": "89efbb137ff7cb6e4d820caef066663f22d803c3748d8726ad4f3debebe6935c",
+      "target_html": "<p>Если бы в этот момент нежный голос Рене прозвучал у него на ухо,\nпрося о пощаде; если бы прекрасная Мерседес вошла и сказала ему:\n«Во имя Бога, который смотрит на нас и судит нас, верните мне моего\nжениха», — да, этот лоб, наполовину склоненный под тяжестью обстоятельств, склонился бы\nсовсем, и своими ледяными руками он, несомненно, рискуя всем,\nчто могло бы из этого для него последовать, подписал бы приказ об освобождении\nДантеса; но ни один голос не прошептал в тишине, и дверь\nоткрылась лишь для того, чтобы впустить камердинера Вильфора, который\nпришёл сообщить ему, что почтовые лошади запряжены в прогулочную\nкарету.</p>",
+      "target_sha256": "58e3a61dcac18cbd4997730af4e5348ddd2e9ea794d24bd0541cc374691aa027",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0062",
+      "role": "body",
+      "source_html": "<p>Villefort se leva, ou plutôt bondit, comme un homme qui triomphe d'une\nlutte intérieure, courut à son secrétaire, versa dans ses poches tout\nl'or qui se trouvait dans un des tiroirs, tourna un instant effaré dans\nla chambre, la main sur son front, et articulant des paroles sans suite;\npuis enfin, sentant que son valet de chambre venait de lui poser son\nmanteau sur les épaules, il sortit, s'élança en voiture, et ordonna\nd'une voix brève de toucher rue du Grand-Cours, chez M. de Saint-Méran.</p>",
+      "source": "Villefort se leva, ou plutôt bondit, comme un homme qui triomphe d'une\nlutte intérieure, courut à son secrétaire, versa dans ses poches tout\nl'or qui se trouvait dans un des tiroirs, tourna un instant effaré dans\nla chambre, la main sur son front, et articulant des paroles sans suite;\npuis enfin, sentant que son valet de chambre venait de lui poser son\nmanteau sur les épaules, il sortit, s'élança en voiture, et ordonna\nd'une voix brève de toucher rue du Grand-Cours, chez M. de Saint-Méran.",
+      "source_sha256": "7aa3e7ced1bc4bdb688c7c2d2fe74e8f3dc572f259ad01e72dfb5712da46bd3b",
+      "target_html": "<p>Вильфор встал, или, вернее, вскочил, как человек, одержавший победу в\nвнутренней борьбе, бросился к своему секретарю, наполнил карманы всем\nзолотом, которое находилось в одном из ящиков, на мгновение в испуге\nбегал по комнате, прижав ладонь ко лбу и бормоча бессвязные слова;\nзатем, почувствовав, что его камердинер только что накинул ему\nпальто на плечи, он вышел, сел в карету и приказал\nлаконичным голосом ехать на улицу Гран-Кур, к месье де Сен-Мерану.</p>",
+      "target_sha256": "b7f83bc612474f3a3100caae2e7dc6d3a12b661b877805326156bcd00812c73c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0063",
+      "role": "body",
+      "source_html": "<p>Le malheureux Dantès était condamné.</p>",
+      "source": "Le malheureux Dantès était condamné.",
+      "source_sha256": "a8eab25eb514c095033f478517d91294257490e39ffcbe5d900c586950f15700",
+      "target_html": "<p>Несчастный Дантес был приговорен к смертной казни.</p>",
+      "target_sha256": "318c270dd5ff061a56a3c9fe0c0d5cb5eb233d5181fe55a9eaccb1b936773e88",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0064",
+      "role": "body",
+      "source_html": "<p>Comme l'avait promis M. de Saint-Méran, Villefort trouva la marquise et\nRenée dans le cabinet. En apercevant Renée, le jeune homme tressaillit;\ncar il crut qu'elle allait lui demander de nouveau la liberté de Dantès.\nMais, hélas! il faut le dire à la honte de notre égoïsme, la belle jeune\nfille n'était préoccupée que d'une chose: du départ de Villefort.</p>",
+      "source": "Comme l'avait promis M. de Saint-Méran, Villefort trouva la marquise et\nRenée dans le cabinet. En apercevant Renée, le jeune homme tressaillit;\ncar il crut qu'elle allait lui demander de nouveau la liberté de Dantès.\nMais, hélas! il faut le dire à la honte de notre égoïsme, la belle jeune\nfille n'était préoccupée que d'une chose: du départ de Villefort.",
+      "source_sha256": "ced612776fb4453af110f90fe03fb1da857077a46bca3d4ca77e6b362115574f",
+      "target_html": "<p>Как и обещал господин де Сен-Меран, Вильфор застал маркизу и\nРене в кабинете. Увидев Рене, молодой человек вздрогнул;\nведь он полагал, что она вновь попросит его освободить Дантеса.\nНо, увы! Надо сказать это, к стыду нашего эгоизма, прекрасная девушка\nбыла озабочена лишь одним: отъездом Вильфора.</p>",
+      "target_sha256": "55f4a5479617de7dc46688e4342f74f8a2a3fd81ebd4fd9274fadb24065af799",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0065",
+      "role": "body",
+      "source_html": "<p>Elle aimait Villefort, Villefort allait partir au moment de devenir son\nmari. Villefort ne pouvait dire quand il reviendrait, et Renée, au lieu\nde plaindre Dantès, maudit l'homme qui, par son crime, la séparait de\nson amant.</p>",
+      "source": "Elle aimait Villefort, Villefort allait partir au moment de devenir son\nmari. Villefort ne pouvait dire quand il reviendrait, et Renée, au lieu\nde plaindre Dantès, maudit l'homme qui, par son crime, la séparait de\nson amant.",
+      "source_sha256": "e9fa4339ef0aa2599c89ebf6e877462f0adeb7741feaef9bf99214a68e1b315c",
+      "target_html": "<p>Она любила Вильфора, а Вильфор собирался уехать как раз в тот момент, когда должен был стать её\nмужем. Вильфор не мог сказать, когда он вернётся, и Рене, вместо того\nчтобы сочувствовать Дантесу, проклинала человека, который своим преступлением разлучил её с\nеё возлюбленным.</p>",
+      "target_sha256": "d39dc92803830337f7240a1e6d5a59bdaeed60d60566a0bcf53d7c96f2f3af38",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0066",
+      "role": "body",
+      "source_html": "<p>Que devait donc dire Mercédès!</p>",
+      "source": "Que devait donc dire Mercédès!",
+      "source_sha256": "50e90b960cd09622342020df6763fde3b6b0a1f1a1b0aeb881f6936a21d821a7",
+      "target_html": "<p>Что же должна была сказать Мерседес!</p>",
+      "target_sha256": "63f0774562b8d04b2aad165046b244914e769b05ba7d4802572e405e6e0d0ea1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0067",
+      "role": "body",
+      "source_html": "<p>La pauvre Mercédès avait retrouvé, au coin de la rue de la Loge,\nFernand, qui l'avait suivie; elle était rentrée aux Catalans, et\nmourante, désespérée, elle s'était jetée sur son lit. Devant ce lit,\nFernand s'était mis à genoux, et pressant sa main glacée, que Mercédès\nne songeait pas à retirer, il la couvrait de baisers brûlants que\nMercédès ne sentait même pas.</p>",
+      "source": "La pauvre Mercédès avait retrouvé, au coin de la rue de la Loge,\nFernand, qui l'avait suivie; elle était rentrée aux Catalans, et\nmourante, désespérée, elle s'était jetée sur son lit. Devant ce lit,\nFernand s'était mis à genoux, et pressant sa main glacée, que Mercédès\nne songeait pas à retirer, il la couvrait de baisers brûlants que\nMercédès ne sentait même pas.",
+      "source_sha256": "41330c06706d0336ee3a8fe5e91fedcbad7a191942f85ac9e4bd79c03ae1bf5f",
+      "target_html": "<p>Бедная Мерседес встретила на углу улицы де ла Лож\nФернана, который следовал за ней; она вернулась в «Каталан», и,\nумирая от отчаяния, бросилась на свою постель. Перед этой кроватью\nФернан опустился на колени и, сжимая её ледяную руку, которую Мерседес\nдаже не думала отдергивать, покрывал её жгучими поцелуями, которые\nМерседес даже не ощущала.</p>",
+      "target_sha256": "24b22ddc24a5fd8812d7c6edf812d6a5fe42cde80625b624ccce41e91b321bc5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0068",
+      "role": "body",
+      "source_html": "<p>Elle passa la nuit ainsi. La lampe s'éteignit quand il n'y eut plus\nd'huile: elle ne vit pas plus l'obscurité qu'elle n'avait vu la lumière,\net le jour revint sans qu'elle vît le jour.</p>",
+      "source": "Elle passa la nuit ainsi. La lampe s'éteignit quand il n'y eut plus\nd'huile: elle ne vit pas plus l'obscurité qu'elle n'avait vu la lumière,\net le jour revint sans qu'elle vît le jour.",
+      "source_sha256": "8cc09e199fc7c0968f892523264c8040a8df7df37fcf2b6757e7578c33ae8faa",
+      "target_html": "<p>Так прошла ночь. Лампа погасла, когда закончилось\nмасло: она не видела тьмы так же, как не видела света,\nи наступил день, но она его не увидела.</p>",
+      "target_sha256": "a5b8b88bd4dc90902ac1fae187320b260bc50df68f3c62dd28e965ae39c6e840",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0069",
+      "role": "body",
+      "source_html": "<p>La douleur avait mis devant ses yeux un bandeau qui ne lui laissait voir\nqu'Edmond.</p>",
+      "source": "La douleur avait mis devant ses yeux un bandeau qui ne lui laissait voir\nqu'Edmond.",
+      "source_sha256": "311bdbda84d9f9be8ea54e843c2d9e97c58d8fb3db5b7623248b92c7893c9da4",
+      "target_html": "<p>Горе завязало ему глаза повязкой, которая позволяла ему видеть\nтолько Эдмонда.</p>",
+      "target_sha256": "a6ad1d3bda056701582424dcfead36544feeecb59e80d6eae92e88873416eee5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0070",
+      "role": "body",
+      "source_html": "<p>«Ah! vous êtes là! dit-elle enfin, en se retournant du côté de Fernand.</p>",
+      "source": "«Ah! vous êtes là! dit-elle enfin, en se retournant du côté de Fernand.",
+      "source_sha256": "29c8dc88b2499eeaaf2f71215f9915b8a5b668901f2b1105106020f40fc8ec7d",
+      "target_html": "<p>«Ах! Вы здесь!» — сказала она наконец, обернувшись в сторону Фернана.</p>",
+      "target_sha256": "e456aa5522b2e2d9fc86159679ecac6734cca8ddce257c682e7e0ad7337cac79",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0071",
+      "role": "body",
+      "source_html": "<p>—Depuis hier je ne vous ai pas quittée», répondit Fernand avec un\nsoupir douloureux.</p>",
+      "source": "—Depuis hier je ne vous ai pas quittée», répondit Fernand avec un\nsoupir douloureux.",
+      "source_sha256": "c4151fd584c45bb7ce68f90af1d51516275e1f0869823491a50c5fc9100228a8",
+      "target_html": "<p>—С вчерашнего дня я ни на минуту не отходил от вас, — ответил Фернан с\nболезненным вздохом.</p>",
+      "target_sha256": "e7d5d451f8e1e5909059d00da6b05089574256ff355a0ce40fdbf8e8d12b9e93",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0072",
+      "role": "body",
+      "source_html": "<p>M. Morrel ne s'était pas tenu pour battu: il avait appris qu'à la suite\nde son interrogatoire Dantès avait été conduit à la prison; il avait\nalors couru chez tous ses amis, il s'était présenté chez les personnes\nde Marseille qui pouvaient avoir de l'influence, mais déjà le bruit\ns'était répandu que le jeune homme avait été arrêté comme agent\nbonapartiste, et comme, à cette époque, les plus hasardeux regardaient\ncomme un rêve insensé toute tentative de Napoléon pour remonter sur le\ntrône, il n'avait trouvé partout que froideur, crainte ou refus, et il\nétait rentré chez lui désespéré, mais avouant cependant que la position\nétait grave et que personne n'y pouvait rien.</p>",
+      "source": "M. Morrel ne s'était pas tenu pour battu: il avait appris qu'à la suite\nde son interrogatoire Dantès avait été conduit à la prison; il avait\nalors couru chez tous ses amis, il s'était présenté chez les personnes\nde Marseille qui pouvaient avoir de l'influence, mais déjà le bruit\ns'était répandu que le jeune homme avait été arrêté comme agent\nbonapartiste, et comme, à cette époque, les plus hasardeux regardaient\ncomme un rêve insensé toute tentative de Napoléon pour remonter sur le\ntrône, il n'avait trouvé partout que froideur, crainte ou refus, et il\nétait rentré chez lui désespéré, mais avouant cependant que la position\nétait grave et que personne n'y pouvait rien.",
+      "source_sha256": "4c18a26a45af0774d86d4c0948456ae39087d71e2f24b7651a9a41240e2f1b39",
+      "target_html": "<p>Месье Моррель не сдался: он узнал, что после\nдопроса Дантеса отвели в тюрьму; тогда он\nпобежал ко всем своим друзьям, обратился к влиятельным\nлюдям Марселя, но уже разнесся слух,\nчто молодой человек был арестован как\nбонапартиста, и поскольку в то время самые смелые считали\nбезумной мечтой любую попытку Наполеона вновь взойти на\nтрон, он повсюду встречал лишь холодность, страх или отказ, и\nвернулся домой в отчаянии, признавая, однако, что положение\nбыло серьёзным и что никто ничего не мог поделать.</p>",
+      "target_sha256": "488b384f1e5d6d4a75918cc1604ad3a50476356b143b859c8cfb8e1d4e0ad1f6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0073",
+      "role": "body",
+      "source_html": "<p>De son côté, Caderousse était fort inquiet et fort tourmenté: au lieu de\nsortir comme l'avait fait M. Morrel, au lieu d'essayer quelque chose en\nfaveur de Dantès, pour lequel d'ailleurs il ne pouvait rien, il s'était\nenfermé avec deux bouteilles de vin de cassis, et avait essayé de noyer\nson inquiétude dans l'ivresse. Mais, dans l'état d'esprit où il se\ntrouvait, c'était trop peu de deux bouteilles pour éteindre son\njugement; il était donc demeuré, trop ivre pour aller chercher d'autre\nvin, pas assez ivre pour que l'ivresse eût éteint ses souvenirs, accoudé\nen face de ses deux bouteilles vides sur une table boiteuse, et voyant\ndanser, au reflet de sa chandelle à la longue mèche, tous ces spectres,\nqu'Hoffmann a semés sur ses manuscrits humides de punch, comme une\npoussière noire et fantastique.</p>",
+      "source": "De son côté, Caderousse était fort inquiet et fort tourmenté: au lieu de\nsortir comme l'avait fait M. Morrel, au lieu d'essayer quelque chose en\nfaveur de Dantès, pour lequel d'ailleurs il ne pouvait rien, il s'était\nenfermé avec deux bouteilles de vin de cassis, et avait essayé de noyer\nson inquiétude dans l'ivresse. Mais, dans l'état d'esprit où il se\ntrouvait, c'était trop peu de deux bouteilles pour éteindre son\njugement; il était donc demeuré, trop ivre pour aller chercher d'autre\nvin, pas assez ivre pour que l'ivresse eût éteint ses souvenirs, accoudé\nen face de ses deux bouteilles vides sur une table boiteuse, et voyant\ndanser, au reflet de sa chandelle à la longue mèche, tous ces spectres,\nqu'Hoffmann a semés sur ses manuscrits humides de punch, comme une\npoussière noire et fantastique.",
+      "source_sha256": "cfe9fdfc13ccbe2a2132fc24735321d382b0a5aa3776524239e8ea352d3c3462",
+      "target_html": "<p>Со своей стороны, Кадерусс был очень обеспокоен и сильно мучился: вместо того, чтобы\nвыйти, как это сделал господин Моррель, вместо того, чтобы попытаться что-то сделать в\nпользу Дантеса, ради которого, кстати, он ничего не мог сделать, он\nзаперся с двумя бутылками кассисового вина и пытался утопить\nсвоё беспокойство в пьянстве. Но в том душевном состоянии, в котором он\nнаходился, двух бутылок было слишком мало, чтобы затуманить его\nразум; поэтому он остался — слишком пьяный, чтобы пойти за другим\nвина, но и недостаточно пьяным, чтобы опьянение стерло его воспоминания, он сидел,\nопираясь локтями на хромающий столик напротив двух пустых бутылок и видел,\nкак в свете его свечи с длинным фитилем танцуют все эти призраки,\nкоторые Гофман разбросал по своим рукописям, пропитанным пуншем, словно\nчерную и причудливую пыль.</p>",
+      "target_sha256": "8d927d667c40773030b530bb2eed6de90ed3247032a0031539dda1f98e6b3b09",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0074",
+      "role": "body",
+      "source_html": "<p>Danglars, seul, n'était ni tourmenté ni inquiet; Danglars même était\njoyeux, car il s'était vengé d'un ennemi et avait assuré, à bord du\n<i>Pharaon</i>, sa place qu'il craignait de perdre; Danglars était un de ces\nhommes de calcul qui naissent avec une plume derrière l'oreille et un\nencrier à la place du cœur; tout était pour lui dans ce monde\nsoustraction ou multiplication, et un chiffre lui paraissait bien plus\nprécieux qu'un homme, quand ce chiffre pouvait augmenter le total que\ncet homme pouvait diminuer.</p>",
+      "source": "Danglars, seul, n'était ni tourmenté ni inquiet; Danglars même était\njoyeux, car il s'était vengé d'un ennemi et avait assuré, à bord du\nPharaon, sa place qu'il craignait de perdre; Danglars était un de ces\nhommes de calcul qui naissent avec une plume derrière l'oreille et un\nencrier à la place du cœur; tout était pour lui dans ce monde\nsoustraction ou multiplication, et un chiffre lui paraissait bien plus\nprécieux qu'un homme, quand ce chiffre pouvait augmenter le total que\ncet homme pouvait diminuer.",
+      "source_sha256": "a098840ff30056c01c33890bc7c779aa3aab2bf2ec4551e06a5d3a5146152bd4",
+      "target_html": "<p>Дангларс, единственный, не испытывал ни мучений, ни беспокойства; Дангларс даже был\nвесел, ибо отомстил врагу и обеспечил себе на борту\n<i>«Фараона»</i> место, которое боялся потерять; Данглар был одним из тех\nрассчетливых людей, которые рождаются с пером за ухом и\nчернильницей вместо сердца; для него в этом мире все сводилось\nк вычитанию или умножению, и цифра казалась ему гораздо\nценнее человека, когда эта цифра могла увеличить итоговую сумму, которую\nэтот человек мог уменьшить.</p>",
+      "target_sha256": "f90799f4bce7812f9f75103edcfc6a59661b4a6864b805a2acb93bc623ea3227",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0075",
+      "role": "body",
+      "source_html": "<p>Danglars s'était donc couché à son heure ordinaire et dormait\ntranquillement.</p>",
+      "source": "Danglars s'était donc couché à son heure ordinaire et dormait\ntranquillement.",
+      "source_sha256": "d4443e8bf661b8d28b35a74fb7add9112c56e780adf96cfbdef10544c7f0e2a0",
+      "target_html": "<p>Данглар, таким образом, лег спать в обычное время и спал\nспокойно.</p>",
+      "target_sha256": "fe3553b90777a4d5694489181b34af3f6ff1345c07ca98bbe0dd0380a1194ccc",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0076",
+      "role": "body",
+      "source_html": "<p>Villefort, après avoir reçu la lettre de M. de Salvieux, embrassé Renée\nsur les deux joues, baisé la main de Mme de Saint-Méran, et serré celle\ndu marquis, courait la poste sur la route d'Aix.</p>",
+      "source": "Villefort, après avoir reçu la lettre de M. de Salvieux, embrassé Renée\nsur les deux joues, baisé la main de Mme de Saint-Méran, et serré celle\ndu marquis, courait la poste sur la route d'Aix.",
+      "source_sha256": "a1f803a17e47045ce0b89383ad37cbdcc75fc639a439e45fbc7424a2c4c339dc",
+      "target_html": "<p>Вильфор, получив письмо от месье де Сальвье, поцеловал Рене\nв обе щеки, поцеловал руку мадам де Сен-Меран и пожал руку\nмаркиза, а затем помчался на почтовой карете по дороге в Экс.</p>",
+      "target_sha256": "f350de6257768a2861a9b13fc8461af6e8f455e3fdfce07d40f2a3d9b5f5cba3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0077",
+      "role": "body",
+      "source_html": "<p>Le père Dantès se mourait de douleur et d'inquiétude.</p>",
+      "source": "Le père Dantès se mourait de douleur et d'inquiétude.",
+      "source_sha256": "2761810b8d6e0d5b5f5da5c3af2547cfadc54e21c539cc0811045e04e10adad8",
+      "target_html": "<p>Отец Дантес умирал от горя и беспокойства.</p>",
+      "target_sha256": "e38e61c9fbf4fb7049332c36d511f3c3c5494387b558b6900728e32030d891bb",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "009-0078",
+      "role": "body",
+      "source_html": "<p>Quant à Edmond, nous savons ce qu'il était devenu.</p>",
+      "source": "Quant à Edmond, nous savons ce qu'il était devenu.",
+      "source_sha256": "03ac3e9d49808724c6b492028e32c2b47d30dc1159c36cdd670ad7d0822763ab",
+      "target_html": "<p>Что касается Эдмона, то мы знаем, что с ним стало.</p>",
+      "target_sha256": "c278a09f386ded089d373a11302234d2a80f3a2a33b30660e97ada95cbca49bc",
+      "model_type_used": "quality_optimized"
+    }
+  ],
+  "engine": "DeepL",
+  "requested_model": "quality_optimized",
+  "source_language": "FR",
+  "target_language": "RU"
+}

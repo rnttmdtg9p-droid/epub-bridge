@@ -1,0 +1,742 @@
+{
+  "chapter": 80,
+  "number": "LXXX",
+  "source_url": "https://www.gutenberg.org/files/17991/17991-h/17991-h.htm",
+  "source_document_sha256": "d8ef06e5cf1b0e4cfe81e8c366eaeec68a7c8836c65c493e7fa2a66e3d75ac25",
+  "paragraphs": [
+    {
+      "id": "080-0000",
+      "role": "heading",
+      "source_html": "<h3><a href=\"#table\">L’accusation.</a></h3>",
+      "source": "L’accusation.",
+      "source_sha256": "af9e5ade36d419c28e075b77f7aecf28018dee378b166bde775329328195632e",
+      "target_html": "<h3><a href=\"#table\">Обвинение.</a></h3>",
+      "target_sha256": "69f15311e6eec071743f729822ce382db3f832a1fb8c757fad4ff95928bc76a2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0001",
+      "role": "body",
+      "source_html": "<p>M. d’Avrigny eut bientôt rappelé à lui le magistrat, qui semblait un\nsecond cadavre dans cette chambre funèbre.</p>",
+      "source": "M. d’Avrigny eut bientôt rappelé à lui le magistrat, qui semblait un\nsecond cadavre dans cette chambre funèbre.",
+      "source_sha256": "f2a5cef75d3bfa966c544cc26b5484d2bbcba43c939791f4e181d9a2088b73e7",
+      "target_html": "<p>Месье д’Авриньи вскоре привёл в чувство магистрата, который казался\nвторым трупом в этой траурной комнате.</p>",
+      "target_sha256": "65eccb9cc2687b167f6f356b4f7fcb636d60ae2325fdd905de3894c220bbeef2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0002",
+      "role": "body",
+      "source_html": "<p>«Oh! la mort est dans ma maison! s’écria Villefort.</p>",
+      "source": "«Oh! la mort est dans ma maison! s’écria Villefort.",
+      "source_sha256": "1534dbcaa92a1cd3b83f52b0e7823417983598e85d96e94db92e490fdd724b7c",
+      "target_html": "<p>«О! Смерть в моём доме!» — воскликнул Вильфор.</p>",
+      "target_sha256": "acf4d3ce89f42b74271553e5787c575c97d33e1a06da0b7886ff74dc72005302",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0003",
+      "role": "body",
+      "source_html": "<p>—Dites le crime, répondit le docteur.</p>",
+      "source": "—Dites le crime, répondit le docteur.",
+      "source_sha256": "da1e784b03219e8f822fbd295b86867af3dbd667d8ac9f070a04ba8af819a9cf",
+      "target_html": "<p>—Назовите преступление, — ответил доктор.</p>",
+      "target_sha256": "b19abc755b972ce26da393b7ea994d12fc33d4d4c0406eae439db542744dc1ed",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0004",
+      "role": "body",
+      "source_html": "<p>—Monsieur d’Avrigny! s’écria Villefort, je ne puis vous exprimer tout\nce qui se passe en moi en ce moment; c’est de l’effroi, c’est de la\ndouleur, c’est de la folie.</p>",
+      "source": "—Monsieur d’Avrigny! s’écria Villefort, je ne puis vous exprimer tout\nce qui se passe en moi en ce moment; c’est de l’effroi, c’est de la\ndouleur, c’est de la folie.",
+      "source_sha256": "a289c795b8be2a91469fd384095960dd84a71308f637776bb5983e83c88709d3",
+      "target_html": "<p>—Месье д’Авриньи! — воскликнул Вильфор. — Я не могу выразить вам всего того,\nчто происходит во мне в этот момент; это ужас, это\nболь, это безумие.</p>",
+      "target_sha256": "9c405c24716a907a02aa3d96284489cfc6c445bc823bd517dd55cb15918fd244",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0005",
+      "role": "body",
+      "source_html": "<p>—Oui, dit M. d’Avrigny avec un calme imposant: mais je crois qu’il est\ntemps que nous agissions; je crois qu’il est temps que nous opposions\nune digue à ce torrent de mortalité. Quant à moi, je ne me sens point\ncapable de porter plus longtemps de pareils secrets, sans espoir d’en\nfaire bientôt sortir la vengeance pour la société et les victimes.»</p>",
+      "source": "—Oui, dit M. d’Avrigny avec un calme imposant: mais je crois qu’il est\ntemps que nous agissions; je crois qu’il est temps que nous opposions\nune digue à ce torrent de mortalité. Quant à moi, je ne me sens point\ncapable de porter plus longtemps de pareils secrets, sans espoir d’en\nfaire bientôt sortir la vengeance pour la société et les victimes.»",
+      "source_sha256": "fb01da741e3d7555806b6da23f62229c7640d3691752670f866658fbb10e78f3",
+      "target_html": "<p>—Да, — сказал месье д’Авриньи с внушительным спокойствием, — но я полагаю, что\nпора действовать; я полагаю, что пора воздвигнуть\nплотину на этом потоке смерти. Что касается меня, то я не чувствую себя\nспособным дольше хранить подобные тайны, не имея надежды\nв скором времени отомстить за общество и жертв».</p>",
+      "target_sha256": "9e23e54360e95cfd87ed7233867b2450da5f2071b425eff6c909eb7cfa12cee8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0006",
+      "role": "body",
+      "source_html": "<p>Villefort jeta autour de lui un sombre regard.</p>",
+      "source": "Villefort jeta autour de lui un sombre regard.",
+      "source_sha256": "a749373208affc82c0ccac0ed6254835d84ccca4387aa06ea329257f76f7101d",
+      "target_html": "<p>Вильфор бросил мрачный взгляд по сторонам.</p>",
+      "target_sha256": "21b82a28c8e22c72bb2dab28a82eee35f81cd41cee6d0cd8673eec44bf7b35c6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0007",
+      "role": "body",
+      "source_html": "<p>«Dans ma maison! murmura-t-il, dans ma maison!</p>",
+      "source": "«Dans ma maison! murmura-t-il, dans ma maison!",
+      "source_sha256": "b46d9d3b5858d69a449f476c49fe5cc8ba38a83ac94743c8296fd0f3fa73bb12",
+      "target_html": "<p>«В моём доме! — прошептал он, — в моём доме!»</p>",
+      "target_sha256": "c39d3a04282680c4ae8764df51c8e03cd0b48fe0e5d104b27f9b1858e2492372",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0008",
+      "role": "body",
+      "source_html": "<p>—Voyons, magistrat, dit d’Avrigny, soyez homme; interprète de la loi,\nhonorez-vous par une immolation complète.</p>",
+      "source": "—Voyons, magistrat, dit d’Avrigny, soyez homme; interprète de la loi,\nhonorez-vous par une immolation complète.",
+      "source_sha256": "1a6c62c2f2d96c2fee08e42a89c2a321411f4b9537dab73825311e6ea9d85ff5",
+      "target_html": "<p>—Ну же, судья, — сказал д’Авриньи, — будьте мужчиной; как толкователь закона,\nпрославьте себя полным самопожертвованием.</p>",
+      "target_sha256": "8efed89fea43bc4b0fb6afbbca96ebbafdaaac6828adb0f5789b159091f1e7e1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0009",
+      "role": "body",
+      "source_html": "<p>—Vous me faites frémir, docteur, une immolation!</p>",
+      "source": "—Vous me faites frémir, docteur, une immolation!",
+      "source_sha256": "64a10ac0cfdfe0d00d8db6a251beff6bcb0ccd6a11e2c95d571faa6c8a458018",
+      "target_html": "<p>—Вы заставляете меня содрогнуться, доктор, это же самопожертвование!</p>",
+      "target_sha256": "733582486374a51b1df64bf4242f6d9d2193a0791d36638e26c3d64b4b273333",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0010",
+      "role": "body",
+      "source_html": "<p>—J’ai dit le mot.</p>",
+      "source": "—J’ai dit le mot.",
+      "source_sha256": "576e84d9c3eafceda8e3f6d2a793f415e38d2f29963e6365ad8c4f8261af8e14",
+      "target_html": "<p>—Я это сказал.</p>",
+      "target_sha256": "11be07488481e56a0e8f0268c3e5e53b7e9115513cc952b31383d64a4b62cc36",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0011",
+      "role": "body",
+      "source_html": "<p>—Vous soupçonnez donc quelqu’un?</p>",
+      "source": "—Vous soupçonnez donc quelqu’un?",
+      "source_sha256": "5de9fa882d2427cc1ae24cb7c0f4d5a67d169b393df4839bbdde0cb872c7c7da",
+      "target_html": "<p>—Значит, вы подозреваете кого-то?</p>",
+      "target_sha256": "09ae2f8993587fdc45af7d14a3c216b21016cfd556c6a902cfa976ba5b608892",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0012",
+      "role": "body",
+      "source_html": "<p>—Je ne soupçonne personne; la mort frappe à votre porte, elle entre,\nelle va, non pas aveugle, mais intelligente qu’elle est, de chambre en\nchambre. Eh bien, moi, je suis sa trace, je reconnais son passage,\nj’adopte la sagesse des anciens: je tâtonne; car mon amitié pour votre\nfamille, car mon respect pour vous sont deux bandeaux appliqués sur mes\nyeux; eh bien....</p>",
+      "source": "—Je ne soupçonne personne; la mort frappe à votre porte, elle entre,\nelle va, non pas aveugle, mais intelligente qu’elle est, de chambre en\nchambre. Eh bien, moi, je suis sa trace, je reconnais son passage,\nj’adopte la sagesse des anciens: je tâtonne; car mon amitié pour votre\nfamille, car mon respect pour vous sont deux bandeaux appliqués sur mes\nyeux; eh bien....",
+      "source_sha256": "6fd7fb745d19384788ddd015ea9b052747b778ba31d478f55d4a0eb16c2f3eff",
+      "target_html": "<p>—Я никого не подозреваю; смерть стучится в вашу дверь, она входит,\nона идет — не слепая, а мудрая, как она есть, из комнаты в\nкомнату. Что ж, я следую по её следам, я узнаю её след,\nя следую мудрости древних: я прощупываю путь; ибо моя дружба с вашей\nсемьёй, ибо моё уважение к вам — это две повязки, наложенные на мои\nглаза; что ж...</p>",
+      "target_sha256": "c87e71f461cf2180b1402c8fe2f9f53e7d29d90820f2f72a5a2cf6642d7fc8f8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0013",
+      "role": "body",
+      "source_html": "<p>—Oh! parlez, parlez, docteur, j’aurai du courage.</p>",
+      "source": "—Oh! parlez, parlez, docteur, j’aurai du courage.",
+      "source_sha256": "6f32bab72ba18036d5ab728330d4e3838a9d215be3d819962d05922f6137c5d4",
+      "target_html": "<p>—О! Говорите, говорите, доктор, я найду в себе мужество.</p>",
+      "target_sha256": "3661e5ce533abc2248f85fbbb5c41278e6bac3d30e15f7b34e4b08962cad6d3d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0014",
+      "role": "body",
+      "source_html": "<p>—Eh bien, monsieur, vous avez chez vous, dans le sein de votre maison,\ndans votre famille peut-être, un de ces affreux phénomènes comme chaque\nsiècle en produit quelqu’un. Locuste et Agrippine, vivant en même temps,\nsont une exception qui prouve la fureur de la Providence à perdre\nl’empire romain, souillé par tant de crimes. Brunehaut et Frédégonde\nsont les résultats du travail pénible d’une civilisation à sa genèse,\ndans laquelle l’homme apprenait à dominer l’esprit, fût-ce par l’envoyé\ndes ténèbres. Eh bien, toutes ces femmes avaient été ou étaient encore\njeunes et belles. On avait vu fleurir sur leur front, ou sur leur front\nfleurissait encore, cette même fleur d’innocence que l’on retrouve aussi\nsur le front de la coupable qui est dans votre maison.»</p>",
+      "source": "—Eh bien, monsieur, vous avez chez vous, dans le sein de votre maison,\ndans votre famille peut-être, un de ces affreux phénomènes comme chaque\nsiècle en produit quelqu’un. Locuste et Agrippine, vivant en même temps,\nsont une exception qui prouve la fureur de la Providence à perdre\nl’empire romain, souillé par tant de crimes. Brunehaut et Frédégonde\nsont les résultats du travail pénible d’une civilisation à sa genèse,\ndans laquelle l’homme apprenait à dominer l’esprit, fût-ce par l’envoyé\ndes ténèbres. Eh bien, toutes ces femmes avaient été ou étaient encore\njeunes et belles. On avait vu fleurir sur leur front, ou sur leur front\nfleurissait encore, cette même fleur d’innocence que l’on retrouve aussi\nsur le front de la coupable qui est dans votre maison.»",
+      "source_sha256": "ae2e27cc5071a92401bd36e55545a308b0f40603e69c13dd9bf29d8681af6125",
+      "target_html": "<p>—Ну что ж, месье, у вас дома, в лоне вашего дома,\nвозможно, в вашей семье, находится одно из тех ужасных явлений, которые каждый\nвек порождает по одному. Локуст и Агриппина, жившие в одно время,\nявляются исключением, подтверждающим ярость Провидения, стремящегося к гибели\nРимской империи, осквернённой столькими преступлениями. Брюнео и Фредегонда\n— это плоды мучительного труда зарождающейся цивилизации,\nв которой человек учился господствовать над духом, пусть даже с помощью\nпосланника тьмы. Итак, все эти женщины были или ещё оставались\nмолодыми и красивыми. На их лбу расцветал, или до сих пор\nрасцветал тот самый цветок невинности, который можно увидеть также\nна лбу виновницы, находящейся в вашем доме».</p>",
+      "target_sha256": "c18054f1c1aa56bdd829d284c04b8c870078393206f3fe86e30ee436bdb2f9c4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0015",
+      "role": "body",
+      "source_html": "<p>Villefort poussa un cri, joignit les mains, et regarda le docteur avec\nun geste suppliant.</p>",
+      "source": "Villefort poussa un cri, joignit les mains, et regarda le docteur avec\nun geste suppliant.",
+      "source_sha256": "f6c1beb730d914287972be80383a468b7e09f938e1b7cd5cec0e37474d07f713",
+      "target_html": "<p>Вильфор вскрикнул, сложил руки и посмотрел на доктора с\nумоляющим жестом.</p>",
+      "target_sha256": "a9eb968dd9e51ffab8521613c88c34a9495d58152388126317d9a168221946a7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0016",
+      "role": "body",
+      "source_html": "<p>Mais celui-ci poursuivit sans pitié:</p>",
+      "source": "Mais celui-ci poursuivit sans pitié:",
+      "source_sha256": "0865de0c8deb7a95a7c3899b9dd05f316bcbcd99a4a7d03f8cb68053d393c828",
+      "target_html": "<p>Но тот безжалостно продолжал:</p>",
+      "target_sha256": "a9caf70c0202cd25419c0d6153e5ea9366e2d1393c92852b54e597b4b6987fb6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0017",
+      "role": "body",
+      "source_html": "<p>«Cherche à qui le crime profite, dit un axiome de jurisprudence....</p>",
+      "source": "«Cherche à qui le crime profite, dit un axiome de jurisprudence....",
+      "source_sha256": "9eb5aad61f39b30d6a1f79d147431764959790ce265dd191c02a06d0564d4024",
+      "target_html": "<p>«Ищи, кому выгодно преступление, — гласит одна из аксиом юриспруденции…»</p>",
+      "target_sha256": "24a3afd830881124921b347326ea66ce7eac84eb603de6403e4275b7ca5b979b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0018",
+      "role": "body",
+      "source_html": "<p>—Docteur! s’écria Villefort, hélas! docteur, combien de fois la justice\ndes hommes n’a-t-elle pas été trompée par ces funestes paroles! Je ne\nsais, mais il me semble que ce crime....</p>",
+      "source": "—Docteur! s’écria Villefort, hélas! docteur, combien de fois la justice\ndes hommes n’a-t-elle pas été trompée par ces funestes paroles! Je ne\nsais, mais il me semble que ce crime....",
+      "source_sha256": "fb79f94347bbe72414f3511bd7bb3ad29f1073aafa57bc1b2aa245a9bd242d55",
+      "target_html": "<p>—Доктор! — воскликнул Вильфор. — Увы, доктор, сколько раз человеческое правосудие\nбывало введено в заблуждение этими роковыми словами! Я не\nзнаю, но мне кажется, что это преступление…</p>",
+      "target_sha256": "a51d18843b56db4e433c8d94f928dbc1f838d19bd48c75cc5b3ffbb2f8f54fea",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0019",
+      "role": "body",
+      "source_html": "<p>—Ah! vous avouez donc enfin que le crime existe?</p>",
+      "source": "—Ah! vous avouez donc enfin que le crime existe?",
+      "source_sha256": "e8b479df5e153b0cb2cb84d2944f3ac920cae3cb70f11615c6a4a36d3e415932",
+      "target_html": "<p>—Ах! Значит, вы наконец признаете, что преступление существует?</p>",
+      "target_sha256": "8d012bf821b48247398973be74980654245a6db2de016bf215c1576c1f77615a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0020",
+      "role": "body",
+      "source_html": "<p>—Oui, je le reconnais. Que voulez-vous? il le faut bien. Mais\nlaissez-moi continuer. Il me semble, dis-je, que ce crime tombe sur moi\nseul et non sur les victimes. Je soupçonne quelque désastre pour moi\nsous tous ces désastres étranges.</p>",
+      "source": "—Oui, je le reconnais. Que voulez-vous? il le faut bien. Mais\nlaissez-moi continuer. Il me semble, dis-je, que ce crime tombe sur moi\nseul et non sur les victimes. Je soupçonne quelque désastre pour moi\nsous tous ces désastres étranges.",
+      "source_sha256": "bfc413f27867b5b63517a84c2b0c0900e4e80de83a163816167eb1794fd57bb3",
+      "target_html": "<p>—Да, я признаю это. Что поделать? Так уж сложилось. Но\nпозвольте мне продолжить. Мне кажется, — сказал я, — что вина за это преступление лежит исключительно на мне,\nа не на жертвах. Я подозреваю, что за всеми этими странными бедствиями\nскрывается какая-то беда, грозящая мне самому.</p>",
+      "target_sha256": "e1e9ee52bd60d55a71105d3c95b56f53a738d198fd2f5e4c3b3aae80993a9e80",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0021",
+      "role": "body",
+      "source_html": "<p>—Ô homme! murmura d’Avrigny; le plus égoïste de tous les animaux, la\nplus personnelle de toutes les créatures, qui croit toujours que la\nterre tourne, que le soleil brille, que la mort fauche pour lui tout\nseul; fourmi maudissant Dieu du haut d’un brin d’herbe! Et ceux qui ont\nperdu la vie, n’ont-ils rien perdu, eux? M. de Saint-Méran, Mme de\nSaint-Méran, M. Noirtier....</p>",
+      "source": "—Ô homme! murmura d’Avrigny; le plus égoïste de tous les animaux, la\nplus personnelle de toutes les créatures, qui croit toujours que la\nterre tourne, que le soleil brille, que la mort fauche pour lui tout\nseul; fourmi maudissant Dieu du haut d’un brin d’herbe! Et ceux qui ont\nperdu la vie, n’ont-ils rien perdu, eux? M. de Saint-Méran, Mme de\nSaint-Méran, M. Noirtier....",
+      "source_sha256": "cbd83b47990a0d13bafb5d51497aeb7085276972eccb12f6c2cfa448008047f4",
+      "target_html": "<p>—О, человек! — прошептал д’Авриньи; — самое эгоистичное из всех животных,\nсамое эгоцентричное из всех существ, которое всегда верит, что\nземля вращается, что солнце светит, что смерть пожирает только его\nодного; муравей, проклинающий Бога с вершины стебля травы! А те, кто\nпотерял жизнь, разве они ничего не потеряли? Месье де Сен-Меран, мадам\nде Сен-Меран, месье Нуартье...</p>",
+      "target_sha256": "28c3bac0f712c768c452a631e099f8e6bcb36a2ede44bc6aed231b855574ff68",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0022",
+      "role": "body",
+      "source_html": "<p>—Comment? M. Noirtier!</p>",
+      "source": "—Comment? M. Noirtier!",
+      "source_sha256": "12ccab1c0bdfda2f422a0031602398a819c6f39148a000ac8a0e75a8d35ab99d",
+      "target_html": "<p>—Что? Господин Нуартье!</p>",
+      "target_sha256": "78fa53bf6e1a8eb20ee65bfc2ac89aa3ff24bab063983b468e04e7798249211c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0023",
+      "role": "body",
+      "source_html": "<p>—Eh oui! Croyez-vous, par exemple, que ce soit à ce malheureux\ndomestique qu’on en voulait? Non, non: comme le Polonius de Shakespeare,\nil est mort pour un autre. C’était Noirtier qui devait boire la\nlimonade, c’est Noirtier qui l’a bue selon l’ordre logique des choses:\nl’autre ne l’a bue que par accident; et, quoique ce soit Barrois qui\nsoit mort, c’est Noirtier qui devait mourir.</p>",
+      "source": "—Eh oui! Croyez-vous, par exemple, que ce soit à ce malheureux\ndomestique qu’on en voulait? Non, non: comme le Polonius de Shakespeare,\nil est mort pour un autre. C’était Noirtier qui devait boire la\nlimonade, c’est Noirtier qui l’a bue selon l’ordre logique des choses:\nl’autre ne l’a bue que par accident; et, quoique ce soit Barrois qui\nsoit mort, c’est Noirtier qui devait mourir.",
+      "source_sha256": "e33cbae8a2cf2053f500c87279beb01d089928e5b321ea73583a80846a7ed2cd",
+      "target_html": "<p>—Да! Вы что, например, думаете, что виноватым был этот несчастный\nслуга? Нет, нет: как Полоний у Шекспира,\nон погиб за другого. Именно Нуартье должен был выпить\nлимонад, именно Нуартье выпил его в соответствии с логическим порядком вещей:\nдругой выпил его лишь случайно; и, хотя умер именно Барруа,\nумереть должен был Нуартье.</p>",
+      "target_sha256": "026eb757386d3f906d98205b8879fb5c4022f885021d3d0924d6d38858d6823e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0024",
+      "role": "body",
+      "source_html": "<p>—Mais alors comment mon père n’a-t-il pas succombé?</p>",
+      "source": "—Mais alors comment mon père n’a-t-il pas succombé?",
+      "source_sha256": "8242471633b4ecd6e1fd36c88a605610bb0fea45e65a7c4867f9a8a8fadb6ce9",
+      "target_html": "<p>—Но тогда почему мой отец не умер?</p>",
+      "target_sha256": "4e236e1799994747dbe8388a8925c1a0eec3f49dd2f22ddb3449547d482c2490",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0025",
+      "role": "body",
+      "source_html": "<p>—Je vous l’ai déjà dit, un soir, dans le jardin, après la mort de Mme\nde Saint-Méran; parce que son corps est fait à l’usage de ce poison\nmême; parce que la dose insignifiante pour lui était mortelle pour tout\nautre; parce qu’enfin personne ne sait, et pas même l’assassin, que\ndepuis un an je traite avec la brucine la paralysie de M. Noirtier,\ntandis que l’assassin n’ignore pas, et il s’en est assuré par\nexpérience, que la brucine est un poison violent.</p>",
+      "source": "—Je vous l’ai déjà dit, un soir, dans le jardin, après la mort de Mme\nde Saint-Méran; parce que son corps est fait à l’usage de ce poison\nmême; parce que la dose insignifiante pour lui était mortelle pour tout\nautre; parce qu’enfin personne ne sait, et pas même l’assassin, que\ndepuis un an je traite avec la brucine la paralysie de M. Noirtier,\ntandis que l’assassin n’ignore pas, et il s’en est assuré par\nexpérience, que la brucine est un poison violent.",
+      "source_sha256": "b68b5810619bec273ac7315a2b921078c8ff1bfaa563ccfc2d744eb82d9c90f3",
+      "target_html": "<p>—Я уже говорил вам об этом однажды вечером в саду, после смерти мадам\nде Сен-Меран; потому что её организм привык к этому яду\n; потому что доза, незначительная для него, оказалась смертельной для любого\nдругого; потому что, наконец, никто не знает, и даже сам убийца, что\nуже год я лечу бруцином паралич господина Нуартье,\nтогда как убийца знает, и убедился в этом на\nсобственном опыте, что бруцин — сильный яд».</p>",
+      "target_sha256": "49f4176d4b478a50d946096dea14b77e2dbaaaa1923ba53e549525e391f0a8ee",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0026",
+      "role": "body",
+      "source_html": "<p>—Mon Dieu! mon Dieu! murmura Villefort en se tordant les bras.</p>",
+      "source": "—Mon Dieu! mon Dieu! murmura Villefort en se tordant les bras.",
+      "source_sha256": "40b96d01f16df9264960ac82dfc3bd735d25b8f7b1bfd189feb4233db90956f3",
+      "target_html": "<p>—Боже мой! Боже мой! — прошептал Вильфор, сжимая руки.</p>",
+      "target_sha256": "258f760b6b137052a303c0137df23fbc673b8e7c2d8313b960576cc3d11e3059",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0027",
+      "role": "body",
+      "source_html": "<p>—Suivez la marche du criminel; il tue M. de Saint-Méran.</p>",
+      "source": "—Suivez la marche du criminel; il tue M. de Saint-Méran.",
+      "source_sha256": "c1bbbe60391151a2cdcb69c9fb9c2d189d0bffc9e258585ef796605fbd008ac9",
+      "target_html": "<p>—Проследите за действиями преступницы; она убивает господина де Сен-Мерана.</p>",
+      "target_sha256": "5c76a0989b029b2824b06216b2dfeb884af99b4ce3c242bc6ace991a633ffed0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0028",
+      "role": "body",
+      "source_html": "<p>—Oh! docteur!</p>",
+      "source": "—Oh! docteur!",
+      "source_sha256": "283b0a06acda7090eeaf88e97ebe25083c027642e3d3a4e53fbee91d170f4d09",
+      "target_html": "<p>—О! Доктор!</p>",
+      "target_sha256": "f38427cb75a1e8a89c46354a0b6e79290e5c3d0967c1209e364caa67867d7c51",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0029",
+      "role": "body",
+      "source_html": "<p>—Je le jurerais; ce que l’on m’a dit des symptômes s’accorde trop bien\navec ce que j’ai vu de mes yeux.»</p>",
+      "source": "—Je le jurerais; ce que l’on m’a dit des symptômes s’accorde trop bien\navec ce que j’ai vu de mes yeux.»",
+      "source_sha256": "51fbf641e4a14fa5304cc06759b9fdfd261590bd2588fe3662c84470dab369bf",
+      "target_html": "<p>—Я готов поклясться; то, что мне рассказали о симптомах, слишком хорошо\nсоответствует тому, что я видел собственными глазами».</p>",
+      "target_sha256": "a6030f2166ccfea234f552ff2c180cbdf5c80669c18698da275ea8c5f1991318",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0030",
+      "role": "body",
+      "source_html": "<p>Villefort cessa de combattre, et poussa un gémissement.</p>",
+      "source": "Villefort cessa de combattre, et poussa un gémissement.",
+      "source_sha256": "4579c8d1558db2ebf1939a44ab8bd456886ffc18d0703aaeb3ad9eb7152878cf",
+      "target_html": "<p>Вильфор перестал сопротивляться и тихо застонал.</p>",
+      "target_sha256": "c93cd58d89f18784d77f52de68a64edb29c0ef2634dccc4aadaa3b11e013e5c5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0031",
+      "role": "body",
+      "source_html": "<p>«Il tue M. de Saint-Méran, répéta le docteur, il tue Mme de Saint-Méran:\ndouble héritage à recueillir.»</p>",
+      "source": "«Il tue M. de Saint-Méran, répéta le docteur, il tue Mme de Saint-Méran:\ndouble héritage à recueillir.»",
+      "source_sha256": "ec57aa61906c5a6ff1f148d0fc1f77705444541afa0346a877d838849e17a7cc",
+      "target_html": "<p>«Он убил господина де Сен-Мерана, — повторил доктор, — он убил госпожу де Сен-Меран:\nдвойное наследство, которое можно получить».</p>",
+      "target_sha256": "6f4048851b8ac5f660c43503c976e640662ce9a472698bad2fa4e4c5494de9ad",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0032",
+      "role": "body",
+      "source_html": "<p>Villefort essuya la sueur qui coulait sur son front.</p>",
+      "source": "Villefort essuya la sueur qui coulait sur son front.",
+      "source_sha256": "8733c1684f9350c57a43ed2510af2fd00cc10faab0406795de37ed3374a01cb1",
+      "target_html": "<p>Вильфор вытер пот, стекавший с его лба.</p>",
+      "target_sha256": "6d225d7312ba968aba3e54ed80d0e476615fcbbed3de18439eb60fca037d68e1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0033",
+      "role": "body",
+      "source_html": "<p>«Écoutez bien.</p>",
+      "source": "«Écoutez bien.",
+      "source_sha256": "3c1b94523bc2c30eaf0f72462483a56aa01f94df6970471605416105e21cb993",
+      "target_html": "<p>«Послушайте внимательно.</p>",
+      "target_sha256": "451d0f85e78faed4a6ed5497ae33cfe4d7e408f22ed7ec7230cd4a41c718ba58",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0034",
+      "role": "body",
+      "source_html": "<p>—Hélas! balbutia Villefort, je ne perds pas un mot, pas un seul.</p>",
+      "source": "—Hélas! balbutia Villefort, je ne perds pas un mot, pas un seul.",
+      "source_sha256": "982ddafd12232a8dc8e4176284f6831235d5e3e6a86642f61720815bdbb6c4ba",
+      "target_html": "<p>—Увы! — пролепетал Вильфор, — я не упускаю ни слова, ни одного.</p>",
+      "target_sha256": "d2658735d1ae3dbae8e10864d8e580297adfd99734606670822888f6cb452880",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0035",
+      "role": "body",
+      "source_html": "<p>—M. Noirtier, reprit de sa voix impitoyable M. d’Avrigny, M. Noirtier\navait testé naguère contre vous, contre votre famille, en faveur des\npauvres enfin; M. Noirtier est épargné, on n’attend rien de lui. Mais il\nn’a pas plus tôt détruit son premier testament, il n’a pas plus tôt fait\nle second, que, de peur qu’il n’en fasse sans doute un troisième, on le\nfrappe: le testament est d’avant-hier, je crois; vous le voyez, il n’y a\npas de temps de perdu.</p>",
+      "source": "—M. Noirtier, reprit de sa voix impitoyable M. d’Avrigny, M. Noirtier\navait testé naguère contre vous, contre votre famille, en faveur des\npauvres enfin; M. Noirtier est épargné, on n’attend rien de lui. Mais il\nn’a pas plus tôt détruit son premier testament, il n’a pas plus tôt fait\nle second, que, de peur qu’il n’en fasse sans doute un troisième, on le\nfrappe: le testament est d’avant-hier, je crois; vous le voyez, il n’y a\npas de temps de perdu.",
+      "source_sha256": "6baed86258043f97d1da526d06894461dc1184b2023a32d4914cc47acec8b62c",
+      "target_html": "<p>—Господин Нуартье, — продолжил своим безжалостным голосом господин д’Авриньи, — господин Нуартье\nнедавно составил завещание против вас, против вашей семьи, в пользу\nбедных, наконец; месье Нуартье остался в живых, от него ничего не ждут. Но едва\nон уничтожил своё первое завещание и едва успел составить\nвторое, как, наверное, из опасения, что он составит третье, его\nубили: завещание, по-моему, датировано позавчера; как видите,\nвремени терять нельзя.</p>",
+      "target_sha256": "db1cbc4332dedddc80f196f1bb64a8b8bf39def9a7109c191762994b47c0e0a1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0036",
+      "role": "body",
+      "source_html": "<p>—Oh! grâce! monsieur d’Avrigny.</p>",
+      "source": "—Oh! grâce! monsieur d’Avrigny.",
+      "source_sha256": "9333b7571f44a0a6b379f33038e243996a8c62020c7ae97d699d3061824ee7cd",
+      "target_html": "<p>—О, пощадите! Господин д’Авриньи.</p>",
+      "target_sha256": "140d2e54d477655af11801c9346fafbd071ac09928a842b7585cf2b3436dfcc5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0037",
+      "role": "body",
+      "source_html": "<p>—Pas de grâce, monsieur; le médecin a une mission sacrée sur la terre,\nc’est pour la remplir qu’il a remonté jusqu’aux sources de la vie et\ndescendu dans les mystérieuses ténèbres de la mort. Quand le crime a été\ncommis, et que Dieu, épouvanté sans doute, détourne son regard du\ncriminel, c’est au médecin de dire: Le voilà!</p>",
+      "source": "—Pas de grâce, monsieur; le médecin a une mission sacrée sur la terre,\nc’est pour la remplir qu’il a remonté jusqu’aux sources de la vie et\ndescendu dans les mystérieuses ténèbres de la mort. Quand le crime a été\ncommis, et que Dieu, épouvanté sans doute, détourne son regard du\ncriminel, c’est au médecin de dire: Le voilà!",
+      "source_sha256": "12939f483e42e3bb445b3f10459993cb3fdd483cd6cdebea4f150615d994562a",
+      "target_html": "<p>—Нет пощады, господин; у врача есть священная миссия на земле,\nи именно для того, чтобы выполнить её, он поднялся к истокам жизни и\nспустился в таинственные мраки смерти. Когда преступление\nсовершено, и Бог, несомненно, ужаснувшись, отворачивает взор от\nпреступника, именно врач должен сказать: «Вот он!»</p>",
+      "target_sha256": "0ce718d20e32a9cf9efb3f5b1ff2de8952bfc288565324428806083a450471bd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0038",
+      "role": "body",
+      "source_html": "<p>—Grâce pour ma fille, monsieur! murmura Villefort.</p>",
+      "source": "—Grâce pour ma fille, monsieur! murmura Villefort.",
+      "source_sha256": "bbdf077697c738921cb0f8c2f17b4f143afbd11b71d172d6e94b56c5bed81f89",
+      "target_html": "<p>—Пощадите мою дочь, господин! — прошептал Вильфор.</p>",
+      "target_sha256": "0402e07bf11e20abd95838c4937c697378fc4b813df3afc3dcb53ddfdbfbd40d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0039",
+      "role": "body",
+      "source_html": "<p>—Vous voyez bien que c’est vous qui l’avez nommée, vous, son père!</p>",
+      "source": "—Vous voyez bien que c’est vous qui l’avez nommée, vous, son père!",
+      "source_sha256": "13bb2110985c285760a42122840e7ee0efa7e3dbb0fe4e4a17e8ce5cd09df9f0",
+      "target_html": "<p>—Вы же сами видите, что это вы, её отец, назначили её!</p>",
+      "target_sha256": "60c1d96b3699d4a5d1394c61e9775c9463d0673ca302670c2607d03055529fb6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0040",
+      "role": "body",
+      "source_html": "<p>—Grâce pour Valentine! Écoutez, c’est impossible. J’aimerais autant\nm’accuser moi-même! Valentine, un cœur de diamant, un lis d’innocence!</p>",
+      "source": "—Grâce pour Valentine! Écoutez, c’est impossible. J’aimerais autant\nm’accuser moi-même! Valentine, un cœur de diamant, un lis d’innocence!",
+      "source_sha256": "29751889023391b458076009e14cb608e34418b38a0a7682fc52053d13048da2",
+      "target_html": "<p>—Помилование для Валентины! Послушайте, это невозможно. Я скорее\nсам бы признался в этом! Валентина — сердце из алмаза, лилия невинности!</p>",
+      "target_sha256": "2a52fe5465cb9e9e87a14877e60c326fbfb0399fb40a64f33f7c0d897dc52770",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0041",
+      "role": "body",
+      "source_html": "<p>—Pas de grâce, monsieur le procureur du roi, le crime est flagrant:\nMlle de Villefort a emballé elle-même les médicaments qu’on a envoyés à\nM. de Saint-Méran, et M. de Saint-Méran est mort.</p>",
+      "source": "—Pas de grâce, monsieur le procureur du roi, le crime est flagrant:\nMlle de Villefort a emballé elle-même les médicaments qu’on a envoyés à\nM. de Saint-Méran, et M. de Saint-Méran est mort.",
+      "source_sha256": "c59771996b74556aa5f6841da38afb466ad9bd6033fbb85ec40d8fd8e1e76983",
+      "target_html": "<p>—Не милуйте, господин королевский прокурор, преступление очевидно:\nмадемуазель де Вильфор сама упаковала лекарства, которые были отправлены\nгосподину де Сен-Мерану, и господин де Сен-Меран умер.</p>",
+      "target_sha256": "a3aa685768696b746b0f77e44ca1e7bab0ad44c78f4292049058cecfe068dd5e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0042",
+      "role": "body",
+      "source_html": "<p>«Mlle de Villefort a préparé les tisanes de Mme de Saint-Méran, et Mme\nde Saint-Méran est morte.</p>",
+      "source": "«Mlle de Villefort a préparé les tisanes de Mme de Saint-Méran, et Mme\nde Saint-Méran est morte.",
+      "source_sha256": "dd8fac4d5e1c86732505de3c32b807c69e36a0d40715949a0462d50d2cc0bb29",
+      "target_html": "<p>«Мадемуазель де Вильфор приготовила травяные отвары для мадам де Сен-Меран, и мадам\nде Сен-Меран умерла.</p>",
+      "target_sha256": "ae2693f8273cfc46a16845bd280c293d76629aeeff466afb3a3db4ae45aba76c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0043",
+      "role": "body",
+      "source_html": "<p>«Mlle de Villefort a pris des mains de Barrois, que l’on a envoyé\ndehors, le carafon de limonade que le vieillard vide ordinairement dans\nla matinée, et le vieillard n’a échappé que par miracle. </p>",
+      "source": "«Mlle de Villefort a pris des mains de Barrois, que l’on a envoyé\ndehors, le carafon de limonade que le vieillard vide ordinairement dans\nla matinée, et le vieillard n’a échappé que par miracle. ",
+      "source_sha256": "6c24e6184319b2a69bd14cf2fda7234e4b8d3c27336caf7b215cb05c314764ca",
+      "target_html": "<p>«Мадемуазель де Вильфор взяла из рук Барруа, которого выпроводили\nна улицу, кувшин с лимонадом, который старик обычно выпивает\nутром, и старик спасся лишь чудом. </p>",
+      "target_sha256": "36846a5d522869ad2533e4390a107a084948cf2ca5a4039d3777764f02e1093d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0044",
+      "role": "body",
+      "source_html": "<p>«Mlle de Villefort est la coupable! c’est l’empoisonneuse! Monsieur le\nprocureur du roi, je vous dénonce Mlle de Villefort, faites votre\ndevoir.</p>",
+      "source": "«Mlle de Villefort est la coupable! c’est l’empoisonneuse! Monsieur le\nprocureur du roi, je vous dénonce Mlle de Villefort, faites votre\ndevoir.",
+      "source_sha256": "2b396eb1497cc87b75a16db321d27e8f9137e66bda32087dc8ef296cf6d695fc",
+      "target_html": "<p>«Мадемуазель де Вильфор — виновница! Это она отравила его! Господин\nкоролевский прокурор, я доношу на мадемуазель де Вильфор, выполните свой\nдолг».</p>",
+      "target_sha256": "66cca9b69eb76a05640122a58a40124600cb420cec2acf39c11fbb7d5ba75f79",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0045",
+      "role": "body",
+      "source_html": "<p>—Docteur, je ne résiste plus, je ne me défends plus, je vous crois,\nmais, par pitié, épargnez ma vie, mon honneur!</p>",
+      "source": "—Docteur, je ne résiste plus, je ne me défends plus, je vous crois,\nmais, par pitié, épargnez ma vie, mon honneur!",
+      "source_sha256": "1601f62255b5b0c0ab748e21372c2b1e012a369fb5d1c1ac3a0a74632012594c",
+      "target_html": "<p>—Доктор, я больше не сопротивляюсь, я больше не защищаюсь, я верю вам,\nно, пожалуйста, пощадите мою жизнь, мою честь!</p>",
+      "target_sha256": "104ece2e2117eba1007a09c6805d57d56dcb2c1803f2e57011ca085cc16f42b6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0046",
+      "role": "body",
+      "source_html": "<p>—Monsieur de Villefort, reprit le docteur avec une force croissante, il\nest des circonstances où je franchis toutes les limites de la sotte\ncirconspection humaine. Si votre fille avait commis seulement un premier\ncrime, et que je la visse en méditer un second, je vous dirais:\nAvertissez-la, punissez-la, qu’elle passe le reste de sa vie dans\nquelque cloître, dans quelque couvent, à pleurer, à prier. Si elle avait\ncommis un second crime, je vous dirais: «Tenez, monsieur de Villefort,\nvoilà un poison qui n’a pas d’antidote connu, prompt comme la pensée,\nrapide comme l’éclair, mortel comme la foudre, donnez-lui ce poison en\nrecommandant son âme à Dieu, et sauvez ainsi votre honneur et vos jours,\ncar c’est à vous qu’elle en veut.» Et je la vois s’approcher de votre\nchevet avec ses sourires hypocrites et ses douces exhortations! Malheur\nà vous, monsieur de Villefort, si vous ne vous hâtez pas de frapper le\npremier! Voilà ce que je vous dirais si elle n’avait tué que deux\npersonnes; mais elle a vu trois agonies, elle a contemplé trois\nmoribonds, s’est agenouillée près de trois cadavres; au bourreau\nl’empoisonneuse! au bourreau! Vous parlez de votre honneur, faites ce\nque je vous dis, et c’est l’immortalité qui vous attend!»</p>",
+      "source": "—Monsieur de Villefort, reprit le docteur avec une force croissante, il\nest des circonstances où je franchis toutes les limites de la sotte\ncirconspection humaine. Si votre fille avait commis seulement un premier\ncrime, et que je la visse en méditer un second, je vous dirais:\nAvertissez-la, punissez-la, qu’elle passe le reste de sa vie dans\nquelque cloître, dans quelque couvent, à pleurer, à prier. Si elle avait\ncommis un second crime, je vous dirais: «Tenez, monsieur de Villefort,\nvoilà un poison qui n’a pas d’antidote connu, prompt comme la pensée,\nrapide comme l’éclair, mortel comme la foudre, donnez-lui ce poison en\nrecommandant son âme à Dieu, et sauvez ainsi votre honneur et vos jours,\ncar c’est à vous qu’elle en veut.» Et je la vois s’approcher de votre\nchevet avec ses sourires hypocrites et ses douces exhortations! Malheur\nà vous, monsieur de Villefort, si vous ne vous hâtez pas de frapper le\npremier! Voilà ce que je vous dirais si elle n’avait tué que deux\npersonnes; mais elle a vu trois agonies, elle a contemplé trois\nmoribonds, s’est agenouillée près de trois cadavres; au bourreau\nl’empoisonneuse! au bourreau! Vous parlez de votre honneur, faites ce\nque je vous dis, et c’est l’immortalité qui vous attend!»",
+      "source_sha256": "512d86dd36ea9b56053f83ba4be80b3f4a9a71c8c22b207fd171b52f8b85e773",
+      "target_html": "<p>—Месье де Вильфор, — продолжил доктор с нарастающей силой, —\nесть обстоятельства, при которых я преодолеваю все пределы глупой\nчеловеческой осторожности. Если бы ваша дочь совершила лишь одно\nпреступление, а я увидел, что она замышляет второе, я бы сказал вам:\nПредупредите её, накажите её, пусть она проведёт остаток своей жизни в\nкаком-нибудь монастыре, в каком-нибудь женском обители, плача и молясь. Если бы она\nсовершила второе преступление, я бы сказал вам: «Вот, месье де Вильфор,\nвот яд, для которого не существует известного противоядия, быстрый, как мысль,\nстремительный, как молния, смертельный, как гром; дайте ей этот яд,\nвверив её душу Богу, и спасите таким образом свою честь и свою жизнь,\nибо именно на вас она нацелена». И я вижу, как она приближается к вашему\nложу со своими лицемерными улыбками и нежными увещеваниями! Горе\nвам, месье де Вильфор, если вы не поспешите нанести удар\nпервым! Вот что я бы вам сказала, если бы она убила лишь двух\nчеловек; но она видела три агонии, созерцала трех\nумирающих, преклонила колени у трех трупов; на плаху\nэту отравительницу! На плаху! Вы говорите о своей чести — сделайте то,\nчто я вам говорю, и вас ждет бессмертие!»</p>",
+      "target_sha256": "0d50afdbf14a4ef43eeab11c4489b6a7f38fd8e09f9ca9e16e54ad96b74c680f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0047",
+      "role": "body",
+      "source_html": "<p>Villefort tomba à genoux.</p>",
+      "source": "Villefort tomba à genoux.",
+      "source_sha256": "67d616dde1858db54d72480f0178bccf3268b4703e64129a787fe393476d09c4",
+      "target_html": "<p>Вильфор упал на колени.</p>",
+      "target_sha256": "865792f0703fa9add9d3a001a8a644106e63f39a1154665fe447b054fdd22ca6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0048",
+      "role": "body",
+      "source_html": "<p>«Écoutez, dit-il, je n’ai pas cette force que vous avez, ou plutôt que\nvous n’auriez pas si, au lieu de ma fille Valentine, il s’agissait de\nvotre fille Madeleine.»</p>",
+      "source": "«Écoutez, dit-il, je n’ai pas cette force que vous avez, ou plutôt que\nvous n’auriez pas si, au lieu de ma fille Valentine, il s’agissait de\nvotre fille Madeleine.»",
+      "source_sha256": "18ae4dac7a7b622549c93cf386742064fdee975ecde37b83e681e5d13db3f981",
+      "target_html": "<p>«Послушайте, — сказал он, — у меня нет той силы, которая есть у вас, или, вернее, которой\nне было бы у вас, если бы речь шла не о моей дочери Валентине, а о\nвашей дочери Мадлен».</p>",
+      "target_sha256": "3bb4cd50ef30f0fbd302d9e280473dc2df99e75156c62d4065789b6b2b21efd2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0049",
+      "role": "body",
+      "source_html": "<p>Le docteur pâlit.</p>",
+      "source": "Le docteur pâlit.",
+      "source_sha256": "63d6b2be6697ea2ca1e3ed95066bc9eaf393b4c193cbd7eaf5970310288a82d0",
+      "target_html": "<p>Доктор побледнел.</p>",
+      "target_sha256": "3a2b07d94ed1bc13a154710b98a138734d8b2332d0186ab7777ba945d867f1b0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0050",
+      "role": "body",
+      "source_html": "<p>«Docteur, tout homme fils de la femme est né pour souffrir et mourir;\ndocteur, je souffrirai, et j’attendrai la mort.</p>",
+      "source": "«Docteur, tout homme fils de la femme est né pour souffrir et mourir;\ndocteur, je souffrirai, et j’attendrai la mort.",
+      "source_sha256": "a3b5f8caba4a8ed37ef827335b488f68c29c4fe62b0b1654caa155b81914f460",
+      "target_html": "<p>«Доктор, каждый человек, сын женщины, рождён, чтобы страдать и умереть;\nдоктор, я буду страдать и ждать смерти».</p>",
+      "target_sha256": "58ebc16338e76dee7a9b047ff7c3b9005c9b7895bfae94863b16f25da534910c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0051",
+      "role": "body",
+      "source_html": "<p>—Prenez garde, dit M. d’Avrigny, elle sera lente... cette mort; vous la\nverrez s’approcher après avoir frappé votre père, votre femme, votre\nfils peut-être.»</p>",
+      "source": "—Prenez garde, dit M. d’Avrigny, elle sera lente... cette mort; vous la\nverrez s’approcher après avoir frappé votre père, votre femme, votre\nfils peut-être.»",
+      "source_sha256": "ca72597f347a8cac77c86ab6dda4adec1331f880dfab86365ef51a087ac5dfc2",
+      "target_html": "<p>—Будьте осторожны, — сказал господин д’Авриньи, — эта смерть будет медленной… Вы\nувидите, как она приближается, поразив сначала вашего отца, вашу жену, а\nвозможно, и вашего сына».</p>",
+      "target_sha256": "548c085d90e53dbc79ff8bb0b450e012a3d6cf7521635a062918e02c2ce082a7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0052",
+      "role": "body",
+      "source_html": "<p>Villefort, suffoquant, étreignit le bras du docteur.</p>",
+      "source": "Villefort, suffoquant, étreignit le bras du docteur.",
+      "source_sha256": "5fd71a58e298cb5ce09cfff9c8565c6a559dd27fc1774de47733e7016cef41e8",
+      "target_html": "<p>Вильфор, задыхаясь, схватил доктора за руку.</p>",
+      "target_sha256": "b0ed117c442b55c788d1143c869286b50c1498f97ed5b62ab87a841112a73686",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0053",
+      "role": "body",
+      "source_html": "<p>«Écoutez-moi! s’écria-t-il, plaignez-moi, secourez-moi.... Non, ma fille\nn’est pas coupable.... Traînez-nous devant un tribunal, je dirai encore:\n«Non, ma fille n’est pas coupable» il n’y a pas de crime dans ma\nmaison.... Je ne veux pas, entendez-vous, qu’il y ait un crime dans ma\nmaison; car lorsque le crime entre quelque part, c’est comme la mort, il\nn’entre pas seul. Écoutez, que vous importe à vous que je meure\nassassiné?... êtes-vous mon ami? êtes-vous un homme? avez-vous un\ncœur?... Non, vous êtes médecin!... Eh bien, je vous dis: «Non, ma\nfille ne sera pas traînée par moi aux mains du bourreau!...» Ah! voilà\nune idée qui me dévore, qui me pousse comme un insensé à creuser ma\npoitrine avec mes ongles!... Et si vous vous trompiez, docteur! si\nc’était un autre que ma fille! Si, un jour, je venais, pâle comme un\nspectre vous dire: Assassin! tu as tué ma fille.... Tenez, si cela\narrivait, je suis chrétien, monsieur d’Avrigny, et cependant je me\ntuerais!</p>",
+      "source": "«Écoutez-moi! s’écria-t-il, plaignez-moi, secourez-moi.... Non, ma fille\nn’est pas coupable.... Traînez-nous devant un tribunal, je dirai encore:\n«Non, ma fille n’est pas coupable» il n’y a pas de crime dans ma\nmaison.... Je ne veux pas, entendez-vous, qu’il y ait un crime dans ma\nmaison; car lorsque le crime entre quelque part, c’est comme la mort, il\nn’entre pas seul. Écoutez, que vous importe à vous que je meure\nassassiné?... êtes-vous mon ami? êtes-vous un homme? avez-vous un\ncœur?... Non, vous êtes médecin!... Eh bien, je vous dis: «Non, ma\nfille ne sera pas traînée par moi aux mains du bourreau!...» Ah! voilà\nune idée qui me dévore, qui me pousse comme un insensé à creuser ma\npoitrine avec mes ongles!... Et si vous vous trompiez, docteur! si\nc’était un autre que ma fille! Si, un jour, je venais, pâle comme un\nspectre vous dire: Assassin! tu as tué ma fille.... Tenez, si cela\narrivait, je suis chrétien, monsieur d’Avrigny, et cependant je me\ntuerais!",
+      "source_sha256": "004226777e2a6761a778bc022d464e6c563c572621951344bd91e608e81d1451",
+      "target_html": "<p>«Послушайте меня! — воскликнул он. — Пожалейте меня, помогите мне… Нет, моя дочь\nне виновата… Приведите нас в суд, я снова скажу:\n«Нет, моя дочь не виновата», в моем\nдоме нет преступления… Я не хочу, слышите ли, чтобы в моем\nдоме было преступление; ибо когда преступление проникает куда-то, оно подобно смерти —\nоно не приходит в одиночку. Послушайте, какое вам дело до того, что я умру\nубитым?… Вы мой друг? Вы мужчина? У вас есть\nсердце?… Нет, вы врач!... Что ж, я говорю вам: «Нет, мою\nдочь я не отдам в руки палача!...» Ах! Вот\nмысль, которая пожирает меня, которая заставляет меня, как безумца, впиваться\nногтями в грудь!... А вдруг вы ошибаетесь, доктор! Вдруг\nэто была не моя дочь! Если однажды я приду, бледный, как\nпризрак, и скажу вам: «Убийца! Ты убил мою дочь…» Вот, если это\nслучится, я христианин, месье д’Авриньи, и тем не менее я\nпокончу с собой!</p>",
+      "target_sha256": "e5e4fb52f201a012f3f87c6d983b8b640c946c13d8115b632327d9080d53b7bd",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0054",
+      "role": "body",
+      "source_html": "<p>—C’est bien, dit le docteur après un instant de silence, j’attendrai.»</p>",
+      "source": "—C’est bien, dit le docteur après un instant de silence, j’attendrai.»",
+      "source_sha256": "dde60be587c7345f138ce3a068ecb6407d1ac3d3be2d4109cd5feeec0e010ee9",
+      "target_html": "<p>—Хорошо, — сказал доктор после минутного молчания, — я подожду.»</p>",
+      "target_sha256": "709aec697ed5f5e52a417c56427794e22c217b4ac6bcbb2a5388f5773668f4b3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0055",
+      "role": "body",
+      "source_html": "<p>Villefort le regarda comme s’il doutait encore de ses paroles.</p>",
+      "source": "Villefort le regarda comme s’il doutait encore de ses paroles.",
+      "source_sha256": "c70b9b27b759e4eda76c86b7692be0111c69b0a6fff067fa45814533488b3e71",
+      "target_html": "<p>Вильфор посмотрел на него так, будто все еще сомневался в его словах.</p>",
+      "target_sha256": "97b4f1639d8d6e9177b91e18af3850cc8f9c1d3cab6a2be0b6b55e833a121c75",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0056",
+      "role": "body",
+      "source_html": "<p>«Seulement, continua M. d’Avrigny d’une voix lente et solennelle, si\nquelque personne de votre maison tombe malade, si vous-même vous vous\nsentez frappé, ne m’appelez pas, car je ne viendrai plus. Je veux bien\npartager avec vous ce secret terrible, mais je ne veux pas que la honte\net le remords aillent chez moi en fructifiant et en grandissant dans ma\nconscience, comme le crime et le malheur vont grandir et fructifier dans\nvotre maison.</p>",
+      "source": "«Seulement, continua M. d’Avrigny d’une voix lente et solennelle, si\nquelque personne de votre maison tombe malade, si vous-même vous vous\nsentez frappé, ne m’appelez pas, car je ne viendrai plus. Je veux bien\npartager avec vous ce secret terrible, mais je ne veux pas que la honte\net le remords aillent chez moi en fructifiant et en grandissant dans ma\nconscience, comme le crime et le malheur vont grandir et fructifier dans\nvotre maison.",
+      "source_sha256": "c1c97d6a885ca4a914d06463084261f537df6e0fcbd0862c2970a6392cf93aed",
+      "target_html": "<p>«Только вот, — продолжил господин д’Авриньи медленным и торжественным голосом, — если\nкто-нибудь из вашей семьи заболеет, если вы сами\nпочувствуете, что вас поразила болезнь, не зовите меня, ибо я больше не приду. Я готов\nразделить с вами эту ужасную тайну, но я не хочу, чтобы стыд\nи угрызения совести поселились в моей душе, принося плоды и разрастаясь в моей\nсовести, так же как преступление и несчастье будут разрастаться и приносить плоды в\nвашем доме.</p>",
+      "target_sha256": "b28b06e1f905a83e968b4e32bb1e400a7a8456ed2fb155bcd9a76f1028ed3436",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0057",
+      "role": "body",
+      "source_html": "<p>—Ainsi, vous m’abandonnez, docteur?</p>",
+      "source": "—Ainsi, vous m’abandonnez, docteur?",
+      "source_sha256": "6b86e5101dfa081e88b62329dfe1d5b3a7af353897a79dc5fdf399d31413ee53",
+      "target_html": "<p>—Значит, вы меня бросаете, доктор?</p>",
+      "target_sha256": "5c8dc8c3b6e9e2f92c90031ca35145ac601e89646d768d38e10c8b29ccaa77fa",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0058",
+      "role": "body",
+      "source_html": "<p>—Oui, car je ne puis pas vous suivre plus loin, et je ne m’arrête qu’au\npied de l’échafaud. Quelque autre révélation viendra qui amènera la fin\nde cette terrible tragédie. Adieu.</p>",
+      "source": "—Oui, car je ne puis pas vous suivre plus loin, et je ne m’arrête qu’au\npied de l’échafaud. Quelque autre révélation viendra qui amènera la fin\nde cette terrible tragédie. Adieu.",
+      "source_sha256": "2ce613d38dd9f6b7906e6b2bd6b96024505aa0bb146d90b8c5b5e5046f8977ee",
+      "target_html": "<p>—Да, ведь я не могу сопровождать вас дальше и останусь только у\nподножия эшафота. Появятся новые откровения, которые положат конец\nэтой ужасной трагедии. Прощайте.</p>",
+      "target_sha256": "39e4d38ebf3ffc6c3800c7dbf66649177c2cbab02a8bc7f55716ed326d4d2386",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0059",
+      "role": "body",
+      "source_html": "<p>—Docteur, je vous en supplie!</p>",
+      "source": "—Docteur, je vous en supplie!",
+      "source_sha256": "264a42ec5bd549bde1dc8aca76dacb6eff24dc66f290b3262611003091db91ef",
+      "target_html": "<p>—Доктор, я вас умоляю!</p>",
+      "target_sha256": "fcc60257496705b6c3eb8ad4cb083943583b008a37b200e5ad82a18a6686f9b6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0060",
+      "role": "body",
+      "source_html": "<p>—Toutes les horreurs qui souillent ma pensée font votre maison odieuse\net fatale. Adieu, monsieur.</p>",
+      "source": "—Toutes les horreurs qui souillent ma pensée font votre maison odieuse\net fatale. Adieu, monsieur.",
+      "source_sha256": "bdda771b5b422613284978ea5ffe77b9b3aa89cf8c300981c334caa579e8bd8e",
+      "target_html": "<p>—Все ужасы, оскверняющие мои мысли, делают ваш дом отвратительным\nи роковым. Прощайте, месье.</p>",
+      "target_sha256": "f22231c1536bd711e82db818aa42c84b0f444857203d88f9d6ffa605d5d7977c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0061",
+      "role": "body",
+      "source_html": "<p>—Un mot, un mot seulement encore, docteur! Vous vous retirez me\nlaissant toute l’horreur de la situation, horreur que vous avez\naugmentée par ce que vous m’avez révélé. Mais de la mort instantanée,\nsubite, de ce pauvre vieux serviteur, que va-t-on dire?</p>",
+      "source": "—Un mot, un mot seulement encore, docteur! Vous vous retirez me\nlaissant toute l’horreur de la situation, horreur que vous avez\naugmentée par ce que vous m’avez révélé. Mais de la mort instantanée,\nsubite, de ce pauvre vieux serviteur, que va-t-on dire?",
+      "source_sha256": "deaf2ec9dacb3f6b68ed5690e93ffbc6519859589888d4d69b90840d4ba490b3",
+      "target_html": "<p>—Еще одно слово, всего одно слово, доктор! Вы уходите,\nоставляя мне весь ужас этой ситуации, ужас, который вы\nеще усилили тем, что мне рассказали. Но что скажут о мгновенной,\nвнезапной смерти этого бедного старого слуги?</p>",
+      "target_sha256": "59abc3f8d24fd0901263c17c39d0f4ef24fcff0e3860d8ab652b889ee477875c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0062",
+      "role": "body",
+      "source_html": "<p>—C’est juste, dit M. d’Avrigny, reconduisez-moi.»</p>",
+      "source": "—C’est juste, dit M. d’Avrigny, reconduisez-moi.»",
+      "source_sha256": "9d1b922377f21f0b183155c5b16981bd15dcb47265c7e8eb6db9efa4cf14b5a5",
+      "target_html": "<p>— Вы правы, — сказал господин д’Авриньи, — проводите меня.</p>",
+      "target_sha256": "c38db0c4402a6e200c4d1c19dd5a38b8db7df3b873037cfa137e3fdb02c101e4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0063",
+      "role": "body",
+      "source_html": "<p>Le docteur sortit le premier, M. de Villefort le suivit; les\ndomestiques, inquiets, étaient dans les corridors et sur les escaliers\npar où devait passer le médecin.</p>",
+      "source": "Le docteur sortit le premier, M. de Villefort le suivit; les\ndomestiques, inquiets, étaient dans les corridors et sur les escaliers\npar où devait passer le médecin.",
+      "source_sha256": "2bdf801bacfd46d974c0185149b1ea6ab7ee3b169468ccc6b5873a20e43050d7",
+      "target_html": "<p>Доктор вышел первым, за ним последовал месье де Вильфор;\nобеспокоенные слуги стояли в коридорах и на лестницах,\nпо которым должен был пройти доктор.</p>",
+      "target_sha256": "ab11c0f056fa5076095e97c595671a20bea5c874275744de94e564db32daf044",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0064",
+      "role": "body",
+      "source_html": "<p>«Monsieur, dit d’Avrigny à Villefort, en parlant à haute voix de façon\nque tout le monde l’entendît, le pauvre Barrois était trop sédentaire\ndepuis quelques années: lui, qui aimait tant avec son maître à courir à\ncheval ou en voiture les quatre coins de l’Europe, il s’est tué à ce\nservice monotone autour d’un fauteuil. Le sang est devenu lourd. Il\nétait replet, il avait le cou gros et court, il a été frappé d’une\napoplexie foudroyante, et l’on m’est venu avertir trop tard.</p>",
+      "source": "«Monsieur, dit d’Avrigny à Villefort, en parlant à haute voix de façon\nque tout le monde l’entendît, le pauvre Barrois était trop sédentaire\ndepuis quelques années: lui, qui aimait tant avec son maître à courir à\ncheval ou en voiture les quatre coins de l’Europe, il s’est tué à ce\nservice monotone autour d’un fauteuil. Le sang est devenu lourd. Il\nétait replet, il avait le cou gros et court, il a été frappé d’une\napoplexie foudroyante, et l’on m’est venu avertir trop tard.",
+      "source_sha256": "c835f7271362536f7ebec725b43f645506cd754be547c280d4eb9d6ea9715ac5",
+      "target_html": "<p>«Месье, — сказал д’Авриньи Вильфору, говоря громко,\nчтобы все слышали, — бедный Барруа в последние несколько лет вел слишком сидячий\nобраз жизни: он, который так любил вместе со своим хозяином мчаться\nверхом или в карете по всем уголкам Европы, погубил себя этой\nмонотонной службой, прикованный к креслу. Кровь у него загустела. Он\nбыл полноватым, у него была толстая и короткая шея, его поразил\nмолниеносный апоплексический удар, и мне пришли сообщить об этом слишком поздно».</p>",
+      "target_sha256": "a53e8f9a5fc11e1c935b44bbdcb51b48f7eb0d3d09b99c1843d2eab3e14605db",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0065",
+      "role": "body",
+      "source_html": "<p>«À propos, ajouta-t-il tout bas, ayez bien soin de jeter cette tasse de\nviolettes dans les cendres.»</p>",
+      "source": "«À propos, ajouta-t-il tout bas, ayez bien soin de jeter cette tasse de\nviolettes dans les cendres.»",
+      "source_sha256": "41b6b0cc2d67bb046f3488544e788b9524306e5ab3e1f3dcaa6bdea9ebfca325",
+      "target_html": "<p>«Кстати, — тихо добавил он, — постарайтесь обязательно бросить эту чашку с\nфиалками в пепел».</p>",
+      "target_sha256": "cbf4756b40cb4fedf8e1efa719edc85c1beee458c2f983e3c1e1f35a52eb01c5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0066",
+      "role": "body",
+      "source_html": "<p>Et le docteur, sans toucher la main de Villefort, sans revenir un seul\ninstant sur ce qu’il avait dit, sortit escorté par les larmes et les\nlamentations de tous les gens de la maison.</p>",
+      "source": "Et le docteur, sans toucher la main de Villefort, sans revenir un seul\ninstant sur ce qu’il avait dit, sortit escorté par les larmes et les\nlamentations de tous les gens de la maison.",
+      "source_sha256": "a3d31f9fccb536567ccf0284033920f4138a6aee20d70ba9ef0a95924afe0422",
+      "target_html": "<p>И доктор, не коснувшись руки Вильфорта, не вернувшись ни на\nмгновение к тому, что он сказал, вышел, сопровождаемый слёзами и\nплачем всех обитателей дома.</p>",
+      "target_sha256": "99f646547c61c2f4c3bc444c440a70cbc2a42242ee9ea61b50117abee9ac2639",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0067",
+      "role": "body",
+      "source_html": "<p>Le soir même, tous les domestiques de Villefort, qui s’étaient réunis\ndans la cuisine et qui avaient longuement causé entre eux, vinrent\ndemander à Mme de Villefort la permission de se retirer. Aucune\ninstance, aucune proposition d’augmentation de gages ne les put retenir;\nà toutes paroles ils répondaient:</p>",
+      "source": "Le soir même, tous les domestiques de Villefort, qui s’étaient réunis\ndans la cuisine et qui avaient longuement causé entre eux, vinrent\ndemander à Mme de Villefort la permission de se retirer. Aucune\ninstance, aucune proposition d’augmentation de gages ne les put retenir;\nà toutes paroles ils répondaient:",
+      "source_sha256": "66f0d6ed8a93883897619118dfa69cbc9fb1d75651e544fbea1d8acb84be004b",
+      "target_html": "<p>В тот же вечер все слуги де Вильфора, собравшиеся\nна кухне и долго обсуждавшие что-то между собой, пришли\nпросить у мадам де Вильфор разрешения уйти. Никакие\nуговоры, никакие предложения о повышении жалованья не могли их удержать;\nна все слова они отвечали:</p>",
+      "target_sha256": "2c93dc121ad0998eab4cc583f0a69defa998e8afbd99a5a1ab664505121ac419",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0068",
+      "role": "body",
+      "source_html": "<p>«Nous voulons nous en aller parce que la mort est dans la maison.»</p>",
+      "source": "«Nous voulons nous en aller parce que la mort est dans la maison.»",
+      "source_sha256": "103d7a9850a13afb2d7c35f57dc9be1f1e710da88ee445718342e3851db60afd",
+      "target_html": "<p>«Мы хотим уйти, потому что в доме царит смерть».</p>",
+      "target_sha256": "ab60d6cf2621db8fc6323c2e07d6593cfab5450eeaaa58928feea76befaf1f56",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0069",
+      "role": "body",
+      "source_html": "<p>Ils partirent donc, malgré les prières qu’on leur fit, témoignant que\nleurs regrets étaient vifs de quitter de si bons maîtres, et surtout\nMlle Valentine, si bonne, si bienfaisante et si douce.</p>",
+      "source": "Ils partirent donc, malgré les prières qu’on leur fit, témoignant que\nleurs regrets étaient vifs de quitter de si bons maîtres, et surtout\nMlle Valentine, si bonne, si bienfaisante et si douce.",
+      "source_sha256": "d185a067f69d71981493b51b77cef7e09e2ec89cd05efcbb140ad5235d2df9d7",
+      "target_html": "<p>Итак, они уехали, несмотря на просьбы, которые им обращали, демонстрируя, что\nони искренне сожалеют о том, что покидают таких добрых хозяев, и особенно\nмадемуазель Валентину, такую добрую, благодетельную и ласковую.</p>",
+      "target_sha256": "1cb4ab752bd757052ad2957e2b5cc5c7ae6fa44287aec57b5f34d5dafaed4d00",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0070",
+      "role": "body",
+      "source_html": "<p>Villefort, à ces mots, regarda Valentine.</p>",
+      "source": "Villefort, à ces mots, regarda Valentine.",
+      "source_sha256": "84e06f6a43a49125f0ed69a338cdc64008e660b2c746469aea9f3e25d6fffaef",
+      "target_html": "<p>Вилльфор, услышав эти слова, посмотрел на Валентину.</p>",
+      "target_sha256": "2f01d302d41229ba102d6c0b0e203133fefef24f0151c823a15d9a8e5ed8352a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0071",
+      "role": "body",
+      "source_html": "<p>Elle pleurait.</p>",
+      "source": "Elle pleurait.",
+      "source_sha256": "45f662441bb1d1a058bdf2cf54aff3dfb5506ab44960720612a3f56158f9f077",
+      "target_html": "<p>Она плакала.</p>",
+      "target_sha256": "98d2a405cfcd166206fa495acf2f0248ac813ef3edb522a139c1d6139345621d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "080-0072",
+      "role": "body",
+      "source_html": "<p>Chose étrange! à travers l’émotion que lui firent éprouver ces larmes,\nil regarda aussi Mme de Villefort, et il lui sembla qu’un sourire\nfugitif et sombre avait passé sur ses lèvres minces, comme ces météores\nqu’on voit glisser, sinistres, entre deux nuages, au fond d’un ciel\norageux.</p>",
+      "source": "Chose étrange! à travers l’émotion que lui firent éprouver ces larmes,\nil regarda aussi Mme de Villefort, et il lui sembla qu’un sourire\nfugitif et sombre avait passé sur ses lèvres minces, comme ces météores\nqu’on voit glisser, sinistres, entre deux nuages, au fond d’un ciel\norageux.",
+      "source_sha256": "9f738700811f89594d7e057c5de982443d10fe2be484068616b7de9a97557da2",
+      "target_html": "<p>Странно! Несмотря на волнение, которое вызвали у него эти слёзы,\nон также взглянул на мадам де Вильфор, и ему показалось, что мимолётная\nи мрачная улыбка промелькнула на её тонких губах, словно те метеоры,\nкоторые можно увидеть, скользящими зловеще между двумя облаками на фоне\nгрозового неба.</p>",
+      "target_sha256": "3ab38ea14f6efe0fe0316d781d0d416043871ecd181690181e1953ebaec59fde",
+      "model_type_used": "quality_optimized"
+    }
+  ],
+  "engine": "DeepL",
+  "requested_model": "quality_optimized",
+  "source_language": "FR",
+  "target_language": "RU"
+}

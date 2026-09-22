@@ -1,0 +1,992 @@
+{
+  "chapter": 110,
+  "number": "CX",
+  "source_url": "https://www.gutenberg.org/files/17992/17992-h/17992-h.htm",
+  "source_document_sha256": "c6b440afe977961a906f8d619bea626d2eddc5cc2ed83e93aca731ae6414ca13",
+  "paragraphs": [
+    {
+      "id": "110-0000",
+      "role": "heading",
+      "source_html": "<h3><a href=\"#table\">L'acte d'accusation.</a></h3>",
+      "source": "L'acte d'accusation.",
+      "source_sha256": "6188f86885d11dc33f2090ea83c7fc35658366076b763dcd16b299d29cd9d726",
+      "target_html": "<h3><a href=\"#table\">Обвинительное заключение.</a></h3>",
+      "target_sha256": "817812f0dc1499749013351bae37eb492d0ae1debf066b9fc949b8af3b9696da",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0001",
+      "role": "body",
+      "source_html": "<p>Les juges prirent séance au milieu du plus profond silence; les jurés\ns'assirent à leur place; M. de Villefort, objet de l'attention, et nous\ndirons presque de l'admiration générale, se plaça couvert dans son\nfauteuil, promenant un regard tranquille autour de lui.</p>",
+      "source": "Les juges prirent séance au milieu du plus profond silence; les jurés\ns'assirent à leur place; M. de Villefort, objet de l'attention, et nous\ndirons presque de l'admiration générale, se plaça couvert dans son\nfauteuil, promenant un regard tranquille autour de lui.",
+      "source_sha256": "f8684b9781a5a96936954c7824a77f859dc1f493cf7fe557d2163ea2d351ac01",
+      "target_html": "<p>Судьи заняли свои места в атмосфере глубочайшей тишины; присяжные\nуселись на свои места; господин де Вильфор, на которого было направлено все внимание и,\nможно сказать, почти всеобщее восхищение, устроился, накрывшись, в своём\nкресле, спокойно оглядываясь по сторонам.</p>",
+      "target_sha256": "98623be220892f49d221dd0d6a9e6c8382bb0c9ba8f5d38f1251b36b38369c4d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0002",
+      "role": "body",
+      "source_html": "<p>Chacun regardait avec étonnement cette figure grave et sévère, sur\nl'impassibilité de laquelle les douleurs paternelles semblaient n'avoir\naucune prise, et l'on regardait avec une espèce de terreur cet homme\nétranger aux émotions de l'humanité.</p>",
+      "source": "Chacun regardait avec étonnement cette figure grave et sévère, sur\nl'impassibilité de laquelle les douleurs paternelles semblaient n'avoir\naucune prise, et l'on regardait avec une espèce de terreur cet homme\nétranger aux émotions de l'humanité.",
+      "source_sha256": "76fa6f56ea1eaddb670f7eda81230321b2a705797d8f0feec1658931331bbebb",
+      "target_html": "<p>Все с изумлением смотрели на это серьёзное и суровое лицо, на\nбесстрастии которого, казалось, не могли\nоказать никакого влияния отцовские страдания, и с каким-то ужасом смотрели на этого человека,\nчуждого человеческим эмоциям.</p>",
+      "target_sha256": "c0123573ad132ebfc9a40fd25683e4423e8ab030bc0287047dce9b0c961fb28c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0003",
+      "role": "body",
+      "source_html": "<p>«Gendarmes! dit le président, amenez l'accusé.»</p>",
+      "source": "«Gendarmes! dit le président, amenez l'accusé.»",
+      "source_sha256": "d667c7208e083e9d11ae56e52b76fac6ff8ef292db2f8ab835f6a76fb3254b13",
+      "target_html": "<p>«Жандармы! — сказал председатель. — Приведите обвиняемого».</p>",
+      "target_sha256": "13af19635c4d7ec8bb7215ef2cc4709db22ad3fea5ea5ba9a0944bd6890b98c8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0004",
+      "role": "body",
+      "source_html": "<p>À ces mots, l'attention du public devint plus active, et tous les yeux\nse fixèrent sur la porte par laquelle Benedetto devait entrer.</p>",
+      "source": "À ces mots, l'attention du public devint plus active, et tous les yeux\nse fixèrent sur la porte par laquelle Benedetto devait entrer.",
+      "source_sha256": "2bed3f9b69d0c81325ce3b3928e8c849eb137bc49c353c98f87338b32e01e564",
+      "target_html": "<p>При этих словах внимание публики обострилось, и все взоры\nустремились к двери, через которую должен был войти Бенедетто.</p>",
+      "target_sha256": "76e49e92f622fd2abea2d8dc244d045ffeb6c2b338d69e95771c3e4c516fe00d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0005",
+      "role": "body",
+      "source_html": "<p>Bientôt cette porte s'ouvrit et l'accusé parut.</p>",
+      "source": "Bientôt cette porte s'ouvrit et l'accusé parut.",
+      "source_sha256": "392e3d4e3e571804960f4fc88b4e01c31e59dc4137f43e0da8afbdab0645b6bd",
+      "target_html": "<p>Вскоре эта дверь открылась, и появился обвиняемый.</p>",
+      "target_sha256": "f9d083e9ac34a4b9768f4167afbd2e47cca394627e0b5c11b1a8ce1d15560fae",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0006",
+      "role": "body",
+      "source_html": "<p>L'impression fut la même sur tout le monde, et nul ne se trompa à\nl'expression de sa physionomie.</p>",
+      "source": "L'impression fut la même sur tout le monde, et nul ne se trompa à\nl'expression de sa physionomie.",
+      "source_sha256": "eb408ab12f6bbd9467d23d3cdcb8bf3ed98b0e71b49efe62809a80f67c643b4f",
+      "target_html": "<p>Все испытали одинаковое впечатление, и никто не ошибся в\nинтерпретации выражения его лица.</p>",
+      "target_sha256": "64244f280a8c57c5b0e9e14b4d09ccdace7d09fd3f5c6053ab14010d2617d43b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0007",
+      "role": "body",
+      "source_html": "<p>Ses traits ne portaient pas l'empreinte de cette émotion profonde qui\nrefoule le sang au cœur et décolore le front et les joues. Ses mains,\ngracieusement posées l'une sur son chapeau, l'autre dans l'ouverture de\nson gilet de piqué blanc, n'étaient agitées d'aucun frisson: son œil\nétait calme et même brillant. À peine dans la salle, le regard du jeune\nhomme se mit à parcourir tous les rangs des juges et des assistants, et\ns'arrêta plus longuement sur le président et surtout sur le procureur du\nroi.</p>",
+      "source": "Ses traits ne portaient pas l'empreinte de cette émotion profonde qui\nrefoule le sang au cœur et décolore le front et les joues. Ses mains,\ngracieusement posées l'une sur son chapeau, l'autre dans l'ouverture de\nson gilet de piqué blanc, n'étaient agitées d'aucun frisson: son œil\nétait calme et même brillant. À peine dans la salle, le regard du jeune\nhomme se mit à parcourir tous les rangs des juges et des assistants, et\ns'arrêta plus longuement sur le président et surtout sur le procureur du\nroi.",
+      "source_sha256": "53e1a2b244c7a80f4611f72c26e7c8bf401f59556f645198261c09e42fbaa627",
+      "target_html": "<p>Его черты лица не отражали той глубокой эмоции, которая\nзаставляет кровь приливать к сердцу и бледнеть лоб и щеки. Его руки,\nизящно положенные — одна на шляпу, другая в разрез\nбелого пикевого жилета, — не дрожали ни на йоту: его взгляд\nбыл спокоен и даже блестящ. Едва войдя в зал, взгляд молодого\nчеловека начал скользить по всем рядам судей и присяжных и\nзадержался дольше на председателе и, прежде всего, на прокуроре\nкороля.</p>",
+      "target_sha256": "3039e26f8b6abe68cb981d5c929f6d50c3fb38847e52e6f9858778696c5e8cc4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0008",
+      "role": "body",
+      "source_html": "<p>Auprès d'Andrea se plaça son avocat, avocat nommé d'office (car Andrea\nn'avait point voulu s'occuper de ces détails auxquels il n'avait paru\nattacher aucune importance), jeune homme aux cheveux d'un blond fade, au\nvisage rougi par une émotion cent fois plus sensible que celle du\nprévenu.</p>",
+      "source": "Auprès d'Andrea se plaça son avocat, avocat nommé d'office (car Andrea\nn'avait point voulu s'occuper de ces détails auxquels il n'avait paru\nattacher aucune importance), jeune homme aux cheveux d'un blond fade, au\nvisage rougi par une émotion cent fois plus sensible que celle du\nprévenu.",
+      "source_sha256": "be0192b783bc4bf9d3b52161b88ff55a15dc51567640916ee24ddb3ee44d4737",
+      "target_html": "<p>Рядом с Андреа встал его адвокат, назначенный судом (поскольку Андреа\nне захотел заниматься этими мелочами, к которым, как казалось, он\nне придавал никакого значения), молодой человек с блекло-русыми волосами и\nлицом, покрасневшим от волнения, в сто раз более сильного, чем у\nподсудимого.</p>",
+      "target_sha256": "e86cfa895f00bc65227fe8d545e16b4c530bf1abe3cbce38b875f6345c6ea91d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0009",
+      "role": "body",
+      "source_html": "<p>Le président demanda la lecture de l'acte d'accusation, rédigé, comme on\nsait, par la plume si habile et si implacable de Villefort.</p>",
+      "source": "Le président demanda la lecture de l'acte d'accusation, rédigé, comme on\nsait, par la plume si habile et si implacable de Villefort.",
+      "source_sha256": "3ad893000ad19ed149889f97943cf0009bf4bf94ea8bf82245957b540247bb90",
+      "target_html": "<p>Председатель распорядился зачитать обвинительное заключение, составленное, как\nизвестно, столь искусной и неумолимой рукой Вильфора.</p>",
+      "target_sha256": "7392e0177b17a7227891cc20e40f00a3b7d775bac0092526cb3a6d1f3a778afe",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0010",
+      "role": "body",
+      "source_html": "<p>Pendant cette lecture, qui fut longue, et qui pour tout autre eût été\naccablante, l'attention publique ne cessa de se porter sur Andrea, qui\nen soutint le poids avec la gaieté d'âme d'un Spartiate.</p>",
+      "source": "Pendant cette lecture, qui fut longue, et qui pour tout autre eût été\naccablante, l'attention publique ne cessa de se porter sur Andrea, qui\nen soutint le poids avec la gaieté d'âme d'un Spartiate.",
+      "source_sha256": "1c0c3a8a53f0eac841fca4b51191efc9dc9c6d27ee107b45eae4aaca85059d2d",
+      "target_html": "<p>Во время этого чтения, которое было долгим и для любого другого оказалось бы\nневыносимым, внимание публики постоянно было приковано к Андреа, который\nвыдержал эту нагрузку с душевной бодростью спартанца.</p>",
+      "target_sha256": "d2db6f300038478da11ef3316be2b1ad7b477b0de00a135dc3d196b68c0f007a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0011",
+      "role": "body",
+      "source_html": "<p>Jamais Villefort peut-être n'avait été si concis ni si éloquent; le\ncrime était présenté sous les couleurs les plus vives, les antécédents\ndu prévenu, sa transfiguration, la filiation de ses actes depuis un âge\nassez tendre, étaient déduits avec le talent que la pratique de la vie\net la connaissance du cœur humain pouvaient fournir à un esprit aussi\nélevé que celui du procureur du roi.</p>",
+      "source": "Jamais Villefort peut-être n'avait été si concis ni si éloquent; le\ncrime était présenté sous les couleurs les plus vives, les antécédents\ndu prévenu, sa transfiguration, la filiation de ses actes depuis un âge\nassez tendre, étaient déduits avec le talent que la pratique de la vie\net la connaissance du cœur humain pouvaient fournir à un esprit aussi\nélevé que celui du procureur du roi.",
+      "source_sha256": "17a3c4e500dd6c90d466f684f0de9010eb3c57413d54607b974f471b7832dfbe",
+      "target_html": "<p>Пожалуй, Вильфор никогда еще не был столь лаконичен и красноречив;\nпреступление представлялось в самых ярких красках, а биография\nподсудимого, его преображение, цепочка его поступков, начиная с\nдовольно юного возраста, излагались с тем талантом, который жизненный\nопыт и знание человеческого сердца могли дать столь\nвозвышенному уму, как у королевского прокурора.</p>",
+      "target_sha256": "f5d8ceb3d3b33aca983dd3f7aea1843752299cabb709b4054030353b7ad0de92",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0012",
+      "role": "body",
+      "source_html": "<p>Avec ce seul préambule, Benedetto était à jamais perdu dans l'opinion\npublique, en attendant qu'il fût puni plus matériellement par la loi.</p>",
+      "source": "Avec ce seul préambule, Benedetto était à jamais perdu dans l'opinion\npublique, en attendant qu'il fût puni plus matériellement par la loi.",
+      "source_sha256": "6c4e5a1f9cde653e7060bb06b22b0351616273d2cfff0a5e2e06491b2cd7602d",
+      "target_html": "<p>Уже одним этим вступлением Бенедетто навсегда потерял авторитет в глазах\nобщественности, не говоря уже о том, что его ждало более суровое наказание по закону.</p>",
+      "target_sha256": "6db8f5db606143294513c92893a258f71a62939a42a4ec2855bcf674d155edec",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0013",
+      "role": "body",
+      "source_html": "<p>Andrea ne prêta pas la moindre attention aux charges successives qui\ns'élevaient et retombaient sur lui: M. de Villefort, qui l'examinait\nsouvent et qui sans doute continuait sur lui les études psychologiques\nqu'il avait eu si souvent l'occasion de faire sur les accusés, M. de\nVillefort ne put une seule fois lui faire baisser les yeux, quelles que\nfussent la fixité et la profondeur de son regard.</p>",
+      "source": "Andrea ne prêta pas la moindre attention aux charges successives qui\ns'élevaient et retombaient sur lui: M. de Villefort, qui l'examinait\nsouvent et qui sans doute continuait sur lui les études psychologiques\nqu'il avait eu si souvent l'occasion de faire sur les accusés, M. de\nVillefort ne put une seule fois lui faire baisser les yeux, quelles que\nfussent la fixité et la profondeur de son regard.",
+      "source_sha256": "98ad27aea342dd7159317123cfc30a57f058a7b407e8dbc34c8b20c0a7f19d6f",
+      "target_html": "<p>Андреа не обращал ни малейшего внимания на череду обвинений, которые\nнаваливались на него и отступали: господин де Вильфор, который часто\nвзглядывал на него и, без сомнения, продолжал проводить над ним те же\nпсихологические исследования, которые ему так часто доводилось проводить над обвиняемыми, господин де\nВильфор ни разу не смог заставить его опустить глаза, какими бы\nне были пристальным и глубоким его взгляд.</p>",
+      "target_sha256": "7becaac30e86312fb81f4201b159c9ead60cbfd44e835e6b0c56a6dbbb0e62d0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0014",
+      "role": "body",
+      "source_html": "<p>Enfin la lecture fut terminée.</p>",
+      "source": "Enfin la lecture fut terminée.",
+      "source_sha256": "8f493263940e0491d6b15bb2d75fd40f3b03efdaba701ce25489d352b8eb6d79",
+      "target_html": "<p>Наконец чтение было закончено.</p>",
+      "target_sha256": "f37abd2b4ef3d426266423ab29ad1f217be3672d9ca54955643a4095a5b0efe3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0015",
+      "role": "body",
+      "source_html": "<p>«Accusé, dit le président, vos nom et prénoms?»</p>",
+      "source": "«Accusé, dit le président, vos nom et prénoms?»",
+      "source_sha256": "94a14c137135e96e1c2a69e83c431d5e0629a445c03b97d73940bfd22cfacf0e",
+      "target_html": "<p>«Обвиняемый, — сказал председатель, — ваше имя и фамилия?»</p>",
+      "target_sha256": "7a86168192168f190ee23eaf3557c3d6b7ba6da942a730cddcdfde8e5d48a5e7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0016",
+      "role": "body",
+      "source_html": "<p>Andrea se leva.</p>",
+      "source": "Andrea se leva.",
+      "source_sha256": "e29c1b55555292bbba8c945db21bca91dd173830bdd57e889f6fa96d1d0f78ab",
+      "target_html": "<p>Андреа встал.</p>",
+      "target_sha256": "c0c17e09888f6d53a1530dee83a842635cdf90b3d87669488ca43061a64feec0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0017",
+      "role": "body",
+      "source_html": "<p>«Pardonnez-moi monsieur le président, dit-il d'une voix dont le timbre\nvibrait parfaitement pur, mais je vois que vous allez prendre un ordre\nde questions dans lequel je ne puis vous suivre. J'ai la prétention que\nc'est à moi de justifier plus tard d'être une exception aux accusés\nordinaires. Veuillez donc, je vous prie, me permettre de répondre en\nsuivant un ordre différent; je n'en répondrai pas moins à toutes.»</p>",
+      "source": "«Pardonnez-moi monsieur le président, dit-il d'une voix dont le timbre\nvibrait parfaitement pur, mais je vois que vous allez prendre un ordre\nde questions dans lequel je ne puis vous suivre. J'ai la prétention que\nc'est à moi de justifier plus tard d'être une exception aux accusés\nordinaires. Veuillez donc, je vous prie, me permettre de répondre en\nsuivant un ordre différent; je n'en répondrai pas moins à toutes.»",
+      "source_sha256": "b3c436032a049684e57607d8ba08ddeb9d7ed79d6303874dfef024109126d476",
+      "target_html": "<p>«Простите меня, господин председатель, — сказал он голосом, тембр которого\nзвучал совершенно чисто, — но я вижу, что вы собираетесь задавать вопросы\nв таком порядке, которому я не могу следовать. Я считаю, что\nименно я должен позже обосновать, почему я являюсь исключением из числа\nобычных обвиняемых. Поэтому, прошу вас, позвольте мне отвечать,\nследуя иному порядку; я не менее полно отвечу на все вопросы».</p>",
+      "target_sha256": "51eb6694f4a49d8dbc291fdbfdcdb8a9a7cc85fe019fce4d1c5bbb26ca33e153",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0018",
+      "role": "body",
+      "source_html": "<p>Le président, surpris, regarda les jurés, qui regardèrent le procureur\ndu roi.</p>",
+      "source": "Le président, surpris, regarda les jurés, qui regardèrent le procureur\ndu roi.",
+      "source_sha256": "17e9a890e8db581c045344560814fa2c1f57e6cb7e209f1d4e312d2573bceb84",
+      "target_html": "<p>Председатель, удивлённый, посмотрел на присяжных, а те — на прокурора\nкороля.</p>",
+      "target_sha256": "3eb80cf45ff75da03ab936f7d99a3b7def7ecab8b7cdde9a0fdda2c24dd24467",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0019",
+      "role": "body",
+      "source_html": "<p>Une grande surprise se manifesta dans toute l'assemblée. Mais Andrea ne\nparut aucunement s'en émouvoir.</p>",
+      "source": "Une grande surprise se manifesta dans toute l'assemblée. Mais Andrea ne\nparut aucunement s'en émouvoir.",
+      "source_sha256": "fd8bfcd7393a8c9689f5d96a855fec9771f0f4c2bd07c244f316a3d260c4dc3d",
+      "target_html": "<p>Во всем зале царило сильное удивление. Но Андреа\nне показал, что это его как-то взволновало.</p>",
+      "target_sha256": "c45f557db115fd8af584fdedc1ceae8682944e6702bf2170d59732c0421a5879",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0020",
+      "role": "body",
+      "source_html": "<p>«Votre âge? dit le président; répondrez-vous à cette question?</p>",
+      "source": "«Votre âge? dit le président; répondrez-vous à cette question?",
+      "source_sha256": "792d9ebba14a81630c57ee09ca684b7c59e960cd510714a45bc314105302dd88",
+      "target_html": "<p>«Ваш возраст? — спросил председатель. — Вы ответите на этот вопрос?»</p>",
+      "target_sha256": "2a96fec5b639ad626be0f261725629d04858c06b5a7fd53cbdff8d5ba7d56ab6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0021",
+      "role": "body",
+      "source_html": "<p>—À cette question comme aux autres, je répondrai, monsieur le\nprésident, mais à son tour.</p>",
+      "source": "—À cette question comme aux autres, je répondrai, monsieur le\nprésident, mais à son tour.",
+      "source_sha256": "2774b081fe03e6de593ad78e34337031d0f599f338bdd2b169cbbb352d21924f",
+      "target_html": "<p>—На этот вопрос, как и на остальные, я отвечу, господин\nпредседатель, но по порядку.</p>",
+      "target_sha256": "c73a9dd6fc3a1d67a0cb28980a1d25d0f8bf913aa73e6a95746064f60fb67d32",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0022",
+      "role": "body",
+      "source_html": "<p>—Votre âge? répéta le magistrat.</p>",
+      "source": "—Votre âge? répéta le magistrat.",
+      "source_sha256": "2c199720e0e1841e040a6a008dcb855abb5fb4dc6558ed54332c967754cd6b26",
+      "target_html": "<p>—Ваш возраст? — повторил судья.</p>",
+      "target_sha256": "8adea36e2bc336038baaa9b7c18896a7204f20f41797ad8418d9f6abac0120d4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0023",
+      "role": "body",
+      "source_html": "<p>—J'ai vingt et un ans, ou plutôt je les aurai seulement dans quelques\njours, étant né dans la nuit du 27 au 28 septembre 1817.»</p>",
+      "source": "—J'ai vingt et un ans, ou plutôt je les aurai seulement dans quelques\njours, étant né dans la nuit du 27 au 28 septembre 1817.»",
+      "source_sha256": "3e97d89cf5aa314130369867acfe522701d7545a6853c8868ab3642eaaa075a2",
+      "target_html": "<p>—Мне двадцать один год, или, вернее, мне исполнится столько всего через несколько\nдней, так как я родился в ночь с 27 на 28 сентября 1817 года».</p>",
+      "target_sha256": "8d1d6f14637ac967c5e63ade672c4e89d4fadb51ff5c5f39b629157e386e7bab",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0024",
+      "role": "body",
+      "source_html": "<p>M. de Villefort, qui était à prendre note, leva la tête à cette date.</p>",
+      "source": "M. de Villefort, qui était à prendre note, leva la tête à cette date.",
+      "source_sha256": "808afcf2b30de716165d3aadd1e1f0a3b52fba5d5628c853991c3628d1703cd2",
+      "target_html": "<p>Месье де Вильфор, который делал записи, поднял голову, увидев эту дату.</p>",
+      "target_sha256": "0ec2dfcd25e67d716789f0cc7f1f918b32948b80de9a7f6372e9a3e771bfed5b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0025",
+      "role": "body",
+      "source_html": "<p>«Où êtes-vous né? continua le président.</p>",
+      "source": "«Où êtes-vous né? continua le président.",
+      "source_sha256": "bfd08184068a92d6ee0dea1d92585d984fec4c8b557d303221efe60468c7aac8",
+      "target_html": "<p>«Где вы родились?», — продолжил председатель.</p>",
+      "target_sha256": "bba3206e06ba2493b4689f2ebe20754f01c424d318aab79f2b4981b488ef92d5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0026",
+      "role": "body",
+      "source_html": "<p>—À Auteuil, près Paris», répondit Benedetto.</p>",
+      "source": "—À Auteuil, près Paris», répondit Benedetto.",
+      "source_sha256": "6a95e10fb4f757c182a168c7f677f5cdb06e84b7f953f86ea1f362430815b8e8",
+      "target_html": "<p>—В Отей, недалеко от Парижа», — ответил Бенедетто.</p>",
+      "target_sha256": "80a775f761eeda08be99624435a9374cf496bf2eac0e7f6b08eeefcd1bfe5a36",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0027",
+      "role": "body",
+      "source_html": "<p>M. de Villefort leva une seconde fois la tête, regarda Benedetto comme\nil eût regardé la tête de Méduse et devint livide.</p>",
+      "source": "M. de Villefort leva une seconde fois la tête, regarda Benedetto comme\nil eût regardé la tête de Méduse et devint livide.",
+      "source_sha256": "e7927dcecb0d010cbdfbcee463a294e7d48f4b454165e858b1d91e05fd22f836",
+      "target_html": "<p>Месье де Вильфор во второй раз поднял голову, посмотрел на Бенедетто так,\nкак бы он смотрел на голову Медузы, и побледнел.</p>",
+      "target_sha256": "7e6d87e8b991cf3a75164aed2101e9effccc67b6597de6e94c3bd1df95c3094c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0028",
+      "role": "body",
+      "source_html": "<p>Quant à Benedetto, il passa gracieusement sur ses lèvres le coin brodé\nd'un mouchoir de fine batiste.</p>",
+      "source": "Quant à Benedetto, il passa gracieusement sur ses lèvres le coin brodé\nd'un mouchoir de fine batiste.",
+      "source_sha256": "039e80fc5f6de28fe29edbd0f0df34bc5c3120000e8d8e9344479285145ca109",
+      "target_html": "<p>Что же касается Бенедетто, то он изящно провел по губам вышитым\nуголком носового платка из тонкого батиста.</p>",
+      "target_sha256": "ff26151194d14f985ed23a5eb8dd8d65ce2ac91cb9524813659b765dbbb31ae3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0029",
+      "role": "body",
+      "source_html": "<p>«Votre profession? demanda le président.</p>",
+      "source": "«Votre profession? demanda le président.",
+      "source_sha256": "c4e6d3a261476e58f2cf4a2a9368241e5fb87368bd355dab4cc5368a60b5bd4b",
+      "target_html": "<p>«Ваша профессия?» — спросил председатель.</p>",
+      "target_sha256": "6deca6fd52a5a303880e952c895804eb59048af8e5113a4cda2e083f17fafbe6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0030",
+      "role": "body",
+      "source_html": "<p>—D'abord j'étais faussaire, dit Andrea le plus tranquillement du monde;\nensuite je suis passé voleur, et tout récemment je me suis fait\nassassin.»</p>",
+      "source": "—D'abord j'étais faussaire, dit Andrea le plus tranquillement du monde;\nensuite je suis passé voleur, et tout récemment je me suis fait\nassassin.»",
+      "source_sha256": "67f50ee4214a18ab8a11e970bb30d6914eeffb34be13d2a16a3c10988d742d32",
+      "target_html": "<p>— Сначала я был фальшивомонетчиком, — сказал Андреа совершенно спокойно;\n— потом стал вором, а совсем недавно я стал\nубийцей».</p>",
+      "target_sha256": "b9009e4a163ed351cee08d2593c674fd3f24c633558f1b7a7b13cf078a117824",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0031",
+      "role": "body",
+      "source_html": "<p>Un murmure ou plutôt une tempête d'indignation et de surprise éclata\ndans toutes les parties de la salle: les juges eux-mêmes se regardèrent\nstupéfaits, les jurés manifestèrent le plus grand dégoût pour le cynisme\nqu'on attendait si peu d'un homme élégant.</p>",
+      "source": "Un murmure ou plutôt une tempête d'indignation et de surprise éclata\ndans toutes les parties de la salle: les juges eux-mêmes se regardèrent\nstupéfaits, les jurés manifestèrent le plus grand dégoût pour le cynisme\nqu'on attendait si peu d'un homme élégant.",
+      "source_sha256": "e1c5307859f648b8b3d28d73471b5aa57f4d9fabc6a8a774a9451a965dca5693",
+      "target_html": "<p>Шум, или, вернее, буря возмущения и удивления разразилась\nпо всему залу: даже судьи ошеломлённо смотрели друг на друга,\nа присяжные выразили крайнее отвращение к цинизму,\nкоторого так не ожидали от такого элегантного человека.</p>",
+      "target_sha256": "6912f2aa57e500aeaf7aba7d6f6639148f815f4bf80e9c12fd67ed42b8d3e57d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0032",
+      "role": "body",
+      "source_html": "<p>M. de Villefort appuya une main sur son front qui, d'abord pâle, était\ndevenu rouge et bouillant, tout à coup il se leva regardant autour de\nlui comme un homme égaré: l'air lui manquait.</p>",
+      "source": "M. de Villefort appuya une main sur son front qui, d'abord pâle, était\ndevenu rouge et bouillant, tout à coup il se leva regardant autour de\nlui comme un homme égaré: l'air lui manquait.",
+      "source_sha256": "5a58a6562d33128cefa450f6aa3c670ebeef553c5113e7aa9d7812282ed129d4",
+      "target_html": "<p>Месье де Вильфор прижал ладонь ко лбу, который сначала был бледным, а\nпотом покраснел и стал горячим; вдруг он вскочил, оглядываясь по\nсторонам, как заблудившийся человек: ему не хватало воздуха.</p>",
+      "target_sha256": "b7054acc05d12d801df799636b47d930f167ba1782011a676a4363f9a0c6a6a6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0033",
+      "role": "body",
+      "source_html": "<p>«Cherchez-vous quelque chose, monsieur le procureur du roi?» demanda\nBenedetto avec son plus obligeant sourire.</p>",
+      "source": "«Cherchez-vous quelque chose, monsieur le procureur du roi?» demanda\nBenedetto avec son plus obligeant sourire.",
+      "source_sha256": "89d7885a2e817a1264cfbff0f32a9123444250116faf2b761548e21f5014a56a",
+      "target_html": "<p>«Вы что-то ищете, господин королевский прокурор?» — спросил\nБенедетто с самой любезной улыбкой.</p>",
+      "target_sha256": "85222150461321f7e69016404da8731366a80c6c37b393eeb072db22d4725ce4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0034",
+      "role": "body",
+      "source_html": "<p>M. de Villefort ne répondit rien, et se rassit ou plutôt retomba sur son\nfauteuil.</p>",
+      "source": "M. de Villefort ne répondit rien, et se rassit ou plutôt retomba sur son\nfauteuil.",
+      "source_sha256": "47e2ed0f3572a51844c5890df49f980de65510aa531f76a8c57ef61208a0d85c",
+      "target_html": "<p>Месье де Вильфор ничего не ответил и снова сел, или, вернее, рухнул в своё\nкресло.</p>",
+      "target_sha256": "d0031aee2204e3f772a2761f707f1a5eebd2c96b19fbadbfb44c98e15bb2b433",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0035",
+      "role": "body",
+      "source_html": "<p>«Est-ce maintenant, prévenu, que vous consentez à dire votre nom?\ndemanda le président. L'affectation brutale que vous avez mise à\nénumérer vos différents crimes, que vous qualifiez de profession,\nl'espèce de point d'honneur que vous y attachez, ce dont, au nom de la\nmorale et du respect dû à l'humanité, la cour doit vous blâmer\nsévèrement, voilà peut-être la raison qui vous a fait tarder de vous\nnommer: vous voulez faire ressortir ce nom par les titres qui le\nprécèdent.</p>",
+      "source": "«Est-ce maintenant, prévenu, que vous consentez à dire votre nom?\ndemanda le président. L'affectation brutale que vous avez mise à\nénumérer vos différents crimes, que vous qualifiez de profession,\nl'espèce de point d'honneur que vous y attachez, ce dont, au nom de la\nmorale et du respect dû à l'humanité, la cour doit vous blâmer\nsévèrement, voilà peut-être la raison qui vous a fait tarder de vous\nnommer: vous voulez faire ressortir ce nom par les titres qui le\nprécèdent.",
+      "source_sha256": "a33e4c0d1775c1a9f386eb50dba369d707eb1f358bf6853438bda00a07817a66",
+      "target_html": "<p>«Итак, обвиняемый, вы теперь согласны назвать своё имя?\n— спросил председатель. «Та грубая напыщенность, с которой вы\nперечисляли свои различные преступления, которые вы называете профессией,\nто, что вы считаете это делом чести, за что, во имя\nморали и уважения к человечеству, суд должен вас\nсурово порицать, — вот, возможно, причина, по которой вы так долго\nне называли себя: вы хотите выделить это имя с помощью титулов, которые ему\nпредшествуют.</p>",
+      "target_sha256": "9918f034fa5d93c7512de866f12014403be3f1409b32d16631d81cdaa647584d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0036",
+      "role": "body",
+      "source_html": "<p>—C'est incroyable, monsieur le président, dit Benedetto du ton de voix\nle plus gracieux et avec les manières les plus polies, comme vous avez\nlu au fond de ma pensée; c'est en effet dans ce but que je vous ai prié\nd'intervertir l'ordre des questions.»</p>",
+      "source": "—C'est incroyable, monsieur le président, dit Benedetto du ton de voix\nle plus gracieux et avec les manières les plus polies, comme vous avez\nlu au fond de ma pensée; c'est en effet dans ce but que je vous ai prié\nd'intervertir l'ordre des questions.»",
+      "source_sha256": "875ea01db1563cd6b862b12adaf8b1384a9060aa41c6c386159785c2567ded8f",
+      "target_html": "<p>— Это невероятно, господин председатель, — сказал Бенедетто самым\nвежливым тоном и с самыми вежливыми манерами, — как вы\nпрочитали мои мысли; именно с этой целью я и попросил вас\nизменить порядок вопросов».</p>",
+      "target_sha256": "c5a05c7c8fa3e0fcb70473a910da8ed181c63525307d58920362dca59d67ee99",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0037",
+      "role": "body",
+      "source_html": "<p>La stupeur était à son comble, il n'y avait plus dans les paroles de\nl'accusé ni forfanterie ni cynisme; l'auditoire ému pressentait quelque\nfoudre éclatante au fond de ce nuage sombre.</p>",
+      "source": "La stupeur était à son comble, il n'y avait plus dans les paroles de\nl'accusé ni forfanterie ni cynisme; l'auditoire ému pressentait quelque\nfoudre éclatante au fond de ce nuage sombre.",
+      "source_sha256": "09936352afda7d9fe46b78411314b076355df6a405888746feccf447bebf162f",
+      "target_html": "<p>Ошеломление достигло своего апогея; в словах\nобвиняемого больше не было ни хвастовства, ни цинизма; взволнованная аудитория предчувствовала какой-то\nяркий удар молнии в глубине этого мрачного облака.</p>",
+      "target_sha256": "35f059b041b3c5a55e6efb799edcfcc86443c6284e67890798c5addbbe010028",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0038",
+      "role": "body",
+      "source_html": "<p>«Eh bien, dit le président, votre nom?</p>",
+      "source": "«Eh bien, dit le président, votre nom?",
+      "source_sha256": "87c06718b4537c5da10ecf1aa36b1eade6bd7837ea228436df4c840ab3fe0c52",
+      "target_html": "<p>«Ну что ж, — сказал председатель, — как вас зовут?»</p>",
+      "target_sha256": "ab1ac3eab684a7903bb7d1ddeef21ed11ac9ff34a23da8dd3fac4f459eb4f60b",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0039",
+      "role": "body",
+      "source_html": "<p>—Je ne puis vous dire mon nom, car je ne le sais pas; mais je sais\ncelui de mon père, et je peux vous le dire.»</p>",
+      "source": "—Je ne puis vous dire mon nom, car je ne le sais pas; mais je sais\ncelui de mon père, et je peux vous le dire.»",
+      "source_sha256": "cfcb9ab1b23514f0d0385c2fcf055b44f6b946191aaa75f6c081d6d89d00460e",
+      "target_html": "<p>— Я не могу назвать вам своё имя, потому что не знаю его; но я знаю\nимя своего отца и могу назвать его вам».</p>",
+      "target_sha256": "09210f6246c6db878a570675927282ada89e369be7bfda5e678d41ffd353c8f9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0040",
+      "role": "body",
+      "source_html": "<p>Un éblouissement douloureux aveugla Villefort; on vit tomber de ses\njoues des gouttes de sueur âcres et pressées sur les papiers qu'il\nremuait d'une main convulsive et éperdue.</p>",
+      "source": "Un éblouissement douloureux aveugla Villefort; on vit tomber de ses\njoues des gouttes de sueur âcres et pressées sur les papiers qu'il\nremuait d'une main convulsive et éperdue.",
+      "source_sha256": "456a5916cefb5ed08ec2b9193fd5514811301f3e48cb03a1eb77704e40073c67",
+      "target_html": "<p>Виллефорта ослепила мучительная яркость; было видно, как с его\nщек капали едкие капли пота на бумаги, которые он\nперебирал судорожной и обезумевшей рукой.</p>",
+      "target_sha256": "d21d3bbe731fa3e88a751a94f91a7885c0e60c8cdc3e2a31fec51a537278b605",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0041",
+      "role": "body",
+      "source_html": "<p>«Dites alors le nom de votre père», reprit le président.</p>",
+      "source": "«Dites alors le nom de votre père», reprit le président.",
+      "source_sha256": "2850adda266bd2e319f504f12711cd5898eeae96acbd3790a4ce5265e7c8ae43",
+      "target_html": "<p>«Назовите же имя вашего отца», — продолжил председатель.</p>",
+      "target_sha256": "6b147d68e7915a65ee5d3f812e5cca785e33a0f71fc14578343085cd90eedfec",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0042",
+      "role": "body",
+      "source_html": "<p>Pas un souffle, pas une haleine ne troublaient le silence de cette\nimmense assemblée: tout le monde attendait.</p>",
+      "source": "Pas un souffle, pas une haleine ne troublaient le silence de cette\nimmense assemblée: tout le monde attendait.",
+      "source_sha256": "a6c5889b88cf3bf5e084a045a996dfd748796c4311e994a70ef0bf3fc3fe13b1",
+      "target_html": "<p>Ни один вздох, ни одно дыхание не нарушали тишины этого\nогромного собрания: все ждали.</p>",
+      "target_sha256": "8a87fd38a3acb8fb7e091f6efa8296a2ba5f247447aefe9c10e097f5f51a500c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0043",
+      "role": "body",
+      "source_html": "<p>«Mon père est procureur du roi, répondit tranquillement Andrea.</p>",
+      "source": "«Mon père est procureur du roi, répondit tranquillement Andrea.",
+      "source_sha256": "1a075bdaa856902ef437cbcb5ce316b7c6d6f18248a4960c492d56bcef8f810c",
+      "target_html": "<p>«Мой отец — королевский прокурор, — спокойно ответил Андреа.</p>",
+      "target_sha256": "f4ae3376ec7345cd0aeaecc268341b505e9a6a0e6ffea37ca776e59d5341b645",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0044",
+      "role": "body",
+      "source_html": "<p>—Procureur du roi! fit avec stupéfaction le président, sans remarquer\nle bouleversement qui se faisait sur la figure de Villefort; procureur\ndu roi!</p>",
+      "source": "—Procureur du roi! fit avec stupéfaction le président, sans remarquer\nle bouleversement qui se faisait sur la figure de Villefort; procureur\ndu roi!",
+      "source_sha256": "cc929447969d3991a68482dff568126d842da3fe652c7f2357a036c3d32d9518",
+      "target_html": "<p>—Королевский прокурор! — воскликнул в изумлении председатель, не заметив\nвзбудораженного выражения на лице Вильфора; — королевский\nпрокурор!</p>",
+      "target_sha256": "3399ba4c74764c7a18e982aec282b6df3398f8158bf0c4cb7dc596b7920f96be",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0045",
+      "role": "body",
+      "source_html": "<p>—Oui, et puisque vous voulez savoir son nom je vais vous le dire: il se\nnomme de Villefort!»</p>",
+      "source": "—Oui, et puisque vous voulez savoir son nom je vais vous le dire: il se\nnomme de Villefort!»",
+      "source_sha256": "b8ef4db1a612be70f8c839fe5860c21b5d3a07c53554a9cf42694a140b718063",
+      "target_html": "<p>—Да, и раз вы хотите знать его имя, я вам его скажу: его\nзовут де Вильфор!</p>",
+      "target_sha256": "7059fd24c6f268b1f882b8cee0db58b9f96559c51dc17ffe7897279c07e1297d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0046",
+      "role": "body",
+      "source_html": "<p>L'explosion, si longtemps contenue par le respect qu'en séance on porte\nà la justice, se fit jour, comme un tonnerre, du fond de toutes les\npoitrines; la cour elle-même ne songea point à réprimer ce mouvement de\nla multitude. Les interjections, les injures adressées à Benedetto, qui\ndemeurait impassible, les gestes énergiques, le mouvement des gendarmes,\nle ricanement de cette partie fangeuse qui, dans toute assemblée, monte\nà la surface aux moments de trouble et de scandale, tout cela dura cinq\nminutes avant que les magistrats et les huissiers eussent réussi à\nrétablir le silence.</p>",
+      "source": "L'explosion, si longtemps contenue par le respect qu'en séance on porte\nà la justice, se fit jour, comme un tonnerre, du fond de toutes les\npoitrines; la cour elle-même ne songea point à réprimer ce mouvement de\nla multitude. Les interjections, les injures adressées à Benedetto, qui\ndemeurait impassible, les gestes énergiques, le mouvement des gendarmes,\nle ricanement de cette partie fangeuse qui, dans toute assemblée, monte\nà la surface aux moments de trouble et de scandale, tout cela dura cinq\nminutes avant que les magistrats et les huissiers eussent réussi à\nrétablir le silence.",
+      "source_sha256": "768a7015210c993504226e5e2d4d3694b9f23d7a514b4060537119c3db222f31",
+      "target_html": "<p>Взрыв эмоций, так долго сдерживавшийся из уважения, которое на заседании проявляют\nк правосудию, прорвался, словно гром, из глубины всех\nсердец; сам суд даже не подумал о том, чтобы подавить это волнение\nтолпы. Восклицания, оскорбления в адрес Бенедетто, который\nоставался невозмутимым, энергичные жесты, движения жандармов,\nхихиканье той грязной части публики, которая в любом собрании выплывает\nна поверхность в моменты беспорядков и скандалов, — всё это длилось пять\nминут, прежде чем судьям и судебным приставам удалось\nвосстановить тишину.</p>",
+      "target_sha256": "95dcf08a1b54f99edba57218ef331178b42a663ee98dcfbf9b9e830b5b3212bb",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0047",
+      "role": "body",
+      "source_html": "<p>Au milieu de tout ce bruit, on entendait la voix du président, qui\ns'écriait:</p>",
+      "source": "Au milieu de tout ce bruit, on entendait la voix du président, qui\ns'écriait:",
+      "source_sha256": "0c43c2bb5cb97fa4cb939c9d74be1657820957205475ed1b33683eae9676e790",
+      "target_html": "<p>Среди всего этого шума слышался голос председателя, который\nвосклицал:</p>",
+      "target_sha256": "1f85e2205337e1e2dd501b7257ac77144543230db8d1ae4150b03527c3dd9cb7",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0048",
+      "role": "body",
+      "source_html": "<p>«Vous jouez-vous de la justice, accusé, et oseriez-vous donner à vos\nconcitoyens le spectacle d'une corruption qui, dans une époque qui\ncependant ne laisse rien à désirer sous ce rapport, n'aurait pas encore\neu son égale?»</p>",
+      "source": "«Vous jouez-vous de la justice, accusé, et oseriez-vous donner à vos\nconcitoyens le spectacle d'une corruption qui, dans une époque qui\ncependant ne laisse rien à désirer sous ce rapport, n'aurait pas encore\neu son égale?»",
+      "source_sha256": "4e2d19a3b511d72c90ec58f5985c22da2150a95ae0393bc5f89323ae75458f8c",
+      "target_html": "<p>«Вы, обвиняемый, издеваетесь над правосудием и осмеливаетесь представить своим\nсогражданам зрелище коррупции, которое в эпоху,\nкоторая, впрочем, не оставляет желать ничего лучшего в этом отношении, до сих пор\nне имело себе равных?»</p>",
+      "target_sha256": "7ba5d849a893af50da87b120c46e63481be12e20e10875c62a4166b991ce9916",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0049",
+      "role": "body",
+      "source_html": "<p>Dix personnes s'empressaient auprès de M. le procureur du roi, à demi\nécrasé sur son siège, et lui offraient des consolations, des\nencouragements, des protestations de zèle et de sympathie.</p>",
+      "source": "Dix personnes s'empressaient auprès de M. le procureur du roi, à demi\nécrasé sur son siège, et lui offraient des consolations, des\nencouragements, des protestations de zèle et de sympathie.",
+      "source_sha256": "1599e9aaef53b44ce522afb786774dd67f414e52a3b86e36f83e37ffb98e8a02",
+      "target_html": "<p>Десять человек суетились вокруг господина королевского прокурора, полу\nраздавленного на своем кресле, и предлагали ему слова утешения,\nподдержки, заверения в усердии и сочувствии.</p>",
+      "target_sha256": "740efb92a63679fcb6ceebf3ceeb2ffa85e8176d1a0d787289713a96e8508f23",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0050",
+      "role": "body",
+      "source_html": "<p>Le calme s'était rétabli dans la salle, à l'exception cependant d'un\npoint où un groupe assez nombreux s'agitait et chuchotait.</p>",
+      "source": "Le calme s'était rétabli dans la salle, à l'exception cependant d'un\npoint où un groupe assez nombreux s'agitait et chuchotait.",
+      "source_sha256": "b266204c57df18a3e79b1ead6c27759c5155dc14b50d8d22099ec508b5f4efca",
+      "target_html": "<p>В зале воцарилось спокойствие, за исключением, однако, одного\nместа, где довольно многолюдная группа суетилась и шепталась.</p>",
+      "target_sha256": "bcab17ea1ea4c56988fa7fc6f03ef7791d667a5259bc5267139c0bcced8a4db3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0051",
+      "role": "body",
+      "source_html": "<p>Une femme, disait-on, venait de s'évanouir; on lui avait fait respirer\ndes sels, elle s'était remise.</p>",
+      "source": "Une femme, disait-on, venait de s'évanouir; on lui avait fait respirer\ndes sels, elle s'était remise.",
+      "source_sha256": "4f59e3d462862a4441e264bd4de76477749a86f05da4e7a70a4118fee68819e7",
+      "target_html": "<p>Говорили, что одна женщина только что потеряла сознание; ей дали подышать\nсолями, и она пришла в себя.</p>",
+      "target_sha256": "85a98defd226d5e64cf5fd1ed729c2abff1ea6ff0b064b85a56142198f751fbf",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0052",
+      "role": "body",
+      "source_html": "<p>Andrea, pendant tout ce tumulte, avait tourné sa figure souriante vers\nl'assemblée; puis, s'appuyant enfin d'une main sur la rampe de chêne de\nson banc, et cela dans l'attitude la plus gracieuse:</p>",
+      "source": "Andrea, pendant tout ce tumulte, avait tourné sa figure souriante vers\nl'assemblée; puis, s'appuyant enfin d'une main sur la rampe de chêne de\nson banc, et cela dans l'attitude la plus gracieuse:",
+      "source_sha256": "b65ba3fed8ddc9740f1a4f5b1fba685ccfc637601fc64646faee67bed2b029f0",
+      "target_html": "<p>Андреа, на протяжении всей этой суматохи, обращал своё улыбающееся лицо к\nсобравшимся; затем, наконец, опираясь одной рукой на дубовую перила\nсвоей скамьи, причём в самой изящной позе:</p>",
+      "target_sha256": "2dfd8d4d440282e6cb5420bbcd1f5eba0f7d2081789dae14d39cd7b4ae176a08",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0053",
+      "role": "body",
+      "source_html": "<p>«Messieurs, dit-il, à Dieu ne plaise que je cherche à insulter la cour\net à faire, en présence de cette honorable assemblée, un scandale\ninutile. On me demande quel âge j'ai, je le dis; on me demande où je\nsuis né, je réponds; on me demande mon nom, je ne puis le dire, puisque\nmes parents m'ont abandonné. Mais je puis bien, sans dire mon nom,\npuisque je n'en ai pas, dire celui de mon père, or, je le répète, mon\npère se nomme M. de Villefort, et je suis tout prêt à le prouver.»</p>",
+      "source": "«Messieurs, dit-il, à Dieu ne plaise que je cherche à insulter la cour\net à faire, en présence de cette honorable assemblée, un scandale\ninutile. On me demande quel âge j'ai, je le dis; on me demande où je\nsuis né, je réponds; on me demande mon nom, je ne puis le dire, puisque\nmes parents m'ont abandonné. Mais je puis bien, sans dire mon nom,\npuisque je n'en ai pas, dire celui de mon père, or, je le répète, mon\npère se nomme M. de Villefort, et je suis tout prêt à le prouver.»",
+      "source_sha256": "28cfbcc7a90facb2796e23d09cf27dfa629b0a4842d53172638c8fa6c052aa93",
+      "target_html": "<p>«Господа, — сказал он, — да не дай Бог, чтобы я пытался оскорбить двор\nи устроить в присутствии этого почтенного собрания\nненужный скандал. Меня спрашивают, сколько мне лет, — я говорю; меня спрашивают, где я\nродился, — я отвечаю; меня спрашивают, как меня зовут, — я не могу сказать, поскольку\nмои родители меня бросили. Но я вполне могу, не называя своего имени,\nпоскольку у меня его нет, назвать имя своего отца, и, повторяю, мой\nотец — господин де Вильфор, и я готов это доказать».</p>",
+      "target_sha256": "0c4240075171f3d9299a297d5cf82d26e313da94ab135800caf1881c83211649",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0054",
+      "role": "body",
+      "source_html": "<p>Il y avait dans l'accent du jeune homme une certitude, une conviction,\nune énergie qui réduisirent le tumulte au silence. Les regards se\nportèrent un moment sur le procureur du roi, qui gardait sur son siège\nl'immobilité d'un homme que la foudre vient de changer en cadavre.</p>",
+      "source": "Il y avait dans l'accent du jeune homme une certitude, une conviction,\nune énergie qui réduisirent le tumulte au silence. Les regards se\nportèrent un moment sur le procureur du roi, qui gardait sur son siège\nl'immobilité d'un homme que la foudre vient de changer en cadavre.",
+      "source_sha256": "d6ba0c46184c09eacbd31398ab9065f7e7cbcbb27f313befb879d234a5b073d4",
+      "target_html": "<p>В голосе молодого человека чувствовалась уверенность, убеждённость,\nэнергия, которые заставили бурную толпу замолчать. Взгляды на\nмгновение обратились к королевскому прокурору, который сидел на своём месте\nнеподвижно, словно человек, которого молния только что превратила в труп.</p>",
+      "target_sha256": "f441001c15363f0ee46dc5e2db0e305a2038a2037c9d2eeb35abde72c9c3ff82",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0055",
+      "role": "body",
+      "source_html": "<p>«Messieurs, continua Andrea en commandant le silence du geste et de la\nvoix, je vous dois la preuve et l'explication de mes paroles.</p>",
+      "source": "«Messieurs, continua Andrea en commandant le silence du geste et de la\nvoix, je vous dois la preuve et l'explication de mes paroles.",
+      "source_sha256": "5562b11edc2d400547932798a2dd303f7ecac89736d15e1a7d79a56ecab3c1c0",
+      "target_html": "<p>«Господа, — продолжил Андреа, призывая к тишине жестом и\nголосом, — я обязан вам доказать и объяснить свои слова».</p>",
+      "target_sha256": "02f95cf1bcb96903f813a22917f5eb9166821d65948e526005d5274d27e25c61",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0056",
+      "role": "body",
+      "source_html": "<p>—Mais, s'écria le président irrité, vous avez déclaré dans\nl'instruction vous nommer Benedetto, vous avez dit être orphelin, et\nvous vous êtes donné la Corse pour patrie.</p>",
+      "source": "—Mais, s'écria le président irrité, vous avez déclaré dans\nl'instruction vous nommer Benedetto, vous avez dit être orphelin, et\nvous vous êtes donné la Corse pour patrie.",
+      "source_sha256": "c7c314b5d4364589f57fa4e727cce6e3b2a4a92429fa237d6185aa2f89ad9367",
+      "target_html": "<p>— Но, — воскликнул раздражённый председатель, — вы заявили в ходе\nпредварительного следствия, что вас зовут Бенедетто, сказали, что вы сирота, и\nназвали Корсику своей родиной.</p>",
+      "target_sha256": "51f77e4fd3d4d701fd9681128b07ea5547894446c601125c2b5f12da7921e91d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0057",
+      "role": "body",
+      "source_html": "<p>—J'ai dit à l'instruction ce qu'il m'a convenu de dire à l'instruction,\ncar je ne voulais pas que l'on affaiblît ou que l'on arrêtât, ce qui\nn'eût point manqué d'arriver, le retentissement solennel que je voulais\ndonner à mes paroles.</p>",
+      "source": "—J'ai dit à l'instruction ce qu'il m'a convenu de dire à l'instruction,\ncar je ne voulais pas que l'on affaiblît ou que l'on arrêtât, ce qui\nn'eût point manqué d'arriver, le retentissement solennel que je voulais\ndonner à mes paroles.",
+      "source_sha256": "8efbd4ef8b2f9bcfa5955c97b13e76bf234d5f4c6e9b647152662bc3ed91652f",
+      "target_html": "<p>—Я сказал следствию то, что считал нужным сказать следствию,\nпотому что не хотел, чтобы ослабили или остановили — а это\nнепременно произошло бы — тот торжественный резонанс, который я хотел\nпридать своим словам.</p>",
+      "target_sha256": "c5a38d26df3cb4a2ca9f571e54eb67319a936323e88b0e23440bf3bcb2804812",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0058",
+      "role": "body",
+      "source_html": "<p>«Maintenant je vous répète que je suis né à Auteuil, dans la nuit du 27\nau 28 septembre 1817, et que je suis le fils de M. le procureur du roi\nde Villefort. Maintenant, voulez-vous des détails? je vais vous en\ndonner.</p>",
+      "source": "«Maintenant je vous répète que je suis né à Auteuil, dans la nuit du 27\nau 28 septembre 1817, et que je suis le fils de M. le procureur du roi\nde Villefort. Maintenant, voulez-vous des détails? je vais vous en\ndonner.",
+      "source_sha256": "324b27fe86ceb5f9d84bffd03839129d32b9e61e676ffba17a3ed2c9fbc07b34",
+      "target_html": "<p>«Теперь я повторяю вам, что я родился в Отей, в ночь с 27-го\nна 28-е сентября 1817 года, и что я сын королевского прокурора\nде Вильфорта. Хотите подробностей? Я вам их\nрасскажу.</p>",
+      "target_sha256": "e64c691284f09ddc3a72376bd7f3ff47bbe31f9f360721e41e4c8df8e2a4cde2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0059",
+      "role": "body",
+      "source_html": "<p>«Je naquis au premier de la maison numéro 28, rue de la Fontaine, dans\nune chambre tendue de damas rouge. Mon père me prit dans ses bras en\ndisant à ma mère que j'étais mort, m'enveloppa dans une serviette\nmarquée d'un H et d'un N, et m'emporta dans le jardin où il m'enterra\nvivant.»</p>",
+      "source": "«Je naquis au premier de la maison numéro 28, rue de la Fontaine, dans\nune chambre tendue de damas rouge. Mon père me prit dans ses bras en\ndisant à ma mère que j'étais mort, m'enveloppa dans une serviette\nmarquée d'un H et d'un N, et m'emporta dans le jardin où il m'enterra\nvivant.»",
+      "source_sha256": "f7f35335ab60e0c55f4afcd7e7dc856029087403faa76cc4801d7de4dee3470c",
+      "target_html": "<p>«Я родился первого числа в доме № 28 на улице де ла Фонтен, в\nкомнате, занавешенной красным дамастом. Мой отец взял меня на руки,\nсказав матери, что я умер, завернул меня в полотенце\nс инициалами H и N и унес в сад, где похоронил меня\nживым».</p>",
+      "target_sha256": "0e7e3b5707131caf4d4bbc63ae62b56b35218cd2f366f05cad60cfd63717a84f",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0060",
+      "role": "body",
+      "source_html": "<p>Un frisson parcourut tous les assistants quand ils virent que\ngrandissait l'assurance du prévenu avec l'épouvante de M. de Villefort.</p>",
+      "source": "Un frisson parcourut tous les assistants quand ils virent que\ngrandissait l'assurance du prévenu avec l'épouvante de M. de Villefort.",
+      "source_sha256": "61db5fbb1e8ab67cc5d20fd74aabaa7b68ac63599abc43cf7f35251887ab7042",
+      "target_html": "<p>Дрожь пробежала по всем присутствующим, когда они увидели, что\nуверенность подсудимого росла по мере того, как ужас охватывал господина де Вильфорта.</p>",
+      "target_sha256": "67c41230fff473024c4d0880f414c2673a18c990673a9422f4122ef6e14633e0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0061",
+      "role": "body",
+      "source_html": "<p>«Mais comment savez-vous tous ces détails? demanda le président.</p>",
+      "source": "«Mais comment savez-vous tous ces détails? demanda le président.",
+      "source_sha256": "8a6565c7aa5c90ba8c25fc70adad9b57d031b6aceced057f78acfd49d6f45952",
+      "target_html": "<p>«Но откуда вам известны все эти подробности?» — спросил председатель.</p>",
+      "target_sha256": "496b4750a69c9cc1cd9cadb59b5da4d76f90140fb6a8c6ddb2b842eaa2f307bb",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0062",
+      "role": "body",
+      "source_html": "<p>—Je vais vous le dire, monsieur le président. Dans le jardin où mon\npère venait de m'ensevelir, s'était, cette nuit-là même, introduit un\nhomme qui lui en voulait mortellement, et qui le guettait depuis\nlongtemps pour accomplir sur lui une vengeance corse. L'homme était\ncaché dans un massif; il vit mon père enfermer un dépôt dans la terre,\net le frappa d'un coup de couteau au milieu même de cette opération;\npuis, croyant que ce dépôt était quelque trésor, il ouvrit la fosse et\nme trouva vivant encore. Cet homme me porta à l'hospice des\nEnfants-Trouvés, où je fus inscrit sous le numéro 57. Trois mois après,\nsa sœur fit le voyage de Rogliano à Paris pour me venir chercher, me\nréclama comme son fils et m'emmena.</p>",
+      "source": "—Je vais vous le dire, monsieur le président. Dans le jardin où mon\npère venait de m'ensevelir, s'était, cette nuit-là même, introduit un\nhomme qui lui en voulait mortellement, et qui le guettait depuis\nlongtemps pour accomplir sur lui une vengeance corse. L'homme était\ncaché dans un massif; il vit mon père enfermer un dépôt dans la terre,\net le frappa d'un coup de couteau au milieu même de cette opération;\npuis, croyant que ce dépôt était quelque trésor, il ouvrit la fosse et\nme trouva vivant encore. Cet homme me porta à l'hospice des\nEnfants-Trouvés, où je fus inscrit sous le numéro 57. Trois mois après,\nsa sœur fit le voyage de Rogliano à Paris pour me venir chercher, me\nréclama comme son fils et m'emmena.",
+      "source_sha256": "5a523379f20faffe62c401bc14b51bdadf14d08da5955be5699e0afe08ee5792",
+      "target_html": "<p>— Я вам сейчас объясню, господин председатель. В сад, где мой\nотец только что меня закопал, в ту же самую ночь проник\nчеловек, который смертельно мстил ему и который давно\nподстерегал его, чтобы осуществить корсиканскую месть. Этот человек\nскрывался в кустах; он увидел, как мой отец зарыл что-то в землю,\nи нанес ему удар ножом прямо во время этой операции;\nзатем, полагая, что это было какое-то сокровище, он открыл яму и\nнашёл меня ещё живым. Этот человек отнёс меня в приют для\nнаходённых детей, где меня зарегистрировали под номером 57. Через три месяца\nего сестра приехала из Рольяно в Париж, чтобы забрать меня,\nзаявила, что я её сын, и увезла меня.</p>",
+      "target_sha256": "409b22f50a440b8f0cf74452cef94818b224662fa04c244e7b0fc2f85b215ba1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0063",
+      "role": "body",
+      "source_html": "<p>«Voilà comment, quoique né à Auteuil, je fus élevé en Corse.»</p>",
+      "source": "«Voilà comment, quoique né à Auteuil, je fus élevé en Corse.»",
+      "source_sha256": "b3932c6d5b67e029278c82a61572e1bf1a8c0ec204a4ba61cdf7974485c1eecd",
+      "target_html": "<p>«Вот почему, хотя я и родился в Отей, меня воспитывали на Корсике».</p>",
+      "target_sha256": "ba67ce11ac1bdc53ed17f2c75ec8926b2030cd8b3b4923d4d12c7840869b702c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0064",
+      "role": "body",
+      "source_html": "<p>Il y eut un instant de silence, mais d'un silence si profond, que, sans\nl'anxiété que semblaient respirer mille poitrines, on eût cru la salle\nvide.</p>",
+      "source": "Il y eut un instant de silence, mais d'un silence si profond, que, sans\nl'anxiété que semblaient respirer mille poitrines, on eût cru la salle\nvide.",
+      "source_sha256": "f2eab100f30768ff72faef88cccba0735177af5c5c8a321bc6ea6180112e8f7d",
+      "target_html": "<p>Наступила минута тишины, но тишины настолько глубокой, что, если бы не\nтревога, которую, казалось, испытывали тысячи сердец, можно было бы подумать, что зал\nпуст.</p>",
+      "target_sha256": "6a5fb53434207d020ed2e3a7e05837cea0d808ed806124836adf0aec1bb3ada2",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0065",
+      "role": "body",
+      "source_html": "<p>«Continuez, dit la voix du président.</p>",
+      "source": "«Continuez, dit la voix du président.",
+      "source_sha256": "e9db269a847a87a6ea81a2b4888f3ef95f88c60a0f3949578e446d23ecc6e242",
+      "target_html": "<p>«Продолжайте», — сказал председатель.</p>",
+      "target_sha256": "6c69e0ec0a39b419c9706246c5947b60f1f3355535bcedfd7e9c2320cbfc1a8d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0066",
+      "role": "body",
+      "source_html": "<p>—Certes, continua Benedetto, je pouvais être heureux chez ces braves\ngens qui m'adoraient; mais mon naturel pervers l'emporta sur toutes les\nvertus qu'essayait de verser dans mon cœur ma mère adoptive. Je grandis\ndans le mal et je suis arrivé au crime. Enfin, un jour que je maudissais\nDieu de m'avoir fait si méchant et de me donner une si hideuse destinée,\nmon père adoptif est venu me dire:</p>",
+      "source": "—Certes, continua Benedetto, je pouvais être heureux chez ces braves\ngens qui m'adoraient; mais mon naturel pervers l'emporta sur toutes les\nvertus qu'essayait de verser dans mon cœur ma mère adoptive. Je grandis\ndans le mal et je suis arrivé au crime. Enfin, un jour que je maudissais\nDieu de m'avoir fait si méchant et de me donner une si hideuse destinée,\nmon père adoptif est venu me dire:",
+      "source_sha256": "f6a8607eba1589b6aee4469acffb58ea4242d5a376a96f38faeff9f0b9884b52",
+      "target_html": "<p>—Конечно, — продолжил Бенедетто, — я мог бы быть счастлив среди этих добрых\nлюдей, которые обожали меня; но моя порочная натура взяла верх над всеми\nдобродетелями, которые моя приемная мать пыталась влить в мое сердце. Я вырос\nво зле и дошёл до преступления. Наконец, однажды, когда я проклинал\nБога за то, что Он создал меня таким злым и уготовил мне столь ужасную судьбу,\nмой приёмный отец пришёл ко мне и сказал:</p>",
+      "target_sha256": "a700f9ab029d3b21e68a62da1f6440e2ab3773fec48aaaf7906560c520c9fc9a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0067",
+      "role": "body",
+      "source_html": "<p>«—Ne blasphème pas, malheureux! car Dieu t'a donné le jour sans colère!\nle crime vient de ton père et non de toi; de ton père qui t'a voué à\nl'enfer si tu mourais, à la misère si un miracle te rendait au jour!</p>",
+      "source": "«—Ne blasphème pas, malheureux! car Dieu t'a donné le jour sans colère!\nle crime vient de ton père et non de toi; de ton père qui t'a voué à\nl'enfer si tu mourais, à la misère si un miracle te rendait au jour!",
+      "source_sha256": "623476736e53cd1f5d00ba7688ffcc2086d3636ec8532515f1448ed7825215dd",
+      "target_html": "<p>«—Не богохульствуй, несчастный! Ведь Бог даровал тебе жизнь без гнева!\nПреступление исходит от твоего отца, а не от тебя; от твоего отца, который обрек тебя на\nад, если бы ты умер, и на нищету, если бы чудо вернуло тебя к жизни!»</p>",
+      "target_sha256": "dda4783af9ac86224f06a6697b869b32350db57c0586c17a87cf3c3547f9b8d8",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0068",
+      "role": "body",
+      "source_html": "<p>«Dès lors j'ai cessé de blasphémer Dieu, mais j'ai maudit mon père; et\nvoilà pourquoi j'ai fait entendre ici les paroles que vous m'avez\nreprochées, monsieur le président; voilà pourquoi j'ai causé le scandale\ndont frémit encore cette assemblée. Si c'est un crime de plus,\npunissez-moi; mais si je vous ai convaincu que dès le jour de ma\nnaissance ma destinée était fatale, douloureuse, amère, lamentable,\nplaignez-moi!</p>",
+      "source": "«Dès lors j'ai cessé de blasphémer Dieu, mais j'ai maudit mon père; et\nvoilà pourquoi j'ai fait entendre ici les paroles que vous m'avez\nreprochées, monsieur le président; voilà pourquoi j'ai causé le scandale\ndont frémit encore cette assemblée. Si c'est un crime de plus,\npunissez-moi; mais si je vous ai convaincu que dès le jour de ma\nnaissance ma destinée était fatale, douloureuse, amère, lamentable,\nplaignez-moi!",
+      "source_sha256": "16b91c6a0bddaefb6fb66d4c11655c1126ca84381d68a64d4a21759011cf5a45",
+      "target_html": "<p>«С тех пор я перестал богохульствовать, но проклинал своего отца; и\nвот почему я произнес здесь те слова, в которых вы меня\nобвиняли, господин председатель; вот почему я вызвал тот скандал,\nот которого до сих пор содрогается это собрание. Если это ещё одно преступление,\nнакажите меня; но если я убедил вас, что с самого дня моего\nрождения моя судьба была роковой, мучительной, горькой, плачевной,\nпожалейте меня!»</p>",
+      "target_sha256": "5b326cdefa6987a05e4de4bd5ef8e243c676e4c34e9920295f766e77ce6b3d9c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0069",
+      "role": "body",
+      "source_html": "<p>—Mais votre mère? demanda le président.</p>",
+      "source": "—Mais votre mère? demanda le président.",
+      "source_sha256": "e35455ab6a37d489005d9590fdf9cadb5223a108f5270dd13c248de758171b44",
+      "target_html": "<p>— А ваша мать? — спросил председатель.</p>",
+      "target_sha256": "dde61217f2739a999c4fb204409f0cac8dd0fb94283484ea9a797c2193c423ea",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0070",
+      "role": "body",
+      "source_html": "<p>—Ma mère me croyait mort; ma mère n'est point coupable. Je n'ai pas\nvoulu savoir le nom de ma mère; je ne la connais pas.»</p>",
+      "source": "—Ma mère me croyait mort; ma mère n'est point coupable. Je n'ai pas\nvoulu savoir le nom de ma mère; je ne la connais pas.»",
+      "source_sha256": "a03001fb1cf2193bd9ba7bd4d3ed42b37b2e11f89cbd4dd0e93b2ec811f6880a",
+      "target_html": "<p>—Моя мать считала меня мёртвым; моя мать не виновата. Я не\nхотел знать имени своей матери; я её не знаю».</p>",
+      "target_sha256": "8dd19e79547d87f7cfbe927fbb4c3fff5ca7ceff4f6eca34980fbc3e9809c50e",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0071",
+      "role": "body",
+      "source_html": "<p>En ce moment un cri aigu, qui se termina par un sanglot, retentit au\nmilieu du groupe qui entourait, comme nous l'avons dit, une femme.</p>",
+      "source": "En ce moment un cri aigu, qui se termina par un sanglot, retentit au\nmilieu du groupe qui entourait, comme nous l'avons dit, une femme.",
+      "source_sha256": "e21349622a02499c06e310c386d2d1d414de1c2d1b252b14aa28290fd01a15b2",
+      "target_html": "<p>В этот момент пронзительный крик, закончившийся рыданием, раздался\nпосреди группы, окружавшей, как мы уже сказали, женщину.</p>",
+      "target_sha256": "8c2f67cce7c67b52b0f13b09e6d05fd9a18090c4b1cf64cba3741a4111a6d18a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0072",
+      "role": "body",
+      "source_html": "<p>Cette femme tomba dans une violente attaque de nerfs et fut enlevée du\nprétoire, tandis qu'on l'emportait, le voile épais qui cachait son\nvisage s'écarta et l'on reconnut Mme Danglars.</p>",
+      "source": "Cette femme tomba dans une violente attaque de nerfs et fut enlevée du\nprétoire, tandis qu'on l'emportait, le voile épais qui cachait son\nvisage s'écarta et l'on reconnut Mme Danglars.",
+      "source_sha256": "4d726880e0aec84096521bdb6e4746f59ef54130a145b6617c6b4dd85faf68e0",
+      "target_html": "<p>Эта женщина впала в сильный нервный приступ и была выведена из\nзала суда; когда её уносили, плотная вуаль, скрывавшая её\nлицо, приоткрылась, и все узнали в ней мадам Данглар.</p>",
+      "target_sha256": "beda1b0fcfd17bbde09c2f68523598d51480e8643f2a7f9f242dd609ecc0d557",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0073",
+      "role": "body",
+      "source_html": "<p>Malgré l'accablement de ses sens énervés, malgré le bourdonnement qui\nfrémissait à son oreille, malgré l'espèce de folie qui bouleversait son\ncerveau, Villefort la reconnut et se leva.</p>",
+      "source": "Malgré l'accablement de ses sens énervés, malgré le bourdonnement qui\nfrémissait à son oreille, malgré l'espèce de folie qui bouleversait son\ncerveau, Villefort la reconnut et se leva.",
+      "source_sha256": "f8251844a679da78225b01f114dedb9060ef8bb254cce3ebd373e283603f92e0",
+      "target_html": "<p>Несмотря на ошеломление своих измученных чувств, несмотря на гудение, которое\nтрепетало в его ушах, несмотря на то, что его мозг охватывало\nкакое-то безумие, Вильфор узнал её и встал.</p>",
+      "target_sha256": "c3afc97d2a8886ac5ea98e9e65b8ff008f2f8466c2f611b1932a99b6bda16a6d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0074",
+      "role": "body",
+      "source_html": "<p>«Les preuves! les preuves! dit le président; prévenu, souvenez-vous que\nce tissu d'horreurs a besoin d'être soutenu par les preuves les plus\néclatantes.</p>",
+      "source": "«Les preuves! les preuves! dit le président; prévenu, souvenez-vous que\nce tissu d'horreurs a besoin d'être soutenu par les preuves les plus\néclatantes.",
+      "source_sha256": "d292af5a71bb39023abbb45af76294313d1585e7f47f7f0d35994e1451559c8b",
+      "target_html": "<p>«Доказательства! Доказательства!» — сказал председатель. «Обвиняемый, помните, что\nэта паутина ужасов должна быть подкреплена самыми\nяркими доказательствами».</p>",
+      "target_sha256": "5aed739d2a51717c4250e5e5e8e23f0244a0767ee88898d38c096c2b8a2616cf",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0075",
+      "role": "body",
+      "source_html": "<p>—Les preuves? dit Benedetto en riant, les preuves, vous les voulez?</p>",
+      "source": "—Les preuves? dit Benedetto en riant, les preuves, vous les voulez?",
+      "source_sha256": "04b75bb3af0cc5f2c64d21a32277d3b66f404d726aa8f25de8a2bfdc33a28427",
+      "target_html": "<p>—Доказательства? — сказал Бенедетто, смеясь, — доказательства, вы их хотите?</p>",
+      "target_sha256": "f7c885a8badbe91ffa9fd6d1ca20d1c0adc4256aa7ec450c10b6efd658f60cb0",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0076",
+      "role": "body",
+      "source_html": "<p>—Oui.</p>",
+      "source": "—Oui.",
+      "source_sha256": "2052638ec88bc735c3d8e304acbc9110e71e900e5e07a8b3358f9eba77a4d232",
+      "target_html": "<p>—Да.</p>",
+      "target_sha256": "641fc71bd51d4f44f25e6af18151c234ab6061248a2cfaf6d32db82e193cade5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0077",
+      "role": "body",
+      "source_html": "<p>—Eh bien, regardez M. de Villefort, et demandez-moi encore les\npreuves.»</p>",
+      "source": "—Eh bien, regardez M. de Villefort, et demandez-moi encore les\npreuves.»",
+      "source_sha256": "94aa04135d564a7ca9616ff6999d01eedb80cc89d18a3e9e1747dcc728efc3fc",
+      "target_html": "<p>—Ну, посмотрите на господина де Вильфорта и снова попросите у меня\nдоказательства».</p>",
+      "target_sha256": "50d96941293254919a1cc6b51348715917e1a679fcb11d7acbdba09242c11b56",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0078",
+      "role": "body",
+      "source_html": "<p>Chacun se retourna vers le procureur du roi, qui, sous le poids de ces\nmille regards rivés sur lui, s'avança dans l'enceinte du tribunal,\nchancelant, les cheveux en désordre et le visage couperosé par la\npression de ses ongles.</p>",
+      "source": "Chacun se retourna vers le procureur du roi, qui, sous le poids de ces\nmille regards rivés sur lui, s'avança dans l'enceinte du tribunal,\nchancelant, les cheveux en désordre et le visage couperosé par la\npression de ses ongles.",
+      "source_sha256": "03f60731adccf6ddb28000b9d3cb478acaa0f7efd90f6be7904dd9304bfac9cd",
+      "target_html": "<p>Все обернулись к королевскому прокурору, который, под тяжестью этих\nтысяч прикованных к нему взглядов, шатаясь, продвинулся в зал суда,\nс растрепанными волосами и лицом, покрытым красными пятнами от\nдавления ногтей.</p>",
+      "target_sha256": "bb8b7915274631be0b6fc2206f84c2a164eb9e0472edd068a7a6aaa65e6640c6",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0079",
+      "role": "body",
+      "source_html": "<p>L'assemblée tout entière poussa un long murmure d'étonnement.</p>",
+      "source": "L'assemblée tout entière poussa un long murmure d'étonnement.",
+      "source_sha256": "ebf713fbcc8b655d008e0d84fe2d4014fd016c63daf2c33a2764263f73e4babd",
+      "target_html": "<p>Вся аудитория вздохнула от удивления.</p>",
+      "target_sha256": "8d0cf6d5a79fd43dfe60cd3be9102395e2a8b2a1d57c120b39ae043a543a0ca9",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0080",
+      "role": "body",
+      "source_html": "<p>«On me demande les preuves, mon père, dit Benedetto, voulez-vous que je\nles donne?</p>",
+      "source": "«On me demande les preuves, mon père, dit Benedetto, voulez-vous que je\nles donne?",
+      "source_sha256": "c6d25ad1b4d806fd22d37d848f09061a11b70006bae499272276330d5fe5567f",
+      "target_html": "<p>«От меня требуют доказательств, отец, — сказал Бенедетто, — хотите, чтобы я\nих предоставил?»</p>",
+      "target_sha256": "1f4a785b1c28b04863f2f604b6c5ad300de81ad88f35b6c827db8bc448c875b5",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0081",
+      "role": "body",
+      "source_html": "<p>—Non, non, balbutia M. de Villefort d'une voix étranglée; non, c'est\ninutile.</p>",
+      "source": "—Non, non, balbutia M. de Villefort d'une voix étranglée; non, c'est\ninutile.",
+      "source_sha256": "dae8d87a217fcc46fe73e3e7f5e4339a0df2a04e472ada88bfb0d8d028dfd222",
+      "target_html": "<p>—Нет, нет, — пролепетал господин де Вильфор сдавленным голосом; — нет, это\nбесполезно.</p>",
+      "target_sha256": "9f2a9a5001d46ad884f2b2cefb50b5d4eeefe41990dce30ca7be479a1a031d9d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0082",
+      "role": "body",
+      "source_html": "<p>—Comment, inutile? s'écria le président: mais que voulez-vous dire?</p>",
+      "source": "—Comment, inutile? s'écria le président: mais que voulez-vous dire?",
+      "source_sha256": "a52999be565eda934cb811586574bfe1c57eaeba35ad68eb920ce992aa504e6e",
+      "target_html": "<p>—Как это, бесполезно? — воскликнул председатель. — Но что вы имеете в виду?</p>",
+      "target_sha256": "4fc303f3f17adcd4b0d8c6ebd94a729761bb01fdb51ac1a4d74b83942d74d609",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0083",
+      "role": "body",
+      "source_html": "<p>—Je veux dire, s'écria le procureur du roi, que je me débattrais en\nvain sous l'étreinte mortelle qui m'écrase, messieurs, je suis, je le\nreconnais, dans la main du Dieu vengeur. Pas de preuves; il n'en est pas\nbesoin; tout ce que vient de dire ce jeune homme est vrai!»</p>",
+      "source": "—Je veux dire, s'écria le procureur du roi, que je me débattrais en\nvain sous l'étreinte mortelle qui m'écrase, messieurs, je suis, je le\nreconnais, dans la main du Dieu vengeur. Pas de preuves; il n'en est pas\nbesoin; tout ce que vient de dire ce jeune homme est vrai!»",
+      "source_sha256": "dcb6f1374483863b425d05c8ed6d5d1c52b238952085279b15c1aac15e99be9a",
+      "target_html": "<p>—Я хочу сказать, — воскликнул королевский прокурор, — что я тщетно\nборолся бы в смертельном объятии, которое меня давит, господа, я,\nпризнаю, нахожусь во власти мстительного Бога. Никаких доказательств; в них нет\nнужды; всё, что только что сказал этот молодой человек, — правда!»</p>",
+      "target_sha256": "c546ca5cb96ef752fd50f29f3a37a1ef53badca8b9a33812ebea21fc0b4d0d40",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0084",
+      "role": "body",
+      "source_html": "<p>Un silence sombre et pesant comme celui qui précède les catastrophes de\nla nature enveloppa dans son manteau de plomb tous les assistants, dont\nles cheveux se dressaient sur la tête.</p>",
+      "source": "Un silence sombre et pesant comme celui qui précède les catastrophes de\nla nature enveloppa dans son manteau de plomb tous les assistants, dont\nles cheveux se dressaient sur la tête.",
+      "source_sha256": "b0376dbe24299fd86d13abc9ba9c304d0c0be7cf2e54b1796df12f1d8762fc78",
+      "target_html": "<p>Мрачная и тягостная тишина, подобная той, что предшествует стихийным бедствиям,\nобернула своим свинцовым плащом всех присутствующих, у которых\nволосы встали дыбом.</p>",
+      "target_sha256": "06c0e9f45988ce086e1e527a5865515a752643fcbd9d3c4d1cf58e1321aac6aa",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0085",
+      "role": "body",
+      "source_html": "<p>«Et quoi! monsieur de Villefort, s'écria le président, vous ne cédez pas\nà une hallucination? Quoi! vous jouissez de la plénitude de vos\nfacultés? On concevrait qu'une accusation si étrange, si imprévue, si\nterrible, ait troublé vos esprits? voyons, remettez-vous.»</p>",
+      "source": "«Et quoi! monsieur de Villefort, s'écria le président, vous ne cédez pas\nà une hallucination? Quoi! vous jouissez de la plénitude de vos\nfacultés? On concevrait qu'une accusation si étrange, si imprévue, si\nterrible, ait troublé vos esprits? voyons, remettez-vous.»",
+      "source_sha256": "b8f80786f43e8792584a5500da772331e47877046fee4f33fdf947e1f3de073a",
+      "target_html": "<p>«И что же! Месье де Вильфор, — воскликнул председатель, — вы же не поддаётесь\nгаллюцинациям? Что же! Вы в полном владении своими\nумами? Можно было бы предположить, что столь странное, столь неожиданное, столь\nужасное обвинение потрясло ваш разум? Ну же, придите в себя».</p>",
+      "target_sha256": "18d31afb4b6e63dfbeedcd72bae7d52fb6c9c9df0203e402494cd8acc41487f4",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0086",
+      "role": "body",
+      "source_html": "<p>Le procureur du roi secoua la tête. Ses dents s'entrechoquaient avec\nviolence comme celles d'un homme dévoré par la fièvre, et cependant il\nétait d'une pâleur mortelle.</p>",
+      "source": "Le procureur du roi secoua la tête. Ses dents s'entrechoquaient avec\nviolence comme celles d'un homme dévoré par la fièvre, et cependant il\nétait d'une pâleur mortelle.",
+      "source_sha256": "02840f13119af8e76e43ec4e9c6f7fafedfde4d00c59a1bd499008190721a853",
+      "target_html": "<p>Королевский прокурор покачал головой. Его зубы с\nсилой стучали друг о друга, как у человека, охваченного лихорадкой, и при этом он\nбыл смертельно бледен.</p>",
+      "target_sha256": "cedfde79a0d3c01ff104a0af89ce1bf6fba06287c505128c56a8107c8b7a7003",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0087",
+      "role": "body",
+      "source_html": "<p>«Je jouis de toutes mes facultés, monsieur, dit-il; le corps seulement\nsouffre et cela se conçoit. Je me reconnais coupable de tout ce que ce\njeune homme vient d'articuler contre moi, et je me tiens chez moi à la\ndisposition de M. le procureur du roi mon successeur.»</p>",
+      "source": "«Je jouis de toutes mes facultés, monsieur, dit-il; le corps seulement\nsouffre et cela se conçoit. Je me reconnais coupable de tout ce que ce\njeune homme vient d'articuler contre moi, et je me tiens chez moi à la\ndisposition de M. le procureur du roi mon successeur.»",
+      "source_sha256": "c9309fafe8e87e03d22eb484f52112777ade1406b637d47a75743ebd45ffc8bc",
+      "target_html": "<p>«Я в полном рассудке, месье, — сказал он, — только тело\nстрадает, и это понятно. Я признаю себя виновным во всём, что этот\nмолодой человек только что изложил против меня, и остаюсь у себя дома в\nраспоряжении господина королевского прокурора, моего преемника».</p>",
+      "target_sha256": "97c75de010e27966fd65cc48a6719ead3d347fc6701b83ea6d74ce24b9438937",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0088",
+      "role": "body",
+      "source_html": "<p>Et en prononçant ces mots d'une voix sourde et presque étouffée, M. de\nVillefort se dirigea en vacillant vers la porte, que lui ouvrit d'un\nmouvement machinal l'huissier de service.</p>",
+      "source": "Et en prononçant ces mots d'une voix sourde et presque étouffée, M. de\nVillefort se dirigea en vacillant vers la porte, que lui ouvrit d'un\nmouvement machinal l'huissier de service.",
+      "source_sha256": "4a88e1d9204cb3208adcf968ac9507abadeddd941cd055134f239ea3745891ac",
+      "target_html": "<p>И, произнеся эти слова приглушенным, почти задыхающимся голосом, господин\nде Вильфор пошатываясь направился к двери, которую ему открыл\nмеханическим движением дежурный судебный пристав.</p>",
+      "target_sha256": "8ff5bf268f64ecba80b819359318241bcd9ba570a75a796f35e37153b22d4dc1",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0089",
+      "role": "body",
+      "source_html": "<p>L'assemblée tout entière demeura muette et consternée par cette\nrévélation et par cet aveu, qui faisaient un dénouement si terrible aux\ndifférentes péripéties qui, depuis quinze jours, avaient agité la haute\nsociété parisienne.</p>",
+      "source": "L'assemblée tout entière demeura muette et consternée par cette\nrévélation et par cet aveu, qui faisaient un dénouement si terrible aux\ndifférentes péripéties qui, depuis quinze jours, avaient agité la haute\nsociété parisienne.",
+      "source_sha256": "16f848e6b45873de025917ad75ca454d69abbff1a90ba9e77f291689ccf81cc6",
+      "target_html": "<p>Все собравшиеся замерли в молчании, потрясенные этим\nраскрытием и этим признанием, которые стали столь ужасным развязкой\nразличных перипетий, всколыхнувших за последние пятнадцать дней высшее\nпарижское общество.</p>",
+      "target_sha256": "b5fa29747b897c20e392e4328e1fd32ad305b8665a861d13a34ba9953721537a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0090",
+      "role": "body",
+      "source_html": "<p>«Eh bien, dit Beauchamp, qu'on vienne dire maintenant que le drame n'est\npas dans la nature!</p>",
+      "source": "«Eh bien, dit Beauchamp, qu'on vienne dire maintenant que le drame n'est\npas dans la nature!",
+      "source_sha256": "32727e025e188164e2607f0ed749f4a4eeaa2bc3232ecf68a8d79386d48b3b25",
+      "target_html": "<p>«Ну, — сказал Бошан, — пусть теперь кто-нибудь скажет, что драма\nне лежит в природе!»</p>",
+      "target_sha256": "77c3d93b5847bd77d4980fe70441c1d5f32126c89a4a75b0b697225667fed60c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0091",
+      "role": "body",
+      "source_html": "<p>—Ma foi, dit Château-Renaud, j'aimerais encore mieux finir comme M. de\nMorcerf: un coup de pistolet paraît doux près d'une pareille\ncatastrophe.</p>",
+      "source": "—Ma foi, dit Château-Renaud, j'aimerais encore mieux finir comme M. de\nMorcerf: un coup de pistolet paraît doux près d'une pareille\ncatastrophe.",
+      "source_sha256": "03acabf969fcd5102f53301042afebc5bf1613bc9ff5b924d42b8dff25b0261f",
+      "target_html": "<p>— Честно говоря, — сказал Шато-Рено, — я бы предпочёл закончить жизнь так же, как месье де\nМорсерф: выстрел из пистолета кажется мягким на фоне такой\nкатастрофы.</p>",
+      "target_sha256": "db66a5e9629d2c0f0c0538fc20b8147f3c3ae658b7be1329bc26b99065d3f48a",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0092",
+      "role": "body",
+      "source_html": "<p>—Et puis il tue, dit Beauchamp.</p>",
+      "source": "—Et puis il tue, dit Beauchamp.",
+      "source_sha256": "c41632a4f9c28cb5365aac208c0503079cd8537ad7abf2c86789157b692ed691",
+      "target_html": "<p>— Да к тому же он убивает, — сказал Бошам.</p>",
+      "target_sha256": "b7ff02a07969827fd3ab994657bf215898a3e3bb4eb93ffd4830ddc7056b1b4d",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0093",
+      "role": "body",
+      "source_html": "<p>—Et moi qui avais eu un instant l'idée d'épouser sa fille, dit Debray.\nA-t-elle bien fait de mourir, mon Dieu, la pauvre enfant!</p>",
+      "source": "—Et moi qui avais eu un instant l'idée d'épouser sa fille, dit Debray.\nA-t-elle bien fait de mourir, mon Dieu, la pauvre enfant!",
+      "source_sha256": "093dcf48a4d85af08180393721f8bee45ee1c409db781dd1e7c1940b1b756164",
+      "target_html": "<p>—А я-то на мгновение даже подумал о том, чтобы жениться на его дочери, — сказал Дебрей.\nБоже мой, как же хорошо, что она умерла, бедное дитя!</p>",
+      "target_sha256": "d454f2ec14fc5e8c8a43989d6838439d42d4dd32d08c585830d569a310c66294",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0094",
+      "role": "body",
+      "source_html": "<p>—La séance est levée, messieurs, dit le président, et la cause remise à\nla prochaine session. L'affaire doit être instruite de nouveau et\nconfiée à un autre magistrat.»</p>",
+      "source": "—La séance est levée, messieurs, dit le président, et la cause remise à\nla prochaine session. L'affaire doit être instruite de nouveau et\nconfiée à un autre magistrat.»",
+      "source_sha256": "847b30e60cf07a632e3b2396272fd96babeb821ee7f65b62c4294d60b8d0aaaf",
+      "target_html": "<p>—Заседание закрыто, господа, — сказал председатель, — и дело отложено до\nследующей сессии. Дело должно быть рассмотрено заново и\nпередано другому судье.»</p>",
+      "target_sha256": "3d2f713f0799528ce25ab330c6c394f44ef0bdead00b343dd093ea3e739f7c9c",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0095",
+      "role": "body",
+      "source_html": "<p>Quant à Andrea, toujours aussi tranquille et beaucoup plus intéressant,\nil quitta la salle escorté par les gendarmes, qui involontairement lui\ntémoignaient des égards.</p>",
+      "source": "Quant à Andrea, toujours aussi tranquille et beaucoup plus intéressant,\nil quitta la salle escorté par les gendarmes, qui involontairement lui\ntémoignaient des égards.",
+      "source_sha256": "c3e0e2b3f880cd5e7d70531e2fd429c2114d52358f78a610afc58e37dd69685b",
+      "target_html": "<p>Что же касается Андреа, по-прежнему столь же спокойного и гораздо более интересного,\nто он покинул зал в сопровождении жандармов, которые невольно\nпроявляли к нему почтение.</p>",
+      "target_sha256": "ecdbc7c749bfcdedf97c547927f20a443ea71f8ef5977e5d524a27fb738573f3",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0096",
+      "role": "body",
+      "source_html": "<p>«Eh bien, que pensez-vous de cela, mon brave homme? demanda Debray au\nsergent de ville, en lui glissant un louis dans la main.</p>",
+      "source": "«Eh bien, que pensez-vous de cela, mon brave homme? demanda Debray au\nsergent de ville, en lui glissant un louis dans la main.",
+      "source_sha256": "3d55c6b50be1a6a24a4f8635da1ccda6f8ee8d5ad28f9e9777a468790f0e39dc",
+      "target_html": "<p>«Ну, что вы об этом думаете, мой добрый человек? — спросил Дебрей у\nгородского сержанта, сунув ему в руку луи.</p>",
+      "target_sha256": "38199a9c4e6fbead0e4040cc88172d29e3cb4247b08b862ed512826e8992d8ed",
+      "model_type_used": "quality_optimized"
+    },
+    {
+      "id": "110-0097",
+      "role": "body",
+      "source_html": "<p>—Il y aura des circonstances atténuantes», répondit celui-ci.</p>",
+      "source": "—Il y aura des circonstances atténuantes», répondit celui-ci.",
+      "source_sha256": "b5aecac96e4c49e19b0b8ea3a8405d7b7c0943536cae7b4a6b63bf01cf41740e",
+      "target_html": "<p>— «Будут смягчающие обстоятельства», — ответил тот.</p>",
+      "target_sha256": "7ff7567355e6c16c6b37664ec455d1dfc2c65b38e049dd786ab7f3849171cede",
+      "model_type_used": "quality_optimized"
+    }
+  ],
+  "engine": "DeepL",
+  "requested_model": "quality_optimized",
+  "source_language": "FR",
+  "target_language": "RU"
+}
