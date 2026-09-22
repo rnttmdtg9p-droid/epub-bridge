@@ -1,0 +1,47 @@
+name: Recover rank27 authentic chapter sources
+on:
+  push:
+    paths: ['.github/workflows/bb-ru27-chapters.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover linked chapters with polite delay
+        run: |
+          python3 -u - <<'PY'
+          from pathlib import Path
+          import urllib.request,urllib.parse,urllib.error,json,re,time,hashlib
+          root=Path('results/ru27-chapters');root.mkdir(parents=True,exist_ok=True);ledger=[]
+          sources=[('childhood','results/ru25-28-sources/027-026.html','Детство_(Толстой)/Глава_'),('youth','results/ru25-28-sources/027-028.html','Юность_(Толстой)/Глава_')]
+          for work,path,prefix in sources:
+            links=[]
+            for href in re.findall(r'href="(/wiki/[^"]+)"',Path(path).read_text()):
+              title=urllib.parse.unquote(href[len('/wiki/'):]).split('#')[0]
+              if title.startswith(prefix) and title not in links:links.append(title)
+            for i,title in enumerate(links,1):
+              row={'work':work,'chapter':i,'title':title}
+              url='https://ru.wikisource.org/w/api.php?'+urllib.parse.urlencode({'action':'parse','page':title.replace('_',' '),'prop':'text|revid','format':'json'})
+              for attempt in range(2):
+                time.sleep(10 if attempt==0 else 45)
+                try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'BBClassicsProduction/1.0 (public-domain source research)'})
+                  data=json.load(urllib.request.urlopen(req,timeout=60));text=data['parse']['text']['*'];name=f'{work}-{i:03}.html';(root/name).write_text(text)
+                  row.update(status='RECOVERED',file=name,revision=data['parse']['revid'],sha256=hashlib.sha256(text.encode()).hexdigest());break
+                except Exception as e:row.update(status='FAILED',error=str(e))
+              ledger.append(row);(root/'ledger.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2));print(title,row['status'],flush=True)
+          PY
+      - name: Save source checkpoint
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ru27-chapters/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Save Tolstoy original chapters for Russian rank27"
+          git pull --rebase origin main
+          git push origin HEAD:main
