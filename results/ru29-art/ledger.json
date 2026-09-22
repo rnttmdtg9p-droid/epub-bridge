@@ -13,13 +13,19 @@
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/3/37/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image003.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Too many requests (f061ab2)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image003.jpg",
+    "sha256": "f798765cddf19395d4d7c241857da8e2e8a12efb3196ee922255c0d39f504ebd",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/a/ae/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image004.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Too many requests (f061ab2)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image004.jpg",
+    "sha256": "d3d595f4e46a8cb558485f5209f1148b52a3bcb0923542f71f00d86f48f88495",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/2/27/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image006.jpg",
@@ -29,13 +35,19 @@
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/b/b9/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image007.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Too many requests (f061ab2)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image007.jpg",
+    "sha256": "fbe34740f37ed93f3464c88ced52c5a8ee8be5320a56f8afc27521a7d54e20bd",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/2/2c/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image008.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Too many requests (f061ab2)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image008.jpg",
+    "sha256": "98bbc43fc5c9e97d43a571fbb84260cd14c6730248a9732b5e5fcca3fd5b2fe6",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/1/19/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image009.jpg",
@@ -45,82 +57,130 @@
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/3/3d/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image010.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Too many requests (f061ab2)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image010.jpg",
+    "sha256": "f92fa1d01a10203bf024c1987e48c2f2dac23725af2b34eac20e620766a77380",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/4/48/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image012.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Too many requests (f061ab2)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Too many requests (f061ab2)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image012.jpg",
+    "sha256": "9c1a29e733cd982e31ad462d65323ceb8cb248ba46bb01303d483e64d61e2662",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/e/e0/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image014.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image014.jpg",
+    "sha256": "99a5f8ca3e9ca886f1fe2382e0d5e4257f4a79000b018330fc5834d08d2df2d1",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/1/17/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image015.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image015.jpg",
+    "sha256": "5635a846d3d6feeadb03c581ccfa68f0a136bdcff53ca9e358eb5ddb6b5202b0",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/f/fc/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image016.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image016.jpg",
+    "sha256": "626a465061b5e1e4ffb310c22cf2976e16ddb8d531efa9caa582aa998cd8e99f",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/b/bb/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image017.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image017.jpg",
+    "sha256": "dcca7167f8e5ef1713cdadb1aa18dbeff8cebe65dd80e82e0dd73cbd5349469b",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/2/24/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image018.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image018.jpg",
+    "sha256": "144b77f74bb526a6987cce9ed96d4067956ac5e5fabdc42f22de0ff3882782b8",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/a/ad/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image019.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image019.jpg",
+    "sha256": "85c9429bfc22f1f954d9e8311b9903f10c213036fb9b3704e6fafc5f676d9f9c",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/d/d5/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image020.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image020.jpg",
+    "sha256": "c38da37810f72ff821d2a696e3166a892daed50972a1dff40937be1e2beffbf6",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/5/5c/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image021.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image021.jpg",
+    "sha256": "2684cf4399ba80b18b845a243c200e734575150d2a2bc12db946014fab0039e3",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/0/07/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image022.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image022.jpg",
+    "sha256": "2d36a50a4daee0baeddb6fd4449fba45960ef581f0ccfad49230c3bf0df9359c",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/a/a6/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image023.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image023.jpg",
+    "sha256": "7f9a527386cd6e2a857d5f3c6fba156999b5f899c1ad07e36b721a4d55dcd0d6",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/d/dc/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image024.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image024.jpg",
+    "sha256": "23d36db238b2aa48858c553ec618f175ac730f471caaeef959c5d4c8dce30062",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/9/9b/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image025.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image025.jpg",
+    "sha256": "44ac22f30910b30b174615e35877900d601455ee5430fedf8c97e74a2b3a0fb1",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/9/90/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image026.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image026.jpg",
+    "sha256": "e74c515beb0085172ff9ab70a97417d696579c4a944e3852a89ff5c6824fa239",
+    "retry_attempt": 1
   },
   {
     "url": "https://upload.wikimedia.org/wikisource/ru/5/51/Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image027.jpg",
-    "status": "FAILED",
-    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    "status": "RECOVERED",
+    "error": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)",
+    "file": "Wern_z_text_1870_20000_mille_lieues_sous_les_mers-vovchok_image027.jpg",
+    "sha256": "041a46102c4bf7e9c5b7d60987c7501f9a08df4289fafe3d2c8d966d90303c01",
+    "retry_attempt": 1
   }
 ]
