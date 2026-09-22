@@ -1,0 +1,47 @@
+name: Resume Russian source recovery with backoff
+on:
+  push:
+    paths: ['.github/workflows/bb-ru25-28-resume.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover remaining public source pages
+        run: |
+          python3 -u - <<'PY'
+          import urllib.request,urllib.parse,urllib.error,json,hashlib,time
+          from pathlib import Path
+          root=Path('results/ru25-28-sources');ledger=json.loads((root/'ledger.json').read_text())
+          for i,row in enumerate(ledger):
+            if row['status']=='RECOVERED':continue
+            title=row['title'];url='https://ru.wikisource.org/w/api.php?'+urllib.parse.urlencode({'action':'parse','page':title,'prop':'text|revid','format':'json'})
+            for attempt in range(3):
+              time.sleep(10 if attempt==0 else 45)
+              try:
+                req=urllib.request.Request(url,headers={'User-Agent':'BBClassicsProduction/1.0 (public-domain source research)'})
+                data=json.load(urllib.request.urlopen(req,timeout=60));text=data['parse']['text']['*']
+                name=f"{row['rank']:03}-{i:03}.html";(root/name).write_text(text)
+                row.update(file=name,revision=data['parse']['revid'],sha256=hashlib.sha256(text.encode()).hexdigest(),status='RECOVERED',recovery_attempt=attempt+1)
+                break
+              except urllib.error.HTTPError as e:
+                row.update(status='FAILED',error=str(e))
+                if e.code!=429:break
+              except Exception as e:row.update(status='FAILED',error=str(e));break
+            (root/'ledger.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2))
+            print(title,row['status'],flush=True)
+          PY
+      - name: Save source checkpoint
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ru25-28-sources/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Checkpoint recovered Russian originals after rate-limit backoff"
+          git pull --rebase origin main
+          git push origin HEAD:main
