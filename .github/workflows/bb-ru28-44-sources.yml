@@ -1,0 +1,24 @@
+name: Recover Russian ranks28–44 source candidates
+on:
+  push:
+    paths: ['.github/workflows/bb-ru28-44-sources.yml','scripts/ru28-44-recover.py','scripts/ru28-44-candidates.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -u scripts/ru28-44-recover.py
+      - name: Preserve public sources
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/ru28-44-sources/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Save Russian rank28–44 source candidates"
+          git pull --rebase origin main
+          git push origin HEAD:main
