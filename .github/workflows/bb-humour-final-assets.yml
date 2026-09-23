@@ -1,0 +1,42 @@
+name: BB humour final portrait acquisition
+on:
+  push:
+    paths: ['.github/workflows/bb-humour-final-assets.yml']
+permissions:
+  contents: write
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install -q requests pillow
+      - run: |
+          python - <<'PY'
+          import requests,pathlib,json,hashlib
+          from PIL import Image
+          from io import BytesIO
+          from urllib.parse import quote
+          root=pathlib.Path('acquired/bb-humour-fast-20260923');root.mkdir(parents=True,exist_ok=True)
+          files={'006':'Weedon and George Grossmith.jpg','009':'Hector Hugh Munro aka Saki, by E O Hoppe, 1913.jpg','010':'Evelyn Waugh, by Van Vechten.png','earnest-lane':'Aynesworth-and-Peile-Importance-of-Being-Earnest-1895.jpg','earnest-cigarette':'The Importance of Being Earnest - Cigarettecase.jpg'}
+          records=[]
+          for key,name in files.items():
+           name=name.replace(' ','_');h=hashlib.md5(name.encode()).hexdigest()
+           urls=['https://upload.wikimedia.org/wikipedia/commons/'+h[0]+'/'+h[:2]+'/'+quote(name,safe=',()'),'https://upload.wikimedia.org/wikipedia/commons/thumb/'+h[0]+'/'+h[:2]+'/'+quote(name,safe=',()')+'/500px-'+quote(name,safe=',()')]
+           if key=='010':urls.insert(0,'https://tile.loc.gov/storage-services/service/pnp/van/5a52000/5a52700/5a52769r.jpg')
+           row={'id':key,'attempts':[]}
+           for url in urls:
+            try:
+             r=requests.get(url,timeout=12);r.raise_for_status();img=Image.open(BytesIO(r.content));img.convert('RGB').save(root/(key+'.jpg'),quality=95);row.update(status='downloaded',url=url,dimensions=img.size);break
+            except Exception as e:row['attempts'].append(str(e))
+           records.append(row)
+          (root/'ledger.json').write_text(json.dumps(records,indent=2))
+          
+          PY
+      - run: |
+          git config user.name "BB asset acquisition"
+          git config user.email "actions@users.noreply.github.com"
+          git add acquired/bb-humour-fast-20260923
+          git commit -m "Preserve final public portrait acquisition evidence"
+          git pull --rebase origin main
+          git push origin HEAD:main
