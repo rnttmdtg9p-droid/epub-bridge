@@ -1,0 +1,40 @@
+[
+  {
+    "id": "006",
+    "attempts": [
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/9/93/Weedon_and_George_Grossmith.jpg",
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Weedon_and_George_Grossmith.jpg/500px-Weedon_and_George_Grossmith.jpg"
+    ]
+  },
+  {
+    "id": "009",
+    "attempts": [
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/c/cc/Hector_Hugh_Munro_aka_Saki,_by_E_O_Hoppe,_1913.jpg",
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hector_Hugh_Munro_aka_Saki,_by_E_O_Hoppe,_1913.jpg/500px-Hector_Hugh_Munro_aka_Saki,_by_E_O_Hoppe,_1913.jpg"
+    ]
+  },
+  {
+    "id": "010",
+    "attempts": [],
+    "status": "downloaded",
+    "url": "https://tile.loc.gov/storage-services/service/pnp/van/5a52000/5a52700/5a52769r.jpg",
+    "dimensions": [
+      483,
+      640
+    ]
+  },
+  {
+    "id": "earnest-lane",
+    "attempts": [
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/1/19/Aynesworth-and-Peile-Importance-of-Being-Earnest-1895.jpg",
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Aynesworth-and-Peile-Importance-of-Being-Earnest-1895.jpg/500px-Aynesworth-and-Peile-Importance-of-Being-Earnest-1895.jpg"
+    ]
+  },
+  {
+    "id": "earnest-cigarette",
+    "attempts": [
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/8/8a/The_Importance_of_Being_Earnest_-_Cigarettecase.jpg",
+      "403 Client Error: Forbidden for url: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/The_Importance_of_Being_Earnest_-_Cigarettecase.jpg/500px-The_Importance_of_Being_Earnest_-_Cigarettecase.jpg"
+    ]
+  }
+]
