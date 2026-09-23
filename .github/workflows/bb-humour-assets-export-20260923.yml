@@ -1,0 +1,60 @@
+name: BB humour public assets 20260923
+on:
+  push:
+    paths: ['.github/workflows/bb-humour-assets-export-20260923.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch public portraits and documentary scenes
+        run: |
+          python -m pip install -q pillow requests
+          mkdir -p assets
+          python - <<'PY'
+          import requests,pathlib,json,hashlib,time
+          from PIL import Image
+          from io import BytesIO
+          from urllib.parse import quote
+          files={
+          '001':'Jerome K. Jerome (7893553318).jpg',
+          '002':'Oscar Wilde by Sarony 1882 01.jpg',
+          '003':'PGWodehouse.jpg',
+          '006':'Weedon and George Grossmith.jpg',
+          '007':'Mark Twain by AF Bradley.jpg',
+          '008':'Charles Dickens 1867.jpg',
+          '009':'Hector Hugh Munro aka Saki, by E O Hoppe, 1913.jpg',
+          '010':'Evelyn Waugh, by Van Vechten.png',
+          'earnest-lane':'Aynesworth-and-Peile-Importance-of-Being-Earnest-1895.jpg',
+          'earnest-cigarette':'The Importance of Being Earnest - Cigarettecase.jpg'}
+          ledger=[]
+          for key,fn in files.items():
+            fn=fn.replace(' ','_');md=hashlib.md5(fn.encode()).hexdigest()
+            u='https://upload.wikimedia.org/wikipedia/commons/'+md[0]+'/'+md[:2]+'/'+quote(fn)
+            d={'id':key,'url':u,'page':'https://commons.wikimedia.org/wiki/File:'+quote(fn)}
+            try:
+              r=requests.get(u,headers={'User-Agent':'BoundaryBayClassics/1.0 public-domain asset research'},timeout=90);r.raise_for_status()
+              p=pathlib.Path('assets')/(key+'.jpg');im=Image.open(BytesIO(r.content));im.load();im.convert('RGB').save(p,quality=95);d.update(status='downloaded',sha256=hashlib.sha256(p.read_bytes()).hexdigest(),size=im.size)
+            except Exception as e:d.update(status='failed',error=str(e))
+            ledger.append(d);time.sleep(2)
+          pathlib.Path('assets/ledger.json').write_text(json.dumps(ledger,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb-humour-assets-20260923
+          path: assets/
+          retention-days: 7
+
+      - name: Save acquired public-domain assets
+        run: |
+          mkdir -p acquired/bb-humour-20260923
+          cp assets/* acquired/bb-humour-20260923/
+          git config user.name "BB asset acquisition"
+          git config user.email "actions@users.noreply.github.com"
+          git add acquired/bb-humour-20260923
+          git commit -m "Preserve public BB humour asset acquisition"
+          git pull --rebase origin main
+          git push origin HEAD:main
