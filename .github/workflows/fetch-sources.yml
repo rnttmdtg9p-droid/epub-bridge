@@ -2,6 +2,8 @@ name: Fetch Italian EPUB Sources
 
 on:
   push:
+    paths:
+      - '.github/workflows/fetch-sources.yml'
   workflow_dispatch:
 
 permissions:

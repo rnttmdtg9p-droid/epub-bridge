@@ -2,6 +2,8 @@ name: Fetch Pinocchio Book 6 Sources
 
 on:
   push:
+    paths:
+      - '.github/workflows/fetch-pinocchio-book6.yml'
   workflow_dispatch:
 
 permissions:

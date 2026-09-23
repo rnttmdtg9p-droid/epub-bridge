@@ -2,6 +2,8 @@ name: Fetch L'Innocente Sartorio Gallery
 
 on:
   push:
+    paths:
+      - '.github/workflows/fetch-linnocente-sartorio-gallery.yml'
   workflow_dispatch:
 
 permissions:
