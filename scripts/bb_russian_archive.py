@@ -31,6 +31,8 @@ GATES = {
     "resources_and_typography", "assets_and_rights", "bb_technical_preflight",
     "epubcheck", "rendered_layout", "reader_navigation",
     "delivery_verification",
+    "reader_safe_opening_qa32", "opening_acceptance_qa33",
+    "opening_promotion_guard_qa35", "source_presentation_qa36",
 }
 COLLECTION_GATES = {
     "roster_reconciliation", "follow_on_rebuilds", "master_audit",
