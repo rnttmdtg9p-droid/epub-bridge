@@ -11,7 +11,10 @@ The committed roster was frozen from version 1716 of the durable production
 manifest. It selects 186 ranks from the 200-rank catalog, excludes the 14
 already-built ranks, and identifies the six follow-on rebuilds among those 14.
 Selected ranks are ordered but **not contiguous**. Each title retains its
-original `rank`, `title`, and `author`; do not renumber titles to 1–186.
+original `rank`, `title`, and `author`; do not renumber titles to 1–186. The
+roster also pins the approved Master SHA-256 from that snapshot (v5.0.64).
+If a newer Master is approved before release, update this pin and re-audit
+every title against the newer rules before creating the checkpoint manifest.
 
 The Release `archive-manifest.json` has this shape (showing one title only):
 
