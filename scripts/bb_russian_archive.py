@@ -258,6 +258,7 @@ def main():
                 and manifest.get("expected_title_count") == 186
                 and manifest.get("checkpoint_tag") == args.tag
                 and manifest.get("roster_sha256") == roster_sha
+                and manifest.get("master_sha256") == roster.get("master_sha256")
                 and isinstance(manifest.get("master_sha256"), str)
                 and SHA.fullmatch(manifest["master_sha256"]), "invalid checkpoint manifest header")
         entries = manifest.get("titles", [])
