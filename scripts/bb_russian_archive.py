@@ -153,7 +153,9 @@ def check_collection_evidence(path, manifest, roster_sha):
         report = json.loads(archive.read("report.json"))
         require(report.get("roster_sha256") == roster_sha, "collection roster binding")
         require(report.get("master_sha256") == manifest["master_sha256"], "collection master binding")
-        title_digest = hashlib.sha256(json.dumps(manifest["titles"], ensure_ascii=False,
+        ledger = {"titles": manifest["titles"],
+                  "follow_on_rebuilds": manifest["follow_on_rebuilds"]}
+        title_digest = hashlib.sha256(json.dumps(ledger, ensure_ascii=False,
                                           sort_keys=True, separators=(",", ":")).encode()).hexdigest()
         require(report.get("titles_sha256") == title_digest,
                 "collection title ledger binding")
@@ -184,8 +186,8 @@ def check_epub(path, jar):
     return result.stdout
 
 
-def assemble(epubs, out):
-    out.mkdir(parents=True, exist_ok=False)
+def assemble(epubs, out, prefix, ledger_name):
+    out.mkdir(parents=True, exist_ok=True)
     parts, group, size = [], [], 0
     for entry, path in epubs:
         if group and size + path.stat().st_size > MAX_PART:
@@ -197,7 +199,7 @@ def assemble(epubs, out):
         parts.append(group)
     archives = []
     for index, group in enumerate(parts, 1):
-        name = f"BB_Russian_Collection_186_part{index:02d}.zip"
+        name = f"{prefix}_part{index:02d}.zip"
         target = out / name
         with zipfile.ZipFile(target, "w", allowZip64=False) as z:
             for entry, path in group:
@@ -214,7 +216,7 @@ def assemble(epubs, out):
     ledger = {"titles": [{"rank": e["rank"], "file": e["epub_asset"],
                           "sha256": e["sha256"], "bytes": e["size"]} for e, _ in epubs],
               "archives": archives}
-    (out / "SHA256SUMS.json").write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n")
+    (out / ledger_name).write_text(json.dumps(ledger, ensure_ascii=False, indent=2) + "\n")
     return archives
 
 
@@ -231,10 +233,20 @@ def main():
     roster_sha = digest(args.roster)
     roster = json.loads(args.roster.read_text(encoding="utf-8"))
     required = roster.get("titles", [])
+    selected_ranks = [t["rank"] for t in required]
+    excluded = roster.get("excluded_ranks", [])
+    follow_roster = roster.get("follow_on_rebuilds", [])
     require(roster.get("expected_title_count") == 186 and len(required) == 186
-            and [t["rank"] for t in required] == list(range(1, 187))
+            and selected_ranks == sorted(set(selected_ranks))
+            and len(excluded) == 14 and excluded == sorted(set(excluded))
+            and set(selected_ranks).isdisjoint(excluded)
+            and set(selected_ranks) | set(excluded) == set(range(1, 201))
+            and len(follow_roster) == 6
+            and {t["title"] for t in follow_roster} == FOLLOW_ON
+            and {t["rank"] for t in follow_roster} <= set(excluded)
+            and all(t.get("author") for t in follow_roster)
             and all(t.get("title") and t.get("author") for t in required),
-            "invalid frozen roster; need 186 ordered identities")
+            "invalid frozen roster; need 186 selected identities and 14 excluded ranks")
     assets = release_assets(args.tag, token)
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp)
@@ -249,10 +261,13 @@ def main():
                 and isinstance(manifest.get("master_sha256"), str)
                 and SHA.fullmatch(manifest["master_sha256"]), "invalid checkpoint manifest header")
         entries = manifest.get("titles", [])
-        require(len(entries) == 186 and [e["rank"] for e in entries] == list(range(1, 187)),
-                "missing, duplicate or out-of-order rank")
+        require(len(entries) == 186 and [e["rank"] for e in entries] == selected_ranks,
+                "missing, duplicate or out-of-order selected rank")
+        follow = manifest.get("follow_on_rebuilds", [])
+        require(len(follow) == 6 and [e["rank"] for e in follow] ==
+                [e["rank"] for e in follow_roster], "six follow-on ranks not reconciled")
         names = set()
-        for want, entry in zip(required, entries):
+        for want, entry in list(zip(required, entries)) + list(zip(follow_roster, follow)):
             require((entry.get("title"), entry.get("author")) ==
                     (want["title"], want["author"]), f"roster identity mismatch: {want['rank']}")
             require(entry.get("status") == "RELEASED", f"rank {want['rank']} is not released")
@@ -264,20 +279,13 @@ def main():
             names.update((epub, qa))
             require(isinstance(entry.get("size"), int) and entry["size"] > 0,
                     f"invalid size for rank {want['rank']}")
-        follow = manifest.get("follow_on_rebuilds", [])
-        require(len(follow) == 6 and {x["title"] for x in follow} == FOLLOW_ON,
-                "six designated follow-on rebuilds not reconciled")
-        for item in follow:
-            require(any(e["rank"] == item.get("rank") and e["title"] == item["title"]
-                        and e["sha256"] == item.get("sha256") for e in entries),
-                    f"follow-on final bytes mismatch: {item['title']}")
         require(manifest.get("release_state") == "RELEASED", "collection not released")
         qa_spec = manifest.get("collection_qa", {})
         collection_qa = work / "collection_qa.zip"
         download(assets, qa_spec.get("asset"), collection_qa, token, qa_spec.get("sha256"))
         check_collection_evidence(collection_qa, manifest, roster_sha)
-        epubs = []
-        for entry in entries:
+        epubs, follow_epubs = [], []
+        for entry in entries + follow:
             rank = entry["rank"]
             path = work / entry["epub_asset"]
             qa_path = work / entry["qa_asset"]
@@ -285,12 +293,13 @@ def main():
             download(assets, entry["qa_asset"], qa_path, token, entry.get("qa_sha256"))
             check_evidence(qa_path, entry["sha256"], manifest["master_sha256"])
             check_epub(path, args.epubcheck_jar)
-            epubs.append((entry, path))
+            (epubs if entry["rank"] in selected_ranks else follow_epubs).append((entry, path))
             print(f"VERIFIED rank={rank:03d} sha256={entry['sha256']}", flush=True)
         require(not args.output.exists(), "output already exists")
-        archives = assemble(epubs, args.output)
+        archives = assemble(epubs, args.output, "BB_Russian_Collection_186", "SHA256SUMS_186.json")
+        follow_archives = assemble(follow_epubs, args.output, "BB_Russian_Follow_On_6", "SHA256SUMS_follow_on.json")
         shutil.copyfile(manifest_file, args.output / "archive-manifest.json")
-        print(f"ARCHIVE_READY titles=186 parts={len(archives)}", flush=True)
+        print(f"ARCHIVE_READY titles=186 parts={len(archives)} follow_on=6 follow_parts={len(follow_archives)}", flush=True)
 
 
 if __name__ == "__main__":
