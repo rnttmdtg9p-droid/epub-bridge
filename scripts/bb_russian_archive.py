@@ -15,6 +15,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
@@ -76,7 +77,12 @@ def api(url, token):
 
 def release_assets(tag, token):
     base = f"https://api.github.com/repos/{REPO}"
-    release = api(f"{base}/releases/tags/{urllib.parse.quote(tag, safe='')}", token)
+    try:
+        release = api(f"{base}/releases/tags/{urllib.parse.quote(tag, safe='')}", token)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            raise ValueError(f"checkpoint Release {tag!r} is absent; no final archive can be published") from exc
+        raise
     require(release["tag_name"] == tag, "checkpoint tag mismatch")
     result = {}
     page = 1
