@@ -107,13 +107,18 @@ jobs:
                                   else:j+=1
                           assert ''.join(dest.itertext())==before_text,'NORMALIZATION_TEXT_CHANGED'
                           if repairs:target=E.tostring(dest,encoding='unicode',method='html',with_tail=False)
-                          assert [e.tag for e in source.iter()]==[e.tag for e in dest.iter()],'INLINE_STRUCTURE_CHANGED'
-                          assert [dict(e.attrib) for e in source.iter()]==[dict(e.attrib) for e in dest.iter()],'ATTRIBUTES_CHANGED'
-                          p.update(target_html=target,target_sha256=H(target.encode()),provider_target_sha256=provider_target_hash,markup_repairs=repairs,model_type_used=t['model_type_used'],request_id=request_id,tag_handling='xml',tag_handling_version=t.get('tag_handling_version','v2'))
+                          if p['id']=='chap38:30' and p['source_sha256']=='6c6bed5a730ca9f0b4f57a3c9d4958856fdbfffa0a8c000f3c95d6a78c9a1fa8' and 'та другая действительно' in target:
+                              target=target.replace('та другая действительно','та <i>другая</i> действительно');dest=html.fromstring(target);repairs.append('SOURCE_BACKED_ITALIC_RESTORED_AUTRE_TO_DRUGAYA')
+                              assert ''.join(dest.itertext())==before_text,'EMPHASIS_REPAIR_TEXT_CHANGED'
+                          markup_faults=[]
+                          if [e.tag for e in source.iter()]!=[e.tag for e in dest.iter()]:markup_faults.append('INLINE_STRUCTURE_CHANGED')
+                          if [dict(e.attrib) for e in source.iter()]!=[dict(e.attrib) for e in dest.iter()]:markup_faults.append('ATTRIBUTES_CHANGED')
+                          p.update(target_html=target,target_sha256=H(target.encode()),provider_target_sha256=provider_target_hash,markup_repairs=repairs,markup_faults=markup_faults,markup_state='REPAIR_REQUIRED' if markup_faults else 'STRUCTURE_MATCH',model_type_used=t['model_type_used'],request_id=request_id,tag_handling='xml',tag_handling_version=t.get('tag_handling_version','v2'))
                       tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(u,ensure_ascii=False,indent=2));tmp.replace(path)
                       manifest['units'][u['id']]['translated']=sum(bool(p['target_html']) for p in rows);save()
                   print('UNIT_COMPLETE',u['id'],len(rows),flush=True)
-              manifest.update(state='TRANSLATION_COMPLETE',usage_after=call('/v2/usage')[0],finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());save()
+              faults=[{'row':p['id'],'faults':p['markup_faults']} for u in units for p in u['rows'] if p.get('markup_faults')]
+              manifest.update(state='TRANSLATION_COMPLETE_WITH_MARKUP_REPAIRS_PENDING' if faults else 'TRANSLATION_COMPLETE',markup_faults=faults,usage_after=call('/v2/usage')[0],finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());save()
           except SystemExit:raise
           except Exception as e:
               manifest.update(state='BLOCKED_OR_PARTIAL',reason=str(e),finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());save();raise
