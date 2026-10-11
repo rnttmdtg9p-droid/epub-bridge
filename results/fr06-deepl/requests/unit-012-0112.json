@@ -1,0 +1,32 @@
+{
+  "row_ids": [
+    "u012-p0113",
+    "u012-p0114",
+    "u012-p0115"
+  ],
+  "source_hashes": [
+    "81b8ef7306f56d576dcf642ca1abe0ce46d62c4c73c14e16b588b0c4320b1b2e",
+    "24bf7b033ca4f637bf42b6787a5311f4c368d7999bd51cff5522b9f9d841c224",
+    "6e8fa1af6832241ee4aa8a0b627ca520b8402c56d9c8f977a5e580bc1e647157"
+  ],
+  "request_id": "7553f57b75b04dc98112e1cc1a81469c",
+  "response": {
+    "translations": [
+      {
+        "text": "— Tu veux bien boire un thé maintenant ? demanda-t-elle.",
+        "detected_source_language": "RU",
+        "model_type_used": "quality_optimized"
+      },
+      {
+        "text": "— Plus tard ! Je veux dormir ! Laisse-moi…",
+        "detected_source_language": "RU",
+        "model_type_used": "quality_optimized"
+      },
+      {
+        "text": "Il se détourna brusquement vers le mur ; Nastasia sortit.",
+        "detected_source_language": "RU",
+        "model_type_used": "quality_optimized"
+      }
+    ]
+  }
+}

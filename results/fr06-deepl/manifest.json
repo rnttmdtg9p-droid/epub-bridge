@@ -1,0 +1,278 @@
+{
+  "rank": 6,
+  "title": "Crime et Châtiment",
+  "source_language": "RU",
+  "target_language": "FR",
+  "engine": "DeepL quality_optimized",
+  "source_epub_sha256": "dd707117897d84c1a79141714c81e233d95298b6554f061daefde226edb31732",
+  "source_json_sha256": "90e6239ede9a26f54dc8955c090c72eabc891a89e8ad82e14b5ab8472aeeebc0",
+  "units_expected": 41,
+  "rows_expected": 3765,
+  "state": "TRANSLATION_COMPLETE_REVIEW_PENDING",
+  "release_ready": false,
+  "units": {
+    "1": {
+      "rows": 48,
+      "translated": 48
+    },
+    "2": {
+      "rows": 57,
+      "translated": 57
+    },
+    "3": {
+      "rows": 43,
+      "translated": 43
+    },
+    "4": {
+      "rows": 46,
+      "translated": 46
+    },
+    "5": {
+      "rows": 77,
+      "translated": 77
+    },
+    "6": {
+      "rows": 62,
+      "translated": 62
+    },
+    "7": {
+      "rows": 87,
+      "translated": 87
+    },
+    "8": {
+      "rows": 138,
+      "translated": 138
+    },
+    "9": {
+      "rows": 66,
+      "translated": 66
+    },
+    "10": {
+      "rows": 122,
+      "translated": 122
+    },
+    "11": {
+      "rows": 78,
+      "translated": 78
+    },
+    "12": {
+      "rows": 115,
+      "translated": 115
+    },
+    "13": {
+      "rows": 218,
+      "translated": 218
+    },
+    "14": {
+      "rows": 152,
+      "translated": 152
+    },
+    "15": {
+      "rows": 90,
+      "translated": 90
+    },
+    "16": {
+      "rows": 84,
+      "translated": 84
+    },
+    "17": {
+      "rows": 139,
+      "translated": 139
+    },
+    "18": {
+      "rows": 129,
+      "translated": 129
+    },
+    "19": {
+      "rows": 164,
+      "translated": 164
+    },
+    "20": {
+      "rows": 70,
+      "translated": 70
+    },
+    "21": {
+      "rows": 128,
+      "translated": 128
+    },
+    "22": {
+      "rows": 111,
+      "translated": 111
+    },
+    "23": {
+      "rows": 64,
+      "translated": 64
+    },
+    "24": {
+      "rows": 185,
+      "translated": 185
+    },
+    "25": {
+      "rows": 95,
+      "translated": 95
+    },
+    "26": {
+      "rows": 106,
+      "translated": 106
+    },
+    "27": {
+      "rows": 90,
+      "translated": 90
+    },
+    "28": {
+      "rows": 23,
+      "translated": 23
+    },
+    "29": {
+      "rows": 74,
+      "translated": 74
+    },
+    "30": {
+      "rows": 166,
+      "translated": 166
+    },
+    "31": {
+      "rows": 106,
+      "translated": 106
+    },
+    "32": {
+      "rows": 57,
+      "translated": 57
+    },
+    "33": {
+      "rows": 63,
+      "translated": 63
+    },
+    "34": {
+      "rows": 81,
+      "translated": 81
+    },
+    "35": {
+      "rows": 38,
+      "translated": 38
+    },
+    "36": {
+      "rows": 129,
+      "translated": 129
+    },
+    "37": {
+      "rows": 53,
+      "translated": 53
+    },
+    "38": {
+      "rows": 80,
+      "translated": 80
+    },
+    "39": {
+      "rows": 85,
+      "translated": 85
+    },
+    "40": {
+      "rows": 11,
+      "translated": 11
+    },
+    "41": {
+      "rows": 35,
+      "translated": 35
+    }
+  },
+  "started_utc": "2026-10-11T21:14:57.300014+00:00",
+  "usage_before": {
+    "products": [
+      {
+        "product_type": "write",
+        "billing_unit": "characters",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "translate",
+        "billing_unit": "characters",
+        "api_key_unit_count": 4779789,
+        "account_unit_count": 4779789,
+        "api_key_character_count": 4779789,
+        "character_count": 4779789
+      },
+      {
+        "product_type": "speechToText",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "speechToSpeech",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      }
+    ],
+    "api_key_character_count": 4779789,
+    "api_key_character_limit": 1000000000000,
+    "start_time": "2026-09-21T01:38:46Z",
+    "end_time": "2026-10-21T01:38:46Z",
+    "character_count": 4779789,
+    "character_limit": 1000000000000,
+    "speech_to_text_milliseconds_count": 0,
+    "speech_to_text_milliseconds_limit": 0,
+    "speech_to_text_minutes_count": 0,
+    "speech_to_text_minutes_limit": 1800000,
+    "speech_to_speech_minutes_count": 0,
+    "speech_to_speech_minutes_limit": 1800000
+  },
+  "remaining_source_characters": 1066826,
+  "usage_after": {
+    "products": [
+      {
+        "product_type": "write",
+        "billing_unit": "characters",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "translate",
+        "billing_unit": "characters",
+        "api_key_unit_count": 5846615,
+        "account_unit_count": 5846615,
+        "api_key_character_count": 5846615,
+        "character_count": 5846615
+      },
+      {
+        "product_type": "speechToText",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      },
+      {
+        "product_type": "speechToSpeech",
+        "billing_unit": "minutes",
+        "api_key_unit_count": 0,
+        "account_unit_count": 0,
+        "api_key_character_count": 0,
+        "character_count": 0
+      }
+    ],
+    "api_key_character_count": 5846615,
+    "api_key_character_limit": 1000000000000,
+    "start_time": "2026-09-21T01:38:46Z",
+    "end_time": "2026-10-21T01:38:46Z",
+    "character_count": 5846615,
+    "character_limit": 1000000000000,
+    "speech_to_text_milliseconds_count": 0,
+    "speech_to_text_milliseconds_limit": 0,
+    "speech_to_text_minutes_count": 0,
+    "speech_to_text_minutes_limit": 1800000,
+    "speech_to_speech_minutes_count": 0,
+    "speech_to_speech_minutes_limit": 1800000
+  },
+  "finished_utc": "2026-10-11T21:23:13.787219+00:00"
+}
