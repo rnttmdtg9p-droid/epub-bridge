@@ -1,0 +1,186 @@
+name: BB French 06 Claude API pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/bb-fr06-claude-pilot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  translate-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Translate three source-aligned paragraphs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p staging/fr06-claude-pilot
+          python3 - <<'PY'
+          import datetime
+          import hashlib
+          import json
+          import os
+          import re
+          import sys
+          import urllib.error
+          import urllib.request
+          from pathlib import Path
+
+          API_VERSION = "2023-06-01"
+          MODEL = "claude-sonnet-5-5"
+          ENDPOINT = "https://api.anthropic.com/v1/messages"
+          SOURCE_EPUB_SHA256 = "dd707117897d84c1a79141714c81e233d95298b6554f061daefde226edb31732"
+          SOURCE_PACKAGE_SHA256 = "3923e211bd2aa3023c99922ed2e5e0d030c5bd5baf4dad9d4ce21cf35b11987a"
+
+          source_rows = [
+              {
+                  "id": "u009-p0052",
+                  "source_sha256": "d741c556ddf0b4c23a4a6c8789110be9c5a54311c4c9d7862fdd2651231f9880",
+                  "source": "— Небось со вчерашнего не ел. Целый-то день прошлялся, а самого лихоманка бьет.",
+              },
+              {
+                  "id": "u009-p0053",
+                  "source_sha256": "4429c4f78dd9e648bdac9aca0993d3391492c7a73d350c5d725f120d18c79ebb",
+                  "source": "— Настасья… за что били хозяйку?",
+              },
+              {
+                  "id": "u009-p0054",
+                  "source_sha256": "47db58719fc1f2f2b9592aa23d6839dd0c54094632e4b334c8ffcb3e3fc5cf3f",
+                  "source": "Она пристально на него посмотрела.",
+              },
+          ]
+
+          for row in source_rows:
+              actual = hashlib.sha256(row["source"].encode("utf-8")).hexdigest()
+              if actual != row["source_sha256"]:
+                  raise SystemExit("SOURCE_HASH_MISMATCH:" + row["id"])
+
+          key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+          if not key:
+              raise SystemExit("CLAUDE_PILOT: MISSING_ANTHROPIC_API_KEY")
+
+          system = (
+              "You are translating Fyodor Dostoevsky's Crime and Punishment from the "
+              "provided Russian source into substantive, publication-quality modern French. "
+              "Preserve meaning, tone, paragraph boundaries, names, dialogue punctuation, and "
+              "every source detail. Do not summarize, omit, add commentary, or modernize facts. "
+              "Return only a JSON array. Each object must contain exactly id, source_sha256, and french."
+          )
+          prompt = (
+              "Translate these three source-aligned paragraphs. Copy each id and source_sha256 "
+              "unchanged.\n" + json.dumps(source_rows, ensure_ascii=False)
+          )
+          request_body = {
+              "model": MODEL,
+              "max_tokens": 1200,
+              "temperature": 0,
+              "system": system,
+              "messages": [{"role": "user", "content": prompt}],
+          }
+          request_bytes = json.dumps(request_body, ensure_ascii=False).encode("utf-8")
+          request_sha256 = hashlib.sha256(request_bytes).hexdigest()
+          request = urllib.request.Request(
+              ENDPOINT,
+              data=request_bytes,
+              headers={
+                  "Authorization": "Bearer " + key,
+                  "anthropic-version": API_VERSION,
+                  "content-type": "application/json",
+              },
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(request, timeout=180) as response:
+                  api_response = json.load(response)
+          except urllib.error.HTTPError as error:
+              print("CLAUDE_PILOT: HTTP_ERROR", error.code)
+              raise SystemExit(1)
+          except Exception as error:
+              print("CLAUDE_PILOT: NETWORK_ERROR", type(error).__name__)
+              raise SystemExit(1)
+
+          text_blocks = [
+              block.get("text", "")
+              for block in api_response.get("content", [])
+              if block.get("type") == "text"
+          ]
+          raw_text = "\n".join(text_blocks).strip()
+          fenced = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", raw_text, flags=re.S | re.I)
+          if fenced:
+              raw_text = fenced.group(1).strip()
+          try:
+              translated_rows = json.loads(raw_text)
+          except json.JSONDecodeError:
+              raise SystemExit("CLAUDE_PILOT: NON_JSON_RESPONSE")
+
+          expected = {row["id"]: row for row in source_rows}
+          if not isinstance(translated_rows, list) or len(translated_rows) != len(source_rows):
+              raise SystemExit("CLAUDE_PILOT: PARAGRAPH_COUNT_MISMATCH")
+          seen = set()
+          evidence_rows = []
+          for translated in translated_rows:
+              if not isinstance(translated, dict) or set(translated) != {"id", "source_sha256", "french"}:
+                  raise SystemExit("CLAUDE_PILOT: OUTPUT_SCHEMA_MISMATCH")
+              unit_id = translated["id"]
+              if unit_id not in expected or unit_id in seen:
+                  raise SystemExit("CLAUDE_PILOT: OUTPUT_ID_MISMATCH")
+              if translated["source_sha256"] != expected[unit_id]["source_sha256"]:
+                  raise SystemExit("CLAUDE_PILOT: SOURCE_HASH_NOT_PRESERVED")
+              french = translated["french"].strip()
+              if not french:
+                  raise SystemExit("CLAUDE_PILOT: EMPTY_TRANSLATION")
+              if re.search(r"[А-Яа-яЁё]", french):
+                  raise SystemExit("CLAUDE_PILOT: CYRILLIC_REMAINS")
+              seen.add(unit_id)
+              evidence_rows.append({
+                  "id": unit_id,
+                  "source_sha256": expected[unit_id]["source_sha256"],
+                  "translation_sha256": hashlib.sha256(french.encode("utf-8")).hexdigest(),
+                  "french": french,
+              })
+
+          evidence = {
+              "status": "API_EXECUTION_PASS_LITERARY_REVIEW_PENDING",
+              "generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "title_rank": 6,
+              "title": "Crime et Châtiment",
+              "source_language": "ru",
+              "target_language": "fr",
+              "source_epub_sha256": SOURCE_EPUB_SHA256,
+              "source_package_sha256": SOURCE_PACKAGE_SHA256,
+              "source_unit": 9,
+              "endpoint": ENDPOINT,
+              "api_version": API_VERSION,
+              "requested_model": MODEL,
+              "response_model": api_response.get("model"),
+              "response_id": api_response.get("id"),
+              "stop_reason": api_response.get("stop_reason"),
+              "request_sha256": request_sha256,
+              "usage": api_response.get("usage", {}),
+              "rows": evidence_rows,
+          }
+          output = Path("staging/fr06-claude-pilot/pilot_result.json")
+          output.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          readback = output.read_bytes()
+          json.loads(readback)
+          print("CLAUDE_PILOT: API_EXECUTION_PASS_LITERARY_REVIEW_PENDING")
+          print("CLAUDE_PILOT: RESPONSE_MODEL", evidence["response_model"])
+          print("CLAUDE_PILOT: RESPONSE_ID", evidence["response_id"])
+          print("CLAUDE_PILOT: PARAGRAPHS", len(evidence_rows))
+          print("CLAUDE_PILOT: EVIDENCE_SHA256", hashlib.sha256(readback).hexdigest())
+          PY
+
+      - name: Preserve private staging evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fr06-claude-api-pilot
+          path: staging/fr06-claude-pilot/
+          if-no-files-found: warn
+          retention-days: 7
