@@ -1,0 +1,35 @@
+name: Acquire Chromium for French rank 6 rendering
+on:
+  push:
+    branches: [bb-fr-rank6-deepl-20261011]
+    paths: ['.github/workflows/bb-fr06-chromium-acquire-20261011.yml']
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Download and verify official Chrome for Testing Linux64
+        run: |
+          set -euo pipefail
+          mkdir -p acquired
+          python3 - <<'PY'
+          import json,urllib.request
+          u='https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json'
+          d=json.load(urllib.request.urlopen(u,timeout=30))
+          c=d['channels']['Stable'];version=c['version']
+          links=[x['url'] for x in c['downloads']['chrome'] if x['platform']=='linux64']
+          assert len(links)==1 and links[0].startswith('https://storage.googleapis.com/chrome-for-testing-public/')
+          urllib.request.urlretrieve(links[0],'acquired/chrome-linux64.zip')
+          open('acquired/SOURCE.json','w').write(json.dumps({'version':version,'url':links[0]},indent=2))
+          PY
+          unzip -t acquired/chrome-linux64.zip
+          cd acquired
+          sha256sum chrome-linux64.zip > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bb-fr06-official-chromium-20261011
+          path: acquired/
+          retention-days: 30
+          if-no-files-found: error
