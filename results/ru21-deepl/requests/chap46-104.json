@@ -1,0 +1,45 @@
+{
+  "row_ids": [
+    "chap46:103",
+    "chap46:104",
+    "chap46:105",
+    "chap46:106"
+  ],
+  "source_hashes": [
+    "b5c962c08f5995c51859526c06c73c862cb373e3b3b9f30fd2b76283a702f7e7",
+    "df380b3178f3547f5be18b99cc52b52f9b1e02d13dc0c907de5ad6482c9d547a",
+    "d6816d5dfb350dbac194b4722954c51d528fbe3202f7b628435d41276b79fad2",
+    "beea4e7638b1b5cfc798e2d338e2c3a778988d192efd1d6812801ac41ba1d82a"
+  ],
+  "request_id": "4a0eadff9cfd4e06a155f185439dc46c",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nБолее трёхсот солдат всех родов войск собрались у ворот\nлагеря, и в отдельной группе можно было разглядеть месье де Бузиньи, драгона,\nшвейцарца и четвёртого участника пари.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nАтос снял шляпу, надел её на острие шпаги и взмахнул ею в воздухе.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nВсе зрители ответили ему на приветствие, сопровождая этот жест вежливости\nгромким «ура», которое долетело до них.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nПосле чего все четверо скрылись в бастионе, куда их уже\nопередил Гримо.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

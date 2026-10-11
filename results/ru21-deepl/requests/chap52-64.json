@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap52:63",
+    "chap52:64",
+    "chap52:65"
+  ],
+  "source_hashes": [
+    "d708a32bf4d55ad87c1943e4354f9bae1f916233a499d413017d7ca39e3439ce",
+    "90702ba0053d6d4621ab2bc1cc5b851302c9b3bfa4c6414b6d40b6f40cef4fc7",
+    "6a4b2431dc16eb092a2cc09868ea9bca9ef2c819d0d2fd22579c6eaf6eed027c"
+  ],
+  "request_id": "62d992429a9343ca98d64d5146fb6068",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n«Слабый он или сильный, — повторяла Миледи, — но в душе этого человека есть искра сострадания;\nиз этой искры я разжгу пожар, который поглотит его».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Что касается другого, то он меня знает, боится меня и знает, чего ему ждать от\nменя, если я когда-нибудь вырвусь из его рук, поэтому бесполезно что-либо предпринимать в отношении\nнего. Но Фелтон — это совсем другое дело; это наивный, чистый молодой человек, который\nкажется добродетельным; этого можно свести с пути истинного».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ Миледи легла и заснула с улыбкой на губах; тот, кто\nувидел бы её спящей, сказал бы, что это молодая девушка, мечтающая о венке из цветов,\nкоторый она должна была возложить на лоб на следующем празднике.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

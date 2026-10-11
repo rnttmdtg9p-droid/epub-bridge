@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap50:71",
+    "chap50:72",
+    "chap50:73"
+  ],
+  "source_hashes": [
+    "e338f7d0a9b9ef8c5fe369f0534c343fd06aeb48a952aad10f4579286f420290",
+    "4c37a0d4c241febc130128a0e6dab229da8acbda83c52bcb30732de72f2500df",
+    "4176fff6eea08024a56bb94bec33542ab55a5bb305435f45322e29127d6fdf28"
+  ],
+  "request_id": "d0d395a38b3c4d908d11ece698a0586e",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nМиледи опустила голову, словно почувствовав, что этот\nприговор давит на неё. Лорд де Винтер вышел, сделав знак Фелтону, который вышел\nвслед за ним и закрыл дверь.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧерез мгновение в коридоре раздались тяжелые шаги морского пехотинца,\nстоявшего на страже с топором за поясом и мушкетом в\nруке.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nМиледи пробыла несколько минут в той же позе, так как подумала,\nчто, возможно, за ней наблюдают через замочную скважину; затем она медленно подняла голову,\nна лице которой вновь появилось грозное выражение угрозы и вызова, подбежала прислушаться\nк двери, посмотрела в окно, а затем, вернувшись и устроившись в огромном\nкресле, погрузилась в раздумья.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

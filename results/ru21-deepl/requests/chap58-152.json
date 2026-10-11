@@ -1,0 +1,29 @@
+{
+  "row_ids": [
+    "chap58:151",
+    "chap58:152"
+  ],
+  "source_hashes": [
+    "50ce221dc29a86b1efe920015431b8088a498afd3fe2d58150f3b1366ebe5001",
+    "79d2200cd09a9b13f1f4bbeeaaee4656ee121e39680ab4d0d1b240c16686f9bd"
+  ],
+  "request_id": "5f59128d10874e5d92514da0b9e22470",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nБыло решено, что Миледи будет ждать Фелтона до десяти часов; если к десяти часам\nон не вернётся, она уедет.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nТогда, если он окажется свободен, он присоединится к ней во Франции, в монастыре\nкармелиток в Бетуне.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "row_ids": [
+    "chap42:31",
+    "chap42:32",
+    "chap42:33",
+    "chap42:34",
+    "chap42:35",
+    "chap42:36",
+    "chap42:37",
+    "chap42:38"
+  ],
+  "source_hashes": [
+    "1666cd3204469c90becec4e6c01fee0f97d991eb690e176e75dd32e3bda7d604",
+    "c878dba8e5752e659238fca3f1f06930c50b71c342eb9f934717a37e8b661adf",
+    "25eaf469e69b871efeb16ee2ced46d32cd964f0b50959a43b28c853b62cfc3cc",
+    "e90dbb4de18a8a6dc07f0f53f16b2568ae4908eb0df934db3cfe95e6290e37af",
+    "ee177394033fe766444ad7d38bed019934b4ca554cce42caba8bc35bda84cf1b",
+    "2b3c9b50df93221709ad6cbfac4dc9100e587551aeac245a08240d715650a7ff",
+    "c42d6dc98d98d381cd5474523d90103e690e0fd775277ec933c234f376ced14c",
+    "89ac3f0ac924aaeb547577a02facf968c1373ec5bc9fb824e56d32aa6caeb22c"
+  ],
+  "request_id": "387d6566ac344ea09460f1ccfbeda9a5",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Это вы, Арамис, — сказал Атос, — прислали вино?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Нет, а ты, Портос?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Нет, а вы, Атос?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Нет.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Если это не вы, — сказал д’Артаньян, — то это ваш трактирщик.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Наш трактирщик?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Да! Ваш трактирщик, Годо, трактирщик мушкетеров.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Честное слово, откуда бы оно ни было, неважно, — сказал Портос, — давайте попробуем, и,\nесли оно хорошее, давайте выпьем.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

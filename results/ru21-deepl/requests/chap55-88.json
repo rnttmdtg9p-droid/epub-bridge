@@ -1,0 +1,61 @@
+{
+  "row_ids": [
+    "chap55:87",
+    "chap55:88",
+    "chap55:89",
+    "chap55:90",
+    "chap55:91",
+    "chap55:92"
+  ],
+  "source_hashes": [
+    "e246562b45d7f96a4aadb760d66028d68e40adb5cfad55ed13178384a832a7e1",
+    "6d40ece55cbae178b30abeccfdd1594e289fa876992ad5f1b5328a5e44fbb2a1",
+    "ec45d80fc655742b42bff6236402bc20819d82b73b4f15483c4a2eb8bc94ccc8",
+    "8740306c4a13ba2bc0fadc5b1aaa8a503399f0096ccf14b0c1b185c73a20617d",
+    "df3d597e24aea3e90831ba6588cd22de331f41d515c3e63068939a96b4afb314",
+    "64f4b5edfc9b043dba8037dc882e95e23fc04305ccc7971c626c6ae3403cff8a"
+  ],
+  "request_id": "910483e002b34b0ca039e4513e77af5c",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Хорошо, — сказал Фелтон, — до вечера!»\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ он выбежал из комнаты, закрыл дверь и стал ждать снаружи,\nдержа в руке половину пики солдата, словно стоял на страже на своём месте.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nКогда солдат вернулся, Фелтон вернул ему оружие.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nТогда, через окошко, к которому она подошла, Миледи увидела, как молодой\nчеловек с безумным рвением перекрестился и ушел по коридору,\nпереполненный радостью.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧто же касается неё, то она вернулась на своё место с улыбкой дикого презрения на\nгубах и, богохульствуя, повторяла это страшное имя Бога, которым она\nклялась, так и не узнав Его.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Боже мой! — сказала она, — безумный фанатик! Боже мой! Это я, я и тот, кто\nпоможет мне отомстить».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

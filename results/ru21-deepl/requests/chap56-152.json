@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap56:151",
+    "chap56:152",
+    "chap56:153"
+  ],
+  "source_hashes": [
+    "70cc07053ce8bb3fbc570f75227bbbf8e5cedb6d2d20e1eca6de8fd61aab22fe",
+    "1701e6c7e746d9f97dc2948c3278e411c2928f6f0f5dd230df04955cc0b52c92",
+    "6a0a27782b2f014a8f7d30733d933aa70547952dc15d02bceecab057d01b3c2a"
+  ],
+  "request_id": "1a66c3f0725a410d8ff076a1a56abab4",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n«— Хорошо, — повторил он, — вы этого хотите, до завтрашнего вечера!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«— До завтрашнего вечера, — ответил я, опустившись на пол и в ярости впиваясь зубами в ковер…\n»\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nФелтон опирался на мебель, и Миледи с демонической радостью видела, что\nу неё, возможно, не хватит сил до конца рассказа.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

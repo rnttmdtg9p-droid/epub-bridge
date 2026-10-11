@@ -1,0 +1,53 @@
+{
+  "row_ids": [
+    "chap64:47",
+    "chap64:48",
+    "chap64:49",
+    "chap64:50",
+    "chap64:51"
+  ],
+  "source_hashes": [
+    "5681180cc9e867abf56b29c7f93e53e5b8199628e9577c59885675f59d01da45",
+    "694fc1cf3c39474422d6278c80692d6cfb40d670668501e3527ad8a8d0450c3f",
+    "51257b7d45474b74e0a0fe8ee2e572a738cf9d1c1d354d51d81df6c4bd918869",
+    "4caf33395e1542acbcddddae1c5e78030e4f2e0b19ede0f2b465588f7bc9dbf1",
+    "f35b6c12bf9dea538d9c4a54cfd8ba2dd36d42658a8748bb46fb47fa1eaa9f12"
+  ],
+  "request_id": "48006cbcc6094e5da53002b627bd7475",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nИ он помчался галопом.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧерез четверть часа он действительно вернулся в сопровождении человека в маске,\nзакутанного в большой красный плащ.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЛорд де Винтер и трое мушкетеров обменялись вопросительными взглядами. Никто\nиз них не мог просветить остальных, ибо все они не знали, кем был этот\nчеловек. Однако они решили, что так и должно быть, поскольку всё это\nпроисходило по приказу Атоса.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nВ девять часов, под руководством Планше, небольшая кавалькада двинулась в путь,\nследуя по той же дороге, по которой ехала карета.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nПечальное зрелище представляли эти шестеро мужчин, бежавших в тишине,\nкаждый погруженный в свои мысли, угрюмые, как отчаяние, мрачные, как\nнаказание.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

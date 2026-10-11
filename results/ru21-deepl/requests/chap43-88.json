@@ -1,0 +1,29 @@
+{
+  "row_ids": [
+    "chap43:87",
+    "chap43:88"
+  ],
+  "source_hashes": [
+    "927bf79700c11f737931e1abdf8de0dc006d298a9d0f56cabde862e42c912c2f",
+    "cca9863113e9626cb5061ddfdc64ed70eceeb58930980fe4033e992125497e14"
+  ],
+  "request_id": "b0fdf27b80ec41ec86352145491fa897",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Хорошо, — сказал кардинал, — заходите туда, господа, и подождите меня; я\nбуду не больше получаса».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ пока трое мушкетеров входили в комнату на\nпервом этаже, кардинал, не спрашивая дополнительных сведений, поднялся\nпо лестнице, как человек, которому не нужно, чтобы ему указывали дорогу.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

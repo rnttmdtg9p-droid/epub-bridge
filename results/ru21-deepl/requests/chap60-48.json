@@ -1,0 +1,45 @@
+{
+  "row_ids": [
+    "chap60:47",
+    "chap60:48",
+    "chap60:49",
+    "chap60:50"
+  ],
+  "source_hashes": [
+    "cf0a78405c1d9a36db55127dda7e9dbd0cd3570a9e9e223b76595b52c6528e82",
+    "7a874c3317d3f05423d0e102bc07a0523c3e8b6a82637c91b64da948adce2584",
+    "9576bb8ed82b5f2f1bfdc8f15d3d019d97b0475cae7495212796022833e08342",
+    "0583b43540822376d7184ab79ca5f24e8f0321b978b208cba8f8ec21e5207185"
+  ],
+  "request_id": "4542e4ea3b3a41a3995d3020196ebf2b",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— <i>«Арментьер»</i>\n, — прочитал Портос. «Арментьер» — я такого не знаю!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— А это название города или деревни написано его рукой! — воскликнул Атос.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Ну же, ну же, бережно храним эту бумажку, — сказал д’Артаньян, — может быть,\nя ещё не потерял свою последнюю пистоль. В седло, друзья мои, в седло!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ четверо товарищей помчались галопом по дороге в Бетун.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

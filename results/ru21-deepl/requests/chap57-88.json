@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap57:87",
+    "chap57:88",
+    "chap57:89"
+  ],
+  "source_hashes": [
+    "39ceab0bf599a6ff5601a2b18d301c9b510e99a5004353ac113456362811ab2e",
+    "c689aeea08fd063c1753c29a61050f4a222ae1f9ab1c56a76cb960062b50f375",
+    "607f778f9e22e086b25484d4bf371d7a9227ddff38fa1c9ea7d99cb2399a9e4c"
+  ],
+  "request_id": "1a3da834e9f346ec95cb0559c214bae2",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nПолучив такое распоряжение от своего начальника, Фелтон подчинился; но, выходя, он вонзил\nнож себе в грудь.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧто же касается лорда де Винтера, то он ограничился тем, что позвал служанку Миледи,\nи, когда та подошла, поручил ей присмотреть за пленницей, которая по-прежнему находилась в обморочном состоянии,\nпосле чего оставил их наедине.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nОднако, как бы то ни было, несмотря на свои подозрения, рана могла оказаться\nсерьёзной, и он тут же послал всадника за врачом.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

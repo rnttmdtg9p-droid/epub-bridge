@@ -1,0 +1,61 @@
+{
+  "row_ids": [
+    "chap44:103",
+    "chap44:104",
+    "chap44:105",
+    "chap44:106",
+    "chap44:107",
+    "chap44:108"
+  ],
+  "source_hashes": [
+    "39e05b6b1c593229d1066e70956d066aef281fe9e0671c760dcdd9f0a22ec7f6",
+    "bf02129ed822a0291c4b3aaf573659be4daf61aabff04b1872aafee3917b40bb",
+    "661b18beeaeee783e2f49823828d4d82fb01a059248aa07e435eed4410b2723e",
+    "90f5c20fb58a0f4ca07dfea6472ed3a44a3ca3060dd57c5a3b6c66bdaa4c9964",
+    "058ad20c8d74ee8482cc195d7913c6c6b572c2a0b6e0d90ae4eb8ae44c5a2bb5",
+    "09f3ff320281b4721e0e4aa8166b048fb2a52ba0e7433c48a79f10a6f33e9621"
+  ],
+  "request_id": "47e2689f3af84e68be5915a1db5f73a1",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Тебе нужно уйти! — сказал Портос. — Но если кардинал спросит о тебе, что\nмы ему ответим?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Не ждите, пока он спросит меня, — скажите ему первыми, что я\nушел в разведку, потому что некоторые слова нашего хозяина заставили меня\nподумать, что дорога небезопасна; я сначала вскользь упомяну об этом\nконюху кардинала; остальное — мое дело, не беспокойтесь об этом.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Будь осторожен, Атос! — сказал Арамис.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Будьте спокойны, — ответил Атос, — вы же знаете, что я хладнокровен.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nПортос и Арамис вернулись на свои места у дымохода.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧто же касается Атоса, то он вышел без всякой таинственности, подошёл к своей лошади, привязанной\nвместе с лошадьми его двух друзей к поворотным створкам ставен, в\nчетырёх словах убедил конюха в необходимости авангарда для обратного пути, с\nнапускной тщательностью проверил капсюли своих пистолетов, зажал меч зубами и, словно\nзаблудившийся ребёнок, пошёл по дороге, ведущей в лагерь.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

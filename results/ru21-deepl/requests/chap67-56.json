@@ -1,0 +1,77 @@
+{
+  "row_ids": [
+    "chap67:55",
+    "chap67:56",
+    "chap67:57",
+    "chap67:58",
+    "chap67:59",
+    "chap67:60",
+    "chap67:61",
+    "chap67:62"
+  ],
+  "source_hashes": [
+    "60a889ba6130e6f326183593a0aed275c92ab46939730d691bae9b654935ca87",
+    "912a1923ad0148a58d2706883e0a5dd81667331ae797a5dcdc1cb524ce1009e5",
+    "e9d2700f7c95d54175bb56824095e5103a6daf245188693f32dd2e851b8fbf76",
+    "a3b846478289e477c99437a99ae3de81c12fa3faadc244e9f5a09d1be49f291a",
+    "4985b2992909d9150f7b332bb228415e478b2dedbc54ab5c7ed0b82178ef8a2c",
+    "cc94b591309c7115be0bc2771e0577ccb2e47298eb7a35bf3bf12cba59775cbf",
+    "cdd75445a656789dd92a05d0cc5ea47093182594ba66da66f3bf21d714c1b703",
+    "4c2d718643abcafcf7103430b8037350e875becc37dced00616d93d2ee3b2fee"
+  ],
+  "request_id": "17dd50f1b98845559db844e04c02ddac",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Господин, — сказал кардинал, — если миледи де Винтер совершила те преступления, о которых вы\nговорите, она будет наказана.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Так и есть, Ваше Преосвященство.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— И кто её наказал?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Мы.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Она в тюрьме?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Она умерла.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Мертва! — повторил кардинал, не в силах поверить в то, что слышал: — Мертва!\nРазве вы не сказали, что она мертва?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Трижды она пыталась убить меня, и я прощал её, но она\nубила женщину, которую я любил. Тогда мы с моими друзьями схватили её, судили\nи приговорили».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

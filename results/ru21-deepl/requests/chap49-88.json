@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap49:87",
+    "chap49:88",
+    "chap49:89"
+  ],
+  "source_hashes": [
+    "8e8c90cef6d5165308059089c2bfe9ae519ea488b34fcebe1ebd3a884de8cc65",
+    "c770746ca289517ed658af7b32970568b627d4825ca8e3b885ad981858f38baf",
+    "46a9f820fb23c800ee7a3654f42f7956df3fa605ae817248f7fd6957324d8e3e"
+  ],
+  "request_id": "ec7ce0655b234ce8a9ca651b56e957ab",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Хватит громких слов; давайте сядем и поговорим спокойно, как\nи положено между братом и сестрой».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЗатем, повернувшись к двери и увидев, что молодой офицер ждет\nего последних приказов:\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Хорошо, — сказал он, — спасибо вам; а теперь оставьте нас, месье\nФелтон».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

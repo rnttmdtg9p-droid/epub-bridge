@@ -1,0 +1,53 @@
+{
+  "row_ids": [
+    "chap53:79",
+    "chap53:80",
+    "chap53:81",
+    "chap53:82",
+    "chap53:83"
+  ],
+  "source_hashes": [
+    "98e6bc11fa6831e98e9ed49d58acbfb158a95e61d0b633ac001408f6826cc225",
+    "b6da773e94e0d2c9ec68751f370ffc4d9a9da45453d9fd81885d892088effeb1",
+    "a70e7379f81364c37bb6e314c36d5c2f90f494d327206282ff1d901e6689f19c",
+    "f3a8b04bcf7cea9c8459d3400de0ed6ae75c4ddc839a3975a7cfd6f4026b6b89",
+    "213e1e4562b19e1cc13f168f7f9d2c084da6ee9e7f0a8bcba0ee3b2d84edde56"
+  ],
+  "request_id": "55487aa16ec94a28889252b4b46b9fe9",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nИ бедный безумный даже сам не замечал несообразности своих\nслов, в то время как Миледи пронзала своим зрением лиса глубины его\nсердца.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Я замолчу, — сказала Миледи, опустив глаза со всей мягкостью, которую она\nмогла вложить в свой голос, со всей покорностью, которую она могла придать своему\nповедению.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Нет, нет, мадам, — сказал Фелтон, — только пойте потише, особенно ночью\n».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ, сказав это, Фелтон, почувствовав, что не сможет долго сохранять свою\nстрогость по отношению к пленнице, выбежал из своей комнаты.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Вы поступили правильно, лейтенант, — сказал солдат, — эти песни трогают душу;\nоднако со временем к ним привыкаешь: у неё такой прекрасный голос!»\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

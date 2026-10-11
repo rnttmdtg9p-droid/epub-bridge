@@ -1,0 +1,77 @@
+{
+  "row_ids": [
+    "chap41:111",
+    "chap41:112",
+    "chap41:113",
+    "chap41:114",
+    "chap41:115",
+    "chap41:116",
+    "chap41:117",
+    "chap41:118"
+  ],
+  "source_hashes": [
+    "df2fccfaeee6854e02e3625f0ed062d9e41428d13078577e64300bceefef82d1",
+    "5357a890d5aedb6fe3db44af8ff495a78231acdcc92b1a707125139743cb50d7",
+    "57e85c17d992f4017cd17f461e90a490824c72783c443616355aa7c93168379f",
+    "1f45185359bfe7239c2ed4ca8343ef405d58acc45ad8a50d55111d80f392d165",
+    "ab2b4976e08938582e0ed40a4774a29f6a6ed14e5d750ac939e7eafe74652aee",
+    "ac364a10b6576e03cec5c24348681fe655ef0534f3ce51be76e35e3eec56897d",
+    "660b88160fb501e0aec70c96dd3d0814cf89cac6d4278c3a3017f6043f05d656",
+    "227bb982f72acbbb26a09ac71b188cb998b5c6e1bf3dd308205348ecf30fe872"
+  ],
+  "request_id": "4812bd7441154ca3a74c2068f2a501bb",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nД’Артаньян вернулся в окоп и бросил труп рядом с раненым, бледным\nкак мертвец.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nОн тут же приступил к описи: кожаный портфель, кошелек, в котором,\nочевидно, находилась часть суммы, полученной бандитом, трубочка\nи игральные кости составляли наследство покойного.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nОн оставил трубку и кости там, где они упали, бросил кошелек раненому\nи жадно открыл бумажник.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nСреди нескольких незначительных бумаг он нашёл следующее письмо:\nэто было то самое письмо, за которым он отправлялся, рискуя жизнью:\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p class=\"letter\">\n«Поскольку вы потеряли след этой женщины и она теперь в\nбезопасности в том монастыре, куда вы никогда не должны были позволять ей попасть, постарайтесь,\nпо крайней мере, не упустить того человека; иначе вы знаете, что у меня длинная рука и\nчто вам дорого обойдутся те сто луи, которые вы мне должны».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nПодписи не было. Тем не менее было очевидно, что письмо пришло от Миледи. В\nрезультате он сохранил его в качестве улики и, укрывшись за\nуглом окопа, приступил к допросу раненого. Тот признался,\nчто вместе со своим товарищем, тем самым, который только что был убит,\nон взялся похитить молодую женщину, которая должна была выехать из Парижа через шлагбаум Ла-\nВиллет, но, остановившись выпить в таверне, они опоздали\nна карету на десять минут.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Но что бы вы сделали с этой женщиной?» — с тревогой спросил д’Артаньян.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Мы должны были доставить её в отель на площади Рояль, — сказал раненый.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

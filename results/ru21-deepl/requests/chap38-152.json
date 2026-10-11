@@ -1,0 +1,45 @@
+{
+  "row_ids": [
+    "chap38:151",
+    "chap38:152",
+    "chap38:153",
+    "chap38:154"
+  ],
+  "source_hashes": [
+    "5a28e79b5cd5582cb9d5a5aaa9be3a3a50c6136ef07add4284e20745aade347c",
+    "2121d81731967248c67d6143eeaa3d73d2a0fa15ced1a3fc84d1e3579f2b81f1",
+    "c5c1bd7b14da61d9237d2d8559698cb7bd2726d05681bc3169371f7253ef7137",
+    "e473f442f139d071bd33a4949213bb3e6f265493b0de09f17c5a996a8192feb1"
+  ],
+  "request_id": "6dfffcc244414ed0ade6a79f5ebad298",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Подумайте, Атос.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Наличные деньги в наши дни стоят дорого, и нужно уметь идти\nна жертвы. Вперед, д’Артаньян, вперед; Гримо будет сопровождать вас со своим\nмушкетом».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧерез полчаса д’Артаньян вернулся с двумя тысячами ливров, и\nс ним не случилось ничего плохого.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nТак Атос обнаружил в своём хозяйстве средства, на которые он\nне рассчитывал.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}
