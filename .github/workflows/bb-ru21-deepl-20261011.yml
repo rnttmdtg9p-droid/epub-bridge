@@ -1,0 +1,115 @@
+name: BB rank 21 French to Russian translation only
+on:
+  push:
+    branches: [bb-rank21-translation-20261011]
+    paths: ['.github/workflows/bb-ru21-deepl-20261011.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-rank21-translation-20261011
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install 'lxml==6.0.2'
+      - name: Translate frozen French source with existing DeepL secret
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,hashlib,time,datetime
+          from pathlib import Path
+          from lxml import html,etree as E
+          H=lambda b:hashlib.sha256(b).hexdigest()
+          out=Path('results/ru21-deepl');out.mkdir(parents=True,exist_ok=True)
+          manifest={'rank':21,'master':'5.0.68','source_language':'FR','target_language':'RU','engine':'DeepL quality_optimized','state':'PREPARING','units':{},'full_human_literary_review':'NOT_PERFORMED','release_ready':False,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          def save():
+              tmp=out/'manifest.tmp';tmp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2));tmp.replace(out/'manifest.json')
+          save()
+          key=os.environ.get('DEEPL_AUTH_KEY','').strip()
+          if not key:
+              manifest.update(state='BLOCKED_AUTH',reason='MISSING_DEEPL_AUTH_KEY');save();raise SystemExit(2)
+          host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
+          def call(path,payload=None):
+              for attempt in range(4):
+                  req=urllib.request.Request(host+path,data=json.dumps(payload).encode() if payload is not None else None,headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=120) as r:
+                          return json.load(r),r.headers.get('x-request-id')
+                  except urllib.error.HTTPError as e:
+                      if e.code in (429,500,502,503,504) and attempt<3:
+                          time.sleep(3*(attempt+1));continue
+                      raise RuntimeError('DEEPL_HTTP_'+str(e.code)) from None
+                  except Exception as e:
+                      raise RuntimeError('DEEPL_NETWORK_'+type(e).__name__) from None
+          expected=[{'id': 'pref01', 'sha256': '42da59e1a95eee0a795ba84490b9e5b4f8748e79b99a8de5e29d5f8c12087a32', 'blocks': 14}, {'id': 'chap01', 'sha256': '8f2e640c82b7cc88a15ce96d275a3bbfbd4cf8031d5ce1aef523c9758bfdd703', 'blocks': 128}, {'id': 'chap02', 'sha256': '37dde8ecb0877ef15b3c25a94b4b54bbc417329ab1479b4cc8b65862c0271702', 'blocks': 62}, {'id': 'chap03', 'sha256': '8a59fbf0c54e3777ee9603ba03a9c210e13b75135599f074bc3d6f474d69ca8b', 'blocks': 98}, {'id': 'chap04', 'sha256': 'b7374359913a3808d8016bf959a1e45ca56fb705d5aab7661d32e430f6cfd292', 'blocks': 85}, {'id': 'chap05', 'sha256': '0a3704f8a42790e2951857b748528d229b24056ce55ca81cb3a619eb29b2a679', 'blocks': 127}, {'id': 'chap06', 'sha256': '8dad91db810df5f36df8ad0b95bc9337e7ac574f4f898073bf1e6a2c674c394e', 'blocks': 197}, {'id': 'chap07', 'sha256': '40b19e98f8b5fab162cfb1e29bea21c0e987eb74c44cf3e4e235fedc657887f9', 'blocks': 46}, {'id': 'chap08', 'sha256': 'fa22caac4219d63d28efa4f05d1b96a84315971f2967897e497a811408d76486', 'blocks': 130}, {'id': 'chap09', 'sha256': '2407242b0d41a3dd03e3fc369f2b42eb1196decc6ebe27d766bc0426c8b6d692', 'blocks': 121}, {'id': 'chap10', 'sha256': '028e13cac1691eeb8121b65690dff68cc66e385d9cf98d5c30622380d3b81558', 'blocks': 133}, {'id': 'chap11', 'sha256': '555122a944d993847dee55fdbb2425f2e046fdbe246aaa957543e29d34be7784', 'blocks': 234}, {'id': 'chap12', 'sha256': 'd30f5f61fa41ce9d1f221eb93b5aa1f88e5cfc514f89122ea9102d307446be87', 'blocks': 72}, {'id': 'chap13', 'sha256': 'dd5e60599be307de1753f53931d78cb1a8813d9288e53458bdf8963e7b87e8bb', 'blocks': 119}, {'id': 'chap14', 'sha256': 'f5d986bedd0734965ad25fa35a7f374c32b73ff39507a6fc2c9e99ee4b11ba79', 'blocks': 196}, {'id': 'chap15', 'sha256': 'd0b92b38b26f088c5a9720f9017048391be5439b8ba7eef231ddbf02d15eade0', 'blocks': 94}, {'id': 'chap16', 'sha256': '9bc85e5e9b86132cb5789725ab26371dce730f2b6c7dc741f8b26e421cff6294', 'blocks': 149}, {'id': 'chap17', 'sha256': '13aa4f69782f4888a0c46b33be091f596edd58a405df7f1e7e2add0d41be927c', 'blocks': 184}, {'id': 'chap18', 'sha256': '349d4a3abc945ee4df524939eecd6063067e8f2f9a1a6b63a68654a964ee4e29', 'blocks': 140}, {'id': 'chap19', 'sha256': 'e2f284ebdf2b0718c61bfa776221c5c42eb37aa85a761a076da3765248bd6122', 'blocks': 151}, {'id': 'chap20', 'sha256': 'cf10d83f7ef4a71b187f3ea14778587b9afee3b084526680d8563920123ea148', 'blocks': 184}, {'id': 'chap21', 'sha256': '61ac0cf655d439e62a19fc94ab98e6c494f75dacb181f10ec2a1f28cc27d7fe6', 'blocks': 116}, {'id': 'chap22', 'sha256': '40714b45a87f1038faa02526744d2d75d9a77b3c088177671593724acbb88d18', 'blocks': 68}, {'id': 'chap23', 'sha256': 'c445543f0df4acdf0a15238053bf23cacc1628580a40bbdd5d87c038a350aa12', 'blocks': 167}, {'id': 'chap24', 'sha256': '75a63b31062c21eaba5ca8f27cb87e1c03d5c3118bbfa1af2401499e8404615e', 'blocks': 115}, {'id': 'chap25', 'sha256': '54303da49e6ad7733ac50458d94099adb60d434254b7eb84203e119d71f98575', 'blocks': 242}, {'id': 'chap26', 'sha256': '74531c05cf4e1056582adefa4cfac57e1e5a97d701a9e2053c330e28a9775d7a', 'blocks': 214}, {'id': 'chap27', 'sha256': '451e42d3179333875b4e314430cd80c3f5758c3e6d159a3cb7fe68adfd3f1541', 'blocks': 256}, {'id': 'chap28', 'sha256': 'dedde2443c6e65695700edf299dc663c62671d8d2b4383bf85a85286f1f8a60d', 'blocks': 234}, {'id': 'chap29', 'sha256': '4a8369f04d5a9740318330b7598731131ab15f91ad32cd97eb12931d6fc3d663', 'blocks': 106}, {'id': 'chap30', 'sha256': 'be86d5ac67d467cc4e3c30d150c8042d8de79a7d3fefa07fb59cb1d2aedd939a', 'blocks': 98}, {'id': 'chap31', 'sha256': '5ac489994014fc71c9d58bf5050a6d9050e3eb179d7adb94f25344c7411da306', 'blocks': 93}, {'id': 'chap32', 'sha256': '07c53bf5be91b1a2980e08acb6428a153471e9582ca928a1fba47237e9990191', 'blocks': 110}, {'id': 'chap33', 'sha256': '14a385c7f12d272287d70192d03adb0f4b0b41b3edd262981d44d35fe599ce15', 'blocks': 156}, {'id': 'chap34', 'sha256': '8841e80c8ca2801355bb44d387c8575c9d4b41595939c04f8082fadc291722e8', 'blocks': 118}, {'id': 'chap35', 'sha256': 'f0989597db010f6e7131786f8dfff8f0cea4ec71c1b2eabd7e0d267090c452cf', 'blocks': 98}, {'id': 'chap36', 'sha256': '41b69f88089e0fd8bde741adba8e10c06f5ac116609b54ff1d68c50e6b839604', 'blocks': 143}, {'id': 'chap37', 'sha256': 'c1bc0cc38c12b158e4c5ffbda810487d6e06b877df516854da53515157bbf8f6', 'blocks': 96}, {'id': 'chap38', 'sha256': '2e37cd3058a89149936269713e83c89bc6aca59b407ad214fc9907ed5692cfc4', 'blocks': 155}, {'id': 'chap39', 'sha256': 'ba6d77175ccbe5ac40c29bb8d44e3f9a5845b7d97119a92fb72b27ad16070ad9', 'blocks': 110}, {'id': 'chap40', 'sha256': 'c5173ed95ff74a52a4e833845b3f84e31760c76068712f15077c08df47875b4e', 'blocks': 82}, {'id': 'chap41', 'sha256': '2aef6f9b21ecbfd0b60fd3d5e38344749fe3a3248e9dc0e594acae95a3b9fd78', 'blocks': 132}, {'id': 'chap42', 'sha256': 'e7cd9819ec82c75f946984778bfc887b915a27c4ec4340e15c69d0c0adac34f3', 'blocks': 118}, {'id': 'chap43', 'sha256': 'cc75681b687634829cad7f1ebd328f49e61ba70515cfa86490481b2dbd568997', 'blocks': 89}, {'id': 'chap44', 'sha256': 'e12b9d6bc207ecfefc5874a230d6ee952ef6913b59199bb2a330066d6341eb24', 'blocks': 109}, {'id': 'chap45', 'sha256': '568035f3ea083321cf864a8b5c828023da1ef6cfab687a80c5a865fd2c062f79', 'blocks': 74}, {'id': 'chap46', 'sha256': '977583662b8143cc4437704b68b08755ac220fab14a983bbbe96667fd228ce4c', 'blocks': 107}, {'id': 'chap47', 'sha256': 'd4776846c6b5e8379cd82fac88792bf018a543b5095e2aef36b58de76c647c23', 'blocks': 286}, {'id': 'chap48', 'sha256': 'c7dbd5fbd28499aa325bbee119838e62aeed1f9676c46403643b667d13d2d9de', 'blocks': 190}, {'id': 'chap49', 'sha256': '519be5dbcfd29dddb1b386fb5c0a9097ea2e4e71f27884b9aa1e35f9dfbb4623', 'blocks': 90}, {'id': 'chap50', 'sha256': '21d7338b03f835f58c10c1febdce81870b80ca953f4cb6ae1181dab6f33e9b2d', 'blocks': 74}, {'id': 'chap51', 'sha256': 'd18ad91fe41ce9e1b9e7e5a4a426f3735e5980620030fadb3ad6f9a79ac5676b', 'blocks': 87}, {'id': 'chap52', 'sha256': 'ad1d2f7da30c7f05efeb6506b632e865698fe81888376d1bc56f0a4001e9f74d', 'blocks': 66}, {'id': 'chap53', 'sha256': '587fc164570fddcdef6b6458ed4a3720cec3ab8e224eb0a7c1df5b52bc15defd', 'blocks': 84}, {'id': 'chap54', 'sha256': '603b1ad1a6a9f93e9a3a653515fa99c959ab133bc2e547a2805162eb34ff764d', 'blocks': 104}, {'id': 'chap55', 'sha256': '07283f3f562cc2afefb2dd4a2cf8e2c7b3bef78409f60b0171e38f58c3d95eb2', 'blocks': 93}, {'id': 'chap56', 'sha256': '073332e0fbe092aa63db60e5b56b1a81f2ec0f7568adc61b22d54aaafb1e8b65', 'blocks': 154}, {'id': 'chap57', 'sha256': 'dfc5f368a23142068353d16a8baf2e1d40a8e6fab64675960fd56698ddf747d4', 'blocks': 90}, {'id': 'chap58', 'sha256': '01d27fd39f967b11604165cd2b0d1b05ee6e37b91fa9a9a9487fe1865b8ad6ce', 'blocks': 153}, {'id': 'chap59', 'sha256': '63effbcd83cd01ab1625a4a0c314347a46adf99d92f56d7f555bb3ec04975bf8', 'blocks': 158}, {'id': 'chap60', 'sha256': '35c9a1edaae2cc1ff74be9b3bf98e381b45d30da99be634e8f23cd025a3325c3', 'blocks': 51}, {'id': 'chap61', 'sha256': '153b47ca520e71db195615a12e99fc05c327979e90e03837bbfb7e31d01671f9', 'blocks': 184}, {'id': 'chap62', 'sha256': 'a3ba1e423ee1c619588a57003a1be8a4581b8c4a7a44e73411529026295cbda3', 'blocks': 128}, {'id': 'chap63', 'sha256': '235d4455d0675d049f894a03038c4f382cafed705b09fc9b8b9f52fe67082720', 'blocks': 239}, {'id': 'chap64', 'sha256': '9d8689289c1dc2b8456b542844575297af4ca9d5f3ba798731aaefbbbf6176a9', 'blocks': 52}, {'id': 'chap65', 'sha256': '2783c063d566a8418841c6c70fbe68717a5570f2024987130402931509dbaa03', 'blocks': 113}, {'id': 'chap66', 'sha256': '86b68ee49185610eac3839591180b08ec078705207072ff7299a7939d4fca1c4', 'blocks': 69}, {'id': 'chap67', 'sha256': 'e18400a0e4075fd5b3d5a32f0db90b2fce2561e72d2e0cf7e55e52427e4282e3', 'blocks': 141}, {'id': 'chap68', 'sha256': 'f1c1fb92f79af867d975a60676e20b9d52b0af272e2b0b10be6889d99c3062d4', 'blocks': 16}]
+          try:
+              with urllib.request.urlopen('https://www.gutenberg.org/cache/epub/13951/pg13951-images.html',timeout=60) as r:raw=r.read()
+              assert H(raw)=='262a5c604946a14f5fdececa7cecd300b37ae514582d761d2a82b408961524d7','SOURCE_CAPTURE_CHANGED'
+              (out/'pg13951-original.html').write_bytes(raw)
+              nodes=html.fromstring(raw).xpath('//div[@class="chapter"]');assert len(nodes)==69
+              units=[]
+              for node,exp in zip(nodes,expected):
+                  assert H(E.tostring(node,encoding='utf-8',method='html',with_tail=False))==exp['sha256'],'SOURCE_UNIT_CHANGED'
+                  heading=node.xpath('./h2')[0];assert heading.xpath('.//a/@id')==[exp['id']]
+                  blocks=[e for e in node if isinstance(e.tag,str) and e is not heading];assert len(blocks)==exp['blocks']
+                  rows=[]
+                  for i,e in enumerate([heading]+blocks):
+                      serialized=E.tostring(e,encoding='unicode',method='html',with_tail=False)
+                      rows.append({'id':exp['id']+':'+('heading' if i==0 else str(i-1)),'source_html':serialized,'source_text':' '.join(''.join(e.itertext()).split()),'source_sha256':H(serialized.encode()),'target_html':None})
+                  u={'id':exp['id'],'source_unit_sha256':exp['sha256'],'rows':rows}
+                  path=out/(exp['id']+'.json')
+                  if path.exists():
+                      prior=json.loads(path.read_text());assert prior['source_unit_sha256']==u['source_unit_sha256'] and len(prior['rows'])==len(rows)
+                      for a,b in zip(prior['rows'],rows):assert a['id']==b['id'] and a['source_sha256']==b['source_sha256']
+                      u=prior
+                  units.append(u)
+                  manifest['units'][u['id']]={'rows':len(rows),'translated':sum(bool(p['target_html']) for p in u['rows'])}
+              usage,_=call('/v2/usage');needed=sum(len(p['source_text']) for u in units for p in u['rows'] if not p['target_html'])
+              manifest.update(usage_before=usage,remaining_source_characters=needed,expected_blocks=8692,expected_headings=69,source_sha256=H(raw))
+              limit=usage.get('character_limit');used=usage.get('character_count',0)
+              if limit is not None and used+needed>limit:
+                  manifest.update(state='BLOCKED_QUOTA',quota_shortfall=used+needed-limit);save();raise SystemExit(2)
+              manifest['state']='TRANSLATING';save()
+              for u in units:
+                  rows=u['rows'];path=out/(u['id']+'.json')
+                  for start in range(0,len(rows),8):
+                      batch=[p for p in rows[start:start+8] if not p['target_html']]
+                      if not batch:continue
+                      context='Alexandre Dumas, Les Trois Mousquetaires. Historical adventure novel, France 1625. D’Artagnan: д’Артаньян; Athos: Атос; Porthos: Портос; Aramis: Арамис; Milady: миледи; Richelieu: Ришелье. Surrounding original French passage:\n'+'\n\n'.join(p['source_text'] for p in rows[max(0,start-3):min(len(rows),start+11)])
+                      result,request_id=call('/v2/translate',{'text':[p['source_html'] for p in batch],'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','tag_handling':'html','split_sentences':'nonewlines','context':context})
+                      targets=result.get('translations',[]);assert len(targets)==len(batch),'ROW_COUNT_MISMATCH'
+                      for p,t in zip(batch,targets):
+                          target=t.get('text','');assert target.strip(),'EMPTY_TRANSLATION'
+                          assert t.get('model_type_used')=='quality_optimized','UNEXPECTED_MODEL'
+                          source=html.fromstring(p['source_html']);dest=html.fromstring(target)
+                          assert [e.tag for e in source.iter()]==[e.tag for e in dest.iter()],'INLINE_STRUCTURE_CHANGED'
+                          assert [dict(e.attrib) for e in source.iter()]==[dict(e.attrib) for e in dest.iter()],'ATTRIBUTES_CHANGED'
+                          p.update(target_html=target,target_sha256=H(target.encode()),model_type_used=t['model_type_used'],request_id=request_id)
+                      tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(u,ensure_ascii=False,indent=2));tmp.replace(path)
+                      manifest['units'][u['id']]['translated']=sum(bool(p['target_html']) for p in rows);save()
+                  print('UNIT_COMPLETE',u['id'],len(rows),flush=True)
+              manifest.update(state='TRANSLATION_COMPLETE',usage_after=call('/v2/usage')[0],finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());save()
+          except SystemExit:raise
+          except Exception as e:
+              manifest.update(state='BLOCKED_OR_PARTIAL',reason=str(e),finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());save();raise
+          PY
+      - name: Save rank 21 translation checkpoint on isolated branch
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/ru21-deepl/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Checkpoint rank 21 DeepL FR-RU translation; release gates pending'
+          git push origin HEAD:bb-rank21-translation-20261011
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-rank21-deepl-checkpoint-20261011
+          path: results/ru21-deepl/
+          retention-days: 30
