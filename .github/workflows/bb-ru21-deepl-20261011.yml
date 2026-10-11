@@ -39,7 +39,7 @@ jobs:
                   req=urllib.request.Request(host+path,data=json.dumps(payload).encode() if payload is not None else None,headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
                   try:
                       with urllib.request.urlopen(req,timeout=120) as r:
-                          return json.load(r),r.headers.get('x-request-id')
+                          return json.load(r),r.headers.get('x-trace-id') or r.headers.get('x-request-id')
                   except urllib.error.HTTPError as e:
                       if e.code in (429,500,502,503,504) and attempt<3:
                           time.sleep(3*(attempt+1));continue
@@ -81,7 +81,10 @@ jobs:
                       batch=[p for p in rows[start:start+8] if not p['target_html']]
                       if not batch:continue
                       context='Alexandre Dumas, Les Trois Mousquetaires. Historical adventure novel, France 1625. D’Artagnan: д’Артаньян; Athos: Атос; Porthos: Портос; Aramis: Арамис; Milady: миледи; Richelieu: Ришелье. Surrounding original French passage:\n'+'\n\n'.join(p['source_text'] for p in rows[max(0,start-3):min(len(rows),start+11)])
-                      result,request_id=call('/v2/translate',{'text':[p['source_html'] for p in batch],'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','tag_handling':'html','split_sentences':'nonewlines','context':context})
+                      payload={'text':[E.tostring(html.fromstring(p['source_html']),encoding='unicode',method='xml',with_tail=False) for p in batch],'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','tag_handling':'xml','tag_handling_version':'v2','split_sentences':'nonewlines','context':context}
+                      result,request_id=call('/v2/translate',payload)
+                      journal=out/'requests';journal.mkdir(exist_ok=True)
+                      (journal/(u['id']+'-'+str(start)+'.json')).write_text(json.dumps({'row_ids':[p['id'] for p in batch],'source_hashes':[p['source_sha256'] for p in batch],'request_id':request_id,'tag_handling':'xml','tag_handling_version':'v2','response':result},ensure_ascii=False,indent=2))
                       targets=result.get('translations',[]);assert len(targets)==len(batch),'ROW_COUNT_MISMATCH'
                       for p,t in zip(batch,targets):
                           target=t.get('text','');assert target.strip(),'EMPTY_TRANSLATION'
@@ -89,7 +92,7 @@ jobs:
                           source=html.fromstring(p['source_html']);dest=html.fromstring(target)
                           assert [e.tag for e in source.iter()]==[e.tag for e in dest.iter()],'INLINE_STRUCTURE_CHANGED'
                           assert [dict(e.attrib) for e in source.iter()]==[dict(e.attrib) for e in dest.iter()],'ATTRIBUTES_CHANGED'
-                          p.update(target_html=target,target_sha256=H(target.encode()),model_type_used=t['model_type_used'],request_id=request_id)
+                          p.update(target_html=target,target_sha256=H(target.encode()),model_type_used=t['model_type_used'],request_id=request_id,tag_handling='xml',tag_handling_version=t.get('tag_handling_version','v2'))
                       tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(u,ensure_ascii=False,indent=2));tmp.replace(path)
                       manifest['units'][u['id']]['translated']=sum(bool(p['target_html']) for p in rows);save()
                   print('UNIT_COMPLETE',u['id'],len(rows),flush=True)
