@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap29:103",
+    "chap29:104",
+    "chap29:105"
+  ],
+  "source_hashes": [
+    "bbd5490f2caa0ebb9e54229cc3b2020f57c8f3a5578d4b2280ccad1b491f29a8",
+    "04de072729ba32eccea039d9d79c0fa8b568825938b2c3a5b42a66236c48a131",
+    "3dc66f29a9a681630f29e55f2bd7785d2ad1def826f898f905073d2ea99c2106"
+  ],
+  "request_id": "e35ff843888d40cda082d216293ded19",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— До свидания, моя забывчивая.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— До завтра, мой ангел!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— До завтра, пламя моей жизни!»\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

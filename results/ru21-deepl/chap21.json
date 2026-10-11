@@ -967,147 +967,296 @@
       "source_html": "<p>\nD’Artagnan se dirigea à l’instant même vers l’auberge indiquée, et la reconnut\naux cris qui s’en échappaient: on parlait de guerre entre l’Angleterre et la\nFrance comme de chose prochaine et indubitable, et les matelots joyeux\nfaisaient bombance.\n</p>",
       "source_text": "D’Artagnan se dirigea à l’instant même vers l’auberge indiquée, et la reconnut aux cris qui s’en échappaient: on parlait de guerre entre l’Angleterre et la France comme de chose prochaine et indubitable, et les matelots joyeux faisaient bombance.",
       "source_sha256": "f3fac8a9163a3ece4d9c03678726152b4e0a03973cae22a81e9eff5f79cbb9c1",
-      "target_html": null
+      "target_html": "<p>\nД’Артаньян тут же направился к указанной гостинице и узнал её\nпо крикам, доносившимся оттуда: там говорили о войне между Англией и\nФранцией как о неминуемом и несомненном событии, а веселые матросы\nустраивали пир.\n</p>",
+      "target_sha256": "d7e2cd5cbd03568a9ed977da72eae51b85ca00f4c9018bbfbd22458100137fe0",
+      "provider_target_sha256": "d7e2cd5cbd03568a9ed977da72eae51b85ca00f4c9018bbfbd22458100137fe0",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:96",
       "source_html": "<p>\nD’Artagnan fendit la foule, s’avança vers l’hôte, et prononça le mot\n<i>Forward</i>. À l’instant même, l’hôte lui fit signe de le suivre, sortit\navec lui par une porte qui donnait dans la cour, le conduisit à l’écurie où\nl’attendait un cheval tout sellé, et lui demanda s’il avait besoin de quelque\nautre chose.\n</p>",
       "source_text": "D’Artagnan fendit la foule, s’avança vers l’hôte, et prononça le mot Forward. À l’instant même, l’hôte lui fit signe de le suivre, sortit avec lui par une porte qui donnait dans la cour, le conduisit à l’écurie où l’attendait un cheval tout sellé, et lui demanda s’il avait besoin de quelque autre chose.",
       "source_sha256": "461dc05b105c3b64975f2facc81e0e458ce47dc04990f59e47de2c17b17bd8cf",
-      "target_html": null
+      "target_html": "<p>\nД’Артаньян пробился сквозь толпу, подошёл к хозяину и произнёс слово\n<i>«Вперёд</i>\n». В тот же миг хозяин дал ему знак следовать за ним, вышел\nвместе с ним через дверь, выходящую во двор, привёл его в конюшню, где\nего ждала полностью оседланная лошадь, и спросил, не нужно ли ему чего-нибудь\nещё.\n</p>",
+      "target_sha256": "bd6c9b07145017081953e8413987b562ebe8791b1420fcb871edc8534407cafe",
+      "provider_target_sha256": "bd6c9b07145017081953e8413987b562ebe8791b1420fcb871edc8534407cafe",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:97",
       "source_html": "<p>\n«J’ai besoin de connaître la route que je dois suivre, dit d’Artagnan.\n</p>",
       "source_text": "«J’ai besoin de connaître la route que je dois suivre, dit d’Artagnan.",
       "source_sha256": "8c174d8578650a85fa6a0c6fe59495224db04847183161f68f12cfb0631b11fa",
-      "target_html": null
+      "target_html": "<p>\n— Мне нужно знать, по какому маршруту мне следует ехать, — сказал д’Артаньян.\n</p>",
+      "target_sha256": "980025fab7aaaf7d2d82ade655a58f7c4693a0c9d008e486983372b15ae6026b",
+      "provider_target_sha256": "980025fab7aaaf7d2d82ade655a58f7c4693a0c9d008e486983372b15ae6026b",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:98",
       "source_html": "<p>\n— Allez d’ici à Blangy, et de Blangy à Neufchâtel. À Neufchâtel, entrez à\nl’auberge de la <i>Herse d’Or</i>, donnez le mot d’ordre à l’hôtelier, et vous\ntrouverez comme ici un cheval tout sellé.\n</p>",
       "source_text": "— Allez d’ici à Blangy, et de Blangy à Neufchâtel. À Neufchâtel, entrez à l’auberge de la Herse d’Or, donnez le mot d’ordre à l’hôtelier, et vous trouverez comme ici un cheval tout sellé.",
       "source_sha256": "7818c249e4e60740d9c01fbaebbb50432802fcd664f45c8855974f3abb6356e1",
-      "target_html": null
+      "target_html": "<p>\n— Отправляйтесь отсюда в Бланжи, а из Бланжи — в Невшатель. В Невшателе зайдите в\nгостиницу <i>«Золотая коса</i>», назовите пароль хозяину, и вы\nнайдёте, как и здесь, полностью оседланную лошадь.\n</p>",
+      "target_sha256": "4c10c612646109509e85c2d7fe28a18881e0a7fff20728064439e65e055de2ca",
+      "provider_target_sha256": "175498ab8b57617aacc206cf0e3d3f8f7d2ab388f31110c01f63364edc531bf6",
+      "markup_repairs": [
+        "LOSSLESS_ADJACENT_EMPHASIS_MERGE"
+      ],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:99",
       "source_html": "<p>\n— Dois-je quelque chose? demanda d’Artagnan.\n</p>",
       "source_text": "— Dois-je quelque chose? demanda d’Artagnan.",
       "source_sha256": "67231436f016f2e06b372a32cc29824be035a56f4cc8776517b29f92797ccb33",
-      "target_html": null
+      "target_html": "<p>\n— Я что-нибудь должен? — спросил д’Артаньян.\n</p>",
+      "target_sha256": "1732bfe79bf7abf6e162db767f8e96c8005cccb38722f7e9fcda238fb0263bef",
+      "provider_target_sha256": "1732bfe79bf7abf6e162db767f8e96c8005cccb38722f7e9fcda238fb0263bef",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:100",
       "source_html": "<p>\n— Tout est payé, dit l’hôte, et largement. Allez donc, et que Dieu vous\nconduise!\n</p>",
       "source_text": "— Tout est payé, dit l’hôte, et largement. Allez donc, et que Dieu vous conduise!",
       "source_sha256": "060e29bce2e6e1ea132db3502320d419a0e0690dad8a07db327d5314ef83a528",
-      "target_html": null
+      "target_html": "<p>\n— Всё оплачено, — сказал хозяин, — и с избытком. Ну, вперед, и да сопроводит вас\nБог!\n</p>",
+      "target_sha256": "4bbd0e0084e040e25d713702059dd1a7f9b4a8867911abbc34f62695c5e624ff",
+      "provider_target_sha256": "4bbd0e0084e040e25d713702059dd1a7f9b4a8867911abbc34f62695c5e624ff",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:101",
       "source_html": "<p>\n— Amen!» répondit le jeune homme en partant au galop.\n</p>",
       "source_text": "— Amen!» répondit le jeune homme en partant au galop.",
       "source_sha256": "5f0a48d6d41c7816bef3ce6797305fce69a5ce198ece96e04a1e45c1c6aec56d",
-      "target_html": null
+      "target_html": "<p>\n— Аминь!» — ответил молодой человек и умчался галопом.\n</p>",
+      "target_sha256": "436196dc800130f398b44dea3138e4ab3231df0fdf5a827af85387cadf3f48a4",
+      "provider_target_sha256": "436196dc800130f398b44dea3138e4ab3231df0fdf5a827af85387cadf3f48a4",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:102",
       "source_html": "<p>\nQuatre heures après, il était à Neufchâtel.\n</p>",
       "source_text": "Quatre heures après, il était à Neufchâtel.",
       "source_sha256": "e3abb946f584400e31e1ef5974c27ee2ad582371460053d815932999ff3c582d",
-      "target_html": null
+      "target_html": "<p>\nЧерез четыре часа он был уже в Невшателе.\n</p>",
+      "target_sha256": "deab32c224e3ea32176327c5fbf889fe59cfacf41e0ec3d212fda33cd36cdd57",
+      "provider_target_sha256": "deab32c224e3ea32176327c5fbf889fe59cfacf41e0ec3d212fda33cd36cdd57",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "26df4d75e8c741918c6fd2b9920a6f41",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:103",
       "source_html": "<p>\nIl suivit strictement les instructions reçues; à Neufchâtel, comme à\nSaint-Valery, il trouva une monture toute sellée et qui l’attendait; il voulut\ntransporter les pistolets de la selle qu’il venait de quitter à la selle qu’il\nallait prendre: les fontes étaient garnies de pistolets pareils.\n</p>",
       "source_text": "Il suivit strictement les instructions reçues; à Neufchâtel, comme à Saint-Valery, il trouva une monture toute sellée et qui l’attendait; il voulut transporter les pistolets de la selle qu’il venait de quitter à la selle qu’il allait prendre: les fontes étaient garnies de pistolets pareils.",
       "source_sha256": "828cd6a7f965ac8981fca72e815d3c7af7814c40c2b2c8ff93be1266ea4533f3",
-      "target_html": null
+      "target_html": "<p>\nОн строго следовал полученным инструкциям; в Невшателе, как и в\nСен-Валери, он обнаружил уже оседланную лошадь, которая ждала его; он захотел\nпереложить пистолеты из седла, которое только что покинул, в седло, на которое\nсобирался сесть: седла были оснащены одинаковыми пистолетами.\n</p>",
+      "target_sha256": "3ffd0acdf9bbf710bd0a890f1c4c6c4827e4a6db69e9f8c112c98cb2f71484d2",
+      "provider_target_sha256": "3ffd0acdf9bbf710bd0a890f1c4c6c4827e4a6db69e9f8c112c98cb2f71484d2",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:104",
       "source_html": "<p>\n«Votre adresse à Paris?\n</p>",
       "source_text": "«Votre adresse à Paris?",
       "source_sha256": "aeab9643d0659de9248637b341f8a5c8cad902fa654feda5c666f196f3fa0eb2",
-      "target_html": null
+      "target_html": "<p>\n— Ваш адрес в Париже?\n</p>",
+      "target_sha256": "bec227fcbe67808d25726cf968f365cb18cb0387f25912042095f45230ffb589",
+      "provider_target_sha256": "bec227fcbe67808d25726cf968f365cb18cb0387f25912042095f45230ffb589",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:105",
       "source_html": "<p>\n— Hôtel des Gardes, compagnie des Essarts.\n</p>",
       "source_text": "— Hôtel des Gardes, compagnie des Essarts.",
       "source_sha256": "a159d3ac4f787dbc77f969067f2e24c9499f7dcf63143e2d9cb563879f6bf2a3",
-      "target_html": null
+      "target_html": "<p>\n— Отель Гвардии, рота Эссар.\n</p>",
+      "target_sha256": "731d8726c961c052f738d700ea45f2c25768643793ab43e74e3001c699b2b8a5",
+      "provider_target_sha256": "731d8726c961c052f738d700ea45f2c25768643793ab43e74e3001c699b2b8a5",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:106",
       "source_html": "<p>\n— Bien, répondit celui-ci.\n</p>",
       "source_text": "— Bien, répondit celui-ci.",
       "source_sha256": "f07dcf3b5f4a40a0233149b031e0bc95e734ef36f21608a1e0abefb5a0a6fee2",
-      "target_html": null
+      "target_html": "<p>\n— Хорошо, — ответил тот.\n</p>",
+      "target_sha256": "1368d572ba67b59b2c58bafceafb3e02cdc3c952edb0363f149d856f23eda288",
+      "provider_target_sha256": "1368d572ba67b59b2c58bafceafb3e02cdc3c952edb0363f149d856f23eda288",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:107",
       "source_html": "<p>\n— Quelle route faut-il prendre? demanda à son tour d’Artagnan.\n</p>",
       "source_text": "— Quelle route faut-il prendre? demanda à son tour d’Artagnan.",
       "source_sha256": "042e5f10d66b21353f9b23963092f4b7c188f236dc255c2ece8c1bfd4f170e91",
-      "target_html": null
+      "target_html": "<p>\n— Какую дорогу нужно выбрать? — спросил в свою очередь д’Артаньян.\n</p>",
+      "target_sha256": "5a763d39ff0a61f53fdde80a53fd255854bba839972def28ffcba96ba81bb39e",
+      "provider_target_sha256": "5a763d39ff0a61f53fdde80a53fd255854bba839972def28ffcba96ba81bb39e",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:108",
       "source_html": "<p>\n— Celle de Rouen; mais vous laisserez la ville à votre droite. Au petit village\nd’Écouis, vous vous arrêterez, il n’y a qu’une auberge, l’<i>Écu de France</i>.\nNe la jugez pas d’après son apparence; elle aura dans ses écuries un cheval qui\nvaudra celui-ci.\n</p>",
       "source_text": "— Celle de Rouen; mais vous laisserez la ville à votre droite. Au petit village d’Écouis, vous vous arrêterez, il n’y a qu’une auberge, l’Écu de France. Ne la jugez pas d’après son apparence; elle aura dans ses écuries un cheval qui vaudra celui-ci.",
       "source_sha256": "f0564bd5bd85aa22a4f3f8c1d8b7d3b83cb27bc42e262b27b928a4d42fd831b0",
-      "target_html": null
+      "target_html": "<p>\n— Ту, что из Руана; но город останется у вас справа. В маленькой деревушке\nЭкуа вы остановитесь, там есть только одна гостиница — <i>«Эку-де-Франс</i>\n».\nНе судите о ней по внешнему виду; в её конюшнях будет лошадь, которая\nничем не уступает этой.\n</p>",
+      "target_sha256": "e2a4e75a0c732ee790b2f03dd079934a8b017db5a94abf24372377a477742949",
+      "provider_target_sha256": "e2a4e75a0c732ee790b2f03dd079934a8b017db5a94abf24372377a477742949",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:109",
       "source_html": "<p>\n— Même mot d’ordre?\n</p>",
       "source_text": "— Même mot d’ordre?",
       "source_sha256": "ef69645a60cfc8da1b0b5131a03003e3c3bf3015479adec9746a63e080545ecb",
-      "target_html": null
+      "target_html": "<p>\n— Тот же пароль?\n</p>",
+      "target_sha256": "eaa4ab52d2f298d0e61e4d376a534db9f2b0de08145ba64a02b1917c5c5b7690",
+      "provider_target_sha256": "eaa4ab52d2f298d0e61e4d376a534db9f2b0de08145ba64a02b1917c5c5b7690",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:110",
       "source_html": "<p>\n— Exactement.\n</p>",
       "source_text": "— Exactement.",
       "source_sha256": "88c997500fcf6f76589cbf20272f984cd9a04e691786a34d263a3e6c255ad6a2",
-      "target_html": null
+      "target_html": "<p>\n— Именно так.\n</p>",
+      "target_sha256": "df1aee87260e0c2eeb3a252413094a3d29338fb51bb988289520378f8bd5ba1e",
+      "provider_target_sha256": "df1aee87260e0c2eeb3a252413094a3d29338fb51bb988289520378f8bd5ba1e",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "fbfe0c81f3a14679ade3edfcb374f0b1",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:111",
       "source_html": "<p>\n— Adieu, maître!\n</p>",
       "source_text": "— Adieu, maître!",
       "source_sha256": "20b3fd4f6778640bdb7b8a3cc8734b95ad00b482131b9c84b52e4c9ddbba12ff",
-      "target_html": null
+      "target_html": "<p>\n— Прощайте, господин!\n</p>",
+      "target_sha256": "bc2c3953883687a2cf1db7416b299d9941e289e66fbfe6f1e44cfad54f698e59",
+      "provider_target_sha256": "bc2c3953883687a2cf1db7416b299d9941e289e66fbfe6f1e44cfad54f698e59",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "c38c3f9581ca489ca5d8f8a4b2445890",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:112",
       "source_html": "<p>\n— Bon voyage, gentilhomme! avez-vous besoin de quelque chose?»\n</p>",
       "source_text": "— Bon voyage, gentilhomme! avez-vous besoin de quelque chose?»",
       "source_sha256": "df07c423d5bd5c74ebed47a194985cd740f597df7796f885946988e332e9a028",
-      "target_html": null
+      "target_html": "<p>\n— Удачного пути, господин! Вам что-нибудь нужно?\n</p>",
+      "target_sha256": "d8ed5bbee53190b95ae444557d3fe83fbd4c2a5862dd453045e6a80386df332a",
+      "provider_target_sha256": "d8ed5bbee53190b95ae444557d3fe83fbd4c2a5862dd453045e6a80386df332a",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "c38c3f9581ca489ca5d8f8a4b2445890",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:113",
       "source_html": "<p>\nD’Artagnan fit signe de la tête que non, et repartit à fond de train. À Écouis,\nla même scène se répéta: il trouva un hôte aussi prévenant, un cheval frais et\nreposé; il laissa son adresse comme il l’avait fait, et repartit du même train\npour Pontoise. À Pontoise, il changea une dernière fois de monture, et à neuf\nheures il entrait au grand galop dans la cour de l’hôtel de M. de Tréville.\n</p>",
       "source_text": "D’Artagnan fit signe de la tête que non, et repartit à fond de train. À Écouis, la même scène se répéta: il trouva un hôte aussi prévenant, un cheval frais et reposé; il laissa son adresse comme il l’avait fait, et repartit du même train pour Pontoise. À Pontoise, il changea une dernière fois de monture, et à neuf heures il entrait au grand galop dans la cour de l’hôtel de M. de Tréville.",
       "source_sha256": "f6eff1af3da430160c5a0515a1d0c81a69bc7f2de24114434a8379aac7513d95",
-      "target_html": null
+      "target_html": "<p>\nД’Артаньян кивнул головой, что нет, и снова помчался во весь опор. В Экюи\nповторилась та же сцена: он нашел столь же любезного хозяина, свежую и\nотдохнувшую лошадь; оставил свою визитную карточку, как и раньше, и снова отправился тем же темпом\nв Понтуаз. В Понтуазе он в последний раз сменил лошадь, и в девять\nчасов ворвался галопом во двор особняка господина де Тревилля.\n</p>",
+      "target_sha256": "a1f989d6ca04c732831071f8f327b36907b0ea1d8806f2362ea5ca0516670992",
+      "provider_target_sha256": "a1f989d6ca04c732831071f8f327b36907b0ea1d8806f2362ea5ca0516670992",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "c38c3f9581ca489ca5d8f8a4b2445890",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:114",
       "source_html": "<p>\nIl avait fait près de soixante lieues en douze heures.\n</p>",
       "source_text": "Il avait fait près de soixante lieues en douze heures.",
       "source_sha256": "691cd43a03e7901ca1339dcbd50c8c085646c8f0fa6910d0a85b95434969f19d",
-      "target_html": null
+      "target_html": "<p>\nЗа двенадцать часов он преодолел почти шестьдесят лиев.\n</p>",
+      "target_sha256": "f6fc30fd24e40d07ebe1b2bdab193d6707325c153c84f9639b6ca3d297ae59f4",
+      "provider_target_sha256": "f6fc30fd24e40d07ebe1b2bdab193d6707325c153c84f9639b6ca3d297ae59f4",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "c38c3f9581ca489ca5d8f8a4b2445890",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     },
     {
       "id": "chap21:115",
       "source_html": "<p>\nM. de Tréville le reçut comme s’il l’avait vu le matin même; seulement, en lui\nserrant la main un peu plus vivement que de coutume, il lui annonça que la\ncompagnie de M. des Essarts était de garde au Louvre et qu’il pouvait se rendre\nà son poste.\n</p>",
       "source_text": "M. de Tréville le reçut comme s’il l’avait vu le matin même; seulement, en lui serrant la main un peu plus vivement que de coutume, il lui annonça que la compagnie de M. des Essarts était de garde au Louvre et qu’il pouvait se rendre à son poste.",
       "source_sha256": "fa74137716b4aa95bf46a3050bf783258d9a0530035d90f3fda26ab6649a357f",
-      "target_html": null
+      "target_html": "<p>\nМесье де Тревиль принял его так, словно видел его этим же утром; только,\nпожав ему руку чуть сильнее, чем обычно, он сообщил, что\nрота месье де Эссарса несет караул в Лувре и что он может отправиться\nна свой пост.\n</p>",
+      "target_sha256": "d068b9c4cd83304f5f441c1df2ef13d920035391e8bf7d14f4e9b4b2ab7451dc",
+      "provider_target_sha256": "d068b9c4cd83304f5f441c1df2ef13d920035391e8bf7d14f4e9b4b2ab7451dc",
+      "markup_repairs": [],
+      "model_type_used": "quality_optimized",
+      "request_id": "c38c3f9581ca489ca5d8f8a4b2445890",
+      "tag_handling": "xml",
+      "tag_handling_version": "v2"
     }
   ]
 }

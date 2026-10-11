@@ -1,0 +1,53 @@
+{
+  "row_ids": [
+    "chap22:63",
+    "chap22:64",
+    "chap22:65",
+    "chap22:66",
+    "chap22:67"
+  ],
+  "source_hashes": [
+    "c89a37ca5d58250034cc3203385ce503bc4252bfe1e60d8a21dc2430766c179d",
+    "c419b5a5e54d483453c8e0ceea838923491e5c36e3185ca0dbe7741105cbbecd",
+    "6d7e077950df2368a7f99663cde3656dc19e4d6ba327028815bb78e7a541a6d4",
+    "7bbb0601a6261eae701ff3b96dec8184b72f3470069c27a92a7499458f5699aa",
+    "f315abe570818ec1393b2563faa41a2263f02a0cad68a69d547af504deb0dba1"
+  ],
+  "request_id": "9506f1ada40940528e21c26d8063452b",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Тише! — сказала молодая женщина, прижав ладонь к губам молодого\nчеловека: — Тише! И уходите тем же путем, которым пришли.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Но где и когда я вас снова увижу? — воскликнул д’Артаньян.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Об этом вам скажет записка, которую вы найдёте, вернувшись. Уходите, уходите!»\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ, сказав это, она открыла дверь в коридор и вытолкнула д’Артаньяна из\nкабинета.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nД’Артаньян послушался, как ребёнок, не оказывая сопротивления и не высказывая ни малейших возражений, что\nдоказывает, что он действительно был влюблён.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

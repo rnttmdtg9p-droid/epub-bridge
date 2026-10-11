@@ -1,0 +1,53 @@
+{
+  "row_ids": [
+    "chap21:111",
+    "chap21:112",
+    "chap21:113",
+    "chap21:114",
+    "chap21:115"
+  ],
+  "source_hashes": [
+    "20b3fd4f6778640bdb7b8a3cc8734b95ad00b482131b9c84b52e4c9ddbba12ff",
+    "df07c423d5bd5c74ebed47a194985cd740f597df7796f885946988e332e9a028",
+    "f6eff1af3da430160c5a0515a1d0c81a69bc7f2de24114434a8379aac7513d95",
+    "691cd43a03e7901ca1339dcbd50c8c085646c8f0fa6910d0a85b95434969f19d",
+    "fa74137716b4aa95bf46a3050bf783258d9a0530035d90f3fda26ab6649a357f"
+  ],
+  "request_id": "c38c3f9581ca489ca5d8f8a4b2445890",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Прощайте, господин!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Удачного пути, господин! Вам что-нибудь нужно?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nД’Артаньян кивнул головой, что нет, и снова помчался во весь опор. В Экюи\nповторилась та же сцена: он нашел столь же любезного хозяина, свежую и\nотдохнувшую лошадь; оставил свою визитную карточку, как и раньше, и снова отправился тем же темпом\nв Понтуаз. В Понтуазе он в последний раз сменил лошадь, и в девять\nчасов ворвался галопом во двор особняка господина де Тревилля.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЗа двенадцать часов он преодолел почти шестьдесят лиев.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nМесье де Тревиль принял его так, словно видел его этим же утром; только,\nпожав ему руку чуть сильнее, чем обычно, он сообщил, что\nрота месье де Эссарса несет караул в Лувре и что он может отправиться\nна свой пост.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

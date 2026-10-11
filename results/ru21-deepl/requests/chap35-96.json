@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap35:95",
+    "chap35:96",
+    "chap35:97"
+  ],
+  "source_hashes": [
+    "c0d50dea5d1055a1482eb8520a77930c8d1b04aa98461005016e2cb6ab3b054b",
+    "657710762cec42f5ff01573d35fb9b86fbb63600d898ebc3a8eb03c153a84a30",
+    "c3ceb024fa15954641ef7088956fd74969864c0a5d68b8cd0b0aecda37c21a1f"
+  ],
+  "request_id": "bb13fcbd56d84a16b33e8cd061048e7b",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Я подумала, что госпожа почувствовала себя плохо, и хотела ей помочь,\n— ответила горничная, придя в ужас от страшного выражения, которое появилось на\nлице её хозяйки.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Мне стало плохо? Мне? Вы что, принимаете меня за слабачку? Когда меня\nоскорбляют, мне не становится плохо, я мщу, слышите!»\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ она жестом руки дала понять Кетти, чтобы та вышла.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

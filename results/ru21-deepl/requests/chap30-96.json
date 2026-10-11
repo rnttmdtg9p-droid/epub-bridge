@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap30:95",
+    "chap30:96",
+    "chap30:97"
+  ],
+  "source_hashes": [
+    "49b457d112857e148a196c134f0a87c4c73127ae440caff3f5512d041d71ebc3",
+    "b04c20a7d3644f727786d33bd7560b93f522ca7712e98314ee491d7876c6410e",
+    "d98d60977f570491b3729cc790bfb030d842b6892d1f7e2db65c31e787d049f0"
+  ],
+  "request_id": "497babc396314f2fb6bcc1f64b3bd513",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\nПортос вытащил меч из ножен и начал отбиваться от ударов у стены,\nвремя от времени отступая и делая приседания, как танцор. Арамис,\nкоторый по-прежнему работал над своим стихотворением, заперся в кабинете Атоса и попросил,\nчтобы его больше не беспокоили, пока не придет время обнажить меч.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nАтос жестом попросил у Гримо бутылку.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЧто касается д’Артаньяна, то он придумал про себя небольшой план,\nосуществление которого мы увидим позже и который обещал ему какое-нибудь\nочаровательное приключение, о чём\nсвидетельствовали улыбки, время от времени промелькивавшие на его\nлице и освещавшие его мечтания.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

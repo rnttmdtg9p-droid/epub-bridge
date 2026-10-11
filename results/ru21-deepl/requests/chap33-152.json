@@ -1,0 +1,53 @@
+{
+  "row_ids": [
+    "chap33:151",
+    "chap33:152",
+    "chap33:153",
+    "chap33:154",
+    "chap33:155"
+  ],
+  "source_hashes": [
+    "acb83bafcc4a7839221d3dcc79d6f1695e9d1fee66e7745d33336406732fbaf2",
+    "e59c5290a4add1714c98c37fb0e09933991cc7fc392b39a63173207f4558c446",
+    "cd6deedae45117e2df1d22b49b9f76371459a0caef6eed0e9c358d016306cd64",
+    "6d4c8282adfec338c3fba6b127b6ba248afe31b3280874c19ab215153194a074",
+    "6b529667f0ee8cb5a43c0e0a8d9e1ce92d8d312331c637cfbe8ef80fb6a5e765"
+  ],
+  "request_id": "b2b376bb169c46e284ce854075db593a",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Ах! Вы меня не любите! — воскликнула Кетти, — и я такая несчастная!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nНа этот упрек есть ответ, в котором женщины всегда заблуждаются;\nд’Артаньян ответил так, что Кетти осталась в полном заблуждении.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nТем не менее она долго плакала, прежде чем решилась передать это письмо\nМиледи, но в конце концов она решилась — это было всё, чего хотел д’Артаньян.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nКроме того, он пообещал ей, что вечером рано уйдет от своей\nлюбовницы и, выйдя от неё, заглянет к ней.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nЭто обещание окончательно утешило бедную Кетти.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

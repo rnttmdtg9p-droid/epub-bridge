@@ -1,0 +1,69 @@
+{
+  "row_ids": [
+    "chap34:111",
+    "chap34:112",
+    "chap34:113",
+    "chap34:114",
+    "chap34:115",
+    "chap34:116",
+    "chap34:117"
+  ],
+  "source_hashes": [
+    "9ed8118bf467db11fae774d7b97bb19f0c25494a0735f618ccdd624f518f7a48",
+    "2ffb29531be2d847a486a2e277360ed57b0df1af4954ebeff1bddaa779918d97",
+    "81ac5976b1b0da7a63ca452990121734fba31d9f68549e5c129affa361e7b95b",
+    "16038aaa036d00f03f7d3fa46e7ea10840cd19acb20322e6b0ed4847f661f0da",
+    "ce683b26a6688b162f1e356ac75aee584a1b546a76dd80de7ff30d45104e7bfe",
+    "7cbfe23ac87e91b0bb7c4c8517585c1493aa1a819029ff09ecaebb21839c2714",
+    "f64447d55256c77624f3085b40f87ed48d49d4317701030c6fe4fd6ef1c482f9"
+  ],
+  "request_id": "36c9fa18aeae430298fcb91733f4f3bc",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— А как так? — спросил мушкетер.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Послушайте. Сегодня вечером месье Кокенар отправляется к герцогу де Шольну, который его пригласил.\nЭто консультация, которая продлится не менее двух часов. Пойдемте, мы останемся\nнаедине и подведем итоги.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Отлично! Вот это я понимаю, моя дорогая!\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Вы меня прощаете?\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— «Посмотрим», — величественно сказал Портос.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\nИ оба расстались, сказав друг другу: «До вечера».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n«Чёрт возьми! — подумал Портос, удаляясь, — мне кажется, я наконец приближаюсь\nк комоду мастера Кокенара».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}

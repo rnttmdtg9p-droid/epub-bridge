@@ -1,0 +1,37 @@
+{
+  "row_ids": [
+    "chap28:231",
+    "chap28:232",
+    "chap28:233"
+  ],
+  "source_hashes": [
+    "ae9f4168d8d07194e4ab54f707f599fd35d95a747684933e1dbd023068f8bd05",
+    "7ee9184697eb6b6f9907d29ff01333cde3f5ae6f734e1886093632dcabfcab31",
+    "619977f12a401399bba8129cc023e95513efb4e54a811af7eaf86bc4cec9848f"
+  ],
+  "request_id": "f560ff5baadd4de386b7f4fbf83bbb05",
+  "tag_handling": "xml",
+  "tag_handling_version": "v2",
+  "response": {
+    "translations": [
+      {
+        "text": "<p>\n— Это уже что-то: у меня же нет даже и тени этого, — холодно заметил\nАтос, — но что касается д’Артаньяна, господа, счастье от того, что он отныне стал одним из\nнас, свело его с ума; тысяча ливров! Клянусь, что только для меня одного мне нужно\nдве тысячи.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Четырежды два — восемь, — сказал тогда Арамис, — значит, нам нужно восемь тысяч ливров\nна наши лошадей, на которых, правда, у нас\nуже есть седла.\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      },
+      {
+        "text": "<p>\n— Ещё, — сказал Атос, дожидаясь, пока д’Артаньян, который собирался поблагодарить месье де\nТревилля, закроет дверь, — ещё этот прекрасный бриллиант, сверкающий на пальце нашего\nдруга. Чёрт возьми! Д’Артаньян — слишком хороший товарищ, чтобы оставить братьев в\nбеде, когда на среднем пальце у него — выкуп за короля».\n</p>",
+        "detected_source_language": "FR",
+        "model_type_used": "quality_optimized",
+        "tag_handling_version": "v2"
+      }
+    ]
+  }
+}
