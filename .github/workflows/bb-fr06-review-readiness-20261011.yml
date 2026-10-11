@@ -1,0 +1,21 @@
+name: French rank 6 AI review route readiness
+on:
+  push:
+    branches: [bb-fr-rank6-deepl-20261011]
+    paths: ['.github/workflows/bb-fr06-review-readiness-20261011.yml']
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check existing authorized Claude secret without exposing credentials
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+            echo "EXISTING_CLAUDE_SECRET_PRESENT"
+          else
+            echo "EXISTING_CLAUDE_SECRET_ABSENT"
+          fi
