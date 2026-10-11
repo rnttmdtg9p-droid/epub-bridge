@@ -1,0 +1,17 @@
+{
+  "rank": 21,
+  "master": "5.0.69",
+  "status": "BLOCKED",
+  "total_units": 69,
+  "total_rows": 8761,
+  "units": {},
+  "human_review": "NOT_APPLICABLE_USER_AUTHORIZED_AI_REVIEW",
+  "release_ready": false,
+  "rank22_started": false,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "started_utc": "2026-10-11T21:09:10.320769+00:00",
+  "reason": "MISSING_EXISTING_ANTHROPIC_OR_CLAUDE_API_KEY"
+}
