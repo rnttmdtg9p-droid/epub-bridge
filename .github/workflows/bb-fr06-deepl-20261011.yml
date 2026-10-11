@@ -1,0 +1,145 @@
+name: BB French rank 6 Russian to French translation only
+on:
+  push:
+    branches: [bb-fr-rank6-deepl-20261011]
+    paths: ['.github/workflows/bb-fr06-deepl-20261011.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-fr06-deepl-20261011
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate frozen 41-unit Russian source through existing DeepL secret
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: |
+          python3 - <<'PY'
+          import base64,datetime,gzip,hashlib,json,os,time,urllib.error,urllib.request
+          from pathlib import Path
+          H=lambda b:hashlib.sha256(b).hexdigest()
+          input_path=Path('inputs/fr06/rank6_ru_source.json.gz.b64')
+          packed=input_path.read_bytes()
+          assert H(packed)=='3923e211bd2aa3023c99922ed2e5e0d030c5bd5baf4dad9d4ce21cf35b11987a','INPUT_FILE_CHANGED'
+          raw=gzip.decompress(base64.b64decode(packed))
+          assert H(raw)=='90e6239ede9a26f54dc8955c090c72eabc891a89e8ad82e14b5ab8472aeeebc0','SOURCE_JSON_CHANGED'
+          src=json.loads(raw)
+          units=src['units']
+          assert len(units)==41 and sum(len(u['rows']) for u in units)==3765
+          assert src['source_epub_sha256']=='dd707117897d84c1a79141714c81e233d95298b6554f061daefde226edb31732'
+          for i,u in enumerate(units,1):
+              assert u['unit']==i and len(u['rows'])>5
+              for j,row in enumerate(u['rows'],1):
+                  assert row['id']==f'u{i:03d}-p{j:04d}'
+                  assert row['text'].strip() and H(row['text'].encode())==row['sha256']
+          out=Path('results/fr06-deepl');out.mkdir(parents=True,exist_ok=True)
+          mpath=out/'manifest.json'
+          manifest=json.loads(mpath.read_text()) if mpath.exists() else {
+              'rank':6,'title':'Crime et Châtiment','source_language':'RU','target_language':'FR',
+              'engine':'DeepL quality_optimized','source_epub_sha256':src['source_epub_sha256'],
+              'source_json_sha256':H(raw),'units_expected':41,'rows_expected':3765,
+              'state':'PREPARING','release_ready':False,'units':{},
+              'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          assert manifest['source_json_sha256']==H(raw)
+          def save():
+              tmp=mpath.with_suffix('.tmp');tmp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2));tmp.replace(mpath)
+          save()
+          key=os.environ.get('DEEPL_AUTH_KEY','').strip()
+          if not key:
+              manifest.update(state='BLOCKED_AUTH',reason='MISSING_DEEPL_AUTH_KEY');save();raise SystemExit(2)
+          host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
+          def call(path,payload=None):
+              for attempt in range(5):
+                  req=urllib.request.Request(host+path,data=json.dumps(payload,ensure_ascii=False).encode() if payload is not None else None,
+                      headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=120) as response:
+                          return json.load(response),response.headers.get('x-trace-id') or response.headers.get('x-request-id')
+                  except urllib.error.HTTPError as exc:
+                      if exc.code in (429,500,502,503,504) and attempt<4:
+                          time.sleep(4*(attempt+1));continue
+                      raise RuntimeError('DEEPL_HTTP_'+str(exc.code)) from None
+                  except Exception as exc:
+                      if attempt<4:
+                          time.sleep(4*(attempt+1));continue
+                      raise RuntimeError('DEEPL_NETWORK_'+type(exc).__name__) from None
+          try:
+              states=[]
+              for u in units:
+                  path=out/f"unit-{u['unit']:03d}.json"
+                  prior=json.loads(path.read_text()) if path.exists() else None
+                  rows=[dict(row,target_text=None) for row in u['rows']]
+                  if prior:
+                      assert prior['source_xhtml_sha256']==u['xhtml_sha256'] and len(prior['rows'])==len(rows),'CHECKPOINT_SCOPE_MISMATCH'
+                      for old,new in zip(prior['rows'],rows):
+                          assert old['id']==new['id'] and old['sha256']==new['sha256']
+                          new.update({k:old.get(k) for k in ('target_text','target_sha256','model_type_used','request_id')})
+                  states.append((u,path,rows))
+                  manifest['units'][str(u['unit'])]={'rows':len(rows),'translated':sum(bool(r.get('target_text')) for r in rows)}
+              needed=sum(len(r['text']) for _,_,rows in states for r in rows if not r.get('target_text'))
+              usage,_=call('/v2/usage')
+              manifest.update(usage_before=usage,remaining_source_characters=needed)
+              limit=usage.get('character_limit');used=usage.get('character_count',0)
+              if limit is not None and used+needed>limit:
+                  manifest.update(state='BLOCKED_QUOTA',quota_shortfall=used+needed-limit);save();raise SystemExit(2)
+              manifest['state']='TRANSLATING';save()
+              for u,path,rows in states:
+                  for start in range(0,len(rows),8):
+                      batch=[r for r in rows[start:start+8] if not r.get('target_text')]
+                      if not batch:continue
+                      context='Ф. М. Достоевский, Преступление и наказание. 1866 novel. Translate fully into literary French; retain dialogue, names and paragraph order. Surrounding Russian text: '+ ' '.join(r['text'] for r in rows[max(0,start-2):min(len(rows),start+10)])[:2400]
+                      payload={'text':[r['text'] for r in batch],'source_lang':'RU','target_lang':'FR',
+                          'model_type':'quality_optimized','split_sentences':'nonewlines','context':context}
+                      journal=out/'requests';journal.mkdir(exist_ok=True)
+                      jpath=journal/f"unit-{u['unit']:03d}-{start:04d}.json"
+                      if jpath.exists():
+                          old=json.loads(jpath.read_text())
+                          assert old['row_ids']==[r['id'] for r in batch] and old['source_hashes']==[r['sha256'] for r in batch],'JOURNAL_SOURCE_MISMATCH'
+                          result,request_id=old['response'],old['request_id']
+                      else:
+                          result,request_id=call('/v2/translate',payload)
+                          jpath.write_text(json.dumps({'row_ids':[r['id'] for r in batch],
+                              'source_hashes':[r['sha256'] for r in batch],
+                              'request_id':request_id,'response':result},ensure_ascii=False,indent=2))
+                      targets=result.get('translations',[])
+                      assert len(targets)==len(batch),'TRANSLATION_CARDINALITY'
+                      for row,t in zip(batch,targets):
+                          target=t.get('text','')
+                          assert target.strip() and t.get('model_type_used')=='quality_optimized','EMPTY_OR_UNEXPECTED_MODEL'
+                          row.update(target_text=target,target_sha256=H(target.encode()),
+                              model_type_used=t['model_type_used'],request_id=request_id)
+                      tmp=path.with_suffix('.tmp')
+                      tmp.write_text(json.dumps({'unit':u['unit'],'title':u['title'],
+                          'source_xhtml_sha256':u['xhtml_sha256'],'rows':rows},ensure_ascii=False,indent=2))
+                      tmp.replace(path)
+                      manifest['units'][str(u['unit'])]['translated']=sum(bool(r.get('target_text')) for r in rows);save()
+                  print('UNIT_COMPLETE',u['unit'],len(rows),flush=True)
+              assert all(r.get('target_text') for _,_,rows in states for r in rows)
+              manifest.update(state='TRANSLATION_COMPLETE_REVIEW_PENDING',
+                  usage_after=call('/v2/usage')[0],finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
+              save()
+          except SystemExit:raise
+          except Exception as exc:
+              manifest.update(state='BLOCKED_OR_PARTIAL',reason=str(exc),
+                  finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());save();raise
+          PY
+      - name: Save isolated translation checkpoint
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/fr06-deepl/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Checkpoint rank 6 DeepL RU-FR translation; release gates pending'
+          git push origin HEAD:bb-fr-rank6-deepl-20261011
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-fr06-deepl-checkpoint-20261011
+          path: results/fr06-deepl/
+          retention-days: 30
