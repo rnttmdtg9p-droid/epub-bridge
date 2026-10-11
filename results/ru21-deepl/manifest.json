@@ -285,7 +285,7 @@
   },
   "full_human_literary_review": "NOT_PERFORMED",
   "release_ready": false,
-  "started_utc": "2026-10-11T17:53:46.111372+00:00",
+  "started_utc": "2026-10-11T18:02:01.723521+00:00",
   "usage_before": {
     "products": [
       {
@@ -299,10 +299,10 @@
       {
         "product_type": "translate",
         "billing_unit": "characters",
-        "api_key_unit_count": 3458963,
-        "account_unit_count": 3458963,
-        "api_key_character_count": 3458963,
-        "character_count": 3458963
+        "api_key_unit_count": 3911775,
+        "account_unit_count": 3911775,
+        "api_key_character_count": 3911775,
+        "character_count": 3911775
       },
       {
         "product_type": "speechToText",
@@ -321,11 +321,11 @@
         "character_count": 0
       }
     ],
-    "api_key_character_count": 3458963,
+    "api_key_character_count": 3911775,
     "api_key_character_limit": 1000000000000,
     "start_time": "2026-09-21T01:38:46Z",
     "end_time": "2026-10-21T01:38:46Z",
-    "character_count": 3458963,
+    "character_count": 3911775,
     "character_limit": 1000000000000,
     "speech_to_text_milliseconds_count": 0,
     "speech_to_text_milliseconds_limit": 0,
@@ -334,10 +334,10 @@
     "speech_to_speech_minutes_count": 0,
     "speech_to_speech_minutes_limit": 1800000
   },
-  "remaining_source_characters": 1302322,
+  "remaining_source_characters": 856072,
   "expected_blocks": 8692,
   "expected_headings": 69,
   "source_sha256": "262a5c604946a14f5fdececa7cecd300b37ae514582d761d2a82b408961524d7",
   "reason": "INLINE_STRUCTURE_CHANGED",
-  "finished_utc": "2026-10-11T18:00:01.713739+00:00"
+  "finished_utc": "2026-10-11T18:02:05.672066+00:00"
 }
