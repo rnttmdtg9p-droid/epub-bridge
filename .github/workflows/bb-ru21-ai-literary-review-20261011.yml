@@ -1,0 +1,43 @@
+name: BB rank21 complete AI literary review only
+on:
+  push:
+    branches: [bb-rank21-translation-20261011]
+    paths:
+      - .github/workflows/bb-ru21-ai-literary-review-20261011.yml
+      - scripts/bb_ru21_ai_literary_review.py
+      - inputs/ru21-ai-review/**
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-ru21-ai-literary-review
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install --quiet lxml==6.0.2
+      - name: Complete source-aligned AI review with existing protected credential
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: python scripts/bb_ru21_ai_literary_review.py
+      - name: Preserve review checkpoints
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/ru21-ai-review
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint rank21 AI literary review; no release claim'
+            git push origin HEAD:bb-rank21-translation-20261011
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bb-ru21-ai-literary-review-20261011
+          path: results/ru21-ai-review
+          if-no-files-found: error
+          retention-days: 90
