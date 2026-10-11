@@ -82,17 +82,34 @@ jobs:
                       if not batch:continue
                       context='Alexandre Dumas, Les Trois Mousquetaires. Historical adventure novel, France 1625. D’Artagnan: д’Артаньян; Athos: Атос; Porthos: Портос; Aramis: Арамис; Milady: миледи; Richelieu: Ришелье. Surrounding original French passage:\n'+'\n\n'.join(p['source_text'] for p in rows[max(0,start-3):min(len(rows),start+11)])
                       payload={'text':[E.tostring(html.fromstring(p['source_html']),encoding='unicode',method='xml',with_tail=False) for p in batch],'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','tag_handling':'xml','tag_handling_version':'v2','split_sentences':'nonewlines','context':context}
-                      result,request_id=call('/v2/translate',payload)
                       journal=out/'requests';journal.mkdir(exist_ok=True)
-                      (journal/(u['id']+'-'+str(start)+'.json')).write_text(json.dumps({'row_ids':[p['id'] for p in batch],'source_hashes':[p['source_sha256'] for p in batch],'request_id':request_id,'tag_handling':'xml','tag_handling_version':'v2','response':result},ensure_ascii=False,indent=2))
+                      journal_path=journal/(u['id']+'-'+str(start)+'.json')
+                      if journal_path.exists():
+                          prior=json.loads(journal_path.read_text())
+                          assert prior['row_ids']==[p['id'] for p in batch] and prior['source_hashes']==[p['source_sha256'] for p in batch],'RESPONSE_JOURNAL_SOURCE_MISMATCH'
+                          result=prior['response'];request_id=prior['request_id']
+                      else:
+                          result,request_id=call('/v2/translate',payload)
+                          journal_path.write_text(json.dumps({'row_ids':[p['id'] for p in batch],'source_hashes':[p['source_sha256'] for p in batch],'request_id':request_id,'tag_handling':'xml','tag_handling_version':'v2','response':result},ensure_ascii=False,indent=2))
                       targets=result.get('translations',[]);assert len(targets)==len(batch),'ROW_COUNT_MISMATCH'
                       for p,t in zip(batch,targets):
                           target=t.get('text','');assert target.strip(),'EMPTY_TRANSLATION'
                           assert t.get('model_type_used')=='quality_optimized','UNEXPECTED_MODEL'
                           source=html.fromstring(p['source_html']);dest=html.fromstring(target)
+                          provider_target_hash=H(target.encode());repairs=[]
+                          before_text=''.join(dest.itertext())
+                          for parent in dest.iter():
+                              children=list(parent);j=0
+                              while j+1<len(children):
+                                  left,right=children[j:j+2]
+                                  if left.tag in ('i','em','b','strong') and left.tag==right.tag and dict(left.attrib)==dict(right.attrib) and not len(left) and not len(right) and not (left.tail or '').strip():
+                                      left.text=(left.text or '')+(left.tail or '')+(right.text or '');left.tail=right.tail;parent.remove(right);children.pop(j+1);repairs.append('LOSSLESS_ADJACENT_EMPHASIS_MERGE')
+                                  else:j+=1
+                          assert ''.join(dest.itertext())==before_text,'NORMALIZATION_TEXT_CHANGED'
+                          if repairs:target=E.tostring(dest,encoding='unicode',method='html',with_tail=False)
                           assert [e.tag for e in source.iter()]==[e.tag for e in dest.iter()],'INLINE_STRUCTURE_CHANGED'
                           assert [dict(e.attrib) for e in source.iter()]==[dict(e.attrib) for e in dest.iter()],'ATTRIBUTES_CHANGED'
-                          p.update(target_html=target,target_sha256=H(target.encode()),model_type_used=t['model_type_used'],request_id=request_id,tag_handling='xml',tag_handling_version=t.get('tag_handling_version','v2'))
+                          p.update(target_html=target,target_sha256=H(target.encode()),provider_target_sha256=provider_target_hash,markup_repairs=repairs,model_type_used=t['model_type_used'],request_id=request_id,tag_handling='xml',tag_handling_version=t.get('tag_handling_version','v2'))
                       tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(u,ensure_ascii=False,indent=2));tmp.replace(path)
                       manifest['units'][u['id']]['translated']=sum(bool(p['target_html']) for p in rows);save()
                   print('UNIT_COMPLETE',u['id'],len(rows),flush=True)
