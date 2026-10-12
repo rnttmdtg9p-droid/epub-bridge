@@ -78,6 +78,9 @@ checks. In the isolated October 11 test, the environment already allowed
 proxy. The command tool's supported per-command network permission restored
 that existing route. Use that documented, scoped permission when needed; keep
 the proxy and restricted policy intact.
+The successful command permission used `sandbox_permissions:
+"with_additional_permissions"` with `network.enabled: true` in the Codex
+command tool. These are execution-tool settings, not Python runner arguments.
 
 The runner requests structured output with `output_config.format`, using a
 `rows` object schema. Paragraph count, IDs, hashes, order, nonempty French, and
