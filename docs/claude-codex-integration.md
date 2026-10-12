@@ -69,3 +69,22 @@ Missing credentials exit with code 2 and a precise receipt. HTTP or network
 failures are recorded as attempted requests rather than pre-call failures.
 Preserve the private receipts and their SHA-256 values; keep test output out of
 the public repository.
+
+## Executor network permission and response evidence
+
+The environment allowlist and a command's executor permission are separate
+checks. In the isolated October 11 test, the environment already allowed
+`api.anthropic.com`, but a default command could not connect to its mandatory
+proxy. The command tool's supported per-command network permission restored
+that existing route. Use that documented, scoped permission when needed; keep
+the proxy and restricted policy intact.
+
+The runner requests structured output with `output_config.format`, using a
+`rows` object schema. Paragraph count, IDs, hashes, order, nonempty French, and
+normal `end_turn` completion remain validated locally. It preserves the
+credential-redacted `api_response.json` before response validation. A failed
+parse or incomplete response now leaves a `RESPONSE_VALIDATION_FAILED` receipt
+with provider metadata and the preserved response hash.
+
+Anthropic structured-output reference:
+https://platform.claude.com/docs/en/build-with-claude/structured-outputs
