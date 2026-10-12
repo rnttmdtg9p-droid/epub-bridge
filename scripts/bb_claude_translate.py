@@ -120,8 +120,8 @@ def request_payload(args: argparse.Namespace, rows: list[dict[str, str]]) -> dic
         "Russian source into substantive, publication-quality modern French. "
         "Preserve meaning, tone, paragraph boundaries, names, dialogue punctuation, "
         "and every source detail. Do not summarize, omit, add commentary, or modernize "
-        "facts. Return only a JSON array. Each object must contain exactly id, "
-        "source_sha256, and french."
+        "facts. Return only a JSON object with a rows array in source order. Each "
+        "row must contain exactly id, source_sha256, and french."
     )
     prompt = (
         f"Translate the complete Chapter {args.chapter_number}, "
@@ -134,6 +134,31 @@ def request_payload(args: argparse.Namespace, rows: list[dict[str, str]]) -> dic
         "max_tokens": args.max_tokens,
         "system": system,
         "messages": [{"role": "user", "content": prompt}],
+        "output_config": {
+            "format": {
+                "type": "json_schema",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "rows": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {"type": "string"},
+                                    "source_sha256": {"type": "string"},
+                                    "french": {"type": "string"},
+                                },
+                                "required": ["id", "source_sha256", "french"],
+                                "additionalProperties": False,
+                            },
+                        },
+                    },
+                    "required": ["rows"],
+                    "additionalProperties": False,
+                },
+            },
+        },
     }
 
 
@@ -185,16 +210,22 @@ def validate_translation(
     api_response: dict[str, Any],
     source_rows: list[dict[str, str]],
 ) -> list[dict[str, str]]:
+    if api_response.get("stop_reason") != "end_turn":
+        raise RuntimeError(f"INCOMPLETE_RESPONSE:{api_response.get('stop_reason')}")
     try:
         translated_rows = json.loads(response_text(api_response))
     except json.JSONDecodeError as error:
         raise RuntimeError("NON_JSON_RESPONSE") from error
+    if isinstance(translated_rows, dict):
+        if set(translated_rows) != {"rows"}:
+            raise RuntimeError("OUTPUT_SCHEMA_MISMATCH")
+        translated_rows = translated_rows["rows"]
     expected = {row["id"]: row for row in source_rows}
     if not isinstance(translated_rows, list) or len(translated_rows) != len(source_rows):
         raise RuntimeError("PARAGRAPH_COUNT_MISMATCH")
     seen: set[str] = set()
     evidence_rows: list[dict[str, str]] = []
-    for translated in translated_rows:
+    for index, translated in enumerate(translated_rows):
         if not isinstance(translated, dict) or set(translated) != {
             "id",
             "source_sha256",
@@ -202,10 +233,14 @@ def validate_translation(
         }:
             raise RuntimeError("OUTPUT_SCHEMA_MISMATCH")
         row_id = translated["id"]
+        if not isinstance(row_id, str) or row_id != source_rows[index]["id"]:
+            raise RuntimeError("OUTPUT_ORDER_MISMATCH")
         if row_id not in expected or row_id in seen:
             raise RuntimeError("OUTPUT_ID_MISMATCH")
         if translated["source_sha256"] != expected[row_id]["source_sha256"]:
             raise RuntimeError("SOURCE_HASH_NOT_PRESERVED")
+        if not isinstance(translated["french"], str):
+            raise RuntimeError("OUTPUT_SCHEMA_MISMATCH")
         french = translated["french"].strip()
         if not french:
             raise RuntimeError("EMPTY_TRANSLATION")
@@ -265,6 +300,7 @@ def main() -> int:
         "api_version": API_VERSION,
         "requested_model": args.model,
         "request_sha256": request_sha256,
+        "requested_output_format": "json_schema_rows_object",
         "authentication": {
             "credential_environment_variable": args.api_key_env,
             "credential_present": bool(os.environ.get(args.api_key_env, "").strip()),
@@ -342,12 +378,48 @@ def main() -> int:
         return 2
     phase_seconds["api_request"] = api_seconds
 
+    # Preserve the provider payload before validation so a format error cannot
+    # discard a paid response. Request headers and credential values are omitted.
+    payload_text = json.dumps(api_response, ensure_ascii=False)
+    credential = os.environ.get(args.api_key_env, "").strip()
+    if credential:
+        payload_text = payload_text.replace(credential, "[REDACTED]")
+    preserved_response = json.loads(payload_text)
+    response_hash = write_json_atomic(args.output_dir / "api_response.json", preserved_response)
+    response_metadata = {
+        "api_request_attempted": True,
+        "provider_response_received": True,
+        "api_response_sha256": response_hash,
+        "response_id": api_response.get("id"),
+        "response_model": api_response.get("model"),
+        "stop_reason": api_response.get("stop_reason"),
+        "usage": api_response.get("usage", {}),
+    }
+
     phase_started = time.perf_counter()
-    rows = validate_translation(api_response, source_rows)
+    try:
+        rows = validate_translation(api_response, source_rows)
+    except Exception as error:
+        phase_seconds["response_validation"] = time.perf_counter() - phase_started
+        phase_seconds["total"] = time.perf_counter() - process_started
+        failure = {
+            **common,
+            **response_metadata,
+            "status": "RESPONSE_VALIDATION_FAILED",
+            "blocker": str(error).split(":", 1)[0],
+            "error_type": type(error).__name__,
+            "phase_seconds": phase_seconds,
+        }
+        failure_hash = write_json_atomic(args.output_dir / "blocker.json", failure)
+        print("DIRECT_CLAUDE: RESPONSE_VALIDATION_FAILED", failure["blocker"])
+        print("DIRECT_CLAUDE: API_RESPONSE_SHA256", response_hash)
+        print("DIRECT_CLAUDE: BLOCKER_SHA256", failure_hash)
+        return 1
     phase_seconds["response_validation"] = time.perf_counter() - phase_started
     phase_seconds["total_through_validation"] = time.perf_counter() - process_started
     evidence = {
         **common,
+        **response_metadata,
         "status": "API_EXECUTION_PASS_LITERARY_REVIEW_PENDING",
         "api_request_attempted": True,
         "provider_response_received": True,
@@ -363,6 +435,7 @@ def main() -> int:
     finished = time.perf_counter()
     receipt = {
         **common,
+        **response_metadata,
         "status": "API_EXECUTION_PASS_LITERARY_REVIEW_PENDING",
         "translation_result_sha256": result_hash,
         "response_id": api_response.get("id"),
