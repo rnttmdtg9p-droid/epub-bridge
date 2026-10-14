@@ -19,7 +19,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ru035-claude-translation
-          run-id: 38533956596
+          run-id: 38535676488
           github-token: ${{ github.token }}
           path: staging/ru035-resume/
       - name: Translate frozen White Fang English source into Russian
@@ -27,7 +27,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
           BB_RESUME_DIRECTORY: staging/ru035-resume/
-          BB_RESUME_RUN_ID: '38533956596'
+          BB_RESUME_RUN_ID: '38535676488'
         shell: bash
         run: |
           set -euo pipefail
@@ -68,13 +68,19 @@ jobs:
            repairs=[]
            text=text.strip();fence=re.fullmatch(r'```(?:json)?\s*(.*?)\s*```',text,re.S|re.I)
            if fence:text=fence[1];repairs.append({'reason':'Removed enclosing JSON code fence; quoted values unchanged'})
-           marker='Wait — I need to correct two rows that contain errors. Here is the corrected, final output:'
-           if marker in text:
-            before,after=text.split(marker,1);draft=json.loads(before.strip());final=json.loads(after.strip())
-            assert isinstance(draft,list) and isinstance(final,list)
-            assert [(r['id'],r['source_sha256']) for r in draft]==[(r['id'],r['source_sha256']) for r in final]
-            changes=[{'id':a['id'],'before':a['russian_xhtml'],'after':b['russian_xhtml']} for a,b in zip(draft,final) if a['russian_xhtml']!=b['russian_xhtml']]
-            return final,[{'reason':'Selected provider explicitly designated corrected final array; preserved raw draft and correction evidence','changes':changes}]
+           try:
+            first,end=json.JSONDecoder().raw_decode(text)
+            tail=text[end:].strip()
+            if tail and isinstance(first,list) and re.search(r'correction|corrected|final output',tail,re.I):
+             start=tail.find('[');assert start>=0
+             final=json.loads(tail[start:]);assert isinstance(final,list)
+             if all('russian_xhtml' in r for r in final):
+              assert [r['id'] for r in first]==[r['id'] for r in final]
+              changes=[{'id':a['id'],'before':a['russian_xhtml'],'after':b['russian_xhtml']} for a,b in zip(first,final) if a['russian_xhtml']!=b['russian_xhtml']]
+              return final,[{'reason':'Selected explicitly designated provider corrected final array','changes':changes}]
+             assert all(set(r)<= {'id','source_sha256'} and r['id'] in {x['id'] for x in first} for r in final)
+             return first,[{'reason':'Retained complete translation array; trailing correction concerned metadata only. Source hashes bound independently to frozen request ledger.','trailing_metadata':final}]
+           except json.JSONDecodeError:pass
            for attempt in range(16):
             try:return json.loads(text),repairs
             except json.JSONDecodeError as error:
@@ -87,6 +93,19 @@ jobs:
              repairs.append({'offset':pos,'removed':')','reason':'Extraneous JSON punctuation outside every quoted value; no text inside strings changed'})
              text=text[:pos]+text[pos+1:]
            raise ValueError('UNSUPPORTED_PROVIDER_JSON_REPAIR')
+          def bind_rows(batch,translated,receipt):
+           assert isinstance(translated,list) and len(translated)==len(batch),'ROW_COUNT_MISMATCH'
+           evidence=[]
+           for original,target in zip(batch,translated):
+            assert set(target)<= {'id','source_sha256','russian_xhtml'} and {'id','russian_xhtml'}<=set(target),'UNEXPECTED_FIELDS'
+            assert target['id']==original['id'],'SOURCE_ID_ORDER_MISMATCH'
+            reported=target.get('source_sha256')
+            if reported!=original['source_sha256']:evidence.append({'id':target['id'],'model_reported_hash':reported,'frozen_source_hash':original['source_sha256'],'reason':'Hash is request metadata, not translated literary text; bound deterministically by exact ordered row ID'})
+            element=E.fromstring('<p>'+target['russian_xhtml']+'</p>');assert all(e.tag in INLINE and not e.attrib for e in list(element.iter())[1:]),'UNEXPECTED_MARKUP'
+            plain=''.join(element.itertext()).strip();assert plain and re.search('[А-Яа-яЁё]',plain),'NO_RUSSIAN_TRANSLATION'
+            assert re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',original['source_xhtml'])==re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',target['russian_xhtml']),'INLINE_EMPHASIS_MISMATCH'
+            target.update(source_sha256=original['source_sha256'],translation_sha256=H(target['russian_xhtml'].encode()),response_id=receipt['id'],response_model=receipt['model'])
+           return evidence
           def main():
            key=os.environ.get('ANTHROPIC_API_KEY','').strip()
            if not key:raise RuntimeError('MISSING_ANTHROPIC_API_KEY')
@@ -123,7 +142,7 @@ jobs:
              elif raw.exists():
               receipt=json.loads(raw.read_text());assert receipt['stop_reason']=='end_turn' and receipt['model']==MODEL
               raw_text='\n'.join(x['text'] for x in receipt['content'] if x['type']=='text');recovered,repairs=decode_provider_json(raw_text)
-              for item in recovered:item.update(translation_sha256=H(item['russian_xhtml'].encode()),response_id=receipt['id'],response_model=receipt['model'])
+              repairs+=bind_rows(batch,recovered,receipt)
              else:break
              assert [r['id'] for r in recovered]==[r['id'] for r in batch]
              resume_rows+=recovered;recovery.append({'batch':ordinal,'rows':len(recovered),'response_processing':repairs})
@@ -143,7 +162,9 @@ jobs:
               assert re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',original['source_xhtml'])==re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',target['russian_xhtml'])
              atomic(ROOT/f'batch-{ordinal:04}.json',{'rank':35,'batch':ordinal,'source_sha256':H(source),'rows':restored,'state':'EXACT_SAVED_CLAUDE_BATCH_REUSED'});results+=restored;print('CLAUDE_BATCH_REUSED',ordinal,len(restored),flush=True);continue
             system='Translate Jack London White Fang from the provided complete English source into publication-quality modern Russian. Preserve every detail, narrative voice, dialogue, paragraph boundary and source order. No abridgment, added explanations or imitation of an existing Russian translation. Translate headings too, retaining their chapter/part numbers. Preserve source meaningful inline emphasis using only i,em,b,strong,sup,sub,br XHTML tags with no attributes. Return only a JSON array with exactly id,source_sha256,russian_xhtml for each supplied row. Copy IDs and source hashes unchanged. No source omissions. White Fang is Белый Клык; Grey Beaver is Серый Бобр; Weedon Scott is Уидон Скотт; Beauty Smith is Красавчик Смит; Collie is Колли; One Eye is Одноглазый; Lip-lip is Лип-Лип; Bill is Билл and Henry is Генри.'
-            body={'model':MODEL,'max_tokens':12000,'system':system,'messages':[{'role':'user','content':'Translate only these source rows, in exactly this order:\n'+json.dumps(batch,ensure_ascii=False)}]};request_bytes=json.dumps(body,ensure_ascii=False).encode();headers={'x-api-key':key,'anthropic-version':'2023-06-01','content-type':'application/json'}
+            system=system.replace('exactly id,source_sha256,russian_xhtml','exactly id,russian_xhtml').replace('Copy IDs and source hashes unchanged.','Copy IDs unchanged; source hashes are assigned locally from the frozen source ledger. Return one final valid JSON array without commentary, drafts or corrections outside the array.')
+            supplied=[{k:r[k] for k in ['id','kind','part','chapter','source_xhtml']} for r in batch]
+            body={'model':MODEL,'max_tokens':12000,'system':system,'messages':[{'role':'user','content':'Translate only these source rows, in exactly this order:\n'+json.dumps(supplied,ensure_ascii=False)}]};request_bytes=json.dumps(body,ensure_ascii=False).encode();headers={'x-api-key':key,'anthropic-version':'2023-06-01','content-type':'application/json'}
             workspace=os.environ.get('ANTHROPIC_WORKSPACE_ID','').strip()
             if workspace:headers['anthropic-workspace-id']=workspace
             req=urllib.request.Request('https://api.anthropic.com/v1/messages',data=request_bytes,headers=headers,method='POST')
@@ -155,11 +176,17 @@ jobs:
             assert receipt.get('stop_reason')=='end_turn','TRUNCATED_OR_NONFINAL_RESPONSE'
             text='\n'.join(x.get('text','') for x in receipt.get('content',[]) if x.get('type')=='text').strip();fence=re.fullmatch(r'```(?:json)?\s*(.*?)\s*```',text,re.S|re.I)
             if fence:text=fence[1]
-            translated,format_repairs=decode_provider_json(text);assert isinstance(translated,list) and len(translated)==len(batch),'ROW_COUNT_MISMATCH'
-            for original,target in zip(batch,translated):
-             assert set(target)=={'id','source_sha256','russian_xhtml'} and target['id']==original['id'] and target['source_sha256']==original['source_sha256'],'SOURCE_BINDING_MISMATCH'
-             element=E.fromstring('<p>'+target['russian_xhtml']+'</p>');assert all(e.tag in INLINE and not e.attrib for e in list(element.iter())[1:]),'UNEXPECTED_MARKUP';plain=''.join(element.itertext()).strip();assert plain and re.search('[А-Яа-яЁё]',plain),'NO_RUSSIAN_TRANSLATION'
-             source_tags=re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',original['source_xhtml']);target_tags=re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',target['russian_xhtml']);assert source_tags==target_tags,'INLINE_EMPHASIS_MISMATCH';target.update(translation_sha256=H(target['russian_xhtml'].encode()),response_id=receipt.get('id'),response_model=receipt.get('model'))
+            for format_attempt in range(3):
+             try:
+              translated,format_repairs=decode_provider_json(text);binding=bind_rows(batch,translated,receipt);format_repairs+=binding;break
+             except (json.JSONDecodeError,AssertionError,E.ParseError,ValueError) as error:
+              atomic(ROOT/f'format-error-{ordinal:04}-{format_attempt}.json',{'error_type':type(error).__name__,'error':str(error),'response_id':receipt['id'],'review_state':'PENDING'})
+              if format_attempt==2:raise
+              repair_body={'model':MODEL,'max_tokens':12000,'system':'Correct serialization and schema only. Return one final valid JSON array of exactly id,russian_xhtml for every supplied row in order. Preserve all translated literary wording. Repair only malformed JSON or XHTML serialization; no commentary or hash fields. If inline emphasis needs repair, preserve the source emphasis. Do not perform literary review.','messages':[{'role':'user','content':json.dumps({'source_rows':supplied,'previous_translation_response':text,'validation_error':str(error)},ensure_ascii=False)}]}
+              repair_request=urllib.request.Request('https://api.anthropic.com/v1/messages',data=json.dumps(repair_body,ensure_ascii=False).encode(),headers=headers,method='POST')
+              with urllib.request.urlopen(repair_request,timeout=240) as response:receipt=json.load(response)
+              atomic(ROOT/f'receipt-{ordinal:04}-format-{format_attempt+1}.json',receipt);assert receipt['stop_reason']=='end_turn'
+              text='\n'.join(x.get('text','') for x in receipt['content'] if x['type']=='text').strip()
             evidence={'rank':35,'batch':ordinal,'batches':len(batches),'source_sha256':H(source),'request_sha256':H(request_bytes),'response_id':receipt.get('id'),'response_model':receipt.get('model'),'usage':receipt.get('usage'),'format_repairs':format_repairs,'rows':translated,'state':'TRANSLATED_SCHEMA_VALIDATED_COMPLETE_SOURCE_ALIGNED_REVIEW_PENDING'};atomic(ROOT/f'batch-{ordinal:04}.json',evidence);results+=translated;atomic(ROOT/'translation_progress.json',{'rank':35,'completed_batches':ordinal,'total_batches':len(batches),'translated_rows':len(results),'expected_rows':len(rows),'source_sha256':H(source),'release_claimed':False});print('CLAUDE_BATCH_PASS',ordinal,len(batches),receipt.get('id'),len(translated),flush=True)
            assert [r['id'] for r in results]==[r['id'] for r in rows]
            atomic(ROOT/'translation_complete.json',{'state':'CLAUDE_TRANSLATION_COMPLETE_AI_REVIEW_AND_EPUB_PRODUCTION_PENDING','rank':35,'source_sha256':H(source),'rows':results,'source_rows':len(rows),'release_claimed':False});print('CLAUDE_TRANSLATION_COMPLETE',len(results),flush=True)
