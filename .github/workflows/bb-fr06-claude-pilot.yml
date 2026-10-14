@@ -19,7 +19,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ru035-claude-translation
-          run-id: 38533220153
+          run-id: 38533956596
           github-token: ${{ github.token }}
           path: staging/ru035-resume/
       - name: Translate frozen White Fang English source into Russian
@@ -27,6 +27,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
           BB_RESUME_DIRECTORY: staging/ru035-resume/
+          BB_RESUME_RUN_ID: '38533956596'
         shell: bash
         run: |
           set -euo pipefail
@@ -65,6 +66,15 @@ jobs:
            temp=path.with_suffix(path.suffix+'.writing');temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temp.replace(path)
           def decode_provider_json(text):
            repairs=[]
+           text=text.strip();fence=re.fullmatch(r'```(?:json)?\s*(.*?)\s*```',text,re.S|re.I)
+           if fence:text=fence[1];repairs.append({'reason':'Removed enclosing JSON code fence; quoted values unchanged'})
+           marker='Wait — I need to correct two rows that contain errors. Here is the corrected, final output:'
+           if marker in text:
+            before,after=text.split(marker,1);draft=json.loads(before.strip());final=json.loads(after.strip())
+            assert isinstance(draft,list) and isinstance(final,list)
+            assert [(r['id'],r['source_sha256']) for r in draft]==[(r['id'],r['source_sha256']) for r in final]
+            changes=[{'id':a['id'],'before':a['russian_xhtml'],'after':b['russian_xhtml']} for a,b in zip(draft,final) if a['russian_xhtml']!=b['russian_xhtml']]
+            return final,[{'reason':'Selected provider explicitly designated corrected final array; preserved raw draft and correction evidence','changes':changes}]
            for attempt in range(16):
             try:return json.loads(text),repairs
             except json.JSONDecodeError as error:
@@ -105,13 +115,22 @@ jobs:
            resume_directory=os.environ.get('BB_RESUME_DIRECTORY','').strip()
            if resume_directory:
             previous=Path(resume_directory);ledger=json.loads((previous/'source_ledger.json').read_text());assert ledger['source_sha256']==H(source)
-            resume_rows=json.loads((previous/'batch-0001.json').read_text())['rows']
-            second=json.loads((previous/'receipt-0002.json').read_text());assert second['stop_reason']=='end_turn' and second['model']==MODEL
-            second_text='\n'.join(x['text'] for x in second['content'] if x['type']=='text');recovered,repairs=decode_provider_json(second_text)
-            for item in recovered:item.update(translation_sha256=H(item['russian_xhtml'].encode()),response_id=second['id'],response_model=second['model'])
-            resume_rows+=recovered;assert [r['id'] for r in resume_rows]==[r['id'] for r in rows[:36]]
-            for filename in ['receipt-0001.json','receipt-0002.json']:shutil.copyfile(previous/filename,ROOT/filename)
-            atomic(ROOT/'resume_provenance.json',{'previous_run_id':38533220153,'reused_rows':36,'format_only_repairs':repairs,'raw_response_text_sha256':H(second_text.encode()),'literary_strings_changed':False})
+            recovery=[];resume_rows=[]
+            for ordinal,batch in enumerate(batches,1):
+             saved=previous/f'batch-{ordinal:04}.json';raw=previous/f'receipt-{ordinal:04}.json'
+             if saved.exists():
+              data=json.loads(saved.read_text());assert data['source_sha256']==H(source);recovered=data['rows'];repairs=[]
+             elif raw.exists():
+              receipt=json.loads(raw.read_text());assert receipt['stop_reason']=='end_turn' and receipt['model']==MODEL
+              raw_text='\n'.join(x['text'] for x in receipt['content'] if x['type']=='text');recovered,repairs=decode_provider_json(raw_text)
+              for item in recovered:item.update(translation_sha256=H(item['russian_xhtml'].encode()),response_id=receipt['id'],response_model=receipt['model'])
+             else:break
+             assert [r['id'] for r in recovered]==[r['id'] for r in batch]
+             resume_rows+=recovered;recovery.append({'batch':ordinal,'rows':len(recovered),'response_processing':repairs})
+            assert [r['id'] for r in resume_rows]==[r['id'] for r in rows[:len(resume_rows)]]
+            for saved in previous.glob('receipt-*.json'):shutil.copyfile(saved,ROOT/saved.name)
+            if (previous/'resume_provenance.json').exists():shutil.copyfile(previous/'resume_provenance.json',ROOT/'previous_resume_provenance.json')
+            atomic(ROOT/'resume_provenance.json',{'previous_run_id':int(os.environ['BB_RESUME_RUN_ID']),'reused_rows':len(resume_rows),'recovered_batches':recovery,'full_source_aligned_ai_review':'PENDING'})
            results=[]
            for ordinal,batch in enumerate(batches,1):
             restored=[r for r in resume_rows if r['id'] in {x['id'] for x in batch}]
