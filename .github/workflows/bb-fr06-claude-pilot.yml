@@ -6,6 +6,7 @@ on:
     paths: ['.github/workflows/bb-fr06-claude-pilot.yml']
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: bb-russian-r035-claude
   cancel-in-progress: false
@@ -14,16 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
+      - name: Recover exact previous Claude checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: ru035-claude-translation
+          run-id: 38533220153
+          github-token: ${{ github.token }}
+          path: staging/ru035-resume/
       - name: Translate frozen White Fang English source into Russian
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_RESUME_DIRECTORY: staging/ru035-resume/
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           """Rank35 payload for the existing Claude Actions route; no EPUB builder."""
-          import os,json,hashlib,re,html,datetime,urllib.request,urllib.error
+          import os,json,hashlib,re,html,datetime,urllib.request,urllib.error,shutil
           from html.parser import HTMLParser
           from pathlib import Path
           from xml.etree import ElementTree as E
@@ -54,6 +63,20 @@ jobs:
             if self.tag and not self.stop:self.bits.append(html.escape(s,quote=False))
           def atomic(path,value):
            temp=path.with_suffix(path.suffix+'.writing');temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temp.replace(path)
+          def decode_provider_json(text):
+           repairs=[]
+           for attempt in range(16):
+            try:return json.loads(text),repairs
+            except json.JSONDecodeError as error:
+             pos=error.pos;in_string=False;escape=False
+             for ch in text[:pos]:
+              if escape:escape=False
+              elif ch=='\\' and in_string:escape=True
+              elif ch=='"':in_string=not in_string
+             if in_string or text[pos:pos+1]!=')' or not text[:pos].rstrip().endswith('"') or not text[pos+1:].lstrip().startswith('}'):raise
+             repairs.append({'offset':pos,'removed':')','reason':'Extraneous JSON punctuation outside every quoted value; no text inside strings changed'})
+             text=text[:pos]+text[pos+1:]
+           raise ValueError('UNSUPPORTED_PROVIDER_JSON_REPAIR')
           def main():
            key=os.environ.get('ANTHROPIC_API_KEY','').strip()
            if not key:raise RuntimeError('MISSING_ANTHROPIC_API_KEY')
@@ -77,8 +100,29 @@ jobs:
             if current and (size+n>6500 or len(current)>=18):batches.append(current);current=[];size=0
             current.append(row);size+=n
            if current:batches.append(current)
+           resume_json=os.environ.get('BB_RESUME_ROWS_JSON','').strip()
+           resume_rows=json.loads(resume_json) if resume_json else []
+           resume_directory=os.environ.get('BB_RESUME_DIRECTORY','').strip()
+           if resume_directory:
+            previous=Path(resume_directory);ledger=json.loads((previous/'source_ledger.json').read_text());assert ledger['source_sha256']==H(source)
+            resume_rows=json.loads((previous/'batch-0001.json').read_text())['rows']
+            second=json.loads((previous/'receipt-0002.json').read_text());assert second['stop_reason']=='end_turn' and second['model']==MODEL
+            second_text='\n'.join(x['text'] for x in second['content'] if x['type']=='text');recovered,repairs=decode_provider_json(second_text)
+            for item in recovered:item.update(translation_sha256=H(item['russian_xhtml'].encode()),response_id=second['id'],response_model=second['model'])
+            resume_rows+=recovered;assert [r['id'] for r in resume_rows]==[r['id'] for r in rows[:36]]
+            for filename in ['receipt-0001.json','receipt-0002.json']:shutil.copyfile(previous/filename,ROOT/filename)
+            atomic(ROOT/'resume_provenance.json',{'previous_run_id':38533220153,'reused_rows':36,'format_only_repairs':repairs,'raw_response_text_sha256':H(second_text.encode()),'literary_strings_changed':False})
            results=[]
            for ordinal,batch in enumerate(batches,1):
+            restored=[r for r in resume_rows if r['id'] in {x['id'] for x in batch}]
+            if restored:
+             assert [r['id'] for r in restored]==[r['id'] for r in batch],'PARTIAL_OR_REORDERED_RESUME_BATCH'
+             for original,target in zip(batch,restored):
+              assert target['source_sha256']==original['source_sha256'] and H(target['russian_xhtml'].encode())==target['translation_sha256']
+              assert target['response_model']==MODEL and target['response_id'].startswith('msg_')
+              element=E.fromstring('<p>'+target['russian_xhtml']+'</p>');assert all(e.tag in INLINE and not e.attrib for e in list(element.iter())[1:])
+              assert re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',original['source_xhtml'])==re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',target['russian_xhtml'])
+             atomic(ROOT/f'batch-{ordinal:04}.json',{'rank':35,'batch':ordinal,'source_sha256':H(source),'rows':restored,'state':'EXACT_SAVED_CLAUDE_BATCH_REUSED'});results+=restored;print('CLAUDE_BATCH_REUSED',ordinal,len(restored),flush=True);continue
             system='Translate Jack London White Fang from the provided complete English source into publication-quality modern Russian. Preserve every detail, narrative voice, dialogue, paragraph boundary and source order. No abridgment, added explanations or imitation of an existing Russian translation. Translate headings too, retaining their chapter/part numbers. Preserve source meaningful inline emphasis using only i,em,b,strong,sup,sub,br XHTML tags with no attributes. Return only a JSON array with exactly id,source_sha256,russian_xhtml for each supplied row. Copy IDs and source hashes unchanged. No source omissions. White Fang is Белый Клык; Grey Beaver is Серый Бобр; Weedon Scott is Уидон Скотт; Beauty Smith is Красавчик Смит; Collie is Колли; One Eye is Одноглазый; Lip-lip is Лип-Лип; Bill is Билл and Henry is Генри.'
             body={'model':MODEL,'max_tokens':12000,'system':system,'messages':[{'role':'user','content':'Translate only these source rows, in exactly this order:\n'+json.dumps(batch,ensure_ascii=False)}]};request_bytes=json.dumps(body,ensure_ascii=False).encode();headers={'x-api-key':key,'anthropic-version':'2023-06-01','content-type':'application/json'}
             workspace=os.environ.get('ANTHROPIC_WORKSPACE_ID','').strip()
@@ -92,12 +136,12 @@ jobs:
             assert receipt.get('stop_reason')=='end_turn','TRUNCATED_OR_NONFINAL_RESPONSE'
             text='\n'.join(x.get('text','') for x in receipt.get('content',[]) if x.get('type')=='text').strip();fence=re.fullmatch(r'```(?:json)?\s*(.*?)\s*```',text,re.S|re.I)
             if fence:text=fence[1]
-            translated=json.loads(text);assert isinstance(translated,list) and len(translated)==len(batch),'ROW_COUNT_MISMATCH'
+            translated,format_repairs=decode_provider_json(text);assert isinstance(translated,list) and len(translated)==len(batch),'ROW_COUNT_MISMATCH'
             for original,target in zip(batch,translated):
              assert set(target)=={'id','source_sha256','russian_xhtml'} and target['id']==original['id'] and target['source_sha256']==original['source_sha256'],'SOURCE_BINDING_MISMATCH'
              element=E.fromstring('<p>'+target['russian_xhtml']+'</p>');assert all(e.tag in INLINE and not e.attrib for e in list(element.iter())[1:]),'UNEXPECTED_MARKUP';plain=''.join(element.itertext()).strip();assert plain and re.search('[А-Яа-яЁё]',plain),'NO_RUSSIAN_TRANSLATION'
              source_tags=re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',original['source_xhtml']);target_tags=re.findall(r'<(i|em|b|strong|sup|sub)(?:\s|>)',target['russian_xhtml']);assert source_tags==target_tags,'INLINE_EMPHASIS_MISMATCH';target.update(translation_sha256=H(target['russian_xhtml'].encode()),response_id=receipt.get('id'),response_model=receipt.get('model'))
-            evidence={'rank':35,'batch':ordinal,'batches':len(batches),'source_sha256':H(source),'request_sha256':H(request_bytes),'response_id':receipt.get('id'),'response_model':receipt.get('model'),'usage':receipt.get('usage'),'rows':translated,'state':'TRANSLATED_SCHEMA_VALIDATED_COMPLETE_SOURCE_ALIGNED_REVIEW_PENDING'};atomic(ROOT/f'batch-{ordinal:04}.json',evidence);results+=translated;atomic(ROOT/'translation_progress.json',{'rank':35,'completed_batches':ordinal,'total_batches':len(batches),'translated_rows':len(results),'expected_rows':len(rows),'source_sha256':H(source),'release_claimed':False});print('CLAUDE_BATCH_PASS',ordinal,len(batches),receipt.get('id'),len(translated),flush=True)
+            evidence={'rank':35,'batch':ordinal,'batches':len(batches),'source_sha256':H(source),'request_sha256':H(request_bytes),'response_id':receipt.get('id'),'response_model':receipt.get('model'),'usage':receipt.get('usage'),'format_repairs':format_repairs,'rows':translated,'state':'TRANSLATED_SCHEMA_VALIDATED_COMPLETE_SOURCE_ALIGNED_REVIEW_PENDING'};atomic(ROOT/f'batch-{ordinal:04}.json',evidence);results+=translated;atomic(ROOT/'translation_progress.json',{'rank':35,'completed_batches':ordinal,'total_batches':len(batches),'translated_rows':len(results),'expected_rows':len(rows),'source_sha256':H(source),'release_claimed':False});print('CLAUDE_BATCH_PASS',ordinal,len(batches),receipt.get('id'),len(translated),flush=True)
            assert [r['id'] for r in results]==[r['id'] for r in rows]
            atomic(ROOT/'translation_complete.json',{'state':'CLAUDE_TRANSLATION_COMPLETE_AI_REVIEW_AND_EPUB_PRODUCTION_PENDING','rank':35,'source_sha256':H(source),'rows':results,'source_rows':len(rows),'release_claimed':False});print('CLAUDE_TRANSLATION_COMPLETE',len(results),flush=True)
           if __name__=='__main__':main()
