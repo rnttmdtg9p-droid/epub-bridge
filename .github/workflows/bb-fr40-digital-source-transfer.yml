@@ -1,0 +1,41 @@
+name: BB Atala digital source transfer only
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-fr40-digital-source-transfer.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-fr40-digital-source-transfer-only
+  cancel-in-progress: false
+jobs:
+  fetch-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Acquire digital texts and official validation runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p transfer/source transfer/tools
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0 (digital text only)' 'https://fr.wikisource.org/wiki/Atala' -o transfer/source/Atala.html
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0 (digital text only)' 'https://fr.wikisource.org/wiki/Pr%C3%A9faces_de_diverses_%C3%A9ditions_d%E2%80%99Atala' -o transfer/source/Prefaces.html
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 'https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip' -o transfer/tools/epubcheck-5.4.0.zip
+          python - <<'PY'
+          import pathlib,json,hashlib,datetime
+          root=pathlib.Path('transfer')
+          texts=[root/'source/Atala.html',root/'source/Prefaces.html']
+          for p in texts:
+              assert p.stat().st_size>30000, f'Source transfer incomplete: {p}'
+              assert 'Atala' in p.read_text(), f'Unexpected content: {p}'
+          ledger={'scope':'digital-source-transfer-only; no scans, EPUB build, canonical state write, or external publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':[{ 'path':str(p.relative_to(root)), 'bytes':p.stat().st_size, 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]}
+          (root/'TRANSFER.json').write_text(json.dumps(ledger,indent=2),encoding='utf-8')
+          PY
+      - name: Retain source transfer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bb-fr40-digital-source-transfer
+          path: transfer/
+          if-no-files-found: error
+          retention-days: 7
