@@ -14,26 +14,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Retrieve existing Rene artwork and source notices
+      - name: Retrieve digital validator regression source
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer/assets transfer/notices
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 'https://v3b.fal.media/files/b/0aae953b/WbR1EsnLFuqZzkQ-n4x8q.jpg' -o transfer/assets/041_cover_raw.jpg
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Ren%C3%A9%2C_Chateaubriand%2C_ill._Malo-Renault_%28extrait15_p%29.pdf' -o transfer/assets/041_Malo_Renault_1925_Illustrations.pdf
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://commons.wikimedia.org/wiki/File:Ren%C3%A9,_Chateaubriand,_ill._Malo-Renault_(extrait15_p).pdf' -o transfer/notices/041_Illustration_Source_Notice.html
+          mkdir -p transfer/fixture
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://www.gutenberg.org/ebooks/22499.txt.utf-8' -o transfer/fixture/La_crisi_Immutable_Gutenberg_22499.txt
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://www.gutenberg.org/cache/epub/22499/pg22499-images.html' -o transfer/fixture/La_crisi_Immutable_Gutenberg_22499.html
           python - <<'PY'
           import pathlib,json,hashlib,datetime
           root=pathlib.Path('transfer')
-          assert (root/'assets/041_cover_raw.jpg').read_bytes()[:2]==b'\xff\xd8'
-          assert (root/'assets/041_Malo_Renault_1925_Illustrations.pdf').read_bytes()[:5]==b'%PDF-'
-          ledger={'scope':'asset transfer only; no new image generation, text-to-scan comparison, EPUB build, canonical state writes, or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':[{'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]}
+          for p in (root/'fixture').iterdir():
+              assert p.stat().st_size>50000
+              assert 'SCENA STABILE' in p.read_text(encoding='utf-8-sig')
+          ledger={'scope':'public digital validator-fixture transfer only; no scans, EPUB production, canonical writes or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_record':'https://www.gutenberg.org/ebooks/22499','files':[{'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]}
           (root/'TRANSFER.json').write_text(json.dumps(ledger,indent=2),encoding='utf-8')
           PY
-      - name: Retain transferred assets
+      - name: Retain source fixture
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr41-artwork-transfer
+          name: bb-fr41-spatial-fixture-transfer
           path: transfer/
           if-no-files-found: error
           retention-days: 7
