@@ -1,4 +1,4 @@
-name: BB Atala digital source transfer only
+name: BB French digital source transfer only
 on:
   push:
     paths:
@@ -14,28 +14,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Acquire digital texts and official validation runtime
+      - name: Acquire Rene digital text only
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer/source transfer/tools
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0 (digital text only)' 'https://fr.wikisource.org/wiki/Atala' -o transfer/source/Atala.html
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0 (digital text only)' 'https://fr.wikisource.org/wiki/Pr%C3%A9faces_de_diverses_%C3%A9ditions_d%E2%80%99Atala' -o transfer/source/Prefaces.html
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 'https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip' -o transfer/tools/epubcheck-5.4.0.zip
+          mkdir -p transfer/source
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0 (digital text only)' 'https://fr.wikisource.org/wiki/Ren%C3%A9' -o transfer/source/Rene.html
           python - <<'PY'
           import pathlib,json,hashlib,datetime
           root=pathlib.Path('transfer')
-          texts=[root/'source/Atala.html',root/'source/Prefaces.html']
-          for p in texts:
-              assert p.stat().st_size>30000, f'Source transfer incomplete: {p}'
-              assert 'Atala' in p.read_text(), f'Unexpected content: {p}'
-          ledger={'scope':'digital-source-transfer-only; no scans, EPUB build, canonical state write, or external publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':[{ 'path':str(p.relative_to(root)), 'bytes':p.stat().st_size, 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]}
+          p=root/'source/Rene.html'
+          assert p.stat().st_size>30000, 'Source transfer incomplete'
+          assert 'René' in p.read_text(), 'Unexpected content'
+          ledger={'scope':'digital-source-transfer-only; no scans, EPUB build, canonical state write, or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_url':'https://fr.wikisource.org/wiki/Ren%C3%A9','files':[{'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}]}
           (root/'TRANSFER.json').write_text(json.dumps(ledger,indent=2),encoding='utf-8')
           PY
       - name: Retain source transfer artifact
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr40-digital-source-transfer
+          name: bb-fr41-digital-source-transfer
           path: transfer/
           if-no-files-found: error
           retention-days: 7
