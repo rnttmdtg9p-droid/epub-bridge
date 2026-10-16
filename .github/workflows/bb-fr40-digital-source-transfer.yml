@@ -14,25 +14,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Acquire Rene digital text only
+      - name: Retrieve existing Rene artwork and source notices
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer/source
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0 (digital text only)' 'https://fr.wikisource.org/wiki/Ren%C3%A9' -o transfer/source/Rene.html
+          mkdir -p transfer/assets transfer/notices
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 'https://v3b.fal.media/files/b/0aae953b/WbR1EsnLFuqZzkQ-n4x8q.jpg' -o transfer/assets/041_cover_raw.jpg
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Ren%C3%A9%2C_Chateaubriand%2C_ill._Malo-Renault_%28extrait15_p%29.pdf' -o transfer/assets/041_Malo_Renault_1925_Illustrations.pdf
+          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://commons.wikimedia.org/wiki/File:Ren%C3%A9,_Chateaubriand,_ill._Malo-Renault_(extrait15_p).pdf' -o transfer/notices/041_Illustration_Source_Notice.html
           python - <<'PY'
           import pathlib,json,hashlib,datetime
           root=pathlib.Path('transfer')
-          p=root/'source/Rene.html'
-          assert p.stat().st_size>30000, 'Source transfer incomplete'
-          assert 'René' in p.read_text(), 'Unexpected content'
-          ledger={'scope':'digital-source-transfer-only; no scans, EPUB build, canonical state write, or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_url':'https://fr.wikisource.org/wiki/Ren%C3%A9','files':[{'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}]}
+          assert (root/'assets/041_cover_raw.jpg').read_bytes()[:2]==b'\xff\xd8'
+          assert (root/'assets/041_Malo_Renault_1925_Illustrations.pdf').read_bytes()[:5]==b'%PDF-'
+          ledger={'scope':'asset transfer only; no new image generation, text-to-scan comparison, EPUB build, canonical state writes, or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':[{'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]}
           (root/'TRANSFER.json').write_text(json.dumps(ledger,indent=2),encoding='utf-8')
           PY
-      - name: Retain source transfer artifact
+      - name: Retain transferred assets
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr41-digital-source-transfer
+          name: bb-fr41-artwork-transfer
           path: transfer/
           if-no-files-found: error
           retention-days: 7
