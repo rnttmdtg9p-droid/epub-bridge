@@ -14,26 +14,49 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Retrieve digital validator regression source
+      - name: Retrieve public digital Essais text only
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer/fixture
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://www.gutenberg.org/ebooks/22499.txt.utf-8' -o transfer/fixture/La_crisi_Immutable_Gutenberg_22499.txt
-          curl --fail --location --retry 2 --connect-timeout 15 --max-time 90 -A 'BoundaryBaySourceTransfer/1.0' 'https://www.gutenberg.org/cache/epub/22499/pg22499-images.html' -o transfer/fixture/La_crisi_Immutable_Gutenberg_22499.html
+          mkdir -p transfer/source transfer/provider
           python - <<'PY'
-          import pathlib,json,hashlib,datetime
-          root=pathlib.Path('transfer')
-          for p in (root/'fixture').iterdir():
-              assert p.stat().st_size>50000
-              assert 'SCENA STABILE' in p.read_text(encoding='utf-8-sig')
-          ledger={'scope':'public digital validator-fixture transfer only; no scans, EPUB production, canonical writes or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_record':'https://www.gutenberg.org/ebooks/22499','files':[{'path':str(p.relative_to(root)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()]}
-          (root/'TRANSFER.json').write_text(json.dumps(ledger,indent=2),encoding='utf-8')
+          import concurrent.futures, datetime, hashlib, json, pathlib, time, urllib.request
+          root = pathlib.Path('transfer')
+          sources = [('source/index.html','https://fr.wikisource.org/wiki/Essais',20000)]
+          for book in ['I','II','III']:
+              sources.append((f'source/book-{book}.html',f'https://fr.wikisource.org/wiki/Essais/Livre_{book}/Texte_entier',100000))
+              sources.append((f'source/index-{book}.html',f'https://fr.wikisource.org/wiki/Essais/Livre_{book}',20000))
+          sources.append(('provider/Wikisource-copyright.html','https://fr.wikisource.org/wiki/Wikisource:Copyright',20000))
+          def get(entry):
+              name, url, minimum = entry
+              last = None
+              for attempt in range(2):
+                  try:
+                      req = urllib.request.Request(url, headers={'User-Agent':'BoundaryBayDigitalTextTransfer/1.0 (source-only retrieval)'})
+                      with urllib.request.urlopen(req, timeout=60) as response:
+                          data = response.read(20000000)
+                          final_url = response.url
+                      text = data.decode('utf-8')
+                      assert len(data) >= minimum, 'Unexpectedly small response'
+                      assert '<html' in text.lower() and 'mw-parser-output' in text, 'Not a Wikisource content page'
+                      assert 'Essais' in text or 'Copyright' in url, 'Unexpected source identity'
+                      (root / name).write_bytes(data)
+                      return {'path':name,'url':url,'final_url':final_url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'state':'TRANSFERRED_NOT_YET_CONTENT_QUALIFIED'}
+                  except Exception as error:
+                      last = type(error).__name__ + ': ' + str(error)
+                      time.sleep(2)
+              return {'path':name,'url':url,'state':'TRANSFER_FAILED','error':last}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              results = list(pool.map(get, sources))
+          ledger = {'schema':'bb.public-digital-transfer.v1','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Public digital sources only. No scans, EPUB build, canonical state changes, or publication.','rank':46,'title':'Essais','files':results}
+          (root / 'TRANSFER.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps({'transferred':sum(r['state'].startswith('TRANSFERRED') for r in results),'failed':sum(r['state']=='TRANSFER_FAILED' for r in results)}))
           PY
-      - name: Retain source fixture
+      - name: Retain exact source transfer
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr41-spatial-fixture-transfer
+          name: bb-fr46-essais-digital-source-transfer
           path: transfer/
           if-no-files-found: error
           retention-days: 7
