@@ -12,29 +12,46 @@ concurrency:
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 10
     steps:
-      - name: Retrieve verified public domain Pascal author portrait
+      - name: Retrieve rank48 complete digital 1777 Montesquieu edition (no scans)
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer
+          mkdir -p transfer/source
           python - <<'PY'
-          import urllib.request,hashlib,pathlib,json,datetime
-          url='https://upload.wikimedia.org/wikipedia/commons/9/98/Blaise_Pascal_Versailles.JPG'
-          req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayPublicPortraitResearch/1.0 (public domain artwork)'})
-          with urllib.request.urlopen(req,timeout=60) as response: data=response.read(6000000)
-          assert data[:3]==b'\xff\xd8\xff' and len(data)>100000,'Wrong or incomplete JPG'
-          pathlib.Path('transfer/Pascal_Versailles.jpg').write_bytes(data)
-          result={'rank':47,'image_url':url,'rights_evidence_url':'https://commons.wikimedia.org/wiki/File:Blaise_Pascal_Versailles.JPG','rights':'Public Domain Mark; original painting anonymous circa1690; US public domain; faithful photographic reproduction','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'public domain source asset only; no EPUB build nor release'}
-          pathlib.Path('transfer/IMAGE.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
-          print(json.dumps(result))
+          import urllib.request,urllib.parse,pathlib,hashlib,json,datetime,time,concurrent.futures
+          d=pathlib.Path('transfer')
+          base='https://fr.wikisource.org/wiki/De_l%E2%80%99esprit_des_lois%2C_Garnier%2C_1777'
+          jobs=[('source/edition.html',base)]
+          for i in range(1,5):jobs.append((f'source/tome-{i}.html',base+f'/Tome_{i}'))
+          jobs.append(('source/table.html',base+'/Table_des_mati%C3%A8res'))
+          export='https://ws-export.wmcloud.org/?lang=fr&format=epub&page='+urllib.parse.quote('De_l’esprit_des_lois,_Garnier,_1777',safe='')
+          jobs.append(('source/full-edition-export.epub',export))
+          def get(job):
+              name,url=job;p=d/name;p.parent.mkdir(parents=True,exist_ok=True)
+              err=None
+              for j in range(2):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayDigitalTextTransfer/1.0 (public original text only)'})
+                      with urllib.request.urlopen(req,timeout=140) as response:data=response.read(45000000)
+                      assert len(data)>2000,'Too short'
+                      p.write_bytes(data)
+                      return {'file':name,'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'SUCCESS'}
+                  except Exception as e:
+                      err=f'{type(e).__name__}:{e}';time.sleep(2)
+              return {'file':name,'url':url,'status':'FAILED','error':err}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex: rows=list(ex.map(get,jobs))
+          ledger={'rank':48,'title':'De l’esprit des lois','source':'Garnier1777, four-volume Wikisource digital edition','scope':'No facsimile; source-only transfer; no EPUB construction/canonical write/external publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':rows}
+          (d/'TRANSFER.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(rows,ensure_ascii=False))
+          assert all(row['status']=='SUCCESS' for row in rows[:5]),'Main table acquisitions not complete'
           PY
-      - name: Retain portrait download
+      - name: Retain source evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr47-pascal-portrait-transfer
+          name: bb-fr48-montesquieu-digital-source-transfer
           path: transfer/
           retention-days: 7
           if-no-files-found: error
