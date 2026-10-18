@@ -14,65 +14,41 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Retrieve complete public digital edition and exact linked images
+      - name: Retrieve public 1670 Desprez Wikisource transcription and paratext
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer/source transfer/catalogue
+          mkdir -p transfer/source
           python - <<'PY'
-          import concurrent.futures, datetime, hashlib, html.parser, json, pathlib, time, urllib.parse, urllib.request
-          root = pathlib.Path('transfer')
-          ids = [48529,49168,58801,58706]
-          jobs = []
-          for volume, id in enumerate(ids,1):
-              jobs.append((f'source/vol-{volume}/pg{id}-images.html',f'https://www.gutenberg.org/cache/epub/{id}/pg{id}-images.html',100000))
-              jobs.append((f'catalogue/{id}.html',f'https://www.gutenberg.org/ebooks/{id}',5000))
-          def get(job):
-              name,url,minimum = job
-              err = None
-              for attempt in range(2):
+          import concurrent.futures,datetime,hashlib,json,pathlib,time,urllib.parse,urllib.request
+          root=pathlib.Path('transfer')
+          base='https://fr.wikisource.org/wiki/Pensées_(Pascal)/2e_éd._Desprez/'
+          names=['Texte_entier','Préface','Approbations','Privilège','Avertissement','Index']
+          def get(name):
+              path=root/'source'/(name.replace('è','e').replace('é','e')+'.html')
+              url=base+name
+              url=urllib.parse.quote(url,safe=':/()_.-')
+              err=''
+              for i in range(3):
                   try:
-                      request=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayDigitalTextTransfer/1.0 (source-only retrieval)'})
-                      with urllib.request.urlopen(request,timeout=60) as response:
-                          data=response.read(30000000); final=response.url
-                      assert len(data)>=minimum, 'Unexpectedly small source'
-                      p=root/name; p.parent.mkdir(parents=True,exist_ok=True); p.write_bytes(data)
-                      return {'path':name,'url':url,'final_url':final,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'state':'TRANSFERRED_NOT_YET_CONTENT_QUALIFIED'}
-                  except Exception as error:
-                      err=type(error).__name__+': '+str(error); time.sleep(2)
-              return {'path':name,'url':url,'state':'TRANSFER_FAILED','error':err}
-          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-              results=list(pool.map(get,jobs))
-          class Images(html.parser.HTMLParser):
-              def __init__(self): super().__init__(); self.srcs=[]
-              def handle_starttag(self,tag,attrs):
-                  if tag.lower()=='img':
-                      src=dict(attrs).get('src')
-                      if src: self.srcs.append(src)
-          imagejobs=[]
-          seen=set()
-          for row in results:
-              if row['path'].startswith('source/') and row['state'].startswith('TRANSFERRED'):
-                  parser=Images();parser.feed((root/row['path']).read_text(encoding='utf-8-sig'))
-                  for src in parser.srcs:
-                      url=urllib.parse.urljoin(row['final_url'],src)
-                      parts=urllib.parse.urlsplit(src)
-                      if parts.scheme or src.startswith('/') or '..' in pathlib.PurePosixPath(parts.path).parts: continue
-                      name=str(pathlib.PurePosixPath(row['path']).parent/urllib.parse.unquote(parts.path))
-                      if (name,url) not in seen:
-                          seen.add((name,url));imagejobs.append((name,url,100))
-          assert len(imagejobs)<=50, 'Unexpected image count; bounded transfer stops'
-          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-              results.extend(pool.map(get,imagejobs))
-          ledger={'schema':'bb.public-digital-transfer.v1','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Public digital source and exact linked images only. No scans, EPUB build, canonical writes or publication.','rank':46,'title':'Essais','edition_candidate':'Michaud, 1907, complete four-volume digital text, original and modern French with separate commentary volume','gutenberg_ids':ids,'files':results}
-          (root/'TRANSFER.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2),encoding='utf-8')
-          print(json.dumps({'transferred':sum(x['state'].startswith('TRANSFERRED') for x in results),'failed':sum(x['state']=='TRANSFER_FAILED' for x in results),'images_requested':len(imagejobs)}))
+                      req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayPublicSourceTransfer/1.0 (contact: public text archival research)'})
+                      with urllib.request.urlopen(req,timeout=75) as resp: data=resp.read(2500000)
+                      assert len(data)>3000 and b'Wikisource' in data
+                      path.write_bytes(data)
+                      return {'path':str(path.relative_to(root)),'url':url,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'TRANSFERRED'}
+                  except Exception as e:
+                      err=f'{type(e).__name__}: {e}';time.sleep(1+i)
+              return {'path':str(path.relative_to(root)),'url':url,'status':'FAILED','error':err}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool: rows=list(pool.map(get,names))
+          (root/'TRANSFER.json').write_text(json.dumps({'rank':47,'title':'Pensées','edition':'Desprez1670 Port-Royal second','scope':'public text only; no scans; no publication or EPUB build','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':rows},ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(rows,ensure_ascii=False))
+          assert all(x['status']=='TRANSFERRED' for x in rows), 'One or more source pages were not available'
           PY
-      - name: Retain exact digital source transfer
+      - name: Retain source-only download
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr46-essais-michaud-digital-transfer
+          name: bb-fr47-pensees-digital-text
           path: transfer/
-          if-no-files-found: error
           retention-days: 7
+          if-no-files-found: error
