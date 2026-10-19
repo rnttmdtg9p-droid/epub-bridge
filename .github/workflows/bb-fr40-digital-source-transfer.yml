@@ -7,43 +7,40 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: bb-fr55-voltaire-moreau
+  group: bb-fr56-zadig-historical-assets
   cancel-in-progress: false
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 6
     steps:
-      - name: Retrieve two authentic eighteenth century Moreau L'Ingénu engravings
+      - name: Retrieve Zadig Moreau 18th century original engravings from Commons
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p transfer
           python - <<'PY'
-          import urllib.request,urllib.parse,pathlib,hashlib,json,datetime,time,concurrent.futures
-          root=pathlib.Path('transfer')
-          names=['Voltaire_-_L\'Ingénu_-_Simonet_-_Moreau.jpg','Voltaire_-_L\'Ingénu_-_Delignon_-_Moreau.jpg']
-          def get(row):
-              i,name=row;hashname=hashlib.md5(name.encode('utf8')).hexdigest()
-              url='https://upload.wikimedia.org/wikipedia/commons/'+hashname[:1]+'/'+hashname[:2]+'/'+urllib.parse.quote(name,safe='_.-')
+          import urllib.request,time,datetime,json,hashlib,pathlib
+          items=[('Triere','https://upload.wikimedia.org/wikipedia/commons/1/1d/Voltaire_-_Zadig_-_Tri%C3%A8re_-_Moreau.jpg'),('Duclos','https://upload.wikimedia.org/wikipedia/commons/1/15/Voltaire_-_Zadig_-_Duclos_-_Moreau.jpg')]
+          root=pathlib.Path('transfer');rows=[]
+          for name,url in items:
+            error=''
+            for attempt in range(3):
               try:
-                  req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayHistoricalEtchingResearch/1.0'})
-                  with urllib.request.urlopen(req,timeout=100) as resp:data=resp.read(5000000)
-                  assert data.startswith(b'\xff\xd8\xff') and len(data)>50000
-                  dest=root/f'Ingenu_Moreau_{i}.jpg';dest.write_bytes(data)
-                  return {'i':i,'file':dest.name,'url':url,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'status':'SUCCESS'}
-              except Exception as e:return {'i':i,'url':url,'status':'FAILED','error':repr(e)}
-          with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:results=list(pool.map(get,enumerate(names,1)))
-          ledger={'title':'L’Ingénu','rank':55,'artist':'Jean-Michel Moreau le Jeune; engravers Simonet and Delignon, eighteenth century','rights':'Commons public-domain mark; historical engraving U.S. publication before 1931','source':'ETH Zürich reproduction via Wikimedia Commons','status':'TRANSFER_ONLY_NOT_EPUB_RELEASE','date':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':results}
-          (root/'ENGRAVINGS.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2))
-          print(json.dumps(results))
-          assert all(x['status']=='SUCCESS' for x in results)
+                req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayFrenchCollection/1.0 (public-domain illustration research)'})
+                with urllib.request.urlopen(req,timeout=75) as r: blob=r.read(2500000)
+                assert blob.startswith(b'\xff\xd8\xff') and len(blob)>100000,'incomplete jpeg'
+                (root/f'Zadig_Moreau_{name}.jpg').write_bytes(blob)
+                rows.append({'name':name,'url':url,'bytes':len(blob),'sha256':hashlib.sha256(blob).hexdigest(),'status':'SUCCESS'});break
+              except Exception as e:error=type(e).__name__+': '+str(e);time.sleep(1+attempt*2)
+            else: rows.append({'name':name,'url':url,'status':'FAILED','error':error})
+          (root/'SOURCE_LEDGER.json').write_text(json.dumps({'rank':56,'title':'Zadig','original_artist':'Jean-Michel Moreau le Jeune','source':'Wikimedia Commons / ETH Zürich, engravings of Zadig in Voltaire works','original_creator':'Engravers Trière and Duclos, 18th c.','rights':'Public domain United States, Commons PD-Mark and faithful reproductions of 2D public-domain works','scope':'Source asset retrieval only; no scans, EPUB build, publication or canonical write','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'assets':rows},ensure_ascii=False,indent=2))
+          assert all(x['status']=='SUCCESS' for x in rows),rows
           PY
-      - name: Save exact eighteenth-century engraving bytes
+      - name: Retain source art and rights metadata
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr55-ingenu-moreau-illustrations
+          name: bb-fr56-zadig-original-illustrations
           path: transfer/
-          if-no-files-found: error
           retention-days: 7
