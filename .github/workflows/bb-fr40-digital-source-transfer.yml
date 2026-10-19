@@ -7,43 +7,53 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: bb-fr54-engraving-recovery-only
+  group: bb-fr54-erara-iiif-research-only
   cancel-in-progress: false
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 9
     steps:
-      - name: Retrieve outstanding original 1762 public-domain engravings by direct Commons storage path
+      - name: Recover first-edition Emile public domain IIIF volume and plate inventories
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p transfer
           python - <<'PY'
-          import urllib.request,urllib.parse,hashlib,pathlib,json,time,datetime
-          base='https://upload.wikimedia.org/wikipedia/commons/'
-          names=[(1,'Emile I Thétis et Achille 1762.jpg'),(2,'Emile II Chiron et Achille.jpg'),(5,'Emile V Circé et Ulysse.jpg')]
-          rows=[];root=pathlib.Path('transfer')
-          for i,name in names:
-              literal=name.replace(' ','_');md5=hashlib.md5(literal.encode('utf-8')).hexdigest()
-              url=base+md5[0]+'/'+md5[:2]+'/'+urllib.parse.quote(literal,safe='_.')
-              status='FAILED';error=''
-              for attempt in range(3):
-                  try:
-                      req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayBookResearch/1.0','Accept':'image/jpeg'})
-                      with urllib.request.urlopen(req,timeout=75) as response:data=response.read(7000000)
-                      assert data.startswith(b'\xff\xd8\xff') and len(data)>30000
-                      (root/f'emile-book-{i}.jpg').write_bytes(data)
-                      rows.append({'book':i,'name':name,'url':url,'status':'SUCCESS','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()});status='SUCCESS';break
-                  except Exception as e:error=repr(e);time.sleep(2+attempt*3)
-              if status=='FAILED':rows.append({'book':i,'name':name,'url':url,'status':status,'error':error})
-          (root/'LEDGER.json').write_text(json.dumps({'rank':54,'scope':'historical art only, no EPUB promotion','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'results':rows},ensure_ascii=False,indent=2),encoding='utf8')
-          print(json.dumps(rows,ensure_ascii=False))
+          import json,urllib.request,hashlib,pathlib,datetime
+          root=pathlib.Path('transfer')
+          urls=['https://www.e-rara.ch/i3f/v20/2090103/manifest','https://www.e-rara.ch/i3f/v20/2089908/manifest']
+          allrows=[]
+          for idx,url in enumerate(urls):
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayDigitalPublicDomainResearch/1.0'})
+              with urllib.request.urlopen(req,timeout=75) as q:data=q.read(14000000)
+              assert len(data)>5000
+              m=json.loads(data)
+              (root/f'manifest_{idx}.json').write_bytes(data)
+              items=m.get('items',[]) or []
+              canvases=[]
+              def crawl(nodes,sequence):
+                for j,node in enumerate(nodes):
+                  if node.get('type')=='Canvas':
+                    labs=node.get('label',{})
+                    text=' '.join(' '.join(v) for v in labs.values()) if isinstance(labs,dict) else str(labs)
+                    thumb=node.get('thumbnail',[])
+                    canvases.append({'index':len(canvases),'sequence':sequence,'label':text[:140],'id':node.get('id',''),'thumbnail_url':thumb[0].get('id') if thumb else None})
+                  if node.get('items') and node.get('type')!='Canvas':crawl(node['items'],sequence+'/'+str(j))
+              crawl(items,'')
+              (root/f'canvases_{idx}.json').write_text(json.dumps(canvases,ensure_ascii=False,indent=2))
+              matches=[x for x in canvases if any(t in (x['label'].lower()+' '+x['id'].lower()) for t in ['front','thétis','chiron','circ','plate','gravure','orphe','planche'])]
+              allrows.append({'manifest_url':url,'total_canvases':len(canvases),'top_labels':canvases[:35],'matches':matches[:55],'byte_sha256':hashlib.sha256(data).hexdigest(),'status':'SUCCESS'})
+            except Exception as e:
+              allrows.append({'manifest_url':url,'status':'FAILED','error':repr(e)})
+          (root/'LEDGER.json').write_text(json.dumps({'rank':54,'scope':'IIIF source metadata only; no print collation or title release','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'rows':allrows},ensure_ascii=False,indent=2))
+          print(json.dumps([{k:v for k,v in row.items() if k not in ['top_labels','matches']} for row in allrows]))
           PY
-      - name: Save transfer evidence
+      - name: Retain metadata for independent plate identification
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr54-original-engraving-retry
+          name: bb-fr54-erara-iiif-metadata
           path: transfer/
           retention-days: 7
