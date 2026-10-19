@@ -7,48 +7,43 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: bb-fr54-erara-plate-thumbnails
+  group: bb-fr55-voltaire-historical-portrait
   cancel-in-progress: false
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 7
     steps:
-      - name: Collect bounded IIIF original-engraving candidate thumbnails
+      - name: Recover National Gallery of Art CC0 portrait of Voltaire
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer/thumbs
+          mkdir -p transfer
           python - <<'PY'
-          import urllib.request,concurrent.futures,json,pathlib,hashlib,datetime,time
-          root=pathlib.Path('transfer')
-          url='https://www.e-rara.ch/i3f/v20/2090103/manifest'
-          with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'BoundaryBayBookIllustrationResearch/1.0'}),timeout=80) as f:m=json.load(f)
-          canvases=m['sequences'][0]['canvases']
-          ranges=[list(range(0,10)),list(range(17,26)),list(range(156,166)),list(range(502,518)),list(range(680,691)),list(range(932,946)),list(range(1332,1350))]
-          indices=sorted(set(sum(ranges,[])))
-          def get(i):
-              row=canvases[i];obj=row['images'][0]['resource'];base=obj['service']['@id']
-              u=base+'/full/440,/0/default.jpg'
-              for t in range(3):
-                  try:
-                      req=urllib.request.Request(u,headers={'User-Agent':'BoundaryBayBookIllustrationResearch/1.0'})
-                      with urllib.request.urlopen(req,timeout=85) as f:data=f.read(550000)
-                      assert data[:3]==b'\xff\xd8\xff' and len(data)>5000
-                      name=f'thumbs/canvas-{i:04d}.jpg';(root/name).write_bytes(data)
-                      return {'index':i,'file':name,'canvas_id':row['@id'],'image_base':base,'label':row.get('label',''),'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'status':'SUCCESS'}
-                  except Exception as e:
-                      error=repr(e);time.sleep(1+t)
-              return {'index':i,'image_base':base,'status':'FAILED','error':error}
-          with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:rows=list(pool.map(get,indices))
-          ledger={'rank':54,'source':'Bibliothèque de Genève Rsa251, Amsterdam/La Haye 1762, DOI 10.3931/e-rara-7961','rights':'Public Domain Mark, source credit and repository requested','manifest_url':url,'scope':'85 bounded image thumbnails only, no print text collation, no EPUB mutation or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'results':rows}
-          (root/'THUMBNAILS.json').write_text(json.dumps(ledger,indent=2,ensure_ascii=False))
-          print(json.dumps({'attempted':len(rows),'success':sum(x['status']=='SUCCESS' for x in rows),'failed':sum(x['status']=='FAILED' for x in rows)}))
+          import urllib.request,urllib.parse,pathlib,hashlib,json,datetime,time
+          name='Jean-Antoine_Houdon,_Voltaire,_1778,_NGA_46715.jpg'
+          md5=hashlib.md5(name.encode()).hexdigest()
+          urls=['https://upload.wikimedia.org/wikipedia/commons/'+md5[0]+'/'+md5[:2]+'/'+urllib.parse.quote(name,safe='_.-,'),
+          'https://commons.wikimedia.org/wiki/Special:FilePath/'+urllib.parse.quote(name,safe='_.-,')]
+          rows=[];root=pathlib.Path('transfer');success=False
+          for url in urls:
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayCommonsHistoricalResearch/1.0','Accept':'image/jpeg'})
+                  with urllib.request.urlopen(req,timeout=70) as r:data=r.read(3000000)
+                  assert data[:3]==b'\xff\xd8\xff' and len(data)>100000
+                  (root/'Voltaire_Houdon_1778_NGA_CC0.jpg').write_bytes(data)
+                  rows.append({'url':url,'status':'SUCCESS','sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)});success=True;break
+              except Exception as e:
+                  rows.append({'url':url,'status':'FAILED','error':repr(e)})
+          record={'rank':55,'title':'L’Ingénu','subject':'Voltaire','artwork':'Jean-Antoine Houdon, marble bust Voltaire 1778, NGA accession 1963.10.240','rights':'NGA open access CC0 1.0','source':'https://commons.wikimedia.org/wiki/File:Jean-Antoine_Houdon,_Voltaire,_1778,_NGA_46715.jpg','scope':'portrait-only source transfer, no EPUB build or publication','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'attempts':rows}
+          (root/'PORTRAIT.json').write_text(json.dumps(record,ensure_ascii=False,indent=2))
+          print(json.dumps(record,ensure_ascii=False))
+          assert success,'Historical portrait byte retrieval not available'
           PY
-      - name: Save initial engraving candidate thumbnails
+      - name: Save original portrait and rights evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr54-iiif-engraving-thumbnails
+          name: bb-fr55-voltaire-NGA-CC0-portrait
           path: transfer/
           retention-days: 7
