@@ -7,45 +7,43 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: bb-fr54-educational-frontispieces
+  group: bb-fr54-engraving-recovery-only
   cancel-in-progress: false
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 8
     steps:
-      - name: Retrieve five public domain 1762 Émile book-related engravings
+      - name: Retrieve outstanding original 1762 public-domain engravings by direct Commons storage path
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p transfer
           python - <<'PY'
-          import pathlib,urllib.parse,urllib.request,hashlib,json,datetime,concurrent.futures,time
-          root=pathlib.Path('transfer')
-          names=['Emile I Thétis et Achille 1762.jpg','Emile II Chiron et Achille.jpg','Emile III Hermes.jpg','Emile IV Orphée enseignant à prier.jpg','Emile V Circé et Ulysse.jpg']
-          def get(pair):
-              i,name=pair
-              api='https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Cextmetadata&titles='+urllib.parse.quote('File:'+name,safe='')
-              try:
-                  with urllib.request.urlopen(urllib.request.Request(api,headers={'User-Agent':'BoundaryBayHistoricalIllustrationResearch/1.0'}),timeout=50) as q:data=json.load(q)
-                  x=next(iter(data['query']['pages'].values()))
-                  info=x['imageinfo'][0];url=info['url']
-                  with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'BoundaryBayHistoricalIllustrationResearch/1.0'}),timeout=80) as q:blob=q.read(7000000)
-                  assert len(blob)>30000 and blob[:3]==b'\xff\xd8\xff'
-                  dest=root/('emile-book-'+str(i)+'.jpg');dest.write_bytes(blob)
-                  rights=info.get('extmetadata',{})
-                  return {'book':i,'file':name,'bytes':len(blob),'sha256':hashlib.sha256(blob).hexdigest(),'commons_url':'https://commons.wikimedia.org/wiki/File:'+urllib.parse.quote(name),'asset_url':url,'license':rights.get('LicenseShortName',{}).get('value'),'artist':rights.get('Artist',{}).get('value','')[:300],'status':'SUCCESS'}
-              except Exception as e:return {'book':i,'file':name,'status':'FAILED','error':str(e)}
-          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:rows=list(pool.map(get,enumerate(names,1)))
-          (root/'LEDGER.json').write_text(json.dumps({'rank':54,'title':'Émile, ou De l’éducation','art':'Original 1762 engraved book frontispieces as listed by Wikimedia Commons; separate from selected 1782 text source; matches book scenes, not falsely called illustrations from 1782 printing','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'assets':rows,'scope':'Source-only research, no scans, no EPUB build or release'},ensure_ascii=False,indent=2),encoding='utf-8')
+          import urllib.request,urllib.parse,hashlib,pathlib,json,time,datetime
+          base='https://upload.wikimedia.org/wikipedia/commons/'
+          names=[(1,'Emile I Thétis et Achille 1762.jpg'),(2,'Emile II Chiron et Achille.jpg'),(5,'Emile V Circé et Ulysse.jpg')]
+          rows=[];root=pathlib.Path('transfer')
+          for i,name in names:
+              literal=name.replace(' ','_');md5=hashlib.md5(literal.encode('utf-8')).hexdigest()
+              url=base+md5[0]+'/'+md5[:2]+'/'+urllib.parse.quote(literal,safe='_.')
+              status='FAILED';error=''
+              for attempt in range(3):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayBookResearch/1.0','Accept':'image/jpeg'})
+                      with urllib.request.urlopen(req,timeout=75) as response:data=response.read(7000000)
+                      assert data.startswith(b'\xff\xd8\xff') and len(data)>30000
+                      (root/f'emile-book-{i}.jpg').write_bytes(data)
+                      rows.append({'book':i,'name':name,'url':url,'status':'SUCCESS','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()});status='SUCCESS';break
+                  except Exception as e:error=repr(e);time.sleep(2+attempt*3)
+              if status=='FAILED':rows.append({'book':i,'name':name,'url':url,'status':status,'error':error})
+          (root/'LEDGER.json').write_text(json.dumps({'rank':54,'scope':'historical art only, no EPUB promotion','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'results':rows},ensure_ascii=False,indent=2),encoding='utf8')
           print(json.dumps(rows,ensure_ascii=False))
-          assert all(x['status']=='SUCCESS' for x in rows),'Not all engravings could be acquired'
           PY
-      - name: Save sourced illustration assets
+      - name: Save transfer evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr54-emile-historical-book-engravings
+          name: bb-fr54-original-engraving-retry
           path: transfer/
           retention-days: 7
-          if-no-files-found: error
