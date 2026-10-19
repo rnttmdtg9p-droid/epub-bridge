@@ -7,31 +7,46 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: bb-fr50-diderot-portrait
+  group: bb-french-cover-historical-art
   cancel-in-progress: false
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 10
     steps:
-      - name: Retrieve rights-evidenced Diderot public-domain historical portrait
+      - name: Recover public-domain historical art for BB French cover correction
+        shell: bash
         run: |
           set -euo pipefail
-          mkdir -p transfer
+          mkdir -p transfer/artwork
           python - <<'PY'
-          import urllib.request,hashlib,pathlib,json,datetime
-          url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Denis_Diderot_by_Louis-Michel_van_Loo.jpg'
-          req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayHistoricalPortraitResearch/1.0'})
-          with urllib.request.urlopen(req,timeout=65) as r:data=r.read(3000000)
-          assert data[:3]==b'\xff\xd8\xff' and len(data)>700000
-          p=pathlib.Path('transfer/Denis_Diderot_Van_Loo_1767.jpg');p.write_bytes(data)
-          (pathlib.Path('transfer/PROVENANCE.json')).write_text(json.dumps({'rank':50,'subject':'Denis Diderot','asset':'Louis-Michel van Loo, Diderot, 1767, Louvre RF1958','source':url,'rights_page':'https://commons.wikimedia.org/wiki/File:Denis_Diderot_by_Louis-Michel_van_Loo.jpg','rights':'Wikimedia Commons public-domain mark / PD-Art US','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}))
+          import urllib.request,urllib.parse,json,pathlib,hashlib,datetime,time
+          root=pathlib.Path('transfer/artwork')
+          works=[('045_Gargantua_Dore','File:Gustave Doré - Gargantua.jpg'),('048_Montesquieu_portrait','File:Charles de Secondat, Baron de Montesquieu.jpg'),('049_Persian_Letters_1759','File:Persianische Briefe.jpg')]
+          rows=[]
+          for label,title in works:
+              q=urllib.parse.urlencode({'action':'query','titles':title,'prop':'imageinfo','iiprop':'url|size|extmetadata','format':'json'})
+              api='https://commons.wikimedia.org/w/api.php?'+q
+              try:
+                  req=urllib.request.Request(api,headers={'User-Agent':'BoundaryBayPublicDomainResearch/1.0 (literary art source retrieval)'})
+                  with urllib.request.urlopen(req,timeout=70) as r: obj=json.load(r)
+                  pages=list(obj['query']['pages'].values());info=pages[0]['imageinfo'][0];url=info['url']
+                  req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayPublicDomainResearch/1.0 (literary art source retrieval)'})
+                  with urllib.request.urlopen(req,timeout=90) as r:data=r.read(15000000)
+                  assert data[:3]==b'\xff\xd8\xff' and len(data)>20000
+                  p=root/(label+'.jpg');p.write_bytes(data)
+                  rows.append({'label':label,'title':title,'page':'https://commons.wikimedia.org/wiki/'+urllib.parse.quote(title.replace(' ','_'),safe=':()_'),'asset_url':url,'sha256':hashlib.sha256(data).hexdigest(),'size':len(data),'extmetadata':{k:v.get('value','')[:600] for k,v in info.get('extmetadata',{}).items() if k in ['LicenseShortName','LicenseUrl','UsageTerms','Credit','Artist','Copyrighted','Restrictions']},'status':'PASS'})
+              except Exception as e:
+                  rows.append({'label':label,'title':title,'status':'FAIL','error':str(e)})
+          (pathlib.Path('transfer')/'TRANSFER.json').write_text(json.dumps({'scope':'Three historic public-domain illustrative assets for title-specific cover composition; no publish or EPUB writes','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':rows},ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(rows,ensure_ascii=False))
+          assert sum(x['status']=='PASS' for x in rows)>=2,'insufficient art transfers'
           PY
-      - name: Retain source asset only
+      - name: Retain source images and provenance
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr50-diderot-portrait
+          name: bb-french-cover-historical-art-transfer
           path: transfer/
           retention-days: 7
           if-no-files-found: error
