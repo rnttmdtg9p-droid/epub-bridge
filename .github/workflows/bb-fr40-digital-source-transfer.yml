@@ -7,68 +7,31 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: bb-fr49-letters-digital-transfer
+  group: bb-fr50-diderot-portrait
   cancel-in-progress: false
 jobs:
   fetch-only:
     runs-on: ubuntu-latest
-    timeout-minutes: 9
+    timeout-minutes: 6
     steps:
-      - name: Retrieve two-volume PG 1873 French digital Lettres persanes edition
-        shell: bash
+      - name: Retrieve rights-evidenced Diderot public-domain historical portrait
         run: |
           set -euo pipefail
-          mkdir -p transfer/source transfer/catalogue
+          mkdir -p transfer
           python - <<'PY'
-          import urllib.request,urllib.parse,pathlib,hashlib,json,datetime,time,concurrent.futures,html.parser
-          root=pathlib.Path('transfer')
-          sources=[(30268,'tome-1'),(33856,'tome-2')]
-          jobs=[]
-          for num,name in sources:
-              jobs.append((f'source/{name}.html',f'https://www.gutenberg.org/cache/epub/{num}/pg{num}-images.html',100000))
-              jobs.append((f'catalogue/{num}.html',f'https://www.gutenberg.org/ebooks/{num}',6000))
-          def get(job):
-              name,url,minimum=job
-              p=root/name;p.parent.mkdir(parents=True,exist_ok=True)
-              err=''
-              for j in range(3):
-                  try:
-                      req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayDigitalSourceTransfer/1.0 (public-domain literary research)'})
-                      with urllib.request.urlopen(req,timeout=80) as resp: data=resp.read(30000000); final=resp.url
-                      assert len(data)>minimum,f'Unexpectedly small content {len(data)}'
-                      p.write_bytes(data)
-                      return {'file':name,'url':url,'final_url':final,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'status':'SUCCESS'}
-                  except Exception as e:
-                      err=type(e).__name__+': '+str(e);time.sleep(j+1)
-              return {'file':name,'url':url,'status':'FAILED','error':err}
-          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex: rows=list(ex.map(get,jobs))
-          class ImgParser(html.parser.HTMLParser):
-              def __init__(self):super().__init__();self.src=[]
-              def handle_starttag(self,tag,attrs):
-                  if tag=='img':
-                      src=dict(attrs).get('src')
-                      if src:self.src.append(src)
-          images=[]
-          for r in rows:
-              if not r['file'].startswith('source/') or r['status']!='SUCCESS':continue
-              p=ImgParser();p.feed((root/r['file']).read_text('utf-8-sig'))
-              for src in sorted(set(p.src)):
-                  parsed=urllib.parse.urlsplit(src)
-                  if parsed.scheme or src.startswith('/') or '..' in pathlib.PurePosixPath(parsed.path).parts:continue
-                  name=str(pathlib.PurePosixPath(r['file']).parent/urllib.parse.unquote(parsed.path))
-                  images.append((name,urllib.parse.urljoin(r['final_url'],src),100))
-          assert len(images)<=40, 'Too many image sources'
-          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex: rows+=list(ex.map(get,images))
-          ledger={'rank':49,'title':'Lettres persanes','source':'Project Gutenberg 30268/33856, two-volume French scholarly edition, original 1721 text with later readings/notes and explicit editorial provenance; not the 1721 second Marteau 140-letter edition','scope':'US public-domain digital source transfer only; no print scans or EPUB release','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'files':rows}
-          (root/'TRANSFER.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2),encoding='utf-8')
-          print(json.dumps({'main_sources':[r for r in rows if r['file'].startswith('source/')],'image_count':len(images)},ensure_ascii=False))
-          assert all(r['status']=='SUCCESS' for r in rows if r['file'].startswith('source/')),'Source transfer incomplete'
+          import urllib.request,hashlib,pathlib,json,datetime
+          url='https://upload.wikimedia.org/wikipedia/commons/f/fc/Denis_Diderot_by_Louis-Michel_van_Loo.jpg'
+          req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayHistoricalPortraitResearch/1.0'})
+          with urllib.request.urlopen(req,timeout=65) as r:data=r.read(3000000)
+          assert data[:3]==b'\xff\xd8\xff' and len(data)>700000
+          p=pathlib.Path('transfer/Denis_Diderot_Van_Loo_1767.jpg');p.write_bytes(data)
+          (pathlib.Path('transfer/PROVENANCE.json')).write_text(json.dumps({'rank':50,'subject':'Denis Diderot','asset':'Louis-Michel van Loo, Diderot, 1767, Louvre RF1958','source':url,'rights_page':'https://commons.wikimedia.org/wiki/File:Denis_Diderot_by_Louis-Michel_van_Loo.jpg','rights':'Wikimedia Commons public-domain mark / PD-Art US','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}))
           PY
-      - name: Retain exact source bytes and evidence
+      - name: Retain source asset only
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bb-fr49-lettres-persanes-original-digital
+          name: bb-fr50-diderot-portrait
           path: transfer/
-          if-no-files-found: error
           retention-days: 7
+          if-no-files-found: error
