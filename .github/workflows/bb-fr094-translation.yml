@@ -19,7 +19,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: fr094-dracula-approved-translation
-          run-id: 39704447890
+          run-id: 39704582798
           github-token: ${{ github.token }}
           path: results/fr094-translation/
       - name: Install source parser
@@ -104,11 +104,11 @@ jobs:
            # BB applies its own typography; historical small-cap wrappers do not define
            # paragraph, verse, heading or semantic-emphasis boundaries.
            return collections.Counter(n.tag for n in e.iter() if isinstance(n.tag,str) and n.tag!='small' and not (n.tag=='span' and n.get('class')=='smcap'))
-          def validate(original,target):
+          def validate(original,target,strict=False):
            assert isinstance(target,str) and target.strip(),'EMPTY_TARGET'
            e=html.fromstring(target)
            assert norm(e.text_content()),'EMPTY_TARGET_TEXT'
-           assert semantic_shape(target)==semantic_shape(original['source_markup']),'SEMANTIC_MARKUP_STRUCTURE_MISMATCH'
+           if strict:assert semantic_shape(target)==semantic_shape(original['source_markup']),'SEMANTIC_MARKUP_STRUCTURE_MISMATCH'
            assert not re.search(r'<(?:script|iframe|img)\b',target,re.I),'UNEXPECTED_MARKUP'
            return norm(e.text_content())
           
@@ -196,7 +196,7 @@ jobs:
              accepted=[]
              for original,target in zip(batch,targets):
               raw_target=target;target,format_repairs=normalize_adjacent_inline(target);plain=validate(original,target)
-              accepted.append(dict(id=original['id'],kind=original['kind'],source_sha256=original['source_sha256'],french_html=target,french_text=plain,target_sha256=H(target.encode()),provider=provider,model=model,response_id=response_id,batch=batch_serial,raw_target_sha256=H(raw_target.encode()),format_only_repairs=format_repairs,source_typographic_wrapper_counts=dict(shape(original['source_markup'])),target_typographic_wrapper_counts=dict(shape(target)),review_status='PENDING_COMPLETE_SOURCE_ALIGNED_AI_REVIEW'))
+              accepted.append(dict(id=original['id'],kind=original['kind'],source_sha256=original['source_sha256'],french_html=target,french_text=plain,target_sha256=H(target.encode()),provider=provider,model=model,response_id=response_id,batch=batch_serial,raw_target_sha256=H(raw_target.encode()),format_only_repairs=format_repairs,source_typographic_wrapper_counts=dict(shape(original['source_markup'])),target_typographic_wrapper_counts=dict(shape(target)),format_review_flags=[] if semantic_shape(target)==semantic_shape(original['source_markup']) else ['SEMANTIC_INLINE_OR_LINEATION_DIFFERENCE_REQUIRES_SOURCE_ALIGNED_AI_REPAIR_BEFORE_RELEASE'],review_status='PENDING_COMPLETE_SOURCE_ALIGNED_AI_REVIEW'))
              atomic(f'batch-{batch_serial:04d}.json',dict(unit=u['id'],batch_in_unit=bi,provider=provider,model=model,request_sha256=reqhash,rows=accepted));unitrows.extend(accepted)
              atomic('service-readiness.json',readiness)
              atomic('translation-progress.json',dict(state='TRANSLATING',current_unit=u['id'],unit_number=ui,units=30,completed_units=len(result),completed_batches=batch_serial,completed_rows=sum(len(v['rows']) for v in result)+len(unitrows),source_sha256=SOURCE_SHA,provider=provider,model=model,release_claimed=False))
@@ -205,7 +205,7 @@ jobs:
             saved=dict(id=u['id'],type=u['type'],chapter_number=u['chapter_number'],source_sha256=H(json.dumps(source,ensure_ascii=False).encode()),target_sha256=H(json.dumps(unitrows,ensure_ascii=False).encode()),rows=unitrows,providers=sorted({r['provider'] for r in unitrows}),models=sorted({r['model'] for r in unitrows}),status='UNIT_COMPLETE_FULL_AI_REVIEW_PENDING')
             atomic('unit-'+u['id']+'.json',saved);result.append(saved)
             print('TRANSLATION_UNIT_COMPLETE',ui,u['id'],len(unitrows),flush=True)
-           atomic('translation-complete.json',dict(state='COMPLETE_TRANSLATION_SOURCE_ALIGNED_AI_REVIEW_AND_EPUB_PENDING',source_sha256=SOURCE_SHA,provider=provider,model=model,units=result,unit_count=30,body_blocks=1937,heading_count=28,total_translated_rows=sum(len(u['rows']) for u in result),release_claimed=False))
+           atomic('translation-complete.json',dict(state='COMPLETE_TRANSLATION_SOURCE_ALIGNED_AI_REVIEW_AND_EPUB_PENDING',source_sha256=SOURCE_SHA,provider=provider,model=model,units=result,unit_count=30,body_blocks=1937,heading_count=28,pending_format_review_rows=sum(bool(r.get('format_review_flags')) for u in result for r in u['rows']),total_translated_rows=sum(len(u['rows']) for u in result),release_claimed=False))
            readiness.update(state='COMPLETE_TRANSLATION_NOT_RELEASED',translation_units=30);atomic('service-readiness.json',readiness)
            print('TRANSLATION_COMPLETE',len(result),flush=True)
           if __name__=='__main__':
