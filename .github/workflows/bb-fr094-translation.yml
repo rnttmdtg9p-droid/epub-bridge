@@ -1,0 +1,184 @@
+name: BB French 094 Dracula approved translation only
+on:
+  push:
+    branches: [bb-french-r094-translation-20261021]
+    paths: ['.github/workflows/bb-fr094-translation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-french-r094-translation-20261021
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Install source parser
+        run: python3 -m pip install lxml
+      - name: Translate frozen original using existing authorized providers
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          """Finite Dracula EN-FR translation task using existing repository provider connections."""
+          from pathlib import Path
+          from lxml import html,etree
+          import os,json,hashlib,urllib.request,urllib.error,re,time,datetime,collections
+          OUT=Path('results/fr094-translation');OUT.mkdir(parents=True,exist_ok=True)
+          H=lambda b:hashlib.sha256(b).hexdigest()
+          SOURCE_URL='https://www.gutenberg.org/cache/epub/345/pg345-images.html'
+          SOURCE_SHA='4f329d89d8531b86c9fcd19731cb612e1f335488707d10974c95fb53fc317840' # replaced from frozen manifest below
+          MODEL='claude-sonnet-5-5'
+          EXPECTED_UNIT_LEDGER_SHA='6b289912d8926f3c95590b51c3f7090c954f684cf2621cac9dbd6abdfdb749da'
+          
+          def atomic(name,v):
+           p=OUT/name;t=p.with_suffix(p.suffix+'.writing');t.write_text(json.dumps(v,ensure_ascii=False,indent=2));t.replace(p)
+          def norm(s):return ' '.join(s.split())
+          def load_source(raw):
+           d=html.fromstring(raw);units=[]
+           for idx,c in enumerate(d.xpath('//div[@class="chapter"]')):
+            if idx in [1,3]:continue
+            h=c.find('h2');title=norm(h.text_content()) if h is not None else ''
+            typ='dedication' if idx==0 else 'prefatory_statement' if idx==2 else 'closing_note' if title=='NOTE' else 'chapter'
+            n=idx-3 if typ=='chapter' else None;uid=f'chapter-{n:02d}' if n else typ;rows=[]
+            if h is not None:rows.append(dict(id=uid+'-heading',kind='heading',source_markup=etree.tostring(h,encoding='unicode',method='html',with_tail=False),source_text=title))
+            j=0
+            for e in c:
+             if e.tag=='h2' or e.tag=='hr' or not norm(e.text_content()):continue
+             if typ=='closing_note' and e.tag=='div' and e.get('class')=='boxxx':continue
+             j+=1;rows.append(dict(id=f'{uid}-r{j:04d}',kind='body',source_markup=etree.tostring(e,encoding='unicode',method='html',with_tail=False),source_text=norm(e.text_content())))
+            for r in rows:r['source_sha256']=H(r['source_markup'].encode())
+            units.append(dict(id=uid,type=typ,chapter_number=n,heading=title,rows=rows))
+           assert len(units)==30
+           assert [u['chapter_number'] for u in units if u['type']=='chapter']==list(range(1,28))
+           assert sum(r['kind']=='body' for u in units for r in u['rows'])==1937
+           return units
+          
+          def request_json(url,payload=None,headers=None,retries=2):
+           data=json.dumps(payload,ensure_ascii=False).encode() if payload is not None else None
+           for attempt in range(retries+1):
+            req=urllib.request.Request(url,data=data,headers=headers or {})
+            try:
+             with urllib.request.urlopen(req,timeout=240) as response:
+              return json.load(response),dict(status=response.status,trace_id=response.headers.get('X-Trace-ID'),date=response.headers.get('Date'))
+            except urllib.error.HTTPError as e:
+             if e.code in [429,500,502,503,504] and attempt<retries:
+              time.sleep(min(10,2**(attempt+1)));continue
+             body=e.read().decode(errors='replace')
+             for key in ['DEEPL_AUTH_KEY','ANTHROPIC_API_KEY','ANTHROPIC_WORKSPACE_ID']:
+              secret=os.environ.get(key,'')
+              if secret:body=body.replace(secret,'[REDACTED]')
+             raise RuntimeError(json.dumps(dict(http_status=e.code,body=body[:1500]))) from None
+            except (TimeoutError,urllib.error.URLError) as e:
+             # Do not repeat an uncertain translation POST automatically: preserve its state.
+             raise RuntimeError('NETWORK_REQUEST_OUTCOME_UNCERTAIN_'+type(e).__name__) from None
+          
+          def shape(markup):
+           e=html.fromstring(markup)
+           return collections.Counter(n.tag for n in e.iter() if isinstance(n.tag,str))
+          def validate(original,target):
+           assert isinstance(target,str) and target.strip(),'EMPTY_TARGET'
+           e=html.fromstring(target)
+           assert norm(e.text_content()),'EMPTY_TARGET_TEXT'
+           assert shape(target)==shape(original['source_markup']),'MARKUP_STRUCTURE_MISMATCH'
+           assert not re.search(r'<(?:script|iframe|img)\b',target,re.I),'UNEXPECTED_MARKUP'
+           return norm(e.text_content())
+          
+          def main():
+           raw=urllib.request.urlopen(urllib.request.Request(SOURCE_URL,headers={'User-Agent':'BoundaryBayResearch/1.0'}),timeout=90).read()
+           assert H(raw)==SOURCE_SHA,'SOURCE_BYTES_CHANGED'
+           (OUT/'original-source.html').write_bytes(raw);units=load_source(raw)
+           ledger=dict(rank=94,title='Dracula',author='Bram Stoker',source_url=SOURCE_URL,source_sha256=H(raw),source_language='en',target_language='fr',units=units)
+           assert H(json.dumps(units,ensure_ascii=False,separators=(',',':')).encode())==EXPECTED_UNIT_LEDGER_SHA,'SOURCE_MAP_CHANGED'
+           atomic('source-ledger.json',ledger)
+           source_chars=sum(len(r['source_markup']) for u in units for r in u['rows'])
+           readiness=dict(rank=94,standing_authorization='Approved Master5.0.69 SRC26–30;existing provider paths;complete new French translation already authorized',source_sha256=H(raw),source_characters_with_markup=source_chars,provider_checks=[],translation_calls=0)
+           dkey=os.environ.get('DEEPL_AUTH_KEY','').strip();akey=os.environ.get('ANTHROPIC_API_KEY','').strip();provider=None;headers={};host=None
+           if dkey:
+            host='https://api-free.deepl.com' if dkey.endswith(':fx') else 'https://api.deepl.com'
+            headers={'Authorization':'DeepL-Auth-Key '+dkey,'Content-Type':'application/json'}
+            try:
+             usage,meta=request_json(host+'/v2/usage',headers=headers);atomic('deepl-usage-before.json',usage)
+             # Respect the account's existing limit; no top-up, purchase or billing-setting change.
+             available=usage.get('character_limit',0)-usage.get('character_count',0)
+             ok=available>=source_chars
+             readiness['provider_checks'].append(dict(provider='DeepL',status='USAGE_ACCESS_PASS' if ok else 'INSUFFICIENT_EXISTING_QUOTA',available_characters=available,required_characters_with_markup=source_chars,requested_model='quality_optimized'))
+             if ok:provider='DeepL'
+            except Exception as e:readiness['provider_checks'].append(dict(provider='DeepL',status='UNAVAILABLE',error=str(e)))
+           else:readiness['provider_checks'].append(dict(provider='DeepL',status='MISSING_CONFIGURED_SECRET'))
+           if provider is None and akey:
+            provider='Claude';headers={'x-api-key':akey,'anthropic-version':'2023-06-01','content-type':'application/json'}
+            if os.environ.get('ANTHROPIC_WORKSPACE_ID','').strip():headers['anthropic-workspace-id']=os.environ['ANTHROPIC_WORKSPACE_ID'].strip()
+            readiness['provider_checks'].append(dict(provider='Claude',status='CONFIGURED_AUTHENTICATED_PATH_REQUEST_PENDING',model_requested=MODEL))
+           if provider is None:
+            readiness['state']='TRANSLATION_SERVICE_ACCESS_BLOCKED';atomic('service-readiness.json',readiness);raise RuntimeError('NO_APPROVED_ACCESSIBLE_PROVIDER')
+           readiness.update(state='PROVIDER_READY_TRANSLATION_ACTIVE',selected_provider=provider);atomic('service-readiness.json',readiness)
+           result=[];batch_serial=0
+           for ui,u in enumerate(units,1):
+            unitrows=[];source=u['rows'];batches=[];current=[];size=0
+            for r in source:
+             n=len(r['source_markup'])
+             if current and (len(current)>=8 or size+n>6500):batches.append(current);current=[];size=0
+             current.append(r);size+=n
+            if current:batches.append(current)
+            for bi,batch in enumerate(batches,1):
+             batch_serial+=1
+             ids=[r['id'] for r in batch];start=source.index(batch[0]);context='Bram Stoker, Dracula (1897), complete English original. Late-Victorian epistolary Gothic novel. Unit: '+u['id']+'; '+u['heading']+'. Names: Jonathan Harker, Mina Murray/Harker, Lucy Westenra, Abraham Van Helsing, John Seward, Arthur Holmwood/Lord Godalming, Quincey Morris, Renfield, Count Dracula. Surrounding source passage:\n'+'\n\n'.join(r['source_text'] for r in source[max(0,start-2):min(len(source),start+len(batch)+2)])
+             if provider=='DeepL':
+              payload=dict(text=[r['source_markup'] for r in batch],source_lang='EN',target_lang='FR',model_type='quality_optimized',tag_handling='html',preserve_formatting=True,context=context)
+              reqhash=H(json.dumps(payload,ensure_ascii=False).encode());atomic(f'request-{batch_serial:04d}.json',dict(provider='DeepL',request_sha256=reqhash,payload=payload,unit=u['id'],ids=ids,state='PREPARED'))
+              try:
+               receipt,meta=request_json(host+'/v2/translate',payload,headers)
+              except RuntimeError as error:
+               if not akey or 'OUTCOME_UNCERTAIN' in str(error):raise
+               readiness['provider_checks'].append(dict(provider='DeepL',status='TRANSLATION_PATH_FAILED_SWITCH_TO_AUTHORIZED_CLAUDE',error=str(error),batch=batch_serial));atomic('service-readiness.json',readiness)
+               provider='Claude';headers={'x-api-key':akey,'anthropic-version':'2023-06-01','content-type':'application/json'}
+               if os.environ.get('ANTHROPIC_WORKSPACE_ID','').strip():headers['anthropic-workspace-id']=os.environ['ANTHROPIC_WORKSPACE_ID'].strip()
+              if provider=='DeepL':
+               atomic(f'receipt-{batch_serial:04d}.json',dict(provider='DeepL',response=receipt,response_metadata=meta,request_sha256=reqhash))
+               got=receipt.get('translations',[]);assert len(got)==len(batch),'TRANSLATION_COUNT_MISMATCH'
+               assert all(v.get('model_type_used')=='quality_optimized' for v in got),'UNVERIFIED_OR_DIFFERENT_DEEPL_MODEL'
+               targets=[v['text'] for v in got];model='quality_optimized';response_id=meta.get('trace_id')
+             if provider=='Claude':
+              system='Translate the supplied complete original English Dracula by Bram Stoker into fluent publication-quality modern French. Preserve every event, detail, distinctive narrative voice, dialogue, historical setting, proper name, paragraph boundary and paragraph order. Translate headings, dedication and genuine paratext too. Do not summarize, omit, invent, censor or borrow from an existing French translation. Preserve every HTML element and attribute, especially paragraphs, verse line spans, explicit breaks and emphasis. Return only one final valid JSON array with exactly id,french_html for each supplied source row, in source order. No commentary or hashes. This is translation only, not literary review.'
+              payload=dict(model=MODEL,max_tokens=14000,system=system,messages=[dict(role='user',content=json.dumps(dict(context_only_not_to_translate=context,rows=[dict(id=r['id'],source_html=r['source_markup']) for r in batch]),ensure_ascii=False))])
+              reqhash=H(json.dumps(payload,ensure_ascii=False).encode());atomic(f'request-{batch_serial:04d}.json',dict(provider='Claude',request_sha256=reqhash,payload=payload,unit=u['id'],ids=ids,state='PREPARED'))
+              receipt,meta=request_json('https://api.anthropic.com/v1/messages',payload,headers)
+              atomic(f'receipt-{batch_serial:04d}.json',dict(provider='Claude',response=receipt,response_metadata=meta,request_sha256=reqhash))
+              assert receipt.get('stop_reason')=='end_turn','TRUNCATED_RESPONSE';assert receipt.get('model')==MODEL,'UNVERIFIED_OR_DIFFERENT_CLAUDE_MODEL'
+              text='\n'.join(v.get('text','') for v in receipt.get('content',[]) if v.get('type')=='text').strip();fence=re.fullmatch(r'```(?:json)?\s*(.*?)\s*```',text,re.S|re.I)
+              if fence:text=fence[1]
+              got=json.loads(text);assert isinstance(got,list) and [v['id'] for v in got]==ids,'ID_ORDER_OR_COUNT_MISMATCH'
+              targets=[v['french_html'] for v in got];model=receipt['model'];response_id=receipt['id']
+             readiness['translation_calls']+=1
+             accepted=[]
+             for original,target in zip(batch,targets):
+              plain=validate(original,target)
+              accepted.append(dict(id=original['id'],kind=original['kind'],source_sha256=original['source_sha256'],french_html=target,french_text=plain,target_sha256=H(target.encode()),provider=provider,model=model,response_id=response_id,batch=batch_serial,review_status='PENDING_COMPLETE_SOURCE_ALIGNED_AI_REVIEW'))
+             atomic(f'batch-{batch_serial:04d}.json',dict(unit=u['id'],batch_in_unit=bi,provider=provider,model=model,request_sha256=reqhash,rows=accepted));unitrows.extend(accepted)
+             atomic('translation-progress.json',dict(state='TRANSLATING',current_unit=u['id'],unit_number=ui,units=30,completed_units=len(result),completed_batches=batch_serial,completed_rows=sum(len(v['rows']) for v in result)+len(unitrows),source_sha256=SOURCE_SHA,provider=provider,model=model,release_claimed=False))
+             print('TRANSLATED_BATCH',u['id'],bi,'OF',len(batches),'ROWS',len(accepted),flush=True)
+            assert [r['id'] for r in unitrows]==[r['id'] for r in source]
+            saved=dict(id=u['id'],type=u['type'],chapter_number=u['chapter_number'],source_sha256=H(json.dumps(source,ensure_ascii=False).encode()),target_sha256=H(json.dumps(unitrows,ensure_ascii=False).encode()),rows=unitrows,providers=sorted({r['provider'] for r in unitrows}),models=sorted({r['model'] for r in unitrows}),status='UNIT_COMPLETE_FULL_AI_REVIEW_PENDING')
+            atomic('unit-'+u['id']+'.json',saved);result.append(saved)
+            print('TRANSLATION_UNIT_COMPLETE',ui,u['id'],len(unitrows),flush=True)
+           atomic('translation-complete.json',dict(state='COMPLETE_TRANSLATION_SOURCE_ALIGNED_AI_REVIEW_AND_EPUB_PENDING',source_sha256=SOURCE_SHA,provider=provider,model=model,units=result,unit_count=30,body_blocks=1937,heading_count=28,total_translated_rows=sum(len(u['rows']) for u in result),release_claimed=False))
+           readiness.update(state='COMPLETE_TRANSLATION_NOT_RELEASED',translation_units=30);atomic('service-readiness.json',readiness)
+           print('TRANSLATION_COMPLETE',len(result),flush=True)
+          if __name__=='__main__':
+           try:main()
+           except Exception as e:
+            atomic('failure.json',dict(state='BLOCKED_OR_PARTIAL_NOT_RELEASED',error_type=type(e).__name__,error=str(e),release_claimed=False));raise
+          PY
+      - name: Preserve exact source, provider receipts and sequential unit checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fr094-dracula-approved-translation
+          path: results/fr094-translation/
+          if-no-files-found: error
+          retention-days: 30
