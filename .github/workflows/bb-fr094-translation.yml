@@ -19,7 +19,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: fr094-dracula-approved-translation
-          run-id: 39704182035
+          run-id: 39704447890
           github-token: ${{ github.token }}
           path: results/fr094-translation/
       - name: Install source parser
@@ -99,11 +99,16 @@ jobs:
            assert e.text_content()==before,'TEXT_CHANGED_DURING_FORMAT_REPAIR'
            return etree.tostring(e,encoding='unicode',method='html',with_tail=False),repairs
           
+          def semantic_shape(markup):
+           e=html.fromstring(markup)
+           # BB applies its own typography; historical small-cap wrappers do not define
+           # paragraph, verse, heading or semantic-emphasis boundaries.
+           return collections.Counter(n.tag for n in e.iter() if isinstance(n.tag,str) and n.tag!='small' and not (n.tag=='span' and n.get('class')=='smcap'))
           def validate(original,target):
            assert isinstance(target,str) and target.strip(),'EMPTY_TARGET'
            e=html.fromstring(target)
            assert norm(e.text_content()),'EMPTY_TARGET_TEXT'
-           assert shape(target)==shape(original['source_markup']),'MARKUP_STRUCTURE_MISMATCH'
+           assert semantic_shape(target)==semantic_shape(original['source_markup']),'SEMANTIC_MARKUP_STRUCTURE_MISMATCH'
            assert not re.search(r'<(?:script|iframe|img)\b',target,re.I),'UNEXPECTED_MARKUP'
            return norm(e.text_content())
           
@@ -191,7 +196,7 @@ jobs:
              accepted=[]
              for original,target in zip(batch,targets):
               raw_target=target;target,format_repairs=normalize_adjacent_inline(target);plain=validate(original,target)
-              accepted.append(dict(id=original['id'],kind=original['kind'],source_sha256=original['source_sha256'],french_html=target,french_text=plain,target_sha256=H(target.encode()),provider=provider,model=model,response_id=response_id,batch=batch_serial,raw_target_sha256=H(raw_target.encode()),format_only_repairs=format_repairs,review_status='PENDING_COMPLETE_SOURCE_ALIGNED_AI_REVIEW'))
+              accepted.append(dict(id=original['id'],kind=original['kind'],source_sha256=original['source_sha256'],french_html=target,french_text=plain,target_sha256=H(target.encode()),provider=provider,model=model,response_id=response_id,batch=batch_serial,raw_target_sha256=H(raw_target.encode()),format_only_repairs=format_repairs,source_typographic_wrapper_counts=dict(shape(original['source_markup'])),target_typographic_wrapper_counts=dict(shape(target)),review_status='PENDING_COMPLETE_SOURCE_ALIGNED_AI_REVIEW'))
              atomic(f'batch-{batch_serial:04d}.json',dict(unit=u['id'],batch_in_unit=bi,provider=provider,model=model,request_sha256=reqhash,rows=accepted));unitrows.extend(accepted)
              atomic('service-readiness.json',readiness)
              atomic('translation-progress.json',dict(state='TRANSLATING',current_unit=u['id'],unit_number=ui,units=30,completed_units=len(result),completed_batches=batch_serial,completed_rows=sum(len(v['rows']) for v in result)+len(unitrows),source_sha256=SOURCE_SHA,provider=provider,model=model,release_claimed=False))
