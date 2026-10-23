@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK4Qh7QfxJe2nvoxDtrW",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-055-0039\",\"target\":\"— Да, милорд. Шлюпка брига, вверх килем!\"},{\"source_id\":\"fr42c-055-0040\",\"target\":\"— Несчастные! — воскликнула леди Элен. — Они погибли!\"},{\"source_id\":\"fr42c-055-0041\",\"target\":\"— Да, сударыня, — ответил Джон Манглс, — и они не могли не погибнуть: среди этих бурунов, на бурном море, в такую тёмную ночь они шли навстречу верной смерти.\"},{\"source_id\":\"fr42c-055-0042\",\"target\":\"— Да сжалится над ними небо! — прошептала Мэри Грант.\"},{\"source_id\":\"fr42c-055-0043\",\"target\":\"Несколько мгновений пассажиры молчали. Они смотрели на эту хрупкую лодку, которая приближалась. Она, очевидно, опрокинулась в четырёх милях от берега, и из тех, кто в ней сидел, никто, без сомнения, не спасся.\"},{\"source_id\":\"fr42c-055-0044\",\"target\":\"— Но эта шлюпка может нам пригодиться, — сказал Гленарван.\"},{\"source_id\":\"fr42c-055-0045\",\"target\":\"— Правда, — ответил Джон Манглс. — Держи на неё, Уилсон.\"},{\"source_id\":\"fr42c-055-0046\",\"target\":\"Направление плота изменили, но ветер понемногу стихал, и до шлюпки добрались лишь через два часа.\"},{\"source_id\":\"fr42c-055-0047\",\"target\":\"Малради, стоявший на носу, смягчил удар, и опрокинутая шлюпка прижалась к борту.\"},{\"source_id\":\"fr42c-055-0048\",\"target\":\"— Пуста? — спросил Джон Манглс.\"},{\"source_id\":\"fr42c-055-0049\",\"target\":\"— Да, капитан, — ответил матрос, — шлюпка пуста, и обшивка у неё разошлась. Так что нам она служить не может.\"},{\"source_id\":\"fr42c-055-0050\",\"target\":\"— Никакой пользы из неё извлечь нельзя? — спросил Мак-Наббс.\"},{\"source_id\":\"fr42c-055-0051\",\"target\":\"— Никакой, — ответил Джон Манглс. — Это обломок, годный лишь на дрова.\"},{\"source_id\":\"fr42c-055-0052\",\"target\":\"— Жаль, — сказал Паганель, — эта шлюпка могла бы доставить нас в Окленд.\"},{\"source_id\":\"fr42c-055-0053\",\"target\":\"— Придётся смириться, господин Паганель, — ответил Джон Манглс. — К тому же на столь бурном море я всё же предпочитаю наш плот этой ненадёжной лодке. Довольно было слабого толчка, чтобы разбить её вдребезги! Итак, милорд, нам здесь больше нечего делать.\"},{\"source_id\":\"fr42c-055-0054\",\"target\":\"— Когда пожелаешь, Джон, — сказал Гленарван.\"},{\"source_id\":\"fr42c-055-0055\",\"target\":\"— В путь, Уилсон, — продолжал молодой капитан, — и прямо к берегу!\"},{\"source_id\":\"fr42c-055-0056\",\"target\":\"Прилив должен был продлиться ещё около часа. Удалось пройти две мили. Но тут ветер почти совсем упал и, казалось, стал склоняться к береговому. Плот замер на месте. Вскоре его даже начало относить в открытое море отливом.\"},{\"source_id\":\"fr42c-055-0057\",\"target\":\"Джон не мог колебаться ни секунды.\"},{\"source_id\":\"fr42c-055-0058\",\"target\":\"— Отдать якорь! — крикнул он.\"}],\"review\":[{\"source_id\":\"fr42c-055-0039\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'quille renversée' rendered idiomatically.\"},{\"source_id\":\"fr42c-055-0040\",\"verdict\":\"PASS\",\"reason\":\"Meaning, exclamation and name correct.\"},{\"source_id\":\"fr42c-055-0041\",\"verdict\":\"PASS\",\"reason\":\"Complete; modal 'devaient périr' and circumstances preserved.\"},{\"source_id\":\"fr42c-055-0042\",\"verdict\":\"PASS\",\"reason\":\"Wish and attribution preserved.\"},{\"source_id\":\"fr42c-055-0043\",\"verdict\":\"PASS\",\"reason\":\"All facts preserved, including four miles and 'sans doute'.\"},{\"source_id\":\"fr42c-055-0044\",\"verdict\":\"PASS\",\"reason\":\"Dialogue punctuation correct.\"},{\"source_id\":\"fr42c-055-0045\",\"verdict\":\"PASS\",\"reason\":\"Order to Wilson correct; punctuation fixed.\"},{\"source_id\":\"fr42c-055-0046\",\"verdict\":\"PASS\",\"reason\":\"Raft, wind dropping, two hours all preserved.\"},{\"source_id\":\"fr42c-055-0047\",\"verdict\":\"PASS\",\"reason\":\"Mulrady, bow, shock, you-you rendered as шлюпка; faithful.\"},{\"source_id\":\"fr42c-055-0048\",\"verdict\":\"PASS\",\"reason\":\"Question preserved.\"},{\"source_id\":\"fr42c-055-0049\",\"verdict\":\"PASS\",\"reason\":\"Empty, planking opened, unusable; faithful.\"},{\"source_id\":\"fr42c-055-0050\",\"verdict\":\"PASS\",\"reason\":\"Negative question preserved.\"},{\"source_id\":\"fr42c-055-0051\",\"verdict\":\"PASS\",\"reason\":\"'Bonne à brûler' idiomatic.\"},{\"source_id\":\"fr42c-055-0052\",\"verdict\":\"PASS\",\"reason\":\"Regret and Auckland preserved.\"},{\"source_id\":\"fr42c-055-0053\",\"verdict\":\"PASS\",\"reason\":\"All points preserved, including conclusion.\"},{\"source_id\":\"fr42c-055-0054\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-055-0055\",\"verdict\":\"PASS\",\"reason\":\"Command and attribution faithful.\"},{\"source_id\":\"fr42c-055-0056\",\"verdict\":\"PASS\",\"reason\":\"Tide, distance, wind, drift preserved.\"},{\"source_id\":\"fr42c-055-0057\",\"verdict\":\"PASS\",\"reason\":\"Negation preserved.\"},{\"source_id\":\"fr42c-055-0058\",\"verdict\":\"PASS\",\"reason\":\"Nautical command 'Mouille' rendered as anchor order; correct.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11430,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2205,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
