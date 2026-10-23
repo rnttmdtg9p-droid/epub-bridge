@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK5UcRr9TSbaJ5BNwb5Y",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-059-0061\",\"target\":\"— Мои спутники такие же англичане, как и я. Мы путешественники, потерпевшие кораблекрушение. Но, если тебе угодно знать, мы не принимали участия в войне.\"},{\"source_id\":\"fr42c-059-0062\",\"target\":\"— Всё равно! — грубо ответил Кара-Тете. — Всякий англичанин — наш враг. Твои соплеменники вторглись на наш остров! Они отняли наши поля! Они сожгли наши деревни!\"},{\"source_id\":\"fr42c-059-0063\",\"target\":\"— Они были неправы! — серьёзным голосом ответил Гленарван. — Я говорю тебе это потому, что так думаю, а не потому, что нахожусь в твоей власти.\"},{\"source_id\":\"fr42c-059-0064\",\"target\":\"— Слушай, — продолжал Кай-Куму, — тохонга, верховный жрец Нуи-Атуа[[FN:88]], попал в руки твоих братьев; он в плену у пакеков[[FN:89]]. Наш Бог повелевает нам выкупить его жизнь. Я хотел бы вырвать у тебя сердце, я хотел бы, чтобы твоя голова и головы твоих спутников вечно висели на столбах этого частокола! Но Нуи-Атуа сказал своё слово».\"},{\"source_id\":\"fr42c-059-0065\",\"target\":\"Говоря так, Кай-Куму, до сих пор владевший собой, дрожал от гнева, и лицо его исказилось свирепым исступлением.\"},{\"source_id\":\"fr42c-059-0066\",\"target\":\"Затем, спустя несколько мгновений, он заговорил более хладнокровно:\"},{\"source_id\":\"fr42c-059-0067\",\"target\":\"— Как ты думаешь, обменяют ли англичане нашего тохонгу на тебя?\"},{\"source_id\":\"fr42c-059-0068\",\"target\":\"Гленарван замешкался с ответом и внимательно посмотрел на вождя маори.\"},{\"source_id\":\"fr42c-059-0069\",\"target\":\"— Не знаю, — сказал он после минутного молчания.\"},{\"source_id\":\"fr42c-059-0070\",\"target\":\"— Говори, — продолжал Кай-Куму. — Стоит ли твоя жизнь жизни нашего тохонги?\"},{\"source_id\":\"fr42c-059-0071\",\"target\":\"— Нет, — ответил Гленарван. — Среди своих я не вождь и не священник!\"},{\"source_id\":\"fr42c-059-0072\",\"target\":\"Паганель, поражённый этим ответом, посмотрел на Гленарвана с глубочайшим изумлением.\"},{\"source_id\":\"fr42c-059-0073\",\"target\":\"Кай-Куму тоже, казалось, был удивлён.\"},{\"source_id\":\"fr42c-059-0074\",\"target\":\"— Итак, ты сомневаешься? — сказал он.\"},{\"source_id\":\"fr42c-059-0075\",\"target\":\"— Не знаю, — повторил Гленарван.\"},{\"source_id\":\"fr42c-059-0076\",\"target\":\"— Твои не примут тебя в обмен на нашего тохонгу?\"},{\"source_id\":\"fr42c-059-0077\",\"target\":\"— Меня одного? Нет, — повторил Гленарван. — Нас всех — быть может.\"},{\"source_id\":\"fr42c-059-0078\",\"target\":\"— У маори, — сказал Кай-Куму, — голова за голову.\"},{\"source_id\":\"fr42c-059-0079\",\"target\":\"— Предложи сначала этих женщин в обмен на своего жреца, — сказал Гленарван, указав на леди Элен и Мэри Грант.\"},{\"source_id\":\"fr42c-059-0080\",\"target\":\"Леди Элен хотела броситься к мужу. Майор удержал её.\"}],\"review\":[{\"source_id\":\"fr42c-059-0061\",\"verdict\":\"PASS\",\"reason\":\"Faithful: companions, castaways, non-participation in war all preserved.\"},{\"source_id\":\"fr42c-059-0062\",\"verdict\":\"PASS\",\"reason\":\"Brutal tone, enemy statement and three accusations accurately rendered.\"},{\"source_id\":\"fr42c-059-0063\",\"verdict\":\"PASS\",\"reason\":\"Agency and contrast 'because I think so, not because in your power' preserved.\"},{\"source_id\":\"fr42c-059-0064\",\"verdict\":\"PASS\",\"reason\":\"Both FN tokens kept; conditional wishes, palisade, final line accurate.\"},{\"source_id\":\"fr42c-059-0065\",\"verdict\":\"PASS\",\"reason\":\"Self-control, trembling anger and ferocious exaltation preserved.\"},{\"source_id\":\"fr42c-059-0066\",\"verdict\":\"PASS\",\"reason\":\"Time and calmer manner accurately conveyed.\"},{\"source_id\":\"fr42c-059-0067\",\"verdict\":\"PASS\",\"reason\":\"Question accurate; dialogue punctuation continues the speech correctly.\"},{\"source_id\":\"fr42c-059-0068\",\"verdict\":\"PASS\",\"reason\":\"Hesitation and attentive observation preserved.\"},{\"source_id\":\"fr42c-059-0069\",\"verdict\":\"PASS\",\"reason\":\"'I don't know' after silence; accurate.\"},{\"source_id\":\"fr42c-059-0070\",\"verdict\":\"PASS\",\"reason\":\"Command and question about equal value of lives preserved.\"},{\"source_id\":\"fr42c-059-0071\",\"verdict\":\"PASS\",\"reason\":\"Negation of chief and priest preserved.\"},{\"source_id\":\"fr42c-059-0072\",\"verdict\":\"PASS\",\"reason\":\"Paganel's stupefaction and profound astonishment kept.\"},{\"source_id\":\"fr42c-059-0073\",\"verdict\":\"PASS\",\"reason\":\"Also surprised; accurate.\"},{\"source_id\":\"fr42c-059-0074\",\"verdict\":\"PASS\",\"reason\":\"Doubt question accurate.\"},{\"source_id\":\"fr42c-059-0075\",\"verdict\":\"PASS\",\"reason\":\"Repetition preserved.\"},{\"source_id\":\"fr42c-059-0076\",\"verdict\":\"PASS\",\"reason\":\"Negative question about acceptance in exchange preserved.\"},{\"source_id\":\"fr42c-059-0077\",\"verdict\":\"PASS\",\"reason\":\"Alone: no; all together: perhaps. Accurate.\"},{\"source_id\":\"fr42c-059-0078\",\"verdict\":\"PASS\",\"reason\":\"Head for head maxim accurate.\"},{\"source_id\":\"fr42c-059-0079\",\"verdict\":\"PASS\",\"reason\":\"Offer of women, gesture and names accurate; 'жрец' consistent with context.\"},{\"source_id\":\"fr42c-059-0080\",\"verdict\":\"PASS\",\"reason\":\"Helena's impulse and major's restraint preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11604,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2289,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
