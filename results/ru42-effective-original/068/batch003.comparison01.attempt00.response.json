@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK7v7SHrwJLBjPFaZG38",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-068-0060\",\"target\":\"И тут произошёл странный и поистине сверхъестественный случай. Брат и сестра, по одной из тех магнетических связей, что таинственно соединяют души между собой, испытали одновременно, в один и тот же миг, одну и ту же галлюцинацию.\"},{\"source_id\":\"fr42c-068-0061\",\"target\":\"Из глубины этих волн, попеременно тёмных и сверкающих, Мэри и Роберту послышался голос, поднимавшийся к ним; его глубокий, жалобный звук заставил содрогнуться каждую струну их сердец.\"},{\"source_id\":\"fr42c-068-0062\",\"target\":\"«Ко мне! Ко мне! — кричал этот голос.\"},{\"source_id\":\"fr42c-068-0063\",\"target\":\"— Мэри, — сказал Роберт, — ты слышала? Ты слышала?»\"},{\"source_id\":\"fr42c-068-0064\",\"target\":\"И, вдруг выпрямившись над поручнем, оба, перегнувшись, стали вопрошать глубины ночи.\"},{\"source_id\":\"fr42c-068-0065\",\"target\":\"Но они ничего не увидели, кроме тьмы, бесконечно простиравшейся перед ними.\"},{\"source_id\":\"fr42c-068-0066\",\"target\":\"«Роберт, — сказала Мэри, бледная от волнения, — мне показалось… Да, мне показалось, как и тебе… У нас обоих лихорадка, мой Роберт!…»\"},{\"source_id\":\"fr42c-068-0067\",\"target\":\"Но до них долетел новый зов, и на этот раз иллюзия была так сильна, что из обоих сердец одновременно вырвался один и тот же крик:\"},{\"source_id\":\"fr42c-068-0068\",\"target\":\"«Отец мой! Отец мой!…»\"},{\"source_id\":\"fr42c-068-0069\",\"target\":\"Для Мэри Грант это было слишком. Сломленная волнением, она без чувств упала на руки Роберта.\"},{\"source_id\":\"fr42c-068-0070\",\"target\":\"«На помощь! — закричал Роберт. — Сестра! Отец! На помощь!»\"},{\"source_id\":\"fr42c-068-0071\",\"target\":\"Рулевой бросился поднимать девушку. Сбежались вахтенные матросы, затем Джон Манглс, леди Элен, Гленарван, внезапно разбуженные.\"},{\"source_id\":\"fr42c-068-0072\",\"target\":\"«Моя сестра умирает, а наш отец здесь!» — кричал Роберт, указывая на волны.\"},{\"source_id\":\"fr42c-068-0073\",\"target\":\"Его слов никто не понимал.\"},{\"source_id\":\"fr42c-068-0074\",\"target\":\"«Да нет же, — повторял он. — Мой отец здесь! Я слышал голос моего отца! Мэри слышала его так же, как я!»\"},{\"source_id\":\"fr42c-068-0075\",\"target\":\"И в эту минуту Мэри Грант, очнувшись, потерянная, словно безумная, тоже закричала:\"},{\"source_id\":\"fr42c-068-0076\",\"target\":\"«Отец мой! Мой отец здесь!»\"},{\"source_id\":\"fr42c-068-0077\",\"target\":\"Несчастная девушка, поднявшись и перегнувшись через поручень, хотела броситься в море.\"},{\"source_id\":\"fr42c-068-0078\",\"target\":\"«Милорд! Госпожа Элен! — повторяла она, сжимая руки. — Говорю вам, мой отец здесь! Уверяю вас, я слышала его голос, поднимавшийся из волн, как жалоба, как последнее прощание!»\"},{\"source_id\":\"fr42c-068-0079\",\"target\":\"Тогда спазмы и судороги снова охватили бедное дитя. Она вырывалась. Её пришлось отнести в каюту, и леди Элен последовала за ней, чтобы ухаживать за нею, а Роберт всё повторял:\"}],\"review\":[{\"source_id\":\"fr42c-068-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful: strange supernatural incident, magnetic links, simultaneous identical hallucination preserved.\"},{\"source_id\":\"fr42c-068-0061\",\"verdict\":\"PASS\",\"reason\":\"Dark/bright waves, voice, both hearing it, and heart fibres all conveyed.\"},{\"source_id\":\"fr42c-068-0062\",\"verdict\":\"PASS\",\"reason\":\"«À moi» correctly rendered «Ко мне»; dialogue punctuation correct.\"},{\"source_id\":\"fr42c-068-0063\",\"verdict\":\"PASS\",\"reason\":\"Accurate; repeated question and closing quote correct.\"},{\"source_id\":\"fr42c-068-0064\",\"verdict\":\"PASS\",\"reason\":\"Sudden rising, leaning, questioning the night's depths preserved.\"},{\"source_id\":\"fr42c-068-0065\",\"verdict\":\"PASS\",\"reason\":\"Nothing seen but endless shadow; accurate.\"},{\"source_id\":\"fr42c-068-0066\",\"verdict\":\"PASS\",\"reason\":\"Pale with emotion, 'I thought… like you', fever for both; ellipses preserved.\"},{\"source_id\":\"fr42c-068-0067\",\"verdict\":\"PASS\",\"reason\":\"New call, illusion, same cry from both hearts; faithful.\"},{\"source_id\":\"fr42c-068-0068\",\"verdict\":\"PASS\",\"reason\":\"Accurate repeated cry.\"},{\"source_id\":\"fr42c-068-0069\",\"verdict\":\"PASS\",\"reason\":\"Too much for Mary; fainted into Robert's arms; accurate.\"},{\"source_id\":\"fr42c-068-0070\",\"verdict\":\"PASS\",\"reason\":\"Cry for help, sister, father; accurate.\"},{\"source_id\":\"fr42c-068-0071\",\"verdict\":\"PASS\",\"reason\":\"Helmsman, watch sailors, then John Mangles, Helena, Glenarvan suddenly awakened; correct.\"},{\"source_id\":\"fr42c-068-0072\",\"verdict\":\"PASS\",\"reason\":\"Sister dying, father there, pointing at waves; faithful.\"},{\"source_id\":\"fr42c-068-0073\",\"verdict\":\"PASS\",\"reason\":\"No one understood his words; correct.\"},{\"source_id\":\"fr42c-068-0074\",\"verdict\":\"PASS\",\"reason\":\"«Si» as contradiction rendered «Да нет же»; the rest accurate.\"},{\"source_id\":\"fr42c-068-0075\",\"verdict\":\"PASS\",\"reason\":\"Revived, distraught, mad; also cried out; accurate.\"},{\"source_id\":\"fr42c-068-0076\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-068-0077\",\"verdict\":\"PASS\",\"reason\":\"Rising, leaning over rail, wanting to throw herself into sea; faithful.\"},{\"source_id\":\"fr42c-068-0078\",\"verdict\":\"PASS\",\"reason\":\"Address, clasped hands, voice from waves as lamentation and last farewell all preserved.\"},{\"source_id\":\"fr42c-068-0079\",\"verdict\":\"PASS\",\"reason\":\"Spasms, struggle, carried to cabin, Helena tending her, Robert repeating; accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 12301,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2452,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
