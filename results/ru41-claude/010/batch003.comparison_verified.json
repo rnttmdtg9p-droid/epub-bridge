@@ -1,0 +1,471 @@
+{
+  "unit": 10,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01203",
+      "target": "— Не то что вы, милый Арамис, ведь вы всё тот же: у вас по-прежнему прекрасные чёрные волосы, по-прежнему изящный стан, по-прежнему женские руки, которые стали восхитительными руками прелата.",
+      "source_sha256": "bd25a0ad862185f4548e791bc1d333487ba48498dd1f4c6ddb86c8f75b3d4abe",
+      "target_id": "ru-id01203",
+      "tag": "p",
+      "target_sha256": "422136139dfe855d2c42c48707dcca9921a4b12fad784f7db0941d5e6b144836"
+    },
+    {
+      "source_id": "id01204",
+      "target": "— Да, — сказал Арамис, — это правда, я очень за собой слежу. А знаете ли, друг мой, что я старею: мне скоро будет тридцать семь лет.",
+      "source_sha256": "1bf7bb90e094810d4394b6e88f037a24f1bd57807b59525d784b15e0be4527d3",
+      "target_id": "ru-id01204",
+      "tag": "p",
+      "target_sha256": "41949ac29118b92859fba34c99a9eed1f48330e627fd5d746a09e979470664e5"
+    },
+    {
+      "source_id": "id01205",
+      "target": "— Послушайте, друг мой, — сказал д’Артаньян с улыбкой, — раз уж мы снова встретились, давайте условимся об одном: о том, сколько нам будет лет в дальнейшем.",
+      "source_sha256": "c4c4b09259de162a209bd0fdfacdc6dfc247b7a93676d62e0f6eadb9a794ef21",
+      "target_id": "ru-id01205",
+      "tag": "p",
+      "target_sha256": "5e9c1e0abf210a34e4449b50172a63f44b408240566728d20516c37f478b4e94"
+    },
+    {
+      "source_id": "id01206",
+      "target": "— Как это? — спросил Арамис.",
+      "source_sha256": "0738b029041027b189182b1f518a17390e4925d84fc7b495260fc05f8436b2ba",
+      "target_id": "ru-id01206",
+      "tag": "p",
+      "target_sha256": "69fb503429b03226b53788c73f49a8659a741d56d336de31d52e75483bd4231d"
+    },
+    {
+      "source_id": "id01207",
+      "target": "— Да так, — продолжал д’Артаньян, — прежде я был моложе вас на два-три года, а теперь, если я не ошибаюсь, мне сорок лет, и сорок полновесных.",
+      "source_sha256": "da225da9e00dd22669517fd0f32e6d04a474057ce768a8632a09c2fdec636f35",
+      "target_id": "ru-id01207",
+      "tag": "p",
+      "target_sha256": "8366530d182b042b76db68db0748da3d49d31c673e9877c14f211b9ef925dd6d"
+    },
+    {
+      "source_id": "id01208",
+      "target": "— В самом деле! — сказал Арамис. — Значит, это я ошибаюсь, ведь вы, мой друг, всегда были превосходным математиком. Выходит, по-вашему, мне сорок три года! Чёрт возьми, чёрт возьми, друг мой! Не вздумайте говорить об этом в отеле Рамбуйе, это мне повредило бы.",
+      "source_sha256": "48a986ecad53eb2da83ae0d2c23c69c7028638cf5fe9ea454bdec7b81e0abee9",
+      "target_id": "ru-id01208",
+      "tag": "p",
+      "target_sha256": "89fe757e3471c4f7ea42f2646b288a90f42b054b182aa3dea8ecc35e3bc5eeec"
+    },
+    {
+      "source_id": "id01209",
+      "target": "— Будьте спокойны, — сказал д’Артаньян, — я там не бываю.",
+      "source_sha256": "68a64389447b6b45d82fb52452482ffd909bc54f13d0966d3ec9bee2448b498a",
+      "target_id": "ru-id01209",
+      "tag": "p",
+      "target_sha256": "eb385d927062035ce4b60e06ff8eb0510f7ddd2d504e185b040d87ca0df1c9da"
+    },
+    {
+      "source_id": "id01210",
+      "target": "— Да что же это такое! — воскликнул Арамис. — Что делает этот болван Базен? Базен! Поторопитесь же, сударь вы мой плут! Мы до бешенства хотим есть и пить!",
+      "source_sha256": "c30a0beab95627012f4fd387543f7f32284dedee39014538166dd850dd646914",
+      "target_id": "ru-id01210",
+      "tag": "p",
+      "target_sha256": "e13532701f4c4caf72d37461a793c88bfa8a369cd272a20f74b2d1a52e68facb"
+    },
+    {
+      "source_id": "id01211",
+      "target": "Базен, входивший в эту минуту, воздел к небу руки, в каждой из которых было по бутылке.",
+      "source_sha256": "5702d970970f380063cd70ccafc16090980af6d458e10c46226253ad84649958",
+      "target_id": "ru-id01211",
+      "tag": "p",
+      "target_sha256": "db9a90e80c2f6f11324d83cee529d3eccd74da5ef617bdc6aeb32469e8bbd2ba"
+    },
+    {
+      "source_id": "id01212",
+      "target": "— Ну так что же, — сказал Арамис, — мы наконец готовы, а?",
+      "source_sha256": "f9d14cb8ed49ba438114b724c7818f093776ff38009a94f3754a1a99e0cb13f5",
+      "target_id": "ru-id01212",
+      "tag": "p",
+      "target_sha256": "922b97f3b4e23cbb0abadbfd3cfe2ce339c8ba0941a4ee45fefda4b33e07118f"
+    },
+    {
+      "source_id": "id01213",
+      "target": "— Да, сударь, сию же минуту, — сказал Базен, — но мне понадобилось время, чтобы поднять все…",
+      "source_sha256": "82ed4205c8b68201c9a5b49e7efb94259eefb0fe7313d849c31d1bb80281021c",
+      "target_id": "ru-id01213",
+      "tag": "p",
+      "target_sha256": "36b800f14c1ae0cee0a63ecd2f15e6167531f736365d0da8d0247960c94f3e6d"
+    },
+    {
+      "source_id": "id01214",
+      "target": "— Потому что вам всё мерещится, будто на плечах у вас по-прежнему ряса церковного сторожа, — прервал Арамис, — и вы проводите всё время за чтением требника. Но предупреждаю вас: если, усердно полируя всю утварь, что стоит в часовнях, вы разучитесь чистить мою шпагу, я разведу большой костёр из всех ваших святых картинок и поджарю вас на нём.",
+      "source_sha256": "5734c72eec42a0de93e2945a4b332881b43d841b118985aa326e2e67e652307a",
+      "target_id": "ru-id01214",
+      "tag": "p",
+      "target_sha256": "89e0792da65fd8294571679aa5741c15935f80eb2f6772090a1df9b55f316612"
+    },
+    {
+      "source_id": "id01215",
+      "target": "Возмущённый Базен перекрестился бутылкой, которую держал. Что до д’Артаньяна, то он, удивлённый более чем когда-либо тоном и манерами аббата д’Эрбле, так сильно отличавшимися от манер мушкетёра Арамиса, оставался перед своим другом, вытаращив глаза.",
+      "source_sha256": "96a947367be3044b0898eae87a063feee7d27ffd0fed5b0c411e32dc84aa0e05",
+      "target_id": "ru-id01215",
+      "tag": "p",
+      "target_sha256": "91c52c3ad8bc0b8498b9a69880d09d12affe9179d4fafbe5b2938957e91d89cb"
+    },
+    {
+      "source_id": "id01216",
+      "target": "Базен проворно накрыл стол камчатной скатертью и расставил на ней столько золотистых, благоухающих, лакомых яств, что д’Артаньян остолбенел.",
+      "source_sha256": "9c06d012cc9b920dd649b569e796fb5db6790b4f63ce2d1b138f9be44b5c2df5",
+      "target_id": "ru-id01216",
+      "tag": "p",
+      "target_sha256": "6bceb0a3c47457d9aa44845713b6a63c2f79678d1f60f119d993e2f8d5020482"
+    },
+    {
+      "source_id": "id01217",
+      "target": "— Да вы, стало быть, кого-то ждали? — спросил офицер.",
+      "source_sha256": "6996160fe3e62a017b3ac75af2713b8629c2e18d9d4f5da004536566144b53c4",
+      "target_id": "ru-id01217",
+      "tag": "p",
+      "target_sha256": "ef4c2d15bcc78ac59f507e7e9914c644538448f8ee4a73c513eb0cb032a52814"
+    },
+    {
+      "source_id": "id01218",
+      "target": "— Гм! — сказал Арамис. — У меня всегда есть кое-что про запас; к тому же я знал, что вы меня ищете.",
+      "source_sha256": "780da84fda7529b94319e4cd6fce3817c93396d9fb8230e0cc6506639f9c56d9",
+      "target_id": "ru-id01218",
+      "tag": "p",
+      "target_sha256": "49a2a29ff8bf3e428dfa115bc788d2a54c8d8919ba6a476b5c05b49fcbaf3ea0"
+    },
+    {
+      "source_id": "id01219",
+      "target": "— От кого?",
+      "source_sha256": "7f0d07d6fcc97acc05a813b6545db6f1b3ffd4a725c824e30dcaf79afee32451",
+      "target_id": "ru-id01219",
+      "tag": "p",
+      "target_sha256": "71d9ee30c51d925b2c95eb07e4858fb0e353422696cd6ead49228c186415208d"
+    },
+    {
+      "source_id": "id01220",
+      "target": "— Да от мэтра Базена, друг мой, который принял вас за дьявола и прибежал предупредить меня об опасности, угрожающей моей душе, если я вновь увижусь с такой дурной компанией, как офицер мушкетёров.",
+      "source_sha256": "97c2fa5ec3149267e9f36826205c7104ce8d29307b0b8b1dfdfbdbd385287f27",
+      "target_id": "ru-id01220",
+      "tag": "p",
+      "target_sha256": "aa5d8ed92118d038c9021600ceac569f78b0a4d8faed5660c86a5830c1068eab"
+    },
+    {
+      "source_id": "id01221",
+      "target": "— О, сударь!.. — произнёс Базен, сложив руки с умоляющим видом.",
+      "source_sha256": "3abaee000f9ff34164b6254f4e2a3f67332809a68ff4f44d8df1189f83523815",
+      "target_id": "ru-id01221",
+      "tag": "p",
+      "target_sha256": "c6caf416fd5a5ece2c4efc36707214cca411637d185aa520170cbc01fa6e8a70"
+    },
+    {
+      "source_id": "id01222",
+      "target": "— Полно, без лицемерия! Вы знаете, я его не терплю. Вы бы лучше открыли окно и спустили хлеб, цыплёнка и бутылку вина вашему приятелю Планше, который уже битый час изводит себя, хлопая в ладоши.",
+      "source_sha256": "e9d922b3bfb5684daf252c151911d641ff20d86b281171f4b371dbc5ca5694a5",
+      "target_id": "ru-id01222",
+      "tag": "p",
+      "target_sha256": "8c3fe2982323354e1832f3178f61e2b6f0f0245a06ecb485ba7697052d91496b"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01203",
+      "verdict": "CORRECTED",
+      "reason": "«С вами не так» was stiff; «Не то что вы» renders the contrast with the changed duchess idiomatically. Rest faithful."
+    },
+    {
+      "source_id": "id01204",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic; age and the sense of «je me soigne» preserved."
+    },
+    {
+      "source_id": "id01205",
+      "verdict": "PASS",
+      "reason": "Faithful; the proposal about future ages is preserved."
+    },
+    {
+      "source_id": "id01206",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01207",
+      "verdict": "CORRECTED",
+      "reason": "«ровно сорок, и даже с лишком» was self-contradictory and weakened «bien sonnés»; replaced with «сорок полновесных»."
+    },
+    {
+      "source_id": "id01208",
+      "verdict": "PASS",
+      "reason": "Faithful: the arithmetic joke (43), the oaths and «hôtel de Rambouillet» are preserved."
+    },
+    {
+      "source_id": "id01209",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01210",
+      "verdict": "CORRECTED",
+      "reason": "«monsieur le drôle» is «плут», not «шут гороховый»; «enrageons de faim et de soif» weakened to «умираем», restored the rage («до бешенства хотим есть и пить»)."
+    },
+    {
+      "source_id": "id01211",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01212",
+      "verdict": "CORRECTED",
+      "reason": "Draft changed the subject («готово ли всё»); the source says «sommes-nous prêts», with impatient «enfin/voyons». Fixed."
+    },
+    {
+      "source_id": "id01213",
+      "verdict": "PASS",
+      "reason": "Faithful, including the broken-off sentence."
+    },
+    {
+      "source_id": "id01214",
+      "verdict": "CORRECTED",
+      "reason": "«bedeau» is a church beadle/verger, not «причетник»; the garment is rendered as «ряса церковного сторожа». Rest faithful."
+    },
+    {
+      "source_id": "id01215",
+      "verdict": "CORRECTED",
+      "reason": "«сидел» was added, but the source has «demeurait» (remained); fixed and the sentence made less clumsy."
+    },
+    {
+      "source_id": "id01216",
+      "verdict": "PASS",
+      "reason": "Faithful; «камчатная скатерть» is apt."
+    },
+    {
+      "source_id": "id01217",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01218",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic («en-cas» = «про запас»)."
+    },
+    {
+      "source_id": "id01219",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01220",
+      "verdict": "PASS",
+      "reason": "Faithful: agency (Bazin took d'Artagnan for the devil, ran to warn) is preserved."
+    },
+    {
+      "source_id": "id01221",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01222",
+      "verdict": "PASS",
+      "reason": "Faithful; the Planchet detail and the idiom «битый час» are fine."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01203",
+      "before": "— С вами не так, милый Арамис, ведь вы всё тот же: у вас по-прежнему прекрасные чёрные волосы, по-прежнему изящный стан, по-прежнему женские руки, которые стали восхитительными руками прелата.",
+      "after": "— Не то что вы, милый Арамис, ведь вы всё тот же: у вас по-прежнему прекрасные чёрные волосы, по-прежнему изящный стан, по-прежнему женские руки, которые стали восхитительными руками прелата."
+    },
+    {
+      "source_id": "id01207",
+      "before": "— Да так, — продолжал д’Артаньян, — прежде я был моложе вас на два-три года, а теперь, если я не ошибаюсь, мне ровно сорок, и даже с лишком.",
+      "after": "— Да так, — продолжал д’Артаньян, — прежде я был моложе вас на два-три года, а теперь, если я не ошибаюсь, мне сорок лет, и сорок полновесных."
+    },
+    {
+      "source_id": "id01210",
+      "before": "— Да что же это такое! — воскликнул Арамис. — Что делает этот болван Базен? Базен! Поторопитесь же, сударь вы мой шут гороховый! Мы умираем от голода и жажды!",
+      "after": "— Да что же это такое! — воскликнул Арамис. — Что делает этот болван Базен? Базен! Поторопитесь же, сударь вы мой плут! Мы до бешенства хотим есть и пить!"
+    },
+    {
+      "source_id": "id01212",
+      "before": "— Ну наконец-то, — сказал Арамис, — готово ли всё, посмотрим?",
+      "after": "— Ну так что же, — сказал Арамис, — мы наконец готовы, а?"
+    },
+    {
+      "source_id": "id01214",
+      "before": "— Потому что вам всё мерещится, будто на плечах у вас по-прежнему сутана причетника, — прервал Арамис, — и вы проводите всё время за чтением требника. Но предупреждаю вас: если, усердно полируя всю утварь, что стоит в часовнях, вы разучитесь чистить мою шпагу, я разведу большой костёр из всех ваших святых картинок и поджарю вас на нём.",
+      "after": "— Потому что вам всё мерещится, будто на плечах у вас по-прежнему ряса церковного сторожа, — прервал Арамис, — и вы проводите всё время за чтением требника. Но предупреждаю вас: если, усердно полируя всю утварь, что стоит в часовнях, вы разучитесь чистить мою шпагу, я разведу большой костёр из всех ваших святых картинок и поджарю вас на нём."
+    },
+    {
+      "source_id": "id01215",
+      "before": "Возмущённый Базен перекрестился бутылкой, которую держал. Что до д’Артаньяна, то он, удивлённый более чем когда-либо тоном и манерами аббата д’Эрбле, так сильно отличавшимися от манер мушкетёра Арамиса, сидел, выпучив глаза, перед своим другом.",
+      "after": "Возмущённый Базен перекрестился бутылкой, которую держал. Что до д’Артаньяна, то он, удивлённый более чем когда-либо тоном и манерами аббата д’Эрбле, так сильно отличавшимися от манер мушкетёра Арамиса, оставался перед своим другом, вытаращив глаза."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJDwowacc1Ea7vs5DtRV",
+    "usage": {
+      "input_tokens": 5716,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2546,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJDyzhJ8DnFk13wmy8jA",
+    "usage": {
+      "input_tokens": 9889,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 6263,
+      "output_tokens_details": {
+        "thinking_tokens": 2658
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJJz6FF2LPCC6Pq4iAXg",
+        "usage": {
+          "input_tokens": 11096,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4297,
+          "output_tokens_details": {
+            "thinking_tokens": 1183
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01203",
+          "verdict": "PASS",
+          "reason": "The prior correction «Не то что вы» is confirmed: it renders the contrast of «Ce n'est pas comme vous». Hair, figure, hands and the prelate's hands are all preserved."
+        },
+        {
+          "source_id": "id01204",
+          "verdict": "PASS",
+          "reason": "Faithful: «je me soigne beaucoup», «je me fais vieux» and «trente-sept ans» are all rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id01205",
+          "verdict": "PASS",
+          "reason": "The proposal about the age they will claim «à l'avenir» is conveyed accurately, with the smile and the dialogue turn intact."
+        },
+        {
+          "source_id": "id01206",
+          "verdict": "PASS",
+          "reason": "Accurate and complete."
+        },
+        {
+          "source_id": "id01207",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed. It removes the earlier «ровно сорок, и даже с лишком», which contradicted «bien sonnés», and keeps the «два-три года» seniority and the conditional «si je ne fais pas d'erreur». «Сорок полновесных» is slightly emphatic but acceptable for «bien sonnés»."
+        },
+        {
+          "source_id": "id01208",
+          "verdict": "PASS",
+          "reason": "Aramis's ironic remark about the mathematician, the 43 years «à votre compte», the repeated «Diable» and the warning about the hôtel de Rambouillet are all preserved."
+        },
+        {
+          "source_id": "id01209",
+          "verdict": "PASS",
+          "reason": "Accurate: «je n'y vais pas» becomes «я там не бываю», with the negation kept."
+        },
+        {
+          "source_id": "id01210",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed. «Monsieur le drôle» becomes «сударь вы мой плут», and «nous enrageons de faim et de soif» is an apt rendering. The exclamatory register is kept."
+        },
+        {
+          "source_id": "id01211",
+          "verdict": "PASS",
+          "reason": "Agency and image are preserved: Bazin enters at that moment and raises his hands, each holding a bottle."
+        },
+        {
+          "source_id": "id01212",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed. It conveys the impatient «Enfin», the question «sommes-nous prêts» and «voyons» as «а?»."
+        },
+        {
+          "source_id": "id01213",
+          "verdict": "PASS",
+          "reason": "The interrupted sentence and the ellipsis are preserved, along with Bazin's excuse about the time needed."
+        },
+        {
+          "source_id": "id01214",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed: «simarre de bedeau» becomes «ряса церковного сторожа». The conditional threat about polishing chapel objects, neglecting the sword and roasting Bazin on a fire of holy pictures is complete."
+        },
+        {
+          "source_id": "id01215",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed. «Il demeurait les yeux écarquillés» becomes «оставался… вытаращив глаза». The sign of the cross made with the bottle, the contrast between abbé d'Herblay and musketeer Aramis, and «plus surpris que jamais» are all kept."
+        },
+        {
+          "source_id": "id01216",
+          "verdict": "PASS",
+          "reason": "Damask cloth, the three adjectives «dorées, parfumées, friandes» and d'Artagnan's astonishment are faithfully rendered."
+        },
+        {
+          "source_id": "id01217",
+          "verdict": "PASS",
+          "reason": "Accurate; «donc» is conveyed by «стало быть»."
+        },
+        {
+          "source_id": "id01218",
+          "verdict": "PASS",
+          "reason": "«En-cas» becomes «кое-что про запас», the interjection «Heu» is kept, and the logic of «puis je savais» is preserved."
+        },
+        {
+          "source_id": "id01219",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id01220",
+          "verdict": "PASS",
+          "reason": "Maître Bazin mistook d'Artagnan for the devil and ran to warn Aramis of the danger to his soul. The ironic phrase about «mauvaise compagnie» and the officer of musketeers is intact."
+        },
+        {
+          "source_id": "id01221",
+          "verdict": "PASS",
+          "reason": "Faithful, including the clasped hands and the pleading look."
+        },
+        {
+          "source_id": "id01222",
+          "verdict": "PASS",
+          "reason": "«Pas d'hypocrisies», the instruction to lower bread, chicken and wine to Planchet, and the hour of clapping are all kept. «Битый час» fits «depuis une heure», and «Планше» matches the established name."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

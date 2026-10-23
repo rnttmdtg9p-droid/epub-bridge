@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJJuxWo3rkoZhdMfxkpu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id00860\",\"target\":\"— Тоже нет.\"},{\"source_id\":\"id00861\",\"target\":\"— Чёрт, чёрт, чёрт!\"},{\"source_id\":\"id00862\",\"target\":\"— Но, — сказал Планше с хитрой усмешкой, — я знаю, где Базен.\"},{\"source_id\":\"id00863\",\"target\":\"— Как! Ты знаешь, где Базен?\"},{\"source_id\":\"id00864\",\"target\":\"— Да, сударь.\"},{\"source_id\":\"id00865\",\"target\":\"— И где же он?\"},{\"source_id\":\"id00866\",\"target\":\"— В Нотр-Дам.\"},{\"source_id\":\"id00867\",\"target\":\"— А что он делает в Нотр-Дам?\"},{\"source_id\":\"id00868\",\"target\":\"— Он служит привратником.\"},{\"source_id\":\"id00869\",\"target\":\"— Базен — привратник в Нотр-Дам! Ты в этом уверен?\"},{\"source_id\":\"id00870\",\"target\":\"— Совершенно уверен: я видел его, я с ним говорил.\"},{\"source_id\":\"id00871\",\"target\":\"— Он должен знать, где его господин.\"},{\"source_id\":\"id00872\",\"target\":\"— Без всякого сомнения.\"},{\"source_id\":\"id00873\",\"target\":\"Д’Артаньян задумался, потом взял плащ и шпагу и приготовился уйти.\"},{\"source_id\":\"id00874\",\"target\":\"— Сударь, — жалобным голосом сказал Планше, — неужели вы так меня бросаете? Подумайте, вся моя надежда только на вас!\"},{\"source_id\":\"id00875\",\"target\":\"— Но тебя ведь не придут искать здесь, — сказал д’Артаньян.\"},{\"source_id\":\"id00876\",\"target\":\"— И всё же, если придут, — сказал осторожный Планше, — подумайте: для домашних, которые не видели, как я вошёл, я вор.\"},{\"source_id\":\"id00877\",\"target\":\"— Это справедливо, — сказал д’Артаньян. — Ну-ка, ты говоришь на каком-нибудь наречии?\"},{\"source_id\":\"id00878\",\"target\":\"— Я говорю лучше, чем на наречии, сударь, — сказал Планше, — я говорю на языке; я говорю по-фламандски.\"},{\"source_id\":\"id00879\",\"target\":\"— И где, чёрт возьми, ты ему выучился?\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3908,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 799,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
