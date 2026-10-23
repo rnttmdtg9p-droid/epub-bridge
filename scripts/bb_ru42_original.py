@@ -23,8 +23,8 @@ def commit():
 GLOSSARY='Гленарван; леди Элен; Мэри Грант; Роберт Грант; Гарри Грант; Джон Манглс; Мак-Наббс; Жак Паганель; Айртон; Талькав; Дункан; Британия. Names are consistency guidance only; preserve source distinctions.'
 SYSTEM='You are the authorized Boundary Bay literary translator for Jules Verne, Les enfants du capitaine Grant (1868), French to Russian. Create a NEW complete fluent literary Russian translation directly from the supplied French. Never consult or reproduce a published Russian translation. Preserve every fact, agency, negation, tense, humour, ambiguity, dialogue turn and paragraph boundary. Preserve historical anomalies faithfully. Use Russian dialogue punctuation and idiomatic prose. Retain authentic source verse line counts exactly, and italic spans semantically. Do not merge, omit, summarize, modernize facts, or add explanations. Source HTML br may encode mechanical wrapping of prose; preserve genuine verse or document layout when semantically indicated, without treating every prose wrap as a verse line. Names already established: '+GLOSSARY+' Preserve every [[FN:number]] note token exactly. Rows with translate=false are authentic foreign-language documents or verse and MUST retain their text exactly, including line breaks. Source role identifies notes, captions, source signatures and documentary headings; never turn these into new chapters. Return JSON only.'
 
-def call(system,payload,path):
-    body={'model':MODEL,'max_tokens':16000,'system':system,'messages':[{'role':'user','content':json.dumps(payload,ensure_ascii=False)}]}
+def call(system,payload,path,max_tokens=32768):
+    body={'model':MODEL,'max_tokens':max_tokens,'output_config':{'effort':'medium'},'system':system+' Keep each per-row assessment concise (at most40words) while checking every source row completely.','messages':[{'role':'user','content':json.dumps(payload,ensure_ascii=False)}]}
     save(Path(str(path)+'.request.json'),body)
     headers={'x-api-key':KEY,'anthropic-version':'2023-06-01','content-type':'application/json'}
     workspace=os.environ.get('ANTHROPIC_WORKSPACE_ID','').strip()
@@ -34,7 +34,7 @@ def call(system,payload,path):
             req=urllib.request.Request('https://api.anthropic.com/v1/messages',data=json.dumps(body,ensure_ascii=False).encode(),headers=headers)
             with urllib.request.urlopen(req,timeout=240) as r: raw=json.load(r)
             save(Path(str(path)+'.response.json'),raw)
-            if raw.get('stop_reason')!='end_turn':raise RuntimeError('INCOMPLETE_RESPONSE_'+str(raw.get('stop_reason')))
+            if raw.get('stop_reason')!='end_turn':raise ValueError('INCOMPLETE_RESPONSE_'+str(raw.get('stop_reason')))
             text='\n'.join(x['text'] for x in raw['content'] if x.get('type')=='text').strip()
             if text.startswith('```'):text=text.split('\n',1)[1].rsplit('```',1)[0]
             return json.JSONDecoder().raw_decode(text[text.index('{'):])[0],{'requested_model':MODEL,'actual_model':raw.get('model'),'response_id':raw.get('id'),'usage':raw.get('usage')}
@@ -122,7 +122,8 @@ def checked_call(system,payload,path,source,review=False):
                 if key in request:request[key]=[r for r in request[key] if r['source_id'] not in native_ids]
         if last:request['format_retry_instruction']='Previous response failed strict validation: '+last+'. Return only requested JSON with every editable source_id in supplied order.'
         try:
-            result,meta=call(system,request,Path(str(path)+f'.attempt{attempt:02}'))
+            budget=65536 if last and 'INCOMPLETE_RESPONSE_max_tokens' in last else 32768
+            result,meta=call(system,request,Path(str(path)+f'.attempt{attempt:02}'),max_tokens=budget)
             result['rows']=validate(result['rows'],editable)
             if review:
                 for r in result.get('review',[]):r['source_id']=r.get('source_id',r.get('id'))
