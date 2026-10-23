@@ -1,0 +1,82 @@
+{
+  "unit": 8,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 251,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdJovrZ3dgTK7W3ZFsg",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 1,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdRNPdr2iQ813APUfRk",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 2,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdZ4rvKwJXhAdqjUC4x",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 3,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKddWiHAgWRSDYHtpbgA",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 4,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdhuBzibJzuFRhyzHUi",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 5,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdm7C99PZVdAkEf4Uhj",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 6,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdpgHJusqfjcvRa6p4G",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 7,
+      "rows": 28,
+      "actual_provider_review_rows": 28,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdwkQYyjRFBeNVRNJAC",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    }
+  ],
+  "source_native_policy": "Untranslated original foreign documents/verse copied exactly and independently compared; not represented as model-translated or provider-reviewed output",
+  "qualified_target_sha256": "4b18670fb144d6f4d7d55e0d45190df34cf901a90ce052a3749ea9f1ee0fe89d",
+  "book_release": false
+}
