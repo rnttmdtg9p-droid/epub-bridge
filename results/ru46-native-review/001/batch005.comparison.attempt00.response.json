@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKjtDy5jCvZfFt1Kojcd",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"assessments\":[{\"source_id\":\"046-1-0199\",\"verdict\":\"PASS\",\"reason\":\"Identical to source stage direction.\"},{\"source_id\":\"046-1-0200\",\"verdict\":\"PASS\",\"reason\":\"Identical to source; speaker span and text preserved.\"},{\"source_id\":\"046-1-0201\",\"verdict\":\"PASS\",\"reason\":\"Identical to source, including inline stage direction and repetition 'Милая моя…'.\"},{\"source_id\":\"046-1-0202\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0203\",\"verdict\":\"PASS\",\"reason\":\"Identical to source, including nested character-name span.\"},{\"source_id\":\"046-1-0204\",\"verdict\":\"PASS\",\"reason\":\"Identical to source; colloquial wording preserved.\"},{\"source_id\":\"046-1-0205\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0206\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0207\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0208\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0209\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0210\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0211\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0212\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0213\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0214\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0215\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0216\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0217\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0218\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0219\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0220\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0221\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0222\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0223\",\"verdict\":\"PASS\",\"reason\":\"Continuation paragraph without speaker label preserved as in source.\"},{\"source_id\":\"046-1-0224\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0225\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0226\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0227\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0228\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0229\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0230\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0231\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0232\",\"verdict\":\"PASS\",\"reason\":\"Identical to source; 'всё свои' and 'не хорошо' preserved.\"},{\"source_id\":\"046-1-0233\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0234\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0235\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0236\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0237\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"},{\"source_id\":\"046-1-0238\",\"verdict\":\"PASS\",\"reason\":\"Identical to source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 50000,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1458,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
