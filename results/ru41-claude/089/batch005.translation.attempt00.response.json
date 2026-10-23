@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJYRfZAuJrhQNhsuqRSw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id11548\",\"target\":\"— Ничуть, Портос, друг мой: этой мышеловки хватало на двоих, а для троих она становится слишком слабой.\"},{\"source_id\":\"id11549\",\"target\":\"— Я ровно ничего не понимаю, — сказал Портос.\"},{\"source_id\":\"id11550\",\"target\":\"— И не надо, — сказал д’Артаньян. — Сядем за стол и подкрепимся: силы нам понадобятся ночью.\"},{\"source_id\":\"id11551\",\"target\":\"— Что же мы будем делать этой ночью? — спросил Портос, всё более заинтригованный.\"},{\"source_id\":\"id11552\",\"target\":\"— Вероятно, отправимся в путь.\"},{\"source_id\":\"id11553\",\"target\":\"— Но…\"},{\"source_id\":\"id11554\",\"target\":\"— Сядем за стол, дорогой друг: идеи приходят ко мне за едой. После ужина, когда мои идеи соберутся в полном составе, я вам их сообщу.\"},{\"source_id\":\"id11555\",\"target\":\"Как ни хотелось Портосу узнать о замысле д’Артаньяна, он знал привычки своего друга, а потому сел за стол, не настаивая более, и ел с таким аппетитом, который делал честь доверию, внушаемому ему изобретательностью д’Артаньяна.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2601,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 458,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

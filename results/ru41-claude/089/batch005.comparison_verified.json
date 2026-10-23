@@ -1,0 +1,224 @@
+{
+  "unit": 89,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11548",
+      "target": "— Ничуть, Портос, друг мой: этой мышеловки хватало на двоих, а для троих она становится слишком слабой.",
+      "source_sha256": "a8d1cf7f9d5bffe7ff98e0b35971324bab1a4b451e071137631579b557c4102e",
+      "target_id": "ru-id11548",
+      "tag": "p",
+      "target_sha256": "5b82f877a1aa836fd5409aaf57c4577146b9862bc9c3d1a194df6288cdade7b7"
+    },
+    {
+      "source_id": "id11549",
+      "target": "— Я ровно ничего не понимаю, — сказал Портос.",
+      "source_sha256": "f4e4ad120300cc7aa1494c91c3cfc5d94f8b84899012e149fc277cc74129604d",
+      "target_id": "ru-id11549",
+      "tag": "p",
+      "target_sha256": "27b8e7edd57b88b0d0e09db6532d0088f2230eab4ee5ea927d619af960ebd001"
+    },
+    {
+      "source_id": "id11550",
+      "target": "— И не надо, — сказал д’Артаньян. — Сядем за стол и подкрепимся: силы нам понадобятся ночью.",
+      "source_sha256": "45f503fefca15a846413a4be999cb7ded284f182c3915d97968f04876ada3a17",
+      "target_id": "ru-id11550",
+      "tag": "p",
+      "target_sha256": "3c8488ec2eeb3d270eb9d125b4228792be28055311502a6948d60b1a82f944ae"
+    },
+    {
+      "source_id": "id11551",
+      "target": "— Что же мы будем делать этой ночью? — спросил Портос, всё более заинтригованный.",
+      "source_sha256": "ad6e3be6307746747b71157912754b99f9fdcc2678a805a4801cac65827f18fd",
+      "target_id": "ru-id11551",
+      "tag": "p",
+      "target_sha256": "130136812f8b02cc5256071e25055d15edcbce0ea179009cb0b88a1c02da2a10"
+    },
+    {
+      "source_id": "id11552",
+      "target": "— Вероятно, отправимся в путь.",
+      "source_sha256": "26e0e6dd2ba2c3b3d3aebc6e660c9e034dc51b004c916133d9e1fa5bd6a5a18d",
+      "target_id": "ru-id11552",
+      "tag": "p",
+      "target_sha256": "07aac16d37a2d121a325e036fb601a4fa9c4f6e0a0539e5a0013def678bdf12d"
+    },
+    {
+      "source_id": "id11553",
+      "target": "— Но…",
+      "source_sha256": "9edf441aa03d051871a4163b4210ad9fb3920f6edddf5d9bef2b4a229a829a80",
+      "target_id": "ru-id11553",
+      "tag": "p",
+      "target_sha256": "bcf90575bf4af1e4812efb7f6eff663cfc2516e80fe082d857d77a618b2090a6"
+    },
+    {
+      "source_id": "id11554",
+      "target": "— Сядем за стол, дорогой друг: идеи приходят ко мне за едой. После ужина, когда мои идеи соберутся в полном составе, я вам их сообщу.",
+      "source_sha256": "d57279823860112794ffd852f44336a3e4ac9684d186df097f5a82c4b3a5c4b6",
+      "target_id": "ru-id11554",
+      "tag": "p",
+      "target_sha256": "98ec59dacf7e6e69d835349871cf009edf70fc7642a77d7e8a6f6c11b895483b"
+    },
+    {
+      "source_id": "id11555",
+      "target": "Как ни хотелось Портосу узнать о замысле д’Артаньяна, он знал привычки своего друга, а потому сел за стол, не настаивая более, и ел с таким аппетитом, который делал честь доверию, внушаемому ему изобретательностью д’Артаньяна.",
+      "source_sha256": "e34cc7bb043a4ffed7265a1b4ccd9212435ff3782616a2ce60475ac40c613456",
+      "target_id": "ru-id11555",
+      "tag": "p",
+      "target_sha256": "092690e674db0b0530ec0f74a782c509636ac7ae81ae9053e01068f3df129414"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11548",
+      "verdict": "PASS",
+      "reason": "Faithful: the trap sufficed for two and becomes too weak for three; the negation 'Pas du tout' is rendered as 'Ничуть'; the address to Porthos is kept."
+    },
+    {
+      "source_id": "id11549",
+      "verdict": "PASS",
+      "reason": "Faithful rendering of 'Je ne comprends pas du tout'; negation and speech tag preserved."
+    },
+    {
+      "source_id": "id11550",
+      "verdict": "PASS",
+      "reason": "'Inutile' is read as 'no need to understand', which fits the context; the invitation to eat and the need for strength at night are preserved."
+    },
+    {
+      "source_id": "id11551",
+      "verdict": "PASS",
+      "reason": "Question, future tense and 'de plus en plus intrigué' are all preserved."
+    },
+    {
+      "source_id": "id11552",
+      "verdict": "PASS",
+      "reason": "'Nous voyagerons probablement' is accurately rendered, with the hedge 'probablement' kept."
+    },
+    {
+      "source_id": "id11553",
+      "verdict": "PASS",
+      "reason": "The interrupted 'Mais…' is preserved."
+    },
+    {
+      "source_id": "id11554",
+      "verdict": "PASS",
+      "reason": "The humour about ideas arriving while eating and being 'au grand complet' is retained; the promise to share them after supper is intact."
+    },
+    {
+      "source_id": "id11555",
+      "verdict": "PASS",
+      "reason": "All clauses are preserved: Porthos's desire, his knowledge of d'Artagnan's ways, not insisting, his appetite, and his confidence in d'Artagnan's inventiveness. Agency is clear."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJYRfZAuJrhQNhsuqRSw",
+    "usage": {
+      "input_tokens": 2601,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 458,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJYRvhFgDjj1bwnprho6",
+    "usage": {
+      "input_tokens": 4138,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1491,
+      "output_tokens_details": {
+        "thinking_tokens": 500
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJYSfgdvU5Evoj3VpDnw",
+        "usage": {
+          "input_tokens": 4199,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1509,
+          "output_tokens_details": {
+            "thinking_tokens": 439
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11548",
+          "verdict": "PASS",
+          "reason": "Faithful: «Pas du tout» answers Porthos's pessimism; the two/three contrast (suffisante pour deux / trop faible pour trois) is preserved, and the register is idiomatic."
+        },
+        {
+          "source_id": "id11549",
+          "verdict": "PASS",
+          "reason": "The emphatic negation «ne… pas du tout» is rendered as «ровно ничего не понимаю»; the speaker and the dialogue turn are intact."
+        },
+        {
+          "source_id": "id11550",
+          "verdict": "PASS",
+          "reason": "«Inutile» is rendered naturally as «И не надо» (no need to understand). The invitation to eat, the gaining of strength, and the need for it during the night are all kept."
+        },
+        {
+          "source_id": "id11551",
+          "verdict": "PASS",
+          "reason": "Future tense, «donc» (as «же»), the night, and Porthos's growing intrigue are all preserved."
+        },
+        {
+          "source_id": "id11552",
+          "verdict": "PASS",
+          "reason": "«Probablement» and the future sense are kept; «voyagerons» is rendered acceptably as «отправимся в путь»."
+        },
+        {
+          "source_id": "id11553",
+          "verdict": "PASS",
+          "reason": "The interrupted «Mais…» is preserved with its ellipsis."
+        },
+        {
+          "source_id": "id11554",
+          "verdict": "PASS",
+          "reason": "Complete: the table, the ideas coming while eating, the 'full complement' joke, and the promise to share the ideas after supper are all preserved."
+        },
+        {
+          "source_id": "id11555",
+          "verdict": "PASS",
+          "reason": "All elements are present: Porthos's desire to know, his knowledge of d'Artagnan's ways, sitting down without insisting, and the appetite that honours his confidence in d'Artagnan's inventiveness. The logical relations are kept and the Russian is fluent."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
