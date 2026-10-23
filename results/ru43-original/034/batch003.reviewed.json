@@ -1,0 +1,93 @@
+{
+  "unit": 34,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "043-034-0060",
+      "target": "Берусь за глухие места",
+      "source_sha256": "9c803065050ce1eab846493f35ec3b38c24073804850737504c426329eea613b",
+      "target_id": "ru-043-034-0060",
+      "tag": "source_caption",
+      "target_sha256": "7113c0d4b8f4379f5b2c841a650394acea2441441dbb64dcac01ef1f03a1182f"
+    },
+    {
+      "source_id": "043-034-0061",
+      "target": "Так я ушёл и взял курс на глухомань. Я не оглядывался, но как-то чувствовал, что он смотрит мне вслед. Только я знал, что его на этом можно измотать. Я шагал прямо в поле целую милю, не останавливаясь; потом вернулся лесом назад, к дому Фелпсов. Я рассудил, что лучше сразу взяться за свой план и не валять дурака, потому что мне надо было закрыть Джиму рот, пока эти молодцы не смоются. Мне не хотелось никаких хлопот с такой публикой. Я нагляделся на них досыта и хотел отделаться от них начисто.",
+      "source_sha256": "adf3bcb9bf10af374fca685b50b7b3ff7be59b00f9d6c932dbcff9785aac6d49",
+      "target_id": "ru-043-034-0061",
+      "tag": "p",
+      "target_sha256": "1a5ad66db4df860431e5ad03d4bcbd039aa54a65228bf9086b6606f17928dd57"
+    },
+    {
+      "source_id": "043-034-0062",
+      "target": "Тихо, как в воскресенье",
+      "source_sha256": "ff66a808e9b078dd6a83ad9c4c1527918659627c47614877120eea1d69d17995",
+      "target_id": "ru-043-034-0062",
+      "tag": "source_caption",
+      "target_sha256": "8748fd70f85645b7fe05c782398969d9bc29e0e7d0cefd35dee27473dbab21de"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-034-0060",
+      "verdict": "CORRECTED",
+      "reason": "Caption \"Striking for the Back Country\" rendered more idiomatically; \"в путь в глубинку\" was awkward and lost the narrator's action."
+    },
+    {
+      "source_id": "043-034-0061",
+      "verdict": "CORRECTED",
+      "reason": "Fixed mistranslation: Jim's mouth to be stopped, not Jim \"заткнуть\"; \"tire him out\" clarified; \"полевой местности\" was stiff; restored colloquial voice, all facts preserved."
+    },
+    {
+      "source_id": "043-034-0062",
+      "verdict": "CORRECTED",
+      "reason": "Caption slightly polished to natural Russian: \"Тихо, как в воскресенье\"; meaning unchanged."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-034-0060",
+      "before": "В путь в глубинку",
+      "after": "Берусь за глухие места"
+    },
+    {
+      "source_id": "043-034-0061",
+      "before": "Так что я ушел и направился в глубинку. Я не оглядывался, но мне как-то казалось, что он за мной следит. Но я знал, что так его можно утомить. Я прошел прямо по полевой местности целую милю, прежде чем остановился; потом развернулся и пошел через лес обратно к дому Фелпсов. Я решил, что лучше сразу приступить к осуществлению своего плана, не теряя времени, потому что мне нужно было заткнуть Джима, пока эти парни не успеют убраться. Мне не хотелось никаких неприятностей с такими, как они. Я видел их достаточно и хотел избавиться от них раз и навсегда.",
+      "after": "Так я ушёл и взял курс на глухомань. Я не оглядывался, но как-то чувствовал, что он смотрит мне вслед. Только я знал, что его на этом можно измотать. Я шагал прямо в поле целую милю, не останавливаясь; потом вернулся лесом назад, к дому Фелпсов. Я рассудил, что лучше сразу взяться за свой план и не валять дурака, потому что мне надо было закрыть Джиму рот, пока эти молодцы не смоются. Мне не хотелось никаких хлопот с такой публикой. Я нагляделся на них досыта и хотел отделаться от них начисто."
+    },
+    {
+      "source_id": "043-034-0062",
+      "before": "Тихо и как в воскресенье",
+      "after": "Тихо, как в воскресенье"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/034/batch003.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKN5Zb2k54raY17r1YE9",
+    "usage": {
+      "input_tokens": 3098,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 577,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
