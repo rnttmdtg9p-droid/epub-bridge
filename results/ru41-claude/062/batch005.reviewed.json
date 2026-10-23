@@ -1,0 +1,134 @@
+{
+  "unit": 62,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id08386",
+      "target": "Тем временем солдаты всё кричали: «Стой! стой!», а сержант, начинавший понимать, что его провели хитростью, рвал на себе волосы.",
+      "source_sha256": "4c7f7725517131f3af4ce03e1e54e374e8ef336a5550c36e4a01e0f8b6f0fd8d",
+      "target_id": "ru-id08386",
+      "tag": "p",
+      "target_sha256": "fb79f343041e3be244251de8bd2d1ea04d02f3ecca0ead8203a8f8d4e2b0a30f"
+    },
+    {
+      "source_id": "id08387",
+      "target": "Тут увидели всадника, скачущего галопом и держащего в руке бумагу.",
+      "source_sha256": "bb26675344ad0fcdab49e86540d6034c49d225b0c184daf5956bdaad702520ad",
+      "target_id": "ru-id08387",
+      "tag": "p",
+      "target_sha256": "a0433f04b9829b0e0ebe29e161c46b9787edb08e3b1043815f3a9c866f93a8a0"
+    },
+    {
+      "source_id": "id08388",
+      "target": "Это был Мордонт, возвращавшийся с приказом.",
+      "source_sha256": "5a0865790dd890f9ab5c29d02d32317b918e0a55c50133b1ebe1e083e36df591",
+      "target_id": "ru-id08388",
+      "tag": "p",
+      "target_sha256": "645adacafc0f2ef736feee24ab6b48e6e44b1bf856467df0902087be03c3e416"
+    },
+    {
+      "source_id": "id08389",
+      "target": "— Пленники? — крикнул он, соскакивая с лошади.",
+      "source_sha256": "6c0750b2ef9d2a4f3961779daa64266ffdc84d01b5f20c529042fa7a3892a68d",
+      "target_id": "ru-id08389",
+      "tag": "p",
+      "target_sha256": "45bd459d18b91a161499294a2a69d728fa4e092f6751239171040eae3e6169f0"
+    },
+    {
+      "source_id": "id08390",
+      "target": "У сержанта не хватило сил ответить ему; он показал на распахнутую дверь и пустую комнату. Мордонт бросился к ступеням, всё понял, испустил крик, словно ему разорвали внутренности, и без чувств упал на камень.",
+      "source_sha256": "6a4c3a69b3e2119b6611463676feaec3d2a210dbb19edce1ee874e396c9892af",
+      "target_id": "ru-id08390",
+      "tag": "p",
+      "target_sha256": "8220a5a645e61c1952357df9bd7ba4577ee438a85aca347a88881391fdb8ed01"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id08386",
+      "verdict": "PASS",
+      "reason": "Faithful: soldiers' repeated cries, sergeant's dawning realization of being duped by a ruse, and tearing his hair are all preserved."
+    },
+    {
+      "source_id": "id08387",
+      "target": "",
+      "verdict": "CORRECTED",
+      "reason": "Draft's 'показался во весь опор скакавший всадник' was awkward and dropped the impersonal 'on vit'. Reworded to keep the observation and the galloping rider holding a paper."
+    },
+    {
+      "source_id": "id08388",
+      "verdict": "PASS",
+      "reason": "Accurate; Mordaunt returns with the order."
+    },
+    {
+      "source_id": "id08389",
+      "verdict": "CORRECTED",
+      "reason": "Draft added 'Где'; the source is the elliptical exclamation 'Les prisonniers?'. Restored literal form."
+    },
+    {
+      "source_id": "id08390",
+      "verdict": "CORRECTED",
+      "reason": "'déchiré' means torn, not 'вырвали'; 'degrés' are steps, not 'лестница'; 'la pierre' is singular stone, not 'плиты'. Corrected accordingly; the rest was faithful."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id08387",
+      "before": "Тут показался во весь опор скакавший всадник с бумагой в руке.",
+      "after": "Тут увидели всадника, скачущего галопом и держащего в руке бумагу."
+    },
+    {
+      "source_id": "id08389",
+      "before": "— Где пленники? — крикнул он, соскакивая с лошади.",
+      "after": "— Пленники? — крикнул он, соскакивая с лошади."
+    },
+    {
+      "source_id": "id08390",
+      "before": "У сержанта не хватило сил ответить ему; он показал на распахнутую дверь и пустую комнату. Мордонт бросился к лестнице, всё понял, испустил крик, словно ему вырвали внутренности, и без чувств упал на каменные плиты.",
+      "after": "У сержанта не хватило сил ответить ему; он показал на распахнутую дверь и пустую комнату. Мордонт бросился к ступеням, всё понял, испустил крик, словно ему разорвали внутренности, и без чувств упал на камень."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJTdPsN2aNWHzrrsdQSC",
+    "usage": {
+      "input_tokens": 2267,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 302,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJTdaf14NYMB3hMrVjC5",
+    "usage": {
+      "input_tokens": 3287,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1224,
+      "output_tokens_details": {
+        "thinking_tokens": 535
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
