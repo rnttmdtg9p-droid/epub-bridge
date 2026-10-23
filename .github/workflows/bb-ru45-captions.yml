@@ -1,0 +1,32 @@
+name: BB Russian45 original captions and metadata review
+on:
+  push:
+    paths: ['.github/workflows/bb-ru45-captions.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Configure durable production checkpoints
+        run: |
+          git config user.name 'Boundary Bay Production'
+          git config user.email 'production@boundarybaypublishing.com'
+      - name: Review all16 original captions and3 metadata rows
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru45_captions.py
+      - name: Preserve actual review exchanges and checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru45-captions-actual-review-v5070
+          path: results/ru45-captions/
+          retention-days: 90
+          if-no-files-found: error
