@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJRWN81FtJicXSEFrkTK",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id07601\",\"target\":\"Он решил, что это д’Артаньян, и не шелохнулся.\"},{\"source_id\":\"id07602\",\"target\":\"— От имени кардинала, — сказал офицер.\"},{\"source_id\":\"id07603\",\"target\":\"— Что?! — воскликнул Портос, широко раскрыв глаза. — Что вы говорите?\"},{\"source_id\":\"id07604\",\"target\":\"— Я говорю, что его высокопреосвященство посылает вас в Англию и что господин д’Артаньян ждёт вас у конюшен.\"},{\"source_id\":\"id07605\",\"target\":\"Портос глубоко вздохнул, встал, взял свою фетровую шляпу, пистолеты, шпагу и плащ и вышел, бросив печальный взгляд на постель, в которой он обещал себе так хорошо выспаться.\"},{\"source_id\":\"id07606\",\"target\":\"Едва он повернулся спиной, как офицер уже устроился на постели, и не успел Портос переступить порог, как его преемник, в свою очередь, захрапел во всю мочь. Это было вполне естественно: во всём этом собрании только он, наравне с королём, королевой и монсеньором Гастоном Орлеанским, спал даром.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2388,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 423,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
