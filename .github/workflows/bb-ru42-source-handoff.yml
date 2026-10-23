@@ -1,0 +1,27 @@
+name: BB rank42 source completeness repair handoff
+on:
+  push:
+    paths: ['.github/workflows/bb-ru42-source-handoff.yml']
+permissions:
+  actions: write
+  contents: read
+jobs:
+  preserve-and-cancel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Stop only incomplete-source rank42 run and preserve its artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import urllib.request,json,os,time
+          base='https://api.github.com/repos/rnttmdtg9p-droid/epub-bridge/actions/runs/39908956620'
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'}
+          req=urllib.request.Request(base+'/cancel',data=b'',headers=headers,method='POST')
+          try:
+              with urllib.request.urlopen(req,timeout=30) as r:print('Specific source-defective run cancellation requested',r.status)
+          except urllib.error.HTTPError as e:
+              if e.code!=409:raise
+              print('Run already ended')
+          PY
