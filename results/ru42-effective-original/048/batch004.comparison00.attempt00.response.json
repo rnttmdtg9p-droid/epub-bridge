@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK2dSXSoabB5Ab3HGBVc",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-048-0080\",\"target\":\"«<i>Дункан</i> ушёл с восемнадцатого числа текущего месяца в неизвестном направлении.\"},{\"source_id\":\"fr42c-048-0081\",\"target\":\"«Дж. Эндрю. С. Б.»\"},{\"source_id\":\"fr42c-048-0082\",\"target\":\"Депеша выпала из рук Гленарвана.\"},{\"source_id\":\"fr42c-048-0083\",\"target\":\"Больше никаких сомнений! Честная шотландская яхта в руках Бена Джойса стала пиратским кораблём!\"},{\"source_id\":\"fr42c-048-0084\",\"target\":\"Так завершилось это путешествие через Австралию, начатое при столь благоприятных предзнаменованиях. Следы капитана Гранта и потерпевших кораблекрушение, казалось, были потеряны безвозвратно; эта неудача стоила жизни целому экипажу; лорд Гленарван терпел поражение в борьбе, и этого мужественного искателя, которого не могли остановить в Пампасах объединившиеся против него стихии, на австралийском материке только что сразила людская злоба.\"},{\"source_id\":\"fr42c-048-0085\",\"target\":\"Обе молодые женщины едва плелись. (Стр. 430)\"},{\"source_id\":\"fr42c-048-0086\",\"target\":\"Обе молодые женщины едва плелись. (Стр. 430)\"},{\"source_id\":\"fr42c-048-0087\",\"target\":\"<i>КОНЕЦ ВТОРОЙ ЧАСТИ</i>\"}],\"review\":[{\"source_id\":\"fr42c-048-0080\",\"verdict\":\"PASS\",\"reason\":\"Telegram content faithful: italic Duncan, 'depuis 18 courant', unknown destination preserved; prior correction verified.\"},{\"source_id\":\"fr42c-048-0081\",\"verdict\":\"PASS\",\"reason\":\"Signature initials and layout preserved; no new content.\"},{\"source_id\":\"fr42c-048-0082\",\"verdict\":\"PASS\",\"reason\":\"Accurate; depesha fell from Glenarvan's hands.\"},{\"source_id\":\"fr42c-048-0083\",\"venue\":\"\",\"verdict\":\"PASS\",\"reason\":\"'Aux mains de Ben Joyce' rendered correctly; navire de pirates preserved; exclamations kept.\"},{\"source_id\":\"fr42c-048-0084\",\"verdict\":\"PASS\",\"reason\":\"All clauses retained: lost traces, crew's lives, Glenarvan's defeat, elements in Pampas versus human wickedness. Prior correction accurate and idiomatic.\"},{\"source_id\":\"fr42c-048-0085\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate; 'se traînaient' as 'едва плелись' fits; page reference kept.\"},{\"source_id\":\"fr42c-048-0086\",\"verdict\":\"PASS\",\"reason\":\"Duplicate caption identical to source and consistent with previous row.\"},{\"source_id\":\"fr42c-048-0087\",\"verdict\":\"PASS\",\"reason\":\"Ending heading translated with italics preserved; not made a chapter.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 5202,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1057,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

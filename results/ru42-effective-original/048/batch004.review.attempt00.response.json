@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK2cqBC7jYPNPKSVqXAT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-048-0080\",\"target\":\"«<i>Дункан</i> ушёл с восемнадцатого числа текущего месяца в неизвестном направлении.\"},{\"source_id\":\"fr42c-048-0081\",\"target\":\"«Дж. Эндрю. С. Б.»\"},{\"source_id\":\"fr42c-048-0082\",\"target\":\"Депеша выпала из рук Гленарвана.\"},{\"source_id\":\"fr42c-048-0083\",\"target\":\"Больше никаких сомнений! Честная шотландская яхта в руках Бена Джойса стала пиратским кораблём!\"},{\"source_id\":\"fr42c-048-0084\",\"target\":\"Так завершилось это путешествие через Австралию, начатое при столь благоприятных предзнаменованиях. Следы капитана Гранта и потерпевших кораблекрушение, казалось, были потеряны безвозвратно; эта неудача стоила жизни целому экипажу; лорд Гленарван терпел поражение в борьбе, и этого мужественного искателя, которого не могли остановить в Пампасах объединившиеся против него стихии, на австралийском материке только что сразила людская злоба.\"},{\"source_id\":\"fr42c-048-0085\",\"target\":\"Обе молодые женщины едва плелись. (Стр. 430)\"},{\"source_id\":\"fr42c-048-0086\",\"target\":\"Обе молодые женщины едва плелись. (Стр. 430)\"},{\"source_id\":\"fr42c-048-0087\",\"target\":\"<i>КОНЕЦ ВТОРОЙ ЧАСТИ</i>\"}],\"review\":[{\"source_id\":\"fr42c-048-0080\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored «depuis 18 courant» (since the 18th of this month), spacing of the italic quotation, and the verb sense; italics kept on Дункан.\"},{\"source_id\":\"fr42c-048-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Signature kept; guillemet style and initials are consistent with the source.\"},{\"source_id\":\"fr42c-048-0082\",\"verdict\":\"PASS\",\"reason\":\"Accurate and complete.\"},{\"source_id\":\"fr42c-048-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"«aux mains de» rendered literally as «в руках»; «navire de pirates» becomes «пиратский корабль», with tone preserved.\"},{\"source_id\":\"fr42c-048-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed double space; fixed «auspices»; «succombait» now imperfect (was losing); «perversité» → «людская злоба»; conjured elements reworded; sentence structure preserved.\"},{\"source_id\":\"fr42c-048-0085\",\"verdict\":\"CORRECTED\",\"reason\":\"«se traînaient» rendered more vividly as «едва плелись»; page reference kept.\"},{\"source_id\":\"fr42c-048-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"Duplicate caption kept as in the source, with the same wording correction.\"},{\"source_id\":\"fr42c-048-0087\",\"verdict\":\"PASS\",\"reason\":\"Ending marker translated correctly, italics preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4390,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1075,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

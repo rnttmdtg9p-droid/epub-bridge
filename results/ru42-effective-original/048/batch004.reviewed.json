@@ -1,0 +1,167 @@
+{
+  "unit": 48,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-048-0080",
+      "target": "«<i>Дункан</i> ушёл с восемнадцатого числа текущего месяца в неизвестном направлении.",
+      "source_sha256": "767fb1d5cdec414eed437198db2264360c8efa5d410f5de4a732685e9bd03697",
+      "target_id": "ru-fr42c-048-0080",
+      "tag": "p",
+      "target_sha256": "e11603638a750eb0b79d0e4d73e264e8996b1816dd2cc95a3dbdad6c8464924c"
+    },
+    {
+      "source_id": "fr42c-048-0081",
+      "target": "«Дж. Эндрю. С. Б.»",
+      "source_sha256": "ac033ec294e5e48c1496a227979c50622f739e491840c1f38d27777111b16c3b",
+      "target_id": "ru-fr42c-048-0081",
+      "tag": "p",
+      "target_sha256": "524dbd04045fb3617ac3fc7982c8e8869ba117b58c69bd035b50c7ee59affc87"
+    },
+    {
+      "source_id": "fr42c-048-0082",
+      "target": "Депеша выпала из рук Гленарвана.",
+      "source_sha256": "143943fcc922a0ab107c234ba278c5f7578a4c06d4c4e061ffb660e708e971c3",
+      "target_id": "ru-fr42c-048-0082",
+      "tag": "p",
+      "target_sha256": "4baea228d7992ae94b440a4920c3a6096c6a8e655ec206526430de740c697395"
+    },
+    {
+      "source_id": "fr42c-048-0083",
+      "target": "Больше никаких сомнений! Честная шотландская яхта в руках Бена Джойса стала пиратским кораблём!",
+      "source_sha256": "264d81fa9e810e9e736430c5775a48ba3062069b4a2032eced4de8ae86406def",
+      "target_id": "ru-fr42c-048-0083",
+      "tag": "p",
+      "target_sha256": "c67f0f2faf9301df50c5cdf72fd0959e071c9edd786052fd0315ceb124708cef"
+    },
+    {
+      "source_id": "fr42c-048-0084",
+      "target": "Так завершилось это путешествие через Австралию, начатое при столь благоприятных предзнаменованиях. Следы капитана Гранта и потерпевших кораблекрушение, казалось, были потеряны безвозвратно; эта неудача стоила жизни целому экипажу; лорд Гленарван терпел поражение в борьбе, и этого мужественного искателя, которого не могли остановить в Пампасах объединившиеся против него стихии, на австралийском материке только что сразила людская злоба.",
+      "source_sha256": "89c71ad606e27b84d57c30b6d36d9004a2dd4c9084abd0c4022815055e6a6033",
+      "target_id": "ru-fr42c-048-0084",
+      "tag": "p",
+      "target_sha256": "9ad942d6ab3f85ea62c37e3e93274be9c3d29b2fe3c0b347d3b3331f24b6e698"
+    },
+    {
+      "source_id": "fr42c-048-0085",
+      "target": "Обе молодые женщины едва плелись. (Стр. 430)",
+      "source_sha256": "72ab7e766d32dd5722cb0b8b2b4f82d65f9ba940a855add88faea3daaad0d6ee",
+      "target_id": "ru-fr42c-048-0085",
+      "tag": "figcaption",
+      "target_sha256": "c825436419ec379aaec65fcab1018b53ff2c656ad1a27a022a3a252f2a86ff9d"
+    },
+    {
+      "source_id": "fr42c-048-0086",
+      "target": "Обе молодые женщины едва плелись. (Стр. 430)",
+      "source_sha256": "72ab7e766d32dd5722cb0b8b2b4f82d65f9ba940a855add88faea3daaad0d6ee",
+      "target_id": "ru-fr42c-048-0086",
+      "tag": "figcaption",
+      "target_sha256": "c825436419ec379aaec65fcab1018b53ff2c656ad1a27a022a3a252f2a86ff9d"
+    },
+    {
+      "source_id": "fr42c-048-0087",
+      "target": "<i>КОНЕЦ ВТОРОЙ ЧАСТИ</i>",
+      "source_sha256": "fe8c0f0ddb8ca920854de3259c1a6b883fe12af42453d1ec93c58989ac140368",
+      "target_id": "ru-fr42c-048-0087",
+      "tag": "h5",
+      "target_sha256": "ef5de8ee20b749bc993312dafcf259bebecce8aacc782ebc2f369128ddecebfc"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-048-0080",
+      "verdict": "CORRECTED",
+      "reason": "Restored «depuis 18 courant» (since the 18th of this month), spacing of the italic quotation, and the verb sense; italics kept on Дункан."
+    },
+    {
+      "source_id": "fr42c-048-0081",
+      "verdict": "CORRECTED",
+      "reason": "Signature kept; guillemet style and initials are consistent with the source."
+    },
+    {
+      "source_id": "fr42c-048-0082",
+      "verdict": "PASS",
+      "reason": "Accurate and complete."
+    },
+    {
+      "source_id": "fr42c-048-0083",
+      "verdict": "CORRECTED",
+      "reason": "«aux mains de» rendered literally as «в руках»; «navire de pirates» becomes «пиратский корабль», with tone preserved."
+    },
+    {
+      "source_id": "fr42c-048-0084",
+      "verdict": "CORRECTED",
+      "reason": "Removed double space; fixed «auspices»; «succombait» now imperfect (was losing); «perversité» → «людская злоба»; conjured elements reworded; sentence structure preserved."
+    },
+    {
+      "source_id": "fr42c-048-0085",
+      "verdict": "CORRECTED",
+      "reason": "«se traînaient» rendered more vividly as «едва плелись»; page reference kept."
+    },
+    {
+      "source_id": "fr42c-048-0086",
+      "verdict": "CORRECTED",
+      "reason": "Duplicate caption kept as in the source, with the same wording correction."
+    },
+    {
+      "source_id": "fr42c-048-0087",
+      "verdict": "PASS",
+      "reason": "Ending marker translated correctly, italics preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-048-0080",
+      "before": "«<i>Дункан</i> уехал 18-го числа в неизвестном направлении.",
+      "after": "«<i>Дункан</i> ушёл с восемнадцатого числа текущего месяца в неизвестном направлении."
+    },
+    {
+      "source_id": "fr42c-048-0083",
+      "before": "Больше никаких сомнений! Честная шотландская яхта под управлением Бена Джойса превратилась в пиратское судно!",
+      "after": "Больше никаких сомнений! Честная шотландская яхта в руках Бена Джойса стала пиратским кораблём!"
+    },
+    {
+      "source_id": "fr42c-048-0084",
+      "before": "Так закончилось это путешествие по Австралии, начавшееся под столь  благоприятными знамениями. Следы капитана Гранта и потерпевших кораблекрушение, казалось, были безвозвратно утрачены; эта неудача стоила жизни всему экипажу; лорд Гленарван пал в этой борьбе, и этого отважного исследователя, которого не смогли остановить соединившиеся стихии в Пампасах, извращённость людей только что победила на австралийском континенте.",
+      "after": "Так завершилось это путешествие через Австралию, начатое при столь благоприятных предзнаменованиях. Следы капитана Гранта и потерпевших кораблекрушение, казалось, были потеряны безвозвратно; эта неудача стоила жизни целому экипажу; лорд Гленарван терпел поражение в борьбе, и этого мужественного искателя, которого не могли остановить в Пампасах объединившиеся против него стихии, на австралийском материке только что сразила людская злоба."
+    },
+    {
+      "source_id": "fr42c-048-0085",
+      "before": "Обе молодые женщины едва передвигались. (Стр. 430)",
+      "after": "Обе молодые женщины едва плелись. (Стр. 430)"
+    },
+    {
+      "source_id": "fr42c-048-0086",
+      "before": "Обе молодые женщины едва передвигались. (Стр. 430)",
+      "after": "Обе молодые женщины едва плелись. (Стр. 430)"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/048/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK2cqBC7jYPNPKSVqXAT",
+    "usage": {
+      "input_tokens": 4390,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1075,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
