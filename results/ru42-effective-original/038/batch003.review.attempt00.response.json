@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJxu6QCskSH1zP8JdEfM",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-038-0059\",\"target\":\"Спал туземный ребёнок. (Стр. 331)\"},{\"source_id\":\"fr42c-038-0060\",\"target\":\"Спал туземный ребёнок. (Стр. 331)\"},{\"source_id\":\"fr42c-038-0061\",\"target\":\"Эта находка полностью подтвердила сомнения офицера: дикари были ни при чём в этом преступлении.\"},{\"source_id\":\"fr42c-038-0062\",\"target\":\"— Те, кто это сделал, — сказал он, — люди, привычные к обращению с этим небольшим орудием.\"},{\"source_id\":\"fr42c-038-0063\",\"target\":\"И с этими словами он показал пару «дарбиз» — нечто вроде наручников, состоящих из двух железных колец с замком.\"},{\"source_id\":\"fr42c-038-0064\",\"target\":\"— Очень скоро, — добавил он, — я буду иметь удовольствие преподнести им этот браслет в качестве новогоднего подарка.\"},{\"source_id\":\"fr42c-038-0065\",\"target\":\"— Так вы, значит, подозреваете?..\"},{\"source_id\":\"fr42c-038-0066\",\"target\":\"— Людей, которые «путешествовали задаром на судах Её Величества».\"},{\"source_id\":\"fr42c-038-0067\",\"target\":\"— Как! Каторжников! — воскликнул Паганель, знавший это иносказание, употребляемое в австралийских колониях.\"},{\"source_id\":\"fr42c-038-0068\",\"target\":\"— Я полагал, — заметил Гленарван, — что ссыльные не имеют права жить в провинции Виктория?\"},{\"source_id\":\"fr42c-038-0069\",\"target\":\"— Пф! — ответил полицейский офицер. — Если у них нет этого права, они берут его сами! Каторжники иногда бегут, и я сильно ошибаюсь, если эти не явились прямиком из Перта. Что ж, туда они и вернутся, можете мне поверить.\"},{\"source_id\":\"fr42c-038-0070\",\"target\":\"Мистер Митчелл жестом одобрил слова полицейского офицера. В это время повозка подъехала к железнодорожному переезду. Гленарван хотел избавить путешественниц от ужасного зрелища у Кэмден-Бриджа. Он поклонился генеральному землемеру, простился с ним и знаком предложил друзьям следовать за собой.\"},{\"source_id\":\"fr42c-038-0071\",\"target\":\"— Это не причина, — сказал он, — прерывать наше путешествие.\"},{\"source_id\":\"fr42c-038-0072\",\"target\":\"Подойдя к повозке, Гленарван сказал леди Элен лишь о железнодорожной катастрофе, умолчав о той роли, какую в ней сыграло преступление; не упомянул он и о том, что в этих краях бродит шайка каторжников, предоставив себе сообщить об этом Айртону отдельно. Затем маленький отряд пересёк железную дорогу в нескольких сотнях туазов выше моста и вновь двинулся на восток по привычному пути.\"}],\"review\":[{\"source_id\":\"fr42c-038-0059\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption fidelity; «indigène» rendered as «туземный», consistent with period usage.\"},{\"source_id\":\"fr42c-038-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Duplicate caption harmonized with the previous row.\"},{\"source_id\":\"fr42c-038-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Tightened; the officer's doubts are confirmed and the savages are 'for nothing' in the crime.\"},{\"source_id\":\"fr42c-038-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation converted to a dash; wording made idiomatic.\"},{\"source_id\":\"fr42c-038-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Darbies rendered as a transliterated slang term; handcuff description made precise.\"},{\"source_id\":\"fr42c-038-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue format; «Avant peu» rendered as «Очень скоро».\"},{\"source_id\":\"fr42c-038-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"«Vous soupçonnez» is used absolutely; unnecessary «что-то» removed.\"},{\"source_id\":\"fr42c-038-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed «Её Величества» semantics and the slang-quoted phrase; the object of suspicion made explicit.\"},{\"source_id\":\"fr42c-038-0067\",\"verdict\":\"CORRECTED\",\"reason\":\"«Convicts» as «каторжников» is more accurate than «осуждённые»; «метафора» rendered as «иносказание».\"},{\"source_id\":\"fr42c-038-0068\",\"verdict\":\"CORRECTED\",\"reason\":\"«Transportés» rendered as «ссыльные»; the right of residence is preserved.\"},{\"source_id\":\"fr42c-038-0069\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed misplaced quotation marks/dash; «Ça s'échappe» rendered as «каторжники бегут»; Perth retained.\"},{\"source_id\":\"fr42c-038-0070\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed «surveyor-général» as a title; Glenarvan bows and takes leave and only signals (not orders) his friends; the horror is at Camden-Bridge.\"},{\"source_id\":\"fr42c-038-0071\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation made Russian.\"},{\"source_id\":\"fr42c-038-0072\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Helena rendered as Элен; «toises» as «туазов»; he reserves telling Ayrton privately; the bandit-presence clause made faithful.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 7469,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2003,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
