@@ -1,0 +1,120 @@
+{
+  "unit": 65,
+  "batch": 10,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id08842",
+      "target": "— Где это? — спросил д’Артаньян.",
+      "source_sha256": "7506bda88e68f296d8f8632de7984c42a7fb7c875ead8b3eaf728e39a48b4ea6",
+      "target_id": "ru-id08842",
+      "tag": "p",
+      "target_sha256": "07262e03c2d622f3964df92bbd819e29659c45fb1b44894b25c1b4d4295955b8"
+    },
+    {
+      "source_id": "id08843",
+      "target": "— В комнате английского Навуходоносора, — ответил солдат, закоренелый пуританин.",
+      "source_sha256": "016ab1d5348e34975381a7e92e9ed627bd485d88b096639e1fab13385960bd06",
+      "target_id": "ru-id08843",
+      "tag": "p",
+      "target_sha256": "67968a9596af1fd3a40f52d47768704e7a98612c70a8a883c2d690d7aa5e23eb"
+    },
+    {
+      "source_id": "id08844",
+      "target": "— Хорошо, — ответил на превосходном английском Атос, у которого от этого оскорбления, нанесённого королевскому величию, кровь бросилась в лицо, — хорошо; передайте капитану Гроуслоу, что мы идём.",
+      "source_sha256": "58409575bdb5863ede2aff0de7e589f4bed27ec160d7a699685f078bd3986fcb",
+      "target_id": "ru-id08844",
+      "tag": "p",
+      "target_sha256": "c627c74c697e43ba4621cef1c40a84d867ce30bbca2315963f82027ada924ef8"
+    },
+    {
+      "source_id": "id08845",
+      "target": "Затем пуританин вышел; лакеям был отдан приказ оседлать восемь лошадей и отправиться ждать, не разлучаясь друг с другом и не слезая с коней, на углу улицы, расположенной приблизительно в двадцати шагах от дома, где был помещён король.",
+      "source_sha256": "67730b176598c311233cc335fe4a23ec68f31306d293ef865f12b96341a3696c",
+      "target_id": "ru-id08845",
+      "tag": "p",
+      "target_sha256": "933b04ea24700f8606b9ca3b807a04de8c8c5fb7a4a721574576d829685b4bf2"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id08842",
+      "verdict": "CORRECTED",
+      "reason": "Draft added an emphatic «же» absent from the source; \"Où cela?\" rendered neutrally as «Где это?»."
+    },
+    {
+      "source_id": "id08843",
+      "verdict": "PASS",
+      "reason": "Faithful: Nabuchodonosor, the soldier's attribution and \"puritain renforcé\" (закоренелый пуританин) are all preserved."
+    },
+    {
+      "source_id": "id08844",
+      "verdict": "CORRECTED",
+      "reason": "\"Insulte faite à la majesté royale\" means an insult inflicted on royal majesty. The draft's «оскорбления королевского величия» blurred this, so it now reads «оскорбления, нанесённого королевскому величию». The rest is unchanged."
+    },
+    {
+      "source_id": "id08845",
+      "verdict": "CORRECTED",
+      "reason": "Draft omitted the \"aller\" in \"d'aller attendre\" (the lackeys go off to wait) and the approximation in \"à peu près\"; both restored. Passive order, the ban on separating and dismounting, and the location are preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id08842",
+      "before": "— Где же? — спросил д’Артаньян.",
+      "after": "— Где это? — спросил д’Артаньян."
+    },
+    {
+      "source_id": "id08844",
+      "before": "— Хорошо, — ответил на превосходном английском Атос, у которого от этого оскорбления королевского величия кровь бросилась в лицо, — хорошо; передайте капитану Гроуслоу, что мы идём.",
+      "after": "— Хорошо, — ответил на превосходном английском Атос, у которого от этого оскорбления, нанесённого королевскому величию, кровь бросилась в лицо, — хорошо; передайте капитану Гроуслоу, что мы идём."
+    },
+    {
+      "source_id": "id08845",
+      "before": "Затем пуританин вышел; лакеям был отдан приказ оседлать восемь лошадей и ждать, не разлучаясь друг с другом и не слезая с коней, на углу улицы, расположенной шагах в двадцати от дома, где был помещён король.",
+      "after": "Затем пуританин вышел; лакеям был отдан приказ оседлать восемь лошадей и отправиться ждать, не разлучаясь друг с другом и не слезая с коней, на углу улицы, расположенной приблизительно в двадцати шагах от дома, где был помещён король."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJUegwfTrCjUzmLHqudW",
+    "usage": {
+      "input_tokens": 1752,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJUevCdpgNDioQFyAgDD",
+    "usage": {
+      "input_tokens": 2613,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1343,
+      "output_tokens_details": {
+        "thinking_tokens": 666
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
