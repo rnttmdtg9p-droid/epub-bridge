@@ -1,0 +1,501 @@
+{
+  "unit": 16,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01930",
+      "target": "— Что вы хотите сказать, сударь? — спросил Рауль с юношеским любопытством.",
+      "source_sha256": "015f50ab5df5848c158e4ea9fb6cd6718a5e98af3d9e48373e73781e1b0b9189",
+      "target_id": "ru-id01930",
+      "tag": "p",
+      "target_sha256": "7e8f9fa34f00e74ab688874c2c2a735247466ece84e68efb2812ea0a4349e6e5"
+    },
+    {
+      "source_id": "id01931",
+      "target": "— Право, я ничего об этом не знаю, — сказал Атос.",
+      "source_sha256": "d4659b30443c7ebb08b2a11e5bb72fad0b07ddd0747493a4753f7c9cd2a5cf6c",
+      "target_id": "ru-id01931",
+      "tag": "p",
+      "target_sha256": "79157a0a0f0df99dca5d35fb4c02df158efb81bbcb955820ba6b390740d0f4b1"
+    },
+    {
+      "source_id": "id01932",
+      "target": "— Вы забыли бастион Сен-Жерве, Атос, и ту салфетку, которую три пули превратили в знамя. У меня память лучше вашей, я это помню и сейчас расскажу вам об этом, молодой человек.",
+      "source_sha256": "d6b030073eaafdefdcd6a1898e6c7be16262587f4bb6de295021b4eb68590afc",
+      "target_id": "ru-id01932",
+      "tag": "p",
+      "target_sha256": "2c04cd525bb8bd36724122fd6943b3ab0acef489f317717a61aa158230bb07c6"
+    },
+    {
+      "source_id": "id01933",
+      "target": "И он рассказал Раулю всю историю бастиона, так же как Атос рассказал ему историю его предка.",
+      "source_sha256": "b6d31ae3bd135e7e55f8de632eab0592e84a9e2227f62f5e65698e08b7740707",
+      "target_id": "ru-id01933",
+      "tag": "p",
+      "target_sha256": "80ae3b16d4e23cc2e10ca54eb349bf01b693f9a08895717f77aeae847f7ad9ac"
+    },
+    {
+      "source_id": "id01934",
+      "target": "Юноше, слушавшему этот рассказ, казалось, будто перед ним развёртывается один из тех ратных подвигов, о которых повествуют Тассо или Ариосто и которые принадлежат блистательным временам рыцарства.",
+      "source_sha256": "2766174f3103864a41cfe605c299ec641be17edd08f05ee1dfda29061c565ac1",
+      "target_id": "ru-id01934",
+      "tag": "p",
+      "target_sha256": "1bdded9048818b23ed7fe9e7069d0cb821c4a25cbe4b2e6f89b1db28bc2c208c"
+    },
+    {
+      "source_id": "id01935",
+      "target": "— Но вот чего не говорит вам д’Артаньян, Рауль, — в свою очередь продолжал Атос, — так это того, что он был одним из лучших фехтовальщиков своего времени: железные ноги, стальное запястье, верный глаз и пылающий взгляд — вот что он противопоставлял своему противнику. Ему было восемнадцать лет, на три года больше, чем вам, Рауль, когда я впервые увидел его в деле, и притом против закалённых людей.",
+      "source_sha256": "0f3485518481e181ffcde25dcfce0383dcea9d8122ef27da605775620f10c0bc",
+      "target_id": "ru-id01935",
+      "tag": "p",
+      "target_sha256": "373a9b44e93f4f5f252dc246c046e2772788ac29ff13fb49416c378828dab6bc"
+    },
+    {
+      "source_id": "id01936",
+      "target": "— И господин д’Артаньян вышел победителем? — спросил юноша, у которого во время этого разговора блестели глаза и который как будто молил о подробностях.",
+      "source_sha256": "a1339b9fb0190448462c8acd025124c8aff1beb3b15325fe4ff384f9529463ae",
+      "target_id": "ru-id01936",
+      "tag": "p",
+      "target_sha256": "19bf21b9c26ec19d3d3bc9bda66b4fb5eba2118fbcea48d0c223673c2fb7bc06"
+    },
+    {
+      "source_id": "id01937",
+      "target": "— Одного я, кажется, убил! — сказал д’Артаньян, вопросительно глядя на Атоса. — А другого я обезоружил или ранил, уже не помню.",
+      "source_sha256": "9a3854c9185e0c2cc5cb5018a8dfbfe97a5eab8b4d799eed95a992061bd7ca82",
+      "target_id": "ru-id01937",
+      "tag": "p",
+      "target_sha256": "8d9f8af46639a3b3dd05d24e5883172a7618ab44171aa4f399bffe14cdb9d8ce"
+    },
+    {
+      "source_id": "id01938",
+      "target": "— Да, вы его ранили. О, вы были грозным бойцом!",
+      "source_sha256": "8518653460033d44d43cd50484f405d6431407ac5a52b193ca488ed7f531b462",
+      "target_id": "ru-id01938",
+      "tag": "p",
+      "target_sha256": "516954b748eccfd3b11e0764ffe7c6353f322bfedaceb55e03a1f2c6959fe39a"
+    },
+    {
+      "source_id": "id01939",
+      "target": "— Эх, я ещё не так много потерял! — отозвался д’Артаньян со своим негромким гасконским смешком, полным довольства собой. — И совсем недавно ещё…",
+      "source_sha256": "125c54ea53c77595033a70d7c82bf0ab1d9ac442d9e7fc622958f6715244464a",
+      "target_id": "ru-id01939",
+      "tag": "p",
+      "target_sha256": "ec23ba443cdaec6edea9dbe6e4002061d64483269ddfd1b92803733cf00fd5a4"
+    },
+    {
+      "source_id": "id01940",
+      "target": "Взгляд Атоса закрыл ему рот.",
+      "source_sha256": "36a6d5ad67d463c47a2cae6d0b2ec9a13d455f1d78782ed737d105c9ebe3ff41",
+      "target_id": "ru-id01940",
+      "tag": "p",
+      "target_sha256": "3c1f4f14caf43205769af091f802efb2bd355a1bd832a55d59011f77698dbb88"
+    },
+    {
+      "source_id": "id01941",
+      "target": "— Я хочу, чтобы вы знали, Рауль, — продолжал Атос, — вы, считающий себя искусным фехтовальщиком и чьему тщеславию когда-нибудь, быть может, придётся пережить жестокое разочарование; я хочу, чтобы вы знали, как опасен человек, который соединяет хладнокровие с проворством, ибо я никогда не смог бы привести вам более яркого примера: попросите завтра господина д’Артаньяна, если он не слишком устанет, дать вам урок.",
+      "source_sha256": "38d1f33e16f53174b55066527191ca3ecd39e640756f773adcdb00fcb2345d90",
+      "target_id": "ru-id01941",
+      "tag": "p",
+      "target_sha256": "1003ccab4025a11373b94179907f461bd2168c879521572472a4aab9f54b24e7"
+    },
+    {
+      "source_id": "id01942",
+      "target": "— Чёрт возьми, дорогой Атос, а вы всё же хороший учитель, особенно в отношении тех качеств, которые вы во мне хвалите. Вот, например, сегодня ещё Планше говорил мне о той знаменитой дуэли в ограде Кармелитов, с лордом де Винтером и его спутниками. Ах, молодой человек, — продолжал д’Артаньян, — где-то должна быть шпага, которую я не раз называл первой в королевстве.",
+      "source_sha256": "98abc780dc6d3cf3cb7a1fcf0dbd05b3d777148d1202619c73072ca5bd70accb",
+      "target_id": "ru-id01942",
+      "tag": "p",
+      "target_sha256": "ca4addc146731c21424f794cd3ad6a2e127fead54b71455ede2e473d85dfa272"
+    },
+    {
+      "source_id": "id01943",
+      "target": "— О, я, должно быть, испортил себе руку на этом мальчике, — сказал Атос.",
+      "source_sha256": "a71106b4619d1cfec8bbc41d7b95d6b6bb8909980f2e12f454a436943ed4201d",
+      "target_id": "ru-id01943",
+      "tag": "p",
+      "target_sha256": "4de573b1d0bbc5f5aeee06cbe151a4bd74cedb618e7460af43f17f31faa8a689"
+    },
+    {
+      "source_id": "id01944",
+      "target": "— Бывают руки, которые никогда не портятся, дорогой Атос, — сказал д’Артаньян, — но которые зато сильно портят другие.",
+      "source_sha256": "5781f9dbab52f1627cc713b64e5327d7e69247dab09fbd1954516a04a6633206",
+      "target_id": "ru-id01944",
+      "tag": "p",
+      "target_sha256": "d97c858ebaf6ca6fbfe7adc25efec441f19cb421f277cd022931b868c7bdc3c1"
+    },
+    {
+      "source_id": "id01945",
+      "target": "Юноша хотел бы продлить этот разговор на всю ночь; но Атос заметил ему, что гость, должно быть, устал и нуждается в отдыхе. Д’Артаньян из вежливости отнекивался, но Атос настоял, чтобы д’Артаньян вступил во владение своей комнатой. Рауль проводил туда гостя; а так как Атос подумал, что Рауль останется возле д’Артаньяна как можно дольше, заставляя его рассказывать обо всех удалых делах их молодости, он сам пришёл за ним спустя минуту и завершил этот добрый вечер самым дружеским рукопожатием и пожеланием мушкетёру доброй ночи.",
+      "source_sha256": "79e0367c01182f821c2a138e0032c4fa1382c812827e5fd0a6ded812f021d5cd",
+      "target_id": "ru-id01945",
+      "tag": "p",
+      "target_sha256": "eabf0cd6132dcc61a96ac0987b405de7eba2c4470b2a7338fae89ec3378a3c54"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01930",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic; question, address and 'curiosité juvénile' preserved."
+    },
+    {
+      "source_id": "id01931",
+      "verdict": "PASS",
+      "reason": "'ma foi' rendered as 'Право'; negation preserved."
+    },
+    {
+      "source_id": "id01932",
+      "verdict": "PASS",
+      "reason": "Bastion, napkin turned flag by three bullets, memory comparison and promise to tell all preserved."
+    },
+    {
+      "source_id": "id01933",
+      "verdict": "PASS",
+      "reason": "Agency correct: d'Artagnan tells Raoul, as Athos had told him of his ancestor."
+    },
+    {
+      "source_id": "id01934",
+      "verdict": "CORRECTED",
+      "reason": "'crut voir' was weakened to 'думал'; restored the sense of appearing to see the feat unfold («юноше казалось, будто…»)."
+    },
+    {
+      "source_id": "id01935",
+      "verdict": "PASS",
+      "reason": "All qualities, ages (18 vs 15) and 'hommes éprouvés' preserved; colon structure kept."
+    },
+    {
+      "source_id": "id01936",
+      "verdict": "PASS",
+      "reason": "Faithful, including the shining eyes and implied plea for details."
+    },
+    {
+      "source_id": "id01937",
+      "verdict": "PASS",
+      "reason": "Tenses, hedges ('je crois', 'ou') and glance at Athos preserved."
+    },
+    {
+      "source_id": "id01938",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01939",
+      "verdict": "PASS",
+      "reason": "Gascon laugh, self-satisfaction and the interrupted ellipsis preserved."
+    },
+    {
+      "source_id": "id01940",
+      "verdict": "PASS",
+      "reason": "Faithful figurative expression."
+    },
+    {
+      "source_id": "id01941",
+      "verdict": "CORRECTED",
+      "reason": "'fine épée' is 'искусный фехтовальщик', not the calque 'тонкий'; smoothed the relative clause ('вы, считающий себя…'). Meaning otherwise preserved."
+    },
+    {
+      "source_id": "id01942",
+      "verdict": "CORRECTED",
+      "reason": "Missing ё ('Чёрт'); 'bon maître' rendered more naturally as 'хороший учитель'. Planche, Carmes duel and lord de Winter correct."
+    },
+    {
+      "source_id": "id01943",
+      "verdict": "PASS",
+      "reason": "Future perfect rendered as supposition; faithful."
+    },
+    {
+      "source_id": "id01944",
+      "verdict": "PASS",
+      "reason": "Wordplay on 'gâter' preserved."
+    },
+    {
+      "source_id": "id01945",
+      "verdict": "CORRECTED",
+      "reason": "Serious error: 'l'hôte du logis' here is the guest (d'Artagnan), not the host — draft said 'хозяина этого дома'. Also 'sa chambre' wrongly became 'его комнату' (suggesting Athos's room); now 'своей комнатой', and 'y' clarified."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01934",
+      "before": "Слушая этот рассказ, юноша думал, что перед ним развёртывается один из тех ратных подвигов, о которых повествуют Тассо или Ариосто и которые принадлежат блистательным временам рыцарства.",
+      "after": "Слушая этот рассказ, юноше казалось, будто перед ним развёртывается один из тех ратных подвигов, о которых повествуют Тассо или Ариосто и которые принадлежат блистательным временам рыцарства."
+    },
+    {
+      "source_id": "id01941",
+      "before": "— Я хочу, чтобы вы знали, Рауль, — продолжал Атос, — вы, кто считает себя тонким фехтовальщиком и чьему тщеславию когда-нибудь, быть может, придётся пережить жестокое разочарование; я хочу, чтобы вы знали, как опасен человек, который соединяет хладнокровие с проворством, ибо я никогда не смог бы привести вам более яркого примера: попросите завтра господина д’Артаньяна, если он не слишком устанет, дать вам урок.",
+      "after": "— Я хочу, чтобы вы знали, Рауль, — продолжал Атос, — вы, считающий себя искусным фехтовальщиком и чьему тщеславию когда-нибудь, быть может, придётся пережить жестокое разочарование; я хочу, чтобы вы знали, как опасен человек, который соединяет хладнокровие с проворством, ибо я никогда не смог бы привести вам более яркого примера: попросите завтра господина д’Артаньяна, если он не слишком устанет, дать вам урок."
+    },
+    {
+      "source_id": "id01942",
+      "before": "— Черт возьми, дорогой Атос, а вы всё же добрый учитель, особенно в отношении тех качеств, которые вы во мне хвалите. Вот, например, сегодня ещё Планше говорил мне о той знаменитой дуэли в ограде Кармелитов, с лордом де Винтером и его спутниками. Ах, молодой человек, — продолжал д’Артаньян, — где-то должна быть шпага, которую я не раз называл первой в королевстве.",
+      "after": "— Чёрт возьми, дорогой Атос, а вы всё же хороший учитель, особенно в отношении тех качеств, которые вы во мне хвалите. Вот, например, сегодня ещё Планше говорил мне о той знаменитой дуэли в ограде Кармелитов, с лордом де Винтером и его спутниками. Ах, молодой человек, — продолжал д’Артаньян, — где-то должна быть шпага, которую я не раз называл первой в королевстве."
+    },
+    {
+      "source_id": "id01945",
+      "before": "Юноша хотел бы продлить этот разговор на всю ночь; но Атос заметил ему, что гость, должно быть, устал и нуждается в отдыхе. Д’Артаньян из вежливости отнекивался, но Атос настоял, чтобы д’Артаньян занял его комнату. Рауль проводил хозяина этого дома туда же; а так как Атос подумал, что Рауль останется возле д’Артаньяна как можно дольше, заставляя его рассказывать обо всех удалых делах их молодости, он сам пришёл за ним спустя минуту и завершил этот добрый вечер самым дружеским рукопожатием и пожеланием мушкетёру доброй ночи.",
+      "after": "Юноша хотел бы продлить этот разговор на всю ночь; но Атос заметил ему, что гость, должно быть, устал и нуждается в отдыхе. Д’Артаньян из вежливости отнекивался, но Атос настоял, чтобы д’Артаньян вступил во владение своей комнатой. Рауль проводил туда гостя; а так как Атос подумал, что Рауль останется возле д’Артаньяна как можно дольше, заставляя его рассказывать обо всех удалых делах их молодости, он сам пришёл за ним спустя минуту и завершил этот добрый вечер самым дружеским рукопожатием и пожеланием мушкетёру доброй ночи."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJF9gBhu3mKyTANeihkZ",
+    "usage": {
+      "input_tokens": 5724,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2835,
+      "output_tokens_details": {
+        "thinking_tokens": 481
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJFBkcuNMJYkh29DbS35",
+    "usage": {
+      "input_tokens": 9423,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 5399,
+      "output_tokens_details": {
+        "thinking_tokens": 2064
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJKfyoekd4bB6VjCTSyh",
+        "usage": {
+          "input_tokens": 10868,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3713,
+          "output_tokens_details": {
+            "thinking_tokens": 1078
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01930",
+          "verdict": "PASS",
+          "reason": "Faithful: question, agency and 'curiosité juvénile' preserved."
+        },
+        {
+          "source_id": "id01931",
+          "verdict": "PASS",
+          "reason": "'ma foi' rendered as 'право'; negation 'n'en sais rien' preserved."
+        },
+        {
+          "source_id": "id01932",
+          "verdict": "PASS",
+          "reason": "Bastion Saint-Gervais, napkin turned into a flag by three bullets, and the memory comparison all preserved."
+        },
+        {
+          "source_id": "id01933",
+          "verdict": "PASS",
+          "reason": "Parallel with Athos's earlier story of the ancestor preserved accurately."
+        },
+        {
+          "source_id": "id01934",
+          "verdict": "CORRECTED",
+          "reason": "The prior fix 'Слушая этот рассказ, юноше казалось' contains a dangling participle (the participle's subject does not match the dative subject). Restructured as 'Юноше, слушавшему этот рассказ, казалось, будто…'. The meaning of 'crut voir' is kept; Tasso, Ariosto and chivalry are preserved."
+        },
+        {
+          "source_id": "id01935",
+          "verdict": "PASS",
+          "reason": "Qualities, ages (18 vs 15 = three years more) and 'hommes éprouvés' are faithful; the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id01936",
+          "verdict": "PASS",
+          "reason": "Faithful; the shining eyes and the implied plea for details are preserved."
+        },
+        {
+          "source_id": "id01937",
+          "verdict": "PASS",
+          "reason": "Hedging 'je crois', the interrogating glance and the kill/disarm/wound alternatives are preserved."
+        },
+        {
+          "source_id": "id01938",
+          "verdict": "PASS",
+          "reason": "Faithful; the register of 'rude athlète' is matched."
+        },
+        {
+          "source_id": "id01939",
+          "verdict": "PASS",
+          "reason": "Gascon self-satisfied laugh and the trailing interrupted sentence preserved."
+        },
+        {
+          "source_id": "id01940",
+          "verdict": "PASS",
+          "reason": "Agency preserved: Athos's glance silences d'Artagnan."
+        },
+        {
+          "source_id": "id01941",
+          "verdict": "PASS",
+          "reason": "The prior correction (участие 'считающий себя искусным') is accurate; all clauses, including the final request, are intact."
+        },
+        {
+          "source_id": "id01942",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'Peste' as 'Чёрт возьми', 'bon maître' as 'хороший учитель'; duel at the enclos des Carmes and lord de Winter preserved."
+        },
+        {
+          "source_id": "id01943",
+          "verdict": "PASS",
+          "reason": "The future perfect 'j'aurai gâté' is rendered as a conjectural 'должно быть, испортил', which is accurate."
+        },
+        {
+          "source_id": "id01944",
+          "verdict": "PASS",
+          "reason": "The wordplay on gâter/gâtent is preserved ('портятся/портят')."
+        },
+        {
+          "source_id": "id01945",
+          "verdict": "PASS",
+          "reason": "Prior corrections verified: 'prit possession de sa chambre' and 'l'hôte du logis' (the guest) are now accurate; the sequence of actions and the farewell handshake are preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id01934",
+          "before": "Слушая этот рассказ, юноше казалось, будто перед ним развёртывается один из тех ратных подвигов, о которых повествуют Тассо или Ариосто и которые принадлежат блистательным временам рыцарства.",
+          "after": "Юноше, слушавшему этот рассказ, казалось, будто перед ним развёртывается один из тех ратных подвигов, о которых повествуют Тассо или Ариосто и которые принадлежат блистательным временам рыцарства."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJKhWa7MbbpZsj37uMH6",
+        "usage": {
+          "input_tokens": 10877,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3502,
+          "output_tokens_details": {
+            "thinking_tokens": 860
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01930",
+          "verdict": "PASS",
+          "reason": "Question, speaker and 'curiosité juvénile' rendered accurately."
+        },
+        {
+          "source_id": "id01931",
+          "verdict": "PASS",
+          "reason": "'Je n'en sais ma foi rien' correctly conveyed with 'Право... ничего'; negation preserved."
+        },
+        {
+          "source_id": "id01932",
+          "verdict": "PASS",
+          "reason": "Bastion Saint-Gervais, napkin turned into a flag by three bullets, memory comparison and promise to tell all preserved."
+        },
+        {
+          "source_id": "id01933",
+          "verdict": "PASS",
+          "reason": "Complete and faithful, including the parallel with Athos's earlier account of the ancestor."
+        },
+        {
+          "source_id": "id01934",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'crut voir' rendered as 'казалось, будто'; Tasso/Ariosto and chivalry intact."
+        },
+        {
+          "source_id": "id01935",
+          "verdict": "PASS",
+          "reason": "All attributes (jarret de fer, poignet d'acier, coup d'oeil, regard brûlant), age (18, three years more than Raoul) and 'hommes éprouvés' preserved."
+        },
+        {
+          "source_id": "id01936",
+          "verdict": "PASS",
+          "reason": "Question and description of Raoul's eyes implorant details are accurate."
+        },
+        {
+          "source_id": "id01937",
+          "verdict": "PASS",
+          "reason": "Uncertainty ('je crois', 'ou... ou', 'je ne me le rappelle plus') and the glance at Athos preserved."
+        },
+        {
+          "source_id": "id01938",
+          "verdict": "PASS",
+          "reason": "Accurate; 'rude athlète' conveyed as 'грозный боец'."
+        },
+        {
+          "source_id": "id01939",
+          "verdict": "PASS",
+          "reason": "Gascon laugh, self-satisfaction and the interrupted sentence with ellipsis preserved."
+        },
+        {
+          "source_id": "id01940",
+          "verdict": "PASS",
+          "reason": "Faithful, keeping the idiom of the glance closing his mouth."
+        },
+        {
+          "source_id": "id01941",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'fine épée' = 'искусный фехтовальщик'; all clauses and the advice to ask d'Artagnan for a lesson preserved."
+        },
+        {
+          "source_id": "id01942",
+          "verdict": "PASS",
+          "reason": "Prior corrections verified (Чёрт возьми, хороший учитель); Planchet, Carmelite enclosure duel with Lord de Winter and the 'first sword of the kingdom' faithful."
+        },
+        {
+          "source_id": "id01943",
+          "verdict": "PASS",
+          "reason": "Future perfect rendered as supposition ('должно быть, испортил'), appropriate."
+        },
+        {
+          "source_id": "id01944",
+          "verdict": "PASS",
+          "reason": "Antithesis of hands that never spoil but spoil others preserved."
+        },
+        {
+          "source_id": "id01945",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'l'hôte du logis' is d'Artagnan the guest, now correctly 'гостя'; 'prit possession de sa chambre' rendered properly; agency (Athos thought Raoul would linger; Athos fetched him) and final handshake and good-night wish preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
