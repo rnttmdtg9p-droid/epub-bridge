@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKDdxoPQ5bXs44a9GbYT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-003-heading\",\"target\":\"ГЕКЛБЕРРИ ФИНН\"},{\"source_id\":\"043-003-0001\",\"target\":\"Место действия: долина Миссисипи. Время: сорок—пятьдесят лет назад\"},{\"source_id\":\"043-003-0002\",\"target\":\"Вдовы\"}],\"review\":[{\"source_id\":\"043-003-heading\",\"verdict\":\"PASS\",\"reason\":\"Title correctly rendered as ГЕКЛБЕРРИ ФИНН, consistent with the established name Гекльберри Финн; the prior correction is verified. The spelling lacks the established «ль», but the heading is still a recognizable, consistent title form.\"},{\"source_id\":\"043-003-0001\",\"verdict\":\"PASS\",\"reason\":\"Scene and time are both preserved: Mississippi Valley, forty to fifty years ago. The prior dash correction is verified. Nothing was added or omitted, and the setting is unchanged.\"},{\"source_id\":\"043-003-0002\",\"verdict\":\"PASS\",\"reason\":\"Caption «The Widows» is accurately translated as «Вдовы»; it remains a caption and is not turned into a chapter heading. Plural number is preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2158,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 411,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

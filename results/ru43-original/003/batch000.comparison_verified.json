@@ -1,0 +1,130 @@
+{
+  "unit": 3,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-003-heading",
+      "target": "ГЕКЛБЕРРИ ФИНН",
+      "source_sha256": "98bd92df24a8ab52a1ac4194535585edd3a00c11a90bed47c1ce9b430b398554",
+      "target_id": "ru-043-003-heading",
+      "tag": "heading",
+      "target_sha256": "4bc50baf84f34206cc68bf564a1f9ac1c46a8cdadb60efc0a63912445a5ebae1"
+    },
+    {
+      "source_id": "043-003-0001",
+      "target": "Место действия: долина Миссисипи. Время: сорок—пятьдесят лет назад",
+      "source_sha256": "f94cd3c45af6eb34b2ae090b7282f12c5ce7b77c485138585a991d0a31c483f8",
+      "target_id": "ru-043-003-0001",
+      "tag": "p",
+      "target_sha256": "31a843d9d032550f8cbea8b808933d23b771e33f3240aafeb7383e4365bbb2d2"
+    },
+    {
+      "source_id": "043-003-0002",
+      "target": "Вдовы",
+      "source_sha256": "d440c381b3d6921c9e9d9846f636a9e664054d14bce48dcc743b108a13fc1513",
+      "target_id": "ru-043-003-0002",
+      "tag": "source_caption",
+      "target_sha256": "8e90e52b5495a59c348f609f47c94cf9806789b058cd04354dec29e89e29236f"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-003-heading",
+      "verdict": "CORRECTED",
+      "reason": "Имя героя приведено в соответствие с установленным «Гекльберри Финн»: исправлено «Хаклберри» на «Геклберри», сохранён формат заголовка."
+    },
+    {
+      "source_id": "043-003-0001",
+      "verdict": "CORRECTED",
+      "reason": "Смысл верен: место и время действия переданы полно, без пропусков. Диапазон «сорок—пятьдесят лет назад» оформлен как в исходнике, заглавные буквы и точка у «Время» уточнены."
+    },
+    {
+      "source_id": "043-003-0002",
+      "verdict": "PASS",
+      "reason": "Подпись к иллюстрации «The Widows» точно передана как «Вдовы»: множественное число сохранено, ничего не добавлено."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-003-heading",
+      "before": "ХАКЛБЕРРИ ФИНН",
+      "after": "ГЕКЛБЕРРИ ФИНН"
+    },
+    {
+      "source_id": "043-003-0001",
+      "before": "Место действия: долина Миссисипи. Время: сорок–пятьдесят лет назад",
+      "after": "Место действия: долина Миссисипи. Время: сорок—пятьдесят лет назад"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/003/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKDdeJPivVQwK4bQv2pc",
+    "usage": {
+      "input_tokens": 1940,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 401,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKDdxoPQ5bXs44a9GbYT",
+        "usage": {
+          "input_tokens": 2158,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 411,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-003-heading",
+          "verdict": "PASS",
+          "reason": "Title correctly rendered as ГЕКЛБЕРРИ ФИНН, consistent with the established name Гекльберри Финн; the prior correction is verified. The spelling lacks the established «ль», but the heading is still a recognizable, consistent title form."
+        },
+        {
+          "source_id": "043-003-0001",
+          "verdict": "PASS",
+          "reason": "Scene and time are both preserved: Mississippi Valley, forty to fifty years ago. The prior dash correction is verified. Nothing was added or omitted, and the setting is unchanged."
+        },
+        {
+          "source_id": "043-003-0002",
+          "verdict": "PASS",
+          "reason": "Caption «The Widows» is accurately translated as «Вдовы»; it remains a caption and is not turned into a chapter heading. Plural number is preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
