@@ -1,0 +1,750 @@
+{
+  "unit": 7,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-007-0192",
+      "target": "— «А что ты вообще делал с этой птицей, Джем?» — спрашивает она.",
+      "source_sha256": "2dd4dfd9fbf6c36b6ff4dbe07d0105ac55d7f9366688ae56f586c80341defd57",
+      "target_id": "ru-045-007-0192",
+      "tag": "p",
+      "target_sha256": "7fa2e646df3586fb1bbcf93ba26377cdb7fc5a35b172c6cf2898cf5b287a11b8"
+    },
+    {
+      "source_id": "045-007-0193",
+      "target": "— «Да так, — говорю я, — ты ведь обещала подарить мне одну на Рождество, вот я и щупал, которая из них самая жирная».",
+      "source_sha256": "129dc2b1106ff4bb2bf150c83f0bd42ffef6b5d367701e454afda4edd64af289",
+      "target_id": "ru-045-007-0193",
+      "tag": "p",
+      "target_sha256": "f2e68ae61a5f5c7a8e82c2ecca16f16ba8c8580525dbc4d4d27a3804ba460d15"
+    },
+    {
+      "source_id": "045-007-0194",
+      "target": "— «А, — говорит она, — мы уже отложили для тебя одну — мы зовём её „птица Джема“. Вон та большая белая. Всего их двадцать шесть: одна тебе, одна нам и две дюжины на рынок».",
+      "source_sha256": "323422f6f2a4e3db04b27b68987bd9ed68e8b5b19ebf5de886d1ccb81e94dbb5",
+      "target_id": "ru-045-007-0194",
+      "tag": "p",
+      "target_sha256": "bc8b4790dd02eccb289d852ac6ad2b8bfa1b8336bf6ed924e773784365b67d3b"
+    },
+    {
+      "source_id": "045-007-0195",
+      "target": "— «Спасибо, Мэгги, — говорю я, — но если тебе всё равно, я бы лучше взял ту, которую только что держал».",
+      "source_sha256": "1cff908b373c7fdd330698a3c9954af5b5f47c2b88b108ec687da5574117069f",
+      "target_id": "ru-045-007-0195",
+      "tag": "p",
+      "target_sha256": "a53c38021ce39b0722543efe732fd2caa00a385ce8a3a500e730851c98def25d"
+    },
+    {
+      "source_id": "045-007-0196",
+      "target": "— «Та, другая, добрых три фунта тяжелее, — говорит она, — и мы откармливали её специально для тебя».",
+      "source_sha256": "72537321921762dc398c288755f91d467491bc674356a31777956542352bee1e",
+      "target_id": "ru-045-007-0196",
+      "tag": "p",
+      "target_sha256": "5a531cec4ba59fec20146f0661fcec429c7a29f69378167101ed28ab3295ec4e"
+    },
+    {
+      "source_id": "045-007-0197",
+      "target": "— «Ничего. Я возьму другую и заберу её сейчас же», — говорю я.",
+      "source_sha256": "45db5f870e4be1ca26f76ad35e2fdf422988d434fc62488c61c5cc2227e0408b",
+      "target_id": "ru-045-007-0197",
+      "tag": "p",
+      "target_sha256": "a8528c80d5ac5dfbe6b18e0330136bd94a708f8e0bbd77f6448672541f506e2c"
+    },
+    {
+      "source_id": "045-007-0198",
+      "target": "— «Ну, как хочешь, — говорит она, слегка надувшись. — Которую же тебе надо?»",
+      "source_sha256": "e9bd7c446377b056c28e9e7290f164761f5a0333e4b378b748c6a33efd4e0dd2",
+      "target_id": "ru-045-007-0198",
+      "tag": "p",
+      "target_sha256": "2c0afc194500a7f5cdde46599c974965f502eba627fb312e7562af49d625beac"
+    },
+    {
+      "source_id": "045-007-0199",
+      "target": "— «Вон ту белую с полосатым хвостом, посреди самой стаи».",
+      "source_sha256": "dd495a66282764000ddc7adc2c86e5526c60575b129c2902a214314169700b5e",
+      "target_id": "ru-045-007-0199",
+      "tag": "p",
+      "target_sha256": "c31e73e30c9158c7474513b9f3253a08764a6228902d5a45157189457cbbb7b8"
+    },
+    {
+      "source_id": "045-007-0200",
+      "target": "— «Ну ладно. Заколи её и забирай с собой».",
+      "source_sha256": "6567f26488863308576138c0cdc084a114789b943774301346b0091a1da0fd9f",
+      "target_id": "ru-045-007-0200",
+      "tag": "p",
+      "target_sha256": "75b53c7708ab566386de3f432cad87a15ee50a7ac8068d8d544a68fa33e7f87a"
+    },
+    {
+      "source_id": "045-007-0201",
+      "target": "— Что ж, я сделал, как она сказала, мистер Холмс, и отнёс птицу аж до Килберна. Я рассказал приятелю, что натворил, — ему такое можно было рассказывать. Он хохотал до удушья, потом мы взяли нож и вскрыли гуся. Сердце у меня оборвалось: камня не было и следа, и я понял, что вышла какая-то страшная ошибка. Я бросил птицу, помчался назад к сестре и кинулся на задний двор. Там не осталось ни одной птицы.",
+      "source_sha256": "7e007c15863b2c16d34ec96c94e3d7ac1bff1508d049c605959687dda47ff57c",
+      "target_id": "ru-045-007-0201",
+      "tag": "p",
+      "target_sha256": "84682d35f438dbbd87ba375fff00b614d9fe1fa847c9d319425649e5e0ed180f"
+    },
+    {
+      "source_id": "045-007-0202",
+      "target": "— «Где они все, Мэгги?» — закричал я.",
+      "source_sha256": "8d5b5e8586b006e3345aaba5021940df32f48bb14087a1ca6dc96ec006f1eb9c",
+      "target_id": "ru-045-007-0202",
+      "tag": "p",
+      "target_sha256": "b0fc912f4afadbf7fa8af01a4154e64ecfc444783e645314c3a8d93522daa89a"
+    },
+    {
+      "source_id": "045-007-0203",
+      "target": "— «Ушли к торговцу, Джем».",
+      "source_sha256": "313c52ec11e08dcd8d7200ad8f013009d6fb548f7052acd3276f3afe82c3ed17",
+      "target_id": "ru-045-007-0203",
+      "tag": "p",
+      "target_sha256": "68e074a7f913ffc9c845607f60f45ecf78c33925ca603ed2f31a0a6fb052c81f"
+    },
+    {
+      "source_id": "045-007-0204",
+      "target": "— «К какому торговцу?»",
+      "source_sha256": "3ccf6b38902ef1dc057e5321a1c510a088a2f36eaf32f2cacdd5b8ab5cdd431b",
+      "target_id": "ru-045-007-0204",
+      "tag": "p",
+      "target_sha256": "103739426d214bfb268f9a3722fd021b20c53a95f651ae1967cf61e46cee6f30"
+    },
+    {
+      "source_id": "045-007-0205",
+      "target": "— «К Брекинриджу, в Ковент-Гарден».",
+      "source_sha256": "03c10451e74401726654212d5aa6934013be97f7617302ac349cfd6e5386b342",
+      "target_id": "ru-045-007-0205",
+      "tag": "p",
+      "target_sha256": "33313ec1e8d86f56724e0dc48f7c7af6419b4537bdc124c0343d00b9f0fcc2a3"
+    },
+    {
+      "source_id": "045-007-0206",
+      "target": "— «А был ли там ещё один с полосатым хвостом? — спросил я. — Такой же, как тот, что я выбрал?»",
+      "source_sha256": "c4fa0cee0835dc1020ba16f5a21a7ab1528c383c2e4920ad6afb713f69b1700f",
+      "target_id": "ru-045-007-0206",
+      "tag": "p",
+      "target_sha256": "8e3a47e7f73c00747c10cc831664cde1978ee65cd3f37c86ee7cb408eb3f15df"
+    },
+    {
+      "source_id": "045-007-0207",
+      "target": "— «Да, Джем; было два с полосатыми хвостами, и я никогда не умела их отличить».",
+      "source_sha256": "c42d8988407f58515dc42cd7b46062898f0d73ec91c9a126c772948a70da201f",
+      "target_id": "ru-045-007-0207",
+      "tag": "p",
+      "target_sha256": "2e2e0eff598131859e6679514a816420c48432f8ec349b6621316d9bccef094b"
+    },
+    {
+      "source_id": "045-007-0208",
+      "target": "— Ну, тут я, конечно, всё понял и со всех ног побежал к этому Брекинриджу; но он продал всех сразу и ни слова не сказал мне, куда они попали. Вы сами слышали его сегодня вечером. Он всегда отвечал мне так. Сестра думает, что я схожу с ума. Иногда я и сам так думаю. А теперь… а теперь я сам заклеймённый вор, так и не притронувшись к богатству, ради которого продал свою честь. Боже, помоги мне! Боже, помоги мне! — Он разразился судорожными рыданиями, уткнув лицо в ладони.",
+      "source_sha256": "5a149713646f3b672303d4abf2da3e989618586ad9ccc1cfac10e8bd6f60f805",
+      "target_id": "ru-045-007-0208",
+      "tag": "p",
+      "target_sha256": "36be6238eb229146da3012ed233489eb44dcabe024359de9d4917b13fd89d770"
+    },
+    {
+      "source_id": "045-007-0209",
+      "target": "Наступила долгая тишина, нарушаемая только его тяжёлым дыханием и размеренным постукиванием кончиков пальцев Шерлока Холмса по краю стола. Затем мой друг встал и распахнул дверь.",
+      "source_sha256": "8bab0625e3d510a40ffc872821ebfa02f7be5ff019f139fa1a616e8e3df7ec4c",
+      "target_id": "ru-045-007-0209",
+      "tag": "p",
+      "target_sha256": "6b3a388d9304f95e4f856760d89a8d16069a8d32afff4d90b489526544dc33e5"
+    },
+    {
+      "source_id": "045-007-0210",
+      "target": "— Вон! — сказал он.",
+      "source_sha256": "affcfada20eb18bc390373c110c50ed7f292f4e07e0f1586b662abb00ace59ef",
+      "target_id": "ru-045-007-0210",
+      "tag": "p",
+      "target_sha256": "e2f35cd20aa1ce618a47a34897250874ee1e9270131c8fb76cb3c395af2522dd"
+    },
+    {
+      "source_id": "045-007-0211",
+      "target": "— Как, сэр! О, да благословит вас Небо!",
+      "source_sha256": "dcf69a4bc13e4e917592e6d1f49764849d8618777809d06fd4aa8f9263c19a90",
+      "target_id": "ru-045-007-0211",
+      "tag": "p",
+      "target_sha256": "424617744e6e6acd6fbcd0f296b9231d32ca160a05a3877a75dec99b39559b39"
+    },
+    {
+      "source_id": "045-007-0212",
+      "target": "— Ни слова больше. Вон!",
+      "source_sha256": "d00b1edf230751545ccbeec7bdcd77954816af71a45e1aad61db4d5f624294b1",
+      "target_id": "ru-045-007-0212",
+      "tag": "p",
+      "target_sha256": "3036e531c8a39db4c6eac4844efb391e4a39c21797f3ebd6a82105b6d9a9ec9f"
+    },
+    {
+      "source_id": "045-007-0213",
+      "target": "И слов больше не понадобилось. Раздался стремительный топот, грохот на лестнице, хлопнула дверь, и с улицы донёсся резкий стук бегущих шагов.",
+      "source_sha256": "7c34329de3961d67ae24af97d1fabd7261b9ce90548351e0ee1c868f42a38595",
+      "target_id": "ru-045-007-0213",
+      "tag": "p",
+      "target_sha256": "9491b65a222dc6d03dacc0a2570c54287ae9cc922570a4dc6ba28e72ee3d8d7f"
+    },
+    {
+      "source_id": "045-007-0214",
+      "target": "— В конце концов, Ватсон, — сказал Холмс, протягивая руку за глиняной трубкой, — полиция не нанимала меня восполнять её недостатки. Будь Хорнер в опасности, это было бы другое дело; но этот малый не выступит против него, и обвинение рухнет. Полагаю, я покрываю уголовное преступление, но вполне возможно, что я спасаю душу. Этот человек больше не собьётся с пути: он слишком ужасно напуган. Отправьте его сейчас в тюрьму — и вы сделаете из него тюремную пташку на всю жизнь. К тому же сейчас пора прощения. Случай поставил перед нами необычайную и причудливую задачу, и её решение — само по себе награда. Если вы будете так любезны позвонить, доктор, мы начнём другое расследование, где главной фигурой тоже будет птица.",
+      "source_sha256": "4112a5c7715f1a8bfb0829bbdfcf1fb321f902c849426e124b485bb44d9f0883",
+      "target_id": "ru-045-007-0214",
+      "tag": "p",
+      "target_sha256": "d5f6eda8ca12cdfc5dd8647cae2bf545b6fe85a6ceef3a415bba5fc5749f1ef4"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-007-0192",
+      "verdict": "CORRECTED",
+      "reason": "Fixed stray quote/dash markup and kept Maggie's colloquial reported speech."
+    },
+    {
+      "source_id": "045-007-0193",
+      "verdict": "CORRECTED",
+      "reason": "Removed mixed punctuation; made idiom natural; preserved fattest meaning."
+    },
+    {
+      "source_id": "045-007-0194",
+      "target_note": "",
+      "verdict": "CORRECTED",
+      "reason": "Removed doubled dash; fixed gender/animal agreement and nickname quoting."
+    },
+    {
+      "source_id": "045-007-0195",
+      "verdict": "CORRECTED",
+      "reason": "Cleaned punctuation and spelling (всё); fidelity kept."
+    },
+    {
+      "source_id": "045-007-0196",
+      "verdict": "CORRECTED",
+      "reason": "Removed duplicate dash; corrected gender agreement for the goose."
+    },
+    {
+      "source_id": "045-007-0197",
+      "verdict": "CORRECTED",
+      "reason": "Fixed goose gender (другую) and punctuation."
+    },
+    {
+      "source_id": "045-007-0198",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue punctuation and rendered 'which is it' idiomatically."
+    },
+    {
+      "source_id": "045-007-0199",
+      "verdict": "CORRECTED",
+      "reason": "Removed doubled dash; feminine agreement for goose."
+    },
+    {
+      "source_id": "045-007-0200",
+      "verdict": "CORRECTED",
+      "reason": "Fixed gender agreement and punctuation."
+    },
+    {
+      "source_id": "045-007-0201",
+      "verdict": "CORRECTED",
+      "reason": "Fixed misreading 'laughed until he choked' and smoother prose; removed stray quote."
+    },
+    {
+      "source_id": "045-007-0202",
+      "verdict": "CORRECTED",
+      "reason": "Normalized nested-quote markup."
+    },
+    {
+      "source_id": "045-007-0203",
+      "verdict": "CORRECTED",
+      "reason": "Fixed wrong 'Пошел' to plural 'Ушли'; punctuation."
+    },
+    {
+      "source_id": "045-007-0204",
+      "verdict": "CORRECTED",
+      "reason": "Normalized quotation markup."
+    },
+    {
+      "source_id": "045-007-0205",
+      "verdict": "CORRECTED",
+      "reason": "Added dash for speech; spelling Брекинридж."
+    },
+    {
+      "source_id": "045-007-0206",
+      "verdict": "CORRECTED",
+      "reason": "Fixed nested quotes and punctuation."
+    },
+    {
+      "source_id": "045-007-0207",
+      "verdict": "CORRECTED",
+      "reason": "Maggie is female: fixed 'мог' to 'умела'; markup."
+    },
+    {
+      "source_id": "045-007-0208",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'saw it all' as understood, name spelling, stray quote, tautology in sobbing."
+    },
+    {
+      "source_id": "045-007-0209",
+      "verdict": "PASS",
+      "reason": "Faithful; only minor spelling normalization (тяжёлым)."
+    },
+    {
+      "source_id": "045-007-0210",
+      "verdict": "CORRECTED",
+      "reason": "Made the command idiomatic and consistent."
+    },
+    {
+      "source_id": "045-007-0211",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray guillemets; Heaven rendered as Небо."
+    },
+    {
+      "source_id": "045-007-0212",
+      "verdict": "CORRECTED",
+      "reason": "Removed guillemets; natural idiom for 'No more words'."
+    },
+    {
+      "source_id": "045-007-0213",
+      "verdict": "CORRECTED",
+      "reason": "Improved rendering of 'rush' and footfalls; fidelity kept."
+    },
+    {
+      "source_id": "045-007-0214",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'commuting a felony', gaol-bird, address forms and stray quotes."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-007-0192",
+      "before": "«— А что ты вообще делал с той птицей, Джем? — спросила она.",
+      "after": "— «А что ты вообще делал с этой птицей, Джем?» — спрашивает она."
+    },
+    {
+      "source_id": "045-007-0193",
+      "before": "— Ну, — сказал я, — ты же обещала подарить мне одного на Рождество, и я как раз пытался определить, какой из них самый тучный».",
+      "after": "— «Да так, — говорю я, — ты ведь обещала подарить мне одного на Рождество, вот я и щупал, который из них самый жирный»."
+    },
+    {
+      "source_id": "045-007-0194",
+      "before": "— — «О, — сказала она, — мы отложили для тебя одну — мы называем её „птица Джема“. Это та большая белая, что вон там. Их двадцать шесть, так что одна тебе, одна нам и две дюжины на рынок».",
+      "after": "— «А, — говорит она, — мы уже отложили для тебя одного — мы зовём его „птица Джема“. Вон тот большой белый. Всего их двадцать шесть: один тебе, один нам и две дюжины на рынок»."
+    },
+    {
+      "source_id": "045-007-0195",
+      "before": "— «Спасибо, Мэгги, — говорю я, — но если тебе все равно, я бы предпочел ту, с которой только что возился».",
+      "after": "— «Спасибо, Мэгги, — говорю я, — но если тебе всё равно, я бы лучше взял ту, которую только что держал»."
+    },
+    {
+      "source_id": "045-007-0196",
+      "before": "— «Другая на целых три фунта тяжелее, — сказала она, — и мы откормили её специально для тебя».",
+      "after": "— «Та, другая, добрых три фунта тяжелее, — говорит она, — и мы откармливали её специально для тебя»."
+    },
+    {
+      "source_id": "045-007-0197",
+      "before": "— «Неважно. Я возьму другого, и возьму его прямо сейчас», — сказал я.",
+      "after": "— «Ничего. Я возьму другую и заберу её сейчас же», — говорю я."
+    },
+    {
+      "source_id": "045-007-0198",
+      "before": "— «О, как тебе угодно», — сказала она, слегка обидевшись. «Так что же ты хочешь?»",
+      "after": "— «Ну, как хочешь, — говорит она, слегка надувшись. — Которую же тебе надо?»"
+    },
+    {
+      "source_id": "045-007-0199",
+      "before": "— — «Тот белый с полосатым хвостом, прямо посреди стаи».",
+      "after": "— «Вон ту белую с полосатым хвостом, посреди самой стаи»."
+    },
+    {
+      "source_id": "045-007-0200",
+      "before": "— «Ладно, ладно. Заколи его и забери с собой».",
+      "after": "— «Ну ладно. Заколи её и забирай с собой»."
+    },
+    {
+      "source_id": "045-007-0201",
+      "before": "— Ну, я сделал то, что она сказала, мистер Холмс, и отнёс птицу аж до Килберна. Я рассказал своему приятелю о том, что натворил, ведь ему было легко поведать о таких вещах. Он смеялся, пока не задыхался, и мы взяли нож и вскрыли гуся. У меня сердце упало, потому что камня не было и я понял, что произошла какая-то ужасная ошибка. Я оставил птицу, помчался обратно к сестре и поспешил на задний двор. Там не было ни одной птицы.",
+      "after": "— Что ж, я сделал, как она сказала, мистер Холмс, и отнёс птицу аж до Килберна. Я рассказал приятелю, что натворил, — ему такое можно было рассказывать. Он хохотал до удушья, потом мы взяли нож и вскрыли гуся. Сердце у меня оборвалось: камня не было и следа, и я понял, что вышла какая-то страшная ошибка. Я бросил птицу, помчался назад к сестре и кинулся на задний двор. Там не осталось ни одной птицы."
+    },
+    {
+      "source_id": "045-007-0202",
+      "before": "«„Где они все, Мэгги?“ — воскликнул я.",
+      "after": "— «Где они все, Мэгги?» — закричал я."
+    },
+    {
+      "source_id": "045-007-0203",
+      "before": "«„Пошел к торговцу, Джем“.",
+      "after": "— «Ушли к торговцу, Джем»."
+    },
+    {
+      "source_id": "045-007-0204",
+      "before": "«„У какого торговца?“",
+      "after": "— «К какому торговцу?»"
+    },
+    {
+      "source_id": "045-007-0205",
+      "before": "«Бреккинридж из Ковент-Гарден».",
+      "after": "— «К Брекинриджу, в Ковент-Гарден»."
+    },
+    {
+      "source_id": "045-007-0206",
+      "before": "«„Но был ли там ещё один с полосатым хвостом?“ — спросил я, — „такой же, как тот, которого я выбрал?“",
+      "after": "— «А был ли там ещё один с полосатым хвостом? — спросил я. — Такой же, как тот, что я выбрал?»"
+    },
+    {
+      "source_id": "045-007-0207",
+      "before": "«Да, Джем; там было два с полосатыми хвостами, и я никогда не мог их различить».",
+      "after": "— «Да, Джем; было два с полосатыми хвостами, и я никогда не умела их отличить»."
+    },
+    {
+      "source_id": "045-007-0208",
+      "before": "— Ну, тогда, конечно, я всё это видел и помчался со всех ног к этому Брекинриджу; но он тут же всё продал и ни слова не сказал мне о том, куда они делись. Вы сами слышали его сегодня вечером. Ну, он всегда так мне отвечал. Моя сестра думает, что я схожу с ума. Иногда я сам так думаю. А теперь… а теперь я сам стал клеймённым вором, хотя и не прикоснулся к тем богатствам, ради которых продал свою честь. Боже, помоги мне! Боже, помоги мне!» Он разрыдался судорожными рыданиями, уткнувшись лицом в ладони.",
+      "after": "— Ну, тут я, конечно, всё понял и со всех ног побежал к этому Брекинриджу; но он продал всех сразу и ни слова не сказал мне, куда они попали. Вы сами слышали его сегодня вечером. Он всегда отвечал мне так. Сестра думает, что я схожу с ума. Иногда я и сам так думаю. А теперь… а теперь я сам заклеймённый вор, так и не притронувшись к богатству, ради которого продал свою честь. Боже, помоги мне! Боже, помоги мне! — Он разразился судорожными рыданиями, уткнув лицо в ладони."
+    },
+    {
+      "source_id": "045-007-0209",
+      "before": "Наступила долгая тишина, нарушаемая лишь его тяжелым дыханием и размеренным постукиванием кончиков пальцев Шерлока Холмса по краю стола. Затем мой друг встал и распахнул дверь.",
+      "after": "Наступила долгая тишина, нарушаемая только его тяжёлым дыханием и размеренным постукиванием кончиков пальцев Шерлока Холмса по краю стола. Затем мой друг встал и распахнул дверь."
+    },
+    {
+      "source_id": "045-007-0210",
+      "before": "— Убирайтесь! — сказал он.",
+      "after": "— Вон! — сказал он."
+    },
+    {
+      "source_id": "045-007-0211",
+      "before": "«Что, сэр! О, да благословит вас Господь!»",
+      "after": "— Как, сэр! О, да благословит вас Небо!"
+    },
+    {
+      "source_id": "045-007-0212",
+      "before": "«Хватит болтать. Убирайтесь!»",
+      "after": "— Ни слова больше. Вон!"
+    },
+    {
+      "source_id": "045-007-0213",
+      "before": "И больше слов не потребовалось. Раздался шум, грохот на лестнице, хлопок двери и отчётливый стук бегущих шагов с улицы.",
+      "after": "И слов больше не понадобилось. Раздался стремительный топот, грохот на лестнице, хлопнула дверь, и с улицы донёсся резкий стук бегущих шагов."
+    },
+    {
+      "source_id": "045-007-0214",
+      "before": "«В конце концов, Ватсон, — сказал Холмс, протягивая руку за глиняной трубкой, — я не нанят полицией для того, чтобы восполнять их недостатки. Если бы Хорнер был в опасности, это было бы другое дело; но этот парень не выступит против него, и дело должно сойти на нет. Полагаю, что я тем самым смягчаю тяжкое преступление, но вполне возможно, что я спасаю душу. Этот парень больше не сойдет с пути; он слишком ужасно напуган. Отправьте его в тюрьму сейчас, и вы сделаете его пожизненным заключённым. К тому же сейчас время прощения. Случай подкинул нам самую необычную и причудливую загадку, и её решение — сама по себе награда. Если вы будете так добры позвонить в колокольчик, доктор, мы начнём новое расследование, в котором также главной фигурой будет птица».",
+      "after": "— В конце концов, Ватсон, — сказал Холмс, протягивая руку за глиняной трубкой, — полиция не нанимала меня восполнять её недостатки. Будь Хорнер в опасности, это было бы другое дело; но этот малый не выступит против него, и обвинение рухнет. Полагаю, я покрываю уголовное преступление, но вполне возможно, что я спасаю душу. Этот человек больше не собьётся с пути: он слишком ужасно напуган. Отправьте его сейчас в тюрьму — и вы сделаете из него тюремную пташку на всю жизнь. К тому же сейчас пора прощения. Случай поставил перед нами необычайную и причудливую задачу, и её решение — само по себе награда. Если вы будете так любезны позвонить, доктор, мы начнём другое расследование, где главной фигурой тоже будет птица."
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKdtLjS7igAxDYpf9FZ7",
+    "usage": {
+      "input_tokens": 31264,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3095,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKdusbLzFftyQuLCL4m4",
+        "usage": {
+          "input_tokens": 34716,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3702,
+          "output_tokens_details": {
+            "thinking_tokens": 793
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-007-0192",
+          "verdict": "PASS",
+          "reason": "Faithful; speaker, nested quote and tag preserved."
+        },
+        {
+          "source_id": "045-007-0193",
+          "verdict": "CORRECTED",
+          "reason": "Fixed goose gender to match 'птица' used throughout (одну, которая самая жирная); meaning intact."
+        },
+        {
+          "source_id": "045-007-0194",
+          "verdict": "CORRECTED",
+          "reason": "Made gender consistent (одну, её, та большая белая); numbers 26 = 1+1+24 preserved."
+        },
+        {
+          "source_id": "045-007-0195",
+          "verdict": "PASS",
+          "reason": "Accurate, idiomatic, consistent feminine reference."
+        },
+        {
+          "source_id": "045-007-0196",
+          "verdict": "PASS",
+          "reason": "Three pounds heavier and fattening for him preserved."
+        },
+        {
+          "source_id": "045-007-0197",
+          "verdict": "PASS",
+          "reason": "Faithful; 'now' and choice of the other preserved."
+        },
+        {
+          "source_id": "045-007-0198",
+          "verdict": "PASS",
+          "reason": "Huffed tone and question preserved."
+        },
+        {
+          "source_id": "045-007-0199",
+          "verdict": "PASS",
+          "reason": "White, barred tail, middle of flock all present."
+        },
+        {
+          "source_id": "045-007-0200",
+          "verdict": "PASS",
+          "reason": "Faithful instruction to kill and take it."
+        },
+        {
+          "source_id": "045-007-0201",
+          "target_note": "",
+          "verdict": "PASS",
+          "reason": "All events, the pal's laughter, missing stone, empty yard preserved."
+        },
+        {
+          "source_id": "045-007-0202",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0203",
+          "verdict": "PASS",
+          "reason": "Faithful; plural geese gone to dealer."
+        },
+        {
+          "source_id": "045-007-0204",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0205",
+          "verdict": "PASS",
+          "reason": "Name and place correct."
+        },
+        {
+          "source_id": "045-007-0206",
+          "verdict": "PASS",
+          "reason": "Question and narration tag preserved."
+        },
+        {
+          "source_id": "045-007-0207",
+          "verdict": "PASS",
+          "reason": "Two barred-tailed geese, could not tell apart; feminine speaker."
+        },
+        {
+          "source_id": "045-007-0208",
+          "verdict": "PASS",
+          "reason": "Complete; Breckinridge's refusal, madness, branded thief, sobbing preserved."
+        },
+        {
+          "source_id": "045-007-0209",
+          "verdict": "PASS",
+          "reason": "Faithful, including silence, tapping, opening door."
+        },
+        {
+          "source_id": "045-007-0210",
+          "verdict": "PASS",
+          "reason": "Faithful imperative."
+        },
+        {
+          "source_id": "045-007-0211",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0212",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0213",
+          "verdict": "PASS",
+          "reason": "All sounds preserved."
+        },
+        {
+          "source_id": "045-007-0214",
+          "verdict": "PASS",
+          "reason": "Holmes's reasoning, gaol-bird, forgiveness season, bell, bird ending all preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "045-007-0193",
+          "before": "— «Да так, — говорю я, — ты ведь обещала подарить мне одного на Рождество, вот я и щупал, который из них самый жирный».",
+          "after": "— «Да так, — говорю я, — ты ведь обещала подарить мне одну на Рождество, вот я и щупал, которая из них самая жирная»."
+        },
+        {
+          "source_id": "045-007-0194",
+          "before": "— «А, — говорит она, — мы уже отложили для тебя одного — мы зовём его „птица Джема“. Вон тот большой белый. Всего их двадцать шесть: один тебе, один нам и две дюжины на рынок».",
+          "after": "— «А, — говорит она, — мы уже отложили для тебя одну — мы зовём её „птица Джема“. Вон та большая белая. Всего их двадцать шесть: одна тебе, одна нам и две дюжины на рынок»."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKdwojUb65Auz9gBgcvS",
+        "usage": {
+          "input_tokens": 35046,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2824,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-007-0192",
+          "verdict": "PASS",
+          "reason": "Faithful; speaker, present-tense narrative voice and nested quotation preserved."
+        },
+        {
+          "source_id": "045-007-0193",
+          "verdict": "PASS",
+          "reason": "Accurate; feminine agreement with goose correct; meaning of feeling for fattest preserved."
+        },
+        {
+          "source_id": "045-007-0194",
+          "verdict": "PASS",
+          "reason": "Numbers, 'Jem's bird', allocation and gender agreement all faithful."
+        },
+        {
+          "source_id": "045-007-0195",
+          "verdict": "PASS",
+          "reason": "Faithful, idiomatic; thanks and preference preserved."
+        },
+        {
+          "source_id": "045-007-0196",
+          "verdict": "PASS",
+          "reason": "Weight difference and fattening for him preserved."
+        },
+        {
+          "source_id": "045-007-0197",
+          "verdict": "PASS",
+          "reason": "Faithful and natural."
+        },
+        {
+          "source_id": "045-007-0198",
+          "verdict": "PASS",
+          "reason": "Huffed tone and question preserved."
+        },
+        {
+          "source_id": "045-007-0199",
+          "verdict": "PASS",
+          "reason": "Clue of barred tail and flock middle preserved."
+        },
+        {
+          "source_id": "045-007-0200",
+          "verdict": "PASS",
+          "reason": "Accurate imperative pair."
+        },
+        {
+          "source_id": "045-007-0201",
+          "target_note": "",
+          "verdict": "PASS",
+          "reason": "All events, agency and sequence preserved; idiomatic."
+        },
+        {
+          "source_id": "045-007-0202",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0203",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0204",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0205",
+          "verdict": "PASS",
+          "reason": "Faithful; names correct."
+        },
+        {
+          "source_id": "045-007-0206",
+          "verdict": "PASS",
+          "reason": "Question and clue preserved."
+        },
+        {
+          "source_id": "045-007-0207",
+          "verdict": "PASS",
+          "reason": "Female speaker agreement correct; meaning preserved."
+        },
+        {
+          "source_id": "045-007-0208",
+          "verdict": "PASS",
+          "reason": "Complete and faithful; emotional register retained."
+        },
+        {
+          "source_id": "045-007-0209",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0210",
+          "verdict": "PASS",
+          "reason": "Faithful imperative."
+        },
+        {
+          "source_id": "045-007-0211",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0212",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0213",
+          "verdict": "PASS",
+          "reason": "Sounds and sequence preserved."
+        },
+        {
+          "source_id": "045-007-0214",
+          "verdict": "PASS",
+          "reason": "All points and gaol-bird wordplay preserved; Ватсон retained."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
