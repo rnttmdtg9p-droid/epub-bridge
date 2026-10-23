@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJwgDSPWNWdDyuDgt4df",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-034-0039\",\"target\":\"— У вас прекрасный корабль, милорд, — сказал он.\"},{\"source_id\":\"fr42c-034-0040\",\"target\":\"— Прежде всего — хороший корабль, — ответил Гленарван.\"},{\"source_id\":\"fr42c-034-0041\",\"target\":\"— А каков его тоннаж?\"},{\"source_id\":\"fr42c-034-0042\",\"target\":\"— Двести десять тонн.\"},{\"source_id\":\"fr42c-034-0043\",\"target\":\"— Сильно ли я ошибусь, — добавил Айртон, — если скажу, что «<i>Дункан</i>» легко делает пятнадцать узлов на всех парах?\"},{\"source_id\":\"fr42c-034-0044\",\"target\":\"— Накиньте ещё два, — возразил Джон Манглс, — и счёт будет точным.\"},{\"source_id\":\"fr42c-034-0045\",\"target\":\"— Семнадцать! — воскликнул квартирмейстер. — Но тогда ни один военный корабль, даже из лучших, не сможет за ним угнаться?\"},{\"source_id\":\"fr42c-034-0046\",\"target\":\"— Ни один! — ответил Джон Манглс. — «<i>Дункан</i>» — настоящая гоночная яхта, которую не обойдут при любом ходе.\"},{\"source_id\":\"fr42c-034-0047\",\"target\":\"— Даже под парусами? — спросил Айртон.\"},{\"source_id\":\"fr42c-034-0048\",\"target\":\"— Даже под парусами.\"},{\"source_id\":\"fr42c-034-0049\",\"target\":\"— Что ж, милорд, и вы, капитан, — ответил Айртон, — примите поздравления от моряка, знающего цену кораблю.\"},{\"source_id\":\"fr42c-034-0050\",\"target\":\"— Хорошо, Айртон, — ответил Гленарван. — Оставайтесь же на нашем борту, и только от вас будет зависеть, станет ли это судно вашим.\"},{\"source_id\":\"fr42c-034-0051\",\"target\":\"— Я подумаю, милорд, — просто ответил квартирмейстер.\"},{\"source_id\":\"fr42c-034-0052\",\"target\":\"В эту минуту мистер Олбинет пришёл доложить его милости, что обед подан. Гленарван и его гости направились к юту.\"},{\"source_id\":\"fr42c-034-0053\",\"target\":\"— Умный человек этот Айртон, — сказал Паганель майору.\"},{\"source_id\":\"fr42c-034-0054\",\"target\":\"— Слишком умный! — пробормотал Мак-Наббс, которому, надо признаться, без всякого видимого основания не нравились ни лицо, ни манеры квартирмейстера.\"},{\"source_id\":\"fr42c-034-0055\",\"target\":\"За обедом Айртон сообщил интересные подробности об австралийском материке, который знал в совершенстве. Он осведомился, сколько матросов лорд Гленарван берёт с собой в экспедицию. Узнав, что с ним должны отправиться лишь двое — Малрэди и Уилсон, — он удивился. Он советовал Гленарвану составить отряд из лучших матросов «<i>Дункана</i>». Он даже настаивал на этом, и эта настойчивость, кстати сказать, должна была рассеять всякое подозрение в душе майора.\"},{\"source_id\":\"fr42c-034-0056\",\"target\":\"— Но, — сказал Гленарван, — наше путешествие по южной Австралии не представляет никакой опасности?\"},{\"source_id\":\"fr42c-034-0057\",\"target\":\"— Никакой, — поспешил ответить Айртон.\"},{\"source_id\":\"fr42c-034-0058\",\"target\":\"— Тогда оставим на борту как можно больше людей. Нужны люди, чтобы управлять «<i>Дунканом</i>» под парусами и чинить его. Прежде всего важно, чтобы он в точности оказался в месте встречи, которое будет назначено ему позднее. Итак, не станем сокращать его экипаж.\"}],\"review\":[{\"source_id\":\"fr42c-034-0039\",\"verdict\":\"PASS\",\"reason\":\"Faithful; dialogue punctuation correct.\"},{\"source_id\":\"fr42c-034-0040\",\"verdict\":\"PASS\",\"reason\":\"'Un bon navire surtout' rendered accurately.\"},{\"source_id\":\"fr42c-034-0041\",\"verdict\":\"PASS\",\"reason\":\"Accurate question.\"},{\"source_id\":\"fr42c-034-0042\",\"verdict\":\"PASS\",\"reason\":\"Accurate; 'jauge' as tonnage is fine.\"},{\"source_id\":\"fr42c-034-0043\",\"verdict\":\"PASS\",\"reason\":\"Meaning, italic ship name and fifteen knots preserved.\"},{\"source_id\":\"fr42c-034-0044\",\"verdict\":\"PASS\",\"reason\":\"'Mettez-en dix-sept' correctly means seventeen; 'add two' gives seventeen, consistent.\"},{\"source_id\":\"fr42c-034-0045\",\"verdict\":\"PASS\",\"reason\":\"Surprise, question and concession preserved.\"},{\"source_id\":\"fr42c-034-0046\",\"verdict\":\"PASS\",\"reason\":\"Correct; italics kept; unbeatable at any point of sailing.\"},{\"source_id\":\"fr42c-034-0047\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-034-0048\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-034-0049\",\"verdict\":\"PASS\",\"reason\":\"Accurate address to both men.\"},{\"source_id\":\"fr42c-034-0050\",\"verdict\":\"PASS\",\"reason\":\"Conditional offer preserved.\"},{\"source_id\":\"fr42c-034-0051\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-034-0052\",\"verdict\":\"PASS\",\"reason\":\"Accurate; dunette as ют acceptable.\"},{\"source_id\":\"fr42c-034-0053\",\"verdict\":\"PASS\",\"reason\":\"Accurate; opening guillemet converted to dialogue dash.\"},{\"source_id\":\"fr42c-034-0054\",\"verdict\":\"PASS\",\"reason\":\"Aside and dislike preserved.\"},{\"source_id\":\"fr42c-034-0055\",\"verdict\":\"PASS\",\"reason\":\"All facts, italics and aside preserved.\"},{\"source_id\":\"fr42c-034-0056\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-034-0057\",\"verdict\":\"PASS\",\"reason\":\"Accurate, eager reply kept.\"},{\"source_id\":\"fr42c-034-0058\",\"verdict\":\"PASS\",\"reason\":\"Complete and faithful; italics kept.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 12820,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2277,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
