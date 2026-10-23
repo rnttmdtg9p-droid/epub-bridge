@@ -1,0 +1,116 @@
+{
+  "unit": 22,
+  "batch": 9,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id02837",
+      "target": "— Ах! — прошептал Атос, целуя ей руку. — Если бы я раньше знал, что Мари Мишон — такое очаровательное создание!..",
+      "source_sha256": "6a6e9e100ce38a554221505b4ef80ceb627a745bc34b067199a7c769ff3327f2",
+      "target_id": "ru-id02837",
+      "tag": "p",
+      "target_sha256": "85b72b40ca33a0f712026e8497597e6ad6c488664e471d5065e95ecc7868472c"
+    },
+    {
+      "source_id": "id02838",
+      "target": "И он удалился, вздыхая.",
+      "source_sha256": "219eb2ca11f84501f1fb7e32a772ba4ff753480c9b045adb68c62ae0c54bc615",
+      "target_id": "ru-id02838",
+      "tag": "p",
+      "target_sha256": "b770d6d3c1615c37c32d07fc4979a0d4a31ae24ada161c0d053b32fdceeefe5c"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id02837",
+      "verdict": "PASS",
+      "reason": "Faithful to the French. The subjunctive 'fût' (a hypothetical regret) is rendered by 'Если бы я раньше знал, что…'. Athos's gesture (kissing her hand), the speech verb, the ellipsis and the exclamation are all preserved. Мари Мишон is the established alias, rendered consistently."
+    },
+    {
+      "source_id": "id02838",
+      "verdict": "PASS",
+      "reason": "Complete and accurate: 'se retira' = 'удалился', 'en soupirant' = 'вздыхая'. No omission or addition."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJLkQMWB61FiQKH8TjMm",
+    "usage": {
+      "input_tokens": 1280,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 107,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJLkYcbntC8wYETBFVT6",
+    "usage": {
+      "input_tokens": 1728,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 318,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJLkkvGLyDtBsKfpQXUX",
+        "usage": {
+          "input_tokens": 1789,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 411,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id02837",
+          "verdict": "PASS",
+          "reason": "Faithful to the French: Athos murmurs while kissing her hand, and the conditional regret ('si j'avais su plus tôt') is preserved. The subjunctive 'fût' is rendered naturally as 'что Мари Мишон — такое очаровательное создание'. The ellipsis and exclamation are kept, and the Russian dialogue punctuation is correct. Nothing is omitted or added, and the paragraph boundary is intact. The name Мари Мишон is consistent with the alias used in the chapter."
+        },
+        {
+          "source_id": "id02838",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic: 'Et il se retira en soupirant' becomes 'И он удалился, вздыхая.' Agency, tense (past, perfective) and the simultaneous sighing are preserved. No omissions or additions."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
