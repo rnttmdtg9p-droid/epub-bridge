@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK5VitKtSqPw9zGbFu77",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-059-0081\",\"target\":\"— Эти две дамы, — продолжил Гленарван, с почтительной грацией склонившись перед леди Элен и Мэри Грант, — занимают высокое положение в своей стране.\"},{\"source_id\":\"fr42c-059-0082\",\"target\":\"Роберт взобрался на плечи Уилсона. (Стр. 525.)\"},{\"source_id\":\"fr42c-059-0084\",\"target\":\"Воин холодно посмотрел на пленника. На его губах мелькнула злая улыбка, но он почти тотчас подавил её и ответил голосом, который едва сдерживал:\"},{\"source_id\":\"fr42c-059-0085\",\"target\":\"— Неужели ты надеешься обмануть Кай-Куму ложными словами, проклятый европеец? Думаешь, глаза Кай-Куму не умеют читать в сердцах?\"},{\"source_id\":\"fr42c-059-0086\",\"target\":\"И, указав на леди Элен:\"},{\"source_id\":\"fr42c-059-0087\",\"target\":\"— Вот твоя жена! — сказал он.\"},{\"source_id\":\"fr42c-059-0088\",\"target\":\"— Табу! Табу! — воскликнул Кай-Куму. (Стр. 530.)\"},{\"source_id\":\"fr42c-059-0089\",\"target\":\"— Нет! Моя! — вскричал Кара-Тете.\"},{\"source_id\":\"fr42c-059-0090\",\"target\":\"Затем, оттолкнув пленников, вождь положил руку на плечо леди Элен, и она побледнела от этого прикосновения.\"},{\"source_id\":\"fr42c-059-0091\",\"target\":\"— Эдуард! — вскрикнула обезумевшая несчастная женщина.\"},{\"source_id\":\"fr42c-059-0092\",\"target\":\"Гленарван, не проронив ни слова, поднял руку. Грянул выстрел. Кара-Тете упал мёртвым.\"},{\"source_id\":\"fr42c-059-0093\",\"target\":\"При этом выстреле из хижин хлынул поток туземцев. Пах в одно мгновение наполнился людьми. Сто рук поднялись над несчастными. Револьвер Гленарвана вырвали у него из руки.\"},{\"source_id\":\"fr42c-059-0094\",\"target\":\"Кай-Куму бросил на Гленарвана странный взгляд; затем одной рукой прикрыл тело убитого, а другой удержал толпу, бросившуюся на детей.\"},{\"source_id\":\"fr42c-059-0095\",\"target\":\"Наконец его голос перекрыл шум.\"},{\"source_id\":\"fr42c-059-0096\",\"target\":\"— Табу! Табу! — вскричал он.\"},{\"source_id\":\"fr42c-059-0097\",\"target\":\"При этом слове толпа остановилась перед Гленарваном и его спутниками, на время охранёнными сверхъестественной силой.\"},{\"source_id\":\"fr42c-059-0098\",\"target\":\"Несколько мгновений спустя их отвели обратно в Варе-Атуа, служивший им тюрьмой. Но Роберта Гранта и Жака Паганеля с ними уже не было.\"},{\"source_id\":\"fr42c-note-088\",\"target\":\"Имя новозеландского бога.\"},{\"source_id\":\"fr42c-note-089\",\"target\":\"Европейцы.\"}],\"review\":[{\"source_id\":\"fr42c-059-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed Elen, dialogue punctuation, removed wrap artifact.\"},{\"source_id\":\"fr42c-059-0082\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate.\"},{\"source_id\":\"fr42c-059-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved idiom; kept restraint nuance.\"},{\"source_id\":\"fr42c-059-0085\",\"verdict\":\"CORRECTED\",\"reason\":\"Russian dialogue dash format.\"},{\"source_id\":\"fr42c-059-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Elen.\"},{\"source_id\":\"fr42c-059-0087\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation; dash style.\"},{\"source_id\":\"fr42c-059-0088\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption dialogue punctuation.\"},{\"source_id\":\"fr42c-059-0089\",\"verdict\":\"CORRECTED\",\"reason\":\"Verb refined.\"},{\"source_id\":\"fr42c-059-0090\",\"verdict\":\"CORRECTED\",\"reason\":\"Name and hand placement idiom.\"},{\"source_id\":\"fr42c-059-0091\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed incorrect 'лишенная рассудка'; Эдуард form.\"},{\"source_id\":\"fr42c-059-0092\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiom refined.\"},{\"source_id\":\"fr42c-059-0093\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed idiom and agency of revolver seizure.\"},{\"source_id\":\"fr42c-059-0094\",\"verdict\":\"CORRECTED\",\"reason\":\"Meurtrier is the dead man; wording adjusted.\"},{\"source_id\":\"fr42c-059-0095\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiom.\"},{\"source_id\":\"fr42c-059-0096\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation.\"},{\"source_id\":\"fr42c-059-0097\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'momentanément' as temporary protection.\"},{\"source_id\":\"fr42c-059-0098\",\"verdict\":\"CORRECTED\",\"reason\":\"Waré-Atoua spelling; 'вскоре' nuance fixed to 'мгновений'.\"},{\"source_id\":\"fr42c-note-088\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-note-089\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8698,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2020,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
