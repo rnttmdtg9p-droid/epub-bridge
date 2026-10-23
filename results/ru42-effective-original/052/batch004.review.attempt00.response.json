@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK3aHBegVWjxWn83Muaz",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-052-0079\",\"target\":\"Мулради и Уилсон спустились в помещение на баке и через две минуты вернулись. Кубрик был пуст. Тогда они осмотрели твиндек и весь бриг до самого трюма. Ни Уилла Хэлли, ни его матросов они не нашли.\"},{\"source_id\":\"fr42c-052-0080\",\"target\":\"— Как! Никого? — сказал Гленарван.\"},{\"source_id\":\"fr42c-052-0081\",\"target\":\"— Не упали ли они за борт? — спросил Паганель.\"},{\"source_id\":\"fr42c-052-0082\",\"target\":\"— Всё возможно, — ответил Джон Манглс, очень встревоженный этим исчезновением.\"},{\"source_id\":\"fr42c-052-0083\",\"target\":\"Затем, направляясь на корму, он сказал:\"},{\"source_id\":\"fr42c-052-0084\",\"target\":\"— К шлюпке, — сказал он.\"},{\"source_id\":\"fr42c-052-0085\",\"target\":\"Уилсон и Мулради последовали за ним, чтобы спустить на воду ялик.\"},{\"source_id\":\"fr42c-052-0086\",\"target\":\"Ялик исчез.\"}],\"review\":[{\"source_id\":\"fr42c-052-0079\",\"verdict\":\"CORRECTED\",\"reason\":\"Уточнены «gaillard d’avant» (бак), «poste» (кубрик), «entre-pont» (твиндек); смысл сохранён.\"},{\"source_id\":\"fr42c-052-0080\",\"target\":\"\",\"verdict\":\"CORRECTED\",\"reason\":\"Восстановлен русский диалоговый тире вместо кавычки; «dit» передано как «сказал».\"},{\"source_id\":\"fr42c-052-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Диалоговая пунктуация приведена к русской; смысл верен.\"},{\"source_id\":\"fr42c-052-0082\",\"verdict\":\"CORRECTED\",\"reason\":\"Убрана кавычка, оформлено как реплика с тире.\"},{\"source_id\":\"fr42c-052-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"Добавлено подлежащее и глагол речи «он сказал», чтобы сохранить реплику, идущую в следующей строке.\"},{\"source_id\":\"fr42c-052-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Диалог оформлен тире; «canot» передано как «шлюпка» по контексту реплики.\"},{\"source_id\":\"fr42c-052-0085\",\"verdict\":\"CORRECTED\",\"reason\":\"«You-you» — малый ялик, исправлено с «шлюпки».\"},{\"source_id\":\"fr42c-052-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"«You-you» передано как «ялик» для согласованности.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3905,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 949,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

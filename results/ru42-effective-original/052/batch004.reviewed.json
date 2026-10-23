@@ -1,0 +1,183 @@
+{
+  "unit": 52,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-052-0079",
+      "target": "Мулради и Уилсон спустились в помещение на баке и через две минуты вернулись. Кубрик был пуст. Тогда они осмотрели твиндек и весь бриг до самого трюма. Ни Уилла Хэлли, ни его матросов они не нашли.",
+      "source_sha256": "b6b48fdd667542c65c95621e97407948c07f7b11fc751611f84835d1b64627a4",
+      "target_id": "ru-fr42c-052-0079",
+      "tag": "p",
+      "target_sha256": "6f65950d8595a444c3966456ea90b57b0edd72143ee4eb281faf507bb9831fa0"
+    },
+    {
+      "source_id": "fr42c-052-0080",
+      "target": "— Как! Никого? — сказал Гленарван.",
+      "source_sha256": "9e4a5b394360645b6dff154486e391488be16da03e9c8efb480355bb35397af9",
+      "target_id": "ru-fr42c-052-0080",
+      "tag": "p",
+      "target_sha256": "4d2437e54869ca0dd09eb93bc6c77e450a2618a8fc660867d56a42e7a2b6519f"
+    },
+    {
+      "source_id": "fr42c-052-0081",
+      "target": "— Не упали ли они за борт? — спросил Паганель.",
+      "source_sha256": "eeb6cb2a9574448328572b9ada27527c049df11844269481aa732b0110a61a00",
+      "target_id": "ru-fr42c-052-0081",
+      "tag": "p",
+      "target_sha256": "7c72d9aff02225001285211263a191bbb1081a1d67877b82540ccb8b2cc22782"
+    },
+    {
+      "source_id": "fr42c-052-0082",
+      "target": "— Всё возможно, — ответил Джон Манглс, очень встревоженный этим исчезновением.",
+      "source_sha256": "0c58fc673816a22a9cdd0695c3baf23a9a89f63f822ef7977b01e86021619097",
+      "target_id": "ru-fr42c-052-0082",
+      "tag": "p",
+      "target_sha256": "cc4622880fbaf2788540bbba50fa30155138776a0903a10a00e69e6b8a2660df"
+    },
+    {
+      "source_id": "fr42c-052-0083",
+      "target": "Затем, направляясь на корму, он сказал:",
+      "source_sha256": "1e846fcbc90e47844dfeda97ec11ce108d78e7e276251f68e5fc3fbd6d62050b",
+      "target_id": "ru-fr42c-052-0083",
+      "tag": "p",
+      "target_sha256": "84b4378884a50e48afd2d9348ff563604fcde4fe8c68be60f3deeac41c68c378"
+    },
+    {
+      "source_id": "fr42c-052-0084",
+      "target": "— К шлюпке, — сказал он.",
+      "source_sha256": "075889df53ca051caec29a4a234a89815d4cdd60da1305ce69265acea889def6",
+      "target_id": "ru-fr42c-052-0084",
+      "tag": "p",
+      "target_sha256": "4c440b3ba387e8ee84a23f0a6196d4daee1a2a464f36e07533b1aa361fa119eb"
+    },
+    {
+      "source_id": "fr42c-052-0085",
+      "target": "Уилсон и Мулради последовали за ним, чтобы спустить на воду ялик.",
+      "source_sha256": "a26766b6c19f978d2d61323cbd9e4f7a0478162b654b57629a4464e459e28d88",
+      "target_id": "ru-fr42c-052-0085",
+      "tag": "p",
+      "target_sha256": "a6115c4b8cd5534ea96bf7b72b4cec296ec4839dac7127c85265f9da6979b29a"
+    },
+    {
+      "source_id": "fr42c-052-0086",
+      "target": "Ялик исчез.",
+      "source_sha256": "36f3b403e8c1e34ec2bfd65cb58893a13eaddeb0b9afea6d962bf1ec439823c5",
+      "target_id": "ru-fr42c-052-0086",
+      "tag": "p",
+      "target_sha256": "a184850a78baec533ae7599fdcdf7bbccd324bbcbd2cb68b9d02488ccbdb85a3"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-052-0079",
+      "verdict": "CORRECTED",
+      "reason": "Уточнены «gaillard d’avant» (бак), «poste» (кубрик), «entre-pont» (твиндек); смысл сохранён."
+    },
+    {
+      "source_id": "fr42c-052-0080",
+      "target": "",
+      "verdict": "CORRECTED",
+      "reason": "Восстановлен русский диалоговый тире вместо кавычки; «dit» передано как «сказал»."
+    },
+    {
+      "source_id": "fr42c-052-0081",
+      "verdict": "CORRECTED",
+      "reason": "Диалоговая пунктуация приведена к русской; смысл верен."
+    },
+    {
+      "source_id": "fr42c-052-0082",
+      "verdict": "CORRECTED",
+      "reason": "Убрана кавычка, оформлено как реплика с тире."
+    },
+    {
+      "source_id": "fr42c-052-0083",
+      "verdict": "CORRECTED",
+      "reason": "Добавлено подлежащее и глагол речи «он сказал», чтобы сохранить реплику, идущую в следующей строке."
+    },
+    {
+      "source_id": "fr42c-052-0084",
+      "verdict": "CORRECTED",
+      "reason": "Диалог оформлен тире; «canot» передано как «шлюпка» по контексту реплики."
+    },
+    {
+      "source_id": "fr42c-052-0085",
+      "verdict": "CORRECTED",
+      "reason": "«You-you» — малый ялик, исправлено с «шлюпки»."
+    },
+    {
+      "source_id": "fr42c-052-0086",
+      "verdict": "CORRECTED",
+      "reason": "«You-you» передано как «ялик» для согласованности."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-052-0079",
+      "before": "Мулради и Уилсон спустились в каюту носовой палубы и через две минуты вернулись. Пост был пуст. Тогда они обошли межпалубное пространство и брик вплоть до трюма. Ни Уилла Хэлли, ни его матросов они не нашли.",
+      "after": "Мулради и Уилсон спустились в помещение на баке и через две минуты вернулись. Кубрик был пуст. Тогда они осмотрели твиндек и весь бриг до самого трюма. Ни Уилла Хэлли, ни его матросов они не нашли."
+    },
+    {
+      "source_id": "fr42c-052-0080",
+      "before": "«Что! Никого? — воскликнул Гленарван.",
+      "after": "— Как! Никого? — сказал Гленарван."
+    },
+    {
+      "source_id": "fr42c-052-0081",
+      "before": "— Они упали за борт? — спросил Паганель.",
+      "after": "— Не упали ли они за борт? — спросил Паганель."
+    },
+    {
+      "source_id": "fr42c-052-0082",
+      "before": "— Всё возможно, — ответил Джон Манглс, очень обеспокоенный этим исчезновением.",
+      "after": "— Всё возможно, — ответил Джон Манглс, очень встревоженный этим исчезновением."
+    },
+    {
+      "source_id": "fr42c-052-0083",
+      "before": "Затем, направляясь к корме:",
+      "after": "Затем, направляясь на корму, он сказал:"
+    },
+    {
+      "source_id": "fr42c-052-0084",
+      "before": "«К шлюпке», — сказал он.",
+      "after": "— К шлюпке, — сказал он."
+    },
+    {
+      "source_id": "fr42c-052-0085",
+      "before": "Уилсон и Мулради последовали за ним, чтобы спустить на воду шлюпку.",
+      "after": "Уилсон и Мулради последовали за ним, чтобы спустить на воду ялик."
+    },
+    {
+      "source_id": "fr42c-052-0086",
+      "before": "Шлюпка исчезла.",
+      "after": "Ялик исчез."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/052/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK3aHBegVWjxWn83Muaz",
+    "usage": {
+      "input_tokens": 3905,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 949,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
