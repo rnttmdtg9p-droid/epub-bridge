@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJTE1NNzB5ZE2ZyiBJmf",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id06317\",\"target\":\"— Он позволит мне вести переговоры о моей кардинальской шапке так, как я сам сочту нужным.\"},{\"source_id\":\"id06318\",\"target\":\"— Вы так дорожите ею?\"},{\"source_id\":\"id06319\",\"target\":\"— Раз меня принуждают носить шляпу такого фасона, который мне не подходит, — сказал Гонди, — я хочу, по крайней мере, чтобы эта шляпа была красной.\"},{\"source_id\":\"id06320\",\"target\":\"— О вкусах и цветах не спорят, — смеясь, сказал Рошфор. — За его согласие я ручаюсь.\"},{\"source_id\":\"id06321\",\"target\":\"— И вы напишете ему сегодня вечером?\"},{\"source_id\":\"id06322\",\"target\":\"— Я сделаю лучше: пошлю к нему гонца.\"},{\"source_id\":\"id06323\",\"target\":\"— Через сколько дней он может быть здесь?\"},{\"source_id\":\"id06324\",\"target\":\"— Через пять дней.\"},{\"source_id\":\"id06325\",\"target\":\"— Пусть приезжает, и он найдёт здесь перемену.\"},{\"source_id\":\"id06326\",\"target\":\"— Я этого желаю.\"},{\"source_id\":\"id06327\",\"target\":\"— Я за это ручаюсь.\"},{\"source_id\":\"id06328\",\"target\":\"— Итак?\"},{\"source_id\":\"id06329\",\"target\":\"— Ступайте соберите ваших пятьдесят человек и будьте наготове.\"},{\"source_id\":\"id06330\",\"target\":\"— К чему?\"},{\"source_id\":\"id06331\",\"target\":\"— Ко всему.\"},{\"source_id\":\"id06332\",\"target\":\"— Есть ли условный знак для сбора?\"},{\"source_id\":\"id06333\",\"target\":\"— Соломенный бант на шляпе.\"},{\"source_id\":\"id06334\",\"target\":\"— Хорошо. Прощайте, монсеньор.\"},{\"source_id\":\"id06335\",\"target\":\"— Прощайте, мой дорогой Рошфор.\"},{\"source_id\":\"id06336\",\"target\":\"— Ах, мосье Мазарини, мосье Мазарини! — сказал Рошфор, увлекая за собой своего кюре, который так и не нашёл случая вставить хоть слово в этот разговор. — Вы увидите, слишком ли я стар, чтобы быть человеком действия!\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3898,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 796,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
