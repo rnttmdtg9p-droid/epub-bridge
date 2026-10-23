@@ -1,0 +1,388 @@
+{
+  "unit": 20,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "043-020-heading",
+      "target": "ГЛАВА XVII.",
+      "source_sha256": "1e12225a0a5a3223847dc745abeb5e3f9893423914ebf0dbe31f3498522ac869",
+      "target_id": "ru-043-020-heading",
+      "tag": "heading",
+      "target_sha256": "1f0e782f00f4378a03f970f81ce2f8e3da9dfbe42365d94384516b98d7992580"
+    },
+    {
+      "source_id": "043-020-0001",
+      "target": "Вечерний визит. — Ферма в Арканзасе. — Внутреннее убранство. — Стивен Доулинг Ботс. — Поэтические излияния.",
+      "source_sha256": "1f78b931c63846b0a0191002dcb3b2b0a0f9710f5b23d4d6cfad399116be21f0",
+      "target_id": "ru-043-020-0001",
+      "tag": "source_argument",
+      "target_sha256": "2a011c7b005720365d70efdb681eb6c099b47e6197abd0d6305e9ebdbd9c2fe4"
+    },
+    {
+      "source_id": "043-020-0002",
+      "target": "Минуты через две кто-то заговорил из окна, не высовывая головы, и сказал:",
+      "source_sha256": "fe47fadd8a5d4b58348209a077f6f39b7a66ad3fb9b86d63d938bbf968afa2a6",
+      "target_id": "ru-043-020-0002",
+      "tag": "p",
+      "target_sha256": "ce3a7a84b4e4cc295b8c6a698f89e79017b3b6db5cb989f4044b8f3f7278c025"
+    },
+    {
+      "source_id": "043-020-0003",
+      "target": "— Перестаньте, ребята! Кто там?",
+      "source_sha256": "e41aa26cdc1636acc2366d7cd6703feea9a3b114d24bcaa23d80930c46b7387a",
+      "target_id": "ru-043-020-0003",
+      "tag": "p",
+      "target_sha256": "ff281d2e994f2ffd223c4894816ac1f59e9442a88de2e36211ba4b990f65a1c6"
+    },
+    {
+      "source_id": "043-020-0004",
+      "target": "Я говорю:",
+      "source_sha256": "0e568af30022d4c6b08be6c92743d85cbf120134610018b892e098e0fe72f7eb",
+      "target_id": "ru-043-020-0004",
+      "tag": "p",
+      "target_sha256": "fa163bba54dc6558fc348978f79413775cd345d5e175c50769a5d6e4566f034e"
+    },
+    {
+      "source_id": "043-020-0005",
+      "target": "— Это я.",
+      "source_sha256": "9a6667f7d13b4472b9483435994c5184e9c87f2e0c3717d478711bc38ad9d570",
+      "target_id": "ru-043-020-0005",
+      "tag": "p",
+      "target_sha256": "addbb03d1e401ac2f507fad22de778b1cbae9b4bc0724d34ee633778a717cdcb"
+    },
+    {
+      "source_id": "043-020-0006",
+      "target": "— Кто это «я»?",
+      "source_sha256": "ec3534be495755274829d56e60d6573af1d582121f5ff13ca710f328dbecc201",
+      "target_id": "ru-043-020-0006",
+      "tag": "p",
+      "target_sha256": "bd6ee34b31d6d7b0f6fdbf919dcc364359f4a791b3f2fa48f8565a7d0820d222"
+    },
+    {
+      "source_id": "043-020-0007",
+      "target": "— Джордж Джексон, сэр.",
+      "source_sha256": "6d0b2403ade43ee63a16e4a3adccdf55c52a79daaf9d5d41a9c4a2e753a0471b",
+      "target_id": "ru-043-020-0007",
+      "tag": "p",
+      "target_sha256": "e45d45bc7bcfda5ce3b80b29068bfeb1696ca13b7104d861577e44da2b402505"
+    },
+    {
+      "source_id": "043-020-0008",
+      "target": "— Что тебе надо?",
+      "source_sha256": "5af79f76f6b5043e967383b4ebbc976dcb4f8f9efcb66196e8fca17f326061c7",
+      "target_id": "ru-043-020-0008",
+      "tag": "p",
+      "target_sha256": "1517a66d065804e1cf8b87a0ca2ebfb7b264b22a567a6cedcaca32491f63cd42"
+    },
+    {
+      "source_id": "043-020-0009",
+      "target": "— Мне ничего не надо, сэр. Я только хочу пройти мимо, а собаки не пускают.",
+      "source_sha256": "0bff8040f1be86be586cd3e5101060dc1f9b6cba03a73634283123b7a75920fb",
+      "target_id": "ru-043-020-0009",
+      "tag": "p",
+      "target_sha256": "3d1fd88bade0bbee93d534e41feaf45f588a7f7946617b28fd11d2510bc34078"
+    },
+    {
+      "source_id": "043-020-0010",
+      "target": "— Что ты тут шаришься в такое время ночи, а?",
+      "source_sha256": "bb5d19e8504ff710ff4bfb139aa907b0fe633fa4e03de56f9bf430a24224713b",
+      "target_id": "ru-043-020-0010",
+      "tag": "p",
+      "target_sha256": "8225853617c55856fdfd6376a17f583c1e4512d9bf1e66a84076186b66e047ed"
+    },
+    {
+      "source_id": "043-020-0011",
+      "target": "— Я не шарился, сэр, я упал за борт с парохода.",
+      "source_sha256": "aedac23bb0edef0bcdd555e6866259c55fa96d26bd0b510d003785ea781ec700",
+      "target_id": "ru-043-020-0011",
+      "tag": "p",
+      "target_sha256": "4c6be3730623bac66f309700eea966c2494a072312eed7f565b041651bdfc390"
+    },
+    {
+      "source_id": "043-020-0012",
+      "target": "— Ах, вот как? Упал, значит? Эй, кто-нибудь, зажгите огонь. Как, говоришь, тебя зовут?",
+      "source_sha256": "a975a1cb935d1d3eac2fdacda1e11a4a6672b43c7016262188d26aa5a6648a51",
+      "target_id": "ru-043-020-0012",
+      "tag": "p",
+      "target_sha256": "3152b313584bd9ada52b026dac951982ca55841fb8a5866b31cc158e6dbc8e94"
+    },
+    {
+      "source_id": "043-020-0013",
+      "target": "— Джордж Джексон, сэр. Я ведь только мальчик.",
+      "source_sha256": "3378916e1180afb393b5a2cc8995e045e7332f2eb53ceae436fc5b5517b09f22",
+      "target_id": "ru-043-020-0013",
+      "tag": "p",
+      "target_sha256": "f3c35b333cec416faf3d6a21f96f3f719b2b4a562e9b2e27bf73dee125296cc0"
+    },
+    {
+      "source_id": "043-020-0014",
+      "target": "— Слушай, если говоришь правду, бояться тебе нечего — никто тебя не тронет. Но не вздумай двигаться, стой, где стоишь. Подымите-ка Боба и Тома, кто-нибудь, и несите ружья. Джордж Джексон, с тобой кто-нибудь есть?",
+      "source_sha256": "f8b6120303aa43b4389559860e4ca9fbeab2548d560eadc3e4e0b574ad576ab1",
+      "target_id": "ru-043-020-0014",
+      "tag": "p",
+      "target_sha256": "16b9f5e391375b3d145a8e0760cd0d6a98b7389427224c943cb8c41d28380e86"
+    },
+    {
+      "source_id": "043-020-0015",
+      "target": "— Нет, сэр, никого.",
+      "source_sha256": "3807e077513c58a66640c14d982948fe98e7fdfd2979e9fb573dd45a4babf944",
+      "target_id": "ru-043-020-0015",
+      "tag": "p",
+      "target_sha256": "54dd32f52956f25bf4ee09f746597cbc40c45149fe518203935db8cfa00b0c78"
+    },
+    {
+      "source_id": "043-020-0016",
+      "target": "Теперь я слышал, как люди возятся в доме, и увидел свет. Мужчина крикнул:",
+      "source_sha256": "15484824b909f759635d1ac4190e516fb7c2a8f62bc69c592ccedb0407222592",
+      "target_id": "ru-043-020-0016",
+      "tag": "p",
+      "target_sha256": "538ed177ab65a3fb881e928fa578e9859903b297be8868d3591d98bc27da3961"
+    },
+    {
+      "source_id": "043-020-0017",
+      "target": "— Убери огонь, Бетси, старая дура, — у тебя что, ни капли смысла нет? Поставь его на пол за входной дверью. Боб, если вы с Томом готовы, становитесь на места.",
+      "source_sha256": "46524f63035dce0c8aca87a20a92a745d5a9bdaf2969b4f024a7ef2d0564c3b8",
+      "target_id": "ru-043-020-0017",
+      "tag": "p",
+      "target_sha256": "fdb45b1e354360f88fb77c3539f5eb70188f206f7cabc7ba6b6f10e03490b65c"
+    },
+    {
+      "source_id": "043-020-0018",
+      "target": "— Все готовы.",
+      "source_sha256": "1204b9995749e71c1e909ef4bac5e47bfc9ce3d43b7c3cec9ab18e698dbfa3b6",
+      "target_id": "ru-043-020-0018",
+      "tag": "p",
+      "target_sha256": "4ca1e340236a9edd6b16a3f09fd02c76e3255fe1fa1add43017a348d95fea305"
+    },
+    {
+      "source_id": "043-020-0019",
+      "target": "— Ну, Джордж Джексон, ты знаешь Шепердсонов?",
+      "source_sha256": "d0cf57b7d8ce00513ff1998883ffd81a03db0d72fec77220324efac954af1c7b",
+      "target_id": "ru-043-020-0019",
+      "tag": "p",
+      "target_sha256": "ad19b1af8891be1f339988377e2a0cc10b2151737d157f423447b44a47323b87"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-020-heading",
+      "verdict": "PASS",
+      "reason": "Chapter heading correct."
+    },
+    {
+      "source_id": "043-020-0001",
+      "verdict": "CORRECTED",
+      "reason": "Arkansaw rendered as Арканзас (standard form); argument otherwise faithful."
+    },
+    {
+      "source_id": "043-020-0002",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed idiom; meaning preserved (about a minute)."
+    },
+    {
+      "source_id": "043-020-0003",
+      "verdict": "CORRECTED",
+      "reason": "Russian dialogue dash; 'Be done' as 'Перестаньте'."
+    },
+    {
+      "source_id": "043-020-0004",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "043-020-0005",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "043-020-0006",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation; kept 'Who's me' joke."
+    },
+    {
+      "source_id": "043-020-0007",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "043-020-0008",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation, idiom."
+    },
+    {
+      "source_id": "043-020-0009",
+      "verdict": "CORRECTED",
+      "reason": "Colloquial boy voice; double negative kept."
+    },
+    {
+      "source_id": "043-020-0010",
+      "verdict": "CORRECTED",
+      "reason": "Idiomatic 'шаришься'; dialogue dash."
+    },
+    {
+      "source_id": "043-020-0011",
+      "verdict": "CORRECTED",
+      "reason": "Draft mistranslated 'prowling' as 'бродил по окрестностям'; fixed."
+    },
+    {
+      "source_id": "043-020-0012",
+      "verdict": "CORRECTED",
+      "reason": "Idiomatic, dash."
+    },
+    {
+      "source_id": "043-020-0013",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "043-020-0014",
+      "verdict": "CORRECTED",
+      "reason": "Fixed agreement and naturalness; Bob and Tom roused."
+    },
+    {
+      "source_id": "043-020-0015",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "043-020-0016",
+      "verdict": "CORRECTED",
+      "reason": "'Sung out' as 'крикнул'; tense and perception kept."
+    },
+    {
+      "source_id": "043-020-0017",
+      "verdict": "CORRECTED",
+      "reason": "Light as огонь (candle/lamp, not necessarily фонарь); idiom smoothed."
+    },
+    {
+      "source_id": "043-020-0018",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "043-020-0019",
+      "verdict": "CORRECTED",
+      "reason": "Name form Шепердсоны consistent; dialogue dash."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-020-0001",
+      "before": "Вечерний визит. — Ферма в Арканзаве. — Внутреннее убранство. — Стивен Доулинг Ботс. — Поэтические излияния.",
+      "after": "Вечерний визит. — Ферма в Арканзасе. — Внутреннее убранство. — Стивен Доулинг Ботс. — Поэтические излияния."
+    },
+    {
+      "source_id": "043-020-0002",
+      "before": "Примерно через минуту кто-то заговорил из окна, не высунув головы, и сказал:",
+      "after": "Минуты через две кто-то заговорил из окна, не высовывая головы, и сказал:"
+    },
+    {
+      "source_id": "043-020-0003",
+      "before": "«Хватит, ребята! Кто там?»",
+      "after": "— Перестаньте, ребята! Кто там?"
+    },
+    {
+      "source_id": "043-020-0005",
+      "before": "«Это я».",
+      "after": "— Это я."
+    },
+    {
+      "source_id": "043-020-0006",
+      "before": "«Кто я?»",
+      "after": "— Кто это «я»?"
+    },
+    {
+      "source_id": "043-020-0007",
+      "before": "«Джордж Джексон, сэр».",
+      "after": "— Джордж Джексон, сэр."
+    },
+    {
+      "source_id": "043-020-0008",
+      "before": "«Чего тебе нужно?»",
+      "after": "— Что тебе надо?"
+    },
+    {
+      "source_id": "043-020-0009",
+      "before": "«Мне ничего не нужно, сэр. Я просто хочу пройти мимо, но собаки мне не дают».",
+      "after": "— Мне ничего не надо, сэр. Я только хочу пройти мимо, а собаки не пускают."
+    },
+    {
+      "source_id": "043-020-0010",
+      "before": "«Чего ты тут рыскаешь в такую позднюю пору — а?»",
+      "after": "— Что ты тут шаришься в такое время ночи, а?"
+    },
+    {
+      "source_id": "043-020-0011",
+      "before": "«Я не бродил по окрестностям, сэр, я упал за борт с парохода».",
+      "after": "— Я не шарился, сэр, я упал за борт с парохода."
+    },
+    {
+      "source_id": "043-020-0012",
+      "before": "«О, так ты это сделал, да? Кто-нибудь, зажгите там свет. Как, ты сказал, тебя зовут?»",
+      "after": "— Ах, вот как? Упал, значит? Эй, кто-нибудь, зажгите огонь. Как, говоришь, тебя зовут?"
+    },
+    {
+      "source_id": "043-020-0013",
+      "before": "«Джордж Джексон, сэр. Я всего лишь мальчик».",
+      "after": "— Джордж Джексон, сэр. Я ведь только мальчик."
+    },
+    {
+      "source_id": "043-020-0014",
+      "before": "«Слушай, если ты говоришь правду, тебе нечего бояться — никто не причинит тебе вреда. Но не пытайся сдвинуться с места; стой прямо там, где стоишь. Кто-нибудь из вас разбудите Боба и Тома и принесите ружья. Джордж Джексон, есть ли кто-нибудь с тобой?»",
+      "after": "— Слушай, если говоришь правду, бояться тебе нечего — никто тебя не тронет. Но не вздумай двигаться, стой, где стоишь. Подымите-ка Боба и Тома, кто-нибудь, и несите ружья. Джордж Джексон, с тобой кто-нибудь есть?"
+    },
+    {
+      "source_id": "043-020-0015",
+      "before": "«Нет, сэр, никого».",
+      "after": "— Нет, сэр, никого."
+    },
+    {
+      "source_id": "043-020-0016",
+      "before": "Я услышал, как люди зашумели в доме, и увидел свет. Мужчина воскликнул:",
+      "after": "Теперь я слышал, как люди возятся в доме, и увидел свет. Мужчина крикнул:"
+    },
+    {
+      "source_id": "043-020-0017",
+      "before": "«Убери этот фонарь, Бетси, ты, старая дура, — у тебя что, ума нет? Поставь его на пол за входной дверью. Боб, если ты и Том готовы, занимайте свои места».",
+      "after": "— Убери огонь, Бетси, старая дура, — у тебя что, ни капли смысла нет? Поставь его на пол за входной дверью. Боб, если вы с Томом готовы, становитесь на места."
+    },
+    {
+      "source_id": "043-020-0018",
+      "before": "«Всё готово».",
+      "after": "— Все готовы."
+    },
+    {
+      "source_id": "043-020-0019",
+      "before": "«Итак, Джордж Джексон, ты знаком с семьёй Шепердсонов?»",
+      "after": "— Ну, Джордж Джексон, ты знаешь Шепердсонов?"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/020/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKH96hJMcxEUDNaQyjNo",
+    "usage": {
+      "input_tokens": 7559,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1935,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
