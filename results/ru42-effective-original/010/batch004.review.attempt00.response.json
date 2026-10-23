@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJpySsCTLqpwiNQQqUvE",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-010-0080\",\"target\":\"Леди Элен, стоя на юте, в последний раз воскликнула:\"},{\"source_id\":\"fr42c-010-0081\",\"target\":\"— Друзья мои, да поможет вам Бог!\"},{\"source_id\":\"fr42c-010-0082\",\"target\":\"— И он нам поможет, сударыня, — ответил Жак Паганель, — ибо, прошу вас поверить, мы и сами себе поможем!\"},{\"source_id\":\"fr42c-010-0083\",\"target\":\"— Вперёд! — крикнул Джон Манглс своему механику.\"},{\"source_id\":\"fr42c-010-0084\",\"target\":\"— В путь! — ответил лорд Гленарван.\"},{\"source_id\":\"fr42c-010-0085\",\"target\":\"И в тот самый миг, когда путешественники, отпустив поводья своим лошадям, поехали по дороге вдоль берега, <i>«Дункан»,</i> движимый винтом, на всех парах снова взял курс на океан.\"},{\"source_id\":\"fr42c-note-019\",\"target\":\"Известный лондонский боксёр.\"}],\"review\":[{\"source_id\":\"fr42c-010-0080\",\"verdict\":\"CORRECTED\",\"reason\":\"Established name Элен restored; dunette is poop deck (ют), not a stern deckhouse.\"},{\"source_id\":\"fr42c-010-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Source dialogue is a dash-opened line continuing across paragraphs; draft used guillemets, replaced with Russian dash dialogue.\"},{\"source_id\":\"fr42c-010-0082\",\"verdict\":\"CORRECTED\",\"reason\":\"Madame rendered as сударыня; 'je vous prie de le croire' kept closer; meaning and agency preserved.\"},{\"source_id\":\"fr42c-010-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"Name corrected to established Джон Манглс.\"},{\"source_id\":\"fr42c-010-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray guillemets; dialogue dash punctuation applied.\"},{\"source_id\":\"fr42c-010-0085\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic ship name kept; 'à toute vapeur' rendered as на всех парах; the travellers' route along the shore clarified faithfully.\"},{\"source_id\":\"fr42c-note-019\",\"verdict\":\"PASS\",\"reason\":\"Note text accurately translates the source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3840,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 837,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
