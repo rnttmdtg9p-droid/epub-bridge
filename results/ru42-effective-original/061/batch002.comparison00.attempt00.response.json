@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK5tGN2amvN4AFERmgZU",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-061-0039\",\"target\":\"Но как тихо он ни произнёс это имя, Мэри Грант, разбуженная движением в хижине, скользнула к Гленарвану и, схватив эту руку, всю испачканную землёй, покрыла её поцелуями.\"},{\"source_id\":\"fr42c-061-0040\",\"target\":\"— Ты! Ты! — говорила девушка, которая не могла ошибиться. — Ты, мой Роберт!\"},{\"source_id\":\"fr42c-061-0041\",\"target\":\"— Да, сестричка, — ответил Роберт, — я здесь, чтобы спасти вас всех! Но тише!\"},{\"source_id\":\"fr42c-061-0042\",\"target\":\"— Храбрый мальчик! — повторял Гленарван.\"},{\"source_id\":\"fr42c-061-0043\",\"target\":\"— Следите за дикарями снаружи, — продолжал Роберт.\"},{\"source_id\":\"fr42c-061-0044\",\"target\":\"Мулрэди, на миг отвлечённый появлением мальчика, вернулся на свой наблюдательный пост.\"},{\"source_id\":\"fr42c-061-0045\",\"target\":\"— Всё хорошо, — сказал он. — Бодрствуют только четверо воинов. Остальные спят.\"},{\"source_id\":\"fr42c-061-0046\",\"target\":\"— Смелее! — отозвался Уилсон.\"},{\"source_id\":\"fr42c-061-0047\",\"target\":\"В одно мгновение отверстие расширили, и Роберт из объятий сестры перешёл в объятия леди Элен. Вокруг его тела была обмотана длинная верёвка из формиума.\"},{\"source_id\":\"fr42c-061-0048\",\"target\":\"— Дитя моё, дитя моё, — шептала молодая женщина, — эти дикари тебя не убили!\"},{\"source_id\":\"fr42c-061-0049\",\"target\":\"— Нет, сударыня, — ответил Роберт. — Не знаю как, но во время суматохи мне удалось ускользнуть от их глаз; я перебрался через ограду; два дня я оставался спрятанным за кустами; ночью бродил; я хотел снова увидеть вас. Пока всё племя занималось похоронами вождя, я пришёл осмотреть ту сторону укрепления, где стоит тюрьма, и увидел, что смогу добраться до вас. Я украл в пустой хижине этот нож и эту верёвку. Пучки травы и ветви кустов служили мне лестницей; я случайно нашёл нечто вроде грота, вырытого в самом холме, к которому примыкает эта хижина; мне пришлось прокопать всего несколько футов в рыхлой земле — и вот я здесь.\"},{\"source_id\":\"fr42c-061-0050\",\"target\":\"Двадцать безмолвных поцелуев были единственным ответом, какой смог получить Роберт.\"},{\"source_id\":\"fr42c-061-0051\",\"target\":\"— Идёмте! — решительно сказал он.\"},{\"source_id\":\"fr42c-061-0052\",\"target\":\"— Паганель внизу? — спросил Гленарван.\"},{\"source_id\":\"fr42c-061-0053\",\"target\":\"— Господин Паганель? — ответил мальчик, удивлённый вопросом.\"},{\"source_id\":\"fr42c-061-0054\",\"target\":\"— Да, он нас ждёт?\"},{\"source_id\":\"fr42c-061-0055\",\"target\":\"— Да нет же, милорд. Как, господина Паганеля здесь нет?\"},{\"source_id\":\"fr42c-061-0056\",\"target\":\"— Его здесь нет, Роберт, — ответила Мэри Грант.\"},{\"source_id\":\"fr42c-061-0057\",\"target\":\"— Как? Ты его не видел? — спросил Гленарван. — Вы не встретились в этой суматохе? Вы не бежали вместе?\"},{\"source_id\":\"fr42c-061-0058\",\"target\":\"— Нет, милорд, — ответил Роберт, потрясённый известием об исчезновении своего друга Паганеля.\"}],\"review\":[{\"source_id\":\"fr42c-061-0039\",\"verdict\":\"PASS\",\"reason\":\"Faithful: quiet name, Mary awakened by movements, kissing muddy hand.\"},{\"source_id\":\"fr42c-061-0040\",\"verdict\":\"PASS\",\"reason\":\"Dialogue and 'could not be mistaken' preserved.\"},{\"source_id\":\"fr42c-061-0041\",\"verdict\":\"PASS\",\"reason\":\"Accurate, including 'silence'.\"},{\"source_id\":\"fr42c-061-0042\",\"verdict\":\"PASS\",\"reason\":\"Accurate; empty span ignored.\"},{\"source_id\":\"fr42c-061-0043\",\"verdict\":\"PASS\",\"reason\":\"Accurate imperative and attribution.\"},{\"source_id\":\"fr42c-061-0044\",\"verdict\":\"PASS\",\"reason\":\"Agency and distraction preserved.\"},{\"source_id\":\"fr42c-061-0045\",\"verdict\":\"PASS\",\"reason\":\"Four warriors awake, others asleep; correct.\"},{\"source_id\":\"fr42c-061-0046\",\"verdict\":\"PASS\",\"reason\":\"Natural rendering of 'Courage'.\"},{\"source_id\":\"fr42c-061-0047\",\"verdict\":\"PASS\",\"reason\":\"Hole enlarged, transfer to Helena, phormium rope all kept.\"},{\"source_id\":\"fr42c-061-0048\",\"verdict\":\"PASS\",\"reason\":\"Negation and address preserved.\"},{\"source_id\":\"fr42c-061-0049\",\"verdict\":\"PASS\",\"reason\":\"All narrative details and sequence preserved; prior corrections valid.\"},{\"source_id\":\"fr42c-061-0050\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-061-0051\",\"verdict\":\"PASS\",\"reason\":\"Decisive tone preserved.\"},{\"source_id\":\"fr42c-061-0052\",\"verdict\":\"PASS\",\"reason\":\"Accurate question.\"},{\"source_id\":\"fr42c-061-0053\",\"verdict\":\"PASS\",\"reason\":\"Accurate; surprise kept.\"},{\"source_id\":\"fr42c-061-0054\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-061-0055\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic and faithful.\"},{\"source_id\":\"fr42c-061-0056\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-061-0057\",\"verdict\":\"PASS\",\"reason\":\"Three questions and negations preserved.\"},{\"source_id\":\"fr42c-061-0058\",\"verdict\":\"PASS\",\"reason\":\"Accurate; Robert stunned by Paganel's disappearance.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11678,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2265,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
