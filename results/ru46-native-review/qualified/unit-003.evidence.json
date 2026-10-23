@@ -1,0 +1,118 @@
+{
+  "unit": 3,
+  "state": "PASS_INDEPENDENT_ACTUAL_NATIVE_REVIEW_REPLAY",
+  "source_rows": 200,
+  "headings": 1,
+  "evidence": [
+    {
+      "batch": 0,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKj7d3eDBtfAS8wpNAqH",
+          "request_sha256": "d2da83bd4e84be644ec7376aa3feade8664b7034b489a39493eef115345f9794",
+          "response_sha256": "325f06145eea193944585d6e9ba8f5b9e9a0e381dc15ec48449306ebdb66b388"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKj8i6nePhdmFf4KnKEK",
+          "request_sha256": "7895cc29d01e478cb027e9719d94d67d502ad2e227cf9f53b6e169edbbf48857",
+          "response_sha256": "585c39c1e0349d9bfc129edd9e1d053f2819773389ee23f85dabd045ba172ea7"
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKj9z6ETuHicK4CPx991",
+          "request_sha256": "fee483861d2e5ecbe28c8f97df99ac6420fd603bee7e5955b1bcea6a68dbe9aa",
+          "response_sha256": "c74c4a0e5bf372544dfcf0660808e902ce566812932d3ceb6c04bbe2cb6ad8f8"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjAfFSMj5nMtDG3YDA9",
+          "request_sha256": "bd287bea849d46b28e83ec51435aaafec777901873d9c1f3c4d8d6abdc36a80a",
+          "response_sha256": "dd88b0324ecbe78e68e5ec3908b44e9584091a45306145c036bd4d87899224b3"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjBMhXKJ4eWt6PQ8495",
+          "request_sha256": "3be7e4171dbd90e2018d2d4b393d9ce53b56a3509a506984cfda637cc11c1127",
+          "response_sha256": "0742c52323731f9ceeaf138c9502d29627d8ec00e9ab37c7fc8765e6405fc2de"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjC2e5svRpwd8u34CJE",
+          "request_sha256": "aebfceca40c793a40a54700fecc2d77f8bf95d664ca1e994325c3f603c6d88f8",
+          "response_sha256": "293f6933641e3daee511b420b397a1c868e91c87963b8730635f0de54ee7ddb7"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjCj7AXeV16pfMRNMRt",
+          "request_sha256": "68f90ad4025a1e51a2022747feaf45b92be6efe361146dcc9ea99b245a294b9d",
+          "response_sha256": "d1380a08750be066d7bfa8d1662e7879b7d68b7c88cdd667cd89fd5a8c00a3c6"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjDTsez33f4ssECyw8K",
+          "request_sha256": "fbcda52bc25153c835a6f8e1fb8877f9fa5a88e7adb3d5975d9204bfd2f7ce80",
+          "response_sha256": "0fc0e430b54ef8bbef51612b21a7fca29d86e3e4a2ce3ca88272bd9c1dbff457"
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjEF31yr5f61tdyabbp",
+          "request_sha256": "f4330874300c02e44c32fbb527ad95d5ce5087a055893f0254a024ca5c0f201e",
+          "response_sha256": "92a2885828fec6cd1fba37d6b0a9974694155438c54d47c9ee39ac94144c8e15"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjF3ewJwy35G4FHtJbB",
+          "request_sha256": "a19b18cef3ceca391eb13cbf22560bcd56a1c1cb875ccaea9c0b9d7238b010d9",
+          "response_sha256": "bdc843827aab6dd999670b699a9fe5c552559bdf7590a7dc3267857a3c7eb91b"
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "rows": 1,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjFnb6concWunrzbV31",
+          "request_sha256": "ab7144bca8017282bebc087474bcad258b29e394310af33daf437c8ac889c8e8",
+          "response_sha256": "00452478e8bb269a2e6cf09a96246308a41d9946ed10f9c789c929675081fcd0"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjFvuuin7aMv7YdicmG",
+          "request_sha256": "dddd9f6f19260b87c49ddde19d05bad76663580c6b9a4f39e789ab7132adca94",
+          "response_sha256": "6fdfb943a322aee0c94e11b0b37e8aa05f87a46d0211000cdf3cb93dcf1813df"
+        }
+      ]
+    }
+  ],
+  "all_source_bytes_preserved": true,
+  "book_release": false
+}
