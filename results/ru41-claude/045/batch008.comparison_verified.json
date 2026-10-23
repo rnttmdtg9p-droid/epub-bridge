@@ -1,0 +1,163 @@
+{
+  "unit": 45,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id05704",
+      "target": "— Итак?",
+      "source_sha256": "a72634cb3ff087d5fb4c9c16bd62a4a274bab5a09a8544b0fe298fa1bb4b7678",
+      "target_id": "ru-id05704",
+      "tag": "p",
+      "target_sha256": "d4537febfedda1a9b840bc7e84d1df401d1bbf57c27914bf24fc6a2243f7104d"
+    },
+    {
+      "source_id": "id05705",
+      "target": "— Итак, мы делим пистоли Портоса так же, как делили луидоры д’Артаньяна.",
+      "source_sha256": "c33f98e0ddb8e6eb81e49f5de3a4ce496769cb5c253cfb013ba6a25ed334b2bc",
+      "target_id": "ru-id05705",
+      "tag": "p",
+      "target_sha256": "890c74f6ef2d4749dc4b28fc0b419671580d9c3eb32d38bfd04c1a3f54d17383"
+    },
+    {
+      "source_id": "id05706",
+      "target": "Раздел был произведён при свете тонкой витой свечки Базена, и оба друга снова пустились в путь.",
+      "source_sha256": "b9fdfece2a50577ced4978a8af7221baf64c1a38b97ebadface394e77c72da5a",
+      "target_id": "ru-id05706",
+      "tag": "p",
+      "target_sha256": "fb0e328d7b80eed0ed355df922f090d57c111bad0c665231b0748e7b051e7ced"
+    },
+    {
+      "source_id": "id05707",
+      "target": "Четверть часа спустя они были у ворот Сен-Дени, где их ждал де Винтер.",
+      "source_sha256": "7fe991169c61961bd3931465b26e8164e46c64ebb00b74aceef7b7fd02e65e8b",
+      "target_id": "ru-id05707",
+      "tag": "p",
+      "target_sha256": "bd40d6de90ae6737624acdc111d29f9daf329fa48b01b9b69f8f1cf42ff4f046"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id05704",
+      "verdict": "PASS",
+      "reason": "Short question rendered faithfully."
+    },
+    {
+      "source_id": "id05705",
+      "verdict": "PASS",
+      "reason": "Tenses are preserved (present «partageons», past «avons partagé»), and so are the names and currencies (pistoles, louis)."
+    },
+    {
+      "source_id": "id05706",
+      "verdict": "CORRECTED",
+      "reason": "«rat-de-cave» is a thin coiled wax taper, not a candle stub. «Свечной огарок» was inaccurate, so it is now «тонкая витая свечка»."
+    },
+    {
+      "source_id": "id05707",
+      "verdict": "CORRECTED",
+      "reason": "Changed the name to the more natural transliteration from French, «де Винтер». «Ожидал» is simplified to «ждал». The meaning, the place (porte Saint-Denis) and the time are preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id05706",
+      "before": "Раздел был произведён при свете свечного огарка Базена, и оба друга снова пустились в путь.",
+      "after": "Раздел был произведён при свете тонкой витой свечки Базена, и оба друга снова пустились в путь."
+    },
+    {
+      "source_id": "id05707",
+      "before": "Четверть часа спустя они были у ворот Сен-Дени, где их ожидал де Уинтер.",
+      "after": "Четверть часа спустя они были у ворот Сен-Дени, где их ждал де Винтер."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJTrbRVtxnJwXxFyuadk",
+    "usage": {
+      "input_tokens": 1611,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJTrmtJBSQwH3dH47Y6D",
+    "usage": {
+      "input_tokens": 2400,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 989,
+      "output_tokens_details": {
+        "thinking_tokens": 513
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJTsKgEuPgtYcuhXddHU",
+        "usage": {
+          "input_tokens": 2647,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 845,
+          "output_tokens_details": {
+            "thinking_tokens": 235
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id05704",
+          "verdict": "PASS",
+          "reason": "«Ainsi donc?» — короткая реплика-вопрос; «Итак?» передаёт её точно, с сохранением диалогового тире."
+        },
+        {
+          "source_id": "id05705",
+          "verdict": "PASS",
+          "reason": "Все факты сохранены: делят пистоли Портоса так же, как раньше делили луидоры д’Артаньяна. Соотношение времён (настоящее и прошедшее) передано верно, имена и монеты соответствуют оригиналу."
+        },
+        {
+          "source_id": "id05706",
+          "verdict": "PASS",
+          "reason": "Прежняя правка верна: «rat-de-cave» — тонкая витая восковая свечка, а не «огарок». Оборот «Le partage fait» передан пассивной конструкцией, «se remirent en route» — «снова пустились в путь». Пропусков нет."
+        },
+        {
+          "source_id": "id05707",
+          "verdict": "PASS",
+          "reason": "Прежняя правка верна: «де Винтер» — принятое написание, «ждал» естественнее, чем «ожидал». Четверть часа, ворота Сен-Дени и агентность («où de Winter les attendait») сохранены; разрыв строки в HTML не имеет значения для текста."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

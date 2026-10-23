@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJTrbRVtxnJwXxFyuadk",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id05704\",\"target\":\"— Итак?\"},{\"source_id\":\"id05705\",\"target\":\"— Итак, мы делим пистоли Портоса так же, как делили луидоры д’Артаньяна.\"},{\"source_id\":\"id05706\",\"target\":\"Раздел был произведён при свете свечного огарка Базена, и оба друга снова пустились в путь.\"},{\"source_id\":\"id05707\",\"target\":\"Четверть часа спустя они были у ворот Сен-Дени, где их ожидал де Уинтер.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1611,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 183,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
