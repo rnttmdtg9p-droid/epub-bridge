@@ -1,0 +1,28 @@
+name: BB Russian43 measured wrap repair body grounded navigation source comparisons
+on:
+  push:
+    paths: ['.github/workflows/bb-ru43-navigation-wrap-fix.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  navigation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for actual complete translation then derive and independently review every navigation label
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru43_navigation_wrap_fix.py
+      - name: Preserve actual inputs model exchanges source anchors and comparison records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru43-final-navigation-wrap-fixed-v5070
+          path: results/ru43-navigation-wrap-fixed/
+          retention-days: 90
+          if-no-files-found: error
