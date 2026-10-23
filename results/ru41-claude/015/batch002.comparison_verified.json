@@ -1,0 +1,457 @@
+{
+  "unit": 15,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01777",
+      "target": "Мушкетёр сделал ещё несколько шагов вперёд и оказался перед решёткой, выполненной с тем вкусом, что отличает литьё того времени.",
+      "source_sha256": "2062e9c9d2f15df5f5b6aea1a8b092e3a3436806dd11544fa37cdf0ac2c6144e",
+      "target_id": "ru-id01777",
+      "tag": "p",
+      "target_sha256": "b41c96065b35c8f96593d019d57f555bc105b7fe13dbbe33d9562591043524fc"
+    },
+    {
+      "source_id": "id01778",
+      "target": "Сквозь эту решётку виднелись заботливо ухоженные огороды, довольно просторный двор, где переминались с ноги на ногу несколько заводных лошадей, которых держали слуги в разных ливреях, и карета, запряжённая парой местных лошадей.",
+      "source_sha256": "4e6a8f488f89ee450e43b2ce277ea6d381e7a062a2e23c4ed94261c96548bf99",
+      "target_id": "ru-id01778",
+      "tag": "p",
+      "target_sha256": "3ed422a2fc260a8aaceefafa9102ddded4d6bad1e891d8511b5c730c4878a787"
+    },
+    {
+      "source_id": "id01779",
+      "target": "— Либо мы ошиблись, либо этот человек нас обманул, — сказал д’Артаньян. — Здесь никак не может жить Атос. Боже мой! Неужто он умер, и это имение принадлежит кому-то, кто носит то же имя? Слезай с коня, Планше, и ступай разузнать; признаюсь, у меня самого на это не хватает духу.",
+      "source_sha256": "d8c02f4456ba38e2fbf434424a6cf7bc0d03cf9beb4791d12af9b70422c6fa86",
+      "target_id": "ru-id01779",
+      "tag": "p",
+      "target_sha256": "b86d37f1882970823468ff7f320ad70ccf40a455e5342ccc07306f1c364cbd6a"
+    },
+    {
+      "source_id": "id01780",
+      "target": "Планше спешился.",
+      "source_sha256": "bde805c80b87078474501ba06d89275bf054f13ec38131208a9a434b24139519",
+      "target_id": "ru-id01780",
+      "tag": "p",
+      "target_sha256": "811bfab6bce119dcb67ad14ec08080f6c977608b2d7e8c080e13d9f142a6de01"
+    },
+    {
+      "source_id": "id01781",
+      "target": "— Добавь, — сказал д’Артаньян, — что проезжий дворянин желает иметь честь засвидетельствовать почтение господину графу де Ла Фер; а если сведения тебя удовлетворят, ну что ж, тогда назови меня.",
+      "source_sha256": "523b669e010a27de2a1ea8c9fe695f34b3b785fa1914cde281a71079eda3d073",
+      "target_id": "ru-id01781",
+      "tag": "p",
+      "target_sha256": "25ef8a066423bd3b5a4276a497f2228759e085ea48b772ec8b5b743f382865b0"
+    },
+    {
+      "source_id": "id01782",
+      "target": "Планше, волоча лошадь под уздцы, подошёл к воротам и позвонил в колокольчик у решётки; тотчас явился слуга с побелевшими волосами, державшийся прямо, несмотря на возраст, и принял Планше.",
+      "source_sha256": "355ea6b0382f700b5ecc7d5aa7d8561b812c61cf5b931026b57a7cae93eac4f5",
+      "target_id": "ru-id01782",
+      "tag": "p",
+      "target_sha256": "a102a15f99c112adf21da6108d20fdacbd8bfe13706725ee978270793a7ee11f"
+    },
+    {
+      "source_id": "id01783",
+      "target": "— Здесь живёт господин граф де Ла Фер? — спросил Планше.",
+      "source_sha256": "1c684f53b4ffc7c6ef03f3d891e5c610f6d10ca691444b97a901735c64f83db1",
+      "target_id": "ru-id01783",
+      "tag": "p",
+      "target_sha256": "501d869b9a8629025444f67f935d4eb151067caa66ecc9905ef255b2f92e6707"
+    },
+    {
+      "source_id": "id01784",
+      "target": "— Да, сударь, здесь, — ответил слуга Планше, на котором не было ливреи.",
+      "source_sha256": "bdbcbf4ce501d95a30d78c01a0c73ab7c488e3a2fa14242250c7c857d0010282",
+      "target_id": "ru-id01784",
+      "tag": "p",
+      "target_sha256": "ab3bfb934a305aca7be9f101068acad5f1a41ce51ae6a5a7a3f827c4afd2577c"
+    },
+    {
+      "source_id": "id01785",
+      "target": "— Вельможа, оставивший службу, не так ли?",
+      "source_sha256": "dda7f67dcd5ea08eab991f2ae482fad703279ea2292ccc3f73a9760a3f5c5286",
+      "target_id": "ru-id01785",
+      "tag": "p",
+      "target_sha256": "b81f563d183816decf0c070618c00cbf274531b4a5fc2a64790232d79afd331f"
+    },
+    {
+      "source_id": "id01786",
+      "target": "— Именно так.",
+      "source_sha256": "6b701415ee3a73a258e5472d3905ac42032f28affe254419b60e5d1dd1470538",
+      "target_id": "ru-id01786",
+      "tag": "p",
+      "target_sha256": "d9ebed989f2d0490b6179976ee8a45219cf75364dbf36a9799b8a77f2cc59c1d"
+    },
+    {
+      "source_id": "id01787",
+      "target": "— И у которого был лакей по имени Гримо, — продолжал Планше, который по своей всегдашней осторожности полагал, что не может запастись слишком большим количеством сведений.",
+      "source_sha256": "6d704a98364e739f5d57804565e15401903303fe859a6dd6f3e2c16dfec7e2d6",
+      "target_id": "ru-id01787",
+      "tag": "p",
+      "target_sha256": "38d73bb0ba13d8fd12cb825f43836fa7afb68879ee021bc5e0d6c29abd65c94d"
+    },
+    {
+      "source_id": "id01788",
+      "target": "— Господина Гримо в настоящую минуту в замке нет, — сказал слуга, принимаясь разглядывать Планше с головы до ног, ибо не привык к таким расспросам.",
+      "source_sha256": "7fbcbf6f09dd4cb999b3a8c7330825afb2eda951c509423f8f7073870dfbf7cf",
+      "target_id": "ru-id01788",
+      "tag": "p",
+      "target_sha256": "aa123342c13bfe113e7027428495ad1c750d1492e0eb76aab6f504d587467c8f"
+    },
+    {
+      "source_id": "id01789",
+      "target": "— Тогда, — воскликнул сияющий Планше, — я вижу, что это тот самый граф де Ла Фер, которого мы ищем. Так откройте же мне, ибо я хотел бы доложить господину графу, что мой хозяин, дворянин, его друг, стоит здесь и желает засвидетельствовать ему почтение.",
+      "source_sha256": "499196c10b077099d628a1c44b88bf74d871f89c17fee60305807ce36e3c85ae",
+      "target_id": "ru-id01789",
+      "tag": "p",
+      "target_sha256": "14a0e37ec09909bf3def4f1ec4c6b5908e424a5b40f753b7ba46a49fe9ab927b"
+    },
+    {
+      "source_id": "id01790",
+      "target": "— Что же вы не сказали этого раньше! — произнёс слуга, отпирая решётку. — Но где же ваш хозяин?",
+      "source_sha256": "63ff360757130d6361bcd9473a4c027b4ed2c681070950b073f7aadc583bee3f",
+      "target_id": "ru-id01790",
+      "tag": "p",
+      "target_sha256": "a489a7f0c9ef1a67cf1f579807f5244f2412526a6d8665e636b9b02946ea5f10"
+    },
+    {
+      "source_id": "id01791",
+      "target": "— Позади меня, он следует за мной.",
+      "source_sha256": "70a38b9fe07581f506540685446b2bb6eb25b276574904177d3f10a2e5ffec09",
+      "target_id": "ru-id01791",
+      "tag": "p",
+      "target_sha256": "0009bf1067873699772e84a171035a8635839c9b3425fdf7161adc9012aa09b1"
+    },
+    {
+      "source_id": "id01792",
+      "target": "Слуга отворил решётку и пошёл впереди Планше, а тот подал знак д’Артаньяну, и д’Артаньян, с сердцем, бьющимся сильнее, чем когда-либо, въехал верхом во двор.",
+      "source_sha256": "8e370f59b91c669a7634e81d1fc6e1e42837e36626944aa5fe7093a1735b0489",
+      "target_id": "ru-id01792",
+      "tag": "p",
+      "target_sha256": "fa13398f87eefdc2108f285395fe9b8c5ee4d403a171edcf561f49495c5e1f18"
+    },
+    {
+      "source_id": "id01793",
+      "target": "Когда Планше оказался на крыльце, он услышал голос, доносившийся из нижней залы:",
+      "source_sha256": "38b3a3f184b4f1060ab70c53e02e49fc00ad95edf78852566449f22ee71b88e5",
+      "target_id": "ru-id01793",
+      "tag": "p",
+      "target_sha256": "ce5a19a4add97bce2e84fee1057ae42ca168c730cf656078ef1154173fc03261"
+    },
+    {
+      "source_id": "id01794",
+      "target": "— Ну так где же он, этот дворянин, и почему его не ведут сюда?",
+      "source_sha256": "dc6c496dddadf4e045444e7effbe93cb1ad505991f7c7ee07547148e18bfc368",
+      "target_id": "ru-id01794",
+      "tag": "p",
+      "target_sha256": "690eeaeb8e580550570fe8f486fd1d013744536d052369ffe2c17596be165f0e"
+    },
+    {
+      "source_id": "id01795",
+      "target": "Этот голос, долетевший до д’Артаньяна, пробудил в его сердце тысячу чувств, тысячу воспоминаний, которые он забыл. Он поспешно спрыгнул с коня, а Планше с улыбкой на устах двинулся навстречу хозяину дома.",
+      "source_sha256": "d92732b8756799841b7a3fbe41caae0c08884fde75776207e0d0e52f54e8063e",
+      "target_id": "ru-id01795",
+      "tag": "p",
+      "target_sha256": "66d881ccc7588cc5cf201c5278d8f044098af092fe3eaebc35001732e9e35c61"
+    },
+    {
+      "source_id": "id01796",
+      "target": "— Да я же знаю этого малого! — сказал Атос, появляясь на пороге.",
+      "source_sha256": "c49c4d29df51b9a0c657b50ab23a59dd37af4e0fc158b563edf691b8531960f8",
+      "target_id": "ru-id01796",
+      "tag": "p",
+      "target_sha256": "9ac67e81dd93f2f086a4a63a0ff3e3f6f87f0192d5ecbed0d9e47a666ce4efb0"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01777",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic; all details preserved."
+    },
+    {
+      "source_id": "id01778",
+      "verdict": "PASS",
+      "reason": "Complete; 'chevaux de main' correctly rendered as заводные лошади; livery and carriage details intact."
+    },
+    {
+      "source_id": "id01779",
+      "verdict": "CORRECTED",
+      "reason": "'кому-то его имени' was ungrammatical/unidiomatic for 'quelqu'un de son nom'; changed to 'кому-то, кто носит то же имя'. Rest faithful."
+    },
+    {
+      "source_id": "id01780",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01781",
+      "verdict": "PASS",
+      "reason": "Faithful; instruction to give his name only if satisfied preserved."
+    },
+    {
+      "source_id": "id01782",
+      "verdict": "CORRECTED",
+      "reason": "'traînant son cheval par la bride' weakened to 'ведя'; restored the dragging nuance with 'волоча'. Other details preserved."
+    },
+    {
+      "source_id": "id01783",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01784",
+      "verdict": "PASS",
+      "reason": "Agency and the relative clause about the missing livery correctly attached to Planchet."
+    },
+    {
+      "source_id": "id01785",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01786",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic."
+    },
+    {
+      "source_id": "id01787",
+      "verdict": "CORRECTED",
+      "reason": "'не может обзавестись слишком многими сведениями' was an awkward rendering of 'ne croyait pas pouvoir s'entourer de trop de renseignements'; reworded to 'полагал, что не может запастись слишком большим количеством сведений', keeping the humour and negation."
+    },
+    {
+      "source_id": "id01788",
+      "verdict": "PASS",
+      "reason": "Faithful; the cause of the servant's scrutiny is preserved."
+    },
+    {
+      "source_id": "id01789",
+      "verdict": "PASS",
+      "reason": "Faithful; tense 'je désirais' and hierarchy of ideas preserved."
+    },
+    {
+      "source_id": "id01790",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01791",
+      "verdict": "PASS",
+      "reason": "Faithful, keeps the terse repetition."
+    },
+    {
+      "source_id": "id01792",
+      "verdict": "PASS",
+      "reason": "Faithful; chain of agents (servant, Planchet, d'Artagnan) correct."
+    },
+    {
+      "source_id": "id01793",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01794",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic."
+    },
+    {
+      "source_id": "id01795",
+      "verdict": "PASS",
+      "reason": "Faithful; no omissions."
+    },
+    {
+      "source_id": "id01796",
+      "verdict": "PASS",
+      "reason": "Faithful; register suits Athos' remark."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01779",
+      "before": "— Либо мы ошиблись, либо этот человек нас обманул, — сказал д’Артаньян. — Здесь никак не может жить Атос. Боже мой! Неужто он умер, и это имение принадлежит кому-то его имени? Слезай с коня, Планше, и ступай разузнать; признаюсь, у меня самого на это не хватает духу.",
+      "after": "— Либо мы ошиблись, либо этот человек нас обманул, — сказал д’Артаньян. — Здесь никак не может жить Атос. Боже мой! Неужто он умер, и это имение принадлежит кому-то, кто носит то же имя? Слезай с коня, Планше, и ступай разузнать; признаюсь, у меня самого на это не хватает духу."
+    },
+    {
+      "source_id": "id01782",
+      "before": "Планше, ведя лошадь под уздцы, подошёл к воротам и позвонил в колокольчик у решётки; тотчас явился слуга с побелевшими волосами, державшийся прямо, несмотря на возраст, и принял Планше.",
+      "after": "Планше, волоча лошадь под уздцы, подошёл к воротам и позвонил в колокольчик у решётки; тотчас явился слуга с побелевшими волосами, державшийся прямо, несмотря на возраст, и принял Планше."
+    },
+    {
+      "source_id": "id01787",
+      "before": "— И у которого был лакей по имени Гримо, — продолжал Планше, который по своей всегдашней осторожности считал, что не может обзавестись слишком многими сведениями.",
+      "after": "— И у которого был лакей по имени Гримо, — продолжал Планше, который по своей всегдашней осторожности полагал, что не может запастись слишком большим количеством сведений."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJEjfi1UtHQ7HHcDeihf",
+    "usage": {
+      "input_tokens": 6189,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2414,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJEmcVLhUqyi4x5q9Apj",
+    "usage": {
+      "input_tokens": 10230,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 5281,
+      "output_tokens_details": {
+        "thinking_tokens": 1869
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJKbKyDWiXKByHXZe4Cw",
+        "usage": {
+          "input_tokens": 10874,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 6099,
+          "output_tokens_details": {
+            "thinking_tokens": 846
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01777",
+          "verdict": "PASS",
+          "reason": "Faithful: the musketeer advances and faces a grille worked with the taste characteristic of the castings of that period."
+        },
+        {
+          "source_id": "id01778",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Complete: well-kept kitchen gardens, spacious courtyard, led horses held by servants in different liveries, and a carriage with two local horses."
+        },
+        {
+          "source_id": "id01779",
+          "verdict": "PASS",
+          "reason": "The prior correction (\"кому-то, кто носит то же имя\") correctly renders \"quelqu'un de son nom\". Doubt, the question about death, the instruction to Planchet and d'Artagnan's admission of lacking courage are all preserved."
+        },
+        {
+          "source_id": "id01780",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "id01781",
+          "verdict": "PASS",
+          "reason": "Instruction, honorific, conditional and the closing \"nomme-moi\" are accurately rendered."
+        },
+        {
+          "source_id": "id01782",
+          "verdict": "PASS",
+          "reason": "The prior correction \"волоча\" matches \"traînant\". Bell, white-haired servant with straight bearing despite age, and the reception of Planchet are all kept."
+        },
+        {
+          "source_id": "id01783",
+          "verdict": "PASS",
+          "reason": "Faithful question and speaker attribution."
+        },
+        {
+          "source_id": "id01784",
+          "verdict": "PASS",
+          "reason": "Faithful; the livery detail is correctly attached to Planchet."
+        },
+        {
+          "source_id": "id01785",
+          "verdict": "PASS",
+          "reason": "Accurate; the question tag is preserved."
+        },
+        {
+          "source_id": "id01786",
+          "verdict": "PASS",
+          "reason": "Accurate idiomatic equivalent of \"C'est cela même\"."
+        },
+        {
+          "source_id": "id01787",
+          "verdict": "PASS",
+          "reason": "The prior correction conveys Planchet's habitual prudence and the humour of never having too much information. Agency is correct."
+        },
+        {
+          "source_id": "id01788",
+          "verdict": "PASS",
+          "reason": "Grimaud's absence, the servant's scrutiny of Planchet from head to foot and his unfamiliarity with such questions are all preserved."
+        },
+        {
+          "source_id": "id01789",
+          "verdict": "PASS",
+          "reason": "Planchet's radiant conclusion, request to open, and announcement that his master, a friend, wishes to greet the count are all faithfully rendered."
+        },
+        {
+          "source_id": "id01790",
+          "verdict": "PASS",
+          "reason": "Rebuke and question preserved; the servant opens the grille."
+        },
+        {
+          "source_id": "id01791",
+          "verdict": "PASS",
+          "reason": "Faithful, including the slightly redundant structure."
+        },
+        {
+          "source_id": "id01792",
+          "verdict": "PASS",
+          "reason": "Agency is clear: the servant precedes Planchet, Planchet signals, d'Artagnan with palpitating heart enters on horseback."
+        },
+        {
+          "source_id": "id01793",
+          "verdict": "PASS",
+          "reason": "Accurate; \"salle basse\" is rendered as a ground-floor room."
+        },
+        {
+          "source_id": "id01794",
+          "verdict": "PASS",
+          "reason": "Natural dialogue rendering with both questions kept."
+        },
+        {
+          "source_id": "id01795",
+          "verdict": "PASS",
+          "reason": "The voice reaching d'Artagnan, the forgotten feelings and memories, his hasty dismount and Planchet's smiling advance are all kept."
+        },
+        {
+          "source_id": "id01796",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic; Athos appears on the threshold."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

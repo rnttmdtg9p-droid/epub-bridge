@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJKhkocgYnnBMmc76Ev2",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id01416\",\"target\":\"— Что такое? — спросил Арамис.\"},{\"source_id\":\"id01417\",\"target\":\"— Да разве вы не видите, что ветер унёс мою шляпу?\"},{\"source_id\":\"id01418\",\"target\":\"И Арамис бросился вдогонку за беглой шляпой. Д’Артаньян воспользовался случаем и стал искать в изгороди место пореже, чтобы взгляд его мог беспрепятственно проникнуть до самого загадочного всадника. В это самое мгновение луна, быть может, такая же любопытная, как и офицер, выплыла из-за облака, и при её нескромном свете д’Артаньян узнал большие голубые глаза, золотые волосы и благородную голову герцогини де Лонгвиль.\"},{\"source_id\":\"id01419\",\"target\":\"Арамис вернулся, смеясь, с одной шляпой на голове и другой в руке, и они оба продолжили путь к монастырю иезуитов.\"},{\"source_id\":\"id01420\",\"target\":\"— Отлично! — сказал д’Артаньян, поднимаясь и отряхивая колено. — Теперь ты у меня в руках: ты фрондёр и любовник госпожи де Лонгвиль.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2055,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 428,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
