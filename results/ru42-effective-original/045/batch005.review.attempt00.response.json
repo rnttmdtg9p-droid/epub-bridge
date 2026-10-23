@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK1SPB74Y9ZhP6ptQZhM",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-045-0099\",\"target\":\"— А! — произнёс Джон Манглс.\"},{\"source_id\":\"fr42c-045-0100\",\"target\":\"— Он просто выйдет на дорогу к Лукнову, которая приведёт его прямо в Мельбурн.\"},{\"source_id\":\"fr42c-045-0101\",\"target\":\"— Двести пятьдесят миль пешком! — воскликнул молодой капитан.\"},{\"source_id\":\"fr42c-045-0102\",\"target\":\"— Верхом, — возразил Айртон. — Остался один здоровый конь. На это уйдёт четыре дня. Прибавьте два дня на переход «Дункана» в бухту, сутки на возвращение в лагерь — и через неделю гонец будет назад вместе с людьми из экипажа».\"},{\"source_id\":\"fr42c-045-0103\",\"target\":\"Майор кивком одобрял слова Айртона, что не могло не удивлять Джона Манглса. Но предложение квартирмейстера собрало все голоса, и оставалось лишь привести в исполнение этот поистине хорошо продуманный план.\"},{\"source_id\":\"fr42c-045-0104\",\"target\":\"— Теперь, друзья мои, — сказал Гленарван, — нужно выбрать нашего гонца. Поручение будет тяжёлое и опасное, не стану этого скрывать. Кто пожертвует собой ради товарищей и отвезёт наши указания в Мельбурн?»\"},{\"source_id\":\"fr42c-045-0105\",\"target\":\"Уилсон, Малради, Джон Манглс, Паганель и даже Роберт тотчас вызвались. Джон особенно настойчиво просил поручить это дело ему. Но Айртон, который ещё не высказывался, взял слово и сказал:\"},{\"source_id\":\"fr42c-045-0106\",\"target\":\"— Если угодно вашей милости, поеду я, милорд. Я привык к этим краям. Не раз мне случалось проходить места потруднее. Я выпутаюсь там, где другой застрянет. Поэтому, в общих интересах, я прошу права отправиться в Мельбурн. Одной вашей записки хватит, чтобы мне поверил ваш помощник, и через шесть дней я ручаюсь привести «Дункан» в бухту Туфолд.\"},{\"source_id\":\"fr42c-045-0107\",\"target\":\"— Хорошо сказано, — ответил Гленарван. — Вы человек умный и мужественный, Айртон, и вы добьётесь успеха».\"},{\"source_id\":\"fr42c-045-0108\",\"target\":\"Квартирмейстер, очевидно, подходил для этого трудного поручения лучше всякого другого. Все это поняли и отошли. Джон Манглс высказал последнее возражение: присутствие Айртона, мол, необходимо, чтобы найти следы «Британии» или Гарри Гранта. Но майор заметил, что экспедиция останется лагерем на берегах Сноуи до возвращения Айртона, что без него возобновлять эти важные поиски и речи нет, а следовательно, его отсутствие никоим образом не повредит интересам капитана.\"},{\"source_id\":\"fr42c-045-0109\",\"target\":\"— Что ж, отправляйтесь, Айртон, — сказал Гленарван. — Поторопитесь и возвращайтесь через Эден в наш лагерь на Сноуи».\"},{\"source_id\":\"fr42c-045-0110\",\"target\":\"В глазах квартирмейстера блеснула искра удовлетворения. Он отвернулся, но, как ни быстро он отвернулся, Джон Манглс успел подметить эту искру; Джон, лишь по инстинкту, не иначе, чувствовал, что его недоверие к Айртону растёт. Квартирмейстер принялся за приготовления к отъезду, ему помогали два матроса: один занялся его конём, другой — съестными припасами. Тем временем Гленарван писал письмо Тому Остину.\"},{\"source_id\":\"fr42c-045-0111\",\"target\":\"Он приказывал помощнику капитана «Дункана» без промедления идти в бухту Туфолд. Он рекомендовал ему квартирмейстера как человека, которому можно вполне доверять. Том Остин, прибыв на берег, должен был поставить отряд матросов яхты под начало Айртона...\"},{\"source_id\":\"fr42c-045-0112\",\"target\":\"Гленарван дописал до этого места, когда Мак-Наббс, следивший за ним глазами, странным тоном спросил, как он пишет имя Айртона.\"},{\"source_id\":\"fr42c-045-0113\",\"target\":\"— Да как оно произносится, — ответил Гленарван.\"},{\"source_id\":\"fr42c-045-0114\",\"target\":\"— Это ошибка, — спокойно возразил майор. — Произносится Айртон, а пишется Бен Джойс!»\"},{\"source_id\":\"fr42c-note-083\",\"target\":\"37 лье.\"}],\"review\":[{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0099\",\"reason\":\"Interjection and verb of speech adjusted.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0100\",\"reason\":\"Luknow dative form fixed; otherwise faithful.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-045-0101\",\"reason\":\"Faithful.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0102\",\"reason\":\"Fixed misplaced quotes, Ayrton name, Duncan italics/quotes, 'répliqua' tone, wording.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0103\",\"reason\":\"Name spelling and smoother idiom.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0104\",\"reason\":\"Dialogue punctuation made consistent with continuing quote.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0105\",\"reason\":\"Name forms; 'даже Роберт' for lui-même; polished.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0106\",\"reason\":\"Removed invented 'legitimacy'; restored accréditer sense, Twofold, ‘Honneur’ register, no stray italics.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0107\",\"reason\":\"Fixed quotation punctuation, name.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0108\",\"reason\":\"Fixed Britannia italics/quotes, Harry Grant misquote, name, tone.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0109\",\"reason\":\"Name and punctuation.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0110\",\"reason\":\"Restored 'par instinct, non autrement' nuance; names.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0111\",\"reason\":\"Removed stray quotes/italics; 'second' as mate; names.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0112\",\"reason\":\"Name and wording.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0113\",\"reason\":\"Draft inverted meaning ('Mais comme il se prononce').\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-045-0114\",\"reason\":\"Removed invented quotes and stray space; names.\"},{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-note-083\",\"reason\":\"'лье' is correct unit.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10201,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2604,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
