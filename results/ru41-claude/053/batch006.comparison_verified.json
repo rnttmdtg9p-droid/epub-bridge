@@ -1,0 +1,199 @@
+{
+  "unit": 53,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id06909",
+      "target": "— Обоим один и тот же приказ, оба в один и тот же час, оба в Пале-Рояль; я догадываюсь. Ах! вот тайна, за которую господин де Гонди заплатил бы сто тысяч ливров.",
+      "source_sha256": "fec753d945fb8a8e31612b3bed9c386c3262363149d058155b07e28aad81851e",
+      "target_id": "ru-id06909",
+      "tag": "p",
+      "target_sha256": "77d905bf59c7adee618bed11ecef689e6d64aa494bf5109ef8bf717f502d0800"
+    },
+    {
+      "source_id": "id06910",
+      "target": "— Вы размышляете! — встревоженно сказал Мазарини.",
+      "source_sha256": "d7721f8a0a1596625a06bfa2dd399491c81a57b045f7d968457947c43e49d9d0",
+      "target_id": "ru-id06910",
+      "tag": "p",
+      "target_sha256": "52e1df2dcd87b3bc7835b302a540c886d3b66881b926e575125191a20c522bc9"
+    },
+    {
+      "source_id": "id06911",
+      "target": "— Да, я спрашиваю себя, должны ли мы быть вооружены или нет.",
+      "source_sha256": "c7f6d74b8fa515bae036d0bb8c9262a9f52b393117566c3310d27eefeca80b9a",
+      "target_id": "ru-id06911",
+      "tag": "p",
+      "target_sha256": "67e460d638310cfa7a4aa6eef2e46022faf873494a6cec5134709ea34a6ba8eb"
+    },
+    {
+      "source_id": "id06912",
+      "target": "— Вооружены до зубов, — сказал Мазарини.",
+      "source_sha256": "9c733589357b2013a5d16113c5511e684a4b03617e8e06105895bf9ea0b6edeb",
+      "target_id": "ru-id06912",
+      "tag": "p",
+      "target_sha256": "762ae2a399dd5ed0cb1193f571d70a8a4a4d58524c97bfec22ea1d61a692ee16"
+    },
+    {
+      "source_id": "id06913",
+      "target": "— Хорошо, монсеньор, мы будем вооружены.",
+      "source_sha256": "b51409edd425c8e3a9e4fdf41786a5246bcc9f147afbc34da4ae470f0858d42b",
+      "target_id": "ru-id06913",
+      "tag": "p",
+      "target_sha256": "0d41b13a92e58b202ca1152a6806a5760000b2b10dcd468dd43faf9278f808db"
+    },
+    {
+      "source_id": "id06914",
+      "target": "Д’Артаньян поклонился, вышел и побежал передать своему другу лестные обещания Мазарини, которые привели Портоса в неописуемый восторг.",
+      "source_sha256": "e9f5bd8cfb20384776ca12d1037ef7909acdfbaba56947689e1bb0613cda112e",
+      "target_id": "ru-id06914",
+      "tag": "p",
+      "target_sha256": "7689fb515c20a698a94d20902fcb126a30cd6257aeacca0ce30cc3babb3f6500"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id06909",
+      "verdict": "CORRECTED",
+      "reason": "\"à la même heure\" was rendered \"к одному часу\", which could be misread as \"by one o'clock\"; changed to \"в один и тот же час\". Rest preserved, including de Gondy and the hundred thousand livres."
+    },
+    {
+      "source_id": "id06910",
+      "verdict": "PASS",
+      "reason": "Faithful: Mazarin's anxious interjection and the verb \"réfléchissez\" are preserved."
+    },
+    {
+      "source_id": "id06911",
+      "verdict": "PASS",
+      "reason": "Faithful: the question \"armés ou non\" is preserved with correct dialogue punctuation."
+    },
+    {
+      "source_id": "id06912",
+      "verdict": "PASS",
+      "reason": "Faithful: \"jusqu'aux dents\" becomes the idiomatic \"до зубов\"."
+    },
+    {
+      "source_id": "id06913",
+      "verdict": "CORRECTED",
+      "reason": "\"on le sera\" means \"we will be armed\"; the draft \"так и будет\" dropped the explicit idea of being armed. Now \"мы будем вооружены\"."
+    },
+    {
+      "source_id": "id06914",
+      "verdict": "PASS",
+      "reason": "Faithful: the actions in order (bowed, left, ran), the flattering promises and Porthos's joy are all preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id06909",
+      "before": "— Обоим один и тот же приказ, оба к одному часу, оба в Пале-Рояль; я догадываюсь. Ах! вот тайна, за которую господин де Гонди заплатил бы сто тысяч ливров.",
+      "after": "— Обоим один и тот же приказ, оба в один и тот же час, оба в Пале-Рояль; я догадываюсь. Ах! вот тайна, за которую господин де Гонди заплатил бы сто тысяч ливров."
+    },
+    {
+      "source_id": "id06913",
+      "before": "— Хорошо, монсеньор, так и будет.",
+      "after": "— Хорошо, монсеньор, мы будем вооружены."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQrnHWNMHNyXMn6G4Da",
+    "usage": {
+      "input_tokens": 1943,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 776,
+      "output_tokens_details": {
+        "thinking_tokens": 449
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQsFfJ1zbAWA2eNwpwH",
+    "usage": {
+      "input_tokens": 3106,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1460,
+      "output_tokens_details": {
+        "thinking_tokens": 686
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJQt1dD5RB5DjbsGK8re",
+        "usage": {
+          "input_tokens": 3410,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1187,
+          "output_tokens_details": {
+            "thinking_tokens": 285
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id06909",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «оба в один и тот же час» renders «tous deux à la même heure» correctly. The triple repetition, the conjecture «je devine», and the conditional «eût payé» (заплатил бы) are preserved, and «cent mille livres» is accurate."
+        },
+        {
+          "source_id": "id06910",
+          "verdict": "PASS",
+          "reason": "Faithful. «Vous réfléchissez!» is rendered as «Вы размышляете!», and «inquiet» is carried by «встревоженно» with Mazarin as the speaker."
+        },
+        {
+          "source_id": "id06911",
+          "verdict": "PASS",
+          "reason": "Faithful. «Je me demande si… ou non» is rendered as «спрашиваю себя, должны ли… или нет», and «armés» as «вооружены»."
+        },
+        {
+          "source_id": "id06912",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic. «Armés jusqu'aux dents» is the standard «вооружены до зубов», with the correct speaker."
+        },
+        {
+          "source_id": "id06913",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «on le sera» refers back to «armés», so «мы будем вооружены» is correct. The earlier «так и будет» lost that reference. «Monseigneur» is rendered as «монсеньор»."
+        },
+        {
+          "source_id": "id06914",
+          "verdict": "PASS",
+          "reason": "Complete. D'Artagnan bows, leaves and runs to repeat Mazarin's flattering promises to his friend, and Porthos's «allégresse inconcevable» is rendered as «неописуемый восторг». Agency and sequence are preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
