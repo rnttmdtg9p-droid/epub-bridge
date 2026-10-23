@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK7NQFwBt6XtmTuBWPE5",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-066-0059\",\"target\":\"— Он заговорил? — спросил он.\"},{\"source_id\":\"fr42c-066-0060\",\"target\":\"— Нет, — ответила леди Элен. — Но, уступив моим просьбам, Айртон желает вас видеть.\"},{\"source_id\":\"fr42c-066-0061\",\"target\":\"— Ах, дорогая Элен, вам это удалось!\"},{\"source_id\":\"fr42c-066-0062\",\"target\":\"— Надеюсь, Эдвард.\"},{\"source_id\":\"fr42c-066-0063\",\"target\":\"— Вы дали какое-нибудь обещание, которое я должен подтвердить?\"},{\"source_id\":\"fr42c-066-0064\",\"target\":\"— Только одно, друг мой: что вы употребите всё своё влияние, чтобы облегчить участь, уготованную этому несчастному.\"},{\"source_id\":\"fr42c-066-0065\",\"target\":\"— Хорошо, моя дорогая Элен. Пусть Айртон придёт немедленно.\"},{\"source_id\":\"fr42c-066-0066\",\"target\":\"Леди Элен удалилась в свою каюту в сопровождении Мэри Грант, а квартирмейстера отвели в кают-компанию, где его ждал лорд Гленарван.\"}],\"review\":[{\"source_id\":\"fr42c-066-0059\",\"verdict\":\"PASS\",\"reason\":\"Faithful; dialogue punctuation correct, the stray guillemet was removed; the question and the attribution are preserved.\"},{\"source_id\":\"fr42c-066-0060\",\"verdict\":\"PASS\",\"reason\":\"Negation, the participial clause, the names and the meaning are preserved; the register is natural.\"},{\"source_id\":\"fr42c-066-0061\",\"verdict\":\"PASS\",\"reason\":\"Accurate; the exclamation and the form of address are preserved; the name is consistent.\"},{\"source_id\":\"fr42c-066-0062\",\"verdict\":\"PASS\",\"reason\":\"Accurate and concise; the name Эдвард is correct.\"},{\"source_id\":\"fr42c-066-0063\",\"verdict\":\"PASS\",\"reason\":\"Correct question; «ratifier» is rendered as «подтвердить» in an acceptable way.\"},{\"source_id\":\"fr42c-066-0064\",\"verdict\":\"PASS\",\"reason\":\"Preserves «une seule», the promise, the credit/influence and the fate reserved for the wretch; the construction is idiomatic.\"},{\"source_id\":\"fr42c-066-0065\",\"verdict\":\"PASS\",\"reason\":\"Accurate; the imperative «qu'Ayrton vienne» is rendered correctly; the stray quotation mark was removed; the names are consistent.\"},{\"source_id\":\"fr42c-066-0066\",\"verdict\":\"PASS\",\"reason\":\"Agency and sequence preserved; the passive is rendered idiomatically; the carré is rendered as the saloon («кают-компания»); the names are correct.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4915,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 978,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

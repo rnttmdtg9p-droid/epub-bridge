@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK7MqzDKdgmh5TiY2ro1",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-066-0059\",\"target\":\"— Он заговорил? — спросил он.\"},{\"source_id\":\"fr42c-066-0060\",\"target\":\"— Нет, — ответила леди Элен. — Но, уступив моим просьбам, Айртон желает вас видеть.\"},{\"source_id\":\"fr42c-066-0061\",\"target\":\"— Ах, дорогая Элен, вам это удалось!\"},{\"source_id\":\"fr42c-066-0062\",\"target\":\"— Надеюсь, Эдвард.\"},{\"source_id\":\"fr42c-066-0063\",\"target\":\"— Вы дали какое-нибудь обещание, которое я должен подтвердить?\"},{\"source_id\":\"fr42c-066-0064\",\"target\":\"— Только одно, друг мой: что вы употребите всё своё влияние, чтобы облегчить участь, уготованную этому несчастному.\"},{\"source_id\":\"fr42c-066-0065\",\"target\":\"— Хорошо, моя дорогая Элен. Пусть Айртон придёт немедленно.\"},{\"source_id\":\"fr42c-066-0066\",\"target\":\"Леди Элен удалилась в свою каюту в сопровождении Мэри Грант, а квартирмейстера отвели в кают-компанию, где его ждал лорд Гленарван.\"}],\"review\":[{\"source_id\":\"fr42c-066-0059\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray opening guillemet; the question and agency are preserved.\"},{\"source_id\":\"fr42c-066-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Normalised names to Элен and Айртон; sense of her prayers and his wish is preserved.\"},{\"source_id\":\"fr42c-066-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Name normalised to Элен; the idiom of success is made more natural.\"},{\"source_id\":\"fr42c-066-0062\",\"verdict\":\"PASS\",\"reason\":\"Accurate and concise.\"},{\"source_id\":\"fr42c-066-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"'Ratifier' rendered more naturally as 'подтвердить'; indefinite 'quelque' improved.\"},{\"source_id\":\"fr42c-066-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored future 'vous emploierez' as a promise, and 'sort réservé' as the fate in store.\"},{\"source_id\":\"fr42c-066-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Normalised names, removed the stray closing guillemet, and made the order natural.\"},{\"source_id\":\"fr42c-066-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"Name normalised to Элен; passive agency of the quartermaster's being led preserved in natural form.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4148,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 925,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
