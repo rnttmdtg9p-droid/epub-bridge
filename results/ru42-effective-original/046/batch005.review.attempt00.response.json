@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK1vKh38SocXTXp6bGTE",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-046-0099\",\"target\":\"Затем он покинул повозку, жестикулируя и повторяя эти непонятные слова:\"},{\"source_id\":\"fr42c-046-0100\",\"target\":\"«<i>Аланд! Аланд! Зеаланд!</i>»\"}],\"review\":[{\"source_id\":\"fr42c-046-0099\",\"verdict\":\"CORRECTED\",\"reason\":\"The draft's «соскочил» added a manner of motion; the source says only «quitta» (left). Replaced with «покинул».\"},{\"source_id\":\"fr42c-046-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"The words are incomprehensible and printed as sounds; «Зеландия» normalised the form. Changed to «Зеаланд», keeping the italics.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1630,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 273,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

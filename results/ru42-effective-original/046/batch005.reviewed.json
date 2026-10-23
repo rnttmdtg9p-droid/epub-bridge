@@ -1,0 +1,74 @@
+{
+  "unit": 46,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-046-0099",
+      "target": "Затем он покинул повозку, жестикулируя и повторяя эти непонятные слова:",
+      "source_sha256": "be665e7570fa97abc5ebfc70448e05393c51b4a458a7bad1cf93df7ac52f7937",
+      "target_id": "ru-fr42c-046-0099",
+      "tag": "p",
+      "target_sha256": "ef5faea88730cfc328b594cc5e14e2ef2ad72921531da7ca515412d81ef0e50a"
+    },
+    {
+      "source_id": "fr42c-046-0100",
+      "target": "«<i>Аланд! Аланд! Зеаланд!</i>»",
+      "source_sha256": "0ae0a2ff78d26d9414ab8aa433de4e5c8543596c68ef106faad7ae217e91047a",
+      "target_id": "ru-fr42c-046-0100",
+      "tag": "p",
+      "target_sha256": "a72fca968aafa19e4d364c3c2ebe6e1691f1b34aa25df38ed210100b9a7d6ea5"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-046-0099",
+      "verdict": "CORRECTED",
+      "reason": "The draft's «соскочил» added a manner of motion; the source says only «quitta» (left). Replaced with «покинул»."
+    },
+    {
+      "source_id": "fr42c-046-0100",
+      "verdict": "CORRECTED",
+      "reason": "The words are incomprehensible and printed as sounds; «Зеландия» normalised the form. Changed to «Зеаланд», keeping the italics."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-046-0099",
+      "before": "Затем он соскочил с повозки, жестикулируя и повторяя эти непонятные слова:",
+      "after": "Затем он покинул повозку, жестикулируя и повторяя эти непонятные слова:"
+    },
+    {
+      "source_id": "fr42c-046-0100",
+      "before": "«<i>Аланд! Аланд! Зеландия!</i>»",
+      "after": "«<i>Аланд! Аланд! Зеаланд!</i>»"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/046/batch005.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK1vKh38SocXTXp6bGTE",
+    "usage": {
+      "input_tokens": 1630,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

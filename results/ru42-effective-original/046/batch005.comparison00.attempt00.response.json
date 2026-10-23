@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK1w75HjtD5MkYh57pDo",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-046-0099\",\"target\":\"Затем он покинул повозку, жестикулируя и повторяя эти непонятные слова:\"},{\"source_id\":\"fr42c-046-0100\",\"target\":\"«<i>Аланд! Аланд! Зеаланд!</i>»\"}],\"review\":[{\"source_id\":\"fr42c-046-0099\",\"verdict\":\"PASS\",\"reason\":\"Correction verified: «quitta le chariot» is rendered as «покинул повозку», with no added motion. Gesticulation, repeated words and the colon are preserved.\"},{\"source_id\":\"fr42c-046-0100\",\"verdict\":\"PASS\",\"reason\":\"Correction verified: the source's non-standard form «Zealand» is kept as «Зеаланд» rather than normalized to «Зеландия». The italics, repeated exclamations and guillemets are preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1864,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 298,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
