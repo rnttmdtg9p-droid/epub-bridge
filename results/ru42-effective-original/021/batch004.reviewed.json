@@ -1,0 +1,92 @@
+{
+  "unit": 21,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-021-0079",
+      "target": "— Но ведь этот документ совершенно ясен! — повторял Гленарван. — Он самым категорическим образом говорит о кораблекрушении капитана и о месте его плена!",
+      "source_sha256": "e2add585182d414f8f05e0075a7515b6ac8e405b36eca0a5aa4ea9cf386e794e",
+      "target_id": "ru-fr42c-021-0079",
+      "tag": "p",
+      "target_sha256": "12035dcc2144ece1c29458765e015b1a6d58387cb0f817071db7260f08c0a94d"
+    },
+    {
+      "source_id": "fr42c-021-0080",
+      "target": "— Ну нет! — ответил географ, стукнув кулаком по столу. — Сто раз нет! Раз Гарри Грант не в Пампасах, значит, его нет и в Америке. А где он, это должен сказать документ, и он скажет, друзья мои, или я не Жак Паганель!",
+      "source_sha256": "b265243f85d126e8c359e663018f9a1713df2aed6d10505333837fcce6684244",
+      "target_id": "ru-fr42c-021-0080",
+      "tag": "p",
+      "target_sha256": "11150f294fc7ea61b1b7321162522c2401cf7b2a91ee16ee240dcc4315ced7ab"
+    },
+    {
+      "source_id": "fr42c-note-046",
+      "target": "М. А. Гиннар действительно провёл в плену у индейцев-пойуче три года, с 1856 по 1859. Он с исключительным мужеством перенёс все жестокие испытания, которым был подвергнут, и наконец сумел бежать, перейдя Анды через ущелье Упсаллата. Он вновь увидел Францию в 1861 году и ныне является одним из коллег почтенного Паганеля по Географическому обществу.",
+      "source_sha256": "869ebc532607c7faea475f9b9f6e760a467a011ecb513ca395b1ea69b2d73d30",
+      "target_id": "ru-fr42c-note-046",
+      "tag": "note",
+      "target_sha256": "7090e69920dd495898566c1ad6b4b23de238b3a415cb910bb144cd614faf5426"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-021-0079",
+      "verdict": "CORRECTED",
+      "reason": "Fixed the clumsy «документ же», the dialogue dash and the quote punctuation; kept the repetition and the sense of the shipwreck and captivity place."
+    },
+    {
+      "source_id": "fr42c-021-0080",
+      "verdict": "CORRECTED",
+      "reason": "Removed the stray space before the closing quote and used dialogue dashes. Fixed «он не в Америке» to «его нет и в Америке». Kept the oath and the fist blow."
+    },
+    {
+      "source_id": "fr42c-note-046",
+      "verdict": "CORRECTED",
+      "reason": "Standardized the name as Гиннар and the tribe as пойуче. Rendered «Il revit la France» and «collègues… à la Société» more faithfully. Dates and facts preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-021-0079",
+      "before": "«Этот документ же совершенно ясен! — повторял Гленарван. — В нём самым категорическим образом объясняется кораблекрушение капитана и место его плена!»",
+      "after": "— Но ведь этот документ совершенно ясен! — повторял Гленарван. — Он самым категорическим образом говорит о кораблекрушении капитана и о месте его плена!"
+    },
+    {
+      "source_id": "fr42c-021-0080",
+      "before": "— Ну, нет! — ответил географ, ударив кулаком по столу. — Сто раз нет! Раз Гарри Грант не в Пампасах, значит, он не в Америке. А где он находится, должен сказать этот документ, и он скажет, друзья мои, или я больше не Жак Паганель! »",
+      "after": "— Ну нет! — ответил географ, стукнув кулаком по столу. — Сто раз нет! Раз Гарри Грант не в Пампасах, значит, его нет и в Америке. А где он, это должен сказать документ, и он скажет, друзья мои, или я не Жак Паганель!"
+    },
+    {
+      "source_id": "fr42c-note-046",
+      "before": "М. А. Гиннар действительно пробыл в плену у индейцев-поючей в течение трёх лет, с 1856 по 1859 год. Он с необычайным мужеством перенёс все ужасные испытания, которым был подвергнут, и наконец сумел сбежать, пересекая Анды через ущелье Упсаллата. В 1861 году он вернулся во Францию и в настоящее время является одним из коллег достопочтенного Паганеля в Географическом обществе.",
+      "after": "М. А. Гиннар действительно провёл в плену у индейцев-пойуче три года, с 1856 по 1859. Он с исключительным мужеством перенёс все жестокие испытания, которым был подвергнут, и наконец сумел бежать, перейдя Анды через ущелье Упсаллата. Он вновь увидел Францию в 1861 году и ныне является одним из коллег почтенного Паганеля по Географическому обществу."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/021/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJssLrU2a472yDUYgRwp",
+    "usage": {
+      "input_tokens": 3564,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 666,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
