@@ -1,0 +1,40 @@
+{
+  "state": "TARGET_TEXT_UNRESOLVED_AFTER_BOUNDED_RECOVERY_TRANSLATE_AUTOMATICALLY",
+  "utc": "2026-10-23T13:04:56.757295+00:00",
+  "standing_authority": "Master5.0.70 SRC10–14,26–30 and77; user continuous automaticproduction",
+  "routes": [
+    {
+      "route": 1,
+      "kind": "Exact saved Engelhardt source and current Wikisource/upstream version",
+      "source": "predecessor/original-evidence/source-selection.json; research/russian-engelhardt.html",
+      "finding": "43chapters and notice recovered, but transcription is scanless25% import, contains hundreds of evidenced word-boundary defects and selected print edition/date unestablished. Authentic original author EXPLANATORY absent. Originaltranslator lifetime alone does not authenticate this particular electronic version.",
+      "accepted": false
+    },
+    {
+      "route": 2,
+      "kind": "Institutional Russian print recovery",
+      "queries": [
+        "site.rusneb.ru Гекльберри Энгельгардт",
+        "site.search.rsl.ru Похождения Финна",
+        "site.prlib.ru Гекльберри"
+      ],
+      "finding": "No complete authenticated Engelhardt copy established. Surfaced1942Chukovsky-edited and1946Chukovsky-edited records and modernDaruzes print editions cannot be assumed rightscompatible substitutes. Prior bounded print-recovery negative remains preserved.",
+      "accepted": false
+    },
+    {
+      "route": 3,
+      "kind": "Alternate Russian translator/repository/edition route",
+      "queries": [
+        "Гекльберри Ранцов1896 читать полный",
+        "Похождения Гекльберри Финна Энгельгардт издание источник1997"
+      ],
+      "source": "Wikisource alternateversion2 web witness; shell404 twice is accessfinding only, not independently counted source searches",
+      "finding": "AlternateRantsov full webtext surfaced but exact scannededition/complete reuseverified textualversion not established; modern commercialversions and mirrorcopies do not resolve selectedversion identity. No completed acceptable alternative established in bounded recovery.",
+      "accepted": false
+    }
+  ],
+  "preservation": "All2264old Russianorderedblocks and approved3repairs retained in immutable predecessor evidence, never supplied as translation drafts. No finding that every historical translation is copyrighted.",
+  "selected_original": "043_Original_Source_Extent_Verification.json",
+  "translation": "NewcompleteEnglish→Russian; DeepLquality_optimized preferred; actualClaude fullsourcealigned review and separate correctioncomparison mandatory",
+  "checkpoint_is_stop_condition": false
+}
