@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJMeLRKkL4jytD3q8TUs",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id03901\",\"target\":\"— Вот что значит служить своей стране по совести, — с удовлетворением сказал Бруссель.\"},{\"source_id\":\"id03902\",\"target\":\"Врачи вышли после часового совещания и предписали обмывать ушибы водой с солью.\"},{\"source_id\":\"id03903\",\"target\":\"Весь день тянулась вереница карет. Вся Фронда записалась у Брусселя.\"},{\"source_id\":\"id03904\",\"target\":\"— Какой прекрасный триумф, отец! — сказал молодой человек, который, не понимая истинной причины, влекущей всех этих людей к его отцу, принимал всерьёз это изъявление чувств со стороны вельмож, принцев и их друзей. — Увы! мой милый Жак, — сказал Бруссель, — боюсь, что этот триумф обойдётся мне слишком дорого, и я сильно ошибаюсь, если господин Мазарини в эту минуту не составляет мне карту огорчений, которые я ему причиняю.\"},{\"source_id\":\"id03905\",\"target\":\"Фрике вернулся в полночь: ему не удалось найти врача.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2225,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 392,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
