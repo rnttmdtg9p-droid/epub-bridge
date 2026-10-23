@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKjAdWGCJ7YfUeAMsMty",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"assessments\":[{\"source_id\":\"046-act-4-heading\",\"verdict\":\"PASS\",\"reason\":\"Heading matches the source exactly.\"},{\"source_id\":\"046-4-0000\",\"verdict\":\"PASS\",\"reason\":\"Opening stage direction is identical to the source.\"},{\"source_id\":\"046-4-0001\",\"verdict\":\"PASS\",\"reason\":\"Stage direction and character-name spans match the source.\"},{\"source_id\":\"046-4-0002\",\"verdict\":\"PASS\",\"reason\":\"Dialogue, speaker markup and stage directions are identical to the source.\"},{\"source_id\":\"046-4-0003\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0004\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0005\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0006\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0007\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0008\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0009\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0010\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0011\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0012\",\"verdict\":\"PASS\",\"reason\":\"Stage direction matches the source.\"},{\"source_id\":\"046-4-0013\",\"verdict\":\"PASS\",\"reason\":\"Rode's continuing line with no speaker label matches the source paragraph.\"},{\"source_id\":\"046-4-0014\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source, including the Polish «кохане».\"},{\"source_id\":\"046-4-0015\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0016\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0017\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0018\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0019\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0020\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0021\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0022\",\"verdict\":\"PASS\",\"reason\":\"Stage direction matches the source.\"},{\"source_id\":\"046-4-0023\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0024\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0025\",\"verdict\":\"PASS\",\"reason\":\"Stage direction matches the source.\"},{\"source_id\":\"046-4-0026\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0027\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0028\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0029\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source, including Chebutykin's stammer «благо… благоугодным».\"},{\"source_id\":\"046-4-0030\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0031\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source, including «Тарара… бумбия».\"},{\"source_id\":\"046-4-0032\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0033\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0034\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0035\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0036\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source.\"},{\"source_id\":\"046-4-0037\",\"verdict\":\"PASS\",\"reason\":\"Text matches the source, including the lang-la span and the missing period after modus vivendi, which is source-faithful.\"},{\"source_id\":\"046-4-0038\",\"verdict\":\"PASS\",\"reason\":\"Stage direction matches the source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 43483,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1550,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
