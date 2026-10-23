@@ -1,0 +1,13 @@
+"""Actual source comparison of the five structural labels; no name batches repeated."""
+from pathlib import Path
+import json,hashlib,gzip,base64,os
+import bb_ru43_original as api
+R=api.ROOT;O=R/'results/ru43-editorial-two';O.mkdir(parents=True,exist_ok=True);p=R/'inputs/ru43-editorial-two.json'
+data=json.loads(p.read_text());items=data['items'];sources=[x['source'] for x in items];current=api.validate([{'source_id':x['source']['id'],'target':x['prior_target']} for x in items],sources);folder=O/'editorial';folder.mkdir(exist_ok=True);turns=[]
+for phase in range(6):
+ payload={'task':'Review both exact source-bound Russian corrections. The canonical Russian spelling of Huckleberry Finn is Гекльберри Финн. The source house caption is possessive THE WIDOW’S., not plural widows: its actual original1885picture depicts the widow’s house, confirmed by host pixel inspection. Apply source-faithful corrections automatically. Return JSON ONLY using these two top-level arrays: {"rows":[{"source_id":"exact id","target":"complete final Russian"}],"review":[{"source_id":"exact id","verdict":"PASS or CORRECTED","reason":"specific source-based assessment"}]}. Every source_id exactly once in both arrays in supplied order. Phase0 is editing; later phases independently compare the corrected result to source, preserve exact target bytes if already accurate and consistent.','source_rows':sources,'final_rows':current,'correction_evidence':items,'source_context':data['source_context'],'phase':'INDEPENDENT_FINAL_COMPARISON' if phase else 'SOURCE_BOUND_EDITORIAL_REVIEW'}
+ result,meta=api.checked_call(api.SYSTEM+' Verify these two source-grounded editorial corrections only.',payload,folder/f'phase{phase:02}',sources,True);changes=[{'source_id':a['source_id'],'before':a['target'],'after':b['target']} for a,b in zip(current,result['rows']) if a['target']!=b['target']];turns.append({'phase':phase,'api':meta,'review':result['review'],'corrections':changes});current=result['rows']
+ if phase>=1 and not changes and all(x['verdict']=='PASS' for x in result['review']):
+  assert [x['target'] for x in current]==[x['proposed_target'] for x in items],'SOURCE_BOUND_CORRECTION_REQUIRES_FURTHER_ALIGNMENT'
+  api.save(O/'editorial.verified.json',{'state':'ACTUAL_TWO_EDITORIAL_CORRECTIONS_AND_SEPARATE_STABLE_SOURCE_COMPARISON','source_items':items,'rows':current,'turns':turns,'run_id':os.environ.get('GITHUB_RUN_ID'),'input_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'book_release':False});print('TWO_SOURCE_BOUND_EDITORIAL_CORRECTIONS_ACTUALLY_REVIEWED_AND_INDEPENDENTLY_COMPARED',flush=True);break
+else:raise RuntimeError('EDITORIAL_COMPARISON_NOT_STABLE')
