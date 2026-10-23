@@ -1,0 +1,64 @@
+{
+  "unit": 2,
+  "state": "INDEPENDENT_PRIOR_ACTUAL_EXCHANGES_AND_EFFECTIVE_SOURCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 94,
+  "prior_complete_actual_qualification": {
+    "unit": 2,
+    "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+    "source_rows": 94,
+    "batch_evidence": [
+      {
+        "batch": 0,
+        "rows": 20,
+        "actual_provider_review_rows": 19,
+        "source_native_untranslated_rows": 1,
+        "response_id": "msg_011CgJjzSESKo8G2Bhqfbpsf",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 1,
+        "rows": 20,
+        "actual_provider_review_rows": 19,
+        "source_native_untranslated_rows": 1,
+        "response_id": "msg_011CgJk6VkgSoJtcm5iqhkRK",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 2,
+        "rows": 20,
+        "actual_provider_review_rows": 18,
+        "source_native_untranslated_rows": 2,
+        "response_id": "msg_011CgJkE1exprsYyeeeS6GTP",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 3,
+        "rows": 20,
+        "actual_provider_review_rows": 20,
+        "source_native_untranslated_rows": 0,
+        "response_id": "msg_011CgJkMSJEyvHUG1ZycmMuW",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 4,
+        "rows": 15,
+        "actual_provider_review_rows": 15,
+        "source_native_untranslated_rows": 0,
+        "response_id": "msg_011CgJmBcz1honeiYFumpqyT",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      }
+    ],
+    "source_native_policy": "Untranslated original foreign documents/verse copied exactly and independently compared; not represented as model-translated or provider-reviewed output",
+    "qualified_target_sha256": "83af9016dda0082f399ae39257825943663cab9bb04bf718469327ea9611b5f1",
+    "book_release": false
+  },
+  "heading_source_correction": null,
+  "all_retained_source_body_rows_exactly_unchanged": true,
+  "source_effective_unit_sha256": "1f8ac81f35c3326531aacef32acb84158ba607bf304afa816a29d653fd5fcffa",
+  "book_release": false
+}
