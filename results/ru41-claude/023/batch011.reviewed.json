@@ -1,0 +1,123 @@
+{
+  "unit": 23,
+  "batch": 11,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id03059",
+      "target": "— Прощайте, господа, — сказал граф. — А я пойду спать двадцать четыре часа кряду: я валюсь с ног от усталости.",
+      "source_sha256": "a04739b3dbdb94038c19c1c931e3d8919ec2016a67ee6caf23ac95594724033a",
+      "target_id": "ru-id03059",
+      "tag": "p",
+      "target_sha256": "2dfa03646e8b289643295726c5556b3a6b1ae2db356d28ae0a651ef47af06220"
+    },
+    {
+      "source_id": "id03060",
+      "target": "Трое мужчин поклонились друг другу, обменявшись последним взглядом.",
+      "source_sha256": "cc2631d06dae35ed03f1ddab341bbb47a681fdf3b71b26cd274950f4a4c5218c",
+      "target_id": "ru-id03060",
+      "tag": "p",
+      "target_sha256": "500c89d96e2010e99eee07ccadad7fce3f90a7dcc6a7dec60def509c822db58e"
+    },
+    {
+      "source_id": "id03061",
+      "target": "Скаррон следил за ними краем глаза сквозь портьеры своей гостиной.",
+      "source_sha256": "4d94e3fe9457b868567e2b0704a6a3ce8f56c16b6a2584c866a17d8607f8fe73",
+      "target_id": "ru-id03061",
+      "tag": "p",
+      "target_sha256": "f6ab4865e813797500076cd3b8fcd56a230aa5f8cc639a6ebc05064ef1652e13"
+    },
+    {
+      "source_id": "id03062",
+      "target": "— Ни один из них не сделает того, что говорит, — пробормотал он со своей маленькой обезьяньей улыбкой. — Но пусть идут, храбрые дворяне! Кто знает, не хлопочут ли они о том, чтобы мне вернули мою пенсию!.. Они-то могут двигать руками, а это очень много; увы, у меня есть только язык, но я постараюсь доказать, что и это кое-что значит. Эй! Шампенец, бьёт одиннадцать. Подкатите меня к постели… По правде сказать, эта мадемуазель д’Обинье очаровательна!",
+      "source_sha256": "306f81c869fccba8f8633dfdaa6637f3506894de44233cc3960b260ef1e32558",
+      "target_id": "ru-id03062",
+      "tag": "p",
+      "target_sha256": "eb157691ebf534e080e8c5b1ca5bbfa57e803af6e2cc210b6646c3163641e200"
+    },
+    {
+      "source_id": "id03063",
+      "target": "С этими словами бедный паралитик скрылся в своей спальне, дверь за ним затворилась, и огни один за другим погасли в гостиной на улице Турнель.",
+      "source_sha256": "b098ee9e5152e5d944109952433cec50b966bf73c6d967fe150979568d5845a9",
+      "target_id": "ru-id03063",
+      "tag": "p",
+      "target_sha256": "e6a9dd2e01598bd516adc241402b00da3f476ab68436e0d1c22f3773405619cb"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id03059",
+      "verdict": "PASS",
+      "reason": "Faithful: the speech, the twenty-four hours of sleep, and the exhaustion are all rendered accurately, in an appropriate register."
+    },
+    {
+      "source_id": "id03060",
+      "verdict": "PASS",
+      "reason": "Faithful: the three men's mutual greeting and the exchanged last look are preserved, with the sequence intact."
+    },
+    {
+      "source_id": "id03061",
+      "verdict": "PASS",
+      "reason": "Faithful: Scarron watches them out of the corner of his eye through the curtains of his salon; the imperfect aspect is preserved."
+    },
+    {
+      "source_id": "id03062",
+      "verdict": "CORRECTED",
+      "reason": "The source has the present tense 'voilà onze heures qui sonnent' (eleven is striking now), but the draft used the past 'пробило'. Changed to 'бьёт одиннадцать'. Everything else (the negation, the irony, the contrast between arms and tongue, the order to roll him to bed, the remark on Mlle d'Aubigné) is accurate."
+    },
+    {
+      "source_id": "id03063",
+      "verdict": "PASS",
+      "reason": "Faithful: the paralytic's exit, the closing door, the lights going out one after another, and the rue des Tournelles are all preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id03062",
+      "before": "— Ни один из них не сделает того, что говорит, — пробормотал он со своей маленькой обезьяньей улыбкой. — Но пусть идут, храбрые дворяне! Кто знает, не хлопочут ли они о том, чтобы мне вернули мою пенсию!.. Они-то могут двигать руками, а это очень много; увы, у меня есть только язык, но я постараюсь доказать, что и это кое-что значит. Эй! Шампенец, пробило одиннадцать. Подкатите меня к постели… По правде сказать, эта мадемуазель д’Обинье очаровательна!",
+      "after": "— Ни один из них не сделает того, что говорит, — пробормотал он со своей маленькой обезьяньей улыбкой. — Но пусть идут, храбрые дворяне! Кто знает, не хлопочут ли они о том, чтобы мне вернули мою пенсию!.. Они-то могут двигать руками, а это очень много; увы, у меня есть только язык, но я постараюсь доказать, что и это кое-что значит. Эй! Шампенец, бьёт одиннадцать. Подкатите меня к постели… По правде сказать, эта мадемуазель д’Обинье очаровательна!"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMQxPtng2d79aT9qNTw",
+    "usage": {
+      "input_tokens": 2306,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 459,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMRHX67bkHPG7z5b3PD",
+    "usage": {
+      "input_tokens": 3470,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1343,
+      "output_tokens_details": {
+        "thinking_tokens": 460
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
