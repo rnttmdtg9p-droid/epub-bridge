@@ -2,9 +2,9 @@ import base64, concurrent.futures, datetime, gzip, hashlib, json, os, subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'results/ru42-complete-original'; OUT.mkdir(parents=True,exist_ok=True)
-PACKED=base64.b64decode((ROOT/'inputs/ru42-source.json.gz.b64').read_text())
-assert hashlib.sha256(PACKED).hexdigest()=='85acf8afe9c3576a79c1b3c8739c939e531e31cbbb0d7a50b39e31880fc3277b'
+OUT=ROOT/'results/ru42-effective-original'; OUT.mkdir(parents=True,exist_ok=True)
+PACKED=base64.b64decode((ROOT/'inputs/ru42-effective-source.json.gz.b64').read_text())
+assert hashlib.sha256(PACKED).hexdigest()=='8b7e6aa530a279f1838ac07e50c92edcc9a8cdfe7650d85f142cddcb8c5642af'
 SOURCE=json.loads(gzip.decompress(PACKED))
 KEY=os.environ.get('ANTHROPIC_API_KEY','').strip()
 MODEL='claude-sonnet-5-5'
@@ -15,10 +15,15 @@ def save(p,v):
     t=p.with_suffix(p.suffix+'.tmp'); t.write_text(json.dumps(v,ensure_ascii=False,indent=2));t.replace(p)
 def commit():
     with LOCK:
-        subprocess.run(['git','add','results/ru42-complete-original'],cwd=ROOT,check=True)
+        subprocess.run(['git','add','results/ru42-effective-original'],cwd=ROOT,check=True)
         if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode:
             subprocess.run(['git','commit','-m','Checkpoint rank 42 Claude translation and review'],cwd=ROOT,check=True)
-            subprocess.run(['git','push','origin','HEAD'],cwd=ROOT,check=True)
+            
+            for push_attempt in range(3):
+                pushed=subprocess.run(['git','push','origin','HEAD'],cwd=ROOT)
+                if pushed.returncode==0:break
+                if push_attempt==2:raise RuntimeError('CHECKPOINT_PUSH_FAILED_AFTER_SAFE_RETRIES')
+                time.sleep(2*(push_attempt+1))
 
 GLOSSARY='Гленарван; леди Элен; Мэри Грант; Роберт Грант; Гарри Грант; Джон Манглс; Мак-Наббс; Жак Паганель; Айртон; Талькав; Дункан; Британия. Names are consistency guidance only; preserve source distinctions.'
 SYSTEM='You are the authorized Boundary Bay literary translator for Jules Verne, Les enfants du capitaine Grant (1868), French to Russian. Create a NEW complete fluent literary Russian translation directly from the supplied French. Never consult or reproduce a published Russian translation. Preserve every fact, agency, negation, tense, humour, ambiguity, dialogue turn and paragraph boundary. Preserve historical anomalies faithfully. Use Russian dialogue punctuation and idiomatic prose. Retain authentic source verse line counts exactly, and italic spans semantically. Do not merge, omit, summarize, modernize facts, or add explanations. Source HTML br may encode mechanical wrapping of prose; preserve genuine verse or document layout when semantically indicated, without treating every prose wrap as a verse line. Names already established: '+GLOSSARY+' Preserve every [[FN:number]] note token exactly. Rows with translate=false are authentic foreign-language documents or verse and MUST retain their text exactly, including line breaks. Source role identifies notes, captions, source signatures and documentary headings; never turn these into new chapters. Return JSON only.'
@@ -114,8 +119,9 @@ def checked_call(system,payload,path,source,review=False):
     start=max([int(re.search(r'\.attempt(\d+)\.request',q.name)[1])+1 for q in existing] or [0])
     for attempt in range(start,start+3):
         request=dict(payload)
+        request['source_rows']=[{k:v for k,v in r.items() if k not in ['source_fragments','source_child_indices']} for r in editable]
         if native:
-            request['source_rows']=editable
+            request['source_rows']=[{k:v for k,v in r.items() if k not in ['source_fragments','source_child_indices']} for r in editable]
             request['protected_source_native_rows']=native
             request['protected_source_instruction']='Read these authentic foreign-language documents/verse as context. They are copied exactly from source and are NOT editable or translated rows. Return rows and review arrays only for source_rows. Do not add protected IDs to your returned arrays.'
             for key in ['draft_rows','final_rows']:
@@ -216,7 +222,7 @@ def translate(unit):
     commit()
     from bb_ru42_verify import qualify_unit
     try:
-        accepted,qualification=qualify_unit(ROOT,SOURCE,number)
+        accepted,qualification=qualify_unit(ROOT,SOURCE,number,output_name="ru42-effective-original")
         save(OUT/'qualified'/f'unit-{number:03}.json',accepted)
         save(OUT/'qualified'/f'unit-{number:03}.evidence.json',qualification)
         (OUT/'qualified'/f'unit-{number:03}.blocked.json').unlink(missing_ok=True)
@@ -229,19 +235,23 @@ def translate(unit):
     return number
 
 if __name__=='__main__':
-    assert len(SOURCE)==70 and sum(len(u['rows']) for u in SOURCE)==5738
+    assert len(SOURCE)==70 and sum(len(u['rows']) for u in SOURCE)==5671
     if not KEY:raise SystemExit('MISSING_ANTHROPIC_API_KEY')
     if not os.environ.get('DEEPL_AUTH_KEY','').strip():raise SystemExit('MISSING_DEEPL_AUTH_KEY')
     errors=[]
     status=OUT/'run-status.json'
     if status.exists():save(OUT/('prior-run-status-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'.json'),json.loads(status.read_text()))
-    save(status,{'state':'RUNNING_CONTINUOUS_TRANSLATION_REVIEW','run_id':os.environ.get('GITHUB_RUN_ID'),'source_units':70,'source_rows':5738,'checkpoint_is_stop_condition':False,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+    save(status,{'state':'RUNNING_CONTINUOUS_TRANSLATION_REVIEW','run_id':os.environ.get('GITHUB_RUN_ID'),'source_units':70,'source_rows':5671,'checkpoint_is_stop_condition':False,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
     commit()
     for unit in SOURCE:
-        try:translate(unit)
+        try:
+            if unit['unit'] in [1,2,4]:
+                from bb_ru42_seed_verify import qualify_seeded_unit
+                chapter,qualification=qualify_seeded_unit(ROOT,SOURCE,unit['unit']);folder=OUT/f'{unit["unit"]:03}';save(folder/'chapter.reviewed.json',chapter);save(OUT/'qualified'/f'unit-{unit["unit"]:03}.json',chapter);save(OUT/'qualified'/f'unit-{unit["unit"]:03}.evidence.json',qualification);commit();print('UNCHANGED_PRIOR_UNIT_REUSED',unit['unit'],flush=True)
+            else:translate(unit)
         except Exception as error:
             errors.append({'unit':unit['unit'],'error':str(error)});print('UNIT_FAILED',unit['unit'],str(error),flush=True)
             break
-    save(OUT/'run-status.json',{'state':'PARTIAL_FAILURE' if errors else 'API_TRANSLATION_REVIEW_COMPLETE_PENDING_BOOK_QA','errors':errors,'source_units':70,'source_rows':5738,'translation_provider':'DeepL quality_optimized','review_provider':MODEL,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+    save(OUT/'run-status.json',{'state':'PARTIAL_FAILURE' if errors else 'API_TRANSLATION_REVIEW_COMPLETE_PENDING_BOOK_QA','errors':errors,'source_units':70,'source_rows':5671,'translation_provider':'DeepL quality_optimized','review_provider':MODEL,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
     commit()
     if errors:raise SystemExit(1)
