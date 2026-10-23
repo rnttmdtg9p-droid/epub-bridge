@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,hashlib,os
+import bb_ru43_original as api
+R=api.ROOT;O=R/'results/ru43-rail-caption' ;O.mkdir(parents=True,exist_ok=True);p=R/'inputs/ru43-rail-caption.json';data=json.loads(p.read_text());items=data['items'];sources=[x['source'] for x in items];current=api.validate([{'source_id':x['source']['id'],'target':x['prior_target']} for x in items],sources);turns=[]
+for phase in range(6):
+ payload={'task':'Review the one supplied complete Russian rows against their English sources and full chapter contexts. Apply concrete corrections for the provided contextual findings: correct idioms, agency, gender and historical tobacco referents. Preserve source humour, facts and all italic spans. Do not overcorrect source anomalies or already idiomatic text. Return JSON ONLY: rows with source_id,target and review with source_id,verdict PASS or CORRECTED,reason. Every supplied source_id exactly once in both arrays. In subsequent phases independently compare the complete corrected rows against English and preserve exact bytes when faithful.','source_rows':sources,'final_rows':current,'findings':[{'source_id':x['source']['id'],'finding':x['finding'],'context_unit':x['context_unit']} for x in items],'complete_source_contexts':data['complete_source_contexts'],'phase':'INDEPENDENT_SOURCE_COMPARISON' if phase else 'FULL_CONTEXTUAL_FIDELITY_REVIEW'}
+ result,meta=api.checked_call(api.SYSTEM,payload,O/f'phase{phase:02}',sources,True);changes=[{'source_id':a['source_id'],'before':a['target'],'after':b['target']} for a,b in zip(current,result['rows']) if a['target']!=b['target']];turns.append({'phase':phase,'api':meta,'review':result['review'],'corrections':changes});current=result['rows']
+ if phase>=1 and not changes and all(x['verdict']=='PASS' for x in result['review']):
+  api.save(O/'rail.verified.json',{'state':'ACTUAL_RAIL_CAPTION_SCOPE_REPAIR_AND_STABLE_SOURCE_COMPARISON','items':items,'rows':current,'turns':turns,'input_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'run_id':os.environ.get('GITHUB_RUN_ID'),'book_release':False});break
+else:raise RuntimeError('CONTEXTUAL_COMPARISON_NOT_STABLE')
