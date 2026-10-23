@@ -1,0 +1,74 @@
+{
+  "unit": 33,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-033-0100",
+      "target": "— То, что думаем все мы, мой дорогой Эдвард, — ответила леди Элен, обернувшись к своим спутникам. — В путь! В путь!»",
+      "source_sha256": "c1a51b8eca6872beb02d9ad4c1cdb8bb2a5e6af7bda07b0a6013673383ad2e57",
+      "target_id": "ru-fr42c-033-0100",
+      "tag": "p",
+      "target_sha256": "5f73d2f5dce2d9315a09dddbb43cb09249d81c9a56914542997fe22087873c27"
+    },
+    {
+      "source_id": "fr42c-note-071",
+      "target": "Около 1200 лье.",
+      "source_sha256": "eb6c75dbb5318f9e07dd3047414f97190e2b5b637baf766abb195f80aac326de",
+      "target_id": "ru-fr42c-note-071",
+      "tag": "note",
+      "target_sha256": "88393e6176438e6790474bfae86434955785bfe577a989fe9d49fd9f052c08b8"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-033-0100",
+      "verdict": "CORRECTED",
+      "reason": "Исправлено имя на established «Элен»; пунктуация реплики приведена к русской норме (точка после ремарки вместо двоеточия и тире); смысл сохранён."
+    },
+    {
+      "source_id": "fr42c-note-071",
+      "verdict": "CORRECTED",
+      "reason": "«Лиев» неверно; lieues — «лье». «Environ» передано как «около»."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-033-0100",
+      "before": "— То, что мы все думаем, мой дорогой Эдвард, — ответила леди Елена, обращаясь к своим спутникам: — В путь! В путь!»",
+      "after": "— То, что думаем все мы, мой дорогой Эдвард, — ответила леди Элен, обернувшись к своим спутникам. — В путь! В путь!»"
+    },
+    {
+      "source_id": "fr42c-note-071",
+      "before": "Примерно 1200 лиев.",
+      "after": "Около 1200 лье."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/033/batch005.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJwW7zwqyJnaBzuLdwBH",
+    "usage": {
+      "input_tokens": 1940,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

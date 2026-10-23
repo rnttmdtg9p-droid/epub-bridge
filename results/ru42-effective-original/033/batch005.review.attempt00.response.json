@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJwW7zwqyJnaBzuLdwBH",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-033-0100\",\"target\":\"— То, что думаем все мы, мой дорогой Эдвард, — ответила леди Элен, обернувшись к своим спутникам. — В путь! В путь!»\"},{\"source_id\":\"fr42c-note-071\",\"target\":\"Около 1200 лье.\"}],\"review\":[{\"source_id\":\"fr42c-033-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"Исправлено имя на established «Элен»; пунктуация реплики приведена к русской норме (точка после ремарки вместо двоеточия и тире); смысл сохранён.\"},{\"source_id\":\"fr42c-note-071\",\"verdict\":\"CORRECTED\",\"reason\":\"«Лиев» неверно; lieues — «лье». «Environ» передано как «около».\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1940,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 278,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
