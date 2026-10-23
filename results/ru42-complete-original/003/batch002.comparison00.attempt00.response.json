@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJmNDUxnd3onk2aDooyu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-003-0039\",\"target\":\"— У вас его больше нет?\"},{\"source_id\":\"fr42c-003-0040\",\"target\":\"— Нет; в интересах самого вашего отца лорд Гленарван, должно быть, увёз его в Лондон; но я передала вам всё, что в нём было, слово в слово, и рассказала, как нам удалось восстановить его точный смысл; среди этих почти стёртых обрывков фраз волны пощадили несколько цифр; к несчастью, долгота…\"},{\"source_id\":\"fr42c-003-0041\",\"target\":\"— Мы обойдёмся без неё! — воскликнул мальчик.\"},{\"source_id\":\"fr42c-003-0042\",\"target\":\"— Да, господин Роберт, — ответила Элен, улыбаясь при виде его решимости. — Итак, как видите, мисс Грант, малейшие подробности этого документа известны вам так же, как и мне.\"},{\"source_id\":\"fr42c-003-0043\",\"target\":\"— Да, сударыня, — ответила девушка, — но мне хотелось бы увидеть почерк моего отца.\"},{\"source_id\":\"fr42c-003-0044\",\"target\":\"— Что ж, завтра, быть может, уже завтра лорд Гленарван вернётся. Мой муж, взяв с собой этот неоспоримый документ, пожелал представить его комиссарам Адмиралтейства, чтобы добиться немедленной отправки корабля на поиски капитана Гранта.\"},{\"source_id\":\"fr42c-003-0045\",\"target\":\"— Возможно ли это, сударыня! — воскликнула девушка. — Вы сделали это для нас?\"},{\"source_id\":\"fr42c-003-0046\",\"target\":\"— Да, дорогая мисс, и я жду лорда Гленарвана с минуты на минуту.\"},{\"source_id\":\"fr42c-003-0047\",\"target\":\"— Сударыня, — сказала девушка с глубокой признательностью и благоговейным жаром, — да благословит вас небо, вас и лорда Гленарвана!\"},{\"source_id\":\"fr42c-003-0048\",\"target\":\"— Дорогое дитя, — ответила леди Элен, — мы не заслуживаем никакой благодарности; всякий другой на нашем месте сделал бы то же, что и мы. Дай бог, чтобы сбылись надежды, которые я позволила вам питать! До возвращения лорда Гленарвана вы останетесь в замке…\"},{\"source_id\":\"fr42c-003-0049\",\"target\":\"— Сударыня, — ответила девушка, — я не хотела бы злоупотреблять сочувствием, которое вы выказываете чужим людям…\"},{\"source_id\":\"fr42c-003-0050\",\"target\":\"— Чужим! Дорогое дитя, ни ваш брат, ни вы не чужие в этом доме, и я хочу, чтобы по возвращении лорд Гленарван сам рассказал детям капитана Гранта, что собираются предпринять для спасения их отца».\"},{\"source_id\":\"fr42c-003-0051\",\"target\":\"Отказаться от предложения, сделанного от всего сердца, было невозможно. Итак, было решено, что мисс Грант и её брат будут ждать в Малкольм-Касле возвращения лорда Гленарвана.\"},{\"source_id\":\"fr42c-note-004\",\"target\":\"Горная Шотландия.\"},{\"source_id\":\"fr42c-note-005\",\"target\":\"Боевые песни.\"}],\"review\":[{\"source_id\":\"fr42c-003-0039\",\"verdict\":\"PASS\",\"reason\":\"Faithful question, negation preserved.\"},{\"source_id\":\"fr42c-003-0040\",\"verdict\":\"PASS\",\"reason\":\"Agency (Glenarvan took it; Helena told) and details correct; trailing ellipsis kept.\"},{\"source_id\":\"fr42c-003-0041\",\"verdict\":\"PASS\",\"reason\":\"'On s'en passera' rendered correctly; 'неё' refers to longitude; 'jeune garçon' as мальчик fine.\"},{\"source_id\":\"fr42c-003-0042\",\"verdict\":\"PASS\",\"reason\":\"Accurate; smiling at his determination and conclusion preserved. Name form consistent.\"},{\"source_id\":\"fr42c-003-0043\",\"verdict\":\"PASS\",\"reason\":\"Accurate conditional wish; register appropriate.\"},{\"source_id\":\"fr42c-003-0044\",\"verdict\":\"PASS\",\"reason\":\"Meaning, 'demain peut-être' and purpose clause preserved.\"},{\"source_id\":\"fr42c-003-0045\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and question faithful.\"},{\"source_id\":\"fr42c-003-0046\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'd'un instant à l'autre' idiomatic.\"},{\"source_id\":\"fr42c-003-0047\",\"verdict\":\"PASS\",\"reason\":\"Blessing and emotional tone faithful; word order fine.\"},{\"source_id\":\"fr42c-003-0048\",\"verdict\":\"PASS\",\"reason\":\"All clauses preserved, including final ellipsis; idiomatic.\"},{\"source_id\":\"fr42c-003-0049\",\"verdict\":\"PASS\",\"reason\":\"Faithful, negation and conditional preserved.\"},{\"source_id\":\"fr42c-003-0050\",\"verdict\":\"PASS\",\"reason\":\"Faithful; closing quote ends the speech begun earlier.\"},{\"source_id\":\"fr42c-003-0051\",\"verdict\":\"PASS\",\"reason\":\"Faithful narrative; decision and waiting preserved.\"},{\"source_id\":\"fr42c-note-004\",\"verdict\":\"PASS\",\"reason\":\"Correct note rendering.\"},{\"source_id\":\"fr42c-note-005\",\"verdict\":\"PASS\",\"reason\":\"Correct note rendering.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10057,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1950,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
