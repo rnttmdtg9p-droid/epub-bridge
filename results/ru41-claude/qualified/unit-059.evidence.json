@@ -1,0 +1,74 @@
+{
+  "unit": 59,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 153,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 20,
+      "response_id": "msg_011CgJRmcNRbMQG4LAHzrRqD",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 1,
+      "rows": 20,
+      "response_id": "msg_011CgJRpyvoUiRscM7dYogFM",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 2,
+      "rows": 20,
+      "response_id": "msg_011CgJRtucTFLwHegud49eYc",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 3,
+      "rows": 20,
+      "response_id": "msg_011CgJRyg3X5FcwTRM2xmcPd",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 4,
+      "rows": 20,
+      "response_id": "msg_011CgJS3KMgoHGztQghRios2",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 5,
+      "rows": 20,
+      "response_id": "msg_011CgJS6p3Rkw7YUqNknSwPG",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 6,
+      "rows": 20,
+      "response_id": "msg_011CgJSCG4jrMEqBXhdsRW8R",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 7,
+      "rows": 14,
+      "response_id": "msg_011CgJSFixbAT3Q7yCAMTxFy",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    }
+  ],
+  "controlling_corrections": 0,
+  "qualified_target_sha256": "285af6f2edfdc6809f19f4d27f83bedda7a698d60b01cfdea35da02e25734c76",
+  "book_release": false
+}
