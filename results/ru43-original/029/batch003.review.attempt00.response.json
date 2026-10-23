@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKLTRoMqhACoYPvsAUDf",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-029-0060\",\"target\":\"— И в церковь не ходят.\"},{\"source_id\":\"043-029-0061\",\"target\":\"— Но <i>ты</i> же всегда ходил в церковь.\"},{\"source_id\":\"043-029-0062\",\"target\":\"Ну, я опять сел в лужу. Я забыл, что я слуга старика. Но в следующую минуту я уже пустился в объяснения, как это слуга-«долина» отличается от обыкновенного слуги и <i>обязан</i> ходить в церковь, хочет он того или нет, и сидеть вместе с семьёй, потому что таков закон. Но вышло у меня не очень ловко, и когда я кончил, то увидел, что она не удовлетворена. Она говорит:\"},{\"source_id\":\"043-029-0063\",\"target\":\"— Ну-ка, по-честному, как индеец, — разве ты не наврал мне с три короба?\"},{\"source_id\":\"043-029-0064\",\"target\":\"Честное индейское\"},{\"source_id\":\"043-029-0065\",\"target\":\"— Честное индейское, — говорю я.\"},{\"source_id\":\"043-029-0066\",\"target\":\"— Ни капельки не наврал?\"},{\"source_id\":\"043-029-0067\",\"target\":\"— Ни капельки. Ни одного слова вранья, — говорю я.\"},{\"source_id\":\"043-029-0068\",\"target\":\"— Положи руку на эту книгу и скажи это.\"},{\"source_id\":\"043-029-0069\",\"target\":\"Я увидел, что это всего-навсего словарь, и положил на него руку и сказал. Тогда она стала глядеть немного более довольной и говорит:\"},{\"source_id\":\"043-029-0070\",\"target\":\"— Ну ладно, кое-чему я поверю; но, помилуй бог, всему остальному я ни за что не поверю.\"},{\"source_id\":\"043-029-0071\",\"target\":\"— Чему это ты не поверишь, Джо? — говорит Мэри Джейн, входя, а за ней Сьюзан. — Нехорошо и недобро так разговаривать с ним: он чужой и так далеко от своих. Тебе самой понравилось бы, если бы с тобой так обращались?\"},{\"source_id\":\"043-029-0072\",\"target\":\"— Ты всегда такая, Мэйм — вечно бросаешься на помощь, прежде чем кого-нибудь обидят. Я ему ничего не сделала. Он наплёл всяких небылиц, по-моему, а я сказала, что не проглочу всё это; вот и всё до последней крошки, что я <i>сказала</i>. Думаю, он такую малость переживёт, разве нет?\"},{\"source_id\":\"043-029-0073\",\"target\":\"— Мне всё равно, малость это или не малость; он у нас в доме и чужой, и с твоей стороны нехорошо было так говорить. Окажись ты на его месте, тебе было бы стыдно; а потому нельзя говорить другому человеку то, от чего <i>ему</i> станет стыдно.\"},{\"source_id\":\"043-029-0074\",\"target\":\"— Но, Мэм, он ведь сказал…\"},{\"source_id\":\"043-029-0075\",\"target\":\"— Неважно, что он <i>сказал</i> — не в этом дело. Дело в том, чтобы ты обходилась с ним <i>ласково</i> и не говорила ничего, от чего он вспомнит, что он не в своей стране и не среди своих.\"},{\"source_id\":\"043-029-0076\",\"target\":\"Я говорю себе: вот <i>какой</i> девушке я позволяю этой старой гадюке грабить её на деньги!\"},{\"source_id\":\"043-029-0077\",\"target\":\"Тут вступила Сьюзан, и, веришь не веришь, она задала Заячьей Губе такую взбучку, что мёртвый бы услышал!\"},{\"source_id\":\"043-029-0078\",\"target\":\"Говорю я себе: а вот и <i>ещё</i> одна, которую я позволяю ему грабить на деньги!\"},{\"source_id\":\"043-029-0079\",\"target\":\"Потом Мэри Джейн взялась за дело снова и принялась мило и ласково — это уж у неё всегда так; но когда она кончила, от бедной Заячьей Губы почти ничего не осталось. И она заревела.\"}],\"review\":[{\"source_id\":\"043-029-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed echo form and dialogue punctuation.\"},{\"source_id\":\"043-029-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic 'you' preserved on ты; dash dialogue; speaker is Huck as the servant.\"},{\"source_id\":\"043-029-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Made idiom colloquial; 'had' italic moved to обязан; narrator is male.\"},{\"source_id\":\"043-029-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"'Honest injun' mistranslated as 'честно говоря'; restored oath and 'lies'.\"},{\"source_id\":\"043-029-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption matched to the oath phrase.\"},{\"source_id\":\"043-029-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation and oath phrase.\"},{\"source_id\":\"043-029-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"'None of it at all' made idiomatic and consistent.\"},{\"source_id\":\"043-029-0067\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiom and dialogue punctuation fixed.\"},{\"source_id\":\"043-029-0068\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation.\"},{\"source_id\":\"043-029-0069\",\"verdict\":\"CORRECTED\",\"reason\":\"Wrongly feminine narrator; 'said it' fixed, not 'this word'.\"},{\"source_id\":\"043-029-0070\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the 'hope to gracious' sense (won't believe the rest) and register.\"},{\"source_id\":\"043-029-0071\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; sentence ordering and tone fixed.\"},{\"source_id\":\"043-029-0072\",\"verdict\":\"CORRECTED\",\"reason\":\"'before they're hurt' fixed; italic 'did' kept; register livened.\"},{\"source_id\":\"043-029-0073\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format, natural phrasing, italic them kept.\"},{\"source_id\":\"043-029-0074\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dash; 'Mam' as name for Mary Jane.\"},{\"source_id\":\"043-029-0075\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; italics on сказал and ласково kept.\"},{\"source_id\":\"043-029-0076\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic 'this' restored; sense clarified.\"},{\"source_id\":\"043-029-0077\",\"verdict\":\"CORRECTED\",\"reason\":\"Hare-lip is a girl, and the idiom was misrendered; italic 'she' omitted as unnatural.\"},{\"source_id\":\"043-029-0078\",\"verdict\":\"CORRECTED\",\"reason\":\"'another one' is a girl; italics fixed.\"},{\"source_id\":\"043-029-0079\",\"verdict\":\"CORRECTED\",\"reason\":\"Hare-lip feminine; 'took another inning' and 'hollered' (she cried) fixed.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9193,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2522,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
