@@ -1,8 +1,9 @@
 {
-  "state": "RUNNING_CONTINUOUS_TRANSLATION_REVIEW",
-  "unit": 46,
-  "last_complete_batch": 0,
-  "run_id": "39966310480",
-  "utc": "2026-10-23T15:34:19.780260+00:00",
-  "checkpoint_is_stop_condition": false
+  "state": "API_TRANSLATION_REVIEW_COMPLETE_PENDING_BOOK_QA",
+  "errors": [],
+  "source_units": 46,
+  "source_rows": 2385,
+  "translation_provider": "DeepL quality_optimized",
+  "review_provider": "claude-sonnet-5-5",
+  "utc": "2026-10-23T15:34:23.525048+00:00"
 }
