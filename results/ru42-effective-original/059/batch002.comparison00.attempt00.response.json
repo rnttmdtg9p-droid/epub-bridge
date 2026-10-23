@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK5SNY8EZxm5GxnJigRB",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-059-0041\",\"target\":\"Мальчик помолчал несколько минут, затем продолжил:\"},{\"source_id\":\"fr42c-059-0042\",\"target\":\"— Кай-Куму говорит… Дикари успокаиваются… Они его слушают…\"},{\"source_id\":\"fr42c-059-0043\",\"target\":\"— Очевидно, — сказал майор, — у этого вождя есть личный интерес защищать нас. Он хочет обменять своих пленников на вождей своего племени! Но согласятся ли на это его воины?\"},{\"source_id\":\"fr42c-059-0044\",\"target\":\"— Да!.. Они его слушают… — продолжал Роберт. — Они расходятся… Одни возвращаются в свои хижины… Другие покидают укрепление…\"},{\"source_id\":\"fr42c-059-0045\",\"target\":\"— Ты говоришь правду? — воскликнул майор.\"},{\"source_id\":\"fr42c-059-0046\",\"target\":\"— Да, господин Мак-Наббс, — ответил Роберт. — Кай-Куму остался один с воинами из своей лодки… Ах! Один из них идёт к нашей хижине…\"},{\"source_id\":\"fr42c-059-0047\",\"target\":\"— Спускайся, Роберт, — сказал Гленарван.\"},{\"source_id\":\"fr42c-059-0048\",\"target\":\"В эту минуту леди Элен, которая поднялась на ноги, схватила мужа за руку.\"},{\"source_id\":\"fr42c-059-0049\",\"target\":\"— Эдвард, — сказала она твёрдым голосом, — ни Мэри Грант, ни я не должны попасть живыми в руки этих дикарей!\"},{\"source_id\":\"fr42c-059-0050\",\"target\":\"И, сказав это, она протянула Гленарвану заряженный револьвер.\"},{\"source_id\":\"fr42c-059-0051\",\"target\":\"— Оружие! — воскликнул Гленарван, и глаза его вспыхнули.\"},{\"source_id\":\"fr42c-059-0052\",\"target\":\"— Да! Маори не обыскивают своих пленниц! Но это оружие — для нас, Эдвард, а не для них!..\"},{\"source_id\":\"fr42c-059-0053\",\"target\":\"— Гленарван, — быстро сказал Мак-Наббс, — спрячьте револьвер! Ещё не время…\"},{\"source_id\":\"fr42c-059-0054\",\"target\":\"Револьвер исчез под одеждой лорда. Циновка, закрывавшая вход в хижину, приподнялась. Появился туземец.\"},{\"source_id\":\"fr42c-059-0055\",\"target\":\"Он знаком велел пленникам следовать за ним. Гленарван и его спутники, тесной группой, пересекли пах и остановились перед Кай-Куму.\"},{\"source_id\":\"fr42c-059-0056\",\"target\":\"Вокруг этого вождя собрались главные воины его племени. Среди них находился тот маори, чья лодка присоединилась к лодке Кай-Куму при впадении Похайнхенны в Вайкато. Это был человек лет сорока, сильный, с суровым и жестоким лицом. Его звали Кара-Тете, что на новозеландском языке означает «вспыльчивый». Кай-Куму обращался с ним с известным уважением, а по тонкости его татуировки было видно, что Кара-Тете занимает в племени высокое положение. Однако наблюдатель мог бы угадать, что между этими двумя вождями существует соперничество. Майор заметил, что влияние Кара-Тете внушает Кай-Куму ревность. Оба они управляли этими многочисленными племенами Вайкато и обладали равной властью. Поэтому во время этой беседы, хотя уста Кай-Куму улыбались, глаза его выдавали глубокую вражду.\"},{\"source_id\":\"fr42c-059-0057\",\"target\":\"Кай-Куму спросил Гленарвана:\"},{\"source_id\":\"fr42c-059-0058\",\"target\":\"— Ты англичанин? — спросил он.\"},{\"source_id\":\"fr42c-059-0059\",\"target\":\"— Да, — ответил лорд без колебаний, так как эта национальность должна была облегчить обмен.\"},{\"source_id\":\"fr42c-059-0060\",\"target\":\"— А твои спутники? — сказал Кай-Куму.\"}],\"review\":[{\"source_id\":\"fr42c-059-0041\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'l'enfant' rendered as мальчик, tense and sequence preserved.\"},{\"source_id\":\"fr42c-059-0042\",\"verdict\":\"PASS\",\"reason\":\"Speech continues open quote; dialogue dash is fine. Meaning and ellipses preserved.\"},{\"source_id\":\"fr42c-059-0043\",\"verdict\":\"PASS\",\"reason\":\"Major's inference, exchange of prisoners, and final question accurately rendered.\"},{\"source_id\":\"fr42c-059-0044\",\"verdict\":\"PASS\",\"reason\":\"Robert's report of dispersal fully preserved; correction verified.\"},{\"source_id\":\"fr42c-059-0045\",\"verdict\":\"PASS\",\"reason\":\"'Dis-tu vrai' correctly rendered as direct address; agency kept.\"},{\"source_id\":\"fr42c-059-0046\",\"verdict\":\"PASS\",\"reason\":\"Accurate; Kai-Koumou alone with his boat's warriors; one approaches the hut.\"},{\"source_id\":\"fr42c-059-0047\",\"verdict\":\"PASS\",\"reason\":\"Command and speaker preserved.\"},{\"source_id\":\"fr42c-059-0048\",\"verdict\":\"PASS\",\"reason\":\"Lady Helena rose and seized husband's arm; faithful.\"},{\"source_id\":\"fr42c-059-0049\",\"verdict\":\"PASS\",\"reason\":\"Negation 'ni…ni' and 'vivantes' preserved.\"},{\"source_id\":\"fr42c-059-0050\",\"verdict\":\"PASS\",\"reason\":\"Loaded revolver handed to Glenarvan; accurate.\"},{\"source_id\":\"fr42c-059-0051\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and flash in eyes conveyed.\"},{\"source_id\":\"fr42c-059-0052\",\"verdict\":\"PASS\",\"reason\":\"Maoris do not search prisoners; weapon for themselves, not them; preserved.\"},{\"source_id\":\"fr42c-059-0053\",\"verdict\":\"PASS\",\"reason\":\"Warning to hide revolver and 'not yet time' preserved.\"},{\"source_id\":\"fr42c-059-0054\",\"verdict\":\"PASS\",\"reason\":\"Natte as циновка is correct; sequence of events accurate.\"},{\"source_id\":\"fr42c-059-0055\",\"verdict\":\"PASS\",\"reason\":\"Sign to follow, close group, crossing pah, halt before Kai-Koumou preserved.\"},{\"source_id\":\"fr42c-059-0056\",\"verdict\":\"PASS\",\"reason\":\"All details complete; stray English word fix verified; rivalry, jealousy, smile versus eyes preserved.\"},{\"source_id\":\"fr42c-059-0057\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-059-0058\",\"verdict\":\"PASS\",\"reason\":\"Question and attribution preserved.\"},{\"source_id\":\"fr42c-059-0059\",\"verdict\":\"PASS\",\"reason\":\"'Échange' correctly restored; reason clause preserved.\"},{\"source_id\":\"fr42c-059-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful and concise.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 12647,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2533,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
