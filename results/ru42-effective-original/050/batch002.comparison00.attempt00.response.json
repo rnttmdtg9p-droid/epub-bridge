@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK33p4uhXqYUC8nRNmQK",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-050-0039\",\"target\":\"Тотчас же четыре матроса, хорошие стрелки. (Стр. 455.)\"},{\"source_id\":\"fr42c-050-0041\",\"target\":\"К несчастью, влияние миссионеров не распространилось за пределы их поселений. Вся кочевая часть населения ускользает от их воздействия. Каннибализм уничтожен только среди христиан, да и то не следовало бы подвергать этих новообращённых слишком большим искушениям. Инстинкт крови трепещет в них.\"},{\"source_id\":\"fr42c-050-0042\",\"target\":\"К тому же в этих диких краях война по-прежнему существует в хроническом состоянии. Зеландцы — не отупевшие австралийцы, которые бегут перед европейским нашествием; они сопротивляются, защищаются, ненавидят своих захватчиков, и неизлечимая ненависть в эту минуту толкает их против английских переселенцев. Будущее этих великих островов поставлено на карту, как на бросок игральной кости. Его ждёт либо немедленная цивилизация, либо глубокое варварство на долгие века, смотря по случайности оружия.\"},{\"source_id\":\"fr42c-050-0043\",\"target\":\"Так Паганель, у которого мозг кипел от нетерпения, заново пережил в уме историю Новой Зеландии. Но ничто в этой истории не позволяло назвать «континентом» страну, состоящую из двух островов, и хотя некоторые слова документа пробудили его воображение, эти два слога <i>contin</i> упорно останавливали его на пути к новому толкованию.\"},{\"source_id\":\"fr42c-note-086\",\"target\":\"Впоследствии было признано, что туземное название всей Новой Зеландии — Тейка-Мауи. Таваи-Пуна-Му обозначает лишь одну местность на центральном острове.\"}],\"review\":[{\"source_id\":\"fr42c-050-0039\",\"verdict\":\"PASS\",\"reason\":\"Caption and page reference are faithful; «Тотчас же» renders «Aussitôt» correctly.\"},{\"source_id\":\"fr42c-050-0041\",\"verdict\":\"PASS\",\"reason\":\"Meaning, tenses, negation and the concessive «et encore» are preserved; the correction is faithful and idiomatic.\"},{\"source_id\":\"fr42c-050-0042\",\"verdict\":\"PASS\",\"reason\":\"«D'ailleurs», the chronic state of war, the Zealanders' resistance, the dice-throw image and the alternatives are accurately conveyed; the correction is sound.\"},{\"source_id\":\"fr42c-050-0043\",\"verdict\":\"PASS\",\"reason\":\"Italic «contin» is retained and the added dash and quotation marks are removed. Meaning, agency and negation are faithful.\"},{\"source_id\":\"fr42c-note-086\",\"verdict\":\"PASS\",\"reason\":\"The note is accurate, including the names and «localité de l'île centrale». No note token is present in the row.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6437,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1010,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
