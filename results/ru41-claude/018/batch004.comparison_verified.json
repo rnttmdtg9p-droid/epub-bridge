@@ -1,0 +1,245 @@
+{
+  "unit": 18,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id02170",
+      "target": "Мазарини был весьма щедр на обещания: он являлся полной противоположностью этому славному господину Гримо, которого расхваливал Ла Рамэ и который говорил мало, а делал много.",
+      "source_sha256": "080f68f0cdcbc55bcabf5814aae62dbd0be8b90f301942ae2e3df794305281ed",
+      "target_id": "ru-id02170",
+      "tag": "p",
+      "target_sha256": "d87a2c5305374533bbb4bb223256b6e4e9461337374c7124ef353023980b3976"
+    },
+    {
+      "source_id": "id02171",
+      "target": "Кардинал задал Ла Рамэ ещё множество вопросов об узнике — о том, как его кормят, где помещают и как укладывают спать; тот отвечал так удовлетворительно, что кардинал отпустил его почти успокоенным.",
+      "source_sha256": "705462cca25ca883393120cc86672f65cfbd9b918e4e0e6877b8dd5682809719",
+      "target_id": "ru-id02171",
+      "tag": "p",
+      "target_sha256": "59be43647a2c501f385b8a238e112724c4dc878846262f89a54d48425178459c"
+    },
+    {
+      "source_id": "id02172",
+      "target": "Затем, так как было уже девять часов утра, он встал, надушился, оделся и прошёл к королеве, чтобы сообщить ей о причинах, задержавших его дома. Королева, которая боялась господина де Бофора едва ли меньше, чем сам кардинал, и была почти так же суеверна, как он, заставила его слово в слово повторить все обещания Ла Рамэ и все похвалы, которые тот расточал своему помощнику; а когда кардинал закончил, она сказала:",
+      "source_sha256": "6f437eb3a94d3dc010f6ec6b2b31b55039b426ad1554c94f98ee822cd090f9a9",
+      "target_id": "ru-id02172",
+      "tag": "p",
+      "target_sha256": "6d19bff6a7c75d1123857faba329e5ee481fed79b7410c1f6b5ad0e026ba4ec8"
+    },
+    {
+      "source_id": "id02173",
+      "target": "— Увы, сударь! — промолвила она вполголоса. — Если бы только у нас был Гримо при каждом принце!",
+      "source_sha256": "24d2c2395c0744bdf4a3e6e74067688cbc0276bc6e373f9773eb8d3416e3c666",
+      "target_id": "ru-id02173",
+      "tag": "p",
+      "target_sha256": "43f04b27dc692f9ad10ad66be426e7c889869092049f7c88ceda443163f6fe83"
+    },
+    {
+      "source_id": "id02174",
+      "target": "— Терпение, — сказал Мазарини со своей итальянской улыбкой, — может быть, когда-нибудь так и будет; но пока что…",
+      "source_sha256": "203ab38f3c3f7f44fdd8c5ecdb1f32d25dd18e9a19e7478dbf9f24fb66a9acda",
+      "target_id": "ru-id02174",
+      "tag": "p",
+      "target_sha256": "f049fbe03b94baf875b8313e26528822287828a27cd14c39b47ccf2f9ff5aab8"
+    },
+    {
+      "source_id": "id02175",
+      "target": "— Ну, а пока что?",
+      "source_sha256": "416240fc68e49a600c6e05a0b1b60baf92299de23bf73633f67af1f24dff78a1",
+      "target_id": "ru-id02175",
+      "tag": "p",
+      "target_sha256": "a9b131f1036ed96789bba0c542c3db76bf84110ead0687bd8c946f77ae5c2df8"
+    },
+    {
+      "source_id": "id02176",
+      "target": "— Пока что я всё-таки приму свои меры предосторожности.",
+      "source_sha256": "b0aafc34d914f46f5f55a2cddcdb70c9d45cc49bab37ffae934cc0483f26c5bc",
+      "target_id": "ru-id02176",
+      "tag": "p",
+      "target_sha256": "fc9ae1acc68e2a300aab90b0c963597430048b81f8dbb9dc95681c84ac1be078"
+    },
+    {
+      "source_id": "id02177",
+      "target": "Ввиду этого он уже написал д’Артаньяну, чтобы тот поторопил своё возвращение.",
+      "source_sha256": "b41884583a7a9d2d581a60d35ab6c57ba43fba8723b0efdf60d15ee645bee475",
+      "target_id": "ru-id02177",
+      "tag": "p",
+      "target_sha256": "6157cf8d418d75db449f0694b41642456367386dc2fec022eb3fc1d01b7326bf"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id02170",
+      "verdict": "PASS",
+      "reason": "Faithful: contrast with Grimaud, relative clause (parlait peu et agissait beaucoup) correctly attached to Grimaud; names consistent."
+    },
+    {
+      "source_id": "id02171",
+      "verdict": "CORRECTED",
+      "reason": "'couché' rendered more exactly as how he was bedded ('как укладывают спать'); 'logé' as 'помещают'. Rest accurate."
+    },
+    {
+      "source_id": "id02172",
+      "verdict": "CORRECTED",
+      "reason": "Source has 'M. de Beaufort', not 'герцога'; changed to 'господина де Бофора' to avoid adding a title. Agency (queen made cardinal repeat) and other details preserved."
+    },
+    {
+      "source_id": "id02173",
+      "verdict": "PASS",
+      "reason": "Accurate exclamation, 'à demi-voix' and 'Grimaud auprès de chaque prince' preserved."
+    },
+    {
+      "source_id": "id02174",
+      "verdict": "PASS",
+      "reason": "Accurate, including Mazarin's Italian smile and the trailing ellipsis."
+    },
+    {
+      "source_id": "id02175",
+      "verdict": "CORRECTED",
+      "reason": "Made the interrogative more idiomatic ('Ну, а пока что?') while keeping the sense of 'en attendant'."
+    },
+    {
+      "source_id": "id02176",
+      "verdict": "PASS",
+      "reason": "Accurate; 'toujours' conveyed by 'всё-таки'."
+    },
+    {
+      "source_id": "id02177",
+      "verdict": "CORRECTED",
+      "reason": "'Sur ce' means 'thereupon/on that basis' and the verb is pluperfect; draft's 'С этой целью' shifted the meaning. Now 'Ввиду этого он уже написал'."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id02171",
+      "before": "Кардинал задал Ла Рамэ ещё множество вопросов об узнике — о том, как его кормят, где содержат и на чём он спит; тот отвечал так удовлетворительно, что кардинал отпустил его почти успокоенным.",
+      "after": "Кардинал задал Ла Рамэ ещё множество вопросов об узнике — о том, как его кормят, где помещают и как укладывают спать; тот отвечал так удовлетворительно, что кардинал отпустил его почти успокоенным."
+    },
+    {
+      "source_id": "id02172",
+      "before": "Затем, так как было уже девять часов утра, он встал, надушился, оделся и прошёл к королеве, чтобы сообщить ей о причинах, задержавших его дома. Королева, которая боялась герцога де Бофора едва ли меньше, чем сам кардинал, и была почти так же суеверна, как он, заставила его слово в слово повторить все обещания Ла Рамэ и все похвалы, которые тот расточал своему помощнику; а когда кардинал закончил, она сказала:",
+      "after": "Затем, так как было уже девять часов утра, он встал, надушился, оделся и прошёл к королеве, чтобы сообщить ей о причинах, задержавших его дома. Королева, которая боялась господина де Бофора едва ли меньше, чем сам кардинал, и была почти так же суеверна, как он, заставила его слово в слово повторить все обещания Ла Рамэ и все похвалы, которые тот расточал своему помощнику; а когда кардинал закончил, она сказала:"
+    },
+    {
+      "source_id": "id02175",
+      "before": "— Ну так что же, пока что?",
+      "after": "— Ну, а пока что?"
+    },
+    {
+      "source_id": "id02177",
+      "before": "С этой целью он написал д’Артаньяну, чтобы тот поторопил своё возвращение.",
+      "after": "Ввиду этого он уже написал д’Артаньяну, чтобы тот поторопил своё возвращение."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJL2sWyS7X2iFwsRHDsQ",
+    "usage": {
+      "input_tokens": 2992,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 614,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJL3E6y8LdtghEDTXEMT",
+    "usage": {
+      "input_tokens": 4688,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2515,
+      "output_tokens_details": {
+        "thinking_tokens": 1313
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJL4W4vwPPzSXPk2g2ij",
+        "usage": {
+          "input_tokens": 5439,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1976,
+          "output_tokens_details": {
+            "thinking_tokens": 623
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id02170",
+          "verdict": "PASS",
+          "reason": "Faithful: Mazarin's generosity with promises, the contrast with Grimaud (praised by La Ramée), and the relative clause on speaking little and doing much are all preserved; the register is idiomatic."
+        },
+        {
+          "source_id": "id02171",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: the three questions (fed, lodged, put to bed) are all rendered; 'celui-ci' is correctly La Ramée; 'presque rassuré' is preserved; no omissions."
+        },
+        {
+          "source_id": "id02172",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'M. de Beaufort' is rendered as 'господина де Бофора', not 'герцога'. The time, the actions in sequence, the queen's fear and superstition, the word-for-word repetition, 'son second' as помощник, and the cliffhanger colon are all preserved."
+        },
+        {
+          "source_id": "id02173",
+          "verdict": "PASS",
+          "reason": "The queen's low-voiced wish ('que n'avons-nous un Grimaud auprès de chaque prince') is conveyed accurately in Russian dialogue punctuation; the form of address 'сударь' is appropriate."
+        },
+        {
+          "source_id": "id02174",
+          "verdict": "PASS",
+          "reason": "Mazarin's 'Italian smile', the 'peut-être un jour' and the trailing ellipsis are all preserved."
+        },
+        {
+          "source_id": "id02175",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'Ну, а пока что?' idiomatically renders 'Eh bien! en attendant?'."
+        },
+        {
+          "source_id": "id02176",
+          "verdict": "PASS",
+          "reason": "'Je vais toujours prendre mes précautions' is accurately rendered with the nuance of 'toujours' as 'всё-таки'; the future sense is retained."
+        },
+        {
+          "source_id": "id02177",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'Sur ce' as 'Ввиду этого', the pluperfect 'avait écrit' as 'уже написал', the order to hasten d'Artagnan's return, and the name form д’Артаньян are all correct."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
