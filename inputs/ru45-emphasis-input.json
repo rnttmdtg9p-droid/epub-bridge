@@ -1,0 +1,34 @@
+[
+  {
+    "source": {
+      "id": "045-001-0250",
+      "tag": "signature",
+      "role": "source_signature",
+      "text": "“IRENE NORTON, <i>née</i> ADLER.”",
+      "sha256": "a2089555e1681305e08817ae51d5683c8fb0dfa5baefacf712dfd753795d18bb",
+      "original_plaintext": "“IRENE NORTON, _née_ ADLER.”",
+      "original_plaintext_sha256": "eb292cf303e3c7eb5733d96adf7fa901f7cc175ef508a873ffa272602b5549cf",
+      "source_raw_block": "    “IRENE NORTON, _née_ ADLER.”",
+      "source_raw_block_sha256": "e2767d5f80e7b5e2d1dc39554e03de24119e8326c92a2ce2a61b76c49809c38b",
+      "source_italic_spans": 1
+    },
+    "prior_target": "ИРЕН НОРТОН, урождённая АДЛЕР».",
+    "expected_target": "ИРЕН НОРТОН, <i>урождённая</i> АДЛЕР»."
+  },
+  {
+    "source": {
+      "id": "045-002-0185",
+      "tag": "p",
+      "role": "source_prose",
+      "text": "“I am afraid so. I had brought a pack of cards in my pocket, and I thought that, as we were a <i>partie carrée</i>, you might have your rubber after all. But I see that the enemy’s preparations have gone so far that we cannot risk the presence of a light. And, first of all, we must choose our positions. These are daring men, and though we shall take them at a disadvantage, they may do us some harm unless we are careful. I shall stand behind this crate, and do you conceal yourselves behind those. Then, when I flash a light upon them, close in swiftly. If they fire, Watson, have no compunction about shooting them down.”",
+      "sha256": "347f38a83f6cb5be3978c1351278c0e6dcaa5b891d78658abacced7e41e28755",
+      "original_plaintext": "“I am afraid so. I had brought a pack of cards in my pocket, and I thought that, as we were a _partie carrée_, you might have your rubber after all. But I see that the enemy’s preparations have gone so far that we cannot risk the presence of a light. And, first of all, we must choose our positions. These are daring men, and though we shall take them at a disadvantage, they may do us some harm unless we are careful. I shall stand behind this crate, and do you conceal yourselves behind those. Then, when I flash a light upon them, close in swiftly. If they fire, Watson, have no compunction about shooting them down.”",
+      "original_plaintext_sha256": "2be4775590338a3a51ae9c425f6587faff1192816d147ce563b391da9933e9ae",
+      "source_raw_block": "“I am afraid so. I had brought a pack of cards in my pocket, and I\nthought that, as we were a _partie carrée_, you might have your rubber\nafter all. But I see that the enemy’s preparations have gone so far\nthat we cannot risk the presence of a light. And, first of all, we must\nchoose our positions. These are daring men, and though we shall take\nthem at a disadvantage, they may do us some harm unless we are careful.\nI shall stand behind this crate, and do you conceal yourselves behind\nthose. Then, when I flash a light upon them, close in swiftly. If they\nfire, Watson, have no compunction about shooting them down.”",
+      "source_raw_block_sha256": "944eb47c80aab0dccd1b18f2a4489e9eaf3a0635c44fe0218ee6b0c1cc6a681e",
+      "source_italic_spans": 1
+    },
+    "prior_target": "— Боюсь, что да. Я захватил в кармане колоду карт и думал, что, раз нас четверо, вы всё-таки сыграете свой роббер. Но вижу, что приготовления врага зашли так далеко, что мы не можем рисковать присутствием света. И прежде всего нужно выбрать места. Это люди отчаянные, и хотя мы застанем их врасплох, они могут причинить нам вред, если мы не будем осторожны. Я встану за этим ящиком, а вы спрячьтесь за теми. Потом, когда я посвечу на них, быстро смыкайтесь. Если они выстрелят, Ватсон, не стесняйтесь стрелять в них.",
+    "expected_target": "— Боюсь, что да. Я захватил в кармане колоду карт и думал, что, раз <i>нас четверо</i>, вы всё-таки сыграете свой роббер. Но вижу, что приготовления врага зашли так далеко, что мы не можем рисковать присутствием света. И прежде всего нужно выбрать места. Это люди отчаянные, и хотя мы застанем их врасплох, они могут причинить нам вред, если мы не будем осторожны. Я встану за этим ящиком, а вы спрячьтесь за теми. Потом, когда я посвечу на них, быстро смыкайтесь. Если они выстрелят, Ватсон, не стесняйтесь стрелять в них."
+  }
+]
