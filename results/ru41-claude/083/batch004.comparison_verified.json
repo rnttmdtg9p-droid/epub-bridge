@@ -1,0 +1,491 @@
+{
+  "unit": 83,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11071",
+      "target": "— А, это вы, господин де Шатильон! — воскликнул шевалье. — Добро пожаловать, я вас ждал!",
+      "source_sha256": "9ba572666b9ac0bf9d38ea4099bd04479dab1afe6a1d107a8759c509241836f3",
+      "target_id": "ru-id11071",
+      "tag": "p",
+      "target_sha256": "c6aadd90f3aa0f8e1eb38e1cc12631b416ae8abd8a8975d7f5f2ad3639873c15"
+    },
+    {
+      "source_id": "id11072",
+      "target": "— Надеюсь, я не слишком заставил вас ждать, сударь, — сказал герцог. — Во всяком случае, вот и я.",
+      "source_sha256": "34c8071cbe94381c9ca80bc695e857813df14b31a9506e7ee6d460e0e905c1fc",
+      "target_id": "ru-id11072",
+      "tag": "p",
+      "target_sha256": "f28523ea6fd9bcb22b18d5da1ccd535208a04e06657830dd4b149dd9a5f236e9"
+    },
+    {
+      "source_id": "id11073",
+      "target": "— Господин де Шатильон, — сказал Арамис, доставая из седельной кобуры второй пистолет, который он приберёг для этого случая, — полагаю, что если ваш пистолет разряжен, вы человек мёртвый.",
+      "source_sha256": "746e498953155491ea276a61c8cad0fb14431fff0cc524dcfacc249d2f0e0a7e",
+      "target_id": "ru-id11073",
+      "tag": "p",
+      "target_sha256": "7d047a14a25726b908fe70c4f1fb47f8cb804aa80c353b4ad0c20bf4be591511"
+    },
+    {
+      "source_id": "id11074",
+      "target": "— Слава Богу, — сказал Шатильон, — он не разряжен!",
+      "source_sha256": "b12f59bd130b9159f7972ab0b881858beb69a2576721e608cda6d771337d9774",
+      "target_id": "ru-id11074",
+      "tag": "p",
+      "target_sha256": "d62605b37262f9c4530c3d6548f92b7e6e3c62deac42201cd43803e6b0d1a30a"
+    },
+    {
+      "source_id": "id11075",
+      "target": "И герцог, подняв пистолет на Арамиса, прицелился и выстрелил. Но Арамис пригнул голову в тот миг, когда увидел, что герцог нажимает пальцем на спуск, и пуля пролетела над ним, не задев его.",
+      "source_sha256": "ce5dbcc2b5971850b8840bf0a15cc775c62eb0c01f5c5b5fcae01c24384de9ee",
+      "target_id": "ru-id11075",
+      "tag": "p",
+      "target_sha256": "e358ba3ddadde3715a7f45230dbe9bf1f16e38623ea66ae372594d0b5ffe7158"
+    },
+    {
+      "source_id": "id11076",
+      "target": "— О, вы промахнулись, — сказал Арамис. — А я, клянусь Богом, не промахнусь.",
+      "source_sha256": "d124e49c7e9399ccd2c2f02a6d321045b31e4cd3fae47bc1190b6b2765bf7ec9",
+      "target_id": "ru-id11076",
+      "tag": "p",
+      "target_sha256": "014650815895b4522c7941829513e7376ddeeb55151142330bb901303d8bb80f"
+    },
+    {
+      "source_id": "id11077",
+      "target": "— Если я дам вам на это время! — вскричал господин де Шатильон, пришпорив коня и бросаясь на него с поднятой шпагой.",
+      "source_sha256": "512c6c29cfa0a7cbf3a6b534755a9663cd708836dffd2bfd0b861e9dab014930",
+      "target_id": "ru-id11077",
+      "tag": "p",
+      "target_sha256": "3032fd937f320150985359a77d5dd990074e84e4aafeb72fd1933e5a6efaf8e2"
+    },
+    {
+      "source_id": "id11078",
+      "target": "Арамис ждал его с той страшной улыбкой, что была ему свойственна в подобных обстоятельствах; а Атос, видя, как господин де Шатильон молнией несётся на Арамиса, уже открывал рот, чтобы крикнуть: «Стреляйте! Да стреляйте же!» — как грянул выстрел. Господин де Шатильон раскинул руки и откинулся на круп своего коня.",
+      "source_sha256": "c87a63d6b088b1be0ee66fc00e82bbd95a735f73042dff70a30c3af3b9871e95",
+      "target_id": "ru-id11078",
+      "tag": "p",
+      "target_sha256": "6cac47854812df2208b7286a69f02d6611620f4b3ec007171473f30beb5c5dba"
+    },
+    {
+      "source_id": "id11079",
+      "target": "Пуля вошла ему в грудь через вырез кирасы.",
+      "source_sha256": "14486661b7c699e4d9aa72096a473f8a6aed76401cb0b8311b62a91d0857d16d",
+      "target_id": "ru-id11079",
+      "tag": "p",
+      "target_sha256": "4acd9e1aa82ca103cd85ee1ffb42b6f5c424adcec0e1bfa0bf091ca380ae8fc0"
+    },
+    {
+      "source_id": "id11080",
+      "target": "— Я убит! — прошептал герцог.",
+      "source_sha256": "692356eb976592353e5e2e93b8f506a28354494811aca838e51df0ad125869ea",
+      "target_id": "ru-id11080",
+      "tag": "p",
+      "target_sha256": "188e920e3f135e9ac5b006b0c9ea0aa45cb66955bf46a290964af95b07a03c37"
+    },
+    {
+      "source_id": "id11081",
+      "target": "И он соскользнул с коня на землю.",
+      "source_sha256": "7f1cabb89a02cca35dd6b159fe0cd7aa7d74112164dd375ecad79cfd726bb2b0",
+      "target_id": "ru-id11081",
+      "tag": "p",
+      "target_sha256": "13d78303aee40126667cfc1623c36d5355576739a686963642d3075a615afea5"
+    },
+    {
+      "source_id": "id11082",
+      "target": "— Я вам это говорил, сударь, и теперь мне жаль, что я так хорошо сдержал слово. Могу ли я быть вам чем-нибудь полезен?",
+      "source_sha256": "e7118989ad45af5af5f018c08a54654d82d92804dcd6959d4e2275d01c88e0a5",
+      "target_id": "ru-id11082",
+      "tag": "p",
+      "target_sha256": "991a210a670c00499efdf86a13148a4f5a0ec41792430f07d51225c41ddd1e30"
+    },
+    {
+      "source_id": "id11083",
+      "target": "Шатильон сделал рукой знак; и Арамис уже собирался спешиться, как вдруг получил сильный толчок в бок: это был удар шпагой, но кираса отразила его.",
+      "source_sha256": "60a9fc6b5c022664d2d5d7a6259d5ee608792c1c1b099254e15619e1d58140f5",
+      "target_id": "ru-id11083",
+      "tag": "p",
+      "target_sha256": "93303795d7afb003e4019018957d3db748fcbc03ed9c37a1dd1d60c8f9d4f1c6"
+    },
+    {
+      "source_id": "id11084",
+      "target": "Он живо обернулся и схватил нового противника за запястье, и тут одновременно раздались два крика — один его, другой Атоса:",
+      "source_sha256": "67bfe3328f7b05abf8a9fa50a6e5109afa70c66908e8d4d7b74c77cdb62d430b",
+      "target_id": "ru-id11084",
+      "tag": "p",
+      "target_sha256": "b79ab339585b199e6d5a2f5d263b8eee873b5bc7c4f3d4f68524bec605e38290"
+    },
+    {
+      "source_id": "id11085",
+      "target": "— Рауль!",
+      "source_sha256": "a95a9f9926e5d4014488e07a83d464a1380a04a8760744eb25c4bb4d8b96ba3c",
+      "target_id": "ru-id11085",
+      "tag": "p",
+      "target_sha256": "7ceded3a029aaf331b3a9ed0057455a4f7eded631deca0d7184967d94a162aba"
+    },
+    {
+      "source_id": "id11086",
+      "target": "Молодой человек разом узнал лицо шевалье д’Эрбле и голос своего отца и выронил шпагу. Несколько всадников парижской армии в этот миг бросились на Рауля, но Арамис прикрыл его своей шпагой.",
+      "source_sha256": "a6c422c30f9002914b7dfb1971fbbe670925ca8b7c65a1063984e90c43141f82",
+      "target_id": "ru-id11086",
+      "tag": "p",
+      "target_sha256": "c2db449d12a7ead8191afb9a707417ad57595d967912242831ab2da735a6d2af"
+    },
+    {
+      "source_id": "id11087",
+      "target": "— Он мой пленник! Обходите стороной! — крикнул он.",
+      "source_sha256": "4bae4b65057eac93dd684a625bf039d820f019a2613847b4275bbef4fb54c660",
+      "target_id": "ru-id11087",
+      "tag": "p",
+      "target_sha256": "a967117e2c80b74343c95a440158702f035e440bf309d7454c765cabad175930"
+    },
+    {
+      "source_id": "id11088",
+      "target": "Атос тем временем брал коня сына под уздцы и уводил его из свалки.",
+      "source_sha256": "86c49c6c54bb87358bd7812e97d9bc7a9d05b4a9ef3d006ce486cea13d9977bb",
+      "target_id": "ru-id11088",
+      "tag": "p",
+      "target_sha256": "1edc3c002afb34453c55f5bbe421f8c189b157ec883a2c9f23a15990e7e7303b"
+    },
+    {
+      "source_id": "id11089",
+      "target": "В этот миг господин Принц, поддерживавший господина де Шатильона во второй линии, появился посреди схватки; сверкнул его орлиный взор, и его узнали по его ударам.",
+      "source_sha256": "62149f4d073a6f64180a0dbedc50d5c9f4e2006f28f97a4b951747cad23f65ba",
+      "target_id": "ru-id11089",
+      "tag": "p",
+      "target_sha256": "9f90c7d2e86507101cf942d111c8bdb145618ca13a44fffef28e56948b7e2f6a"
+    },
+    {
+      "source_id": "id11090",
+      "target": "При его виде полк архиепископа Коринфского, который коадъютор, несмотря на все усилия, так и не смог привести в порядок, бросился в гущу парижских войск, опрокинул всё и бегством вернулся в Шарантон, промчавшись через него не останавливаясь. Коадъютор, увлечённый им, вновь проехал мимо группы, образованной Атосом, Арамисом и Раулем.",
+      "source_sha256": "3ce1a53cc0e764756b9282331d9dffcd752fb900214666777f65b0397cc82ada",
+      "target_id": "ru-id11090",
+      "tag": "p",
+      "target_sha256": "e17667c0d5569e085ea12741382e7dcd2adc6c2aade10126fd0a98989bbe35b5"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11071",
+      "verdict": "PASS",
+      "reason": "Faithful; exclamations and address preserved."
+    },
+    {
+      "source_id": "id11072",
+      "verdict": "PASS",
+      "reason": "Faithful in sense and register."
+    },
+    {
+      "source_id": "id11073",
+      "verdict": "PASS",
+      "reason": "Conditional, fontes (saddle holster) and 'second pistol reserved' preserved."
+    },
+    {
+      "source_id": "id11074",
+      "verdict": "PASS",
+      "reason": "Faithful; negation preserved."
+    },
+    {
+      "source_id": "id11075",
+      "verdict": "PASS",
+      "reason": "Agency and sequence of aiming, ducking and bullet passing preserved."
+    },
+    {
+      "source_id": "id11076",
+      "verdict": "PASS",
+      "reason": "Faithful, including oath and negation."
+    },
+    {
+      "source_id": "id11077",
+      "verdict": "CORRECTED",
+      "reason": "'Оставлю вам на это время' was unidiomatic; replaced with 'дам вам на это время'."
+    },
+    {
+      "source_id": "id11078",
+      "verdict": "CORRECTED",
+      "reason": "Imperfect 'ouvrait la bouche' rendered as imperfective 'открывал' for the interrupted action."
+    },
+    {
+      "source_id": "id11079",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id11080",
+      "verdict": "CORRECTED",
+      "reason": "'Я умер' replaced by the idiomatic 'Я убит'."
+    },
+    {
+      "source_id": "id11081",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id11082",
+      "verdict": "CORRECTED",
+      "reason": "'Je vous l'avais dit' means 'I told you', not 'I promised'; corrected to 'говорил'."
+    },
+    {
+      "source_id": "id11083",
+      "verdict": "CORRECTED",
+      "reason": "Word order adjusted ('отразила его') for clarity; sense unchanged."
+    },
+    {
+      "source_id": "id11084",
+      "verdict": "CORRECTED",
+      "reason": "Clarified simultaneity of the two cries; sense unchanged."
+    },
+    {
+      "source_id": "id11085",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id11086",
+      "verdict": "PASS",
+      "reason": "Faithful; agency preserved."
+    },
+    {
+      "source_id": "id11087",
+      "verdict": "CORRECTED",
+      "reason": "'Passez au large' rendered as 'Обходите стороной' in keeping with the order to keep clear."
+    },
+    {
+      "source_id": "id11088",
+      "verdict": "CORRECTED",
+      "reason": "Imperfect 'prenait/entraînait' rendered with imperfective verbs; 'par la bride' as 'под уздцы'."
+    },
+    {
+      "source_id": "id11089",
+      "verdict": "CORRECTED",
+      "reason": "'M. le Prince' rendered as 'господин Принц' (title, not generic prince); 'seconde ligne' as 'второй линии'."
+    },
+    {
+      "source_id": "id11090",
+      "verdict": "CORRECTED",
+      "reason": "Removed the 'бегом ... пробежав' repetition: 'en fuyant' as 'бегством', 'traversa' as 'промчался'; 'renversa' as 'опрокинул'; 'À sa vue' as 'При его виде' to make clear it refers to the Prince."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11077",
+      "before": "— Если я оставлю вам на это время! — вскричал господин де Шатильон, пришпорив коня и бросаясь на него с поднятой шпагой.",
+      "after": "— Если я дам вам на это время! — вскричал господин де Шатильон, пришпорив коня и бросаясь на него с поднятой шпагой."
+    },
+    {
+      "source_id": "id11078",
+      "before": "Арамис ждал его с той страшной улыбкой, что была ему свойственна в подобных обстоятельствах; а Атос, видя, как господин де Шатильон молнией несётся на Арамиса, уже открыл рот, чтобы крикнуть: «Стреляйте! Да стреляйте же!» — как грянул выстрел. Господин де Шатильон раскинул руки и откинулся на круп своего коня.",
+      "after": "Арамис ждал его с той страшной улыбкой, что была ему свойственна в подобных обстоятельствах; а Атос, видя, как господин де Шатильон молнией несётся на Арамиса, уже открывал рот, чтобы крикнуть: «Стреляйте! Да стреляйте же!» — как грянул выстрел. Господин де Шатильон раскинул руки и откинулся на круп своего коня."
+    },
+    {
+      "source_id": "id11080",
+      "before": "— Я умер! — прошептал герцог.",
+      "after": "— Я убит! — прошептал герцог."
+    },
+    {
+      "source_id": "id11082",
+      "before": "— Я вам это обещал, сударь, и теперь мне жаль, что я так хорошо сдержал слово. Могу ли я быть вам чем-нибудь полезен?",
+      "after": "— Я вам это говорил, сударь, и теперь мне жаль, что я так хорошо сдержал слово. Могу ли я быть вам чем-нибудь полезен?"
+    },
+    {
+      "source_id": "id11083",
+      "before": "Шатильон сделал рукой знак; и Арамис уже собирался спешиться, как вдруг получил сильный толчок в бок: это был удар шпагой, но кираса его отразила.",
+      "after": "Шатильон сделал рукой знак; и Арамис уже собирался спешиться, как вдруг получил сильный толчок в бок: это был удар шпагой, но кираса отразила его."
+    },
+    {
+      "source_id": "id11084",
+      "before": "Он живо обернулся и схватил нового противника за запястье, и в тот же миг раздались два крика — один его, другой Атоса:",
+      "after": "Он живо обернулся и схватил нового противника за запястье, и тут одновременно раздались два крика — один его, другой Атоса:"
+    },
+    {
+      "source_id": "id11087",
+      "before": "— Он мой пленник! Проезжайте стороной! — крикнул он.",
+      "after": "— Он мой пленник! Обходите стороной! — крикнул он."
+    },
+    {
+      "source_id": "id11088",
+      "before": "Атос тем временем взял коня сына за повод и увёл его из свалки.",
+      "after": "Атос тем временем брал коня сына под уздцы и уводил его из свалки."
+    },
+    {
+      "source_id": "id11089",
+      "before": "В этот миг принц, поддерживавший господина де Шатильона во втором ряду, появился посреди схватки; сверкнул его орлиный взор, и его узнали по его ударам.",
+      "after": "В этот миг господин Принц, поддерживавший господина де Шатильона во второй линии, появился посреди схватки; сверкнул его орлиный взор, и его узнали по его ударам."
+    },
+    {
+      "source_id": "id11090",
+      "before": "При виде него полк архиепископа Коринфского, который коадъютор, несмотря на все усилия, так и не смог привести в порядок, бросился в гущу парижских войск, смял всё и бегом вернулся в Шарантон, пробежав его не останавливаясь. Коадъютор, увлечённый им, вновь проехал мимо группы, образованной Атосом, Арамисом и Раулем.",
+      "after": "При его виде полк архиепископа Коринфского, который коадъютор, несмотря на все усилия, так и не смог привести в порядок, бросился в гущу парижских войск, опрокинул всё и бегством вернулся в Шарантон, промчавшись через него не останавливаясь. Коадъютор, увлечённый им, вновь проехал мимо группы, образованной Атосом, Арамисом и Раулем."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXG57sUqpnJzf7xmwzx",
+    "usage": {
+      "input_tokens": 6693,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1396,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXGkzVKrKYwggxg9a6w",
+    "usage": {
+      "input_tokens": 10679,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 4138,
+      "output_tokens_details": {
+        "thinking_tokens": 1627
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXJdRP5di2dPC1RXbZB",
+        "usage": {
+          "input_tokens": 12214,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3421,
+          "output_tokens_details": {
+            "thinking_tokens": 709
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11071",
+          "verdict": "PASS",
+          "reason": "Faithful to the French: exclamation, address, and 'je vous attendais' are all preserved."
+        },
+        {
+          "source_id": "id11072",
+          "verdict": "PASS",
+          "reason": "Faithful: the polite hope not to have kept him waiting, and 'en tout cas, me voici', are preserved."
+        },
+        {
+          "source_id": "id11073",
+          "verdict": "PASS",
+          "reason": "Faithful: 'fontes' as saddle holster, the reserved second pistol, and the conditional threat are all preserved."
+        },
+        {
+          "source_id": "id11074",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic; the negation 'il ne l'est pas' (not discharged) is correctly rendered."
+        },
+        {
+          "source_id": "id11075",
+          "verdict": "PASS",
+          "reason": "Faithful: the sequence of aiming and firing, Aramis ducking as the finger presses the trigger, and the bullet passing over without hitting him are all kept."
+        },
+        {
+          "source_id": "id11076",
+          "verdict": "PASS",
+          "reason": "Faithful: the miss, the oath and the future negation are preserved."
+        },
+        {
+          "source_id": "id11077",
+          "verdict": "PASS",
+          "reason": "The prior correction to 'дам вам на это время' is accurate to 'laisse le temps'; the spurring and the raised sword are preserved."
+        },
+        {
+          "source_id": "id11078",
+          "verdict": "PASS",
+          "reason": "The prior correction to the imperfect 'открывал' matches 'ouvrait la bouche'. Dialogue, the shot, and the gesture of falling back are accurate."
+        },
+        {
+          "source_id": "id11079",
+          "verdict": "PASS",
+          "reason": "Faithful: the bullet entered the chest through the gap in the cuirass."
+        },
+        {
+          "source_id": "id11080",
+          "verdict": "PASS",
+          "reason": "The prior correction to 'Я убит' is accurate for 'Je suis mort' in the context of a fatal wound."
+        },
+        {
+          "source_id": "id11081",
+          "verdict": "PASS",
+          "reason": "Faithful: he slid from his horse to the ground."
+        },
+        {
+          "source_id": "id11082",
+          "verdict": "PASS",
+          "reason": "The prior correction to 'говорил' accurately renders 'Je vous l'avais dit'. The regret and the offer of help are preserved."
+        },
+        {
+          "source_id": "id11083",
+          "verdict": "PASS",
+          "reason": "The corrected word order is accurate and idiomatic: the cuirass parried the sword thrust."
+        },
+        {
+          "source_id": "id11084",
+          "verdict": "PASS",
+          "reason": "The prior correction is accurate: 'тут одновременно' renders 'en même temps', and the two cries, his and Athos's, are kept."
+        },
+        {
+          "source_id": "id11085",
+          "verdict": "PASS",
+          "reason": "The one-word exclamation is preserved."
+        },
+        {
+          "source_id": "id11086",
+          "verdict": "PASS",
+          "reason": "Faithful: Raoul recognizes both the face and the voice and drops his sword; Aramis shields him from the Parisian horsemen."
+        },
+        {
+          "source_id": "id11087",
+          "verdict": "PASS",
+          "reason": "The prior correction is accurate: 'Он мой пленник' and 'Обходите стороной' fit 'Prisonnier à moi! Passez donc au large!'."
+        },
+        {
+          "source_id": "id11088",
+          "verdict": "PASS",
+          "reason": "The imperfect tenses 'брал' and 'уводил' match 'prenait' and 'entraînait'; the bridle and the removal from the melee are preserved."
+        },
+        {
+          "source_id": "id11089",
+          "verdict": "PASS",
+          "reason": "The prior correction is accurate: 'M. le Prince' as 'господин Принц', the second line, the eagle eye, and the recognition by his blows are all kept."
+        },
+        {
+          "source_id": "id11090",
+          "verdict": "PASS",
+          "reason": "The prior correction is accurate: the regiment's rout, the passage through Charenton without stopping, and the coadjutor being carried past Athos, Aramis and Raoul are all preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

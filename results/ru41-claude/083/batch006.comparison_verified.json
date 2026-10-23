@@ -1,0 +1,408 @@
+{
+  "unit": 83,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11111",
+      "target": "— Прежде всего, граф, этот молодой человек — пленник, вы об этом забываете. То, что мы делаем, — законный приём войны. К тому же побеждённым не пристало быть разборчивыми в средствах. Отдайте депешу, Рауль.",
+      "source_sha256": "57df6e1fc98ee6c64bae5f477ade6b2c3fae7d5eec8734d60d8c2a345fd2c11d",
+      "target_id": "ru-id11111",
+      "tag": "p",
+      "target_sha256": "f3ea53b8eaa4372e78874dd68831313d5feb50a7d9515fd77233ac7bf68b159f"
+    },
+    {
+      "source_id": "id11112",
+      "target": "Рауль колебался, глядя на Атоса, словно пытаясь прочесть в его глазах, как ему поступить.",
+      "source_sha256": "20cbb5eec26184f5cf2e7995f53b3332b9b55667cca3a60cfebe3141b5168e26",
+      "target_id": "ru-id11112",
+      "tag": "p",
+      "target_sha256": "1cf4d5fe8d0aa6e8e66514b3fba18f881247b46f7ff6dacce6afc979c62f00e8"
+    },
+    {
+      "source_id": "id11113",
+      "target": "— Отдайте депешу, Рауль, — сказал Атос, — вы пленник шевалье д’Эрбле.",
+      "source_sha256": "b8203bde5ca88c62dde4e140a12f2b8f833d9079c2bb95d420b2787b0baf41c5",
+      "target_id": "ru-id11113",
+      "tag": "p",
+      "target_sha256": "708f1de630b1de6d4a11d810e53ede886038c8d4749e8b74285300fc3961e285"
+    },
+    {
+      "source_id": "id11114",
+      "target": "Рауль уступил с неохотой, но Арамис, менее щепетильный, чем граф де Ла Фер, поспешно схватил депешу, пробежал её глазами и, возвращая Атосу, сказал:",
+      "source_sha256": "f4b46121ccffd5dc73a0c0fdb0f4ecbd1aade084af5b6dfbba729f395b548107",
+      "target_id": "ru-id11114",
+      "tag": "p",
+      "target_sha256": "60efd9733ce132b8924749b3f5a3c945f9b86bf881454764022fe480fad79cdb"
+    },
+    {
+      "source_id": "id11115",
+      "target": "— Вы, — сказал он, — человек верующий: прочтите и, поразмыслив, увидите в этом письме нечто такое, о чём Провидение считает важным, чтобы мы узнали.",
+      "source_sha256": "51e6a9790adedf8787cbdcda12076e9fd752f7ef4b074ccc72cdc72b1983711e",
+      "target_id": "ru-id11115",
+      "tag": "p",
+      "target_sha256": "05efe7664b55b98815d40ae323089ce274e3ce16af9c08adfc29ed4d07995268"
+    },
+    {
+      "source_id": "id11116",
+      "target": "Атос взял письмо, хмуря свою красивую бровь, но мысль о том, что в письме речь идёт о д’Артаньяне, помогла ему побороть отвращение, которое он испытывал при чтении.",
+      "source_sha256": "9986c874cf8bd3c29bb05f82a2d10d523c2d776e8a630e6dbb0900f3a4adc4fa",
+      "target_id": "ru-id11116",
+      "tag": "p",
+      "target_sha256": "7ad5c79dae71cc79b6c679aab2e1e603ed5293336c64b5da14c1b7e5da6c9736"
+    },
+    {
+      "source_id": "id11117",
+      "target": "Вот что было в письме:",
+      "source_sha256": "c75be864c3304d2747f8351fa7ade2632f06ef7a51f696a7e19225c14d75a9e8",
+      "target_id": "ru-id11117",
+      "tag": "p",
+      "target_sha256": "3c0596d4f30e59724353f3abcac9876f3419d0fbdac32a8c36a27d07a2f7e64e"
+    },
+    {
+      "source_id": "id11118",
+      "target": "«Монсеньёр, сегодня вечером я пришлю Вашему Высокопреосвященству для усиления отряда г-на де Коменжа десять человек, которых вы просите. Это хорошие солдаты, способные удержать двух крепких противников, чьей ловкости и решимости опасается Ваше Высокопреосвященство.»",
+      "source_sha256": "a0d83dcdf1ad4e7a04acb5cdd3ec00c4495f9d882cd4fda577389126eb8cb9b4",
+      "target_id": "ru-id11118",
+      "tag": "p",
+      "target_sha256": "7374bf2c8e777aec9936683e77da26a67a2f9b1727c0c4899f7e7a19ad992713"
+    },
+    {
+      "source_id": "id11119",
+      "target": "— О-о! — сказал Атос.",
+      "source_sha256": "fee20119b36b6f5986acacc4f6163b71223f22f132d71d613420cc089b03b9f9",
+      "target_id": "ru-id11119",
+      "tag": "p",
+      "target_sha256": "585b2b4ee72283674bf9d75a041b864e5e054ec88630c0c648d1249b65360b55"
+    },
+    {
+      "source_id": "id11120",
+      "target": "— Ну что? — спросил Арамис. — Что вы скажете о двух противниках, для охраны которых, кроме отряда Коменжа, нужны ещё десять хороших солдат? Не похожи ли они, как две капли воды, на д’Артаньяна и Портоса?",
+      "source_sha256": "ad06b424db3779d24459a362da15dda32db770f506a57c0440860fdf49c5e3f3",
+      "target_id": "ru-id11120",
+      "tag": "p",
+      "target_sha256": "3c238af1e0f63e346acff2647c3077dc7ec5cc8de21c75e89fc9023611e832e3"
+    },
+    {
+      "source_id": "id11121",
+      "target": "— Мы будем прочёсывать Париж весь день, — сказал Атос, — и если к вечеру не получим вестей, то снова поедем по дороге в Пикардию, и я ручаюсь, что, благодаря выдумке д’Артаньяна, мы скоро найдём какое-нибудь указание, которое рассеет все наши сомнения.",
+      "source_sha256": "830cab14f6b123e743ceaae6bfe8e42f3976554593140596ffdb4d602d16671a",
+      "target_id": "ru-id11121",
+      "tag": "p",
+      "target_sha256": "65936771b3cb16225f3e0dafd78dd21c17e5ea69d4d535f930fb41df39261b88"
+    },
+    {
+      "source_id": "id11122",
+      "target": "— Так прочешем Париж и расспросим, особенно Планше, не слышал ли он чего-нибудь о своём прежнем господине.",
+      "source_sha256": "a70605986c1766c5770f2459a166e849a87f4cbba3ac177093005a83357766d9",
+      "target_id": "ru-id11122",
+      "tag": "p",
+      "target_sha256": "7290bae4b86bc281edad804119f2cbcef9e03996d1ed1744564af0df15e65b75"
+    },
+    {
+      "source_id": "id11123",
+      "target": "— Бедный Планше! Вам легко о нём говорить, Арамис, его, без сомнения, убили. Все эти воинственные горожане, должно быть, вышли в поход, и была учинена резня.",
+      "source_sha256": "9c20a572352948c68760ead5dec6c4cee94a7e026321f733a8cf58d33d350e4b",
+      "target_id": "ru-id11123",
+      "tag": "p",
+      "target_sha256": "ac6318f538192e4db2d52f29122aa043f7da09f9b05c726fde81a117d95019d4"
+    },
+    {
+      "source_id": "id11124",
+      "target": "Поскольку это было вполне вероятно, то с чувством тревоги оба друга вернулись в Париж через Тампльские ворота и направились к Королевской площади, где рассчитывали получить вести об этих бедных горожанах. Но велико было изумление обоих друзей, когда они застали их пьющими и зубоскалящими — и их самих, и их капитана, — всё так же расположившимися лагерем на Королевской площади и, без сомнения, оплакиваемыми своими семьями, которые слышали грохот пушки Шарантона и считали их под огнём.",
+      "source_sha256": "7e53fcb9b5c097bbd20002ccbf657cf0c49bbe3c908da276710ff90f6e685ab0",
+      "target_id": "ru-id11124",
+      "tag": "p",
+      "target_sha256": "dee87f57a6a8b27e8d3d74bccda1e50532912ac049f10e537b61aceff4fec8b1"
+    },
+    {
+      "source_id": "id11125",
+      "target": "Атос и Арамис снова расспросили Планше, но он ничего не узнал о д’Артаньяне. Они хотели увести его с собой, он же заявил, что не может покинуть свой пост без приказа вышестоящего.",
+      "source_sha256": "0426b2f6ea8fcc4afa8dcc55b7638bcc620e9ef5e9c95bb1d9344840cfb0d840",
+      "target_id": "ru-id11125",
+      "tag": "p",
+      "target_sha256": "aeb14d3f93dd0da954f1aded6f73f98146e978d00bb7e912c80b0707ffe623a6"
+    },
+    {
+      "source_id": "id11126",
+      "target": "Только в пять часов они вернулись по домам, говоря, что возвращаются с битвы; они ни на минуту не упускали из виду бронзового коня Людовика XIII.",
+      "source_sha256": "34f3cf16b563d9c4bbed218042cef9a7f06247162ede26544468d185386fb0d8",
+      "target_id": "ru-id11126",
+      "tag": "p",
+      "target_sha256": "51f2c6013c929fd77e5efcb9fba215e593fe8f5ed635ce482433a82696b7f2f0"
+    },
+    {
+      "source_id": "id11127",
+      "target": "— Тысяча громов! — сказал Планше, входя в свою лавку на улице Ломбардцев. — Нас разбили наголову. Я никогда не утешусь!",
+      "source_sha256": "12bfb29a2306e21dd03781b93dcabf047616b239bff883f4e34a8292ad11146b",
+      "target_id": "ru-id11127",
+      "tag": "p",
+      "target_sha256": "c785ad45f251408f42cad628b423be3f95b570911add6adb3ad41cd3c53b66cc"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11111",
+      "verdict": "PASS",
+      "reason": "Faithful: prisoner, fair war, vanquished and means, order to hand over the dispatch all preserved."
+    },
+    {
+      "source_id": "id11112",
+      "verdict": "PASS",
+      "reason": "Accurate; Raoul hesitates and seeks guidance in Athos's eyes."
+    },
+    {
+      "source_id": "id11113",
+      "verdict": "PASS",
+      "reason": "Accurate; d'Herblay rendered conventionally as д’Эрбле."
+    },
+    {
+      "source_id": "id11114",
+      "verdict": "PASS",
+      "reason": "Agency and sequence preserved: Raoul yields, Aramis seizes, skims, returns the dispatch."
+    },
+    {
+      "source_id": "id11115",
+      "verdict": "CORRECTED",
+      "reason": "The draft omitted 'dit-il', added 'believes in Providence' and turned the imperatives 'lisez et voyez' into a question. Restored the source structure."
+    },
+    {
+      "source_id": "id11116",
+      "verdict": "PASS",
+      "reason": "Faithful, including the fine eyebrow and the thought of d'Artagnan overcoming disgust."
+    },
+    {
+      "source_id": "id11117",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11118",
+      "verdict": "CORRECTED",
+      "reason": "'demandez' is 'просите', not the stronger 'требуете'. Rest of the letter is faithful, with Коменж in the established form."
+    },
+    {
+      "source_id": "id11119",
+      "verdict": "PASS",
+      "reason": "Accurate interjection."
+    },
+    {
+      "source_id": "id11120",
+      "verdict": "PASS",
+      "reason": "Accurate, including the two-drops-of-water comparison."
+    },
+    {
+      "source_id": "id11121",
+      "verdict": "CORRECTED",
+      "reason": "'indication' rendered as 'указание' rather than 'знак'; the rest is faithful."
+    },
+    {
+      "source_id": "id11122",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11123",
+      "verdict": "CORRECTED",
+      "reason": "Draft lost the agency of 'l'on aura fait un massacre' (a conjectural future perfect). Restored with 'была учинена резня'."
+    },
+    {
+      "source_id": "id11124",
+      "verdict": "PASS",
+      "reason": "All details preserved: the Temple gate, Place Royale, the families weeping, the cannon of Charenton."
+    },
+    {
+      "source_id": "id11125",
+      "verdict": "PASS",
+      "reason": "Faithful; the source's stray punctuation is smoothed without any loss of meaning."
+    },
+    {
+      "source_id": "id11126",
+      "verdict": "PASS",
+      "reason": "Accurate, including the bronze horse of Louis XIII."
+    },
+    {
+      "source_id": "id11127",
+      "verdict": "PASS",
+      "reason": "Accurate and idiomatic."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11115",
+      "before": "— Вы, кто верит в Провидение, прочтите и поразмыслите: не видите ли вы в этом письме нечто такое, о чём Провидение почитает важным, чтобы мы узнали?",
+      "after": "— Вы, — сказал он, — человек верующий: прочтите и, поразмыслив, увидите в этом письме нечто такое, о чём Провидение считает важным, чтобы мы узнали."
+    },
+    {
+      "source_id": "id11118",
+      "before": "«Монсеньёр, сегодня вечером я пришлю Вашему Высокопреосвященству для усиления отряда г-на де Коменжа десять человек, которых вы требуете. Это хорошие солдаты, способные удержать двух крепких противников, чьей ловкости и решимости опасается Ваше Высокопреосвященство.»",
+      "after": "«Монсеньёр, сегодня вечером я пришлю Вашему Высокопреосвященству для усиления отряда г-на де Коменжа десять человек, которых вы просите. Это хорошие солдаты, способные удержать двух крепких противников, чьей ловкости и решимости опасается Ваше Высокопреосвященство.»"
+    },
+    {
+      "source_id": "id11121",
+      "before": "— Мы будем прочёсывать Париж весь день, — сказал Атос, — и если к вечеру не получим вестей, то снова поедем по дороге в Пикардию, и я ручаюсь, что, благодаря выдумке д’Артаньяна, мы скоро найдём какой-нибудь знак, который рассеет все наши сомнения.",
+      "after": "— Мы будем прочёсывать Париж весь день, — сказал Атос, — и если к вечеру не получим вестей, то снова поедем по дороге в Пикардию, и я ручаюсь, что, благодаря выдумке д’Артаньяна, мы скоро найдём какое-нибудь указание, которое рассеет все наши сомнения."
+    },
+    {
+      "source_id": "id11123",
+      "before": "— Бедный Планше! Вам легко о нём говорить, Арамис, его, без сомнения, убили. Все эти воинственные горожане, должно быть, вышли в поход, и там случилась резня.",
+      "after": "— Бедный Планше! Вам легко о нём говорить, Арамис, его, без сомнения, убили. Все эти воинственные горожане, должно быть, вышли в поход, и была учинена резня."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXPz3W5aA2xZFQtSRjy",
+    "usage": {
+      "input_tokens": 5552,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1508,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXQotbGwmhARuwSf2KW",
+    "usage": {
+      "input_tokens": 9274,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 4289,
+      "output_tokens_details": {
+        "thinking_tokens": 1835
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXSiFKM9BLRTrhXZKxa",
+        "usage": {
+          "input_tokens": 10163,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4346,
+          "output_tokens_details": {
+            "thinking_tokens": 1544
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11111",
+          "verdict": "PASS",
+          "reason": "Faithful: prisoner, 'de bonne guerre', the vanquished and means of war, and the demand for the dispatch are all rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id11112",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Raoul's hesitation and his looking to Athos for a rule of conduct are fully preserved."
+        },
+        {
+          "source_id": "id11113",
+          "verdict": "PASS",
+          "reason": "Athos's order and Raoul's status as prisoner of the chevalier d'Herblay are accurate; dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id11114",
+          "verdict": "PASS",
+          "reason": "Raoul yields reluctantly; Aramis, less scrupulous than the comte de La Fère, eagerly seizes the dispatch, skims it and hands it back to Athos. Agency and sequence are preserved."
+        },
+        {
+          "source_id": "id11115",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'qui êtes croyant' is rendered as 'человек верующий', the imperative 'lisez' is kept, and the Providence clause is accurate. The 'dit-il' insertion is preserved."
+        },
+        {
+          "source_id": "id11116",
+          "verdict": "PASS",
+          "reason": "Athos frowns (singular 'sourcil' kept), and the thought that the letter concerns d'Artagnan helps him overcome his disgust at reading it. Accurate."
+        },
+        {
+          "source_id": "id11117",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "id11118",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'demandez' is now 'просите' rather than 'требуете', Comminges is rendered as Коменж, and the register of address to His Eminence is maintained. The closing quotation mark is preserved."
+        },
+        {
+          "source_id": "id11119",
+          "verdict": "PASS",
+          "reason": "Interjection and attribution are correct."
+        },
+        {
+          "source_id": "id11120",
+          "verdict": "PASS",
+          "reason": "Aramis's question, the two adversaries, the 'outre la troupe de Comminges, dix bons soldats' and the 'deux gouttes d'eau' comparison are all faithful."
+        },
+        {
+          "source_id": "id11121",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'indication' is now 'указание'. 'Battre Paris', the return along the Picardy road, and d'Artagnan's imagination are accurate."
+        },
+        {
+          "source_id": "id11122",
+          "verdict": "PASS",
+          "reason": "Faithful: Planchet is singled out for inquiry and the 'ancien maître' is kept."
+        },
+        {
+          "source_id": "id11123",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: the future perfect and the impersonal 'l'on aura fait un massacre' are rendered as 'была учинена резня', faithful to the source. The sense of conjecture is kept."
+        },
+        {
+          "source_id": "id11124",
+          "verdict": "PASS",
+          "reason": "All details are present: the probability clause, the Temple gate, Place Royale, the drinking and joking bourgeois and their captain, the families' tears, and the cannon of Charenton. No omissions."
+        },
+        {
+          "source_id": "id11125",
+          "verdict": "PASS",
+          "reason": "Faithful, including the source's odd punctuation 'd'Artagnan.,' resolved sensibly; Planchet's refusal to leave his post without superior orders is preserved."
+        },
+        {
+          "source_id": "id11126",
+          "verdict": "PASS",
+          "reason": "Five o'clock, the claim of returning from the battle, and not losing sight of Louis XIII's bronze horse are accurate."
+        },
+        {
+          "source_id": "id11127",
+          "verdict": "PASS",
+          "reason": "Planchet's oath, the rue des Lombards, 'battus à plate couture' and his inconsolability are rendered accurately and idiomatically."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
