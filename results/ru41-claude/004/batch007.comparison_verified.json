@@ -1,0 +1,307 @@
+{
+  "unit": 4,
+  "batch": 7,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id00593",
+      "target": "— Ну что ж, в таком случае, сударь, — сказала она, — если вам больше не о чем меня спрашивать, оставьте меня; вы должны понять, что после подобной сцены мне нужно побыть одной.",
+      "source_sha256": "6862ce60a6041c40eab38846d24d875ed425b0cec2f9d2b3480763f80b66f0bd",
+      "target_id": "ru-id00593",
+      "tag": "p",
+      "target_sha256": "7e1253a8e3ffcbba7615fedbc9fe84c8e3b4f4c8770fc351e27e50f29a5c5ee2"
+    },
+    {
+      "source_id": "id00594",
+      "target": "Мазарини поклонился.",
+      "source_sha256": "ab70e5b1811cb43f8b692d18d3f790a13ad4ae88f2139e99f344a21f708e899e",
+      "target_id": "ru-id00594",
+      "tag": "p",
+      "target_sha256": "fb2bf333f87232bb090fb72988ee3d6ffeac8436a52767c64302fc00a2a6f3d0"
+    },
+    {
+      "source_id": "id00595",
+      "target": "— Я удаляюсь, сударыня, — сказал он. — Позволите ли вы мне вернуться?",
+      "source_sha256": "50f5119ae054b19fe16de0f08fd684e711d7c5ff4206dc9ee4112daf58ccadb7",
+      "target_id": "ru-id00595",
+      "tag": "p",
+      "target_sha256": "7a361cc6b21a172fd98b6eaf43127a2fb435256635dc8c65d3fca688afab68a0"
+    },
+    {
+      "source_id": "id00596",
+      "target": "— Да, но завтра; мне и всего этого времени будет не слишком много, чтобы прийти в себя.",
+      "source_sha256": "82c0c95cc71a206f8ccb06f4453b7c7a8586664a6af91674e5a0261354fbd8f8",
+      "target_id": "ru-id00596",
+      "tag": "p",
+      "target_sha256": "b9dcf4c72a87c872b2e974c5a67a4369737af2a6076b418a5924305c7b427509"
+    },
+    {
+      "source_id": "id00597",
+      "target": "Кардинал взял руку королевы и галантно поцеловал её, затем удалился.",
+      "source_sha256": "5ab364dd6a990b05dbd88bb11d03b708a4fa928df1fc01d046364e7a4e693845",
+      "target_id": "ru-id00597",
+      "tag": "p",
+      "target_sha256": "d4a9a052d8eaf06b0051e2ae8c21ef3036212a4145e58ba0c65e631bca99e161"
+    },
+    {
+      "source_id": "id00598",
+      "target": "Едва он вышел, как королева прошла в покои сына и спросила Лапорта, лёг ли король. Лапорт указал рукой на спящего ребёнка.",
+      "source_sha256": "7091b276d4587a7929eda50f162f4ae8a509ebb29c55d91fcc1680e651cbb25a",
+      "target_id": "ru-id00598",
+      "tag": "p",
+      "target_sha256": "ea524de5c89bd25b7897a2c527aeb4533a2f5f1c26eca8453139be2361e81a98"
+    },
+    {
+      "source_id": "id00599",
+      "target": "Анна Австрийская поднялась на ступеньки кровати, приблизила губы к наморщенному лбу сына и тихонько поцеловала его; затем она удалилась так же безмолвно, как пришла, лишь сказав камердинеру:",
+      "source_sha256": "da1429e009643e0ea15cccb05c0c6652c1c66a2ef5425fc057ac42950707f1d2",
+      "target_id": "ru-id00599",
+      "tag": "p",
+      "target_sha256": "867c7260ba75d77ff1dcc16ccc6259d023a97afaaad70a892654586487e9149e"
+    },
+    {
+      "source_id": "id00600",
+      "target": "— Постарайтесь же, мой милый Лапорт, чтобы король приветливее встречал господина кардинала, которому и он, и я так многим обязаны.",
+      "source_sha256": "8201848c5e64474d9c0817b4a559db167f2a4f946511e0d9c3d9d5416c181ceb",
+      "target_id": "ru-id00600",
+      "tag": "p",
+      "target_sha256": "05d2f1ade96fd26af3d25618ea30a569af86bb3929caca2a0c5a4f6c0425d179"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id00593",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic; dialogue punctuation, 'rien autre chose' and the reason for wanting solitude are preserved."
+    },
+    {
+      "source_id": "id00594",
+      "verdict": "PASS",
+      "reason": "Faithful; Мазарини matches the established name."
+    },
+    {
+      "source_id": "id00595",
+      "verdict": "PASS",
+      "reason": "Faithful; formal register and the question are preserved."
+    },
+    {
+      "source_id": "id00596",
+      "verdict": "CORRECTED",
+      "reason": "The litotes 'je n'aurai pas trop de tout ce temps' was flattened to 'понадобится всё это время'; the negated understatement is restored. The Russian wording is a little awkward and could be smoothed to 'мне не будет лишним'."
+    },
+    {
+      "source_id": "id00597",
+      "verdict": "PASS",
+      "reason": "Faithful; the gallant kiss on the hand and the departure are preserved."
+    },
+    {
+      "source_id": "id00598",
+      "verdict": "PASS",
+      "reason": "Faithful; agency, sequence and Laporte's gesture are preserved."
+    },
+    {
+      "source_id": "id00599",
+      "verdict": "PASS",
+      "reason": "Faithful; the action sequence, the silence and the lead-in to the speech (colon) are preserved."
+    },
+    {
+      "source_id": "id00600",
+      "verdict": "CORRECTED",
+      "reason": "'fasse meilleure mine' means to receive with a friendlier face, not just 'относился лучше'; changed to 'приветливее встречал'. Also 'lui et moi' made explicit as 'и он, и я' to keep the pairing."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id00596",
+      "before": "— Да, но завтра; мне понадобится всё это время, чтобы прийти в себя.",
+      "after": "— Да, но завтра; всё это время мне будет не лишним, чтобы прийти в себя."
+    },
+    {
+      "source_id": "id00600",
+      "before": "— Постарайтесь же, мой милый Лапорт, чтобы король лучше относился к господину кардиналу, которому он и я так многим обязаны.",
+      "after": "— Постарайтесь же, мой милый Лапорт, чтобы король приветливее встречал господина кардинала, которому и он, и я так многим обязаны."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJE2VZuzq4bSagRiuXc9",
+    "usage": {
+      "input_tokens": 2683,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 910,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJE3MupmXQi9zmJqpLFb",
+    "usage": {
+      "input_tokens": 4337,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2004,
+      "output_tokens_details": {
+        "thinking_tokens": 557
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJJR1JAK4F3Pig9bQctv",
+        "usage": {
+          "input_tokens": 4592,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1940,
+          "output_tokens_details": {
+            "thinking_tokens": 783
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id00593",
+          "verdict": "PASS",
+          "reason": "Faithful: 'Eh bien, alors', 'rien autre chose à me demander', and the need to be alone after such a scene are all rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id00594",
+          "verdict": "PASS",
+          "reason": "Accurate; Мазарини matches the established name and the past tense is preserved."
+        },
+        {
+          "source_id": "id00595",
+          "verdict": "PASS",
+          "reason": "Accurate; polite register preserved, the question is rendered correctly."
+        },
+        {
+          "source_id": "id00596",
+          "verdict": "CORRECTED",
+          "reason": "The prior fix 'мне будет не лишним, чтобы…' was ungrammatical and awkward. The French 'je n'aurai pas trop de tout ce temps pour me remettre' is now rendered as 'мне и всего этого времени будет не слишком много, чтобы прийти в себя', which keeps the negation and the 'not too much' sense."
+        },
+        {
+          "source_id": "id00597",
+          "verdict": "PASS",
+          "reason": "Agency and sequence preserved: he took her hand, kissed it gallantly, then withdrew."
+        },
+        {
+          "source_id": "id00598",
+          "verdict": "PASS",
+          "reason": "Complete and accurate: 'À peine… que', the question about whether the king was in bed, and Laporte's gesture toward the sleeping child are all preserved."
+        },
+        {
+          "source_id": "id00599",
+          "verdict": "PASS",
+          "reason": "All details present (bed steps, wrinkled forehead, gentle kiss, silent departure, valet de chambre); the colon leading to the next dialogue paragraph is appropriate."
+        },
+        {
+          "source_id": "id00600",
+          "verdict": "PASS",
+          "reason": "The prior correction is valid: 'faire meilleure mine à' is rendered as 'приветливее встречал', and 'lui et moi' keeps its sense in 'и он, и я'. The meaning of the great obligations is intact."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id00596",
+          "before": "— Да, но завтра; всё это время мне будет не лишним, чтобы прийти в себя.",
+          "after": "— Да, но завтра; мне и всего этого времени будет не слишком много, чтобы прийти в себя."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJJRvzENRgHhe9QhsXjL",
+        "usage": {
+          "input_tokens": 4596,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1711,
+          "output_tokens_details": {
+            "thinking_tokens": 522
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id00593",
+          "verdict": "PASS",
+          "reason": "Faithful: conditional, 'monsieur' as «сударь», and the reason for wanting solitude are all preserved; the register is natural."
+        },
+        {
+          "source_id": "id00594",
+          "verdict": "PASS",
+          "reason": "Accurate; the name Мазарини follows the established form."
+        },
+        {
+          "source_id": "id00595",
+          "verdict": "PASS",
+          "reason": "Accurate: 'Je me retire' as «Я удаляюсь», the request for permission to return is intact, and the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id00596",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. The litotes 'je n'aurai pas trop de tout ce temps' is kept as «не слишком много», with 'demain' and 'me remettre' rendered correctly. The wording is idiomatic and the meaning is preserved."
+        },
+        {
+          "source_id": "id00597",
+          "verdict": "PASS",
+          "reason": "Agency and sequence are correct: the cardinal takes her hand, kisses it gallantly, then withdraws."
+        },
+        {
+          "source_id": "id00598",
+          "verdict": "PASS",
+          "reason": "Nothing omitted: 'À peine… que' becomes «Едва… как», the question to Laporte is intact, and Laporte's gesture towards the sleeping child is rendered accurately."
+        },
+        {
+          "source_id": "id00599",
+          "verdict": "PASS",
+          "reason": "All actions are preserved: the steps of the bed, the wrinkled forehead, the gentle kiss, the silent withdrawal, and 'se contentant de dire' as «лишь сказав». The colon before the speech is a legitimate Russian rendering of the source's period before dialogue."
+        },
+        {
+          "source_id": "id00600",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. 'Fasse meilleure mine' as «приветливее встречал» is idiomatic, and «которому и он, и я так многим обязаны» correctly preserves 'lui et moi' and 'de si grandes obligations'."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
