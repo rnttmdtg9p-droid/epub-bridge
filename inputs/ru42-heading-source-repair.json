@@ -1,0 +1,14 @@
+{
+  "state": "SOURCE_HEADING_CORRECTION_REQUIRED_TARGET_REVIEW_PENDING",
+  "unit": 1,
+  "source_original_html": "<h4 id=\"CHAPITRE_PREMIERbalance-fish.\" class=\"tmp mw-html-heading\" style=\"font-weight: normal;font-size: 105%; letter-spacing: 0.1em;\"> CHAPITRE PREMIER<br><br><span class=\"sc\">balance-fish</span>.</h4>",
+  "before": "CHAPITRE PREMIER — balancebalance-fish.",
+  "corrected_source_heading": "CHAPITRE PREMIER — balance-fish.",
+  "cause": "Host insertion of a heading separator duplicated the word balance. Raw original HTML never contained the duplicate.",
+  "corrected_source_sha256": "f0ad122d6da6a7e1ba1fd076069a70e949c696bd560d6846456891cc35b3bb0f",
+  "active_provider_input_remains_immutable": true,
+  "affected_body_rows": 0,
+  "original_note_context": "Le balance-fish est ainsi nommé par les marins anglais parce que sa tête présente la forme d’une balance, ou mieux encore la forme d’un double marteau. C’est même pour cette raison qu’en France cet animal est connu sous le nom de requin-marteau.",
+  "target_action": "Fresh authorized provider translation and complete source-aligned review of corrected heading, then exact overlay join. No invented target approval.",
+  "release_claimed": false
+}
