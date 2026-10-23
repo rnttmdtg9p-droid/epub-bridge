@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJzjh3FBytXEf4APk2Cm",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-043-0081\",\"target\":\"На следующий день, с самого рассвета, они простились с двумя молодыми сквоттерами. Было множество благодарностей и твёрдых обещаний свидеться в Европе, в замке Малкольм. Затем фургон тронулся, обогнул подножие горы Хоттам, и вскоре жилище исчезло из глаз путешественников, как быстрое видение. Ещё пять миль кони ступали копытами по земле станции. Лишь в девять часов была пройдена последняя изгородь, и маленький отряд углубился в почти неведомые края провинции Виктория.\"},{\"source_id\":\"fr42c-note-081\",\"target\":\"Английское выражение, обозначающее упряжку из четырёх лошадей.\"}],\"review\":[{\"source_id\":\"fr42c-043-0081\",\"verdict\":\"PASS\",\"reason\":\"Faithful and complete: dawn, farewells, promises, chariot rounding Mt Hottam, vanishing house, five more miles on station land, ninth hour, last fence, victorian province. Prior corrections verified; the idiom is natural.\"},{\"source_id\":\"fr42c-note-081\",\"verdict\":\"PASS\",\"reason\":\"Accurately renders the note: an English expression for a four-horse team. No omissions or additions.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3378,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 445,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
