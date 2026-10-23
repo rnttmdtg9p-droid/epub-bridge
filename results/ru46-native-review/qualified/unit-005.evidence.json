@@ -1,0 +1,28 @@
+{
+  "unit": 5,
+  "state": "PASS_INDEPENDENT_ACTUAL_NATIVE_REVIEW_REPLAY",
+  "source_rows": 13,
+  "headings": 1,
+  "evidence": [
+    {
+      "batch": 0,
+      "rows": 14,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjGT6rNgwkEYNSiZKgu",
+          "request_sha256": "cb5b0dd81ec086cbbd8d89fbc8f096ab6ac00f2842a4c0fd3fa77eef703be025",
+          "response_sha256": "cfe0b574cc5884b1b3686594ac6e4dc3aa36535624c7b4e1c7bac7d9882dbb48"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjGqKpsGCaY1VQAryvu",
+          "request_sha256": "a6f3f3c9abd458d3369158fb0529f7bf6d80f66564549f202f8b549a7b18f92c",
+          "response_sha256": "5b1b32f2cbef9e3f9369eb9798b480fe036c08256c8d585988259f95e6afd60c"
+        }
+      ]
+    }
+  ],
+  "all_source_bytes_preserved": true,
+  "book_release": false
+}
