@@ -6,7 +6,7 @@ import json,hashlib
 
 def sha(s):return hashlib.sha256(s.encode()).hexdigest()
 def qualify_unit(root,source,unit):
- root=Path(root);u=next(u for u in source if u['unit']==unit);folder=root/f'results/ru42-original/{unit:03}';chapter=json.loads((folder/'chapter.reviewed.json').read_text());assert 'CORRECTION_COMPARISON_COMPLETE' in chapter['state'],'INCOMPLETE_COMPARISON'
+ root=Path(root);u=next(u for u in source if u['unit']==unit);folder=root/f'results/ru42-complete-original/{unit:03}';chapter=json.loads((folder/'chapter.reviewed.json').read_text());assert 'CORRECTION_COMPARISON_COMPLETE' in chapter['state'],'INCOMPLETE_COMPARISON'
  expected={r['id']:r for r in u['rows']};expected[u['heading_id']]={'id':u['heading_id'],'text':u['heading'],'sha256':sha(u['heading'])};adjfile=root/'inputs/ru42-controlling-adjudications.json';adj=json.loads(adjfile.read_text()) if adjfile.exists() else {};final=[];batches=[]
  def verdict(r,rows):
   if r['verdict']=='PASS':return bool(r.get('reason'))
@@ -22,6 +22,9 @@ def qualify_unit(root,source,unit):
   assert [r['source_id'] for r in raw['review']]==ids and all(verdict(r,rows) for r in raw['review']),'ACTUAL_API_REVIEW_VERDICTS';assert len(frozen)==len(rows)
   for src,row in zip(frozen,rows):
    bound=expected[row['source_id']];assert src['id']==row['source_id'] and src['text']==bound['text'],'FROZEN_SOURCE_TEXT';assert row['source_sha256']==src['sha256']==bound['sha256']==sha(src['text']),'FROZEN_SOURCE_HASH';assert row['target_sha256']==sha(row['target']),'TARGET_HASH'
+   import re
+   assert re.findall(r'\[\[FN:\d+\]\]',row['target'])==re.findall(r'\[\[FN:\d+\]\]',bound['text']),'NOTE_TOKEN_PRESERVATION'
+   if not bound.get('translate',True):assert row['target']==bound['text'],'FOREIGN_DOCUMENT_VERBATIM'
    if bound.get('source_lines'):assert src['source_lines']==bound['source_lines'] and len(row['target'].splitlines())==len(bound['source_lines']),'AUTHENTIC_VERSE_LINEATION'
   final.extend(rows);batches.append({'batch':number,'rows':len(rows),'response_id':response['id'],'source_order_hashes':'PASS','actual_request_response':'PASS','final_comparison':'PASS'})
  assert len(final)==len(u['rows'])+1 and chapter['heading']==final[0] and chapter['rows']==final[1:],'CHAPTER_BATCH_RECONCILIATION';assert [r['source_id'] for r in chapter['rows']]==[r['id'] for r in u['rows']],'COMPLETE_SOURCE_ORDER';applied=[]
