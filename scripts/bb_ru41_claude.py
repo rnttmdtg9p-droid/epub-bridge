@@ -76,8 +76,17 @@ def checked_call(system,payload,path,source,review=False):
 def compare_final(unit,index,rows,item,folder,context):
     current=validate(item['rows'],rows)
     comparison=[]
-    for turn in range(3):
-        request={'task':'Compare EVERY final Russian row against its French source. Verify all prior corrections in the supplied ledger. Check meaning, agency, negation, omissions, idiom, register, italics and original verse line count. Return JSON only: {"rows":[{"source_id":"exact source id","target":"complete corrected Russian"}],"review":[{"source_id":"exact source id","verdict":"PASS or CORRECTED","reason":"specific source-based assessment"}]}. Return every row in both arrays, in source order. Do not return source hashes; host binds immutable hashes. If already faithful and idiomatic, preserve the exact target bytes.','context':context,'source_rows':rows,'final_rows':current,'prior_corrections':item.get('corrections',[])}
+    pending=folder/f'batch{index:03}.comparison_pending.json'
+    if pending.exists():
+        recovered=json.loads(pending.read_text())
+        current=validate(recovered['rows'],rows)
+        comparison=recovered['comparison']
+        assert comparison and comparison[-1]['corrections'], 'PENDING_COMPARISON_LEDGER'
+    # Continue from applied corrections and retain every earlier API exchange.
+    # A nonstable result remains pending; extra passes do not relax acceptance.
+    start_turn=len(comparison)
+    for turn in range(start_turn,start_turn+6):
+        request={'task':'Compare EVERY final Russian row against its French source. Verify all prior corrections in the supplied ledger. Check meaning, agency, negation, omissions, idiom, register, italics and original verse line count. Return JSON only: {"rows":[{"source_id":"exact source id","target":"complete corrected Russian"}],"review":[{"source_id":"exact source id","verdict":"PASS or CORRECTED","reason":"specific source-based assessment"}]}. Return every row in both arrays, in source order. Do not return source hashes; host binds immutable hashes. If already faithful and idiomatic, preserve the exact target bytes.','context':context,'source_rows':rows,'final_rows':current,'prior_corrections':item.get('corrections',[])+[c for previous in comparison for c in previous['corrections']]}
         result,meta=checked_call(SYSTEM+' You are the final source-aligned AI comparison reviewer, checking corrected text against French independently of prior verdicts.',request,folder/f'batch{index:03}.comparison{turn:02}',rows,True)
         revised=result['rows']
         changes=[{'source_id':a['source_id'],'before':a['target'],'after':b['target']} for a,b in zip(current,revised) if a['target']!=b['target']]
@@ -88,7 +97,7 @@ def compare_final(unit,index,rows,item,folder,context):
             save(folder/f'batch{index:03}.comparison_verified.json',final)
             return final
     save(folder/f'batch{index:03}.comparison_pending.json',{'rows':current,'comparison':comparison,'state':'CORRECTIONS_APPLIED_RECHECK_STILL_REQUIRED'})
-    raise RuntimeError('COMPARISON_NOT_STABLE_AFTER_THREE_PASSES')
+    raise RuntimeError('COMPARISON_NOT_STABLE_AFTER_RESUMED_PASSES')
 
 def translate(unit):
     number=unit['unit'];folder=OUT/f'{number:03}';folder.mkdir(exist_ok=True)
