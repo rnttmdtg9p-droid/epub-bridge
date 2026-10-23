@@ -26,3 +26,5 @@ jobs:
           path: results/ru43-navigation-final/
           retention-days: 90
           if-no-files-found: error
+
+# Resume actual verifiedunit4; exact Unicodecharacter counts in strict retries.
