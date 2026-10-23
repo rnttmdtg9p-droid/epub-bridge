@@ -1,0 +1,462 @@
+{
+  "unit": 28,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id03753",
+      "target": "— Оглянитесь вокруг, господа, если вы сомневаетесь, — сказал герцог.",
+      "source_sha256": "c1ef3717fc987c5e747588e6af5866d6e6e80394c33f213d8de0cf21bd8492c2",
+      "target_id": "ru-id03753",
+      "tag": "p",
+      "target_sha256": "a51a99c7b0ddd8d0c1cab4000192251e814efde6e6ef2f2e7eaa602fe1fed4f4"
+    },
+    {
+      "source_id": "id03754",
+      "target": "Д’Артаньян и Портос огляделись: они и в самом деле были со всех сторон окружены отрядом всадников.",
+      "source_sha256": "4fdb33380f586d59a8a18e0df260e755516acef739d18bf0f6873d7c504f0ff8",
+      "target_id": "ru-id03754",
+      "tag": "p",
+      "target_sha256": "96076027b1139f3907690d0916300372d61d19f36bdd0a6a3a6c4690a79fa097"
+    },
+    {
+      "source_id": "id03755",
+      "target": "— По шуму вашей схватки, — сказал герцог, — я решил, что вас человек двадцать, и вернулся со всеми, кто был при мне, — мне надоело вечно бежать, и мне хотелось тоже немного помахать шпагой; вас же оказалось только двое.",
+      "source_sha256": "1e44d24ca1f93774d1821ec75565071c9f3042f1cffd1bbd90fb0184e116a5b0",
+      "target_id": "ru-id03755",
+      "tag": "p",
+      "target_sha256": "dd4ac529d1edb0d14f4f7807e726e52e5b9ce05e6c0d960e2e6ca3e59aacdf9d"
+    },
+    {
+      "source_id": "id03756",
+      "target": "— Да, монсеньер, — сказал Атос, — но, как вы сами сказали, двое, которые стоят двадцати.",
+      "source_sha256": "ac3b3fe9de5d894d01e3e91ff15df29c24c36c9ec5701c42ec10d1d1e76a8b61",
+      "target_id": "ru-id03756",
+      "tag": "p",
+      "target_sha256": "57d3b53fc7f1f69ccc0359528b5845436ed2a381d8da555e503aee0f6b9cd169"
+    },
+    {
+      "source_id": "id03757",
+      "target": "— Что ж, господа, ваши шпаги, — сказал герцог.",
+      "source_sha256": "d32ae78031db315184d77b123c654d88d433f9deeba88dd0e5cccd38a9fd4535",
+      "target_id": "ru-id03757",
+      "tag": "p",
+      "target_sha256": "9e1d30d9933939e4396d9abbfa121fb43aef1af27142c34e467aea0651ec910e"
+    },
+    {
+      "source_id": "id03758",
+      "target": "— Наши шпаги! — сказал д’Артаньян, подняв голову и приходя в себя. — Наши шпаги! Никогда!",
+      "source_sha256": "fb2054bc09b61d7a3ff01da36b4e8075ec32722883b12ec8d9342bd8eb16046d",
+      "target_id": "ru-id03758",
+      "tag": "p",
+      "target_sha256": "e33bb154c97f9dcf9acbeb354959e437bae3f20cddfbd713516bd2682a10eda1"
+    },
+    {
+      "source_id": "id03759",
+      "target": "— Никогда! — сказал Портос.",
+      "source_sha256": "c01a6ed4c1da095b85fdca7b343e9a4216f7399daa5a103eff31532e6c26a498",
+      "target_id": "ru-id03759",
+      "tag": "p",
+      "target_sha256": "ab76b90bd6080ab0bd0a5927e1d494c7152cb7367a52afdf172e07a24043c9cd"
+    },
+    {
+      "source_id": "id03760",
+      "target": "Несколько человек шевельнулись.",
+      "source_sha256": "c7efa3cbc1d9cca9a9a5b2349ce711298199f40c7ecf0e15346beb355c50319c",
+      "target_id": "ru-id03760",
+      "tag": "p",
+      "target_sha256": "42382e3261002c78d8f7217e74f3679c6c4eb70a495140659a9cfa2c8a8f7cc5"
+    },
+    {
+      "source_id": "id03761",
+      "target": "— Одну минуту, монсеньер, — сказал Атос, — два слова.",
+      "source_sha256": "e77f47180a2a8279ff80918643075ea8340e5fb95dd0d64814c3acc88d9785a7",
+      "target_id": "ru-id03761",
+      "tag": "p",
+      "target_sha256": "3c386e4b9892af1c4d74ca3321fd8e9e35e2e9b2926b23fd72c37c794a8803c4"
+    },
+    {
+      "source_id": "id03762",
+      "target": "И он приблизился к принцу, и тот наклонился к нему, а Атос тихо сказал ему несколько слов.",
+      "source_sha256": "29a07ede0c7e29f66302a5ab9eb37cf328696c827b69f8582c61871c99c58913",
+      "target_id": "ru-id03762",
+      "tag": "p",
+      "target_sha256": "e71c3ce6758bb9821641859bfdceb35aa86f197133578d41e9a7af8c7717732d"
+    },
+    {
+      "source_id": "id03763",
+      "target": "— Как вам угодно, граф, — сказал принц. — Я слишком многим вам обязан, чтобы отказать вам в первой же просьбе. Расступитесь, господа, — сказал он людям своего эскорта. — Господа д’Артаньян и дю Валлон, вы свободны.",
+      "source_sha256": "ae67e6c8aa935a630970277a2995bd5b4b217c899dcb38b8bf6db69aa6cd584f",
+      "target_id": "ru-id03763",
+      "tag": "p",
+      "target_sha256": "d21bd8d2be5c7f9e985c90422d17b23de405007a3bcd90f5e6822c70e6ca9878"
+    },
+    {
+      "source_id": "id03764",
+      "target": "Приказ был тотчас исполнен, и д’Артаньян с Портосом оказались в центре широкого круга.",
+      "source_sha256": "a6b6b4dc3d02e955ab71929d5c3d3daf6c80216d963f1bb23234f5066296e83e",
+      "target_id": "ru-id03764",
+      "tag": "p",
+      "target_sha256": "94c54b0fe3065f698449f23b95ded315f6f3b4ea2de2cec705b1cd7b5e47084b"
+    },
+    {
+      "source_id": "id03765",
+      "target": "— Теперь, д’Эрбле, — сказал Атос, — сойдите с лошади и подойдите.",
+      "source_sha256": "b1c5e1e2bc91b5731bf58d5b69349a46982af629184a177b15093fdcf06abbc2",
+      "target_id": "ru-id03765",
+      "tag": "p",
+      "target_sha256": "5836926ea54e99ecdf6045154fda8690c8c66a6b71909c8e4739a234af45d704"
+    },
+    {
+      "source_id": "id03766",
+      "target": "Арамис спешился и подошёл к Портосу, а Атос подошёл к д’Артаньяну. Так все четверо оказались вместе.",
+      "source_sha256": "dd7226ee1b6e0afb3fec143b2df57c277ff67dd3dd10e31ae03cc9ba293d2922",
+      "target_id": "ru-id03766",
+      "tag": "p",
+      "target_sha256": "71c007f593de2ca0053ad22c38b4765697b5a098a740717b7e19d9c6ed8d4361"
+    },
+    {
+      "source_id": "id03767",
+      "target": "— Друзья, — сказал Атос, — вы всё ещё жалеете, что мы не пролили нашей крови?",
+      "source_sha256": "88e58e4c1787d9b0116e433d297cfa43516fa5ff395ee167927c9407c1cc841a",
+      "target_id": "ru-id03767",
+      "tag": "p",
+      "target_sha256": "3e609f9fe4c90cc374febddd674d6b2aa565ac5657c1a6ff6a654baf8e356739"
+    },
+    {
+      "source_id": "id03768",
+      "target": "— Нет, — сказал д’Артаньян, — я жалею, что мы оказались друг против друга, мы, всегда бывшие так тесно сплочены; я жалею, что мы встретились в двух противоположных лагерях. Ах! Больше нам ничто не удастся.",
+      "source_sha256": "3c126ec475bc327982c5545e5f03ed212611de9b2955d38e899e63175df1a721",
+      "target_id": "ru-id03768",
+      "tag": "p",
+      "target_sha256": "d7dceccedb32d2bd655941d4d7d4eaef8abb046457ae964d1d109015d54f27cd"
+    },
+    {
+      "source_id": "id03769",
+      "target": "— О, Боже мой! Нет, всё кончено, — сказал Портос.",
+      "source_sha256": "509b6c42619a1a600cad5a0718bfb5545904460a10ad4293cfc29d2ec680d6e0",
+      "target_id": "ru-id03769",
+      "tag": "p",
+      "target_sha256": "b42b24a1ea94df8380d0455dd23312da0cb4e367f653c021f21f1952e3c6d02f"
+    },
+    {
+      "source_id": "id03770",
+      "target": "— Ну так будьте с нами, — сказал Арамис.",
+      "source_sha256": "51e7f3d7fc124363479b7554ef03f351a30050890600b9ebee8d5b47278037bb",
+      "target_id": "ru-id03770",
+      "tag": "p",
+      "target_sha256": "cbd81577d133fa085ff0cd2bbfc73d78b9eb44059de5de36a1cfe5ce7107e848"
+    },
+    {
+      "source_id": "id03771",
+      "target": "— Молчите, д’Эрбле, — сказал Атос, — таких предложений не делают людям, подобным этим господам. Если они вступили в партию Мазарини, значит, их совесть повлекла их в ту сторону, как наша повлекла нас на сторону принцев.",
+      "source_sha256": "4e7f60831b9b9ea7a0ae8efaf31692dc11c322822ca4d516af76e8ac17cefe30",
+      "target_id": "ru-id03771",
+      "tag": "p",
+      "target_sha256": "7bed1d7b054cc92a37c0749ab88116deab366569b8960b9e260171e5953e294a"
+    },
+    {
+      "source_id": "id03772",
+      "target": "— А пока что мы с вами враги, — сказал Портос. — Чёрт побери! Кто бы мог подумать?",
+      "source_sha256": "99c2fb0e81d9ee705f83fbd5ff63a46e512b115a1d09d51d65251655030fa565",
+      "target_id": "ru-id03772",
+      "tag": "p",
+      "target_sha256": "8530ffaebd81a1169d64ac654d218ace2f145e7573867e68bc8e47bf595af5c6"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id03753",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03754",
+      "verdict": "CORRECTED",
+      "reason": "'troupe d'hommes à cheval' rendered more naturally as 'отряд всадников'."
+    },
+    {
+      "source_id": "id03755",
+      "target": "",
+      "verdict": "PASS",
+      "reason": "Complete and faithful; the sense of the duc's return and the 'two only' preserved."
+    },
+    {
+      "source_id": "id03756",
+      "verdict": "CORRECTED",
+      "reason": "Corrupted 'монseigneur' replaced with 'монсеньер'."
+    },
+    {
+      "source_id": "id03757",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03758",
+      "verdict": "PASS",
+      "reason": "Faithful, negation 'jamais' preserved."
+    },
+    {
+      "source_id": "id03759",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03760",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03761",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03762",
+      "verdict": "CORRECTED",
+      "reason": "Removed unsupported 'подъехал' (source: s'approcha) and clarified agency: the prince leans, Athos speaks low; fixed faulty comma construction."
+    },
+    {
+      "source_id": "id03763",
+      "verdict": "PASS",
+      "reason": "Faithful; agency and address forms preserved."
+    },
+    {
+      "source_id": "id03764",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03765",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03766",
+      "verdict": "PASS",
+      "reason": "Faithful; agency of both approaches preserved."
+    },
+    {
+      "source_id": "id03767",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03768",
+      "verdict": "CORRECTED",
+      "reason": "Improved participial phrase for 'si bien unis' ('тесно сплочены'); content otherwise preserved."
+    },
+    {
+      "source_id": "id03769",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03770",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id03771",
+      "verdict": "PASS",
+      "reason": "Faithful, including conscience parallel and negation."
+    },
+    {
+      "source_id": "id03772",
+      "verdict": "PASS",
+      "reason": "Faithful; oath rendered idiomatically."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id03754",
+      "before": "Д’Артаньян и Портос огляделись: они и в самом деле были со всех сторон окружены отрядом конных.",
+      "after": "Д’Артаньян и Портос огляделись: они и в самом деле были со всех сторон окружены отрядом всадников."
+    },
+    {
+      "source_id": "id03756",
+      "before": "— Да, монseigneur, — сказал Атос, — но, как вы сами сказали, двое, которые стоят двадцати.",
+      "after": "— Да, монсеньер, — сказал Атос, — но, как вы сами сказали, двое, которые стоят двадцати."
+    },
+    {
+      "source_id": "id03762",
+      "before": "И он подъехал к принцу, который наклонился к нему, и тихо сказал ему несколько слов.",
+      "after": "И он приблизился к принцу, и тот наклонился к нему, а Атос тихо сказал ему несколько слов."
+    },
+    {
+      "source_id": "id03768",
+      "before": "— Нет, — сказал д’Артаньян, — я жалею, что мы оказались друг против друга, мы, всегда бывшие так тесно связаны; я жалею, что мы встретились в двух противоположных лагерях. Ах! Больше нам ничто не удастся.",
+      "after": "— Нет, — сказал д’Артаньян, — я жалею, что мы оказались друг против друга, мы, всегда бывшие так тесно сплочены; я жалею, что мы встретились в двух противоположных лагерях. Ах! Больше нам ничто не удастся."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMfeNbK6xtBC2LdzCF1",
+    "usage": {
+      "input_tokens": 5315,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1230,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMgHN5DZJQEa9U6CkjE",
+    "usage": {
+      "input_tokens": 9162,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3147,
+      "output_tokens_details": {
+        "thinking_tokens": 1081
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMhj9tWjqT9Kc5r6HcT",
+        "usage": {
+          "input_tokens": 9745,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3169,
+          "output_tokens_details": {
+            "thinking_tokens": 709
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03753",
+          "verdict": "PASS",
+          "reason": "Faithful: the duke's invitation to look around, with the conditional 'si vous en doutez', is preserved."
+        },
+        {
+          "source_id": "id03754",
+          "verdict": "PASS",
+          "reason": "Prior correction 'конных' to 'всадников' verified; 'entièrement enveloppés' is rendered as 'со всех сторон окружены'. Meaning is intact."
+        },
+        {
+          "source_id": "id03755",
+          "verdict": "PASS",
+          "reason": "All elements present: the mistaken belief of twenty men, the return with his entourage, weariness of flight, wish to fight, and 'only two'. Idiomatic."
+        },
+        {
+          "source_id": "id03756",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'монсеньер' now replaces the stray Latin-script fragment. 'Two who are worth twenty' is kept."
+        },
+        {
+          "source_id": "id03757",
+          "verdict": "PASS",
+          "reason": "'Allons' is rendered naturally as 'Что ж'; the demand for swords is preserved."
+        },
+        {
+          "source_id": "id03758",
+          "verdict": "PASS",
+          "reason": "Agency, the gesture of raising the head and recovering, and the emphatic 'jamais' are preserved."
+        },
+        {
+          "source_id": "id03759",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id03760",
+          "verdict": "PASS",
+          "reason": "Accurate and concise; 'quelques hommes firent un mouvement' is kept."
+        },
+        {
+          "source_id": "id03761",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id03762",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: Athos approaches, the prince leans toward him, and Athos speaks softly. The agency of the relative clauses is correct."
+        },
+        {
+          "source_id": "id03763",
+          "verdict": "PASS",
+          "reason": "Faithful, including 'première demande', the order to the escort, and 'du Vallon' as Porthos's name. Register is appropriate."
+        },
+        {
+          "source_id": "id03764",
+          "verdict": "PASS",
+          "reason": "Passive 'fut exécuté' and the image of the two at the centre of a vast circle are preserved."
+        },
+        {
+          "source_id": "id03765",
+          "verdict": "PASS",
+          "reason": "Accurate; the name form 'д’Эрбле' is consistent with the earlier text."
+        },
+        {
+          "source_id": "id03766",
+          "verdict": "PASS",
+          "reason": "Dismounting and the paired approaches are kept correctly, and 'réunis' is rendered as 'вместе'."
+        },
+        {
+          "source_id": "id03767",
+          "verdict": "PASS",
+          "reason": "Faithful rendering of the question, including 'encore' and 'notre sang'."
+        },
+        {
+          "source_id": "id03768",
+          "verdict": "PASS",
+          "reason": "Prior correction 'сплочены' verified as idiomatic for 'si bien unis'. Negation, regret, the two opposed camps, and the final sigh are preserved."
+        },
+        {
+          "source_id": "id03769",
+          "verdict": "PASS",
+          "reason": "Accurate; Porthos's exclamation and finality are kept."
+        },
+        {
+          "source_id": "id03770",
+          "verdict": "PASS",
+          "reason": "Accurate; 'soyez des nôtres' is rendered as 'будьте с нами'."
+        },
+        {
+          "source_id": "id03771",
+          "verdict": "PASS",
+          "reason": "Conscience, the parallel with the princes' side, and the point that such proposals are not made to such men are all preserved."
+        },
+        {
+          "source_id": "id03772",
+          "verdict": "PASS",
+          "reason": "'En attendant' is rendered as 'А пока что'. The oath 'sang-bleu' is an acceptable mild equivalent, and the rhetorical question is retained."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

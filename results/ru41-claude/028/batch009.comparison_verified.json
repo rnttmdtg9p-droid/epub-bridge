@@ -1,0 +1,245 @@
+{
+  "unit": 28,
+  "batch": 9,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id03833",
+      "target": "— Спасибо, мой славный Гримо! — сказал Портос.",
+      "source_sha256": "09a79f6d79bc56b3499c097a55e736a9a64e61a87b5ff4986bba7f605cfd75fc",
+      "target_id": "ru-id03833",
+      "tag": "p",
+      "target_sha256": "b8531dfd6675cb49c60e47b669ee592ab489ef9e1d9576ac9bbc8c75ee72c7d4"
+    },
+    {
+      "source_id": "id03834",
+      "target": "Гримо спешился и подошёл подать руку своему старому другу; тот встретил его со слезами на глазах, и Гримо так и не мог наверное узнать, от радости ли свидания с ним эти слёзы или от боли, которую ему причиняла рана.",
+      "source_sha256": "1b276a768f91e938d1314d70bcf1a9baf5160ca17d93b9742f1fdc576d082db6",
+      "target_id": "ru-id03834",
+      "tag": "p",
+      "target_sha256": "167b2c11c9c41e4484de6ba07134098052516ccbad2240942f17d4865abf2138"
+    },
+    {
+      "source_id": "id03835",
+      "target": "Что до д’Артаньяна и Портоса, то они молча продолжали свой путь к Парижу.",
+      "source_sha256": "ac29f3f175249460a3208c2a17c1781773b7fa81746560ebe4f5b9e34fa9ef59",
+      "target_id": "ru-id03835",
+      "tag": "p",
+      "target_sha256": "ed6c7b3175c9c9398e390d28bc765f2338dd202096156b050065a18ad45256b7"
+    },
+    {
+      "source_id": "id03836",
+      "target": "Три часа спустя их обогнал некий курьер, весь покрытый пылью: это был человек, посланный герцогом; он вёз кардиналу письмо, в котором, как и обещал принц, герцог свидетельствовал о том, что сделали Портос и д’Артаньян.",
+      "source_sha256": "320ffba16eedddec1067545403f0a1c2ecc4c58bc15b03f4c3d8934b8690324e",
+      "target_id": "ru-id03836",
+      "tag": "p",
+      "target_sha256": "c855f8aee8553f26c5bb322f036cd38d0cbf3903205627ef0e6567fb61110712"
+    },
+    {
+      "source_id": "id03837",
+      "target": "Мазарини уже провёл очень скверную ночь, когда получил это письмо, где принц сам извещал его, что он на свободе и что намерен вести против него смертельную войну.",
+      "source_sha256": "6bc4208d1bd38b1b988ac1d06933be7d426d8b633e28f89c8614f6207791ab0f",
+      "target_id": "ru-id03837",
+      "tag": "p",
+      "target_sha256": "b995ed92cb78cc2065498b524b10197aca009510f3ffb9c3072330ba8193da09"
+    },
+    {
+      "source_id": "id03838",
+      "target": "Кардинал прочёл его два или три раза, потом сложил и спрятал в карман:",
+      "source_sha256": "77ef0f5ab069fea4594a0b30488d226300f12b78dedca2834e99cae661734e0f",
+      "target_id": "ru-id03838",
+      "tag": "p",
+      "target_sha256": "14882045dd783b01b9dda2dd6e8968254c9d53771e506319003a25aa7bd50294"
+    },
+    {
+      "source_id": "id03839",
+      "target": "— Утешает меня одно, — сказал он, — раз уж д’Артаньян его упустил: гоняясь за ним, он по крайней мере раздавил Брусселя. Решительно, этот гасконец — человек драгоценный, и он служит мне даже своими промахами.",
+      "source_sha256": "773fe606eaad256c912c2a4cee452b983b227cc03fd338f681558a4c3fff3bb1",
+      "target_id": "ru-id03839",
+      "tag": "p",
+      "target_sha256": "37c8386de00c85c9ce97d7b58438d4b309363f898f458859868c5e5007cc1bf8"
+    },
+    {
+      "source_id": "id03840",
+      "target": "Кардинал намекал на того человека, которого д’Артаньян сбил с ног на углу кладбища Сен-Жан в Париже и который был не кто иной, как советник Брусель.",
+      "source_sha256": "d23a388b7d2bdfaefb523c6add4c86264abf06cbb46bcbab14ea3ff7af531581",
+      "target_id": "ru-id03840",
+      "tag": "p",
+      "target_sha256": "4bbc60d172bfcb231cce9a8bc498b8b60f734170753f5440e83cd5a7c8be537d"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id03833",
+      "verdict": "PASS",
+      "reason": "Accurate; speaker, address and exclamation preserved."
+    },
+    {
+      "source_id": "id03834",
+      "verdict": "CORRECTED",
+      "reason": "Added «ему» to render «lui causait» (the pain caused to Mousqueton); the rest was faithful, including the source's elided article before «blessure»."
+    },
+    {
+      "source_id": "id03835",
+      "verdict": "PASS",
+      "reason": "Faithful: subjects, silence and destination preserved."
+    },
+    {
+      "source_id": "id03836",
+      "verdict": "CORRECTED",
+      "reason": "«не то курьер» wrongly suggested doubt about what he was; «une espèce de courrier» is rendered as «некий курьер». Made explicit that the duke, not the courier, gives the testimony."
+    },
+    {
+      "source_id": "id03837",
+      "verdict": "CORRECTED",
+      "reason": "The pluperfect «avait passé» is conveyed by «уже провёл», showing the bad night had already passed before the letter arrived."
+    },
+    {
+      "source_id": "id03838",
+      "verdict": "PASS",
+      "reason": "Faithful in sequence of actions and in the number of readings."
+    },
+    {
+      "source_id": "id03839",
+      "verdict": "CORRECTED",
+      "reason": "Name normalised to the established «Брусель» (the draft had «Брусселя» in a form inconsistent with the next row). The rest was faithful."
+    },
+    {
+      "source_id": "id03840",
+      "verdict": "CORRECTED",
+      "reason": "«Бруссель» corrected to the established name «Брусель»; the rest (location, agency, identity) was faithful."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id03834",
+      "before": "Гримо спешился и подошёл подать руку своему старому другу; тот встретил его со слезами на глазах, и Гримо так и не мог наверное узнать, от радости ли свидания с ним эти слёзы или от боли, которую причиняла рана.",
+      "after": "Гримо спешился и подошёл подать руку своему старому другу; тот встретил его со слезами на глазах, и Гримо так и не мог наверное узнать, от радости ли свидания с ним эти слёзы или от боли, которую ему причиняла рана."
+    },
+    {
+      "source_id": "id03836",
+      "before": "Три часа спустя их обогнал не то курьер, весь покрытый пылью: это был человек, посланный герцогом; он вёз кардиналу письмо, в котором, как и обещал принц, свидетельствовал о том, что сделали Портос и д’Артаньян.",
+      "after": "Три часа спустя их обогнал некий курьер, весь покрытый пылью: это был человек, посланный герцогом; он вёз кардиналу письмо, в котором, как и обещал принц, герцог свидетельствовал о том, что сделали Портос и д’Артаньян."
+    },
+    {
+      "source_id": "id03837",
+      "before": "Мазарини провёл очень скверную ночь, когда получил это письмо, где принц сам извещал его, что он на свободе и что намерен вести против него смертельную войну.",
+      "after": "Мазарини уже провёл очень скверную ночь, когда получил это письмо, где принц сам извещал его, что он на свободе и что намерен вести против него смертельную войну."
+    },
+    {
+      "source_id": "id03840",
+      "before": "Кардинал намекал на того человека, которого д’Артаньян сбил с ног на углу кладбища Сен-Жан в Париже и который был не кто иной, как советник Бруссель.",
+      "after": "Кардинал намекал на того человека, которого д’Артаньян сбил с ног на углу кладбища Сен-Жан в Париже и который был не кто иной, как советник Брусель."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMstyWYiVK2h35NsW5U",
+    "usage": {
+      "input_tokens": 2843,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 613,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMtFhTHmAavQuJwXka2",
+    "usage": {
+      "input_tokens": 4537,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2108,
+      "output_tokens_details": {
+        "thinking_tokens": 969
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMuMppsoP6nP4NX98Zz",
+        "usage": {
+          "input_tokens": 5294,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2031,
+          "output_tokens_details": {
+            "thinking_tokens": 620
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03833",
+          "verdict": "PASS",
+          "reason": "Faithful to the French: thanks, 'mon bon Grimaud' rendered as 'мой славный Гримо', speaker attribution preserved."
+        },
+        {
+          "source_id": "id03834",
+          "verdict": "PASS",
+          "reason": "Prior correction (adding 'ему') verified: 'la douleur que lui causait blessure' is rendered accurately (the source lacks an article, a typo, but the sense is clear). Agency, the doubt about the cause of the tears and 'positivement' are all preserved."
+        },
+        {
+          "source_id": "id03835",
+          "verdict": "PASS",
+          "reason": "Complete and accurate: 'silencieusement' becomes 'молча', the route to Paris and the contrast 'Quant à' are kept."
+        },
+        {
+          "source_id": "id03836",
+          "verdict": "PASS",
+          "reason": "Prior corrections verified: 'некий курьер' renders 'une espèce de courrier', and 'герцог' makes explicit the subject of 'il rendait témoignage'. The three hours, the dust, the sender, the letter to the cardinal and the promise of the prince are all preserved."
+        },
+        {
+          "source_id": "id03837",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'уже провёл' fits the pluperfect 'avait passé' with 'lorsqu'il reçut'. The content of the letter (freedom, mortal war) and the agency are accurate."
+        },
+        {
+          "source_id": "id03838",
+          "verdict": "PASS",
+          "reason": "Accurate: 'la' refers to the letter ('его'), 'deux ou trois fois', and the folding and pocketing are preserved. The paragraph ends with a colon, as in the source."
+        },
+        {
+          "source_id": "id03839",
+          "verdict": "PASS",
+          "reason": "Preserves the cardinal's irony: consolation, 'puisque d'Artagnan l'a manqué', 'au moins', the crushing of Broussel (Брусель, per the established form), the precious Gascon and 'jusque dans ses maladresses'. Dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id03840",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'Брусель' matches the established name. The cardinal's allusion, 'renversé' as 'сбил с ног', the corner of the Saint-Jean cemetery, Paris and 'советник' are all accurate."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

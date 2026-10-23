@@ -1,0 +1,126 @@
+{
+  "rows": [
+    {
+      "source_id": "id04128",
+      "target": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии одной фрондёрки.",
+      "source_sha256": "093c36eecb9be2b29389037012ce44247fe63b3335163943f5ec40a902adf5fa",
+      "target_id": "ru-id04128",
+      "tag": "p",
+      "target_sha256": "bcc87fcb0eab590758b8bcec28aba5f711ee064444ee69bf9271fca427209adc"
+    }
+  ],
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMmgk97guWHcD8V31EF",
+        "usage": {
+          "input_tokens": 1692,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 829,
+          "output_tokens_details": {
+            "thinking_tokens": 534
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04128",
+          "verdict": "CORRECTED",
+          "reason": "Перевод в целом точен: «traître», «tout bas», жест д’Артаньяна и структура реплики переданы верно. Однако предыдущая правка «какой-то фрондёрки» добавляет пренебрежительный оттенок и подразумевает, что говорящий не знает, о ком речь, чего в «d'une frondeuse» нет: французский текст содержит только неопределённый артикль. Заменено на нейтральное «одной фрондёрки», которое сохраняет неопределённость без лишней окраски."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id04128",
+          "before": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии какой-то фрондёрки.",
+          "after": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии одной фрондёрки."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMnE72rsbfSQJePH2ZT",
+        "usage": {
+          "input_tokens": 1684,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1117,
+          "output_tokens_details": {
+            "thinking_tokens": 280
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04128",
+          "verdict": "PASS",
+          "reason": "The Russian matches the French on all points. \"Ah! traître!\" is rendered as «Ах, предатель!». \"Tout bas\" is «тихо», and \"se penchant à l'oreille d'Aramis\" is «наклонившись к уху Арамиса». \"Vous nous avez fait jurer\" is «Вы заставили нас клясться», so Aramis keeps the agency. \"Le crucifix d'une frondeuse\" is «на распятии одной фрондёрки»: the indefinite article is kept and the feminine form of Frondeur is preserved. Nothing is omitted or added, and the dialogue punctuation and paragraph boundary are correct. The final text differs from the ledger's \"какой-то\" version, but «одной» is closer to the neutral \"une\" and adds no extra pejorative nuance, so no change is needed."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id04128",
+          "before": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии одной фрондёрки.",
+          "after": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распиатии одной фрондёрки."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMnnWCAkKewcFSgKmEm",
+        "usage": {
+          "input_tokens": 1688,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 670,
+          "output_tokens_details": {
+            "thinking_tokens": 345
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04128",
+          "verdict": "CORRECTED",
+          "reason": "Исправлена опечатка «распиатии» → «распятии». Остальное соответствует французскому тексту: «traître» передано как «предатель», тихая реплика д’Артаньяна, наклон к уху Арамиса, «vous nous avez fait jurer» — «заставили нас клясться», «le crucifix d'une frondeuse» — «распятие одной фрондёрки». Формулировка «одной» ближе к оригиналу, чем «какой-то» из записи правок, и ничего не добавляет. Пропусков, искажений отрицания, лица и времени нет, границы абзаца сохранены."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id04128",
+          "before": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распиатии одной фрондёрки.",
+          "after": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии одной фрондёрки."
+        }
+      ]
+    }
+  ],
+  "state": "CORRECTIONS_APPLIED_RECHECK_STILL_REQUIRED"
+}
