@@ -1,0 +1,190 @@
+{
+  "unit": 78,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id10422",
+      "target": "— Нет, — ответил Атос… — А он?",
+      "source_sha256": "249ac20de5e642a82c7f2e8395a2564f13b97381f371640d897d3a56264c43a4",
+      "target_id": "ru-id10422",
+      "tag": "p",
+      "target_sha256": "ab086ad10825a13ce5d5c55ac9af4f1a316f26be1353788d038c05bc9f8daf6a"
+    },
+    {
+      "source_id": "id10423",
+      "target": "— О, он-то на этот раз, слава Богу, мёртв окончательно. Вот, смотрите!",
+      "source_sha256": "b230030be14ad1cccc49fccbb6b16fe1262e039d8410c278f63fc8c16295d912",
+      "target_id": "ru-id10423",
+      "tag": "p",
+      "target_sha256": "3fb8f68a53d6dd827860507a8e6a53f757037b8f5e59a71a33cb29e8e72ac01e"
+    },
+    {
+      "source_id": "id10424",
+      "target": "И д’Артаньян, заставив Атоса взглянуть в ту сторону, которую он указывал, показал ему тело Мордаунта, качавшееся на хребтах волн; оно то погружалось, то поднималось и, казалось, всё ещё преследовало четырёх друзей взглядом, полным оскорбления и смертельной ненависти.",
+      "source_sha256": "a003b996d59375c783ad1b88776c98d554e3fdc23211634dfdb96011be7a0ecc",
+      "target_id": "ru-id10424",
+      "tag": "p",
+      "target_sha256": "141167fe7374077c589bb57a5c658a24bfa25038fc782acfbd22e475f3e3d8c5"
+    },
+    {
+      "source_id": "id10425",
+      "target": "Наконец он скрылся в пучине. Атос следил за ним взором, исполненным печали и жалости.",
+      "source_sha256": "e6d50ab46603c0b483d7b8543a1e3ff5ab9980c81319d16c5086fdb449e68a10",
+      "target_id": "ru-id10425",
+      "tag": "p",
+      "target_sha256": "1e3fe737cff3a73398286ed2f1bc94d8d4b03b2bc65f15267663e522c6f5fdf3"
+    },
+    {
+      "source_id": "id10426",
+      "target": "— Браво, Атос! — сказал Арамис с душевным порывом, столь редким у него.",
+      "source_sha256": "0fc16affa2c775145a832693512740d5ec6b0c0e2856aaad774bb829f1b0bebf",
+      "target_id": "ru-id10426",
+      "tag": "p",
+      "target_sha256": "754ce1266c829b34c7310e929c66d90d7ed2ee84ef780c2af3db0cf0a5ba4cb4"
+    },
+    {
+      "source_id": "id10427",
+      "target": "— Что за удар! — воскликнул Портос.",
+      "source_sha256": "2d92a8474952cb128c848f7de75c4ce944f843b06540bc5b82e86a43c4bdae90",
+      "target_id": "ru-id10427",
+      "tag": "p",
+      "target_sha256": "7201623ec6382a2f82012f06887fed5e203a4baa8df2f4fc4b8cd8918d0d21c9"
+    },
+    {
+      "source_id": "id10428",
+      "target": "— У меня был сын, — сказал Атос, — я захотел жить.",
+      "source_sha256": "82f21565dea556150c1e77346753ebdda926b79299d425214f58d19a626fe25f",
+      "target_id": "ru-id10428",
+      "tag": "p",
+      "target_sha256": "fa76106242061abf8b84658c18e93779f611e5f473d76de13dfb833a2d1b548a"
+    },
+    {
+      "source_id": "id10429",
+      "target": "— Словом, — сказал д’Артаньян, — тут-то и заговорил Бог.",
+      "source_sha256": "92670b66419af2ba49e983d81856eac99525d35cdfd2598fb235baf35e861e8f",
+      "target_id": "ru-id10429",
+      "tag": "p",
+      "target_sha256": "4057cd9005931b0fe082b90966e9a566d07e160a8d7be37da79545627e6cb8bf"
+    },
+    {
+      "source_id": "id10430",
+      "target": "— Это не я убил его, — прошептал Атос, — это судьба.",
+      "source_sha256": "ae4f008aec09fe87f31a1f6ab3c5372d00d4efe6df02242e74a93937e7086979",
+      "target_id": "ru-id10430",
+      "tag": "p",
+      "target_sha256": "b263cab87b1cc74382e298c2136a4236ced6d80b7711426946f86088182a397e"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id10422",
+      "verdict": "PASS",
+      "reason": "Faithful: negation, ellipsis and the question are all preserved."
+    },
+    {
+      "source_id": "id10423",
+      "verdict": "PASS",
+      "reason": "Accurately renders 'lui, cette fois', 'Dieu merci', 'bien mort' and 'Tenez!'."
+    },
+    {
+      "source_id": "id10424",
+      "verdict": "CORRECTED",
+      "reason": "'flottant' means floating or drifting, not swimming, so 'плывущее' was changed to 'качавшееся'. 'relevé' is now 'поднималось'. The rest of the sentence is unchanged."
+    },
+    {
+      "source_id": "id10425",
+      "verdict": "CORRECTED",
+      "reason": "The subject 'il' is Mordaunt, so the Russian now says 'он' rather than the neuter 'оно'. The pluperfect sense of the following clause is kept."
+    },
+    {
+      "source_id": "id10426",
+      "verdict": "CORRECTED",
+      "reason": "'effusion bien rare chez lui' means rare, not 'несвойствен' (uncharacteristic). It is now rendered as 'порыв, столь редкий у него'."
+    },
+    {
+      "source_id": "id10427",
+      "verdict": "PASS",
+      "reason": "Faithful exclamation, with the right speaker and tone."
+    },
+    {
+      "source_id": "id10428",
+      "verdict": "PASS",
+      "reason": "Tenses and the sense of 'j'ai voulu vivre' are preserved."
+    },
+    {
+      "source_id": "id10429",
+      "verdict": "CORRECTED",
+      "reason": "'voilà où Dieu a parlé' is idiomatically rendered as 'тут-то и заговорил Бог'. This is more natural than 'здесь высказался Бог' and keeps the sense."
+    },
+    {
+      "source_id": "id10430",
+      "verdict": "PASS",
+      "reason": "The cleft construction, the negation and 'le destin' are preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id10424",
+      "before": "И д’Артаньян, заставив Атоса взглянуть в ту сторону, которую он указывал, показал ему тело Мордаунта, плывущее по хребтам волн; оно то погружалось, то всплывало и, казалось, всё ещё преследовало четырёх друзей взглядом, полным оскорбления и смертельной ненависти.",
+      "after": "И д’Артаньян, заставив Атоса взглянуть в ту сторону, которую он указывал, показал ему тело Мордаунта, качавшееся на хребтах волн; оно то погружалось, то поднималось и, казалось, всё ещё преследовало четырёх друзей взглядом, полным оскорбления и смертельной ненависти."
+    },
+    {
+      "source_id": "id10425",
+      "before": "Наконец оно исчезло в пучине. Атос следил за ним взором, исполненным печали и жалости.",
+      "after": "Наконец он скрылся в пучине. Атос следил за ним взором, исполненным печали и жалости."
+    },
+    {
+      "source_id": "id10426",
+      "before": "— Браво, Атос! — сказал Арамис с таким порывом чувства, какой был ему весьма несвойствен.",
+      "after": "— Браво, Атос! — сказал Арамис с душевным порывом, столь редким у него."
+    },
+    {
+      "source_id": "id10429",
+      "before": "— Словом, — сказал д’Артаньян, — здесь высказался Бог.",
+      "after": "— Словом, — сказал д’Артаньян, — тут-то и заговорил Бог."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJWorimwKBiyKQro8c2A",
+    "usage": {
+      "input_tokens": 2827,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 488,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJWp7jQygEwsW9MwnMjf",
+    "usage": {
+      "input_tokens": 4499,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2196,
+      "output_tokens_details": {
+        "thinking_tokens": 1092
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

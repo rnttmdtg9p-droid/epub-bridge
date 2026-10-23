@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJWorimwKBiyKQro8c2A",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id10422\",\"target\":\"— Нет, — ответил Атос… — А он?\"},{\"source_id\":\"id10423\",\"target\":\"— О, он-то на этот раз, слава Богу, мёртв окончательно. Вот, смотрите!\"},{\"source_id\":\"id10424\",\"target\":\"И д’Артаньян, заставив Атоса взглянуть в ту сторону, которую он указывал, показал ему тело Мордаунта, плывущее по хребтам волн; оно то погружалось, то всплывало и, казалось, всё ещё преследовало четырёх друзей взглядом, полным оскорбления и смертельной ненависти.\"},{\"source_id\":\"id10425\",\"target\":\"Наконец оно исчезло в пучине. Атос следил за ним взором, исполненным печали и жалости.\"},{\"source_id\":\"id10426\",\"target\":\"— Браво, Атос! — сказал Арамис с таким порывом чувства, какой был ему весьма несвойствен.\"},{\"source_id\":\"id10427\",\"target\":\"— Что за удар! — воскликнул Портос.\"},{\"source_id\":\"id10428\",\"target\":\"— У меня был сын, — сказал Атос, — я захотел жить.\"},{\"source_id\":\"id10429\",\"target\":\"— Словом, — сказал д’Артаньян, — здесь высказался Бог.\"},{\"source_id\":\"id10430\",\"target\":\"— Это не я убил его, — прошептал Атос, — это судьба.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2827,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 488,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
