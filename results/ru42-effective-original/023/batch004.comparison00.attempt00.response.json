@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJtT6aBUoeAXbfQqJvfX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-023-0080\",\"target\":\"— Осматриваю безбрежный горизонт.\"},{\"source_id\":\"fr42c-023-0081\",\"target\":\"— Не могли бы вы спуститься на минутку?\"},{\"source_id\":\"fr42c-023-0082\",\"target\":\"— Я вам нужен?\"},{\"source_id\":\"fr42c-023-0083\",\"target\":\"— Да.\"},{\"source_id\":\"fr42c-023-0084\",\"target\":\"— По какому поводу?\"},{\"source_id\":\"fr42c-023-0085\",\"target\":\"— Чтобы узнать, какие страны пересекает тридцать седьмая параллель.\"},{\"source_id\":\"fr42c-023-0086\",\"target\":\"— Нет ничего проще, — ответил Паганель, — даже не стоит меня беспокоить, чтобы сказать вам это.\"},{\"source_id\":\"fr42c-023-0087\",\"target\":\"— Ну так говорите.\"},{\"source_id\":\"fr42c-023-0088\",\"target\":\"— Извольте. Покинув Америку, тридцать седьмая южная параллель пересекает Атлантический океан.\"},{\"source_id\":\"fr42c-023-0089\",\"target\":\"— Хорошо.\"},{\"source_id\":\"fr42c-023-0090\",\"target\":\"— Она встречает острова Тристан-да-Кунья.\"},{\"source_id\":\"fr42c-023-0091\",\"target\":\"— Прекрасно.\"},{\"source_id\":\"fr42c-023-0092\",\"target\":\"— Она проходит двумя градусами ниже мыса Доброй Надежды.\"},{\"source_id\":\"fr42c-023-0093\",\"target\":\"— Дальше?\"},{\"source_id\":\"fr42c-023-0094\",\"target\":\"— Она бежит через Индийское море.\"},{\"source_id\":\"fr42c-023-0095\",\"target\":\"— Потом?\"},{\"source_id\":\"fr42c-023-0096\",\"target\":\"— Она едва касается острова Сен-Пьер из группы островов Амстердам.\"},{\"source_id\":\"fr42c-023-0097\",\"target\":\"— Продолжайте.\"},{\"source_id\":\"fr42c-023-0098\",\"target\":\"— Она рассекает Австралию по провинции Виктория.\"},{\"source_id\":\"fr42c-023-0099\",\"target\":\"— Продолжайте.\"}],\"review\":[{\"source_id\":\"fr42c-023-0080\",\"verdict\":\"PASS\",\"reason\":\"Faithful: examining the immense horizon; natural register.\"},{\"source_id\":\"fr42c-023-0081\",\"verdict\":\"PASS\",\"reason\":\"Polite question about descending briefly is accurate.\"},{\"source_id\":\"fr42c-023-0082\",\"verdict\":\"PASS\",\"reason\":\"'Вы нуждаетесь во мне' correctly rendered idiomatically.\"},{\"source_id\":\"fr42c-023-0083\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-023-0084\",\"verdict\":\"PASS\",\"reason\":\"'À quel propos' rendered correctly.\"},{\"source_id\":\"fr42c-023-0085\",\"verdict\":\"PASS\",\"reason\":\"Correct: which countries the parallel crosses; feminine parallel.\"},{\"source_id\":\"fr42c-023-0086\",\"verdict\":\"PASS\",\"reason\":\"Meaning, speaker attribution and 'même' preserved.\"},{\"source_id\":\"fr42c-023-0087\",\"verdict\":\"PASS\",\"reason\":\"'Allez' as invitation to speak; acceptable and idiomatic.\"},{\"source_id\":\"fr42c-023-0088\",\"verdict\":\"PASS\",\"reason\":\"Correct sense, geography and feminine agreement.\"},{\"source_id\":\"fr42c-023-0089\",\"verdict\":\"PASS\",\"reason\":\"Accurate brief response.\"},{\"source_id\":\"fr42c-023-0090\",\"verdict\":\"PASS\",\"reason\":\"Tristan da Cunha correct; feminine subject; 'rencontre' kept.\"},{\"source_id\":\"fr42c-023-0091\",\"verdict\":\"PASS\",\"reason\":\"'Bien' acceptable; distinct from previous reply.\"},{\"source_id\":\"fr42c-023-0092\",\"venict\":\"PASS\",\"verdict\":\"PASS\",\"reason\":\"Two degrees below the Cape; accurate.\"},{\"source_id\":\"fr42c-023-0093\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-023-0094\",\"verdict\":\"PASS\",\"reason\":\"'Mer des Indes' kept as sea; 'court' rendered vividly.\"},{\"source_id\":\"fr42c-023-0095\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-023-0096\",\"verdict\":\"PASS\",\"reason\":\"'Effleure' as barely touches; names correct.\"},{\"source_id\":\"fr42c-023-0097\",\"verdict\":\"PASS\",\"reason\":\"'Allez toujours' as keep going; acceptable.\"},{\"source_id\":\"fr42c-023-0098\",\"verdict\":\"PASS\",\"reason\":\"Cuts Australia through Victoria; accurate.\"},{\"source_id\":\"fr42c-023-0099\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8416,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1720,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
