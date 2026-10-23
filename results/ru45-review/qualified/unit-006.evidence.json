@@ -1,0 +1,73 @@
+{
+  "unit": 6,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 222,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKcjKfKeDQLHAitexpPW",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 1,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKcs8xNSJ4VTvXiUgYBh",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 2,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKd1FENTF4wUVDYPNS4m",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 3,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKd59CLabnNrLy3vkDG2",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 4,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKd9Y7aoeqKYA4DmEAAh",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 5,
+      "rows": 32,
+      "actual_provider_review_rows": 32,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdCa6VAkKAao8Yjz9Zx",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 6,
+      "rows": 31,
+      "actual_provider_review_rows": 31,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKdGoGrfzST37SmbT8oB",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    }
+  ],
+  "source_native_policy": "Untranslated original foreign documents/verse copied exactly and independently compared; not represented as model-translated or provider-reviewed output",
+  "qualified_target_sha256": "24ea122d9dc37ad1650e77af5daf7b5bf9f6fa15fe58fe1b04b4dd2de00c7704",
+  "book_release": false
+}
