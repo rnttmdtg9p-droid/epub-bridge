@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJoHVyjYc39dRMxhFz4j",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-003-0041\",\"target\":\"— Обойдёмся без неё! — воскликнул мальчик.\"},{\"source_id\":\"fr42c-003-0042\",\"target\":\"— Да, мсье Роберт, — ответила Хелена, улыбаясь при виде такой решимости. — Итак, как видите, мисс Грант, малейшие подробности этого документа известны вам так же, как и мне.\"},{\"source_id\":\"fr42c-003-0043\",\"target\":\"— Да, сударыня, — ответила девушка, — но мне хотелось бы увидеть почерк моего отца.\"},{\"source_id\":\"fr42c-003-0044\",\"target\":\"— Что ж, завтра, быть может, уже завтра лорд Гленарван вернётся. Мой муж, имея на руках этот неоспоримый документ, пожелал представить его комиссарам Адмиралтейства, чтобы добиться немедленной отправки корабля на поиски капитана Гранта.\"},{\"source_id\":\"fr42c-003-0045\",\"target\":\"— Возможно ли это, сударыня! — воскликнула девушка. — Вы сделали это для нас?\"},{\"source_id\":\"fr42c-003-0046\",\"target\":\"— Да, дорогая мисс, и я жду лорда Гленарвана с минуты на минуту.\"},{\"source_id\":\"fr42c-003-0047\",\"target\":\"— Сударыня, — сказала девушка с глубокой признательностью и благоговейным жаром, — да благословит вас небо, вас и лорда Гленарвана!\"},{\"source_id\":\"fr42c-003-0048\",\"target\":\"— Дорогое дитя, — ответила леди Хелена, — мы не заслуживаем никакой благодарности; всякий другой на нашем месте сделал бы то же, что и мы. Дай Бог, чтобы сбылись надежды, которые я позволила вам питать! До возвращения лорда Гленарвана вы будете жить в замке…\"},{\"source_id\":\"fr42c-003-0049\",\"target\":\"— Сударыня, — ответила девушка, — я не хотела бы злоупотреблять сочувствием, какое вы проявляете к чужим людям…\"},{\"source_id\":\"fr42c-003-0050\",\"target\":\"— Чужим! Дорогое дитя, ни ваш брат, ни вы не чужие в этом доме, и я хочу, чтобы по возвращении лорд Гленарван сам рассказал детям капитана Гранта, что намереваются предпринять для спасения их отца»..\"},{\"source_id\":\"fr42c-003-0051\",\"target\":\"Отказаться от предложения, сделанного с такой сердечностью, было невозможно. Итак, решили, что мисс Грант и её брат будут ждать в Малькольм-Касле возвращения лорда Гленарвана.\"},{\"source_id\":\"fr42c-note-004\",\"target\":\"Нагорья Шотландии.\"},{\"source_id\":\"fr42c-note-005\",\"target\":\"Боевые песни.\"}],\"review\":[{\"source_id\":\"fr42c-003-0041\",\"verdict\":\"CORRECTED\",\"reason\":\"Made 'le jeune garçon' more exact and the phrase more idiomatic.\"},{\"source_id\":\"fr42c-003-0042\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the awkward double participle, 'monsieur' rendering, and 'détails'.\"},{\"source_id\":\"fr42c-003-0043\",\"verdict\":\"CORRECTED\",\"reason\":\"'Madame' rendered as period-appropriate address; meaning preserved.\"},{\"source_id\":\"fr42c-003-0044\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved the repeated 'demain' and the phrase 'muni de'; kept the facts.\"},{\"source_id\":\"fr42c-003-0045\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the punctuation and address form.\"},{\"source_id\":\"fr42c-003-0046\",\"verdict\":\"CORRECTED\",\"reason\":\"Address form harmonized; meaning intact.\"},{\"source_id\":\"fr42c-003-0047\",\"verdict\":\"CORRECTED\",\"reason\":\"Made the religious register and address more faithful.\"},{\"source_id\":\"fr42c-003-0048\",\"verdict\":\"CORRECTED\",\"reason\":\"Name fixed to Хелена per the context; 'remercîment' and the wish clause improved.\"},{\"source_id\":\"fr42c-003-0049\",\"verdict\":\"CORRECTED\",\"reason\":\"'Étrangers' rendered as strangers; address form fixed.\"},{\"source_id\":\"fr42c-003-0050\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'чужаки' register, the agency of Glenarvan telling, and the impersonal 'on va tenter'; also fixed a stray closing-punctuation error.\"},{\"source_id\":\"fr42c-003-0051\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the place name to Малькольм-Касл and improved the register of 'offre'.\"},{\"source_id\":\"fr42c-note-004\",\"verdict\":\"CORRECTED\",\"reason\":\"'Hautes terres' rendered as the Highlands in the standard form.\"},{\"source_id\":\"fr42c-note-005\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed the added quotation marks, which are not in the source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6987,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1782,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

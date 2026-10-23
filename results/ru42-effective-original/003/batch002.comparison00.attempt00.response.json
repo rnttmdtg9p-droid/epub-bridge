@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJoJQX6ggbYy6nZKh8SV",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-003-0041\",\"target\":\"— Обойдёмся без неё! — воскликнул мальчик.\"},{\"source_id\":\"fr42c-003-0042\",\"target\":\"— Да, мсье Роберт, — ответила Хелена, улыбаясь при виде такой решимости. — Итак, как видите, мисс Грант, малейшие подробности этого документа известны вам так же, как и мне.\"},{\"source_id\":\"fr42c-003-0043\",\"target\":\"— Да, сударыня, — ответила девушка, — но мне хотелось бы увидеть почерк моего отца.\"},{\"source_id\":\"fr42c-003-0044\",\"target\":\"— Что ж, завтра, быть может, уже завтра лорд Гленарван вернётся. Мой муж, имея на руках этот неоспоримый документ, пожелал представить его комиссарам Адмиралтейства, чтобы добиться немедленной отправки корабля на поиски капитана Гранта.\"},{\"source_id\":\"fr42c-003-0045\",\"target\":\"— Возможно ли это, сударыня! — воскликнула девушка. — Вы сделали это для нас?\"},{\"source_id\":\"fr42c-003-0046\",\"target\":\"— Да, дорогая мисс, и я жду лорда Гленарвана с минуты на минуту.\"},{\"source_id\":\"fr42c-003-0047\",\"target\":\"— Сударыня, — сказала девушка с глубокой признательностью и благоговейным жаром, — да благословит вас небо, вас и лорда Гленарвана!\"},{\"source_id\":\"fr42c-003-0048\",\"target\":\"— Дорогое дитя, — ответила леди Хелена, — мы не заслуживаем никакой благодарности; всякий другой на нашем месте сделал бы то же, что и мы. Дай Бог, чтобы сбылись надежды, которые я позволила вам питать! До возвращения лорда Гленарвана вы будете жить в замке…\"},{\"source_id\":\"fr42c-003-0049\",\"target\":\"— Сударыня, — ответила девушка, — я не хотела бы злоупотреблять сочувствием, какое вы проявляете к чужим людям…\"},{\"source_id\":\"fr42c-003-0050\",\"target\":\"— Чужим! Дорогое дитя, ни ваш брат, ни вы не чужие в этом доме, и я хочу, чтобы по возвращении лорд Гленарван сам рассказал детям капитана Гранта, что намереваются предпринять для спасения их отца».\"},{\"source_id\":\"fr42c-003-0051\",\"target\":\"Отказаться от предложения, сделанного с такой сердечностью, было невозможно. Итак, решили, что мисс Грант и её брат будут ждать в Малькольм-Касле возвращения лорда Гленарвана.\"},{\"source_id\":\"fr42c-note-004\",\"target\":\"Нагорья Шотландии.\"},{\"source_id\":\"fr42c-note-005\",\"target\":\"Боевые песни.\"}],\"review\":[{\"source_id\":\"fr42c-003-0041\",\"verdict\":\"PASS\",\"reason\":\"Faithful: «On s'en passera» as impersonal 'we'll manage without it'; jeune garçon is мальчик.\"},{\"source_id\":\"fr42c-003-0042\",\"verdict\":\"PASS\",\"reason\":\"Meaning, smile, determination and 'as well as I' preserved.\"},{\"source_id\":\"fr42c-003-0043\",\"verdict\":\"PASS\",\"reason\":\"Accurate conditional wish and register.\"},{\"source_id\":\"fr42c-003-0044\",\"verdict\":\"PASS\",\"reason\":\"All facts preserved: tomorrow, Admiralty commissioners, immediate dispatch of ship.\"},{\"source_id\":\"fr42c-003-0045\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and question correctly rendered.\"},{\"source_id\":\"fr42c-003-0046\",\"verdict\":\"PASS\",\"reason\":\"Faithful and idiomatic.\"},{\"source_id\":\"fr42c-003-0047\",\"verdict\":\"PASS\",\"reason\":\"Gratitude, religious ardour and blessing preserved.\"},{\"source_id\":\"fr42c-003-0048\",\"verdict\":\"PASS\",\"reason\":\"Negation, hope clause and trailing ellipsis preserved.\"},{\"source_id\":\"fr42c-003-0049\",\"verdict\":\"PASS\",\"reason\":\"Faithful to 'étrangers' and the conditional refusal.\"},{\"source_id\":\"fr42c-003-0050\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed the erroneous double period after the closing quote; otherwise faithful. Passive 'l'on va tenter' rendered impersonally.\"},{\"source_id\":\"fr42c-003-0051\",\"verdict\":\"PASS\",\"reason\":\"Complete and faithful; names consistent.\"},{\"source_id\":\"fr42c-note-004\",\"verdict\":\"PASS\",\"reason\":\"Accurate note.\"},{\"source_id\":\"fr42c-note-005\",\"verdict\":\"PASS\",\"reason\":\"Accurate note.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8857,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1683,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

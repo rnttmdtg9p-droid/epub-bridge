@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJoK87tVViJUKEhC6U46",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-003-0041\",\"target\":\"— Обойдёмся без неё! — воскликнул мальчик.\"},{\"source_id\":\"fr42c-003-0042\",\"target\":\"— Да, мсье Роберт, — ответила Хелена, улыбаясь при виде такой решимости. — Итак, как видите, мисс Грант, малейшие подробности этого документа известны вам так же, как и мне.\"},{\"source_id\":\"fr42c-003-0043\",\"target\":\"— Да, сударыня, — ответила девушка, — но мне хотелось бы увидеть почерк моего отца.\"},{\"source_id\":\"fr42c-003-0044\",\"target\":\"— Что ж, завтра, быть может, уже завтра лорд Гленарван вернётся. Мой муж, имея на руках этот неоспоримый документ, пожелал представить его комиссарам Адмиралтейства, чтобы добиться немедленной отправки корабля на поиски капитана Гранта.\"},{\"source_id\":\"fr42c-003-0045\",\"target\":\"— Возможно ли это, сударыня! — воскликнула девушка. — Вы сделали это для нас?\"},{\"source_id\":\"fr42c-003-0046\",\"target\":\"— Да, дорогая мисс, и я жду лорда Гленарвана с минуты на минуту.\"},{\"source_id\":\"fr42c-003-0047\",\"target\":\"— Сударыня, — сказала девушка с глубокой признательностью и благоговейным жаром, — да благословит вас небо, вас и лорда Гленарвана!\"},{\"source_id\":\"fr42c-003-0048\",\"target\":\"— Дорогое дитя, — ответила леди Хелена, — мы не заслуживаем никакой благодарности; всякий другой на нашем месте сделал бы то же, что и мы. Дай Бог, чтобы сбылись надежды, которые я позволила вам питать! До возвращения лорда Гленарвана вы будете жить в замке…\"},{\"source_id\":\"fr42c-003-0049\",\"target\":\"— Сударыня, — ответила девушка, — я не хотела бы злоупотреблять сочувствием, какое вы проявляете к чужим людям…\"},{\"source_id\":\"fr42c-003-0050\",\"target\":\"— Чужим! Дорогое дитя, ни ваш брат, ни вы не чужие в этом доме, и я хочу, чтобы по возвращении лорд Гленарван сам рассказал детям капитана Гранта, что намереваются предпринять для спасения их отца».\"},{\"source_id\":\"fr42c-003-0051\",\"target\":\"Отказаться от предложения, сделанного с такой сердечностью, было невозможно. Итак, решили, что мисс Грант и её брат будут ждать в Малькольм-Касле возвращения лорда Гленарвана.\"},{\"source_id\":\"fr42c-note-004\",\"target\":\"Нагорья Шотландии.\"},{\"source_id\":\"fr42c-note-005\",\"target\":\"Боевые песни.\"}],\"review\":[{\"source_id\":\"fr42c-003-0041\",\"verdict\":\"PASS\",\"reason\":\"Faithful: «On s'en passera» as «Обойдёмся без неё», jeune garçon as мальчик.\"},{\"source_id\":\"fr42c-003-0042\",\"verdict\":\"PASS\",\"reason\":\"Meaning, smile and clause order preserved; «мсье» for monsieur is acceptable.\"},{\"source_id\":\"fr42c-003-0043\",\"verdict\":\"PASS\",\"reason\":\"Conditional wish and 'writing of my father' preserved.\"},{\"source_id\":\"fr42c-003-0044\",\"verdict\":\"PASS\",\"reason\":\"Tomorrow/perhaps, husband's agency, Admiralty purpose all preserved.\"},{\"source_id\":\"fr42c-003-0045\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and question correctly rendered.\"},{\"source_id\":\"fr42c-003-0046\",\"verdict\":\"PASS\",\"reason\":\"Accurate; 'any moment' idiom preserved.\"},{\"source_id\":\"fr42c-003-0047\",\"verdict\":\"PASS\",\"reason\":\"Blessing, gratitude and religious ardour preserved.\"},{\"source_id\":\"fr42c-003-0048\",\"verdict\":\"PASS\",\"reason\":\"All clauses present; subjunctive wish and ellipsis kept.\"},{\"source_id\":\"fr42c-003-0049\",\"verdict\":\"PASS\",\"reason\":\"Negation and 'strangers' sense preserved, ellipsis kept.\"},{\"source_id\":\"fr42c-003-0050\",\"verdict\":\"PASS\",\"reason\":\"Prior double-period error fixed; closing quote retained as in source; meaning faithful.\"},{\"source_id\":\"fr42c-003-0051\",\"verdict\":\"PASS\",\"reason\":\"Agreement, heartfelt offer, waiting at Malcolm-Castle preserved.\"},{\"source_id\":\"fr42c-note-004\",\"verdict\":\"PASS\",\"reason\":\"Correct note content.\"},{\"source_id\":\"fr42c-note-005\",\"verdict\":\"PASS\",\"reason\":\"Correct note content.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9073,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1700,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
