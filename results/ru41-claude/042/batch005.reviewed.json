@@ -1,0 +1,120 @@
+{
+  "unit": 42,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id05341",
+      "target": "Тогда юная Генриетта шагнула вперёд, улыбаясь и краснея, и подставила дворянину лоб.",
+      "source_sha256": "0dda37e3cc582f4b837a3df7ca39a5a04f33be69cfac20b45ccadaf739dfbf7f",
+      "target_id": "ru-id05341",
+      "tag": "p",
+      "target_sha256": "1a965fc1aadca02770fcc4b821a66607598d58261360d9d3709d5db69c32b933"
+    },
+    {
+      "source_id": "id05342",
+      "target": "— Скажите моему отцу, что, король ли он или беглец, победитель или побеждённый, могущественный или бедный, — сказала юная принцесса, — во мне он имеет самую покорную и самую любящую дочь.",
+      "source_sha256": "dadb3043e82bcd434a9090bb882d73a995c168b2d9cec8fa543ee7cecdba92ec",
+      "target_id": "ru-id05342",
+      "tag": "p",
+      "target_sha256": "aeba496c0ef6db2cf87816236b4b8707fff207fdc6e08de8f2cfe8d3a05464eb"
+    },
+    {
+      "source_id": "id05343",
+      "target": "— Я это знаю, сударыня, — ответил де Винтер, коснувшись губами лба Генриетты.",
+      "source_sha256": "44475d1a390c8cb9bdff546bd1f2e67cbe39948385f5aeef18631d21eb4fb959",
+      "target_id": "ru-id05343",
+      "tag": "p",
+      "target_sha256": "ff7cf656bb9e418a5c2a87a546c283410835e8f765c5ac1aa720aa6204b068ce"
+    },
+    {
+      "source_id": "id05344",
+      "target": "Затем он ушёл, пройдя, никем не провожаемый, через эти огромные, пустые и тёмные покои и утирая слёзы, которых — как ни был он пресыщен пятьюдесятью годами придворной жизни — не мог не пролить при виде этого королевского несчастья, столь достойного и вместе с тем столь глубокого.",
+      "source_sha256": "12e15bd3efb3282c56ca7407b3e0ba1cc3bbacc341ea91f8755e7c87f6276e45",
+      "target_id": "ru-id05344",
+      "tag": "p",
+      "target_sha256": "370b8830e3bcdfe08ab3f62e0f908bbeb701b6ea9df0d1cd5f9052da1c90f742"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id05341",
+      "verdict": "CORRECTED",
+      "reason": "The adverb «alors» was omitted; restored as «Тогда». The rest (smiling, blushing, offering her forehead) was accurate."
+    },
+    {
+      "source_id": "id05342",
+      "verdict": "CORRECTED",
+      "reason": "«pauvre» had been rendered «нищий», which is stronger than the source; changed to «бедный». The rest of the speech and the dialogue punctuation were faithful."
+    },
+    {
+      "source_id": "id05343",
+      "verdict": "PASS",
+      "reason": "Faithful: the reply, the form of address «Madame» and the kiss on the forehead are all preserved."
+    },
+    {
+      "source_id": "id05344",
+      "verdict": "CORRECTED",
+      "reason": "«sans être reconduit» had been turned into an awkward inserted clause («и никто его не провожал»); replaced with the participial «никем не провожаемый», which keeps the construction. The tears, the fifty years of court life and the «royal misfortune» were already accurate."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id05341",
+      "before": "Юная Генриетта шагнула вперёд, улыбаясь и краснея, и подставила дворянину лоб.",
+      "after": "Тогда юная Генриетта шагнула вперёд, улыбаясь и краснея, и подставила дворянину лоб."
+    },
+    {
+      "source_id": "id05342",
+      "before": "— Скажите моему отцу, что, король ли он или беглец, победитель или побеждённый, могущественный или нищий, — сказала юная принцесса, — во мне он имеет самую покорную и самую любящую дочь.",
+      "after": "— Скажите моему отцу, что, король ли он или беглец, победитель или побеждённый, могущественный или бедный, — сказала юная принцесса, — во мне он имеет самую покорную и самую любящую дочь."
+    },
+    {
+      "source_id": "id05344",
+      "before": "Затем он ушёл, пройдя, и никто его не провожал, через эти огромные, пустые и тёмные покои и утирая слёзы, которых — как ни был он пресыщен пятьюдесятью годами придворной жизни — не мог не пролить при виде этого королевского несчастья, столь достойного и вместе с тем столь глубокого.",
+      "after": "Затем он ушёл, пройдя, никем не провожаемый, через эти огромные, пустые и тёмные покои и утирая слёзы, которых — как ни был он пресыщен пятьюдесятью годами придворной жизни — не мог не пролить при виде этого королевского несчастья, столь достойного и вместе с тем столь глубокого."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJPEuP2HNPkXyXofcP13",
+    "usage": {
+      "input_tokens": 1890,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 341,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJPFA3aVJ7cQ6ReJhno5",
+    "usage": {
+      "input_tokens": 2837,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1188,
+      "output_tokens_details": {
+        "thinking_tokens": 508
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
