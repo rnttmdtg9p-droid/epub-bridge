@@ -1,0 +1,140 @@
+{
+  "unit": 96,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id12228",
+      "target": "Поэтому, когда весь Париж радовался возвращению короля, назначенному на послезавтра, один лишь Гонди посреди всеобщего ликования был в таком дурном расположении духа, что тотчас послал за двумя людьми, которых имел обыкновение призывать, когда бывал в подобном настроении.",
+      "source_sha256": "dacc66bd88c0e28862f4e290b522d210bec7a8c43e2e07ea107061489c29ede3",
+      "target_id": "ru-id12228",
+      "tag": "p",
+      "target_sha256": "610bd6a746d6c9feff3d0cb9a305ff0bb4442bec82b6e0b4bb780b513bb4cff0"
+    },
+    {
+      "source_id": "id12229",
+      "target": "Эти два человека были: один — граф де Рошфор, другой — нищий от Сен-Эсташа.",
+      "source_sha256": "9a1f1f98c44ae6ce0de686f892b1ef31cdae8b1f2bdd5b469902a1c4950ca16e",
+      "target_id": "ru-id12229",
+      "tag": "p",
+      "target_sha256": "a67d3b494e7c4bc600a1b21efbb34bff11d0eadcaf34ce2ee215667fbbef1242"
+    },
+    {
+      "source_id": "id12230",
+      "target": "Они явились с обычной своей точностью, и коадъютор провёл с ними часть ночи.",
+      "source_sha256": "ff9e0932c2e89c1db36f69f98b5722c0eb40b424b2f8d7b95d5604fb6f26edeb",
+      "target_id": "ru-id12230",
+      "tag": "p",
+      "target_sha256": "c1a946e060742591adb7017521dd95299953f28e30687c3f9aa4d56b97f67425"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id12228",
+      "verdict": "CORRECTED",
+      "reason": "Content, agency and sequence were faithful. I replaced «когда на него находило подобное настроение» with «когда бывал в подобном настроении», which follows the French «quand il était dans cette disposition d'esprit» more closely and drops the added suggestion of a sudden fit."
+    },
+    {
+      "source_id": "id12229",
+      "verdict": "PASS",
+      "reason": "Both men are correctly identified, with the established name Рошфор. The structure «l'un… l'autre» is kept, and the phrase «нищий от Сен-Эсташа» adds nothing to the source."
+    },
+    {
+      "source_id": "id12230",
+      "verdict": "PASS",
+      "reason": "Faithful. «Ponctualité ordinaire» is rendered as «обычная точность», and the coadjutor spends part of the night with them, as in the French."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id12228",
+      "before": "Поэтому, когда весь Париж радовался возвращению короля, назначенному на послезавтра, один лишь Гонди посреди всеобщего ликования был в таком дурном расположении духа, что тотчас послал за двумя людьми, которых имел обыкновение призывать, когда на него находило подобное настроение.",
+      "after": "Поэтому, когда весь Париж радовался возвращению короля, назначенному на послезавтра, один лишь Гонди посреди всеобщего ликования был в таком дурном расположении духа, что тотчас послал за двумя людьми, которых имел обыкновение призывать, когда бывал в подобном настроении."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJZE4CyboCxqRdb1XVhE",
+    "usage": {
+      "input_tokens": 1986,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJZEFXcYVUJ9CAZ6VQ34",
+    "usage": {
+      "input_tokens": 2694,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1203,
+      "output_tokens_details": {
+        "thinking_tokens": 683
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJZEsMQ8FPjR6zEYeEJQ",
+        "usage": {
+          "input_tokens": 2993,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 598,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id12228",
+          "verdict": "PASS",
+          "reason": "Prior correction verified. The Russian preserves the causal 'Aussi', the king's return fixed for the day after tomorrow, Gondy alone amid the general rejoicing, the immediate summoning of two men, and the habit of calling them when in such a frame of mind. 'Когда бывал в подобном настроении' renders 'quand il était dans cette disposition d'esprit' accurately; the register is idiomatic."
+        },
+        {
+          "source_id": "id12229",
+          "verdict": "PASS",
+          "reason": "Faithful. Both men are identified as in the source: the comte de Rochefort and the beggar of Saint-Eustache. The 'l'un… l'autre' structure is kept, the name Рошфор matches the established form, and the Russian reads naturally."
+        },
+        {
+          "source_id": "id12230",
+          "verdict": "PASS",
+          "reason": "Faithful. 'Avec leur ponctualité ordinaire' becomes 'с обычной своей точностью'; the coadjutor spending part of the night with them is preserved, with tense and agency unchanged."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

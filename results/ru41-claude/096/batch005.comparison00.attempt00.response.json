@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJZEsMQ8FPjR6zEYeEJQ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id12228\",\"target\":\"Поэтому, когда весь Париж радовался возвращению короля, назначенному на послезавтра, один лишь Гонди посреди всеобщего ликования был в таком дурном расположении духа, что тотчас послал за двумя людьми, которых имел обыкновение призывать, когда бывал в подобном настроении.\"},{\"source_id\":\"id12229\",\"target\":\"Эти два человека были: один — граф де Рошфор, другой — нищий от Сен-Эсташа.\"},{\"source_id\":\"id12230\",\"target\":\"Они явились с обычной своей точностью, и коадъютор провёл с ними часть ночи.\"}],\"review\":[{\"source_id\":\"id12228\",\"verdict\":\"PASS\",\"reason\":\"Prior correction verified. The Russian preserves the causal 'Aussi', the king's return fixed for the day after tomorrow, Gondy alone amid the general rejoicing, the immediate summoning of two men, and the habit of calling them when in such a frame of mind. 'Когда бывал в подобном настроении' renders 'quand il était dans cette disposition d'esprit' accurately; the register is idiomatic.\"},{\"source_id\":\"id12229\",\"verdict\":\"PASS\",\"reason\":\"Faithful. Both men are identified as in the source: the comte de Rochefort and the beggar of Saint-Eustache. The 'l'un… l'autre' structure is kept, the name Рошфор matches the established form, and the Russian reads naturally.\"},{\"source_id\":\"id12230\",\"verdict\":\"PASS\",\"reason\":\"Faithful. 'Avec leur ponctualité ordinaire' becomes 'с обычной своей точностью'; the coadjutor spending part of the night with them is preserved, with tense and agency unchanged.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2993,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 598,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
