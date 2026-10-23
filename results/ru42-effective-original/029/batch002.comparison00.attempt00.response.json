@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJvAPGHwTAfbzDCaShY4",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-029-0040\",\"target\":\"Гленарван не был ни удивлён, ни огорчён его ответом. Он и его спутники во время этих различных остановок искали там, где капитана Гранта не было, а не там, где он был. Они хотели лишь убедиться в его отсутствии в этих разных точках параллели, вот и всё. Поэтому отплытие «<i>Дункана</i>» было решено на следующий день.\"},{\"source_id\":\"fr42c-029-0041\",\"target\":\"До вечера пассажиры осматривали остров, внешний вид которого весьма привлекателен. Но его фауна и флора не заполнили бы и ин-октаво самого многословного из натуралистов. Класс четвероногих, птиц, рыб и китообразных насчитывал лишь нескольких диких кабанов, «снежных» буревестников, альбатросов, окуней и тюленей. Термальные воды и железистые источники то тут, то там вытекали из черноватой лавы и стлали свои густые пары над вулканической почвой. Некоторые из этих источников имели очень высокую температуру. Джон Манглс опустил в один из них термометр Фаренгейта, и тот показал сто семьдесят шесть градусов[[FN:60]]. Рыба, пойманная в море в нескольких шагах оттуда, варилась в этих почти кипящих водах за пять минут; это и заставило Паганеля отказаться от купания.\"},{\"source_id\":\"fr42c-029-0042\",\"target\":\"К вечеру, после доброй прогулки, Гленарван простился с честным господином Вио. Каждый пожелал ему всяческого счастья на его пустынном островке. В ответ старик пожелал успеха экспедиции, и шлюпка «<i>Дункана</i>» доставила пассажиров обратно на борт.\"},{\"source_id\":\"fr42c-note-055\",\"target\":\"Это те самые противопассаты, предел которых, по-видимому, определяется тридцатой параллелью.\"},{\"source_id\":\"fr42c-note-056\",\"target\":\"Около 600 лье.\"},{\"source_id\":\"fr42c-note-057\",\"target\":\"Двенадцать сотен лье.\"},{\"source_id\":\"fr42c-note-058\",\"target\":\"Коммодор Мори.\"},{\"source_id\":\"fr42c-note-059\",\"target\":\"75° 4′ к востоку от парижского меридиана.\"},{\"source_id\":\"fr42c-note-060\",\"target\":\"80 градусов по Цельсию.\"}],\"review\":[{\"source_id\":\"fr42c-029-0040\",\"verdict\":\"PASS\",\"reason\":\"Faithful: negations, 'où n'était pas / où il était', purpose, decision and italic ship name preserved.\"},{\"source_id\":\"fr42c-029-0041\",\"verdict\":\"PASS\",\"reason\":\"Complete and accurate; 176°F, note token, thermometer, fish cooking and Paganel's decision correctly rendered.\"},{\"source_id\":\"fr42c-029-0042\",\"verdict\":\"PASS\",\"reason\":\"Farewell, wishes, reciprocal wishes and boat returning passengers are accurate; italics kept.\"},{\"source_id\":\"fr42c-note-055\",\"verdict\":\"PASS\",\"reason\":\"Accurate rendering of contre-alizés and limit by thirtieth parallel.\"},{\"source_id\":\"fr42c-note-056\",\"verdict\":\"PASS\",\"reason\":\"Correct: about 600 leagues.\"},{\"source_id\":\"fr42c-note-057\",\"verdict\":\"PASS\",\"reason\":\"Correct: twelve hundred leagues.\"},{\"source_id\":\"fr42c-note-058\",\"verdict\":\"PASS\",\"reason\":\"Maury's rank 'commandant' is acceptably rendered as commodore, matching his historical usage.\"},{\"source_id\":\"fr42c-note-059\",\"verdict\":\"PASS\",\"reason\":\"Coordinates and Paris meridian faithfully rendered.\"},{\"source_id\":\"fr42c-note-060\",\"verdict\":\"PASS\",\"reason\":\"Accurate: 80 degrees Celsius.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8787,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1356,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
