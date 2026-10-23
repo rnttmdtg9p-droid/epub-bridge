@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK3sp6jjZMgjH8BrqpYS",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-053-0061\",\"target\":\"Ночь прошла спокойно. Была назначена вахта, главным образом для наблюдения за якорями.\"},{\"source_id\":\"fr42c-053-0062\",\"target\":\"Рассвело. Предсказания Джона Манглса сбывались. Он расхваливал бриз с северо-северо-запада, который стремился посвежеть. Это была весьма выгодная прибавка силы. Экипаж был взят в оборот. Роберт, Уилсон и Мулрэди наверху грот-мачты, майор, Гленарван и Паганель на палубе приготовили снасти так, чтобы распустить паруса в самый нужный миг. Рей грот-марселя подняли до отказа, а грот и грот-марсель оставили на их гитовах.\"},{\"source_id\":\"fr42c-053-0063\",\"target\":\"Было девять часов утра. До полной воды оставалось ещё четыре часа. Они не пропали даром. Джон употребил их на то, чтобы поставить на носу брига свою временную мачту вместо фок-мачты. Так он сможет уйти из этих опасных вод, как только судно окажется на плаву. Работники приложили новые усилия, и ещё до полудня фока-рея была крепко закреплена вместо мачты. Леди Элен и Мэри Грант оказались очень полезны и привязали запасной парус к рее малого брамселя. Для них было радостью трудиться ради общего спасения. Когда такелаж был закончен, то если «Маккуори» и оставлял желать лучшего в смысле изящества, то по крайней мере мог плавать, лишь бы не слишком удаляться от берега.\"},{\"source_id\":\"fr42c-053-0064\",\"target\":\"Между тем прилив поднимался. Поверхность моря вздымалась небольшими зыбкими волнами. Верхушки рифов мало-помалу исчезали, как морские животные, возвращающиеся в свою жидкую стихию. Приближался час, когда надо было предпринять великую попытку. Лихорадочное нетерпение держало умы в крайнем возбуждении. Никто не говорил. Все смотрели на Джона. Все ждали его приказа.\"},{\"source_id\":\"fr42c-053-0065\",\"target\":\"Джон Манглс, склонившись над планширем юта, следил за приливом. Он с тревогой поглядывал на канат и швартов, вытянутые и сильно выбранные.\"},{\"source_id\":\"fr42c-053-0066\",\"target\":\"В час дня море достигло высшей точки. Наступил стояк воды, то есть тот краткий миг, когда вода уже не прибывает и ещё не убывает. Надо было действовать без промедления. Грот и грот-марсель отдали, и под напором ветра они накрыли мачту.\"},{\"source_id\":\"fr42c-053-0067\",\"target\":\"— К шпилю! — крикнул Джон.\"},{\"source_id\":\"fr42c-053-0068\",\"target\":\"Это был шпиль с качалками, наподобие пожарных насосов. Гленарван, Мулрэди и Роберт с одной стороны, Паганель, майор и Олбинет с другой налегли на качалки, передававшие движение механизму. В то же время Джон и Уилсон, вставив вымбовки, добавили свои усилия к усилиям товарищей.\"},{\"source_id\":\"fr42c-053-0069\",\"target\":\"— Дружней! Дружней! — крикнул молодой капитан. — Все вместе!\"},{\"source_id\":\"fr42c-053-0070\",\"target\":\"Канат и швартов натянулись под мощным действием шпиля. Якоря держали крепко и не ползли.\"},{\"source_id\":\"fr42c-053-0071\",\"target\":\"Надо было добиться успеха быстро. Полная вода длится всего несколько минут. Уровень воды не мог помочь, спадая.\"},{\"source_id\":\"fr42c-053-0072\",\"target\":\"Усилия удвоили. Ветер бил яростно и прижимал паруса к мачте. В корпусе почувствовалась лёгкая дрожь. Бриг, казалось, вот-вот приподнимется. Быть может, хватило бы ещё одной пары рук, чтобы сорвать его с песчаной банки.\"},{\"source_id\":\"fr42c-053-0073\",\"target\":\"— Элен! Мэри! — крикнул Гленарван.\"},{\"source_id\":\"fr42c-053-0074\",\"target\":\"Обе молодые женщины пришли присоединить свои усилия к усилиям товарищей. Послышался последний щелчок стопора.\"},{\"source_id\":\"fr42c-053-0075\",\"target\":\"Но этим всё и кончилось. Бриг не сдвинулся. Попытка не удалась. Отлив уже начинался, и стало очевидно, что даже с помощью ветра и моря эта малочисленная команда не сможет снять свой корабль с мели.\"}],\"review\":[{\"source_id\":\"fr42c-053-0061\",\"verdict\":\"PASS\",\"reason\":\"Faithful: quiet night, watch set mainly to watch the anchors.\"},{\"source_id\":\"fr42c-053-0062\",\"verdict\":\"PASS\",\"reason\":\"Faithful; weather, crew positions, sails and clewlines/buntlines rendered acceptably, no omissions.\"},{\"source_id\":\"fr42c-053-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'малого брам-реи' (ungrammatical) to 'малого брамселя' for petit perroquet yard; italic Macquarie shown by quotes; other content faithful.\"},{\"source_id\":\"fr42c-053-0064\",\"verdict\":\"PASS\",\"reason\":\"Rising tide, reefs vanishing, tense silence all preserved.\"},{\"source_id\":\"fr42c-053-0065\",\"verdict\":\"PASS\",\"reason\":\"John leaning over the poop rail, anxious glance at cable and hawser; accurate.\"},{\"source_id\":\"fr42c-053-0066\",\"verdict\":\"PASS\",\"reason\":\"High water slack explained; sails loosed and filled against mast; faithful.\"},{\"source_id\":\"fr42c-053-0067\",\"verdict\":\"PASS\",\"reason\":\"Order to the windlass correctly rendered with dialogue dash.\"},{\"source_id\":\"fr42c-053-0068\",\"verdict\":\"PASS\",\"reason\":\"Windlass with pump brakes, positions of named people and handspikes all preserved.\"},{\"source_id\":\"fr42c-053-0069\",\"verdict\":\"PASS\",\"reason\":\"Encouraging cry and dialogue turn preserved idiomatically.\"},{\"source_id\":\"fr42c-053-0070\",\"verdict\":\"PASS\",\"reason\":\"Cable and hawser tauten; anchors held, did not drag; accurate.\"},{\"source_id\":\"fr42c-053-0071\",\"verdict\":\"PASS\",\"reason\":\"Urgency, brief high water, water level unable to help by falling; faithful.\"},{\"source_id\":\"fr42c-053-0072\",\"verdict\":\"PASS\",\"reason\":\"Redoubled effort, wind, tremors, near-lift, one more arm; faithful.\"},{\"source_id\":\"fr42c-053-0073\",\"verdict\":\"PASS\",\"reason\":\"Glenarvan's call to Helena and Mary preserved.\"},{\"source_id\":\"fr42c-053-0074\",\"verdict\":\"PASS\",\"reason\":\"Women join efforts; last click of the pawl; accurate.\"},{\"source_id\":\"fr42c-053-0075\",\"verdict\":\"PASS\",\"reason\":\"Failure, ebb beginning, reduced crew unable to refloat; faithful.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 13128,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2543,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
