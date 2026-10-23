@@ -1,0 +1,199 @@
+{
+  "unit": 46,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id05828",
+      "target": "Гримо издал глухое ворчание, похожее на рычание.",
+      "source_sha256": "01aac1ceb0ce4d44c4c4a91be16a54ccf320e51b8615901f53f016373fcf4708",
+      "target_id": "ru-id05828",
+      "tag": "p",
+      "target_sha256": "957d13f224d61535848a0e4b4245423682a5a2fa130cf812778178d3dc9b7019"
+    },
+    {
+      "source_id": "id05829",
+      "target": "В этот миг со шлюпа их окликнул чей-то голос. Лоцман, сидевший у руля, ответил, и лодка пристала к судну.",
+      "source_sha256": "58a92990e1ad554fe41977f400da89bdc7d70b7031fa727f797f627aa376bbad",
+      "target_id": "ru-id05829",
+      "tag": "p",
+      "target_sha256": "7ed7fcfefabadc25d8c931e5cf2e9d2b7e77f803a26ca6b37dbe8de8436cd1ce"
+    },
+    {
+      "source_id": "id05830",
+      "target": "В одно мгновение господа, слуги и багаж оказались на борту. Хозяин ждал лишь пассажиров, чтобы отплыть; и едва те ступили на палубу, как судно взяло курс на Гастингс, где им предстояло высадиться.",
+      "source_sha256": "4640986d57843efa095a2aa169994ffe6ad1c0a98415a207682431c6a7264b8d",
+      "target_id": "ru-id05830",
+      "tag": "p",
+      "target_sha256": "ac22b7e704b1a1df728bd10320658e665c793d74d049454fe2e064e3d5396abf"
+    },
+    {
+      "source_id": "id05831",
+      "target": "В этот миг трое друзей, сами того не желая, бросили последний взгляд на скалу, где всё ещё виднелась, резко выделяясь, грозная тень, преследовавшая их.",
+      "source_sha256": "0c1f7d25bed1d1534c10730766d8a5eef1c8bee9ef8c3f571edbd28726d91d3f",
+      "target_id": "ru-id05831",
+      "tag": "p",
+      "target_sha256": "618c0f306cb4d9cc3c09af379a71d5f56583c3f5c58deba41582e465222b9355"
+    },
+    {
+      "source_id": "id05832",
+      "target": "Потом до них долетел голос, посылавший им последнюю угрозу:",
+      "source_sha256": "52dfc050442f5e274d107e7e76f915f6326ead07432962e59ae0b2d747a1dcc7",
+      "target_id": "ru-id05832",
+      "tag": "p",
+      "target_sha256": "e5e7b3a902aafea02507b52dd6c400777ef422b7ab80e18f7fd9eee0ede613d4"
+    },
+    {
+      "source_id": "id05833",
+      "target": "— До свидания, господа, в Англии!",
+      "source_sha256": "5d5e65efd87cc4b65b8c71b177f593661614bc4d4b45c7714cf22789ad136d66",
+      "target_id": "ru-id05833",
+      "tag": "p",
+      "target_sha256": "95041a5c6abb9157b93d1bf7a14b0c08003d58519438a1c25efba85918135ece"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id05828",
+      "verdict": "PASS",
+      "reason": "Complete and accurate: Grimaud, the dull growl resembling a roar."
+    },
+    {
+      "source_id": "id05829",
+      "verdict": "CORRECTED",
+      "reason": "Changed «с шлюпа» to the more euphonic «со шлюпа»; the voice hailing, the pilot at the helm answering and the boat coming alongside are all preserved."
+    },
+    {
+      "source_id": "id05830",
+      "verdict": "PASS",
+      "reason": "All facts preserved: men, valets and baggage on board, the master waiting only for the passengers, the course set for Hastings where they were to disembark. The impersonal «on mit le cap» is rendered naturally."
+    },
+    {
+      "source_id": "id05831",
+      "verdict": "CORRECTED",
+      "reason": "The clumsy «виднелась отчётливо вырисовывавшаяся» was smoothed to «виднелась, резко выделяясь»; meaning (still visible, menacing shadow pursuing them, glance cast despite themselves) is kept."
+    },
+    {
+      "source_id": "id05832",
+      "verdict": "PASS",
+      "reason": "Accurate: a voice reached them sending this last threat."
+    },
+    {
+      "source_id": "id05833",
+      "verdict": "PASS",
+      "reason": "Accurate dialogue line with proper Russian dash punctuation; the ominous 'in England' is preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id05829",
+      "before": "В этот миг с шлюпа их окликнул чей-то голос. Лоцман, сидевший у руля, ответил, и лодка пристала к судну.",
+      "after": "В этот миг со шлюпа их окликнул чей-то голос. Лоцман, сидевший у руля, ответил, и лодка пристала к судну."
+    },
+    {
+      "source_id": "id05831",
+      "before": "В этот миг трое друзей, сами того не желая, бросили последний взгляд на скалу, где всё ещё виднелась отчётливо вырисовывавшаяся грозная тень, преследовавшая их.",
+      "after": "В этот миг трое друзей, сами того не желая, бросили последний взгляд на скалу, где всё ещё виднелась, резко выделяясь, грозная тень, преследовавшая их."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJPfaDYKVJShpXmCGc2V",
+    "usage": {
+      "input_tokens": 2210,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJPfniNRa9EyDS3ULGsw",
+    "usage": {
+      "input_tokens": 3416,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1343,
+      "output_tokens_details": {
+        "thinking_tokens": 527
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJPgXJhWpu2wgFMx8oSv",
+        "usage": {
+          "input_tokens": 3759,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1259,
+          "output_tokens_details": {
+            "thinking_tokens": 354
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id05828",
+          "verdict": "PASS",
+          "reason": "Faithful: «grognement sourd qui ressemblait à un rugissement» is rendered as «глухое ворчание, похожее на рычание». Agency is preserved and nothing is omitted."
+        },
+        {
+          "source_id": "id05829",
+          "verdict": "PASS",
+          "reason": "The prior correction «со шлюпа» is confirmed. The hail from the sloop, the pilot at the helm answering, and the boat coming alongside are all accurate, and the tenses are correct."
+        },
+        {
+          "source_id": "id05830",
+          "verdict": "PASS",
+          "reason": "All elements are present: men, valets and baggage on board, the patron waiting only for the passengers, and the course set for Hastings as soon as they stepped onto the deck. The impersonal «on mit le cap» is rendered naturally, and «où on devait débarquer» is rendered accurately. The idiom is natural."
+        },
+        {
+          "source_id": "id05831",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed: «резко выделяясь» renders «se détachait visible encore» naturally. «Malgré eux», the last glance, the menacing shadow and its pursuit are all preserved."
+        },
+        {
+          "source_id": "id05832",
+          "verdict": "PASS",
+          "reason": "Faithful: the voice reaching them and sending a last threat. The paragraph ends in a colon, as in the source."
+        },
+        {
+          "source_id": "id05833",
+          "verdict": "PASS",
+          "reason": "Accurate rendering of the threatening farewell «Au revoir, messieurs, en Angleterre!», with correct dialogue dash punctuation."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
