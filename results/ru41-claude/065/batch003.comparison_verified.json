@@ -1,0 +1,613 @@
+{
+  "unit": 65,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id08702",
+      "target": "— Послушайте, — сказал англичанин, — вот что сделайте.",
+      "source_sha256": "5a72db73a1cefd1d175057b71a606af98725fc0c565e3f023bf2d77376cebccc",
+      "target_id": "ru-id08702",
+      "tag": "p",
+      "target_sha256": "ee303e35153fb844a770577c2ba95d686c3049d0d8d0549e386c2490f3006271"
+    },
+    {
+      "source_id": "id08703",
+      "target": "— Что именно?",
+      "source_sha256": "bd1107f9ec00f49dd10498b2f5f48dc2de61de8a7e29241d9e82f929c8c60286",
+      "target_id": "ru-id08703",
+      "tag": "p",
+      "target_sha256": "00e195d300c713a812567908a1542198c648cc146e5f98cadfd307320af6aba6"
+    },
+    {
+      "source_id": "id08704",
+      "target": "— Завтра я в карауле.",
+      "source_sha256": "adbc65d623072c26a5f018824836c502b6d98f15fc0190fb730d547801c8eedc",
+      "target_id": "ru-id08704",
+      "tag": "p",
+      "target_sha256": "5553ce140df10a8131c9d839258ac5a335d3bdd4e1938bb0a49c7c6e8af7c785"
+    },
+    {
+      "source_id": "id08705",
+      "target": "— При Стюарте?",
+      "source_sha256": "56c610e072c15228eb7b9029f95cc572639ec0832f67844c1c01e4f316d3e386",
+      "target_id": "ru-id08705",
+      "tag": "p",
+      "target_sha256": "e49d0e7a9878bfc115c556f355ceddb1d44ac3c63c4fa356455ba8a4aa9ef1e3"
+    },
+    {
+      "source_id": "id08706",
+      "target": "— Да. Приходите провести ночь со мной.",
+      "source_sha256": "0d7941c80c0873e725779a00f8267d756ad4dd055f4d62becde71d089db2aac3",
+      "target_id": "ru-id08706",
+      "tag": "p",
+      "target_sha256": "1c449556bead68ab5be5eaee72ee85d395db2b927dd2a16b9685194a78bea72f"
+    },
+    {
+      "source_id": "id08707",
+      "target": "— Невозможно.",
+      "source_sha256": "727dc0506b7fbe6a845b447d96d22621b6edf93037b9ec2e173c6d7634480922",
+      "target_id": "ru-id08707",
+      "tag": "p",
+      "target_sha256": "19872cfacd9316e743888a21f9e89816c4fcbb822dc99efb48fbf56fe0708921"
+    },
+    {
+      "source_id": "id08708",
+      "target": "— Невозможно?",
+      "source_sha256": "1a887eb66e3dbdefc0ff1403282de70a94af7b44bd2909cdd4f8af6b6c38c3a9",
+      "target_id": "ru-id08708",
+      "tag": "p",
+      "target_sha256": "5c448c1ff6d860b60d8bfb2380fdad71cea26eeb8422014af0777443c39274d7"
+    },
+    {
+      "source_id": "id08709",
+      "target": "— Совершенно невозможно.",
+      "source_sha256": "1769327238da2a74e2523cd689e00186ca141ca43525112e12956dbd4df3263e",
+      "target_id": "ru-id08709",
+      "tag": "p",
+      "target_sha256": "09d2c6c9995217a7c0f17928156af99719f389767daf005de3a89c0200d94535"
+    },
+    {
+      "source_id": "id08710",
+      "target": "— Почему же?",
+      "source_sha256": "24abe4982bc1efaf04df8781dfe2ce72e9299c18c2fb0ec5d15297b000883304",
+      "target_id": "ru-id08710",
+      "tag": "p",
+      "target_sha256": "d04e535109dce7f15eaca0f9a4b515ecd71d7a92dd33d80dbaec78fd084b9d52"
+    },
+    {
+      "source_id": "id08711",
+      "target": "— Каждую ночь я составляю партию господину дю Валлону. Иногда мы и вовсе не ложимся… Нынче утром, например, мы ещё играли, когда рассвело.",
+      "source_sha256": "88c2da56c1db66acb8c3fc0448a3fd404b93df23976ff2fd8400984039373601",
+      "target_id": "ru-id08711",
+      "tag": "p",
+      "target_sha256": "d897280bab4fb99b5b9fb295b47ee318712405ef4d5c8fbb1c2af04e195fe596"
+    },
+    {
+      "source_id": "id08712",
+      "target": "— Ну и что?",
+      "source_sha256": "2caed6e1ccb03a9e5b3191e4e09dc771bdcca703c589c4b9b2a520a990a050f0",
+      "target_id": "ru-id08712",
+      "tag": "p",
+      "target_sha256": "c3c7c847be433d2b02af850bdfcfd0e3734a843506123820fd38a33c0d05ab04"
+    },
+    {
+      "source_id": "id08713",
+      "target": "— Ну вот: ему было бы скучно, если бы я не составлял ему партии.",
+      "source_sha256": "20ade29556caa634b2f239eecfceb201d3851be46a6b552cc99a398b1d05bf62",
+      "target_id": "ru-id08713",
+      "tag": "p",
+      "target_sha256": "7dd54e74cc3d6be434f08aa61fd5be0935981069d8dde85813ca601c8524ca83"
+    },
+    {
+      "source_id": "id08714",
+      "target": "— Он благородный игрок?",
+      "source_sha256": "9db2479c95970408f88b5bcf68724445d1e2d8034b6522e7b01745bedaf8a3c0",
+      "target_id": "ru-id08714",
+      "tag": "p",
+      "target_sha256": "738d1437bf919748245bf9ec5c6b792cde3e143e33d281409d3fc4ca1753ee33"
+    },
+    {
+      "source_id": "id08715",
+      "target": "— Я видел, как он проигрывал до двух тысяч пистолей, хохоча до слёз.",
+      "source_sha256": "fb7112292822079986ea407c19e91aef9125074029c6b625831687ee92f7cfa5",
+      "target_id": "ru-id08715",
+      "tag": "p",
+      "target_sha256": "75795b7cf6415b784472ba26fc946092234a9bf0426bfd3652ac58a2c118e6db"
+    },
+    {
+      "source_id": "id08716",
+      "target": "— Тогда приведите его.",
+      "source_sha256": "3dfa420c1ec6038824bcaf6f839e979b82f690e1970698565fce748ac71e274f",
+      "target_id": "ru-id08716",
+      "tag": "p",
+      "target_sha256": "f6bfcd5021e96cefef44062d4594beded58b02f06345fdbb00d1301e422e7636"
+    },
+    {
+      "source_id": "id08717",
+      "target": "— Как же это возможно? А наши пленники?",
+      "source_sha256": "95d35283cee9740caf51b724656c46453dcfdec9632e6dfc5e6990856e03c89c",
+      "target_id": "ru-id08717",
+      "tag": "p",
+      "target_sha256": "08dcc33367cf2cb22684bf7295f8d427a3846e15756eb9c7fc417f04ddb9c92b"
+    },
+    {
+      "source_id": "id08718",
+      "target": "— А, чёрт! Это верно, — сказал офицер. — Но поручите их охрану вашим лакеям.",
+      "source_sha256": "e050e47d70bb67d6ca9b249544c953d29f2f4113e0337e2bff46328c22b14148",
+      "target_id": "ru-id08718",
+      "tag": "p",
+      "target_sha256": "d77d8e604e1a75b9d39ed0a8cbbd14c078093d37ed13d4a12267a016f4c0b2a4"
+    },
+    {
+      "source_id": "id08719",
+      "target": "— Да, чтобы они сбежали! — сказал д’Артаньян. — Уж увольте.",
+      "source_sha256": "51e070c791a1e5e13cb842fc4fd20f8bb1719d1d44781782808f1eaa065b8fee",
+      "target_id": "ru-id08719",
+      "tag": "p",
+      "target_sha256": "ea68d844302a075a9ad80a0028f0673b63f975a9d384b1f3a53acc038c573b88"
+    },
+    {
+      "source_id": "id08720",
+      "target": "— Так это знатные люди, раз вы так за них держитесь?",
+      "source_sha256": "c303fe3744beef829b95a37a22eebf8809af2c195369589f9f69b677f58c911f",
+      "target_id": "ru-id08720",
+      "tag": "p",
+      "target_sha256": "65e3bf89e278cb0e5ff21864ae1974de0e70a3ae2cbbd9634e252d4f22fc8abc"
+    },
+    {
+      "source_id": "id08721",
+      "target": "Чёрт возьми! Один — богатый сеньор из Турени, другой — мальтийский рыцарь из знатного дома. Мы условились о выкупе с каждого: две тысячи фунтов стерлингов по прибытии во Францию. Поэтому мы не хотим ни на миг расставаться с людьми, которых наши лакеи считают миллионерами. Мы, правда, немного обыскали их, когда брали в плен, и я даже признаюсь вам, что мы с господином дю Валлоном каждую ночь как раз и перетягиваем между собой их кошельки; но они могли утаить от нас какой-нибудь драгоценный камень, какой-нибудь дорогой бриллиант, так что мы подобны скупцам, не отходящим от своего сокровища; мы назначили себя бессменными стражами наших людей, и когда я сплю, господин дю Валлон бодрствует.",
+      "source_sha256": "e9bc3d38eae4882c8865265c37abfbe1940b7b96a5e5c28c2eccbef9e6cf7366",
+      "target_id": "ru-id08721",
+      "tag": "p",
+      "target_sha256": "0026286b28c685c201e5cf44690f68d3d067a57e584bae663b0aec33e420871d"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id08702",
+      "verdict": "CORRECTED",
+      "reason": "«сделайте одну вещь» — калька; заменено идиоматичным «вот что сделайте»."
+    },
+    {
+      "source_id": "id08703",
+      "verdict": "CORRECTED",
+      "reason": "«Laquelle?» — «Что именно?» точнее передаёт вопрос о выборе; незначительная правка."
+    },
+    {
+      "source_id": "id08704",
+      "verdict": "PASS",
+      "reason": "Точно: «je suis de garde» — «я в карауле»."
+    },
+    {
+      "source_id": "id08705",
+      "verdict": "PASS",
+      "reason": "Смысл и реплика сохранены."
+    },
+    {
+      "source_id": "id08706",
+      "verdict": "PASS",
+      "reason": "Точно."
+    },
+    {
+      "source_id": "id08707",
+      "verdict": "PASS",
+      "reason": "Точно."
+    },
+    {
+      "source_id": "id08708",
+      "verdict": "PASS",
+      "reason": "Точно, повтор с вопросом сохранён."
+    },
+    {
+      "source_id": "id08709",
+      "verdict": "PASS",
+      "reason": "Усиление «de toute impossibilité» передано."
+    },
+    {
+      "source_id": "id08710",
+      "verdict": "PASS",
+      "reason": "Естественный эквивалент «Comment cela?»."
+    },
+    {
+      "source_id": "id08711",
+      "verdict": "CORRECTED",
+      "reason": "Смысл верный; орфография «ещё» приведена к единому ё-варианту."
+    },
+    {
+      "source_id": "id08712",
+      "verdict": "PASS",
+      "reason": "«Eh bien?» передано корректно."
+    },
+    {
+      "source_id": "id08713",
+      "verdict": "CORRECTED",
+      "reason": "Перестроено для естественности: «Ну вот: ему было бы скучно…», условное наклонение сохранено."
+    },
+    {
+      "source_id": "id08714",
+      "verdict": "CORRECTED",
+      "reason": "«beau joueur» — не «хорошо играет», а человек, достойно переносящий проигрыш; ответ о проигрыше это подтверждает. Исправлено на «благородный игрок»."
+    },
+    {
+      "source_id": "id08715",
+      "verdict": "CORRECTED",
+      "reason": "«en riant aux larmes» — «хохоча до слёз», усилена экспрессия; факты сохранены."
+    },
+    {
+      "source_id": "id08716",
+      "verdict": "PASS",
+      "reason": "Точно."
+    },
+    {
+      "source_id": "id08717",
+      "verdict": "CORRECTED",
+      "reason": "«Comment voulez-vous?» — «как же это возможно?»; прежний вариант «как сделать» сдвигал смысл."
+    },
+    {
+      "source_id": "id08718",
+      "verdict": "CORRECTED",
+      "reason": "Смысл верен; «чёрт» приведено к единому написанию с ё."
+    },
+    {
+      "source_id": "id08719",
+      "verdict": "PASS",
+      "reason": "«je n'ai garde» передано идиоматично («Уж увольте»)."
+    },
+    {
+      "source_id": "id08720",
+      "verdict": "PASS",
+      "reason": "Точно, вопросительная интонация и причинная связь сохранены."
+    },
+    {
+      "source_id": "id08721",
+      "verdict": "CORRECTED",
+      "reason": "Пропущено «même» — добавлено «даже»; «Чёрт» с ё. Остальное (выкуп, обыск, скупцы, бессменные стражи) передано точно."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id08702",
+      "before": "— Послушайте, — сказал англичанин, — сделайте одну вещь.",
+      "after": "— Послушайте, — сказал англичанин, — вот что сделайте."
+    },
+    {
+      "source_id": "id08703",
+      "before": "— Какую?",
+      "after": "— Что именно?"
+    },
+    {
+      "source_id": "id08711",
+      "before": "— Каждую ночь я составляю партию господину дю Валлону. Иногда мы и вовсе не ложимся… Нынче утром, например, мы еще играли, когда рассвело.",
+      "after": "— Каждую ночь я составляю партию господину дю Валлону. Иногда мы и вовсе не ложимся… Нынче утром, например, мы ещё играли, когда рассвело."
+    },
+    {
+      "source_id": "id08713",
+      "before": "— Ну и то, что ему было бы скучно, если бы я не составлял ему партии.",
+      "after": "— Ну вот: ему было бы скучно, если бы я не составлял ему партии."
+    },
+    {
+      "source_id": "id08714",
+      "before": "— Он хорошо играет?",
+      "after": "— Он благородный игрок?"
+    },
+    {
+      "source_id": "id08715",
+      "before": "— Я видел, как он проигрывал до двух тысяч пистолей, смеясь до слёз.",
+      "after": "— Я видел, как он проигрывал до двух тысяч пистолей, хохоча до слёз."
+    },
+    {
+      "source_id": "id08717",
+      "before": "— Как же это сделать? А наши пленники?",
+      "after": "— Как же это возможно? А наши пленники?"
+    },
+    {
+      "source_id": "id08721",
+      "before": "Черт возьми! Один — богатый сеньор из Турени, другой — мальтийский рыцарь из знатного дома. Мы условились о выкупе с каждого: две тысячи фунтов стерлингов по прибытии во Францию. Поэтому мы не хотим ни на миг расставаться с людьми, которых наши лакеи считают миллионерами. Мы, правда, немного обыскали их, когда брали в плен, и должен вам признаться, что мы с господином дю Валлоном каждую ночь как раз и перетягиваем между собой их кошельки; но они могли утаить от нас какой-нибудь драгоценный камень, какой-нибудь дорогой бриллиант, так что мы подобны скупцам, не отходящим от своего сокровища; мы назначили себя бессменными стражами наших людей, и когда я сплю, господин дю Валлон бодрствует.",
+      "after": "Чёрт возьми! Один — богатый сеньор из Турени, другой — мальтийский рыцарь из знатного дома. Мы условились о выкупе с каждого: две тысячи фунтов стерлингов по прибытии во Францию. Поэтому мы не хотим ни на миг расставаться с людьми, которых наши лакеи считают миллионерами. Мы, правда, немного обыскали их, когда брали в плен, и должен вам признаться, что мы с господином дю Валлоном каждую ночь как раз и перетягиваем между собой даже их кошельки; но они могли утаить от нас какой-нибудь драгоценный камень, какой-нибудь дорогой бриллиант, так что мы подобны скупцам, не отходящим от своего сокровища; мы назначили себя бессменными стражами наших людей, и когда я сплю, господин дю Валлон бодрствует."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJU5gQzhmYtyERA1gr1U",
+    "usage": {
+      "input_tokens": 4369,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 982,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJU69xD2UNeB3BZ2qEoQ",
+    "usage": {
+      "input_tokens": 7905,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3782,
+      "output_tokens_details": {
+        "thinking_tokens": 1732
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJU7t1K2aoD4rDq664r2",
+        "usage": {
+          "input_tokens": 9110,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2813,
+          "output_tokens_details": {
+            "thinking_tokens": 872
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08702",
+          "verdict": "PASS",
+          "reason": "Faithful; «вот что сделайте» idiomatically renders «faites une chose»."
+        },
+        {
+          "source_id": "id08703",
+          "verdict": "PASS",
+          "reason": "«Laquelle?» rendered naturally as «Что именно?»."
+        },
+        {
+          "source_id": "id08704",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08705",
+          "verdict": "PASS",
+          "reason": "Accurate; «при Стюарте» matches «près du Stuart»."
+        },
+        {
+          "source_id": "id08706",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08707",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08708",
+          "verdict": "PASS",
+          "reason": "Accurate echo question."
+        },
+        {
+          "source_id": "id08709",
+          "verdict": "PASS",
+          "reason": "«De toute impossibilité» = «совершенно невозможно»."
+        },
+        {
+          "source_id": "id08710",
+          "verdict": "PASS",
+          "reason": "Acceptable idiomatic rendering of «Comment cela?»."
+        },
+        {
+          "source_id": "id08711",
+          "verdict": "PASS",
+          "reason": "Complete; the ellipsis, the time reference and the imperfect «jouions encore» are preserved; the ё correction is confirmed."
+        },
+        {
+          "source_id": "id08712",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08713",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed; conditional and meaning preserved."
+        },
+        {
+          "source_id": "id08714",
+          "verdict": "PASS",
+          "reason": "«Beau joueur» (a gracious player) is plausibly rendered as «благородный игрок»; the following reply supports it."
+        },
+        {
+          "source_id": "id08715",
+          "verdict": "PASS",
+          "reason": "Faithful; «хохоча до слёз» fits «riant aux larmes»."
+        },
+        {
+          "source_id": "id08716",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08717",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed."
+        },
+        {
+          "source_id": "id08718",
+          "verdict": "PASS",
+          "reason": "Accurate, with the speaker attribution intact."
+        },
+        {
+          "source_id": "id08719",
+          "verdict": "PASS",
+          "reason": "Acceptable idiomatic equivalent of «je n'ai garde»; the agency is preserved."
+        },
+        {
+          "source_id": "id08720",
+          "verdict": "PASS",
+          "reason": "Accurate; the causal «donc … que» structure is conveyed."
+        },
+        {
+          "source_id": "id08721",
+          "verdict": "CORRECTED",
+          "reason": "The prior correction added «даже» before «их кошельки», which has no basis in the French: «même» modifies «je vous avouerai», not «leur bourse». I moved it to «я даже признаюсь вам». The rest was checked and is faithful."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id08721",
+          "before": "Чёрт возьми! Один — богатый сеньор из Турени, другой — мальтийский рыцарь из знатного дома. Мы условились о выкупе с каждого: две тысячи фунтов стерлингов по прибытии во Францию. Поэтому мы не хотим ни на миг расставаться с людьми, которых наши лакеи считают миллионерами. Мы, правда, немного обыскали их, когда брали в плен, и должен вам признаться, что мы с господином дю Валлоном каждую ночь как раз и перетягиваем между собой даже их кошельки; но они могли утаить от нас какой-нибудь драгоценный камень, какой-нибудь дорогой бриллиант, так что мы подобны скупцам, не отходящим от своего сокровища; мы назначили себя бессменными стражами наших людей, и когда я сплю, господин дю Валлон бодрствует.",
+          "after": "Чёрт возьми! Один — богатый сеньор из Турени, другой — мальтийский рыцарь из знатного дома. Мы условились о выкупе с каждого: две тысячи фунтов стерлингов по прибытии во Францию. Поэтому мы не хотим ни на миг расставаться с людьми, которых наши лакеи считают миллионерами. Мы, правда, немного обыскали их, когда брали в плен, и я даже признаюсь вам, что мы с господином дю Валлоном каждую ночь как раз и перетягиваем между собой их кошельки; но они могли утаить от нас какой-нибудь драгоценный камень, какой-нибудь дорогой бриллиант, так что мы подобны скупцам, не отходящим от своего сокровища; мы назначили себя бессменными стражами наших людей, и когда я сплю, господин дю Валлон бодрствует."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJU9687As3i7kqKz8jGZ",
+        "usage": {
+          "input_tokens": 9740,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3196,
+          "output_tokens_details": {
+            "thinking_tokens": 858
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08702",
+          "verdict": "PASS",
+          "reason": "«Faites une chose» is rendered idiomatically as «вот что сделайте»; the speaker and the dialogue turn are preserved. The prior correction is confirmed."
+        },
+        {
+          "source_id": "id08703",
+          "verdict": "PASS",
+          "reason": "«Laquelle?» is rendered naturally as «Что именно?»; the prior correction is confirmed."
+        },
+        {
+          "source_id": "id08704",
+          "verdict": "PASS",
+          "reason": "Accurate: «je suis de garde» is «я в карауле», and «demain» is kept."
+        },
+        {
+          "source_id": "id08705",
+          "verdict": "PASS",
+          "reason": "«Près du Stuart» is rendered as «При Стюарте», which suits the sense of being on guard duty beside the king."
+        },
+        {
+          "source_id": "id08706",
+          "verdict": "PASS",
+          "reason": "The invitation to spend the night is preserved, with the imperative and «со мной»."
+        },
+        {
+          "source_id": "id08707",
+          "verdict": "PASS",
+          "reason": "Exact and brief."
+        },
+        {
+          "source_id": "id08708",
+          "verdict": "PASS",
+          "reason": "The echo question is preserved."
+        },
+        {
+          "source_id": "id08709",
+          "verdict": "PASS",
+          "reason": "«De toute impossibilité» is conveyed as an emphatic «Совершенно невозможно»."
+        },
+        {
+          "source_id": "id08710",
+          "verdict": "PASS",
+          "reason": "«Comment cela?» as «Почему же?» fits the context, where a reason is being asked for."
+        },
+        {
+          "source_id": "id08711",
+          "verdict": "PASS",
+          "reason": "Faithful: nightly play, sometimes without going to bed, «au jour nous jouions encore» as «ещё играли, когда рассвело». The correction to ё is confirmed."
+        },
+        {
+          "source_id": "id08712",
+          "verdict": "PASS",
+          "reason": "«Eh bien?» as «Ну и что?» is idiomatic."
+        },
+        {
+          "source_id": "id08713",
+          "verdict": "PASS",
+          "reason": "The conditional and the meaning «he would be bored if I did not play his game» are preserved. The prior correction is confirmed."
+        },
+        {
+          "source_id": "id08714",
+          "verdict": "PASS",
+          "reason": "«Beau joueur» is a good sport at play; «благородный игрок» is acceptable, and the following answer about the loss laughed off supports it. The prior correction is retained."
+        },
+        {
+          "source_id": "id08715",
+          "verdict": "PASS",
+          "reason": "«Jusqu'à deux mille pistoles» and «en riant aux larmes» are preserved; «хохоча до слёз» is idiomatic. The prior correction is confirmed."
+        },
+        {
+          "source_id": "id08716",
+          "verdict": "PASS",
+          "reason": "Accurate imperative with «alors» as «Тогда»."
+        },
+        {
+          "source_id": "id08717",
+          "verdict": "PASS",
+          "reason": "«Comment voulez-vous?» as «Как же это возможно?» matches the sense of objection; the question about the prisoners is kept. The prior correction is confirmed."
+        },
+        {
+          "source_id": "id08718",
+          "verdict": "PASS",
+          "reason": "The interjection, the officer's attribution and the suggestion to have the lackeys guard the prisoners are all kept."
+        },
+        {
+          "source_id": "id08719",
+          "verdict": "PASS",
+          "reason": "«Je n'ai garde» is rendered idiomatically as a firm refusal, and the fear that the prisoners would escape is kept."
+        },
+        {
+          "source_id": "id08720",
+          "verdict": "PASS",
+          "reason": "«Hommes de condition» as «знатные люди» and «vous y tenez tant» as «так за них держитесь» are both accurate."
+        },
+        {
+          "source_id": "id08721",
+          "verdict": "PASS",
+          "reason": "Complete and faithful: the two prisoners, the ransom of 2000 pounds sterling, the lackeys' belief in their wealth, the search, the nightly gambling for their purses, the possibly hidden jewels, the miser simile, and the permanent guard in turns. The final reading «я даже признаюсь вам» is closer to «je vous avouerai même», and the ё spelling is correct. The prior corrections are confirmed."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

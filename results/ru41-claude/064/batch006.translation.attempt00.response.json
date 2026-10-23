@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJUBZXvtzKBXDPyUxG2k",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id08629\",\"target\":\"— Ну, господа, — воскликнул Гаррисон, поставив стакан и нимало не считаясь с тем, что перед ним знаменитый узник, которого он конвоировал, — в путь!\"},{\"source_id\":\"id08630\",\"target\":\"— Где мы ночуем, полковник?\"},{\"source_id\":\"id08631\",\"target\":\"— В Тирске, — ответил Гаррисон.\"},{\"source_id\":\"id08632\",\"target\":\"— Перри, — сказал король, в свою очередь вставая и оборачиваясь к своему слуге, — мою лошадь. Я хочу ехать в Тирск.\"},{\"source_id\":\"id08633\",\"target\":\"— Право слово, — сказал д’Артаньян Атосу, — ваш король по-настоящему меня пленил, и я всецело к его услугам.\"},{\"source_id\":\"id08634\",\"target\":\"— Если вы говорите это искренне, — ответил Атос, — то до Лондона он не доедет.\"},{\"source_id\":\"id08635\",\"target\":\"— Как так?\"},{\"source_id\":\"id08636\",\"target\":\"— Да, ибо до того мы его похитим.\"},{\"source_id\":\"id08637\",\"target\":\"— Ах! На этот раз, Атос, — сказал д’Артаньян, — честное слово, вы сумасшедший.\"},{\"source_id\":\"id08638\",\"target\":\"— У вас, стало быть, есть какой-то определённый замысел? — спросил Арамис.\"},{\"source_id\":\"id08639\",\"target\":\"— Э! — сказал Портос. — Дело не было бы невозможным, будь у нас хороший план.\"},{\"source_id\":\"id08640\",\"target\":\"— У меня его нет, — сказал Атос, — но д’Артаньян его найдёт.\"},{\"source_id\":\"id08641\",\"target\":\"Д’Артаньян пожал плечами, и все тронулись в путь.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3586,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 634,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
