@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJuFJSMHoCwxUJJBGDU3",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-026-0040\",\"target\":\"Гленарван попросил его вглядеться в тёмный горизонт моря. Несколько минут Паганель добросовестно предавался этому созерцанию.\"},{\"source_id\":\"fr42c-026-0041\",\"target\":\"— Ну что же? Вы ничего не видите? — спросил Гленарван.\"},{\"source_id\":\"fr42c-026-0042\",\"target\":\"— Ничего! Даже кошка не разглядела бы тут ничего в двух шагах от себя.\"},{\"source_id\":\"fr42c-026-0043\",\"target\":\"— Ищите красный или зелёный огонь, то есть огонь левого или правого борта.\"},{\"source_id\":\"fr42c-026-0044\",\"target\":\"— Я не вижу ни зелёного, ни красного огня! Всё чёрно! — ответил Паганель, у которого глаза невольно закрывались.\"},{\"source_id\":\"fr42c-026-0045\",\"target\":\"Полчаса он машинально следовал за своим нетерпеливым другом, роняя голову на грудь и тут же резко вскидывая её. Он не отвечал, он больше не говорил. Нетвёрдые шаги заставляли его покачиваться, как пьяного. Гленарван посмотрел на Паганеля. Паганель спал на ходу.\"},{\"source_id\":\"fr42c-026-0046\",\"target\":\"Тогда Гленарван взял его под руку и, не разбудив, отвёл обратно в его нору, где удобно закопал его.\"},{\"source_id\":\"fr42c-026-0047\",\"target\":\"На рассвете все были подняты на ноги криком:\"},{\"source_id\":\"fr42c-026-0048\",\"target\":\"— <i>«Дункан»!</i> <i>«Дункан»!</i>\"},{\"source_id\":\"fr42c-026-0049\",\"target\":\"— Ура! Ура! — ответили Гленарвану его спутники, бросаясь на берег.\"},{\"source_id\":\"fr42c-026-0050\",\"target\":\"И в самом деле, в пяти милях от берега яхта со старательно убранными нижними парусами держалась на малом пару. Дым её неясно терялся в утренних туманах. Море было бурным, и судно такого водоизмещения не могло без опасности подойти к подножию отмелей.\"},{\"source_id\":\"fr42c-026-0051\",\"target\":\"Гленарван, вооружившись подзорной трубой Паганеля, наблюдал за движениями <i>«Дункана»</i>. Джон Манглс, должно быть, не заметил своих пассажиров, потому что не менял курса и продолжал идти левым галсом под зарифленным на нижний риф марселем.\"},{\"source_id\":\"fr42c-026-0052\",\"target\":\"Но в эту минуту Талькав, сильно забив заряд в карабин, выстрелил в сторону яхты.\"},{\"source_id\":\"fr42c-026-0053\",\"target\":\"Все прислушивались. Но больше всего смотрели. Трижды прогремел карабин индейца, будя эхо дюн.\"},{\"source_id\":\"fr42c-026-0054\",\"target\":\"Наконец у борта яхты показался белый дымок.\"},{\"source_id\":\"fr42c-026-0055\",\"target\":\"— Они нас увидели! — воскликнул Гленарван. — Это пушка <i>«Дункана»</i>!\"},{\"source_id\":\"fr42c-026-0056\",\"target\":\"И несколько секунд спустя глухой выстрел замер у самой кромки берега. Тотчас <i>«Дункан»</i>, сменив марсель и усилив огонь в топках, повернул так, чтобы пройти ближе к берегу.\"},{\"source_id\":\"fr42c-026-0057\",\"target\":\"Вскоре, с помощью трубы, было видно, как от борта отделилась шлюпка.\"},{\"source_id\":\"fr42c-026-0058\",\"target\":\"— Леди Элен не сможет приехать, — сказал Том Остин, — море слишком тяжёлое!\"},{\"source_id\":\"fr42c-026-0059\",\"target\":\"— Джон Манглс тоже, — ответил Мак-Наббс, — он не может покинуть свой корабль.\"}],\"review\":[{\"source_id\":\"fr42c-026-0040\",\"verdict\":\"PASS\",\"reason\":\"Faithful; request, observation and conscientious contemplation preserved.\"},{\"source_id\":\"fr42c-026-0041\",\"verdict\":\"PASS\",\"reason\":\"Dialogue and question preserved; punctuation correct.\"},{\"source_id\":\"fr42c-026-0042\",\"verdict\":\"PASS\",\"reason\":\"Cat image, negation and two paces preserved.\"},{\"source_id\":\"fr42c-026-0043\",\"verdict\":\"PASS\",\"reason\":\"Red/green lights correctly rendered as port/starboard lights.\"},{\"source_id\":\"fr42c-026-0044\",\"verdict\":\"PASS\",\"reason\":\"Double negation, darkness and involuntarily closing eyes preserved.\"},{\"source_id\":\"fr42c-026-0045\",\"verdict\":\"PASS\",\"reason\":\"Half hour, mechanical following, drunken rolling and sleep-walking all preserved.\"},{\"source_id\":\"fr42c-026-0046\",\"verdict\":\"PASS\",\"reason\":\"Arm, not waking him, hole and humorous 'buried' preserved.\"},{\"source_id\":\"fr42c-026-0047\",\"verdict\":\"PASS\",\"reason\":\"Dawn and cry introduction preserved.\"},{\"source_id\":\"fr42c-026-0048\",\"verdict\":\"PASS\",\"reason\":\"Italic ship name repeated; dialogue dash fits Russian.\"},{\"source_id\":\"fr42c-026-0049\",\"verdict\":\"PASS\",\"reason\":\"Replies and rush to shore preserved.\"},{\"source_id\":\"fr42c-026-0050\",\"verdict\":\"PASS\",\"reason\":\"Distance, sails, steam, smoke, rough sea and danger accurately conveyed.\"},{\"source_id\":\"fr42c-026-0051\",\"verdict\":\"PASS\",\"reason\":\"Nautical details and inference preserved; italics kept.\"},{\"source_id\":\"fr42c-026-0052\",\"verdict\":\"PASS\",\"reason\":\"Thalcave's loading and firing toward yacht preserved.\"},{\"source_id\":\"fr42c-026-0053\",\"verdict\":\"PASS\",\"reason\":\"Listening, watching, three shots and echoes preserved.\"},{\"source_id\":\"fr42c-026-0054\",\"verdict\":\"PASS\",\"reason\":\"White smoke at yacht's side preserved.\"},{\"source_id\":\"fr42c-026-0055\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and italic ship name preserved.\"},{\"source_id\":\"fr42c-026-0056\",\"verdict\":\"PASS\",\"reason\":\"Report, sail change, stoked fires and approach to coast preserved.\"},{\"source_id\":\"fr42c-026-0057\",\"verdict\":\"PASS\",\"reason\":\"Boat leaving the ship seen through glass; faithful.\"},{\"source_id\":\"fr42c-026-0058\",\"verdict\":\"PASS\",\"reason\":\"Speaker, Lady Helena (Элен) and rough sea preserved.\"},{\"source_id\":\"fr42c-026-0059\",\"verdict\":\"PASS\",\"reason\":\"Names and reason preserved; 'non plus' rendered correctly.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 12219,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2430,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
