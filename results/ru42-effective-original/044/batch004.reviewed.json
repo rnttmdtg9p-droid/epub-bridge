@@ -1,0 +1,146 @@
+{
+  "unit": 44,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-044-0082",
+      "target": "Майор, который вовсе не был эгоистом, собирался разбудить Паганеля, чтобы учёный мог увидеть это явление собственными глазами, но его остановило одно происшествие.",
+      "source_sha256": "c6298779b4299a1bd65c8cb76a5f6367eac4176adb535ee0ab550a44aad61523",
+      "target_id": "ru-fr42c-044-0082",
+      "tag": "p",
+      "target_sha256": "c5c6b10bd57ff8ea01d4f9d1f7d604969196af1ed0c0ac669ffe763c1f5fb465"
+    },
+    {
+      "source_id": "fr42c-044-0083",
+      "target": "Фосфорический свет озарял лес на расстоянии полумили, и Мак-Наббсу показалось, что на освещённой опушке быстро проходят какие-то тени. Обманывало ли его зрение? Не был ли он игрушкой галлюцинации?",
+      "source_sha256": "e5d6f61d3be46ee034b091c0decaef4773765903470705519b9bc4ed8a6f893d",
+      "target_id": "ru-fr42c-044-0083",
+      "tag": "p",
+      "target_sha256": "360749a16cc572ea64c72b8c45e482b2f832e122cd0fc342bbf76f2d3757bd7e"
+    },
+    {
+      "source_id": "fr42c-044-0084",
+      "target": "Мак-Наббс лёг на землю и, после тщательного наблюдения, ясно различил нескольких человек, которые, поочерёдно то нагибаясь, то выпрямляясь, как будто искали на земле ещё свежие следы.",
+      "source_sha256": "9c30c627df203586128774e1d63df578199a9e0ed698abaed58af8345665e8d5",
+      "target_id": "ru-fr42c-044-0084",
+      "tag": "p",
+      "target_sha256": "a28fd4ba8058509c5dd2dfc6bb48850055928c40f9e43682197802d5f8bb7803"
+    },
+    {
+      "source_id": "fr42c-044-0085",
+      "target": "Чего хотели эти люди, нужно было непременно узнать.",
+      "source_sha256": "029f2a58f249e840698aeedd58b0abf78dd19d613d01769bd0349070736f132d",
+      "target_id": "ru-fr42c-044-0085",
+      "tag": "p",
+      "target_sha256": "378f75959f1e7471a591de5cbceb6dd149fbef8aa2c1f193d6fb2b18fd4f67f8"
+    },
+    {
+      "source_id": "fr42c-044-0086",
+      "target": "Майор не колебался и, не поднимая тревоги среди своих спутников, пополз по земле, как дикарь прерий, и скрылся в высокой траве.",
+      "source_sha256": "de3168122b82a0a3c27fea8d16b6197b3bbc0bdf1bc3fdf09b6efa24e3823292",
+      "target_id": "ru-fr42c-044-0086",
+      "tag": "p",
+      "target_sha256": "57554bd5d7e19894ea66457b48d9b551c519912ea10e1e4c48bb994d1bc02439"
+    },
+    {
+      "source_id": "fr42c-note-082",
+      "target": "Этот факт уже был отмечен Драммондом в Австралии, по поводу грибов, которые, по-видимому, принадлежат к семейству <i>Agaricus olearicus</i>.",
+      "source_sha256": "71dbdb9d11e569f6c78efa7549e9fc48efb3c23493e2aa4eaa917faccaa1ea41",
+      "target_id": "ru-fr42c-note-082",
+      "tag": "note",
+      "target_sha256": "82219b7e4232a56318b6cdd8a04a352fa6931c35464e57364e0ca6773ae7de09"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-044-0082",
+      "verdict": "CORRECTED",
+      "reason": "«Incident» rendered more precisely as происшествие; meaning otherwise preserved."
+    },
+    {
+      "source_id": "fr42c-044-0083",
+      "verdict": "CORRECTED",
+      "reason": "Fixed Мак-Наббсу dative; «jouet d'une hallucination» restored as игрушка; phosphorescent rendered consistently."
+    },
+    {
+      "source_id": "fr42c-044-0084",
+      "verdict": "CORRECTED",
+      "reason": "Name hyphenated; «hommes» and the rigorous observation kept; word order made clearer."
+    },
+    {
+      "source_id": "fr42c-044-0085",
+      "verdict": "CORRECTED",
+      "reason": "Restored source emphasis on the necessity of finding out what the men wanted."
+    },
+    {
+      "source_id": "fr42c-044-0086",
+      "verdict": "CORRECTED",
+      "reason": "Fixed agency: he did not wake companions, and crawled/disappeared; «prairies» not steppes."
+    },
+    {
+      "source_id": "fr42c-note-082",
+      "verdict": "CORRECTED",
+      "reason": "«Famille» rendered as семейство; «abordé» as отмечен; italics preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-044-0082",
+      "before": "Майор, который вовсе не был эгоистом, собирался разбудить Паганеля, чтобы учёный мог увидеть это явление собственными глазами, но его остановил непредвиденный случай.",
+      "after": "Майор, который вовсе не был эгоистом, собирался разбудить Паганеля, чтобы учёный мог увидеть это явление собственными глазами, но его остановило одно происшествие."
+    },
+    {
+      "source_id": "fr42c-044-0083",
+      "before": "Фосфоресцирующий свет озарял лес на расстоянии полумили, и Мак-Наббс показалось, что он видит быстро проносящиеся тени на освещённой опушке. Обманывал ли его взгляд? Был ли он жертвой галлюцинации?",
+      "after": "Фосфорический свет озарял лес на расстоянии полумили, и Мак-Наббсу показалось, что на освещённой опушке быстро проходят какие-то тени. Обманывало ли его зрение? Не был ли он игрушкой галлюцинации?"
+    },
+    {
+      "source_id": "fr42c-044-0084",
+      "before": "Мак Наббс прилег на землю и, пристально присмотревшись, отчётливо разглядел нескольких мужчин, которые, то наклоняясь, то выпрямляясь, поочерёдно, казалось, искали на земле ещё свежие следы.",
+      "after": "Мак-Наббс лёг на землю и, после тщательного наблюдения, ясно различил нескольких человек, которые, поочерёдно то нагибаясь, то выпрямляясь, как будто искали на земле ещё свежие следы."
+    },
+    {
+      "source_id": "fr42c-044-0085",
+      "before": "Нужно было понять, чего хотели эти люди.",
+      "after": "Чего хотели эти люди, нужно было непременно узнать."
+    },
+    {
+      "source_id": "fr42c-044-0086",
+      "before": "Майор не колебался и, не разбудив своих товарищей, полз по земле, как дикарь степей, и скрылся в высокой траве.",
+      "after": "Майор не колебался и, не поднимая тревоги среди своих спутников, пополз по земле, как дикарь прерий, и скрылся в высокой траве."
+    },
+    {
+      "source_id": "fr42c-note-082",
+      "before": "Этот факт уже упоминался Драммондом в Австралии в связи с грибами, которые, по-видимому, относятся к роду <i>Agaricus olearicus</i>.",
+      "after": "Этот факт уже был отмечен Драммондом в Австралии, по поводу грибов, которые, по-видимому, принадлежат к семейству <i>Agaricus olearicus</i>."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/044/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK179uN3QbJwezxhh3Nq",
+    "usage": {
+      "input_tokens": 4468,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 919,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
