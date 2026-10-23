@@ -1,0 +1,241 @@
+{
+  "unit": 33,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id04277",
+      "target": "— Мой противник, обратившись в бегство, — сказал де Гиш, — оставил мне полную возможность поспешить вам на помощь; но тяжело ли вы ранены? Я вижу, вы весь в крови.",
+      "source_sha256": "00180a2b4f8dd068db982ed4fbbe0dbad1e9f49020f861c7b5874135d05f434b",
+      "target_id": "ru-id04277",
+      "tag": "p",
+      "target_sha256": "c8df03fc21ecfdb45d902a72d4909cfe6237fe701c05453c63f7688cfae50c44"
+    },
+    {
+      "source_id": "id04278",
+      "target": "— Мне кажется, — сказал Рауль, — у меня что-то вроде царапины на руке. Помогите же мне выбраться из-под лошади, и ничто, надеюсь, не помешает нам продолжить путь.",
+      "source_sha256": "5bf6472266ec1c8679f29162df48c63d2126cce09c8b4e5efeb8b39f15d21233",
+      "target_id": "ru-id04278",
+      "tag": "p",
+      "target_sha256": "7b2508d7bdd48ae8e4eb2909412e5992aa9883db8e7eb3862c9048ce4ec754b9"
+    },
+    {
+      "source_id": "id04279",
+      "target": "Г-н д’Арминж и Оливен уже спешились и приподнимали лошадь, бившуюся в агонии. Раулю удалось высвободить ногу из стремени и вытащить её из-под лошади, и через мгновение он уже стоял на ногах.",
+      "source_sha256": "cd8afa0c66ed1228996a11f8d5fbbeece81d6e7bf2a13a8dfd8e8f8f8364907d",
+      "target_id": "ru-id04279",
+      "tag": "p",
+      "target_sha256": "e1d8e41e9ce90b50b373d688b33e6f3ff8081a1b8078d7be66e60ba633373bf0"
+    },
+    {
+      "source_id": "id04280",
+      "target": "— Ничего не сломано? — спросил де Гиш.",
+      "source_sha256": "1d8c4562f9366c7f4a1bcc3ec715eca530849e0f365c59cfe2673b8dd7380852",
+      "target_id": "ru-id04280",
+      "tag": "p",
+      "target_sha256": "55aa280e6e3aaa06af8af3a148ccaf0d533edb5dcc36023eeddbef2a92f152c9"
+    },
+    {
+      "source_id": "id04281",
+      "target": "— Право, нет, слава Богу, — ответил Рауль. — Но что сталось с теми несчастными, которых убивали эти негодяи?",
+      "source_sha256": "6cc48cd16bfcad07898ce2d97cafcf1dc5550bbada9d16f477adc783c34fd0ad",
+      "target_id": "ru-id04281",
+      "tag": "p",
+      "target_sha256": "e72a8a80f28c9f48571df0de4bcadb14041fe1d772119b3bcda877b47263e062"
+    },
+    {
+      "source_id": "id04282",
+      "target": "— Мы подоспели слишком поздно: они, кажется, убили их и бежали, унеся добычу; двое моих лакеев находятся возле трупов.",
+      "source_sha256": "48f7be63d10370e545da21be02a1c05ef7d56394b68ef3d14f32a18e79957615",
+      "target_id": "ru-id04282",
+      "tag": "p",
+      "target_sha256": "0763bca23ec1a6bb2402ec69a302e58113a6386030e72ad0f03df5546c09867d"
+    },
+    {
+      "source_id": "id04283",
+      "target": "— Пойдёмте посмотрим, так ли уж они мертвы и нельзя ли оказать им помощь, — сказал Рауль. — Оливен, нам достались в наследство две лошади, но я потерял свою: возьмите себе лучшую из двух, а мне отдайте вашу.",
+      "source_sha256": "d0366d541be2b06696068694f87a60e91bba91f5aaa4710cfe05262dafad1540",
+      "target_id": "ru-id04283",
+      "tag": "p",
+      "target_sha256": "0bd2e737bff786a997707e88abf155eb3ad5f5e0df259e53c78ddcc4c684128a"
+    },
+    {
+      "source_id": "id04284",
+      "target": "И они подошли к месту, где лежали жертвы.",
+      "source_sha256": "6b42910a4205e99cebd12629bb849595ad9312e86841547042f5dcaf8494dc03",
+      "target_id": "ru-id04284",
+      "tag": "p",
+      "target_sha256": "9f6cef2a0320f81593106c5b586b63a8a174428ac224207340cc7397de1f5235"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id04277",
+      "verdict": "PASS",
+      "reason": "Faithful in meaning, agency and tone; only a punctuation tweak to the final sentence."
+    },
+    {
+      "source_id": "id04278",
+      "verdict": "PASS",
+      "reason": "Accurate: scratch on the arm, request for help, hope about continuing the journey."
+    },
+    {
+      "source_id": "id04279",
+      "verdict": "CORRECTED",
+      "reason": "The draft said «другую ногу», adding a second leg that the source does not mention (son pied… sa jambe is the same leg). Replaced with «вытащить её из-под лошади»."
+    },
+    {
+      "source_id": "id04280",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id04281",
+      "verdict": "PASS",
+      "reason": "Accurate; negation, exclamation and the victims/assailants roles preserved."
+    },
+    {
+      "source_id": "id04282",
+      "verdict": "CORRECTED",
+      "reason": "«стоят возле трупов» added a posture not in the source (sont près des cadavres). Changed to «находятся возле трупов»."
+    },
+    {
+      "source_id": "id04283",
+      "verdict": "CORRECTED",
+      "reason": "«не вполне ли они мертвы» reversed the sense: the source means 'whether they are not quite dead'. Replaced with the idiomatic «так ли уж они мертвы»."
+    },
+    {
+      "source_id": "id04284",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id04279",
+      "before": "Г-н д’Арминж и Оливен уже спешились и приподнимали лошадь, бившуюся в агонии. Раулю удалось высвободить ногу из стремени и вытащить другую ногу из-под лошади, и через мгновение он уже стоял на ногах.",
+      "after": "Г-н д’Арминж и Оливен уже спешились и приподнимали лошадь, бившуюся в агонии. Раулю удалось высвободить ногу из стремени и вытащить её из-под лошади, и через мгновение он уже стоял на ногах."
+    },
+    {
+      "source_id": "id04282",
+      "before": "— Мы подоспели слишком поздно: они, кажется, убили их и бежали, унеся добычу; двое моих лакеев стоят возле трупов.",
+      "after": "— Мы подоспели слишком поздно: они, кажется, убили их и бежали, унеся добычу; двое моих лакеев находятся возле трупов."
+    },
+    {
+      "source_id": "id04283",
+      "before": "— Пойдёмте посмотрим, не вполне ли они мертвы и нельзя ли оказать им помощь, — сказал Рауль. — Оливен, нам достались в наследство две лошади, но я потерял свою: возьмите себе лучшую из двух, а мне отдайте вашу.",
+      "after": "— Пойдёмте посмотрим, так ли уж они мертвы и нельзя ли оказать им помощь, — сказал Рауль. — Оливен, нам достались в наследство две лошади, но я потерял свою: возьмите себе лучшую из двух, а мне отдайте вашу."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJN7psbPmwSkhhTYfL6e",
+    "usage": {
+      "input_tokens": 3081,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1502,
+      "output_tokens_details": {
+        "thinking_tokens": 886
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJN8dK6LQzxTgubMw1Ag",
+    "usage": {
+      "input_tokens": 4781,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2710,
+      "output_tokens_details": {
+        "thinking_tokens": 1629
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJN9vbScwstYrLmvBD5X",
+        "usage": {
+          "input_tokens": 5403,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1831,
+          "output_tokens_details": {
+            "thinking_tokens": 573
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04277",
+          "verdict": "PASS",
+          "reason": "Faithful: the enemy's flight, de Guiche's freedom to come to the rescue, the question about the severity of the wound and the blood are all preserved; the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id04278",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Faithful: «quelque chose comme une égratignure», the request for help and the hope that nothing will prevent continuing the journey are all rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id04279",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «sa jambe de dessous le cheval» is now rendered as «вытащить её (ногу) из-под лошади», with no spurious «другую ногу». Agency, sequence and the agony of the horse are preserved."
+        },
+        {
+          "source_id": "id04280",
+          "verdict": "PASS",
+          "reason": "Exact and natural."
+        },
+        {
+          "source_id": "id04281",
+          "verdict": "PASS",
+          "reason": "«Ma foi, non, grâce au ciel» is rendered naturally; the victims and the 'misérables' who were killing them are preserved; the tense is correct."
+        },
+        {
+          "source_id": "id04282",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «sont près des cadavres» is rendered as «находятся возле трупов». The 'je crois' hedge, the arrival too late, the flight with the booty and the two lackeys are all preserved."
+        },
+        {
+          "source_id": "id04283",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «s'ils ne sont point tout à fait morts» is rendered as «так ли уж они мертвы», which conveys the doubt that they are completely dead. The inheritance of two horses, the loss of Raoul's own and the exchange with Olivain are all accurate."
+        },
+        {
+          "source_id": "id04284",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
