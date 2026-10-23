@@ -1,0 +1,34 @@
+name: BB Russian 42 continuous full original translation and review
+on:
+  push:
+    paths: ['.github/workflows/bb-ru42-output-budget-resume.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-ru42-continuous-output-budget-resume-v5070
+  cancel-in-progress: false
+jobs:
+  translate-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure durable sequential chapter checkpoints
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Translate complete original with DeepL quality optimized and source-aligned Claude review
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru42_original.py
+      - name: Preserve all actual provider and review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru42-complete-original-translation-review-v5070
+          path: results/ru42-complete-original/
+          retention-days: 90
+          if-no-files-found: warn
