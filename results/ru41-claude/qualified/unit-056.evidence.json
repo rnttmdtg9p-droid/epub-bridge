@@ -1,0 +1,82 @@
+{
+  "unit": 56,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 165,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 20,
+      "response_id": "msg_011CgJQzXsoevQ5i55hMQa8Y",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 1,
+      "rows": 20,
+      "response_id": "msg_011CgJR4GzU25ZaQrTkzeeXo",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 2,
+      "rows": 20,
+      "response_id": "msg_011CgJR8k8ia4ykMTjaTWP7w",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 3,
+      "rows": 20,
+      "response_id": "msg_011CgJRBhP7VjFH1QJjukyEn",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 4,
+      "rows": 20,
+      "response_id": "msg_011CgJRHqj4kZ4usCpBBJs6H",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 5,
+      "rows": 20,
+      "response_id": "msg_011CgJRMheWGtZyFdYaBnETi",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 6,
+      "rows": 20,
+      "response_id": "msg_011CgJRR9EDdUH4Trb3HXfwg",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 7,
+      "rows": 20,
+      "response_id": "msg_011CgJRUvwAUaZTjstBMbAWe",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 8,
+      "rows": 6,
+      "response_id": "msg_011CgJRYHcTNUmPdSuvwTQ3n",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    }
+  ],
+  "controlling_corrections": 0,
+  "qualified_target_sha256": "2ac8d0f007f1ff0c94f359c6d1efe8d9f7785b18b828ce73eebbae751d7150c3",
+  "book_release": false
+}
