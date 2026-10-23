@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJsN5nJA93D5HESRWLYZ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-019-0120\",\"target\":\"И Роберт, и он, спешившись, бросились друг другу в объятия. Потом настал черёд индейца прижать к груди отважного сына капитана Гранта.\"},{\"source_id\":\"fr42c-019-0121\",\"target\":\"— Он жив! Он жив! — повторял Гленарван.\"},{\"source_id\":\"fr42c-019-0122\",\"target\":\"— Да! — ответил Роберт. — И всё благодаря Тауке!\"},{\"source_id\":\"fr42c-019-0123\",\"target\":\"Индеец не дожидался этих слов признательности, чтобы поблагодарить своего коня; в эту минуту он говорил с ним, целовал его, словно в жилах гордого животного текла человеческая кровь.\"},{\"source_id\":\"fr42c-019-0124\",\"target\":\"Потом, обернувшись к Паганелю, он указал ему на юного Роберта:\"},{\"source_id\":\"fr42c-019-0125\",\"target\":\"— Храбрец! — сказал он.\"},{\"source_id\":\"fr42c-019-0126\",\"target\":\"И, употребив индейскую метафору, которой выражают мужество, добавил:\"},{\"source_id\":\"fr42c-019-0127\",\"target\":\"— Его шпоры не дрогнули!\"},{\"source_id\":\"fr42c-019-0128\",\"target\":\"Между тем Гленарван, обнимая Роберта, говорил ему:\"},{\"source_id\":\"fr42c-019-0129\",\"target\":\"— Почему же, сын мой, почему ты не позволил Талькаву или мне попытать этот последний шанс спасти тебя?\"},{\"source_id\":\"fr42c-019-0130\",\"target\":\"— Милорд, — ответил мальчик с выражением живейшей благодарности, — разве не мне надлежало пожертвовать собой? Талькав уже спас мне жизнь! А вы спасёте моего отца.\"},{\"source_id\":\"fr42c-note-042\",\"target\":\"Светящиеся насекомые.\"}],\"review\":[{\"source_id\":\"fr42c-019-0120\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed phrasing; meaning, mutual embrace and Indian's turn preserved.\"},{\"source_id\":\"fr42c-019-0121\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation converted to Russian dash style; imperfect kept.\"},{\"source_id\":\"fr42c-019-0122\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue format; 'grâce à Thaouka' rendered faithfully.\"},{\"source_id\":\"fr42c-019-0123\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed repetitive 'благодарности/поблагодарить'; 'embrassait' as kissing kept; negation preserved.\"},{\"source_id\":\"fr42c-019-0124\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiomatic phrasing; content unchanged.\"},{\"source_id\":\"fr42c-019-0125\",\"verdict\":\"CORRECTED\",\"reason\":\"Merged speech and tag into dash format; 'brave' as 'Храбрец'; later sentence split handled in next rows.\"},{\"source_id\":\"fr42c-019-0126\",\"verdict\":\"CORRECTED\",\"reason\":\"Preserved Indian metaphor intro; added 'добавил' bridging to the following quote, a row-boundary-driven rendering.\"},{\"source_id\":\"fr42c-019-0127\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; negation preserved. The 'ajouta-t-il' is carried by the previous row's 'добавил'.\"},{\"source_id\":\"fr42c-019-0128\",\"verdict\":\"CORRECTED\",\"reason\":\"Minor wording; agency preserved.\"},{\"source_id\":\"fr42c-019-0129\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Талькав fixed; dash dialogue; 'tenter cette dernière chance' rendered accurately.\"},{\"source_id\":\"fr42c-019-0130\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed name Талькав (draft had Талкаве); removed stray guillemet; dash format; future 'вы спасёте' kept.\"},{\"source_id\":\"fr42c-note-042\",\"verdict\":\"PASS\",\"reason\":\"Accurate note translation.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 5957,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1458,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
