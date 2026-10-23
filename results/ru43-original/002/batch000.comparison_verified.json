@@ -1,0 +1,153 @@
+{
+  "unit": 2,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-002-heading",
+      "target": "ПОЯСНЕНИЕ",
+      "source_sha256": "e725944c5cff91456836a1b7df75a9c2efb0ea4b0d474070b3f25feef11b1daf",
+      "target_id": "ru-043-002-heading",
+      "tag": "heading",
+      "target_sha256": "66e9514eef5409c5d813867ce99c7d9dc9644a585129fa5f63040978b55ad2b3"
+    },
+    {
+      "source_id": "043-002-0001",
+      "target": "В этой книге употреблён ряд диалектов, а именно: миссурийский диалект негров; самая крайняя форма диалекта глухих юго-западных лесов; обыкновенный диалект «округа Пайк» и четыре видоизменённые разновидности этого последнего. Оттенки переданы не кое-как и не наугад, а с большим тщанием, под надёжным руководством и опорой личного знакомства со всеми этими видами речи.",
+      "source_sha256": "afc3fa46a29303f3b847d7b8b4c8271bf2a32fa3f72bc9bbefe28ffbf1aca5af",
+      "target_id": "ru-043-002-0001",
+      "tag": "p",
+      "target_sha256": "a67b430d0ef54e83547fc1528f1afe8e7a902c7a18451523dc218c5b12c60af9"
+    },
+    {
+      "source_id": "043-002-0002",
+      "target": "Я даю это пояснение потому, что без него многие читатели решили бы, будто все эти персонажи пытались говорить одинаково, да у них не выходило.",
+      "source_sha256": "5f61eb660c5dd5ed72f922feb6e0e63241f42216659aa5c39c2102cd5f346d46",
+      "target_id": "ru-043-002-0002",
+      "tag": "p",
+      "target_sha256": "80c23fe293dae0e6c0da47cca1fa0f5268ab3e38c38e5ccc2ecf9100bb6130d2"
+    },
+    {
+      "source_id": "043-002-0003",
+      "target": "АВТОР.",
+      "source_sha256": "ee7ee4f6a151e50b3ecce988ac118d7df315c1373e07c684f6421993b5957e06",
+      "target_id": "ru-043-002-0003",
+      "tag": "signature",
+      "target_sha256": "1c3cc35c00de1b277cb2d97dedd5902b7572bdbf5e2c6b6c8dbff70967dcdab1"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-002-heading",
+      "verdict": "CORRECTED",
+      "reason": "Heading 'EXPLANATORY' rendered more naturally as 'ПОЯСНЕНИЕ', a standard paratext title."
+    },
+    {
+      "source_id": "043-002-0001",
+      "verdict": "CORRECTED",
+      "reason": "Draft was stiff and bureaucratic ('не осуществлялась', 'модифицированных'). Rewrote idiomatically; kept all dialects, 'painstakingly', 'trustworthy guidance and support' and personal familiarity."
+    },
+    {
+      "source_id": "043-002-0002",
+      "verdict": "CORRECTED",
+      "reason": "Meaning kept; tightened for fluency and kept the conditional 'would suppose' and the 'not succeeding' joke."
+    },
+    {
+      "source_id": "043-002-0003",
+      "verdict": "PASS",
+      "reason": "Signature 'THE AUTHOR.' correctly rendered as 'АВТОР.'"
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-002-heading",
+      "before": "ПОЯСНИТЕЛЬНАЯ ЗАПИСЬ",
+      "after": "ПОЯСНЕНИЕ"
+    },
+    {
+      "source_id": "043-002-0001",
+      "before": "В этой книге используется ряд диалектов, а именно: диалект негров штата Миссури; крайняя форма юго-западного диалекта глубинки; обычный диалект «округа Пайк»; и четыре модифицированных разновидности последнего. Передача нюансов не осуществлялась наугад или на основе догадок, а проводилась кропотливо, под надёжным руководством и при поддержке личного знакомства с этими различными формами речи.",
+      "after": "В этой книге употреблён ряд диалектов, а именно: миссурийский диалект негров; самая крайняя форма диалекта глухих юго-западных лесов; обыкновенный диалект «округа Пайк» и четыре видоизменённые разновидности этого последнего. Оттенки переданы не кое-как и не наугад, а с большим тщанием, под надёжным руководством и опорой личного знакомства со всеми этими видами речи."
+    },
+    {
+      "source_id": "043-002-0002",
+      "before": "Я даю это пояснение по той причине, что без него многие читатели могли бы подумать, будто все эти персонажи пытались говорить одинаково, но у них это не получалось.",
+      "after": "Я даю это пояснение потому, что без него многие читатели решили бы, будто все эти персонажи пытались говорить одинаково, да у них не выходило."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/002/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKDcbjL3oAy66pGMKd4g",
+    "usage": {
+      "input_tokens": 2698,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 632,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKDcviLimHsEFFyYDMLk",
+        "usage": {
+          "input_tokens": 3276,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 666,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-002-heading",
+          "verdict": "PASS",
+          "reason": "\"EXPLANATORY\" is rendered as a paratext heading, \"ПОЯСНЕНИЕ\". The earlier correction is verified and no new chapter is created."
+        },
+        {
+          "source_id": "043-002-0001",
+          "verdict": "PASS",
+          "reason": "All dialect categories are preserved: Missouri negro, extreme backwoods Southwestern, Pike County, and four modified varieties. \"Not haphazard or guesswork, but painstakingly, with personal familiarity\" is faithful. The prior corrections are verified."
+        },
+        {
+          "source_id": "043-002-0002",
+          "verdict": "PASS",
+          "reason": "The reason for the explanation is preserved: readers would suppose the characters were trying to talk alike and failing. The register is idiomatic and the prior correction is verified."
+        },
+        {
+          "source_id": "043-002-0003",
+          "verdict": "PASS",
+          "reason": "The signature \"THE AUTHOR.\" is correctly rendered as \"АВТОР.\" and kept as a signature."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
