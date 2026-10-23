@@ -1,0 +1,38 @@
+name: BB rank41 safe transition to repaired Claude adapter
+on:
+  push:
+    paths: ['.github/workflows/bb-ru41-safe-transition.yml']
+permissions:
+  contents: read
+  actions: write
+jobs:
+  transition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify saved rank41 checkpoint and stop only superseded run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import base64,json,os,urllib.request
+          base='https://api.github.com/repos/rnttmdtg9p-droid/epub-bridge'
+          def request(path,method='GET'):
+              req=urllib.request.Request(base+path,method=method,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'})
+              with urllib.request.urlopen(req,timeout=30) as r:
+                  body=r.read()
+                  return json.loads(body) if body else {}
+          run=request('/actions/runs/39877600129')
+          assert run['head_branch']=='bb-ru41-claude-v5070-20261023'
+          assert run['path']=='.github/workflows/bb-ru41-claude.yml'
+          checkpoint=request('/contents/results/ru41-claude/034/chapter.reviewed.json?ref=bb-ru41-claude-v5070-20261023')
+          data=json.loads(base64.b64decode(checkpoint['content']))
+          assert data['unit']==34 and data['source_rows']==len(data['rows']) and data['rows']
+          print('SAVED_CHECKPOINT_CONFIRMED_UNIT_34',checkpoint['sha'])
+          if run['status']!='completed':
+              request('/actions/runs/39877600129/cancel','POST')
+              print('SUPERSEDED_RANK41_RUN_CANCEL_REQUESTED_39877600129')
+          else:
+              print('SUPERSEDED_RUN_ALREADY_FINISHED',run.get('conclusion'))
+          print('REPAIRED_RUN_39883078624_REUSES_LATEST_SAVED_RESULTS_AFTER_CONCURRENCY_LOCK_RELEASE')
+          PY
