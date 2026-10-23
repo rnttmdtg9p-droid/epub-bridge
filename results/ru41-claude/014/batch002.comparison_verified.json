@@ -1,0 +1,457 @@
+{
+  "unit": 14,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01678",
+      "target": "— К тому же, — спросил Портос, — разве вы сами не держите до сих пор при себе всё того же лакея: этого славного, степенного, смышлёного… как бишь его зовут?",
+      "source_sha256": "733e2425d17821daf2f38b006bc121a93f7d1d9e9dec79d5014d44da800b663f",
+      "target_id": "ru-id01678",
+      "tag": "p",
+      "target_sha256": "2e9202e4994d2c9fc68607ddb50d0b237bb085809adb4a0c863dcc55d7b4d794"
+    },
+    {
+      "source_id": "id01679",
+      "target": "— Планше. Да, я его разыскал, но он уже не лакей.",
+      "source_sha256": "dc678f8666be64daec1a8e5b3f28dbdab13ed6341a158af6db551c3a2687221e",
+      "target_id": "ru-id01679",
+      "tag": "p",
+      "target_sha256": "7df7f03f6b622099efcc8408025347756cb14a23d03fac50311d68874664b6c2"
+    },
+    {
+      "source_id": "id01680",
+      "target": "— Кто же он теперь?",
+      "source_sha256": "1d95110700959b6265fdd625e03557ab0fa75824ab4a1fe2e73d8b6a7e6afb67",
+      "target_id": "ru-id01680",
+      "tag": "p",
+      "target_sha256": "c5acf4f9cc251fe9c22c29e101cc90dcf24617b66f7574e67615f5f0da18f7c8"
+    },
+    {
+      "source_id": "id01681",
+      "target": "— Ну так вот! На свои тысячу шестьсот ливров, помните, те тысячу шестьсот ливров, что он заработал при осаде Ла-Рошели, отвезя письмо лорду Винтеру, он завёл небольшую лавку на улице Ломбардцев и стал кондитером.",
+      "source_sha256": "f5e6dca092139351a2846361be670fc8f57f8ca80629c8601ff85ac7df456a29",
+      "target_id": "ru-id01681",
+      "tag": "p",
+      "target_sha256": "722f6b11348202b02c78dffeb8098e989a4842182634fc9442b33b8f087a0980"
+    },
+    {
+      "source_id": "id01682",
+      "target": "— А! Он кондитер на улице Ломбардцев! Но как же он вам служит?",
+      "source_sha256": "904fe3ead31a603cad731d30ef11eb5bf8136080a4cbeeeb0cfed02fed887d77",
+      "target_id": "ru-id01682",
+      "tag": "p",
+      "target_sha256": "58dccc5ad7cf007f76427a8e1b184e13b16155d16bae4f79f37bb327363450ba"
+    },
+    {
+      "source_id": "id01683",
+      "target": "— Он позволил себе кое-какие выходки, — сказал д’Артаньян, — и опасается, как бы его не потревожили.",
+      "source_sha256": "591c88949687ff4a6f94c0a20c0fd64ba9bf0f8dec4f5f1dbae88d7c2ebf5717",
+      "target_id": "ru-id01683",
+      "tag": "p",
+      "target_sha256": "ee9323b3eb8483c144fa2a33874f93243f9db3b2df7342ea50fee3bba2ec7720"
+    },
+    {
+      "source_id": "id01684",
+      "target": "И мушкетёр рассказал своему другу, как он разыскал Планше.",
+      "source_sha256": "2204be3a907bcea004b1e465cf5beea9527ed96d25e1a2db468744daad362896",
+      "target_id": "ru-id01684",
+      "tag": "p",
+      "target_sha256": "a579cad5cc480416b864e68e23e913e534c7ea8cd17ca89eed069ae8d61598d4"
+    },
+    {
+      "source_id": "id01685",
+      "target": "— Ну так вот! — сказал тогда Портос. — А если бы вам сказали, мой милый, что в один прекрасный день Планше поможет бежать Рошфору, а вы станете из-за этого его прятать?",
+      "source_sha256": "243c1a8f9278b7638cd17ac268e5f743c2796b30340fbc78c0ad7b67339cc235",
+      "target_id": "ru-id01685",
+      "tag": "p",
+      "target_sha256": "1a27429eeb6f6c19eaa289e09506353ef6a38f4c090da8da360d832d07fd381e"
+    },
+    {
+      "source_id": "id01686",
+      "target": "— Я бы не поверил. Но что поделаешь? События меняют людей.",
+      "source_sha256": "0a587fdf67345d818962974f2932da09abb9496467500775c0dd376add7bcee8",
+      "target_id": "ru-id01686",
+      "tag": "p",
+      "target_sha256": "0e9e045adc3821b9c62ed9404d332de8a3056dcee7c2b54d7a5ee93e8040766d"
+    },
+    {
+      "source_id": "id01687",
+      "target": "— Нет ничего вернее, — сказал Портос, — но вот что не меняется, или меняется лишь затем, чтобы стать лучше, — это вино. Попробуйте-ка вот это; оно из тех испанских виноградников, которые наш друг Атос очень ценил: это херес.",
+      "source_sha256": "878bea9d7e41c5430560731b07b751c9159114d43fb20cd92c5f91dfb1dc45c7",
+      "target_id": "ru-id01687",
+      "tag": "p",
+      "target_sha256": "28dca3c8bf3a9a0d85c86c7faa4b1d093538a34773b7d8918fde868e44d679ec"
+    },
+    {
+      "source_id": "id01688",
+      "target": "В эту минуту управитель пришёл спросить хозяина о завтрашнем меню, а также о задуманной охоте.",
+      "source_sha256": "a8d4c7b79137097038804a6aa422b92be07310a4ebb13b0a905ee8c26999f3e6",
+      "target_id": "ru-id01688",
+      "tag": "p",
+      "target_sha256": "2c3d8fa935b2b3e377e1b3d218b0f78618193a38da459f5d9b2c600ae09df9ba"
+    },
+    {
+      "source_id": "id01689",
+      "target": "— Скажи-ка, Мустон, — сказал Портос, — в добром ли состоянии моё оружие?",
+      "source_sha256": "3001bafdd4e431fd0ebe3039f2c3b6770e2f3621252fcf98eb778af403883c58",
+      "target_id": "ru-id01689",
+      "tag": "p",
+      "target_sha256": "94be3bb559f0c71e980dce4cfd22fe270da034d5fe3da8969d0f39bc1aa1ed45"
+    },
+    {
+      "source_id": "id01690",
+      "target": "Д’Артаньян принялся отбивать такт по столу, чтобы скрыть своё смущение.",
+      "source_sha256": "4bcf684be9437c0421ff301f972e3c8e9026272920fd11500a87e5b82befb93f",
+      "target_id": "ru-id01690",
+      "tag": "p",
+      "target_sha256": "00f4db42e4066df49d02ed8ed9c428d5b08c069d510800f8290b0830b2099a57"
+    },
+    {
+      "source_id": "id01691",
+      "target": "— Ваше оружие, монсеньор? — спросил Мустон. — Какое оружие?",
+      "source_sha256": "b0cc0d5a6ce298dde75f5fa512b1c4ccdf4f6ce20b067e48bdb406242fa12869",
+      "target_id": "ru-id01691",
+      "tag": "p",
+      "target_sha256": "868791c2564f955da38615c09d1c56b61f67d22c592abbb5b8ae5b47228ce3b1"
+    },
+    {
+      "source_id": "id01692",
+      "target": "— Да чёрт возьми, мои доспехи!",
+      "source_sha256": "788a6f1e5b38de07b2b08a72c45b064acbd47e45a0e015b8d4518042368ce741",
+      "target_id": "ru-id01692",
+      "tag": "p",
+      "target_sha256": "49fef01406c89c9edc47863da220c7679194e7f7106cbf4f9642093f9431caf8"
+    },
+    {
+      "source_id": "id01693",
+      "target": "— Какие доспехи?",
+      "source_sha256": "88fdc3bfbda529ec33c5e3556c000de5db19d2721250aa4df3c8dd21ec660645",
+      "target_id": "ru-id01693",
+      "tag": "p",
+      "target_sha256": "2db4117ae654eba2a89dc3e5afabfb21ccaea437829c824b197bbf42d9b0d7d2"
+    },
+    {
+      "source_id": "id01694",
+      "target": "— Мои боевые доспехи.",
+      "source_sha256": "f81959606a320c454e6581aed8c691ac5e3c3cfd97a5d84927d6dccfb65398a9",
+      "target_id": "ru-id01694",
+      "tag": "p",
+      "target_sha256": "dfe714248cbe4ea13728d7fa9b5a505835f4167cf21fce7a3332bc7f6a86a43a"
+    },
+    {
+      "source_id": "id01695",
+      "target": "— Ну да, монсеньор. По крайней мере, я так полагаю.",
+      "source_sha256": "625485df3ec80860de48710c6a2a96f2adea484a18a2ce3d85d3d5ec10e3a390",
+      "target_id": "ru-id01695",
+      "tag": "p",
+      "target_sha256": "281aba82b6cb51ffe2f5525cbfccc551c524345348b7fbee5bb9aa399569acd4"
+    },
+    {
+      "source_id": "id01696",
+      "target": "— Завтра удостоверишься и прикажешь их вычистить, если понадобится. Какая у меня лучшая скаковая лошадь?",
+      "source_sha256": "9df9ec7bfc2adcc18e512feb69dd5947d6f9ff63fabe82e06880483ce50fd3a3",
+      "target_id": "ru-id01696",
+      "tag": "p",
+      "target_sha256": "5d3afc41cf2782f85f21b004cadf433609f60bfd9121c0282badaccee9638359"
+    },
+    {
+      "source_id": "id01697",
+      "target": "— Вулкан.",
+      "source_sha256": "a5d570b3864deb375c66b87602ce2237bee670a0e6be32fe9203059b2e6de47e",
+      "target_id": "ru-id01697",
+      "tag": "p",
+      "target_sha256": "bd260f12026fd1b8038cb83c57db6a98cdfedd128b709b95b27d4ca9e8ac2e79"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01678",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic; the three adjectives, 'toujours', and the forgotten name are all preserved."
+    },
+    {
+      "source_id": "id01679",
+      "verdict": "PASS",
+      "reason": "Faithful; name, tense and negation are correct."
+    },
+    {
+      "source_id": "id01680",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic."
+    },
+    {
+      "source_id": "id01681",
+      "verdict": "CORRECTED",
+      "reason": "'Eh bien!' rendered 'А вот что!' wrongly suggests a revelation; changed to 'Ну так вот!', which matches how the same interjection is rendered elsewhere. Sums, siege, letter and shop are accurate."
+    },
+    {
+      "source_id": "id01682",
+      "verdict": "PASS",
+      "reason": "Faithful; the split 'sert-il' is correctly resolved."
+    },
+    {
+      "source_id": "id01683",
+      "verdict": "CORRECTED",
+      "reason": "'Escapades' means pranks or misdeeds, not military sorties; 'вылазки' changed to 'выходки'. The rest of the sentence is faithful."
+    },
+    {
+      "source_id": "id01684",
+      "verdict": "PASS",
+      "reason": "Faithful; agency preserved."
+    },
+    {
+      "source_id": "id01685",
+      "verdict": "PASS",
+      "reason": "Conditional, agency (Planchet helps Rochefort escape, d'Artagnan hides him) and tone are preserved."
+    },
+    {
+      "source_id": "id01686",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic."
+    },
+    {
+      "source_id": "id01687",
+      "verdict": "PASS",
+      "reason": "Faithful: the wine as the thing that improves, Spanish vintage, Athos's liking, and xérès/херес."
+    },
+    {
+      "source_id": "id01688",
+      "verdict": "PASS",
+      "reason": "Faithful; intendant, menu and planned hunt are all preserved."
+    },
+    {
+      "source_id": "id01689",
+      "verdict": "PASS",
+      "reason": "Faithful; name and question are preserved."
+    },
+    {
+      "source_id": "id01690",
+      "verdict": "PASS",
+      "reason": "Faithful; d'Artagnan's embarrassment is preserved."
+    },
+    {
+      "source_id": "id01691",
+      "verdict": "CORRECTED",
+      "reason": "'demanda' is a plain 'спросил'; 'переспросил' added an unwarranted nuance of repetition, so it was changed."
+    },
+    {
+      "source_id": "id01692",
+      "verdict": "PASS",
+      "reason": "Acceptable rendering of 'Eh pardieu'; 'harnais' correctly rendered as доспехи."
+    },
+    {
+      "source_id": "id01693",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01694",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id01695",
+      "verdict": "PASS",
+      "reason": "Faithful, including the hedging 'du moins'."
+    },
+    {
+      "source_id": "id01696",
+      "verdict": "PASS",
+      "reason": "Faithful; the instruction and question are both preserved."
+    },
+    {
+      "source_id": "id01697",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01681",
+      "before": "— А вот что! На свои тысячу шестьсот ливров, помните, те тысячу шестьсот ливров, что он заработал при осаде Ла-Рошели, отвезя письмо лорду Винтеру, он завёл небольшую лавку на улице Ломбардцев и стал кондитером.",
+      "after": "— Ну так вот! На свои тысячу шестьсот ливров, помните, те тысячу шестьсот ливров, что он заработал при осаде Ла-Рошели, отвезя письмо лорду Винтеру, он завёл небольшую лавку на улице Ломбардцев и стал кондитером."
+    },
+    {
+      "source_id": "id01683",
+      "before": "— Он позволил себе кое-какие вылазки, — сказал д’Артаньян, — и опасается, как бы его не потревожили.",
+      "after": "— Он позволил себе кое-какие выходки, — сказал д’Артаньян, — и опасается, как бы его не потревожили."
+    },
+    {
+      "source_id": "id01691",
+      "before": "— Ваше оружие, монсеньор? — переспросил Мустон. — Какое оружие?",
+      "after": "— Ваше оружие, монсеньор? — спросил Мустон. — Какое оружие?"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJER5L3KEcvY3fdVXw7U",
+    "usage": {
+      "input_tokens": 4776,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2846,
+      "output_tokens_details": {
+        "thinking_tokens": 764
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJETJDVZi2tZ6MDmgmQE",
+    "usage": {
+      "input_tokens": 8499,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 4626,
+      "output_tokens_details": {
+        "thinking_tokens": 1519
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJKJseF78ojud6X8FJty",
+        "usage": {
+          "input_tokens": 8953,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3085,
+          "output_tokens_details": {
+            "thinking_tokens": 652
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01678",
+          "verdict": "PASS",
+          "reason": "Faithful: Porthos's question, the 'même laquais' (всё того же лакея), the three epithets and the trailing 'comment l'appelez-vous donc' are all preserved in a natural register."
+        },
+        {
+          "source_id": "id01679",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Accurate: 'je l'ai retrouvé' = разыскал, 'n'est plus laquais' = уже не лакей; negation preserved."
+        },
+        {
+          "source_id": "id01680",
+          "verdict": "PASS",
+          "reason": "Accurate, idiomatic rendering of 'Qu'est-il donc?'."
+        },
+        {
+          "source_id": "id01681",
+          "verdict": "PASS",
+          "reason": "Prior correction ('Ну так вот!' for 'Eh bien!') verified as idiomatic. Sums, La Rochelle, lord de Winter, rue des Lombards and the confiseur trade are all intact; the agency of 'portant la lettre' is preserved."
+        },
+        {
+          "source_id": "id01682",
+          "verdict": "PASS",
+          "reason": "Faithful, including the surprised repetition of the confectioner detail and the question 'comment vous sert-il'."
+        },
+        {
+          "source_id": "id01683",
+          "verdict": "PASS",
+          "reason": "Prior correction ('выходки' for 'escapades') verified as better than 'вылазки'. The fear of being disturbed is preserved with correct agency."
+        },
+        {
+          "source_id": "id01684",
+          "verdict": "PASS",
+          "reason": "Complete and accurate; the pluperfect sense of 'avait retrouvé' is rendered correctly."
+        },
+        {
+          "source_id": "id01685",
+          "verdict": "PASS",
+          "reason": "Conditional structure 'si on vous eût dit… ferait… cacheriez' is preserved, with correct agency (Planchet helps Rochefort escape; d'Artagnan hides him)."
+        },
+        {
+          "source_id": "id01686",
+          "verdict": "PASS",
+          "reason": "Accurate: conditional negation 'Je ne l'aurais pas cru' and the maxim about events changing men are preserved."
+        },
+        {
+          "source_id": "id01687",
+          "verdict": "PASS",
+          "reason": "All elements preserved: agreement, the wine that does not change or changes for the better, the Spanish cru esteemed by Athos, and xérès = херес."
+        },
+        {
+          "source_id": "id01688",
+          "verdict": "PASS",
+          "reason": "Accurate: intendant, menu of the next day, and the planned hunting party are all present."
+        },
+        {
+          "source_id": "id01689",
+          "verdict": "PASS",
+          "reason": "Faithful, with the address to Mouston (Мустон) and the question about the weapons' condition."
+        },
+        {
+          "source_id": "id01690",
+          "verdict": "PASS",
+          "reason": "Accurate: d'Artagnan beats time on the table to hide his embarrassment."
+        },
+        {
+          "source_id": "id01691",
+          "verdict": "PASS",
+          "reason": "Prior correction ('спросил' for 'переспросил') verified: the French has 'demanda', not a repeat. The interrupting-speaker structure is preserved."
+        },
+        {
+          "source_id": "id01692",
+          "verdict": "PASS",
+          "reason": "'harnais' correctly as доспехи (armour); the interjection 'pardieu' is acceptably rendered by 'чёрт возьми' in Porthos's register."
+        },
+        {
+          "source_id": "id01693",
+          "verdict": "PASS",
+          "reason": "Accurate echo of the preceding word."
+        },
+        {
+          "source_id": "id01694",
+          "verdict": "PASS",
+          "reason": "'harnais de guerre' = боевые доспехи, consistent with the previous rows."
+        },
+        {
+          "source_id": "id01695",
+          "verdict": "PASS",
+          "reason": "Accurate: Mouston's hesitant affirmation with the hedge 'du moins' is preserved."
+        },
+        {
+          "source_id": "id01696",
+          "verdict": "PASS",
+          "reason": "Accurate: instruction to check tomorrow, have them cleaned (fourbir) if needed, and the question about the best race horse."
+        },
+        {
+          "source_id": "id01697",
+          "verdict": "PASS",
+          "reason": "Vulcain correctly rendered as Вулкан."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
