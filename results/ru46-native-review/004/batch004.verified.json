@@ -1,0 +1,816 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 4,
+  "batch": 4,
+  "source_ids": [
+    "046-4-0162",
+    "046-4-0163",
+    "046-4-0164",
+    "046-4-0165",
+    "046-4-0166",
+    "046-4-0167",
+    "046-4-0168",
+    "046-4-0169",
+    "046-4-0170",
+    "046-4-0171",
+    "046-4-0172",
+    "046-4-0173",
+    "046-4-0174",
+    "046-4-0175",
+    "046-4-0176",
+    "046-4-0177",
+    "046-4-0178",
+    "046-4-0179",
+    "046-4-0180",
+    "046-4-0181",
+    "046-4-0182",
+    "046-4-0183",
+    "046-4-0184",
+    "046-4-0185",
+    "046-4-0186",
+    "046-4-0187",
+    "046-4-0188",
+    "046-4-0189",
+    "046-4-0190",
+    "046-4-0191",
+    "046-4-0192",
+    "046-4-0193",
+    "046-4-0194",
+    "046-4-0195",
+    "046-4-0196",
+    "046-4-0197",
+    "046-4-0198",
+    "046-4-0199",
+    "046-4-0200",
+    "046-4-0201"
+  ],
+  "source_hashes": {
+    "046-4-0162": "0e8631b0a0183fc08322750e32ef5b28fa4c10c8512d6be4ffda7bbf73e98a48",
+    "046-4-0163": "db813314f34a3f77c764f169dd1af5df8100475c36d1f8e3e464b46285cfc9b6",
+    "046-4-0164": "7590b90c305d38e6a64cc1b57fd70cb63f0ed7817e0456ad3260bbdb2469d0ee",
+    "046-4-0165": "5ab7e70b801fc620cddf16ff82714dd5190a75e3075f3dabc615ef91cf29d8ad",
+    "046-4-0166": "40f9b0ed6e029dddffcb33c5ade6299c5c7d570f2c14360aea5e36f251bdaca9",
+    "046-4-0167": "48d00b0daf2be4d56433183641fe46315a978eb5c6c708d9f104c5955909550d",
+    "046-4-0168": "3367a292e19a0f8e6b67994a788d9ce9e8d26a9eda444cae2e2933311c581844",
+    "046-4-0169": "6255493482d27810549dc0db7948f84114fc4023d6e1e5150ce16f1552f9145e",
+    "046-4-0170": "1199dc56c8a5c64a66986902bbdbe0803553137914b8ca317704b5719787dafc",
+    "046-4-0171": "aeb8e24cdedc1fb6e304f28e9a509ac4816380666241ad2b3e929dd2163aec46",
+    "046-4-0172": "025e203dad80a4924a84f3962efbfc5fc6069bf6492c32aa900f55ecb06ad55c",
+    "046-4-0173": "73c5de4ebd644356096ec188d05a26ecd518c7a0dba0617bf5e53bbaac92f0d9",
+    "046-4-0174": "614904a21db2f01257a8c9549be1d17b6af331f2f5bd474365f6c97e0be92783",
+    "046-4-0175": "e1390cfd6cb85f06a69d1e5025da5f3ee0f0e477cdf01a84ebf757510d00e6b0",
+    "046-4-0176": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-4-0177": "c710177f66f33a4ea61e9d7c4eff2993b82e59ae9cdef2c6f1ddc953508a9756",
+    "046-4-0178": "ee6089563e8b3754edae7bb775d379c0f8229cf688e1673ba40af53c722f713d",
+    "046-4-0179": "367bbba9f2c01260608d596790874b8781f7a46a0bae4a4edf573f239ba253ac",
+    "046-4-0180": "fea9a2fc31ef7b9c123592b43122006b341a18392dec5fea801f2e940e0e1527",
+    "046-4-0181": "c764c55631e8307ef07bb13b3d103922e55142721b1f5ddd5aa3494c922d60b2",
+    "046-4-0182": "61849b577de84d5695650f24b153b406935294fb51de461df1d593017ea9ec8c",
+    "046-4-0183": "7e2ea575a785d6718aee21966dcb509f3f5a610ef0ab85e18d7f32db531e3916",
+    "046-4-0184": "412b5eead52a87c6fdf60e6cc926278334fbdf294324474adbfc5ac9704209bc",
+    "046-4-0185": "93cb689be7484220cc82ef80e94faa14bc444b1be5e6b40eb2700092519b9c5e",
+    "046-4-0186": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-4-0187": "ce5bbb481e3508c531077090468983ed74e7061393b426d123364e54f336cad0",
+    "046-4-0188": "59d55a06054f147a3c78eca8402ac06aeed7304103b638290ba876b949640124",
+    "046-4-0189": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-4-0190": "a1c6fcd903597be5569b77a35dfd4bcf8da200eb02d769af053d5ddc8281a090",
+    "046-4-0191": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-4-0192": "8a06063b5b2fb58b950c103f06b0a770f5222cebf7d67afb1cf1e371d149ea3f",
+    "046-4-0193": "975840ef7b14ead047bc7b9de5ff71451a93352e0d928bb7f2bee16141d6a0b8",
+    "046-4-0194": "f252abf99a36124c9513915b4838669c85b55ee9b236d186f4c8d1ebd2af3ab8",
+    "046-4-0195": "844ac050c24e352aeb70bae3e48a29b608394cc99e3ebe628baeb97fe7e9e2c7",
+    "046-4-0196": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-4-0197": "04315a6f49428dc56f1cbbd5aacd9158db77f37dc6636aff935dc281e3f9c1a4",
+    "046-4-0198": "cd9859cf3f8f537b8b6f367cf67218d51c152c76c08e73e4c58fca00fa6e7ec2",
+    "046-4-0199": "3cc029abf4dfb89682df71f1c969af6b62300b66d1b60855734d204da8a32c17",
+    "046-4-0200": "23e595649b56489557974280de47886182cdfebe6cda1b1ff66fb30fdc3c7cd8",
+    "046-4-0201": "138ac30431144fba3485e835a3038703c76eda0444fdb608638d6d3b9c680350"
+  },
+  "review": [
+    {
+      "source_id": "046-4-0162",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim: Andrey's speech, punctuation and ellipsis intact."
+    },
+    {
+      "source_id": "046-4-0163",
+      "verdict": "PASS",
+      "reason": "Identical to source; Ferapont's voice and dash preserved."
+    },
+    {
+      "source_id": "046-4-0164",
+      "verdict": "PASS",
+      "reason": "Identical to source, including both stage directions."
+    },
+    {
+      "source_id": "046-4-0165",
+      "verdict": "PASS",
+      "reason": "Natasha's French errors (dormée, du bruit) preserved, lang-fr span and [[FN:12]] anchor intact; matches source."
+    },
+    {
+      "source_id": "046-4-0166",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0167",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0168",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0169",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0170",
+      "verdict": "PASS",
+      "reason": "Stage direction paragraph preserved verbatim."
+    },
+    {
+      "source_id": "046-4-0171",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0172",
+      "verdict": "PASS",
+      "reason": "Stage direction and character-name spans match source."
+    },
+    {
+      "source_id": "046-4-0173",
+      "verdict": "PASS",
+      "reason": "Verbatim match including '!..'."
+    },
+    {
+      "source_id": "046-4-0174",
+      "verdict": "PASS",
+      "reason": "Anfisa's dialect wording (цельная, Ариша) preserved; verbatim."
+    },
+    {
+      "source_id": "046-4-0175",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0176",
+      "verdict": "PASS",
+      "reason": "Stage direction matches."
+    },
+    {
+      "source_id": "046-4-0177",
+      "verdict": "PASS",
+      "reason": "Continuation of Vershinin's speech without speaker label, as in source."
+    },
+    {
+      "source_id": "046-4-0178",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0179",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0180",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0181",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0182",
+      "verdict": "PASS",
+      "reason": "Offstage call preserved verbatim."
+    },
+    {
+      "source_id": "046-4-0183",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0184",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0185",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0186",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0187",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0188",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0189",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0190",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0191",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0192",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0193",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0194",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0195",
+      "verdict": "PASS",
+      "reason": "Verbatim match, including 'не далеко' spelling."
+    },
+    {
+      "source_id": "046-4-0196",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0197",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0198",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0199",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0200",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0201",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjGkeJah6vgvk4nQuLX",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 43473,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1575,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-4-0162",
+      "verdict": "PASS",
+      "reason": "Target text matches the source verbatim, including punctuation and the final ellipsis."
+    },
+    {
+      "source_id": "046-4-0163",
+      "verdict": "PASS",
+      "reason": "Identical to the source; Ferapont's voice and the dash are preserved."
+    },
+    {
+      "source_id": "046-4-0164",
+      "verdict": "PASS",
+      "reason": "Identical to the source, including both stage directions."
+    },
+    {
+      "source_id": "046-4-0165",
+      "verdict": "PASS",
+      "reason": "Natasha's French with its mistakes (dormée, du bruit) is preserved verbatim, with the lang-fr span and the [[FN:12]] anchor intact; matches the source."
+    },
+    {
+      "source_id": "046-4-0166",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0167",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0168",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0169",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0170",
+      "verdict": "PASS",
+      "reason": "The stage direction is preserved verbatim."
+    },
+    {
+      "source_id": "046-4-0171",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0172",
+      "verdict": "PASS",
+      "reason": "The stage direction and character-name spans match the source."
+    },
+    {
+      "source_id": "046-4-0173",
+      "verdict": "PASS",
+      "reason": "Verbatim match, including the '!..' ending."
+    },
+    {
+      "source_id": "046-4-0174",
+      "verdict": "PASS",
+      "reason": "Verbatim match; Anfisa's dialect wording (цельная, Ариша) is preserved."
+    },
+    {
+      "source_id": "046-4-0175",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0176",
+      "verdict": "PASS",
+      "reason": "The stage direction matches."
+    },
+    {
+      "source_id": "046-4-0177",
+      "verdict": "PASS",
+      "reason": "Vershinin's speech continues without a speaker label, as in the source."
+    },
+    {
+      "source_id": "046-4-0178",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0179",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0180",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0181",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0182",
+      "verdict": "PASS",
+      "reason": "The offstage call is preserved verbatim."
+    },
+    {
+      "source_id": "046-4-0183",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0184",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0185",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0186",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0187",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0188",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0189",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0190",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0191",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0192",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0193",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0194",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0195",
+      "verdict": "PASS",
+      "reason": "Verbatim match, including the 'не далеко' spelling."
+    },
+    {
+      "source_id": "046-4-0196",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0197",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0198",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0199",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0200",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    },
+    {
+      "source_id": "046-4-0201",
+      "verdict": "PASS",
+      "reason": "Verbatim match."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjHWaV5VrtcuHkSjDkv",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 45225,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1593,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-4-0162",
+      "source_sha256": "0e8631b0a0183fc08322750e32ef5b28fa4c10c8512d6be4ffda7bbf73e98a48",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Настоящее противно, но зато когда я думаю о будущем, то как хорошо! Становится так легко, так просторно; и вдали забрезжит свет, я вижу свободу, я вижу, как я и дети мои становимся свободны от праздности, от квасу, от гуся с капустой, от сна после обеда, от подлого тунеядства…",
+      "target_sha256": "0e8631b0a0183fc08322750e32ef5b28fa4c10c8512d6be4ffda7bbf73e98a48",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0163",
+      "source_sha256": "db813314f34a3f77c764f169dd1af5df8100475c36d1f8e3e464b46285cfc9b6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Две тысячи людей померзло будто. Народ, говорит, ужасался. Не то в Петербурге, не то в Москве — не упомню.",
+      "target_sha256": "db813314f34a3f77c764f169dd1af5df8100475c36d1f8e3e464b46285cfc9b6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0164",
+      "source_sha256": "7590b90c305d38e6a64cc1b57fd70cb63f0ed7817e0456ad3260bbdb2469d0ee",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(охваченный нежным чувством)</i></small>. Милые мои сестры, чудные мои сестры! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Сквозь слезы.)</i></small> Маша, сестра моя…",
+      "target_sha256": "7590b90c305d38e6a64cc1b57fd70cb63f0ed7817e0456ad3260bbdb2469d0ee",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0165",
+      "source_sha256": "5ab7e70b801fc620cddf16ff82714dd5190a75e3075f3dabc615ef91cf29d8ad",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в окне)</i></small>. Кто здесь разговаривает так громко? Это ты, Андрюша? Софочку разбудишь. <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"lang-fr\">Il ne faut pas faire du bruit, la Sophie est dormée déjà. Vous êtes un ours</span>.[[FN:12]] <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Рассердившись.)</i></small> Если хочешь разговаривать, то отдай колясочку с ребенком кому-нибудь другому. Ферапонт, возьми у барина колясочку!",
+      "target_sha256": "5ab7e70b801fc620cddf16ff82714dd5190a75e3075f3dabc615ef91cf29d8ad",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0166",
+      "source_sha256": "40f9b0ed6e029dddffcb33c5ade6299c5c7d570f2c14360aea5e36f251bdaca9",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Слушаю. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Берет колясочку.)</i></small>",
+      "target_sha256": "40f9b0ed6e029dddffcb33c5ade6299c5c7d570f2c14360aea5e36f251bdaca9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0167",
+      "source_sha256": "48d00b0daf2be4d56433183641fe46315a978eb5c6c708d9f104c5955909550d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сконфуженно)</i></small>. Я говорю тихо.",
+      "target_sha256": "48d00b0daf2be4d56433183641fe46315a978eb5c6c708d9f104c5955909550d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0168",
+      "source_sha256": "3367a292e19a0f8e6b67994a788d9ce9e8d26a9eda444cae2e2933311c581844",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(за окном, лаская своего мальчика)</i></small>. Бобик! Шалун Бобик! Дурной Бобик!",
+      "target_sha256": "3367a292e19a0f8e6b67994a788d9ce9e8d26a9eda444cae2e2933311c581844",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0169",
+      "source_sha256": "6255493482d27810549dc0db7948f84114fc4023d6e1e5150ce16f1552f9145e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(оглядывая бумаги)</i></small>. Ладно, пересмотрю и, что нужно, подпишу, а ты снесешь опять в управу…",
+      "target_sha256": "6255493482d27810549dc0db7948f84114fc4023d6e1e5150ce16f1552f9145e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0170",
+      "source_sha256": "1199dc56c8a5c64a66986902bbdbe0803553137914b8ca317704b5719787dafc",
+      "target": "<small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит в дом, читая бумаги; Ферапонт везет колясочку.)</i></small>",
+      "target_sha256": "1199dc56c8a5c64a66986902bbdbe0803553137914b8ca317704b5719787dafc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0171",
+      "source_sha256": "aeb8e24cdedc1fb6e304f28e9a509ac4816380666241ad2b3e929dd2163aec46",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(за окном)</i></small>. Бобик, как зовут твою маму? Милый, милый! А это кто? Это тетя Оля. Скажи тете: здравствуй, Оля!",
+      "target_sha256": "aeb8e24cdedc1fb6e304f28e9a509ac4816380666241ad2b3e929dd2163aec46",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0172",
+      "source_sha256": "025e203dad80a4924a84f3962efbfc5fc6069bf6492c32aa900f55ecb06ad55c",
+      "target": "Бродячие музыканты, мужчина и девушка, играют на скрипке и арфе; из дому выходят <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Вершинин</span>, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ольга</span> и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Анфиса</span> и с минуту слушают молча; подходит Ирина.",
+      "target_sha256": "025e203dad80a4924a84f3962efbfc5fc6069bf6492c32aa900f55ecb06ad55c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0173",
+      "source_sha256": "73c5de4ebd644356096ec188d05a26ecd518c7a0dba0617bf5e53bbaac92f0d9",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Наш сад, как проходной двор, через него и ходят, и ездят. Няня, дай этим музыкантам что-нибудь!..",
+      "target_sha256": "73c5de4ebd644356096ec188d05a26ecd518c7a0dba0617bf5e53bbaac92f0d9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0174",
+      "source_sha256": "614904a21db2f01257a8c9549be1d17b6af331f2f5bd474365f6c97e0be92783",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Анфиса</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(подает музыкантам)</i></small>. Уходите с богом, сердечные. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Музыканты кланяются и уходят.)</i></small> Горький народ. От сытости не заиграешь. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине.)</i></small> Здравствуй, Ариша! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Целует ее.)</i></small> И-и, деточка, вот живу! Вот живу! В гимназии на казенной квартире, золотая, вместе с Олюшкой — определил господь на старости лет. Отродясь я, грешница, так не жила… Квартира большая, казенная, и мне цельная комнатка и кроватка. Все казенное. Проснусь ночью и — о господи, матерь божия, счастливей меня человека нету!",
+      "target_sha256": "614904a21db2f01257a8c9549be1d17b6af331f2f5bd474365f6c97e0be92783",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0175",
+      "source_sha256": "e1390cfd6cb85f06a69d1e5025da5f3ee0f0e477cdf01a84ebf757510d00e6b0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(взглянув на часы)</i></small>. Сейчас уходим, Ольга Сергеевна. Мне пора.",
+      "target_sha256": "e1390cfd6cb85f06a69d1e5025da5f3ee0f0e477cdf01a84ebf757510d00e6b0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0176",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0177",
+      "source_sha256": "c710177f66f33a4ea61e9d7c4eff2993b82e59ae9cdef2c6f1ddc953508a9756",
+      "target": "Я желаю вам всего, всего… Где Мария Сергеевна?",
+      "target_sha256": "c710177f66f33a4ea61e9d7c4eff2993b82e59ae9cdef2c6f1ddc953508a9756",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0178",
+      "source_sha256": "ee6089563e8b3754edae7bb775d379c0f8229cf688e1673ba40af53c722f713d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Она где-то в саду. Я пойду поищу ее.",
+      "target_sha256": "ee6089563e8b3754edae7bb775d379c0f8229cf688e1673ba40af53c722f713d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0179",
+      "source_sha256": "367bbba9f2c01260608d596790874b8781f7a46a0bae4a4edf573f239ba253ac",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Будьте добры. Я тороплюсь.",
+      "target_sha256": "367bbba9f2c01260608d596790874b8781f7a46a0bae4a4edf573f239ba253ac",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0180",
+      "source_sha256": "fea9a2fc31ef7b9c123592b43122006b341a18392dec5fea801f2e940e0e1527",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Анфиса</span>. Пойду и я поищу. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Кричит.)</i></small> Машенька, ау!",
+      "target_sha256": "fea9a2fc31ef7b9c123592b43122006b341a18392dec5fea801f2e940e0e1527",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0181",
+      "source_sha256": "c764c55631e8307ef07bb13b3d103922e55142721b1f5ddd5aa3494c922d60b2",
+      "target": "Уходит вместе с <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ириной</span> в глубину сада.",
+      "target_sha256": "c764c55631e8307ef07bb13b3d103922e55142721b1f5ddd5aa3494c922d60b2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0182",
+      "source_sha256": "61849b577de84d5695650f24b153b406935294fb51de461df1d593017ea9ec8c",
+      "target": "А-у, а-у!",
+      "target_sha256": "61849b577de84d5695650f24b153b406935294fb51de461df1d593017ea9ec8c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0183",
+      "source_sha256": "7e2ea575a785d6718aee21966dcb509f3f5a610ef0ab85e18d7f32db531e3916",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Все имеет свой конец. Вот и мы расстаемся. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Город давал нам что-то вроде завтрака, пили шампанское, городской голова говорил речь, я ел и слушал, а душой был здесь, у вас… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Оглядывает сад.)</i></small> Привык я к вам.",
+      "target_sha256": "7e2ea575a785d6718aee21966dcb509f3f5a610ef0ab85e18d7f32db531e3916",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0184",
+      "source_sha256": "412b5eead52a87c6fdf60e6cc926278334fbdf294324474adbfc5ac9704209bc",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Увидимся ли мы еще когда-нибудь?",
+      "target_sha256": "412b5eead52a87c6fdf60e6cc926278334fbdf294324474adbfc5ac9704209bc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0185",
+      "source_sha256": "93cb689be7484220cc82ef80e94faa14bc444b1be5e6b40eb2700092519b9c5e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Должно быть, нет.",
+      "target_sha256": "93cb689be7484220cc82ef80e94faa14bc444b1be5e6b40eb2700092519b9c5e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0186",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0187",
+      "source_sha256": "ce5bbb481e3508c531077090468983ed74e7061393b426d123364e54f336cad0",
+      "target": "Жена моя и обе девочки проживут здесь еще месяца два; пожалуйста, если что случится, если что понадобится…",
+      "target_sha256": "ce5bbb481e3508c531077090468983ed74e7061393b426d123364e54f336cad0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0188",
+      "source_sha256": "59d55a06054f147a3c78eca8402ac06aeed7304103b638290ba876b949640124",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Да, да, конечно. Будьте покойны.",
+      "target_sha256": "59d55a06054f147a3c78eca8402ac06aeed7304103b638290ba876b949640124",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0189",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0190",
+      "source_sha256": "a1c6fcd903597be5569b77a35dfd4bcf8da200eb02d769af053d5ddc8281a090",
+      "target": "В городе завтра не будет уже ни одного военного, все станет воспоминанием, и, конечно, для нас начнется новая жизнь…",
+      "target_sha256": "a1c6fcd903597be5569b77a35dfd4bcf8da200eb02d769af053d5ddc8281a090",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0191",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0192",
+      "source_sha256": "8a06063b5b2fb58b950c103f06b0a770f5222cebf7d67afb1cf1e371d149ea3f",
+      "target": "Все делается не по-нашему. Я не хотела быть начальницей и все-таки сделалась ею. В Москве, значит, не быть…",
+      "target_sha256": "8a06063b5b2fb58b950c103f06b0a770f5222cebf7d67afb1cf1e371d149ea3f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0193",
+      "source_sha256": "975840ef7b14ead047bc7b9de5ff71451a93352e0d928bb7f2bee16141d6a0b8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Ну… Спасибо вам за все. Простите мне, если что не так… Много, очень уж много я говорил — и за это простите, не поминайте лихом.",
+      "target_sha256": "975840ef7b14ead047bc7b9de5ff71451a93352e0d928bb7f2bee16141d6a0b8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0194",
+      "source_sha256": "f252abf99a36124c9513915b4838669c85b55ee9b236d186f4c8d1ebd2af3ab8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(утирает глаза)</i></small>. Что ж это Маша не идет…",
+      "target_sha256": "f252abf99a36124c9513915b4838669c85b55ee9b236d186f4c8d1ebd2af3ab8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0195",
+      "source_sha256": "844ac050c24e352aeb70bae3e48a29b608394cc99e3ebe628baeb97fe7e9e2c7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Что же еще вам сказать на прощание? О чем пофилософствовать?.. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Жизнь тяжела. Она представляется многим из нас глухой и безнадежной, но все же, надо сознаться, она становится все яснее и легче, и, по-видимому, не далеко время, когда она станет совсем светлой. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Пора мне, пора! Прежде человечество было занято войнами, заполняя все свое существование походами, набегами, победами, теперь же все это отжило, оставив после себя громадное пустое место, которое пока нечем заполнить; человечество страстно ищет и конечно найдет. Ах, только бы поскорее!",
+      "target_sha256": "844ac050c24e352aeb70bae3e48a29b608394cc99e3ebe628baeb97fe7e9e2c7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0196",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0197",
+      "source_sha256": "04315a6f49428dc56f1cbbd5aacd9158db77f37dc6636aff935dc281e3f9c1a4",
+      "target": "Если бы, знаете, к трудолюбию прибавить образование, а к образованию трудолюбие. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Мне, однако, пора…",
+      "target_sha256": "04315a6f49428dc56f1cbbd5aacd9158db77f37dc6636aff935dc281e3f9c1a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0198",
+      "source_sha256": "cd9859cf3f8f537b8b6f367cf67218d51c152c76c08e73e4c58fca00fa6e7ec2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Вот она идет.",
+      "target_sha256": "cd9859cf3f8f537b8b6f367cf67218d51c152c76c08e73e4c58fca00fa6e7ec2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0199",
+      "source_sha256": "3cc029abf4dfb89682df71f1c969af6b62300b66d1b60855734d204da8a32c17",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Маша</span> входит.",
+      "target_sha256": "3cc029abf4dfb89682df71f1c969af6b62300b66d1b60855734d204da8a32c17",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0200",
+      "source_sha256": "23e595649b56489557974280de47886182cdfebe6cda1b1ff66fb30fdc3c7cd8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Я пришел проститься…",
+      "target_sha256": "23e595649b56489557974280de47886182cdfebe6cda1b1ff66fb30fdc3c7cd8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0201",
+      "source_sha256": "138ac30431144fba3485e835a3038703c76eda0444fdb608638d6d3b9c680350",
+      "target": "Ольга отходит немного в сторону, чтобы не помешать прощанию.",
+      "target_sha256": "138ac30431144fba3485e835a3038703c76eda0444fdb608638d6d3b9c680350",
+      "tag": "p"
+    }
+  ]
+}
