@@ -1,0 +1,71 @@
+{
+  "unit": 92,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id11802",
+      "target": "— Теперь, монсеньор, войдёмте, пожалуйста.",
+      "source_sha256": "9b9b75700175d84a0b1bf4ed9754e56bdbc63b772cba65a0b3c0d3677f039a63",
+      "target_id": "ru-id11802",
+      "tag": "p",
+      "target_sha256": "c1d7be10ecff04c47d7331f95d5d44df89ace3835a424b31f80ca5e90e310123"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11802",
+      "verdict": "CORRECTED",
+      "reason": "Смысл передан верно: «Maintenant» — «теперь», «Monseigneur» — «монсеньор», «entrons» — приглашение войти вместе, «s'il vous plaît» — вежливая просьба. Формулировка «давайте войдём, если вам угодно» звучала слишком разговорно и немного искажала оттенок любезной настойчивости. Заменил на «войдёмте, пожалуйста», что точнее по регистру и по тону д’Артаньяна. Имена, пунктуация диалога и границы абзаца сохранены."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11802",
+      "before": "— Теперь, монсеньор, давайте войдём, если вам угодно.",
+      "after": "— Теперь, монсеньор, войдёмте, пожалуйста."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJYYgo2wxq8uj9imjyuu",
+    "usage": {
+      "input_tokens": 1428,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 51,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJYYn7kpJyryY3yJfwJ1",
+    "usage": {
+      "input_tokens": 1704,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
