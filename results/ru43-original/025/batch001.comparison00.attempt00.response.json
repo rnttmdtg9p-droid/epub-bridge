@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKKdEapo27R6YGxSNNj2",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-025-0020\",\"target\":\"В ЗДАНИИ СУДА!\\nТОЛЬКО 3 ВЕЧЕРА!\\n<i>Всемирно известные трагики</i>\\nДЭВИД ГАРРИК-МЛАДШИЙ!\\nИ\\nЭДМУНД КИН-СТАРШИЙ!\\n<i>Лондонских и континентальных\\nтеатров</i>,\\nв их захватывающей трагедии\\nКОРОЛЕВСКИЙ ЖИРАФОПАРД\\nИЛИ\\nКОРОЛЕВСКОЕ НЕСРАВНЕННОЕ!!!\\n<i>Вход 50 центов</i>.\"},{\"source_id\":\"043-025-0021\",\"target\":\"А внизу шла самая большая строка из всех — в ней говорилось:\"},{\"source_id\":\"043-025-0022\",\"target\":\"ДАМЫ И ДЕТИ НЕ ДОПУСКАЮТСЯ.\"},{\"source_id\":\"043-025-0023\",\"target\":\"— Вот, — говорит он, — если эта строка их не заманит, то я не знаю Арканзаса!\"},{\"source_id\":\"043-025-0024\",\"target\":\"Трагедия\"}],\"review\":[{\"source_id\":\"043-025-0020\",\"verdict\":\"PASS\",\"reason\":\"Thirteen lines preserved exactly, with italic spans matched. Content is faithful. 'Camelopard' (giraffe) and the pseudo-French 'Nonesuch' are rendered plausibly and consistently with the prior correction.\"},{\"source_id\":\"043-025-0021\",\"verdict\":\"PASS\",\"reason\":\"Faithful: 'biggest line of all' and the introduction of the bottom line are preserved, and the register is idiomatic.\"},{\"source_id\":\"043-025-0022\",\"verdict\":\"PASS\",\"reason\":\"Capitalized notice preserved; 'Ladies and children not admitted' is accurately conveyed in period-appropriate wording.\"},{\"source_id\":\"043-025-0023\",\"target\":\"— Вот, — говорит он, — если эта строка их не заманит, то я не знаю Арканзаса!\",\"verdict\":\"PASS\",\"reason\":\"Dialogue dash punctuation and the present-tense 'says he' are kept. 'Fetch them' becomes 'заманит'. The negation and Arkansas reference are intact.\"},{\"source_id\":\"043-025-0024\",\"verdict\":\"PASS\",\"reason\":\"The caption 'Tragedy' is translated accurately and remains a caption.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 5175,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 869,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

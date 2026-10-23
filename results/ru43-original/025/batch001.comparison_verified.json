@@ -1,0 +1,178 @@
+{
+  "unit": 25,
+  "batch": 1,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-025-0020",
+      "target": "В ЗДАНИИ СУДА!\nТОЛЬКО 3 ВЕЧЕРА!\n<i>Всемирно известные трагики</i>\nДЭВИД ГАРРИК-МЛАДШИЙ!\nИ\nЭДМУНД КИН-СТАРШИЙ!\n<i>Лондонских и континентальных\nтеатров</i>,\nв их захватывающей трагедии\nКОРОЛЕВСКИЙ ЖИРАФОПАРД\nИЛИ\nКОРОЛЕВСКОЕ НЕСРАВНЕННОЕ!!!\n<i>Вход 50 центов</i>.",
+      "source_sha256": "5ec78aa93682e879aa943cbfcdc122eb13966d7f01e4d83630afa42e67922ee1",
+      "target_id": "ru-043-025-0020",
+      "tag": "source_display",
+      "target_sha256": "f646b7d19c175956023e65754b1a50d5f7392a291029e23b0783e3e6d605add5"
+    },
+    {
+      "source_id": "043-025-0021",
+      "target": "А внизу шла самая большая строка из всех — в ней говорилось:",
+      "source_sha256": "ceb428ad64ef4c459b15510169b5f33fd8466e660ac7d4d3a6bfab6d4b41264d",
+      "target_id": "ru-043-025-0021",
+      "tag": "p",
+      "target_sha256": "5faeb4b067b7f95e93e773ecebea57bfcff21af5f9bc93e68dfd2321d1281e2c"
+    },
+    {
+      "source_id": "043-025-0022",
+      "target": "ДАМЫ И ДЕТИ НЕ ДОПУСКАЮТСЯ.",
+      "source_sha256": "e5176e98a9f6b3d1dd1f9d02856a719598bf74f22b9c792a2c75eaccf37e4228",
+      "target_id": "ru-043-025-0022",
+      "tag": "source_display",
+      "target_sha256": "1a8745fa0a33855dac8a20eade2442f58541998086eb6876959b7143a2da8e61"
+    },
+    {
+      "source_id": "043-025-0023",
+      "target": "— Вот, — говорит он, — если эта строка их не заманит, то я не знаю Арканзаса!",
+      "source_sha256": "c766d0cc2bd454af8b8edc15afe47131be63ca94b1bbfcd2dd031709867f85eb",
+      "target_id": "ru-043-025-0023",
+      "tag": "p",
+      "target_sha256": "612ba70764af0cbf2d5655b574dec2f385454fa80f370f85cf5e84e9ec5f16d2"
+    },
+    {
+      "source_id": "043-025-0024",
+      "target": "Трагедия",
+      "source_sha256": "afc51426a0ecf987e9bb8633462d3205ffadb6472eecaf6fb9a2a0025419c541",
+      "target_id": "ru-043-025-0024",
+      "tag": "source_caption",
+      "target_sha256": "fbc990ca0ffa2ce5b892299d25b90c3d03c4d23bc0e82dd7a809ce9c37e5295c"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-025-0020",
+      "verdict": "CORRECTED",
+      "reason": "Restored exact 13-line billboard lineation, removed broken line breaks and extra quotes, translated camelopard and Nonesuch titles, kept italic spans and 'Admission 50 cents'."
+    },
+    {
+      "source_id": "043-025-0021",
+      "verdict": "CORRECTED",
+      "reason": "Changed 'была' to 'шла' for idiom; meaning preserved: biggest line at bottom."
+    },
+    {
+      "source_id": "043-025-0022",
+      "verdict": "CORRECTED",
+      "reason": "Used 'Дамы и дети не допускаются' to match billboard register and the source 'ladies', 'not admitted'."
+    },
+    {
+      "source_id": "043-025-0023",
+      "verdict": "CORRECTED",
+      "reason": "Converted to Russian dialogue dash punctuation; 'fetch them' rendered 'заманит'; 'don't know Arkansaw' preserved with the dialect spelling's flavor reduced."
+    },
+    {
+      "source_id": "043-025-0024",
+      "verdict": "PASS",
+      "reason": "Caption 'Tragedy' correctly translated."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-025-0020",
+      "before": "В ЗДАНИИ СУДА!\n ТОЛЬКО 3 ВЕЧЕРА!\n <i>Всемирно известные трагики</i>\n ДЭВИД ГАРРИК-МЛАДШИЙ!\n И\n ЭДМУНД КИН-СТАРШИЙ!\n <i>Из лондонских и континентальных\n театров</i>,\n в своей захватывающей трагедии «КОРОЛЕВСКИЙ ВЕРБЛЮДОПАРД\n ИЛИ\n КОРОЛЕВСКИЙ НОНЕСУЧ»\n!!!\n <i>Входной билет — 50 центов</i>.",
+      "after": "В ЗДАНИИ СУДА!\nТОЛЬКО 3 ВЕЧЕРА!\n<i>Всемирно известные трагики</i>\nДЭВИД ГАРРИК-МЛАДШИЙ!\nИ\nЭДМУНД КИН-СТАРШИЙ!\n<i>Лондонских и континентальных\nтеатров</i>,\nв их захватывающей трагедии\nКОРОЛЕВСКИЙ ЖИРАФОПАРД\nИЛИ\nКОРОЛЕВСКОЕ НЕСРАВНЕННОЕ!!!\n<i>Вход 50 центов</i>."
+    },
+    {
+      "source_id": "043-025-0021",
+      "before": "А внизу была самая большая строка из всех — в ней говорилось:",
+      "after": "А внизу шла самая большая строка из всех — в ней говорилось:"
+    },
+    {
+      "source_id": "043-025-0022",
+      "before": "ЖЕНЩИНАМ И ДЕТЯМ ВХОД ЗАПРЕЩЕН.",
+      "after": "ДАМЫ И ДЕТИ НЕ ДОПУСКАЮТСЯ."
+    },
+    {
+      "source_id": "043-025-0023",
+      "before": "«Вот, — говорит он, — если эта фраза их не привлечёт, то я не знаю, что такое Арканзас!»",
+      "after": "— Вот, — говорит он, — если эта строка их не заманит, то я не знаю Арканзаса!"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/025/batch001.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKKcmo1zAPshdo1Kt4Cn",
+    "usage": {
+      "input_tokens": 4350,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 820,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKKdEapo27R6YGxSNNj2",
+        "usage": {
+          "input_tokens": 5175,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 869,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-025-0020",
+          "verdict": "PASS",
+          "reason": "Thirteen lines preserved exactly, with italic spans matched. Content is faithful. 'Camelopard' (giraffe) and the pseudo-French 'Nonesuch' are rendered plausibly and consistently with the prior correction."
+        },
+        {
+          "source_id": "043-025-0021",
+          "verdict": "PASS",
+          "reason": "Faithful: 'biggest line of all' and the introduction of the bottom line are preserved, and the register is idiomatic."
+        },
+        {
+          "source_id": "043-025-0022",
+          "verdict": "PASS",
+          "reason": "Capitalized notice preserved; 'Ladies and children not admitted' is accurately conveyed in period-appropriate wording."
+        },
+        {
+          "source_id": "043-025-0023",
+          "target": "— Вот, — говорит он, — если эта строка их не заманит, то я не знаю Арканзаса!",
+          "verdict": "PASS",
+          "reason": "Dialogue dash punctuation and the present-tense 'says he' are kept. 'Fetch them' becomes 'заманит'. The negation and Arkansas reference are intact."
+        },
+        {
+          "source_id": "043-025-0024",
+          "verdict": "PASS",
+          "reason": "The caption 'Tragedy' is translated accurately and remains a caption."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

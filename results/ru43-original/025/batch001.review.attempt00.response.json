@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKKcmo1zAPshdo1Kt4Cn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-025-0020\",\"target\":\"В ЗДАНИИ СУДА!\\nТОЛЬКО 3 ВЕЧЕРА!\\n<i>Всемирно известные трагики</i>\\nДЭВИД ГАРРИК-МЛАДШИЙ!\\nИ\\nЭДМУНД КИН-СТАРШИЙ!\\n<i>Лондонских и континентальных\\nтеатров</i>,\\nв их захватывающей трагедии\\nКОРОЛЕВСКИЙ ЖИРАФОПАРД\\nИЛИ\\nКОРОЛЕВСКОЕ НЕСРАВНЕННОЕ!!!\\n<i>Вход 50 центов</i>.\"},{\"source_id\":\"043-025-0021\",\"target\":\"А внизу шла самая большая строка из всех — в ней говорилось:\"},{\"source_id\":\"043-025-0022\",\"target\":\"ДАМЫ И ДЕТИ НЕ ДОПУСКАЮТСЯ.\"},{\"source_id\":\"043-025-0023\",\"target\":\"— Вот, — говорит он, — если эта строка их не заманит, то я не знаю Арканзаса!\"},{\"source_id\":\"043-025-0024\",\"target\":\"Трагедия\"}],\"review\":[{\"source_id\":\"043-025-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored exact 13-line billboard lineation, removed broken line breaks and extra quotes, translated camelopard and Nonesuch titles, kept italic spans and 'Admission 50 cents'.\"},{\"source_id\":\"043-025-0021\",\"verdict\":\"CORRECTED\",\"reason\":\"Changed 'была' to 'шла' for idiom; meaning preserved: biggest line at bottom.\"},{\"source_id\":\"043-025-0022\",\"verdict\":\"CORRECTED\",\"reason\":\"Used 'Дамы и дети не допускаются' to match billboard register and the source 'ladies', 'not admitted'.\"},{\"source_id\":\"043-025-0023\",\"verdict\":\"CORRECTED\",\"reason\":\"Converted to Russian dialogue dash punctuation; 'fetch them' rendered 'заманит'; 'don't know Arkansaw' preserved with the dialect spelling's flavor reduced.\"},{\"source_id\":\"043-025-0024\",\"verdict\":\"PASS\",\"reason\":\"Caption 'Tragedy' correctly translated.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4350,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 820,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
