@@ -1,0 +1,716 @@
+{
+  "unit": 2,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-002-0039",
+      "target": "Вот точное факсимиле третьего документа:",
+      "source_sha256": "0420dfb0d9322e773512d369c29734d860692c234cb7e265388568c331354a87",
+      "target_id": "ru-fr42c-002-0039",
+      "tag": "p",
+      "target_sha256": "80eabd28c60cb6ea85f0a23759654fe877c1f60a89870a8f29a4b0af80a10814"
+    },
+    {
+      "source_id": "fr42c-002-0040",
+      "target": "troi ats tannia gonie austral abor contin pr cruel indi jeté ongit et 37° 11′ lat",
+      "source_sha256": "5aa5b28958951d8efd493fa8cee6fb2f17c1f311a6e9582bfffbb54d08f9fb69",
+      "target_id": "ru-fr42c-002-0040",
+      "tag": "document",
+      "target_sha256": "5aa5b28958951d8efd493fa8cee6fb2f17c1f311a6e9582bfffbb54d08f9fb69"
+    },
+    {
+      "source_id": "fr42c-002-0041",
+      "target": "«Здесь есть цифры, — воскликнула леди Элен. — Смотрите, господа, смотрите!…",
+      "source_sha256": "06823ad0b0967cd96e0bc87152a70eb2d88d86aebac81101c2a24565274ed6f4",
+      "target_id": "ru-fr42c-002-0041",
+      "tag": "p",
+      "target_sha256": "eaf5a774f3319dd1dfed8d26ac31f09d246d00b8b9bd25419a5d674ab8c01f95"
+    },
+    {
+      "source_id": "fr42c-002-0042",
+      "target": "— Будем действовать по порядку, — сказал лорд Гленарван, — и начнём с самого начала. Позвольте мне выписать одно за другим эти разрозненные и неполные слова. Прежде всего, уже по первым буквам, я вижу, что речь идёт о трёхмачтовом судне, название которого, благодаря английскому и французскому документам, сохранилось у нас полностью: <i>«Британия».</i> Из двух следующих слов, <i>gonie</i> и <i>austral,</i> только последнее имеет значение, понятное вам всем.",
+      "source_sha256": "47bdf7d7346f563043d2d9ef071d7fa54caa6e7fc0fa8ea51d077191a5304f22",
+      "target_id": "ru-fr42c-002-0042",
+      "tag": "p",
+      "target_sha256": "68bcae0d769297215e9b570e19a34978ab3cdbadf716a049fda07b2fabb3de0f"
+    },
+    {
+      "source_id": "fr42c-002-0043",
+      "target": "— Вот уже ценная подробность, — ответил Джон Манглс, — кораблекрушение произошло в южном полушарии.",
+      "source_sha256": "71dd365f9f02105a3107d0ac16a1dd5521b27947aa5ec1fdc5b39ca24b860328",
+      "target_id": "ru-fr42c-002-0043",
+      "tag": "p",
+      "target_sha256": "ab23c0ffe3f6438a68bf98a0edab50db311cc04adac84f0dc884938b7adfc5ae"
+    },
+    {
+      "source_id": "fr42c-002-0044",
+      "target": "— Это расплывчато, — сказал майор.",
+      "source_sha256": "96cf3acfcd5a637f14594b5ef32aa8bc52c2cb8b06883f6465b3cda4feef9a25",
+      "target_id": "ru-fr42c-002-0044",
+      "tag": "p",
+      "target_sha256": "910130123f3277a42cd4a70471d4434ef806228e1504ae161cb4ece23d291239"
+    },
+    {
+      "source_id": "fr42c-002-0045",
+      "target": "— Продолжаю, — снова заговорил Гленарван. — А! Слово <i>abor</i> — корень глагола <i>aborder.</i> Эти несчастные куда-то причалили. Но куда? <i>Contin!</i> Неужели на материке? <i>Жестокий!…</i>",
+      "source_sha256": "c0dee7669ba0c2d5b010f093aed718ffaee2aa347c8f876bd0f4fd1569b6a696",
+      "target_id": "ru-fr42c-002-0045",
+      "tag": "p",
+      "target_sha256": "9644077be958d7454cb54d25bb6d7fb8267bd435b41278f86cfe938c28d3c6cb"
+    },
+    {
+      "source_id": "fr42c-002-0046",
+      "target": "— <i>Жестокий!</i> — воскликнул Джон Манглс. — Да ведь это объясняет немецкое слово <i>graus… grausam… жестокий!</i>",
+      "source_sha256": "77f83d932e9e74d03e6f98a42d305e11296e2c5030f6dd4414d031c00189410e",
+      "target_id": "ru-fr42c-002-0046",
+      "tag": "p",
+      "target_sha256": "6d80a86993d14056e3a9bc6ed5d85c5b304d6f7f0357fe0b4b5d7f6e9b3fac54"
+    },
+    {
+      "source_id": "fr42c-002-0047",
+      "target": "— Продолжим! Продолжим! — сказал Гленарван, чей интерес бурно возрастал по мере того, как смысл этих неполных слов раскрывался перед его глазами. — <i>Indi…</i> — неужели речь об <i>Индии,</i> куда, быть может, были заброшены эти матросы? Что означает слово <i>ongit?</i> А! <i>Долгота!</i> А вот и широта: <i>тридцать семь градусов одиннадцать минут.</i> Наконец-то! Теперь у нас есть точное указание.",
+      "source_sha256": "2f824f2a95a6cc162245160b83476cfea43a566417574805720c63ff1b19e6d8",
+      "target_id": "ru-fr42c-002-0047",
+      "tag": "p",
+      "target_sha256": "90dea7172d705c238e9b6d1de8cf20df785d04124c22e6366bf6e75ba53db9bd"
+    },
+    {
+      "source_id": "fr42c-002-0048",
+      "target": "— Но долготы-то нет, — сказал Мак-Наббс.",
+      "source_sha256": "21d3d480858d130a875864017362d77d6051950127d2585c8cf94f34378f2431",
+      "target_id": "ru-fr42c-002-0048",
+      "tag": "p",
+      "target_sha256": "cf720ee71ec3661c1e009fca08a4757a4a72eac3f81e87e86c61e68895358b01"
+    },
+    {
+      "source_id": "fr42c-002-0049",
+      "target": "— Всего сразу не получишь, мой дорогой майор, — ответил Гленарван, — а точная широта — это уже кое-что. Решительно, французский документ — самый полный из трёх. Очевидно, что каждый из них был буквальным переводом остальных, ведь во всех них одинаковое число строк. Теперь нужно, следовательно, свести их воедино, перевести на один язык и отыскать их наиболее вероятный, наиболее логичный и наиболее ясный смысл.",
+      "source_sha256": "bdf27b60858036c5f0cd053a5020b371d81c91db140e3bd8e7eb0ae036c8cc9b",
+      "target_id": "ru-fr42c-002-0049",
+      "tag": "p",
+      "target_sha256": "214dfd1eba3cb72e113adb96c536e81c45ca3211b66b819f9b644607aba5ec06"
+    },
+    {
+      "source_id": "fr42c-002-0050",
+      "target": "— На французском, — спросил майор, — на английском или на немецком вы будете делать этот перевод?",
+      "source_sha256": "f5ce9f9413294cea6a01a68387b407993975c44fb60650e1f099397367196ab9",
+      "target_id": "ru-fr42c-002-0050",
+      "tag": "p",
+      "target_sha256": "f4efd6ea03a6b0ff3acb47e994b103d79878d63f3dcee354385f50b6f1538003"
+    },
+    {
+      "source_id": "fr42c-002-0051",
+      "target": "— На французском, — ответил Гленарван, — поскольку большая часть интересных слов сохранилась у нас именно на этом языке.",
+      "source_sha256": "d64efa90034b3528709656aa84f909dccd11bcc6d30b12a68e433256465d9512",
+      "target_id": "ru-fr42c-002-0051",
+      "tag": "p",
+      "target_sha256": "e80d78ae27ceba17838fbbc80a1003b82acdb40972873d196485adbedac4930d"
+    },
+    {
+      "source_id": "fr42c-002-0052",
+      "target": "— Ваша милость права, — сказал Джон Манглс, — и к тому же этот язык нам знаком.",
+      "source_sha256": "72042c9047fa7eab45a39b45ee5830c9fbfa477a7221911bf095f6adba699cf5",
+      "target_id": "ru-fr42c-002-0052",
+      "tag": "p",
+      "target_sha256": "63e91a387b6e84d3ae9087bc1ec00dec6dc1bfb7958807478c8e90453701d999"
+    },
+    {
+      "source_id": "fr42c-002-0053",
+      "target": "— Решено. Я запишу этот документ, соединив эти остатки слов и клочья фраз, соблюдая промежутки между ними и дополняя те, смысл которых не может вызывать сомнения; затем мы сравним и рассудим.»",
+      "source_sha256": "57f9332bb5ceddd0bb1d580caea253d5a81570de2eed4f9dccb0f79dd610d7dc",
+      "target_id": "ru-fr42c-002-0053",
+      "tag": "p",
+      "target_sha256": "0a713aebacb2f222d6736964c8df85b38fa7ca56679c58d0d9fb407f29d96ca5"
+    },
+    {
+      "source_id": "fr42c-002-0054",
+      "target": "Гленарван тотчас взял перо, и несколько мгновений спустя он показывал друзьям листок, на котором были выведены следующие строки:",
+      "source_sha256": "5052d7c045c6a53e26f26ef20bbee7e256b809cac80788bf8a9b2048eefddf59",
+      "target_id": "ru-fr42c-002-0054",
+      "tag": "p",
+      "target_sha256": "7aff9f62cf4bb9e63cc7d9be9b997a73129eae7d055ff1e4bc50b97f55fad77a"
+    },
+    {
+      "source_id": "fr42c-002-0055",
+      "target": "7 juin 1862 trois-mâts Britannia Glasgow sombré gonie austral à terre deux matelots capitaine Gr abor contin pr cruel indi jeté ce document de longitude et 37° 11′ de latitude Portez-leur secours perdus.",
+      "source_sha256": "78b3e49d86419aad50968fbaba201de555bb875c64dd26ddacc65ad1851258f1",
+      "target_id": "ru-fr42c-002-0055",
+      "tag": "document",
+      "target_sha256": "78b3e49d86419aad50968fbaba201de555bb875c64dd26ddacc65ad1851258f1"
+    },
+    {
+      "source_id": "fr42c-002-0056",
+      "target": "В эту минуту матрос подошёл предупредить капитана, что <i>«Дункан»</i> входит в залив Клайд, и спросил его распоряжений.",
+      "source_sha256": "24e6b7d2e256074a54e293de82c89e896b1e97c66faf9765595e7a731a9a00ff",
+      "target_id": "ru-fr42c-002-0056",
+      "tag": "p",
+      "target_sha256": "de8f5b0ab6ac4ca60d5ac3a496f67a6218ba36c8f0d9521ca489abf98f3f0404"
+    },
+    {
+      "source_id": "fr42c-002-0057",
+      "target": "«Каковы намерения вашей милости? — спросил Джон Манглс, обращаясь к лорду Гленарвану.",
+      "source_sha256": "c56f4010d4f1c378be843312268b996594926bd3c56f1899ca2f052a4233f87c",
+      "target_id": "ru-fr42c-002-0057",
+      "tag": "p",
+      "target_sha256": "d91b18e950b96cad9dc91e68223f73719eadb3fd0be6f6448e340a1374837aed"
+    },
+    {
+      "source_id": "fr42c-002-0058",
+      "target": "— Как можно скорее добраться до Дамбартона, Джон; затем, в то время как леди Элен вернётся в Малькольм-Касл, я поеду в Лондон, чтобы представить этот документ Адмиралтейству.»",
+      "source_sha256": "3af7ec7721500513928190abfe3d62cc0d7f73d9f239281c1e9d23a1bf9ecb82",
+      "target_id": "ru-fr42c-002-0058",
+      "tag": "p",
+      "target_sha256": "f59a61529fecbe2e2b7965c84ed8a9e0f8bebb8c21174c4223c4fc5b2141330e"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-002-0039",
+      "verdict": "PASS",
+      "reason": "Faithful; grammar of «факсимиле» acceptable."
+    },
+    {
+      "source_id": "fr42c-002-0040",
+      "verdict": "NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN",
+      "reason": "Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict."
+    },
+    {
+      "source_id": "fr42c-002-0041",
+      "target": "",
+      "verdict": "CORRECTED",
+      "reason": "Name changed to established «леди Элен»; «Il y a» rendered explicitly."
+    },
+    {
+      "source_id": "fr42c-002-0042",
+      "verdict": "CORRECTED",
+      "reason": "Restored document fragments gonie/austral as in the source (italic), fixed «идёт», «Britannia» italic span, and 'documents anglais et français' as English and French documents."
+    },
+    {
+      "source_id": "fr42c-002-0043",
+      "verdict": "CORRECTED",
+      "reason": "Name fixed to Джон Манглс; removed erroneous semicolon-dash; «détail précieux» rendered as ценная подробность."
+    },
+    {
+      "source_id": "fr42c-002-0044",
+      "verdict": "CORRECTED",
+      "reason": "«Vague» rendered as расплывчато; meaning preserved."
+    },
+    {
+      "source_id": "fr42c-002-0045",
+      "verdict": "CORRECTED",
+      "reason": "Draft wrongly invented «aborer»/«причаливать» and translated 'contin' as «Продолжай!»; restored abor, aborder, contin as fragments, 'sur un continent' and cruel."
+    },
+    {
+      "source_id": "fr42c-002-0046",
+      "verdict": "CORRECTED",
+      "reason": "Fixed name, removed stray quotation marks, restored German graus… grausam… with translated cruel."
+    },
+    {
+      "source_id": "fr42c-002-0047",
+      "verdict": "CORRECTED",
+      "reason": "Fixed verb of speech (dit, not воскликнул), 'intérêt' not 'любопытство', conditional 'auraient été jetés', restored Indi… and ongit fragments, fixed gender error «точное указание»."
+    },
+    {
+      "source_id": "fr42c-002-0048",
+      "verdict": "CORRECTED",
+      "reason": "Name fixed to Мак-Наббс."
+    },
+    {
+      "source_id": "fr42c-002-0049",
+      "verdict": "CORRECTED",
+      "reason": "Idiom 'On ne peut pas tout avoir' and 'le plus probable, le plus logique et le plus explicite' made fuller and more faithful."
+    },
+    {
+      "source_id": "fr42c-002-0050",
+      "verdict": "PASS",
+      "reason": "Faithful dialogue turn."
+    },
+    {
+      "source_id": "fr42c-002-0051",
+      "verdict": "CORRECTED",
+      "reason": "'Mots intéressants' restored (not «важных»)."
+    },
+    {
+      "source_id": "fr42c-002-0052",
+      "verdict": "CORRECTED",
+      "reason": "Fixed address form and gender agreement; name fixed."
+    },
+    {
+      "source_id": "fr42c-002-0053",
+      "verdict": "CORRECTED",
+      "reason": "Rendered 'C’est entendu' and 'nous comparerons et nous jugerons' more precisely; clarified 'ceux dont...'."
+    },
+    {
+      "source_id": "fr42c-002-0054",
+      "verdict": "CORRECTED",
+      "reason": "Imperfect 'présentait' rendered as ongoing action; wording polished."
+    },
+    {
+      "source_id": "fr42c-002-0055",
+      "verdict": "NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN",
+      "reason": "Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict."
+    },
+    {
+      "source_id": "fr42c-002-0056",
+      "verdict": "CORRECTED",
+      "reason": "Fixed italic/quotation placement for Дункан; 'demanda ses ordres' rendered precisely."
+    },
+    {
+      "source_id": "fr42c-002-0057",
+      "verdict": "CORRECTED",
+      "reason": "Name fixed; form of address made consistent."
+    },
+    {
+      "source_id": "fr42c-002-0058",
+      "verdict": "CORRECTED",
+      "reason": "Fixed imperative infinitive structure, future 'retournera', names (Элен, Малькольм-Касл) and 'Admiralty'."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-002-0041",
+      "before": "«Там цифры, — воскликнула леди Хелена. — Смотрите, господа, смотрите!…",
+      "after": "«Здесь есть цифры, — воскликнула леди Элен. — Смотрите, господа, смотрите!…"
+    },
+    {
+      "source_id": "fr42c-002-0042",
+      "before": "— Давайте действовать по порядку, — сказал лорд Гленарван, — и начнём с самого начала. Позвольте мне рассмотреть поочерёдно эти разрозненные и неполные слова. Сразу же, уже по первым буквам, я вижу, что речь идет о трёхмачтовом судне, название которого, благодаря английским и французским документам, полностью сохранилось: <i>«Британия».</i> Из двух следующих слов <i>— «гония»</i> и <i>«аустрал» —</i> только последнее имеет значение, которое вы все понимаете.",
+      "after": "— Будем действовать по порядку, — сказал лорд Гленарван, — и начнём с самого начала. Позвольте мне выписать одно за другим эти разрозненные и неполные слова. Прежде всего, уже по первым буквам, я вижу, что речь идёт о трёхмачтовом судне, название которого, благодаря английскому и французскому документам, сохранилось у нас полностью: <i>«Британия».</i> Из двух следующих слов, <i>gonie</i> и <i>austral,</i> только последнее имеет значение, понятное вам всем."
+    },
+    {
+      "source_id": "fr42c-002-0043",
+      "before": "— Это уже ценная деталь, — ответил Джон Мэнглз; — кораблекрушение произошло в южном полушарии.",
+      "after": "— Вот уже ценная подробность, — ответил Джон Манглс, — кораблекрушение произошло в южном полушарии."
+    },
+    {
+      "source_id": "fr42c-002-0044",
+      "before": "— Это слишком неопределённо, — сказал майор.",
+      "after": "— Это расплывчато, — сказал майор."
+    },
+    {
+      "source_id": "fr42c-002-0045",
+      "before": "— Продолжу, — возобновил Гленарван. — Ах! Слово <i>«abor»,</i> корень глагола <i>«aborer» (причаливать).</i> Эти несчастные где-то причалили. Но где? <i>Продолжай!</i> Неужели на континенте? Как <i>жестоко!…</i>",
+      "after": "— Продолжаю, — снова заговорил Гленарван. — А! Слово <i>abor</i> — корень глагола <i>aborder.</i> Эти несчастные куда-то причалили. Но куда? <i>Contin !</i> Неужели на материке? <i>Жестокий !…</i>"
+    },
+    {
+      "source_id": "fr42c-002-0046",
+      "before": "— <i>«Жестоко!» —</i> воскликнул Джон Мэнглз, — «но вот и объяснение немецкого слова <i>graus… grausam… жестокий!»</i>",
+      "after": "— <i>Жестокий!</i> — воскликнул Джон Манглс. — Да ведь это объясняет немецкое слово <i>graus… grausam… жестокий!</i>"
+    },
+    {
+      "source_id": "fr42c-002-0047",
+      "before": "— Продолжаем! Продолжаем! — воскликнул Гленарван, чьё любопытство бурно разгоралось по мере того, как смысл этих неполных слов прояснялся в его глазах. <i>«Инди…» —</i> значит ли это, что речь идёт об Индии<i>,</i> куда, по-видимому, были выброшены эти матросы? Что означает слово <i>«онгит»?</i> Ах! <i>Долгота!</i> А вот и широта: <i>тридцать семь градусов одиннадцать минут.</i> Наконец-то! У нас есть точная указание.",
+      "after": "— Продолжим! Продолжим! — сказал Гленарван, чей интерес бурно возрастал по мере того, как смысл этих неполных слов раскрывался перед его глазами. — <i>Indi…</i> — неужели речь об <i>Индии,</i> куда, быть может, были заброшены эти матросы? Что означает слово <i>ongit?</i> А! <i>Долгота!</i> А вот и широта: <i>тридцать семь градусов одиннадцать минут.</i> Наконец-то! Теперь у нас есть точное указание."
+    },
+    {
+      "source_id": "fr42c-002-0048",
+      "before": "— Но здесь нет долготы, — сказал Мак-Наббс.",
+      "after": "— Но долготы-то нет, — сказал Мак-Наббс."
+    },
+    {
+      "source_id": "fr42c-002-0049",
+      "before": "— Нельзя иметь всё, мой дорогой майор, — ответил Гленарван, — и это уже что-то: точная широта. Определённо, этот французский документ — самый полный из трёх. Очевидно, что каждый из них был дословным переводом других, поскольку все они содержат одинаковое количество строк. Теперь, следовательно, нужно соединить их, перевести на один язык и найти их наиболее вероятный, логичный и ясный смысл.",
+      "after": "— Всего сразу не получишь, мой дорогой майор, — ответил Гленарван, — а точная широта — это уже кое-что. Решительно, французский документ — самый полный из трёх. Очевидно, что каждый из них был буквальным переводом остальных, ведь во всех них одинаковое число строк. Теперь нужно, следовательно, свести их воедино, перевести на один язык и отыскать их наиболее вероятный, наиболее логичный и наиболее ясный смысл."
+    },
+    {
+      "source_id": "fr42c-002-0051",
+      "before": "— На французском, — ответил Гленарван, — ведь большинство важных слов сохранилось для нас именно на этом языке.",
+      "after": "— На французском, — ответил Гленарван, — поскольку большая часть интересных слов сохранилась у нас именно на этом языке."
+    },
+    {
+      "source_id": "fr42c-002-0052",
+      "before": "— Ваша честь прав, — сказал Джон Мэнглз, — да и к тому же этот язык нам знаком.",
+      "after": "— Ваша милость права, — сказал Джон Манглс, — и к тому же этот язык нам знаком."
+    },
+    {
+      "source_id": "fr42c-002-0053",
+      "before": "— Договорились. Я составлю этот документ, собрав воедино эти обрывки слов и фрагменты предложений, соблюдая промежутки между ними и дополняя те, смысл которых не вызывает сомнений; затем мы сравним и решим.»",
+      "after": "— Решено. Я запишу этот документ, соединив эти остатки слов и клочья фраз, соблюдая промежутки между ними и дополняя те слова, смысл которых не может вызывать сомнения; затем мы сравним и рассудим.»"
+    },
+    {
+      "source_id": "fr42c-002-0054",
+      "before": "Гленарван тут же взял перо, и через несколько мгновений показал своим друзьям листок, на котором были начертаны следующие строки:",
+      "after": "Гленарван тотчас взял перо, и несколько мгновений спустя он показывал друзьям листок, на котором были выведены следующие строки:"
+    },
+    {
+      "source_id": "fr42c-002-0056",
+      "before": "В этот момент матрос подошёл к капитану, чтобы сообщить, что <i>«Дункан</i>» входит в залив Клайд, и спросил о приказах.",
+      "after": "В эту минуту матрос подошёл предупредить капитана, что <i>«Дункан»</i> входит в залив Клайд, и спросил его распоряжений."
+    },
+    {
+      "source_id": "fr42c-002-0057",
+      "before": "«Каковы намерения Вашей Чести? — спросил Джон Мэнглз, обращаясь к лорду Гленарвану.",
+      "after": "«Каковы намерения вашей милости? — спросил Джон Манглс, обращаясь к лорду Гленарвану."
+    },
+    {
+      "source_id": "fr42c-002-0058",
+      "before": "— Джон, нужно как можно скорее добраться до Дамбартона; затем, пока леди Хелена вернётся в Малкольм-Касл, я отправлюсь в Лондон, чтобы представить этот документ в Адмиралтейство».",
+      "after": "— Как можно скорее добраться до Дамбартона, Джон; затем, в то время как леди Элен вернётся в Малькольм-Касл, я поеду в Лондон, чтобы представить этот документ Адмиралтейству.»"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-complete-original/002/batch002.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJk8Ep4hyP6MmfTxYpwV",
+    "usage": {
+      "input_tokens": 11360,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 6799,
+      "output_tokens_details": {
+        "thinking_tokens": 3871
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "protected_source_native_ids": [
+      "fr42c-002-0040",
+      "fr42c-002-0055"
+    ],
+    "actual_provider_review_ids": [
+      "fr42c-002-0039",
+      "fr42c-002-0041",
+      "fr42c-002-0042",
+      "fr42c-002-0043",
+      "fr42c-002-0044",
+      "fr42c-002-0045",
+      "fr42c-002-0046",
+      "fr42c-002-0047",
+      "fr42c-002-0048",
+      "fr42c-002-0049",
+      "fr42c-002-0050",
+      "fr42c-002-0051",
+      "fr42c-002-0052",
+      "fr42c-002-0053",
+      "fr42c-002-0054",
+      "fr42c-002-0056",
+      "fr42c-002-0057",
+      "fr42c-002-0058"
+    ]
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJkBgkMuQhmDz645PQJA",
+        "usage": {
+          "input_tokens": 14351,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4838,
+          "output_tokens_details": {
+            "thinking_tokens": 1940
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "protected_source_native_ids": [
+          "fr42c-002-0040",
+          "fr42c-002-0055"
+        ],
+        "actual_provider_review_ids": [
+          "fr42c-002-0039",
+          "fr42c-002-0041",
+          "fr42c-002-0042",
+          "fr42c-002-0043",
+          "fr42c-002-0044",
+          "fr42c-002-0045",
+          "fr42c-002-0046",
+          "fr42c-002-0047",
+          "fr42c-002-0048",
+          "fr42c-002-0049",
+          "fr42c-002-0050",
+          "fr42c-002-0051",
+          "fr42c-002-0052",
+          "fr42c-002-0053",
+          "fr42c-002-0054",
+          "fr42c-002-0056",
+          "fr42c-002-0057",
+          "fr42c-002-0058"
+        ]
+      },
+      "review": [
+        {
+          "source_id": "fr42c-002-0039",
+          "verdict": "PASS",
+          "reason": "Faithful introduction to the third document; meaning and punctuation preserved."
+        },
+        {
+          "source_id": "fr42c-002-0040",
+          "verdict": "NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN",
+          "reason": "Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict."
+        },
+        {
+          "source_id": "fr42c-002-0041",
+          "verdict": "PASS",
+          "reason": "Agency, exclamation and address to the gentlemen preserved; prior name correction (леди Элен) verified."
+        },
+        {
+          "source_id": "fr42c-002-0042",
+          "verdict": "PASS",
+          "reason": "All facts preserved (trois-mâts, Britannia preserved thanks to the English and French documents, gonie/austral, only the last meaningful); italics kept; prior correction verified and idiomatic."
+        },
+        {
+          "source_id": "fr42c-002-0043",
+          "verdict": "PASS",
+          "reason": "Accurate: the wreck occurred in the southern hemisphere; Манглс name consistent."
+        },
+        {
+          "source_id": "fr42c-002-0044",
+          "verdict": "PASS",
+          "reason": "«C'est vague» rendered correctly."
+        },
+        {
+          "source_id": "fr42c-002-0045",
+          "verdict": "CORRECTED",
+          "reason": "Meaning was right, but the French spacing before «!» was carried into Russian ('Contin !', 'Жестокий !…'); normalized to Russian punctuation while keeping italics and the fragment 'Contin'."
+        },
+        {
+          "source_id": "fr42c-002-0046",
+          "verdict": "PASS",
+          "reason": "Exclamation, German word graus… grausam… and its explanation preserved; italics correct."
+        },
+        {
+          "source_id": "fr42c-002-0047",
+          "verdict": "PASS",
+          "reason": "Conditional 'auraient été jetés' conveyed by «быть может»; fragments Indi…/ongit kept, longitude, latitude 37°11′ and the 'precise indication' preserved; prior fixes verified."
+        },
+        {
+          "source_id": "fr42c-002-0048",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic; speaker Мак-Наббс correct."
+        },
+        {
+          "source_id": "fr42c-002-0049",
+          "verdict": "PASS",
+          "reason": "All reasoning preserved: exact latitude, French document most complete, equal number of lines, plan to combine and translate; idiomatic."
+        },
+        {
+          "source_id": "fr42c-002-0050",
+          "verdict": "PASS",
+          "reason": "Question about the three languages preserved with the major's interruption."
+        },
+        {
+          "source_id": "fr42c-002-0051",
+          "verdict": "PASS",
+          "reason": "Faithful: most interesting words were preserved in French."
+        },
+        {
+          "source_id": "fr42c-002-0052",
+          "verdict": "PASS",
+          "reason": "«Votre Honneur» rendered as a respectful «Ваша милость» and the rest is accurate."
+        },
+        {
+          "source_id": "fr42c-002-0053",
+          "verdict": "CORRECTED",
+          "reason": "The translation added the noun «слова» after «те», resolving the French ambiguity of «ceux»; restored the neutral «те» to preserve the ambiguity. The rest is faithful."
+        },
+        {
+          "source_id": "fr42c-002-0054",
+          "verdict": "PASS",
+          "reason": "Faithful to the source: immediately took the pen, a few moments later showed the paper with the lines."
+        },
+        {
+          "source_id": "fr42c-002-0055",
+          "verdict": "NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN",
+          "reason": "Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict."
+        },
+        {
+          "source_id": "fr42c-002-0056",
+          "verdict": "PASS",
+          "reason": "Duncan italicized; entering the Clyde estuary and the request for orders preserved."
+        },
+        {
+          "source_id": "fr42c-002-0057",
+          "verdict": "PASS",
+          "reason": "Question and addressee preserved; register consistent."
+        },
+        {
+          "source_id": "fr42c-002-0058",
+          "verdict": "PASS",
+          "reason": "Itinerary (Dumbarton, Malcolm-Castle, London, Admiralty) and the simultaneity of plans preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-002-0045",
+          "before": "— Продолжаю, — снова заговорил Гленарван. — А! Слово <i>abor</i> — корень глагола <i>aborder.</i> Эти несчастные куда-то причалили. Но куда? <i>Contin !</i> Неужели на материке? <i>Жестокий !…</i>",
+          "after": "— Продолжаю, — снова заговорил Гленарван. — А! Слово <i>abor</i> — корень глагола <i>aborder.</i> Эти несчастные куда-то причалили. Но куда? <i>Contin!</i> Неужели на материке? <i>Жестокий!…</i>"
+        },
+        {
+          "source_id": "fr42c-002-0053",
+          "before": "— Решено. Я запишу этот документ, соединив эти остатки слов и клочья фраз, соблюдая промежутки между ними и дополняя те слова, смысл которых не может вызывать сомнения; затем мы сравним и рассудим.»",
+          "after": "— Решено. Я запишу этот документ, соединив эти остатки слов и клочья фраз, соблюдая промежутки между ними и дополняя те, смысл которых не может вызывать сомнения; затем мы сравним и рассудим.»"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJkE1exprsYyeeeS6GTP",
+        "usage": {
+          "input_tokens": 14771,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3896,
+          "output_tokens_details": {
+            "thinking_tokens": 1000
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "protected_source_native_ids": [
+          "fr42c-002-0040",
+          "fr42c-002-0055"
+        ],
+        "actual_provider_review_ids": [
+          "fr42c-002-0039",
+          "fr42c-002-0041",
+          "fr42c-002-0042",
+          "fr42c-002-0043",
+          "fr42c-002-0044",
+          "fr42c-002-0045",
+          "fr42c-002-0046",
+          "fr42c-002-0047",
+          "fr42c-002-0048",
+          "fr42c-002-0049",
+          "fr42c-002-0050",
+          "fr42c-002-0051",
+          "fr42c-002-0052",
+          "fr42c-002-0053",
+          "fr42c-002-0054",
+          "fr42c-002-0056",
+          "fr42c-002-0057",
+          "fr42c-002-0058"
+        ]
+      },
+      "review": [
+        {
+          "source_id": "fr42c-002-0039",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic; 'troisième document' and 'fac-simile exact' preserved."
+        },
+        {
+          "source_id": "fr42c-002-0040",
+          "verdict": "NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN",
+          "reason": "Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict."
+        },
+        {
+          "source_id": "fr42c-002-0041",
+          "verdict": "PASS",
+          "reason": "Exclamation, address to 'Messieurs' and ellipsis preserved; name rendered as established (леди Элен)."
+        },
+        {
+          "source_id": "fr42c-002-0042",
+          "verdict": "PASS",
+          "reason": "All facts preserved: stepwise procedure, trois-mâts, Britannia conserved thanks to English and French documents, gonie/austral kept as italic fragments, only 'austral' meaningful. Prior corrections verified."
+        },
+        {
+          "source_id": "fr42c-002-0043",
+          "verdict": "PASS",
+          "reason": "Meaning, agent (Mangles), and southern hemisphere inference accurate; name per guidance."
+        },
+        {
+          "source_id": "fr42c-002-0044",
+          "verdict": "PASS",
+          "reason": "'C’est vague' rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "fr42c-002-0045",
+          "verdict": "PASS",
+          "reason": "Fragments abor/aborder/contin kept in italics; 'cruel' rendered as Russian equivalent; questions and tentative inference preserved; spacing before punctuation corrected."
+        },
+        {
+          "source_id": "fr42c-002-0046",
+          "verdict": "PASS",
+          "reason": "Mangles links the fragment 'cruel' to German 'grausam'; italics and ellipses kept."
+        },
+        {
+          "source_id": "fr42c-002-0047",
+          "verdict": "PASS",
+          "reason": "Conditional 'auraient été jetés' conveyed by 'быть может'; italics for fragments and latitude preserved; 'précise' accurately rendered; earlier errors fixed."
+        },
+        {
+          "source_id": "fr42c-002-0048",
+          "verdict": "PASS",
+          "reason": "Accurate: longitude is missing; natural colloquial register."
+        },
+        {
+          "source_id": "fr42c-002-0049",
+          "verdict": "PASS",
+          "reason": "Proverbial remark, latitude point, comparison of three documents, equal line count and plan to unify and translate all faithfully rendered."
+        },
+        {
+          "source_id": "fr42c-002-0050",
+          "verdict": "PASS",
+          "reason": "Major's question with three language options preserved."
+        },
+        {
+          "source_id": "fr42c-002-0051",
+          "verdict": "PASS",
+          "reason": "Reason (most interesting words preserved in French) accurately given."
+        },
+        {
+          "source_id": "fr42c-002-0052",
+          "verdict": "PASS",
+          "reason": "'Votre Honneur' rendered as 'Ваша милость' with correct feminine agreement; 'familier' preserved."
+        },
+        {
+          "source_id": "fr42c-002-0053",
+          "verdict": "PASS",
+          "reason": "All actions of Glenarvan's plan preserved, including respecting intervals, completing unambiguous parts, then comparing and judging; ambiguity of 'ceux' retained."
+        },
+        {
+          "source_id": "fr42c-002-0054",
+          "verdict": "PASS",
+          "reason": "Agency, sequence and the introduction to the document faithfully rendered."
+        },
+        {
+          "source_id": "fr42c-002-0055",
+          "verdict": "NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN",
+          "reason": "Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict."
+        },
+        {
+          "source_id": "fr42c-002-0056",
+          "verdict": "PASS",
+          "reason": "Duncan italic preserved; entering the Clyde gulf and request for orders accurate."
+        },
+        {
+          "source_id": "fr42c-002-0057",
+          "verdict": "PASS",
+          "reason": "Question and address to Lord Glenarvan accurately rendered."
+        },
+        {
+          "source_id": "fr42c-002-0058",
+          "verdict": "PASS",
+          "reason": "Destination, simultaneous plans of Lady Helen and Glenarvan, and submission to the Admiralty preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
