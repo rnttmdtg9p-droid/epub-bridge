@@ -1,0 +1,806 @@
+{
+  "unit": 17,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-017-heading",
+      "target": "ГЛАВА XIV.",
+      "source_sha256": "c64a594972e6dcc1ab51eedc7ac1f7db39e815c91403c949425001e10027e086",
+      "target_id": "ru-043-017-heading",
+      "tag": "heading",
+      "target_sha256": "5bf65c6aba8726e22a3d0212ab8b41842255fb2087c217b5a08f6a506944f79f"
+    },
+    {
+      "source_id": "043-017-0001",
+      "target": "Всеобщее веселье. — Гарем. — Французский.",
+      "source_sha256": "369e836ff9b9539821aefd7c3c2f4a05826e9464921f9ed849977a7d36de241a",
+      "target_id": "ru-043-017-0001",
+      "tag": "source_argument",
+      "target_sha256": "b4ad8f96523662d1349884ec6ccfbb26a609b35b863e5168e52fa4ffa0eff906"
+    },
+    {
+      "source_id": "043-017-0002",
+      "target": "Немного погодя, когда мы встали, мы перебрали барахло, которое шайка утащила с разбитого парохода, и нашли сапоги, одеяла, одежду и всякую всячину, да ещё кучу книг, подзорную трубу и три коробки сигар. Никогда в жизни мы ни один, ни другой не были так богаты. Сигары были первый сорт. Весь день мы провалялись в лесу, болтали, а я читал книжки, и вообще нам было очень хорошо. Я рассказал Джиму всё, что случилось внутри разбитого парохода и на пароме, и сказал, что такие дела — это приключения; а он сказал, что никаких больше приключений ему не надо. Он сказал, что когда я полез в техас, а он пополз назад, на плот, и увидел, что плота нет, он чуть не помер; потому что решил, что <i>ему</i>-то уж конец, как ни поверни: не спасут — утонет; а спасут — тот, кто спасёт, отправит его домой за награду, а там мисс Уотсон непременно продаст его на Юг. Что ж, он был прав; он почти всегда был прав; голова у него была на редкость трезвая — для негра.",
+      "source_sha256": "fce18e46c696e64450e8f6ca94b961ad247eb4b877fdb7df5e4094dc1264da85",
+      "target_id": "ru-043-017-0002",
+      "tag": "p",
+      "target_sha256": "79194268626ea80fa462cd21c8cfab4b792c0369ad1b12a6de7b40cf981aa4d3"
+    },
+    {
+      "source_id": "043-017-0003",
+      "target": "Я много читал Джиму про королей, герцогов, графов и прочих, как они пышно одеваются, как важничают и называют друг друга «ваше величество», «ваша светлость», «ваше сиятельство» и так далее, вместо «мистер»; а Джим выпучил глаза, ему было страшно интересно. Он говорит:",
+      "source_sha256": "b8ad9dedccc69dc382d15d04fabde7a15fc1b6ba5b90eecbc10078629ccb7b82",
+      "target_id": "ru-043-017-0003",
+      "tag": "p",
+      "target_sha256": "67bb514ecbc363d6ad55d8b963ed7479bb13f61d0196379af338583fe603d41f"
+    },
+    {
+      "source_id": "043-017-0004",
+      "target": "— Я и не знал, что их так много. Я почти ни про кого из них и не слыхал, окромя старого короля Соллермуна, если только не считать тех королей, что в колоде. А сколько король получает?",
+      "source_sha256": "c900ca396de046db37e882fe84e628ef47b10afc26e6c71ab760c358ceef4f64",
+      "target_id": "ru-043-017-0004",
+      "tag": "p",
+      "target_sha256": "5ac0a6a3e20510764407149027d097262fb9c7fe4d3290ba10fa2cc8513234a8"
+    },
+    {
+      "source_id": "043-017-0005",
+      "target": "— Получает? — говорю я. — Да они получают тысячу долларов в месяц, если хотят; могут брать сколько вздумается; всё ихнее.",
+      "source_sha256": "c3411b327a1173098acc13d5c826f29286223536154816e84ece01682ad35ccd",
+      "target_id": "ru-043-017-0005",
+      "tag": "p",
+      "target_sha256": "3073a974f9ad52c657900377ceec3b427a4d1ec52bf52ed078c2a28345828018"
+    },
+    {
+      "source_id": "043-017-0006",
+      "target": "— Вот <i>это</i> да! А что им делать-то надо, Гек?",
+      "source_sha256": "abe4791b6b7c6251b40b32326e0cd38e62a7bcc299535d3492ce9b7461637181",
+      "target_id": "ru-043-017-0006",
+      "tag": "p",
+      "target_sha256": "afc6120860d84df85dd4547b92f18c17f59bcb2220bdb4befcece49858e72ad4"
+    },
+    {
+      "source_id": "043-017-0007",
+      "target": "— <i>Они</i> ничего не делают! Ну и спросил! Просто сидят без дела.",
+      "source_sha256": "33654061a3fcdc7c651d464364f460618b7e0e30fee95ff6b83f326451ed0c4a",
+      "target_id": "ru-043-017-0007",
+      "tag": "p",
+      "target_sha256": "3bb8c44916c14d7199b475375dce4f18ccb00b997aa3441bfc7b2ce4b482a418"
+    },
+    {
+      "source_id": "043-017-0008",
+      "target": "— Нет, правда, что ль?",
+      "source_sha256": "6329bf60bf7ce935e2f0dbb40b15a7f528c4e5e0c2374fe261e0ce90644ef4ab",
+      "target_id": "ru-043-017-0008",
+      "tag": "p",
+      "target_sha256": "9c15082c031c3764bbe60b6659eb14c6c8faf394d8492cff7f5181930160ec41"
+    },
+    {
+      "source_id": "043-017-0009",
+      "target": "— Ясное дело. Просто сидят — разве что, может, когда война; тогда идут на войну. А в другое время просто бездельничают; или ездят на соколиную охоту — просто соколиная охота и пле… Тс-с! Слышишь шум?",
+      "source_sha256": "c4ab4a0882404949363f8093aa697b49abb0575d353168368276dafdd8c02ca4",
+      "target_id": "ru-043-017-0009",
+      "tag": "p",
+      "target_sha256": "80acbee83b39aa632d0d8cdbaeee27074d259134cb5211a64b8832a219d7b10e"
+    },
+    {
+      "source_id": "043-017-0010",
+      "target": "Мы выскочили и посмотрели; но это был всего лишь плеск колеса парохода далеко внизу, за мысом; так что мы вернулись.",
+      "source_sha256": "e9a30bbac97a85ad95a4dc96035d50a6ed9080b0840fbe0a93120d56f230598d",
+      "target_id": "ru-043-017-0010",
+      "tag": "p",
+      "target_sha256": "cb9abcec545747bb79b393850657614dc3ad83648ba9e9b59dcb2e52ed494e23"
+    },
+    {
+      "source_id": "043-017-0011",
+      "target": "— Да, — говорю я, — а в другое время, когда скучно, они возятся с парламентом; и если все не пляшут под его дудку, он им головы долой. Но больше всего они околачиваются возле гарема.",
+      "source_sha256": "4f4567a99b2b06bd9ddbcfccb1fba10a2d1165626b056d94fc7d56a26e2db93d",
+      "target_id": "ru-043-017-0011",
+      "tag": "p",
+      "target_sha256": "84b54b73e09ead0792cf87584b31a2916779e093a72a7a89a53c1eb174170f11"
+    },
+    {
+      "source_id": "043-017-0012",
+      "target": "— Возле чего?",
+      "source_sha256": "4ac7084d561d3f3f84ae48612dd68d8eec56a07aa34350cfe436bcc11f5f3603",
+      "target_id": "ru-043-017-0012",
+      "tag": "p",
+      "target_sha256": "96e97a219b4ae214d87d28c1335b64b56d405c3dae91a7cb9a4d367cc3d107f7"
+    },
+    {
+      "source_id": "043-017-0013",
+      "target": "— Гарема.",
+      "source_sha256": "05bdef07f43e1216f92d5b1f3c897a1dab9578fce34e6a886d47321e7ac05121",
+      "target_id": "ru-043-017-0013",
+      "tag": "p",
+      "target_sha256": "9ffe2461a42ed160e5030d7f4748a33563b0025d1dca87b3c024569c04f58bd1"
+    },
+    {
+      "source_id": "043-017-0014",
+      "target": "— А что такое гарем?",
+      "source_sha256": "204f1b998efacc1f3e721446d77e919b1d2c9a64e566c12b131ae8cc8bb86253",
+      "target_id": "ru-043-017-0014",
+      "tag": "p",
+      "target_sha256": "32d3622b1cc759c1494cdbf4493a3085b9a0ce4bf5a89cd5f40a6868ededd13e"
+    },
+    {
+      "source_id": "043-017-0015",
+      "target": "Соломон и его миллион жён",
+      "source_sha256": "1a1ab29f73ea747c699427b28f6d7fc9c34800818a6fb08c0888b15ec94804b3",
+      "target_id": "ru-043-017-0015",
+      "tag": "source_caption",
+      "target_sha256": "9dd8e75241151aec97aef5eead27f934cdee93a5283ed8e5763e472da6ad74d1"
+    },
+    {
+      "source_id": "043-017-0016",
+      "target": "— Место, где он держит своих жён. Неужто ты про гарем не знаешь? У Соломона он был; у него было жён примерно миллион.",
+      "source_sha256": "f139177e9927fae93c36ed9bd0ca40163af137839441a0c90d3d098b49289416",
+      "target_id": "ru-043-017-0016",
+      "tag": "p",
+      "target_sha256": "bf00ae3b261fe890bb3a5fb8dad3c4ffa0a177a54b56e2b7399de08a83876078"
+    },
+    {
+      "source_id": "043-017-0017",
+      "target": "— Ну да, оно так; я… я совсем позабыл. Гарем — это, надо думать, пансион. Небось, в детской там шум-гам стоит. И жёны, небось, дерутся порядком, а от этого шуму только больше. А всё ж говорят, что Соллермун был мудрейший человек на свете. Я в это не верю. А почему: разве мудрый человек стал бы жить посреди такой трескотни день-деньской? Нет, нипочём не стал бы. Мудрый человек взял бы да построил котельную фабрику; а тогда он мог бы <i>остановить</i> эту фабрику, когда захочет отдохнуть.",
+      "source_sha256": "b60624f81ef7483356bbcc018e21022f11671dea19da3a0bd9332ccac1d31090",
+      "target_id": "ru-043-017-0017",
+      "tag": "p",
+      "target_sha256": "69c9f2c684e763574edeeb8db545bc797c6624db2f9fc03d9d422c751be69101"
+    },
+    {
+      "source_id": "043-017-0018",
+      "target": "— Ну, но он всё-таки <i>был</i> мудрейшим человеком; мне вдова сама так сказала, лично.",
+      "source_sha256": "1e08f00f4c8d4530e2580ac4db653afa0ee219698aa1cd584c7adbce7dac6bf9",
+      "target_id": "ru-043-017-0018",
+      "tag": "p",
+      "target_sha256": "a40ffa2edba770fb5d19cd8baca8688b0bb08b4b5b7d973ef8e0e83f54e55903"
+    },
+    {
+      "source_id": "043-017-0019",
+      "target": "— Мне наплевать, что вдова говорит, никакой он <i>не был</i> мудрец. У него были такие чудные затеи, каких я отродясь не видал. Знаешь про того ребёнка, которого он хотел разрубить надвое?",
+      "source_sha256": "8fcc242cb34a6c38a0c8baab67c306eaa3df08877096febc4ad10b6e7c9f1acd",
+      "target_id": "ru-043-017-0019",
+      "tag": "p",
+      "target_sha256": "8d79751904a4a53db7caefa23b68e70db5f7535601f96434ef990e0875f2a554"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-017-heading",
+      "verdict": "PASS",
+      "reason": "Heading correct."
+    },
+    {
+      "source_id": "043-017-0001",
+      "verdict": "PASS",
+      "reason": "Argument faithfully rendered."
+    },
+    {
+      "source_id": "043-017-0002",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'truck' as loot, 'wreck', Jim's fear, italic 'him' dropped as plain; register made colloquial; removed stray HTML."
+    },
+    {
+      "source_id": "043-017-0003",
+      "verdict": "CORRECTED",
+      "reason": "Titles lowercase; colloquial narrator; 'gaudy' fidelity."
+    },
+    {
+      "source_id": "043-017-0004",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue dashes; Jim's voice colloquial; meaning kept."
+    },
+    {
+      "source_id": "043-017-0005",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation and register."
+    },
+    {
+      "source_id": "043-017-0006",
+      "verdict": "CORRECTED",
+      "reason": "Draft mistranslated 'Ain’ dat gay' as odd negation; fixed with italic emphasis."
+    },
+    {
+      "source_id": "043-017-0007",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; italic 'They' kept."
+    },
+    {
+      "source_id": "043-017-0008",
+      "verdict": "CORRECTED",
+      "reason": "Idiomatic Jim question."
+    },
+    {
+      "source_id": "043-017-0009",
+      "venue": "",
+      "verdict": "CORRECTED",
+      "reason": "Hawking is falconry, not peddling; interrupted 'sp—' handled; dialogue format."
+    },
+    {
+      "source_id": "043-017-0010",
+      "verdict": "CORRECTED",
+      "reason": "Wheel flutter is paddle sound, not rudder; idiom."
+    },
+    {
+      "source_id": "043-017-0011",
+      "verdict": "CORRECTED",
+      "reason": "Removed anachronistic 'тусуются'; fixed agreement."
+    },
+    {
+      "source_id": "043-017-0012",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format and echo of 'harem'."
+    },
+    {
+      "source_id": "043-017-0013",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format."
+    },
+    {
+      "source_id": "043-017-0014",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format."
+    },
+    {
+      "source_id": "043-017-0015",
+      "verdict": "CORRECTED",
+      "reason": "Caption without quotation marks."
+    },
+    {
+      "source_id": "043-017-0016",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format."
+    },
+    {
+      "source_id": "043-017-0017",
+      "verdict": "CORRECTED",
+      "reason": "Draft had broken quotes, 'brothel' wrongly; boarding-house restored; italic 'down' lost semantically via 'остановить'; voice."
+    },
+    {
+      "source_id": "043-017-0018",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; italic 'was' lost, now kept."
+    },
+    {
+      "source_id": "043-017-0019",
+      "verdict": "CORRECTED",
+      "reason": "Italic 'warn’t' kept in sense; 'dad-fetchedes’' ways as odd schemes; dialogue format."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-017-0002",
+      "before": "Через некоторое время, когда мы встали, мы перевернули тележку, которую банда украла с места крушения, и нашли сапоги, одеяла, одежду и всевозможные другие вещи, а также кучу книг, подзорную трубу и три коробки сигар. Никогда раньше ни один из нас не был так богат. Сигары были первоклассные. Мы провели весь день в лесу, болтая, я читал книги, и в целом прекрасно проводили время. Я рассказал Джиму всё о том, что произошло внутри затонувшего корабля и на пароме, и сказал, что такие вещи — это приключения; но он ответил, что больше не хочет никаких приключений. Он сказал, что когда я залез в техас, а он полз назад, чтобы забраться на плот, и обнаружил, что его уже нет, он чуть не умер; потому что решил, что с <i>ним</i> все кончено, как бы то ни было; ведь если бы его не спасли, он бы утонул; а если бы его спасли, тот, кто его спас, отправил бы его обратно домой, чтобы получить награду, и тогда мисс Уотсон наверняка продала бы его на Юг. Ну, он был прав; он почти всегда был прав; у него была необыкновенно трезвая голова, как для негра.",
+      "after": "Немного погодя, когда мы встали, мы перебрали барахло, которое шайка утащила с разбитого парохода, и нашли сапоги, одеяла, одежду и всякую всячину, да ещё кучу книг, подзорную трубу и три коробки сигар. Никогда в жизни мы ни один, ни другой не были так богаты. Сигары были первый сорт. Весь день мы провалялись в лесу, болтали, а я читал книжки, и вообще нам было очень хорошо. Я рассказал Джиму всё, что случилось внутри разбитого парохода и на пароме, и сказал, что такие дела — это приключения; а он сказал, что никаких больше приключений ему не надо. Он сказал, что когда я полез в техас, а он пополз назад, на плот, и увидел, что плота нет, он чуть не помер; потому что решил, что ему-то уж конец, как ни поверни: не спасут — утонет; а спасут — тот, кто спасёт, отправит его домой за награду, а там мисс Уотсон непременно продаст его на Юг. Что ж, он был прав; он почти всегда был прав; голова у него была на редкость трезвая — для негра.</p>"
+    },
+    {
+      "source_id": "043-017-0003",
+      "before": "Я много рассказывал Джиму о королях, герцогах, графах и прочих, о том, как они нарядно одевались, как вычурно себя вели, как называли друг друга «Ваше Величество», «Ваша Светлость», «Ваше Сиятельство» и так далее вместо «мистер»; у Джима глаза вылезли из орбит, и он заинтересовался. Он говорит:",
+      "after": "Я много читал Джиму про королей, герцогов, графов и прочих, как они пышно одеваются, как важничают и называют друг друга «ваше величество», «ваша светлость», «ваше сиятельство» и так далее, вместо «мистер»; а Джим выпучил глаза, ему было страшно интересно. Он говорит:"
+    },
+    {
+      "source_id": "043-017-0004",
+      "before": "«Я не знал, что их так много. Я почти ни о ком из них не слышал, разве что о старом короле Соллермуне, если не считать тех королей, что в колоде карт. Сколько же получает король?»",
+      "after": "— Я и не знал, что их так много. Я почти ни про кого из них и не слыхал, окромя старого короля Соллермуна, если только не считать тех королей, что в колоде. А сколько король получает?"
+    },
+    {
+      "source_id": "043-017-0005",
+      "before": "«Получают?» — спросил я. — «Да, они получают тысячу долларов в месяц, если захотят; они могут получить столько, сколько захотят; всё принадлежит им».",
+      "after": "— Получает? — говорю я. — Да они получают тысячу долларов в месяц, если хотят; могут брать сколько вздумается; всё ихнее."
+    },
+    {
+      "source_id": "043-017-0006",
+      "before": "<i>«Разве</i> это <i>не</i> весело? И что им делать, Хак?»",
+      "after": "— Вот <i>это</i> да! А что им делать-то надо, Гек?"
+    },
+    {
+      "source_id": "043-017-0007",
+      "before": "<i>«Они</i> ничего не делают! Да как ты так говоришь! Они просто сидят без дела».",
+      "after": "— <i>Они</i> ничего не делают! Ну и спросил! Просто сидят без дела."
+    },
+    {
+      "source_id": "043-017-0008",
+      "before": "«Нет; это так?»",
+      "after": "— Нет, правда, что ль?"
+    },
+    {
+      "source_id": "043-017-0009",
+      "before": "«Конечно, так и есть. Они просто сидят без дела — разве что, может быть, когда начинается война; тогда они идут на войну. А в остальное время они просто бездельничают; или ходят по домам с товарами — просто ходят с товарами и… Тсс! — ты слышал шум?»",
+      "after": "— Ясное дело. Просто сидят — разве что, может, когда война; тогда идут на войну. А в другое время просто бездельничают; или ездят на соколиную охоту — просто на соколиную охоту и всякое такое… Тс-с! Слышишь шум?"
+    },
+    {
+      "source_id": "043-017-0010",
+      "before": "Мы выскочили и посмотрели; но это было не что иное, как шевеление руля парохода внизу, выходящего из-за мыса; так что мы вернулись.",
+      "after": "Мы выскочили и посмотрели; но это был всего лишь плеск колеса парохода далеко внизу, за мысом; так что мы вернулись."
+    },
+    {
+      "source_id": "043-017-0011",
+      "before": "«Да, — говорю я, — а иногда, когда скучно, они возится с парламентом; и если все не поступают так, как надо, он отрубает им головы. Но в основном они тусуются в гареме».",
+      "after": "— Да, — говорю я, — а в другое время, когда скучно, они возятся с парламентом; и если все не пляшут под его дудку, он им головы долой. Но больше всего они околачиваются в гареме."
+    },
+    {
+      "source_id": "043-017-0012",
+      "before": "«Вокруг чего?»",
+      "after": "— Вокруг чего?"
+    },
+    {
+      "source_id": "043-017-0013",
+      "before": "«Гарем».",
+      "after": "— В гареме."
+    },
+    {
+      "source_id": "043-017-0014",
+      "before": "«Что такое гарем?»",
+      "after": "— А что такое гарем?"
+    },
+    {
+      "source_id": "043-017-0015",
+      "before": "«Соломон и его миллион жён»",
+      "after": "Соломон и его миллион жён"
+    },
+    {
+      "source_id": "043-017-0016",
+      "before": "«Место, где он держит своих жен. Разве ты не знаешь о гареме? У Соломона был гарем; у него было около миллиона жен».",
+      "after": "— Место, где он держит своих жён. Неужто ты про гарем не знаешь? У Соломона он был; у него было жён примерно миллион."
+    },
+    {
+      "source_id": "043-017-0017",
+      "before": "«Да, конечно, это так; я… я совсем забыл об этом. Гарем — это, наверное, дом разврата. Скорее всего, в детской там царит шум и суматоха. И, по-моему, жены часто ссорятся; а это только усиливает шум. И всё же говорят, что Соллермун — самый мудрый человек, который когда-либо жил». Я в это не верю. Потому что: разве мудрый человек захотел бы жить посреди такого чертового шума всё время? Нет — конечно, не захотел бы. Мудрый человек построил бы фабрику по производству котлов; а потом он мог бы закрыть эту фабрику, когда захочет отдохнуть».",
+      "after": "— Ну да, оно так; я… я совсем позабыл. Гарем — это, надо думать, пансион. Небось, в детской там шум-гам стоит. И жёны, небось, дерутся порядком, а от этого шуму только больше. А всё ж говорят, что Соллермун был мудрейший человек на свете. Я в это не верю. А почему: разве мудрый человек стал бы жить посреди такой трескотни день-деньской? Нет, нипочём не стал бы. Мудрый человек взял бы да построил котельную фабрику; а тогда он мог бы остановить эту фабрику, когда захочет отдохнуть."
+    },
+    {
+      "source_id": "043-017-0018",
+      "before": "«Ну, но он всё равно <i>был</i> самым мудрым человеком; потому что вдова сама мне так сказала, собственноручно».",
+      "after": "— Ну, но он всё-таки <i>был</i> мудрейшим человеком; мне вдова сама так сказала, лично."
+    },
+    {
+      "source_id": "043-017-0019",
+      "before": "«Мне плевать, что говорит вдова, он тоже <i>не был</i> мудрым человеком. У него были самые странные привычки из всех, что я когда-либо видел. А ты слышал про того ребёнка, которого он собирался распилить пополам?»",
+      "after": "— Мне наплевать, что вдова говорит, никакой он был не мудрец. У него были такие чудные затеи, каких я отродясь не видал. Знаешь про того ребёнка, которого он хотел разрубить надвое?"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/017/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKGHQjNWENYu2nSm8jDN",
+    "usage": {
+      "input_tokens": 9951,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2827,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKGK6eEaTYFU3TW4AiZ6",
+        "usage": {
+          "input_tokens": 13195,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2612,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-017-heading",
+          "verdict": "PASS",
+          "reason": "Chapter heading correctly rendered."
+        },
+        {
+          "source_id": "043-017-0001",
+          "verdict": "PASS",
+          "reason": "Argument faithfully translated."
+        },
+        {
+          "source_id": "043-017-0002",
+          "verdict": "CORRECTED",
+          "reason": "Removed stray </p> tag; restored italic on 'him' (ему). Content otherwise faithful."
+        },
+        {
+          "source_id": "043-017-0003",
+          "verdict": "PASS",
+          "reason": "Faithful, idiomatic."
+        },
+        {
+          "source_id": "043-017-0004",
+          "verdict": "PASS",
+          "reason": "Faithful; Jim's voice dignified, colloquial."
+        },
+        {
+          "source_id": "043-017-0005",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0006",
+          "verdict": "PASS",
+          "reason": "Italic emphasis preserved."
+        },
+        {
+          "source_id": "043-017-0007",
+          "verdict": "PASS",
+          "reason": "Italic 'They' preserved."
+        },
+        {
+          "source_id": "043-017-0008",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0009",
+          "verdict": "PASS",
+          "reason": "Hawking correctly falconry; interrupted speech preserved."
+        },
+        {
+          "source_id": "043-017-0010",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0011",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "043-017-0012",
+          "verdict": "PASS",
+          "reason": "Jim's mishearing 'Roun' de which' conveyed adequately."
+        },
+        {
+          "source_id": "043-017-0013",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0014",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0015",
+          "verdict": "PASS",
+          "reason": "Caption accurate."
+        },
+        {
+          "source_id": "043-017-0016",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0017",
+          "verdict": "CORRECTED",
+          "reason": "Restored missing italic on 'down' (остановить). Rest faithful."
+        },
+        {
+          "source_id": "043-017-0018",
+          "verdict": "PASS",
+          "reason": "Italic 'was' preserved."
+        },
+        {
+          "source_id": "043-017-0019",
+          "verdict": "CORRECTED",
+          "reason": "Restored italic on 'warn't' (не был) lost in prior version."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "043-017-0002",
+          "before": "Немного погодя, когда мы встали, мы перебрали барахло, которое шайка утащила с разбитого парохода, и нашли сапоги, одеяла, одежду и всякую всячину, да ещё кучу книг, подзорную трубу и три коробки сигар. Никогда в жизни мы ни один, ни другой не были так богаты. Сигары были первый сорт. Весь день мы провалялись в лесу, болтали, а я читал книжки, и вообще нам было очень хорошо. Я рассказал Джиму всё, что случилось внутри разбитого парохода и на пароме, и сказал, что такие дела — это приключения; а он сказал, что никаких больше приключений ему не надо. Он сказал, что когда я полез в техас, а он пополз назад, на плот, и увидел, что плота нет, он чуть не помер; потому что решил, что ему-то уж конец, как ни поверни: не спасут — утонет; а спасут — тот, кто спасёт, отправит его домой за награду, а там мисс Уотсон непременно продаст его на Юг. Что ж, он был прав; он почти всегда был прав; голова у него была на редкость трезвая — для негра.</p>",
+          "after": "Немного погодя, когда мы встали, мы перебрали барахло, которое шайка утащила с разбитого парохода, и нашли сапоги, одеяла, одежду и всякую всячину, да ещё кучу книг, подзорную трубу и три коробки сигар. Никогда в жизни мы ни один, ни другой не были так богаты. Сигары были первый сорт. Весь день мы провалялись в лесу, болтали, а я читал книжки, и вообще нам было очень хорошо. Я рассказал Джиму всё, что случилось внутри разбитого парохода и на пароме, и сказал, что такие дела — это приключения; а он сказал, что никаких больше приключений ему не надо. Он сказал, что когда я полез в техас, а он пополз назад, на плот, и увидел, что плота нет, он чуть не помер; потому что решил, что <i>ему</i>-то уж конец, как ни поверни: не спасут — утонет; а спасут — тот, кто спасёт, отправит его домой за награду, а там мисс Уотсон непременно продаст его на Юг. Что ж, он был прав; он почти всегда был прав; голова у него была на редкость трезвая — для негра."
+        },
+        {
+          "source_id": "043-017-0017",
+          "before": "— Ну да, оно так; я… я совсем позабыл. Гарем — это, надо думать, пансион. Небось, в детской там шум-гам стоит. И жёны, небось, дерутся порядком, а от этого шуму только больше. А всё ж говорят, что Соллермун был мудрейший человек на свете. Я в это не верю. А почему: разве мудрый человек стал бы жить посреди такой трескотни день-деньской? Нет, нипочём не стал бы. Мудрый человек взял бы да построил котельную фабрику; а тогда он мог бы остановить эту фабрику, когда захочет отдохнуть.",
+          "after": "— Ну да, оно так; я… я совсем позабыл. Гарем — это, надо думать, пансион. Небось, в детской там шум-гам стоит. И жёны, небось, дерутся порядком, а от этого шуму только больше. А всё ж говорят, что Соллермун был мудрейший человек на свете. Я в это не верю. А почему: разве мудрый человек стал бы жить посреди такой трескотни день-деньской? Нет, нипочём не стал бы. Мудрый человек взял бы да построил котельную фабрику; а тогда он мог бы <i>остановить</i> эту фабрику, когда захочет отдохнуть."
+        },
+        {
+          "source_id": "043-017-0019",
+          "before": "— Мне наплевать, что вдова говорит, никакой он был не мудрец. У него были такие чудные затеи, каких я отродясь не видал. Знаешь про того ребёнка, которого он хотел разрубить надвое?",
+          "after": "— Мне наплевать, что вдова говорит, никакой он <i>не был</i> мудрец. У него были такие чудные затеи, каких я отродясь не видал. Знаешь про того ребёнка, которого он хотел разрубить надвое?"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKGLe9bK3hr4h3QCzXgG",
+        "usage": {
+          "input_tokens": 14696,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3900,
+          "output_tokens_details": {
+            "thinking_tokens": 1113
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-017-heading",
+          "verdict": "PASS",
+          "reason": "Chapter heading correct."
+        },
+        {
+          "source_id": "043-017-0001",
+          "verdict": "PASS",
+          "reason": "Argument faithfully rendered."
+        },
+        {
+          "source_id": "043-017-0002",
+          "verdict": "PASS",
+          "reason": "Complete and accurate; italic on 'him' preserved; prior stray </p> and italic loss fixed."
+        },
+        {
+          "source_id": "043-017-0003",
+          "verdict": "PASS",
+          "reason": "Faithful; titles, humour and Jim's reaction preserved."
+        },
+        {
+          "source_id": "043-017-0004",
+          "verdict": "PASS",
+          "reason": "Faithful; Jim's voice colloquial without caricature; King Solomon and card kings kept."
+        },
+        {
+          "source_id": "043-017-0005",
+          "verdict": "PASS",
+          "reason": "Accurate, with correct dialogue punctuation."
+        },
+        {
+          "source_id": "043-017-0006",
+          "verdict": "PASS",
+          "reason": "Italic emphasis on 'Ain't' kept semantically; meaning intact."
+        },
+        {
+          "source_id": "043-017-0007",
+          "verdict": "PASS",
+          "reason": "Italic 'They' preserved; accurate."
+        },
+        {
+          "source_id": "043-017-0008",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0009",
+          "verdict": "CORRECTED",
+          "reason": "Truncated 'sp—' (spitting) was lost as 'и всякое такое'; restored the cut-off word 'пле…'."
+        },
+        {
+          "source_id": "043-017-0010",
+          "verdict": "PASS",
+          "reason": "Faithful; earlier 'hawking' and rudder errors fixed; wheel noise correct."
+        },
+        {
+          "source_id": "043-017-0011",
+          "verdict": "CORRECTED",
+          "reason": "'hang round the harem' now 'возле гарема' so Jim's 'Roun' de which?' echoes properly."
+        },
+        {
+          "source_id": "043-017-0012",
+          "verdict": "CORRECTED",
+          "reason": "Adjusted to 'Возле чего?' to match the revised preceding line."
+        },
+        {
+          "source_id": "043-017-0013",
+          "verdict": "CORRECTED",
+          "reason": "'Гарема.' now answers 'Возле чего?' as in the source."
+        },
+        {
+          "source_id": "043-017-0014",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-017-0015",
+          "verdict": "PASS",
+          "reason": "Caption accurate."
+        },
+        {
+          "source_id": "043-017-0016",
+          "verdict": "PASS",
+          "reason": "Accurate, including the 'million wives' hyperbole."
+        },
+        {
+          "source_id": "043-017-0017",
+          "verdict": "PASS",
+          "reason": "Faithful; boarding-house, boiler factory logic and italic 'shut down' preserved."
+        },
+        {
+          "source_id": "043-017-0018",
+          "verdict": "PASS",
+          "reason": "Italic 'was' kept; accurate."
+        },
+        {
+          "source_id": "043-017-0019",
+          "verdict": "PASS",
+          "reason": "Italic 'warn't' kept; question and Jim's dismissive tone accurate."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "043-017-0009",
+          "before": "— Ясное дело. Просто сидят — разве что, может, когда война; тогда идут на войну. А в другое время просто бездельничают; или ездят на соколиную охоту — просто на соколиную охоту и всякое такое… Тс-с! Слышишь шум?",
+          "after": "— Ясное дело. Просто сидят — разве что, может, когда война; тогда идут на войну. А в другое время просто бездельничают; или ездят на соколиную охоту — просто соколиная охота и пле… Тс-с! Слышишь шум?"
+        },
+        {
+          "source_id": "043-017-0011",
+          "before": "— Да, — говорю я, — а в другое время, когда скучно, они возятся с парламентом; и если все не пляшут под его дудку, он им головы долой. Но больше всего они околачиваются в гареме.",
+          "after": "— Да, — говорю я, — а в другое время, когда скучно, они возятся с парламентом; и если все не пляшут под его дудку, он им головы долой. Но больше всего они околачиваются возле гарема."
+        },
+        {
+          "source_id": "043-017-0012",
+          "before": "— Вокруг чего?",
+          "after": "— Возле чего?"
+        },
+        {
+          "source_id": "043-017-0013",
+          "before": "— В гареме.",
+          "after": "— Гарема."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKGNXAiLcN1RWfpyQDBJ",
+        "usage": {
+          "input_tokens": 15144,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3386,
+          "output_tokens_details": {
+            "thinking_tokens": 632
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-017-heading",
+          "verdict": "PASS",
+          "reason": "Chapter heading correctly rendered."
+        },
+        {
+          "source_id": "043-017-0001",
+          "verdict": "PASS",
+          "reason": "Argument items all present and in order."
+        },
+        {
+          "source_id": "043-017-0002",
+          "verdict": "PASS",
+          "reason": "Complete; Jim's reasoning, negations, agency and italic 'ему' preserved; stray tag removed; colloquial register and 'для негра' faithful."
+        },
+        {
+          "source_id": "043-017-0003",
+          "verdict": "PASS",
+          "reason": "Faithful; titles, 'instead of mister', Jim's bulging eyes and interest preserved."
+        },
+        {
+          "source_id": "043-017-0004",
+          "verdict": "PASS",
+          "reason": "Jim's voice conveyed colloquially without caricature; King Solomon and the cards joke kept."
+        },
+        {
+          "source_id": "043-017-0005",
+          "verdict": "PASS",
+          "reason": "Meaning and amounts accurate; dialogue punctuation correct."
+        },
+        {
+          "source_id": "043-017-0006",
+          "verdict": "PASS",
+          "reason": "Italic emphasis kept semantically; question preserved."
+        },
+        {
+          "source_id": "043-017-0007",
+          "verdict": "PASS",
+          "reason": "Italic 'They' kept; idiomatic."
+        },
+        {
+          "source_id": "043-017-0008",
+          "verdict": "PASS",
+          "reason": "Accurate and brief."
+        },
+        {
+          "source_id": "043-017-0009",
+          "verdict": "PASS",
+          "reason": "Interrupted 'sp—' and 'Sh!' preserved; hawking and war content correct."
+        },
+        {
+          "source_id": "043-017-0010",
+          "verdict": "PASS",
+          "reason": "Paddle-wheel noise, point and return accurate."
+        },
+        {
+          "source_id": "043-017-0011",
+          "verdict": "PASS",
+          "reason": "Parliament, head-whacking and harem all preserved."
+        },
+        {
+          "source_id": "043-017-0012",
+          "verdict": "PASS",
+          "reason": "Jim's puzzled echo is correct in sense."
+        },
+        {
+          "source_id": "043-017-0013",
+          "verdict": "PASS",
+          "reason": "Repeats the word, matching the source."
+        },
+        {
+          "source_id": "043-017-0014",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "043-017-0015",
+          "verdict": "PASS",
+          "reason": "Caption accurate."
+        },
+        {
+          "source_id": "043-017-0016",
+          "verdict": "PASS",
+          "reason": "Faithful; million wives preserved."
+        },
+        {
+          "source_id": "043-017-0017",
+          "verdict": "PASS",
+          "reason": "Boarding-house, nursery racket, quarrelling wives, boiler-factory joke and italic 'down' all preserved; Jim's voice lively."
+        },
+        {
+          "source_id": "043-017-0018",
+          "verdict": "PASS",
+          "reason": "Italic 'was' preserved; the widow said so herself."
+        },
+        {
+          "source_id": "043-017-0019",
+          "verdict": "PASS",
+          "reason": "Italic 'warn't' kept; the child-chopping question faithful."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
