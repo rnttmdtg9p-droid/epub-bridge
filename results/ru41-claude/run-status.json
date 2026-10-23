@@ -1,0 +1,145 @@
+{
+  "state": "PARTIAL_FAILURE",
+  "errors": [
+    {
+      "unit": 6,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 7,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 5,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 9,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 11,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 13,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 12,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 14,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 15,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 18,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 20,
+      "error": "Command '['git', 'add', 'results/ru41-claude']' returned non-zero exit status 128."
+    },
+    {
+      "unit": 21,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 24,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 22,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 27,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 25,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 30,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 28,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 33,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 34,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 37,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 38,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 40,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 42,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 43,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 44,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 46,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 47,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 48,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 50,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 51,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 52,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    },
+    {
+      "unit": 53,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    }
+  ],
+  "accepted_seed_units": [
+    1,
+    2,
+    3
+  ],
+  "source_units": 99,
+  "source_rows": 12324,
+  "utc": "2026-10-23T04:46:47.585624+00:00"
+}
