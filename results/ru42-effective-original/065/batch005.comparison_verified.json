@@ -1,0 +1,154 @@
+{
+  "unit": 65,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-065-0099",
+      "target": "Леди Элен уступила этому замечанию. Она и Мэри Грант заняли места подле лорда Гленарвана. Вокруг него расположились майор, Паганель, Джон Манглс, Роберт, Уилсон, Малрэди, Олбинет — все те, кто был так тяжело скомпрометирован предательством каторжника. Экипаж яхты, ещё не понимая всей серьёзности этой сцены, хранил глубокое молчание.",
+      "source_sha256": "ef32b71890ac40edf27a7a2a37c3c9e055e39a4a5afa1d5099259d9a48e3086f",
+      "target_id": "ru-fr42c-065-0099",
+      "tag": "p",
+      "target_sha256": "d19f62c5b2f6958e73d443c2d9d888007c82007fd3620179badf45b6ab3e3fb8"
+    },
+    {
+      "source_id": "fr42c-065-0100",
+      "target": "— Приведите Айртона, — сказал Гленарван.",
+      "source_sha256": "485ed76ca9f3f2b0e2402235dc577cd30273e64aaf5e05cd44324ad77225c855",
+      "target_id": "ru-fr42c-065-0100",
+      "tag": "p",
+      "target_sha256": "8bf4e3376a83291781ef092d9ddfc1153d7c407f860d6134a55546efc1481104"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-065-0099",
+      "verdict": "CORRECTED",
+      "reason": "Fixed name Элен, restored 'compromised' sense instead of 'honour', changed the verb for the seating arrangement, and corrected punctuation and spelling. Айртон is not in this row. Olbinett rendered consistently."
+    },
+    {
+      "source_id": "fr42c-065-0100",
+      "verdict": "CORRECTED",
+      "reason": "Changed to Russian dialogue dash format and the established name Айртон."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-065-0099",
+      "before": "Леди Елена подчинилась этому замечанию. Она и Мэри Грант заняли места рядом с лордом Гленарваном. Вокруг него выстроились майор, Паганель, Джон Манглс, Роберт, Уилсон, Мулради, Олбинетт — все те, чья честь была так тяжело задета предательством каторжника. Экипаж яхты, пока ещё не осознавая всей серьезности происходящего, хранил глубокое молчание.",
+      "after": "Леди Элен уступила этому замечанию. Она и Мэри Грант заняли места подле лорда Гленарвана. Вокруг него расположились майор, Паганель, Джон Манглс, Роберт, Уилсон, Мulради, Олбинет — все те, кто был так тяжело скомпрометирован предательством каторжника. Экипаж яхты, ещё не понимая всей серьёзности этой сцены, хранил глубокое молчание."
+    },
+    {
+      "source_id": "fr42c-065-0100",
+      "before": "«Приведите Эйртона», — сказал Гленарван.",
+      "after": "— Приведите Айртона, — сказал Гленарван."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/065/batch005.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK78MW69VLVfzYbtYwqt",
+    "usage": {
+      "input_tokens": 2406,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 790,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK78tPyAfRyzWQLByij3",
+        "usage": {
+          "input_tokens": 2881,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 422,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-065-0099",
+          "verdict": "CORRECTED",
+          "reason": "Name \"Мulради\" contained Latin letters (mixed script); replaced with Cyrillic \"Малрэди\". Meaning, agency, order of persons, \"compromis\" and the crew's silence are otherwise faithful. Prior corrections verified."
+        },
+        {
+          "source_id": "fr42c-065-0100",
+          "verdict": "PASS",
+          "reason": "Faithful: imperative, speaker, Айртон consistent with established names; dialogue dash punctuation correct."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-065-0099",
+          "before": "Леди Элен уступила этому замечанию. Она и Мэри Грант заняли места подле лорда Гленарвана. Вокруг него расположились майор, Паганель, Джон Манглс, Роберт, Уилсон, Мulради, Олбинет — все те, кто был так тяжело скомпрометирован предательством каторжника. Экипаж яхты, ещё не понимая всей серьёзности этой сцены, хранил глубокое молчание.",
+          "after": "Леди Элен уступила этому замечанию. Она и Мэри Грант заняли места подле лорда Гленарвана. Вокруг него расположились майор, Паганель, Джон Манглс, Роберт, Уилсон, Малрэди, Олбинет — все те, кто был так тяжело скомпрометирован предательством каторжника. Экипаж яхты, ещё не понимая всей серьёзности этой сцены, хранил глубокое молчание."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK798NqdSW9eMBMmbRcH",
+        "usage": {
+          "input_tokens": 3221,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 400,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-065-0099",
+          "verdict": "PASS",
+          "reason": "Faithful: all names, agency, and the participial clause on the crew are preserved. The earlier Latin 'M' error in Малрэди is fixed. Names match the established forms. Nothing omitted or added."
+        },
+        {
+          "source_id": "fr42c-065-0100",
+          "verdict": "PASS",
+          "reason": "Accurate imperative and speaker attribution. Russian dialogue dash is used, and Айртон matches the established name."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

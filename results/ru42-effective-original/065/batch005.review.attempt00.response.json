@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK78MW69VLVfzYbtYwqt",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-065-0099\",\"target\":\"Леди Элен уступила этому замечанию. Она и Мэри Грант заняли места подле лорда Гленарвана. Вокруг него расположились майор, Паганель, Джон Манглс, Роберт, Уилсон, Мulради, Олбинет — все те, кто был так тяжело скомпрометирован предательством каторжника. Экипаж яхты, ещё не понимая всей серьёзности этой сцены, хранил глубокое молчание.\"},{\"source_id\":\"fr42c-065-0100\",\"target\":\"— Приведите Айртона, — сказал Гленарван.\"}],\"review\":[{\"source_id\":\"fr42c-065-0099\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed name Элен, restored 'compromised' sense instead of 'honour', changed the verb for the seating arrangement, and corrected punctuation and spelling. Айртон is not in this row. Olbinett rendered consistently.\"},{\"source_id\":\"fr42c-065-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"Changed to Russian dialogue dash format and the established name Айртон.\"}]}\n\nWait — I must ensure the output has correct spelling. Corrected JSON:\n\n{\"rows\":[{\"source_id\":\"fr42c-065-0099\",\"target\":\"Леди Элен уступила этому замечанию. Она и Мэри Грант заняли места подле лорда Гленарвана. Вокруг него расположились майор, Паганель, Джон Манглс, Роберт, Уилсон, Мулрэди, Олбинет — все те, кто был так тяжело скомпрометирован предательством каторжника. Экипаж яхты, ещё не понимая всей серьёзности этой сцены, хранил глубокое молчание.\"},{\"source_id\":\"fr42c-065-0100\",\"target\":\"— Приведите Айртона, — сказал Гленарван.\"}],\"review\":[{\"source_id\":\"fr42c-065-0099\",\"verdict\":\"CORRECTED\",\"reason\":\"Used Элен, restored 'compromised' rather than 'honour', fixed seating verbs, ёфикация and name spellings.\"},{\"source_id\":\"fr42c-065-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"Converted to Russian dialogue dash and established name Айртон.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2406,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 790,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
