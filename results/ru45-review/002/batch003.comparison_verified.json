@@ -1,0 +1,803 @@
+{
+  "unit": 2,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-002-0096",
+      "target": "— Нет, нет, — воскликнул Холмс, толкая его обратно в кресло, с которого тот уже наполовину приподнялся. — Я ни за что на свете не пропустил бы ваше дело. Оно на редкость необычно, это просто освежает. Но, если позволите так выразиться, в нём есть что-то и впрямь немного смешное. Прошу вас, что вы предприняли, когда обнаружили карточку на двери?",
+      "source_sha256": "5c929d12bb46e9b05b7622ffad5d42d51949e8df38b88f682fd8feb33e62a78e",
+      "target_id": "ru-045-002-0096",
+      "tag": "p",
+      "target_sha256": "70673955ed8c38fba2c14511797a0adf76b9a95f89151f31667e5e3350ff8d13"
+    },
+    {
+      "source_id": "045-002-0097",
+      "target": "— Я был ошеломлён, сэр. Я не знал, что делать. Тогда я обошёл соседние конторы, но никто из них, похоже, ничего об этом не знал. Наконец я пошёл к домовладельцу, он бухгалтер и живёт на первом этаже, и спросил, не скажет ли он, что стало с Лигой рыжих. Он ответил, что никогда не слышал ни о каком таком обществе. Тогда я спросил, кто такой мистер Дункан Росс. Он сказал, что это имя ему внове.",
+      "source_sha256": "dca6af095ab523497ec0a393a5df2ee8007fbc28d4319a6bce57887b4d854fbd",
+      "target_id": "ru-045-002-0097",
+      "tag": "p",
+      "target_sha256": "67dc96fe05a46de1c95575634f2fbb593bb451b0e8672ccb77d70e1bb0764f6f"
+    },
+    {
+      "source_id": "045-002-0098",
+      "target": "— Ну как же, — сказал я, — джентльмен из четвёртого номера.",
+      "source_sha256": "fdede0915b2cd53b58ead71e69fc2e7f072ae69a2482f4b5237f0b749d791923",
+      "target_id": "ru-045-002-0098",
+      "tag": "p",
+      "target_sha256": "cb8e67a99c3789944633eb9a6d1f6788f6f4e7792dfa069accc3087a73467493"
+    },
+    {
+      "source_id": "045-002-0099",
+      "target": "— Как, рыжий?",
+      "source_sha256": "8cd5629526e0c28c3ac585d1f7f5d62b96e602419894659d9c5ddb391ef9ac84",
+      "target_id": "ru-045-002-0099",
+      "tag": "p",
+      "target_sha256": "fc5aa179219639c879960a2f85f147bf0ad94111abb504f3b5e1309af2a5056d"
+    },
+    {
+      "source_id": "045-002-0100",
+      "target": "— Да.",
+      "source_sha256": "008605d089a20e3591c26df2d7d4f225976f53ede47d484f29f2b566340487e5",
+      "target_id": "ru-045-002-0100",
+      "tag": "p",
+      "target_sha256": "b38bdfda461dc2130aa710240e46c220d11d45c3bc5fe7d22b9278a9a8f4972c"
+    },
+    {
+      "source_id": "045-002-0101",
+      "target": "— А, — сказал он, — его звали Уильям Моррис. Он адвокат и пользовался моей комнатой временно, пока не будет готово его новое помещение. Вчера он съехал.",
+      "source_sha256": "2af49876c2d8b85b48d2b6774478f51ed16bd0710b2f176a136702f6251dd453",
+      "target_id": "ru-045-002-0101",
+      "tag": "p",
+      "target_sha256": "4a4068c137a72894be2cbfcc7b2f9ea81203ec7ceb3ab20b93c1a3c30aabe762"
+    },
+    {
+      "source_id": "045-002-0102",
+      "target": "— Где мне его найти?",
+      "source_sha256": "89bb5f024de3d54f22293fc3f43971ae5d7fcb7a844ca01dd653f161c6b18669",
+      "target_id": "ru-045-002-0102",
+      "tag": "p",
+      "target_sha256": "b39ef172a138ce9ce0943dc8474bcab41a84a3f42064c393ee5ed619350cff3d"
+    },
+    {
+      "source_id": "045-002-0103",
+      "target": "— О, в его новой конторе. Он действительно назвал мне адрес. Да, Кинг-Эдвард-стрит, 17, неподалёку от собора Святого Павла.",
+      "source_sha256": "781304bb1e957b60f6f6cad452093db480e2e7744c7539dc2c441ca21abd8141",
+      "target_id": "ru-045-002-0103",
+      "tag": "p",
+      "target_sha256": "33a931c22b888207319b5dcc812b903debe676357e7d4328d82b2324c56a414b"
+    },
+    {
+      "source_id": "045-002-0104",
+      "target": "— Я отправился туда, мистер Холмс, но по этому адресу оказалась фабрика искусственных коленных чашечек, и никто там никогда не слышал ни о мистере Уильяме Моррисе, ни о мистере Дункане Россе.",
+      "source_sha256": "73e85350dd132ee656c772512cb0efdb86d39d1ee6542489e2dacb97d0d5c99a",
+      "target_id": "ru-045-002-0104",
+      "tag": "p",
+      "target_sha256": "2d07dd18770c51a38015bca569127cc38ae32278de32c125b6c8bb9f67fe372f"
+    },
+    {
+      "source_id": "045-002-0105",
+      "target": "— И что вы сделали тогда? — спросил Холмс.",
+      "source_sha256": "f700ed67ca487d10821591bc84ca83e2d39b90de7855f10c73fb6869451d1a0a",
+      "target_id": "ru-045-002-0105",
+      "tag": "p",
+      "target_sha256": "dede903d0b26ae82e628600dcca6d6d374e009a0b1907e4bdac3594b2ef70824"
+    },
+    {
+      "source_id": "045-002-0106",
+      "target": "— Я пошёл домой, на Сакс-Кобург-сквер, и посоветовался с помощником. Но он ничем не мог мне помочь. Сказал только, что если подождать, то придёт известие по почте. Но этого было мало, мистер Холмс. Я не хотел терять такое место без борьбы, и, поскольку слышал, что вы любезно даёте советы бедным людям, которые в них нуждаются, я сразу пришёл к вам.",
+      "source_sha256": "ee4fc2f947abed6f968db661bd76b4fd70bbb70a6660220520efd5649b109fa1",
+      "target_id": "ru-045-002-0106",
+      "tag": "p",
+      "target_sha256": "d1ba416de199618a29582c185514ad55cb9e7cf22e13fcadee9625057b5b9a52"
+    },
+    {
+      "source_id": "045-002-0107",
+      "target": "— И вы поступили очень мудро, — сказал Холмс. — Ваш случай чрезвычайно примечателен, и я с радостью им займусь. Судя по вашему рассказу, возможно, что за ним кроется более серьёзное дело, чем может показаться на первый взгляд.",
+      "source_sha256": "cbf5715fdaa9b811664aa97cce94eafed2332573bac133be8b448f2c714507f0",
+      "target_id": "ru-045-002-0107",
+      "tag": "p",
+      "target_sha256": "2c154f47da826488c5d3f09bdf5feb3c680cf56b7534b28c6c2c525ff8b4c480"
+    },
+    {
+      "source_id": "045-002-0108",
+      "target": "— Ещё бы не серьёзное! — сказал мистер Джейбез Уилсон. — Да я лишился четырёх фунтов в неделю.",
+      "source_sha256": "de5c96ef24fbfcc9243ba0e1c1473732c6b97ecb935ff820ef0ee7ce0ec61eb8",
+      "target_id": "ru-045-002-0108",
+      "tag": "p",
+      "target_sha256": "011ff718c39cb06b5d835c9bcb1630fedddc2f2ddaa624f757330c51e6db42ed"
+    },
+    {
+      "source_id": "045-002-0109",
+      "target": "— Что касается лично вас, — заметил Холмс, — я не вижу, чтобы у вас были основания для претензий к этой необыкновенной Лиге. Напротив, насколько я понимаю, вы стали богаче примерно на тридцать фунтов, не говоря уже о подробнейших знаниях по всем предметам, которые начинаются на букву А. Вы ничего не потеряли из-за них.",
+      "source_sha256": "3a80eb34f518a62ee0a334c124d990a15c9a8f38b4f836721dd004a4475f4086",
+      "target_id": "ru-045-002-0109",
+      "tag": "p",
+      "target_sha256": "97d0d3fc6650ec7eb5546101440a31ab15438b67ad3ae0116f53df0b8659786f"
+    },
+    {
+      "source_id": "045-002-0110",
+      "target": "— Нет, сэр. Но я хочу выяснить, кто они и зачем сыграли со мной эту шутку, если это была шутка. Для них она вышла довольно дорогой: обошлась им в тридцать два фунта.",
+      "source_sha256": "102853847be1fe48c1472fee5cbb4866a4f2f6dea241cc8b26d865bf90f5f832",
+      "target_id": "ru-045-002-0110",
+      "tag": "p",
+      "target_sha256": "7452e4d2ca34071b5bca9bce4dde335e175887941101a6edd2edb538f5c171d0"
+    },
+    {
+      "source_id": "045-002-0111",
+      "target": "— Мы постараемся прояснить для вас эти вопросы. А прежде один-два вопроса, мистер Уилсон. Этот ваш помощник, который первым обратил ваше внимание на объявление, — как давно он у вас служил?",
+      "source_sha256": "3d11233fe65dae767d0c673de4b2ab0f3a73793e051fc73c93650af7e3e8871a",
+      "target_id": "ru-045-002-0111",
+      "tag": "p",
+      "target_sha256": "3cf0578d223abde44393ae3ac58e44f16c7c2c9eb697dff461a6cf7deaf7ae98"
+    },
+    {
+      "source_id": "045-002-0112",
+      "target": "— Тогда около месяца.",
+      "source_sha256": "9187811a400a800077b5fa199bfac6210f4088164ac8da7d7d5d8fa51f7ff070",
+      "target_id": "ru-045-002-0112",
+      "tag": "p",
+      "target_sha256": "4ee39ac401b7967c005c232bf6faae5a7b203575330724608dd01073c13c14d7"
+    },
+    {
+      "source_id": "045-002-0113",
+      "target": "— Как он к вам попал?",
+      "source_sha256": "6f4b0115ca08cd9a4f324ce87210c3b79b1262c8d3e8a0f48041934a6d1f1981",
+      "target_id": "ru-045-002-0113",
+      "tag": "p",
+      "target_sha256": "60733928874743b8ca7470b0dc2e424b71e734b1e700bd08fa23d5092bcb3c6b"
+    },
+    {
+      "source_id": "045-002-0114",
+      "target": "— По объявлению.",
+      "source_sha256": "4a90684fff9c64e032e832e8292d21a30c905c0be3304a55f1825dce70a742f2",
+      "target_id": "ru-045-002-0114",
+      "tag": "p",
+      "target_sha256": "971187855d703d8ad8d3ab209fed2629ca9db1fb44e1cca7adfa301d2d72c011"
+    },
+    {
+      "source_id": "045-002-0115",
+      "target": "— Он был единственным кандидатом?",
+      "source_sha256": "f11d9d153963053b5f81329f0385ce5198e61262078b02fc1211ce7908664850",
+      "target_id": "ru-045-002-0115",
+      "tag": "p",
+      "target_sha256": "3ef6bcc3893306b921638fedc53afb6d12ec88c86cabe762eb4f2761e5898758"
+    },
+    {
+      "source_id": "045-002-0116",
+      "target": "— Нет, было человек двенадцать.",
+      "source_sha256": "4d06a3dc2254b20ce80518eb7a417da2d110657b51cf7b4b403cfcf9e4f6c975",
+      "target_id": "ru-045-002-0116",
+      "tag": "p",
+      "target_sha256": "f154db5fc26d5a50cff3a4d7c02786392a9305fbb9dd819eb09cd75e4b5681ac"
+    },
+    {
+      "source_id": "045-002-0117",
+      "target": "— Почему вы выбрали его?",
+      "source_sha256": "dccd25ea6eae28a9a4ca6f750279b822b9af6f96f4246fa49700bc2df424e1d1",
+      "target_id": "ru-045-002-0117",
+      "tag": "p",
+      "target_sha256": "3134e83e83c7701ab4225aa82a61941d79bdbca090ed80a0b7b3a0c92e632b9e"
+    },
+    {
+      "source_id": "045-002-0118",
+      "target": "— Потому что он был сметлив и обходился дёшево.",
+      "source_sha256": "0fc7a44bcb20ec7b6af9660c49b9976411f305c05f91be9667554f91fef507e2",
+      "target_id": "ru-045-002-0118",
+      "tag": "p",
+      "target_sha256": "cdbfe9b56dd763860fd7e6f92aab17f56925d95a8f053d04ffffce928d98a922"
+    },
+    {
+      "source_id": "045-002-0119",
+      "target": "— За половинное жалованье, иначе говоря.",
+      "source_sha256": "2e7f605e1b2447011b8b12b8d3540d36efc5199d5695a22e1cb18d25e6ed7881",
+      "target_id": "ru-045-002-0119",
+      "tag": "p",
+      "target_sha256": "7a50fe004fe77c0a9c46ea07758a95c384b6412bbf737147c73e4f077fbdabc8"
+    },
+    {
+      "source_id": "045-002-0120",
+      "target": "— Да.",
+      "source_sha256": "838a04296799794f4e1a85c40540fd52027a3aa3d6a1cd735f69b489839212cf",
+      "target_id": "ru-045-002-0120",
+      "tag": "p",
+      "target_sha256": "b38bdfda461dc2130aa710240e46c220d11d45c3bc5fe7d22b9278a9a8f4972c"
+    },
+    {
+      "source_id": "045-002-0121",
+      "target": "— Каков он собой, этот Винсент Сполдинг?",
+      "source_sha256": "f582032fb8cf600173a07ea6e15a8146e49ad7719b0e4efd52f27ae4fe62b2fa",
+      "target_id": "ru-045-002-0121",
+      "tag": "p",
+      "target_sha256": "90faaf9a3d7ff65992e933c2b250b8bb3871668e9578b8d5d75e6509dfeb03f4"
+    },
+    {
+      "source_id": "045-002-0122",
+      "target": "— Невысокий, плотного сложения, очень проворный, на лице ни волоска, хотя ему никак не меньше тридцати. На лбу белое пятно от кислоты.",
+      "source_sha256": "5df7578385da5a2a926d05bd2fc354d7371e3fea91ec25a6b2c89d796fd6f815",
+      "target_id": "ru-045-002-0122",
+      "tag": "p",
+      "target_sha256": "0bafd62f03777ce3d153d55bf2f33943216d4f89cafe604b0e42078da1b2a9a2"
+    },
+    {
+      "source_id": "045-002-0123",
+      "target": "Холмс в сильном волнении выпрямился в кресле. — Так я и думал, — сказал он. — Вы никогда не замечали, что у него проколоты уши для серёжек?",
+      "source_sha256": "b156e913af397bfc9d186635af493fbd053a4667bcdbd098e47ce6386a60bd5d",
+      "target_id": "ru-045-002-0123",
+      "tag": "p",
+      "target_sha256": "3c8cab34e8d455fbfcbf7f6bdf5269f4eda96b4528de8005fc0b1459ec5ba4d1"
+    },
+    {
+      "source_id": "045-002-0124",
+      "target": "— Замечал, сэр. Он говорил, что это сделала ему цыганка, когда он был мальчишкой.",
+      "source_sha256": "0a6718a7a0083a1b76a9a4db5e11dd72924b1a70217a1f3f30e89fd9bb401df9",
+      "target_id": "ru-045-002-0124",
+      "tag": "p",
+      "target_sha256": "e8557e3abc7917ebc375afefbeeab014008125fbf55b6961b667e1b7bb74f52f"
+    },
+    {
+      "source_id": "045-002-0125",
+      "target": "— Хм! — сказал Холмс, откидываясь назад в глубокой задумчивости. — Он по-прежнему у вас?",
+      "source_sha256": "06f0c5e511af3c8c6d6cd3643ac1dd5e9d8c194641d32a09f8b7ee412aad626c",
+      "target_id": "ru-045-002-0125",
+      "tag": "p",
+      "target_sha256": "79e7fd61c270358efa6bc2b6d8f02ace73669f5436362d8cda2b2a3e1daaddf0"
+    },
+    {
+      "source_id": "045-002-0126",
+      "target": "— О да, сэр; я только что от него.",
+      "source_sha256": "cb7e78ff8bf30ef27ad6513fa01642e4370a2690e5628a5f200536b308c402ec",
+      "target_id": "ru-045-002-0126",
+      "tag": "p",
+      "target_sha256": "4e2d1a2fe59c7c79d3a4a89e1016434491bdb2adc8ac2d8a0ed4f9109f5355ad"
+    },
+    {
+      "source_id": "045-002-0127",
+      "target": "— А ваше дело не оставалось без присмотра в ваше отсутствие?",
+      "source_sha256": "f49a751db9d880ad9e32a0644f80b3957fc82883a4ace8107ca3b7e0d4defd4f",
+      "target_id": "ru-045-002-0127",
+      "tag": "p",
+      "target_sha256": "778183822154f0591c80ac0e40b5ea235c6d3f55af3860de4fe62b75f7006fd9"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-002-0096",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue punctuation, 'card' as карточка, and the humour of 'a little funny'."
+    },
+    {
+      "source_id": "045-002-0097",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray guillemets, smoothed idiom; 'Red-headed League' rendered consistently as Лига рыжих."
+    },
+    {
+      "source_id": "045-002-0098",
+      "verdict": "CORRECTED",
+      "reason": "Corrected quote markup and dash dialogue; 'No. 4' as четвёртый номер."
+    },
+    {
+      "source_id": "045-002-0099",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray guillemets; used dash dialogue."
+    },
+    {
+      "source_id": "045-002-0100",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue punctuation."
+    },
+    {
+      "source_id": "045-002-0101",
+      "verdict": "CORRECTED",
+      "reason": "Removed nested quotation marks; 'premises' rendered as помещение, not квартира."
+    },
+    {
+      "source_id": "045-002-0102",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue punctuation."
+    },
+    {
+      "source_id": "045-002-0103",
+      "verdict": "CORRECTED",
+      "reason": "Fixed markup; street name rendered Кинг-Эдвард-стрит."
+    },
+    {
+      "source_id": "045-002-0104",
+      "verdict": "CORRECTED",
+      "reason": "Fixed punctuation and phrasing; preserves manufactory and the names."
+    },
+    {
+      "source_id": "045-002-0105",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray guillemets."
+    },
+    {
+      "source_id": "045-002-0106",
+      "verdict": "CORRECTED",
+      "reason": "Fixed punctuation; 'advice' and sequence preserved; smoother Russian."
+    },
+    {
+      "source_id": "045-002-0107",
+      "verdict": "CORRECTED",
+      "reason": "Fixed punctuation; clarified 'graver issues' without adding anything."
+    },
+    {
+      "source_id": "045-002-0108",
+      "verdict": "CORRECTED",
+      "reason": "Draft 'терял' mistranslated 'have lost'; fixed to лишился."
+    },
+    {
+      "source_id": "045-002-0109",
+      "verdict": "CORRECTED",
+      "reason": "Fixed nested quotes; 'league' kept as Лига, not 'группа'; 'minute knowledge' rendered as подробнейшие знания."
+    },
+    {
+      "source_id": "045-002-0110",
+      "verdict": "CORRECTED",
+      "reason": "Normalised punctuation; content preserved, including the amount."
+    },
+    {
+      "source_id": "045-002-0111",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue; tense fixed."
+    },
+    {
+      "source_id": "045-002-0112",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue punctuation."
+    },
+    {
+      "source_id": "045-002-0113",
+      "verdict": "CORRECTED",
+      "reason": "'Как он сюда попал' fixed to 'к вам попал'."
+    },
+    {
+      "source_id": "045-002-0114",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue punctuation."
+    },
+    {
+      "source_id": "045-002-0115",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray guillemet; 'applicant' as кандидат."
+    },
+    {
+      "source_id": "045-002-0116",
+      "verdict": "CORRECTED",
+      "reason": "Draft misread 'I had a dozen' (a dozen applicants); fixed."
+    },
+    {
+      "source_id": "045-002-0117",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue punctuation."
+    },
+    {
+      "source_id": "045-002-0118",
+      "verdict": "CORRECTED",
+      "reason": "Normalised punctuation; 'handy' rendered as сметлив."
+    },
+    {
+      "source_id": "045-002-0119",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue; 'зарплата' made more period-appropriate as жалованье."
+    },
+    {
+      "source_id": "045-002-0120",
+      "verdict": "CORRECTED",
+      "reason": "Normalised dialogue punctuation."
+    },
+    {
+      "source_id": "045-002-0121",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation, faithful."
+    },
+    {
+      "source_id": "045-002-0122",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'not short of thirty' (at least thirty); all details preserved."
+    },
+    {
+      "source_id": "045-002-0123",
+      "verdict": "CORRECTED",
+      "reason": "Corrected dialogue punctuation and register."
+    },
+    {
+      "source_id": "045-002-0124",
+      "verdict": "CORRECTED",
+      "reason": "Idiom and word order smoothed."
+    },
+    {
+      "source_id": "045-002-0125",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed 'sinking back'."
+    },
+    {
+      "source_id": "045-002-0126",
+      "verdict": "CORRECTED",
+      "reason": "'I have only just left him' made idiomatic."
+    },
+    {
+      "source_id": "045-002-0127",
+      "verdict": "CORRECTED",
+      "reason": "'Attended to' fixed: not 'улажены' but without supervision."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-002-0096",
+      "before": "«Нет, нет», — воскликнул Холмс, толкая его обратно в кресло, из которого тот уже наполовину поднялся. «Я ни за что на свете не пропустил бы ваше дело. Оно удивительно необычно. Но, если позволите так выразиться, в нём есть что-то немного странное. Прошу вас, какие меры вы предприняли, когда обнаружили визитку на двери?»",
+      "after": "— Нет, нет, — воскликнул Холмс, толкая его обратно в кресло, с которого тот уже наполовину приподнялся. — Я ни за что на свете не пропустил бы ваше дело. Оно на редкость необычно, это просто освежает. Но, если позволите так выразиться, в нём есть что-то и впрямь немного смешное. Прошу вас, что вы предприняли, когда обнаружили карточку на двери?"
+    },
+    {
+      "source_id": "045-002-0097",
+      "before": "«Я был ошеломлен, сэр. Я не знал, что делать. Тогда я обошел соседние конторы, но, казалось, ни в одной из них ничего об этом не знали. В конце концов я обратился к домовладельцу, который является бухгалтером и живет на первом этаже, и спросил его, не может ли он сказать мне, что стало с Лигой рыжеволосых. Он ответил, что никогда не слышал ни о какой такой организации. Тогда я спросил его, кто такой мистер Дункан Росс. Он ответил, что это имя ему ни о чем не говорит».",
+      "after": "— Я был ошеломлён, сэр. Я не знал, что делать. Тогда я обошёл соседние конторы, но никто из них, похоже, ничего об этом не знал. Наконец я пошёл к домовладельцу, он бухгалтер и живёт на первом этаже, и спросил, не скажет ли он, что стало с Лигой рыжих. Он ответил, что никогда не слышал ни о каком таком обществе. Тогда я спросил, кто такой мистер Дункан Росс. Он сказал, что это имя ему внове."
+    },
+    {
+      "source_id": "045-002-0098",
+      "before": "«— Ну, — сказал я, — джентльмен из дома № 4…»",
+      "after": "— Ну как же, — сказал я, — джентльмен из четвёртого номера."
+    },
+    {
+      "source_id": "045-002-0099",
+      "before": "«— Что, тот рыжеволосый мужчина?»",
+      "after": "— Как, рыжий?"
+    },
+    {
+      "source_id": "045-002-0100",
+      "before": "«Да».",
+      "after": "— Да."
+    },
+    {
+      "source_id": "045-002-0101",
+      "before": "«— „О“, — сказал он, — „его звали Уильям Моррис. Он был адвокатом и пользовался моей комнатой временно, пока не будет готова его новая квартира. Вчера он съехал“.",
+      "after": "— А, — сказал он, — его звали Уильям Моррис. Он адвокат и пользовался моей комнатой временно, пока не будет готово его новое помещение. Вчера он съехал."
+    },
+    {
+      "source_id": "045-002-0102",
+      "before": "«Где я могу его найти?»",
+      "after": "— Где мне его найти?"
+    },
+    {
+      "source_id": "045-002-0103",
+      "before": "«— „О, в его новом офисе. Он действительно сказал мне адрес. Да, улица Кинг-Эдвард, 17, недалеко от собора Святого Павла“.»",
+      "after": "— О, в его новой конторе. Он действительно назвал мне адрес. Да, Кинг-Эдвард-стрит, 17, неподалёку от собора Святого Павла."
+    },
+    {
+      "source_id": "045-002-0104",
+      "before": "— Я отправился туда, мистер Холмс, но когда я добрался до указанного адреса, оказалось, что это фабрика по производству искусственных коленных чашечек, и никто из находящихся там людей никогда не слышал ни о мистере Уильяме Моррисе, ни о мистере Дункане Россе».",
+      "after": "— Я отправился туда, мистер Холмс, но по этому адресу оказалась фабрика искусственных коленных чашечек, и никто там никогда не слышал ни о мистере Уильяме Моррисе, ни о мистере Дункане Россе."
+    },
+    {
+      "source_id": "045-002-0105",
+      "before": "— «И что вы тогда сделали?» — спросил Холмс.",
+      "after": "— И что вы сделали тогда? — спросил Холмс."
+    },
+    {
+      "source_id": "045-002-0106",
+      "before": "— Я вернулся домой на Сакс-Кобург-сквер и посоветовался со своим помощником. Но он ничем не смог мне помочь. Он мог только сказать, что, если я подожду, мне придет ответ по почте. Но этого было недостаточно, мистер Холмс. Я не хотел терять такую работу, не поборовшись, поэтому, услышав, что вы любезно даёте советы бедным людям, которые в этом нуждаются, я сразу же пришёл к вам».",
+      "after": "— Я пошёл домой, на Сакс-Кобург-сквер, и посоветовался с помощником. Но он ничем не мог мне помочь. Сказал только, что если подождать, то придёт известие по почте. Но этого было мало, мистер Холмс. Я не хотел терять такое место без борьбы, и, поскольку слышал, что вы любезно даёте советы бедным людям, которые в них нуждаются, я сразу пришёл к вам."
+    },
+    {
+      "source_id": "045-002-0107",
+      "before": "— И вы поступили очень мудро, — сказал Холмс. — Ваш случай чрезвычайно примечателен, и я с удовольствием его изучу. Судя по тому, что вы мне рассказали, я полагаю, что от него могут зависеть более серьёзные последствия, чем может показаться на первый взгляд».",
+      "after": "— И вы поступили очень мудро, — сказал Холмс. — Ваш случай чрезвычайно примечателен, и я с радостью им займусь. Судя по вашему рассказу, возможно, что за ним кроется более серьёзное дело, чем может показаться на первый взгляд."
+    },
+    {
+      "source_id": "045-002-0108",
+      "before": "«Довольно серьёзно!» — сказал мистер Джейбез Уилсон. «Ведь я терял четыре фунта в неделю».",
+      "after": "— Ещё бы не серьёзное! — сказал мистер Джейбез Уилсон. — Да я лишился четырёх фунтов в неделю."
+    },
+    {
+      "source_id": "045-002-0109",
+      "before": "— «Что касается вас лично, — заметил Холмс, — я не вижу, чтобы у вас были какие-либо претензии к этой необыкновенной группе. Напротив, насколько я понимаю, вы стали богаче на 30 фунтов, не говоря уже о том, что приобрели доскональное знание по всем вопросам, начинающимся на букву «А». Вы ничего не потеряли из-за них».",
+      "after": "— Что касается лично вас, — заметил Холмс, — я не вижу, чтобы у вас были основания для претензий к этой необыкновенной Лиге. Напротив, насколько я понимаю, вы стали богаче примерно на тридцать фунтов, не говоря уже о подробнейших знаниях по всем предметам, которые начинаются на букву А. Вы ничего не потеряли из-за них."
+    },
+    {
+      "source_id": "045-002-0110",
+      "before": "«Нет, сэр. Но я хочу выяснить, кто они такие и с какой целью устроили эту шутку — если это была шутка — над мной. Для них это была довольно дорогая шутка, ведь она обошлась им в тридцать два фунта».",
+      "after": "— Нет, сэр. Но я хочу выяснить, кто они и зачем сыграли со мной эту шутку, если это была шутка. Для них она вышла довольно дорогой: обошлась им в тридцать два фунта."
+    },
+    {
+      "source_id": "045-002-0111",
+      "before": "«Мы постараемся прояснить для вас эти моменты. А сначала — один-два вопроса, мистер Уилсон. Этот ваш помощник, который первым обратил ваше внимание на объявление, — как долго он уже работал у вас?»",
+      "after": "— Мы постараемся прояснить для вас эти вопросы. А прежде один-два вопроса, мистер Уилсон. Этот ваш помощник, который первым обратил ваше внимание на объявление, — как давно он у вас служил?"
+    },
+    {
+      "source_id": "045-002-0112",
+      "before": "«Тогда около месяца».",
+      "after": "— Тогда около месяца."
+    },
+    {
+      "source_id": "045-002-0113",
+      "before": "— Как он сюда попал?",
+      "after": "— Как он к вам попал?"
+    },
+    {
+      "source_id": "045-002-0114",
+      "before": "— «В ответ на объявление».",
+      "after": "— По объявлению."
+    },
+    {
+      "source_id": "045-002-0115",
+      "before": "— Он был единственным претендентом?»",
+      "after": "— Он был единственным кандидатом?"
+    },
+    {
+      "source_id": "045-002-0116",
+      "before": "— Нет, я видел его с дюжиной».",
+      "after": "— Нет, было человек двенадцать."
+    },
+    {
+      "source_id": "045-002-0117",
+      "before": "— Почему вы выбрали именно его?",
+      "after": "— Почему вы выбрали его?"
+    },
+    {
+      "source_id": "045-002-0118",
+      "before": "— «Потому что он был ловким и обходился дешево».",
+      "after": "— Потому что он был сметлив и обходился дёшево."
+    },
+    {
+      "source_id": "045-002-0119",
+      "before": "«Фактически, за половину зарплаты».",
+      "after": "— За половинное жалованье, иначе говоря."
+    },
+    {
+      "source_id": "045-002-0120",
+      "before": "«Да».",
+      "after": "— Да."
+    },
+    {
+      "source_id": "045-002-0121",
+      "before": "— А как он выглядит, этот Винсент Сполдинг?",
+      "after": "— Каков он собой, этот Винсент Сполдинг?"
+    },
+    {
+      "source_id": "045-002-0122",
+      "before": "— Невысокий, крепкого телосложения, очень подвижный, без растительности на лице, хотя ему уже за тридцать. На лбу у него белый след от кислоты.",
+      "after": "— Невысокий, плотного сложения, очень проворный, на лице ни волоска, хотя ему никак не меньше тридцати. На лбу белое пятно от кислоты."
+    },
+    {
+      "source_id": "045-002-0123",
+      "before": "Холмс выпрямился в кресле, явно взволнованный. «Я так и думал», — сказал он. «Вы когда-нибудь замечали, что у него проколоты уши для сережек?»",
+      "after": "Холмс в сильном волнении выпрямился в кресле. — Так я и думал, — сказал он. — Вы никогда не замечали, что у него проколоты уши для серёжек?"
+    },
+    {
+      "source_id": "045-002-0124",
+      "before": "— Да, сэр. Он рассказал мне, что цыганка сделала это для него, когда он был мальчиком.",
+      "after": "— Замечал, сэр. Он говорил, что это сделала ему цыганка, когда он был мальчишкой."
+    },
+    {
+      "source_id": "045-002-0125",
+      "before": "— Хм! — сказал Холмс, погрузившись в глубокие раздумья. — Он всё ещё у вас?",
+      "after": "— Хм! — сказал Холмс, откидываясь назад в глубокой задумчивости. — Он по-прежнему у вас?"
+    },
+    {
+      "source_id": "045-002-0126",
+      "before": "— О, да, сэр; я только что с ним расстался.",
+      "after": "— О да, сэр; я только что от него."
+    },
+    {
+      "source_id": "045-002-0127",
+      "before": "— А ваши дела были улажены в ваше отсутствие?",
+      "after": "— А ваше дело не оставалось без присмотра в ваше отсутствие?"
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKc9WCNm6WVuqBLxKxAx",
+    "usage": {
+      "input_tokens": 35746,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3894,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKcBTTEwQgZd3C7b5tgC",
+        "usage": {
+          "input_tokens": 39813,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4275,
+          "output_tokens_details": {
+            "thinking_tokens": 651
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-002-0096",
+          "verdict": "PASS",
+          "reason": "Faithful: Holmes's refusal, 'refreshingly unusual', slight humour and the question about steps taken are all preserved; idiomatic."
+        },
+        {
+          "source_id": "045-002-0097",
+          "verdict": "PASS",
+          "reason": "All events, the landlord-accountant, and the negations are preserved; the Russian is natural."
+        },
+        {
+          "source_id": "045-002-0098",
+          "verdict": "PASS",
+          "reason": "Wilson's reply about the gentleman at No. 4 is accurate."
+        },
+        {
+          "source_id": "045-002-0099",
+          "verdict": "PASS",
+          "reason": "Short question about the red-headed man is accurate."
+        },
+        {
+          "source_id": "045-002-0100",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0101",
+          "verdict": "PASS",
+          "reason": "Name William Morris, his profession, the temporary room and yesterday's move are all kept."
+        },
+        {
+          "source_id": "045-002-0102",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0103",
+          "verdict": "PASS",
+          "reason": "Address, number and St Paul's are preserved."
+        },
+        {
+          "source_id": "045-002-0104",
+          "verdict": "PASS",
+          "reason": "The factory of artificial knee-caps and the double ignorance of both names are preserved."
+        },
+        {
+          "source_id": "045-002-0105",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0106",
+          "verdict": "PASS",
+          "reason": "Assistant's advice, 'hear by post', and the motive for coming to Holmes are faithful."
+        },
+        {
+          "source_id": "045-002-0107",
+          "verdict": "PASS",
+          "reason": "Holmes's assessment and the hint of graver issues are faithful."
+        },
+        {
+          "source_id": "045-002-0108",
+          "verdict": "PASS",
+          "reason": "Wilson's grim humour and the loss of £4 a week are preserved."
+        },
+        {
+          "source_id": "045-002-0109",
+          "verdict": "PASS",
+          "reason": "£30 figure, letter A, and the point that he lost nothing are preserved."
+        },
+        {
+          "source_id": "045-002-0110",
+          "verdict": "PASS",
+          "reason": "Prank, 'if it was a prank', and the thirty-two pounds are accurate."
+        },
+        {
+          "source_id": "045-002-0111",
+          "verdict": "PASS",
+          "reason": "Accurate question about the assistant's tenure."
+        },
+        {
+          "source_id": "045-002-0112",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0113",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0114",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0115",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0116",
+          "verdict": "PASS",
+          "reason": "A dozen applicants is conveyed correctly."
+        },
+        {
+          "source_id": "045-002-0117",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0118",
+          "verdict": "PASS",
+          "reason": "Handy and cheap are acceptably rendered."
+        },
+        {
+          "source_id": "045-002-0119",
+          "verdict": "PASS",
+          "reason": "Half wages is accurate."
+        },
+        {
+          "source_id": "045-002-0120",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0121",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0122",
+          "venue": "",
+          "verdict": "PASS",
+          "reason": "The description (height, build, quickness, no facial hair, over thirty, acid splash) is preserved."
+        },
+        {
+          "source_id": "045-002-0123",
+          "verdict": "PASS",
+          "reason": "Holmes's excitement, 'I thought as much' and the pierced-ears clue are preserved; the single paragraph is kept."
+        },
+        {
+          "source_id": "045-002-0124",
+          "verdict": "PASS",
+          "reason": "Gipsy explanation is preserved."
+        },
+        {
+          "source_id": "045-002-0125",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0126",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-002-0127",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
