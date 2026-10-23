@@ -1,0 +1,780 @@
+{
+  "state": "CHAPTER_LITERARY_REVIEW_PASS",
+  "unit": 2,
+  "method": "AI_LITERARY_REVIEW_IN_CONTROLLING_CODEX_THREAD",
+  "review_model": "NOT_EXPOSED",
+  "coverage": "All116source/targetrowsactuallyreadintwo58rowbatchesplusheading;verse6linesindependentlyrecoveredfromsourceHTML",
+  "corrections": [
+    {
+      "source_id": "id00101",
+      "source": "En approchant du poste de la barrière des Sergents, la sentinelle cria: «Qui vive?» D'Artagnan répondit, et, ayant demandé les mots de passe au cardinal, s'avança à l'ordre; les mots de passe étaient Louis et Rocroy.",
+      "before": "Когда они приблизились к посту у заставы Сержан, часовой окликнул: «Кто идёт?» Д’Артаньян ответил и, спросив у кардинала пароль и отзыв, подъехал для доклада; паролем было «Людовик», отзывом — «Рокруа».",
+      "after": "Когда они приблизились к посту у заставы Сержан, часовой окликнул: «Кто идёт?» Д’Артаньян ответил и, спросив у кардинала пароль и отзыв, подъехал к часовому; паролем было «Людовик», отзывом — «Рокруа».",
+      "reason": "Do not add a report: advance in the challenge/countersign exchange.",
+      "source_sha256": "cf1c66c4c6fa44c4431a13924d1c7e160b3a78624e6fd0928246f262f7b55330",
+      "before_sha256": "1de1f39323eaa153e25e4601580bb42452a9375f92ca899cc76176da01e65843",
+      "after_sha256": "de644cb858478865008a21191dd3eb2664c6e0612a9d24128b16cf219455975f",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00116",
+      "source": "Un vent de Fronde S'est levé ce matin; Je crois qu'il gronde Contre le Mazarin. Un vent de Fronde S'est levé ce matin!",
+      "before": "Фронды ветер буйный\nПоднялся чуть свет;\nМазарини, верно,\nОн грозит вослед.\nФронды ветер буйный\nПоднялся чуть свет!",
+      "after": "Ветер Фронды\nПоднялся с утра;\nОн, кажется, ропщет\nПротив Мазарини.\nВетер Фронды\nПоднялся с утра!",
+      "reason": "Restore faithful six-line song: no unsupported pursuit вослед; preserve repetition and original grumbling against Mazarin.",
+      "source_sha256": "d15a6690ad8ba24b29b183ed1a47e062fe72060770269ad77ae6e360f2b84d56",
+      "before_sha256": "14743cbfce47d29e2e91b30e3e647b93a67a58c4384f9056123a886265244140",
+      "after_sha256": "efebb4ffe24f48b711767463c6eda0375153bfe956f32b4291814bae37699ab4",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00163",
+      "source": "Pendant tout le temps que cette course nocturne avait duré, c'est- à-dire pendant une heure à peu près, le cardinal avait, tout en étudiant tour à tour Comminges, Guitaut et Villequier, examiné un homme. Cet homme, qui était resté impassible devant la menace populaire, et dont la figure n'avait pas plus sourcillé aux plaisanteries qu'avait faites Mazarin qu'à celles dont il avait été l'objet, cet homme lui semblait un être à part et trempé pour des événements dans le genre de ceux dans lesquels on se trouvait, surtout de ceux dans lesquels on allait se trouver.",
+      "before": "Всё то время, пока длилась эта ночная поездка, то есть около часа, кардинал, поочерёдно изучая Коменжа, Гито и Вилькье, присматривался к одному человеку. Этот человек, оставшийся невозмутимым перед угрозой толпы, у которого ни разу не дрогнула бровь ни от шуток, отпущенных Мазарини, ни от тех, предметом которых был он сам, — этот человек казался ему существом особенным, закалённым для событий вроде тех, среди которых они находились, а особенно тех, среди которых им предстояло оказаться.",
+      "after": "Всё то время, пока длилась эта ночная поездка, то есть около часа, кардинал, поочерёдно изучая Коменжа, Гито и Вилькье, присматривался к одному человеку. Этот человек, оставшийся невозмутимым перед угрозой толпы, у которого ни разу не дрогнула бровь ни от шуток Мазарини, ни от насмешек над самим кардиналом, — этот человек казался ему существом особенным, закалённым для событий вроде тех, среди которых они находились, а особенно тех, среди которых им предстояло оказаться.",
+      "reason": "The jokes target Mazarin, not dArtagnan: witnessed Villequier/Comminges conversation.",
+      "source_sha256": "57ef268c32e9985648bdd53c111c20bb8e030b3ddc8cb86a98748c2ac38d557b",
+      "before_sha256": "b6ab249d796d8a1c28a8c9dcf2c1203bc0e22453a48f4fd56f46f180dbad8149",
+      "after_sha256": "652c2275923589058de8ecf937ee265c123b65ae1ecfab7e83850b4a2a7bd986",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00173",
+      "source": "— Peste, Monseigneur! m'avez-vous fait venir avec vous pour me tirer mon horoscope?",
+      "before": "— Ах ты чёрт, монсеньор! Уж не для того ли вы взяли меня с собой, чтобы составить мне гороскоп?",
+      "after": "— Чёрт побери, монсеньор! Уж не для того ли вы взяли меня с собой, чтобы составить мне гороскоп?",
+      "reason": "Avoid unintended direct insult addressed to cardinal; preserve exclamation.",
+      "source_sha256": "bb8dd68755eda2b8e251604cda47300b9e64760f2334865474504b317125eda6",
+      "before_sha256": "91b92537f1cb32722bfb3861eb095765fea1fb3035b802cb27a486b19e4b4394",
+      "after_sha256": "e6be9cd7e12c01e1cc2096303e738fb90ff80368263bc65547f99690391eca18",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00188",
+      "source": "— Monseigneur, reprit Guitaut, c'est que ceux-là ne pèsent pas tous les hommes dans la même balance, et qu'ils savent s'adresser aux gens de guerre pour la guerre et aux intrigants pour l'intrigue. Adressez-vous à quelque intrigant de l'époque dont vous parlez, et vous en tirerez ce que vous voudrez, en payant, bien entendu.",
+      "before": "— Монсеньор, — возразил Гито, — это оттого, что они не взвешивают всех людей на одних весах и умеют обращаться к военным — за войной, а к интриганам — за интригой. Обратитесь к какому-нибудь интригану тех времён, о которых вы говорите, и вы вытянете из него всё, что пожелаете, — разумеется, за плату.",
+      "after": "— Монсеньор, — возразил Гито, — это оттого, что они не взвешивают всех людей на одних весах и умеют обращаться к военным по военным делам, а к интриганам — по делам интриг. Обратитесь к какому-нибудь интригану тех времён, о которых вы говорите, и вы вытянете из него всё, что пожелаете, — разумеется, за плату.",
+      "reason": "Correct literal за войной calque; retain proper allocation of requests.",
+      "source_sha256": "d676c73da1222444ee9d9950199c3f0bba2cffc6596f472f11be5920df4b8e11",
+      "before_sha256": "e7b79058558131597ae7de8d3764931385545e36997faf981bcba61204bd2c34",
+      "after_sha256": "7cdf8a6c4956682cc69498ef9050c62bda06c496a3d4b1bcb7105a17603f1384",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "id00098",
+      "source_sha256": "e47b83f6a0d86df8a16fd2f8bfd29b3d8a2e6d1cbd5037cd918c215ed6f94885",
+      "reviewed_target_sha256": "b11156b64c9bc12f44f806ba3949810f3fdd17ba8a164bb32946d464f26c098d",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00099",
+      "source_sha256": "f2d1fea23ee531949f3f9e939416448a36c693a6f1b3d5ddcb629c84a10b7143",
+      "reviewed_target_sha256": "4ca9554aa7d8269f76b66031e2213d0bce0aced882b1631dac0728a9d3243018",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00100",
+      "source_sha256": "96dc9fdbff64ccc9ab40c84d667d239d7e5124ea8b70684b75fd41c374ed8593",
+      "reviewed_target_sha256": "dc41e57c3786ae2845c8fe5de3817c067a919848e9482c7f76436e94b7c5c34a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00101",
+      "source_sha256": "cf1c66c4c6fa44c4431a13924d1c7e160b3a78624e6fd0928246f262f7b55330",
+      "reviewed_target_sha256": "de644cb858478865008a21191dd3eb2664c6e0612a9d24128b16cf219455975f",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00102",
+      "source_sha256": "f9fe9c67ac702d82122aa8a97c4647c4f90a125dadff5b132cbbb63e3394afce",
+      "reviewed_target_sha256": "384e850eaab825aa983dbd66f6139904be3790a2476a7cf02635e35b3aa7f510",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00103",
+      "source_sha256": "7ad4c873976b8c97b516340f063fd1e74f316e80576c115b78e7ba861ef457ae",
+      "reviewed_target_sha256": "2f714035314e6f3c86b6b43088181d71721cecb90ea4ca8b17afd2a4f838760a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00104",
+      "source_sha256": "7b173215b8306b6f0c90e049db02f0a7820e9d89dcc1b9aa6540dc02e3768182",
+      "reviewed_target_sha256": "3fe4e12290b25555c0951ffb0aa0a78d40c516ee1d21c1df12ac8c4faf869d46",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00105",
+      "source_sha256": "ef9a0f52849683bb9106b50213d61f38245b0c33466b1292dff9e7937455960e",
+      "reviewed_target_sha256": "6646ae480e045603bf03cff66af47ec25be47f8e92ba3637d9712ca14239879e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00106",
+      "source_sha256": "df7278250b467ee3c0edcc4199473d132a36a14f4b5923372a7b295eebb97727",
+      "reviewed_target_sha256": "4cf426b549dea18d9212259d818d1ade5418115862779117eb02da2d7511053a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00107",
+      "source_sha256": "9d2782d93f9748086bc2c9e544ad7b73f66a47cecc58069f896c9f24a6810d2b",
+      "reviewed_target_sha256": "2b82e1e9251b4395f223e0c65d3d806b054db41f2c3602efd6427eea00896d77",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00108",
+      "source_sha256": "b75d372101b6878fe29c49625ddff51992a1a0c3a0f5cfe0527c64e3dfd72621",
+      "reviewed_target_sha256": "ab5e23577e93f6a197acb4fd1a161ee49caf126f585c9afe7aca6c33bb2a4b4c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00109",
+      "source_sha256": "1b489dd657d86c6342b38231458d097111bb508201b3dae26216c7628542f276",
+      "reviewed_target_sha256": "e63adf4c49a1a0bd11ae9e9e397434bc013495c9110df258af1f1f0e2565f4cd",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00110",
+      "source_sha256": "fa71bc46af5718d359b05aee9cb4c6405724b87ff06d8b1a4e791337215414dc",
+      "reviewed_target_sha256": "5579d95dee58fcda4f80193b8d4eb4f6f05da59cdcec824e47309318af1f60e5",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00111",
+      "source_sha256": "600371f0a1ecde37ef0b6096abe37b5ab80df2a803ddf693e6baecfdb487ca4a",
+      "reviewed_target_sha256": "9cc08f474ee321a3bbcb9338023e4130ba3322ddd7f9294f94d43f8c106ed180",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00112",
+      "source_sha256": "d868329cc1195e99c96c4b984e8995f51cb6f8b4a62680b6fe90de22b68391d8",
+      "reviewed_target_sha256": "794e03aaa2658c8457c9e9a28d910fc2646054dab1ecbf788860e698e50ee1c3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00113",
+      "source_sha256": "bf3cced739e4701ba033cde59840a832fccdaf7b8ce06310d25c31abbac1d672",
+      "reviewed_target_sha256": "d2387bf8dd0ae484c5ce0890edebef352a511ec5d135e66d745a59769a294072",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00114",
+      "source_sha256": "ebca53dfda2d80da9ad9d31624efe71b2f29a3ab5a06be6f16c42a57c2f7d2ec",
+      "reviewed_target_sha256": "398772b3e8c13cab2e8ca6bf7f6f62f07fd255d73ec37e6564d5507a7c2c1c72",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00115",
+      "source_sha256": "3279956faa18963ddcbba1fe51a00ffb5c98aecff407d10a9ffde10f091ae9d4",
+      "reviewed_target_sha256": "a35e8843a76bb3f338ae6ce42cac0b30299860985036869ac88e512f617882a3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00116",
+      "source_sha256": "d15a6690ad8ba24b29b183ed1a47e062fe72060770269ad77ae6e360f2b84d56",
+      "reviewed_target_sha256": "efebb4ffe24f48b711767463c6eda0375153bfe956f32b4291814bae37699ab4",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00117",
+      "source_sha256": "3561229f05df9e6e4189be3e4af6cbfe8feb19dc9005ed427bc222c624643140",
+      "reviewed_target_sha256": "4192aebe85314e8e5d36eed071027d37b22a7701173b584fd43537d1c29bd2ea",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00118",
+      "source_sha256": "33289a6013d25206aebfc3be7dfe0dff19e6dfd1112d7c48d24f6d8509a8c519",
+      "reviewed_target_sha256": "5cf4a1e9afdf211fce746cc13b6d51b27c4019735472e0f560aec25cd41d8caf",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00119",
+      "source_sha256": "a2702153fb2f462bdc267c4becb131c4c563d872aa1a48a1e51dcb86b242ac79",
+      "reviewed_target_sha256": "eeebb9d5c350fdc562bd28929763963989514c1d4f01e10530ef31cbbbcf57b0",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00120",
+      "source_sha256": "3f9ac753a938733e105057fe08d847b16ba4dd99e7994f104e9b35f2402d25fc",
+      "reviewed_target_sha256": "29eab660a1bc750f2235771c4d54c0711805628e300fb256e068caff1b5dccd1",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00121",
+      "source_sha256": "a3434348fafb029fe0fdc9367519cefdb9f1488ae5f06446745be6ec13c6a994",
+      "reviewed_target_sha256": "8749f0c80b523deefaf67ccff38fc00158844730335bb613f4eea1b2b5aea9b3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00122",
+      "source_sha256": "f892e928792df7b551f4d3710bc20450191f9b0a34b6e9b21044859fce2d4edf",
+      "reviewed_target_sha256": "7d4763bd9c7f99b59a770f523f4c5be6d4ae25244d80d5b5c69eb2e7221cf55a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00123",
+      "source_sha256": "3ea712a0e65084adfcf4b6fb286af2c0f2f3261cfe3c4ffa29f266439c54e0fc",
+      "reviewed_target_sha256": "b78d44ead4cb2535511c93515fac2876468948d2073d362683748b7ca1b2abc3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00124",
+      "source_sha256": "6782e1bc835e255dfed1c7b0ed277aec083fca053a0f633b4e0791dd4183a7ac",
+      "reviewed_target_sha256": "55e4b6eb8d0bc53759456ee9382af97169d75126abbc3376dee27d2d330ab8d0",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00125",
+      "source_sha256": "e4cd4677348d293cb7e5db67cd4f3e455598ed4c3eb5115034d224ad6fa413be",
+      "reviewed_target_sha256": "41225fcd1352836b6b49e4deb32b4ff3339d4c1c90528077655d0413c60b4dd8",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00126",
+      "source_sha256": "c303a1a80eb2aac5d934d562eb4b77269452825d4756190d3d1d93f4a74a998a",
+      "reviewed_target_sha256": "1454c631462a8147d7c259073250bf08b635b9ae15bc6bba72ff8924aa316079",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00127",
+      "source_sha256": "6fdee5ca68b091fedbf35fea797a9e37b5fd5692ff5927271b9cf81ce79746f6",
+      "reviewed_target_sha256": "a8f0c417c8d408a241843baedf1081e03d0bfbf082f4163c0e6a5d98219429a0",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00128",
+      "source_sha256": "93e4553cfea603efcc35fb636a998e144f3289e4cdbff978e000e72e0d5bed18",
+      "reviewed_target_sha256": "4b98a10f1b0bb87f4ca3202a709dfee4cd4263f32eb355c72f31d9ad15695552",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00129",
+      "source_sha256": "d22b3e646b294c6936140ba301a4085b481b1dc69521cc078d3977cbe7469cfb",
+      "reviewed_target_sha256": "6c09ddce2aef5aa9a60c057905f1c23c7a30a963d715e41975ff7643954c293f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00130",
+      "source_sha256": "57fdbcdcba45ca4884efbecde6ba146f86df4db608941b45c02f540c352eb94c",
+      "reviewed_target_sha256": "7f41ac915b1debf20d504804c66caebdc633bbe09fb7943be9e65842df94bf33",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00131",
+      "source_sha256": "fc5d7d2efdaac6af3c1b258ab33e1593a84a3931ca4bb06ede707295c32960f6",
+      "reviewed_target_sha256": "84b5057129e2ab0a8f04fd8eb85f346c754cb3d380bff9177cb0c105eab6cb2e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00132",
+      "source_sha256": "5de8b97c953fe35b8d5228279975fae9d056a94168ab6fecee9a97abcce946d2",
+      "reviewed_target_sha256": "a309ddd987611a68223f75fd4a71476d9de6512fec40d40b84abbf9e80306bc6",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00133",
+      "source_sha256": "5c534f5c68debda9592404b9abf55e54451d2227cfade437210bacce92fd4936",
+      "reviewed_target_sha256": "164e23a8f91f2bad7368a29009acc844f871304ca5341b3f4fd9d037c94769bc",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00134",
+      "source_sha256": "34b69f69020f7bea3384f35733fbcf5fb21e51d47dac9140ae644e97a8303a68",
+      "reviewed_target_sha256": "339b6593e451ef53349c027efdea294c3ac3011b6ec0d0448194b6abdfc637de",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00135",
+      "source_sha256": "9359e48cc478eaf1af36b4e55b09ce25c682ea61e74704ae5d416c0308ad242f",
+      "reviewed_target_sha256": "5d8b83430d90124eb5c80183e1fc568b9772e8e3657f6a93b902cd160e3218e8",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00136",
+      "source_sha256": "8d7102df0c15e19fe8dc98b2a1b7d17ffcf576e747f47ee43bc54919b607827e",
+      "reviewed_target_sha256": "f53429da61410a81badbc62902426d6ddc6dbd19d5bbd322dd10d480b2d2fa95",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00137",
+      "source_sha256": "ac759068855bffab75ef9f57dcab780bdacb4d205f36e6552af00598c112294b",
+      "reviewed_target_sha256": "c4e2100bef30160450796da696f90e2c268dd8ec9146098cf650c5043dfbc230",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00138",
+      "source_sha256": "6720c11b20ef3e6ee4ffe9f3292d5a5bdf29f927895eb29ae156ad3a16e71b13",
+      "reviewed_target_sha256": "19a6e27c2d3d7ffac910c7a8186d16610f6bdf0ec9b389f752c43b971062fc8d",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00139",
+      "source_sha256": "d36b44643575c58543b192a63cc27def67727765ac6ae548420983b8108c5439",
+      "reviewed_target_sha256": "411cb5a74dfdcb2496b7dcfe7ba568a3a03cb36135e0003bdd1d35d18f7a047c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00140",
+      "source_sha256": "006c99b6ad4a38f82a0caac4f7d01fd910c69df4e7079252f1497b354be35ce6",
+      "reviewed_target_sha256": "1ed3233f626cbdce3f6877ccb3597ac73b0b9b589b75f6e614fef522d5db33f3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00141",
+      "source_sha256": "8084ea44ca2c65e4b13b0f8d239ca83dd2d8476c479cfeb921ce598771ee4a09",
+      "reviewed_target_sha256": "6e74a29a27f203c893777f9a1f7697ce07617eb7092185f4de778b43cd78b924",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00142",
+      "source_sha256": "71ee9cbf4b47be33e62f4691d78d7e2c1c7e7391ee258b4aadd79e387b7c3690",
+      "reviewed_target_sha256": "7cd1817987908f7c6c98b919d458656fa4f0de67540c769dda8874af9a084748",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00143",
+      "source_sha256": "1ca491f8660860852384054b12b906fc5ca7fb9f36f8182f5f675a40f3fc86e0",
+      "reviewed_target_sha256": "44d00ba82ecac6fc6f7243b87843c7c04629b0abcd7e1e626f1ca2deb87fd78f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00144",
+      "source_sha256": "6a217f429b530c7d322a0a55c0fb6af6768361747ad4e0581cfe1b5533479d78",
+      "reviewed_target_sha256": "dc1f9e5507782cedff4622e9014f2bfc99787fd5ba6563916b34b6f9d171f2d7",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00145",
+      "source_sha256": "d05193cec8ae7326ee30bd32e7886836ea00a5344505826aa2eb2da1d567f5b1",
+      "reviewed_target_sha256": "752ab3fe59ffcf298b497a6e1e3d8c523f567a53ac4f35ee2052f8b029494565",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00146",
+      "source_sha256": "debb9088ddcbbafd8e2dffedcea452dd278ba35f9d9ddab756ae9541d5295036",
+      "reviewed_target_sha256": "805c87ad31144c9913d56fb7882fb5da8f50e12a2b02f30ffc505f601012e185",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00147",
+      "source_sha256": "2e73f594572970a1ac9d9c1118897854350fa002bc9874dcfd2b2201ce2e8340",
+      "reviewed_target_sha256": "e16cb29a6bee37c09ffaf492055629fa0bfd6058afdd1426634bf5a2ba7413a3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00148",
+      "source_sha256": "748ee6b6b472718da96e80f05cdf0f9e234b839c5cae1dded2338b7a32898e78",
+      "reviewed_target_sha256": "ced782789b85bad85bd75d986017f1d924ce3cb92e69981d36c0d30b9da778cf",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00149",
+      "source_sha256": "b31d2481d4afe989e2e1e48c793216ecbb492d5b538df9768e9a2c02a8599694",
+      "reviewed_target_sha256": "ed81edd06f4035dd114dbc05324fb5dc3441e96506592d387d88ddf8566e8738",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00150",
+      "source_sha256": "08a62c614212f05cd2e9c4463b36f28c39adaae2e2d0c48aa43c7dc65315244f",
+      "reviewed_target_sha256": "26dd1de30830ef8ab8e41b0486c8006a522b39a4ae5f44ced3e970c8488e9790",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00151",
+      "source_sha256": "21e6b771fc6d05dcc606a1cfa5ae57e9a10a3722979f0f8c8fa4a585d4c15a4e",
+      "reviewed_target_sha256": "a552a081ee62f7aad6cd712232863f18c359e567f8806457b8663ababd5dbaa7",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00152",
+      "source_sha256": "43961f94ccdf40d5492ba3de00f39240b1f26371332db9ab5513ac8b38cc1b62",
+      "reviewed_target_sha256": "30a897db2c77881fe699f973d43c276f76d46879ffeae4ff3abbd851ef07503c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00153",
+      "source_sha256": "3031bb1da8360b11391abb48f57498ee5d58f9b5352dd0cabaf823005a0fc00d",
+      "reviewed_target_sha256": "fc8eda4eff597c697c7844e4d542a36c73417eb98b5b61ff10cc4975b49a364d",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00154",
+      "source_sha256": "d96a5fdd9270c3c56adae00fdea2fa778b117fda560c6e95274b97af71670a77",
+      "reviewed_target_sha256": "833a15db49d001168b351a89a295cb08e189d79a844a51accd9d6523e5db5911",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00155",
+      "source_sha256": "7a8b9f38639e2d0ab0dec6f125d7ed7cb10f843fe0a050f107dc228eaf654326",
+      "reviewed_target_sha256": "aa967f8648cfceea0de28b426097af980c4ebc188a49acd9dc86ad8752f30a33",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00156",
+      "source_sha256": "07254c95f6afa86f126c45ccd9921f2d03c94edef57cdcc07d9d014074033a60",
+      "reviewed_target_sha256": "ad3294953b77b18ca83183efeee59c4668bdf1234d2a18eae41fd32b3f76bc34",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00157",
+      "source_sha256": "c0208a7a02ecb9355c188069f205c7840c0f006e3c7be41b766e5bf32d61b111",
+      "reviewed_target_sha256": "e94e566286f9e5cc5def6912bcb3d3d87494473f720708a16a3ac4a443dc7697",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00158",
+      "source_sha256": "f477395b9b1ecfbb19a52ab34bcf8a6d8faa4723414f5d9d57ee56814c8fa3ea",
+      "reviewed_target_sha256": "244adde9d8d3b6693ca29d05af0b83de0eda22474adaad91d47d3421a1076d0a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00159",
+      "source_sha256": "2241c93db6002c05c691422bd645e100534de2524488e91232e03d07b824ae00",
+      "reviewed_target_sha256": "bbe0fd3207d138deaf30acb6d600d06b1f6c2ca5bd170d7bbd86890e46d72f2e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00160",
+      "source_sha256": "b9ce25099c86dabde933d3c48b57512c73192c4b471bf82af9a5644706211cf6",
+      "reviewed_target_sha256": "55b221e881f7dcb91626faf071c4ef0a3bbd9df652fc44c60eb431798372ffdf",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00161",
+      "source_sha256": "3c05af49fb8bae14e8414efb693a25f18e01fcea8853fc3c61e7a8438c73ba1d",
+      "reviewed_target_sha256": "3aa64611fd2860cb9a5a70104abe6b7190d08ac279c49490e18ad82a5b8774ae",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00162",
+      "source_sha256": "4159e412ddd1f325cb171f57752bd8c27ac4b6d6d7bfcb0961ef63f3b59ebf07",
+      "reviewed_target_sha256": "5aa42d617fb37d10e81947fbd9b2b83944320ee94faba096ed4e355f9020ffba",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00163",
+      "source_sha256": "57ef268c32e9985648bdd53c111c20bb8e030b3ddc8cb86a98748c2ac38d557b",
+      "reviewed_target_sha256": "652c2275923589058de8ecf937ee265c123b65ae1ecfab7e83850b4a2a7bd986",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00164",
+      "source_sha256": "ef56413256d8f6d636acb58f4ced62c9ac9eb70be890bd238b54896e9cd9ee3c",
+      "reviewed_target_sha256": "4faeae09133ef95211a489ebeb53469c5393de88a034dbbb213cd5b37f998e83",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00165",
+      "source_sha256": "ae494bc9f086fead918eaaf4ef6d64ca71df7513d94970434fc41b0bab553fbc",
+      "reviewed_target_sha256": "729434ea1db28043855499b6d89dea91fa9be0bbbd71b7f402993d6853c25314",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00166",
+      "source_sha256": "d3c9821f2c70bb84c1f6ec3deaeb9df8bf03635511b5e00ffdbf3d7d4c1ec82e",
+      "reviewed_target_sha256": "804b740e293dc3f36835aa13bcd8175c926b6a7cb627f1b40e87b0971e5a4122",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00167",
+      "source_sha256": "1f492fa09f772a3697a4dbb58e389e9b3a65c15b1744b2bf5a2bb2072c75db15",
+      "reviewed_target_sha256": "d6b88ea1277a9840b720345db20f44ed302d206c534a3c8f26e7a19493945710",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00168",
+      "source_sha256": "0a572721f735b97ad532318bd990f45fbd441c51e1715aaf94022555dd77e350",
+      "reviewed_target_sha256": "cab64191cd8fb318dd5ee1027bcb0143d2bf4e1f7b805bb7fb62afe025d29997",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00169",
+      "source_sha256": "2fd5430fa01b452e568afbeee8c97c8a176a6605232be0b574cc26d30e473fd7",
+      "reviewed_target_sha256": "3b1f0171a2ca78faf74631a94559307b4a2385a0bb7bbc57905adeb2b1723b8b",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00170",
+      "source_sha256": "24abe4982bc1efaf04df8781dfe2ce72e9299c18c2fb0ec5d15297b000883304",
+      "reviewed_target_sha256": "60dfab8fe9529c71539e81f404dca0b45bf5e598f61c46988a035c07ac188b5c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00171",
+      "source_sha256": "d14dd7e6066f4bdf850562e62d93b4fa9d0984b2f985617694fa82aa60bc1cab",
+      "reviewed_target_sha256": "b14af9ba51cd0922274cd970beb8634a870dc64a454e4a3075ad38418baf6054",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00172",
+      "source_sha256": "17f08261b69dd4852134e170fbb2f0ac83e08d5af2375000191c8b10b71954c1",
+      "reviewed_target_sha256": "c371063183ad356297cf909de8006ba87ae8615f912a139daa7ac75f800b61c7",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00173",
+      "source_sha256": "bb8dd68755eda2b8e251604cda47300b9e64760f2334865474504b317125eda6",
+      "reviewed_target_sha256": "e6be9cd7e12c01e1cc2096303e738fb90ff80368263bc65547f99690391eca18",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00174",
+      "source_sha256": "0f9464bdb147ea8ab9bc2ad82d6b5e12808f77ea2006b4f31136a64fb02543f6",
+      "reviewed_target_sha256": "29948cf7e90c0ca2f62587e64d354d8ec2361c9462fac6ae3e447b72c85dc49a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00175",
+      "source_sha256": "8496bcce32e7f6ef92b426d98588de21818b80fcbcaf547fccb71f4a47ed7857",
+      "reviewed_target_sha256": "d93eb0b6647f9b327c558a7a679a8a8cff212a0b6b8d53c2044251e1d5706ce8",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00176",
+      "source_sha256": "9f4a2e0ce3c8b67038a54bfa044334c55d6f083e8cb634d6147afc7307b16a6f",
+      "reviewed_target_sha256": "b38bdfda461dc2130aa710240e46c220d11d45c3bc5fe7d22b9278a9a8f4972c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00177",
+      "source_sha256": "c6c08a0b1099cc7c337ec8e1d35c3659573171465756bdc282e53d08147edb1d",
+      "reviewed_target_sha256": "36db6483d5dfc7cebca8c83696ec2ef453025248171418e51873eefca424b6ea",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00178",
+      "source_sha256": "ebc960e14085a35b0abd4ea9977d72a0bf994a9d1d192ed68c6fed8ac683ce21",
+      "reviewed_target_sha256": "17229cda03ee434222af4ae656326d5aa9a4874b9762ebd91f23da8f73ff5ec6",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00179",
+      "source_sha256": "f09e81638e91eb0208cc836005f46090da2788ba40e0db96302ff8469446d472",
+      "reviewed_target_sha256": "b3cd5e73d343d424c86fe2ee722f661f2b55aa400d11bdf153ad763278e6ac83",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00180",
+      "source_sha256": "87023a20b7bf0f4c5e4ed68f481f8c80cec83c404cf2b28fd66b6a5d617ae3b4",
+      "reviewed_target_sha256": "d3063946cd6d7308c44abc3576ac26c219889acb97a20a2c8fb57a578c5abcc6",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00181",
+      "source_sha256": "1adbaaa03e7e83afc67352be5c8ff2c0a2ffdbe8b3872f2e35bdba0d539ca4e4",
+      "reviewed_target_sha256": "6cfea1665c99c39d1a2a523982579a70cabd5510060cc2b9b7b8778b97d2f3ab",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00182",
+      "source_sha256": "360f2bf58180e59a9c6cf158685291437a55eb18a54e183c5289dc349d4d0c2e",
+      "reviewed_target_sha256": "f11b110aeb7ce65b12b06dad874381d9dd27100b4f216e5d28232b452c7c5dc7",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00183",
+      "source_sha256": "cbfff77be3ba62e82d8d5e7a0b285ecd08c9db0b83c23b0cf92490aaa84cb596",
+      "reviewed_target_sha256": "ec067b9c212d37477d4e4ee37c4684934ab7326df72fc3d3788841653127ac81",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00184",
+      "source_sha256": "0a7b95562217ccce1d5da6a35fdf3cecc5e4d409bcc97339cc1cbdaf7c1c6e0f",
+      "reviewed_target_sha256": "a903895c64d5253012bf644a3cf5f7843f140cbae9190b927420effcae578c34",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00185",
+      "source_sha256": "5d2fc13f142378a93304ecab1fd2fd0e46174354769b090e87f00fe5401258a1",
+      "reviewed_target_sha256": "a7519f44af1f550ad47e979b6ac0fdbc0b9c74d32872aaa11b70c0bf49df328b",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00186",
+      "source_sha256": "05e9520c22cd54516dcee49ce074873bd9c8d814dea3f48d2f6ac96cef1c86dd",
+      "reviewed_target_sha256": "0f442189e80db62f32fa36a084ba8e3f9996427b79d21f5c2c57e4f0d297b6d7",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00187",
+      "source_sha256": "60f6371f56ef0dddd8a677a08acab6207017354b426f7e0eb45653de04f9be81",
+      "reviewed_target_sha256": "9ec3d23f091963b7bea49408c4ace8c29e33d5177700a644083640ba384a5dff",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00188",
+      "source_sha256": "d676c73da1222444ee9d9950199c3f0bba2cffc6596f472f11be5920df4b8e11",
+      "reviewed_target_sha256": "7cdf8a6c4956682cc69498ef9050c62bda06c496a3d4b1bcb7105a17603f1384",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00189",
+      "source_sha256": "fe80c08aa7aa1e491a7194a4377340dfbd469da262cdc14eade28a70280d4f0f",
+      "reviewed_target_sha256": "6ca52196fe6da9ab619d4517e0f5fe2d444884667c49ba30a8628d08e831495d",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00190",
+      "source_sha256": "d8469f5bc9cfce1c3d79f5d00443c92b9ff51c01afe07192098007b3e6906623",
+      "reviewed_target_sha256": "c26aaca1294b9cf224c6d46f2790d8b6fdb37f9a3685cc38e3f3a00b298a0b95",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00191",
+      "source_sha256": "797a39dae1accc70d8900b15f8504c80366e420357d01b405a76cc9ecc64b9d6",
+      "reviewed_target_sha256": "39aa33238247e6022b54d027c4b2d2d900353d3a194d2cecdd9c52c3b3225397",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00192",
+      "source_sha256": "bdf4257b603f52bf7bc1fa49fd33f52cc9783c9c40d0ab644cb7cf33ad2d0f05",
+      "reviewed_target_sha256": "875e62bef78e1902c828675cc3c4d17286ff6d53dfae93c090802a1b38d378e3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00193",
+      "source_sha256": "289df3e9d8080951e5a26d0ec8b702a56db4eab49cd3719ab17492caae4e825a",
+      "reviewed_target_sha256": "01ee3829ae76377d1df80fa297a8ab8d61f2697186663a3eefc476121e614108",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00194",
+      "source_sha256": "203d2ec166a95022f0e423b20e80715228ea547fe8e7b8336ff421dcb4aba844",
+      "reviewed_target_sha256": "985c0105546be2b7dc3b5fb594c09a7e2eb904264198324087dc6869760f7c2b",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00195",
+      "source_sha256": "ff0b2f4d35025d708eeefe28af7b8a8031bf575cd0550c0ac0eb3771876184f4",
+      "reviewed_target_sha256": "5d4adc4b1686b235138921d473d3e2de26821958b272f1a00526ce0f3db79c24",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00196",
+      "source_sha256": "2823b57583897dda66158cdf2fee0c88aa60b1b996a20261e77e863b77f83e8a",
+      "reviewed_target_sha256": "1a2665396aab3b0d8c46b7a39c4165e70f38a8890ae93908302d55422921a13e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00197",
+      "source_sha256": "a0b54693d6fc584ecbdb77e221b2938ac57896851340ca91079bd66aa25a9e47",
+      "reviewed_target_sha256": "d6a77001ccc89c9d32b3f9927c62596f1cac7d2048c99bc0ecc07ccf41d95f94",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00198",
+      "source_sha256": "65ad84e578d5d4512217482a7eb1ac15516ff8831bc7b6132513362bbc484b82",
+      "reviewed_target_sha256": "1f2967c15a63ce22a01b43908555ced3c3e55643854df94fd5b4fc9e2ef592c8",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00199",
+      "source_sha256": "b8e3e3c8473a7d05f3eb5c81363cdc90e156ec31d1e4e48b531ee0114210c5e0",
+      "reviewed_target_sha256": "75e3c01e2cf1564c78c7b81f78f3dc79dddd2523ae3be3a0459a019545647da1",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00200",
+      "source_sha256": "0cbc29b469bd121ef10df88cf9b86f45dc8765929fffb4b3a4b95c4eac39def1",
+      "reviewed_target_sha256": "9f4ec4a166857735f76591b308ef5df4804394d04950d76f37a202b2eaf672e0",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00201",
+      "source_sha256": "3689998a2202f7a8a38c7a2d06d03de8d6ae604f7f979cb7b3f08a3c1df94b80",
+      "reviewed_target_sha256": "518979a7fa229229c8a819f99ca2bbc631649b11744d733670abd656f1ac5787",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00202",
+      "source_sha256": "ec73b8a3643a76ab8ab49e5f2a9a53105a0d238c56be36408502ed78daf878d3",
+      "reviewed_target_sha256": "afa4fb4951c245ee6a276a579d3fcd398b50a60f88fe7bb05498daf09e17639a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00203",
+      "source_sha256": "143e51e3878553070d22383ad7c3f4f1eb70c46eb0c58ce0fea85fc354e031fc",
+      "reviewed_target_sha256": "8600f2b08edaa6c77d5da78fc839bc311a286ad79a3af20928349b62b563abed",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00204",
+      "source_sha256": "8f7b214244fe67d6720d742f6b0899c17a1416628672c2d54d1b485ba6914214",
+      "reviewed_target_sha256": "06245da0bfdbc8d532d98267126d10edeb358f827b2e0f4ddd510410e097a369",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00205",
+      "source_sha256": "619a0be5d849e90f748404558b98715b2d16a5e6acd1b7dd4f05da6106766013",
+      "reviewed_target_sha256": "252b6379743e230c38b7dd0c08bfa2f430f36e96e617473d7da8f11867dca83e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00206",
+      "source_sha256": "b5096f71019ba9900be336365d9741c21c7b6b3b59f2a4f80adacdb44f2680ec",
+      "reviewed_target_sha256": "0c2e7b2810f1ceb01e650d042bbe0c724db7040e3537d9166e59f88d4294658c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00207",
+      "source_sha256": "d33b81582ea6a50a779ddde186c873e834b06ea3bd707b26fcba3fb49827ca17",
+      "reviewed_target_sha256": "48480681cf309e9ec396e7f38e623f0f666b1216282c45cc8cd42acbbfe66e78",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00208",
+      "source_sha256": "0e3ac64ab18b0246d6a47d54b9a7e833e0c0b0a2ac4b8869e66201597625b054",
+      "reviewed_target_sha256": "015cce9dbb889ad0987777f4dd201321ab7c390f5fea13d45b6e29b6de3aa46a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00209",
+      "source_sha256": "74c28bc35888e24375ed56d1f843bfe49bf32b7eee941af422c8b4bc99c844db",
+      "reviewed_target_sha256": "4de4e95a4984a25217786c92ca7aa5838c9f6ff862817af75e553752117b1fdb",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00210",
+      "source_sha256": "2df220ed427cfae0387f9ec22385d9fac4a27997053920db16cca8ea7dbe03c4",
+      "reviewed_target_sha256": "4f32504c4ba7fdb3abdbf4fe38a772924a299ea9437ab25c96892fff0d4c0827",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00211",
+      "source_sha256": "14aeeb804d482587519a21c8ae612033d10c558fa3366635c5087fff50db9bda",
+      "reviewed_target_sha256": "fee8db878a63c8f216a477df00a0dc74543a519e1d228bc81e72c3d9353ba707",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00212",
+      "source_sha256": "7e4eac7ff489776ce63c05b679d32ed718ebabbe3d2140b51ec7bb479ec7e892",
+      "reviewed_target_sha256": "fbd117e354bf20f3b50315e642a224374f6b1b60931e426044236ebd21dd9189",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00213",
+      "source_sha256": "4bae7d890bc4435a6b1a9937448eb0e9d2d5c5b89a6ecee7ab7835ec471be66a",
+      "reviewed_target_sha256": "cbbceecab0bdf5f10202a57dd8f33f99f23f20cc4687a5d0c12723bf6fc4d779",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    }
+  ],
+  "heading": {
+    "source": "II. Une ronde de nuit",
+    "target": "II. Ночной дозор",
+    "state": "PASS"
+  },
+  "source_unchanged": true,
+  "source_rows": 116,
+  "notes_in_source": 0,
+  "verse_lines": 6,
+  "original_target_sha256": "db4ccb74caeaefa53745649a174a1b3af7642040762fe74db374ccc234af4de4",
+  "reviewed_target_sha256": "7ef4cefd912f89ed33baa105a2b7e62d7258b466fd162462a7c049454569fc07",
+  "release_claimed": false,
+  "full_book_review_claimed": false
+}

@@ -1,0 +1,634 @@
+{
+  "state": "CHAPTER_LITERARY_REVIEW_PASS",
+  "unit": 1,
+  "method": "AI_LITERARY_REVIEW_IN_CONTROLLING_CODEX_THREAD",
+  "translator": "ClaudeOpus5.5",
+  "review_model": "NOT_EXPOSED",
+  "coverage": "All89source/targetrowsandheadingactuallyread;truncatedmiddle27-47separatelyreadinfull",
+  "source_sha256": "61b28643d5e7bb6428e7ca632aa0a4aba3dd86b2ff7e934ea2951c177a795bc3",
+  "original_target_sha256": "9fb0ca30fb61dd8ae952ec6292c6fd4f342273cbb0cb447c4832336da7e6d1aa",
+  "reviewed_target_sha256": "181eb403f2f18136689c53bab7d5f7284eef0b491f1b6aea20c4cd1dc49b2957",
+  "corrections": [
+    {
+      "source_id": "id00011",
+      "source": "Hélas! c'était bien en effet seulement l'ombre du grand homme. La France affaiblie, l'autorité du roi méconnue, les grands redevenus forts et turbulents, l'ennemi rentré en deçà des frontières, tout témoignait que Richelieu n'était plus là.",
+      "before": "Увы! Это и в самом деле была лишь тень великого человека. Ослабевшая Франция, попранная королевская власть, вельможи, вновь ставшие сильными и буйными, неприятель, снова перешедший границы, — всё говорило о том, что Ришелье больше нет.",
+      "after": "Увы! Это и в самом деле была лишь тень великого человека. Ослабевшая Франция, попранная королевская власть, вельможи, вновь ставшие сильными и буйными, неприятель, снова вторгшийся в пределы страны, — всё говорило о том, что Ришелье больше нет.",
+      "reason": "en deçà des frontières explicitly means enemy inside French territory",
+      "source_sha256": "eee6abf45ba594ae5a055cb27ed1e0a75609e6ca6e1940e62179759105dc6f6e",
+      "before_sha256": "64fa56516d377ec1ec1680944d95745afa0c564d3c07d1bd7c63d69faba2336e",
+      "after_sha256": "8a328a957828d85bf65fb0882c860c1c3d6987f28e13be363dc76799de729df4",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00015",
+      "source": "— Étranger! murmurait-il; Italien! voilà leur grand mot lâché! avec ce mot, ils ont assassiné, pendu et dévoré Concini, et, si je les laissais faire, ils m'assassineraient, me pendraient et me dévoreraient comme lui, bien que je ne leur aie jamais fait d'autre mal que de les pressurer un peu. Les niais! ils ne sentent donc pas que leur ennemi, ce n'est point cet Italien qui parle mal le français, mais bien plutôt ceux-là qui ont le talent de leur dire des belles paroles avec un si pur et si bon accent parisien.",
+      "before": "— Иноземец! — бормотал он. — Итальянец! Вот оно, их великое словечко, наконец-то сорвалось с языка! С этим словом они убили, повесили и растерзали Кончини, и, дай я им волю, они убили бы, повесили и растерзали бы и меня, как его, хотя я не причинил им иного зла, кроме того, что слегка их прижал. Глупцы! Неужели они не чуют, что враг их вовсе не этот итальянец, который дурно говорит по-французски, а скорее те, кто умеет говорить им красивые слова с таким чистым и отменным парижским выговором.",
+      "after": "— Иноземец! — бормотал он. — Итальянец! Вот оно, их великое словечко, наконец-то сорвалось с языка! С этим словом они убили, повесили и сожрали Кончини, и, дай я им волю, они убили бы, повесили и сожрали бы и меня, как его, хотя я не причинил им иного зла, кроме того, что слегка их прижал. Глупцы! Неужели они не чуют, что враг их вовсе не этот итальянец, который дурно говорит по-французски, а скорее те, кто умеет говорить им красивые слова с таким чистым и отменным парижским выговором.",
+      "reason": "dévoré retains explicit devouring in both historical and threatened clauses",
+      "source_sha256": "317b41d5015585aed16ec8b2d9248153260bca9036feaeca667e9c70e3940669",
+      "before_sha256": "a7be26172c6133a0a14f68266fff12bc44f2203bb6297fadba2ec5cff78f3d0c",
+      "after_sha256": "063ff5c1d70463b1a057358ebeee46fed207605bc594ab3d25a3decc20363dbd",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00018",
+      "source": "— Eh bien! le parlement… nous verrons ce que nous en ferons du parlement; nous avons Orléans et Montargis. Oh! j'y mettrai le temps; mais ceux qui ont commencé à crier à bas le Mazarin finiront par crier à bas tous ces gens-là, chacun à son tour. Richelieu, qu'ils haïssaient quand il était vivant, et dont ils parlent toujours depuis qu'il est mort, a été plus bas que moi; car il a été chassé plusieurs fois, et plus souvent encore il a craint de l'être. La reine ne me chassera jamais, moi, et si je suis contraint de céder au peuple, elle cédera avec moi; si je fuis, elle fuira, et nous verrons alors ce que feront les rebelles sans leur reine et sans leur roi. Oh! si seulement je n'étais pas étranger, si seulement j'étais Français, si seulement j'étais gentilhomme!",
+      "before": "— Что ж! Парламент… посмотрим, что мы сделаем с парламентом; у нас есть Орлеан и Монтаржи. О, я не стану торопиться; но те, кто начал кричать «долой Мазарини», кончат тем, что станут кричать «долой» всем этим людям, каждому в свой черёд. Ришелье, которого они ненавидели при жизни и о котором не перестают толковать с тех пор, как он умер, падал ниже, чем я: ведь его не раз изгоняли, а ещё чаще он опасался изгнания. Меня же королева не изгонит никогда, и если я буду вынужден уступить народу, она уступит вместе со мной; если я бегу, бежит и она, и тогда посмотрим, что станут делать мятежники без своей королевы и без своего короля. О, если бы только я не был иностранцем, если бы только я был французом, если бы только я был дворянином!",
+      "after": "— Что ж! Парламент… посмотрим, что мы сделаем с парламентом; у нас есть Орлеан и Монтаржи. О, я не стану торопиться; но те, кто начал кричать «долой Мазарини», кончат тем, что станут кричать «долой» всем этим людям, каждому в свой черёд. Ришелье, которого они ненавидели при жизни и о котором не перестают толковать с тех пор, как он умер, падал ниже, чем я: ведь его не раз изгоняли, а ещё чаще он опасался изгнания. Меня же королева не изгонит никогда, и если я буду вынужден уступить народу, она уступит вместе со мной; если я побегу, побежит и она, и тогда посмотрим, что станут делать мятежники без своей королевы и без своего короля. О, если бы только я не был иностранцем, если бы только я был французом, если бы только я был дворянином!",
+      "reason": "Future conditional flight rather than ambiguous current/habitual action",
+      "source_sha256": "06cf29fbe19c1442aa0ff2522a5285f115c90c2ec8cd9fae5f4d41d60655561c",
+      "before_sha256": "c19bdaccb9fd77b3dcaf5bdf9a45b00c7d4232462a13d7b717bcf575288ff304",
+      "after_sha256": "fd50ea3f2afc26ea7c2a6f0e861bb88a8b0860b70f6bbe7dbbeb48a90be7a39f",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00025",
+      "source": "Alors, pour voir, on avait assemblé le conseil et l'on avait envoyé chercher le surintendant des finances d'Emery.",
+      "before": "Тогда, чтобы увидеть, собрали совет и послали за суперинтендантом финансов д’Эмери.",
+      "after": "Тогда, чтобы разобраться, собрали совет и послали за суперинтендантом финансов д’Эмери.",
+      "reason": "pour voir idiom is to examine/decide matter; literal увидеть is unnatural without object",
+      "source_sha256": "91ec85e91190747caf1c16b4961134947bd9e0d7dae19928254feef6d48bac51",
+      "before_sha256": "cb0db410f20bc85c8b829abdf79fcfe7077fec445039c06f3111ff266df944c1",
+      "after_sha256": "b84835c6bd2c247cc90ccd12d566602aef8266294ba2719ed30fad58db667a81",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00068",
+      "source": "C'était un homme de trente-neuf à quarante ans, de petite taille mais bien prise, maigre, l'oeil vif et spirituel, la barbe noire et les cheveux grisonnants, comme il arrive toujours lorsqu'on a trouvé la vie trop bonne ou trop mauvaise, et surtout quand on est fort brun.",
+      "before": "Это был человек лет тридцати девяти — сорока, невысокий, но хорошо сложённый, худощавый, с живым и умным взглядом, с чёрной бородой и седеющими волосами, как это всегда бывает, когда находишь жизнь то слишком хорошей, то слишком дурной, и особенно когда ты очень смугл.",
+      "after": "Это был человек лет тридцати девяти — сорока, невысокий, но хорошо сложённый, худощавый, с живым и умным взглядом, с чёрной бородой и седеющими волосами, как это всегда бывает у тех, кому жизнь показалась слишком хорошей или слишком дурной, и особенно у жгучих брюнетов.",
+      "reason": "Preserve disjunctive alternatives and brun dark hair relevant to graying; remove unwarranted alternation",
+      "source_sha256": "7c51484048aa8e3ef814e994f80a71f42bd8db93a5ecf4392cc243fbf0752557",
+      "before_sha256": "d551f667b32272134594d6d27d675d6517778cf045628da279e62c8e7650446e",
+      "after_sha256": "fc954f880af2feeaf3668023eb27580ee79f415d852e3eb6a12014e5734b829c",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    },
+    {
+      "source_id": "id00071",
+      "source": "Le cardinal fixa sur lui son oeil plus fin que profond, l'examina avec attention, puis, après quelques secondes de silence:",
+      "before": "Кардинал устремил на него свой взгляд, скорее проницательный, нежели глубокий, внимательно оглядел его, затем, после нескольких секунд молчания:",
+      "after": "Кардинал устремил на него свой взгляд, скорее лукавый, нежели проницательный, внимательно оглядел его, затем, после нескольких секунд молчания:",
+      "reason": "fin contrasts shrewd/cunning glance with penetrating depth; retain contrast instead of nearly synonymous Russian terms",
+      "source_sha256": "044f2bd5616a175bf171a5d79e08ca452608c5d6595c67223f3e1c5ab8678699",
+      "before_sha256": "eb00ea353aa5bb4d35eb214bc32551f124bd3b0ed1f1cc7f8cecbf4813f57168",
+      "after_sha256": "70233f03bfef6261b0593e229e039b084bd658dc215e020e9992a67771682130",
+      "acceptance": "AUTOMATIC_STANDING_USER_DIRECTIVE",
+      "correction_source_comparison": "PASS_ACTUAL_AI_SEMANTIC_RECHECK"
+    }
+  ],
+  "rows": [
+    {
+      "source_id": "id00008",
+      "source_sha256": "b7e0dc2f7225d6149a1070a72c47b8526444dd1f387540ea11e4e8350a6e8adb",
+      "reviewed_target_sha256": "f4d84df2e833180576a408d7c26f18bcf4bacef5a7492abf209d26453942e5cb",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00009",
+      "source_sha256": "2e1e6cb96740f8978e197429c27f8398859d2ed4a4871ce709097f2a6c224ae1",
+      "reviewed_target_sha256": "26e43ce98201530b47eeec5a45f66468bd258eac9d0b0716f50f4ca629139d3a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00010",
+      "source_sha256": "427939b6bcdbfcd44480614f01f84f30439e4148d76895d130e57fe58bb07422",
+      "reviewed_target_sha256": "22c747db9181a69d8ab201ce295a4ee13af2f10a94eb710ee89f170e7fb42fee",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00011",
+      "source_sha256": "eee6abf45ba594ae5a055cb27ed1e0a75609e6ca6e1940e62179759105dc6f6e",
+      "reviewed_target_sha256": "8a328a957828d85bf65fb0882c860c1c3d6987f28e13be363dc76799de729df4",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00012",
+      "source_sha256": "71a2b16f8d63ce35645f5444fafbe952f7ecc53f781ea50d16c247f7bab91bad",
+      "reviewed_target_sha256": "00e54345f6a0e38812f203369bd466571dbc5082242282498d1e26177392f0f2",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00013",
+      "source_sha256": "fd54b1cc5ddeb8361aed000a087bf970df02a7d8a4586f87c5434e89d7b3ebff",
+      "reviewed_target_sha256": "d09d45c9a7cbb9142dbde0d64de5e9afd349c3e22b6ad8a76d156e489af23097",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00014",
+      "source_sha256": "7091506919a3422eac60111de73d21076c13e3b0fef837e3d3fd0cd9b823d4c8",
+      "reviewed_target_sha256": "e86ede4c7e142dd9165acb20aeb67187bf2eeaae1afd22ac64a6353f1cbc5f57",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00015",
+      "source_sha256": "317b41d5015585aed16ec8b2d9248153260bca9036feaeca667e9c70e3940669",
+      "reviewed_target_sha256": "063ff5c1d70463b1a057358ebeee46fed207605bc594ab3d25a3decc20363dbd",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00016",
+      "source_sha256": "011f57f2eb2778265b1ebda0e74ceefeca13509835cf2fe2c5c92101f11ce323",
+      "reviewed_target_sha256": "c4dd6f2a4158f3a659d415177cc8f9d0d46c27b4190da3d854090f11f8f69022",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00017",
+      "source_sha256": "1a210480360acd0d29c8a2fbd7eb2613c8045778132d627e0e7d0e9fc3f76d3b",
+      "reviewed_target_sha256": "cfb50f9ffbdf3c527474010eb03b4f09a967a758338a30f666d596b5c3afa830",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00018",
+      "source_sha256": "06cf29fbe19c1442aa0ff2522a5285f115c90c2ec8cd9fae5f4d41d60655561c",
+      "reviewed_target_sha256": "fd50ea3f2afc26ea7c2a6f0e861bb88a8b0860b70f6bbe7dbbeb48a90be7a39f",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00019",
+      "source_sha256": "82ecc2af4e46e394f782af402b030fb55145c77ed12555125f5910451d346d51",
+      "reviewed_target_sha256": "6d9826b9b08bdf123be41dc7416bbc75c7412ed7f8003dcd95a30b58f41c461f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00020",
+      "source_sha256": "c2ecf95afa0a148832a952f376aec3fb0c68d2d7f3f243445bd394e3d9f14f35",
+      "reviewed_target_sha256": "eaac8f40b6dd1a8760b9422566078b68d7cbba26649fdf245d7426f2300897fa",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00021",
+      "source_sha256": "988db2da2d08a793342ff83a693bcbb971896895328d2f8a9292800f32d99d5d",
+      "reviewed_target_sha256": "fe14418928fc273dbe02d5bff1aee2027fa1e69bc11b6f1b64b0a413e98e8ab3",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00022",
+      "source_sha256": "b3a417d442e157c3420e54f2a3054b2a6c019b00fed1e7e30c39ecff5f04cb01",
+      "reviewed_target_sha256": "cf2127140716eb4bb363747944982f10cd42cb0c83cd0633faae79d326f6130e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00023",
+      "source_sha256": "5504565b837cdd475e11be75ece1301a2b91324a87b91413e07eead1167e8b0b",
+      "reviewed_target_sha256": "def0e9eeda43ac46c9eab66eb2702ffb92811ea9e4306eca3b607142fd1a0213",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00024",
+      "source_sha256": "723a78d0f400687602814fb4c5f6c2e1742ed1280b50524f95eaa86a9181ca20",
+      "reviewed_target_sha256": "e735f69774ff1430ccded56542f9ed7b19bc6b137378a6616a8c977e026d3a33",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00025",
+      "source_sha256": "91ec85e91190747caf1c16b4961134947bd9e0d7dae19928254feef6d48bac51",
+      "reviewed_target_sha256": "b84835c6bd2c247cc90ccd12d566602aef8266294ba2719ed30fad58db667a81",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00026",
+      "source_sha256": "077d144cd2015141b64b09e9bad51e749926135cc0ad46fb2c54adf98edfd40c",
+      "reviewed_target_sha256": "69dd646533dbac9f38b7c6fe758876479362e23e189ab312588b9993a56ebc9f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00027",
+      "source_sha256": "a73686a56942ad141860ac2e70c3f1a0f9a682c2515a8a82da7581d530bd4d73",
+      "reviewed_target_sha256": "acf11d12ee61e582c7221d31729fa02bf005519d7954cabe0c5c2ab32a6fd747",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00028",
+      "source_sha256": "5918f9797f6b32ec55f66c86cd6b2facd788e78b2b47a01487b626c42506ee6e",
+      "reviewed_target_sha256": "013612dd89cbdc6b7f6a028972dc22c4ebd3326ba97edde3fd143e1e6654e853",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00029",
+      "source_sha256": "cb90dad282913c575722ebae9bd11d8b3eb1e132002c17e74eb08ab178297146",
+      "reviewed_target_sha256": "7d0ba955a58e67a94b610a075a73ef29d7155d5259eda54ce44aee546c167aa7",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00030",
+      "source_sha256": "a9885fa774d316b34c4f8db56738ab2b0d7ffb7cab59e3fe411044e37e402ba3",
+      "reviewed_target_sha256": "faccca38c2785823bb780d42d269933f9ef81304e815d562964452ed67b15b67",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00031",
+      "source_sha256": "f4e015fff1138784f8de4b2c84721d9e6729ab11a1b19de1d64dffcb38eac53c",
+      "reviewed_target_sha256": "8727b0b94fdccd65e9bd6b7080bd2023dbde0aec46c1fd34f51469d5a14d8052",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00032",
+      "source_sha256": "170f47273bdd6e2f93d4c99dc0660632db2e337b17d64230ed0f916155c6129b",
+      "reviewed_target_sha256": "4b5fba6d3541917f0bfc652f1887be9f6c8c7e16fc2e03d2838546685c778076",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00033",
+      "source_sha256": "ab7e89b5654af72ed285a627ebae098b6424e972f81f10af23d088fef84ac185",
+      "reviewed_target_sha256": "c44700f42111019b05c283dd1e48f9c8d082603f9a36ca81abd5adfa0d928966",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00034",
+      "source_sha256": "440651a7bdc49544b7e4ea1d835f49d5b64375aec16a56ca31eb92e317eb9c85",
+      "reviewed_target_sha256": "535872228c0f413e90cbe26169b4bdc419d06ff04f4fbe18ec8cc939459e14cb",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00035",
+      "source_sha256": "5f6e20bb56b1d417e7aef3d4e3574112da2a0c031bcd980d0de614b36abf1162",
+      "reviewed_target_sha256": "b83b6ffc7b62c4873773a4cacc2f35fff267fa47958e03b6c68cccda846bc03d",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00036",
+      "source_sha256": "dd1cdf0f8047df2a2e4bf9e648c1342a3d7022be1074d40094d21c65987aa690",
+      "reviewed_target_sha256": "b8a7fdc53fac41dbf18ab9509991f6ee9bb7dcb1b0976bd2cb5cec56a26afd43",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00037",
+      "source_sha256": "65fdb37b1e4e9f6b472798db83f8378767a31c8ee46e69f3acf61bfa4f76f1a0",
+      "reviewed_target_sha256": "74c6bb83d30d7663f09d25232f2d89776775d6f9df5cf901940ea581210c6fa2",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00038",
+      "source_sha256": "faccda966e4de04e9b999f30f02fc86015f6778fc5c7fe1639aaccf9669483fa",
+      "reviewed_target_sha256": "b95d2ce7a11c5bd0ed862711c21117f4a2cebcee3ac5aca0925b84edc0cdd930",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00039",
+      "source_sha256": "eb71f56c26670b2729bcec35e62dda3e48559514972ecf87c279f6beea40ba18",
+      "reviewed_target_sha256": "bb6b3d6974091fafcad2656d808f4aacddfc7b9f115b0c65fe5b6e3edd77666e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00040",
+      "source_sha256": "57b4de074cc91362872d94c67ca1a009c0fe61f5a848cf7554d152d72dd27d3e",
+      "reviewed_target_sha256": "f46d05d22f78d8199cfc0ab18d9f7ea1baa358c4a78318185d9a12cec85a594c",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00041",
+      "source_sha256": "092198c66093a12d78a2eec9efbf2c18dd77b47974bd0b24a9d16804b7438372",
+      "reviewed_target_sha256": "5c8544935a2031d56803e5a5db1eff6399dd7a4d96486f6449f0f0ec6b14697a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00042",
+      "source_sha256": "0283c10d64f915796d428301390af70c19940946acf053edb06a871900756cea",
+      "reviewed_target_sha256": "4d7e2764a03d896c95a8a9ae72714d0136817e660c9b542236430b8a6c485176",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00043",
+      "source_sha256": "e0ad7119946b0c3164027afdbcc6bc597e509c7695a8dffa513ec1d8acaad8e3",
+      "reviewed_target_sha256": "347c35fb69fd629b94d42b06f61d77682641f35547bc1d6830dd82cad1b628ad",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00044",
+      "source_sha256": "738b21f78e50bdacf92af350222f1dbf44d25b23b98ab2c23c3e83bf5cff4385",
+      "reviewed_target_sha256": "00b20683c38407d341fc37a2670611692939a48a65db7dea25d995f6dc5c678a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00045",
+      "source_sha256": "baf28abfecc6ca3bc563924c44e414b7f1898e6a3933f2288bee931417a8e6aa",
+      "reviewed_target_sha256": "741d6bb9f160d27c317f5b5a9521cc01b84d37a582dc2f9b14d78f05b333ab5e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00046",
+      "source_sha256": "1579eac540716daf786753358f0203ff903d2e42dfa0d2959ed3b697b259127f",
+      "reviewed_target_sha256": "c7379599d9fb1efe4b37b0ff4e71283c30055b2febbcb0a99ad66405c62fb127",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00047",
+      "source_sha256": "038526ae4e868d08797ffd738a823ff34e84e52ddcf9600f3f4cf5265aa8a007",
+      "reviewed_target_sha256": "f00cf0fc6c320ad6b0b88a98301ed04eabf8358d2a1a1d2af6b6b2b061386ada",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00048",
+      "source_sha256": "767b7b534e200eecc91c1a7d326b5334cdeb8d9c89764e7416ee959452cd98f9",
+      "reviewed_target_sha256": "b8e622c6e2f07037f4db00d7ad513f953077d48dc9d473e6aebfc81458d51986",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00049",
+      "source_sha256": "f1be736909a6756ddb55e5dee3f89f3d0f92afd7dc6a6d25449359b560f8b1e6",
+      "reviewed_target_sha256": "c614fa906e6c095f65ce4ad9bff1841ce46da9f1b95999e84baf35b17e2e9696",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00050",
+      "source_sha256": "5409f92e76b72e0487ccf9dfcffbc6ac483ba6cb276291460fa13f76ea377488",
+      "reviewed_target_sha256": "16560561007bb9dfb6ca824917f752407df64339258621dd7f33cda227939c9a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00051",
+      "source_sha256": "5f122ae929fdc68b1e0ecc91ce3515cbd1b0f69fea9424b17703dbd69c748ae7",
+      "reviewed_target_sha256": "ad5827f7337b3500e2acc238dc0341850b2f40aae36106a7f3fe95e536d9fa6b",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00052",
+      "source_sha256": "cac092fbd4a0f75b801557039221541662a6662a45bd3f13de23f19eb05758f7",
+      "reviewed_target_sha256": "459dc94a98152dbad8888dfbbad0e76a44e20f342aacdf85aa8c258c6913676e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00053",
+      "source_sha256": "a17fa61600c4b0b8bfc20294e72a87e93138b37f8118aded50e90663c91735eb",
+      "reviewed_target_sha256": "fe4c95567b87086733efc95ec57c4e44a13eed9095a8d1bdeab5033c9415003f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00054",
+      "source_sha256": "151fa1bd7515c39af506a77ec93395af3659bd0d212ea997140bbef24eb9ed92",
+      "reviewed_target_sha256": "a10b779efb7af47e71dd1e3500ee2341c737732b9604f04b4967c9cbedb5394a",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00055",
+      "source_sha256": "4de81382d3ddc598c945474e367720e855158af652b7de24edc4efe520bf5247",
+      "reviewed_target_sha256": "a54eabc1dd84cd8d079badaa01d1be8c9aec89edbdcc4ff45a9699101fa485cf",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00056",
+      "source_sha256": "3e0a084810acd3e1ef0ef535fa677775b08b1f1ebbd15d7b7e6769779b4040bd",
+      "reviewed_target_sha256": "5fb69fcb20f00699d21add5c1eef20f2cb101d89e8349258d532d56e1404176f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00057",
+      "source_sha256": "35a6f71ad7d78e28908bcda70525a8928188d97a40998382208d313974c8a5b5",
+      "reviewed_target_sha256": "16ecd6a4cb5c77b87c83e3dc6ad8ea79e53b033fe3e8f76a1ac65211bb3f6942",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00058",
+      "source_sha256": "13e24f3381ef68e918470010b319a51fb81d457ef2ba9929b18fdfa99ff3cbff",
+      "reviewed_target_sha256": "5cf7ef4dc3ea09fc5bfc0543a5e3dba3d03bc9178390c27d04cbe5dc8f7afbed",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00059",
+      "source_sha256": "f2b516eb4e2f7d4cc53a126d9205b0b84034a033411f3f7a40bcf03ecf0fbd54",
+      "reviewed_target_sha256": "ce7c246a914f0f12f5ff4d38634a7de80e869c5064d365de090b952fae07c294",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00060",
+      "source_sha256": "dae8d4072dd6c3f2f45b59d8888077593794a86bbd593fa55d3a8efc0cafe2ba",
+      "reviewed_target_sha256": "1f765bd8a7a23149f3bd61ef0e476f543bd316700bbf561b873d4603c20d1c64",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00061",
+      "source_sha256": "3054197ede2930c5fba547cd9b2689a358fbf808a1d32fae11916e50e379f46e",
+      "reviewed_target_sha256": "d464328b7a75e4107946ca3611e3b4e18b947588cdf6f661d3773784ea2fec51",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00062",
+      "source_sha256": "1d32bdfdc7f92c75ac721693324bdaa3b56ae961266ee773ee05edd10f8d0ecc",
+      "reviewed_target_sha256": "ecc5fe4fc881e82d99c28cf37c4588b045d3d9597372af4b9bd8740c387e4efa",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00063",
+      "source_sha256": "edf0dafd5d3a7b1962b7905369efd1044c2ade0c446d15475fbb0ceb6cb6b999",
+      "reviewed_target_sha256": "c80f51a704bd382135460af2be7707b1407eb619786a4f47680ef849879f7d2f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00064",
+      "source_sha256": "b4e81a66faec6d90aec3fc23d2706a7b5bac360e5ae2567687fe9e39580c1a13",
+      "reviewed_target_sha256": "f568a7597a1a68ec6f7efafc0ca2a8095dc7e7c57b2b0d489a56bf25d2f0093f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00065",
+      "source_sha256": "63d8ffb1d232b82a58b78939095beee766b577399975c36bd36904b89737e5fc",
+      "reviewed_target_sha256": "ea0bce46d96c22744441aba12114234c6e330707ecc8ea2f0eb3d1a47e6ceef4",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00066",
+      "source_sha256": "f78a4c8d8209784ab86a64335d0f459aa91a823e039501d3ecbf52cd04f7d23e",
+      "reviewed_target_sha256": "43b38a192acb426191f2113270e9e48a73f42fb7588192d397c409461c596843",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00067",
+      "source_sha256": "7a8d9828af9acf3229e07dca436c4b861f9c331f41c81a96e80978bb22ee6d13",
+      "reviewed_target_sha256": "df12edafead26cb8b9961746f7e240a57f87cb5dc50cdfb2c1d93d43cd543bd5",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00068",
+      "source_sha256": "7c51484048aa8e3ef814e994f80a71f42bd8db93a5ecf4392cc243fbf0752557",
+      "reviewed_target_sha256": "fc954f880af2feeaf3668023eb27580ee79f415d852e3eb6a12014e5734b829c",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00069",
+      "source_sha256": "776b90203d999c3622edd4cc65bafb184bc7124cf09119ee132ba4a0815a7180",
+      "reviewed_target_sha256": "c73120b2e68555f3417ed75756dd2cd797200e5c57b5f689302b19d4cdc369dc",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00070",
+      "source_sha256": "4b3fefbcce7497dea9e5ee711fcaf895eaaed6f90bdaa1a396ee6486983ddc2e",
+      "reviewed_target_sha256": "7c6db5b72ebb9ef6902548717a217e38e7675b0f709339b8a3c06062af99dad6",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00071",
+      "source_sha256": "044f2bd5616a175bf171a5d79e08ca452608c5d6595c67223f3e1c5ab8678699",
+      "reviewed_target_sha256": "70233f03bfef6261b0593e229e039b084bd658dc215e020e9992a67771682130",
+      "state": "CORRECTED_AND_RECHECKED"
+    },
+    {
+      "source_id": "id00072",
+      "source_sha256": "4202bfc476ddcf09218fe6dcd9ae3376c4f8aba68a269011ff5e1c03e4e4efa1",
+      "reviewed_target_sha256": "792251281bf95ad290115a3f65fa7e42e7697f65e3c5419eb90daed3d46111f6",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00073",
+      "source_sha256": "3deb8470adde67f0a8dc817bcf870cda6498815d0b6ced763d13883651ea808a",
+      "reviewed_target_sha256": "c46c4f331acb1f0389575d1e1e2617b21d75f9e8e79754e70a94ddafcbbd6f00",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00074",
+      "source_sha256": "1dce57dd21d2c35aaddf6253c0435ba6876df3c534e3e54cafb86d9053bd3980",
+      "reviewed_target_sha256": "281d1be0f6a6fa0af9119ac96730c3670daaf24ebf7620c45d2fa07a53a46126",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00075",
+      "source_sha256": "0409e3582827d0fa66167dfa4d219c92d8ee6763e6c4b0b5626353d861ea54f9",
+      "reviewed_target_sha256": "7409a1e708aa513ba4e4cd3550d0a3820a420b7f2897fe9f29e52561df5e8e15",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00076",
+      "source_sha256": "49d7cd41b6c965735070e1fc4822604f4d6727fd42986ea25ff6618852355243",
+      "reviewed_target_sha256": "67565f560683552330e4def65efef4314707f22128baa07208c0fa41e4ffe9ca",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00077",
+      "source_sha256": "00ea6b7b9ae9ec3237ecdfbf88c8b84fd763471ddbccddba5b57c9444bd3883a",
+      "reviewed_target_sha256": "5bcf93bb298e0dec2c606375795480c793dae028761c858d6e26eae2709b34f8",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00078",
+      "source_sha256": "2427bfec62924281683ca4c7421d32c2b8c723abfbef6d19eee30c86945135c0",
+      "reviewed_target_sha256": "307cd0c1c7055d3a5c76d10be87f5e27f10ae176d3a89c0b8bb501718bb05589",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00079",
+      "source_sha256": "3b7eb0250c1ccf3064883b192af59eb682c9131a5323991c45b71cfbb27057c5",
+      "reviewed_target_sha256": "ea6817e0dbd1e2082cdcd55567a0a74a249a15e926d7567bb45591122d8e5704",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00080",
+      "source_sha256": "c475e69f37dde64a49750de6917fd1908f7f3c30e4dee1799143f12b617de270",
+      "reviewed_target_sha256": "a4d165f3acd7bf38c283e0b04b5b5e219d4a645987cf6fd187c8d4fcac62c291",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00081",
+      "source_sha256": "024e9dd8f35082023a86ee5d2417746a1be37cfa1fb171ca8048d66b47e1ea50",
+      "reviewed_target_sha256": "f639f1259047834820d16314ec9a968aa24b7bdd541ef2ae0e116b48fb742351",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00082",
+      "source_sha256": "d015741e301d78b734609604bbb121cbe465c0b08666cdcc39d65df21e644cea",
+      "reviewed_target_sha256": "bd523c0cd2a5fcd3fdd2f9bee128f42e874127a75c34d4229c68eb2676ce0dd9",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00083",
+      "source_sha256": "a8a6dca754b1cd81c08ae3969aa6261ca3c0b0cca78023657a5c253dbb8ab3eb",
+      "reviewed_target_sha256": "2fa7d87a37518f8f3179479356c7b715a0b4c4eefca08b5d9211dce75c39a28f",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00084",
+      "source_sha256": "bd3b5b07c5948ad6779a1fda0391ea7f048cda58f3dbab798a20e38f819dec53",
+      "reviewed_target_sha256": "31a0a42c0e203d8b8f3604251d5864263c255f85feaaa451eb80a897e1d67a0e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00085",
+      "source_sha256": "96fc2505ab91f7416efa93490606a18481df07f5207c3339901f9a7dbb2ebf61",
+      "reviewed_target_sha256": "19c3640f9aa94940440ddb43f0f878c6f0fa980a6cd3d0ebe254ae5a624ada3e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00086",
+      "source_sha256": "f6812184003fdc7c38c9dca30554c13c3835f7b82cc1f8aab76148a4e8a22c6b",
+      "reviewed_target_sha256": "34e74440a0597603f2752bea59f8645a122a5e4971ab40c88b245e116acd39ff",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00087",
+      "source_sha256": "ba0de3b3393ffa54ec0621ab787afb38dbf379dfcbfbb2a1a649120a64968311",
+      "reviewed_target_sha256": "0bc50a73acd00e44eb2d80e3c124c544111c44ab033937594a15f77c2cb5a377",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00088",
+      "source_sha256": "8fc382b62045bdec6ebe918e8887cac26df5a340e6f43d8c14005fc68e933d92",
+      "reviewed_target_sha256": "13192d5f43af2152db4259d749a07ae46f75d314c161993a815c65bcf986caf2",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00089",
+      "source_sha256": "1c2dfa4ad9b4c5a3b10801630c70052e6ff73e592828f21fec34e038eeee3564",
+      "reviewed_target_sha256": "ea6641fa39ec441b205259f3da0a2523a374ece4cfee78a78a9588009197ca88",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00090",
+      "source_sha256": "13e24f3381ef68e918470010b319a51fb81d457ef2ba9929b18fdfa99ff3cbff",
+      "reviewed_target_sha256": "5cf7ef4dc3ea09fc5bfc0543a5e3dba3d03bc9178390c27d04cbe5dc8f7afbed",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00091",
+      "source_sha256": "4440dbee322f96856ef30bfe39b576f79dcd30e4f1ef0236f15085ff33c7a450",
+      "reviewed_target_sha256": "8b824550a948a5ea55dc32cf152f542f2091287c94580570974475984e44ecdd",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00092",
+      "source_sha256": "0fcc8326f212a655929e2e9181e40c229d14d8e72dfe2910f86293d6302a621f",
+      "reviewed_target_sha256": "0a5d77adc14834c00919ecaafd0840f4e746ace3a310efa50d77cf4bcee597a4",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00093",
+      "source_sha256": "ad184cedb76e63a3b3871d9baaf06228989bec182642f9d06809ced9fbd4cdbe",
+      "reviewed_target_sha256": "d18c3f0963841ce60702150866fa180a876d27159664a39ac913c885f56e7064",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00094",
+      "source_sha256": "d02efdcd1724e266d0c83ff5c827694e8c142354b9552fd7082792c8a36a9140",
+      "reviewed_target_sha256": "166c50889250c715938fe322ff4c1a7bbacd8bea92ce702d869d2085308e0c4e",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00095",
+      "source_sha256": "349bbd79359d4a0a0d87372f4815d7ba9582ad8652256f9a87cb5757456e9440",
+      "reviewed_target_sha256": "92916fb3af1d72e3dd036265f04f75cddd5dd008c06fa1984e4ac4f654bba054",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    },
+    {
+      "source_id": "id00096",
+      "source_sha256": "9c862bd0175ad76224a091376688220e883e29689655dc2d258bf6e4043a180e",
+      "reviewed_target_sha256": "1fe30c0cc32dff25b401f939912bfd7403aa89c227c8864c565a43c33b653259",
+      "state": "SOURCE_ALIGNED_REVIEW_PASS"
+    }
+  ],
+  "heading": {
+    "state": "PASS",
+    "source": "I. Le fantôme de Richelieu",
+    "target": "I. Призрак Ришелье"
+  },
+  "source_unchanged": true,
+  "omitted_rows": 0,
+  "order": "PASS",
+  "notes_in_source": 0,
+  "rights": "NewClaudeoutputseparatelycredited;notclaimedPD",
+  "recorded_utc": "2026-10-22T23:57:42.170468+00:00",
+  "release_claimed": false,
+  "full_book_review_claimed": false
+}

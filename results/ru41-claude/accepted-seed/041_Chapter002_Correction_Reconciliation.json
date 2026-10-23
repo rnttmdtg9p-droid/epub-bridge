@@ -1,0 +1,27 @@
+{
+  "state": "PASS",
+  "unit": 2,
+  "source_rows": 116,
+  "heading": true,
+  "source_and_target_hashes": "ALL_EXACT",
+  "order": "EXACT",
+  "review_row_coverage": "COMPLETE",
+  "logged_corrections_reconciled": [
+    "id00101",
+    "id00116",
+    "id00163",
+    "id00173",
+    "id00188"
+  ],
+  "unlogged_changes": 0,
+  "authentic_lineation": [
+    {
+      "id": "id00116",
+      "lines": 6
+    }
+  ],
+  "reviewed_json_sha256": "7ef4cefd912f89ed33baa105a2b7e62d7258b466fd162462a7c049454569fc07",
+  "review_evidence_sha256": "4cc9d47fe23ed6bb8aca71cc47287962733fe4579257d6e2d8ac660b021e3685",
+  "full_book_review_claimed": false,
+  "release_claimed": false
+}

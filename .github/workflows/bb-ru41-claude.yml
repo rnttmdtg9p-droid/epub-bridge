@@ -1,0 +1,33 @@
+name: BB Russian 41 Claude translation and review
+on:
+  push:
+    paths: ['.github/workflows/bb-ru41-claude.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-ru41-claude-v5070
+  cancel-in-progress: false
+jobs:
+  translate-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure chapter checkpoints
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Translate and source-align review remaining rank 41 units
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru41_claude.py
+      - name: Preserve complete or partial translation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru41-claude-translation-review-v5070
+          path: results/ru41-claude/
+          retention-days: 90
+          if-no-files-found: warn
