@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJwDpRKbsvrTPXTm7z5w",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-033-heading\",\"target\":\"ГЛАВА VII — АЙРТОН.\"},{\"source_id\":\"fr42c-033-0000\",\"target\":\"Невозможно описать, какое удивление вызвали эти слова. Гленарван вскочил с места и, оттолкнув стул, воскликнул:\"},{\"source_id\":\"fr42c-033-0001\",\"target\":\"— Кто так говорит? — воскликнул он.\"},{\"source_id\":\"fr42c-033-0002\",\"target\":\"— Я, — ответил один из слуг Пэдди О’Мура, сидевший в конце стола.\"},{\"source_id\":\"fr42c-033-0003\",\"target\":\"— Ты, Айртон! — сказал колонист, не менее изумлённый, чем Гленарван.\"},{\"source_id\":\"fr42c-033-0004\",\"target\":\"— Я, — ответил Айртон взволнованным, но твёрдым голосом, — я, шотландец, как и вы, милорд, я, один из потерпевших крушение на <i>«Британии»</i>!\"},{\"source_id\":\"fr42c-033-0005\",\"target\":\"Это заявление произвело неописуемое впечатление. Мэри Грант, полуобморочная от волнения, полумёртвая от счастья, на этот раз упала в объятия леди Элен. Джон Манглс, Роберт, Паганель, покинув свои места, бросились к тому, кого Пэдди О’Мур только что назвал Айртоном.\"},{\"source_id\":\"fr42c-033-0006\",\"target\":\"Это был человек сорока пяти лет, с грубым лицом; его очень блестящий взгляд прятался под глубоко запавшими надбровными дугами. Силы он, должно быть, был немалой, несмотря на худобу тела. Он был весь из костей и жил и, по шотландскому выражению, не тратил времени на то, чтобы нагуливать жирное мясо. Средний рост, широкие плечи, решительная осанка, лицо, полное ума и энергии, хотя черты его были жёстки, располагали в его пользу. Сочувствие, которое он внушал, ещё усиливалось следами недавней нищеты, лежавшими на его лице. Видно было, что он страдал, и страдал много, хотя казался человеком, способным переносить страдания, бросать им вызов и побеждать их.\"},{\"source_id\":\"fr42c-033-0007\",\"target\":\"Гленарван и его друзья почувствовали это с первого взгляда. Личность Айртона внушала уважение сразу. Гленарван, выступая от имени всех, засыпал его вопросами, на которые Айртон отвечал. Встреча Гленарвана и Айртона, очевидно, вызвала у обоих обоюдное волнение.\"},{\"source_id\":\"fr42c-033-0008\",\"target\":\"Поэтому первые вопросы Гленарвана теснились без всякого порядка и как бы помимо его воли.\"},{\"source_id\":\"fr42c-033-0009\",\"target\":\"— Вы один из потерпевших крушение на <i>«Британии»</i>? — спросил он.\"},{\"source_id\":\"fr42c-033-0010\",\"target\":\"— Да, милорд, боцман капитана Гранта, — ответил Айртон.\"},{\"source_id\":\"fr42c-033-0011\",\"target\":\"— Вы спаслись вместе с ним после крушения?\"},{\"source_id\":\"fr42c-033-0012\",\"target\":\"— Нет, милорд, нет. В тот ужасный миг меня разлучили с ним, унесло с палубы судна и выбросило на берег.\"},{\"source_id\":\"fr42c-033-0013\",\"target\":\"— Значит, вы не один из двух матросов, о которых говорится в документе?\"},{\"source_id\":\"fr42c-033-0014\",\"target\":\"— Нет. Я не знал о существовании этого документа. Капитан бросил его в море, когда меня уже не было на борту.\"},{\"source_id\":\"fr42c-033-0015\",\"target\":\"— Но капитан? Капитан?\"},{\"source_id\":\"fr42c-033-0016\",\"target\":\"— Я считал его утонувшим, пропавшим, погибшим вместе со всей командой <i>«Британии»</i>. Я думал, что остался в живых один.\"},{\"source_id\":\"fr42c-033-0017\",\"target\":\"— Но вы же сказали, что капитан Грант жив!\"},{\"source_id\":\"fr42c-033-0018\",\"target\":\"— Нет. Я сказал: если капитан жив…\"}],\"review\":[{\"source_id\":\"fr42c-033-heading\",\"verdict\":\"CORRECTED\",\"reason\":\"Heading preserved; Айртон spelling aligned with names.\"},{\"source_id\":\"fr42c-033-0000\",\"verdict\":\"CORRECTED\",\"reason\":\"Source says repoussant son siège; fixed wording and added implied exclamation context.\"},{\"source_id\":\"fr42c-033-0001\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation fixed; no stray quotation guillemets.\"},{\"source_id\":\"fr42c-033-0002\",\"verdict\":\"PASS\",\"reason\":\"Faithful speaker and position.\"},{\"source_id\":\"fr42c-033-0003\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Айртон; source has dit, not exclaimed.\"},{\"source_id\":\"fr42c-033-0004\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed wrong quotes; italic title retained; name normalized.\"},{\"source_id\":\"fr42c-033-0005\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed invented/odd word, names Элен, Манглс, repeated verb avoided.\"},{\"source_id\":\"fr42c-033-0006\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved physical description, removed repetition of harshness, corrected idiom and misery.\"},{\"source_id\":\"fr42c-033-0007\",\"verdict\":\"CORRECTED\",\"reason\":\"Name fixed; s’imposait rendered as inspiring respect; reciprocal emotion clarified.\"},{\"source_id\":\"fr42c-033-0008\",\"verdict\":\"CORRECTED\",\"reason\":\"Aussi rendered naturally as causal connector.\"},{\"source_id\":\"fr42c-033-0009\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic title kept; naufragés rendered idiomatically.\"},{\"source_id\":\"fr42c-033-0010\",\"verdict\":\"CORRECTED\",\"reason\":\"Quartier-maître here rendered as боцман; name fixed.\"},{\"source_id\":\"fr42c-033-0011\",\"verdict\":\"CORRECTED\",\"reason\":\"Naufrage rendered as крушение; subject clarified.\"},{\"source_id\":\"fr42c-033-0012\",\"verdict\":\"CORRECTED\",\"reason\":\"Agency and sequence smoothed; separation from captain preserved.\"},{\"source_id\":\"fr42c-033-0013\",\"verdict\":\"CORRECTED\",\"reason\":\"Consistent крушение/document wording; meaning intact.\"},{\"source_id\":\"fr42c-033-0014\",\"verdict\":\"PASS\",\"reason\":\"Negations and timing preserved.\"},{\"source_id\":\"fr42c-033-0015\",\"verdict\":\"CORRECTED\",\"reason\":\"Mais rendered as Но.\"},{\"source_id\":\"fr42c-033-0016\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic span corrected; abîmé/equipage idiom adjusted.\"},{\"source_id\":\"fr42c-033-0017\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-033-0018\",\"verdict\":\"PASS\",\"reason\":\"Negation and conditional preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9593,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2568,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
