@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJpDPZmxwJddNymysFMg",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-008-0079\",\"target\":\"— Сударыня, а как же моя миссия?\"},{\"source_id\":\"fr42c-008-0080\",\"target\":\"— Предупреждаю вас, что мы пойдём через Магелланов пролив, — продолжал Гленарван.\"},{\"source_id\":\"fr42c-008-0081\",\"target\":\"— Милорд, вы — искуситель.\"},{\"source_id\":\"fr42c-008-0082\",\"target\":\"— И добавлю, что мы посетим Порт-Фамин!\"},{\"source_id\":\"fr42c-008-0083\",\"target\":\"— Порт-Фамин! — воскликнул француз, осаждённый со всех сторон. — Этот порт, знаменитый в географических летописях!\"},{\"source_id\":\"fr42c-008-0084\",\"target\":\"— Подумайте и о том, господин Паганель, — продолжала леди Элен, — что в этом предприятии вы будете вправе соединить имя Франции с именем Шотландии!\"},{\"source_id\":\"fr42c-008-0085\",\"target\":\"— Да, конечно!\"},{\"source_id\":\"fr42c-008-0086\",\"target\":\"— Географ может принести нашей экспедиции пользу, а что может быть прекраснее, чем поставить науку на службу человечеству?\"},{\"source_id\":\"fr42c-008-0087\",\"target\":\"— Прекрасно сказано, сударыня!\"},{\"source_id\":\"fr42c-008-0088\",\"target\":\"— Поверьте мне. Предоставьте всё случаю, или, вернее, Провидению. Подражайте нам. Оно послало нам этот документ — и мы отправились. Оно забросило вас на борт <i>«Дункана»</i> — не покидайте его больше.\"},{\"source_id\":\"fr42c-008-0089\",\"target\":\"— Хотите, я скажу вам, мои славные друзья? — отозвался тогда Паганель. — Так вот, вам очень хочется, чтобы я остался!\"},{\"source_id\":\"fr42c-008-0090\",\"target\":\"— А вы, Паганель, умираете от желания остаться, — возразил Гленарван.\"},{\"source_id\":\"fr42c-008-0091\",\"target\":\"— Чёрт возьми! — воскликнул учёный географ. — Но я боялся показаться навязчивым!\"},{\"source_id\":\"fr42c-note-015\",\"target\":\"Пайп равен 50 гектолитрам.\"},{\"source_id\":\"fr42c-note-016\",\"target\":\"Около 90 лье.\"}],\"review\":[{\"source_id\":\"fr42c-008-0079\",\"verdict\":\"CORRECTED\",\"reason\":\"Madame rendered as «Сударыня» for register; meaning preserved.\"},{\"source_id\":\"fr42c-008-0080\",\"verdict\":\"CORRECTED\",\"reason\":\"Tense/idiom smoothed: «пойдём через пролив»; reprit rendered «продолжал».\"},{\"source_id\":\"fr42c-008-0081\",\"verdict\":\"PASS\",\"reason\":\"Faithful and concise.\"},{\"source_id\":\"fr42c-008-0082\",\"verdict\":\"CORRECTED\",\"reason\":\"Adjusted to natural «И добавлю»; Port-Famine retained.\"},{\"source_id\":\"fr42c-008-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed erroneous quotation marks; fixed dialogue punctuation, «assailli» as besieged, «fastes» as annals/chronicles.\"},{\"source_id\":\"fr42c-008-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed names (Элен, господин) and consistency; sense preserved.\"},{\"source_id\":\"fr42c-008-0085\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-008-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"Slight idiom improvement; content intact.\"},{\"source_id\":\"fr42c-008-0087\",\"verdict\":\"CORRECTED\",\"reason\":\"Register «сударыня» consistent.\"},{\"source_id\":\"fr42c-008-0088\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic span corrected to cover only the ship name per source; «jette» rendered as thrown aboard; added «больше».\"},{\"source_id\":\"fr42c-008-0089\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed typo «возобрёл» and the misplaced semicolon; dialogue punctuation corrected.\"},{\"source_id\":\"fr42c-008-0090\",\"verdict\":\"PASS\",\"reason\":\"Accurate; minor wording «возразил» for repartit.\"},{\"source_id\":\"fr42c-008-0091\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray guillemets; closing quote in source ends the speech, not a new quotation; «Parbleu» as «Чёрт возьми».\"},{\"source_id\":\"fr42c-note-015\",\"verdict\":\"CORRECTED\",\"reason\":\"«Pipe» is a cask measure, rendered «пайп», not «трубка».\"},{\"source_id\":\"fr42c-note-016\",\"verdict\":\"CORRECTED\",\"reason\":\"«лиев» is wrong; correct «лье».\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6879,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1731,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

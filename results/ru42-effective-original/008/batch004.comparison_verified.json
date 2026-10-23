@@ -1,0 +1,401 @@
+{
+  "unit": 8,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-008-0079",
+      "target": "— Сударыня, а как же моя миссия?",
+      "source_sha256": "65389945a7457a8ecf7519b22cd098bed5bcb36da5e1e5c0513ace071360fd41",
+      "target_id": "ru-fr42c-008-0079",
+      "tag": "p",
+      "target_sha256": "4defbe6bc62d0431ac43c89ef1a1ddad03de2de5aff678ea036df9ef80672e62"
+    },
+    {
+      "source_id": "fr42c-008-0080",
+      "target": "— Предупреждаю вас, что мы пойдём через Магелланов пролив, — продолжал Гленарван.",
+      "source_sha256": "eba1581af9859a05b86589ea1988384013e33b1bba9ef5e0461b5a38671fc57b",
+      "target_id": "ru-fr42c-008-0080",
+      "tag": "p",
+      "target_sha256": "fd7da1ca65dba2e0c6bdf1ea52cdc35bc87e3422e223117fb0b5c94ada98fdde"
+    },
+    {
+      "source_id": "fr42c-008-0081",
+      "target": "— Милорд, вы — искуситель.",
+      "source_sha256": "b3aedaea148b4dbd93b6a1d04fe5340d60e9f9e0cd8ded71590c02d0edd30314",
+      "target_id": "ru-fr42c-008-0081",
+      "tag": "p",
+      "target_sha256": "c54ba309d330905eb76848de2a2b9ebb9cc2a276abf4e5d5e9f15f045ce9a30f"
+    },
+    {
+      "source_id": "fr42c-008-0082",
+      "target": "— И добавлю, что мы посетим Порт-Фамин!",
+      "source_sha256": "c0b71fd9ed72b2ec50d752225151ad625fdceb000d9e7e35fd68d5a6b501cf5f",
+      "target_id": "ru-fr42c-008-0082",
+      "tag": "p",
+      "target_sha256": "0012bbc303b62f6281e0329211c6cd9f0bc75eb303d2ca9343a2571831f735ff"
+    },
+    {
+      "source_id": "fr42c-008-0083",
+      "target": "— Порт-Фамин! — воскликнул француз, осаждённый со всех сторон. — Этот порт, знаменитый в географических летописях!",
+      "source_sha256": "28b9ccdc953ca4df560b05b2d2915d5a36ca65c70d5de610384d5a6bff2c0c87",
+      "target_id": "ru-fr42c-008-0083",
+      "tag": "p",
+      "target_sha256": "1e9e54716ee9e1179711a2fc1364bbb77559a62c2466dcf8ddc57a6a120feb42"
+    },
+    {
+      "source_id": "fr42c-008-0084",
+      "target": "— Подумайте и о том, господин Паганель, — продолжала леди Элен, — что в этом предприятии вы будете вправе соединить имя Франции с именем Шотландии!",
+      "source_sha256": "7736005bb03a0b16811cfa2044434af1e22a32e1aa1c9f3319b9cd550b02a770",
+      "target_id": "ru-fr42c-008-0084",
+      "tag": "p",
+      "target_sha256": "0def03363b97cb0264ac9da2ae7bc1db043cbdc33b3708902c2df115745a1a6c"
+    },
+    {
+      "source_id": "fr42c-008-0085",
+      "target": "— Да, конечно!",
+      "source_sha256": "ed19bf81b0925fe995e811ab3188176abcd997bb30ae269d066a9d6abd3e98d5",
+      "target_id": "ru-fr42c-008-0085",
+      "tag": "p",
+      "target_sha256": "d5a6737c262b5f3bdd40c3bd35f9a8cac95d4958f6c5ec92f2c8e90ba8414e99"
+    },
+    {
+      "source_id": "fr42c-008-0086",
+      "target": "— Географ может принести нашей экспедиции пользу, а что может быть прекраснее, чем поставить науку на службу человечеству?",
+      "source_sha256": "f8f0d7b167c09475e0cb83b0da2ed85ed788c82beea3115179a246ac94f5a63f",
+      "target_id": "ru-fr42c-008-0086",
+      "tag": "p",
+      "target_sha256": "a7f3162761f49a2f069324feca7ce9f9527fe8542e681cc0da8af668d36c1e51"
+    },
+    {
+      "source_id": "fr42c-008-0087",
+      "target": "— Прекрасно сказано, сударыня!",
+      "source_sha256": "56b20f32eb7f81a870136c348da58b6d951122f4551bc89eddf0ea1d7feceaa6",
+      "target_id": "ru-fr42c-008-0087",
+      "tag": "p",
+      "target_sha256": "f3e34e545b8e9aa60f0c2bb1dd54b744f6a6c5667f5ad25760b56bc034c90846"
+    },
+    {
+      "source_id": "fr42c-008-0088",
+      "target": "— Поверьте мне. Предоставьте всё случаю, или, вернее, Провидению. Подражайте нам. Оно послало нам этот документ — и мы отправились. Оно забросило вас на борт <i>«Дункана»</i> — не покидайте его больше.",
+      "source_sha256": "825e38f7f855fae12155f4b53bbc20a795129d9b0a631b75b5649b87a323a7a2",
+      "target_id": "ru-fr42c-008-0088",
+      "tag": "p",
+      "target_sha256": "2350e0440cfcfbc11f42bb2fe7837560ce62d5e999e789c02277824aad19d59c"
+    },
+    {
+      "source_id": "fr42c-008-0089",
+      "target": "— Хотите, я скажу вам, мои славные друзья? — отозвался тогда Паганель. — Так вот, вам очень хочется, чтобы я остался!",
+      "source_sha256": "3ebe3cdc1f064167a8485c0bf336c568799ff39334bccf30eedf381076728b24",
+      "target_id": "ru-fr42c-008-0089",
+      "tag": "p",
+      "target_sha256": "cd16449c6c6a7e275594fb3c9a9fe651c96b1ba34825d7577b5d44fe2208596f"
+    },
+    {
+      "source_id": "fr42c-008-0090",
+      "target": "— А вы, Паганель, умираете от желания остаться, — возразил Гленарван.",
+      "source_sha256": "fe6011c56eb68ccd1ed9dff814d80e3ca37e273c73c302e768864cb523fa0fe5",
+      "target_id": "ru-fr42c-008-0090",
+      "tag": "p",
+      "target_sha256": "e2dee0410239069a472605b5007c2f03245d53a8421fd57991785a6e92723f72"
+    },
+    {
+      "source_id": "fr42c-008-0091",
+      "target": "— Чёрт возьми! — воскликнул учёный географ. — Но я боялся показаться навязчивым!",
+      "source_sha256": "074e06b90d058869df2f3bb5066c5c6c5016ca4e77a46f1c3f65fa94a8558f64",
+      "target_id": "ru-fr42c-008-0091",
+      "tag": "p",
+      "target_sha256": "efac19c101622e9bc9d2633d1fda57e0a9039a78084779883a4c93bab711a01e"
+    },
+    {
+      "source_id": "fr42c-note-015",
+      "target": "Пайп равен 50 гектолитрам.",
+      "source_sha256": "6c544c1f0b55838df719996b915f48a29eae4cf39434646e0f534a8e46d87bef",
+      "target_id": "ru-fr42c-note-015",
+      "tag": "note",
+      "target_sha256": "fd4ef5abd6a20bc36f5dd7eb5237ce274c5e1c1c74892af1b83d102009a3c7eb"
+    },
+    {
+      "source_id": "fr42c-note-016",
+      "target": "Около 90 лье.",
+      "source_sha256": "10fb463d0b9299e1d96dd4d7c05715eaeb5b9773d9ff91bd791a9afeea0c4901",
+      "target_id": "ru-fr42c-note-016",
+      "tag": "note",
+      "target_sha256": "ab815944291cb370e87c2109f00ea72ceb9bb6b367ec6bd4092a4da78699edf1"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-008-0079",
+      "verdict": "CORRECTED",
+      "reason": "Madame rendered as «Сударыня» for register; meaning preserved."
+    },
+    {
+      "source_id": "fr42c-008-0080",
+      "verdict": "CORRECTED",
+      "reason": "Tense/idiom smoothed: «пойдём через пролив»; reprit rendered «продолжал»."
+    },
+    {
+      "source_id": "fr42c-008-0081",
+      "verdict": "PASS",
+      "reason": "Faithful and concise."
+    },
+    {
+      "source_id": "fr42c-008-0082",
+      "verdict": "CORRECTED",
+      "reason": "Adjusted to natural «И добавлю»; Port-Famine retained."
+    },
+    {
+      "source_id": "fr42c-008-0083",
+      "verdict": "CORRECTED",
+      "reason": "Removed erroneous quotation marks; fixed dialogue punctuation, «assailli» as besieged, «fastes» as annals/chronicles."
+    },
+    {
+      "source_id": "fr42c-008-0084",
+      "verdict": "CORRECTED",
+      "reason": "Fixed names (Элен, господин) and consistency; sense preserved."
+    },
+    {
+      "source_id": "fr42c-008-0085",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "fr42c-008-0086",
+      "verdict": "CORRECTED",
+      "reason": "Slight idiom improvement; content intact."
+    },
+    {
+      "source_id": "fr42c-008-0087",
+      "verdict": "CORRECTED",
+      "reason": "Register «сударыня» consistent."
+    },
+    {
+      "source_id": "fr42c-008-0088",
+      "verdict": "CORRECTED",
+      "reason": "Italic span corrected to cover only the ship name per source; «jette» rendered as thrown aboard; added «больше»."
+    },
+    {
+      "source_id": "fr42c-008-0089",
+      "verdict": "CORRECTED",
+      "reason": "Fixed typo «возобрёл» and the misplaced semicolon; dialogue punctuation corrected."
+    },
+    {
+      "source_id": "fr42c-008-0090",
+      "verdict": "PASS",
+      "reason": "Accurate; minor wording «возразил» for repartit."
+    },
+    {
+      "source_id": "fr42c-008-0091",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray guillemets; closing quote in source ends the speech, not a new quotation; «Parbleu» as «Чёрт возьми»."
+    },
+    {
+      "source_id": "fr42c-note-015",
+      "verdict": "CORRECTED",
+      "reason": "«Pipe» is a cask measure, rendered «пайп», not «трубка»."
+    },
+    {
+      "source_id": "fr42c-note-016",
+      "verdict": "CORRECTED",
+      "reason": "«лиев» is wrong; correct «лье»."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-008-0079",
+      "before": "— Мадам, а как же моя миссия?",
+      "after": "— Сударыня, а как же моя миссия?"
+    },
+    {
+      "source_id": "fr42c-008-0080",
+      "before": "— Предупреждаю вас, что мы будем проходить через Магелланов пролив, — продолжил Гленарван.",
+      "after": "— Предупреждаю вас, что мы пойдём через Магелланов пролив, — продолжал Гленарван."
+    },
+    {
+      "source_id": "fr42c-008-0082",
+      "before": "— Добавлю, что мы посетим Порт-Фамин!",
+      "after": "— И добавлю, что мы посетим Порт-Фамин!"
+    },
+    {
+      "source_id": "fr42c-008-0083",
+      "before": "— «Порт-Фамин», — воскликнул француз, окружённый со всех сторон, — этот знаменитый в географических анналах порт!",
+      "after": "— Порт-Фамин! — воскликнул француз, осаждённый со всех сторон. — Этот порт, знаменитый в географических летописях!"
+    },
+    {
+      "source_id": "fr42c-008-0084",
+      "before": "— Учтите также, месье Паганель, — продолжила леди Хелена, — что в этом предприятии у вас будет право соединить имя Франции с именем Шотландии!",
+      "after": "— Подумайте и о том, господин Паганель, — продолжала леди Элен, — что в этом предприятии вы будете вправе соединить имя Франции с именем Шотландии!"
+    },
+    {
+      "source_id": "fr42c-008-0086",
+      "before": "— Географ может принести пользу нашей экспедиции, и что может быть прекраснее, чем поставить науку на службу человечеству?",
+      "after": "— Географ может принести нашей экспедиции пользу, а что может быть прекраснее, чем поставить науку на службу человечеству?"
+    },
+    {
+      "source_id": "fr42c-008-0087",
+      "before": "— Прекрасно сказано, мадам!",
+      "after": "— Прекрасно сказано, сударыня!"
+    },
+    {
+      "source_id": "fr42c-008-0088",
+      "before": "— Поверьте мне. Доверьтесь случаю, или, вернее, Провидению. Поступайте так же, как мы. Оно прислало нам этот документ, и мы отправились в путь. Оно бросает вас на борт <i>«Дункана» —</i> не сходите с него.",
+      "after": "— Поверьте мне. Предоставьте всё случаю, или, вернее, Провидению. Подражайте нам. Оно послало нам этот документ — и мы отправились. Оно забросило вас на борт <i>«Дункана»</i> — не покидайте его больше."
+    },
+    {
+      "source_id": "fr42c-008-0089",
+      "before": "— Хотите, чтобы я вам сказал, мои дорогие друзья? — возобрёл тогда Паганель; — ну что ж, вы очень хотите, чтобы я остался!",
+      "after": "— Хотите, я скажу вам, мои славные друзья? — отозвался тогда Паганель. — Так вот, вам очень хочется, чтобы я остался!"
+    },
+    {
+      "source_id": "fr42c-008-0090",
+      "before": "— А вы, Паганель, просто умираете от желания остаться, — ответил Гленарван.",
+      "after": "— А вы, Паганель, умираете от желания остаться, — возразил Гленарван."
+    },
+    {
+      "source_id": "fr42c-008-0091",
+      "before": "— «Черт возьми! — воскликнул ученый-географ, — но я боялся показаться назойливым!»",
+      "after": "— Чёрт возьми! — воскликнул учёный географ. — Но я боялся показаться навязчивым!"
+    },
+    {
+      "source_id": "fr42c-note-015",
+      "before": "Трубка вмещает 50 гектолитров.",
+      "after": "Пайп равен 50 гектолитрам."
+    },
+    {
+      "source_id": "fr42c-note-016",
+      "before": "Около 90 лиев.",
+      "after": "Около 90 лье."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/008/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJpDPZmxwJddNymysFMg",
+    "usage": {
+      "input_tokens": 6879,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1731,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJpEUaBRieoCSPtr11VT",
+        "usage": {
+          "input_tokens": 8316,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1668,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-008-0079",
+          "verdict": "PASS",
+          "reason": "Faithful; 'Madame' correctly rendered as «Сударыня»."
+        },
+        {
+          "source_id": "fr42c-008-0080",
+          "verdict": "PASS",
+          "reason": "Future 'passerons' and 'reprit' preserved; correction verified."
+        },
+        {
+          "source_id": "fr42c-008-0081",
+          "verdict": "PASS",
+          "reason": "Accurate; 'tentateur' = искуситель."
+        },
+        {
+          "source_id": "fr42c-008-0082",
+          "verdict": "PASS",
+          "reason": "'J'ajoute' rendered as «И добавлю»; meaning intact."
+        },
+        {
+          "source_id": "fr42c-008-0083",
+          "verdict": "PASS",
+          "reason": "Exclamation, 'assailli de toutes parts' and 'fastes' conveyed; correction verified."
+        },
+        {
+          "source_id": "fr42c-008-0084",
+          "verdict": "PASS",
+          "reason": "Lady Helena named as Элен; 'droit d'associer' kept; correct."
+        },
+        {
+          "source_id": "fr42c-008-0085",
+          "verdict": "PASS",
+          "reason": "Complete and accurate."
+        },
+        {
+          "source_id": "fr42c-008-0086",
+          "verdict": "PASS",
+          "reason": "Meaning and rhetorical question preserved; correction verified."
+        },
+        {
+          "source_id": "fr42c-008-0087",
+          "verdict": "PASS",
+          "reason": "Accurate; «сударыня» consistent."
+        },
+        {
+          "source_id": "fr42c-008-0088",
+          "verdict": "PASS",
+          "reason": "Providence agency preserved; italic ship name retained; imperatives correct."
+        },
+        {
+          "source_id": "fr42c-008-0089",
+          "verdict": "PASS",
+          "reason": "Dialogue turn and sense preserved; earlier error fixed."
+        },
+        {
+          "source_id": "fr42c-008-0090",
+          "verdict": "PASS",
+          "reason": "'Vous mourez d'envie' faithfully rendered; 'repartit' as возразил acceptable."
+        },
+        {
+          "source_id": "fr42c-008-0091",
+          "verdict": "PASS",
+          "reason": "Closing quote mark absent in Russian is appropriate; 'indiscret' = навязчивым; faithful."
+        },
+        {
+          "source_id": "fr42c-note-015",
+          "verdict": "PASS",
+          "reason": "'Pipe' as a cask measure = пайп; 50 hectolitres correct."
+        },
+        {
+          "source_id": "fr42c-note-016",
+          "verdict": "PASS",
+          "reason": "Correct unit «лье» and number."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

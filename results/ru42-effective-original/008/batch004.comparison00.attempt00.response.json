@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJpEUaBRieoCSPtr11VT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-008-0079\",\"target\":\"— Сударыня, а как же моя миссия?\"},{\"source_id\":\"fr42c-008-0080\",\"target\":\"— Предупреждаю вас, что мы пойдём через Магелланов пролив, — продолжал Гленарван.\"},{\"source_id\":\"fr42c-008-0081\",\"target\":\"— Милорд, вы — искуситель.\"},{\"source_id\":\"fr42c-008-0082\",\"target\":\"— И добавлю, что мы посетим Порт-Фамин!\"},{\"source_id\":\"fr42c-008-0083\",\"target\":\"— Порт-Фамин! — воскликнул француз, осаждённый со всех сторон. — Этот порт, знаменитый в географических летописях!\"},{\"source_id\":\"fr42c-008-0084\",\"target\":\"— Подумайте и о том, господин Паганель, — продолжала леди Элен, — что в этом предприятии вы будете вправе соединить имя Франции с именем Шотландии!\"},{\"source_id\":\"fr42c-008-0085\",\"target\":\"— Да, конечно!\"},{\"source_id\":\"fr42c-008-0086\",\"target\":\"— Географ может принести нашей экспедиции пользу, а что может быть прекраснее, чем поставить науку на службу человечеству?\"},{\"source_id\":\"fr42c-008-0087\",\"target\":\"— Прекрасно сказано, сударыня!\"},{\"source_id\":\"fr42c-008-0088\",\"target\":\"— Поверьте мне. Предоставьте всё случаю, или, вернее, Провидению. Подражайте нам. Оно послало нам этот документ — и мы отправились. Оно забросило вас на борт <i>«Дункана»</i> — не покидайте его больше.\"},{\"source_id\":\"fr42c-008-0089\",\"target\":\"— Хотите, я скажу вам, мои славные друзья? — отозвался тогда Паганель. — Так вот, вам очень хочется, чтобы я остался!\"},{\"source_id\":\"fr42c-008-0090\",\"target\":\"— А вы, Паганель, умираете от желания остаться, — возразил Гленарван.\"},{\"source_id\":\"fr42c-008-0091\",\"target\":\"— Чёрт возьми! — воскликнул учёный географ. — Но я боялся показаться навязчивым!\"},{\"source_id\":\"fr42c-note-015\",\"target\":\"Пайп равен 50 гектолитрам.\"},{\"source_id\":\"fr42c-note-016\",\"target\":\"Около 90 лье.\"}],\"review\":[{\"source_id\":\"fr42c-008-0079\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'Madame' correctly rendered as «Сударыня».\"},{\"source_id\":\"fr42c-008-0080\",\"verdict\":\"PASS\",\"reason\":\"Future 'passerons' and 'reprit' preserved; correction verified.\"},{\"source_id\":\"fr42c-008-0081\",\"verdict\":\"PASS\",\"reason\":\"Accurate; 'tentateur' = искуситель.\"},{\"source_id\":\"fr42c-008-0082\",\"verdict\":\"PASS\",\"reason\":\"'J'ajoute' rendered as «И добавлю»; meaning intact.\"},{\"source_id\":\"fr42c-008-0083\",\"verdict\":\"PASS\",\"reason\":\"Exclamation, 'assailli de toutes parts' and 'fastes' conveyed; correction verified.\"},{\"source_id\":\"fr42c-008-0084\",\"verdict\":\"PASS\",\"reason\":\"Lady Helena named as Элен; 'droit d'associer' kept; correct.\"},{\"source_id\":\"fr42c-008-0085\",\"verdict\":\"PASS\",\"reason\":\"Complete and accurate.\"},{\"source_id\":\"fr42c-008-0086\",\"verdict\":\"PASS\",\"reason\":\"Meaning and rhetorical question preserved; correction verified.\"},{\"source_id\":\"fr42c-008-0087\",\"verdict\":\"PASS\",\"reason\":\"Accurate; «сударыня» consistent.\"},{\"source_id\":\"fr42c-008-0088\",\"verdict\":\"PASS\",\"reason\":\"Providence agency preserved; italic ship name retained; imperatives correct.\"},{\"source_id\":\"fr42c-008-0089\",\"verdict\":\"PASS\",\"reason\":\"Dialogue turn and sense preserved; earlier error fixed.\"},{\"source_id\":\"fr42c-008-0090\",\"verdict\":\"PASS\",\"reason\":\"'Vous mourez d'envie' faithfully rendered; 'repartit' as возразил acceptable.\"},{\"source_id\":\"fr42c-008-0091\",\"verdict\":\"PASS\",\"reason\":\"Closing quote mark absent in Russian is appropriate; 'indiscret' = навязчивым; faithful.\"},{\"source_id\":\"fr42c-note-015\",\"verdict\":\"PASS\",\"reason\":\"'Pipe' as a cask measure = пайп; 50 hectolitres correct.\"},{\"source_id\":\"fr42c-note-016\",\"verdict\":\"PASS\",\"reason\":\"Correct unit «лье» and number.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8316,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1668,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
