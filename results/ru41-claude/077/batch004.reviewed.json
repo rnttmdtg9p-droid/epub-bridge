@@ -1,0 +1,177 @@
+{
+  "unit": 77,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id10314",
+      "target": "— Вот и я! — сказал Атос, который, как полководец, прикрывающий отступление, пожелал подняться последним и держался у борта лодки. — Все ли в сборе?",
+      "source_sha256": "a8a67a895bda4bec048a3ffe03327c8c3ee60c6c468c784be65ffb43a3f7f7d7",
+      "target_id": "ru-id10314",
+      "tag": "p",
+      "target_sha256": "75e2d4800a33d5c6c07881c075a36eb36388e675705798acda281f3643b8eef1"
+    },
+    {
+      "source_id": "id10315",
+      "target": "— Все, — сказал д’Артаньян. — А у вас, Атос, есть кинжал?",
+      "source_sha256": "e537f7b3edfcdd4dded6d358556658caac63ee5b9783e9e3e5963d2f37826360",
+      "target_id": "ru-id10315",
+      "tag": "p",
+      "target_sha256": "7e1822130903d8405617a8f2e6b1c0b8c3cb8a6aa9c1c6847a0656dc6bd15c85"
+    },
+    {
+      "source_id": "id10316",
+      "target": "— Да.",
+      "source_sha256": "9f4a2e0ce3c8b67038a54bfa044334c55d6f083e8cb634d6147afc7307b16a6f",
+      "target_id": "ru-id10316",
+      "tag": "p",
+      "target_sha256": "b38bdfda461dc2130aa710240e46c220d11d45c3bc5fe7d22b9278a9a8f4972c"
+    },
+    {
+      "source_id": "id10317",
+      "target": "— Тогда перережьте канат и идите к нам.",
+      "source_sha256": "0c42407e463f84d1a19c1ee3f9274ad52d43f331bd0639ae16872e013e2b567d",
+      "target_id": "ru-id10317",
+      "tag": "p",
+      "target_sha256": "ab1052b4997264404e13bd46e5e28633ae86abf9b2e26ac4a114143b7ea6ec6f"
+    },
+    {
+      "source_id": "id10318",
+      "target": "Атос вытащил из-за пояса острый кинжал и перерезал верёвку; фелюга удалилась; лодка осталась на месте, без иного движения, кроме того, какое сообщали ей волны.",
+      "source_sha256": "2f314409e5676a317f7ea18e72342c24a2b71e41fa8aba06a6f83ee21ffc32ff",
+      "target_id": "ru-id10318",
+      "tag": "p",
+      "target_sha256": "4ef6593ff8f88d60c2f4553698a6bfae101739e4aa7a160c4e7b83b2fbd9823d"
+    },
+    {
+      "source_id": "id10319",
+      "target": "— Идите же, Атос! — сказал д’Артаньян.",
+      "source_sha256": "d23bf7d1ff364e4cad3ef8184e3609928d0487d83228cdf141f0c2e716808836",
+      "target_id": "ru-id10319",
+      "tag": "p",
+      "target_sha256": "0101b4425a745341b500c359c8c8848d03ada3d448a4145edc68274c6dc1d3e5"
+    },
+    {
+      "source_id": "id10320",
+      "target": "И он протянул руку графу де Ла Фер, который в свою очередь занял место в лодке.",
+      "source_sha256": "2cec4d3a7a71a22b310423dc70e2f1c96fe611c80ec0c5583e0554fc8f5f7974",
+      "target_id": "ru-id10320",
+      "tag": "p",
+      "target_sha256": "ced88d991862cbdd4187f9402f289a7570de368c06de69143490a3ca12145eab"
+    },
+    {
+      "source_id": "id10321",
+      "target": "— Как раз вовремя, — сказал гасконец, — и сейчас вы увидите нечто любопытное.",
+      "source_sha256": "baad4b147e29d7998cda516a574febaa5ee40ae8bbb54c7096e03735e29ebd25",
+      "target_id": "ru-id10321",
+      "tag": "p",
+      "target_sha256": "c6d8f9337c8cf75f9468e517678b842cb48fb94efb009dac4381eac978441332"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id10314",
+      "verdict": "PASS",
+      "reason": "Faithful: the retreat-covering general simile, Athos last, holding at the boat's edge and the closing question are all kept. Only 'у борта' replaces 'за борт' for 'se tenait au rebord'."
+    },
+    {
+      "source_id": "id10315",
+      "verdict": "PASS",
+      "reason": "Faithful, with dialogue and the question preserved."
+    },
+    {
+      "source_id": "id10316",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id10317",
+      "verdict": "CORRECTED",
+      "reason": "'Venez' rendered 'садитесь' added an interpretation (Athos is still at the boat's edge). Changed to the literal 'идите к нам'."
+    },
+    {
+      "source_id": "id10318",
+      "verdict": "CORRECTED",
+      "reason": "The clause 'sans autre mouvement que celui que lui imprimaient les vagues' was clumsy and unidiomatic in the draft ('не двигаясь иначе, чем как её качали волны'). Rephrased to follow the source structure faithfully."
+    },
+    {
+      "source_id": "id10319",
+      "verdict": "CORRECTED",
+      "reason": "'Venez' rendered 'Садитесь' replaced with the literal 'Идите же', consistent with id10317."
+    },
+    {
+      "source_id": "id10320",
+      "verdict": "PASS",
+      "reason": "Faithful: d'Artagnan holds out his hand and the count takes his place in turn."
+    },
+    {
+      "source_id": "id10321",
+      "verdict": "PASS",
+      "reason": "Faithful: 'Il était temps', 'le Gascon' and 'quelque chose de curieux' are all rendered accurately."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id10314",
+      "before": "— Вот и я! — сказал Атос, который, как полководец, прикрывающий отступление, пожелал подняться последним и держался за борт лодки. — Все ли в сборе?",
+      "after": "— Вот и я! — сказал Атос, который, как полководец, прикрывающий отступление, пожелал подняться последним и держался у борта лодки. — Все ли в сборе?"
+    },
+    {
+      "source_id": "id10317",
+      "before": "— Тогда перережьте канат и садитесь.",
+      "after": "— Тогда перережьте канат и идите к нам."
+    },
+    {
+      "source_id": "id10318",
+      "before": "Атос вытащил из-за пояса острый кинжал и перерезал верёвку; фелюга удалилась; лодка осталась на месте, не двигаясь иначе, чем как её качали волны.",
+      "after": "Атос вытащил из-за пояса острый кинжал и перерезал верёвку; фелюга удалилась; лодка осталась на месте, без иного движения, кроме того, какое сообщали ей волны."
+    },
+    {
+      "source_id": "id10319",
+      "before": "— Садитесь, Атос! — сказал д’Артаньян.",
+      "after": "— Идите же, Атос! — сказал д’Артаньян."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJWJ6vhPapsmGxcHhsme",
+    "usage": {
+      "input_tokens": 2479,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 407,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJWJPeXdQuDzNZRsrjmf",
+    "usage": {
+      "input_tokens": 3986,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1718,
+      "output_tokens_details": {
+        "thinking_tokens": 757
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

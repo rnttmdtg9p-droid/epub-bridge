@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJWJ6vhPapsmGxcHhsme",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id10314\",\"target\":\"— Вот и я! — сказал Атос, который, как полководец, прикрывающий отступление, пожелал подняться последним и держался за борт лодки. — Все ли в сборе?\"},{\"source_id\":\"id10315\",\"target\":\"— Все, — сказал д’Артаньян. — А у вас, Атос, есть кинжал?\"},{\"source_id\":\"id10316\",\"target\":\"— Да.\"},{\"source_id\":\"id10317\",\"target\":\"— Тогда перережьте канат и садитесь.\"},{\"source_id\":\"id10318\",\"target\":\"Атос вытащил из-за пояса острый кинжал и перерезал верёвку; фелюга удалилась; лодка осталась на месте, не двигаясь иначе, чем как её качали волны.\"},{\"source_id\":\"id10319\",\"target\":\"— Садитесь, Атос! — сказал д’Артаньян.\"},{\"source_id\":\"id10320\",\"target\":\"И он протянул руку графу де Ла Фер, который в свою очередь занял место в лодке.\"},{\"source_id\":\"id10321\",\"target\":\"— Как раз вовремя, — сказал гасконец, — и сейчас вы увидите нечто любопытное.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2479,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 407,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
