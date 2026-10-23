@@ -1,0 +1,33 @@
+{
+  "state": "TWO_CONFIRMED_EDITORIAL_CORRECTIONS_FOR_ACTUAL_AI_REVIEW",
+  "items": [
+    {
+      "source": {
+        "id": "043-003-heading",
+        "tag": "heading",
+        "text": "HUCKLEBERRY FINN",
+        "sha256": "98bd92df24a8ab52a1ac4194535585edd3a00c11a90bed47c1ce9b430b398554"
+      },
+      "prior_target": "ГЕКЛБЕРРИ ФИНН",
+      "proposed_target": "ГЕКЛЬБЕРРИ ФИНН",
+      "reason": "CanonicalhouseRussiantransliterationГекльберри; firstacceptedAPIheadingomittedsoftsign. Correcttheactualheadingwithoutchangingmeaning."
+    },
+    {
+      "source": {
+        "id": "043-003-0002",
+        "tag": "source_caption",
+        "text": "THE WIDOW’S.",
+        "sha256": "441c384f70f48a1746b3d7c8a167f9a9c4db21a27bc0bdb39a769e90cb723eb7",
+        "primary_source_image_sha256": "2dd4a04d7eb0cc9b10cc2a50cfd51c373aae8bbd6f51a7fbe0a264b6c6104f8f",
+        "primary_source_locator": "1885originalchapterIheadpieceprintedcaptionbelowtheexteriordrawing,actualpixelsviewed"
+      },
+      "prior_source_text": "The Widows",
+      "prior_source_sha256": "d440c381b3d6921c9e9d9846f636a9e664054d14bce48dcc743b108a13fc1513",
+      "prior_target": "Вдовы",
+      "proposed_target": "У вдовы",
+      "reason": "Actual1885printedcaptionispossessiveTHEWIDOWS withapostrophe,notpluralwidows. PGindexTheWidowsdropstheapostropheandtheoldRussiantranslationВдовыwronglydescribespeople. Actualdrawingdepictsthewidowshouse/exterior. PreserveoriginalrawPGindexoutsidepublication; qualifyexplicitfacsimile-backedcaptioncorrection."
+    }
+  ],
+  "source_context": "In chapterI WidowDouglas takes Huck into herhome, he finds herhouseconfining, and returns atTomspersuasion. Exact original house/exterior drawing andTHEWIDOWS possessivecaption seen bycontrollingagent.",
+  "book_release": false
+}
