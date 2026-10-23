@@ -14,9 +14,9 @@ jobs:
     timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
-      - name: Reuse final checkpoint from preceding translation run
+      - name: Reuse latest final checkpoint from active repaired translation run
         run: |
-          git fetch origin bb-ru41-claude-v5070-20261023
+          git fetch origin bb-ru41-claude-repair-v5070-20261023
           git checkout FETCH_HEAD -- results/ru41-claude
       - name: Configure chapter checkpoints
         run: |
