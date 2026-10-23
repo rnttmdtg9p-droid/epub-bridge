@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKM8hZixGJKr6Qfhkyc2",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-031-0060\",\"target\":\"— Их несколько, но в основном Прокторы.\"},{\"source_id\":\"043-031-0061\",\"target\":\"— Вот-вот, как раз так, — говорю я. — Чуть не забыл. Так вот, мисс Мэри Джейн велела вам передать, что она уехала туда в ужасной спешке — кто-то из них заболел.\"},{\"source_id\":\"043-031-0062\",\"target\":\"— Кто именно?\"},{\"source_id\":\"043-031-0063\",\"target\":\"— Не знаю; то есть я малость подзабыл; но, кажется, это…\"},{\"source_id\":\"043-031-0064\",\"target\":\"— Батюшки мои, только бы не <i>Ханна</i>!\"},{\"source_id\":\"043-031-0065\",\"target\":\"— Мне жаль это говорить, — говорю я, — но как раз Ханна и есть.\"},{\"source_id\":\"043-031-0066\",\"target\":\"— Господи помилуй, а ведь на прошлой неделе была такая здоровая! Ей совсем плохо?\"},{\"source_id\":\"043-031-0067\",\"target\":\"— Хуже некуда. Они сидели с ней всю ночь, сказала мисс Мэри Джейн, и думают, что она не протянет и нескольких часов.\"},{\"source_id\":\"043-031-0068\",\"target\":\"— Ну надо же! А что с ней такое?\"},{\"source_id\":\"043-031-0069\",\"target\":\"Ничего подходящего я так сразу придумать не смог, поэтому говорю:\"},{\"source_id\":\"043-031-0070\",\"target\":\"— Свинка.\"},{\"source_id\":\"043-031-0071\",\"target\":\"— Свинка, как же! Не сидят у постели тех, у кого свинка.\"},{\"source_id\":\"043-031-0072\",\"target\":\"— Не сидят, значит? А вот с <i>этой</i> свинкой сидят, можете не сомневаться. Эта свинка особая. Новая какая-то, сказала мисс Мэри Джейн.\"},{\"source_id\":\"043-031-0073\",\"target\":\"Ханна со свинкой\"},{\"source_id\":\"043-031-0074\",\"target\":\"— Чем же она новая?\"},{\"source_id\":\"043-031-0075\",\"target\":\"— Тем, что смешалась с другими болезнями.\"},{\"source_id\":\"043-031-0076\",\"target\":\"— С какими другими?\"},{\"source_id\":\"043-031-0077\",\"target\":\"— Ну, с корью, и с коклюшем, и с рожей, и с чахоткой, и с желтухой, и с воспалением мозга, и бог знает с чем ещё.\"},{\"source_id\":\"043-031-0078\",\"target\":\"— Господи помилуй! И это называют <i>свинкой</i>?\"},{\"source_id\":\"043-031-0079\",\"target\":\"— Так сказала мисс Мэри Джейн.\"}],\"review\":[{\"source_id\":\"043-031-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Converted to Russian dialogue dash; meaning preserved.\"},{\"source_id\":\"043-031-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed dialogue punctuation and colloquial register; message and hurry preserved.\"},{\"source_id\":\"043-031-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue; sense kept.\"},{\"source_id\":\"043-031-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft wrongly used feminine 'забыла'; speaker is Huck (masculine).\"},{\"source_id\":\"043-031-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Hanner rendered Ханна; italics kept; idiomatic exclamation.\"},{\"source_id\":\"043-031-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash punctuation; natural phrasing of 'the very one'.\"},{\"source_id\":\"043-031-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"'Is she took bad' means seriously ill; draft was wrong; dashes fixed.\"},{\"source_id\":\"043-031-0067\",\"verdict\":\"CORRECTED\",\"reason\":\"'It ain't no name for it' means extremely bad; draft misread as nameless; fixed.\"},{\"source_id\":\"043-031-0068\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue; idiomatic.\"},{\"source_id\":\"043-031-0069\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoother narration; sense kept.\"},{\"source_id\":\"043-031-0070\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue.\"},{\"source_id\":\"043-031-0071\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft 'К чёрту' and 'паротит' wrong in register; 'Mumps your granny' rendered as dismissive idiom.\"},{\"source_id\":\"043-031-0072\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft garbled negation logic and plural; restored sense and italic 'этой'.\"},{\"source_id\":\"043-031-0073\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption harmonized to 'свинка'.\"},{\"source_id\":\"043-031-0074\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash and idiom.\"},{\"source_id\":\"043-031-0075\",\"verdict\":\"CORRECTED\",\"reason\":\"Natural rendering of 'mixed up with'.\"},{\"source_id\":\"043-031-0076\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'other' sense.\"},{\"source_id\":\"043-031-0077\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft had grammar error 'мозговой лихорадка' and awkward ending; fixed illness list.\"},{\"source_id\":\"043-031-0078\",\"verdict\":\"CORRECTED\",\"reason\":\"Mild exclamation; italics kept on 'свинкой'.\"},{\"source_id\":\"043-031-0079\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue; word order natural.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 7824,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2004,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

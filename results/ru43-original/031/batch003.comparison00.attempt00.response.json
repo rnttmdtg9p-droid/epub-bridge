@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKM9kYb2g7NdhBS34hrg",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-031-0060\",\"target\":\"— Их несколько, но в основном Прокторы.\"},{\"source_id\":\"043-031-0061\",\"target\":\"— Вот-вот, как раз так, — говорю я. — Чуть не забыл. Так вот, мисс Мэри Джейн велела вам передать, что она уехала туда в ужасной спешке — кто-то из них заболел.\"},{\"source_id\":\"043-031-0062\",\"target\":\"— Кто именно?\"},{\"source_id\":\"043-031-0063\",\"target\":\"— Не знаю; то есть я малость подзабыл; но, кажется, это…\"},{\"source_id\":\"043-031-0064\",\"target\":\"— Батюшки мои, только бы не <i>Ханна</i>!\"},{\"source_id\":\"043-031-0065\",\"target\":\"— Мне жаль это говорить, — говорю я, — но как раз Ханна и есть.\"},{\"source_id\":\"043-031-0066\",\"target\":\"— Господи помилуй, а ведь на прошлой неделе была такая здоровая! Ей совсем плохо?\"},{\"source_id\":\"043-031-0067\",\"target\":\"— Хуже некуда. Они сидели с ней всю ночь, сказала мисс Мэри Джейн, и думают, что она не протянет и нескольких часов.\"},{\"source_id\":\"043-031-0068\",\"target\":\"— Ну надо же! А что с ней такое?\"},{\"source_id\":\"043-031-0069\",\"target\":\"Ничего подходящего я так сразу придумать не смог, поэтому говорю:\"},{\"source_id\":\"043-031-0070\",\"target\":\"— Свинка.\"},{\"source_id\":\"043-031-0071\",\"target\":\"— Свинка, как же! Не сидят у постели тех, у кого свинка.\"},{\"source_id\":\"043-031-0072\",\"target\":\"— Не сидят, значит? А вот с <i>этой</i> свинкой сидят, можете не сомневаться. Эта свинка особая. Новая какая-то, сказала мисс Мэри Джейн.\"},{\"source_id\":\"043-031-0073\",\"target\":\"Ханна со свинкой\"},{\"source_id\":\"043-031-0074\",\"target\":\"— Чем же она новая?\"},{\"source_id\":\"043-031-0075\",\"target\":\"— Тем, что смешалась с другими болезнями.\"},{\"source_id\":\"043-031-0076\",\"target\":\"— С какими другими?\"},{\"source_id\":\"043-031-0077\",\"target\":\"— Ну, с корью, и с коклюшем, и с рожей, и с чахоткой, и с желтухой, и с воспалением мозга, и бог знает с чем ещё.\"},{\"source_id\":\"043-031-0078\",\"target\":\"— Господи помилуй! И это называют <i>свинкой</i>?\"},{\"source_id\":\"043-031-0079\",\"target\":\"— Так сказала мисс Мэри Джейн.\"}],\"review\":[{\"source_id\":\"043-031-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful; Proctors and 'mainly' preserved; dialogue dash correct.\"},{\"source_id\":\"043-031-0061\",\"verdict\":\"PASS\",\"reason\":\"Meaning, agency and 'one of them's sick' preserved; idiomatic boy voice.\"},{\"source_id\":\"043-031-0062\",\"verdict\":\"PASS\",\"reason\":\"Accurate question.\"},{\"source_id\":\"043-031-0063\",\"verdict\":\"PASS\",\"reason\":\"Hesitation and trailing off preserved; male narrator corrected properly.\"},{\"source_id\":\"043-031-0064\",\"verdict\":\"PASS\",\"reason\":\"Italic on Hanna retained; exclamation idiomatic and faithful in sense.\"},{\"source_id\":\"043-031-0065\",\"verdict\":\"PASS\",\"reason\":\"Faithful, regret and 'very one' preserved.\"},{\"source_id\":\"043-031-0066\",\"verdict\":\"PASS\",\"reason\":\"Contrast with last week and 'took bad' conveyed accurately.\"},{\"source_id\":\"043-031-0067\",\"verdict\":\"PASS\",\"reason\":\"'No name for it' rendered idiomatically; sat up all night and few hours preserved.\"},{\"source_id\":\"043-031-0068\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and question accurate.\"},{\"source_id\":\"043-031-0069\",\"verdict\":\"PASS\",\"reason\":\"Narrator's inability to think of something reasonable preserved.\"},{\"source_id\":\"043-031-0070\",\"verdict\":\"PASS\",\"reason\":\"Mumps correctly rendered as свинка.\"},{\"source_id\":\"043-031-0071\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic equivalent of 'Mumps your granny'; meaning of sitting up preserved.\"},{\"source_id\":\"043-031-0072\",\"verdict\":\"PASS\",\"reason\":\"Italic 'these' preserved; humour and attribution to Mary Jane intact.\"},{\"source_id\":\"043-031-0073\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate and consistent.\"},{\"source_id\":\"043-031-0074\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"043-031-0075\",\"verdict\":\"PASS\",\"reason\":\"'Other things' as other illnesses fits context.\"},{\"source_id\":\"043-031-0076\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"043-031-0077\",\"verdict\":\"PASS\",\"reason\":\"List of diseases complete; brain-fever and colloquial ending preserved.\"},{\"source_id\":\"043-031-0078\",\"verdict\":\"PASS\",\"reason\":\"Italic on mumps retained; surprise preserved.\"},{\"source_id\":\"043-031-0079\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9566,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1890,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
