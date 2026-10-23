@@ -62,12 +62,17 @@ def deepl_translate(rows,path,context):
         c=Clean();c.feed(row.get('source_html') or escape(row['text']));texts.append('<p>'+''.join(c.parts)+'</p>')
     host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
     payload={'text':texts,'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','tag_handling':'html','context':'New complete literary Russian translation of Jules Verne, Les enfants du capitaine Grant (1868), directly from French. Preserve every paragraph, fact, name, historical peculiarity and italic span. '+json.dumps(context,ensure_ascii=False)}
-    save(Path(str(path)+'.deepl.request.json'),payload)
+    request_file=Path(str(path)+'.deepl.request.json')
+    if request_file.exists():assert json.loads(request_file.read_text())==payload,'EXISTING_DEEPL_REQUEST_MISMATCH'
+    else:save(request_file,payload)
     for attempt in range(4):
         try:
-            req=urllib.request.Request(host+'/v2/translate',data=json.dumps(payload,ensure_ascii=False).encode(),headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
-            with urllib.request.urlopen(req,timeout=180) as response:raw=json.load(response)
-            save(Path(str(path)+f'.deepl.attempt{attempt:02}.response.json'),raw)
+            response_file=Path(str(path)+f'.deepl.attempt{attempt:02}.response.json')
+            if response_file.exists():raw=json.loads(response_file.read_text())
+            else:
+                req=urllib.request.Request(host+'/v2/translate',data=json.dumps(payload,ensure_ascii=False).encode(),headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
+                with urllib.request.urlopen(req,timeout=180) as response:raw=json.load(response)
+                save(response_file,raw)
             targets=raw.get('translations',[]);assert len(targets)==len(selected),'DEEPL_ROW_COUNT'
             result=[]
             for row,target in zip(selected,targets):
@@ -99,17 +104,40 @@ def validate(rows,original):
     return rows
 
 def checked_call(system,payload,path,source,review=False):
-    last=None
-    for attempt in range(3):
+    # Original English/German/French facsimiles and Maori verse are not new translations.
+    # Keep exact source-native bytes; show them as protected context, never editable rows.
+    native=[r for r in source if not r.get('translate',True)]
+    editable=[r for r in source if r.get('translate',True)]
+    native_ids={r['id'] for r in native};last=None
+    existing=list(path.parent.glob(path.name+'.attempt*.request.json'))
+    import re
+    start=max([int(re.search(r'\.attempt(\d+)\.request',q.name)[1])+1 for q in existing] or [0])
+    for attempt in range(start,start+3):
         request=dict(payload)
-        if last:request['format_retry_instruction']='Previous response failed strict validation: '+last+'. Return only the requested JSON, with every source_id in supplied order. Do not invent or copy hashes; the host binds exact immutable source hashes.'
+        if native:
+            request['source_rows']=editable
+            request['protected_source_native_rows']=native
+            request['protected_source_instruction']='Read these authentic foreign-language documents/verse as context. They are copied exactly from source and are NOT editable or translated rows. Return rows and review arrays only for source_rows. Do not add protected IDs to your returned arrays.'
+            for key in ['draft_rows','final_rows']:
+                if key in request:request[key]=[r for r in request[key] if r['source_id'] not in native_ids]
+        if last:request['format_retry_instruction']='Previous response failed strict validation: '+last+'. Return only requested JSON with every editable source_id in supplied order.'
         try:
             result,meta=call(system,request,Path(str(path)+f'.attempt{attempt:02}'))
-            result['rows']=validate(result['rows'],source)
+            result['rows']=validate(result['rows'],editable)
             if review:
                 for r in result.get('review',[]):r['source_id']=r.get('source_id',r.get('id'))
-                assert [r['source_id'] for r in result['review']]==[r['id'] for r in source],'REVIEW_COVERAGE'
+                assert [r['source_id'] for r in result['review']]==[r['id'] for r in editable],'REVIEW_COVERAGE'
                 assert all(r.get('reason') for r in result['review']),'REVIEW_REASON'
+            if native:
+                byid={r['source_id']:r for r in result['rows']}
+                for r in native:byid[r['id']]=validate([{'source_id':r['id'],'target':r['text']}],[r])[0]
+                result['rows']=[byid[r['id']] for r in source]
+                if review:
+                    verdicts={r['source_id']:r for r in result['review']}
+                    for r in native:verdicts[r['id']]={'source_id':r['id'],'verdict':'NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN','reason':'Exact unmodified original foreign document or verse; no AI translation. Independent source/hash/lineation comparison, not an invented provider verdict.'}
+                    result['review']=[verdicts[r['id']] for r in source]
+                meta['protected_source_native_ids']=[r['id'] for r in native]
+                meta['actual_provider_review_ids']=[r['id'] for r in editable]
             return result,meta
         except (AssertionError,KeyError,ValueError,TypeError) as error:
             last=type(error).__name__+': '+str(error)
@@ -179,6 +207,8 @@ def translate(unit):
         item=compare_final(number,index,rows,item,folder,context)
         final.extend(item['rows']);reviews.append(item)
         print('UNIT',number,'BATCH',index+1,'OF',len(batches),'COMPARISON_VERIFIED',flush=True)
+        save(OUT/'run-status.json',{'state':'RUNNING_CONTINUOUS_TRANSLATION_REVIEW','unit':number,'last_complete_batch':index,'run_id':os.environ.get('GITHUB_RUN_ID'),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'checkpoint_is_stop_condition':False})
+        commit()
     assert len(final)==len(allrows)
     save(folder/'chapter.reviewed.json',{'unit':number,'heading':final[0],'rows':final[1:],'source_rows':len(unit['rows']),'state':'SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA','review_batches':len(reviews),'master':'5.0.70'})
     # Persist real provider exchanges before independent acceptance checks.
@@ -202,6 +232,10 @@ if __name__=='__main__':
     if not KEY:raise SystemExit('MISSING_ANTHROPIC_API_KEY')
     if not os.environ.get('DEEPL_AUTH_KEY','').strip():raise SystemExit('MISSING_DEEPL_AUTH_KEY')
     errors=[]
+    status=OUT/'run-status.json'
+    if status.exists():save(OUT/('prior-run-status-'+datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'.json'),json.loads(status.read_text()))
+    save(status,{'state':'RUNNING_CONTINUOUS_TRANSLATION_REVIEW','run_id':os.environ.get('GITHUB_RUN_ID'),'source_units':70,'source_rows':5738,'checkpoint_is_stop_condition':False,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+    commit()
     for unit in SOURCE:
         try:translate(unit)
         except Exception as error:
