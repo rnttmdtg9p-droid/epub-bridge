@@ -1,0 +1,145 @@
+{
+  "unit": 81,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id10780",
+      "target": "— Ну конечно! Я иду туда с вами, мы обнимем его вместе.",
+      "source_sha256": "d9006e2f5e76f15bf419fd7690d49bbe2c7393a622801443c66f83d735fdf147",
+      "target_id": "ru-id10780",
+      "tag": "p",
+      "target_sha256": "e099e0718bcc95de629422bd19c7c20c045334fc091fcd8a29ce2bc572f583fc"
+    },
+    {
+      "source_id": "id10781",
+      "target": "Оба снова сели в лодку, на которой приплыли, и велели отвезти себя к Рынку. Там они нашли Гримо и Блезуа, которые держали для них лошадей, и все четверо направились к улице Генего.",
+      "source_sha256": "51bfb756638e88f8ba65a2b9cacf1e69b7dd316ae06aed41f33c1a2360c231a7",
+      "target_id": "ru-id10781",
+      "tag": "p",
+      "target_sha256": "b942bc721f4a870f6b570c3c3d242bbc92923e1889cb2489b1acb8a0c6739168"
+    },
+    {
+      "source_id": "id10782",
+      "target": "Но Рауля в гостинице «<i>Великий король</i>» не оказалось: в течение дня он получил послание от господина принца и уехал вместе с Оливеном тотчас же, как только получил его.",
+      "source_sha256": "cae7d70eabbc178cff4879439c1ac8a95b774b0cdbe21819cd903e2948212681",
+      "target_id": "ru-id10782",
+      "tag": "p",
+      "target_sha256": "db7cb84a8043b62758d36f7edb63f4d3fe5e5b51c9929072563bce06b096c009"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id10780",
+      "verdict": "CORRECTED",
+      "reason": "«Comment donc!» is an emphatic «why, of course»; replaced «Как же иначе!» with the more accurate, natural «Ну конечно!». Meaning, agency and the «we'll embrace him together» turn are preserved."
+    },
+    {
+      "source_id": "id10781",
+      "verdict": "PASS",
+      "reason": "Faithful: both men retook the boat that had brought them and had themselves taken to Les Halles; Grimaud and Blaisois holding the horses; all four set out toward rue Guénégaud. Names and the pluperfect sequence are rendered correctly."
+    },
+    {
+      "source_id": "id10782",
+      "verdict": "CORRECTED",
+      "reason": "«M. le Prince» was reduced to «принца»; restored the title as «господина принца». The rest is faithful: Raoul was not at the hotel, he received a message during the day and left with Olivain immediately after receiving it. The italicised hotel name is retained."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id10780",
+      "before": "— Как же иначе! Я иду туда с вами, мы обнимем его вместе.",
+      "after": "— Ну конечно! Я иду туда с вами, мы обнимем его вместе."
+    },
+    {
+      "source_id": "id10782",
+      "before": "Но Рауля в гостинице «<i>Великий король</i>» не оказалось: в течение дня он получил послание от принца и уехал вместе с Оливеном тотчас же, как только получил его.",
+      "after": "Но Рауля в гостинице «<i>Великий король</i>» не оказалось: в течение дня он получил послание от господина принца и уехал вместе с Оливеном тотчас же, как только получил его."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXHidd8c2RrVyhfXx21",
+    "usage": {
+      "input_tokens": 1571,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXHtZBfjzVGd3pzhv9m",
+    "usage": {
+      "input_tokens": 2263,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1093,
+      "output_tokens_details": {
+        "thinking_tokens": 533
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXJWokn5U7dybitj2A9",
+        "usage": {
+          "input_tokens": 2565,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 921,
+          "output_tokens_details": {
+            "thinking_tokens": 318
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id10780",
+          "verdict": "PASS",
+          "reason": "The prior correction «Ну конечно!» renders «Comment donc!» idiomatically. The sense is complete: «j'y vais avec vous» and «nous l'embrasserons ensemble» (future tense) are preserved. Dialogue dash is correct."
+        },
+        {
+          "source_id": "id10781",
+          "verdict": "PASS",
+          "reason": "All facts are preserved: both men retook the boat that had brought them, had themselves taken to the Halles, found Grimaud and Blaisois holding their horses, and all four set off toward rue Guénégaud. Agency and the causative «s'étaient fait conduire» are accurate. The names follow the established forms and the register is natural."
+        },
+        {
+          "source_id": "id10782",
+          "verdict": "PASS",
+          "reason": "The prior correction «господина принца» properly renders «M. le Prince». Negation («не оказалось»), the timing («dans la journée»), the departure with Olivain immediately upon receipt, and the repetition of «получил» are all faithful. The italic span on the hotel name is kept semantically, as in the previous row."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
