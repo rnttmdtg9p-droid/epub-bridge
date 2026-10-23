@@ -1,0 +1,392 @@
+{
+  "unit": 6,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "044-006-0059",
+      "target": "Но Торнтон упал на колени рядом с Баком. Голова была прижата к голове, и он тряс его из стороны в сторону. Те, кто подбежал, слышали, как он ругает Бака, и ругал он его долго и жарко, и тихо, и ласково.",
+      "source_sha256": "46c55e0e8b482565bac029727fd3b285a55d34b33ffc2801c7dc723ec8f6170b",
+      "target_id": "ru-044-006-0059",
+      "tag": "p",
+      "target_sha256": "6435a0ee04585346952d1e41ddec5bc8f225433355b326bb16f6299b1c4043f2"
+    },
+    {
+      "source_id": "044-006-0060",
+      "target": "— Боже мой, сэр! Боже мой, сэр! — захлёбывался король Скукум-Бенча. — Я дам вам за него тысячу, сэр, тысячу, сэр — тысячу двести, сэр.",
+      "source_sha256": "9a4b445c83bb6c908c26fdf7e9bd82522f63934596391aba935d0ae8270afaf8",
+      "target_id": "ru-044-006-0060",
+      "tag": "p",
+      "target_sha256": "369a47e581de7fe0140ff5e2cfef503697b16e6b426e44fc20a9ad449925fcf9"
+    },
+    {
+      "source_id": "044-006-0061",
+      "target": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам. — Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр.",
+      "source_sha256": "71f5eb5d0863294c471e660d90094e2a21a2e8670a6f79eaa098b3fb632141f3",
+      "target_id": "ru-044-006-0061",
+      "tag": "p",
+      "target_sha256": "a1743d12bd51e95222e2153e5ac6084f3e74a79aa41074e6647ca0feadb4aa71"
+    },
+    {
+      "source_id": "044-006-0062",
+      "target": "Бак схватил руку Торнтона зубами. Торнтон тряс его из стороны в сторону. Словно движимые общим порывом, зрители отступили на почтительное расстояние и больше не были настолько нескромны, чтобы помешать.",
+      "source_sha256": "995b1e1db12e1097cbcfe2d152d79ccf6b4dc8290d8c515b238c51bf38032c1f",
+      "target_id": "ru-044-006-0062",
+      "tag": "p",
+      "target_sha256": "d5b3def7059719171529abc8ad32ec64572a97d4e66cf499f516532a2f1a8f1d"
+    },
+    {
+      "source_id": "044-006-caption-plate-14",
+      "target": "На берегу реки",
+      "source_sha256": "1c04b5bea2f5cfc28209335f978cf4919ebb2de8b831e06c6303b9b17162a76e",
+      "target_id": "ru-044-006-caption-plate-14",
+      "tag": "illustration_caption",
+      "target_sha256": "1b29f765cd50ff6620efefaaf3f59f7e4f7765b40d10514e7fb3bc12e2dfd17c"
+    },
+    {
+      "source_id": "044-006-caption-plate-15",
+      "target": "Позади него были тени всевозможных собак",
+      "source_sha256": "5ab124d06137b194e3d8494757ab5620e8d2b4cb5f2eca4d770631a54776403b",
+      "target_id": "ru-044-006-caption-plate-15",
+      "tag": "illustration_caption",
+      "target_sha256": "0ab0f1879c19e9341aa2874b11997776eadbd72190d7dfb7436459056c7a5548"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "044-006-0059",
+      "verdict": "CORRECTED",
+      "reason": "Уточнены «head was against head» и оттенки «fervently… lovingly»; смысл и порядок сохранены."
+    },
+    {
+      "source_id": "044-006-0060",
+      "verdict": "CORRECTED",
+      "reason": "Исправлена пунктуация реплики на тире; «spluttered» передано точнее, «twelve hundred» — «тысячу двести»."
+    },
+    {
+      "source_id": "044-006-0061",
+      "verdict": "CORRECTED",
+      "reason": "Диалог переведён с тире; «You can go to hell» сохранено грубо; «Sir» и повторы сохранены. Влажные глаза и слёзы переданы верно."
+    },
+    {
+      "source_id": "044-006-0062",
+      "verdict": "CORRECTED",
+      "reason": "Убрано добавленное «зрелище»; «indiscreet» передано как «нескромны», добавления устранены."
+    },
+    {
+      "source_id": "044-006-caption-plate-14",
+      "verdict": "PASS",
+      "reason": "Подпись точна и лаконична."
+    },
+    {
+      "source_id": "044-006-caption-plate-15",
+      "verdict": "CORRECTED",
+      "reason": "«Were» передано как «были», без добавленного «стояли»."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "044-006-0059",
+      "before": "Но Торнтон упал на колени рядом с Баком. Голова прижалась к голове, и он тряс его из стороны в сторону. Те, кто подбежал, слышали, как он ругает Бака, и ругал он его долго и страстно, и тихо, и с любовью.",
+      "after": "Но Торнтон упал на колени рядом с Баком. Голова была прижата к голове, и он тряс его из стороны в сторону. Те, кто подбежал, слышали, как он ругает Бака, и ругал он его долго и жарко, и тихо, и ласково."
+    },
+    {
+      "source_id": "044-006-0060",
+      "before": "«Боже мой, сэр! Боже мой, сэр!» — задыхался от восторга король Скукум-Бенча. «Я дам вам за него тысячу, сэр, тысячу, сэр… двенадцать сотен, сэр».",
+      "after": "— Боже мой, сэр! Боже мой, сэр! — захлёбывался король Скукум-Бенча. — Я дам вам за него тысячу, сэр, тысячу, сэр… тысячу двести, сэр."
+    },
+    {
+      "source_id": "044-006-0061",
+      "before": "Торнтон встал на ноги. Его глаза были влажными. Слёзы открыто текли по его щекам. «Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Вы можете идти к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр».",
+      "after": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам. — Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр."
+    },
+    {
+      "source_id": "044-006-0062",
+      "before": "Бак схватил руку Торнтона зубами. Торнтон раскачивал его из стороны в сторону. Словно движимые общим порывом, зрители отступили на почтительное расстояние; и больше они не были настолько неосторожны, чтобы прервать это зрелище.",
+      "after": "Бак схватил руку Торнтона зубами. Торнтон тряс его из стороны в сторону. Словно движимые общим порывом, зрители отступили на почтительное расстояние и больше не были настолько нескромны, чтобы помешать."
+    },
+    {
+      "source_id": "044-006-caption-plate-15",
+      "before": "Позади него стояли тени всевозможных собак",
+      "after": "Позади него были тени всевозможных собак"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru44-original/006/batch003.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKYfY8LBKz2AuSvwhxCU",
+    "usage": {
+      "input_tokens": 14136,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 924,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKYg2fZvSiYJ1ZJ9ku38",
+        "usage": {
+          "input_tokens": 15067,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 958,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "044-006-0059",
+          "verdict": "PASS",
+          "reason": "Faithful: kneeling, head to head, shaking, cursing long, fervently, softly, lovingly all preserved; prior correction verified."
+        },
+        {
+          "source_id": "044-006-0060",
+          "verdict": "PASS",
+          "reason": "Speaker, repeated 'sir', the rising offer to twelve hundred and the dash-like break are preserved; Russian dialogue punctuation is correct."
+        },
+        {
+          "source_id": "044-006-0061",
+          "verdict": "CORRECTED",
+          "reason": "Source places Thornton's speech after the narration in the same paragraph; the Russian dialogue dash was run into the narration, so I added a paragraph break before the dash. Meaning is otherwise faithful."
+        },
+        {
+          "source_id": "044-006-0062",
+          "verdict": "PASS",
+          "reason": "Agency, shaking, common impulse, respectful distance and the negated indiscretion are accurately rendered; prior correction verified."
+        },
+        {
+          "source_id": "044-006-caption-plate-14",
+          "verdict": "PASS",
+          "reason": "Concise and accurate translation of 'By the river bank'."
+        },
+        {
+          "source_id": "044-006-caption-plate-15",
+          "verdict": "PASS",
+          "reason": "Accurately renders 'Behind him were the shades of all manner of dogs'; prior correction retained."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "044-006-0061",
+          "before": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам. — Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр.",
+          "after": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам.\n\n— Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKYgdDhfesU1JG6QnzPU",
+        "usage": {
+          "input_tokens": 15315,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1417,
+          "output_tokens_details": {
+            "thinking_tokens": 523
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "044-006-0059",
+          "verdict": "PASS",
+          "reason": "Faithful: kneeling, head against head, shaking, long/fervent and soft/loving cursing all preserved; one paragraph."
+        },
+        {
+          "source_id": "044-006-0060",
+          "verdict": "CORRECTED",
+          "reason": "Meaning sound; the source dash before 'twelve hundred' had been replaced by an ellipsis, so the dash is restored."
+        },
+        {
+          "source_id": "044-006-0061",
+          "verdict": "CORRECTED",
+          "reason": "The prior correction split one source paragraph into two. Restored a single paragraph with inline guillemet dialogue; the meaning is accurate."
+        },
+        {
+          "source_id": "044-006-0062",
+          "verdict": "PASS",
+          "reason": "Agency, common impulse, respectful distance and the negated 'indiscreet' interruption are all preserved."
+        },
+        {
+          "source_id": "044-006-caption-plate-14",
+          "verdict": "PASS",
+          "reason": "Accurate, concise caption."
+        },
+        {
+          "source_id": "044-006-caption-plate-15",
+          "verdict": "PASS",
+          "reason": "Accurate; 'were the shades' matches the source verb."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "044-006-0060",
+          "before": "— Боже мой, сэр! Боже мой, сэр! — захлёбывался король Скукум-Бенча. — Я дам вам за него тысячу, сэр, тысячу, сэр… тысячу двести, сэр.",
+          "after": "— Боже мой, сэр! Боже мой, сэр! — захлёбывался король Скукум-Бенча. — Я дам вам за него тысячу, сэр, тысячу, сэр — тысячу двести, сэр."
+        },
+        {
+          "source_id": "044-006-0061",
+          "before": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам.\n\n— Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр.",
+          "after": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам. «Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр»."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKYhLXtVKLZXYaeVj3gT",
+        "usage": {
+          "input_tokens": 15736,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 960,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "044-006-0059",
+          "verdict": "PASS",
+          "reason": "Faithful: kneeling, head against head, shaking, long fervent and soft loving cursing all preserved; idiomatic."
+        },
+        {
+          "source_id": "044-006-0060",
+          "verdict": "PASS",
+          "reason": "Dialogue, stutter-like repetition, 'sir' refrain, dash and twelve hundred preserved; Russian dialogue punctuation correct."
+        },
+        {
+          "source_id": "044-006-0061",
+          "verdict": "CORRECTED",
+          "reason": "Quoted speech had been rendered with guillemets inside a narrative paragraph, but the source is one paragraph with inline quotes; kept as one paragraph, using Russian dialogue dash for the speech. Meaning, tears, 'go to hell' preserved."
+        },
+        {
+          "source_id": "044-006-0062",
+          "verdict": "PASS",
+          "reason": "Agency, shaking, common impulse, respectful distance and the negated 'indiscreet' interruption faithfully rendered."
+        },
+        {
+          "source_id": "044-006-caption-plate-14",
+          "verdict": "PASS",
+          "reason": "Concise and accurate caption translation."
+        },
+        {
+          "source_id": "044-006-caption-plate-15",
+          "verdict": "PASS",
+          "reason": "Accurate: 'shades of all manner of dogs' rendered correctly; 'were' matches source."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "044-006-0061",
+          "before": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам. «Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр».",
+          "after": "Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам. — Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKYi781yjbcDZkEa9jKj",
+        "usage": {
+          "input_tokens": 15978,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 948,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "044-006-0059",
+          "verdict": "PASS",
+          "reason": "Faithful: kneeling, head against head, shaking, long/fervent and soft/loving cursing all preserved; prior corrections hold."
+        },
+        {
+          "source_id": "044-006-0060",
+          "verdict": "PASS",
+          "reason": "Stuttered/spluttered exclamations, repeated 'sir', offers and dash preserved; 'Gad' rendered as mild oath appropriately."
+        },
+        {
+          "source_id": "044-006-0061",
+          "verdict": "PASS",
+          "reason": "Rising, wet eyes, open tears, refusal and 'go to hell' retained; the dialogue dash is within the same paragraph as the source, with no break."
+        },
+        {
+          "source_id": "044-006-0062",
+          "verdict": "PASS",
+          "reason": "Agency and sequence preserved; 'indiscreet' as 'нескромны' and 'interrupt' as 'помешать' are acceptable and not over-expanded."
+        },
+        {
+          "source_id": "044-006-caption-plate-14",
+          "target": "На берегу реки",
+          "verdict": "PASS",
+          "reason": "Concise and exact translation of the caption."
+        },
+        {
+          "source_id": "044-006-caption-plate-15",
+          "verdict": "PASS",
+          "reason": "Caption matches source scope; 'shades' as 'тени' is consistent with the chapter."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

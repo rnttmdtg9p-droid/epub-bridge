@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKYg2fZvSiYJ1ZJ9ku38",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"044-006-0059\",\"target\":\"Но Торнтон упал на колени рядом с Баком. Голова была прижата к голове, и он тряс его из стороны в сторону. Те, кто подбежал, слышали, как он ругает Бака, и ругал он его долго и жарко, и тихо, и ласково.\"},{\"source_id\":\"044-006-0060\",\"target\":\"— Боже мой, сэр! Боже мой, сэр! — захлёбывался король Скукум-Бенча. — Я дам вам за него тысячу, сэр, тысячу, сэр… тысячу двести, сэр.\"},{\"source_id\":\"044-006-0061\",\"target\":\"Торнтон поднялся на ноги. Глаза его были мокры. Слёзы открыто струились по щекам.\\n\\n— Сэр, — сказал он королю Скукум-Бенча, — нет, сэр. Можете убираться к чёрту, сэр. Это лучшее, что я могу для вас сделать, сэр.\"},{\"source_id\":\"044-006-0062\",\"target\":\"Бак схватил руку Торнтона зубами. Торнтон тряс его из стороны в сторону. Словно движимые общим порывом, зрители отступили на почтительное расстояние и больше не были настолько нескромны, чтобы помешать.\"},{\"source_id\":\"044-006-caption-plate-14\",\"target\":\"На берегу реки\"},{\"source_id\":\"044-006-caption-plate-15\",\"target\":\"Позади него были тени всевозможных собак\"}],\"review\":[{\"source_id\":\"044-006-0059\",\"verdict\":\"PASS\",\"reason\":\"Faithful: kneeling, head to head, shaking, cursing long, fervently, softly, lovingly all preserved; prior correction verified.\"},{\"source_id\":\"044-006-0060\",\"verdict\":\"PASS\",\"reason\":\"Speaker, repeated 'sir', the rising offer to twelve hundred and the dash-like break are preserved; Russian dialogue punctuation is correct.\"},{\"source_id\":\"044-006-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Source places Thornton's speech after the narration in the same paragraph; the Russian dialogue dash was run into the narration, so I added a paragraph break before the dash. Meaning is otherwise faithful.\"},{\"source_id\":\"044-006-0062\",\"verdict\":\"PASS\",\"reason\":\"Agency, shaking, common impulse, respectful distance and the negated indiscretion are accurately rendered; prior correction verified.\"},{\"source_id\":\"044-006-caption-plate-14\",\"verdict\":\"PASS\",\"reason\":\"Concise and accurate translation of 'By the river bank'.\"},{\"source_id\":\"044-006-caption-plate-15\",\"verdict\":\"PASS\",\"reason\":\"Accurately renders 'Behind him were the shades of all manner of dogs'; prior correction retained.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 15067,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 958,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
