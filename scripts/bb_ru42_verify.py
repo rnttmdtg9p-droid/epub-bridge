@@ -6,8 +6,11 @@ def sha(s):return hashlib.sha256(s.encode()).hexdigest()
 def decoded(response):
  text='\n'.join(c['text'] for c in response['content'] if c.get('type')=='text');return json.JSONDecoder().raw_decode(text[text.index('{'):])[0]
 def sid(row):return row.get('source_id',row.get('id'))
-def qualify_unit(root,source,unit):
- root=Path(root);u=next(x for x in source if x['unit']==unit);folder=root/f'results/ru42-complete-original/{unit:03}';chapter=json.loads((folder/'chapter.reviewed.json').read_text());assert 'CORRECTION_COMPARISON_COMPLETE' in chapter['state']
+def qualify_unit(root,source,unit,output_name="ru42-complete-original"):
+ root=Path(root);u=next(x for x in source if x['unit']==unit);folder=root/f'results/{output_name}/{unit:03}';chapter=json.loads((folder/'chapter.reviewed.json').read_text());assert 'CORRECTION_COMPARISON_COMPLETE' in chapter['state']
+ if chapter.get('reused_prior_source_unit'):
+  from bb_ru42_seed_verify import qualify_seeded_unit
+  accepted,report=qualify_seeded_unit(root,source,unit);assert chapter['heading']==accepted['heading'] and chapter['rows']==accepted['rows'];return chapter,report
  expected={r['id']:r for r in u['rows']};expected[u['heading_id']]={'id':u['heading_id'],'text':u['heading'],'sha256':sha(u['heading'])};final=[];batches=[]
  for file in sorted(folder.glob('batch*.comparison_verified.json')):
   batch=json.loads(file.read_text());rows=batch['rows'];ids=[r['source_id'] for r in rows];native={i for i in ids if not expected[i].get('translate',True)};active=[i for i in ids if i not in native];assert [r['source_id'] for r in batch['review']]==ids
