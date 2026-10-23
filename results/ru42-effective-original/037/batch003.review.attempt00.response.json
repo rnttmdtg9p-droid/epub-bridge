@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJxcCPu4Q2uB8YM9Di8y",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-037-0059\",\"target\":\"Стюарт велел развернуть австралийский флаг (с. 318).\"},{\"source_id\":\"fr42c-037-0060\",\"target\":\"Так закончился рассказ географа. Час был поздний. Паганеля поблагодарили, и несколько мгновений спустя все мирно спали, а птица-часы, спрятавшись в листве белых гумми-деревьев, ровно отсчитывала секунды этой тихой ночи.\"},{\"source_id\":\"fr42c-037-0061\",\"target\":\"Произошёл ужасный несчастный случай (с. 325).\"},{\"source_id\":\"fr42c-037-0062\",\"target\":\"Произошёл ужасный несчастный случай (с. 325).\"},{\"source_id\":\"fr42c-note-076\",\"target\":\"Жак Паганель смог снова увидеться со Стюартом по возвращении в Шотландию, но недолго наслаждался обществом этого знаменитого путешественника. Стюарт умер 5 июня 1866 года в скромном домике в Ноттингем-Хилле.\"}],\"review\":[{\"source_id\":\"fr42c-037-0059\",\"verdict\":\"PASS\",\"reason\":\"Caption is faithful; agency and 'fit déployer' preserved, consistent with previous row.\"},{\"source_id\":\"fr42c-037-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Adjusted 'L'heure était avancée' to 'Час был поздний', restored sequence 'несколько мгновений спустя', and rendered gommiers blancs as 'гумми-деревья' (white gum trees) rather than eucalyptus. Agency preserved.\"},{\"source_id\":\"fr42c-037-0061\",\"verdict\":\"PASS\",\"reason\":\"Caption faithful, includes page reference; natural Russian.\"},{\"source_id\":\"fr42c-037-0062\",\"verdict\":\"PASS\",\"reason\":\"Duplicate caption faithfully matches the previous row.\"},{\"source_id\":\"fr42c-note-076\",\"verdict\":\"CORRECTED\",\"reason\":\"Changed 'скончался' to 'умер' to match plain source 'est mort'; facts, dates and names preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3953,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 734,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

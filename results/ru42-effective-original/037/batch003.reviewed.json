@@ -1,0 +1,118 @@
+{
+  "unit": 37,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-037-0059",
+      "target": "Стюарт велел развернуть австралийский флаг (с. 318).",
+      "source_sha256": "930ccc5d1f804c4cadb50d6dfc1cc7c7f7223a5c972afb7be8f06a4538192a9c",
+      "target_id": "ru-fr42c-037-0059",
+      "tag": "figcaption",
+      "target_sha256": "f5afcb4e3991063652cce0088c77ef0f68219fabe945ca81ccc7908221294f0e"
+    },
+    {
+      "source_id": "fr42c-037-0060",
+      "target": "Так закончился рассказ географа. Час был поздний. Паганеля поблагодарили, и несколько мгновений спустя все мирно спали, а птица-часы, спрятавшись в листве белых гумми-деревьев, ровно отсчитывала секунды этой тихой ночи.",
+      "source_sha256": "fcd00dd41eea9bf56534084e396c2b6310477d955ef9d319a64521ac1f7e03aa",
+      "target_id": "ru-fr42c-037-0060",
+      "tag": "p",
+      "target_sha256": "383e4c945b7075ca58e5570eaa0edf65e07c8ebb233fe734cbf1af211a0d5f13"
+    },
+    {
+      "source_id": "fr42c-037-0061",
+      "target": "Произошёл ужасный несчастный случай (с. 325).",
+      "source_sha256": "64dd4d5701f19fa71ea45d90e5c9a2655d977fae492aabc3074ac8aaf764c431",
+      "target_id": "ru-fr42c-037-0061",
+      "tag": "figcaption",
+      "target_sha256": "9fd062cfd70051576152257e1a011f56a56672c8125b745863b31a78bc8e5c94"
+    },
+    {
+      "source_id": "fr42c-037-0062",
+      "target": "Произошёл ужасный несчастный случай (с. 325).",
+      "source_sha256": "64dd4d5701f19fa71ea45d90e5c9a2655d977fae492aabc3074ac8aaf764c431",
+      "target_id": "ru-fr42c-037-0062",
+      "tag": "figcaption",
+      "target_sha256": "9fd062cfd70051576152257e1a011f56a56672c8125b745863b31a78bc8e5c94"
+    },
+    {
+      "source_id": "fr42c-note-076",
+      "target": "Жак Паганель смог снова увидеться со Стюартом по возвращении в Шотландию, но недолго наслаждался обществом этого знаменитого путешественника. Стюарт умер 5 июня 1866 года в скромном домике в Ноттингем-Хилле.",
+      "source_sha256": "019103024f7421a4e2e17dbedbb7e5aeac9134955b69be7d58d2ff2d2742f8c1",
+      "target_id": "ru-fr42c-note-076",
+      "tag": "note",
+      "target_sha256": "229506d92de880cdd7cc5c6d80ba548416f962e781257bb31d25187a7abf7370"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-037-0059",
+      "verdict": "PASS",
+      "reason": "Caption is faithful; agency and 'fit déployer' preserved, consistent with previous row."
+    },
+    {
+      "source_id": "fr42c-037-0060",
+      "verdict": "CORRECTED",
+      "reason": "Adjusted 'L'heure était avancée' to 'Час был поздний', restored sequence 'несколько мгновений спустя', and rendered gommiers blancs as 'гумми-деревья' (white gum trees) rather than eucalyptus. Agency preserved."
+    },
+    {
+      "source_id": "fr42c-037-0061",
+      "verdict": "PASS",
+      "reason": "Caption faithful, includes page reference; natural Russian."
+    },
+    {
+      "source_id": "fr42c-037-0062",
+      "verdict": "PASS",
+      "reason": "Duplicate caption faithfully matches the previous row."
+    },
+    {
+      "source_id": "fr42c-note-076",
+      "verdict": "CORRECTED",
+      "reason": "Changed 'скончался' to 'умер' to match plain source 'est mort'; facts, dates and names preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-037-0059",
+      "before": "Стюарт приказал развернуть австралийский флаг (с. 318).",
+      "after": "Стюарт велел развернуть австралийский флаг (с. 318)."
+    },
+    {
+      "source_id": "fr42c-037-0060",
+      "before": "Так закончился рассказ географа. Было уже поздно. Все поблагодарили Паганеля, и через несколько мгновений каждый мирно заснул, а птица-часы, спрятанная в листве белых эвкалиптов, ровно отбивала секунды этой тихой ночи.",
+      "after": "Так закончился рассказ географа. Час был поздний. Паганеля поблагодарили, и несколько мгновений спустя все мирно спали, а птица-часы, спрятавшись в листве белых гумми-деревьев, ровно отсчитывала секунды этой тихой ночи."
+    },
+    {
+      "source_id": "fr42c-note-076",
+      "before": "Жак Паганель смог снова увидеться со Стюартом по возвращении в Шотландию, но недолго наслаждался обществом этого знаменитого путешественника. Стюарт скончался 5 июня 1866 года в скромном домике в Ноттингем-Хилле.",
+      "after": "Жак Паганель смог снова увидеться со Стюартом по возвращении в Шотландию, но недолго наслаждался обществом этого знаменитого путешественника. Стюарт умер 5 июня 1866 года в скромном домике в Ноттингем-Хилле."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/037/batch003.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJxcCPu4Q2uB8YM9Di8y",
+    "usage": {
+      "input_tokens": 3953,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 734,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
