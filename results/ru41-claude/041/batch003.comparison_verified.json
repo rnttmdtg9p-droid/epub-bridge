@@ -1,0 +1,181 @@
+{
+  "unit": 41,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id05236",
+      "target": "Ждать ему пришлось недолго, ибо королева пробыла у Мазарини едва четверть часа; но эта четверть часа ожидания показалась целым веком тому, кто ждал.",
+      "source_sha256": "96d8b88cb29cf10186b54d4c2c84843b48223a10a76a98840245e8ce8725c46a",
+      "target_id": "ru-id05236",
+      "tag": "p",
+      "target_sha256": "e6533dc7dae1a7dd549e5bd13f89eac54e816d811eb5ac51c2b75bb031cd1a8d"
+    },
+    {
+      "source_id": "id05237",
+      "target": "Наконец тяжёлая махина, которую в ту пору называли каретой, с грохотом выехала из ворот, и де Винтер, по-прежнему верхом, снова наклонился к дверце, чтобы побеседовать с её величеством.",
+      "source_sha256": "b02d7e159b2aec265b50d7b07462ce29d5cb62985e4bab49f7889699604912ba",
+      "target_id": "ru-id05237",
+      "tag": "p",
+      "target_sha256": "4e93c5eb19e2a451aca65a1be944771f490fc825507124763e7cfc1bb359df9d"
+    },
+    {
+      "source_id": "id05238",
+      "target": "Лошади тронулись рысью и поехали к Лувру, куда и въехали. Перед отъездом из монастыря кармелиток госпожа Генриетта велела дочери приехать и ждать её во дворце, в котором она долго жила и который покинула лишь потому, что в золочёных залах их нужда казалась им ещё тяжелее.",
+      "source_sha256": "390c0048442e08c853c22c7ac7ced39248757301d54e8943ac1889b92a8d7c65",
+      "target_id": "ru-id05238",
+      "tag": "p",
+      "target_sha256": "f81ccdd01d1c38878527896f4355748393912d1ad93d204020e75270c5ad0bba"
+    },
+    {
+      "source_id": "id05239",
+      "target": "Мордаунт последовал за каретой, и когда увидел, что она въехала под тёмную арку, он вместе с конём прижался к стене, на которую падала тень, и замер среди лепных украшений Жана Гужона, подобный барельефу, изображающему конную статую.",
+      "source_sha256": "238e9db6b6382a1d5826fa752b5135c30c7e8a01275b30556e72842c3ec07e74",
+      "target_id": "ru-id05239",
+      "tag": "p",
+      "target_sha256": "93fd6ecdec246c24cec71ee6f2edba0eb65821045caeac00fb7066c04d7ecc9d"
+    },
+    {
+      "source_id": "id05240",
+      "target": "Он ждал так же, как уже ждал у Пале-Рояля.",
+      "source_sha256": "ca27048abb4c2c598fcb092c691997213c2388feaedaa8830aee3ad2fd5f1a2e",
+      "target_id": "ru-id05240",
+      "tag": "p",
+      "target_sha256": "62d06cfab81ad847ec5b7dd8398a22a4400f3f2aed3b9936a1c03898c704179b"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id05236",
+      "verdict": "CORRECTED",
+      "reason": "«à peine … un quart d'heure» means 'barely a quarter of an hour'; draft «едва ли» wrongly conveyed doubt ('hardly likely'). Replaced with «едва четверть часа»."
+    },
+    {
+      "source_id": "id05237",
+      "verdict": "PASS",
+      "reason": "Faithful: carriage as heavy machine, rumbling exit, de Winter still mounted, leaning again to the door to talk with Her Majesty."
+    },
+    {
+      "source_id": "id05238",
+      "verdict": "CORRECTED",
+      "reason": "Draft resolved the ambiguous «elle» of «qu'elle avait habité» as the daughter («та») and left the relative clauses grammatically mismatched. Restored the neutral pronoun «она» (matching the source), fixed the syntax, and restored the sense 'come and wait for her' («приехать и ждать»)."
+    },
+    {
+      "source_id": "id05239",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic; the Jean Goujon mouldings and the bas-relief/equestrian statue simile are preserved."
+    },
+    {
+      "source_id": "id05240",
+      "verdict": "PASS",
+      "reason": "Faithful, with correct tense and the Palais-Royal name."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id05236",
+      "before": "Ждать ему пришлось недолго, ибо королева пробыла у Мазарини едва ли четверть часа; но эта четверть часа ожидания показалась целым веком тому, кто ждал.",
+      "after": "Ждать ему пришлось недолго, ибо королева пробыла у Мазарини едва четверть часа; но эта четверть часа ожидания показалась целым веком тому, кто ждал."
+    },
+    {
+      "source_id": "id05238",
+      "before": "Лошади тронулись рысью и поехали к Лувру, куда и въехали. Перед отъездом из монастыря кармелиток госпожа Генриетта велела дочери ждать её во дворце, где та долго жила и который покинула лишь потому, что в золочёных залах их нужда казалась им ещё тяжелее.",
+      "after": "Лошади тронулись рысью и поехали к Лувру, куда и въехали. Перед отъездом из монастыря кармелиток госпожа Генриетта велела дочери приехать и ждать её во дворце, в котором она долго жила и который покинула лишь потому, что в золочёных залах их нужда казалась им ещё тяжелее."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJJ99nhht6xM5M9jKvnj",
+    "usage": {
+      "input_tokens": 2806,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 704,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJJ9m1XDqujDt8YQstyc",
+    "usage": {
+      "input_tokens": 4037,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2590,
+      "output_tokens_details": {
+        "thinking_tokens": 1454
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJNuy8i4ZgABUjDKDt47",
+        "usage": {
+          "input_tokens": 4468,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1526,
+          "output_tokens_details": {
+            "thinking_tokens": 571
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id05236",
+          "verdict": "PASS",
+          "reason": "The earlier correction is confirmed: «едва четверть часа» renders «à peine… un quart d'heure» with no added hedging. The contrast between the short wait and the felt century is preserved."
+        },
+        {
+          "source_id": "id05237",
+          "verdict": "PASS",
+          "reason": "The carriage is «lourde machine… qu'on appelait alors un carrosse», leaving the grondement, de Winter still on horseback, leaning again to the door and talking with Her Majesty. All of this is rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id05238",
+          "verdict": "PASS",
+          "reason": "The earlier correction is confirmed. «приехать и ждать» renders «venir l'attendre», and «в котором она долго жила» matches the French relative clause, which is equally ambiguous about who lived there. The reason for leaving (misery heavier in gilded halls) is intact. The trot, the Louvre and the Carmelites are correct."
+        },
+        {
+          "source_id": "id05239",
+          "verdict": "PASS",
+          "reason": "Mordaunt, the dark arch, pressing himself and his horse against the shaded wall, the Jean Goujon mouldings, and the bas-relief simile of an equestrian statue are all faithfully rendered. Agency and tenses are correct."
+        },
+        {
+          "source_id": "id05240",
+          "verdict": "PASS",
+          "reason": "The sentence is accurate: he waited as he had already done at the Palais-Royal."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
