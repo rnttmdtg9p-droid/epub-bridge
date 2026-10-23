@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJqVeSYeKamtpUcRxK9Z",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-013-0020\",\"target\":\"— Как! — сказал майор. — Вы недовольны нашим ужином, учёный Паганель?\"},{\"source_id\":\"fr42c-013-0021\",\"target\":\"— Восхищён, мой славный майор; однако признаюсь, что блюдо из дичи было бы весьма кстати.\"},{\"source_id\":\"fr42c-013-0022\",\"target\":\"— Вы сибарит, — сказал Мак-Наббс.\"},{\"source_id\":\"fr42c-013-0023\",\"target\":\"— Принимаю это прозвище, майор; но вы и сами, что бы вы ни говорили, не отказались бы от какого-нибудь бифштекса!\"},{\"source_id\":\"fr42c-013-0024\",\"target\":\"— Вполне вероятно, — ответил майор.\"},{\"source_id\":\"fr42c-013-0025\",\"target\":\"— И если бы вас попросили отправиться в засаду, несмотря на холод и ночь, вы пошли бы, не сказав ни слова?\"},{\"source_id\":\"fr42c-013-0026\",\"target\":\"— Разумеется, если это доставит вам хоть малейшее удовольствие…»\"},{\"source_id\":\"fr42c-013-0027\",\"target\":\"Спутники Мак-Наббса не успели ни поблагодарить его, ни обуздать его неутомимую услужливость, как вдали послышался вой. Он тянулся долго. Это были не крики отдельных животных, а крики целого стада, быстро приближавшегося. Неужели Провидение, послав хижину, пожелало предложить и ужин? Так подумал географ. Но Гленарван несколько умерил его радость, заметив, что четвероногие Кордильер никогда не встречаются на такой высоте.\"},{\"source_id\":\"fr42c-013-0028\",\"target\":\"«Тогда откуда этот шум? — сказал Том Остин. — Слышите, как он приближается!\"},{\"source_id\":\"fr42c-013-0029\",\"target\":\"— Лавина? — сказал Мулради.\"},{\"source_id\":\"fr42c-013-0030\",\"target\":\"— Невозможно! Это настоящий вой, — возразил Паганель.\"},{\"source_id\":\"fr42c-013-0031\",\"target\":\"— Посмотрим, — сказал Гленарван.\"},{\"source_id\":\"fr42c-013-0032\",\"target\":\"— И посмотрим по-охотничьи, — ответил майор, взяв свой карабин.\"},{\"source_id\":\"fr42c-013-0033\",\"target\":\"Все бросились из касучи. Настала ночь, тёмная и усеянная звёздами. Луна ещё не показывала наполовину обглоданного диска своей последней фазы. Вершины на севере и на востоке тонули во мраке, и взгляд различал лишь фантастические силуэты нескольких господствующих скал. Вой — вой обезумевших зверей — удвоился. Он доносился из тёмной части Кордильер. Что происходило? Внезапно налетела неистовая лавина, но лавина живых существ, обезумевших от ужаса. Казалось, пришло в движение всё плоскогорье. Этих животных неслись сотни, быть может, тысячи, и, несмотря на разреженность воздуха, они производили оглушительный грохот. Были ли это хищники Пампы или просто стадо лам и вигоней? Гленарван, Мак-Наббс, Роберт, Остин, оба матроса успели лишь броситься на землю, а этот живой вихрь пронёсся в нескольких футах над ними. Паганель, который, как ночезрящий, стоял, чтобы лучше видеть, был сбит с ног в одно мгновение.\"},{\"source_id\":\"fr42c-013-0034\",\"target\":\"В этот миг грянул выстрел. Майор выстрелил наугад. Ему показалось, что какое-то животное упало в нескольких шагах от него, между тем как вся стая, увлечённая неодолимым порывом и удвоив крики, исчезла на склонах, освещённых отсветом вулкана.\"},{\"source_id\":\"fr42c-013-0035\",\"target\":\"«Ах! Я их держу, — сказал чей-то голос, голос Паганеля.\"},{\"source_id\":\"fr42c-013-0036\",\"target\":\"— А что вы держите? — спросил Гленарван.\"},{\"source_id\":\"fr42c-013-0037\",\"target\":\"— Мои очки, чёрт возьми! Вполне естественно, что в такой свалке теряешь очки!\"},{\"source_id\":\"fr42c-013-0038\",\"target\":\"— Вы не ранены?…\"},{\"source_id\":\"fr42c-013-0039\",\"target\":\"— Нет, меня только немного потоптали. Но кто?\"}],\"review\":[{\"source_id\":\"fr42c-013-0020\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'Comment!' correctly rendered, addressee and agency preserved.\"},{\"source_id\":\"fr42c-013-0021\",\"verdict\":\"PASS\",\"reason\":\"'Enchanté' as polite delight, venison and concession preserved.\"},{\"source_id\":\"fr42c-013-0022\",\"verdict\":\"PASS\",\"reason\":\"Accurate and concise.\"},{\"source_id\":\"fr42c-013-0023\",\"verdict\":\"PASS\",\"reason\":\"Accepts the epithet; conditional negation and beefsteak preserved.\"},{\"source_id\":\"fr42c-013-0024\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-013-0025\",\"verdict\":\"PASS\",\"reason\":\"Conditional, ambush, cold and night preserved; 'sans faire une réflexion' fine.\"},{\"source_id\":\"fr42c-013-0026\",\"verdict\":\"PASS\",\"reason\":\"Elliptical ending and closing quote preserved.\"},{\"source_id\":\"fr42c-013-0027\",\"verdict\":\"PASS\",\"reason\":\"Correct: no time to thank or check his obligingness; Providence joke and altitude remark kept.\"},{\"source_id\":\"fr42c-013-0028\",\"verdict\":\"PASS\",\"reason\":\"Opening quote with no closing matches source continuation.\"},{\"source_id\":\"fr42c-013-0029\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-013-0030\",\"verdict\":\"PASS\",\"reason\":\"Accurate; 'véritables hurlements' rendered adequately.\"},{\"source_id\":\"fr42c-013-0031\",\"verdict\":\"PASS\",\"reason\":\"Accurate, 'Voyons' echoed in next line.\"},{\"source_id\":\"fr42c-013-0032\",\"velrdict\":\"PASS\",\"verdict\":\"PASS\",\"reason\":\"Wordplay on 'voyons en chasseurs' kept; carabine correct.\"},{\"source_id\":\"fr42c-013-0033\",\"verdict\":\"PASS\",\"reason\":\"Complete; details, nyctalope, feet and sequence preserved.\"},{\"source_id\":\"fr42c-013-0034\",\"verdict\":\"PASS\",\"reason\":\"Shot, uncertainty, band and volcano glow all preserved.\"},{\"source_id\":\"fr42c-013-0035\",\"verdict\":\"PASS\",\"reason\":\"Correct; quote left open for continuing speech.\"},{\"source_id\":\"fr42c-013-0036\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-013-0037\",\"verdict\":\"PASS\",\"reason\":\"Ironic sense of 'c'est bien le moins' conveyed.\"},{\"source_id\":\"fr42c-013-0038\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-013-0039\",\"verdict\":\"PASS\",\"reason\":\"Correct subject and sense of trampling; 'Mais par qui?' concise.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 13563,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2601,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
