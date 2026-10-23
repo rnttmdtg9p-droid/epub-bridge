@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJwz3KwFzn8af9LjzvNx",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-035-0059\",\"target\":\"— Нравоучителен?\"},{\"source_id\":\"fr42c-035-0060\",\"target\":\"— Да, — убеждённо ответил учёный. — Да, нравоучителен! Здесь металлы не окисляются на воздухе, и люди тоже. Здесь чистая и сухая атмосфера быстро отбеливает всё — и бельё, и души! И в Англии хорошо подметили достоинства этого климата, когда решили отправлять в эту страну тех, кого надо исправлять.\"},{\"source_id\":\"fr42c-035-0061\",\"target\":\"— Как! Это влияние и в самом деле чувствуется? — спросила леди Гленарван.\"},{\"source_id\":\"fr42c-035-0062\",\"target\":\"— Да, сударыня, и на животных, и на людях.\"},{\"source_id\":\"fr42c-035-0063\",\"target\":\"— Вы не шутите, господин Паганель?\"},{\"source_id\":\"fr42c-035-0064\",\"target\":\"— Не шучу. Лошади и скот там удивительно послушны. Вы сами увидите.\"},{\"source_id\":\"fr42c-035-0065\",\"target\":\"— Не может быть!\"},{\"source_id\":\"fr42c-035-0066\",\"target\":\"— Но это так! И преступники, перевезённые в этот бодрящий и здоровый воздух, за несколько лет там перерождаются. Это действие известно филантропам. В Австралии все натуры улучшаются.\"},{\"source_id\":\"fr42c-035-0067\",\"target\":\"— Но в таком случае вы, господин Паганель, вы, который и без того так добр, — сказала леди Элен, — чем же вы станете на этой привилегированной земле?\"},{\"source_id\":\"fr42c-035-0068\",\"target\":\"— Превосходным, сударыня, — ответил Паганель, — попросту превосходным!»\"},{\"source_id\":\"fr42c-note-072\",\"target\":\"24 лье.\"},{\"source_id\":\"fr42c-note-073\",\"target\":\"От английского глагола «to squat» — <i>садиться</i>.\"},{\"source_id\":\"fr42c-note-074\",\"target\":\"<i>Ла Плант</i>.\"}],\"review\":[{\"source_id\":\"fr42c-035-0059\",\"verdict\":\"PASS\",\"reason\":\"Faithful repetition of 'moralisateur'; predicate form fits the preceding row.\"},{\"source_id\":\"fr42c-035-0060\",\"verdict\":\"PASS\",\"reason\":\"Meaning, negation, parallels and the 'gens à moraliser' idea preserved; idiomatic.\"},{\"source_id\":\"fr42c-035-0061\",\"verdict\":\"PASS\",\"reason\":\"Surprise, 'réellement' and the question preserved; speaker correct.\"},{\"source_id\":\"fr42c-035-0062\",\"verdict\":\"PASS\",\"reason\":\"Animals and men both covered; address form appropriate.\"},{\"source_id\":\"fr42c-035-0063\",\"verdict\":\"PASS\",\"reason\":\"Negated question and address preserved.\"},{\"source_id\":\"fr42c-035-0064\",\"verdict\":\"PASS\",\"reason\":\"Negation, docility of horses and cattle, and future 'verrez' preserved.\"},{\"source_id\":\"fr42c-035-0065\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic equivalent of disbelief.\"},{\"source_id\":\"fr42c-035-0066\",\"verdict\":\"PASS\",\"reason\":\"Criminals, transport, regeneration, philanthropists and Australia all preserved.\"},{\"source_id\":\"fr42c-035-0067\",\"verdict\":\"PASS\",\"reason\":\"Lady Helena's irony preserved; 'devenir' rendered as 'чем станете'; name per guidance.\"},{\"source_id\":\"fr42c-035-0068\",\"verdict\":\"PASS\",\"reason\":\"Punchline 'excellent' preserved; closing quote retained.\"},{\"source_id\":\"fr42c-note-072\",\"verdict\":\"PASS\",\"reason\":\"Correct unit rendering 'лье'.\"},{\"source_id\":\"fr42c-note-073\",\"verdict\":\"PASS\",\"reason\":\"English verb retained, italic gloss preserved.\"},{\"source_id\":\"fr42c-note-074\",\"verdict\":\"PASS\",\"reason\":\"Italic retained; transliterated title.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 7266,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1423,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
