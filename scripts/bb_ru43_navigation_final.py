@@ -39,26 +39,38 @@ def main():
    if row['source_id'] in overrides:
     replacement=overrides[row['source_id']];assert replacement['source_sha256']==row['source_sha256'];c['rows'][i]=replacement
  save(OUT/'final-body-overlay-input.json',{'input_sha256':H((ROOT/'inputs/ru43-navigation-final.json').read_bytes()),'actual_source_comparison_runs':data['actual_source_comparison_runs'],'overlaid_source_ids':sorted(overrides)})
+ seedraw=api('/actions/artifacts/12513239203/zip');assert H(seedraw)=='9b67d254267c2b3ff287679dddbd8e9c7d0688324a9037774c7a6cb5b89e0a3e';(OUT/'prior-strict-source-exchanges.zip').write_bytes(seedraw)
+ seed=OUT/'prior-strict-attempt';z=zipfile.ZipFile(io.BytesIO(seedraw));assert z.testzip() is None
+ for name in z.namelist():assert not name.startswith('/') and '..' not in Path(name).parts
+ z.extractall(seed)
+ for name in ['004','005']:
+  if (seed/name).exists():shutil.copytree(seed/name,OUT/name,dirs_exist_ok=True)
  results={};previous=[]
- system='You are the Boundary Bay Russian literary navigation editor. Analyze EVERY supplied body row, not its excluded chapter summary. Create a concise specific grammatical Russian chapter description, STRICTLY3–5space-separatedRussianwords and at most24Unicodecharacters; these are hard validated limits, not suggestions. Use the proposed editorial suggestion only if the complete body supports it. Name Huckleberry as Гек, never Хак. (the source division prefix is added separately). No generic labels, no invented facts, no quotation from omitted summary, no truncation of a summary, no typography tricks. Use the chapter narrative dominant event/theme, grounded by two non-adjacent body source IDs. All material claims must be supported by both anchors or explain complementary anchors for combined themes. Keep exact names consistent with reviewed Russian. Avoid all previous descriptions. Return JSON only: {"description":"Russian description without chapter number","anchors":["sourceID1","sourceID2"],"reason":"specific content grounding"}.'
+ system='You are the Boundary Bay Russian literary navigation editor. Analyze EVERY supplied body row, not its excluded chapter summary. Create a concise specific grammatical Russian chapter description, STRICTLY3–5space-separatedRussianwords and at most24Unicodecharacters; these are hard validated limits, not suggestions. Use the EXACT proposed editorial suggestion whenever the complete body supports it; do not replace an accurate concise suggestion merely to add detail. Count all Unicodecharacters INCLUDING spaces and punctuation before responding; the hard limit is24. Name Huckleberry as Гек, never Хак. (the source division prefix is added separately). No generic labels, no invented facts, no quotation from omitted summary, no truncation of a summary, no typography tricks. Use the chapter narrative dominant event/theme, grounded by two non-adjacent body source IDs. All material claims must be supported by both anchors or explain complementary anchors for combined themes. Keep exact names consistent with reviewed Russian. Avoid all previous descriptions. Return JSON only: {"description":"Russian description without chapter number","anchors":["sourceID1","sourceID2"],"reason":"specific content grounding"}.'
  for u in SOURCE[3:]:
   n=u['unit'];c=accepted[n];targets={r['source_id']:r['target'] for r in c['rows']};rows=[{**r,'reviewed_russian':targets[r['id']]} for r in u['rows'] if r['tag'] not in ['source_argument','source_caption']];ids=[r['id'] for r in rows];bodyH=H(json.dumps(rows,ensure_ascii=False,sort_keys=True).encode());folder=OUT/f'{n:03}';folder.mkdir(exist_ok=True)
-  payload={'task':'Read the complete eligible chapter body and draft a source-grounded concise navigation description.','editorial_starting_suggestion':data['proposals'][str(n)],'source_division':u['heading'],'russian_division':c['heading']['target'],'body_rows':rows,'previous_accepted_descriptions':previous,'excluded_roles':['source_argument','source_caption','BBmodules','notes','metadata'],'body_sha256':bodyH}
+  payload={'task':'Read the complete eligible chapter body. Use the exact short editorial suggestion if accurate; otherwise correct within24totalUnicodecharacters including spaces, and3–5words. Do not add detail just to lengthen an already accurate suggestion.','maximum_description_characters_including_spaces':24,'required_space_separated_word_count':[3,5],'editorial_starting_suggestion':data['proposals'][str(n)],'source_division':u['heading'],'russian_division':c['heading']['target'],'body_rows':rows,'previous_accepted_descriptions':previous,'excluded_roles':['source_argument','source_caption','BBmodules','notes','metadata'],'body_sha256':bodyH}
   def valid(d):
-   assert isinstance(d.get('description'),str) and d['description'].strip()==d['description'] and 3<=len(d['description'].split())<=5 and len(d['description'])<=24
+   assert isinstance(d.get('description'),str) and d['description'].strip()==d['description'],'DESCRIPTION_REQUIRED_TRIMMED_STRING'
+   assert 3<=len(d['description'].split())<=5,('WORD_COUNT_MUST_BE3_TO5',len(d['description'].split()),d['description'])
+   assert len(d['description'])<=24,('DESCRIPTION_TOO_LONG_HARD_LIMIT24_INCLUDING_SPACES_ACTUAL',len(d['description']),d['description'],'USE_SHORT_EDITORIAL_SUGGESTION_IF_ACCURATE',data['proposals'][str(n)])
    assert isinstance(d.get('anchors'),list) and len(d['anchors'])>=2 and len(set(d['anchors']))==len(d['anchors'])
    assert all(i in ids for i in d['anchors']) and max(ids.index(i) for i in d['anchors'])-min(ids.index(i) for i in d['anchors'])>=2
    assert d.get('reason') and d['description'] not in previous
    return d
   def checked(p,path):
    last=None
-   for attempt in range(3):
+   existing=list(folder.glob(path+'.attempt*.request.json'));start=max([int(x.name.split('.attempt')[1].split('.')[0])+1 for x in existing] or [0])
+   for attempt in range(start,start+6):
     q=dict(p)
     if last:q['format_retry_instruction']=last
     try:
      d,meta=call(system,q,folder/(path+f'.attempt{attempt:02}'),max_tokens=4096);return valid(d),meta
     except (ValueError,AssertionError,KeyError,TypeError) as e:last=type(e).__name__+': '+str(e)
    raise RuntimeError('NAV_STRICT_FORMAT_RETRIES_EXHAUSTED '+str(last))
+  existing=folder/'navigation.verified.json'
+  if existing.exists():
+   rec=json.loads(existing.read_text());assert rec['body_sha256']==bodyH;valid(rec['history'][-1]['result']);assert all(rec['history'][-1]['result'][key]==rec['history'][-2]['result'][key] for key in ['description','anchors']);rec['reused_actual_navigation_run_id']=39982203142;results[str(n)]=rec;previous.append(rec['description']);save(OUT/'043_Qualified_Concise_Navigation.json',results);print('REUSED_ACTUAL_STABLE_NAVIGATION',n,flush=True);continue
   d,meta=checked(payload,'draft');history=[{'kind':'draft','result':d,'api':meta}]
   for turn in range(6):
    q=dict(payload);q.update(task='INDEPENDENT SOURCE-COMPARISON PASS: verify this proposed description against the WHOLE supplied body. Check every material claim, both exact source-ID anchors and Russian quality/uniqueness. Automatically correct if necessary, otherwise preserve exact description and anchors. Return same JSON schema; reason must explicitly assess support.',proposed=d)
