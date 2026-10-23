@@ -1,0 +1,145 @@
+{
+  "unit": 9,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01140",
+      "target": "— Так это, значит, сам дьявол нас преследует! — воскликнул он, выхватывая шпагу и готовясь напасть на новоприбывшего.",
+      "source_sha256": "13215610bde73ef8e51d1076e6d82ba543d3cbecd40fbe48488ab8270d825beb",
+      "target_id": "ru-id01140",
+      "tag": "p",
+      "target_sha256": "c65d010eb9b370e247195cd9c757301d030672fe86a271d7c9c590c233bd449a"
+    },
+    {
+      "source_id": "id01141",
+      "target": "— Нет, мой дорогой д’Артаньян, — сказал тот, — это не дьявол. Это я, это Арамис. Галопом, Планше, а в конце деревни держи налево.",
+      "source_sha256": "c945ab2623d3205607b05f5963d54feb5164d05fd1175c3b44335fe21a023d4c",
+      "target_id": "ru-id01141",
+      "tag": "p",
+      "target_sha256": "0ee053fa81ed9b21cf5e4db87f549a9451159b1ea00e5e1643d5e7c1bffedd3e"
+    },
+    {
+      "source_id": "id01142",
+      "target": "И Планше, везя Арамиса на крупе, поскакал галопом; за ним последовал д’Артаньян, который начинал думать, что видит какой-то фантастический и бессвязный сон.",
+      "source_sha256": "74c1a3666a3e8bc18089e0342485b0fc58cb7cd7a9757805d32286bbf74d60d5",
+      "target_id": "ru-id01142",
+      "tag": "p",
+      "target_sha256": "1668fa2957964823a006183adddb5d660a6528cfa726fe8009a0db08e39f5b48"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01140",
+      "verdict": "CORRECTED",
+      "reason": "The draft's «Да что же это» weakened the inferential force of «c'est donc le diable»; rendered as «Так это, значит, сам дьявол…». The rest (drawing sword, preparing to charge the newcomer) is faithful."
+    },
+    {
+      "source_id": "id01141",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic: the negation, the self-identification as Aramis, the imperatives to Planchet and the dialogue punctuation are all preserved."
+    },
+    {
+      "source_id": "id01142",
+      "verdict": "CORRECTED",
+      "reason": "The draft added «уже», which is absent from the source («commençait à croire»); removed. The agency (Planchet carrying Aramis, d'Artagnan following) and the dream image are otherwise faithful."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01140",
+      "before": "— Да что же это, сам дьявол нас преследует! — воскликнул он, выхватывая шпагу и готовясь напасть на новоприбывшего.",
+      "after": "— Так это, значит, сам дьявол нас преследует! — воскликнул он, выхватывая шпагу и готовясь напасть на новоприбывшего."
+    },
+    {
+      "source_id": "id01142",
+      "before": "И Планше, везя Арамиса на крупе, поскакал галопом; за ним последовал д’Артаньян, который уже начинал думать, что видит какой-то фантастический и бессвязный сон.",
+      "after": "И Планше, везя Арамиса на крупе, поскакал галопом; за ним последовал д’Артаньян, который начинал думать, что видит какой-то фантастический и бессвязный сон."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJEBozwRMD95Fm4rPuhJ",
+    "usage": {
+      "input_tokens": 1644,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 390,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJECAFrAea5HdxLUuLwL",
+    "usage": {
+      "input_tokens": 2409,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1179,
+      "output_tokens_details": {
+        "thinking_tokens": 508
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJJkpBUy9rTbYAZp9cGc",
+        "usage": {
+          "input_tokens": 2715,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1046,
+          "output_tokens_details": {
+            "thinking_tokens": 421
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01140",
+          "verdict": "PASS",
+          "reason": "Соответствует источнику. «donc» передано через «значит», действие (стрелок выхватывает шпагу и готовится напасть на новоприбывшего) сохранено. «сам» — идиоматичное усиление при «дьявол», смысл не искажён. Предыдущая правка подтверждена."
+        },
+        {
+          "source_id": "id01141",
+          "verdict": "PASS",
+          "reason": "Реплики, обращение, самоназвание («c'est moi, c'est Arамис»), отрицание и приказы («Au galop», «guide à gauche») переданы точно. «celui-ci» = новоприбывший, «тот» уместно. Пропусков и добавлений нет."
+        },
+        {
+          "source_id": "id01142",
+          "verdict": "PASS",
+          "reason": "Агентность сохранена: Планше везёт Арамиса на крупе и скачет галопом, д’Артаньян следует. «commençait à croire» передано как «начинал думать»; убранное прежней правкой «уже» отсутствует в источнике, и исправление верно. «rêve fantastique et incohérent» передано полностью."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
