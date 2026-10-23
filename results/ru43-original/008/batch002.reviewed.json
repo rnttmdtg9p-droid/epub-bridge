@@ -1,0 +1,50 @@
+{
+  "unit": 8,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "043-008-0040",
+      "target": "Уйти с дороги",
+      "source_sha256": "65e44e3423e1b92f62a701e42cf98f2a595a1056ae23d0b3c828193196525db0",
+      "target_id": "ru-043-008-0040",
+      "tag": "source_caption",
+      "target_sha256": "26121badfe4f4bc7339e79800446f8e0ac797f2251bccd68828c738104fe46c4"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-008-0040",
+      "verdict": "PASS",
+      "reason": "Short illustration caption is faithful and idiomatic: 'Getting out of the Way' → 'Уйти с дороги'. No omissions, additions, or register problems; it stays a caption and is not turned into a chapter."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/008/batch002.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKENLznXsyavV4X4Vcr2",
+    "usage": {
+      "input_tokens": 2031,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 142,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
