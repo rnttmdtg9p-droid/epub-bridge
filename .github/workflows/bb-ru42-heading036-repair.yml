@@ -1,0 +1,50 @@
+name: BB rank42 corrected source heading translation and review
+on:
+  push:
+    paths: ['.github/workflows/bb-ru42-heading036-repair.yml']
+permissions:
+  contents: read
+jobs:
+  heading-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate corrected authentic heading and verify every correction
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request,hashlib
+          from pathlib import Path
+          data=json.loads(Path('inputs/ru42-heading036-source-repair.json').read_text());out=Path('results/ru42-heading036-repair');out.mkdir(parents=True,exist_ok=True)
+          source=data['corrected_source_heading'];assert hashlib.sha256(source.encode()).hexdigest()==data['corrected_source_sha256']
+          def save(name,obj):(out/name).write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+          key=os.environ['DEEPL_AUTH_KEY'];host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
+          payload={'text':[source],'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','context':data['original_note_context']+' This is partII chapterX of Jules Verne. Translate the authentic title idiomatically into Russian while preserving its river name and chapter identity. A missing separator in earlier normalization is rejected.'}
+          save('translation.request.json',payload)
+          req=urllib.request.Request(host+'/v2/translate',data=json.dumps(payload).encode(),headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
+          with urllib.request.urlopen(req,timeout=120) as r:raw=json.load(r)
+          save('translation.response.json',raw);assert raw['translations'][0]['model_type_used']=='quality_optimized';target=raw['translations'][0]['text'];history=[]
+          for turn in range(6):
+              request={'model':'claude-sonnet-5-5','max_tokens':3000,'system':'You are the authorized source-aligned French-to-Russian literary reviewer for Jules Verne. Correct the complete supplied chapter heading against the authentic source and original author note. Translate the English word river in the authentic heading while preserving the proper river name. Preserve chapter label and partII chapterX identity. Return JSON only: {"target":"complete corrected Russian heading","verdict":"PASS or CORRECTED","reason":"specific source-based assessment"}. When faithful, preserve exact target bytes. Verify all prior corrections.','messages':[{'role':'user','content':json.dumps({'source':source,'source_sha256':data['corrected_source_sha256'],'original_author_note':data['original_note_context'],'target':target,'prior_corrections':history},ensure_ascii=False)}]}
+              save(f'review{turn:02}.request.json',request)
+              req=urllib.request.Request('https://api.anthropic.com/v1/messages',data=json.dumps(request).encode(),headers={'x-api-key':os.environ['ANTHROPIC_API_KEY'],'anthropic-version':'2023-06-01','Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=180) as r:raw=json.load(r)
+              save(f'review{turn:02}.response.json',raw);assert raw['stop_reason']=='end_turn' and raw['model']=='claude-sonnet-5-5'
+              text='\n'.join(x['text'] for x in raw['content'] if x.get('type')=='text');result=json.JSONDecoder().raw_decode(text[text.index('{'):])[0];assert result['target'] and result['verdict'] in ['PASS','CORRECTED'] and result['reason']
+              revised=result['target'];save(f'review{turn:02}.decoded.json',result)
+              if revised==target and turn>0 and result['verdict']=='PASS':
+                  save('heading.verified.json',{'state':'ACTUAL_SOURCE_ALIGNED_AI_CORRECTION_COMPARISON_PASS','source_id':'fr42c-036-heading','source':source,'source_sha256':data['corrected_source_sha256'],'target':target,'target_sha256':hashlib.sha256(target.encode()).hexdigest(),'review_turn':turn,'actual_model':raw['model'],'response_id':raw['id'],'prior_corrections':history,'release_claimed':False});print('CORRECTED_HEADING_VERIFIED');break
+              if revised!=target:history.append({'before':target,'after':revised})
+              target=revised
+          else:raise RuntimeError('CORRECTION_COMPARISON_NOT_STABLE')
+          PY
+      - name: Preserve exact heading exchanges
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru42-corrected-heading036-evidence-v5070
+          path: results/ru42-heading036-repair/
+          retention-days: 90
