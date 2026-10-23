@@ -1,0 +1,65 @@
+name: BB Russian 42 original translation service readiness
+on:
+  push:
+    paths: ['.github/workflows/bb-ru42-readiness.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-ru42-original-v5070
+  cancel-in-progress: false
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check original bytes and authorized services without exposing credentials
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,base64,gzip,hashlib
+          from pathlib import Path
+          out=Path('results/ru42-readiness');out.mkdir(parents=True,exist_ok=True)
+          packed=base64.b64decode(Path('inputs/ru42-source.json.gz.b64').read_text(),validate=True)
+          assert hashlib.sha256(packed).hexdigest()=='f6edf06339aea986816daf6eab43b86ad49188bde56e2b41698bd4f76fc519fb'
+          source=json.loads(gzip.decompress(packed));assert len(source)==70 and sum(len(u['rows']) for u in source)==5988
+          report={'source_hash_verified':True,'source_units':70,'source_rows':5988,'provider_checks':{},'release_claimed':False}
+          key=os.environ.get('DEEPL_AUTH_KEY','').strip()
+          if not key:report['provider_checks']['deepl']={'state':'MISSING_CONFIGURED_SECRET'}
+          else:
+              host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
+              body={'text':[source[0]['rows'][0]['text']],'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','context':'Jules Verne, Les enfants du capitaine Grant (1868). New complete literary Russian translation from French original; no existing Russian translation is supplied.'}
+              (out/'deepl-pilot.request.json').write_text(json.dumps(body,ensure_ascii=False,indent=2))
+              try:
+                  req=urllib.request.Request(host+'/v2/translate',data=json.dumps(body).encode(),headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
+                  with urllib.request.urlopen(req,timeout=100) as r:raw=json.load(r)
+                  (out/'deepl-pilot.response.json').write_text(json.dumps(raw,ensure_ascii=False,indent=2))
+                  rows=raw.get('translations',[]);assert len(rows)==1 and rows[0].get('text','').strip()
+                  report['provider_checks']['deepl']={'state':'ACTUAL_TRANSLATION_PASS','requested_model':'quality_optimized','model_type_used':rows[0].get('model_type_used'),'review_state':'PENDING'}
+              except urllib.error.HTTPError as e:report['provider_checks']['deepl']={'state':'HTTP_ERROR','status':e.code}
+              except Exception as e:report['provider_checks']['deepl']={'state':'FAILED','error_type':type(e).__name__}
+          key=os.environ.get('ANTHROPIC_API_KEY','').strip()
+          if not key:report['provider_checks']['claude']={'state':'MISSING_CONFIGURED_SECRET'}
+          else:
+              headers={'x-api-key':key,'anthropic-version':'2023-06-01'}
+              workspace=os.environ.get('ANTHROPIC_WORKSPACE_ID','').strip()
+              if workspace:headers['anthropic-workspace-id']=workspace
+              try:
+                  with urllib.request.urlopen(urllib.request.Request('https://api.anthropic.com/v1/models',headers=headers),timeout=80) as r:raw=json.load(r)
+                  ids=[x['id'] for x in raw.get('data',[])];report['provider_checks']['claude']={'state':'AUTHENTICATED_MODELS_LIST_PASS','model_ids':ids}
+              except urllib.error.HTTPError as e:report['provider_checks']['claude']={'state':'HTTP_ERROR','status':e.code}
+              except Exception as e:report['provider_checks']['claude']={'state':'FAILED','error_type':type(e).__name__}
+          (out/'readiness.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report))
+          PY
+      - name: Save exact readiness evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru42-service-readiness-v5070
+          path: results/ru42-readiness/
+          retention-days: 90
