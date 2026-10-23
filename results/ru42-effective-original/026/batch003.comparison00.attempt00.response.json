@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJuJ1ceUSssBQaW7tQa4",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-026-0060\",\"target\":\"— Сестра! Сестра! — кричал Роберт, протягивая руки к яхте, которая сильно раскачивалась.\"},{\"source_id\":\"fr42c-026-0061\",\"target\":\"— Ах! Как мне не терпится оказаться на борту! — воскликнул Гленарван.\"},{\"source_id\":\"fr42c-026-0062\",\"target\":\"— Терпение, Эдвард. Вы будете там через два часа, — ответил майор.\"},{\"source_id\":\"fr42c-026-0063\",\"target\":\"Два часа! И правда, шлюпка о шести вёслах не могла быстрее совершить путь туда и обратно.\"},{\"source_id\":\"fr42c-026-0064\",\"target\":\"Тогда Гленарван подошёл к Талькаву, который, скрестив руки, с Таукой рядом, спокойно смотрел на подвижную поверхность волн.\"},{\"source_id\":\"fr42c-026-0065\",\"target\":\"Гленарван взял его за руку и, указывая на яхту, сказал:\"},{\"source_id\":\"fr42c-026-0066\",\"target\":\"— Идём, — сказал он.\"},{\"source_id\":\"fr42c-026-0067\",\"target\":\"Индеец мягко покачал головой.\"},{\"source_id\":\"fr42c-026-0068\",\"target\":\"— Идём, друг, — повторил Гленарван.\"},{\"source_id\":\"fr42c-026-0069\",\"target\":\"— Нет, — тихо ответил Талькав. — Здесь Таука, а там Пампасы! — добавил он, страстным жестом обводя безбрежный простор равнин.\"},{\"source_id\":\"fr42c-026-0070\",\"target\":\"Один лишь Гленарван бодрствовал. (Стр. 210.)\"},{\"source_id\":\"fr42c-026-0071\",\"target\":\"Гленарван хорошо понял, что индеец никогда не захочет покинуть прерию, где белеют кости его отцов. Он знал о благоговейной привязанности этих детей пустыни к родной земле. Поэтому он пожал руку Талькаву и не стал настаивать. Не стал он настаивать и тогда, когда индеец, улыбнувшись на свой лад, отказался от платы за свои услуги, сказав:\"},{\"source_id\":\"fr42c-026-0072\",\"target\":\"— Из дружбы.\"},{\"source_id\":\"fr42c-026-0073\",\"target\":\"Гленарван не нашёл что ответить. Ему хотелось оставить доброму индейцу хотя бы какую-нибудь память, которая напоминала бы ему о друзьях из Европы. Но что у него оставалось? Оружие, лошадей — всё он потерял в бедствиях наводнения. Его друзья были не богаче его.\"},{\"source_id\":\"fr42c-026-0074\",\"target\":\"Он не знал, как отблагодарить честного проводника за бескорыстие, когда ему пришла мысль. Он достал из бумажника драгоценный медальон, в который был вправлен чудесный портрет, шедевр Лоуренса, и предложил его индейцу.\"},{\"source_id\":\"fr42c-026-0075\",\"target\":\"— Моя жена, — сказал он.\"},{\"source_id\":\"fr42c-026-0076\",\"target\":\"Талькав растроганно взглянул на портрет и произнёс всего несколько простых слов:\"},{\"source_id\":\"fr42c-026-0077\",\"target\":\"— Добрая и красивая!\"},{\"source_id\":\"fr42c-026-0078\",\"target\":\"Затем Роберт, Паганель, майор, Том Остин и двое матросов подошли с трогательными словами проститься с патагонцем. Эти славные люди были искренне взволнованы расставанием с бесстрашным и преданным другом. Талькав прижал их всех к своей широкой груди. Паганель убедил его принять карту Южной Америки и двух океанов, на которую индеец часто смотрел с интересом. Это было самое ценное, чем располагал учёный. Что до Роберта, ему нечего было дарить, кроме ласк; он подарил их своему спасителю, и Таука не был обойдён в этой раздаче.\"},{\"source_id\":\"fr42c-026-0079\",\"target\":\"В эту минуту шлюпка с <i>«Дункана»</i> приблизилась; она проскользнула в узкий канал, прорытый между отмелями, и вскоре пристала к берегу.\"}],\"review\":[{\"source_id\":\"fr42c-026-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'roulait violemment' rendered adequately.\"},{\"source_id\":\"fr42c-026-0061\",\"verdict\":\"PASS\",\"reason\":\"Accurate and idiomatic exclamation.\"},{\"source_id\":\"fr42c-026-0062\",\"verdict\":\"PASS\",\"reason\":\"Meaning, speaker and future preserved.\"},{\"source_id\":\"fr42c-026-0063\",\"verdict\":\"PASS\",\"reason\":\"Six oars, round trip, two hours preserved.\"},{\"source_id\":\"fr42c-026-0064\",\"verdict\":\"PASS\",\"reason\":\"Agency, crossed arms, Thaouka nearby preserved.\"},{\"source_id\":\"fr42c-026-0065\",\"verdict\":\"PASS\",\"reason\":\"Faithful; introduces following dialogue.\"},{\"source_id\":\"fr42c-026-0066\",\"verdict\":\"PASS\",\"reason\":\"Dialogue punctuation correct.\"},{\"source_id\":\"fr42c-026-0067\",\"verdict\":\"PASS\",\"reason\":\"Correct: gently shook head.\"},{\"source_id\":\"fr42c-026-0068\",\"verdict\":\"PASS\",\"reason\":\"'reprit' rendered as repeated; acceptable.\"},{\"source_id\":\"fr42c-026-0069\",\"verdict\":\"PASS\",\"reason\":\"Faithful, including gesture and Pampas.\"},{\"source_id\":\"fr42c-026-0070\",\"verdict\":\"PASS\",\"reason\":\"Caption preserved with page reference.\"},{\"source_id\":\"fr42c-026-0071\",\"verdict\":\"PASS\",\"reason\":\"Negations, bones of fathers, refusal of payment preserved.\"},{\"source_id\":\"fr42c-026-0072\",\"verdict\":\"PASS\",\"reason\":\"Correct and concise.\"},{\"source_id\":\"fr42c-026-0073\",\"verdict\":\"PASS\",\"reason\":\"All facts preserved; idiomatic.\"},{\"source_id\":\"fr42c-026-0074\",\"verdict\":\"PASS\",\"reason\":\"Medallion, Lawrence portrait, offering preserved.\"},{\"source_id\":\"fr42c-026-0075\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-026-0076\",\"verdict\":\"PASS\",\"reason\":\"Tender look and simple words preserved.\"},{\"source_id\":\"fr42c-026-0077\",\"verdict\":\"PASS\",\"reason\":\"'Bonne et belle' correctly rendered.\"},{\"source_id\":\"fr42c-026-0078\",\"verdict\":\"PASS\",\"reason\":\"All farewells, map and caresses preserved.\"},{\"source_id\":\"fr42c-026-0079\",\"verdict\":\"PASS\",\"reason\":\"Italic Duncan retained; movement accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 12468,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2403,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
