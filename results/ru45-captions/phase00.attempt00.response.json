@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKcQLDHTEpZzYVZvRtew",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"045-caption-plate-01\",\"target\":\"«Джентльмен со скамьи подал ей его»\"},{\"source_id\":\"045-caption-plate-02\",\"target\":\"«Вошёл человек»\"},{\"source_id\":\"045-caption-plate-03\",\"target\":\"«Дверь была заперта на замок»\"},{\"source_id\":\"045-caption-plate-04\",\"target\":\"«Весь день он просидел в партере»\"},{\"source_id\":\"045-caption-plate-05\",\"target\":\"«Шерлок Холмс приветствовал её»\"},{\"source_id\":\"045-caption-plate-06\",\"target\":\"«Озираясь по сторонам, как крыса в капкане»\"},{\"source_id\":\"045-caption-plate-07\",\"target\":\"«Они нашли тело»\"},{\"source_id\":\"045-caption-plate-08\",\"target\":\"«Горничная показала нам сапоги».\"},{\"source_id\":\"045-caption-plate-09\",\"target\":\"«— Холмс, — вскричал я, — вы опоздали!»\"},{\"source_id\":\"045-caption-plate-10\",\"target\":\"«У подножия лестницы она встретила этого негодяя-ласкара».\"},{\"source_id\":\"045-caption-plate-11\",\"target\":\"«— Сжальтесь! — завопил он»\"},{\"source_id\":\"045-caption-plate-12\",\"target\":\"«— До свидания, и будьте мужественны!»\"},{\"source_id\":\"045-caption-plate-13\",\"target\":\"«— И ни слова ни одной душе!»\"},{\"source_id\":\"045-caption-plate-14\",\"target\":\"«— Я пожелаю всем вам спокойной ночи».\"},{\"source_id\":\"045-caption-plate-15\",\"target\":\"«Я приставил пистолет к его голове»\"},{\"source_id\":\"045-caption-plate-16\",\"target\":\"«— Я так рада, что вы приехали!»\"},{\"source_id\":\"045-metadata-title\",\"target\":\"Приключения Шерлока Холмса\"},{\"source_id\":\"045-metadata-author\",\"target\":\"Артур Конан Дойл\"},{\"source_id\":\"045-metadata-genre\",\"target\":\"Сборник рассказов\"}],\"review\":[{\"source_id\":\"045-caption-plate-01\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored full quotation display; 'it' is the bouquet, but caption wording keeps the pronoun («его»).\"},{\"source_id\":\"045-caption-plate-02\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed invented 'в комнату'; restored quotation marks and original wording.\"},{\"source_id\":\"045-caption-plate-03\",\"verdict\":\"CORRECTED\",\"reason\":\"Added 'shut and locked' fully: заперта на замок; quotation role restored.\"},{\"source_id\":\"045-caption-plate-04\",\"verdict\":\"CORRECTED\",\"reason\":\"Source says 'he', not named Holmes; restored quotation form.\"},{\"source_id\":\"045-caption-plate-05\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'welcomed her' to «приветствовал её»; added quotation marks.\"},{\"source_id\":\"045-caption-plate-06\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft lost the glancing man and turned rat into mouse; restored simile with rat.\"},{\"source_id\":\"045-caption-plate-07\",\"verdict\":\"CORRECTED\",\"reason\":\"Wording faithful; added quotation marks for caption role.\"},{\"source_id\":\"045-caption-plate-08\",\"verdict\":\"CORRECTED\",\"reason\":\"Added 'us' and the original quotation form with final period.\"},{\"source_id\":\"045-caption-plate-09\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft lost speaker, address to Holmes and 'too late' framing; restored full quote.\"},{\"source_id\":\"045-caption-plate-10\",\"verdict\":\"CORRECTED\",\"reason\":\"Wrong subject: 'she met' the Lascar scoundrel, not 'I'; restored 'scoundrel'.\"},{\"source_id\":\"045-caption-plate-11\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'he shrieked' and exact 'Have mercy!' without added 'надо мной'.\"},{\"source_id\":\"045-caption-plate-12\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed added instruction clause; restored 'be brave' wording.\"},{\"source_id\":\"045-caption-plate-13\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'to a soul' and nested quotation form.\"},{\"source_id\":\"045-caption-plate-14\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'all' and the speaker's declaration 'I will wish'.\"},{\"source_id\":\"045-caption-plate-15\",\"verdict\":\"CORRECTED\",\"reason\":\"Meaning faithful; added quotation marks for caption role.\"},{\"source_id\":\"045-caption-plate-16\",\"verdict\":\"CORRECTED\",\"reason\":\"Speaker is a woman: 'рада', not 'рад'; 'come' fits «приехали».\"},{\"source_id\":\"045-metadata-title\",\"verdict\":\"PASS\",\"reason\":\"Matches approved title.\"},{\"source_id\":\"045-metadata-author\",\"verdict\":\"PASS\",\"reason\":\"Matches approved author.\"},{\"source_id\":\"045-metadata-genre\",\"verdict\":\"PASS\",\"reason\":\"Matches approved genre.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11558,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1796,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
