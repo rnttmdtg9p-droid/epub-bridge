@@ -1,0 +1,217 @@
+{
+  "unit": 5,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id00701",
+      "target": "Едва выйдя, он подошёл к фонарю, висевшему во дворе, и торопливо заглянул в мешок.",
+      "source_sha256": "b6c5aa4241573ae5937a5ff24da1eacb20a1207cfb466fa7c0ffafe6843738fe",
+      "target_id": "ru-id00701",
+      "tag": "p",
+      "target_sha256": "d11604d3081a7053958c434c0a551f87daa3016d52d233421dd2075fae5066d7"
+    },
+    {
+      "source_id": "id00702",
+      "target": "— Серебряные экю! — презрительно произнёс он. — Так я и думал. Ах, Мазарини, Мазарини! Ты мне не доверяешь! Тем хуже! Это принесёт тебе несчастье!",
+      "source_sha256": "2e6e166cc350f6f00ea77dd6c8cbc9df941971d20f31f2377b7dd3d682244f21",
+      "target_id": "ru-id00702",
+      "tag": "p",
+      "target_sha256": "feb0a801646dd73cc87c498496dd2dc2bc4b0f0c6bce3eb23e56d68d30a10385"
+    },
+    {
+      "source_id": "id00703",
+      "target": "Между тем кардинал потирал руки.",
+      "source_sha256": "c9b048330d881aaca237980e8bfbe2235eda682981f3f2aaca1d7b6e9c1a0919",
+      "target_id": "ru-id00703",
+      "tag": "p",
+      "target_sha256": "c26f0c0eb168167a41ff7c80cc03bf72014929072eb4df5b67f034a5703731ef"
+    },
+    {
+      "source_id": "id00704",
+      "target": "— Сто пистолей, — пробормотал он, — сто пистолей! За сто пистолей я получил тайну, за которую господин де Ришелье заплатил бы двадцать тысяч экю. Не считая этого бриллианта, — и он влюблённо бросил взгляд на перстень, который оставил у себя вместо того, чтобы отдать д’Артаньяну, — не считая этого бриллианта, который стоит по меньшей мере десять тысяч ливров.",
+      "source_sha256": "19fee7ce0e6a9f193806aab2f91c184f7225e6542c4913518dacbe4586818584",
+      "target_id": "ru-id00704",
+      "tag": "p",
+      "target_sha256": "8be99cec9842ee92a6a2b447b8d7f22169f9adaa2a08c896ef1e7073cadd6cf6"
+    },
+    {
+      "source_id": "id00705",
+      "target": "И кардинал, весь радостный от этого вечера, принёсшего ему такую прекрасную выгоду, вернулся к себе в спальню, положил перстень в шкатулку, наполненную всевозможными драгоценными камнями, — ибо кардинал питал склонность к самоцветам, — и позвал Бернуина, чтобы тот раздел его, нимало не тревожась больше о шуме, который продолжал порывами долетать и бить в стёкла, и о ружейных выстрелах, всё ещё раздававшихся в Париже, хотя было уже за одиннадцать часов вечера.",
+      "source_sha256": "1e495f4c6786295e9d2cdf7b69f2d0f1e56b18264bb5972145c922ce043eeb23",
+      "target_id": "ru-id00705",
+      "tag": "p",
+      "target_sha256": "736849dc00532c1e52f0f829189ba1e15b2ca7034c95a88349aa7a7e237aa09f"
+    },
+    {
+      "source_id": "id00706",
+      "target": "Между тем д’Артаньян направлялся к улице Тикетонн, где он жил в гостинице <i>«Козочка»</i>…",
+      "source_sha256": "fbd42161098ec87721cfb5d63b8a2cfbedd693950d6906f1151492abda84c40a",
+      "target_id": "ru-id00706",
+      "tag": "p",
+      "target_sha256": "2227d8a0f53796896cebbf5a9b2c0d876aedb3fb263c227340524c1327a663ed"
+    },
+    {
+      "source_id": "id00707",
+      "target": "Скажем в двух словах, как д’Артаньян пришёл к выбору этого жилища.",
+      "source_sha256": "33a7c90bfb7da6ae6e808f644a20b21434e24691f71c50af9f9639a711e157f6",
+      "target_id": "ru-id00707",
+      "tag": "p",
+      "target_sha256": "d2451250e3ef42f299d590e5235e3416078fca3353e586e72be5553b69732bdf"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id00701",
+      "verdict": "PASS",
+      "reason": "Faithful: sequence, place (lantern in courtyard) and hurried glance preserved."
+    },
+    {
+      "source_id": "id00702",
+      "verdict": "PASS",
+      "reason": "Contempt, d'Artagnan's suspicion, address to Mazarin and the curse are all preserved; dialogue punctuation correct."
+    },
+    {
+      "source_id": "id00703",
+      "verdict": "PASS",
+      "reason": "Accurate; imperfect tense rendered with imperfective verb."
+    },
+    {
+      "source_id": "id00704",
+      "verdict": "CORRECTED",
+      "reason": "The draft added «прибавил он», which is not in the source, and turned the participial phrase into a different construction; it also used the imperfective «бормотал» for the passé simple «murmura». Fixed to «пробормотал» and a close rendering of «en jetant amoureusement les yeux» («влюблённо бросил взгляд»), keeping the repeated «не считая этого бриллианта»."
+    },
+    {
+      "source_id": "id00705",
+      "verdict": "CORRECTED",
+      "reason": "«écrin» rendered as «шкатулку» rather than «ларец»; «tout joyeux» made «весь радостный» instead of the weaker «очень довольный». The name Bemouin (a typo for Bernouin in the source) is rendered with the established Бернуин. Other content preserved: profit, taste for gems, noise at the windows, gunshots, after eleven."
+    },
+    {
+      "source_id": "id00706",
+      "verdict": "PASS",
+      "reason": "The italic hotel name is preserved, ellipsis kept; the name is translated, which is acceptable."
+    },
+    {
+      "source_id": "id00707",
+      "verdict": "PASS",
+      "reason": "Accurate and complete."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id00704",
+      "before": "— Сто пистолей, — бормотал он, — сто пистолей! За сто пистолей я получил тайну, за которую господин де Ришелье заплатил бы двадцать тысяч экю. Не считая этого бриллианта, — прибавил он, с нежностью бросив взгляд на перстень, который оставил у себя вместо того, чтобы отдать д’Артаньяну, — не считая этого бриллианта, который стоит по меньшей мере десять тысяч ливров.",
+      "after": "— Сто пистолей, — пробормотал он, — сто пистолей! За сто пистолей я получил тайну, за которую господин де Ришелье заплатил бы двадцать тысяч экю. Не считая этого бриллианта, — и он влюблённо бросил взгляд на перстень, который оставил у себя вместо того, чтобы отдать д’Артаньяну, — не считая этого бриллианта, который стоит по меньшей мере десять тысяч ливров."
+    },
+    {
+      "source_id": "id00705",
+      "before": "И кардинал, очень довольный этим вечером, принёсшим ему такую прекрасную выгоду, вернулся к себе в спальню, положил перстень в ларец, наполненный всевозможными драгоценными камнями, — ибо кардинал питал склонность к самоцветам, — и позвал Бернуина, чтобы тот раздел его, нимало не тревожась больше о шуме, который продолжал порывами долетать и бить в стёкла, и о ружейных выстрелах, всё ещё раздававшихся в Париже, хотя было уже за одиннадцать часов вечера.",
+      "after": "И кардинал, весь радостный от этого вечера, принёсшего ему такую прекрасную выгоду, вернулся к себе в спальню, положил перстень в шкатулку, наполненную всевозможными драгоценными камнями, — ибо кардинал питал склонность к самоцветам, — и позвал Бернуина, чтобы тот раздел его, нимало не тревожась больше о шуме, который продолжал порывами долетать и бить в стёкла, и о ружейных выстрелах, всё ещё раздававшихся в Париже, хотя было уже за одиннадцать часов вечера."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJJRQWg3T8SvBQ1dZ6W8",
+    "usage": {
+      "input_tokens": 2867,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 692,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJJRqki8C2BCinwLbTed",
+    "usage": {
+      "input_tokens": 4517,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2320,
+      "output_tokens_details": {
+        "thinking_tokens": 1054
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJJT9sv2xCMToStmiVwM",
+        "usage": {
+          "input_tokens": 5352,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1857,
+          "output_tokens_details": {
+            "thinking_tokens": 486
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id00701",
+          "verdict": "PASS",
+          "reason": "Faithful: «À peine dehors» (едва выйдя), the lantern in the courtyard and the hurried glance into the bag are all preserved."
+        },
+        {
+          "source_id": "id00702",
+          "verdict": "PASS",
+          "reason": "Contempt, «je m'en doutais», the direct address to Mazarin, «tant pis» and the omen are all preserved; the register is natural for dialogue."
+        },
+        {
+          "source_id": "id00703",
+          "verdict": "PASS",
+          "reason": "Accurate and complete: «Pendant ce temps» rendered as «Между тем», the cardinal rubbing his hands."
+        },
+        {
+          "source_id": "id00704",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «murmura-t-il» is now «пробормотал», and the participial «en jetant amoureusely les yeux» is rendered as «и он влюблённо бросил взгляд», dropping the earlier invented «прибавил». The sums (cent pistoles, vingt mille écus, dix mille livres) are intact, the ring kept back instead of given to d'Artagnan is intact, and the repetition is preserved."
+        },
+        {
+          "source_id": "id00705",
+          "verdict": "PASS",
+          "reason": "The prior corrections are verified: «весь радостный» for «tout joyeux» and «шкатулку» for «écrin». The source's «Bemouin» is a misprint, so the established name Бернуин is used. The cardinal's taste for gems, the rumours beating at the windowpanes, the gunshots and the time after eleven are all preserved."
+        },
+        {
+          "source_id": "id00706",
+          "verdict": "PASS",
+          "reason": "Faithful. The italic hotel name «La Chevrette» is kept in <i> as «Козочка», the street name is rendered, and the ellipsis is retained."
+        },
+        {
+          "source_id": "id00707",
+          "verdict": "PASS",
+          "reason": "Accurate: the narrator's «Disons en peu de mots» and the reason for d'Artagnan's choice of lodging are rendered faithfully."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
