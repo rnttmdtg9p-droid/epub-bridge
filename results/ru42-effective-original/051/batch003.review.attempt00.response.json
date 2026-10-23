@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK3F5JkFnajSXLaw26M7",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-051-0059\",\"target\":\"Чтобы завершить этот кровавый список, следует добавить корабль <i>«Бразерс»</i>, на который в 1815 году напали новозеландцы, и весь экипаж <i>«Бойда»</i> под командованием капитана Томпсона, перебитый в 1820 году. Наконец, 1 марта 1829 года в Уолкитаа вождь Энараро разграбил английский бриг <i>«Хоукс»</i> из Сиднея; его орда каннибалов перебила нескольких матросов, сварила трупы и съела их.\"},{\"source_id\":\"fr42c-051-0060\",\"target\":\"Такова была эта страна, Новая Зеландия, к которой мчался <i>«Маккуори»</i> с тупым экипажем под командой пьяницы.\"},{\"source_id\":\"fr42c-note-087\",\"target\":\"Такури убил Мариона.\"}],\"review\":[{\"source_id\":\"fr42c-051-0059\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed broken italic tag on Boyd, ship names kept as proper names (Brothers), brick as «бриг», «Hawes» form, 'attaqué' agency clarified; massacre wording corrected.\"},{\"source_id\":\"fr42c-051-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved 'stupide' to «тупым» and the idiom 'sous le commandement d'un ivrogne'; punctuation of apposition; italics kept.\"},{\"source_id\":\"fr42c-note-087\",\"verdict\":\"CORRECTED\",\"reason\":\"Marion is the male explorer (object), so accusative «Мариона»; note otherwise accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3500,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 582,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

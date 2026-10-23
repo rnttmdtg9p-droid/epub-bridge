@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK3FVMbggFHedBtX1VD5",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-051-0059\",\"target\":\"Чтобы завершить этот кровавый список, следует добавить корабль <i>«Бразерс»</i>, на который в 1815 году напали новозеландцы, и весь экипаж <i>«Бойда»</i> под командованием капитана Томпсона, перебитый в 1820 году. Наконец, 1 марта 1829 года в Уолкитаа вождь Энараро разграбил английский бриг <i>«Хоукс»</i> из Сиднея; его орда каннибалов перебила нескольких матросов, сварила трупы и съела их.\"},{\"source_id\":\"fr42c-051-0060\",\"target\":\"Такова была эта страна, Новая Зеландия, к которой мчался <i>«Маккуори»</i> с тупым экипажем под командой пьяницы.\"},{\"source_id\":\"fr42c-note-087\",\"target\":\"Такури убил Мариона.\"}],\"review\":[{\"source_id\":\"fr42c-051-0059\",\"verdict\":\"PASS\",\"reason\":\"Faithful: ships, dates, names, captain, massacre, cooking and eating all preserved; italics kept; prior corrections verified. «Brig» for brick is correct.\"},{\"source_id\":\"fr42c-051-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful: country, Macquarie's course, stupid crew, drunkard commander all preserved; italics kept; prior correction is acceptable.\"},{\"source_id\":\"fr42c-note-087\",\"verdict\":\"PASS\",\"reason\":\"Correct: Takouri is the killer, Marion the victim in the accusative; note content complete.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4134,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 553,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

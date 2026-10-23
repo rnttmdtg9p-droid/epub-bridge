@@ -1,0 +1,135 @@
+{
+  "unit": 51,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-051-0059",
+      "target": "Чтобы завершить этот кровавый список, следует добавить корабль <i>«Бразерс»</i>, на который в 1815 году напали новозеландцы, и весь экипаж <i>«Бойда»</i> под командованием капитана Томпсона, перебитый в 1820 году. Наконец, 1 марта 1829 года в Уолкитаа вождь Энараро разграбил английский бриг <i>«Хоукс»</i> из Сиднея; его орда каннибалов перебила нескольких матросов, сварила трупы и съела их.",
+      "source_sha256": "d57d06c584533c8f8310bdb52ce0dd91679a58e252e5eaba423ab9b69a3a024c",
+      "target_id": "ru-fr42c-051-0059",
+      "tag": "p",
+      "target_sha256": "3e2befab98e9c6830792cf4a14649e3370d87e5825d7051b67b6a92f04ce753a"
+    },
+    {
+      "source_id": "fr42c-051-0060",
+      "target": "Такова была эта страна, Новая Зеландия, к которой мчался <i>«Маккуори»</i> с тупым экипажем под командой пьяницы.",
+      "source_sha256": "6b9dc79760641ee5a3c4d9c83a76bcc728d59683093354d2ae8b6773f2c84e66",
+      "target_id": "ru-fr42c-051-0060",
+      "tag": "p",
+      "target_sha256": "96821eb08664ad96dc8c13bc527f98004e6145f40be60b8cc29117fa78117d30"
+    },
+    {
+      "source_id": "fr42c-note-087",
+      "target": "Такури убил Мариона.",
+      "source_sha256": "4265888385c0c93ca4c9a204c1692760583b714d9f0e51f0d6c6704e0fefeac6",
+      "target_id": "ru-fr42c-note-087",
+      "tag": "note",
+      "target_sha256": "966a5dd764ef8ba617d7c390149aa71a77114df6c3ce4a245759112c631842b8"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-051-0059",
+      "verdict": "CORRECTED",
+      "reason": "Fixed broken italic tag on Boyd, ship names kept as proper names (Brothers), brick as «бриг», «Hawes» form, 'attaqué' agency clarified; massacre wording corrected."
+    },
+    {
+      "source_id": "fr42c-051-0060",
+      "verdict": "CORRECTED",
+      "reason": "Improved 'stupide' to «тупым» and the idiom 'sous le commandement d'un ivrogne'; punctuation of apposition; italics kept."
+    },
+    {
+      "source_id": "fr42c-note-087",
+      "verdict": "CORRECTED",
+      "reason": "Marion is the male explorer (object), so accusative «Мариона»; note otherwise accurate."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-051-0059",
+      "before": "Чтобы завершить этот кровавый список, следует добавить корабль <i>«Братья»</i>, атакованный в 1815 году новозеландцами, и весь экипаж <i>«Бойда</i>» под командованием капитана Томпсона, убитый в 1820 году. Наконец, 1 марта 1829 года в Уолкитаа вождь Энараро разграбил английский брик <i>«Хоуз»</i> из Сиднея; его орда каннибалов убила нескольких матросов, сварила трупы и съела их.",
+      "after": "Чтобы завершить этот кровавый список, следует добавить корабль <i>«Бразерс»</i>, на который в 1815 году напали новозеландцы, и весь экипаж <i>«Бойда»</i> под командованием капитана Томпсона, перебитый в 1820 году. Наконец, 1 марта 1829 года в Уолкитаа вождь Энараро разграбил английский бриг <i>«Хоукс»</i> из Сиднея; его орда каннибалов перебила нескольких матросов, сварила трупы и съела их."
+    },
+    {
+      "source_id": "fr42c-051-0060",
+      "before": "Такова была эта страна Новая Зеландия, к которой мчался <i>«Маккуори»</i> с глупым экипажем под командованием пьяницы.",
+      "after": "Такова была эта страна, Новая Зеландия, к которой мчался <i>«Маккуори»</i> с тупым экипажем под командой пьяницы."
+    },
+    {
+      "source_id": "fr42c-note-087",
+      "before": "Такури убил Марион.",
+      "after": "Такури убил Мариона."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/051/batch003.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK3F5JkFnajSXLaw26M7",
+    "usage": {
+      "input_tokens": 3500,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 582,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK3FVMbggFHedBtX1VD5",
+        "usage": {
+          "input_tokens": 4134,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 553,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-051-0059",
+          "verdict": "PASS",
+          "reason": "Faithful: ships, dates, names, captain, massacre, cooking and eating all preserved; italics kept; prior corrections verified. «Brig» for brick is correct."
+        },
+        {
+          "source_id": "fr42c-051-0060",
+          "verdict": "PASS",
+          "reason": "Faithful: country, Macquarie's course, stupid crew, drunkard commander all preserved; italics kept; prior correction is acceptable."
+        },
+        {
+          "source_id": "fr42c-note-087",
+          "verdict": "PASS",
+          "reason": "Correct: Takouri is the killer, Marion the victim in the accusative; note content complete."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
