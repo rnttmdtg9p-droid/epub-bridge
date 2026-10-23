@@ -1,0 +1,145 @@
+{
+  "unit": 8,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01017",
+      "target": "— Скажите-ка, господин офицер, — сказал мальчик, — а есть ещё другие полупистоли, которые можно заработать?",
+      "source_sha256": "ba8f0f9500b066b6c43daec7ce565f7a8ec25d8316177e4e7198185ce6217b36",
+      "target_id": "ru-id01017",
+      "tag": "p",
+      "target_sha256": "14cd180fedf3e0fcb9c84ba2e126d7005e97133b56a57e75dbc045ced201e9e3"
+    },
+    {
+      "source_id": "id01018",
+      "target": "— Может быть, — ответил д’Артаньян.",
+      "source_sha256": "a9cf2e5eb11373e483364cd91679a3b0ab6964c3969771303d227228f85b43ee",
+      "target_id": "ru-id01018",
+      "tag": "p",
+      "target_sha256": "c21257a28174769a017f2e5a4b9f386a0b07f3b3b185588afa95186c2c8d4ab4"
+    },
+    {
+      "source_id": "id01019",
+      "target": "И так как он узнал всё, что хотел, то заплатил за порцию ипокраса, которую не выпил, и поспешно снова зашагал по дороге к улице Тикетон.",
+      "source_sha256": "e606f5ade52f2a36f8edf891c4a3cb0d906f3294432f7ebc835cffb1aaa74840",
+      "target_id": "ru-id01019",
+      "tag": "p",
+      "target_sha256": "68ee2f1880fea2841a364ca23a29f6bbcb97e24a2834aff737992cb09e04c67a"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01017",
+      "verdict": "CORRECTED",
+      "reason": "«Dites donc» передано более живым «Скажите-ка»; смысл вопроса, реплика ребёнка и обращение сохранены."
+    },
+    {
+      "source_id": "id01018",
+      "verdict": "PASS",
+      "reason": "Точно: «Peut-être» и пометка автора переданы без изменений."
+    },
+    {
+      "source_id": "id01019",
+      "verdict": "CORRECTED",
+      "reason": "«Mesure» передано как «порция» вместо «кружка»; убрано добавленное «даже не притронулся», отрицание «n'avait point bue» передано как «не выпил»; «reprit… le chemin» и «vivement» переданы точнее."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01017",
+      "before": "— Послушайте, господин офицер, — сказал мальчик, — а есть ещё другие полупистоли, которые можно заработать?",
+      "after": "— Скажите-ка, господин офицер, — сказал мальчик, — а есть ещё другие полупистоли, которые можно заработать?"
+    },
+    {
+      "source_id": "id01019",
+      "before": "И так как он узнал всё, что хотел, то заплатил за кружку ипокраса, к которой даже не притронулся, и быстро зашагал обратно к улице Тикетон.",
+      "after": "И так как он узнал всё, что хотел, то заплатил за порцию ипокраса, которую не выпил, и поспешно снова зашагал по дороге к улице Тикетон."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJK46QHFV5RCq2bBQQgz",
+    "usage": {
+      "input_tokens": 1429,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 180,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJK4G3U7MaBfMixCiYCU",
+    "usage": {
+      "input_tokens": 2078,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1069,
+      "output_tokens_details": {
+        "thinking_tokens": 645
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJK4uVUNWNjg1g1U1Q13",
+        "usage": {
+          "input_tokens": 2401,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 907,
+          "output_tokens_details": {
+            "thinking_tokens": 356
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01017",
+          "verdict": "PASS",
+          "reason": "Faithful to the French. 'Dites donc' is rendered idiomatically as 'Скажите-ка'. The speaker, the question and 'd'autres demi-pistoles à gagner' are all kept, and the dialogue punctuation is correct. The prior correction from 'Послушайте' to 'Скажите-ка' follows the French more closely."
+        },
+        {
+          "source_id": "id01018",
+          "verdict": "PASS",
+          "reason": "'Peut-être' and the attribution to d'Artagnan are preserved. The register is natural and the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id01019",
+          "verdict": "PASS",
+          "reason": "All facts are preserved: he had learned what he wanted, paid for the measure of hypocras that he had not drunk (negation kept), and quickly resumed the way to rue Tiquetonne. 'Mesure' as 'порция' is acceptable. 'Reprit le chemin' is rendered as 'снова зашагал по дороге'. The prior correction is verified and nothing is added or omitted."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
