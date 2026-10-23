@@ -1,0 +1,38 @@
+name: BB Russian46 complete source-aligned AI literary review
+on:
+  push:
+    paths: ['.github/workflows/bb-ru46-review.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Cancel superseded malformed-input attempt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run list --repo rnttmdtg9p-droid/epub-bridge --branch bb-ru46-review-v5070-20261023 --json databaseId,status --jq '.[] | select(.status != "completed") | .databaseId' | while read -r run_id; do gh run cancel "$run_id" --repo rnttmdtg9p-droid/epub-bridge; done
+      - name: Configure durable production checkpoints
+        run: |
+          git config user.name 'Boundary Bay Production'
+          git config user.email 'production@boundarybaypublishing.com'
+      - name: Review all original Russian acts cast and12 editorial notes and compare all corrections
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru46_review.py
+      - name: Preserve actual review exchanges and checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru46-complete-actual-review-v5070
+          path: results/ru46-review/
+          retention-days: 90
+          if-no-files-found: error
