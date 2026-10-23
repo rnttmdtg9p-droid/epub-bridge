@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK2hjaUX2y6pZ1jQVQmX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-049-0019\",\"target\":\"— Да. Дальше что?\"},{\"source_id\":\"fr42c-049-0020\",\"target\":\"— Что он везёт?\"},{\"source_id\":\"fr42c-049-0021\",\"target\":\"— Всё, что продаётся и всё, что покупается. Дальше что?\"},{\"source_id\":\"fr42c-049-0022\",\"target\":\"— Когда он отправляется?\"},{\"source_id\":\"fr42c-049-0023\",\"target\":\"— Завтра, с полуденным приливом. Дальше что?\"},{\"source_id\":\"fr42c-049-0024\",\"target\":\"— Возьмёт ли он пассажиров?\"},{\"source_id\":\"fr42c-049-0025\",\"target\":\"— Смотря какие пассажиры и смирятся ли они с судовой похлёбкой.\"},{\"source_id\":\"fr42c-049-0026\",\"target\":\"— Они привезут свои припасы.\"},{\"source_id\":\"fr42c-049-0027\",\"target\":\"— Дальше что?\"},{\"source_id\":\"fr42c-049-0028\",\"target\":\"— Дальше что?\"},{\"source_id\":\"fr42c-049-0029\",\"target\":\"— Да. Сколько их?\"},{\"source_id\":\"fr42c-049-0030\",\"target\":\"— Девять, из них две дамы.\"},{\"source_id\":\"fr42c-049-0031\",\"target\":\"— У меня нет кают.\"},{\"source_id\":\"fr42c-049-0032\",\"target\":\"— Мы как-нибудь устроимся в рубке, которую предоставят в их распоряжение.\"},{\"source_id\":\"fr42c-049-0033\",\"target\":\"— Дальше что?\"},{\"source_id\":\"fr42c-049-0034\",\"target\":\"— Вы согласны? — спросил Джон Манглс, которого манеры капитана ничуть не смущали.\"},{\"source_id\":\"fr42c-049-0035\",\"target\":\"— Надо посмотреть, — ответил хозяин «<i>Макквори</i>».\"},{\"source_id\":\"fr42c-049-0036\",\"target\":\"Уилл Хэлли сделал круг-другой, стуча по палубе тяжёлыми подкованными сапогами, потом резко повернулся к Джону Манглсу.\"},{\"source_id\":\"fr42c-049-0037\",\"target\":\"— Сколько платят? — спросил он.\"},{\"source_id\":\"fr42c-049-0038\",\"target\":\"— А сколько просят? — ответил Джон.\"}],\"review\":[{\"source_id\":\"fr42c-049-0019\",\"verdict\":\"CORRECTED\",\"reason\":\"Усилена разговорная интонация повтора «Après ?».\"},{\"source_id\":\"fr42c-049-0020\",\"verdict\":\"PASS\",\"reason\":\"Точно.\"},{\"source_id\":\"fr42c-049-0021\",\"verdict\":\"CORRECTED\",\"reason\":\"Унифицирован повтор «Дальше что?»; смысл сохранён.\"},{\"source_id\":\"fr42c-049-0022\",\"verdict\":\"PASS\",\"reason\":\"Точно.\"},{\"source_id\":\"fr42c-049-0023\",\"verdict\":\"CORRECTED\",\"reason\":\"«À la marée» передано как «с приливом»; повтор унифицирован.\"},{\"source_id\":\"fr42c-049-0024\",\"verdict\":\"CORRECTED\",\"reason\":\"Сохранена условно-вопросительная форма «prendrait-il».\"},{\"source_id\":\"fr42c-049-0025\",\"verdict\":\"CORRECTED\",\"reason\":\"«Суповая каша» неточна; gamelle — судовая похлёбка, сохранено условие «если смирятся».\"},{\"source_id\":\"fr42c-049-0026\",\"verdict\":\"CORRECTED\",\"reason\":\"«Провианты» заменено на «припасы»; сохранено условное будущее смысла.\"},{\"source_id\":\"fr42c-049-0027\",\"verdict\":\"CORRECTED\",\"reason\":\"Унифицирована реплика.\"},{\"source_id\":\"fr42c-049-0028\",\"verdict\":\"CORRECTED\",\"reason\":\"Унифицирована реплика.\"},{\"source_id\":\"fr42c-049-0029\",\"verdict\":\"PASS\",\"reason\":\"Точно.\"},{\"source_id\":\"fr42c-049-0030\",\"verdict\":\"PASS\",\"reason\":\"Точно, число и дамы сохранены.\"},{\"source_id\":\"fr42c-049-0031\",\"verdict\":\"PASS\",\"reason\":\"Отрицание сохранено.\"},{\"source_id\":\"fr42c-049-0032\",\"verdict\":\"CORRECTED\",\"reason\":\"Roufle — рубка/надстройка на палубе; фраза сделана идиоматичной.\"},{\"source_id\":\"fr42c-049-0033\",\"verdict\":\"CORRECTED\",\"reason\":\"Унифицирована реплика.\"},{\"source_id\":\"fr42c-049-0034\",\"verdict\":\"CORRECTED\",\"reason\":\"Убраны ошибочные кавычки внутри реплики; вопрос сохранён.\"},{\"source_id\":\"fr42c-049-0035\",\"verdict\":\"CORRECTED\",\"reason\":\"Исправлена закрывающая кавычка, курсив названия, «patron» — хозяин судна.\"},{\"source_id\":\"fr42c-049-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Исправлены «прошёлся/тяжёлых», сохранены круги и резкий поворот.\"},{\"source_id\":\"fr42c-049-0037\",\"verdict\":\"CORRECTED\",\"reason\":\"Исправлены кавычки и смысл «сколько платят».\"},{\"source_id\":\"fr42c-049-0038\",\"verdict\":\"CORRECTED\",\"reason\":\"Передан встречный вопрос «сколько просят».\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 7519,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1881,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
