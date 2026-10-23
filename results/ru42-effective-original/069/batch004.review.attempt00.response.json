@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK8MwR1WToVUj2TgV1cf",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-069-0079\",\"target\":\"— Похоже, Айртон, я совершил ошибку, высадив вас на обитаемой земле.\"},{\"source_id\":\"fr42c-069-0080\",\"target\":\"— Похоже, капитан.\"},{\"source_id\":\"fr42c-069-0081\",\"target\":\"— Вы займёте моё место на этом необитаемом острове. Да внушит вам небо раскаяние!\"},{\"source_id\":\"fr42c-069-0082\",\"target\":\"— Аминь! — спокойно ответил Айртон.\"},{\"source_id\":\"fr42c-069-0083\",\"target\":\"Затем Гленарван, обратившись к квартирмейстеру, сказал ему:\"},{\"source_id\":\"fr42c-069-0084\",\"target\":\"«Вы всё ещё, Айртон, настаиваете на своём решении быть покинутым?\"},{\"source_id\":\"fr42c-069-0085\",\"target\":\"— Да, милорд.\"},{\"source_id\":\"fr42c-069-0086\",\"target\":\"— Остров Табор вас устраивает?\"},{\"source_id\":\"fr42c-069-0087\",\"target\":\"— Вполне.\"},{\"source_id\":\"fr42c-069-0088\",\"target\":\"— Теперь выслушайте мои последние слова, Айртон. Здесь вы будете вдали от всякой земли и без всякой возможности сообщения с себе подобными. Чудеса редки, и вы не сможете бежать с этого островка, на котором оставляет вас <i>«Дункан»</i>. Вы будете один, под оком Бога, читающего в самой глубине сердец, но вы не будете ни потеряны, ни забыты, как был капитан Грант. Как бы вы ни были недостойны памяти людей, люди будут помнить о вас. Я знаю, где вы, Айртон, я знаю, где вас найти, и никогда этого не забуду.\"},{\"source_id\":\"fr42c-069-0089\",\"target\":\"— Да хранит Бог Вашу Честь! — просто ответил Айртон.\"},{\"source_id\":\"fr42c-069-0090\",\"target\":\"Таковы были последние слова, которыми обменялись Гленарван и квартирмейстер. Шлюпка была готова. Айртон спустился в неё.\"},{\"source_id\":\"fr42c-069-0091\",\"target\":\"Джон Манглс заранее велел перевезти на остров несколько ящиков консервов, инструменты, оружие и запас пороха и свинца. Таким образом, квартирмейстер мог возродиться трудом; ему ничего не недоставало, даже книг, и в числе их Библии, столь дорогой английским сердцам.\"},{\"source_id\":\"fr42c-069-0092\",\"target\":\"Час разлуки настал. Экипаж и пассажиры стояли на палубе. Не одному сжималось сердце. Мэри Грант и леди Элен не могли сдержать волнения.\"},{\"source_id\":\"fr42c-069-0093\",\"target\":\"«Неужели это необходимо? — спросила молодая женщина мужа. — Неужели этого несчастного непременно нужно покинуть!\"},{\"source_id\":\"fr42c-069-0094\",\"target\":\"— Это необходимо, Элен, — ответил лорд Гленарван. — Это искупление!»\"},{\"source_id\":\"fr42c-069-0095\",\"target\":\"В этот миг шлюпка под командой Джона Манглса отвалила от борта. Айртон, стоя, по-прежнему невозмутимый, снял шляпу и серьёзно поклонился.\"},{\"source_id\":\"fr42c-069-0096\",\"target\":\"Гленарван обнажил голову, а с ним и весь экипаж, как это делают перед человеком, который идёт на смерть, и шлюпка удалилась среди глубокого молчания.\"},{\"source_id\":\"fr42c-069-0097\",\"target\":\"Айртон, достигнув берега, спрыгнул на песок, а шлюпка вернулась на борт. Было тогда четыре часа пополудни, и с юта пассажиры могли видеть квартирмейстера, скрестившего руки, неподвижного, как статуя на скале, и глядевшего на корабль.\"},{\"source_id\":\"fr42c-069-0098\",\"target\":\"«Мы отплываем, милорд? — спросил Джон Манглс.\"}],\"review\":[{\"source_id\":\"fr42c-069-0079\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Айртон, «terre habitée» restored as земля.\"},{\"source_id\":\"fr42c-069-0080\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-069-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed grammar «заменит»; «remplacer» rendered as occupying my place.\"},{\"source_id\":\"fr42c-069-0082\",\"verdict\":\"CORRECTED\",\"reason\":\"«Ainsi soit-il» → Аминь; name fixed.\"},{\"source_id\":\"fr42c-069-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed «s'adressant».\"},{\"source_id\":\"fr42c-069-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Name fixed; resolution to be abandoned made accurate.\"},{\"source_id\":\"fr42c-069-0085\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-069-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"«convient» means suits, not pleases.\"},{\"source_id\":\"fr42c-069-0087\",\"verdict\":\"CORRECTED\",\"reason\":\"Register: Вполне.\"},{\"source_id\":\"fr42c-069-0088\",\"verdict\":\"CORRECTED\",\"reason\":\"Name, italic ship, idiom, «ne serez ni perdu» and register refined.\"},{\"source_id\":\"fr42c-069-0089\",\"verdict\":\"CORRECTED\",\"reason\":\"Name; Your Honour word order.\"},{\"source_id\":\"fr42c-069-0090\",\"verdict\":\"CORRECTED\",\"reason\":\"Name fixed.\"},{\"source_id\":\"fr42c-069-0091\",\"verdict\":\"CORRECTED\",\"reason\":\"Names; fixed «ничего не недоставало»? kept as lacking nothing; restored «se régénérer par le travail»; removed false syntax of boxes containing tools.\"},{\"source_id\":\"fr42c-069-0092\",\"verdict\":\"CORRECTED\",\"reason\":\"Elen name per guidance; emotion rendered simply.\"},{\"source_id\":\"fr42c-069-0093\",\"verdict\":\"CORRECTED\",\"reason\":\"Quote closing fixed (dialogue continues); sense of abandonment.\"},{\"source_id\":\"fr42c-069-0094\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Элен; removed erroneous opening-quote mismatch.\"},{\"source_id\":\"fr42c-069-0095\",\"verdict\":\"CORRECTED\",\"reason\":\"«déborda» means pushed off, not landed.\"},{\"source_id\":\"fr42c-069-0096\",\"verdict\":\"CORRECTED\",\"reason\":\"Bared heads; fixed «embarcation».\"},{\"source_id\":\"fr42c-069-0097\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed mistranslation «кварта-мастер», dunette = ют, soir = пополудни.\"},{\"source_id\":\"fr42c-069-0098\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Манглс.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9814,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2495,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
