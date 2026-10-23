@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJriwYAxYJUYZpqMbdMk",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-017-0080\",\"target\":\"Как видно, спор принимал неожиданные размеры, и притом из-за предмета, который, конечно, этого не стоил. Гленарван счёл уместным вмешаться.\"},{\"source_id\":\"fr42c-017-0081\",\"target\":\"— Несомненно, — сказал он, — что с одной стороны тут поддразнивание, а с другой — раздражительность, и меня удивляет это в вас обоих.\"},{\"source_id\":\"fr42c-017-0082\",\"target\":\"Патагонец, не понимая предмета ссоры, легко догадался, что двое друзей спорят. Он улыбнулся и спокойно сказал:\"},{\"source_id\":\"fr42c-017-0083\",\"target\":\"— Это северный ветер.\"},{\"source_id\":\"fr42c-017-0084\",\"target\":\"— Северный ветер! — воскликнул Паганель. — При чём тут северный ветер?\"},{\"source_id\":\"fr42c-017-0085\",\"target\":\"— Ну да, именно так, — ответил Гленарван, — северный ветер и есть причина вашего дурного настроения! Я слышал, что на юге Америки он особенно раздражает нервную систему.\\n\"},{\"source_id\":\"fr42c-017-0086\",\"target\":\"— Клянусь святым Патриком, Эдвард, вы правы! — сказал майор и разразился смехом.\"},{\"source_id\":\"fr42c-017-0087\",\"target\":\"Но Паганель, по-настоящему разгорячившись, не пожелал отступиться от спора и обрушился на Гленарвана, вмешательство которого показалось ему слишком шутливым.\"},{\"source_id\":\"fr42c-017-0088\",\"target\":\"— Ах, вот как, милорд, — сказал он, — у меня, значит, раздражена нервная система?\"},{\"source_id\":\"fr42c-017-0089\",\"target\":\"— Да, Паганель, это северный ветер, ветер, который заставляет совершать немало преступлений в Пампе, как трамонтана в Римской Кампанье!\"},{\"source_id\":\"fr42c-017-0090\",\"target\":\"— Преступлений! — возразил учёный. — Я похож на человека, который собирается совершать преступления?\"},{\"source_id\":\"fr42c-017-0091\",\"target\":\"— Я не говорю этого точно.\"},{\"source_id\":\"fr42c-017-0092\",\"target\":\"— Ну, — ответил Гленарван, смеясь и не в силах сдержаться, — я этого опасаюсь. К счастью, северный ветер длится только один день!\"},{\"source_id\":\"fr42c-017-0093\",\"target\":\"При этом ответе все дружно засмеялись вместе с Гленарваном. Тогда Паганель дал коню шпоры и поскакал вперёд, чтобы избыть дурное настроение. Через четверть часа он уже и не думал о нём.\"},{\"source_id\":\"fr42c-017-0094\",\"target\":\"Так доброе расположение учёного было на миг омрачено; но, как очень верно сказал Гленарван, эту слабость следовало приписать причине совершенно внешней.\"},{\"source_id\":\"fr42c-017-0095\",\"target\":\"В восемь часов вечера Талькав, выехав немного вперёд, указал на барранки столь желанного озера. Через четверть часа маленький отряд спускался по берегам Салинаса. Но там его ожидало тяжёлое разочарование. Озеро было сухо.\"},{\"source_id\":\"fr42c-note-036\",\"target\":\"Зимы в Исландии по этой причине мягче, чем в Ломбардии.\"},{\"source_id\":\"fr42c-note-037\",\"target\":\"Тридцать лье.\"}],\"review\":[{\"source_id\":\"fr42c-017-0080\",\"verdict\":\"CORRECTED\",\"reason\":\"Tightened wording; kept the sense that the subject was not worth the dispute.\"},{\"source_id\":\"fr42c-017-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed dialogue punctuation and the 'il est certain' turn.\"},{\"source_id\":\"fr42c-017-0082\",\"verdict\":\"CORRECTED\",\"reason\":\"Patagon rendered as 'патагонец'; syntax smoothed.\"},{\"source_id\":\"fr42c-017-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dash punctuation instead of quotation marks.\"},{\"source_id\":\"fr42c-017-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiomatic rendering of 'à faire dans tout ceci'.\"},{\"source_id\":\"fr42c-017-0085\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved idiom; preserved the hearsay and nervous system.\"},{\"source_id\":\"fr42c-017-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the stray closing quotation mark; 'partit d'un éclat de rire' idiom.\"},{\"source_id\":\"fr42c-017-0087\",\"verdict\":\"CORRECTED\",\"reason\":\"'Monté' as heated, not merely angry; improved agency and tone.\"},{\"source_id\":\"fr42c-017-0088\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft 'нервы на пределе' mistranslated 'irrité'; fixed.\"},{\"source_id\":\"fr42c-017-0089\",\"verdict\":\"CORRECTED\",\"reason\":\"'Campagne de Rome' rendered as Римская Кампанья; dialogue punctuation.\"},{\"source_id\":\"fr42c-017-0090\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; 'J'ai l'air' preserved.\"},{\"source_id\":\"fr42c-017-0091\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation; negation preserved.\"},{\"source_id\":\"fr42c-017-0092\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed the stray space and quotation mark; 'j'en ai peur' fixed.\"},{\"source_id\":\"fr42c-017-0093\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft 'обеими лошадьми' was wrong; 'piqua des deux' means spurred.\"},{\"source_id\":\"fr42c-017-0094\",\"verdict\":\"CORRECTED\",\"reason\":\"Polished; the same meaning preserved.\"},{\"source_id\":\"fr42c-017-0095\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Талькав; barrancas, not 'берега'; the lake was dry; fixed agency.\"},{\"source_id\":\"fr42c-note-036\",\"verdict\":\"CORRECTED\",\"reason\":\"Slight stylistic adjustment.\"},{\"source_id\":\"fr42c-note-037\",\"verdict\":\"CORRECTED\",\"reason\":\"'Lieues' are лье, not лиги.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8826,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2277,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
