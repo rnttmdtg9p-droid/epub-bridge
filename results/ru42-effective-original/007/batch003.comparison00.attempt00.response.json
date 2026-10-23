@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJoyoQqsNtyu1MjXxN4q",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-007-0060\",\"target\":\"Наконец он попросил у леди Элен разрешения поцеловать её.\"},{\"source_id\":\"fr42c-007-0061\",\"target\":\"На что леди Гленарван согласилась, хотя это, быть может, было слегка «<i>improper</i>».\"}],\"review\":[{\"source_id\":\"fr42c-007-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful: 'Finalement' as 'Наконец', Paganel asks lady Helena's permission to kiss her. Name Элен matches the established form; prior correction verified.\"},{\"source_id\":\"fr42c-007-0061\",\"verdict\":\"PASS\",\"reason\":\"Faithful: lady Glenarvan consents, 'peut-être un peu' rendered as 'быть может, слегка'. English 'improper' kept and italicised as in the source (lang-en span); guillemets preserved. Prior correction verified.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2838,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 320,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
