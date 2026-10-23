@@ -1,0 +1,156 @@
+{
+  "unit": 32,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_BOOK_RECONCILIATION",
+  "rows": [
+    {
+      "source_id": "id04209",
+      "source_sha256": "a5d97c3a19a4c83ea900362dc025465ce7fa3e10073a713273222a50eccb6fe2",
+      "target": "— И я тоже! — воскликнул юноша в порыве радости. — Ах, тем лучше, мы вместе сделаем первый выстрел из пистолета.",
+      "target_id": "ru-id04209",
+      "tag": "p",
+      "target_sha256": "d3e6515e10a619d7a6cfac0129c3b5eeaedb242a98ace1c940f936b729fe08f2"
+    },
+    {
+      "source_id": "id04210",
+      "source_sha256": "7ff9ec51810feafe3a37e8dd2fc5125d6e8bc186f4c06c3c6dd03306744675d6",
+      "target": "— Что ж, любите друг друга, — сказал губернатор. — Вы оба молоды, и, без сомнения, у вас одна звезда, и вам суждено было встретиться.",
+      "target_id": "ru-id04210",
+      "tag": "p",
+      "target_sha256": "3a55cc4f7c2b9d1f1d9cedfda368e63472ab0e3141c5715a66ab0c847e9cc19f"
+    },
+    {
+      "source_id": "id04211",
+      "source_sha256": "197b1f568cec3567d117b7675e7bff39113a1f80950bd150894f1b2cd0c5fa65",
+      "target": "Оба юноши улыбнулись с доверчивостью, свойственной молодости.",
+      "target_id": "ru-id04211",
+      "tag": "p",
+      "target_sha256": "ff1077765af28424fe14c9cdc10bb8611e2c43256dd8385e482361df8bdd5424"
+    },
+    {
+      "source_id": "id04212",
+      "source_sha256": "bdee3cda5b246a87fd0b0db683839e5d658a0d69d4d4f32647e95326f5d868f6",
+      "target": "— А теперь, — сказал губернатор, — вам нужно переменить платье. Ваши лакеи, которым я отдал распоряжения, как только они сошли с парома, должно быть, уже прибыли в трактир. Бельё и вино греются; пойдёмте.",
+      "target_id": "ru-id04212",
+      "tag": "p",
+      "target_sha256": "f622370900fef0330b70201c040a13486d50ca1c968a5cfd5275758d8d64cad2"
+    },
+    {
+      "source_id": "id04213",
+      "source_sha256": "d72cdf01c38200b9480aed76b413332baa6ea64d5db84766b80ba26834874150",
+      "target": "Юноши не имели никаких возражений против этого предложения; напротив, они нашли его превосходным; поэтому они тотчас снова сели на коней, глядя друг на друга и любуясь друг другом: это были в самом деле два изящных всадника со стройной и гибкой осанкой, два благородных лица с открытым лбом, с мягким и гордым взглядом, с честной и тонкой улыбкой.",
+      "target_id": "ru-id04213",
+      "tag": "p",
+      "target_sha256": "73db561ac50df13916cd24f334d7ba4af36ef970c23deaa2904b905a4514c48e"
+    },
+    {
+      "source_id": "id04214",
+      "source_sha256": "c51db930b212a3e4eb25a9124f5f5ff306ba59640cf14c7470b7a61e066ea9de",
+      "target": "Де Гишу могло быть лет восемнадцать, но он был едва ли выше Рауля, которому было всего пятнадцать.",
+      "target_id": "ru-id04214",
+      "tag": "p",
+      "target_sha256": "11da8409096964a5ebc46a7281ca3812ff2d2596d27c679ee5db6273bac37420"
+    },
+    {
+      "source_id": "id04215",
+      "source_sha256": "591774e994927c15cf93a51937f202de542a179aff5dd76adec7beadf40b0753",
+      "target": "Они по невольному побуждению протянули друг другу руки и, пришпорив коней, бок о бок проделали путь от реки до трактира: один находил прекрасной и радостной эту жизнь, которую едва не потерял, другой благодарил Бога за то, что уже прожил достаточно, чтобы сделать нечто приятное своему покровителю.",
+      "target_id": "ru-id04215",
+      "tag": "p",
+      "target_sha256": "d8b7e71db482837e880844fbad43066d46c6092b8b8e859191458b7fd2001ece"
+    },
+    {
+      "source_id": "id04216",
+      "source_sha256": "d8ac7610193e44512cb7ae96c9020a4af6e7d2062999b05ce79a068255d4c8c9",
+      "target": "Что до Оливена, то он один не был вполне доволен этим прекрасным поступком своего господина. Он выкручивал рукава и полы своего камзола, думая о том, что остановка в Компьене избавила бы его не только от несчастья, которого он только что избежал, но и от воспаления лёгких и ревматизма, которые должны были естественно за ним последовать.",
+      "target_id": "ru-id04216",
+      "tag": "p",
+      "target_sha256": "34f3cf8abe41c13a383d63be1a186adce37ddbf688dcd6b6cb496a669652f044"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id04209",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic: exclamation, joy and the 'first pistol shot together' are all preserved."
+    },
+    {
+      "source_id": "id04210",
+      "verdict": "PASS",
+      "reason": "Faithful: imperative 'aimez-vous', shared star and the 'deviez vous rencontrer' fate nuance are retained; dialogue punctuation is correct."
+    },
+    {
+      "source_id": "id04211",
+      "verdict": "PASS",
+      "reason": "Complete and accurate."
+    },
+    {
+      "source_id": "id04212",
+      "verdict": "PASS",
+      "reason": "Agency, orders given at the moment of leaving the ferry, and the linen and wine warming are all preserved; punctuation is correct."
+    },
+    {
+      "source_id": "id04213",
+      "verdict": "PASS",
+      "reason": "Full content preserved, including the inverted 'la trouvèrent-ils excellente', the mutual admiration and all the physical details."
+    },
+    {
+      "source_id": "id04214",
+      "verdict": "PASS",
+      "reason": "Ages and the comparison of height are correct, with the hedged 'pouvait avoir' kept."
+    },
+    {
+      "source_id": "id04215",
+      "verdict": "PASS",
+      "reason": "Both parallel participial clauses (l'un/l'autre) and the spontaneous gesture are accurately rendered."
+    },
+    {
+      "source_id": "id04216",
+      "verdict": "PASS",
+      "reason": "Olivain's lone dissatisfaction, the wringing of sleeves and skirts, the Compiègne halt and the foreseen illnesses are all preserved; the slightly ironic tone is kept."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJH8e5AHrVCm4Zc2hkLa",
+    "usage": {
+      "input_tokens": 3252,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1183,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJH9fZjW1Zv8RGQjtuKZ",
+    "usage": {
+      "input_tokens": 5167,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2676,
+      "output_tokens_details": {
+        "thinking_tokens": 967
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
