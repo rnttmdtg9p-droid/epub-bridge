@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJxDvTa9RP6HAi7WQDFS",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-036-0059\",\"target\":\"Всадники окружили тяжёлую повозку, и все решительно вошли в реку. Обычно, когда повозки пытаются переправляться вброд, их окружает цепь пустых бочек, которая удерживает их на поверхности воды. Но здесь этого плавучего пояса не было; поэтому приходилось полагаться на сообразительность волов, которых вёл под уздцы осторожный Айртон. Он, сидя на своём месте, управлял упряжкой; майор и двое матросов рассекали быстрое течение в нескольких туазах впереди; Гленарван и Джон Манглс, по обе стороны повозки, были готовы прийти на помощь путешественницам, а Паганель и Роберт замыкали строй.\"},{\"source_id\":\"fr42c-036-0060\",\"target\":\"Всё шло хорошо до середины Вимерры. Но тут русло стало глубже, и вода поднялась выше ободьев колёс. Волы, снесённые с брода, могли потерять опору и увлечь за собой качающуюся повозку. Айртон отважно пожертвовал собой: он бросился в воду и, цепляясь за рога волов, сумел вернуть их на верный путь.\"},{\"source_id\":\"fr42c-036-0061\",\"target\":\"В этот миг произошёл непредвиденный толчок; послышался треск; повозка наклонилась под тревожным углом; вода дошла до ног путешественниц; весь экипаж начало сносить течением, несмотря на усилия Гленарвана и Джона Манглса, которые вцепились в боковые решётки. Это была минута, полная тревоги.\"},{\"source_id\":\"fr42c-036-0062\",\"target\":\"К счастью, сильный рывок упряжки приблизил повозку к противоположному берегу. Дно реки стало под ногами волов и лошадей подниматься, и вскоре люди и животные оказались в безопасности на другом берегу, столь же довольные, сколь промокшие.\"},{\"source_id\":\"fr42c-036-0063\",\"target\":\"Только передок повозки был разбит ударом, а у лошади Гленарвана с передних ног слетели подковы.\"},{\"source_id\":\"fr42c-036-0064\",\"target\":\"Эта беда требовала скорого исправления. Все смотрели друг на друга довольно растерянно, когда Айртон предложил съездить на станцию Блэк-Пойнт, расположенную в двадцати милях к северу, и привезти оттуда кузнеца.\"},{\"source_id\":\"fr42c-036-0065\",\"target\":\"— Поезжайте, поезжайте, мой славный Айртон, — сказал ему Гленарван. — Сколько времени вам нужно, чтобы доехать туда и вернуться в лагерь?\"},{\"source_id\":\"fr42c-036-0066\",\"target\":\"— Пятнадцать часов, пожалуй, — ответил Айртон, — но не больше.\"},{\"source_id\":\"fr42c-036-0067\",\"target\":\"— Тогда отправляйтесь, а пока вы не вернётесь, мы расположимся лагерем на берегу Вимерры.\"},{\"source_id\":\"fr42c-036-0068\",\"target\":\"Несколько минут спустя боцман, сев на лошадь Уилсона, скрылся за густой завесой мимоз.\"},{\"source_id\":\"fr42c-note-075\",\"target\":\"Равнины, орошаемые многочисленными источниками.\"}],\"review\":[{\"source_id\":\"fr42c-036-0059\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed name Айртон, bœufs led by hand, siège, ceinture, toises, 'chapelet', and lineup.\"},{\"source_id\":\"fr42c-036-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Corrected jantes, creux, se dévoua, Wimerra wording and name.\"},{\"source_id\":\"fr42c-036-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Corrected craquement, ridelles, dériver and repeated 'повозка'.\"},{\"source_id\":\"fr42c-036-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft misread coup de collier and river slope; corrected idiom.\"},{\"source_id\":\"fr42c-036-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'seulement' scope: avant-train broken.\"},{\"source_id\":\"fr42c-036-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved idiom, name, and maréchal ferrant.\"},{\"source_id\":\"fr42c-036-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Converted to dialogue dash; fixed 'Allez' and punctuation.\"},{\"source_id\":\"fr42c-036-0066\",\"verdict\":\"PASS\",\"reason\":\"Accurate; minor tidy and name spelling.\"},{\"source_id\":\"fr42c-036-0067\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray quote mark/space; fixed names.\"},{\"source_id\":\"fr42c-036-0068\",\"verdict\":\"CORRECTED\",\"reason\":\"Quartier-maître rendered in period style; keeps content.\"},{\"source_id\":\"fr42c-note-075\",\"verdict\":\"PASS\",\"reason\":\"Faithful note.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 7056,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1778,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
