@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJt9E9LcTujU5Uxa5T4F",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-022-0081\",\"target\":\"Едва это слово было произнесено, как налетел огромный маскарет. Чудовищная волна высотой в сорок футов с ужасающим грохотом обрушилась на беглецов. Люди и животные — всё исчезло в водовороте пены. Жидкая масса весом в несколько миллионов тонн закрутила их в своих неистовых водах.\"},{\"source_id\":\"fr42c-022-0082\",\"target\":\"Когда вал прошёл, люди вынырнули на поверхность и быстро пересчитались; но лошади, кроме Тауки, несшего своего хозяина, исчезли навсегда.\"},{\"source_id\":\"fr42c-022-0083\",\"target\":\"— Смелее! Смелее! — повторял Гленарван, поддерживая Паганеля одной рукой, а другой гребя.\"},{\"source_id\":\"fr42c-022-0084\",\"target\":\"— Идёт! Идёт!.. — отвечал достойный учёный. — И даже, я не прочь…\"},{\"source_id\":\"fr42c-022-0085\",\"target\":\"Чего он не прочь? Этого так и не узнали, ибо бедняге пришлось проглотить конец фразы вместе с полупинтой илистой воды. Майор спокойно продвигался вперёд, делая ровные гребки, которых не постыдился бы и учитель плавания. Матросы пробирались, как два морских свина, в своей родной жидкой стихии. Что до Роберта, то, вцепившись в гриву Тауки, он отдался на волю его движения. Таука рассекал воду с великолепной силой и инстинктивно держался линии дерева, куда несло течение.\"},{\"source_id\":\"fr42c-022-0086\",\"target\":\"До дерева оставалось всего двадцать морских саженей. Через несколько мгновений весь отряд достиг его. К счастью: упусти они это убежище, всякая надежда на спасение исчезла бы, и пришлось бы погибнуть в волнах.\"},{\"source_id\":\"fr42c-022-0087\",\"target\":\"Вода поднималась до верхушки ствола, до места, где начинались главные ветви. Поэтому ухватиться за него было нетрудно. Талькав, бросив свою лошадь и подсадив Роберта, взобрался первым, и вскоре его могучие руки поместили в безопасное место измученных пловцов.\"},{\"source_id\":\"fr42c-022-0088\",\"target\":\"Но Таука, увлекаемый течением, быстро удалялся. Он поворачивал к хозяину свою умную голову и, встряхивая длинной гривой, ржанием звал его.\"},{\"source_id\":\"fr42c-022-0089\",\"target\":\"— Ты бросаешь его! — сказал Паганель Талькаву.\"},{\"source_id\":\"fr42c-022-0090\",\"target\":\"— Я! — воскликнул индеец.\"},{\"source_id\":\"fr42c-022-0091\",\"target\":\"И, нырнув в бурные воды, он вынырнул в десяти саженях от дерева. Спустя несколько мгновений его рука уже лежала на шее Тауки, и лошадь со всадником вместе уносило к туманному северному горизонту.\"},{\"source_id\":\"fr42c-note-047\",\"target\":\"Около шестидесяти лье.\"},{\"source_id\":\"fr42c-note-048\",\"target\":\"Скорее! Скорее!\"}],\"review\":[{\"source_id\":\"fr42c-022-0081\",\"verdict\":\"PASS\",\"reason\":\"Faithful; mascaret, forty feet, millions of tons, agency preserved.\"},{\"source_id\":\"fr42c-022-0082\",\"verdict\":\"PASS\",\"reason\":\"Correct: barre passed, men resurface, horses lost except Thaouka with master.\"},{\"source_id\":\"fr42c-022-0083\",\"verdict\":\"PASS\",\"reason\":\"Dialogue punctuation fixed; Glenarvan supports Paganel and swims; accurate.\"},{\"source_id\":\"fr42c-022-0084\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic rendering of 'je ne suis pas fâché' as 'не прочь'; ellipsis kept.\"},{\"source_id\":\"fr42c-022-0085\",\"verdict\":\"PASS\",\"reason\":\"Joke, swimmers, porpoises, Robert and Thaouka's line all preserved.\"},{\"source_id\":\"fr42c-022-0086\",\"verdict\":\"PASS\",\"reason\":\"Twenty brasses, whole troop, refuge conditional all preserved.\"},{\"source_id\":\"fr42c-022-0087\",\"verdict\":\"CORRECTED\",\"reason\":\"Stray English 'main-ветви' replaced with 'главные ветви'; rest faithful.\"},{\"source_id\":\"fr42c-022-0088\",\"verdict\":\"PASS\",\"reason\":\"Accurate: current carries Thaouka, turns head, neighs calling master.\"},{\"source_id\":\"fr42c-022-0089\",\"verdict\":\"PASS\",\"reason\":\"Correct; Thaouka masculine 'его' and dialogue dash.\"},{\"source_id\":\"fr42c-022-0090\",\"verdict\":\"PASS\",\"reason\":\"Faithful, concise exclamation.\"},{\"source_id\":\"fr42c-022-0091\",\"verdict\":\"PASS\",\"reason\":\"Dive, ten brasses, tree, drifting north all accurate.\"},{\"source_id\":\"fr42c-note-047\",\"verdict\":\"PASS\",\"reason\":\"Lieues rendered 'лье'; accurate.\"},{\"source_id\":\"fr42c-note-048\",\"verdict\":\"PASS\",\"reason\":\"Accurate rendering of 'Vite ! vite !'.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9513,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1885,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
