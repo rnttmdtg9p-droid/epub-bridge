@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKPmP5FCzyXbUgGEkMif",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-041-0060\",\"target\":\"«Не знаю, масса Том, может, и смог бы; только тут темновато, а цветок мне всё равно ни к чему, и хлопот с ним будет страсть сколько».\"},{\"source_id\":\"043-041-0061\",\"target\":\"«Ну, ты всё равно попробуй. Другие заключённые так делали».\"},{\"source_id\":\"043-041-0062\",\"target\":\"«Один из тех здоровенных стеблей коровяка, что на кошачий хвост смахивают, тут, пожалуй, вырос бы, масса Том, да только он и половины хлопот не стоил бы, что с ним будет».\"},{\"source_id\":\"043-041-0063\",\"target\":\"«Не думай так. Мы принесём тебе маленький, ты посадишь его вон в том углу и будешь растить. И не называй его коровяком, называй Питчиола — так он правильно называется в тюрьме. И поливать его надо твоими слезами».\"},{\"source_id\":\"043-041-0064\",\"target\":\"«Да у меня, масса Том, родниковой воды вдоволь».\"},{\"source_id\":\"043-041-0065\",\"target\":\"«Тебе родниковая вода не <i>нужна</i>; тебе надо поливать его слезами. Так всегда делают».\"},{\"source_id\":\"043-041-0066\",\"target\":\"«Да что вы, масса Том, спорю, я вырощу такой коровяк с родниковой водой вдвое скорей, чем другой только <i>начнёт</i> растить свой слезами».\\n\"},{\"source_id\":\"043-041-0067\",\"target\":\"Орошение\"},{\"source_id\":\"043-041-0068\",\"target\":\"«Не в этом дело. Тебе <i>надо</i> делать это слезами».\"},{\"source_id\":\"043-041-0069\",\"target\":\"«Он у меня засохнет, масса Том, как пить дать засохнет; я ведь почти никогда не плачу».\\n\"},{\"source_id\":\"043-041-0070\",\"target\":\"Тут Том попал в тупик. Но он обдумал это и сказал, что Джиму придётся как-нибудь обойтись луковицей. Он пообещал, что утром сходит к негритянским хижинам и тайком бросит одну Джиму в кофейник. Джим сказал, что «так же охотно положил бы в кофе табак»; и нашёл столько недостатков и в этом, и в работе и возне с выращиванием коровяка, и в игре крысам на варгане, и в ласках и лести змеям, паукам и прочей твари, в придачу ко всей остальной работе, какую ему надо было делать над перьями, надписями, дневниками и прочим, — из-за чего быть узником стало для него хлопотнее, тревожнее и ответственнее всего, за что он когда-либо брался, — что Том чуть совсем не потерял с ним терпение; и сказал, что на Джима свалилось больше блестящих возможностей прославиться, чем когда-либо бывало у какого-нибудь узника на свете, а он не умеет их ценить, и они на него просто зря тратятся. Тогда Джиму стало совестно, он сказал, что больше так не будет, и мы с Томом поплелись спать.\"},{\"source_id\":\"043-041-0071\",\"target\":\"Против скуки\"}],\"review\":[{\"source_id\":\"043-041-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed name form (Mars Tom), Jim's voice, 'nohow' and 'trouble' nuance.\"},{\"source_id\":\"043-041-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed awkward repeated 'во всяком случае'; smoother.\"},{\"source_id\":\"043-041-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Mullen is mullein (коровяк); fixed stiff register and name.\"},{\"source_id\":\"043-041-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Mullen rendered consistently as коровяк; 'саженец' replaced with 'little one'; quotes/punctuation fixed.\"},{\"source_id\":\"043-041-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Name form made consistent (масса Том).\"},{\"source_id\":\"043-041-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic on 'want' preserved; wording tightened.\"},{\"source_id\":\"043-041-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft reversed sense (twice as fast, another man just starting); fixed.\"},{\"source_id\":\"043-041-0067\",\"verdict\":\"PASS\",\"reason\":\"Caption 'Irrigation' accurately rendered.\"},{\"source_id\":\"043-041-0068\",\"verdict\":\"PASS\",\"reason\":\"Faithful with italic preserved.\"},{\"source_id\":\"043-041-0069\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed mistranslation 'die on my hands' and name form; Jim's voice.\"},{\"source_id\":\"043-041-0070\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'stumped', tobacco quote, 'pens' (not записи), jews-harping, 'sorry', and overall idiom.\"},{\"source_id\":\"043-041-0071\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption made concise and idiomatic.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6845,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1783,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

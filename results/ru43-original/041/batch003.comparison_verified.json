@@ -1,0 +1,338 @@
+{
+  "unit": 41,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-041-0060",
+      "target": "«Не знаю, масса Том, может, и смог бы; только тут темновато, а цветок мне всё равно ни к чему, и хлопот с ним будет страсть сколько».",
+      "source_sha256": "f3220ca3048b65bca428b0ed55ea0f33b98be3e4905dfd67c20336e8780c77dc",
+      "target_id": "ru-043-041-0060",
+      "tag": "p",
+      "target_sha256": "2a05fcb102da3a2acc85be9ef1c2cfbd15ea2237766fd965e2ec5e7e26909c4e"
+    },
+    {
+      "source_id": "043-041-0061",
+      "target": "«Ну, ты всё равно попробуй. Другие заключённые так делали».",
+      "source_sha256": "b3e5ae39d1e912749af0bc3f6d721e08376a6f38df52dab632b8953eac32e681",
+      "target_id": "ru-043-041-0061",
+      "tag": "p",
+      "target_sha256": "46b0a0220bd8904dd95d5e327275f909c8bcb093e1a75549595db809394252aa"
+    },
+    {
+      "source_id": "043-041-0062",
+      "target": "«Один из тех здоровенных стеблей коровяка, что на кошачий хвост смахивают, тут, пожалуй, вырос бы, масса Том, да только он и половины хлопот не стоил бы, что с ним будет».",
+      "source_sha256": "ae9fe43ba17693b7d4cbec47c10437b4be16499e30a09721885dd97eac21c2bc",
+      "target_id": "ru-043-041-0062",
+      "tag": "p",
+      "target_sha256": "d0edcf7b42b9c8e5ef1109c189f908814989446472f3c31d7b7a6ea9b3d1fb7e"
+    },
+    {
+      "source_id": "043-041-0063",
+      "target": "«Не думай так. Мы принесём тебе маленький, ты посадишь его вон в том углу и будешь растить. И не называй его коровяком, называй Питчиола — так он правильно называется в тюрьме. И поливать его надо твоими слезами».",
+      "source_sha256": "854a7fc61513d0a6a000bf6f721b5fd3c1b77087f76d2c478970ebf20789d913",
+      "target_id": "ru-043-041-0063",
+      "tag": "p",
+      "target_sha256": "d3813c5c10d5ce36edc158ba4c7fba2fe714d8d9c11f9e318517000d85b3dc32"
+    },
+    {
+      "source_id": "043-041-0064",
+      "target": "«Да у меня, масса Том, родниковой воды вдоволь».",
+      "source_sha256": "96d90835866edea4d9321533a04355b0e20ce6f219bf576f0154f00617165bbb",
+      "target_id": "ru-043-041-0064",
+      "tag": "p",
+      "target_sha256": "8d81d8d87e586866ad3cbc4e8af6fe5b6734b190ded6ba8ee0a5b67bc089f779"
+    },
+    {
+      "source_id": "043-041-0065",
+      "target": "«Тебе родниковая вода не <i>нужна</i>; тебе надо поливать его слезами. Так всегда делают».",
+      "source_sha256": "1ef0e83e301ce21503456cfb082b8a33712a2a00911513451d2f9096b1d0e5c2",
+      "target_id": "ru-043-041-0065",
+      "tag": "p",
+      "target_sha256": "983c86c32ad4826d3dff3f37056f8079b23d714a053f789b2f1ae9286358f314"
+    },
+    {
+      "source_id": "043-041-0066",
+      "target": "«Да что вы, масса Том, спорю, я вырощу такой коровяк с родниковой водой вдвое скорей, чем другой только <i>начнёт</i> растить свой слезами».\n",
+      "source_sha256": "268f959c3a34cf95ddc022a38a4f0251760e051004f596f27e18ef4b42979e46",
+      "target_id": "ru-043-041-0066",
+      "tag": "p",
+      "target_sha256": "f505410490690535585db09ba87a2c1231adc82c86f060cbb1d1fff255c08046"
+    },
+    {
+      "source_id": "043-041-0067",
+      "target": "Орошение",
+      "source_sha256": "213ed8aee7be9e0fb1c9e8af7e918f7ab461e4b1f74f206cc7146431834d1c68",
+      "target_id": "ru-043-041-0067",
+      "tag": "source_caption",
+      "target_sha256": "1de4216a7eae6972c326d5995aefb2946d2cd14883c560015744d1302d89dc45"
+    },
+    {
+      "source_id": "043-041-0068",
+      "target": "«Не в этом дело. Тебе <i>надо</i> делать это слезами».",
+      "source_sha256": "5c18adcc34fab460708e1ab26f3d3e1283a5846a3575c414a10ae520029c8e2b",
+      "target_id": "ru-043-041-0068",
+      "tag": "p",
+      "target_sha256": "a3c27d05a2bae0bb69c9e6325c266093c23aebcfec647b41c169b06696988d09"
+    },
+    {
+      "source_id": "043-041-0069",
+      "target": "«Он у меня засохнет, масса Том, как пить дать засохнет; я ведь почти никогда не плачу».\n",
+      "source_sha256": "017c0f7f426671a52b61157c93e99e922fdb59104a77b991a693fd61fd03d1fb",
+      "target_id": "ru-043-041-0069",
+      "tag": "p",
+      "target_sha256": "510a66b1933d7cc9012fcaa88c98ff9dc217b0299b1dc6e193de6c658a49adbe"
+    },
+    {
+      "source_id": "043-041-0070",
+      "target": "Тут Том попал в тупик. Но он обдумал это и сказал, что Джиму придётся как-нибудь обойтись луковицей. Он пообещал, что утром сходит к негритянским хижинам и тайком бросит одну Джиму в кофейник. Джим сказал, что «так же охотно положил бы в кофе табак»; и нашёл столько недостатков и в этом, и в работе и возне с выращиванием коровяка, и в игре крысам на варгане, и в ласках и лести змеям, паукам и прочей твари, в придачу ко всей остальной работе, какую ему надо было делать над перьями, надписями, дневниками и прочим, — из-за чего быть узником стало для него хлопотнее, тревожнее и ответственнее всего, за что он когда-либо брался, — что Том чуть совсем не потерял с ним терпение; и сказал, что на Джима свалилось больше блестящих возможностей прославиться, чем когда-либо бывало у какого-нибудь узника на свете, а он не умеет их ценить, и они на него просто зря тратятся. Тогда Джиму стало совестно, он сказал, что больше так не будет, и мы с Томом поплелись спать.",
+      "source_sha256": "df5b6517d6528f9a734a82fdb8d770657f803d5ae3b676b5594b133b08fdc32f",
+      "target_id": "ru-043-041-0070",
+      "tag": "p",
+      "target_sha256": "0734e4f89b86a85566ced7afc5fe7d335135e6a2d0cac5eb60b61161704f092a"
+    },
+    {
+      "source_id": "043-041-0071",
+      "target": "Против скуки",
+      "source_sha256": "94752966161c96b6258523eb5708c065fc903c049f4f76be3de7e84f354764e5",
+      "target_id": "ru-043-041-0071",
+      "tag": "source_caption",
+      "target_sha256": "5c4e0dcbcac41b4a7c6f992ecb962fcbd436602b66c0fc4feaa766ac1aaebe98"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-041-0060",
+      "verdict": "CORRECTED",
+      "reason": "Fixed name form (Mars Tom), Jim's voice, 'nohow' and 'trouble' nuance."
+    },
+    {
+      "source_id": "043-041-0061",
+      "verdict": "CORRECTED",
+      "reason": "Removed awkward repeated 'во всяком случае'; smoother."
+    },
+    {
+      "source_id": "043-041-0062",
+      "verdict": "CORRECTED",
+      "reason": "Mullen is mullein (коровяк); fixed stiff register and name."
+    },
+    {
+      "source_id": "043-041-0063",
+      "verdict": "CORRECTED",
+      "reason": "Mullen rendered consistently as коровяк; 'саженец' replaced with 'little one'; quotes/punctuation fixed."
+    },
+    {
+      "source_id": "043-041-0064",
+      "verdict": "CORRECTED",
+      "reason": "Name form made consistent (масса Том)."
+    },
+    {
+      "source_id": "043-041-0065",
+      "verdict": "CORRECTED",
+      "reason": "Italic on 'want' preserved; wording tightened."
+    },
+    {
+      "source_id": "043-041-0066",
+      "verdict": "CORRECTED",
+      "reason": "Draft reversed sense (twice as fast, another man just starting); fixed."
+    },
+    {
+      "source_id": "043-041-0067",
+      "verdict": "PASS",
+      "reason": "Caption 'Irrigation' accurately rendered."
+    },
+    {
+      "source_id": "043-041-0068",
+      "verdict": "PASS",
+      "reason": "Faithful with italic preserved."
+    },
+    {
+      "source_id": "043-041-0069",
+      "verdict": "CORRECTED",
+      "reason": "Fixed mistranslation 'die on my hands' and name form; Jim's voice."
+    },
+    {
+      "source_id": "043-041-0070",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'stumped', tobacco quote, 'pens' (not записи), jews-harping, 'sorry', and overall idiom."
+    },
+    {
+      "source_id": "043-041-0071",
+      "verdict": "CORRECTED",
+      "reason": "Caption made concise and idiomatic."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-041-0060",
+      "before": "«Не знаю, но, может, и смогу, мистер Том; только тут довольно темно, да и цветы мне ни к чему, во всяком случае, а она доставит кучу хлопот».",
+      "after": "«Не знаю, масса Том, может, и смог бы; только тут темновато, а цветок мне всё равно ни к чему, и хлопот с ним будет страсть сколько»."
+    },
+    {
+      "source_id": "043-041-0061",
+      "before": "«Ну, попробуй, во всяком случае. Некоторые другие заключённые так делали».",
+      "after": "«Ну, ты всё равно попробуй. Другие заключённые так делали»."
+    },
+    {
+      "source_id": "043-041-0062",
+      "before": "«Один из тех больших стеблей, похожих на кошачий хвост, здесь бы вырос, мистер Том, я полагаю, но он не стоил бы и половины тех хлопот, которые принёс бы».",
+      "after": "«Один из тех здоровенных стеблей коровяка, что на кошачий хвост смахивают, тут, пожалуй, вырос бы, масса Том, да только он и половины хлопот не стоил бы, что с ним будет»."
+    },
+    {
+      "source_id": "043-041-0063",
+      "before": "«Не верь этому. Мы принесем тебе маленький саженец, ты посадишь его вон там, в углу, и вырастишь. И не называй его «маллен», называй «Питчиола» — так его правильно называют, когда он в тюрьме. И поливай его своими слезами».",
+      "after": "«Не думай так. Мы принесём тебе маленький, ты посадишь его вон в том углу и будешь растить. И не называй его коровяком, называй Питчиола — так он правильно называется в тюрьме. И поливать его надо твоими слезами»."
+    },
+    {
+      "source_id": "043-041-0064",
+      "before": "«Да у меня же полно родниковой воды, Марс Том».",
+      "after": "«Да у меня, масса Том, родниковой воды вдоволь»."
+    },
+    {
+      "source_id": "043-041-0065",
+      "before": "«Тебе не <i>нужна</i> родниковая вода; тебе нужно поливать его своими слёзами. Так они всегда и поступают».",
+      "after": "«Тебе родниковая вода не <i>нужна</i>; тебе надо поливать его слезами. Так всегда делают»."
+    },
+    {
+      "source_id": "043-041-0066",
+      "before": "«Да что ты, Марс Том, клянусь, я могу вырастить один из этих стеблей муллена, поливая их родниковой водой, пока другой человек <i>выращивает</i> его слезами».",
+      "after": "«Да что вы, масса Том, спорю, я вырощу такой коровяк с родниковой водой вдвое скорей, чем другой только <i>начнёт</i> растить свой слезами».\n"
+    },
+    {
+      "source_id": "043-041-0068",
+      "before": "«Дело не в этом. <i>Надо</i> делать это со слезами».",
+      "after": "«Не в этом дело. Тебе <i>надо</i> делать это слезами»."
+    },
+    {
+      "source_id": "043-041-0069",
+      "before": "«Она умрёт в моих руках, мистер Том, точно умрёт; ведь я почти никогда не плачу».",
+      "after": "«Он у меня засохнет, масса Том, как пить дать засохнет; я ведь почти никогда не плачу».\n"
+    },
+    {
+      "source_id": "043-041-0070",
+      "before": "Так что Том оказался в тупике. Но он всё обдумал и затем сказал, что Джиму придётся как-то справляться с луковицей, как сможет. Он пообещал, что утром пойдёт к хижинам негров и незаметно подкинет одну в кофейник Джима. Джим ответил, что «скоро у него в кофе будет табак»; и так много придирок к этому придумал — к труду и хлопотам по выращиванию муллена, к отпугиванию крыс на варгане, к ухаживанию и подхалимовству перед змеями, пауками и прочей живностью, в придачу ко всей остальной работе, которую ему приходилось выполнять: записи, надписи, дневники и прочее, — что быть заключенным оказалось для него большей морокой, заботой и ответственностью, чем что-либо, за что он когда-либо брался, — так что Том чуть не потерял с ним всякое терпение; и сказал, что на него свалилось гораздо больше блестящих возможностей, чем у любого заключённого в мире, чтобы прославиться, а он всё равно не знает, как их оценить, и они просто пропадают зря. Джим, конечно, раскаялся и пообещал, что больше так себя вести не будет, а потом мы с Томом пошли спать.",
+      "after": "Тут Том попал в тупик. Но он обдумал это и сказал, что Джиму придётся как-нибудь обойтись луковицей. Он пообещал, что утром сходит к негритянским хижинам и тайком бросит одну Джиму в кофейник. Джим сказал, что «так же охотно положил бы в кофе табак»; и нашёл столько недостатков и в этом, и в работе и возне с выращиванием коровяка, и в игре крысам на варгане, и в ласках и лести змеям, паукам и прочей твари, в придачу ко всей остальной работе, какую ему надо было делать над перьями, надписями, дневниками и прочим, — из-за чего быть узником стало для него хлопотнее, тревожнее и ответственнее всего, за что он когда-либо брался, — что Том чуть совсем не потерял с ним терпение; и сказал, что на Джима свалилось больше блестящих возможностей прославиться, чем когда-либо бывало у какого-нибудь узника на свете, а он не умеет их ценить, и они на него просто зря тратятся. Тогда Джиму стало совестно, он сказал, что больше так не будет, и мы с Томом поплелись спать."
+    },
+    {
+      "source_id": "043-041-0071",
+      "before": "Как избавиться от скуки",
+      "after": "Против скуки"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/041/batch003.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKPmP5FCzyXbUgGEkMif",
+    "usage": {
+      "input_tokens": 6845,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1783,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKPneZwP5pcQfaGTgV2Q",
+        "usage": {
+          "input_tokens": 8942,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1789,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-041-0060",
+          "verdict": "PASS",
+          "reason": "Accurate: Jim's doubt, darkness, no use for a flower, much trouble; voice suitably colloquial."
+        },
+        {
+          "source_id": "043-041-0061",
+          "verdict": "PASS",
+          "reason": "Faithful; 'anyway' and prior prisoners preserved."
+        },
+        {
+          "source_id": "043-041-0062",
+          "verdict": "PASS",
+          "reason": "Mullen-stalk, cat-tail look, conditional growth and trouble not worth it all preserved."
+        },
+        {
+          "source_id": "043-041-0063",
+          "verdict": "PASS",
+          "reason": "Instructions, Pitchiola, and tears preserved; 'don't you believe it' rendered idiomatically."
+        },
+        {
+          "source_id": "043-041-0064",
+          "verdict": "PASS",
+          "reason": "Plenty of spring water; address preserved."
+        },
+        {
+          "source_id": "043-041-0065",
+          "verdict": "PASS",
+          "reason": "Italic 'want' kept as нужна; meaning correct."
+        },
+        {
+          "source_id": "043-041-0066",
+          "verdict": "PASS",
+          "reason": "Wager, twice as fast, italic 'start'n' preserved. Trailing newline retained as supplied."
+        },
+        {
+          "source_id": "043-041-0067",
+          "verdict": "PASS",
+          "reason": "Caption 'Irrigation' correctly translated."
+        },
+        {
+          "source_id": "043-041-0068",
+          "verdict": "PASS",
+          "reason": "Italic 'got' preserved as надо; meaning correct."
+        },
+        {
+          "source_id": "043-041-0069",
+          "verdict": "PASS",
+          "reason": "Plant dying, 'hardly ever cry' preserved; idiomatic. Trailing newline retained."
+        },
+        {
+          "source_id": "043-041-0070",
+          "verdict": "PASS",
+          "reason": "All narrative details, Jim's quote, Tom's impatience, Jim's apology and bed preserved; register fine."
+        },
+        {
+          "source_id": "043-041-0071",
+          "verdict": "PASS",
+          "reason": "Caption 'Keeping off Dull Times' rendered concisely and accurately."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
