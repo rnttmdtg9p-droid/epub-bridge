@@ -1,7 +1,9 @@
 {
-  "state": "RUNNING_COMPLETE_ORIGINAL_RUSSIAN_LITERARY_REVIEW",
-  "run_id": "40013345357",
+  "state": "COMPLETE_ACTUAL_NATIVE_REVIEW_PENDING_BOOK_QA",
+  "errors": [],
   "source_rows": 1058,
   "source_headings": 5,
+  "run_id": "40013345357",
+  "model": "claude-sonnet-5-5",
   "checkpoint_is_stop_condition": false
 }
