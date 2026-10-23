@@ -1,0 +1,88 @@
+"""Actual whole-body-grounded concise navigation with separate AI verification."""
+from pathlib import Path
+import os,json,time,urllib.request,zipfile,hashlib,io,shutil,datetime
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'results/ru43-navigation-wrap-fixed';OUT.mkdir(parents=True,exist_ok=True)
+TOKEN=os.environ.get('GITHUB_TOKEN','');REPO='rnttmdtg9p-droid/epub-bridge';RUN=39966310480
+H=lambda b:hashlib.sha256(b).hexdigest()
+def save(p,d):
+ p.parent.mkdir(parents=True,exist_ok=True);q=p.with_suffix('.writing');q.write_text(json.dumps(d,ensure_ascii=False,indent=2));q.replace(p)
+def api(path):
+ req=urllib.request.Request('https://api.github.com/repos/'+REPO+path,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'BoundaryBayProduction'})
+ class SafeRedirect(urllib.request.HTTPRedirectHandler):
+  def redirect_request(self,req,fp,code,msg,headers,newurl):
+   redirected=super().redirect_request(req,fp,code,msg,headers,newurl)
+   from urllib.parse import urlparse
+   if redirected is not None and urlparse(req.full_url).netloc!=urlparse(newurl).netloc:redirected.remove_header('Authorization')
+   return redirected
+ with urllib.request.build_opener(SafeRedirect()).open(req,timeout=60) as r:return r.read()
+def main():
+ while True:
+  run=json.loads(api(f'/actions/runs/{RUN}'));save(OUT/'main-run-observed.json',{k:run.get(k) for k in ['id','status','conclusion','head_sha','updated_at']})
+  if run['status']=='completed':
+   assert run['conclusion']=='success','MAIN_TRANSLATION_RUN_NOT_SUCCESS';break
+  print('WAITING_FOR_ACTUAL_FULL_TRANSLATION',run['status'],flush=True);time.sleep(30)
+ arts=json.loads(api(f'/actions/runs/{RUN}/artifacts'))['artifacts'];matches=[a for a in arts if a['name']=='ru43-original-translation-review-v5070'];assert len(matches)==1
+ a=matches[0];raw=api(f'/actions/artifacts/{a["id"]}/zip');(OUT/'actual-main-source-exchanges.zip').write_bytes(raw)
+ z=zipfile.ZipFile(io.BytesIO(raw));assert z.testzip() is None
+ for n in z.namelist():assert not n.startswith('/') and '..' not in Path(n).parts
+ dest=ROOT/'results/ru43-original';dest.mkdir(exist_ok=True);z.extractall(dest)
+ save(OUT/'actual-main-artifact.json',{'run_id':RUN,'artifact_id':a['id'],'sha256':H(raw),'bytes':len(raw),'zip_crc':'PASS','book_release':False})
+ from bb_ru43_original import SOURCE,call,MODEL
+ from bb_ru43_verify import qualify_unit
+ assert len(SOURCE)==46
+ accepted={}
+ for u in SOURCE:
+  c,proof=qualify_unit(ROOT,SOURCE,u['unit'],output_name='ru43-original');accepted[u['unit']]=c;save(OUT/'main-qualification'/f'unit-{u["unit"]:03}.json',proof)
+ data=json.loads((ROOT/'inputs/ru43-navigation-wrap-fix.json').read_text());overrides={x['source_id']:x for x in data['body_overlays']}
+ for unit,c in accepted.items():
+  for i,row in enumerate(c['rows']):
+   if row['source_id'] in overrides:
+    replacement=overrides[row['source_id']];assert replacement['source_sha256']==row['source_sha256'];c['rows'][i]=replacement
+ save(OUT/'final-body-overlay-input.json',{'input_sha256':H((ROOT/'inputs/ru43-navigation-wrap-fix.json').read_bytes()),'actual_source_comparison_runs':data['actual_source_comparison_runs'],'overlaid_source_ids':sorted(overrides)})
+ seedraw=api('/actions/artifacts/12513988512/zip');assert H(seedraw)=='794ca5d570edee718e8dd6a6488b5488b9d9b594bd476587999c2b802b06483e';(OUT/'prior-strict-source-exchanges.zip').write_bytes(seedraw)
+ seed=OUT/'prior-strict-attempt';z=zipfile.ZipFile(io.BytesIO(seedraw));assert z.testzip() is None
+ for name in z.namelist():assert not name.startswith('/') and '..' not in Path(name).parts
+ z.extractall(seed)
+ for name in [f'{n:03}' for n in range(4,47)]:
+  if (seed/name).exists():shutil.copytree(seed/name,OUT/name,dirs_exist_ok=True)
+ results={};previous=[]
+ system='You are the Boundary Bay Russian literary navigation editor. Analyze EVERY supplied body row, not its excluded chapter summary. Create a concise specific grammatical Russian chapter description, STRICTLY3–5space-separatedRussianwords and at most24Unicodecharacters; these are hard validated limits, not suggestions. Use the EXACT proposed editorial suggestion whenever the complete body supports it; do not replace an accurate concise suggestion merely to add detail. Count all Unicodecharacters INCLUDING spaces and punctuation before responding; the overall hard limit is24. The payload per-unit maximum_description_characters_including_spaces can be stricter; obey that exact smaller limit. Name Huckleberry as Гек, never Хак. (the source division prefix is added separately). No generic labels, no invented facts, no quotation from omitted summary, no truncation of a summary, no typography tricks. Use the chapter narrative dominant event/theme, grounded by two non-adjacent body source IDs. All material claims must be supported by both anchors or explain complementary anchors for combined themes. Keep exact names consistent with reviewed Russian. Avoid all previous descriptions. Return JSON only: {"description":"Russian description without chapter number","anchors":["sourceID1","sourceID2"],"reason":"specific content grounding"}.'
+ for u in SOURCE[3:]:
+  n=u['unit'];c=accepted[n];targets={r['source_id']:r['target'] for r in c['rows']};rows=[{**r,'reviewed_russian':targets[r['id']]} for r in u['rows'] if r['tag'] not in ['source_argument','source_caption']];ids=[r['id'] for r in rows];bodyH=H(json.dumps(rows,ensure_ascii=False,sort_keys=True).encode());folder=OUT/f'{n:03}';folder.mkdir(exist_ok=True)
+  payload={'task':'Read the complete eligible chapter body. Use the exact short editorial suggestion if accurate; otherwise correct within24totalUnicodecharacters including spaces, and3–5words. Do not add detail just to lengthen an already accurate suggestion.','maximum_description_characters_including_spaces':24,'required_space_separated_word_count':[3,5],'editorial_starting_suggestion':data['proposals'][str(n)],'source_division':u['heading'],'russian_division':c['heading']['target'],'body_rows':rows,'previous_accepted_descriptions':previous,'excluded_roles':['source_argument','source_caption','BBmodules','notes','metadata'],'body_sha256':bodyH}
+  char_limit=data['per_unit_max_chars'].get(str(n),24)
+  payload['maximum_description_characters_including_spaces']=char_limit
+  payload['task']='Read the complete final body and verify the exact proposed concise description. Preserve its exact wording if accurate. If correction is necessary, obey the supplied per-unit character limit INCLUDING spaces and punctuation and3–5words. Do not add detail to an accurate short suggestion.'
+  def valid(d):
+   assert isinstance(d.get('description'),str) and d['description'].strip()==d['description'],'DESCRIPTION_REQUIRED_TRIMMED_STRING'
+   assert 3<=len(d['description'].split())<=5,('WORD_COUNT_MUST_BE3_TO5',len(d['description'].split()),d['description'])
+   assert len(d['description'])<=char_limit,('DESCRIPTION_TOO_LONG_HARD_LIMIT_INCLUDING_SPACES',char_limit,'ACTUAL',len(d['description']),d['description'],'USE_SHORT_EDITORIAL_SUGGESTION_IF_ACCURATE',data['proposals'][str(n)])
+   assert isinstance(d.get('anchors'),list) and len(d['anchors'])>=2 and len(set(d['anchors']))==len(d['anchors'])
+   assert all(i in ids for i in d['anchors']) and max(ids.index(i) for i in d['anchors'])-min(ids.index(i) for i in d['anchors'])>=2
+   assert d.get('reason') and d['description'] not in previous
+   return d
+  def checked(p,path):
+   last=None
+   existing=list(folder.glob(path+'.attempt*.request.json'));start=max([int(x.name.split('.attempt')[1].split('.')[0])+1 for x in existing] or [0])
+   for attempt in range(start,start+6):
+    q=dict(p)
+    if last:q['format_retry_instruction']=last
+    try:
+     d,meta=call(system,q,folder/(path+f'.attempt{attempt:02}'),max_tokens=4096);return valid(d),meta
+    except (ValueError,AssertionError,KeyError,TypeError) as e:last=type(e).__name__+': '+str(e)
+   raise RuntimeError('NAV_STRICT_FORMAT_RETRIES_EXHAUSTED '+str(last))
+  existing=folder/'navigation.verified.json'
+  if existing.exists() and n not in data['repair_units']:
+   rec=json.loads(existing.read_text());assert rec['body_sha256']==bodyH;valid(rec['history'][-1]['result']);assert all(rec['history'][-1]['result'][key]==rec['history'][-2]['result'][key] for key in ['description','anchors']);rec['reused_actual_navigation_run_id']=39982923337;results[str(n)]=rec;previous.append(rec['description']);save(OUT/'043_Qualified_Concise_Navigation.json',results);print('REUSED_ACTUAL_STABLE_NAVIGATION',n,flush=True);continue
+  d,meta=checked(payload,'draft');history=[{'kind':'draft','result':d,'api':meta}]
+  for turn in range(6):
+   q=dict(payload);q.update(task='INDEPENDENT SOURCE-COMPARISON PASS: verify this proposed description against the WHOLE supplied body. Check every material claim, both exact source-ID anchors and Russian quality/uniqueness. Automatically correct if necessary, otherwise preserve exact description and anchors. Return same JSON schema; reason must explicitly assess support.',proposed=d)
+   revised,meta=checked(q,f'comparison{turn:02}');history.append({'kind':'source-comparison','result':revised,'api':meta})
+   stable=all(revised[k]==d[k] for k in ['description','anchors']);d=revised
+   if stable:break
+  else:raise RuntimeError('NAV_SOURCE_COMPARISON_NOT_STABLE')
+  record={'unit':n,'chapter':u['chapter'],'source_role':'AUTHENTIC_CONTENTS_ARGUMENT_RETAINED_FULL_AT_OPENING','full_argument':next(r['text'] for r in u['rows'] if r['tag']=='source_argument'),'label':c['heading']['target'].rstrip('. ')+' — '+d['description'],'description':d['description'],'body_sha256':bodyH,'body_rows':len(rows),'excluded_node_ids':[r['id'] for r in u['rows'] if r['tag'] in ['source_argument','source_caption']],'anchors':[{**next(r for r in rows if r['id']==i)} for i in d['anchors']],'target':f'text/unit-{n:03}.xhtml#unit-{n:03}','history':history,'state':'ACTUAL_AI_BODY_GROUNDED_AND_SEPARATELY_SOURCE_COMPARED_PENDING_DEFAULT_TOC_RENDER','model':MODEL,'book_release':False}
+  results[str(n)]=record;previous.append(d['description']);save(folder/'navigation.verified.json',record);save(OUT/'043_Qualified_Concise_Navigation.json',results);print('BODY_GROUNDED_NAVIGATION',n,'OF46',flush=True)
+ assert set(results)=={str(n) for n in range(4,47)}
+ save(OUT/'run-status.json',{'state':'COMPLETE_FINAL_BODY_GROUNDED_STRICT_CONCISE_NAVIGATION_PENDING_RENDER','chapters':43,'main_translation_run':RUN,'book_release':False,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+if __name__=='__main__':main()
