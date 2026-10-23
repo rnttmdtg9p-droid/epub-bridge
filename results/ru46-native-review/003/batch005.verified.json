@@ -1,0 +1,75 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 3,
+  "batch": 5,
+  "source_ids": [
+    "046-note-11"
+  ],
+  "source_hashes": {
+    "046-note-11": "e2181108a3601aa915cce9ed8157abfb10ede2024809a09f156908c1c6830b6c"
+  },
+  "review": [
+    {
+      "source_id": "046-note-11",
+      "verdict": "PASS",
+      "reason": "The target matches the source row exactly: «лат. Omnia mea mecum porto — Все мое ношу с собой». The wording, Latin phrase, em dash and Russian gloss are the same. It is the preserved Wikisource editorial note (FN:11), which the act text anchors to Kulygin's «Omnia mea mecum porto[[FN:11]]». Its wording was not altered and Chekhov's text was not changed. No corruption or unresolved finding."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjFnb6concWunrzbV31",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 21862,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-note-11",
+      "verdict": "PASS",
+      "reason": "The target matches the source row character for character: «лат. Omnia mea mecum porto — Все мое ношу с собой». The Latin phrase, em dash and Russian gloss are unchanged. This is the preserved Wikisource editorial note (FN:11), anchored in the act text at Kulygin's «Omnia mea mecum porto[[FN:11]]». It is not Chekhov's wording, and Chekhov's text is not altered. The prior PASS finding is confirmed, and no corruption or unresolved mismatch remains."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjFvuuin7aMv7YdicmG",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 22112,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-note-11",
+      "source_sha256": "e2181108a3601aa915cce9ed8157abfb10ede2024809a09f156908c1c6830b6c",
+      "target": "лат. Omnia mea mecum porto — Все мое ношу с собой",
+      "target_sha256": "e2181108a3601aa915cce9ed8157abfb10ede2024809a09f156908c1c6830b6c",
+      "tag": "editorial_note"
+    }
+  ]
+}
