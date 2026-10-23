@@ -1,0 +1,651 @@
+Warning: truncated output (original token count: 19654)
+Total output lines: 763
+
+{
+  "state": "TWO_PRIMARY_PRINT_CONFIRMED_SOURCE_ARGUMENT_ERRATA",
+  "items": [
+    {
+      "source": {
+        "id": "043-005-0001",
+        "tag": "source_argument",
+        "text": "The Boys Escape Jim.—Tom Sawyer's Gang.—Deep-laid Plans",
+        "sha256": "e696d23ec838c1458b1568618943beda634c071a4962d855e3fb17ab39ac9daf",
+        "primary_source_page": "1885 printed contents, scan page17",
+        "primary_source_image_sha256": "2de6787f03c854adad5263f921ee0dbf6dde5e7f73f848b8618ffee4cee88acc",
+        "primary_source_xpath": "/html/body/div[3]/div/div[3]/main/div[3]/div[2]/div[1]/section/div[9]/div/table[2]/tbody/tr/td[1]/div/div[1]/div"
+      },
+      "prior_source_text": "The Boys Escape Jim.—Torn Sawyer’s Gang.—Deep-laid Plans.",
+      "prior_source_sha256": "c587c533a0ce2c564579e6cf06fb8bc1420219e1c8826c9c7d32df1633c9173b",
+      "source_unit": 5,
+      "reason": "The primary printed page shows Tom, not the OCR error Torn.",
+      "actual_print_pixels_reviewed": true,
+      "source_body_context": [
+        {
+          "id": "043-005-0002",
+          "tag": "p",
+          "text": "We went tiptoeing along a path amongst the trees back towards the end of the widow’s garden, stooping down so as the branches wouldn’t scrape our heads. When we was passing by the kitchen I fell over a root and made a noise. We scrouched down and laid still. Miss Watson’s big nigger, named Jim, was setting in the kitchen door; we could see him pretty clear, because there was a light behind him. He got up and stretched his neck out about a minute, listening. Then he says:",
+          "sha256": "e88e2a40e51739e5d67549238cd7b82277d56ea1e97d14c54eab554f3f0eea42",
+          "source_location": "div.chapter[7]/*[2]",
+          "source_html": "We went tiptoeing along a path amongst the trees back towards the end of the widow’s garden, stooping down so as the branches wouldn’t scrape our heads. When we was passing by the kitchen I fell over a root and made a noise. We scrouched down and laid still. Miss Watson’s big nigger, named Jim, was setting in the kitchen door; we could see him pretty clear, because there was a light behind him. He got up and stretched his neck out about a minute, listening. Then he says:"
+        },
+        {
+          "id": "043-005-0003",
+          "tag": "p",
+          "text": "“Who dah?”",
+          "sha256": "e35a7fce41309555cb304c90904eb15104e698729e88291624d72b3782bafaf9",
+          "source_location": "div.chapter[7]/*[3]",
+          "source_html": "“Who dah?”"
+        },
+        {
+          "id": "043-005-0004",
+          "tag": "p",
+          "text": "He listened some more; then he come tiptoeing down and stood right between us; we could a touched him, nearly. Well, likely it was minutes and minutes that there warn’t a sound, and we all there so close together. There was a place on my ankle that got to itching, but I dasn’t scratch it; and then my ear begun to itch; and next my back, right between my shoulders. Seemed like I’d die if I couldn’t scratch. Well, I’ve noticed that thing plenty times since. If you are with the quality, or at a funeral, or trying to go to sleep when you ain’t sleepy—if you are anywheres where it won’t do for you to scratch, why you will itch all over in upwards of a thousand places. Pretty soon Jim says:",
+          "sha256": "6944d0fe22ed880c75cdcaf028a78f98300b910390467c00314a1c018ef0d978",
+          "source_location": "div.chapter[7]/*[4]",
+          "source_html": "He listened some more; then he come tiptoeing down and stood right between us; we could a touched him, nearly. Well, likely it was minutes and minutes that there warn’t a sound, and we all there so close together. There was a place on my ankle that got to itching, but I dasn’t scratch it; and then my ear begun to itch; and next my back, right between my shoulders. Seemed like I’d die if I couldn’t scratch. Well, I’ve noticed that thing plenty times since. If you are with the quality, or at a funeral, or trying to go to sleep when you ain’t sleepy—if you are anywheres where it won’t do for you to scratch, why you will itch all over in upwards of a thousand places. Pretty soon Jim says:"
+        },
+        {
+          "id": "043-005-0005",
+          "tag": "p",
+          "text": "“Say, who is you? Whar is you? Dog my cats ef I didn’ hear sumf’n. Well, I know what I’s gwyne to do: I’s gwyne to set down here and listen tell I hears it agin.”",
+          "sha256": "a32848bd10d5511b590ae0cb1db194b3f90c7dd40b5431bf674d41f2081923c1",
+          "source_location": "div.chapter[7]/*[5]",
+          "source_html": "“Say, who is you? Whar is you? Dog my cats ef I didn’ hear sumf’n. Well, I know what I’s gwyne to do: I’s gwyne to set down here and listen tell I hears it agin.”"
+        },
+        {
+          "id": "043-005-0007",
+          "tag": "p",
+          "text": "So he set down on the ground betwixt me and Tom. He leaned his back up against a tree, and stretched his legs out till one of them most touched one of mine. My nose begun to itch. It itched till the tears come into my eyes. But I dasn’t scratch. Then it begun to itch on the inside. Next I got to itching underneath. I didn’t know how I was going to set still. This miserableness went on as much as six or seven minutes; but it seemed a sight longer than that. I was itching in eleven different places now. I reckoned I couldn’t stand it more’n a minute longer, but I set my teeth hard and got ready to try. Just then Jim begun to breathe heavy; next he begun to snore—and then I was pretty soon comfortable again.",
+          "sha256": "1cd31a9c6c96aa54c0089664b3a3e2ceb60b116b62bdf8b41b8f93e1acd12012",
+          "source_location": "div.chapter[7]/*[7]",
+          "source_html": "So he set down on the ground betwixt me and Tom. He leaned his back up against a tree, and stretched his legs out till one of them most touched one of mine. My nose begun to itch. It itched till the tears come into my eyes. But I dasn’t scratch. Then it begun to itch on the inside. Next I got to itching underneath. I didn’t know how I was going to set still. This miserableness went on as much as six or seven minutes; but it seemed a sight longer than that. I was itching in eleven different places now. I reckoned I couldn’t stand it more’n a minute longer, but I set my teeth hard and got ready to try. Just then Jim begun to breathe heavy; next he begun to snore—and then I was pretty soon comfortable again."
+        },
+        {
+          "id": "043-005-0008",
+          "tag": "p",
+          "text": "Tom he made a sign to me—kind of a little noise with his mouth—and we went creeping away on our hands and knees. When we was ten foot off Tom whispered to me, and wanted to tie Jim to the tree for fun. But I said no; he might wake and make a disturbance, and then they’d find out I warn’t in. Then Tom said he hadn’t got candles enough, and he would slip in the kitchen and get some more. I didn’t want him to try. I said Jim might wake up and come. But Tom wanted to resk it; so we slid in there and got three candles, and Tom laid five cents on the table for pay. Then we got out, and I was in a sweat to get away; but nothing would do Tom but he must crawl to where Jim was, on his hands and knees, and play something on him. I waited, and it seemed a good while, everything was so still and lonesome.",
+          "sha256": "7b89307cf9ba85e7fcdd85d5bbc2edd5a569c1f0eeb2767059c8145306059b55",
+          "source_location": "div.chapter[7]/*[8]",
+          "source_html": "Tom he made a sign to me—kind of a little noise with his mouth—and we went creeping away on our hands and knees. When we was ten foot off Tom whispered to me, and wanted to tie Jim to the tree for fun. But I said no; he might wake and make a disturbance, and then they’d find out I warn’t in. Then Tom said he hadn’t got candles enough, and he would slip in the kitchen and get some more. I didn’t want him to try. I said Jim might wake up and come. But Tom wanted to resk it; so we slid in there and got three candles, and Tom laid five cents on the table for pay. Then we got out, and I was in a sweat to get away; but nothing would do Tom but he must crawl to where Jim was, on his hands and knees, and play something on him. I waited, and it seemed a good while, everything was so still and lonesome."
+        },
+        {
+          "id": "043-005-0009",
+          "tag": "p",
+          "text": "As soon as Tom was back we cut along the path, around the garden fence, and by-and-by fetched up on the steep top of the hill the other side of the house. Tom said he slipped Jim’s hat off of his head and hung it on a limb right over him, and Jim stirred a little, but he didn’t wake. Afterwards Jim said the witches bewitched him and put him in a trance, and rode him all over the State, and then set him under the trees again, and hung his hat on a limb to show who done it. And next time Jim told it he said they rode him down to New Orleans; and, after that, every time he told it he spread it more and more, till by-and-by he said they rode him all over the world, and tired him most to death, and his back was all over saddle-boils. Jim was monstrous proud about it, and he got so he wouldn’t hardly notice the other niggers. Niggers would come miles to hear Jim tell about it, and he was more looked up to than any nigger in that country. Strange niggers would stand with their mouths open and look him all over, same as if he was a wonder. Niggers is always talking about witches in the dark by the kitchen fire; but whenever one was talking and letting on to know all about such things, Jim would happen in and say, “Hm! What you know ’bout witches?” and that nigger was corked up and had to take a back seat. Jim always kept that five-center piece round his neck with a string, and said it was a charm the devil give to him with his own hands, and told him he could cure anybody with it and fetch witches whenever he wanted to just by saying something to it; but he never told what it was he said to it. Niggers would come from all around there and give Jim anything they had, just for a sight of that five-center piece; but they wouldn’t touch it, because the devil had had his hands on it. Jim was most ruined for a servant, because he got stuck up on account of having seen the devil and been rode by witches.",
+          "sha256": "2bd1ebeba4f5ef1b82d688a3d042acd557566e4f2dfb968844a8b6282750a73b",
+          "source_location": "div.chapter[7]/*[9]",
+          "source_html": "As soon as Tom was back we cut along the path, around the garden fence, and by-and-by fetched up on the steep top of the hill the other side of the house. Tom said he slipped Jim’s hat off of his head and hung it on a limb right over him, and Jim stirred a little, but he didn’t wake. Afterwards Jim said the witches bewitched him and put him in a trance, and rode him all over the State, and then set him under the trees again, and hung his hat on a limb to show who done it. And next time Jim told it he said they rode him down to New Orleans; and, after that, every time he told it he spread it more and more, till by-and-by he said they rode him all over the world, and tired him most to death, and his back was all over saddle-boils. Jim was monstrous proud about it, and he got so he wouldn’t hardly notice the other niggers. Niggers would come miles to hear Jim tell about it, and he was more looked up to than any nigger in that country. Strange niggers would stand with their mouths open and look him all over, same as if he was a wonder. Niggers is always talking about witches in the dark by the kitchen fire; but whenever one was talking and letting on to know all about such things, Jim would happen in and say, “Hm! What you know ’bout witches?” and that nigger was corked up and had to take a back seat. Jim always kept that five-center piece round his neck with a string, and said it was a charm the devil give to him with his own hands, and told him he could cure anybody with it and fetch witches whenever he wanted to just by saying something to it; but he never told what it was he said to it. Niggers would come from all around there and give Jim anything they had, just for a sight of that five-center piece; but they wouldn’t touch it, because the devil had had his hands on it. Jim was most ruined for a servant, because he got stuck up on account of having seen the devil and been rode by witches."
+        },
+        {
+          "id": "043-005-0010",
+          "tag": "p",
+          "text": "Well, when Tom and me got to the edge of the hilltop we looked away down into the village and could see three or four lights twinkling, where there was sick folks, maybe; and the stars over us was sparkling ever so fine; and down by the village was the river, a whole mile broad, and awful still and grand. We went down the hill and found Jo Harper and Ben Rogers, and two or three more of the boys, hid in the old tanyard. So we unhitched a skiff and pulled down the river two mile and a half, to the big scar on the hillside, and went ashore.",
+          "sha256": "869b360b3bbd20abac46a306afbee1e514be3041f3f6b574cb325bac7e986613",
+          "source_location": "div.chapter[7]/*[10]",
+          "source_html": "Well, when Tom and me got to the edge of the hilltop we looked away down into the village and could see three or four lights twinkling, where there was sick folks, maybe; and the stars over us was sparkling ever so fine; and down by the village was the river, a whole mile broad, and awful still and grand. We went down the hill and found Jo Harper and Ben Rogers, and two or three more of the boys, hid in the old tanyard. So we unhitched a skiff and pulled down the river two mile and a half, to the big scar on the hillside, and went ashore."
+        },
+        {
+          "id": "043-005-0011",
+          "tag": "p",
+          "text": "We went to a clump of bushes, and Tom made everybody swear to keep the secret, and then showed them a hole in the hill, right in the thickest part of the bushes. Then we lit the candles, and crawled in on our hands and knees. We went about two hundred yards, and then the cave opened up. Tom poked about amongst the passages, and pretty soon ducked under a wall where you wouldn’t a noticed that there was a hole. We went along a narrow place and got into a kind of room, all damp and sweaty and cold, and there we stopped. Tom says:",
+          "sha256": "30cd5e22be8ff085ce6f3da51cf6208d9b734141d547fb093bb5a2004477c08c",
+          "source_location": "div.chapter[7]/*[11]",
+          "source_html": "We went to a clump of bushes, and Tom made everybody swear to keep the secret, and then showed them a hole in the hill, right in the thickest part of the bushes. Then we lit the candles, and crawled in on our hands and knees. We went about two hundred yards, and then the cave opened up. Tom poked about amongst the passages, and pretty soon ducked under a wall where you wouldn’t a noticed that there was a hole. We went along a narrow place and got into a kind of room, all damp and sweaty and cold, and there we stopped. Tom says:"
+        },
+        {
+          "id": "043-005-0012",
+          "tag": "p",
+          "text": "“Now, we’ll start this band of robbers and call it Tom Sawyer’s Gang. Everybody that wants to join has got to take an oath, and write his name in blood.”",
+          "sha256": "5d98cb62e515ac6dbb5d4e9406f944db2344ae0b0363ec49fe42388ee4a8bebf",
+          "source_location": "div.chapter[7]/*[12]",
+          "source_html": "“Now, we’ll start this band of robbers and call it Tom Sawyer’s Gang. Everybody that wants to join has got to take an oath, and write his name in blood.”"
+        },
+        {
+          "id": "043-005-0014",
+          "tag": "p",
+          "text": "Everybody was willing. So Tom got out a sheet of paper that he had wrote the oath on, and read it. It swore every boy to stick to the band, and never tell any of the secrets; and if anybody done anything to any boy in the band, whichever boy was ordered to kill that person and his family must do it, and he mustn’t eat and he mustn’t sleep till he had killed them and hacked a cross in their breasts, which was the sign of the band. And nobody that didn’t belong to the band could use that mark, and if he did he must be sued; and if he done it again he must be killed. And if anybody that belonged to the band told the secrets, he must have his throat cut, and then have his carcass burnt up and the ashes scattered all around, and his name blotted off of the list with blood and never mentioned again by the gang, but have a curse put on it and be forgot forever.",
+          "sha256": "2e2abcab81764b1cffe8162dd839d98e21b28dc52b70afdc193296e3608b1572",
+          "source_location": "div.chapter[7]/*[14]",
+          "source_html": "Everybody was willing. So Tom got out a sheet of paper that he had wrote the oath on, and read it. It swore every boy to stick to the band, and never tell any of the secrets; and if anybody done anything to any boy in the band, whichever boy was ordered to kill that person and his family must do it, and he mustn’t eat and he mustn’t sleep till he had killed them and hacked a cross in their breasts, which was the sign of the band. And nobody that didn’t belong to the band could use that mark, and if he did he must be sued; and if he done it again he must be killed. And if anybody that belonged to the band told the secrets, he must have his throat cut, and then have his carcass burnt up and the ashes scattered all around, and his name blotted off of the list with blood and never mentioned again by the gang, but have a curse put on it and be forgot forever."
+        },
+        {
+          "id": "043-005-0015",
+          "tag": "p",
+          "text": "Everybody said it was a real beautiful oath, and asked Tom if he got it out of his own head. He said, some of it, but the rest was out of pirate-books and robber-books, and every gang that was high-toned had it.",
+          "sha256": "fddfeb5f3c9f1df886acc0bcee0a8f31ab87edc07d00dd36aa8706785a9eb1ac",
+          "source_location": "div.chapter[7]/*[15]",
+          "source_html": "Everybody said it was a real beautiful oath, and asked Tom if he got it out of his own head. He said, some of it, but the rest was out of pirate-books and robber-books, and every gang that was high-toned had it."
+        },
+        {
+          "id": "043-005-0016",
+          "tag": "p",
+          "text": "Some thought it would be good to kill the families of boys that told the secrets. Tom said it was a good idea, so he took a pencil and wrote it in. Then Ben Rogers says:",
+          "sha256": "8a73b9976fd993ab27ad95ce8ff0ac034057dca92c42ee88cb8112cf1c8f6a5b",
+          "source_location": "div.chapter[7]/*[16]",
+          "source_html": "Some thought it would be good to kill the <i>families</i> of boys that told the secrets. Tom said it was a good idea, so he took a pencil and wrote it in. Then Ben Rogers says:"
+        },
+        {
+          "id": "043-005-0017",
+          "tag": "p",
+          "text": "“Here’s Huck Finn, he hain’t got no family; what you going to do ’bout him?”",
+          "sha256": "8f6afef4329c108db0ee23afadb177fbfa018ba67be88ada7634edbd6cf99759",
+          "source_location": "div.chapter[7]/*[17]",
+          "source_html": "“Here’s Huck Finn, he hain’t got no family; what you going to do ’bout him?”"
+        },
+        {
+          "id": "043-005-0018",
+          "tag": "p",
+          "text": "“Well, hain’t he got a father?” says Tom Sawyer.",
+          "sha256": "452aa1cc233bfd4cf2898af370f84b03467442b6127530bbd69d7e88f9225573",
+          "source_location": "div.chapter[7]/*[18]",
+          "source_html": "“Well, hain’t he got a father?” says Tom Sawyer."
+        },
+        {
+          "id": "043-005-0019",
+          "tag": "p",
+          "text": "“Yes, he’s got a father, but you can’t never find him these days. He used to lay drunk with the hogs in the tanyard, but he hain’t been seen in these parts for a year or more.”",
+          "sha256": "ff8e4f34f3a4d7e0e93cab39d7fa2873a21cbc62d429675f42cf74a696e79682",
+          "source_location": "div.chapter[7]/*[19]",
+          "source_html": "“Yes, he’s got a father, but you can’t never find him these days. He used to lay drunk with the hogs in the tanyard, but he hain’t been seen in these parts for a year or more.”"
+        },
+        {
+          "id": "043-005-0020",
+          "tag": "p",
+          "text": "They talked it over, and they was going to rule me out, because they said every boy must have a family or somebody to kill, or else it wouldn’t be fair and square for the others. Well, nobody could think of anything to do—everybody was stumped, and set still. I was most ready to cry; but all at once I thought of a way, and so I offered them Miss Watson—they could kill her. Everybody said:",
+          "sha256": "3560a2013d4ede4dd565726cb135e79738c21b25d3546bf5139f88c49df715e0",
+          "source_location": "div.chapter[7]/*[20]",
+          "source_html": "They talked it over, and they was going to rule me out, because they said every boy must have a family or somebody to kill, or else it wouldn’t be fair and square for the others. Well, nobody could think of anything to do—everybody was stumped, and set still. I was most ready to cry; but all at once I thought of a way, and so I offered them Miss Watson—they could kill her. Everybody said:"
+        },
+        {
+          "id": "043-005-0021",
+          "tag": "p",
+          "text": "“Oh, she’ll do. That’s all right. Huck can come in.”",
+          "sha256": "d153c2898680e4d3490cc1334c07083bc24132df859b133e7830a7cdbaca7f9c",
+          "source_location": "div.chapter[7]/*[21]",
+          "source_html": "“Oh, she’ll do. That’s all right. Huck can come in.”"
+        },
+        {
+          "id": "043-005-0022",
+          "tag": "p",
+          "text": "Then they all stuck a pin in their fingers to get blood to sign with, and I made my mark on the paper.",
+          "sha256": "007e8728e7ae8593494b85ca044fb248c95d1f38423a4592d551c99bf1187e61",
+          "source_location": "div.chapter[7]/*[22]",
+          "source_html": "Then they all stuck a pin in their fingers to get blood to sign with, and I made my mark on the paper."
+        },
+        {
+          "id": "043-005-0023",
+          "tag": "p",
+          "text": "“Now,” says Ben Rogers, “what’s the line of business of this Gang?”",
+          "sha256": "b4336435728772e49fb3a6c47f38a59b8cd7fb57e80b7957b0b950f5d6e30304",
+          "source_location": "div.chapter[7]/*[23]",
+          "source_html": "“Now,” says Ben Rogers, “what’s the line of business of this Gang?”"
+        },
+        {
+          "id": "043-005-0024",
+          "tag": "p",
+          "text": "“Nothing only robbery and murder,” Tom said.",
+          "sha256": "f61224d9fe3c9a769f86d823a8c51dd3ee50ca4e05e05a95a998cdb539199e0b",
+          "source_location": "div.chapter[7]/*[24]",
+          "source_html": "“Nothing only robbery and murder,” Tom said."
+        },
+        {
+          "id": "043-005-0025",
+          "tag": "p",
+          "text": "“But who are we going to rob?—houses, or cattle, or—”",
+          "sha256": "10f767886e00d59b966d3736cdb779c5fd28511c09e1932e91c59ca659c6bee9",
+          "source_location": "div.chapter[7]/*[25]",
+          "source_html": "“But who are we going to rob?—houses, or cattle, or—”"
+        },
+        {
+          "id": "043-005-0026",
+          "tag": "p",
+          "text": "“Stuff! stealing cattle and such things ain’t robbery; it’s burglary,” says Tom Sawyer. “We ain’t burglars. That ain’t no sort of style. We are highwaymen. We stop stages and carriages on the road, with masks on, and kill the people and take their watches and money.”",
+          "sha256": "f446a0079841ecee527156a2deebbaa54dbc5dffb0dd411a2b2392685812c808",
+          "source_location": "div.chapter[7]/*[26]",
+          "source_html": "“Stuff! stealing cattle and such things ain’t robbery; it’s burglary,” says Tom Sawyer. “We ain’t burglars. That ain’t no sort of style. We are highwaymen. We stop stages and carriages on the road, with masks on, and kill the people and take their watches and money.”"
+        },
+        {
+          "id": "043-005-0027",
+          "tag": "p",
+          "text": "“Must we always kill the people?”",
+          "sha256": "93c2d58a1808153bcbbbc54bdb290883a1918fb756ab0e98f5685c211a2f63b3",
+          "source_location": "div.chapter[7]/*[27]",
+          "source_html": "“Must we always kill the people?”"
+        },
+        {
+          "id": "043-005-0028",
+          "tag": "p",
+          "text": "“Oh, certainly. It’s best. Some authorities think different, but mostly it’s considered best to kill them—except some that you bring to the cave here, and keep them till they’re ransomed.”",
+          "sha256": "d247d540658a02eceafea2e45720eb48616859e020ef8f2ebad9a4de7a0cc35f",
+          "source_location": "div.chapter[7]/*[28]",
+          "source_html": "“Oh, certainly. It’s best. Some authorities think different, but mostly it’s considered best to kill them—except some that you bring to the cave here, and keep them till they’re ransomed.”"
+        },
+        {
+          "id": "043-005-0029",
+          "tag": "p",
+          "text": "“Ransomed? What’s that?”",
+          "sha256": "23286a358548518928b071b239354a7e21e9cfe9f1bc1c9d8e46d945ef2ce0e8",
+          "source_location": "div.chapter[7]/*[29]",
+          "source_html": "“Ransomed? What’s that?”"
+        },
+        {
+          "id": "043-005-0030",
+          "tag": "p",
+          "text": "“I don’t know. But that’s what they do. I’ve seen it in books; and so of course that’s what we’ve got to do.”",
+          "sha256": "d6bc2514b88b52b7c203428a0c440ecd27dd1a59a739569fb29790538b88f24b",
+          "source_location": "div.chapter[7]/*[30]",
+          "source_html": "“I don’t know. But that’s what they do. I’ve seen it in books; and so of course that’s what we’ve got to do.”"
+        },
+        {
+          "id": "043-005-0031",
+          "tag": "p",
+          "text": "“But how can we do it if we don’t know what it is?”",
+          "sha256": "b4d136dc7ee2e365c3141b1347f2b160ece4f6380b9ba70c9294f55a4652c444",
+          "source_location": "div.chapter[7]/*[31]",
+          "source_html": "“But how can we do it if we don’t know what it is?”"
+        },
+        {
+          "id": "043-005-0032",
+          "tag": "p",
+          "text": "“Why, blame it all, we’ve got to do it. Don’t I tell you it’s in the books? Do you want to go to doing different from what’s in the books, and get things all muddled up?”",
+          "sha256": "18672b33ca79735e9a4a1034ff5bc057048af7d39c3483e7903e929ccada9e46",
+          "source_location": "div.chapter[7]/*[32]",
+          "source_html": "“Why, blame it all, we’ve <i>got</i> to do it. Don’t I tell you it’s in the books? Do you want to go to doing different from what’s in the books, and get things all muddled up?”"
+        },
+        {
+          "id": "043-005-0033",
+          "tag": "p",
+          "text": "“Oh, that’s all very fine to say, Tom Sawyer, but how in the nation are these fellows going to be ransomed if we don’t know how to do it to them?—that’s the thing I want to get at. Now, what do you reckon it is?”",
+          "sha256": "cc7dbbf1b08368d53bc72e1d337022a08bddc53809fe3036c0e44042745033ae",
+          "source_location": "div.chapter[7]/*[33]",
+          "source_html": "“Oh, that’s all very fine to <i>say</i>, Tom Sawyer, but how in the nation are these fellows going to be ransomed if we don’t know how to do it to them?—that’s the thing <i>I</i> want to get at. Now, what do you <i>reckon</i> it is?”"
+        },
+        {
+          "id": "043-005-0034",
+          "tag": "p",
+          "text": "“Well, I don’t know. But per’aps if we keep them till they’re ransomed, it means that we keep them till they’re dead.”",
+          "sha256": "2577bec76fefc40263102158918edad9c0e1899b89f251499a1eb411eb220309",
+          "source_location": "div.chapter[7]/*[34]",
+          "source_html": "“Well, I don’t know. But per’aps if we keep them till they’re ransomed, it means that we keep them till they’re dead.”"
+        },
+        {
+          "id": "043-005-0035",
+          "tag": "p",
+          "text": "“Now, that’s something like. That’ll answer. Why couldn’t you said that before? We’ll keep them till they’re ransomed to death; and a bothersome lot they’ll be, too—eating up everything, and always trying to get loose.”",
+          "sha256": "50900ec148a554496b6aec76d2611e035f62647255f1d9f9bd48d97e82c511c7",
+          "source_location": "div.chapter[7]/*[35]",
+          "source_html": "“Now, that’s something <i>like</i>. That’ll answer. Why couldn’t you said that before? We’ll keep them till they’re ransomed to death; and a bothersome lot they’ll be, too—eating up everything, and always trying to get loose.”"
+        },
+        {
+          "id": "043-005-0036",
+          "tag": "p",
+          "text": "“How you talk, Ben Rogers. How can they get loose when there’s a guard over them, ready to shoot them down if they move a peg?”",
+          "sha256": "6c943bdd9d2466c6957420ebc6d0ba10f711579b9d81ccaa2f4468f7e299b96d",
+          "source_location": "div.chapter[7]/*[36]",
+          "source_html": "“How you talk, Ben Rogers. How can they get loose when there’s a guard over them, ready to shoot them down if they move a peg?”"
+        },
+        {
+          "id": "043-005-0037",
+          "tag": "p",
+          "text": "“A guard! Well, that is good. So somebody’s got to set up all night and never get any sleep, just so as to watch them. I think that’s foolishness. Why can’t a body take a club and ransom them as soon as they get here?”",
+          "sha256": "eb626ae84c6b5873e3584f18f2ae25d9ae0f03850aa8da2ae7f2403b005b00b7",
+          "source_location": "div.chapter[7]/*[37]",
+          "source_html": "“A guard! Well, that <i>is</i> good. So somebody’s got to set up all night and never get any sleep, just so as to watch them. I think that’s foolishness. Why can’t a body take a club and ransom them as soon as they get here?”"
+        },
+        {
+          "id": "043-005-0038",
+          "tag": "p",
+          "text": "“Because it ain’t in the books so—that’s why. Now, Ben Rogers, do you want to do things regular, or don’t you?—that’s the idea. Don’t you reckon that the people that made the books knows what’s the correct thing to do? Do you reckon you can learn ’em anything? Not by a good deal. No, sir, we’ll just go on and ransom them in the regular way.”",
+          "sha256": "912439546cba5ccc27e479f6dfaa8bdc0841f9d296b8c9cb4310a84eff3d5599",
+          "source_location": "div.chapter[7]/*[38]",
+          "source_html": "“Because it ain’t in the books so—that’s why. Now, Ben Rogers, do you want to do things regular, or don’t you?—that’s the idea. Don’t you reckon that the people that made the books knows what’s the correct thing to do? Do you reckon <i>you</i> can learn ’em anything? Not by a good deal. No, sir, we’ll just go on and ransom them in the regular way.”"
+        },
+        {
+          "id": "043-005-0039",
+          "tag": "p",
+          "text": "“All right. I don’t mind; but I say it’s a fool way, anyhow. Say, do we kill the women, too?”",
+          "sha256": "ddd91ed4898543fea2f6839647a90dc13ee180102d5d750cc2c6fb82dd5ed120",
+          "source_location": "div.ch…3654 tokens truncated… the feet on the floor and blowing noses—because people always blows them more at a funeral than they do at other places except church."
+        },
+        {
+          "id": "043-030-0008",
+          "tag": "p",
+          "text": "When the place was packed full the undertaker he slid around in his black gloves with his softy soothering ways, putting on the last touches, and getting people and things all ship-shape and comfortable, and making no more sound than a cat. He never spoke; he moved people around, he squeezed in late ones, he opened up passageways, and done it with nods, and signs with his hands. Then he took his place over against the wall. He was the softest, glidingest, stealthiest man I ever see; and there warn’t no more smile to him than there is to a ham.",
+          "sha256": "4724e1779ada62f204533efa125a07a6847c335cedb052b875e096a2bc5eb5f6",
+          "source_location": "div.chapter[32]/*[8]",
+          "source_html": "When the place was packed full the undertaker he slid around in his black gloves with his softy soothering ways, putting on the last touches, and getting people and things all ship-shape and comfortable, and making no more sound than a cat. He never spoke; he moved people around, he squeezed in late ones, he opened up passageways, and done it with nods, and signs with his hands. Then he took his place over against the wall. He was the softest, glidingest, stealthiest man I ever see; and there warn’t no more smile to him than there is to a ham."
+        },
+        {
+          "id": "043-030-0010",
+          "tag": "p",
+          "text": "They had borrowed a melodeum—a sick one; and when everything was ready a young woman set down and worked it, and it was pretty skreeky and colicky, and everybody joined in and sung, and Peter was the only one that had a good thing, according to my notion. Then the Reverend Hobson opened up, slow and solemn, and begun to talk; and straight off the most outrageous row busted out in the cellar a body ever heard; it was only one dog, but he made a most powerful racket, and he kept it up right along; the parson he had to stand there, over the coffin, and wait—you couldn’t hear yourself think. It was right down awkward, and nobody didn’t seem to know what to do. But pretty soon they see that long-legged undertaker make a sign to the preacher as much as to say, “Don’t you worry—just depend on me.” Then he stooped down and begun to glide along the wall, just his shoulders showing over the people’s heads. So he glided along, and the powwow and racket getting more and more outrageous all the time; and at last, when he had gone around two sides of the room, he disappears down cellar. Then in about two seconds we heard a whack, and the dog he finished up with a most amazing howl or two, and then everything was dead still, and the parson begun his solemn talk where he left off. In a minute or two here comes this undertaker’s back and shoulders gliding along the wall again; and so he glided and glided around three sides of the room, and then rose up, and shaded his mouth with his hands, and stretched his neck out towards the preacher, over the people’s heads, and says, in a kind of a coarse whisper, “He had a rat!” Then he drooped down and glided along the wall again to his place. You could see it was a great satisfaction to the people, because naturally they wanted to know. A little thing like that don’t cost nothing, and it’s just the little things that makes a man to be looked up to and liked. There warn’t no more popular man in town than what that undertaker was.",
+          "sha256": "0f41624cb64217a9ab87e42cfa5e17d5e4fcc2bdc95a543e62b5554055ef258b",
+          "source_location": "div.chapter[32]/*[10]",
+          "source_html": "They had borrowed a melodeum—a sick one; and when everything was ready a young woman set down and worked it, and it was pretty skreeky and colicky, and everybody joined in and sung, and Peter was the only one that had a good thing, according to my notion. Then the Reverend Hobson opened up, slow and solemn, and begun to talk; and straight off the most outrageous row busted out in the cellar a body ever heard; it was only one dog, but he made a most powerful racket, and he kept it up right along; the parson he had to stand there, over the coffin, and wait—you couldn’t hear yourself think. It was right down awkward, and nobody didn’t seem to know what to do. But pretty soon they see that long-legged undertaker make a sign to the preacher as much as to say, “Don’t you worry—just depend on me.” Then he stooped down and begun to glide along the wall, just his shoulders showing over the people’s heads. So he glided along, and the powwow and racket getting more and more outrageous all the time; and at last, when he had gone around two sides of the room, he disappears down cellar. Then in about two seconds we heard a whack, and the dog he finished up with a most amazing howl or two, and then everything was dead still, and the parson begun his solemn talk where he left off. In a minute or two here comes this undertaker’s back and shoulders gliding along the wall again; and so he glided and glided around three sides of the room, and then rose up, and shaded his mouth with his hands, and stretched his neck out towards the preacher, over the people’s heads, and says, in a kind of a coarse whisper, “<i>He had a rat!</i>” Then he drooped down and glided along the wall again to his place. You could see it was a great satisfaction to the people, because naturally they wanted to know. A little thing like that don’t cost nothing, and it’s just the little things that makes a man to be looked up to and liked. There warn’t no more popular man in town than what that undertaker was."
+        },
+        {
+          "id": "043-030-0012",
+          "tag": "p",
+          "text": "Well, the funeral sermon was very good, but pison long and tiresome; and then the king he shoved in and got off some of his usual rubbage, and at last the job was through, and the undertaker begun to sneak up on the coffin with his screw-driver. I was in a sweat then, and watched him pretty keen. But he never meddled at all; just slid the lid along as soft as mush, and screwed it down tight and fast. So there I was! I didn’t know whether the money was in there or not. So, says I, s’pose somebody has hogged that bag on the sly?—now how do I know whether to write to Mary Jane or not? S’pose she dug him up and didn’t find nothing, what would she think of me? Blame it, I says, I might get hunted up and jailed; I’d better lay low and keep dark, and not write at all; the thing’s awful mixed now; trying to better it, I’ve worsened it a hundred times, and I wish to goodness I’d just let it alone, dad fetch the whole business!",
+          "sha256": "4a6c6d6778ecd2d5cd3dafa4157353cd8b852a572d81e1c24ce970ec49e83835",
+          "source_location": "div.chapter[32]/*[12]",
+          "source_html": "Well, the funeral sermon was very good, but pison long and tiresome; and then the king he shoved in and got off some of his usual rubbage, and at last the job was through, and the undertaker begun to sneak up on the coffin with his screw-driver. I was in a sweat then, and watched him pretty keen. But he never meddled at all; just slid the lid along as soft as mush, and screwed it down tight and fast. So there I was! I didn’t know whether the money was in there or not. So, says I, s’pose somebody has hogged that bag on the sly?—now how do <i>I</i> know whether to write to Mary Jane or not? S’pose she dug him up and didn’t find nothing, what would she think of me? Blame it, I says, I might get hunted up and jailed; I’d better lay low and keep dark, and not write at all; the thing’s awful mixed now; trying to better it, I’ve worsened it a hundred times, and I wish to goodness I’d just let it alone, dad fetch the whole business!"
+        },
+        {
+          "id": "043-030-0013",
+          "tag": "p",
+          "text": "They buried him, and we come back home, and I went to watching faces again—I couldn’t help it, and I couldn’t rest easy. But nothing come of it; the faces didn’t tell me nothing.",
+          "sha256": "c86602cd47788640882cde7542a7db106652c27e3204aa7aa3ad0c5674bda3db",
+          "source_location": "div.chapter[32]/*[13]",
+          "source_html": "They buried him, and we come back home, and I went to watching faces again—I couldn’t help it, and I couldn’t rest easy. But nothing come of it; the faces didn’t tell me nothing."
+        },
+        {
+          "id": "043-030-0014",
+          "tag": "p",
+          "text": "The king he visited around in the evening, and sweetened everybody up, and made himself ever so friendly; and he give out the idea that his congregation over in England would be in a sweat about him, so he must hurry and settle up the estate right away and leave for home. He was very sorry he was so pushed, and so was everybody; they wished he could stay longer, but they said they could see it couldn’t be done. And he said of course him and William would take the girls home with them; and that pleased everybody too, because then the girls would be well fixed and amongst their own relations; and it pleased the girls, too—tickled them so they clean forgot they ever had a trouble in the world; and told him to sell out as quick as he wanted to, they would be ready. Them poor things was that glad and happy it made my heart ache to see them getting fooled and lied to so, but I didn’t see no safe way for me to chip in and change the general tune.",
+          "sha256": "076187a26be774397e1d5959863cb63e91ebf13d03d5796238a5c6b7bcf9081f",
+          "source_location": "div.chapter[32]/*[14]",
+          "source_html": "The king he visited around in the evening, and sweetened everybody up, and made himself ever so friendly; and he give out the idea that his congregation over in England would be in a sweat about him, so he must hurry and settle up the estate right away and leave for home. He was very sorry he was so pushed, and so was everybody; they wished he could stay longer, but they said they could see it couldn’t be done. And he said of course him and William would take the girls home with them; and that pleased everybody too, because then the girls would be well fixed and amongst their own relations; and it pleased the girls, too—tickled them so they clean forgot they ever had a trouble in the world; and told him to sell out as quick as he wanted to, they would be ready. Them poor things was that glad and happy it made my heart ache to see them getting fooled and lied to so, but I didn’t see no safe way for me to chip in and change the general tune."
+        },
+        {
+          "id": "043-030-0015",
+          "tag": "p",
+          "text": "Well, blamed if the king didn’t bill the house and the niggers and all the property for auction straight off—sale two days after the funeral; but anybody could buy private beforehand if they wanted to.",
+          "sha256": "cd48ebd68132fb2d17726deff9f2a8e1399785e4f20f4cc8e75675091e0ab554",
+          "source_location": "div.chapter[32]/*[15]",
+          "source_html": "Well, blamed if the king didn’t bill the house and the niggers and all the property for auction straight off—sale two days after the funeral; but anybody could buy private beforehand if they wanted to."
+        },
+        {
+          "id": "043-030-0016",
+          "tag": "p",
+          "text": "So the next day after the funeral, along about noon-time, the girls’ joy got the first jolt. A couple of nigger traders come along, and the king sold them the niggers reasonable, for three-day drafts as they called it, and away they went, the two sons up the river to Memphis, and their mother down the river to Orleans. I thought them poor girls and them niggers would break their hearts for grief; they cried around each other, and took on so it most made me down sick to see it. The girls said they hadn’t ever dreamed of seeing the family separated or sold away from the town. I can’t ever get it out of my memory, the sight of them poor miserable girls and niggers hanging around each other’s necks and crying; and I reckon I couldn’t a stood it all, but would a had to bust out and tell on our gang if I hadn’t knowed the sale warn’t no account and the niggers would be back home in a week or two.",
+          "sha256": "9007bc4f8392979592dfda904b66bce70d42bc733b714890d4ffa39afdabfa93",
+          "source_location": "div.chapter[32]/*[16]",
+          "source_html": "So the next day after the funeral, along about noon-time, the girls’ joy got the first jolt. A couple of nigger traders come along, and the king sold them the niggers reasonable, for three-day drafts as they called it, and away they went, the two sons up the river to Memphis, and their mother down the river to Orleans. I thought them poor girls and them niggers would break their hearts for grief; they cried around each other, and took on so it most made me down sick to see it. The girls said they hadn’t ever dreamed of seeing the family separated or sold away from the town. I can’t ever get it out of my memory, the sight of them poor miserable girls and niggers hanging around each other’s necks and crying; and I reckon I couldn’t a stood it all, but would a had to bust out and tell on our gang if I hadn’t knowed the sale warn’t no account and the niggers would be back home in a week or two."
+        },
+        {
+          "id": "043-030-0017",
+          "tag": "p",
+          "text": "The thing made a big stir in the town, too, and a good many come out flatfooted and said it was scandalous to separate the mother and the children that way. It injured the frauds some; but the old fool he bulled right along, spite of all the duke could say or do, and I tell you the duke was powerful uneasy.",
+          "sha256": "951243524ece21aa5100881b4c0cbc4befaa869cf05fec4763ede009d927cfd8",
+          "source_location": "div.chapter[32]/*[17]",
+          "source_html": "The thing made a big stir in the town, too, and a good many come out flatfooted and said it was scandalous to separate the mother and the children that way. It injured the frauds some; but the old fool he bulled right along, spite of all the duke could say or do, and I tell you the duke was powerful uneasy."
+        },
+        {
+          "id": "043-030-0018",
+          "tag": "p",
+          "text": "Next day was auction day. About broad day in the morning the king and the duke come up in the garret and woke me up, and I see by their look that there was trouble. The king says:",
+          "sha256": "51149425d7989822b95a63e4eb301faefd67894b3c3a82ea902ef04c0d1ccbd6",
+          "source_location": "div.chapter[32]/*[18]",
+          "source_html": "Next day was auction day. About broad day in the morning the king and the duke come up in the garret and woke me up, and I see by their look that there was trouble. The king says:"
+        },
+        {
+          "id": "043-030-0019",
+          "tag": "p",
+          "text": "“Was you in my room night before last?”",
+          "sha256": "f86eb71b706a2e1627ff336340a57ffcdfe38cfa42d6c7c791cce58192958d49",
+          "source_location": "div.chapter[32]/*[19]",
+          "source_html": "“Was you in my room night before last?”"
+        },
+        {
+          "id": "043-030-0020",
+          "tag": "p",
+          "text": "“No, your majesty”—which was the way I always called him when nobody but our gang warn’t around.",
+          "sha256": "782b4c5f24c59e658c274659608b5f7e73ed8c3963c7ed80106286fbc69ce4a9",
+          "source_location": "div.chapter[32]/*[20]",
+          "source_html": "“No, your majesty”—which was the way I always called him when nobody but our gang warn’t around."
+        },
+        {
+          "id": "043-030-0022",
+          "tag": "p",
+          "text": "“Was you in there yisterday er last night?”",
+          "sha256": "4ea82ce236b440bccbb90ff7fdd6f06d0d367b387d4cec065a1cf0e05f734bed",
+          "source_location": "div.chapter[32]/*[22]",
+          "source_html": "“Was you in there yisterday er last night?”"
+        },
+        {
+          "id": "043-030-0023",
+          "tag": "p",
+          "text": "“No, your majesty.”",
+          "sha256": "8a168104d5bfca6fde3986e0cb14207e20700092a70ea80a5d12a8dc67dc79a7",
+          "source_location": "div.chapter[32]/*[23]",
+          "source_html": "“No, your majesty.”"
+        },
+        {
+          "id": "043-030-0024",
+          "tag": "p",
+          "text": "“Honor bright, now—no lies.”",
+          "sha256": "dabeeb479fb9371fffc548fe6d644a3d027b6dd89c499747d92a2c097b0e7be1",
+          "source_location": "div.chapter[32]/*[24]",
+          "source_html": "“Honor bright, now—no lies.”"
+        },
+        {
+          "id": "043-030-0025",
+          "tag": "p",
+          "text": "“Honor bright, your majesty, I’m telling you the truth. I hain’t been a-near your room since Miss Mary Jane took you and the duke and showed it to you.”",
+          "sha256": "55920c037c87f9af71a394c122ec28ccff60f62a11cc081504f8c8516f6909ea",
+          "source_location": "div.chapter[32]/*[25]",
+          "source_html": "“Honor bright, your majesty, I’m telling you the truth. I hain’t been a-near your room since Miss Mary Jane took you and the duke and showed it to you.”"
+        },
+        {
+          "id": "043-030-0026",
+          "tag": "p",
+          "text": "The duke says:",
+          "sha256": "f73b60875cb403dd9b1ef8480bb5cf6cc412292619ab17fb9ca56e62bb21653f",
+          "source_location": "div.chapter[32]/*[26]",
+          "source_html": "The duke says:"
+        },
+        {
+          "id": "043-030-0027",
+          "tag": "p",
+          "text": "“Have you seen anybody else go in there?”",
+          "sha256": "6c01c4ca0f3bb65f34285a93012ce06cd78b63f3259083d9e0d732d19ca6a4e7",
+          "source_location": "div.chapter[32]/*[27]",
+          "source_html": "“Have you seen anybody else go in there?”"
+        },
+        {
+          "id": "043-030-0028",
+          "tag": "p",
+          "text": "“No, your grace, not as I remember, I believe.”",
+          "sha256": "294eeba0e5bdb8918dc4f9fed2222a452a581fd23449de1ae08adb34ad3ad149",
+          "source_location": "div.chapter[32]/*[28]",
+          "source_html": "“No, your grace, not as I remember, I believe.”"
+        },
+        {
+          "id": "043-030-0029",
+          "tag": "p",
+          "text": "“Stop and think.”",
+          "sha256": "fd6b91ea25ef9b16f751820c3c8e8a6e1a8f0572095fc86e6c410d3ae1c291e4",
+          "source_location": "div.chapter[32]/*[29]",
+          "source_html": "“Stop and think.”"
+        },
+        {
+          "id": "043-030-0030",
+          "tag": "p",
+          "text": "I studied awhile and see my chance; then I says:",
+          "sha256": "db9fe10cb76379d5026d8dcd8d561c2cd19f67e8a5c083fd7419d8954f5104b0",
+          "source_location": "div.chapter[32]/*[30]",
+          "source_html": "I studied awhile and see my chance; then I says:"
+        },
+        {
+          "id": "043-030-0031",
+          "tag": "p",
+          "text": "“Well, I see the niggers go in there several times.”",
+          "sha256": "f5b3cbea266f5c5b9c59ae8351159a536e298f04e71498aa46a1c4f9697d38a3",
+          "source_location": "div.chapter[32]/*[31]",
+          "source_html": "“Well, I see the niggers go in there several times.”"
+        },
+        {
+          "id": "043-030-0032",
+          "tag": "p",
+          "text": "Both of them gave a little jump, and looked like they hadn’t ever expected it, and then like they had. Then the duke says:",
+          "sha256": "0e8dc97275f33e04c5089fab07e5a0eb2239f62d524cc4a51a51b89360623cd2",
+          "source_location": "div.chapter[32]/*[32]",
+          "source_html": "Both of them gave a little jump, and looked like they hadn’t ever expected it, and then like they <i>had</i>. Then the duke says:"
+        },
+        {
+          "id": "043-030-0033",
+          "tag": "p",
+          "text": "“What, all of them?”",
+          "sha256": "92466c446db5371844d079860879901f7a95fb279cb00ae6621208f0d11dc918",
+          "source_location": "div.chapter[32]/*[33]",
+          "source_html": "“What, <i>all</i> of them?”"
+        },
+        {
+          "id": "043-030-0034",
+          "tag": "p",
+          "text": "“No—leastways, not all at once—that is, I don’t think I ever see them all come out at once but just one time.”",
+          "sha256": "7d990f53bb54f09397027b81cd7c4eb5d2bb2a1e7d2fdebabb0833a723b2ead6",
+          "source_location": "div.chapter[32]/*[34]",
+          "source_html": "“No—leastways, not all at once—that is, I don’t think I ever see them all come <i>out</i> at once but just one time.”"
+        },
+        {
+          "id": "043-030-0035",
+          "tag": "p",
+          "text": "“Hello! When was that?”",
+          "sha256": "a4904bac87ec666289352afa78b22d1564dbb55e79e2a77b796201caa94736a1",
+          "source_location": "div.chapter[32]/*[35]",
+          "source_html": "“Hello! When was that?”"
+        },
+        {
+          "id": "043-030-0036",
+          "tag": "p",
+          "text": "“It was the day we had the funeral. In the morning. It warn’t early, because I overslept. I was just starting down the ladder, and I see them.”",
+          "sha256": "c01acd5baf0523990180d50c29a1ecdf73bdb6496f3e71c4a823b64a26fcb95d",
+          "source_location": "div.chapter[32]/*[36]",
+          "source_html": "“It was the day we had the funeral. In the morning. It warn’t early, because I overslept. I was just starting down the ladder, and I see them.”"
+        },
+        {
+          "id": "043-030-0037",
+          "tag": "p",
+          "text": "“Well, go on, go on! What did they do? How’d they act?”",
+          "sha256": "39dd705b352b42860a7a3775b586a029cae149f3fc669d1c230e292548c38d16",
+          "source_location": "div.chapter[32]/*[37]",
+          "source_html": "“Well, go on, <i>go</i> on! What did they do? How’d they act?”"
+        },
+        {
+          "id": "043-030-0038",
+          "tag": "p",
+          "text": "“They didn’t do nothing. And they didn’t act anyway much, as fur as I see. They tiptoed away; so I seen, easy enough, that they’d shoved in there to do up your majesty’s room, or something, s’posing you was up; and found you warn’t up, and so they was hoping to slide out of the way of trouble without waking you up, if they hadn’t already waked you up.”",
+          "sha256": "7e6e98601f0ed1648fda8d1bed39f49dc03c11311f1a4edf407f978ace999d80",
+          "source_location": "div.chapter[32]/*[38]",
+          "source_html": "“They didn’t do nothing. And they didn’t act anyway much, as fur as I see. They tiptoed away; so I seen, easy enough, that they’d shoved in there to do up your majesty’s room, or something, s’posing you was up; and found you <i>warn’t</i> up, and so they was hoping to slide out of the way of trouble without waking you up, if they hadn’t already waked you up.”"
+        },
+        {
+          "id": "043-030-0039",
+          "tag": "p",
+          "text": "“Great guns, this is a go!” says the king; and both of them looked pretty sick and tolerable silly. They stood there a-thinking and scratching their heads a minute, and the duke he bust into a kind of a little raspy chuckle, and says:",
+          "sha256": "da6f902b1f0e71d262c5e50d2cf955b3d5f158834f8309b20557f6bf062ff351",
+          "source_location": "div.chapter[32]/*[39]",
+          "source_html": "“Great guns, <i>this</i> is a go!” says the king; and both of them looked pretty sick and tolerable silly. They stood there a-thinking and scratching their heads a minute, and the duke he bust into a kind of a little raspy chuckle, and says:"
+        },
+        {
+          "id": "043-030-0040",
+          "tag": "p",
+          "text": "“It does beat all how neat the niggers played their hand. They let on to be sorry they was going out of this region! And I believed they was sorry, and so did you, and so did everybody. Don’t ever tell me any more that a nigger ain’t got any histrionic talent. Why, the way they played that thing it would fool anybody. In my opinion, there’s a fortune in ’em. If I had capital and a theater, I wouldn’t want a better lay-out than that—and here we’ve gone and sold ’em for a song. Yes, and ain’t privileged to sing the song yet. Say, where is that song—that draft?”",
+          "sha256": "3e48ba0840ec339881e151438b0f955b3e866154c61131a52ae272fcc9356f6d",
+          "source_location": "div.chapter[32]/*[40]",
+          "source_html": "“It does beat all how neat the niggers played their hand. They let on to be <i>sorry</i> they was going out of this region! And I believed they <i>was</i> sorry, and so did you, and so did everybody. Don’t ever tell <i>me</i> any more that a nigger ain’t got any histrionic talent. Why, the way they played that thing it would fool <i>anybody</i>. In my opinion, there’s a fortune in ’em. If I had capital and a theater, I wouldn’t want a better lay-out than that—and here we’ve gone and sold ’em for a song. Yes, and ain’t privileged to sing the song yet. Say, where <i>is</i> that song—that draft?”"
+        },
+        {
+          "id": "043-030-0041",
+          "tag": "p",
+          "text": "“In the bank for to be collected. Where would it be?”",
+          "sha256": "b12e28158e0199a79f95908a59bfb0ccfd6c54c6bd9da17c16437433eb505457",
+          "source_location": "div.chapter[32]/*[41]",
+          "source_html": "“In the bank for to be collected. Where <i>would</i> it be?”"
+        },
+        {
+          "id": "043-030-0042",
+          "tag": "p",
+          "text": "“Well, that’s all right then, thank goodness.”",
+          "sha256": "bcb2fec9a19acb1d207f6268373b7ce81e88e637311496dbf5889af292c0cfff",
+          "source_location": "div.chapter[32]/*[42]",
+          "source_html": "“Well, <i>that’s</i> all right then, thank goodness.”"
+        },
+        {
+          "id": "043-030-0043",
+          "tag": "p",
+          "text": "Says I, kind of timid-like:",
+          "sha256": "0a416c17d4f28d5362ca24882ca5111ea09c5a92f97576ac0da878e572cf593c",
+          "source_location": "div.chapter[32]/*[43]",
+          "source_html": "Says I, kind of timid-like:"
+        },
+        {
+          "id": "043-030-0044",
+          "tag": "p",
+          "text": "“Is something gone wrong?”",
+          "sha256": "929982982e18a80194ea27352a8edf7857599869b9561097c4a0f63d2dad6c1f",
+          "source_location": "div.chapter[32]/*[44]",
+          "source_html": "“Is something gone wrong?”"
+        },
+        {
+          "id": "043-030-0045",
+          "tag": "p",
+          "text": "The king whirls on me and rips out:",
+          "sha256": "e88ea29cc97a2d20da95bcb968e0f5929ad8519e4cf7debe1101ec6aa999105c",
+          "source_location": "div.chapter[32]/*[45]",
+          "source_html": "The king whirls on me and rips out:"
+        },
+        {
+          "id": "043-030-0046",
+          "tag": "p",
+          "text": "“None o’ your business! You keep your head shet, and mind y’r own affairs—if you got any. Long as you’re in this town don’t you forgit that—you hear?” Then he says to the duke, “We got to jest swaller it and say noth’n’: mum’s the word for us.”",
+          "sha256": "155396be1e88384205066c33f1d65bd72e85d0c1ec3d75705a89307e45dfd969",
+          "source_location": "div.chapter[32]/*[46]",
+          "source_html": "“None o’ your business! You keep your head shet, and mind y’r own affairs—if you got any. Long as you’re in this town don’t you forgit <i>that</i>—you hear?” Then he says to the duke, “We got to jest swaller it and say noth’n’: mum’s the word for <i>us</i>.”"
+        },
+        {
+          "id": "043-030-0047",
+          "tag": "p",
+          "text": "As they was starting down the ladder the duke he chuckles again, and says:",
+          "sha256": "abe7582410538dc017ed7028dcf644be31ae8c97e52b76d5311f8d5bdece0236",
+          "source_location": "div.chapter[32]/*[47]",
+          "source_html": "As they was starting down the ladder the duke he chuckles again, and says:"
+        },
+        {
+          "id": "043-030-0048",
+          "tag": "p",
+          "text": "“Quick sales and small profits! It’s a good business—yes.”",
+          "sha256": "4b1f0db0c197f2579cf4eee13cc6dc388873522adef878dc3c566b5b0b03109a",
+          "source_location": "div.chapter[32]/*[48]",
+          "source_html": "“Quick sales <i>and</i> small profits! It’s a good business—yes.”"
+        },
+        {
+          "id": "043-030-0050",
+          "tag": "p",
+          "text": "The king snarls around on him and says:",
+          "sha256": "4e675f900cdaeb13813db3e3cb7aefcc06499b7fc285ad0d5f85e4053979d3e6",
+          "source_location": "div.chapter[32]/*[50]",
+          "source_html": "The king snarls around on him and says:"
+        },
+        {
+          "id": "043-030-0051",
+          "tag": "p",
+          "text": "“I was trying to do for the best in sellin’ ’em out so quick. If the profits has turned out to be none, lackin’ considable, and none to carry, is it my fault any more’n it’s yourn?”",
+          "sha256": "da2188f922c508b6f1f1b9732f06bf39e4ad4371cf4a2b708d89281bdd6ecab0",
+          "source_location": "div.chapter[32]/*[51]",
+          "source_html": "“I was trying to do for the best in sellin’ ’em out so quick. If the profits has turned out to be none, lackin’ considable, and none to carry, is it my fault any more’n it’s yourn?”"
+        },
+        {
+          "id": "043-030-0052",
+          "tag": "p",
+          "text": "“Well, they’d be in this house yet and we wouldn’t if I could a got my advice listened to.”",
+          "sha256": "bf27270d5ce12304a2780c4a35786c0a2aeddf2fe797ef2709a1930692b99695",
+          "source_location": "div.chapter[32]/*[52]",
+          "source_html": "“Well, <i>they’d</i> be in this house yet and we <i>wouldn’t</i> if I could a got my advice listened to.”"
+        },
+        {
+          "id": "043-030-0053",
+          "tag": "p",
+          "text": "The king sassed back as much as was safe for him, and then swapped around and lit into me again. He give me down the banks for not coming and telling him I see the niggers come out of his room acting that way—said any fool would a knowed something was up. And then waltzed in and cussed himself awhile, and said it all come of him not laying late and taking his natural rest that morning, and he’d be blamed if he’d ever do it again. So they went off a-jawing; and I felt dreadful glad I’d worked it all off on to the niggers, and yet hadn’t done the niggers no harm by it.",
+          "sha256": "f512078ae834189fcf9cc8cf29ab32a55019b3a8cd616f9f1e625dc9bf2cd9ff",
+          "source_location": "div.chapter[32]/*[53]",
+          "source_html": "The king sassed back as much as was safe for him, and then swapped around and lit into <i>me</i> again. He give me down the banks for not coming and <i>telling</i> him I see the niggers come out of his room acting that way—said any fool would a <i>knowed</i> something was up. And then waltzed in and cussed <i>himself</i> awhile, and said it all come of him not laying late and taking his natural rest that morning, and he’d be blamed if he’d ever do it again. So they went off a-jawing; and I felt dreadful glad I’d worked it all off on to the niggers, and yet hadn’t done the niggers no harm by it."
+        }
+      ]
+    }
+  ],
+  "scope": "Two authentic contents arguments only; raw original PG input and all prior provider exchanges remain unchanged.",
+  "book_release": false
+}
