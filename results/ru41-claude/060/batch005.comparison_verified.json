@@ -1,0 +1,391 @@
+{
+  "unit": 60,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id08202",
+      "target": "— Благодарю, сударь! — воскликнул Мордонт. — Благодарю! Отныне моя жизнь принадлежит вам, и, потеряв её, я всё равно останусь вашим должником. Благодарю, вы великолепно расплатились со мной за мои услуги.",
+      "source_sha256": "f28ef0ce465bad1c4caa71aa5053749fad912e810a9b1f34386a551c675d0951",
+      "target_id": "ru-id08202",
+      "tag": "p",
+      "target_sha256": "3ab198b261fb983c547381f1b465494f0dd5a038e1c454d6812c86b7fb6ed840"
+    },
+    {
+      "source_id": "id08203",
+      "target": "И он бросился к ногам Кромвеля и, несмотря на усилия пуританского генерала, который не хотел или делал вид, что не хочет позволить воздать себе эту почти королевскую почесть, взял его руку и поцеловал.",
+      "source_sha256": "e43475527b1a20f9236a26261e84337656a570bd676bfb17ca04da6fc4115007",
+      "target_id": "ru-id08203",
+      "tag": "p",
+      "target_sha256": "76b72dc15d419058ee6a3edf3dc89f902e08f9fa17e3682b05087a46f2fe525f"
+    },
+    {
+      "source_id": "id08204",
+      "target": "— Как! — сказал Кромвель, в свою очередь удерживая его в ту минуту, когда он поднимался с колен. — Никакой другой награды? Ни золота? Ни чина?",
+      "source_sha256": "9fca4c48ba5920a863e7c9af88d1e66ef86c283f6dc89f8db83ab0d61fbdd88e",
+      "target_id": "ru-id08204",
+      "tag": "p",
+      "target_sha256": "e79080bf1384f633a0db881d756f7293d4a591714798e24de9f2102090a6fd2e"
+    },
+    {
+      "source_id": "id08205",
+      "target": "— Вы дали мне всё, что только могли дать, милорд, и с этого дня я считаю вас в расчёте со мной за всё остальное.",
+      "source_sha256": "29139e74cdbc0bdba0a487261293b5c7c6924b9fbcffe8517934ca89ef11d5ed",
+      "target_id": "ru-id08205",
+      "tag": "p",
+      "target_sha256": "ee91d9c8e51b48e29e4c7a2ed4fed589476e560976a715f9a10ea529c9ef2747"
+    },
+    {
+      "source_id": "id08206",
+      "target": "И Мордонт бросился вон из палатки генерала с радостью, которая выплёскивалась из его сердца и из его глаз.",
+      "source_sha256": "970926701d9fc7e8e9bb87c0fe14ab2b5267492e9dae25d984db6b318a9f7a3d",
+      "target_id": "ru-id08206",
+      "tag": "p",
+      "target_sha256": "4c9224b7efe6cd5b5e4fbcb2c39aed2455b06025f29df77db1e4b5a03b7eed82"
+    },
+    {
+      "source_id": "id08207",
+      "target": "Кромвель проводил его взглядом.",
+      "source_sha256": "185485ee5ebef3b10d8f62874a1f9540c3c987c1e5cb0c5a6df3eeeab9a62dcd",
+      "target_id": "ru-id08207",
+      "tag": "p",
+      "target_sha256": "f0dd4cc4796b533f5e946a4a9cd0f4ad3103990a74f2cbb654472b963eba5fdf"
+    },
+    {
+      "source_id": "id08208",
+      "target": "— Он убил своего дядю! — прошептал он. — Увы! Что же за слуги у меня? Быть может, этот, который ничего с меня не требует или будто бы ничего не требует, потребовал перед Богом больше, чем те, кто придут требовать золота провинций и хлеба несчастных. Никто не служит мне даром. У Карла, моего пленника, быть может, ещё остались друзья, а у меня их нет.",
+      "source_sha256": "84ae51b4c53fd3374191b98e7008e61164f54659c6bc38bfe8c51c52a1d582fe",
+      "target_id": "ru-id08208",
+      "tag": "p",
+      "target_sha256": "ffabc2266334b5314d711b9e06056f4f4f4043a90e8124c284323d71f9ae0f36"
+    },
+    {
+      "source_id": "id08209",
+      "target": "И, вздохнув, он вновь предался раздумью, прерванному Мордонтом.",
+      "source_sha256": "7131d635dbd8cabc31db84014559018747018249ee2c6cee89e4a1891c27bb73",
+      "target_id": "ru-id08209",
+      "tag": "p",
+      "target_sha256": "f96d6abbf0f4a690229fe1c0f6bca35981801d73e27e50bf871a292605021d23"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id08202",
+      "verdict": "PASS",
+      "reason": "Faithful: the repeated thanks, 'ma vie est désormais à vous', the paradox of still being indebted after losing life, and the ironic payment for services are all preserved."
+    },
+    {
+      "source_id": "id08203",
+      "verdict": "CORRECTED",
+      "reason": "'hommage presque royal' was rendered as a mere 'приветствие' and 'se laisser rendre' lost its sense of permitting; now 'позволить воздать себе ... почесть'. 'prit sa main' made a neutral 'взял'."
+    },
+    {
+      "source_id": "id08204",
+      "verdict": "PASS",
+      "reason": "Accurate: Cromwell stops Mordaunt in turn as he rises; the three rhetorical questions about rewards, gold and rank are intact."
+    },
+    {
+      "source_id": "id08205",
+      "verdict": "CORRECTED",
+      "reason": "'je vous tiens quitte du reste' was clumsy ('расквитавшимся со мной'); replaced with the idiomatic 'считаю вас в расчёте со мной за всё остальное'."
+    },
+    {
+      "source_id": "id08206",
+      "verdict": "CORRECTED",
+      "reason": "The draft changed the construction and weakened 'débordait de son coeur et de ses yeux'; restored joy overflowing in both heart and eyes, and 's'élança' as 'бросился вон'."
+    },
+    {
+      "source_id": "id08207",
+      "verdict": "PASS",
+      "reason": "Exact."
+    },
+    {
+      "source_id": "id08208",
+      "verdict": "CORRECTED",
+      "reason": "'a-t-il plus demandé devant Dieu' was wrongly rendered 'испросил перед Богом' (implying praying); corrected to 'потребовал перед Богом'. Also clarified 'encore des amis' as 'ещё остались друзья' and kept the negation and hedge ('ou qui semble ne rien réclamer')."
+    },
+    {
+      "source_id": "id08209",
+      "verdict": "PASS",
+      "reason": "Faithful: he resumes, sighing, the reverie interrupted by Mordaunt."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id08203",
+      "before": "И он бросился к ногам Кромвеля и, несмотря на усилия пуританского генерала, который не хотел или делал вид, что не хочет принимать это почти королевское приветствие, схватил его руку и поцеловал.",
+      "after": "И он бросился к ногам Кромвеля и, несмотря на усилия пуританского генерала, который не хотел или делал вид, что не хочет позволить воздать себе эту почти королевскую почесть, взял его руку и поцеловал."
+    },
+    {
+      "source_id": "id08205",
+      "before": "— Вы дали мне всё, что только могли дать, милорд, и с этого дня я считаю вас расквитавшимся со мной за всё остальное.",
+      "after": "— Вы дали мне всё, что только могли дать, милорд, и с этого дня я считаю вас в расчёте со мной за всё остальное."
+    },
+    {
+      "source_id": "id08206",
+      "before": "И Мордонт выбежал из палатки генерала, и радость переполняла его сердце и светилась в его глазах.",
+      "after": "И Мордонт бросился вон из палатки генерала с радостью, которая переливалась через край в его сердце и в его глазах."
+    },
+    {
+      "source_id": "id08208",
+      "before": "— Он убил своего дядю! — прошептал он. — Увы! Что же за слуги у меня? Быть может, этот, который ничего не требует от меня, или как будто ничего не требует, испросил перед Богом больше, чем те, кто придёт требовать золота провинций и хлеба несчастных. Никто не служит мне даром. Карл, мой пленник, быть может, ещё имеет друзей, а у меня их нет.",
+      "after": "— Он убил своего дядю! — прошептал он. — Увы! Что же за слуги у меня? Быть может, этот, который ничего с меня не требует или будто бы ничего не требует, потребовал перед Богом больше, чем те, кто придут требовать золота провинций и хлеба несчастных. Никто не служит мне даром. У Карла, моего пленника, быть может, ещё остались друзья, а у меня их нет."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJSX66zBYG8N6bvDSp6U",
+    "usage": {
+      "input_tokens": 2982,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 647,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJSXS629LHHDhRt98LC1",
+    "usage": {
+      "input_tokens": 4716,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2290,
+      "output_tokens_details": {
+        "thinking_tokens": 953
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSYXbSdVQcxhR8mJTHS",
+        "usage": {
+          "input_tokens": 5513,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2052,
+          "output_tokens_details": {
+            "thinking_tokens": 744
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08202",
+          "verdict": "PASS",
+          "reason": "Faithful: thanks, life now his, remaining indebted even in losing it, magnificent payment for services; all preserved and idiomatic."
+        },
+        {
+          "source_id": "id08203",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'не хотел или делал вид, что не хочет', 'почти королевская почесть', and 'взял его руку и поцеловал' match the French agency and sequence."
+        },
+        {
+          "source_id": "id08204",
+          "verdict": "PASS",
+          "reason": "Cromwell stops him in turn as he rises; three rhetorical questions about rewards, gold, rank all preserved."
+        },
+        {
+          "source_id": "id08205",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'в расчёте' correctly renders 'je vous tiens quitte du reste'; the rest is faithful."
+        },
+        {
+          "source_id": "id08206",
+          "verdict": "CORRECTED",
+          "reason": "The prior wording 'переливалась через край в его сердце и в его глазах' lost the source's direction ('débordait de son coeur et de ses yeux' = overflowed out of heart and eyes); rephrased to 'изливаясь из его сердца и из его глаз'. 'S'élança hors' is retained as 'бросился вон'."
+        },
+        {
+          "source_id": "id08207",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic."
+        },
+        {
+          "source_id": "id08208",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'ничего с меня не требует или будто бы ничего не требует', 'потребовал перед Богом больше', 'у Карла ... остались друзья' are faithful; negation, hedging and the contrast between prisoner Charles and Cromwell preserved."
+        },
+        {
+          "source_id": "id08209",
+          "verdict": "PASS",
+          "reason": "Faithful: he resumed, sighing, the reverie interrupted by Mordaunt."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id08206",
+          "before": "И Мордонт бросился вон из палатки генерала с радостью, которая переливалась через край в его сердце и в его глазах.",
+          "after": "И Мордонт бросился вон из палатки генерала с радостью, которая переливалась через край, изливаясь из его сердца и из его глаз."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSZUdd4rGjJ4rrQp3fs",
+        "usage": {
+          "input_tokens": 5512,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2019,
+          "output_tokens_details": {
+            "thinking_tokens": 652
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08202",
+          "verdict": "PASS",
+          "reason": "Faithful: thanks, life now belonging to Cromwell, remaining indebted even in death, and magnificent payment for services are all preserved; dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id08203",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'hommage presque royal' is rendered as 'почти королевская почесть', and 'ne voulait pas ou faisait semblant de ne pas vouloir' keeps its ambiguity. 'Prit sa main qu'il baisa' is correctly 'взял его руку и поцеловал'."
+        },
+        {
+          "source_id": "id08204",
+          "verdict": "PASS",
+          "reason": "Accurate: 'à son tour', the arrest of the movement as he rises, and the three negative questions (reward, gold, rank) are all kept."
+        },
+        {
+          "source_id": "id08205",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'je vous tiens quitte du reste' is idiomatically rendered as 'считаю вас в расчёте со мной за всё остальное'."
+        },
+        {
+          "source_id": "id08206",
+          "verdict": "CORRECTED",
+          "reason": "The prior target had an awkward redundancy ('переливалась через край, изливаясь'). It now follows 'une joie qui débordait de son coeur et de ses yeux' directly and idiomatically; 's'élança hors de la tente' is retained."
+        },
+        {
+          "source_id": "id08207",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic."
+        },
+        {
+          "source_id": "id08208",
+          "verdict": "PASS",
+          "reason": "The prior corrections are verified: 'ne me réclame rien ou semble ne rien réclamer', 'a plus demandé devant Dieu', and 'Charles... a encore des amis' are all accurate. The ambiguity and the contrast between Charles and Cromwell are preserved, and no content is omitted."
+        },
+        {
+          "source_id": "id08209",
+          "verdict": "PASS",
+          "reason": "Accurate: the sigh, the resumed reverie, and the interruption by Mordaunt are all preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id08206",
+          "before": "И Мордонт бросился вон из палатки генерала с радостью, которая переливалась через край, изливаясь из его сердца и из его глаз.",
+          "after": "И Мордонт бросился вон из палатки генерала с радостью, которая выплёскивалась из его сердца и из его глаз."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSaP1KSmoNXhdKCoNm7",
+        "usage": {
+          "input_tokens": 5516,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1829,
+          "output_tokens_details": {
+            "thinking_tokens": 544
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08202",
+          "verdict": "PASS",
+          "reason": "Faithful: repeated «merci», the future debt even after death, and the ironic «payé magnifiquement de mes services» are all preserved; dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id08203",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. The puritan general's real or feigned reluctance to accept the 'almost royal homage' is rendered accurately; kneeling, taking the hand and kissing it are all kept."
+        },
+        {
+          "source_id": "id08204",
+          "verdict": "PASS",
+          "reason": "Cromwell stops him as he rises; the three questions about reward (other rewards, gold, rank) are complete and in order."
+        },
+        {
+          "source_id": "id08205",
+          "verdict": "PASS",
+          "reason": "The prior correction «в расчёте» is verified. It matches «je vous tiens quitte du reste», and «milord» is retained."
+        },
+        {
+          "source_id": "id08206",
+          "verdict": "PASS",
+          "reason": "Mordaunt rushes out of the general's tent, and joy overflows from his heart and eyes, as in the French. The ledger's «after» wording differs from the final row, but the final row is faithful and idiomatic, so its bytes are kept."
+        },
+        {
+          "source_id": "id08207",
+          "verdict": "PASS",
+          "reason": "Accurate and complete."
+        },
+        {
+          "source_id": "id08208",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. The doubt about whether Mordaunt really asks nothing («ou qui semble»), the comparison with those who will claim the gold of the provinces and the bread of the wretched, the line that no one serves for nothing, and the contrast between Charles's friends and his own lack of them are all preserved."
+        },
+        {
+          "source_id": "id08209",
+          "verdict": "PASS",
+          "reason": "Sighing, he resumes the reverie interrupted by Mordaunt; agency and tense are correct."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
