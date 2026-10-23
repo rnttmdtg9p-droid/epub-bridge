@@ -1,0 +1,462 @@
+{
+  "unit": 55,
+  "batch": 9,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id07371",
+      "target": "Человек, закутанный в плащ, полою которого, драпируясь, он скрывал лицо, подошёл, склонился над постелью и посмотрел.",
+      "source_sha256": "f21c3602f84f0dd216763851e7e5cb98a2b9cbffe9d914d4d988f14ff807fa4e",
+      "target_id": "ru-id07371",
+      "tag": "p",
+      "target_sha256": "9e65f29a6865a583fac049f58ca50f4954bd22b6f12ddf0993513c519d4c82a5"
+    },
+    {
+      "source_id": "id07372",
+      "target": "На миг д’Артаньян решил, что у этого человека дурное намерение, и схватился за шпагу; но когда человек в плаще, наклоняясь, пошевелился, он приоткрыл часть своего лица, и д’Артаньян узнал коадъютора.",
+      "source_sha256": "318f08e5a525116bfa88808814b00a8889dca5015592a3b824750ab9877e51a4",
+      "target_id": "ru-id07372",
+      "tag": "p",
+      "target_sha256": "75794dedd41f9f792595c75dab4507d71ac6f95d7aa8c19e02d4e32690a36563"
+    },
+    {
+      "source_id": "id07373",
+      "target": "— Это точно король, — сказал этот человек, выпрямляясь. — Благослови Бог Его Величество!",
+      "source_sha256": "b57e48626f029c98f6dd9566b96e150e2dd17b215422210a8471062fddb9c2eb",
+      "target_id": "ru-id07373",
+      "tag": "p",
+      "target_sha256": "dc3d9dcbf599ce3aea115bcb0891b4d0524bac29430056464d2e0c74f0c311ec"
+    },
+    {
+      "source_id": "id07374",
+      "target": "— Да, — вполголоса сказал предводитель, — да, благослови Бог Его Величество!",
+      "source_sha256": "1073f90b39107a6d0807c42a785340efa02a807f5b7d469bae85d2e1c1099d5a",
+      "target_id": "ru-id07374",
+      "tag": "p",
+      "target_sha256": "2f7d02d2aba036b851e1a195134925d7e78edda4a882d36ed39bcaf97670b879"
+    },
+    {
+      "source_id": "id07375",
+      "target": "И все эти люди, которые вошли в ярости, от гнева перейдя к жалости, в свою очередь благословили королевское дитя.",
+      "source_sha256": "0da2bd451fe59c7201cbdda0dfb405b68f5df008fb6970539463b1ba02ba0301",
+      "target_id": "ru-id07375",
+      "tag": "p",
+      "target_sha256": "b2cf1f5c0fcf73b6b30ac5ab1763ee0ac21575cbd09b01d6725e634d9af8f20e"
+    },
+    {
+      "source_id": "id07376",
+      "target": "— А теперь, — сказал Планше, — поблагодарим королеву, друзья мои, и уйдём.",
+      "source_sha256": "8c823f3ab0d8dac20587e378225430b9992cfc8846c4ad3d38cea1e29d2d09bd",
+      "target_id": "ru-id07376",
+      "tag": "p",
+      "target_sha256": "92eff1d17eac417aab309555a50769b6b13f1b42a90fb5040229f3f17153289b"
+    },
+    {
+      "source_id": "id07377",
+      "target": "Все поклонились и понемногу, без шума вышли, как и вошли. Планше, вошедший первым, выходил последним.",
+      "source_sha256": "ff968e3bd952e9ff0d273c074fdc9fa975419e784d3f4ab21f972c086ed745da",
+      "target_id": "ru-id07377",
+      "tag": "p",
+      "target_sha256": "aae7a9e288eaf6173021e2339d375dc6c6da32f8f24a2e58c86cfd3c56e7f609"
+    },
+    {
+      "source_id": "id07378",
+      "target": "Королева остановила его.",
+      "source_sha256": "e0233dbc5b59d47e55c4b1955bb4427bf56d3ce2fe3b94e9ee596e31db8eb63e",
+      "target_id": "ru-id07378",
+      "tag": "p",
+      "target_sha256": "02b3aaf4e3f2344dfa3518a4d5dd450a6b363ae530698fee332fec675cf1aab9"
+    },
+    {
+      "source_id": "id07379",
+      "target": "— Как вас зовут, друг мой? — спросила она.",
+      "source_sha256": "7d710f2e29d42c413ce2850f9ccf7763779ab89cd9735d1081e9eab575db29eb",
+      "target_id": "ru-id07379",
+      "tag": "p",
+      "target_sha256": "30a5f24d6f701167f2f480775d0d4e9bdd665f862114082b938f235bd658bf3c"
+    },
+    {
+      "source_id": "id07380",
+      "target": "Планше обернулся, очень удивлённый вопросом.",
+      "source_sha256": "9fad8b7051dd0d9d33e333d4df66b3f024384b8e528a5c5b0a0045738ca826f3",
+      "target_id": "ru-id07380",
+      "tag": "p",
+      "target_sha256": "249c0fea5a323de39bd5c7128e86b1f186ca78721aafca5d6038ad4245706a91"
+    },
+    {
+      "source_id": "id07381",
+      "target": "— Да, — сказала королева, — я почитаю для себя такой же честью, что приняла вас сегодня вечером, как если бы вы были принцем, и желаю узнать ваше имя.",
+      "source_sha256": "0cf4418b938955b50534f264651085d68b656b92db1df662784cf9c7425024a8",
+      "target_id": "ru-id07381",
+      "tag": "p",
+      "target_sha256": "961d9cac37f522a8fead2cff37aad1568978c944a88347ff25b8988bc13f0a4e"
+    },
+    {
+      "source_id": "id07382",
+      "target": "— Да уж, — подумал Планше, — чтобы обойтись со мной, как с принцем. Благодарю покорно!",
+      "source_sha256": "528863a7f49be399ac8301231aa94c1f1d7c5e932e4c4e771d51b86a6d12240f",
+      "target_id": "ru-id07382",
+      "tag": "p",
+      "target_sha256": "272084f2da7e727a1991c49f4a75777df0b398295cef589d01137f5a1b7f579e"
+    },
+    {
+      "source_id": "id07383",
+      "target": "Д’Артаньян задрожал: как бы Планше, соблазнённый, подобно ворону из басни, не назвал своего имени, и как бы королева, узнав это имя, не узнала, что Планше служил у него.",
+      "source_sha256": "782fd3bdd953e9b32cc7cfbe8f580c28095368b95fa2210ed1b6cc8bc6ea8f32",
+      "target_id": "ru-id07383",
+      "tag": "p",
+      "target_sha256": "a411d066d9b2c4777baa8fdfdce712748c4bd970bd85ea643e27358deae54756"
+    },
+    {
+      "source_id": "id07384",
+      "target": "— Сударыня, — почтительно ответил Планше, — меня зовут Дюлорье, к вашим услугам.",
+      "source_sha256": "46dca065b5facb07f847a8264c2022ed39cc31a8f39fbb7b2401be96f9e461ad",
+      "target_id": "ru-id07384",
+      "tag": "p",
+      "target_sha256": "9f4359cd1dbf3653611d679e192683df414b752c21dae95cd9c3674e9c2ca83f"
+    },
+    {
+      "source_id": "id07385",
+      "target": "— Благодарю вас, господин Дюлорье, — сказала королева, — а чем вы занимаетесь?",
+      "source_sha256": "75e756b0629358730a0f04f30bc83736d4df7304f920e8a892f707a28a6988e0",
+      "target_id": "ru-id07385",
+      "tag": "p",
+      "target_sha256": "7777677d4f4b6953d35638c1c2cb32640c890481d63038f0261ebafb81fe069e"
+    },
+    {
+      "source_id": "id07386",
+      "target": "— Сударыня, я торговец сукном на улице Бурдонне.",
+      "source_sha256": "195a20941046b716384d2d942842a64ed4b9268a7a35186737545cdae04b5177",
+      "target_id": "ru-id07386",
+      "tag": "p",
+      "target_sha256": "1819b19df1efb1ceb1062fe67183cc65f5de15a41a3dc4e5c4a4967de36ea4a6"
+    },
+    {
+      "source_id": "id07387",
+      "target": "— Это всё, что я хотела знать, — сказала королева. — Весьма вам обязана, дорогой господин Дюлорье, вы ещё услышите обо мне.",
+      "source_sha256": "0bfa151b762f83342e6fb996c781c6ce9fed4a872e767303bb92c747c39458f0",
+      "target_id": "ru-id07387",
+      "tag": "p",
+      "target_sha256": "a52b5a3beabc58246807c3c9fd68316e90a13f3a91f6dcd35d22446511694f3c"
+    },
+    {
+      "source_id": "id07388",
+      "target": "— Ну-ну, — пробормотал д’Артаньян, выходя из-за своей занавеси, — решительно, мэтр Планше вовсе не дурак, и сразу видно, что он прошёл хорошую школу.",
+      "source_sha256": "8b9ca663ab3aef0e5c542471af18af4da2b8edb9d90dbee5be979cb8f7b1d9b2",
+      "target_id": "ru-id07388",
+      "tag": "p",
+      "target_sha256": "31e210458e52e32510f99033300d7203acaecb0159198a533fcec14d3109f3f3"
+    },
+    {
+      "source_id": "id07389",
+      "target": "Различные действующие лица этой странной сцены какое-то время стояли друг против друга, не произнося ни слова: королева — у двери, д’Артаньян — наполовину выбравшись из своего укрытия, король — приподнявшись на локте и готовый упасть обратно на постель при малейшем шуме, который указал бы на возвращение всей этой толпы; но шум, вместо того чтобы приближаться, всё более удалялся и наконец совсем затих.",
+      "source_sha256": "fb1333d223070c5fe2593d83cc710a1317f6e634cde3b6234846f700fc2327ae",
+      "target_id": "ru-id07389",
+      "tag": "p",
+      "target_sha256": "44d6fb33ecada1d229d4dbe64e663fb552d08dccdb34d2d2956e2afda7cbc524"
+    },
+    {
+      "source_id": "id07390",
+      "target": "Королева вздохнула с облегчением; д’Артаньян отёр влажный лоб; король соскользнул с постели, говоря:",
+      "source_sha256": "ab9df61ef8e761d3a2d1cc9c071381f44615538671ba805ccba00ea5bca15ec1",
+      "target_id": "ru-id07390",
+      "tag": "p",
+      "target_sha256": "991d0b66c3c281e462e978527a9129fec4c2ed9ff2239278578bc622fb70357f"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id07371",
+      "verdict": "PASS",
+      "reason": "Faithful: cloak, draping to hide face, approach, bending, looking all preserved."
+    },
+    {
+      "source_id": "id07372",
+      "verdict": "CORRECTED",
+      "reason": "Agency: in the source the man in the cloak himself uncovers part of his face (il découvrit); draft made it passive/impersonal."
+    },
+    {
+      "source_id": "id07373",
+      "verdict": "PASS",
+      "reason": "Accurate; blessing formula and gesture preserved."
+    },
+    {
+      "source_id": "id07374",
+      "verdict": "PASS",
+      "reason": "Accurate; 'le chef' rendered as предводитель, half-voice preserved."
+    },
+    {
+      "source_id": "id07375",
+      "verdict": "PASS",
+      "reason": "Accurate rendering of the shift from fury to pity and the blessing."
+    },
+    {
+      "source_id": "id07376",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07377",
+      "verdict": "PASS",
+      "reason": "Accurate; first-in/last-out contrast preserved."
+    },
+    {
+      "source_id": "id07378",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07379",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07380",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07381",
+      "verdict": "CORRECTED",
+      "reason": "'je me tiens honorée de vous avoir reçu' means she regards receiving him as an honour; 'польщённой' shifted the sense toward flattery, so reworded."
+    },
+    {
+      "source_id": "id07382",
+      "verdict": "PASS",
+      "reason": "Ironic aside preserved; idiomatic 'Благодарю покорно'."
+    },
+    {
+      "source_id": "id07383",
+      "verdict": "CORRECTED",
+      "reason": "Removed the added 'когда-то' and rendered 'lui avait appartenu' as service to d'Artagnan more closely without extra nuance."
+    },
+    {
+      "source_id": "id07384",
+      "verdict": "PASS",
+      "reason": "Name Dulaurier and polite formula preserved."
+    },
+    {
+      "source_id": "id07385",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07386",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07387",
+      "verdict": "PASS",
+      "reason": "Accurate; queen's ambiguous promise preserved."
+    },
+    {
+      "source_id": "id07388",
+      "verdict": "PASS",
+      "reason": "Accurate; humour and 'bonne école' idiom preserved."
+    },
+    {
+      "source_id": "id07389",
+      "verdict": "CORRECTED",
+      "reason": "Replaced 'возвещающем' with a conditional relative clause matching 'qui indiquerait', and 'Разные' with 'Различные'."
+    },
+    {
+      "source_id": "id07390",
+      "verdict": "PASS",
+      "reason": "Accurate; actions in correct sequence."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id07372",
+      "before": "На миг д’Артаньян решил, что у этого человека дурное намерение, и схватился за шпагу; но когда человек в плаще наклонился, открылась часть его лица, и д’Артаньян узнал коадъютора.",
+      "after": "На миг д’Артаньян решил, что у этого человека дурное намерение, и схватился за шпагу; но когда человек в плаще, наклоняясь, пошевелился, он приоткрыл часть своего лица, и д’Артаньян узнал коадъютора."
+    },
+    {
+      "source_id": "id07381",
+      "before": "— Да, — сказала королева, — я почитаю себя столь же польщённой тем, что приняла вас сегодня вечером, как если бы вы были принцем, и желаю узнать ваше имя.",
+      "after": "— Да, — сказала королева, — я почитаю для себя такой же честью, что приняла вас сегодня вечером, как если бы вы были принцем, и желаю узнать ваше имя."
+    },
+    {
+      "source_id": "id07383",
+      "before": "Д’Артаньян задрожал: как бы Планше, соблазнённый, подобно ворону из басни, не назвал своего имени, и как бы королева, узнав это имя, не узнала, что Планше когда-то служил ему.",
+      "after": "Д’Артаньян задрожал: как бы Планше, соблазнённый, подобно ворону из басни, не назвал своего имени, и как бы королева, узнав это имя, не узнала, что Планше служил у него."
+    },
+    {
+      "source_id": "id07389",
+      "before": "Разные действующие лица этой странной сцены какое-то время стояли друг против друга, не произнося ни слова: королева — у двери, д’Артаньян — наполовину выбравшись из своего укрытия, король — приподнявшись на локте и готовый упасть обратно на постель при малейшем шуме, возвещающем возвращение всей этой толпы; но шум, вместо того чтобы приближаться, всё более удалялся и наконец совсем затих.",
+      "after": "Различные действующие лица этой странной сцены какое-то время стояли друг против друга, не произнося ни слова: королева — у двери, д’Артаньян — наполовину выбравшись из своего укрытия, король — приподнявшись на локте и готовый упасть обратно на постель при малейшем шуме, который указал бы на возвращение всей этой толпы; но шум, вместо того чтобы приближаться, всё более удалялся и наконец совсем затих."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRWFnWJGVXQaHoJLMG4",
+    "usage": {
+      "input_tokens": 5248,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1309,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRWxBsqzWJCdMsN95bc",
+    "usage": {
+      "input_tokens": 9143,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3832,
+      "output_tokens_details": {
+        "thinking_tokens": 1558
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJRYdp8BwpJNqJziy5is",
+        "usage": {
+          "input_tokens": 10041,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3610,
+          "output_tokens_details": {
+            "thinking_tokens": 1052
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id07371",
+          "verdict": "PASS",
+          "reason": "Faithful: the cloak, the face hidden by draping it, approaching, bending over the bed and looking are all rendered accurately."
+        },
+        {
+          "source_id": "id07372",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. D'Artagnan's suspicion, his hand going to his sword, the man's stooping movement uncovering part of his face, and the recognition of the coadjutor are all preserved."
+        },
+        {
+          "source_id": "id07373",
+          "target_note": "",
+          "verdict": "PASS",
+          "reason": "\"C'est bien le roi\" and the blessing are accurate, and \"en se relevant\" is rendered as \"выпрямляясь\"."
+        },
+        {
+          "source_id": "id07374",
+          "verdict": "PASS",
+          "reason": "Accurate: \"à demi-voix\" is \"вполголоса\", \"le chef\" is \"предводитель\", and the repeated blessing is kept."
+        },
+        {
+          "source_id": "id07375",
+          "verdict": "PASS",
+          "reason": "The shift from fury to pity, the men blessing in their turn, and \"l'enfant royal\" are all conveyed."
+        },
+        {
+          "source_id": "id07376",
+          "verdict": "PASS",
+          "reason": "Accurate, with the right register and the imperative \"retirons-nous\" kept."
+        },
+        {
+          "source_id": "id07377",
+          "verdict": "PASS",
+          "reason": "Accurate: bowing, leaving little by little and noiselessly, and Planchet entering first and leaving last."
+        },
+        {
+          "source_id": "id07378",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07379",
+          "verdict": "PASS",
+          "reason": "Accurate, with the form of address \"mon ami\" kept."
+        },
+        {
+          "source_id": "id07380",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07381",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. \"Honorée\" is now rendered as \"честью\", and the past tense \"vous avoir reçu\" is kept. The phrasing is slightly stiff but faithful and acceptable."
+        },
+        {
+          "source_id": "id07382",
+          "verdict": "PASS",
+          "reason": "The ironic aside is preserved: \"merci!\" is rendered as \"Благодарю покорно!\" and the thought is marked as Planchet's."
+        },
+        {
+          "source_id": "id07383",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. \"Lui avait appartenu\" is \"служил у него\" with no added \"когда-то\". The fear construction, the fable raven and the agency are all preserved."
+        },
+        {
+          "source_id": "id07384",
+          "verdict": "PASS",
+          "reason": "Accurate, including the false name Dulaurier and \"pour vous servir\"."
+        },
+        {
+          "source_id": "id07385",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07386",
+          "verdict": "PASS",
+          "reason": "Accurate: draper's trade and the rue des Bourdonnais."
+        },
+        {
+          "source_id": "id07387",
+          "verdict": "PASS",
+          "reason": "Accurate, with the queen's register kept."
+        },
+        {
+          "source_id": "id07388",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic, with the negation \"n'est point un sot\" and the \"bonne école\" idea preserved."
+        },
+        {
+          "source_id": "id07389",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. The conditional \"qui indiquerait\" is rendered as \"который указал бы\", and every detail of position and sound is kept."
+        },
+        {
+          "source_id": "id07390",
+          "verdict": "PASS",
+          "reason": "Accurate: the queen breathes again, d'Artagnan wipes his damp brow, and the king slides down from the bed."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

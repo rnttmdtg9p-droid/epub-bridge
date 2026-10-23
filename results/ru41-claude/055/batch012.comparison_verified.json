@@ -1,0 +1,359 @@
+{
+  "unit": 55,
+  "batch": 12,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id07431",
+      "target": "Затем, подойдя к опущенной шторке, он сказал:",
+      "source_sha256": "8aeaa2ac68f28cb3127625516c2dcaaf1a6e39aa8af684a4c2fa5aba6c847668",
+      "target_id": "ru-id07431",
+      "tag": "p",
+      "target_sha256": "398b627a0f7236653963eec1979429a8743f0ee14a090ea5cdc8347cee043c50"
+    },
+    {
+      "source_id": "id07432",
+      "target": "— Приятного вам времяпрепровождения, монсеньор! — сказал он.",
+      "source_sha256": "c0e8dbaf5ae92f903753b93bb9d4eddc6d8e191418c082c8f84738b9ff93c861",
+      "target_id": "ru-id07432",
+      "tag": "p",
+      "target_sha256": "f498cc76f710d9d5d9556155a342713281db2539ae6be023ae2803a3d5dd5811"
+    },
+    {
+      "source_id": "id07433",
+      "target": "— Болтун! — крикнул д’Артаньян. — Из-за вас меня выгонят.",
+      "source_sha256": "6115d05174dd4111166dda82a8df5a13d2d01c2e20bed1ea681768b7a1fc99ae",
+      "target_id": "ru-id07433",
+      "tag": "p",
+      "target_sha256": "539c003831be8329002b5f3b7940ee0ccb9b50d885daa6a2aed91aebd9cb761d"
+    },
+    {
+      "source_id": "id07434",
+      "target": "Шлагбаум заскрипел на петлях; д’Артаньян, увидев, что путь свободен, энергично хлестнул лошадей, и те крупной рысью понеслись вперёд.",
+      "source_sha256": "2b43016b241409d5674f6c8510b6c7e4238782bdbf24d5e659f22eafc9152fce",
+      "target_id": "ru-id07434",
+      "tag": "p",
+      "target_sha256": "00ba4d4d706b3d6eb92f5ff2d25530ebcd8f89585e9d05e060740fa1047b031f"
+    },
+    {
+      "source_id": "id07435",
+      "target": "Через пять минут они догнали карету кардинала.",
+      "source_sha256": "fd3a0b4b90acfcf73c194c72c43e8991e82aca3fa01a3d6b6b67a51ed28b1f49",
+      "target_id": "ru-id07435",
+      "tag": "p",
+      "target_sha256": "15cf7a5566aa043a43a1b0fd8a8a52a37771b0261ecb38ea3201d8e1cbf6b39a"
+    },
+    {
+      "source_id": "id07436",
+      "target": "— Мушкетон, — крикнул д’Артаньян, — поднимите шторки на карете Его Величества.",
+      "source_sha256": "bbb6357f27b99c4797acfde8315c18797192cc7c4116dccf462b85178a622209",
+      "target_id": "ru-id07436",
+      "tag": "p",
+      "target_sha256": "0b5876fc73e8ee6916176776240a392c7ec4ea3e97cad50cafcc2455ee2b7062"
+    },
+    {
+      "source_id": "id07437",
+      "target": "— Это он, — сказал Портос.",
+      "source_sha256": "b2eae4bf2d2fff6e19f5826230675ac612a6af287dc93a251a17168641393d7e",
+      "target_id": "ru-id07437",
+      "tag": "p",
+      "target_sha256": "2560f78edcbe8b9a7638779c8b25ef9c41cb5d3cabc343fcbe4559d59c7c2797"
+    },
+    {
+      "source_id": "id07438",
+      "target": "— В кучерах! — воскликнул Мазарини.",
+      "source_sha256": "e2bcd58b55dc68d6428b30a0597c4b2b5f51bf3af13ab96fd594d8ad23b638dc",
+      "target_id": "ru-id07438",
+      "tag": "p",
+      "target_sha256": "94590f0a2e590095fd40ed2bbfa0d5d6b98d6b9e5661bf1ac3fa434f16dce0bc"
+    },
+    {
+      "source_id": "id07439",
+      "target": "— Да ещё с каретой коадъютора! — сказала королева.",
+      "source_sha256": "4cbb83ad593cd336f12afb1fc2740bad138624f6300f2ff2373f54ae859a8f73",
+      "target_id": "ru-id07439",
+      "tag": "p",
+      "target_sha256": "16f4fbd2bd98f4a02e3180c28de56915f193a07d7203086845e657204fc70728"
+    },
+    {
+      "source_id": "id07440",
+      "target": "— <i>Corpo di Dio!</i> <i>Монсу</i> д’Артаньян, — сказал Мазарини, — вы стоите своего веса в золоте!",
+      "source_sha256": "67e143cb2d0a116a1a58c822bf02200be2fa7b3cb9d93c8e90fabd7d7805ae79",
+      "target_id": "ru-id07440",
+      "tag": "p",
+      "target_sha256": "8ecb5ceede28226f9ce1bce2d4e3556a1ac7212d31cb5a6700ab05ac84ace03c"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id07431",
+      "verdict": "PASS",
+      "reason": "Faithful; the baissé mantelet rendered as the lowered shade, speaker and sequence preserved."
+    },
+    {
+      "source_id": "id07432",
+      "verdict": "CORRECTED",
+      "reason": "The draft contained a Latin-script fragment 'monseigneur' inside the Russian; replaced with 'монсеньор'. The meaning is otherwise preserved, including the sergeant's ironic wish of pleasure."
+    },
+    {
+      "source_id": "id07433",
+      "verdict": "PASS",
+      "reason": "'Indiscret' as 'Болтун' fits the context, with the threat of dismissal preserved; the dialogue punctuation is correct."
+    },
+    {
+      "source_id": "id07434",
+      "verdict": "PASS",
+      "reason": "Gate creaking, d'Artagnan's whipping the horses and the brisk trot are all preserved."
+    },
+    {
+      "source_id": "id07435",
+      "verdict": "PASS",
+      "reason": "Accurate; the impersonal 'on' is naturally rendered as 'они' for the party."
+    },
+    {
+      "source_id": "id07436",
+      "verdict": "PASS",
+      "reason": "Order to Mousqueton and the reference to His Majesty's carriage are accurate."
+    },
+    {
+      "source_id": "id07437",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07438",
+      "verdict": "PASS",
+      "reason": "'En cocher' means disguised as a coachman; 'В кучерах' conveys this idiomatically."
+    },
+    {
+      "source_id": "id07439",
+      "verdict": "CORRECTED",
+      "reason": "'Et avec le carrosse du coadjuteur' means 'and with the coadjutor's carriage'; 'в карете' could suggest being inside it, so it was changed to 'с каретой'."
+    },
+    {
+      "source_id": "id07440",
+      "verdict": "CORRECTED",
+      "reason": "Mazarin's Italianized 'monsou' was transliterated as 'Монсу' to mimic his accent, and the italics were kept as in the source."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id07432",
+      "before": "— Приятного вам времяпрепровождения, монseigneur! — сказал он.",
+      "after": "— Приятного вам времяпрепровождения, монсеньор! — сказал он."
+    },
+    {
+      "source_id": "id07439",
+      "before": "— Да ещё в карете коадъютора! — сказала королева.",
+      "after": "— Да ещё с каретой коадъютора! — сказала королева."
+    },
+    {
+      "source_id": "id07440",
+      "before": "— <i>Corpo di Dio!</i> <i>Monsou</i> д’Артаньян, — сказал Мазарини, — вы стоите своего веса в золоте!",
+      "after": "— <i>Corpo di Dio!</i> <i>Монсу</i> д’Артаньян, — сказал Мазарини, — вы стоите своего веса в золоте!"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRgTHqz6DL8FY8V8B4G",
+    "usage": {
+      "input_tokens": 2531,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRgig3d4iDx2LDx5Mj4",
+    "usage": {
+      "input_tokens": 4378,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1139,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJRhHHbrTUtqhqhyWaMY",
+        "usage": {
+          "input_tokens": 4723,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1964,
+          "output_tokens_details": {
+            "thinking_tokens": 705
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id07431",
+          "verdict": "PASS",
+          "reason": "Faithful. The added «он сказал» is a natural Russian lead-in to the colon and changes no fact or agency; the lowered mantelet is rendered correctly."
+        },
+        {
+          "source_id": "id07432",
+          "verdict": "PASS",
+          "reason": "The prior fix of the garbled «монseigneur» to «монсеньор» is verified. The ironic well-wishing «Bien du plaisir» is idiomatic and the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id07433",
+          "verdict": "PASS",
+          "reason": "Meaning, exclamation and the threat «vous me ferez chasser» («меня выгонят») are preserved. «Болтун» is an acceptable rendering of «Indiscret» in this context."
+        },
+        {
+          "source_id": "id07434",
+          "verdict": "CORRECTED",
+          "reason": "The adverb «vigoureusement» was omitted. Restored as «энергично хлестнул». The rest (the barrier creaking on its hinges, the road open, the horses at a full trot) was already accurate."
+        },
+        {
+          "source_id": "id07435",
+          "verdict": "PASS",
+          "reason": "Time span, the pluperfect sense of «on avait rejoint» and the cardinal's carriage are accurate."
+        },
+        {
+          "source_id": "id07436",
+          "verdict": "PASS",
+          "reason": "The order to Mousqueton to raise the mantelets of His Majesty's carriage is preserved, with correct interrupted-dialogue punctuation."
+        },
+        {
+          "source_id": "id07437",
+          "verdict": "PASS",
+          "reason": "Accurate and complete."
+        },
+        {
+          "source_id": "id07438",
+          "verdict": "PASS",
+          "reason": "«En cocher!» is rendered as «В кучерах!», with the exclamation and attribution to Mazarin preserved."
+        },
+        {
+          "source_id": "id07439",
+          "verdict": "PASS",
+          "reason": "The prior fix is verified: «avec le carrosse du coadjuteur» is rendered as «с каретой коадъютора», not «в карете»."
+        },
+        {
+          "source_id": "id07440",
+          "verdict": "PASS",
+          "reason": "The prior fix is verified: «Monsou» is transliterated as «Монсу» in italics, matching Mazarin's Italianate speech, and «Corpo di Dio!» stays in italics. «Vous valez votre pesant d'or» is idiomatic."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id07434",
+          "before": "Шлагбаум заскрипел на петлях; д’Артаньян, увидев, что путь свободен, хлестнул лошадей, и те крупной рысью понеслись вперёд.",
+          "after": "Шлагбаум заскрипел на петлях; д’Артаньян, увидев, что путь свободен, энергично хлестнул лошадей, и те крупной рысью понеслись вперёд."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJRiFDcm9yiw8Y8Kr9Qd",
+        "usage": {
+          "input_tokens": 4729,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1670,
+          "output_tokens_details": {
+            "thinking_tokens": 496
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id07431",
+          "verdict": "PASS",
+          "reason": "Faithful: approaching the lowered shutter, then speaking. The added 'он сказал' is a natural Russian lead-in to the dialogue line and changes no fact."
+        },
+        {
+          "source_id": "id07432",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "'Bien du plaisir' is rendered idiomatically, the address 'Monseigneur' is correct, and the earlier transliteration error is fixed."
+        },
+        {
+          "source_id": "id07433",
+          "verdict": "PASS",
+          "reason": "Exclamation, speaker, and the threat of dismissal ('vous me ferez chasser') are preserved; 'Болтун' suits 'Indiscret' in context."
+        },
+        {
+          "source_id": "id07434",
+          "verdict": "PASS",
+          "reason": "The creaking barrier, the open road, the vigorous whipping and the horses' trot are all kept, in one paragraph."
+        },
+        {
+          "source_id": "id07435",
+          "verdict": "PASS",
+          "reason": "Five minutes later, the cardinal's carriage was overtaken; the impersonal 'on' is naturally rendered as 'они'."
+        },
+        {
+          "source_id": "id07436",
+          "verdict": "PASS",
+          "reason": "Command, addressee and 'Sa Majesté' are preserved; dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id07437",
+          "verdict": "PASS",
+          "reason": "Accurate and complete."
+        },
+        {
+          "source_id": "id07438",
+          "verdict": "PASS",
+          "reason": "'En cocher' is rendered as 'В кучерах', keeping the exclamation and the speaker."
+        },
+        {
+          "source_id": "id07439",
+          "verdict": "PASS",
+          "reason": "The prior correction 'с каретой' is confirmed: it follows 'avec le carrosse' and keeps the queen's ironic emphasis."
+        },
+        {
+          "source_id": "id07440",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed: the Italian oath and the Italianized 'monsou' are both italic, and 'вы стоите своего веса в золоте' matches 'vous valez votre pesant d'or'."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
