@@ -1,0 +1,71 @@
+{
+  "unit": 49,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id06397",
+      "target": "Коадъютор взял свечу, спустился по лестнице и вышел, глубоко задумавшись.",
+      "source_sha256": "826f75a101c38261703f6afda79878b5cfcb643744e82cea02cae590b964c44c",
+      "target_id": "ru-id06397",
+      "tag": "p",
+      "target_sha256": "fc5ecc842d5f5b0b841bfa5fe36d5f2dc28af69741201baecb6afebd98b65f1b"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id06397",
+      "verdict": "CORRECTED",
+      "reason": "Смысл передан верно: взял свечу, спустился, вышел, «tout rêveur» — погружённый в раздумье. Черновик «совсем задумчивый» звучал буквалистски и неидиоматично, поэтому заменено на «глубоко задумавшись». Для ясности «descendit» передано как «спустился по лестнице», что естественно для контекста. Факты, лица, времена и границы абзаца сохранены."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id06397",
+      "before": "Коадъютор взял свечу, спустился вниз и вышел совсем задумчивый.",
+      "after": "Коадъютор взял свечу, спустился по лестнице и вышел, глубоко задумавшись."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJTSgxTT8AJe6VBFQ8c5",
+    "usage": {
+      "input_tokens": 1034,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 56,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJTSmKtnpekJR3n1PX9r",
+    "usage": {
+      "input_tokens": 1298,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 237,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
