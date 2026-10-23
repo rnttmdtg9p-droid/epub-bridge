@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJrT7n8iQNKhK7VjrdUw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-016-0099\",\"target\":\"26-го день выдался утомительный. Предстояло добраться до Рио-Колорадо. Но лошади, подгоняемые всадниками, проявили такую прыть, что в тот же вечер, на 69° 45′ долготы, достигли прекрасной реки пампасских областей. Её индейское имя, Кобу-Леубу, означает «большая река», и после долгого течения она впадает в Атлантический океан. Там, у её устья, наблюдается любопытная особенность: масса её вод уменьшается по мере приближения к морю — то ли от впитывания, то ли от испарения, — и причина этого явления ещё не вполне определена.\"},{\"source_id\":\"fr42c-016-0100\",\"target\":\"Прибыв к Колорадо, Паганель первым делом выкупался «географически» в её водах, окрашенных красноватой глиной. Он был удивлён, обнаружив, что река так глубока; это объяснялось исключительно таянием снегов под первым летним солнцем. Кроме того, ширина реки была достаточно велика, чтобы лошади не могли переплыть её. К счастью, в нескольких сотнях туазов выше по течению находился мост из плетня, поддерживаемый кожаными ремнями и подвешенный на индейский лад. Таким образом, маленький отряд смог перейти реку и расположиться лагерем на левом берегу.\"},{\"source_id\":\"fr42c-016-0102\",\"target\":\"Перед сном Паганель пожелал точно определить положение Колорадо и нанёс её на карту с особой тщательностью — за неимением Ярлунг-Цангпо, которая текла без него в горах Тибета.\"},{\"source_id\":\"fr42c-016-0103\",\"target\":\"В течение двух следующих дней, 27 и 28 октября, путешествие проходило без происшествий. Та же монотонность и то же бесплодие местности. Никогда пейзаж не был однообразнее, никогда панорама — незначительнее. Однако почва стала очень влажной. Пришлось переходить «канадас» — нечто вроде затопленных низин — и «эстеросы» — постоянные лагуны, заросшие водяными травами. Вечером лошади остановились на берегу обширного озера с сильно минерализованной водой, Уре-Ланкем, которое индейцы называют «горьким озером» и которое в 1862 году стало свидетелем жестокой расправы аргентинских войск. Лагерь разбили, как обычно, и ночь была бы хорошей, если бы не присутствие обезьян, ревунов[[FN:35]] и диких собак. Эти шумные животные — вероятно, в нашу честь, но уж наверняка к неудовольствию европейских ушей — исполнили одну из тех природных симфоний, от которой не отказался бы композитор будущего.\"},{\"source_id\":\"fr42c-note-032\",\"target\":\"150 километров.\"},{\"source_id\":\"fr42c-note-033\",\"target\":\"Грабители равнины.\"},{\"source_id\":\"fr42c-note-034\",\"target\":\"Его отец.\"},{\"source_id\":\"fr42c-note-035\",\"target\":\"Виды капуцинов.\"}],\"review\":[{\"verdict\":\"CORRECTED\",\"source_id\":\"fr42c-016-0099\",\"reason\":\"Fixed stray English word «near»; replaced with «у». Rest faithful: date, longitude, river name, estuary phenomenon, uncertainty.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-016-0100\",\"reason\":\"Faithful: geographic bath, depth due to snowmelt, width, bridge, left-bank camp all preserved; prior fixes verified.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-016-0102\",\"target\":\"\",\"reason\":\"Faithful in meaning; «à défaut du Yarou-Dzangbo-Tchou» rendered as lacking it; Tibet river name modernized but acceptable.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-016-0103\",\"reason\":\"Complete and idiomatic; note token preserved; 1862 reprisals, humour and composer of the future retained.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-note-032\",\"reason\":\"Accurate.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-note-033\",\"reason\":\"Accurate; «грабители» fits pillards.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-note-034\",\"reason\":\"Accurate.\"},{\"verdict\":\"PASS\",\"source_id\":\"fr42c-note-035\",\"reason\":\"Acceptable rendering of sapajous as capuchins.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9240,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1569,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
