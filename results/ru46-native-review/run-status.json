@@ -1,14 +1,7 @@
 {
-  "state": "PARTIAL_FAILURE",
-  "errors": [
-    {
-      "unit": 1,
-      "error": "UNRESOLVED_SOURCE_FINDING_[{\"source_id\": \"046-1-0052\", \"verdict\": \"SOURCE_CORRECTION_REQUIRED\", \"reason\": \"Stray '{' before 'Маша' is a leftover from the 'Вместе {' table markup in the extraction, not Chekhov's text. The target copies it, so the source is genuinely corrupted. The authentic line is 'Ты сегодня невеселая, Маша.'\", \"suggested_target\": \"<span xmlns=\\\"http://www.w3.org/1999/xhtml\\\" class=\\\"speaker-name\\\">Ольга</span>. Ты сегодня невеселая, Маша.\"}]"
-    }
-  ],
+  "state": "RUNNING_COMPLETE_ORIGINAL_RUSSIAN_LITERARY_REVIEW",
+  "run_id": "40013345357",
   "source_rows": 1058,
   "source_headings": 5,
-  "run_id": "40012231707",
-  "model": "claude-sonnet-5-5",
   "checkpoint_is_stop_condition": false
 }
