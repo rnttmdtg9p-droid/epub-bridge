@@ -1,0 +1,135 @@
+{
+  "unit": 1,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-001-heading",
+      "target": "ПРЕДУПРЕЖДЕНИЕ.",
+      "source_sha256": "f0e4d4a2cb84cf2d9654a1b544fb1fa6a8a4c18c4e46fa40dadc14208a53d411",
+      "target_id": "ru-043-001-heading",
+      "tag": "heading",
+      "target_sha256": "13cad0bb865e1410e0ae752a0a17c540340623edfd086efefb75dc3d5f5a6d57"
+    },
+    {
+      "source_id": "043-001-0001",
+      "target": "Лица, пытающиеся найти в этом повествовании мотив, будут преданы суду; лица, пытающиеся найти в нём мораль, будут изгнаны; лица, пытающиеся найти в нём сюжет, будут расстреляны.",
+      "source_sha256": "e891d9716906b4672a7ec7fa24a685b65574a10cb0c30111cb7cdc8a4f291684",
+      "target_id": "ru-043-001-0001",
+      "tag": "letter",
+      "target_sha256": "dda815423150b0adb62bb47b73e5aa4eb03527df71e2a0e7a26c2bcf06978caf"
+    },
+    {
+      "source_id": "043-001-0002",
+      "target": "ПО ПРИКАЗУ АВТОРА\nЗА НАЧАЛЬНИКА АРТИЛЛЕРИЙСКОГО СНАБЖЕНИЯ Г. Г.",
+      "source_sha256": "a3e562fa22684cac00dd584a935cfcfa0b5e3f28512fe2a9286ebad9e2720d40",
+      "target_id": "ru-043-001-0002",
+      "tag": "signature",
+      "target_sha256": "cfa5d44704d3b5abd4628e802795dde77fcc57f2407571fa437453d152a4d672"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-001-heading",
+      "verdict": "CORRECTED",
+      "reason": "The source word is NOTICE, a formal public warning. 'ПРИМЕЧАНИЕ' suggests a footnote; replaced with 'ПРЕДУПРЕЖДЕНИЕ'."
+    },
+    {
+      "source_id": "043-001-0001",
+      "verdict": "CORRECTED",
+      "reason": "'Prosecuted' means brought to trial, so 'привлечены к ответственности' was changed to 'преданы суду'. Motive, moral, plot, the three penalties and the parallel structure are preserved."
+    },
+    {
+      "source_id": "043-001-0002",
+      "verdict": "CORRECTED",
+      "reason": "The draft garbled 'PER' and broke the lines incorrectly. The two-line structure is restored and 'Chief of Ordnance' is rendered with 'Г. Г.' kept. The mock-military signature stays, but the exact wording of the title is approximate."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-001-heading",
+      "before": "ПРИМЕЧАНИЕ.",
+      "after": "ПРЕДУПРЕЖДЕНИЕ."
+    },
+    {
+      "source_id": "043-001-0001",
+      "before": "Лица, пытающиеся найти в этом повествовании мотив, будут привлечены к ответственности; лица, пытающиеся найти в нём мораль, будут изгнаны; лица, пытающиеся найти в нём сюжет, будут расстреляны.",
+      "after": "Лица, пытающиеся найти в этом повествовании мотив, будут преданы суду; лица, пытающиеся найти в нём мораль, будут изгнаны; лица, пытающиеся найти в нём сюжет, будут расстреляны."
+    },
+    {
+      "source_id": "043-001-0002",
+      "before": "ПО ПРИКАЗУ АВТОРА  ПЕР\n Г. Г., НАЧАЛЬНИКА АРТИЛЛЕРИИ.",
+      "after": "ПО ПРИКАЗУ АВТОРА\nЗА НАЧАЛЬНИКА АРТИЛЛЕРИЙСКОГО СНАБЖЕНИЯ Г. Г."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/001/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKDbXjxA4VgesGzKGuPA",
+    "usage": {
+      "input_tokens": 2253,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 569,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKDbskiYhvkySPBZT7G6",
+        "usage": {
+          "input_tokens": 2744,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 493,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-001-heading",
+          "verdict": "PASS",
+          "reason": "NOTICE rendered as official warning heading; fitting register, not a new chapter. Prior correction verified."
+        },
+        {
+          "source_id": "043-001-0001",
+          "verdict": "PASS",
+          "reason": "Three parallel clauses preserved: motive/prosecuted, moral/banished, plot/shot. «Преданы суду» is accurate; no omissions or additions. Prior correction verified."
+        },
+        {
+          "source_id": "043-001-0002",
+          "verdict": "PASS",
+          "reason": "Two-line signature preserved with exact newline count. Author's order, 'per G. G.', and Chief of Ordnance conveyed in military-bureaucratic register. Prior correction verified."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
