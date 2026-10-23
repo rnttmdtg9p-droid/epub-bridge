@@ -25,3 +25,5 @@ jobs:
           path: results/ru43-argument-errata/
           retention-days: 90
           if-no-files-found: error
+
+# Exact full input validated as JSON before this source comparison run.
