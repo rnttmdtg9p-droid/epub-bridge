@@ -1,0 +1,56 @@
+{
+  "unit": 54,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-054-0061",
+      "target": "— Моя вторая история тебе ответит, мой мальчик, — продолжал Паганель. — Однажды миссионер упрекал каннибала за этот ужасный обычай, противный божественным законам, — есть человеческое мясо. «К тому же это, должно быть, невкусно! — добавил он. — Ах, отец мой! — ответил дикарь, бросив алчный взгляд на миссионера. — Говорите, что Бог это запрещает! Но не говорите, что это невкусно! Если бы вы только попробовали!..»",
+      "source_sha256": "5466b306185857ebc1abbd6d1c123490d86da3478e92aed417c2f140fc7d7295",
+      "target_id": "ru-fr42c-054-0061",
+      "tag": "p",
+      "target_sha256": "1900c0c300fb4756b34c26e3d88031b899414369f0c8d291735bf7d6a6471ead"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-054-0061",
+      "verdict": "CORRECTED",
+      "reason": "Draft mistranslated «mauvais» as «вредно» (should be tasty/not tasty, matching Robert's question), changed the imperfect «reprochait», omitted «Et puis» nuance, and dropped the final ellipsis. Fixed to preserve joke and tense."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-054-0061",
+      "before": "— Моя вторая история даст тебе ответ, мой мальчик, — продолжил Паганель. Однажды миссионер упрекнул каннибала в этом ужасном и противоречащем божественным законам обычае — есть человеческую плоть. «К тому же это, наверное, вредно! — добавил он. — Ах, отец! — ответил дикарь, бросив жадный взгляд на миссионера. — Скажите, что Бог это запрещает! Но не говорите, что это вредно! Если бы вы только попробовали!»",
+      "after": "— Моя вторая история тебе ответит, мой мальчик, — продолжал Паганель. — Однажды миссионер упрекал каннибала за этот ужасный обычай, противный божественным законам, — есть человеческое мясо. «К тому же это, должно быть, невкусно! — добавил он. — Ах, отец мой! — ответил дикарь, бросив алчный взгляд на миссионера. — Говорите, что Бог это запрещает! Но не говорите, что это невкусно! Если бы вы только попробовали!..»"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/054/batch003.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK4ER4ybmGRfma5MVdDr",
+    "usage": {
+      "input_tokens": 2438,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 344,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
