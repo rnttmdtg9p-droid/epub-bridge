@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJoYHdWZvof4zKwLdGMM",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-006-0019\",\"target\":\"— Нет, но у меня лучший из экипажей на лучшем из кораблей. Разве вы не восхищаетесь им, нашим <i>«Дунканом»</i>, мисс Мэри?\"},{\"source_id\":\"fr42c-006-0020\",\"target\":\"— Напротив, милорд, — ответила девушка, — я им восхищаюсь, и притом как настоящая знаток.\"},{\"source_id\":\"fr42c-006-0021\",\"target\":\"— Ах! В самом деле!\"},{\"source_id\":\"fr42c-006-0022\",\"target\":\"— Я ещё ребёнком играла на кораблях моего отца; он должен был бы сделать из меня моряка, и, если бы потребовалось, я, пожалуй, без затруднений взяла бы риф или сплела бы свободный конец троса.\"},{\"source_id\":\"fr42c-006-0023\",\"target\":\"— Эх, мисс, что вы говорите! — воскликнул Джон Манглс.\"},{\"source_id\":\"fr42c-006-0024\",\"target\":\"— Если вы так говорите, — продолжал лорд Гленарван, — вы приобретёте в лице капитана Джона большого друга: он не признаёт на свете ничего, что стоило бы звания моряка! Он не видит другого призвания даже для женщины! Не правда ли, Джон?\"},{\"source_id\":\"fr42c-006-0025\",\"target\":\"— Без сомнения, ваша милость, — ответил молодой капитан, — хотя, признаюсь, мисс Грант на юте уместнее, чем за уборкой бом-брамселя; но мне от этого не менее лестно слышать, как она говорит.\"},{\"source_id\":\"fr42c-006-0026\",\"target\":\"— И особенно когда она восхищается <i>«Дунканом»</i>, — заметил Гленарван.\"},{\"source_id\":\"fr42c-006-0027\",\"target\":\"— Он вполне это заслуживает, — ответил Джон.\"},{\"source_id\":\"fr42c-006-0028\",\"target\":\"— Право, — сказала леди Элен, — раз вы так гордитесь своей яхтой, мне захотелось осмотреть её до самого трюма и посмотреть, как устроились наши славные матросы в межпалубном помещении.\"},{\"source_id\":\"fr42c-006-0029\",\"target\":\"— Превосходно, — ответил Джон, — они там как дома.\"},{\"source_id\":\"fr42c-006-0030\",\"target\":\"— Они и в самом деле у себя дома, дорогая Элен, — ответил лорд Гленарван. — Эта яхта — частица нашей старой Каледонии! Это кусок графства Дамбартон, плывущий по особой милости, так что мы не покинули своей страны! <i>«Дункан»</i> — это замок Малкольма, а океан — озеро Ломонд.\"},{\"source_id\":\"fr42c-006-0031\",\"target\":\"— Что ж, дорогой Эдуард, окажите нам честь по замку, — ответила леди Элен.\"},{\"source_id\":\"fr42c-006-0032\",\"target\":\"— К вашим услугам, сударыня, — сказал Гленарван, — но прежде позвольте мне предупредить Олбинетта».\"},{\"source_id\":\"fr42c-006-0033\",\"target\":\"Стюард яхты был превосходным метрдотелем, шотландцем, который своей важностью заслуживал бы быть французом; впрочем, он исполнял свои обязанности с усердием и умом. Он явился по приказанию хозяина.\"},{\"source_id\":\"fr42c-006-0034\",\"target\":\"«Олбинетт, мы пройдёмся перед завтраком, — сказал Гленарван таким тоном, словно речь шла о прогулке в Тарбет или к озеру Кэтрин; — надеюсь, к нашему возвращению стол будет накрыт».\"},{\"source_id\":\"fr42c-006-0035\",\"target\":\"Олбинетт важно поклонился.\"},{\"source_id\":\"fr42c-006-0036\",\"target\":\"«Вы пойдёте с нами, майор? — спросила леди Элен.\"},{\"source_id\":\"fr42c-006-0037\",\"target\":\"— Если вы прикажете, — ответил Мак-Наббс.\"},{\"source_id\":\"fr42c-006-0038\",\"target\":\"— О! — сказал лорд Гленарван. — Майор погружён в дым своей сигары; не нужно его отрывать; ведь, мисс Мэри, уверяю вас, он неустрашимый курильщик. Он курит всегда, даже во сне».\"}],\"review\":[{\"source_id\":\"fr42c-006-0019\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed italic ship name and phrasing of the question.\"},{\"source_id\":\"fr42c-006-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Corrected admiration clause: she admires it as a true connoisseur.\"},{\"source_id\":\"fr42c-006-0021\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved idiom for 'vraiment'.\"},{\"source_id\":\"fr42c-006-0022\",\"verdict\":\"CORRECTED\",\"reason\":\"Corrected nautical terms: take a reef, braid a gasket; conditional preserved.\"},{\"source_id\":\"fr42c-006-0023\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Манглс and exclamation tone fixed.\"},{\"source_id\":\"fr42c-006-0024\",\"verdict\":\"CORRECTED\",\"reason\":\"Clarified meaning of nautical profession and register.\"},{\"source_id\":\"fr42c-006-0025\",\"verdict\":\"CORRECTED\",\"reason\":\"Corrected dunette as poop and topgallant sail; fixed flattery clause.\"},{\"source_id\":\"fr42c-006-0026\",\"verdict\":\"CORRECTED\",\"reason\":\"Repaired italic/punctuation and verb nuance.\"},{\"source_id\":\"fr42c-006-0027\",\"verdict\":\"CORRECTED\",\"reason\":\"Minor wording fix.\"},{\"source_id\":\"fr42c-006-0028\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Элен, desire clause, entre-pont fixed.\"},{\"source_id\":\"fr42c-006-0029\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed incorrect dialogue punctuation.\"},{\"source_id\":\"fr42c-006-0030\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed name, italics, ocean/lake not quoted, 'у себя дома'.\"},{\"source_id\":\"fr42c-006-0031\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Элен; honours of the castle rendered.\"},{\"source_id\":\"fr42c-006-0032\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed quote closing and address form.\"},{\"source_id\":\"fr42c-006-0033\",\"verdict\":\"CORRECTED\",\"reason\":\"Maître d'hôtel rendered as steward's role; agency of arrival adjusted.\"},{\"source_id\":\"fr42c-006-0034\",\"verdict\":\"CORRECTED\",\"reason\":\"Déjeuner is breakfast/lunch, not dinner; Katrine and quote punctuation fixed.\"},{\"source_id\":\"fr42c-006-0035\",\"verdict\":\"CORRECTED\",\"reason\":\"Slight register fix.\"},{\"source_id\":\"fr42c-006-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Элен; 'accompany' rendered.\"},{\"source_id\":\"fr42c-006-0037\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-006-0038\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'intrépide' and quote closing; sentence flow.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10243,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2608,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

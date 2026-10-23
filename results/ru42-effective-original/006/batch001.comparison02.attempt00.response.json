@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJocAcSBktm3qFJwtYCQ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-006-0019\",\"target\":\"— Нет, но у меня лучший из экипажей на лучшем из кораблей. Разве вы не восхищаетесь им, нашим <i>«Дунканом»</i>, мисс Мэри?\"},{\"source_id\":\"fr42c-006-0020\",\"target\":\"— Напротив, милорд, — ответила девушка, — я им восхищаюсь, и притом как настоящий знаток.\"},{\"source_id\":\"fr42c-006-0021\",\"target\":\"— Ах! В самом деле!\"},{\"source_id\":\"fr42c-006-0022\",\"target\":\"— Я ещё ребёнком играла на кораблях моего отца; он должен был бы сделать из меня моряка, и, если бы потребовалось, я, пожалуй, без затруднений взяла бы риф или сплела бы сезень.\"},{\"source_id\":\"fr42c-006-0023\",\"target\":\"— Эх, мисс, что вы говорите! — воскликнул Джон Манглс.\"},{\"source_id\":\"fr42c-006-0024\",\"target\":\"— Если вы так говорите, — продолжал лорд Гленарван, — вы приобретёте в лице капитана Джона большого друга: он не признаёт на свете ничего, что стоило бы звания моряка! Он не видит другого призвания даже для женщины! Не правда ли, Джон?\"},{\"source_id\":\"fr42c-006-0025\",\"target\":\"— Без сомнения, ваша милость, — ответил молодой капитан, — хотя, признаюсь, мисс Грант на юте уместнее, чем за уборкой брамселя; но мне от этого не менее лестно слышать, как она говорит.\"},{\"source_id\":\"fr42c-006-0026\",\"target\":\"— И особенно когда она восхищается <i>«Дунканом»</i>, — заметил Гленарван.\"},{\"source_id\":\"fr42c-006-0027\",\"target\":\"— Он вполне это заслуживает, — ответил Джон.\"},{\"source_id\":\"fr42c-006-0028\",\"target\":\"— Право, — сказала леди Элен, — раз вы так гордитесь своей яхтой, мне захотелось осмотреть её до самого трюма и посмотреть, как устроились наши славные матросы в межпалубном помещении.\"},{\"source_id\":\"fr42c-006-0029\",\"target\":\"— Превосходно, — ответил Джон, — они там как дома.\"},{\"source_id\":\"fr42c-006-0030\",\"target\":\"— Они и в самом деле у себя дома, дорогая Элен, — ответил лорд Гленарван. — Эта яхта — частица нашей старой Каледонии! Это кусок графства Дамбартон, плывущий по особой милости, так что мы не покинули своей страны! <i>«Дункан»</i> — это замок Малкольма, а океан — озеро Ломонд.\"},{\"source_id\":\"fr42c-006-0031\",\"target\":\"— Что ж, дорогой Эдуард, будьте хозяином замка, — ответила леди Элен.\"},{\"source_id\":\"fr42c-006-0032\",\"target\":\"— К вашим услугам, сударыня, — сказал Гленарван, — но прежде позвольте мне предупредить Олбинетта».\"},{\"source_id\":\"fr42c-006-0033\",\"target\":\"Стюард яхты был превосходным метрдотелем, шотландцем, который своей важностью заслуживал бы быть французом; впрочем, он исполнял свои обязанности с усердием и умом. Он явился по приказанию хозяина.\"},{\"source_id\":\"fr42c-006-0034\",\"target\":\"«Олбинетт, мы пройдёмся перед завтраком, — сказал Гленарван таким тоном, словно речь шла о прогулке в Тарбет или к озеру Кэтрин; — надеюсь, к нашему возвращению стол будет накрыт».\"},{\"source_id\":\"fr42c-006-0035\",\"target\":\"Олбинетт важно поклонился.\"},{\"source_id\":\"fr42c-006-0036\",\"target\":\"«Вы пойдёте с нами, майор? — спросила леди Элен.\"},{\"source_id\":\"fr42c-006-0037\",\"target\":\"— Если вы прикажете, — ответил Мак-Наббс.\"},{\"source_id\":\"fr42c-006-0038\",\"target\":\"— О! — сказал лорд Гленарван. — Майор погружён в дым своей сигары; не нужно его отрывать; ведь, мисс Мэри, уверяю вас, он неустрашимый курильщик. Он курит всегда, даже во сне».\"}],\"review\":[{\"source_id\":\"fr42c-006-0019\",\"verdict\":\"PASS\",\"reason\":\"Faithful; superlatives, italic ship name and address preserved.\"},{\"source_id\":\"fr42c-006-0020\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'en véritable connaisseuse' rendered; masculine 'знаток' acceptable.\"},{\"source_id\":\"fr42c-006-0021\",\"verdict\":\"PASS\",\"reason\":\"Faithful exclamation.\"},{\"source_id\":\"fr42c-006-0022\",\"target\":\"\",\"verdict\":\"PASS\",\"reason\":\"Conditional, riz (reef) and garcette (sezen) correctly rendered.\"},{\"source_id\":\"fr42c-006-0023\",\"verdict\":\"PASS\",\"reason\":\"Faithful exclamation and attribution; name consistent.\"},{\"source_id\":\"fr42c-006-0024\",\"verdict\":\"PASS\",\"reason\":\"Meaning, emphasis and question tag preserved.\"},{\"source_id\":\"fr42c-006-0025\",\"verdict\":\"PASS\",\"reason\":\"Votre Honneur, dunette and perroquet sail handled acceptably; flattered meaning kept.\"},{\"source_id\":\"fr42c-006-0026\",\"verdict\":\"PASS\",\"reason\":\"Faithful; italic ship name preserved.\"},{\"source_id\":\"fr42c-006-0027\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-006-0028\",\"verdict\":\"PASS\",\"reason\":\"Faithful; no omissions.\"},{\"source_id\":\"fr42c-006-0029\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-006-0030\",\"verdict\":\"PASS\",\"reason\":\"All claims, italics and geography preserved.\"},{\"source_id\":\"fr42c-006-0031\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic rendering of 'faire les honneurs'.\"},{\"source_id\":\"fr42c-006-0032\",\"verdict\":\"PASS\",\"reason\":\"Faithful; closing quote preserved.\"},{\"source_id\":\"fr42c-006-0033\",\"verdict\":\"PASS\",\"reason\":\"Faithful; humour about importance retained.\"},{\"source_id\":\"fr42c-006-0034\",\"verdict\":\"PASS\",\"reason\":\"Faithful; déjeuner as завтрак, 'comme s'il se fût agi' preserved.\"},{\"source_id\":\"fr42c-006-0035\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-006-0036\",\"verdict\":\"PASS\",\"reason\":\"Faithful; opening quote continues.\"},{\"source_id\":\"fr42c-006-0037\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-006-0038\",\"verdict\":\"PASS\",\"reason\":\"Faithful; all details preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 13628,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2489,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

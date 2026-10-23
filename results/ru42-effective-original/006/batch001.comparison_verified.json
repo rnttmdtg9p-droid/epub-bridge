@@ -1,0 +1,797 @@
+{
+  "unit": 6,
+  "batch": 1,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-006-0019",
+      "target": "— Нет, но у меня лучший из экипажей на лучшем из кораблей. Разве вы не восхищаетесь им, нашим <i>«Дунканом»</i>, мисс Мэри?",
+      "source_sha256": "4653724d6566c5f93da9529d5c3fda0bb00d1c37d387b91b3afa068e1b805de9",
+      "target_id": "ru-fr42c-006-0019",
+      "tag": "p",
+      "target_sha256": "db8610c527d48eada61628074f7888c1973f4deea40cfd9a12a6b230648ef9c4"
+    },
+    {
+      "source_id": "fr42c-006-0020",
+      "target": "— Напротив, милорд, — ответила девушка, — я им восхищаюсь, и притом как настоящий знаток.",
+      "source_sha256": "7b1ae08bb95ae774068f094f4edecd2d3d51674c779749477373a901b56a865a",
+      "target_id": "ru-fr42c-006-0020",
+      "tag": "p",
+      "target_sha256": "e83f4fe99ef965fe573721242c8fe495328ebfefe9f3c151ff3d36f9eec8959f"
+    },
+    {
+      "source_id": "fr42c-006-0021",
+      "target": "— Ах! В самом деле!",
+      "source_sha256": "a01310cc2a59e6a1bd613f08d51fa73facdfca0b577cd145ce0f370816235b8c",
+      "target_id": "ru-fr42c-006-0021",
+      "tag": "p",
+      "target_sha256": "b30a66378f2c2ad36e5c88546b8410d7bd886691514bf4619dcac8a0a509f094"
+    },
+    {
+      "source_id": "fr42c-006-0022",
+      "target": "— Я ещё ребёнком играла на кораблях моего отца; он должен был бы сделать из меня моряка, и, если бы потребовалось, я, пожалуй, без затруднений взяла бы риф или сплела бы сезень.",
+      "source_sha256": "b6eb168ae933ed84c8efecc40003cc00922f009f9573a4cf0dd6c6af1034c047",
+      "target_id": "ru-fr42c-006-0022",
+      "tag": "p",
+      "target_sha256": "09787247a85d36f45ed82963ee9b0713f1eec77cfdc6429e4ce9811d10cde224"
+    },
+    {
+      "source_id": "fr42c-006-0023",
+      "target": "— Эх, мисс, что вы говорите! — воскликнул Джон Манглс.",
+      "source_sha256": "98c575cabb7dd875ac9ae6053e4137acf530c90b14d2d784c2447025b8ec5438",
+      "target_id": "ru-fr42c-006-0023",
+      "tag": "p",
+      "target_sha256": "88c1cfc95399b34bae419e1b1bf69190845899a9d63173ad1e674925548ecbe7"
+    },
+    {
+      "source_id": "fr42c-006-0024",
+      "target": "— Если вы так говорите, — продолжал лорд Гленарван, — вы приобретёте в лице капитана Джона большого друга: он не признаёт на свете ничего, что стоило бы звания моряка! Он не видит другого призвания даже для женщины! Не правда ли, Джон?",
+      "source_sha256": "50d59eb9954401e9ae895730f1fc100b7307003209679721fa37459feb52b446",
+      "target_id": "ru-fr42c-006-0024",
+      "tag": "p",
+      "target_sha256": "7f0f8b2246ea2328268d5629a3318f7431d1f07d9a51e51e2687e158ab4a4b2d"
+    },
+    {
+      "source_id": "fr42c-006-0025",
+      "target": "— Без сомнения, ваша милость, — ответил молодой капитан, — хотя, признаюсь, мисс Грант на юте уместнее, чем за уборкой брамселя; но мне от этого не менее лестно слышать, как она говорит.",
+      "source_sha256": "46000133f380c241ace265d7be981bd913afd48753d82e14434d2b3941bf2592",
+      "target_id": "ru-fr42c-006-0025",
+      "tag": "p",
+      "target_sha256": "6578df877e6a2f46c2c583fc93b3d35e1cc0cfbce01e99ba3cb638071e74e4d9"
+    },
+    {
+      "source_id": "fr42c-006-0026",
+      "target": "— И особенно когда она восхищается <i>«Дунканом»</i>, — заметил Гленарван.",
+      "source_sha256": "d0410b0b9a6c1123bc5e49022e054fd5374c587a45641f019b70dad741d7afe4",
+      "target_id": "ru-fr42c-006-0026",
+      "tag": "p",
+      "target_sha256": "305d02b5165451058ef25fda99c66a8df56a28640a656e1d5a75011fd761b422"
+    },
+    {
+      "source_id": "fr42c-006-0027",
+      "target": "— Он вполне это заслуживает, — ответил Джон.",
+      "source_sha256": "ba0a98ebcaaeb67ce8d77e808d462c2a5f72755919a2d0a5ed0bdfe02553cb16",
+      "target_id": "ru-fr42c-006-0027",
+      "tag": "p",
+      "target_sha256": "134b16b4c000287d46a6c6ab41ff2db133e0342bc67301a0bf34c90637f1fa1b"
+    },
+    {
+      "source_id": "fr42c-006-0028",
+      "target": "— Право, — сказала леди Элен, — раз вы так гордитесь своей яхтой, мне захотелось осмотреть её до самого трюма и посмотреть, как устроились наши славные матросы в межпалубном помещении.",
+      "source_sha256": "d4cef52cf326dd9ca129440ea30230a4d57676c552fcace8f09bcc772781696e",
+      "target_id": "ru-fr42c-006-0028",
+      "tag": "p",
+      "target_sha256": "7cc02a5a84a05913f7ad76f81e9a9696be498db5fbef39bb482e46c88bdce7c2"
+    },
+    {
+      "source_id": "fr42c-006-0029",
+      "target": "— Превосходно, — ответил Джон, — они там как дома.",
+      "source_sha256": "05f99f04bec781e5befcb9d681c3439ea902ef11f26039adc8dbf4476d4f36c6",
+      "target_id": "ru-fr42c-006-0029",
+      "tag": "p",
+      "target_sha256": "a006c5e9225382fa9a76acadf8c87f8f864cf0c1c4a3afe9fae79ddaf9f1eb6f"
+    },
+    {
+      "source_id": "fr42c-006-0030",
+      "target": "— Они и в самом деле у себя дома, дорогая Элен, — ответил лорд Гленарван. — Эта яхта — частица нашей старой Каледонии! Это кусок графства Дамбартон, плывущий по особой милости, так что мы не покинули своей страны! <i>«Дункан»</i> — это замок Малкольма, а океан — озеро Ломонд.",
+      "source_sha256": "3773e478f68f97fbedc1767b8886ac848560613b13f7c4bcced657371c4ceade",
+      "target_id": "ru-fr42c-006-0030",
+      "tag": "p",
+      "target_sha256": "d84718ac6d3f073b0a774089ba2948db3349c6311ad55ad628b2d19a4399333f"
+    },
+    {
+      "source_id": "fr42c-006-0031",
+      "target": "— Что ж, дорогой Эдуард, будьте хозяином замка, — ответила леди Элен.",
+      "source_sha256": "da06b04c78698879f7363fac0b5e1d56ac19937ffdf7399a312b6fe5eb397b51",
+      "target_id": "ru-fr42c-006-0031",
+      "tag": "p",
+      "target_sha256": "7dac2b972f32a1444fdd4ebfc7ac29671d4e49cd661134828f78e57fe33d19a8"
+    },
+    {
+      "source_id": "fr42c-006-0032",
+      "target": "— К вашим услугам, сударыня, — сказал Гленарван, — но прежде позвольте мне предупредить Олбинетта».",
+      "source_sha256": "b555534555ca3edab325eaefe906a61f99f582dec8b8fb936c995b45d9c83666",
+      "target_id": "ru-fr42c-006-0032",
+      "tag": "p",
+      "target_sha256": "9b620942a7779cfc47900110ec1182dfc1f1f86bf9011203d4a993c1fa429e9f"
+    },
+    {
+      "source_id": "fr42c-006-0033",
+      "target": "Стюард яхты был превосходным метрдотелем, шотландцем, который своей важностью заслуживал бы быть французом; впрочем, он исполнял свои обязанности с усердием и умом. Он явился по приказанию хозяина.",
+      "source_sha256": "fe79071c19e4b1e3869db131ec664693573f3dbb1e3d292a1148e390a0285479",
+      "target_id": "ru-fr42c-006-0033",
+      "tag": "p",
+      "target_sha256": "80feb9537dd9999c290f29ae16b8e3d806c83a53ba824dc2d5c6ddf3237be0cf"
+    },
+    {
+      "source_id": "fr42c-006-0034",
+      "target": "«Олбинетт, мы пройдёмся перед завтраком, — сказал Гленарван таким тоном, словно речь шла о прогулке в Тарбет или к озеру Кэтрин; — надеюсь, к нашему возвращению стол будет накрыт».",
+      "source_sha256": "a588d75c78dcb7814afdb3dabd5f9e9cf0ba2f8cf66e60a0d486343c183adf31",
+      "target_id": "ru-fr42c-006-0034",
+      "tag": "p",
+      "target_sha256": "6fb8050c8fac0f696e1fd664c99cd1e9f8dee221c95e5086f0d5492419e7e176"
+    },
+    {
+      "source_id": "fr42c-006-0035",
+      "target": "Олбинетт важно поклонился.",
+      "source_sha256": "d730628c37e175b143181dc2ed179dbc94a8b7f8e447c5459afa1d9ea3af2951",
+      "target_id": "ru-fr42c-006-0035",
+      "tag": "p",
+      "target_sha256": "c8b17512678d87e9d82b8ced7fbc00cf383554db58e39b0595f94c5689e16af1"
+    },
+    {
+      "source_id": "fr42c-006-0036",
+      "target": "«Вы пойдёте с нами, майор? — спросила леди Элен.",
+      "source_sha256": "1bdb694122e41cd2b9470ed3194c7a344f3847a5fb1ce7a20ffb378330a0ddf6",
+      "target_id": "ru-fr42c-006-0036",
+      "tag": "p",
+      "target_sha256": "e18537bb98accddc9431dba2c63886d9628a4dd746cefb686e5f33d0dc62d7fb"
+    },
+    {
+      "source_id": "fr42c-006-0037",
+      "target": "— Если вы прикажете, — ответил Мак-Наббс.",
+      "source_sha256": "8faf10f0a1c56f31b12d8628198ba48b7584ea209d703c544e307a71b4a15085",
+      "target_id": "ru-fr42c-006-0037",
+      "tag": "p",
+      "target_sha256": "34450bed07c7402ca9ccc414a2266f29afbb99c68c2cb898d8af24d62674940d"
+    },
+    {
+      "source_id": "fr42c-006-0038",
+      "target": "— О! — сказал лорд Гленарван. — Майор погружён в дым своей сигары; не нужно его отрывать; ведь, мисс Мэри, уверяю вас, он неустрашимый курильщик. Он курит всегда, даже во сне».",
+      "source_sha256": "f3b461abe9ed84699edcc54918e41e3f24428cc3c65b2e59f65ecc236187827e",
+      "target_id": "ru-fr42c-006-0038",
+      "tag": "p",
+      "target_sha256": "780ab9d3056e1203f1f02becc6375ebc1e2c0c73b25a6a8b6844c49a6e3c7f34"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-006-0019",
+      "verdict": "CORRECTED",
+      "reason": "Fixed italic ship name and phrasing of the question."
+    },
+    {
+      "source_id": "fr42c-006-0020",
+      "verdict": "CORRECTED",
+      "reason": "Corrected admiration clause: she admires it as a true connoisseur."
+    },
+    {
+      "source_id": "fr42c-006-0021",
+      "verdict": "CORRECTED",
+      "reason": "Improved idiom for 'vraiment'."
+    },
+    {
+      "source_id": "fr42c-006-0022",
+      "verdict": "CORRECTED",
+      "reason": "Corrected nautical terms: take a reef, braid a gasket; conditional preserved."
+    },
+    {
+      "source_id": "fr42c-006-0023",
+      "verdict": "CORRECTED",
+      "reason": "Name Манглс and exclamation tone fixed."
+    },
+    {
+      "source_id": "fr42c-006-0024",
+      "verdict": "CORRECTED",
+      "reason": "Clarified meaning of nautical profession and register."
+    },
+    {
+      "source_id": "fr42c-006-0025",
+      "verdict": "CORRECTED",
+      "reason": "Corrected dunette as poop and topgallant sail; fixed flattery clause."
+    },
+    {
+      "source_id": "fr42c-006-0026",
+      "verdict": "CORRECTED",
+      "reason": "Repaired italic/punctuation and verb nuance."
+    },
+    {
+      "source_id": "fr42c-006-0027",
+      "verdict": "CORRECTED",
+      "reason": "Minor wording fix."
+    },
+    {
+      "source_id": "fr42c-006-0028",
+      "verdict": "CORRECTED",
+      "reason": "Name Элен, desire clause, entre-pont fixed."
+    },
+    {
+      "source_id": "fr42c-006-0029",
+      "verdict": "CORRECTED",
+      "reason": "Removed incorrect dialogue punctuation."
+    },
+    {
+      "source_id": "fr42c-006-0030",
+      "verdict": "CORRECTED",
+      "reason": "Fixed name, italics, ocean/lake not quoted, 'у себя дома'."
+    },
+    {
+      "source_id": "fr42c-006-0031",
+      "verdict": "CORRECTED",
+      "reason": "Name Элен; honours of the castle rendered."
+    },
+    {
+      "source_id": "fr42c-006-0032",
+      "verdict": "CORRECTED",
+      "reason": "Fixed quote closing and address form."
+    },
+    {
+      "source_id": "fr42c-006-0033",
+      "verdict": "CORRECTED",
+      "reason": "Maître d'hôtel rendered as steward's role; agency of arrival adjusted."
+    },
+    {
+      "source_id": "fr42c-006-0034",
+      "verdict": "CORRECTED",
+      "reason": "Déjeuner is breakfast/lunch, not dinner; Katrine and quote punctuation fixed."
+    },
+    {
+      "source_id": "fr42c-006-0035",
+      "verdict": "CORRECTED",
+      "reason": "Slight register fix."
+    },
+    {
+      "source_id": "fr42c-006-0036",
+      "verdict": "CORRECTED",
+      "reason": "Name Элен; 'accompany' rendered."
+    },
+    {
+      "source_id": "fr42c-006-0037",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-006-0038",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'intrépide' and quote closing; sentence flow."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-006-0019",
+      "before": "— Нет, но у меня лучший экипаж на лучшем из кораблей. Разве вы не восхищаетесь им, нашим <i>Дунканом,</i> мисс Мэри?",
+      "after": "— Нет, но у меня лучший из экипажей на лучшем из кораблей. Разве вы не восхищаетесь им, нашим <i>«Дунканом»</i>, мисс Мэри?"
+    },
+    {
+      "source_id": "fr42c-006-0020",
+      "before": "— Напротив, милорд, — ответила девушка, — я восхищаюсь им как настоящий знаток.",
+      "after": "— Напротив, милорд, — ответила девушка, — я им восхищаюсь, и притом как настоящая знаток."
+    },
+    {
+      "source_id": "fr42c-006-0021",
+      "before": "— Ах! Правда!",
+      "after": "— Ах! В самом деле!"
+    },
+    {
+      "source_id": "fr42c-006-0022",
+      "before": "— Ещё в детстве я играла на кораблях моего отца; он должен был сделать из меня моряка, и, если бы пришлось, я, возможно, без труда взяла бы в руки весло или сплела бы канат.",
+      "after": "— Я ещё ребёнком играла на кораблях моего отца; он должен был бы сделать из меня моряка, и, если бы потребовалось, я, пожалуй, без затруднений взяла бы риф или сплела бы свободный конец троса."
+    },
+    {
+      "source_id": "fr42c-006-0023",
+      "before": "— Эй, мисс, что вы там говорите? — воскликнул Джон Мэнглз.",
+      "after": "— Эх, мисс, что вы говорите! — воскликнул Джон Манглс."
+    },
+    {
+      "source_id": "fr42c-006-0024",
+      "before": "— Если вы так говорите, — продолжил лорд Гленарван, — то у вас появится отличный друг в лице капитана Джона, ведь он не представляет себе ничего на свете, что могло бы сравниться с жизнью моряка! Он не видит ничего другого, даже для женщины! Правда, Джон?",
+      "after": "— Если вы так говорите, — продолжал лорд Гленарван, — вы приобретёте в лице капитана Джона большого друга: он не признаёт на свете ничего, что стоило бы звания моряка! Он не видит другого призвания даже для женщины! Не правда ли, Джон?"
+    },
+    {
+      "source_id": "fr42c-006-0025",
+      "before": "— Без сомнения, Ваша Честь, — ответил молодой капитан, — и я, впрочем, признаю, что мисс Грант лучше подходит для службы на кормовой рубке, чем для затягивания переднего паруса; но тем не менее мне льстит слышать от вас такие слова.",
+      "after": "— Без сомнения, ваша милость, — ответил молодой капитан, — хотя, признаюсь, мисс Грант на юте уместнее, чем за уборкой бом-брамселя; но мне от этого не менее лестно слышать, как она говорит."
+    },
+    {
+      "source_id": "fr42c-006-0026",
+      "before": "— И особенно когда она восхищается «<i>Дунканом</i>»<i>, —</i> ответил Гленарван.",
+      "after": "— И особенно когда она восхищается <i>«Дунканом»</i>, — заметил Гленарван."
+    },
+    {
+      "source_id": "fr42c-006-0027",
+      "before": "— Он вполне этого заслуживает, — ответил Джон.",
+      "after": "— Он вполне это заслуживает, — ответил Джон."
+    },
+    {
+      "source_id": "fr42c-006-0028",
+      "before": "— Честное слово, — сказала леди Елена, — раз вы так гордитесь своей яхтой, мне захотелось осмотреть её до самого дна трюма и посмотреть, как устроились наши храбрые матросы на межпалубе.",
+      "after": "— Право, — сказала леди Элен, — раз вы так гордитесь своей яхтой, мне захотелось осмотреть её до самого трюма и посмотреть, как устроились наши славные матросы в межпалубном помещении."
+    },
+    {
+      "source_id": "fr42c-006-0029",
+      "before": "— Превосходно, — ответил Джон; — они чувствуют себя здесь как дома.",
+      "after": "— Превосходно, — ответил Джон, — они там как дома."
+    },
+    {
+      "source_id": "fr42c-006-0030",
+      "before": "— И они действительно как дома, моя дорогая Елена, — ответил лорд Гленарван. — Эта яхта — часть нашей старой Каледонии! Это отколовшийся кусочек графства Дамбартон, который плывёт по особой милости, так что мы и не покинули нашу страну! <i>«Дункан»</i> — это замок Малкольма, а «Океан» — озеро Ломонд.",
+      "after": "— Они и в самом деле у себя дома, дорогая Элен, — ответил лорд Гленарван. — Эта яхта — частица нашей старой Каледонии! Это кусок графства Дамбартон, плывущий по особой милости, так что мы не покинули своей страны! <i>«Дункан»</i> — это замок Малкольма, а океан — озеро Ломонд."
+    },
+    {
+      "source_id": "fr42c-006-0031",
+      "before": "— Ну что ж, мой дорогой Эдуард, проведите нас по замку, — ответила леди Елена.",
+      "after": "— Что ж, дорогой Эдуард, окажите нам честь по замку, — ответила леди Элен."
+    },
+    {
+      "source_id": "fr42c-006-0032",
+      "before": "— К вашим услугам, мадам, — сказал Гленарван, — но сначала позвольте мне предупредить Олбинетта. »",
+      "after": "— К вашим услугам, сударыня, — сказал Гленарван, — но прежде позвольте мне предупредить Олбинетта»."
+    },
+    {
+      "source_id": "fr42c-006-0033",
+      "before": "Стюард яхты был превосходным хозяином, шотландцем, который по своей важности заслуживал бы быть французом; к тому же он исполнял свои обязанности с усердием и умом. Он подчинился приказам своего хозяина.",
+      "after": "Стюард яхты был превосходным метрдотелем, шотландцем, который своей важностью заслуживал бы быть французом; впрочем, он исполнял свои обязанности с усердием и умом. Он явился по приказанию хозяина."
+    },
+    {
+      "source_id": "fr42c-006-0034",
+      "before": "«Олбинетт, мы прогуляемся перед обедом, — сказал Гленарван, как будто речь шла о прогулке в Тарбете или на озере Катрин; надеюсь, что к нашему возвращению стол будет накрыт».",
+      "after": "«Олбинетт, мы пройдёмся перед завтраком, — сказал Гленарван таким тоном, словно речь шла о прогулке в Тарбет или к озеру Кэтрин; — надеюсь, к нашему возвращению стол будет накрыт»."
+    },
+    {
+      "source_id": "fr42c-006-0035",
+      "before": "Олбинетт торжественно поклонился.",
+      "after": "Олбинетт важно поклонился."
+    },
+    {
+      "source_id": "fr42c-006-0036",
+      "before": "«Вы поедете с нами, майор? — спросила леди Хелена.",
+      "after": "«Вы пойдёте с нами, майор? — спросила леди Элен."
+    },
+    {
+      "source_id": "fr42c-006-0038",
+      "before": "— О! — воскликнул лорд Гленарван, — майор погружён в дым своей сигары; не стоит его отрывать от неё; ведь, мисс Мэри, я могу вас заверить, что он — бесстрашный курильщик. Он курит всегда, даже во сне.»",
+      "after": "— О! — сказал лорд Гленарван. — Майор погружён в дым своей сигары; не нужно его отрывать; ведь, мисс Мэри, уверяю вас, он неустрашимый курильщик. Он курит всегда, даже во сне»."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/006/batch001.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJoYHdWZvof4zKwLdGMM",
+    "usage": {
+      "input_tokens": 10243,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2608,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJoZcohiw31rYyH2iRhF",
+        "usage": {
+          "input_tokens": 13025,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2422,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-006-0019",
+          "verdict": "PASS",
+          "reason": "Faithful; italic ship name preserved."
+        },
+        {
+          "source_id": "fr42c-006-0020",
+          "verdict": "CORRECTED",
+          "reason": "Fixed gender agreement: «настоящая знаток» → «настоящий знаток» (grammatical); meaning matches."
+        },
+        {
+          "source_id": "fr42c-006-0021",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0022",
+          "target_note": "",
+          "verdict": "PASS",
+          "reason": "Reef and garcette rendered correctly; conditional preserved."
+        },
+        {
+          "source_id": "fr42c-006-0023",
+          "verdict": "PASS",
+          "reason": "Accurate; name consistent."
+        },
+        {
+          "source_id": "fr42c-006-0024",
+          "verdict": "PASS",
+          "reason": "Meaning, negations and rhetorical question preserved."
+        },
+        {
+          "source_id": "fr42c-006-0025",
+          "verdict": "PASS",
+          "reason": "Accurate; dunette/ut and perroquet sail correct."
+        },
+        {
+          "source_id": "fr42c-006-0026",
+          "verdict": "PASS",
+          "reason": "Faithful with italics."
+        },
+        {
+          "source_id": "fr42c-006-0027",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0028",
+          "verdict": "PASS",
+          "reason": "Complete and faithful."
+        },
+        {
+          "source_id": "fr42c-006-0029",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0030",
+          "verdict": "PASS",
+          "reason": "Faithful; italics kept."
+        },
+        {
+          "source_id": "fr42c-006-0031",
+          "verdict": "PASS",
+          "reason": "Accurate idiom."
+        },
+        {
+          "source_id": "fr42c-006-0032",
+          "verdict": "PASS",
+          "reason": "Faithful; closing quote retained."
+        },
+        {
+          "source_id": "fr42c-006-0033",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic."
+        },
+        {
+          "source_id": "fr42c-006-0034",
+          "verdict": "PASS",
+          "reason": "Accurate: déjeuner, Tarbet, Katrine."
+        },
+        {
+          "source_id": "fr42c-006-0035",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0036",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0037",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0038",
+          "verdict": "PASS",
+          "reason": "Faithful, complete."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-006-0020",
+          "before": "— Напротив, милорд, — ответила девушка, — я им восхищаюсь, и притом как настоящая знаток.",
+          "after": "— Напротив, милорд, — ответила девушка, — я им восхищаюсь, и притом как настоящий знаток."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJoaYKMFXPRh1XBX4thH",
+        "usage": {
+          "input_tokens": 13139,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3680,
+          "output_tokens_details": {
+            "thinking_tokens": 1110
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-006-0019",
+          "verdict": "PASS",
+          "reason": "Meaning, superlatives and italic ship name preserved."
+        },
+        {
+          "source_id": "fr42c-006-0020",
+          "verdict": "PASS",
+          "reason": "Prior correction verified; 'Au contraire' and 'connaisseuse' rendered faithfully."
+        },
+        {
+          "source_id": "fr42c-006-0021",
+          "verdict": "PASS",
+          "reason": "Faithful interjection."
+        },
+        {
+          "source_id": "fr42c-006-0022",
+          "verdict": "CORRECTED",
+          "reason": "'Garcette' is a gasket (сезень); 'свободный конец троса' was inexact. Rest faithful, including conditional and 'prendre un riz'."
+        },
+        {
+          "source_id": "fr42c-006-0023",
+          "verdict": "PASS",
+          "reason": "Exclamation and name consistent."
+        },
+        {
+          "source_id": "fr42c-006-0024",
+          "verdict": "PASS",
+          "reason": "Prior correction faithful; negation and 'même pour une femme' preserved."
+        },
+        {
+          "source_id": "fr42c-006-0025",
+          "verdict": "CORRECTED",
+          "reason": "'Voile de perroquet' is a topgallant sail (брамсель), not бом-брамсель; otherwise faithful."
+        },
+        {
+          "source_id": "fr42c-006-0026",
+          "verdict": "PASS",
+          "reason": "Italic ship name and reply preserved."
+        },
+        {
+          "source_id": "fr42c-006-0027",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0028",
+          "verdict": "PASS",
+          "reason": "Prior correction accurate; hold and between-decks included."
+        },
+        {
+          "source_id": "fr42c-006-0029",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "fr42c-006-0030",
+          "verdict": "PASS",
+          "reason": "Prior correction accurate; italics preserved."
+        },
+        {
+          "source_id": "fr42c-006-0031",
+          "verdict": "CORRECTED",
+          "reason": "'Faites-nous les honneurs du château' means act as host; 'окажите нам честь' was unidiomatic."
+        },
+        {
+          "source_id": "fr42c-006-0032",
+          "verdict": "PASS",
+          "reason": "Faithful, including closing quote."
+        },
+        {
+          "source_id": "fr42c-006-0033",
+          "verdict": "PASS",
+          "reason": "Prior corrections verified; maître d'hôtel and obedience rendered properly."
+        },
+        {
+          "source_id": "fr42c-006-0034",
+          "verdict": "PASS",
+          "reason": "Déjeuner, places and conditional tone preserved."
+        },
+        {
+          "source_id": "fr42c-006-0035",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-006-0036",
+          "verdict": "PASS",
+          "reason": "Prior correction verified; question preserved."
+        },
+        {
+          "source_id": "fr42c-006-0037",
+          "verdict": "PASS",
+          "reason": "Accurate with Мак-Наббс."
+        },
+        {
+          "source_id": "fr42c-006-0038",
+          "verdict": "PASS",
+          "reason": "Prior correction verified; smoking joke and address preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-006-0022",
+          "before": "— Я ещё ребёнком играла на кораблях моего отца; он должен был бы сделать из меня моряка, и, если бы потребовалось, я, пожалуй, без затруднений взяла бы риф или сплела бы свободный конец троса.",
+          "after": "— Я ещё ребёнком играла на кораблях моего отца; он должен был бы сделать из меня моряка, и, если бы потребовалось, я, пожалуй, без затруднений взяла бы риф или сплела бы сезень."
+        },
+        {
+          "source_id": "fr42c-006-0025",
+          "before": "— Без сомнения, ваша милость, — ответил молодой капитан, — хотя, признаюсь, мисс Грант на юте уместнее, чем за уборкой бом-брамселя; но мне от этого не менее лестно слышать, как она говорит.",
+          "after": "— Без сомнения, ваша милость, — ответил молодой капитан, — хотя, признаюсь, мисс Грант на юте уместнее, чем за уборкой брамселя; но мне от этого не менее лестно слышать, как она говорит."
+        },
+        {
+          "source_id": "fr42c-006-0031",
+          "before": "— Что ж, дорогой Эдуард, окажите нам честь по замку, — ответила леди Элен.",
+          "after": "— Что ж, дорогой Эдуард, будьте хозяином замка, — ответила леди Элен."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJocAcSBktm3qFJwtYCQ",
+        "usage": {
+          "input_tokens": 13628,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2489,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-006-0019",
+          "verdict": "PASS",
+          "reason": "Faithful; superlatives, italic ship name and address preserved."
+        },
+        {
+          "source_id": "fr42c-006-0020",
+          "verdict": "PASS",
+          "reason": "Faithful; 'en véritable connaisseuse' rendered; masculine 'знаток' acceptable."
+        },
+        {
+          "source_id": "fr42c-006-0021",
+          "verdict": "PASS",
+          "reason": "Faithful exclamation."
+        },
+        {
+          "source_id": "fr42c-006-0022",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Conditional, riz (reef) and garcette (sezen) correctly rendered."
+        },
+        {
+          "source_id": "fr42c-006-0023",
+          "verdict": "PASS",
+          "reason": "Faithful exclamation and attribution; name consistent."
+        },
+        {
+          "source_id": "fr42c-006-0024",
+          "verdict": "PASS",
+          "reason": "Meaning, emphasis and question tag preserved."
+        },
+        {
+          "source_id": "fr42c-006-0025",
+          "verdict": "PASS",
+          "reason": "Votre Honneur, dunette and perroquet sail handled acceptably; flattered meaning kept."
+        },
+        {
+          "source_id": "fr42c-006-0026",
+          "verdict": "PASS",
+          "reason": "Faithful; italic ship name preserved."
+        },
+        {
+          "source_id": "fr42c-006-0027",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "fr42c-006-0028",
+          "verdict": "PASS",
+          "reason": "Faithful; no omissions."
+        },
+        {
+          "source_id": "fr42c-006-0029",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "fr42c-006-0030",
+          "verdict": "PASS",
+          "reason": "All claims, italics and geography preserved."
+        },
+        {
+          "source_id": "fr42c-006-0031",
+          "verdict": "PASS",
+          "reason": "Idiomatic rendering of 'faire les honneurs'."
+        },
+        {
+          "source_id": "fr42c-006-0032",
+          "verdict": "PASS",
+          "reason": "Faithful; closing quote preserved."
+        },
+        {
+          "source_id": "fr42c-006-0033",
+          "verdict": "PASS",
+          "reason": "Faithful; humour about importance retained."
+        },
+        {
+          "source_id": "fr42c-006-0034",
+          "verdict": "PASS",
+          "reason": "Faithful; déjeuner as завтрак, 'comme s'il se fût agi' preserved."
+        },
+        {
+          "source_id": "fr42c-006-0035",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "fr42c-006-0036",
+          "verdict": "PASS",
+          "reason": "Faithful; opening quote continues."
+        },
+        {
+          "source_id": "fr42c-006-0037",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "fr42c-006-0038",
+          "verdict": "PASS",
+          "reason": "Faithful; all details preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
