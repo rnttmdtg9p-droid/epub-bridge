@@ -1,0 +1,14 @@
+{
+  "state": "PARTIAL_FAILURE",
+  "errors": [
+    {
+      "unit": 2,
+      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED AssertionError: AUTHENTIC_FOREIGN_SOURCE_VERBATIM"
+    }
+  ],
+  "source_units": 70,
+  "source_rows": 5738,
+  "translation_provider": "DeepL quality_optimized",
+  "review_provider": "claude-sonnet-5-5",
+  "utc": "2026-10-23T06:22:51.094911+00:00"
+}
