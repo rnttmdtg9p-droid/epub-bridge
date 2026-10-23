@@ -1,0 +1,816 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 1,
+  "batch": 6,
+  "source_ids": [
+    "046-1-0239",
+    "046-1-0240",
+    "046-1-0241",
+    "046-1-0242",
+    "046-1-0243",
+    "046-1-0244",
+    "046-1-0245",
+    "046-1-0246",
+    "046-1-0247",
+    "046-1-0248",
+    "046-1-0249",
+    "046-1-0250",
+    "046-1-0251",
+    "046-1-0252",
+    "046-1-0253",
+    "046-1-0254",
+    "046-1-0255",
+    "046-1-0256",
+    "046-1-0257",
+    "046-1-0258",
+    "046-1-0259",
+    "046-1-0260",
+    "046-1-0261",
+    "046-1-0262",
+    "046-1-0263",
+    "046-1-0264",
+    "046-1-0265",
+    "046-1-0266",
+    "046-1-0267",
+    "046-1-0268",
+    "046-1-0269",
+    "046-1-0270",
+    "046-1-0271",
+    "046-1-0272",
+    "046-1-0273",
+    "046-1-0274",
+    "046-note-01",
+    "046-note-02",
+    "046-note-03",
+    "046-note-04"
+  ],
+  "source_hashes": {
+    "046-1-0239": "6857bb787d42b79f9652e8fd4f1ff5fb45d4f8cdce18cfa384c9d7866a306995",
+    "046-1-0240": "241c99ad8ff99259d96a22605ab79bb372c60590ebe8f67a94510460066b58b1",
+    "046-1-0241": "c5bc5059a08b77a7fe49e2f8116f7fb1a1153168ff09c01f258876f5ac9230c9",
+    "046-1-0242": "af791b969048f1a20d2c98d85654904d5c0c2cd222ed6bd8d6616348d1f8b092",
+    "046-1-0243": "cd1130fe0e58a1845f39089816a42d04967f95422a33420473adb5b21e813708",
+    "046-1-0244": "7050b7f3a6ccc98f17628abbc5fe43d6be83fb44a64024b45a9f081d0a1bd76e",
+    "046-1-0245": "05115e42e47cccbe4c343d863e857a61cd381e2da974e88d4fc1d14a664c7c0d",
+    "046-1-0246": "51103080b0c12d59f4310ca24d6e3b4307e93003e901683ec4d2e8fb28e2c9c3",
+    "046-1-0247": "ff30be557db8ffb0963e267aae50e4929c46d309dd4b7f47ff28df40981abd2f",
+    "046-1-0248": "052692cb4a9739410a10c2d8a5c69810f513aac4fdb58687c9e246b74a468be7",
+    "046-1-0249": "041140818e799e9c561727881419ede6aa65b4fd7b5f599aaf567484e94d3281",
+    "046-1-0250": "8fe427a5c7fa38105a2f2f98d405cef645635a7dbe0ce57a0c1954630d051740",
+    "046-1-0251": "e6bee429b510170bff1659359c1420ebe494a74b60f15899eec2dd55936f93ad",
+    "046-1-0252": "23b102353046c312009be8a23b127e2f31557fed0e1aaddc4cd3ffdefebd4b70",
+    "046-1-0253": "3aa0d3a74d5af9d37e207bfbec4a83857b95dcf4ff8e31a128a858b7971057c8",
+    "046-1-0254": "24e8aa1bd7c4aafaffcc7abce147dee54e218b2459d27da99ec699fe347cf7e2",
+    "046-1-0255": "9efd4db23a83884868adc494fee68175ab4d4bf81e58cc825427238e7c245106",
+    "046-1-0256": "12be09183af1aa0978ef8d9af88c3cf2bb0900e45a2b4ed65eae928926ad073e",
+    "046-1-0257": "f6adaa46d1b7456d69595c42fa02b7283c2b5c6a39d9af3f756811e82cc7d809",
+    "046-1-0258": "c47a95260e861547d04bfbffe2f1f0d4715abbb7e61e2253cccd10be1e1c6182",
+    "046-1-0259": "484121f7cd2f614c414e02799ea372431a00d0b9f4910f7ea1726f6622084c70",
+    "046-1-0260": "0a01f5994ef88cf60f795f162e8fd14ff1bd311f02cf005f8571354b64565d58",
+    "046-1-0261": "c155cf347ce70cfe3ceb532d6e6bf24d13be90fee9064ee7c1461753958d9c52",
+    "046-1-0262": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+    "046-1-0263": "5fcb492457984b76855b12b5b03c577e634be4e8ea791234df5cdc6775b3a314",
+    "046-1-0264": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+    "046-1-0265": "c37bfdf33809afb588a5f5c5f6eb53464ac868781a0d4b7633d33e030cde964f",
+    "046-1-0266": "2d35c7e1919076a3b58ee33375341182bd89ed7e1c91997219018797e6e3ca0f",
+    "046-1-0267": "59578e34868238b53ac35b65374a2764b7ec6c63c3dbc5dd1736e70215b90549",
+    "046-1-0268": "163e635b2b3436aa711bd6d5272283a807b531d0c731927881d0dcf19147314b",
+    "046-1-0269": "4776a96ebaab3e2f0bf09e4da962a0e1d1534e20f0e0b20f9349b426bffe480d",
+    "046-1-0270": "afc65cd02b9bf85af2b7e1c391f2363a00c94b67cd1249975965c0d2677c9af6",
+    "046-1-0271": "e5a3de86ea6c6d26ccdc4862ecf9179c99bcc0449a77989a26217e7d5a92e15e",
+    "046-1-0272": "fb1e8dc86624f0dc1f51b775560a0b2f6c3872830b9fb88349bde9f729fb2c9f",
+    "046-1-0273": "b24854e6804103b4419f23469f6cdeac0d7f7d0a05b6da56acee7c915b703f60",
+    "046-1-0274": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+    "046-note-01": "4868fccf7956509ca436ccd63f72d69702c248ad19d093cfe6be88125e04ded5",
+    "046-note-02": "399501170b5753c22c01416cc5b588cb22b3b1bcff70cde5e90d8e71c538119a",
+    "046-note-03": "dcb3b3d8c1d7dce0793b353c25d6a38af2d2e69a795395c0ade956db7660ccdf",
+    "046-note-04": "421f866c4c7258c28ec320b3971fd790014bdad786a594fd0ac08770ede44c17"
+  },
+  "review": [
+    {
+      "source_id": "046-1-0239",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0240",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the stage direction."
+    },
+    {
+      "source_id": "046-1-0241",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the schoolmaster's grading idiom."
+    },
+    {
+      "source_id": "046-1-0242",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0243",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0244",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the interjections and the '!..' ending."
+    },
+    {
+      "source_id": "046-1-0245",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the dashes and ellipsis."
+    },
+    {
+      "source_id": "046-1-0246",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0247",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0248",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0249",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim. The line has no [[FN:3]] anchor here, which is correct for this row because the anchor belongs to the earlier occurrence in the complete act."
+    },
+    {
+      "source_id": "046-1-0250",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0251",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0252",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0253",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim; the stage direction about the lisp (картавя) is preserved."
+    },
+    {
+      "source_id": "046-1-0254",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including both stage directions."
+    },
+    {
+      "source_id": "046-1-0255",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0256",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0257",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0258",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0259",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the repeated quotation and the stage direction 'Плаксивно'."
+    },
+    {
+      "source_id": "046-1-0260",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0261",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0262",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0263",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0264",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0265",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0266",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0267",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0268",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the ellipses and stage direction."
+    },
+    {
+      "source_id": "046-1-0269",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0270",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0271",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the repetitions and punctuation."
+    },
+    {
+      "source_id": "046-1-0272",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0273",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0274",
+      "verdict": "PASS",
+      "reason": "The 'Занавес' stage direction matches source verbatim, including the italics."
+    },
+    {
+      "source_id": "046-note-01",
+      "verdict": "PASS",
+      "reason": "Preserved editorial note matches source wording verbatim."
+    },
+    {
+      "source_id": "046-note-02",
+      "verdict": "PASS",
+      "reason": "Preserved editorial note matches source wording verbatim."
+    },
+    {
+      "source_id": "046-note-03",
+      "verdict": "PASS",
+      "reason": "Preserved editorial note matches source wording verbatim."
+    },
+    {
+      "source_id": "046-note-04",
+      "verdict": "PASS",
+      "reason": "Preserved editorial note matches source wording verbatim, including the Latin."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjty3vHVmZ2ktiajrX5",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 46046,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1771,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-1-0239",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0240",
+      "verdict": "PASS",
+      "reason": "Target matches source, including the stage direction."
+    },
+    {
+      "source_id": "046-1-0241",
+      "verdict": "PASS",
+      "reason": "Target matches source; the idiom 'на три с минусом' is preserved."
+    },
+    {
+      "source_id": "046-1-0242",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0243",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0244",
+      "verdict": "PASS",
+      "reason": "Target matches source, including interjections and '!..'."
+    },
+    {
+      "source_id": "046-1-0245",
+      "verdict": "PASS",
+      "reason": "Target matches source, including dashes and ellipsis."
+    },
+    {
+      "source_id": "046-1-0246",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0247",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0248",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0249",
+      "verdict": "PASS",
+      "reason": "Target matches source row; no FN anchor in the source here, and the anchor [[FN:3]] belongs to the earlier occurrence in the act."
+    },
+    {
+      "source_id": "046-1-0250",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0251",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0252",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0253",
+      "verdict": "PASS",
+      "reason": "Target matches source, including 'картавя'."
+    },
+    {
+      "source_id": "046-1-0254",
+      "verdict": "PASS",
+      "reason": "Target matches source, including both stage directions."
+    },
+    {
+      "source_id": "046-1-0255",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0256",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0257",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0258",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0259",
+      "verdict": "PASS",
+      "reason": "Target matches source, including repeated quotation and 'Плаксивно'."
+    },
+    {
+      "source_id": "046-1-0260",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0261",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0262",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0263",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0264",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0265",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0266",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0267",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0268",
+      "verdict": "PASS",
+      "reason": "Target matches source, including ellipses and stage direction."
+    },
+    {
+      "source_id": "046-1-0269",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0270",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim."
+    },
+    {
+      "source_id": "046-1-0271",
+      "verdict": "PASS",
+      "reason": "Target matches source, including repetitions and punctuation."
+    },
+    {
+      "source_id": "046-1-0272",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0273",
+      "verdict": "PASS",
+      "reason": "Stage direction matches source."
+    },
+    {
+      "source_id": "046-1-0274",
+      "verdict": "PASS",
+      "reason": "'Занавес' matches source, including italics."
+    },
+    {
+      "source_id": "046-note-01",
+      "verdict": "PASS",
+      "reason": "Editorial note matches source wording."
+    },
+    {
+      "source_id": "046-note-02",
+      "verdict": "PASS",
+      "reason": "Editorial note matches source wording."
+    },
+    {
+      "source_id": "046-note-03",
+      "verdict": "PASS",
+      "reason": "Editorial note matches source wording."
+    },
+    {
+      "source_id": "046-note-04",
+      "verdict": "PASS",
+      "reason": "Editorial note matches source wording, including the Latin."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjumRiHXYJ6fwkCtU4m",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 47994,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1636,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-1-0239",
+      "source_sha256": "6857bb787d42b79f9652e8fd4f1ff5fb45d4f8cdce18cfa384c9d7866a306995",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. У Натальи Ивановны уже есть женишок.",
+      "target_sha256": "6857bb787d42b79f9652e8fd4f1ff5fb45d4f8cdce18cfa384c9d7866a306995",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0240",
+      "source_sha256": "241c99ad8ff99259d96a22605ab79bb372c60590ebe8f67a94510460066b58b1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(стучит вилкой по тарелке)</i></small>. Господа, я желаю сказать речь…",
+      "target_sha256": "241c99ad8ff99259d96a22605ab79bb372c60590ebe8f67a94510460066b58b1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0241",
+      "source_sha256": "c5bc5059a08b77a7fe49e2f8116f7fb1a1153168ff09c01f258876f5ac9230c9",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Ты ведешь себя на три с минусом.",
+      "target_sha256": "c5bc5059a08b77a7fe49e2f8116f7fb1a1153168ff09c01f258876f5ac9230c9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0242",
+      "source_sha256": "af791b969048f1a20d2c98d85654904d5c0c2cd222ed6bd8d6616348d1f8b092",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. А наливка вкусная. На чем это настоено?",
+      "target_sha256": "af791b969048f1a20d2c98d85654904d5c0c2cd222ed6bd8d6616348d1f8b092",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0243",
+      "source_sha256": "cd1130fe0e58a1845f39089816a42d04967f95422a33420473adb5b21e813708",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. На тараканах.",
+      "target_sha256": "cd1130fe0e58a1845f39089816a42d04967f95422a33420473adb5b21e813708",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0244",
+      "source_sha256": "7050b7f3a6ccc98f17628abbc5fe43d6be83fb44a64024b45a9f081d0a1bd76e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(плачущим голосом)</i></small>. Фу! Фу! Какое отвращение!..",
+      "target_sha256": "7050b7f3a6ccc98f17628abbc5fe43d6be83fb44a64024b45a9f081d0a1bd76e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0245",
+      "source_sha256": "05115e42e47cccbe4c343d863e857a61cd381e2da974e88d4fc1d14a664c7c0d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. За ужином будет жареная индейка и сладкий пирог с яблоками. Слава богу, сегодня целый день я дома, вечером — дома… Господа, вечером приходите.",
+      "target_sha256": "05115e42e47cccbe4c343d863e857a61cd381e2da974e88d4fc1d14a664c7c0d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0246",
+      "source_sha256": "51103080b0c12d59f4310ca24d6e3b4307e93003e901683ec4d2e8fb28e2c9c3",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Позвольте и мне прийти вечером!",
+      "target_sha256": "51103080b0c12d59f4310ca24d6e3b4307e93003e901683ec4d2e8fb28e2c9c3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0247",
+      "source_sha256": "ff30be557db8ffb0963e267aae50e4929c46d309dd4b7f47ff28df40981abd2f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Пожалуйста.",
+      "target_sha256": "ff30be557db8ffb0963e267aae50e4929c46d309dd4b7f47ff28df40981abd2f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0248",
+      "source_sha256": "052692cb4a9739410a10c2d8a5c69810f513aac4fdb58687c9e246b74a468be7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span>. У них попросту.",
+      "target_sha256": "052692cb4a9739410a10c2d8a5c69810f513aac4fdb58687c9e246b74a468be7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0249",
+      "source_sha256": "041140818e799e9c561727881419ede6aa65b4fd7b5f599aaf567484e94d3281",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Для любви одной природа нас на свет произвела. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small>",
+      "target_sha256": "041140818e799e9c561727881419ede6aa65b4fd7b5f599aaf567484e94d3281",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0250",
+      "source_sha256": "8fe427a5c7fa38105a2f2f98d405cef645635a7dbe0ce57a0c1954630d051740",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сердито)</i></small>. Перестаньте, господа! Не надоело вам.",
+      "target_sha256": "8fe427a5c7fa38105a2f2f98d405cef645635a7dbe0ce57a0c1954630d051740",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0251",
+      "source_sha256": "e6bee429b510170bff1659359c1420ebe494a74b60f15899eec2dd55936f93ad",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Федотик</span> и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Родэ</span> входят с большой корзиной цветов.",
+      "target_sha256": "e6bee429b510170bff1659359c1420ebe494a74b60f15899eec2dd55936f93ad",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0252",
+      "source_sha256": "23b102353046c312009be8a23b127e2f31557fed0e1aaddc4cd3ffdefebd4b70",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Однако уже завтракают.",
+      "target_sha256": "23b102353046c312009be8a23b127e2f31557fed0e1aaddc4cd3ffdefebd4b70",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0253",
+      "source_sha256": "3aa0d3a74d5af9d37e207bfbec4a83857b95dcf4ff8e31a128a858b7971057c8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(громко и картавя)</i></small>. Завтракают? Да, уже завтракают…",
+      "target_sha256": "3aa0d3a74d5af9d37e207bfbec4a83857b95dcf4ff8e31a128a858b7971057c8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0254",
+      "source_sha256": "24e8aa1bd7c4aafaffcc7abce147dee54e218b2459d27da99ec699fe347cf7e2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Погоди минутку! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Снимает фотографию.)</i></small> Раз! Погоди еще немного… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Снимает другую фотографию.)</i></small> Два! Теперь готово!",
+      "target_sha256": "24e8aa1bd7c4aafaffcc7abce147dee54e218b2459d27da99ec699fe347cf7e2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0255",
+      "source_sha256": "9efd4db23a83884868adc494fee68175ab4d4bf81e58cc825427238e7c245106",
+      "target": "Берут корзину и идут в залу, где их встречают с шумом.",
+      "target_sha256": "9efd4db23a83884868adc494fee68175ab4d4bf81e58cc825427238e7c245106",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0256",
+      "source_sha256": "12be09183af1aa0978ef8d9af88c3cf2bb0900e45a2b4ed65eae928926ad073e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(громко)</i></small>. Поздравляю, желаю всего, всего! Погода сегодня очаровательная, одно великолепие. Сегодня все утро гулял с гимназистами. Я преподаю в гимназии гимнастику…",
+      "target_sha256": "12be09183af1aa0978ef8d9af88c3cf2bb0900e45a2b4ed65eae928926ad073e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0257",
+      "source_sha256": "f6adaa46d1b7456d69595c42fa02b7283c2b5c6a39d9af3f756811e82cc7d809",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Можете двигаться, Ирина Сергеевна, можете! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Снимая фотографию.)</i></small> Вы сегодня интересны. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вынимает из кармана волчок.)</i></small> Вот, между прочим, волчок… Удивительный звук…",
+      "target_sha256": "f6adaa46d1b7456d69595c42fa02b7283c2b5c6a39d9af3f756811e82cc7d809",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0258",
+      "source_sha256": "c47a95260e861547d04bfbffe2f1f0d4715abbb7e61e2253cccd10be1e1c6182",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Какая прелесть!",
+      "target_sha256": "c47a95260e861547d04bfbffe2f1f0d4715abbb7e61e2253cccd10be1e1c6182",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0259",
+      "source_sha256": "484121f7cd2f614c414e02799ea372431a00d0b9f4910f7ea1726f6622084c70",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. У лукоморья дуб зеленый, златая цепь на дубе том… Златая цепь на дубе том… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Плаксивно.)</i></small> Ну, зачем я это говорю? Привязалась ко мне эта фраза с самого утра…",
+      "target_sha256": "484121f7cd2f614c414e02799ea372431a00d0b9f4910f7ea1726f6622084c70",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0260",
+      "source_sha256": "0a01f5994ef88cf60f795f162e8fd14ff1bd311f02cf005f8571354b64565d58",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Тринадцать за столом!",
+      "target_sha256": "0a01f5994ef88cf60f795f162e8fd14ff1bd311f02cf005f8571354b64565d58",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0261",
+      "source_sha256": "c155cf347ce70cfe3ceb532d6e6bf24d13be90fee9064ee7c1461753958d9c52",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(громко)</i></small>. Господа, неужели вы придаете значение предрассудкам?",
+      "target_sha256": "c155cf347ce70cfe3ceb532d6e6bf24d13be90fee9064ee7c1461753958d9c52",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0262",
+      "source_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "target": "Смех.",
+      "target_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0263",
+      "source_sha256": "5fcb492457984b76855b12b5b03c577e634be4e8ea791234df5cdc6775b3a314",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Если тринадцать за столом, то, значит, есть тут влюбленные. Уж не вы ли, Иван Романович, чего доброго…",
+      "target_sha256": "5fcb492457984b76855b12b5b03c577e634be4e8ea791234df5cdc6775b3a314",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0264",
+      "source_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "target": "Смех.",
+      "target_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0265",
+      "source_sha256": "c37bfdf33809afb588a5f5c5f6eb53464ac868781a0d4b7633d33e030cde964f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Я старый грешник, а вот отчего Наталья Ивановна сконфузилась, решительно понять не могу.",
+      "target_sha256": "c37bfdf33809afb588a5f5c5f6eb53464ac868781a0d4b7633d33e030cde964f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0266",
+      "source_sha256": "2d35c7e1919076a3b58ee33375341182bd89ed7e1c91997219018797e6e3ca0f",
+      "target": "Громкий смех; <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Наташа</span> выбегает из залы в гостиную, за ней <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span>.",
+      "target_sha256": "2d35c7e1919076a3b58ee33375341182bd89ed7e1c91997219018797e6e3ca0f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0267",
+      "source_sha256": "59578e34868238b53ac35b65374a2764b7ec6c63c3dbc5dd1736e70215b90549",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Полно, не обращайте внимания! Погодите… постойте, прошу вас…",
+      "target_sha256": "59578e34868238b53ac35b65374a2764b7ec6c63c3dbc5dd1736e70215b90549",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0268",
+      "source_sha256": "163e635b2b3436aa711bd6d5272283a807b531d0c731927881d0dcf19147314b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span>. Мне стыдно… Я не знаю, что со мной делается, а они поднимают меня на смех. То, что я сейчас вышла из-за стола, неприлично, но я не могу… не могу… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Закрывает лицо руками.)</i></small>",
+      "target_sha256": "163e635b2b3436aa711bd6d5272283a807b531d0c731927881d0dcf19147314b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0269",
+      "source_sha256": "4776a96ebaab3e2f0bf09e4da962a0e1d1534e20f0e0b20f9349b426bffe480d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Дорогая моя, прошу вас, умоляю, не волнуйтесь. Уверяю вас, они шутят, они от доброго сердца. Дорогая моя, моя хорошая, они все добрые, сердечные люди и любят меня и вас. Идите сюда к окну, нас здесь не видно им… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Оглядывается.)</i></small>",
+      "target_sha256": "4776a96ebaab3e2f0bf09e4da962a0e1d1534e20f0e0b20f9349b426bffe480d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0270",
+      "source_sha256": "afc65cd02b9bf85af2b7e1c391f2363a00c94b67cd1249975965c0d2677c9af6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span>. Я так не привыкла бывать в обществе!..",
+      "target_sha256": "afc65cd02b9bf85af2b7e1c391f2363a00c94b67cd1249975965c0d2677c9af6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0271",
+      "source_sha256": "e5a3de86ea6c6d26ccdc4862ecf9179c99bcc0449a77989a26217e7d5a92e15e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. О молодость, чудная, прекрасная молодость! Моя дорогая, моя хорошая, не волнуйтесь так!.. Верьте мне, верьте… Мне так хорошо, душа полна любви, восторга… О, нас не видят! Не видят! За что, за что я полюбил вас, когда полюбил — о, ничего не понимаю. Дорогая моя, хорошая, чистая, будьте моей женой! Я вас люблю, люблю… как никого никогда…",
+      "target_sha256": "e5a3de86ea6c6d26ccdc4862ecf9179c99bcc0449a77989a26217e7d5a92e15e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0272",
+      "source_sha256": "fb1e8dc86624f0dc1f51b775560a0b2f6c3872830b9fb88349bde9f729fb2c9f",
+      "target": "Поцелуй.",
+      "target_sha256": "fb1e8dc86624f0dc1f51b775560a0b2f6c3872830b9fb88349bde9f729fb2c9f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0273",
+      "source_sha256": "b24854e6804103b4419f23469f6cdeac0d7f7d0a05b6da56acee7c915b703f60",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Два офицера</span> входят и, увидев целующуюся пару, останавливаются в изумлении.",
+      "target_sha256": "b24854e6804103b4419f23469f6cdeac0d7f7d0a05b6da56acee7c915b703f60",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-1-0274",
+      "source_sha256": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\"><i>Занавес</i></span>",
+      "target_sha256": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-note-01",
+      "source_sha256": "4868fccf7956509ca436ccd63f72d69702c248ad19d093cfe6be88125e04ded5",
+      "target": "Золотник — старая русская мера веса, равная 1/96 фунта, или 4,26 г.",
+      "target_sha256": "4868fccf7956509ca436ccd63f72d69702c248ad19d093cfe6be88125e04ded5",
+      "tag": "editorial_note"
+    },
+    {
+      "source_id": "046-note-02",
+      "source_sha256": "399501170b5753c22c01416cc5b588cb22b3b1bcff70cde5e90d8e71c538119a",
+      "target": "Мерлехлюндия — тоска, хандра.",
+      "target_sha256": "399501170b5753c22c01416cc5b588cb22b3b1bcff70cde5e90d8e71c538119a",
+      "tag": "editorial_note"
+    },
+    {
+      "source_id": "046-note-03",
+      "source_sha256": "dcb3b3d8c1d7dce0793b353c25d6a38af2d2e69a795395c0ade956db7660ccdf",
+      "target": "Цитата из старинной оперы-водевиля «Оборотни или Спорь до слез, а об заклад не бейся» (1808 г.), переделанной с фр. П.Кобяковым.",
+      "target_sha256": "dcb3b3d8c1d7dce0793b353c25d6a38af2d2e69a795395c0ade956db7660ccdf",
+      "tag": "editorial_note"
+    },
+    {
+      "source_id": "046-note-04",
+      "source_sha256": "421f866c4c7258c28ec320b3971fd790014bdad786a594fd0ac08770ede44c17",
+      "target": "лат. Feci quod potui, faciant meliora potentes — Сделал, что мог, пусть, кто может, сделает лучше.",
+      "target_sha256": "421f866c4c7258c28ec320b3971fd790014bdad786a594fd0ac08770ede44c17",
+      "tag": "editorial_note"
+    }
+  ]
+}
