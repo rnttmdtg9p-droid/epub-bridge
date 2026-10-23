@@ -1,14 +1,8 @@
 {
-  "state": "PARTIAL_FAILURE",
-  "errors": [
-    {
-      "unit": 20,
-      "error": "SOURCE_STANZA_BREAKS"
-    }
-  ],
+  "state": "RUNNING_CONTINUOUS_TRANSLATION_REVIEW",
+  "run_id": "39966310480",
   "source_units": 46,
   "source_rows": 2385,
-  "translation_provider": "DeepL quality_optimized",
-  "review_provider": "claude-sonnet-5-5",
-  "utc": "2026-10-23T13:54:39.242500+00:00"
+  "checkpoint_is_stop_condition": false,
+  "utc": "2026-10-23T14:03:07.602648+00:00"
 }
