@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK6qqHDppmkDGDEAwJQ4",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-064-0061\",\"target\":\"Но что должны были подумать Джон Манглс и его товарищи, когда увидели, как исказились черты лорда, как побледнело его лицо и как инструмент выпал у него из рук! Одно-единственное слово объяснило им это внезапное отчаяние.\"},{\"source_id\":\"fr42c-064-0062\",\"target\":\"— «Дункан»! — воскликнул Гленарван. — «Дункан» и каторжники!\"},{\"source_id\":\"fr42c-064-0063\",\"target\":\"— «Дункан»! — воскликнул Джон, бросив весло и тотчас вскочив.\"},{\"source_id\":\"fr42c-064-0064\",\"target\":\"— Да! Смерть с обеих сторон! — прошептал Гленарван, сломленный столькими тревогами.\"},{\"source_id\":\"fr42c-064-0065\",\"target\":\"Это действительно была яхта, ошибиться было невозможно — яхта с её экипажем бандитов! Майор не удержался и бросил проклятие небу. Это было уже чересчур!\"},{\"source_id\":\"fr42c-064-0066\",\"target\":\"Между тем пирога была предоставлена самой себе. Куда её направить? Куда бежать? Можно ли было выбирать между дикарями и каторжниками?\"},{\"source_id\":\"fr42c-064-0067\",\"target\":\"Из ближайшей туземной лодки раздался выстрел, и пуля ударила в весло Вильсона. Несколько взмахов вёсел отогнали тогда пирогу к «Дункану».\"},{\"source_id\":\"fr42c-064-0068\",\"target\":\"Яхта шла на всех парах и была уже не дальше чем в полумиле. Джон Манглс, отрезанный со всех сторон, не знал, как маневрировать и в какую сторону бежать. Две бедные женщины, стоя на коленях, потеряв голову, молились.\"},{\"source_id\":\"fr42c-064-0069\",\"target\":\"Дикари вели беглый огонь, и пули сыпались вокруг пироги. В этот миг грянул сильный выстрел, и ядро, посланное пушкой яхты, пролетело над головами беглецов. Те, зажатые между двух огней, замерли между «Дунканом» и туземными лодками.\"},{\"source_id\":\"fr42c-064-0070\",\"target\":\"Джон Манглс, обезумев от отчаяния, схватил топор. Он готов был пробить дно пироги и затопить её вместе с несчастными спутниками, когда крик Роберта остановил его.\"},{\"source_id\":\"fr42c-064-0071\",\"target\":\"— Том Остин! Том Остин! — говорил мальчик. — Он на борту! Я его вижу! Он нас узнал! Он машет шляпой!\"},{\"source_id\":\"fr42c-064-0072\",\"target\":\"Топор так и застыл в поднятой руке Джона.\"},{\"source_id\":\"fr42c-064-0073\",\"target\":\"Второе ядро просвистело над его головой и разорвало надвое ближайшую из трёх пирог, а на борту «Дункана» грянуло «ура».\"},{\"source_id\":\"fr42c-064-0074\",\"target\":\"Перепуганные дикари бежали и возвращались к берегу.\"},{\"source_id\":\"fr42c-064-0075\",\"target\":\"Возвращение на борт «Дункана». (Стр. 577.)\"},{\"source_id\":\"fr42c-064-0076\",\"target\":\"— К нам! К нам, Том! — зычно крикнул Джон Манглс.\"},{\"source_id\":\"fr42c-064-0077\",\"target\":\"И несколько мгновений спустя десять беглецов, не зная как, ничего не понимая, были все в безопасности на борту «Дункана».\"},{\"source_id\":\"fr42c-064-0078\",\"target\":\"— Никогда! Никогда! — воскликнул Паганель. (Стр. 581.)\"}],\"review\":[{\"source_id\":\"fr42c-064-0061\",\"verdict\":\"PASS\",\"reason\":\"Faithful: facial change, pallor, instrument falling, single word explaining despair all preserved.\"},{\"source_id\":\"fr42c-064-0062\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and title accurate; italics rendered as quoted ship name; dialogue punctuation fine.\"},{\"source_id\":\"fr42c-064-0063\",\"verdict\":\"PASS\",\"reason\":\"John drops oar and rises at once; accurate.\"},{\"source_id\":\"fr42c-064-0064\",\"verdict\":\"PASS\",\"reason\":\"Death on both sides; broken by anguish; accurate.\"},{\"source_id\":\"fr42c-064-0065\",\"verdict\":\"PASS\",\"reason\":\"Yacht, bandit crew, major's curse at heaven, 'too much' all preserved.\"},{\"source_id\":\"fr42c-064-0066\",\"verdict\":\"PASS\",\"reason\":\"Abandoned pirogue and three questions preserved.\"},{\"source_id\":\"fr42c-064-0067\",\"verdict\":\"PASS\",\"reason\":\"Shot, Wilson's oar, pirogue pushed toward Duncan; accurate.\"},{\"source_id\":\"fr42c-064-0068\",\"verdict\":\"PASS\",\"reason\":\"Full steam, half mile, cut off, praying women accurate.\"},{\"source_id\":\"fr42c-064-0069\",\"verdict\":\"PASS\",\"reason\":\"Rolling fire, cannonball over heads, between two fires; accurate.\"},{\"source_id\":\"fr42c-064-0070\",\"verdict\":\"PASS\",\"reason\":\"Axe, intent to scuttle, Robert's cry stopping him; accurate.\"},{\"source_id\":\"fr42c-064-0071\",\"verdict\":\"PASS\",\"reason\":\"Dialogue content accurate; 'disait' rendered fittingly.\"},{\"source_id\":\"fr42c-064-0072\",\"verdict\":\"PASS\",\"reason\":\"Axe left suspended; idiomatic.\"},{\"source_id\":\"fr42c-064-0073\",\"verdict\":\"PASS\",\"reason\":\"Second ball cuts nearest pirogue in two; hurrah aboard; accurate.\"},{\"source_id\":\"fr42c-064-0074\",\"verdict\":\"PASS\",\"reason\":\"Terrified savages flee to the coast; accurate.\"},{\"source_id\":\"fr42c-064-0075\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate with page reference.\"},{\"source_id\":\"fr42c-064-0076\",\"verdict\":\"PASS\",\"reason\":\"'À nous' correctly rendered as call to come to us; loud voice preserved.\"},{\"source_id\":\"fr42c-064-0077\",\"verdict\":\"PASS\",\"reason\":\"Ten fugitives, ignorance, safety aboard preserved.\"},{\"source_id\":\"fr42c-064-0078\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate with page reference.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11859,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2281,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
