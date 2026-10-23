@@ -1,0 +1,136 @@
+{
+  "unit": 31,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-031-0100",
+      "target": "Но под конец всё это кое-как дотянулось, и всё было продано — всё, кроме одного маленького никчёмного клочка на кладбище. Так что им надо было сбыть и <i>его</i> — я в жизни не видал такого жирафа, как этот король: ему всё хотелось проглотить <i>всё</i> подряд. Ну, пока они этим занимались, причалил пароход, и минуты через две подвалила толпа: все орали, вопили, хохотали, дурачились и выкрикивали:",
+      "source_sha256": "d8491f41d1ac9a4ca2f6ee77c78f25073930a018c67614864a9640748e3248f0",
+      "target_id": "ru-043-031-0100",
+      "tag": "p",
+      "target_sha256": "69e487cb0e0761c5143f3661dcb7f3f3dd0de66f9ecb7e9c9218a27f01892957"
+    },
+    {
+      "source_id": "043-031-0101",
+      "target": "— <i>Вот</i> вам и конкурирующая фирма! Вот вам две партии наследников старого Питера Уилкса — платите денежки и выбирайте!",
+      "source_sha256": "6493994462f746cd565a09a3c140e7998cc16474d1c3b63199f6145e8fea7130",
+      "target_id": "ru-043-031-0101",
+      "tag": "p",
+      "target_sha256": "22122f9d97a1bfc52873a8d23764b6008700e048bbc3dbcf59fc04788230f6e7"
+    },
+    {
+      "source_id": "043-031-0102",
+      "target": "Настоящие братья",
+      "source_sha256": "93baefcd10a1e48a1a120de694dc31abc447e89b2a27a65d8646197ac79a6975",
+      "target_id": "ru-043-031-0102",
+      "tag": "source_caption",
+      "target_sha256": "fc01fe9c723a3827cf7fa28958d4bfb7d5b10f63b928c68cb393355ae32c954e"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-031-0100",
+      "verdict": "CORRECTED",
+      "reason": "Fixed italics on 'that' and 'everything', smoothed the clumsy participle chain, and restored the colloquial tone. Facts, agency and the steamboat landing are preserved."
+    },
+    {
+      "source_id": "043-031-0101",
+      "verdict": "CORRECTED",
+      "reason": "Replaced guillemets with a Russian dialogue dash, moved the italic to 'Вот', rendered 'opposition line' idiomatically, and kept the proverb-like ending."
+    },
+    {
+      "source_id": "043-031-0102",
+      "verdict": "CORRECTED",
+      "reason": "Caption retained without added quotation marks; the meaning is preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-031-0100",
+      "before": "Но со временем дело потянулось, и всё было продано — всё, кроме одного маленького ничтожного участка на кладбище. Так что они взялись и за него — я никогда не видел такого жирафа, как этот король, который хотел проглотить <i>всё</i> подряд. Ну, пока они этим занимались, причалил пароход, и примерно через две минуты появилась толпа, кричащая, вопящая, смеющаяся и шумящая, и восклицающая:",
+      "after": "Но под конец всё это кое-как дотянулось, и всё было продано — всё, кроме одного маленького никчёмного клочка на кладбище. Так что им надо было сбыть и <i>его</i> — я в жизни не видал такого жирафа, как этот король: ему всё хотелось проглотить <i>всё</i> подряд. Ну, пока они этим занимались, причалил пароход, и минуты через две подвалила толпа: все орали, вопили, хохотали, дурачились и выкрикивали:"
+    },
+    {
+      "source_id": "043-031-0101",
+      "before": "<i>«Вот</i> вам соперники! Вот вам две группы наследников старого Питера Уилкса — платите деньги и выбирайте!»",
+      "after": "— <i>Вот</i> вам и конкурирующая фирма! Вот вам две партии наследников старого Питера Уилкса — платите денежки и выбирайте!"
+    },
+    {
+      "source_id": "043-031-0102",
+      "before": "«Настоящие братья»",
+      "after": "Настоящие братья"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/031/batch005.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKMDwjQG4YutZSHHw9Gu",
+    "usage": {
+      "input_tokens": 3077,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 590,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKMELgGzxZpiEJs2stRL",
+        "usage": {
+          "input_tokens": 3693,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 549,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-031-0100",
+          "verdict": "PASS",
+          "reason": "Faithful: sale dragged through, graveyard lot, king as 'girafft', steamboat, crowd noise; italics on that/everything preserved; colloquial voice fits. Prior correction verified."
+        },
+        {
+          "source_id": "043-031-0101",
+          "verdict": "PASS",
+          "reason": "Italic 'Here's', opposition line, two sets of heirs and the pay-and-choose saying are conveyed idiomatically; dialogue dash correct. Prior correction verified."
+        },
+        {
+          "source_id": "043-031-0102",
+          "verdict": "PASS",
+          "reason": "Caption 'The True Brothers' translated accurately, with no extraneous quotation marks."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKMDwjQG4YutZSHHw9Gu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-031-0100\",\"target\":\"Но под конец всё это кое-как дотянулось, и всё было продано — всё, кроме одного маленького никчёмного клочка на кладбище. Так что им надо было сбыть и <i>его</i> — я в жизни не видал такого жирафа, как этот король: ему всё хотелось проглотить <i>всё</i> подряд. Ну, пока они этим занимались, причалил пароход, и минуты через две подвалила толпа: все орали, вопили, хохотали, дурачились и выкрикивали:\",\"target_id\":\"ru-043-031-0100\"},{\"source_id\":\"043-031-0101\",\"target\":\"— <i>Вот</i> вам и конкурирующая фирма! Вот вам две партии наследников старого Питера Уилкса — платите денежки и выбирайте!\",\"target_id\":\"ru-043-031-0101\"},{\"source_id\":\"043-031-0102\",\"target\":\"Настоящие братья\",\"target_id\":\"ru-043-031-0102\"}],\"review\":[{\"source_id\":\"043-031-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed italics on 'that' and 'everything', smoothed the clumsy participle chain, and restored the colloquial tone. Facts, agency and the steamboat landing are preserved.\"},{\"source_id\":\"043-031-0101\",\"verdict\":\"CORRECTED\",\"reason\":\"Replaced guillemets with a Russian dialogue dash, moved the italic to 'Вот', rendered 'opposition line' idiomatically, and kept the proverb-like ending.\"},{\"source_id\":\"043-031-0102\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption retained without added quotation marks; the meaning is preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3077,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 590,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
