@@ -1,0 +1,130 @@
+{
+  "unit": 17,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-017-0060",
+      "target": "— Ну так <i>вот</i>! Будь оно неладно, почему ж он не <i>говорит</i> как человек? Ты мне <i>на это</i> ответь!",
+      "source_sha256": "99aaa6ad7fff4f4a0678da30a3240a2a170f1c10069009694c82dd1c9d01844e",
+      "target_id": "ru-043-017-0060",
+      "tag": "p",
+      "target_sha256": "2834e4be965fb44d265042838edc0044900172de8539fa6fca7d2a6889152b41"
+    },
+    {
+      "source_id": "043-017-0061",
+      "target": "Я понял, что слова тратить без толку: негра спорить не научишь. Ну я и бросил.",
+      "source_sha256": "8540195de2d01c14ca5d3c6251e88e0267d8c734785682f6ca511949fa07c960",
+      "target_id": "ru-043-017-0061",
+      "tag": "p",
+      "target_sha256": "df89636c203cbdc876daf3cb614c5c600c9a2667626eadd8faae8771827541bc"
+    },
+    {
+      "source_id": "043-017-0062",
+      "target": "«Мы бы продали плот»",
+      "source_sha256": "99efb3ee5a7f82b85a6542a72e561edf9e3156d51c25c2f7dfce290b980196f1",
+      "target_id": "ru-043-017-0062",
+      "tag": "source_caption",
+      "target_sha256": "9423e6a56aabec777a9e3dba81e3ab0dfb1251e6e25fb0145b92f51baf3765c7"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-017-0060",
+      "verdict": "CORRECTED",
+      "reason": "Replaced guillemets with Russian dialogue dash, matching previous rows. Restored Jim's argumentative sense ('Well, then!' / 'talk like a man'), 'man' as human being, and italic emphasis on 'well', 'talk', 'that'."
+    },
+    {
+      "source_id": "043-017-0061",
+      "verdict": "CORRECTED",
+      "reason": "Made the narrator's voice more colloquial. Kept the historical slur's meaning as 'негр', the idea of not being able to teach arguing, and 'So I quit' as a conclusion."
+    },
+    {
+      "source_id": "043-017-0062",
+      "verdict": "PASS",
+      "reason": "Caption is complete and accurate; conditional 'would sell' preserved, with no added text."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-017-0060",
+      "before": "«<i>Ну</i>, тогда! Чёрт возьми, почему он не <i>говорит</i> как мужчина? Ответь мне <i>на это!</i>»",
+      "after": "— Ну так <i>вот</i>! Будь оно неладно, почему ж он не <i>говорит</i> как человек? Ты мне <i>на это</i> ответь!"
+    },
+    {
+      "source_id": "043-017-0061",
+      "before": "Я понял, что нет смысла тратить слова — не научишь негра спорить. Так что я перестал.",
+      "after": "Я понял, что слова тратить без толку: негра спорить не научишь. Ну я и бросил."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/017/batch003.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKGYmJJBgLQW3UQmnnXp",
+    "usage": {
+      "input_tokens": 2244,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 443,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKGZ6MkvitpnziwtPdkC",
+        "usage": {
+          "input_tokens": 2530,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 435,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-017-0060",
+          "verdict": "PASS",
+          "reason": "Jim's retort is faithful: 'man' as 'человек' follows the previous 'Is a Frenchman a man?' reading; italics on вот/говорит/на это are preserved; the colloquial tone fits and the prior correction is verified."
+        },
+        {
+          "source_id": "043-017-0061",
+          "verdict": "PASS",
+          "reason": "Meaning, negation and the historical slur ('негра') are preserved; the narrator's colloquial voice and the 'So I quit' ending are kept. The prior correction is verified."
+        },
+        {
+          "source_id": "043-017-0062",
+          "verdict": "PASS",
+          "reason": "The caption is accurately translated, keeps its conditional 'would sell' sense, and is not turned into a chapter heading."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
