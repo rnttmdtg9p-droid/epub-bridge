@@ -1,0 +1,980 @@
+{
+  "unit": 11,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-011-0128",
+      "target": "— Да, и это была та самая девушка, которая ждала в гостиной и, возможно, слышала слова дяди о венце.",
+      "source_sha256": "d0fa5157421b337f38a8ba7a7a618fb1c8ff0eb66a4c9e0adeeed78081456d4f",
+      "target_id": "ru-045-011-0128",
+      "tag": "p",
+      "target_sha256": "af451431a9ada351f7849923f69e7e9a2b8075597da8caeefb23e1e83673b65f"
+    },
+    {
+      "source_id": "045-011-0129",
+      "target": "— Понимаю. Вы полагаете, что она могла выйти, чтобы рассказать об этом своему возлюбленному, и что вдвоём они могли замыслить ограбление.",
+      "source_sha256": "840d1b2bab60b9c4ef53f625b37385f50471cade1233f3fcc0144f39be7b501e",
+      "target_id": "ru-045-011-0129",
+      "tag": "p",
+      "target_sha256": "7486fccfdbd507ea08c286397faca0731f3570cec91b05c928118d80f8669cf2"
+    },
+    {
+      "source_id": "045-011-0130",
+      "target": "— Но какой толк во всех этих туманных теориях, — нетерпеливо воскликнул банкир, — когда я же сказал вам, что видел Артура с венцом в руках?",
+      "source_sha256": "6215d57ef845164fc0acf779615dd0056b81ac5da3b2b049edb50463d1de4f1a",
+      "target_id": "ru-045-011-0130",
+      "tag": "p",
+      "target_sha256": "43861b204ebdcf7d427be3674e054f20ef8a92b478a45bea91e8eeb2d64a5203"
+    },
+    {
+      "source_id": "045-011-0131",
+      "target": "— Подождите немного, мистер Холдер. К этому мы ещё вернёмся. Что до этой девушки, мисс Холдер: вы, полагаю, видели, как она вернулась через кухонную дверь?",
+      "source_sha256": "3911498e1ae9369c7faf5a547988757c47d584f1c2da2fd96a71c64bbf304fa9",
+      "target_id": "ru-045-011-0131",
+      "tag": "p",
+      "target_sha256": "b14ba01e84f8168fce50269f4081ddf854421ebe8c5a759c3210d927846fd414"
+    },
+    {
+      "source_id": "045-011-0132",
+      "target": "— Да; когда я пошла посмотреть, заперта ли дверь на ночь, я встретила её — она как раз проскальзывала внутрь. В темноте я увидела и того мужчину.",
+      "source_sha256": "151a56477036f1a5afcb56ab777b95530ee1caa4565dd31d6725870739102490",
+      "target_id": "ru-045-011-0132",
+      "tag": "p",
+      "target_sha256": "357f29063ce428656a92be5c4fabe0be4b97fd6aeeca7258bcbe33f2b5677342"
+    },
+    {
+      "source_id": "045-011-0133",
+      "target": "— Вы его знаете?",
+      "source_sha256": "da92cb667538bf8d7428e6b2c98aa019951a7dd723d94e7c31006c49f9fdada3",
+      "target_id": "ru-045-011-0133",
+      "tag": "p",
+      "target_sha256": "05f9649dcdb4befef33aa676241ed3fcd11d54d95f412e7d46da7ead25b7b537"
+    },
+    {
+      "source_id": "045-011-0134",
+      "target": "— О да! Это зеленщик, который развозит нам овощи. Его зовут Фрэнсис Проспер.",
+      "source_sha256": "2c64c1f3e366d5fabd2a4f0f07d5852bf4efacf06844834c7b22a77b967748a7",
+      "target_id": "ru-045-011-0134",
+      "tag": "p",
+      "target_sha256": "cf87bff0fc75fec0d47a4200d742d91f016901f20a2975d3463d0cbd4af14cdc"
+    },
+    {
+      "source_id": "045-011-0135",
+      "target": "— Он стоял, — сказал Холмс, — слева от двери, то есть дальше по дорожке, чем нужно, чтобы дойти до двери?",
+      "source_sha256": "cfa490d848f5802c74b7e270dc4126e8d315bc8506b729ef3912139f6fbf69e2",
+      "target_id": "ru-045-011-0135",
+      "tag": "p",
+      "target_sha256": "a3654bcf314012c67aa64bb94ab673e5e51c75d9d743c17dbb6824a9fcd59682"
+    },
+    {
+      "source_id": "045-011-0136",
+      "target": "— Да, именно так.",
+      "source_sha256": "90cd56906b1464d873c6ddf01c9ddc142b095df23499acff9519624d30c3993d",
+      "target_id": "ru-045-011-0136",
+      "tag": "p",
+      "target_sha256": "95fb0951b7cf7610d423685a1cbc5da5ba63da7d438d3975140ef52acff6b726"
+    },
+    {
+      "source_id": "045-011-0137",
+      "target": "— И у него деревянная нога?",
+      "source_sha256": "78ace88f47840a5b58dc052e7fc0b73309a966cf5edb4f5b4ce565e6e9f7a2fe",
+      "target_id": "ru-045-011-0137",
+      "tag": "p",
+      "target_sha256": "382c32069222a65f994af39dad93fd52795185e9b406ecf359b19a625d7322d5"
+    },
+    {
+      "source_id": "045-011-0138",
+      "target": "В выразительных чёрных глазах молодой леди мелькнуло что-то похожее на страх. — Да вы настоящий волшебник, — сказала она. — Откуда вы это знаете? — Она улыбнулась, но на худом, напряжённом лице Холмса не появилось ответной улыбки.",
+      "source_sha256": "80554b2045b83e0a314ab24957db6fa2f52709fd826e60c9eb48a20f4d3ad531",
+      "target_id": "ru-045-011-0138",
+      "tag": "p",
+      "target_sha256": "5cf4b10110e6f202b7f6ea95a7d46ddc0144f173b2df92d087bc8908724a4459"
+    },
+    {
+      "source_id": "045-011-0139",
+      "target": "— Теперь я охотно поднялся бы наверх, — сказал он. — Вероятно, мне захочется ещё раз осмотреть дом снаружи. Пожалуй, лучше сначала взглянуть на нижние окна.",
+      "source_sha256": "c3fe663b4631c29094a7c5038e7dda2560a4493a5ba5d304ca881ad2be0d5484",
+      "target_id": "ru-045-011-0139",
+      "tag": "p",
+      "target_sha256": "d4d8c57f2f2ce8ffcc1824b4504c86df121e15b6f55915c427910fe895155956"
+    },
+    {
+      "source_id": "045-011-0140",
+      "target": "Он быстро обошёл их одно за другим, задержавшись только у большого окна, которое выходило из холла в переулок у конюшни. Он открыл его и очень внимательно осмотрел подоконник в свою мощную лупу. — Теперь пойдём наверх, — сказал он наконец.",
+      "source_sha256": "d0509344b725547c6ef80e1e6956e32a6436e6bc01c3322b90d54ceb09a4a1c8",
+      "target_id": "ru-045-011-0140",
+      "tag": "p",
+      "target_sha256": "b4b2c3ae8d1b9a0ad7a3ae791619a07956517eb5b25cd92c64cfb6f38afdaa92"
+    },
+    {
+      "source_id": "045-011-0141",
+      "target": "Туалетная комната банкира была скромно обставленной маленькой комнатой с серым ковром, большим бюро и длинным зеркалом. Холмс прежде всего подошёл к бюро и пристально осмотрел замок.",
+      "source_sha256": "b7745bbc6fe6e105ec363e962802466aa49368948c82f53c26d78d8057c44fc4",
+      "target_id": "ru-045-011-0141",
+      "tag": "p",
+      "target_sha256": "bc5d6c11b697cfa6007ce85ead480fccff6e96129e796cc65ae91cba88548d41"
+    },
+    {
+      "source_id": "045-011-0142",
+      "target": "— Каким ключом его открывали? — спросил он.",
+      "source_sha256": "0e4b9fd7030ee436b91973c8816ee49a60bf8bf57db96c2479689dd6c7d039af",
+      "target_id": "ru-045-011-0142",
+      "tag": "p",
+      "target_sha256": "4679776c0afa738c44439f85250f6939a1e0d270d206635bbbfe2f288b10850f"
+    },
+    {
+      "source_id": "045-011-0143",
+      "target": "— Тем, на который указал сам мой сын, — от шкафа в чулане.",
+      "source_sha256": "6413448e04d08318fc7491ff5589da305c388723e0765b648e4f05691e0dcf65",
+      "target_id": "ru-045-011-0143",
+      "tag": "p",
+      "target_sha256": "72d95057a53dc58781e552b1649e38551b982c50e063417be08ec1b51312c261"
+    },
+    {
+      "source_id": "045-011-0144",
+      "target": "— Он у вас здесь?",
+      "source_sha256": "e6e936e562bb104716d23ff15b571e2d227f019f22803108f21d0737a6684172",
+      "target_id": "ru-045-011-0144",
+      "tag": "p",
+      "target_sha256": "42039f05cd4b909d3a56249d5eb1e5727825b1a6a356e4b3031335bc74fe8716"
+    },
+    {
+      "source_id": "045-011-0145",
+      "target": "— Вот он, на туалетном столике.",
+      "source_sha256": "b41e547263b5745e201e7f2bd325725a907996bf2d172bf25ccb23fe09d1e95c",
+      "target_id": "ru-045-011-0145",
+      "tag": "p",
+      "target_sha256": "32c96ec2fa7ba5b1198e521a7870360b92d944f848e6c8469c07596919936f1a"
+    },
+    {
+      "source_id": "045-011-0146",
+      "target": "Шерлок Холмс взял его и открыл бюро.",
+      "source_sha256": "52210a8767c5e992973a1b217d3c8f2e82ef24030b8740afc058a31b27098460",
+      "target_id": "ru-045-011-0146",
+      "tag": "p",
+      "target_sha256": "8ddec2bc3c609d3d74460b84b627b70a77f73922d35567a39b83eaf35adbe7b8"
+    },
+    {
+      "source_id": "045-011-0147",
+      "target": "— Замок бесшумный, — сказал он. — Неудивительно, что он вас не разбудил. В этом футляре, полагаю, венец. Нужно на него взглянуть. — Он открыл футляр, достал диадему и положил её на стол. Это был великолепный образец ювелирного искусства, а тридцать шесть камней были самыми прекрасными из всех, что я видел. С одной стороны венца был надломленный край, где оторвали угол с тремя камнями.",
+      "source_sha256": "bf188475e90cc343231c66aeecd4b06acfdeac52331abe47db3e75d6f2c2fa4b",
+      "target_id": "ru-045-011-0147",
+      "tag": "p",
+      "target_sha256": "fbd745fbd12c62e2fb83b6c5852db4319c4550a7ffae520adc60b36428601e94"
+    },
+    {
+      "source_id": "045-011-0148",
+      "target": "— Итак, мистер Холдер, — сказал Холмс, — вот угол, соответствующий тому, что так несчастливо утрачен. Не будете ли вы любезны отломить его?",
+      "source_sha256": "cccba45668c277a6f4a13ce5c46af917dbd5e82ac1b4b40b3a5c12bfcf7873bd",
+      "target_id": "ru-045-011-0148",
+      "tag": "p",
+      "target_sha256": "0474c45e5b4dd73bf782239b98a00af233566c91ff4aafbdcfd6e468f4ec5445"
+    },
+    {
+      "source_id": "045-011-0149",
+      "target": "Банкир отшатнулся в ужасе. — Я и помыслить об этом не мог бы, — сказал он.",
+      "source_sha256": "73a32f9ed17c4350da2f113e45fe7d93eca9084c19e44b1999e6da7d850114a5",
+      "target_id": "ru-045-011-0149",
+      "tag": "p",
+      "target_sha256": "1f6ef75197e33829ea5bca4891e5e1be0b82ca0fa7a862b9ea768d54ea9d3e62"
+    },
+    {
+      "source_id": "045-011-0150",
+      "target": "— Тогда попробую я. — Холмс вдруг приложил всю свою силу, но безрезультатно. — Чувствую, что он слегка поддаётся, — сказал он, — но хотя пальцы у меня необыкновенно сильные, мне пришлось бы немало повозиться, чтобы его сломать. Обыкновенный человек не смог бы этого сделать. А теперь, как вы думаете, что случилось бы, если бы я его сломал, мистер Холдер? Раздался бы звук, как от пистолетного выстрела. И вы уверяете, что всё это происходило в нескольких ярдах от вашей постели, а вы ничего не слышали?",
+      "source_sha256": "5c0ed7b40adca1f9eccd39bc62a8b5b0e87b6b10e6290c0213fcd5aab6f4dfe9",
+      "target_id": "ru-045-011-0150",
+      "tag": "p",
+      "target_sha256": "cd36f26013446035d99596b4d5f601e87497407bdf62557d5ad30085298f568c"
+    },
+    {
+      "source_id": "045-011-0151",
+      "target": "— Не знаю, что и думать. Для меня всё это тёмный лес.",
+      "source_sha256": "c4c811a8a31d3469fb89709890cd7473a83d9aeaca5321c3c8b144934abcccde",
+      "target_id": "ru-045-011-0151",
+      "tag": "p",
+      "target_sha256": "d9cd130262ff521961147bb3d430de7223e8f37495abf0ba345b3533a18c9fe5"
+    },
+    {
+      "source_id": "045-011-0152",
+      "target": "— Но, быть может, по ходу дела станет яснее. А что думаете вы, мисс Холдер?",
+      "source_sha256": "2cb0a4f1ce1531789827dc1248ab353958bf7a224a8a3dbf1bd9f4ba74960b7f",
+      "target_id": "ru-045-011-0152",
+      "tag": "p",
+      "target_sha256": "d15f0e52a5df9ce501d01ea71b19c6827ee6d325eb8fd9a77ff80d6b8703bfe1"
+    },
+    {
+      "source_id": "045-011-0153",
+      "target": "— Признаюсь, я по-прежнему разделяю недоумение дяди.",
+      "source_sha256": "78d1fc1f39a99700f402f9950d72fce455acc72d2d476cb9c96d3a31cd2e718a",
+      "target_id": "ru-045-011-0153",
+      "tag": "p",
+      "target_sha256": "e25500e54812d368d1b61fe9025bcf76d49c401d09086d45291ca569f334cb78"
+    },
+    {
+      "source_id": "045-011-0154",
+      "target": "— На вашем сыне не было ни башмаков, ни домашних туфель, когда вы его увидели?",
+      "source_sha256": "04aec66c856d963bbcd6707d3987eb36c3cd15290fcc1fe14a859aec1df6f7e7",
+      "target_id": "ru-045-011-0154",
+      "tag": "p",
+      "target_sha256": "b65c1e85ca913deca2ee9503ff47fbe47ae4d91c09189173e75d8445fb0d40a7"
+    },
+    {
+      "source_id": "045-011-0155",
+      "target": "— На нём не было ничего, кроме брюк и рубашки.",
+      "source_sha256": "4ab44263ca0cc53e68b94b3464af259a93186b5a2429d4e439a722cd49b48bd4",
+      "target_id": "ru-045-011-0155",
+      "tag": "p",
+      "target_sha256": "3832a4c0e5727e9344b4b739175e64a324d940e59b9ec6ccbc83997242e4e1c9"
+    },
+    {
+      "source_id": "045-011-0156",
+      "target": "— Благодарю вас. Нам, несомненно, необыкновенно повезло в этом расследовании, и только по нашей вине мы не сумеем разъяснить это дело. С вашего позволения, мистер Холдер, я продолжу теперь свои разыскания снаружи.",
+      "source_sha256": "dff0ce71d783d60d70e79a0f5df900293c9d33a45131aba1a220806198294a9f",
+      "target_id": "ru-045-011-0156",
+      "tag": "p",
+      "target_sha256": "3cd68c9306a81454b001a80ffa4f27dabad895d706a3415abe7e2430ed8d8e46"
+    },
+    {
+      "source_id": "045-011-0157",
+      "target": "Он пошёл один, по собственной просьбе, объяснив, что любые лишние следы могут затруднить его задачу. Он работал час или больше и наконец вернулся, с ногами, тяжёлыми от снега, и с лицом таким же непроницаемым, как всегда.",
+      "source_sha256": "4550c98623626bc830080b566d9ae401d86ecef67cdbeadf01fc0f22f145e20e",
+      "target_id": "ru-045-011-0157",
+      "tag": "p",
+      "target_sha256": "62e3d543f0788df89f4144af52494755c6e4b863cecc2440cf567d0ad809c667"
+    },
+    {
+      "source_id": "045-011-0158",
+      "target": "— Думаю, я теперь увидел всё, что можно было увидеть, мистер Холдер, — сказал он. — Лучше всего я услужу вам, вернувшись к себе на квартиру.",
+      "source_sha256": "552105c6404b60b5e97f9e43b37fe38075fa747c465950536a3d30059564eef6",
+      "target_id": "ru-045-011-0158",
+      "tag": "p",
+      "target_sha256": "a128d42e2fd751dc360c0d4b701dd3fba932a03563e1e2c37bf7cb0f6ba15fa0"
+    },
+    {
+      "source_id": "045-011-0159",
+      "target": "— Но камни, мистер Холмс! Где они?",
+      "source_sha256": "3c5674291a77b34c0299edc08784dc0a58de4398e4a9bd58391a29eb4cb4f6ef",
+      "target_id": "ru-045-011-0159",
+      "tag": "p",
+      "target_sha256": "3f34f0c2e1e083f0baa5e115b3fef86715828deb11fd759a5c58e15c5a0d08d8"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-011-0128",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue dash and 'coronet' as венец; 'may have heard' preserved."
+    },
+    {
+      "source_id": "045-011-0129",
+      "verdict": "CORRECTED",
+      "reason": "Improved the hedged inference wording."
+    },
+    {
+      "source_id": "045-011-0130",
+      "verdict": "CORRECTED",
+      "reason": "Changed 'корона' to 'венец' and made the idiom more natural."
+    },
+    {
+      "source_id": "045-011-0131",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed the sentence; the meaning is unchanged."
+    },
+    {
+      "source_id": "045-011-0132",
+      "verdict": "CORRECTED",
+      "reason": "Corrected 'I met her slipping in' and made the Russian natural."
+    },
+    {
+      "source_id": "045-011-0133",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "045-011-0134",
+      "verdict": "CORRECTED",
+      "reason": "'Greengrocer' rendered as зеленщик; the phrasing was smoothed."
+    },
+    {
+      "source_id": "045-011-0135",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "045-011-0136",
+      "verdict": "CORRECTED",
+      "reason": "Made the answer more natural."
+    },
+    {
+      "source_id": "045-011-0137",
+      "verdict": "CORRECTED",
+      "reason": "Smoother Russian; the clue is retained."
+    },
+    {
+      "source_id": "045-011-0138",
+      "verdict": "CORRECTED",
+      "reason": "Converted the quotation marks to dialogue dashes; wording polished."
+    },
+    {
+      "source_id": "045-011-0139",
+      "verdict": "CORRECTED",
+      "reason": "Made the register more natural."
+    },
+    {
+      "source_id": "045-011-0140",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue formatting and wording fixed."
+    },
+    {
+      "source_id": "045-011-0141",
+      "verdict": "CORRECTED",
+      "reason": "Corrected 'dressing-room' to туалетная комната."
+    },
+    {
+      "source_id": "045-011-0142",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "045-011-0143",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'lumber-room' to чулан."
+    },
+    {
+      "source_id": "045-011-0144",
+      "verdict": "CORRECTED",
+      "reason": "The key is singular (он), not plural."
+    },
+    {
+      "source_id": "045-011-0145",
+      "verdict": "CORRECTED",
+      "reason": "Corrected the plural 'они' to singular 'он'."
+    },
+    {
+      "source_id": "045-011-0146",
+      "verdict": "CORRECTED",
+      "reason": "Corrected 'комод' to бюро."
+    },
+    {
+      "source_id": "045-011-0147",
+      "verdict": "CORRECTED",
+      "reason": "Fixed mismatched quotation marks and 'coronet'; the wording is polished."
+    },
+    {
+      "source_id": "045-011-0148",
+      "verdict": "CORRECTED",
+      "reason": "Removed the stray quote mark; wording refined."
+    },
+    {
+      "source_id": "045-011-0149",
+      "verdict": "CORRECTED",
+      "reason": "Converted to dialogue format; the idiom is natural."
+    },
+    {
+      "source_id": "045-011-0150",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue markup, the gender of the object, and the idioms."
+    },
+    {
+      "source_id": "045-011-0151",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue dash and idiom."
+    },
+    {
+      "source_id": "045-011-0152",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue formatting; clearer wording."
+    },
+    {
+      "source_id": "045-011-0153",
+      "verdict": "CORRECTED",
+      "reason": "Removed the stray quote; formatting normalized."
+    },
+    {
+      "source_id": "045-011-0154",
+      "verdict": "CORRECTED",
+      "reason": "Slippers rendered precisely."
+    },
+    {
+      "source_id": "045-011-0155",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format."
+    },
+    {
+      "source_id": "045-011-0156",
+      "verdict": "CORRECTED",
+      "reason": "Improved the syntax and register."
+    },
+    {
+      "source_id": "045-011-0157",
+      "verdict": "CORRECTED",
+      "reason": "Fixed the awkward participles and 'at his own request'."
+    },
+    {
+      "source_id": "045-011-0158",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; 'rooms' and the nuance are preserved."
+    },
+    {
+      "source_id": "045-011-0159",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; 'gems' rendered as камни."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-011-0128",
+      "before": "«Да, и это была та самая девушка, которая ждала в гостиной и, возможно, слышала замечания дяди о короне».",
+      "after": "— Да, и это была та самая девушка, которая ждала в гостиной и, возможно, слышала слова дяди о венце."
+    },
+    {
+      "source_id": "045-011-0129",
+      "before": "— Понимаю. Вы делаете вывод, что она, возможно, вышла, чтобы рассказать об этом своему возлюбленному, и что они вдвоём, возможно, спланировали ограбление.",
+      "after": "— Понимаю. Вы полагаете, что она могла выйти, чтобы рассказать об этом своему возлюбленному, и что вдвоём они могли замыслить ограбление."
+    },
+    {
+      "source_id": "045-011-0130",
+      "before": "— Но какой смысл во всех этих расплывчатых теориях, — нетерпеливо воскликнул банкир, — ведь я же сказал вам, что видел Артура с короной в руках?",
+      "after": "— Но какой толк во всех этих туманных теориях, — нетерпеливо воскликнул банкир, — когда я же сказал вам, что видел Артура с венцом в руках?"
+    },
+    {
+      "source_id": "045-011-0131",
+      "before": "— Подождите немного, мистер Холдер. К этому мы ещё вернёмся. А что касается этой девушки, мисс Холдер. Вы, полагаю, видели, как она вернулась через кухонную дверь?",
+      "after": "— Подождите немного, мистер Холдер. К этому мы ещё вернёмся. Что до этой девушки, мисс Холдер: вы, полагаю, видели, как она вернулась через кухонную дверь?"
+    },
+    {
+      "source_id": "045-011-0132",
+      "before": "— Да; когда я пошла проверить, заперта ли дверь на ночь, я застала её пробирающуюся внутрь. Я тоже видела того мужчину в полумраке.",
+      "after": "— Да; когда я пошла посмотреть, заперта ли дверь на ночь, я встретила её — она как раз проскальзывала внутрь. В темноте я увидела и того мужчину."
+    },
+    {
+      "source_id": "045-011-0134",
+      "before": "— О, да! Это тот овощник, который привозит нам овощи. Его зовут Фрэнсис Проспер.",
+      "after": "— О да! Это зеленщик, который развозит нам овощи. Его зовут Фрэнсис Проспер."
+    },
+    {
+      "source_id": "045-011-0136",
+      "before": "— Да, он так и сделал.",
+      "after": "— Да, именно так."
+    },
+    {
+      "source_id": "045-011-0137",
+      "before": "— И это человек с деревянной ногой?",
+      "after": "— И у него деревянная нога?"
+    },
+    {
+      "source_id": "045-011-0138",
+      "before": "В выразительных чёрных глазах молодой леди мелькнуло нечто похожее на страх. «Вы же как волшебник, — сказала она. — Откуда вы это знаете?» Она улыбнулась, но на худощавом, напряжённом лице Холмса не появилось ответной улыбки.",
+      "after": "В выразительных чёрных глазах молодой леди мелькнуло что-то похожее на страх. — Да вы настоящий волшебник, — сказала она. — Откуда вы это знаете? — Она улыбнулась, но на худом, напряжённом лице Холмса не появилось ответной улыбки."
+    },
+    {
+      "source_id": "045-011-0139",
+      "before": "— Теперь я был бы очень рад подняться наверх, — сказал он. — Вероятно, мне захочется ещё раз осмотреть дом снаружи. Возможно, мне лучше взглянуть на нижние окна, прежде чем подниматься.",
+      "after": "— Теперь я охотно поднялся бы наверх, — сказал он. — Вероятно, мне захочется ещё раз осмотреть дом снаружи. Пожалуй, лучше сначала взглянуть на нижние окна."
+    },
+    {
+      "source_id": "045-011-0140",
+      "before": "Он быстро обошёл все окна, останавливаясь лишь у большого, выходившего из холла на переулок, ведущий к конюшне. Он открыл его и очень тщательно осмотрел подоконник с помощью своего мощного увеличительного стекла. «Теперь пойдём наверх», — сказал он наконец.",
+      "after": "Он быстро обошёл их одно за другим, задержавшись только у большого окна, которое выходило из холла в переулок у конюшни. Он открыл его и очень внимательно осмотрел подоконник в свою мощную лупу. — Теперь пойдём наверх, — сказал он наконец."
+    },
+    {
+      "source_id": "045-011-0141",
+      "before": "Гардеробная банкира представляла собой скромно обставленную маленькую комнату с серым ковром, большим бюро и длинным зеркалом. Холмс сначала подошёл к бюро и пристально посмотрел на замок.",
+      "after": "Туалетная комната банкира была скромно обставленной маленькой комнатой с серым ковром, большим бюро и длинным зеркалом. Холмс прежде всего подошёл к бюро и пристально осмотрел замок."
+    },
+    {
+      "source_id": "045-011-0143",
+      "before": "— Тот, на который указал сам мой сын, — шкаф в кладовой.",
+      "after": "— Тем, на который указал сам мой сын, — от шкафа в чулане."
+    },
+    {
+      "source_id": "045-011-0144",
+      "before": "— Это у вас здесь?",
+      "after": "— Он у вас здесь?"
+    },
+    {
+      "source_id": "045-011-0145",
+      "before": "— Вот они на туалетном столике.",
+      "after": "— Вот он, на туалетном столике."
+    },
+    {
+      "source_id": "045-011-0146",
+      "before": "Шерлок Холмс поднял его и открыл комод.",
+      "after": "Шерлок Холмс взял его и открыл бюро."
+    },
+    {
+      "source_id": "045-011-0147",
+      "before": "— Это бесшумный замок, — сказал он. — Неудивительно, что он вас не разбудил. В этом футляре, полагаю, находится корона. Нам нужно на неё взглянуть». Он открыл футляр, достал диадему и положил её на стол. Это был великолепный образец ювелирного искусства, а тридцать шесть камней были самыми прекрасными из всех, что я когда-либо видел. С одной стороны короны был треснувший край, где оторвался уголок, в котором были закреплены три драгоценных камня.",
+      "after": "— Замок бесшумный, — сказал он. — Неудивительно, что он вас не разбудил. В этом футляре, полагаю, венец. Нужно на него взглянуть. — Он открыл футляр, достал диадему и положил её на стол. Это был великолепный образец ювелирного искусства, а тридцать шесть камней были самыми прекрасными из всех, что я видел. С одной стороны венца был надломленный край, где оторвали угол с тремя камнями."
+    },
+    {
+      "source_id": "045-011-0148",
+      "before": "— Итак, мистер Холдер, — сказал Холмс, — вот тот уголок, который соответствует тому, что, к сожалению, было утеряно. Не могли бы вы отломать его?»",
+      "after": "— Итак, мистер Холдер, — сказал Холмс, — вот угол, соответствующий тому, что так несчастливо утрачен. Не будете ли вы любезны отломить его?"
+    },
+    {
+      "source_id": "045-011-0149",
+      "before": "Банкир отшатнулся в ужасе. «Я и во сне не подумал бы об этом», — сказал он.",
+      "after": "Банкир отшатнулся в ужасе. — Я и помыслить об этом не мог бы, — сказал он."
+    },
+    {
+      "source_id": "045-011-0150",
+      "before": "— Тогда я попробую. — Холмс внезапно приложил всю свою силу, но безрезультатно. — Я чувствую, что она немного прогибается, — сказал он, — но, хотя у меня исключительно сильные пальцы, мне понадобилось бы много времени, чтобы сломать её. Обычный человек не смог бы этого сделать. Итак, как вы думаете, что произошло бы, если бы я её сломал, мистер Холдер? Раздался бы звук, похожий на выстрел из пистолета. Вы хотите сказать, что всё это произошло в нескольких ярдах от вашей постели, а вы ничего не слышали?»",
+      "after": "— Тогда попробую я. — Холмс вдруг приложил всю свою силу, но безрезультатно. — Чувствую, что он слегка поддаётся, — сказал он, — но хотя пальцы у меня необыкновенно сильные, мне пришлось бы немало повозиться, чтобы его сломать. Обыкновенный человек не смог бы этого сделать. А теперь, как вы думаете, что случилось бы, если бы я его сломал, мистер Холдер? Раздался бы звук, как от пистолетного выстрела. И вы уверяете, что всё это происходило в нескольких ярдах от вашей постели, а вы ничего не слышали?"
+    },
+    {
+      "source_id": "045-011-0151",
+      "before": "«Я не знаю, что и думать. Для меня это все как в тумане».",
+      "after": "— Не знаю, что и думать. Для меня всё это тёмный лес."
+    },
+    {
+      "source_id": "045-011-0152",
+      "before": "«Но, возможно, по мере того как мы будем продвигаться, ситуация прояснится. Что вы об этом думаете, мисс Холдер?»",
+      "after": "— Но, быть может, по ходу дела станет яснее. А что думаете вы, мисс Холдер?"
+    },
+    {
+      "source_id": "045-011-0153",
+      "before": "— Признаюсь, я по-прежнему разделяю недоумение моего дяди».",
+      "after": "— Признаюсь, я по-прежнему разделяю недоумение дяди."
+    },
+    {
+      "source_id": "045-011-0154",
+      "before": "— Ваш сын был без туфель и тапочек, когда вы его видели?",
+      "after": "— На вашем сыне не было ни туфель, ни домашних туфель, когда вы его увидели?"
+    },
+    {
+      "source_id": "045-011-0155",
+      "before": "«На нём не было ничего, кроме брюк и рубашки».",
+      "after": "— На нём не было ничего, кроме брюк и рубашки."
+    },
+    {
+      "source_id": "045-011-0156",
+      "before": "— Спасибо. Нам, безусловно, сопутствовала необыкновенная удача в ходе этого расследования, и будет исключительно нашей виной, если нам не удастся прояснить это дело. С вашего позволения, мистер Холдер, я теперь продолжу свои расследования на улице.",
+      "after": "— Благодарю вас. Нам, несомненно, необыкновенно повезло в этом расследовании, и только по нашей вине мы не сумеем разъяснить это дело. С вашего позволения, мистер Холдер, я продолжу теперь свои разыскания снаружи."
+    },
+    {
+      "source_id": "045-011-0157",
+      "before": "Он пошёл один, по собственному желанию, так как объяснил, что любые лишние следы могут усложнить его задачу. Он проработал час или больше, наконец вернувшись с ногами, утяжелёнными снегом, и с лицом, непостижимым, как всегда.",
+      "after": "Он пошёл один, по собственной просьбе, объяснив, что любые лишние следы могут затруднить его задачу. Он работал час или больше и наконец вернулся, с ногами, тяжёлыми от снега, и с лицом таким же непроницаемым, как всегда."
+    },
+    {
+      "source_id": "045-011-0158",
+      "before": "«Думаю, я уже увидел всё, что можно было увидеть, мистер Холдер, — сказал он. — Лучше всего я смогу вам помочь, вернувшись в свою квартиру».",
+      "after": "— Думаю, я теперь увидел всё, что можно было увидеть, мистер Холдер, — сказал он. — Лучше всего я услужу вам, вернувшись к себе на квартиру."
+    },
+    {
+      "source_id": "045-011-0159",
+      "before": "«Но драгоценные камни, мистер Холмс. Где они?»",
+      "after": "— Но камни, мистер Холмс! Где они?"
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKeRULC6ZTvzD4UudWLq",
+    "usage": {
+      "input_tokens": 36008,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3887,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKeT8SB73yyRg3Sa3JPA",
+        "usage": {
+          "input_tokens": 40203,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4588,
+          "output_tokens_details": {
+            "thinking_tokens": 706
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-011-0128",
+          "verdict": "PASS",
+          "reason": "Faithful: the maid in the drawing-room, possible overhearing of uncle's remarks about the coronet; idiomatic."
+        },
+        {
+          "source_id": "045-011-0129",
+          "verdict": "PASS",
+          "reason": "Inference, sweetheart and planned robbery preserved with correct modality."
+        },
+        {
+          "source_id": "045-011-0130",
+          "verdict": "PASS",
+          "reason": "Banker's impatience, vague theories and Arthur seen with coronet preserved."
+        },
+        {
+          "source_id": "045-011-0131",
+          "verdict": "PASS",
+          "reason": "Holmes's return to the point, the girl, and the presumption preserved."
+        },
+        {
+          "source_id": "045-011-0132",
+          "verdict": "PASS",
+          "reason": "Meeting her slipping in, and seeing the man in the gloom, accurate."
+        },
+        {
+          "source_id": "045-011-0133",
+          "verdict": "PASS",
+          "reason": "Exact short question."
+        },
+        {
+          "source_id": "045-011-0134",
+          "verdict": "PASS",
+          "reason": "Greengrocer and name Francis Prosper correct."
+        },
+        {
+          "source_id": "045-011-0135",
+          "verdict": "PASS",
+          "reason": "Position left of door and farther up the path preserved."
+        },
+        {
+          "source_id": "045-011-0136",
+          "verdict": "PASS",
+          "reason": "Affirmation faithful."
+        },
+        {
+          "source_id": "045-011-0137",
+          "verdict": "PASS",
+          "reason": "Wooden leg clue preserved."
+        },
+        {
+          "source_id": "045-011-0138",
+          "verdict": "PASS",
+          "reason": "Fear, magician remark, her smile and Holmes's lack of one all preserved."
+        },
+        {
+          "source_id": "045-011-0139",
+          "verdict": "PASS",
+          "reason": "Intentions and lower windows preserved; natural."
+        },
+        {
+          "source_id": "045-011-0140",
+          "verdict": "PASS",
+          "reason": "Windows, hall window onto stable lane, sill and lens all accurate."
+        },
+        {
+          "source_id": "045-011-0141",
+          "verdict": "PASS",
+          "reason": "Room furnishings and Holmes inspecting the lock preserved."
+        },
+        {
+          "source_id": "045-011-0142",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0143",
+          "verdict": "PASS",
+          "reason": "Key indicated by son, lumber-room cupboard; accurate."
+        },
+        {
+          "source_id": "045-011-0144",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0145",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0146",
+          "verdict": "PASS",
+          "reason": "Accurate; bureau correct."
+        },
+        {
+          "source_id": "045-011-0147",
+          "verdict": "PASS",
+          "reason": "Noiseless lock, case, diadem, thirty-six stones, torn corner with three gems all preserved."
+        },
+        {
+          "source_id": "045-011-0148",
+          "verdict": "PASS",
+          "reason": "Request to break the corresponding corner accurate and polite."
+        },
+        {
+          "source_id": "045-011-0149",
+          "verdict": "PASS",
+          "reason": "Horror and refusal preserved."
+        },
+        {
+          "source_id": "045-011-0150",
+          "verdict": "PASS",
+          "reason": "Strength, slight give, pistol-shot noise and the unheard event preserved."
+        },
+        {
+          "source_id": "045-011-0151",
+          "verdict": "PASS",
+          "reason": "Bewilderment preserved idiomatically."
+        },
+        {
+          "source_id": "045-011-0152",
+          "verdict": "PASS",
+          "reason": "Light/clarity metaphor rendered naturally; question to Miss Holder kept."
+        },
+        {
+          "source_id": "045-011-0153",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0154",
+          "verdict": "CORRECTED",
+          "reason": "Awkward 'туфель... домашних туфель' for shoes or slippers; now 'башмаков... домашних туфель'. Meaning of the clue unchanged."
+        },
+        {
+          "source_id": "045-011-0155",
+          "verdict": "PASS",
+          "reason": "Only trousers and shirt preserved."
+        },
+        {
+          "source_id": "045-011-0156",
+          "verdict": "PASS",
+          "reason": "Luck, fault, permission and outside investigation faithful."
+        },
+        {
+          "source_id": "045-011-0157",
+          "verdict": "PASS",
+          "reason": "Alone at his request, footmarks reason, hour of work, inscrutable face preserved."
+        },
+        {
+          "source_id": "045-011-0158",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0159",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "045-011-0154",
+          "before": "— На вашем сыне не было ни туфель, ни домашних туфель, когда вы его увидели?",
+          "after": "— На вашем сыне не было ни башмаков, ни домашних туфель, когда вы его увидели?"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKeV8F5B4p2VsgWAMpjL",
+        "usage": {
+          "input_tokens": 40300,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3829,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-011-0128",
+          "verdict": "PASS",
+          "reason": "Faithful: maid in drawing-room, possibly overheard remarks about the coronet; 'венец' fits."
+        },
+        {
+          "source_id": "045-011-0129",
+          "verdict": "PASS",
+          "reason": "Inference, sweetheart and planned robbery preserved with correct modality."
+        },
+        {
+          "source_id": "045-011-0130",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Banker's impatience, vague theories and Arthur with coronet preserved."
+        },
+        {
+          "source_id": "045-011-0131",
+          "verdict": "PASS",
+          "reason": "Holmes's deferral, address to Miss Holder, presumption about kitchen door all kept."
+        },
+        {
+          "source_id": "045-011-0132",
+          "verdict": "PASS",
+          "reason": "Mary meets maid slipping in and sees the man in the gloom; accurate."
+        },
+        {
+          "source_id": "045-011-0133",
+          "verdict": "PASS",
+          "reason": "Accurate short question."
+        },
+        {
+          "source_id": "045-011-0134",
+          "verdict": "PASS",
+          "reason": "Greengrocer, name and affirmation preserved."
+        },
+        {
+          "source_id": "045-011-0135",
+          "verdict": "PASS",
+          "reason": "Position left of door and farther up path preserved."
+        },
+        {
+          "source_id": "045-011-0136",
+          "verdict": "PASS",
+          "reason": "Affirmative confirmation, idiomatic."
+        },
+        {
+          "source_id": "045-011-0137",
+          "verdict": "PASS",
+          "reason": "Wooden leg question accurate."
+        },
+        {
+          "source_id": "045-011-0138",
+          "verdict": "PASS",
+          "reason": "Fear, magician remark, smile without answering smile all preserved."
+        },
+        {
+          "source_id": "045-011-0139",
+          "verdict": "PASS",
+          "reason": "Holmes's intentions and lower windows preserved."
+        },
+        {
+          "source_id": "045-011-0140",
+          "verdict": "PASS",
+          "reason": "Window to stable lane, sill examined with lens, going upstairs; faithful."
+        },
+        {
+          "source_id": "045-011-0141",
+          "verdict": "PASS",
+          "reason": "Room description and lock inspection accurate."
+        },
+        {
+          "source_id": "045-011-0142",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0143",
+          "verdict": "PASS",
+          "reason": "Key indicated by son, lumber-room cupboard; fine."
+        },
+        {
+          "source_id": "045-011-0144",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0145",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0146",
+          "verdict": "PASS",
+          "reason": "Bureau, not chest; correct."
+        },
+        {
+          "source_id": "045-011-0147",
+          "verdict": "PASS",
+          "reason": "Noiseless lock, thirty-six stones, torn corner with three gems all preserved."
+        },
+        {
+          "source_id": "045-011-0148",
+          "verdict": "PASS",
+          "reason": "Polite request to break off corner preserved."
+        },
+        {
+          "source_id": "045-011-0149",
+          "verdict": "PASS",
+          "reason": "Banker's horror and refusal accurate."
+        },
+        {
+          "source_id": "045-011-0150",
+          "verdict": "PASS",
+          "reason": "Strength, slight give, pistol-shot noise, hearing nothing; faithful."
+        },
+        {
+          "source_id": "045-011-0151",
+          "verdict": "PASS",
+          "reason": "Idiomatic rendering of bewilderment."
+        },
+        {
+          "source_id": "045-011-0152",
+          "verdict": "PASS",
+          "reason": "Hope of clarity and question to Miss Holder preserved."
+        },
+        {
+          "source_id": "045-011-0153",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0154",
+          "verdict": "PASS",
+          "reason": "Shoes or slippers corrected from duplicate 'туфель'; accurate."
+        },
+        {
+          "source_id": "045-011-0155",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0156",
+          "verdict": "PASS",
+          "reason": "Luck, fault, permission and outside investigation preserved."
+        },
+        {
+          "source_id": "045-011-0157",
+          "verdict": "PASS",
+          "reason": "Alone, reason, hour, snowy feet, inscrutable face all preserved."
+        },
+        {
+          "source_id": "045-011-0158",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-011-0159",
+          "verdict": "PASS",
+          "reason": "Accurate and natural."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
