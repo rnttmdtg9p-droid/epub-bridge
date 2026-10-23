@@ -1,0 +1,13 @@
+{
+  "text": [
+    "<p>Comprenez-vous ?\n</p>",
+    "<p>Je ne comprends pas.\n</p>",
+    "<p>Oui, oui !\n</p>",
+    "<p>1,630 francs.\n</p>"
+  ],
+  "source_lang": "FR",
+  "target_lang": "RU",
+  "model_type": "quality_optimized",
+  "tag_handling": "html",
+  "context": "New complete literary Russian translation of Jules Verne, Les enfants du capitaine Grant (1868), directly from French. Preserve every paragraph, fact, name, historical peculiarity and italic span. {\"book\": \"Les enfants du capitaine Grant\", \"chapter\": \"CHAPITRE XV — L’ESPAGNOL DE JACQUES PAGANEL.\", \"unit\": 15, \"previous_french\": [\"Vous êtes un brave homme.\", \"Un Patagon, sans doute.\", \"Répondez.\"], \"previous_reviewed_russian\": [\"Вы славный человек.\", \"Патагонец, должно быть.\", \"Отвечайте.\"]}"
+}

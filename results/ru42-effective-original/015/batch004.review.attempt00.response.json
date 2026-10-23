@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJrAdULsQSwCKmyc4BUa",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-note-028\",\"target\":\"Вы понимаете?\"},{\"source_id\":\"fr42c-note-029\",\"target\":\"Я не понимаю.\"},{\"source_id\":\"fr42c-note-030\",\"target\":\"Да, да!\"},{\"source_id\":\"fr42c-note-031\",\"target\":\"1 630 франков.\"}],\"review\":[{\"source_id\":\"fr42c-note-028\",\"verdict\":\"PASS\",\"reason\":\"Faithful rendering of the question; the note is complete and neutral.\"},{\"source_id\":\"fr42c-note-029\",\"verdict\":\"PASS\",\"reason\":\"The negation is preserved exactly; present tense and first person are correct.\"},{\"source_id\":\"fr42c-note-030\",\"verdict\":\"PASS\",\"reason\":\"The repeated affirmation and exclamation mark are preserved.\"},{\"source_id\":\"fr42c-note-031\",\"verdict\":\"PASS\",\"reason\":\"The figure and currency are preserved; the French decimal comma in a thousands position is correctly rendered with a Russian thousands space.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2239,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 348,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
