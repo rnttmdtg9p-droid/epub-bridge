@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJqEYedGq91i88titDoi",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-012-0019\",\"target\":\"Ещё целый час катапас блуждал, так сказать, наугад, но всё время поднимаясь в более высокие зоны горы. Наконец он был вынужден резко остановиться. Они оказались на дне неширокой долины, одного из тех узких ущелий, которые индейцы называют «кебрадас». Отвесная стена из порфира преграждала выход. Катапас, тщетно поискав проход, спешился, скрестил руки и стал ждать. Гленарван подошёл к нему.\"},{\"source_id\":\"fr42c-012-0020\",\"target\":\"— Вы заблудились? — спросил он.\"},{\"source_id\":\"fr42c-012-0021\",\"target\":\"— Нет, милорд, — ответил катапас.\"},{\"source_id\":\"fr42c-012-0022\",\"target\":\"— Однако мы ведь не в проходе Антуко?\"},{\"source_id\":\"fr42c-012-0023\",\"target\":\"— Мы в нём.\"},{\"source_id\":\"fr42c-012-0024\",\"target\":\"— Вы не ошибаетесь?\"},{\"source_id\":\"fr42c-012-0025\",\"target\":\"— Я не ошибаюсь. Вот остатки костра, которым пользовались индейцы, а вот следы, оставленные стадами кобыл и овец.\"},{\"source_id\":\"fr42c-012-0026\",\"target\":\"— Ну что ж! Значит, по этой дороге проходили!\"},{\"source_id\":\"fr42c-012-0027\",\"target\":\"— Да, но больше по ней не пройдут. Последнее землетрясение сделало её непроходимой…\"},{\"source_id\":\"fr42c-012-0028\",\"target\":\"— Для мулов, — ответил майор, — но не для людей.\"},{\"source_id\":\"fr42c-012-0029\",\"target\":\"— Ах! Это уж ваше дело, — ответил катапас, — я сделал что мог. Мои мулы и я готовы вернуться назад, если вам угодно пойти обратно и поискать другие проходы через Кордильеры.\"},{\"source_id\":\"fr42c-012-0030\",\"target\":\"— И это будет задержка?…\"},{\"source_id\":\"fr42c-012-0031\",\"target\":\"— Не меньше трёх дней.\"},{\"source_id\":\"fr42c-012-0032\",\"target\":\"Гленарван молча слушал слова катапаса. Тот, очевидно, держался условий своего договора. Его мулы не могли идти дальше. Однако, когда было предложено повернуть назад, Гленарван обернулся к своим спутникам и сказал им:\"},{\"source_id\":\"fr42c-012-0033\",\"target\":\"— Хотите всё-таки пройти?\"},{\"source_id\":\"fr42c-012-0034\",\"target\":\"— Мы хотим следовать за вами, — ответил Том Остин.\"},{\"source_id\":\"fr42c-012-0035\",\"target\":\"— И даже идти впереди вас, — добавил Паганель. — О чём, в конце концов, речь? Всего лишь о том, чтобы перейти горную цепь, противоположные склоны которой дают несравненно более лёгкий спуск! Сделав это, мы найдём аргентинских бакеано, которые проведут нас через пампасы, и быстрых лошадей, привыкших скакать по равнинам. Итак, вперёд, и без колебаний.\"},{\"source_id\":\"fr42c-012-0036\",\"target\":\"— Вперёд! — воскликнули спутники Гленарвана.\"},{\"source_id\":\"fr42c-012-0037\",\"target\":\"— Вы не пойдёте с нами? — спросил Гленарван у катапаса.\"},{\"source_id\":\"fr42c-012-0038\",\"target\":\"— Я погонщик мулов, — ответил погонщик.\"}],\"review\":[{\"source_id\":\"fr42c-012-0019\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed «катапаз» to «катапас», «стройная стена… под прямой угол» to sheer wall, restored italic-term sense, minor wording.\"},{\"source_id\":\"fr42c-012-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation normalized to Russian dash form.\"},{\"source_id\":\"fr42c-012-0021\",\"verdict\":\"CORRECTED\",\"reason\":\"Name spelling consistent: катапас.\"},{\"source_id\":\"fr42c-012-0022\",\"verdict\":\"CORRECTED\",\"reason\":\"«passage» rendered as проход, not ущелье.\"},{\"source_id\":\"fr42c-012-0023\",\"verdict\":\"CORRECTED\",\"reason\":\"«Мы на месте» changed to literal: we are in it.\"},{\"source_id\":\"fr42c-012-0024\",\"verdict\":\"PASS\",\"reason\":\"Accurate, negation preserved.\"},{\"source_id\":\"fr42c-012-0025\",\"verdict\":\"CORRECTED\",\"reason\":\"Fire «a servi aux Indiens» rendered as used by Indians.\"},{\"source_id\":\"fr42c-012-0026\",\"verdict\":\"CORRECTED\",\"reason\":\"Impersonal «on a passé» wrongly became «мы»; fixed.\"},{\"source_id\":\"fr42c-012-0027\",\"verdict\":\"CORRECTED\",\"reason\":\"Impersonal «on» corrected; no longer «мы».\"},{\"source_id\":\"fr42c-012-0028\",\"verdict\":\"CORRECTED\",\"reason\":\"«Impracticable aux mulets» is for mules, not onto them.\"},{\"source_id\":\"fr42c-012-0029\",\"verdict\":\"CORRECTED\",\"reason\":\"Name fixed and tone made idiomatic; «вернуться по своим следам» simplified.\"},{\"source_id\":\"fr42c-012-0030\",\"verdict\":\"CORRECTED\",\"reason\":\"Made plain future «ce sera un retard».\"},{\"source_id\":\"fr42c-012-0031\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray quotes/duplicated punctuation; closing quote belongs to dialogue run.\"},{\"source_id\":\"fr42c-012-0032\",\"verdict\":\"CORRECTED\",\"reason\":\"Name fixed; «conditions de son marché» and proposal passive refined.\"},{\"source_id\":\"fr42c-012-0033\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format fixed.\"},{\"source_id\":\"fr42c-012-0034\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-012-0035\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed baqueanos, pampas, ё, and phrasing.\"},{\"source_id\":\"fr42c-012-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored ё in «Вперёд».\"},{\"source_id\":\"fr42c-012-0037\",\"verdict\":\"CORRECTED\",\"reason\":\"Clarified «celui-ci» as Glenarvan; the draft's «тот» wrongly implied the catapaz.\"},{\"source_id\":\"fr42c-012-0038\",\"verdict\":\"PASS\",\"reason\":\"Accurate; repetition of muleteer is in source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10018,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2368,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
