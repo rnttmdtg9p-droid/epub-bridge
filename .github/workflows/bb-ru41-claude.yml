@@ -1,4 +1,4 @@
-name: BB Russian 41 Claude translation and review
+name: BB Russian 41 Claude translation and review recovery
 on:
   push:
     paths: ['.github/workflows/bb-ru41-claude.yml']
@@ -14,6 +14,10 @@ jobs:
     timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
+      - name: Reuse final checkpoint from preceding translation run
+        run: |
+          git fetch origin bb-ru41-claude-v5070-20261023
+          git checkout FETCH_HEAD -- results/ru41-claude
       - name: Configure chapter checkpoints
         run: |
           git config user.name "github-actions[bot]"
