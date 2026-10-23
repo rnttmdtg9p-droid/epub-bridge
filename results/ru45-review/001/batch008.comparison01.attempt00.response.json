@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKcbzSUXqbri8wWhvWwi",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"045-001-0256\",\"target\":\"— У Вашего Величества есть нечто, что я ценил бы ещё выше, — сказал Холмс.\"},{\"source_id\":\"045-001-0257\",\"target\":\"— Вам стоит лишь назвать это.\"},{\"source_id\":\"045-001-0258\",\"target\":\"— Эту фотографию!\"},{\"source_id\":\"045-001-0259\",\"target\":\"Король изумлённо уставился на него.\"},{\"source_id\":\"045-001-0260\",\"target\":\"— Фотографию Ирен! — воскликнул он. — Разумеется, если вы того желаете.\"},{\"source_id\":\"045-001-0261\",\"target\":\"— Благодарю Ваше Величество. Значит, в этом деле больше нечего делать. Имею честь пожелать вам доброго утра. — Он поклонился и, отвернувшись, не заметив руки, которую протянул ему король, отправился вместе со мной к себе на квартиру.\"},{\"source_id\":\"045-001-0262\",\"target\":\"Так великий скандал едва не потряс королевство Богемии, и так лучшие планы мистера Шерлока Холмса были разбиты женской хитростью. Прежде он любил потешаться над умом женщин, но в последнее время я не слышал от него ничего подобного. И когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда называет её почётным титулом — <i>та самая</i> женщина.\"}],\"review\":[{\"source_id\":\"045-001-0256\",\"verdict\":\"PASS\",\"reason\":\"Faithful: conditional 'should value even more highly' rendered as 'ценил бы ещё выше'; speaker and address preserved.\"},{\"source_id\":\"045-001-0257\",\"verdict\":\"PASS\",\"reason\":\"'You have but to name it' accurately and idiomatically conveyed.\"},{\"source_id\":\"045-001-0258\",\"target\":\"— Эту фотографию!\",\"verdict\":\"PASS\",\"reason\":\"Accusative fits the implied 'name' request; correct, no stray quotation marks.\"},{\"source_id\":\"045-001-0259\",\"verdict\":\"PASS\",\"reason\":\"King stares in amazement; agency and meaning preserved.\"},{\"source_id\":\"045-001-0260\",\"verdict\":\"PASS\",\"reason\":\"Exclamation, speaker, and conditional 'if you wish it' preserved; fluent.\"},{\"source_id\":\"045-001-0261\",\"verdict\":\"PASS\",\"reason\":\"Holmes's farewell, the unnoticed outstretched hand, and departure with Watson all preserved; dialogue formatting correct.\"},{\"source_id\":\"045-001-0262\",\"verdict\":\"PASS\",\"reason\":\"Final paragraph complete; 'Богемии' grammatical; italic 'the' preserved as <i>та самая</i>; all facts and humour retained.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 22347,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 937,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

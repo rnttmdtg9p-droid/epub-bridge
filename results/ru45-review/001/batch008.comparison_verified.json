@@ -1,0 +1,296 @@
+{
+  "unit": 1,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-001-0256",
+      "target": "— У Вашего Величества есть нечто, что я ценил бы ещё выше, — сказал Холмс.",
+      "source_sha256": "7bde4fba5bb794ba1a7410fafb599d17ab401cbaa0c2f5ec8a5c70b9bdcdaa74",
+      "target_id": "ru-045-001-0256",
+      "tag": "p",
+      "target_sha256": "a59124a9c739d51a093960472af1331fa11ac4df39949b51b4aff07c7899faa1"
+    },
+    {
+      "source_id": "045-001-0257",
+      "target": "— Вам стоит лишь назвать это.",
+      "source_sha256": "8178541f3b25195b9b9c992a9979c4750a96da66550c0828adf70c9043948187",
+      "target_id": "ru-045-001-0257",
+      "tag": "p",
+      "target_sha256": "7f2ed45cb4e9f0277dc1cdec24e12b7768b37a1736ce80e5924cd41e031486b5"
+    },
+    {
+      "source_id": "045-001-0258",
+      "target": "— Эту фотографию!",
+      "source_sha256": "afcf8098502aab138007af86ce64efb312367e330ce3d1982820216a5d1a69e7",
+      "target_id": "ru-045-001-0258",
+      "tag": "p",
+      "target_sha256": "af83be07716187398640a6c0f85db586f8e9800f41598b837b453fb046a7396a"
+    },
+    {
+      "source_id": "045-001-0259",
+      "target": "Король изумлённо уставился на него.",
+      "source_sha256": "7e3e41fc93be0837130c4680ace7585b02e01d63b17c4ddc9e067ee16562c4c0",
+      "target_id": "ru-045-001-0259",
+      "tag": "p",
+      "target_sha256": "491c7eaad73f256d1c9c8bd97dfbdbdfaea67b867707218cae2246d6430520d8"
+    },
+    {
+      "source_id": "045-001-0260",
+      "target": "— Фотографию Ирен! — воскликнул он. — Разумеется, если вы того желаете.",
+      "source_sha256": "02a312da22b931f2f34c2bda59640b6d698c2e15baaedbb7a5c3c627c8924f44",
+      "target_id": "ru-045-001-0260",
+      "tag": "p",
+      "target_sha256": "51ad9f35edc888d726b12a9a01ea9205128e35f5d63735ca9d27321be3fa9fc3"
+    },
+    {
+      "source_id": "045-001-0261",
+      "target": "— Благодарю Ваше Величество. Значит, в этом деле больше нечего делать. Имею честь пожелать вам доброго утра. — Он поклонился и, отвернувшись, не заметив руки, которую протянул ему король, отправился вместе со мной к себе на квартиру.",
+      "source_sha256": "fab1abcfed67fa778f257d205f58194e96556ce285f01bef0b8e48ed93ae5591",
+      "target_id": "ru-045-001-0261",
+      "tag": "p",
+      "target_sha256": "a1bfee0463af6a447c7ac1eada282ced9bdf2581e06a7646b2f06873f6f0b6a3"
+    },
+    {
+      "source_id": "045-001-0262",
+      "target": "Так великий скандал едва не потряс королевство Богемии, и так лучшие планы мистера Шерлока Холмса были разбиты женской хитростью. Прежде он любил потешаться над умом женщин, но в последнее время я не слышал от него ничего подобного. И когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда называет её почётным титулом — <i>та самая</i> женщина.",
+      "source_sha256": "2a3d7325b057ba768800ffcbc02a1fe5532d61b21c223328544e5b894fe95cc5",
+      "target_id": "ru-045-001-0262",
+      "tag": "p",
+      "target_sha256": "cf926c773205fcaa423dbbbb6871acc1a38744e6e486eb336db0166bbe2447c8"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-001-0256",
+      "verdict": "CORRECTED",
+      "reason": "Added missing dash logic kept; fixed conditional 'should value' as 'ценил бы ещё выше'."
+    },
+    {
+      "source_id": "045-001-0257",
+      "verdict": "CORRECTED",
+      "reason": "Draft invented 'что нужно'; rendered 'You have but to name it' faithfully."
+    },
+    {
+      "source_id": "045-001-0258",
+      "verdict": "CORRECTED",
+      "reason": "Removed erroneous quotation marks inside dialogue; exclamation preserved."
+    },
+    {
+      "source_id": "045-001-0259",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed word order; meaning unchanged."
+    },
+    {
+      "source_id": "045-001-0260",
+      "verdict": "CORRECTED",
+      "reason": "Removed spurious quotation marks; fixed dialogue punctuation and speaker attribution."
+    },
+    {
+      "source_id": "045-001-0261",
+      "verdict": "CORRECTED",
+      "reason": "Converted speech to dialogue dash format, restored 'chambers' naturally, fixed awkward phrasing."
+    },
+    {
+      "source_id": "045-001-0262",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'Bohemia' construction, 'wit' rendering, restored italic on 'the' woman, smoothed repetitions."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-001-0256",
+      "before": "— У Вашего Величества есть нечто, что я ценю ещё больше, — сказал Холмс.",
+      "after": "— У Вашего Величества есть нечто, что я ценил бы ещё выше, — сказал Холмс."
+    },
+    {
+      "source_id": "045-001-0257",
+      "before": "— Только назовите, что нужно.",
+      "after": "— Вам стоит лишь назвать это."
+    },
+    {
+      "source_id": "045-001-0258",
+      "before": "— «Эта фотография!»",
+      "after": "— Эту фотографию!"
+    },
+    {
+      "source_id": "045-001-0259",
+      "before": "Король уставился на него с изумлением.",
+      "after": "Король изумлённо уставился на него."
+    },
+    {
+      "source_id": "045-001-0260",
+      "before": "— «Фотография Ирен!» — воскликнул он. — «Конечно, если вы этого хотите».",
+      "after": "— Фотографию Ирен! — воскликнул он. — Разумеется, если вы того желаете."
+    },
+    {
+      "source_id": "045-001-0261",
+      "before": "«Благодарю Ваше Величество. Значит, в этом деле больше нечего делать. Имею честь пожелать Вам доброго утра». Он поклонился и, отвернувшись, не заметив руки, которую король протянул ему, отправился в моей компании в свои апартаменты.",
+      "after": "— Благодарю Ваше Величество. Значит, в этом деле больше нечего делать. Имею честь пожелать вам доброго утра. — Он поклонился и, отвернувшись, не заметив руки, которую протянул ему король, отправился вместе со мной к себе на квартиру."
+    },
+    {
+      "source_id": "045-001-0262",
+      "before": "И вот так великий скандал грозил потрясти королевство Богемия, и вот так лучшие планы мистера Шерлока Холмса были сорваны женским умом. Раньше он любил подшучивать над сообразительностью женщин, но в последнее время я не слышал, чтобы он это делал. А когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда под почётным титулом «та самая женщина».",
+      "after": "Так великий скандал едва не потряс королевство Богемию, и так лучшие планы мистера Шерлока Холмса были разбиты женской хитростью. Прежде он любил потешаться над умом женщин, но в последнее время я не слышал от него ничего подобного. И когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда называет её почётным титулом — <i>та самая</i> женщина."
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKcb1s2gGPKMNsE5D3Uk",
+    "usage": {
+      "input_tokens": 21096,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 933,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKcbZACf2nJsBLeSPiAv",
+        "usage": {
+          "input_tokens": 22037,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 912,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-001-0256",
+          "verdict": "PASS",
+          "reason": "Faithful: conditional 'should value even more highly' rendered correctly; speaker and address preserved."
+        },
+        {
+          "source_id": "045-001-0257",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic rendering of 'You have but to name it'."
+        },
+        {
+          "source_id": "045-001-0258",
+          "target": "— Эту фотографию!",
+          "verdict": "PASS",
+          "reason": "Correct elliptical reply; dash dialogue form, no stray quotes."
+        },
+        {
+          "source_id": "045-001-0259",
+          "verdict": "PASS",
+          "reason": "Agency and amazement preserved; fluent."
+        },
+        {
+          "source_id": "045-001-0260",
+          "verdict": "PASS",
+          "reason": "Exclamation, speaker and conditional consent preserved faithfully."
+        },
+        {
+          "source_id": "045-001-0261",
+          "verdict": "PASS",
+          "reason": "All details retained: thanks, honour, bow, unnoticed hand, departure with narrator to his rooms."
+        },
+        {
+          "source_id": "045-001-0262",
+          "verdict": "CORRECTED",
+          "reason": "Fixed case error 'королевство Богемию' to 'Богемии'. Rest faithful; italic 'the' preserved as <i>та самая</i>."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "045-001-0262",
+          "before": "Так великий скандал едва не потряс королевство Богемию, и так лучшие планы мистера Шерлока Холмса были разбиты женской хитростью. Прежде он любил потешаться над умом женщин, но в последнее время я не слышал от него ничего подобного. И когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда называет её почётным титулом — <i>та самая</i> женщина.",
+          "after": "Так великий скандал едва не потряс королевство Богемии, и так лучшие планы мистера Шерлока Холмса были разбиты женской хитростью. Прежде он любил потешаться над умом женщин, но в последнее время я не слышал от него ничего подобного. И когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда называет её почётным титулом — <i>та самая</i> женщина."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKcbzSUXqbri8wWhvWwi",
+        "usage": {
+          "input_tokens": 22347,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 937,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-001-0256",
+          "verdict": "PASS",
+          "reason": "Faithful: conditional 'should value even more highly' rendered as 'ценил бы ещё выше'; speaker and address preserved."
+        },
+        {
+          "source_id": "045-001-0257",
+          "verdict": "PASS",
+          "reason": "'You have but to name it' accurately and idiomatically conveyed."
+        },
+        {
+          "source_id": "045-001-0258",
+          "target": "— Эту фотографию!",
+          "verdict": "PASS",
+          "reason": "Accusative fits the implied 'name' request; correct, no stray quotation marks."
+        },
+        {
+          "source_id": "045-001-0259",
+          "verdict": "PASS",
+          "reason": "King stares in amazement; agency and meaning preserved."
+        },
+        {
+          "source_id": "045-001-0260",
+          "verdict": "PASS",
+          "reason": "Exclamation, speaker, and conditional 'if you wish it' preserved; fluent."
+        },
+        {
+          "source_id": "045-001-0261",
+          "verdict": "PASS",
+          "reason": "Holmes's farewell, the unnoticed outstretched hand, and departure with Watson all preserved; dialogue formatting correct."
+        },
+        {
+          "source_id": "045-001-0262",
+          "verdict": "PASS",
+          "reason": "Final paragraph complete; 'Богемии' grammatical; italic 'the' preserved as <i>та самая</i>; all facts and humour retained."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
