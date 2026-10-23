@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 19654)
-Total output lines: 763
-
 {
   "state": "TWO_PRIMARY_PRINT_CONFIRMED_SOURCE_ARGUMENT_ERRATA",
   "items": [
@@ -305,7 +302,122 @@ Total output lines: 763
           "tag": "p",
           "text": "“All right. I don’t mind; but I say it’s a fool way, anyhow. Say, do we kill the women, too?”",
           "sha256": "ddd91ed4898543fea2f6839647a90dc13ee180102d5d750cc2c6fb82dd5ed120",
-          "source_location": "div.ch…3654 tokens truncated… the feet on the floor and blowing noses—because people always blows them more at a funeral than they do at other places except church."
+          "source_location": "div.chapter[7]/*[39]",
+          "source_html": "“All right. I don’t mind; but I say it’s a fool way, anyhow. Say, do we kill the women, too?”"
+        },
+        {
+          "id": "043-005-0040",
+          "tag": "p",
+          "text": "“Well, Ben Rogers, if I was as ignorant as you I wouldn’t let on. Kill the women? No; nobody ever saw anything in the books like that. You fetch them to the cave, and you’re always as polite as pie to them; and by-and-by they fall in love with you, and never want to go home any more.”",
+          "sha256": "f587d2b3ebd0e8184306bb0eb0a62682a8fb9055d383ed5d889609e6fee4ac12",
+          "source_location": "div.chapter[7]/*[40]",
+          "source_html": "“Well, Ben Rogers, if I was as ignorant as you I wouldn’t let on. Kill the women? No; nobody ever saw anything in the books like that. You fetch them to the cave, and you’re always as polite as pie to them; and by-and-by they fall in love with you, and never want to go home any more.”"
+        },
+        {
+          "id": "043-005-0041",
+          "tag": "p",
+          "text": "“Well, if that’s the way I’m agreed, but I don’t take no stock in it. Mighty soon we’ll have the cave so cluttered up with women, and fellows waiting to be ransomed, that there won’t be no place for the robbers. But go ahead, I ain’t got nothing to say.”",
+          "sha256": "091158534a49fe9848f27fcfdb7c7cfd362340b1e90786cd63fbb04ea0cf27ae",
+          "source_location": "div.chapter[7]/*[41]",
+          "source_html": "“Well, if that’s the way I’m agreed, but I don’t take no stock in it. Mighty soon we’ll have the cave so cluttered up with women, and fellows waiting to be ransomed, that there won’t be no place for the robbers. But go ahead, I ain’t got nothing to say.”"
+        },
+        {
+          "id": "043-005-0042",
+          "tag": "p",
+          "text": "Little Tommy Barnes was asleep now, and when they waked him up he was scared, and cried, and said he wanted to go home to his ma, and didn’t want to be a robber any more.",
+          "sha256": "a92d5cac9866d6f9f2e61fcd7aa35bb1f066d55f216f5c1700acd18a16b9392f",
+          "source_location": "div.chapter[7]/*[42]",
+          "source_html": "Little Tommy Barnes was asleep now, and when they waked him up he was scared, and cried, and said he wanted to go home to his ma, and didn’t want to be a robber any more."
+        },
+        {
+          "id": "043-005-0043",
+          "tag": "p",
+          "text": "So they all made fun of him, and called him cry-baby, and that made him mad, and he said he would go straight and tell all the secrets. But Tom give him five cents to keep quiet, and said we would all go home and meet next week, and rob somebody and kill some people.",
+          "sha256": "cabf0793b49420ca2242a70f37139feeee3981698bfc32d2a042610c78c2db47",
+          "source_location": "div.chapter[7]/*[43]",
+          "source_html": "So they all made fun of him, and called him cry-baby, and that made him mad, and he said he would go straight and tell all the secrets. But Tom give him five cents to keep quiet, and said we would all go home and meet next week, and rob somebody and kill some people."
+        },
+        {
+          "id": "043-005-0044",
+          "tag": "p",
+          "text": "Ben Rogers said he couldn’t get out much, only Sundays, and so he wanted to begin next Sunday; but all the boys said it would be wicked to do it on Sunday, and that settled the thing. They agreed to get together and fix a day as soon as they could, and then we elected Tom Sawyer first captain and Jo Harper second captain of the Gang, and so started home.",
+          "sha256": "b793db4b26d4438f82c027fb2092eb355f66119638fa1842a688584f47179b6e",
+          "source_location": "div.chapter[7]/*[44]",
+          "source_html": "Ben Rogers said he couldn’t get out much, only Sundays, and so he wanted to begin next Sunday; but all the boys said it would be wicked to do it on Sunday, and that settled the thing. They agreed to get together and fix a day as soon as they could, and then we elected Tom Sawyer first captain and Jo Harper second captain of the Gang, and so started home."
+        },
+        {
+          "id": "043-005-0045",
+          "tag": "p",
+          "text": "I clumb up the shed and crept into my window just before day was breaking. My new clothes was all greased up and clayey, and I was dog-tired.",
+          "sha256": "d44611c3b2427b040964116560217efdd7beca398daedcba232d070f7913e506",
+          "source_location": "div.chapter[7]/*[45]",
+          "source_html": "I clumb up the shed and crept into my window just before day was breaking. My new clothes was all greased up and clayey, and I was dog-tired."
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "043-030-0001",
+        "tag": "source_argument",
+        "text": "The Funeral.—Satisfying Curiosity.—Suspicious of Huck.—Quick Sales and Small Profits",
+        "sha256": "dbf8ae034095585b26b1155ee0bc5b374df7d0420d8bbb8990a60cee502904a6",
+        "primary_source_page": "1885 printed contents, scan page19",
+        "primary_source_image_sha256": "cedf917cdbe138bc678f92e8190fb846522a3dcc57568991eb2b7eb67818341e",
+        "primary_source_xpath": "/html/body/div[3]/div/div[3]/main/div[3]/div[2]/div[1]/section/div[9]/div/table[27]/tbody/tr/td[1]/div/div[1]/div"
+      },
+      "prior_source_text": "The Funeral.—Satisfying Curiosity.—Suspicious of Huck,—Quick Sales and Small.",
+      "prior_source_sha256": "b10c922b45ba3b70368daff95c0e8ef6e6c1c9aaaf46c8fb950c03088acd4468",
+      "source_unit": 30,
+      "reason": "The primary printed page includes the final word Profits, omitted in the PG transcription.",
+      "actual_print_pixels_reviewed": true,
+      "source_body_context": [
+        {
+          "id": "043-030-0002",
+          "tag": "p",
+          "text": "I crept to their doors and listened; they was snoring. So I tiptoed along, and got down stairs all right. There warn’t a sound anywheres. I peeped through a crack of the dining-room door, and see the men that was watching the corpse all sound asleep on their chairs. The door was open into the parlor, where the corpse was laying, and there was a candle in both rooms. I passed along, and the parlor door was open; but I see there warn’t nobody in there but the remainders of Peter; so I shoved on by; but the front door was locked, and the key wasn’t there. Just then I heard somebody coming down the stairs, back behind me. I run in the parlor and took a swift look around, and the only place I see to hide the bag was in the coffin. The lid was shoved along about a foot, showing the dead man’s face down in there, with a wet cloth over it, and his shroud on. I tucked the money-bag in under the lid, just down beyond where his hands was crossed, which made me creep, they was so cold, and then I run back across the room and in behind the door.",
+          "sha256": "4d439ec50b14c19ecde22c4858ad100bfefb08efaa633ccf28ff7e130af38eb3",
+          "source_location": "div.chapter[32]/*[2]",
+          "source_html": "I crept to their doors and listened; they was snoring. So I tiptoed along, and got down stairs all right. There warn’t a sound anywheres. I peeped through a crack of the dining-room door, and see the men that was watching the corpse all sound asleep on their chairs. The door was open into the parlor, where the corpse was laying, and there was a candle in both rooms. I passed along, and the parlor door was open; but I see there warn’t nobody in there but the remainders of Peter; so I shoved on by; but the front door was locked, and the key wasn’t there. Just then I heard somebody coming down the stairs, back behind me. I run in the parlor and took a swift look around, and the only place I see to hide the bag was in the coffin. The lid was shoved along about a foot, showing the dead man’s face down in there, with a wet cloth over it, and his shroud on. I tucked the money-bag in under the lid, just down beyond where his hands was crossed, which made me creep, they was so cold, and then I run back across the room and in behind the door."
+        },
+        {
+          "id": "043-030-0003",
+          "tag": "p",
+          "text": "The person coming was Mary Jane. She went to the coffin, very soft, and kneeled down and looked in; then she put up her handkerchief, and I see she begun to cry, though I couldn’t hear her, and her back was to me. I slid out, and as I passed the dining-room I thought I’d make sure them watchers hadn’t seen me; so I looked through the crack, and everything was all right. They hadn’t stirred.",
+          "sha256": "9b6afcc537a9ee56b7909733edcacd0b478d1baeba598931c7f6bd547b382a26",
+          "source_location": "div.chapter[32]/*[3]",
+          "source_html": "The person coming was Mary Jane. She went to the coffin, very soft, and kneeled down and looked in; then she put up her handkerchief, and I see she begun to cry, though I couldn’t hear her, and her back was to me. I slid out, and as I passed the dining-room I thought I’d make sure them watchers hadn’t seen me; so I looked through the crack, and everything was all right. They hadn’t stirred."
+        },
+        {
+          "id": "043-030-0004",
+          "tag": "p",
+          "text": "I slipped up to bed, feeling ruther blue, on accounts of the thing playing out that way after I had took so much trouble and run so much resk about it. Says I, if it could stay where it is, all right; because when we get down the river a hundred mile or two I could write back to Mary Jane, and she could dig him up again and get it; but that ain’t the thing that’s going to happen; the thing that’s going to happen is, the money ’ll be found when they come to screw on the lid. Then the king ’ll get it again, and it ’ll be a long day before he gives anybody another chance to smouch it from him. Of course I wanted to slide down and get it out of there, but I dasn’t try it. Every minute it was getting earlier now, and pretty soon some of them watchers would begin to stir, and I might get catched—catched with six thousand dollars in my hands that nobody hadn’t hired me to take care of. I don’t wish to be mixed up in no such business as that, I says to myself.",
+          "sha256": "5975f368dff603c7d97260da52fecde5049b7a42b02121ae53e8d09c7afbdd7e",
+          "source_location": "div.chapter[32]/*[4]",
+          "source_html": "I slipped up to bed, feeling ruther blue, on accounts of the thing playing out that way after I had took so much trouble and run so much resk about it. Says I, if it could stay where it is, all right; because when we get down the river a hundred mile or two I could write back to Mary Jane, and she could dig him up again and get it; but that ain’t the thing that’s going to happen; the thing that’s going to happen is, the money ’ll be found when they come to screw on the lid. Then the king ’ll get it again, and it ’ll be a long day before he gives anybody another chance to smouch it from him. Of course I <i>wanted</i> to slide down and get it out of there, but I dasn’t try it. Every minute it was getting earlier now, and pretty soon some of them watchers would begin to stir, and I might get catched—catched with six thousand dollars in my hands that nobody hadn’t hired me to take care of. I don’t wish to be mixed up in no such business as that, I says to myself."
+        },
+        {
+          "id": "043-030-0005",
+          "tag": "p",
+          "text": "When I got down stairs in the morning the parlor was shut up, and the watchers was gone. There warn’t nobody around but the family and the widow Bartley and our tribe. I watched their faces to see if anything had been happening, but I couldn’t tell.",
+          "sha256": "4e2308c547796e4b5dfa3b4aa29d53691444c53631dd2e0eeb09f9ecf2c50739",
+          "source_location": "div.chapter[32]/*[5]",
+          "source_html": "When I got down stairs in the morning the parlor was shut up, and the watchers was gone. There warn’t nobody around but the family and the widow Bartley and our tribe. I watched their faces to see if anything had been happening, but I couldn’t tell."
+        },
+        {
+          "id": "043-030-0006",
+          "tag": "p",
+          "text": "Towards the middle of the day the undertaker come with his man, and they set the coffin in the middle of the room on a couple of chairs, and then set all our chairs in rows, and borrowed more from the neighbors till the hall and the parlor and the dining-room was full. I see the coffin lid was the way it was before, but I dasn’t go to look in under it, with folks around.",
+          "sha256": "1a2d9d0794a9e1b7ac4b4eb5eec456bb840b361245a7925f6069a95f697ee156",
+          "source_location": "div.chapter[32]/*[6]",
+          "source_html": "Towards the middle of the day the undertaker come with his man, and they set the coffin in the middle of the room on a couple of chairs, and then set all our chairs in rows, and borrowed more from the neighbors till the hall and the parlor and the dining-room was full. I see the coffin lid was the way it was before, but I dasn’t go to look in under it, with folks around."
+        },
+        {
+          "id": "043-030-0007",
+          "tag": "p",
+          "text": "Then the people begun to flock in, and the beats and the girls took seats in the front row at the head of the coffin, and for a half an hour the people filed around slow, in single rank, and looked down at the dead man’s face a minute, and some dropped in a tear, and it was all very still and solemn, only the girls and the beats holding handkerchiefs to their eyes and keeping their heads bent, and sobbing a little. There warn’t no other sound but the scraping of the feet on the floor and blowing noses—because people always blows them more at a funeral than they do at other places except church.",
+          "sha256": "5cc80957e8f0e0b34606470705d534f0a74ff99ca2218de0038b301136d4e4a4",
+          "source_location": "div.chapter[32]/*[7]",
+          "source_html": "Then the people begun to flock in, and the beats and the girls took seats in the front row at the head of the coffin, and for a half an hour the people filed around slow, in single rank, and looked down at the dead man’s face a minute, and some dropped in a tear, and it was all very still and solemn, only the girls and the beats holding handkerchiefs to their eyes and keeping their heads bent, and sobbing a little. There warn’t no other sound but the scraping of the feet on the floor and blowing noses—because people always blows them more at a funeral than they do at other places except church."
         },
         {
           "id": "043-030-0008",
