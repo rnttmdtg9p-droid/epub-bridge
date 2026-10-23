@@ -1,0 +1,26 @@
+name: BB Russian43 two source bound editorial corrections
+on:
+  push:
+    paths: ['.github/workflows/bb-ru43-editorial-two.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Review every spelling correction and independently compare stable final text
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru43_editorial_two.py
+      - name: Preserve actual source, translation, review and correction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru43-two-editorial-comparison-v5070
+          path: results/ru43-editorial-two/
+          retention-days: 90
+          if-no-files-found: error
