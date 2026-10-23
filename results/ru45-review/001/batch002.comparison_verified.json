@@ -1,0 +1,802 @@
+{
+  "unit": 1,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-001-0064",
+      "target": "— Именно так. Но как…",
+      "source_sha256": "3f356d6f8484aeeec7f93bdfaf7621cb1003df9b5b6db3cc0c91040ed4d18b69",
+      "target_id": "ru-045-001-0064",
+      "tag": "p",
+      "target_sha256": "391cf30686266014d68b9d5a129cdc36354f23d68a365ccc4c08ab23672ab046"
+    },
+    {
+      "source_id": "045-001-0065",
+      "target": "— Был ли тайный брак?",
+      "source_sha256": "679a3afb85f934e972c7a7b8d6224df4c2c345919258a46db7be1f0e354e04ab",
+      "target_id": "ru-045-001-0065",
+      "tag": "p",
+      "target_sha256": "64cf4a58f512cffa8ce146834f31268d2b8969d7b730b7d83eef2e8de1576cf9"
+    },
+    {
+      "source_id": "045-001-0066",
+      "target": "— Нет.",
+      "source_sha256": "5b3146dd2cefd5d03660f7162da58d69cf15ff03c1cede5c71fc3fbef10f74f0",
+      "target_id": "ru-045-001-0066",
+      "tag": "p",
+      "target_sha256": "69a324f4996b8b6a7d3d28f1e77fa840d2b3b98071502749b80a16035cbc0564"
+    },
+    {
+      "source_id": "045-001-0067",
+      "target": "— Никаких юридических бумаг или свидетельств?",
+      "source_sha256": "1fc78423fed0fc08eacddf580990026f863571750c0c87c5220795a5335a49c5",
+      "target_id": "ru-045-001-0067",
+      "tag": "p",
+      "target_sha256": "642c1ee002e3b714211ba9898e09f04471d641f8baa6ba559cb02f4b7e049167"
+    },
+    {
+      "source_id": "045-001-0068",
+      "target": "— Никаких.",
+      "source_sha256": "5b3146dd2cefd5d03660f7162da58d69cf15ff03c1cede5c71fc3fbef10f74f0",
+      "target_id": "ru-045-001-0068",
+      "tag": "p",
+      "target_sha256": "3e62ef452d3f09f20aef8cb9a41529c54304ab60c13e4b430e4d6c25f2874898"
+    },
+    {
+      "source_id": "045-001-0069",
+      "target": "— Тогда я не понимаю вас, ваше величество. Если эта молодая особа предъявит свои письма с целью шантажа или с какой-либо иной, как она докажет их подлинность?",
+      "source_sha256": "f62dc71a750cdf669f15e5230b1a31e5c90253dcc70711504f89e6f3ebddd02a",
+      "target_id": "ru-045-001-0069",
+      "tag": "p",
+      "target_sha256": "93f708b42ed485d86786b5d1a46a1c367b2f9b9e22b7d4e7be1ac9f8a03f3ad9"
+    },
+    {
+      "source_id": "045-001-0070",
+      "target": "— Есть почерк.",
+      "source_sha256": "1fece19e0c5e0465b851ba732b57f233643a786cbb0b6a0ddcaa686a0e23287d",
+      "target_id": "ru-045-001-0070",
+      "tag": "p",
+      "target_sha256": "3287daf39d277953db52adf9465a1c75f9efede9fcdd27613ddc2890c19c6b46"
+    },
+    {
+      "source_id": "045-001-0071",
+      "target": "— Пустяки! Подделка.",
+      "source_sha256": "10deed70732b73edfbc13cabfc3e0d984a992c31bb30197b2f217addcd85858a",
+      "target_id": "ru-045-001-0071",
+      "tag": "p",
+      "target_sha256": "d424f2418ef3a75f62c3e1c46535cdc5cdc3c8cc42b811f7ebd746202e1bb030"
+    },
+    {
+      "source_id": "045-001-0072",
+      "target": "— Моя личная почтовая бумага.",
+      "source_sha256": "619671cb2f6e20e344618807af3719c21cb0dd62964520aa7f17e2b53efbaa71",
+      "target_id": "ru-045-001-0072",
+      "tag": "p",
+      "target_sha256": "1f789b596cfb3adf06a3c08908890beb6a99d277ce8c508d785465413af9ef64"
+    },
+    {
+      "source_id": "045-001-0073",
+      "target": "— Украдена.",
+      "source_sha256": "306b177db16988bb2550d066946c8ccc4f5b47df2930415ae6562b851106c986",
+      "target_id": "ru-045-001-0073",
+      "tag": "p",
+      "target_sha256": "13b9564afa21ea8f167276fadf987a1751efaf9db49c3372b142149de5c1b534"
+    },
+    {
+      "source_id": "045-001-0074",
+      "target": "— Моя собственная печать.",
+      "source_sha256": "e3d9481555d7d78c7190502c4ca7dc5a7fec0e03c83ff454b86d592861bc62d6",
+      "target_id": "ru-045-001-0074",
+      "tag": "p",
+      "target_sha256": "189c28775d24b1d406ab9e04e6dd76f987f52bd72a41af734816a479204c012f"
+    },
+    {
+      "source_id": "045-001-0075",
+      "target": "— Подделана.",
+      "source_sha256": "b0ca7f30af208d8cf1e6d24754dbeb5ce3cce60ea197f195899841cd80a45e17",
+      "target_id": "ru-045-001-0075",
+      "tag": "p",
+      "target_sha256": "10ccfcac271cf9ba7aef4644572a3c0b4e82903272760de99b67d2b866ea4c74"
+    },
+    {
+      "source_id": "045-001-0076",
+      "target": "— Моя фотография.",
+      "source_sha256": "ef33b37a03ceb32140e9a34a78efe367fcafc421e7e103088666fa9c38223e78",
+      "target_id": "ru-045-001-0076",
+      "tag": "p",
+      "target_sha256": "f38f7a1a6d323ce4e64252c320ac97640b299320982c3a339bc7178333b4860e"
+    },
+    {
+      "source_id": "045-001-0077",
+      "target": "— Куплена.",
+      "source_sha256": "30919cec8ed22ede3ad028be2451be04c28ed2f8d46aff1485643937cae1abd8",
+      "target_id": "ru-045-001-0077",
+      "tag": "p",
+      "target_sha256": "0a1adeb73077f232011263c150f531dd7baf54fcad8737e87c8c1b93861c5118"
+    },
+    {
+      "source_id": "045-001-0078",
+      "target": "— На фотографии мы сняты вдвоём.",
+      "source_sha256": "abafd7e8ad2351716ce594121b8946a8f97a64f9390f81463c0e3912fb2367f1",
+      "target_id": "ru-045-001-0078",
+      "tag": "p",
+      "target_sha256": "b575d498a85ef04361653c70e255b5af6309f0e7531579b60c0a11c7fe2ee47c"
+    },
+    {
+      "source_id": "045-001-0079",
+      "target": "— О боже! Это очень скверно! Ваше величество и впрямь совершили неосторожность.",
+      "source_sha256": "ae9eb38c64b3bfa853b3848095d5e7a6acaf01ebb1e15bda5ca0d0edfb34419e",
+      "target_id": "ru-045-001-0079",
+      "tag": "p",
+      "target_sha256": "84fb3c9664e7d6e3ba71431efbf2db133dd3d90ad9d51b804044b69586a7c23a"
+    },
+    {
+      "source_id": "045-001-0080",
+      "target": "— Я был вне себя — безумен.",
+      "source_sha256": "e3ab6dfa70db692c1783bd865ff13071b6b7968a1ab4a0f571786b40c8338aa6",
+      "target_id": "ru-045-001-0080",
+      "tag": "p",
+      "target_sha256": "21a0196ac18faaeee8f859fa20b7a1bc09eb8bb97a9edaf2a554fbaef1a4f4f6"
+    },
+    {
+      "source_id": "045-001-0081",
+      "target": "— Вы серьёзно скомпрометировали себя.",
+      "source_sha256": "659582a2a534f6f82365801ef14390bd9ae19adbc1c94f50f21fad5f78efa810",
+      "target_id": "ru-045-001-0081",
+      "tag": "p",
+      "target_sha256": "ce78c94782f24ec50bc47425d25f73b0b23e718f93c99cc866de9c7a7b3a0b8f"
+    },
+    {
+      "source_id": "045-001-0082",
+      "target": "— Я был тогда всего лишь кронпринцем. Я был молод. Мне и сейчас только тридцать.",
+      "source_sha256": "b036691a8fe0a2bfd096614ccc70dcaceda847e8ce61063ea6ec9c64d1ea65f1",
+      "target_id": "ru-045-001-0082",
+      "tag": "p",
+      "target_sha256": "5382850aa73e778cf139c689d3ee7d42fea3d107afda9c5e0d00c1e7ab319603"
+    },
+    {
+      "source_id": "045-001-0083",
+      "target": "— Её необходимо вернуть.",
+      "source_sha256": "c3647a1a19eeee83335c4325ab02e4b7bb0baca6eb6dfed770f83434940e2a58",
+      "target_id": "ru-045-001-0083",
+      "tag": "p",
+      "target_sha256": "798c78303ed3871a1b792b171819adea790a4660870695139a741b906554553b"
+    },
+    {
+      "source_id": "045-001-0084",
+      "target": "— Мы пытались, но безуспешно.",
+      "source_sha256": "7c2952864017f18f03c5a15a1bc70f1faa25c4832c2a1a2bced658540b17a9ff",
+      "target_id": "ru-045-001-0084",
+      "tag": "p",
+      "target_sha256": "474efe6520e243a286b6d4e2ea73d1d39b8688c45c3d0d4f1dc108492e79e64b"
+    },
+    {
+      "source_id": "045-001-0085",
+      "target": "— Ваше величество должны заплатить. Её нужно выкупить.",
+      "source_sha256": "385f9fcda664c918e45bdf66dc99a8dbc7242cdb1bc77211ba25f61ad2246ee4",
+      "target_id": "ru-045-001-0085",
+      "tag": "p",
+      "target_sha256": "9321364f096beeee55577ef9dcd2db3cb2f7546cc6fcad00a89063b3fabdf181"
+    },
+    {
+      "source_id": "045-001-0086",
+      "target": "— Она не продаст.",
+      "source_sha256": "1b3be65ae28b6aa2dd1b19e16c36110328f64632d3ff08e3687db6695f041467",
+      "target_id": "ru-045-001-0086",
+      "tag": "p",
+      "target_sha256": "cdd84ecf3ff6f62d9444bf377eb9f67f270c1ba85fd55f4c20d0a78054b22d24"
+    },
+    {
+      "source_id": "045-001-0087",
+      "target": "— Тогда выкрасть.",
+      "source_sha256": "b7fb1cc0ab02a4b611bed2713a89077d262dd83245f79b084c8bfc35cce02bdd",
+      "target_id": "ru-045-001-0087",
+      "tag": "p",
+      "target_sha256": "846144d690234956726f2eccb827b826b0e3be78be8f1de5eb7d1a9433072f32"
+    },
+    {
+      "source_id": "045-001-0088",
+      "target": "— Было предпринято пять попыток. Дважды нанятые мною взломщики обшаривали её дом. Однажды мы подменили маршрут её багажа, когда она путешествовала. Дважды её подстерегали на дороге. Результата нет.",
+      "source_sha256": "b493afef93bee8e8cc0a262b081d2a910c54a9dc8b62e34b130ce1888c82970c",
+      "target_id": "ru-045-001-0088",
+      "tag": "p",
+      "target_sha256": "4ee07b0ff9e8893df65e10f1097e15dd81c4ca976050c60d56ee244e1c02671a"
+    },
+    {
+      "source_id": "045-001-0089",
+      "target": "— Никаких следов?",
+      "source_sha256": "eb881b40ba5482cb50ada6f32df77033c39713b8c6b5a7869f9429923f090964",
+      "target_id": "ru-045-001-0089",
+      "tag": "p",
+      "target_sha256": "5630f7ba9832874b8c1941c95fb160d2df9fc970eb17771633d84a5ba23c04fc"
+    },
+    {
+      "source_id": "045-001-0090",
+      "target": "— Абсолютно никаких.",
+      "source_sha256": "21b2122d688f63608d3fc9f5679e96cb773afd4d3d75e3bb9a35e56ee677130a",
+      "target_id": "ru-045-001-0090",
+      "tag": "p",
+      "target_sha256": "84b931150299793d1e386cccb51dab2254684d0c56d54ced2170c7dd71da8d8c"
+    },
+    {
+      "source_id": "045-001-0091",
+      "target": "Холмс рассмеялся.\n— Это весьма изящная маленькая задача, — сказал он.",
+      "source_sha256": "2e21757c75e5edc9b6888116bb79f5d7b594ab7ccb3cd379d39d244cf92aa25a",
+      "target_id": "ru-045-001-0091",
+      "tag": "p",
+      "target_sha256": "d33a8f4fb249de7d221b143276b3bb51a53ad2d953b9c65750c4f37b68367a84"
+    },
+    {
+      "source_id": "045-001-0092",
+      "target": "— Но для меня очень серьёзная, — с упрёком возразил король.",
+      "source_sha256": "f7eb8db8e74d237f72f5ca89207c0c8c81d2885bd3c0a3d62a595b57e8e01789",
+      "target_id": "ru-045-001-0092",
+      "tag": "p",
+      "target_sha256": "10fd23956f453bebb38b9c31650b919c309d74d7cc2d8214ea3e6c97d4f7ad78"
+    },
+    {
+      "source_id": "045-001-0093",
+      "target": "— Очень, разумеется. И что она намерена сделать с фотографией?",
+      "source_sha256": "6312df15a897ba4cac67fe44629d87d80371bf1ed69af3432ce9e027ec1c31bc",
+      "target_id": "ru-045-001-0093",
+      "tag": "p",
+      "target_sha256": "c35b4db3ec64eb09bcd66f5c9b6ad0eed92dad2bf13d78c88985bc01d9200880"
+    },
+    {
+      "source_id": "045-001-0094",
+      "target": "— Погубить меня.",
+      "source_sha256": "851a08e16a6ed51c29c07a9706a3a8084666d7fbc5265d10fdb2d5779b20db05",
+      "target_id": "ru-045-001-0094",
+      "tag": "p",
+      "target_sha256": "176448e16ae867a6cbf88d33440ba2360bd1f0ecca6b79c632d5bb7de537e9ea"
+    },
+    {
+      "source_id": "045-001-0095",
+      "target": "— Но как?",
+      "source_sha256": "b455e5e4086930c6e43e0d4666c3766dd38117b8b4749269db80e7143a05789d",
+      "target_id": "ru-045-001-0095",
+      "tag": "p",
+      "target_sha256": "5792603244a8479b6fa75003187f0900fc225418eae4912c803912559dca1f66"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-001-0064",
+      "verdict": "CORRECTED",
+      "reason": "Converted quotation marks to dialogue dash for consistency; meaning preserved."
+    },
+    {
+      "source_id": "045-001-0065",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue dash formatting; question preserved."
+    },
+    {
+      "source_id": "045-001-0066",
+      "verdict": "CORRECTED",
+      "reason": "'None' answers marriage question: «Нет», not «Ничего»."
+    },
+    {
+      "source_id": "045-001-0067",
+      "verdict": "CORRECTED",
+      "reason": "Dash formatting; 'legal papers' rendered more naturally."
+    },
+    {
+      "source_id": "045-001-0068",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'Ничего' to «Никаких» matching documents; dash format."
+    },
+    {
+      "source_id": "045-001-0069",
+      "verdict": "CORRECTED",
+      "reason": "Improved fluency, lowercase «ваше величество» in address, 'other purposes' clarified."
+    },
+    {
+      "source_id": "045-001-0070",
+      "verdict": "CORRECTED",
+      "reason": "'The writing' as handwriting retained; dash format."
+    },
+    {
+      "source_id": "045-001-0071",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; 'Pooh' rendered «Пустяки»."
+    },
+    {
+      "source_id": "045-001-0072",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; note-paper as stationery."
+    },
+    {
+      "source_id": "045-001-0073",
+      "verdict": "CORRECTED",
+      "reason": "Gender agreement: paper is stolen (украдена)."
+    },
+    {
+      "source_id": "045-001-0074",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; content faithful."
+    },
+    {
+      "source_id": "045-001-0075",
+      "verdict": "CORRECTED",
+      "reason": "Seal is imitated: «Подделана» agreement; avoids confusion with 'forgery'."
+    },
+    {
+      "source_id": "045-001-0076",
+      "verdict": "CORRECTED",
+      "reason": "Nominative required, not accusative; dash format."
+    },
+    {
+      "source_id": "045-001-0077",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; agreement correct."
+    },
+    {
+      "source_id": "045-001-0078",
+      "verdict": "CORRECTED",
+      "reason": "More natural: both photographed together."
+    },
+    {
+      "source_id": "045-001-0079",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; lowercase address; 'indiscretion' as неосторожность."
+    },
+    {
+      "source_id": "045-001-0080",
+      "verdict": "CORRECTED",
+      "reason": "Draft awkward and spelling 'сошел'; simplified faithfully."
+    },
+    {
+      "source_id": "045-001-0081",
+      "verdict": "CORRECTED",
+      "reason": "'Compromised' restored rather than 'risk'."
+    },
+    {
+      "source_id": "045-001-0082",
+      "verdict": "CORRECTED",
+      "reason": "Crown Prince as кронпринц; 'but thirty now' kept."
+    },
+    {
+      "source_id": "045-001-0083",
+      "verdict": "CORRECTED",
+      "reason": "Gender: photograph feminine; 'recovered' → вернуть."
+    },
+    {
+      "source_id": "045-001-0084",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; faithful."
+    },
+    {
+      "source_id": "045-001-0085",
+      "verdict": "CORRECTED",
+      "reason": "Photograph feminine; plural polite address; 'bought' as выкупить."
+    },
+    {
+      "source_id": "045-001-0086",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; faithful."
+    },
+    {
+      "source_id": "045-001-0087",
+      "verdict": "CORRECTED",
+      "reason": "Fixed idiom: 'Then stolen' → выкрасть."
+    },
+    {
+      "source_id": "045-001-0088",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'diverted luggage' and 'waylaid'; result, dash format."
+    },
+    {
+      "source_id": "045-001-0089",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; faithful."
+    },
+    {
+      "source_id": "045-001-0090",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; agreement with 'никаких'."
+    },
+    {
+      "source_id": "045-001-0091",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue formatting fixed to dash."
+    },
+    {
+      "source_id": "045-001-0092",
+      "verdict": "CORRECTED",
+      "reason": "Improved phrasing 'very serious one'."
+    },
+    {
+      "source_id": "045-001-0093",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray quote marks; 'propose' as намерена."
+    },
+    {
+      "source_id": "045-001-0094",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; faithful."
+    },
+    {
+      "source_id": "045-001-0095",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; faithful."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-001-0064",
+      "before": "«Именно так. Но как…»",
+      "after": "— Именно так. Но как…"
+    },
+    {
+      "source_id": "045-001-0065",
+      "before": "«Был ли тайный брак?»",
+      "after": "— Был ли тайный брак?"
+    },
+    {
+      "source_id": "045-001-0066",
+      "before": "«Ничего».",
+      "after": "— Нет."
+    },
+    {
+      "source_id": "045-001-0067",
+      "before": "«Никаких юридических документов или свидетельств?»",
+      "after": "— Никаких юридических бумаг или свидетельств?"
+    },
+    {
+      "source_id": "045-001-0068",
+      "before": "«Ничего».",
+      "after": "— Никаких."
+    },
+    {
+      "source_id": "045-001-0069",
+      "before": "«Тогда я не могу понять, Ваше Величество. Если эта молодая особа предъявит свои письма с целью шантажа или для других целей, как она докажет их подлинность?»",
+      "after": "— Тогда я не понимаю вас, ваше величество. Если эта молодая особа предъявит свои письма с целью шантажа или с какой-либо иной, как она докажет их подлинность?"
+    },
+    {
+      "source_id": "045-001-0070",
+      "before": "«Вот почерк».",
+      "after": "— Есть почерк."
+    },
+    {
+      "source_id": "045-001-0071",
+      "before": "«Фу, фу! Подделка».",
+      "after": "— Пустяки! Подделка."
+    },
+    {
+      "source_id": "045-001-0072",
+      "before": "«Моя личная бумага для писем».",
+      "after": "— Моя личная почтовая бумага."
+    },
+    {
+      "source_id": "045-001-0073",
+      "before": "«Украден».",
+      "after": "— Украдена."
+    },
+    {
+      "source_id": "045-001-0074",
+      "before": "«Моя собственная печать».",
+      "after": "— Моя собственная печать."
+    },
+    {
+      "source_id": "045-001-0075",
+      "before": "«Подделка».",
+      "after": "— Подделана."
+    },
+    {
+      "source_id": "045-001-0076",
+      "before": "«Мою фотографию».",
+      "after": "— Моя фотография."
+    },
+    {
+      "source_id": "045-001-0077",
+      "before": "«Куплена».",
+      "after": "— Куплена."
+    },
+    {
+      "source_id": "045-001-0078",
+      "before": "«На фотографии были мы оба».",
+      "after": "— На фотографии мы сняты вдвоём."
+    },
+    {
+      "source_id": "045-001-0079",
+      "before": "«О, боже! Это очень плохо! Ваше Величество действительно совершило опрометчивый поступок».",
+      "after": "— О боже! Это очень скверно! Ваше величество и впрямь совершили неосторожность."
+    },
+    {
+      "source_id": "045-001-0080",
+      "before": "«Я был в безумном состоянии — сошел с ума».",
+      "after": "— Я был вне себя — безумен."
+    },
+    {
+      "source_id": "045-001-0081",
+      "before": "— Вы серьезно подвергли себя риску.",
+      "after": "— Вы серьёзно скомпрометировали себя."
+    },
+    {
+      "source_id": "045-001-0082",
+      "before": "«Тогда я был всего лишь наследным принцем. Я был молод. Сейчас мне всего тридцать».",
+      "after": "— Я был тогда всего лишь кронпринцем. Я был молод. Мне и сейчас только тридцать."
+    },
+    {
+      "source_id": "045-001-0083",
+      "before": "— Его нужно вернуть.",
+      "after": "— Её необходимо вернуть."
+    },
+    {
+      "source_id": "045-001-0084",
+      "before": "«Мы пытались, но потерпели неудачу».",
+      "after": "— Мы пытались, но безуспешно."
+    },
+    {
+      "source_id": "045-001-0085",
+      "before": "«Ваше Величество должно заплатить. Его нужно купить».",
+      "after": "— Ваше величество должны заплатить. Её нужно выкупить."
+    },
+    {
+      "source_id": "045-001-0086",
+      "before": "«Она не продаст».",
+      "after": "— Она не продаст."
+    },
+    {
+      "source_id": "045-001-0087",
+      "before": "«Значит, украсть».",
+      "after": "— Тогда выкрасть."
+    },
+    {
+      "source_id": "045-001-0088",
+      "before": "«Было предпринято пять попыток. Дважды нанятые мной грабители перевернули её дом вверх дном. Однажды мы перенаправили её багаж, когда она была в пути. Дважды её перехватывали на дороге. Ничего не вышло».",
+      "after": "— Было предпринято пять попыток. Дважды нанятые мною взломщики обшаривали её дом. Однажды мы подменили маршрут её багажа, когда она путешествовала. Дважды её подстерегали на дороге. Результата нет."
+    },
+    {
+      "source_id": "045-001-0089",
+      "before": "«Никаких следов?»",
+      "after": "— Никаких следов?"
+    },
+    {
+      "source_id": "045-001-0090",
+      "before": "«Абсолютно никакой».",
+      "after": "— Абсолютно никаких."
+    },
+    {
+      "source_id": "045-001-0091",
+      "before": "Холмс рассмеялся. «Это довольно милая маленькая загадка», — сказал он.",
+      "after": "Холмс рассмеялся.\n— Это весьма изящная маленькая задача, — сказал он."
+    },
+    {
+      "source_id": "045-001-0092",
+      "before": "— Но для меня это очень серьезно, — ответил король укоризненно.",
+      "after": "— Но для меня очень серьёзная, — с упрёком возразил король."
+    },
+    {
+      "source_id": "045-001-0093",
+      "before": "— «Очень даже. И что она собирается делать с этой фотографией?»",
+      "after": "— Очень, разумеется. И что она намерена сделать с фотографией?"
+    },
+    {
+      "source_id": "045-001-0094",
+      "before": "— Чтобы погубить меня.",
+      "after": "— Погубить меня."
+    },
+    {
+      "source_id": "045-001-0095",
+      "before": "«Но как?»",
+      "after": "— Но как?"
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKc53gL1rGLEq6ip7FAu",
+    "usage": {
+      "input_tokens": 31689,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2768,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKc6QeRdr1EoRNX1Ro9B",
+        "usage": {
+          "input_tokens": 33721,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2379,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-001-0064",
+          "verdict": "PASS",
+          "reason": "Faithful; interrupted question preserved."
+        },
+        {
+          "source_id": "045-001-0065",
+          "verdict": "PASS",
+          "reason": "Accurate question."
+        },
+        {
+          "source_id": "045-001-0066",
+          "verdict": "PASS",
+          "reason": "'None' rendered correctly as a negative answer."
+        },
+        {
+          "source_id": "045-001-0067",
+          "verdict": "PASS",
+          "reason": "Legal papers or certificates preserved."
+        },
+        {
+          "source_id": "045-001-0068",
+          "verdict": "PASS",
+          "reason": "Accurate negation matching the question."
+        },
+        {
+          "source_id": "045-001-0069",
+          "verdict": "PASS",
+          "reason": "Meaning, blackmail and authenticity preserved; fluent."
+        },
+        {
+          "source_id": "045-001-0070",
+          "verdict": "PASS",
+          "reason": "'The writing' as handwriting is acceptable."
+        },
+        {
+          "source_id": "045-001-0071",
+          "verdict": "PASS",
+          "reason": "Dismissive 'Pooh' and forgery preserved."
+        },
+        {
+          "source_id": "045-001-0072",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0073",
+          "verdict": "PASS",
+          "reason": "Correct; feminine agrees with paper."
+        },
+        {
+          "source_id": "045-001-0074",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0075",
+          "verdict": "PASS",
+          "reason": "Imitated as forged is acceptable; the seal is the subject."
+        },
+        {
+          "source_id": "045-001-0076",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0077",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0078",
+          "verdict": "PASS",
+          "reason": "Both in the photograph preserved."
+        },
+        {
+          "source_id": "045-001-0079",
+          "verdict": "PASS",
+          "reason": "Tone and meaning preserved."
+        },
+        {
+          "source_id": "045-001-0080",
+          "verdict": "PASS",
+          "reason": "Mad and insane conveyed."
+        },
+        {
+          "source_id": "045-001-0081",
+          "verdict": "PASS",
+          "reason": "Compromised preserved."
+        },
+        {
+          "source_id": "045-001-0082",
+          "verdict": "PASS",
+          "reason": "Age and rank preserved."
+        },
+        {
+          "source_id": "045-001-0083",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0084",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0085",
+          "verdict": "PASS",
+          "reason": "Correct; formal address kept."
+        },
+        {
+          "source_id": "045-001-0086",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0087",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0088",
+          "verdict": "PASS",
+          "reason": "All five attempts, counts and agents preserved."
+        },
+        {
+          "source_id": "045-001-0089",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0090",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0091",
+          "verdict": "PASS",
+          "reason": "Faithful; dialogue break acceptable."
+        },
+        {
+          "source_id": "045-001-0092",
+          "verdict": "PASS",
+          "reason": "Reproach and contrast preserved."
+        },
+        {
+          "source_id": "045-001-0093",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0094",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "045-001-0095",
+          "verdict": "PASS",
+          "reason": "Correct."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
