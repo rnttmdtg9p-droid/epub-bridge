@@ -1,0 +1,64 @@
+{
+  "unit": 46,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 101,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 20,
+      "actual_provider_review_rows": 20,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgK1cryxp6Bh3B5ggGaF6",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 1,
+      "rows": 20,
+      "actual_provider_review_rows": 20,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgK1jr1cXPTGUxsSgeKJA",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 2,
+      "rows": 20,
+      "actual_provider_review_rows": 20,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgK1nek2sMBQJaYyaUcrd",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 3,
+      "rows": 20,
+      "actual_provider_review_rows": 20,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgK1qJgsxkoVvLpCdyzRW",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 4,
+      "rows": 20,
+      "actual_provider_review_rows": 20,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgK1twF8mi87ag6dYDBZZ",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    },
+    {
+      "batch": 5,
+      "rows": 2,
+      "actual_provider_review_rows": 2,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgK1w75HjtD5MkYh57pDo",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    }
+  ],
+  "source_native_policy": "Untranslated original foreign documents/verse copied exactly and independently compared; not represented as model-translated or provider-reviewed output",
+  "qualified_target_sha256": "c8373670e18342ab57e211342df179ca692cdec28867cf231c488f0d5b1142b5",
+  "book_release": false
+}
