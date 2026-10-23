@@ -1,0 +1,127 @@
+{
+  "unit": 87,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11389",
+      "target": "Таково было мнение Коменжа; поэтому он удалился более успокоенным, а Атос остался один в обширной комнате, где, согласно приказу кардинала, к нему относились с уважением, подобающим дворянину.",
+      "source_sha256": "1a6b98927499064eaf4c4e6e0bb838c1e601031117308326786ed43092b31d46",
+      "target_id": "ru-id11389",
+      "tag": "p",
+      "target_sha256": "22e0cfe745c67ba68d89d5b49d178d8b595a6a6543125c5eb601f7445191228e"
+    },
+    {
+      "source_id": "id11390",
+      "target": "Он ожидал, впрочем, — чтобы составить себе точное представление о своём положении, — того самого знаменитого визита, обещанного самим Мазарини.",
+      "source_sha256": "d607e4e20fa90ddbbb5cd8746fa95ab16699a7a98dab0b11f8715463f4e50924",
+      "target_id": "ru-id11390",
+      "tag": "p",
+      "target_sha256": "e88fc238fada1968eabd758c8ab1576a411f6bf2416fbd20b25d1c214692cb0a"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11389",
+      "verdict": "CORRECTED",
+      "reason": "Removed the added «и» (the source says only «C'était l'opinion de Comminges»). «Plus rassuré» is rendered more exactly as «более успокоенным». The clumsy «с ним обращались с уважением» became «к нему относились с уважением, подобающим дворянину», which keeps the passive sense of «il fut traité avec les égards dus à un gentilhomme». Facts, agency, and the cardinal's order are preserved."
+    },
+    {
+      "source_id": "id11390",
+      "verdict": "CORRECTED",
+      "reason": "Fixed the awkward purpose clause: the phrase «pour se faire une idée précise de sa situation» is now set off by dashes, so that it clearly attaches to Athos's waiting. «Promise par Mazarin lui-même» is rendered as the participle «обещанного самим Мазарини», which is more idiomatic than the draft's relative clause. Meaning, «au reste», and the emphasis on «cette fameuse visite» are preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11389",
+      "before": "Таково было и мнение Коменжа; поэтому он удалился более спокойным, а Атос остался один в обширной комнате, где, согласно приказу кардинала, с ним обращались с уважением, подобающим дворянину.",
+      "after": "Таково было мнение Коменжа; поэтому он удалился более успокоенным, а Атос остался один в обширной комнате, где, согласно приказу кардинала, к нему относились с уважением, подобающим дворянину."
+    },
+    {
+      "source_id": "id11390",
+      "before": "Он ожидал, впрочем, чтобы составить себе точное представление о своём положении, того самого знаменитого визита, который пообещал ему сам Мазарини.",
+      "after": "Он ожидал, впрочем, — чтобы составить себе точное представление о своём положении, — того самого знаменитого визита, обещанного самим Мазарини."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJY7zMX78N3CtYfaqHVG",
+    "usage": {
+      "input_tokens": 1694,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJY8B4x5RBqiCAcjHrNW",
+    "usage": {
+      "input_tokens": 2211,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1183,
+      "output_tokens_details": {
+        "thinking_tokens": 659
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJY8nb7bgTGjAtkB6HjH",
+        "usage": {
+          "input_tokens": 2570,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 834,
+          "output_tokens_details": {
+            "thinking_tokens": 214
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11389",
+          "verdict": "PASS",
+          "reason": "Faithful to the French. \"C'était l'opinion de Comminges\" is rendered as \"Таково было мнение Коменжа\". The retirement \"plus rassuré\" is conveyed by \"более успокоенным\". Athos remains alone in the \"vaste chambre\". The passive \"il fut traité avec les égards dus à un gentilhomme\" is rendered idiomatically as \"к нему относились с уважением, подобающим дворянину\", and the cardinal's order is kept. The prior correction is confirmed: it removed the unwarranted \"и\" and the awkward repetition of \"с\"."
+        },
+        {
+          "source_id": "id11390",
+          "verdict": "PASS",
+          "reason": "Faithful to the French. \"Il attendait, au reste\" is rendered as \"Он ожидал, впрочем\". The purpose clause \"pour se faire une idée précise de sa situation\" is kept and set off by dashes. \"Cette fameuse visite promise par Mazarin lui-même\" is rendered as \"того самого знаменитого визита, обещанного самим Мазарини\", with the participial construction preserved and the emphasis of \"lui-même\" kept. The prior correction is confirmed; it removed the added \"ему\" and the relative clause."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
