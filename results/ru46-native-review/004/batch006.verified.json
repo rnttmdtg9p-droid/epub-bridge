@@ -1,0 +1,417 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 4,
+  "batch": 6,
+  "source_ids": [
+    "046-4-0242",
+    "046-4-0243",
+    "046-4-0244",
+    "046-4-0245",
+    "046-4-0246",
+    "046-4-0247",
+    "046-4-0248",
+    "046-4-0249",
+    "046-4-0250",
+    "046-4-0251",
+    "046-4-0252",
+    "046-4-0253",
+    "046-4-0254",
+    "046-4-0255",
+    "046-4-0256",
+    "046-4-0257",
+    "046-4-0258",
+    "046-4-0259",
+    "046-note-12"
+  ],
+  "source_hashes": {
+    "046-4-0242": "7940fed8254d64e346164a1dce8658d46e9b443039fd534e8de73adcb640143d",
+    "046-4-0243": "0a28464c0fccfd49800129208159bbe4c9190766adce989177258d9adbe45a82",
+    "046-4-0244": "98fc5b85a4c62cd428c393df7c7b5b8baab903290643b96af24c0c5fa4ab114c",
+    "046-4-0245": "297c7f6a3b1318151dcdda585deefb64199865c24cb1f24fef30dc62bfa6ce1b",
+    "046-4-0246": "be6dae4f4df095facd0f38af2c9f266c64401298b4b4e9f6088e9edf89db12df",
+    "046-4-0247": "875e639e52a77615db22efef622396fc8e6e2a7a319f353aaeae52a0534069d8",
+    "046-4-0248": "ca455f59df0413646116546e15232cfef3aaefe552fa9d6ab0dbf73ae8f957d0",
+    "046-4-0249": "7c3c3d1b2e334e396ee32558c2b55899e92946f6c282acaacef851f6e29dcf0d",
+    "046-4-0250": "45e8ca4d15a37f45882a63c642ea729b2e73ec8fa6dc2bd032730c37a0e64179",
+    "046-4-0251": "8ac30d6e765a9de2b2765be159d14f6802cbbed766a37b9e7b2d5b4624fc8696",
+    "046-4-0252": "208b0a4841ce1abb710fe6d554e0b2e3700891783b0014da1168fcd79c917f9d",
+    "046-4-0253": "3df951e36bd4b159a937ac94f21f4cd2f5f7a5c1314ae739452c8ce77ccda53d",
+    "046-4-0254": "d84b03e6f56b93b27c018bc11f81096fa07a5c6f91af55f1e6c3cb1bfc09dbe5",
+    "046-4-0255": "4e62713865598ed16e8787d208cebe6a5445dcfd4cca534aa5bf6c19ffd492de",
+    "046-4-0256": "f3575f729e348820fe42aff7636a1b87a60a91b6c04371e1e12c6e2b8ea2a4a4",
+    "046-4-0257": "0da635361ba057489425fb86a2dccae678c4a098d30b83ace3b000a8735e8810",
+    "046-4-0258": "fa09e9c742b8a14e413277402b1d3b646bceb26cd901ecafbeab69f4d20e0c24",
+    "046-4-0259": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+    "046-note-12": "5d55cbd57b9b7c4405292f57b219791dae93875f35f2e760b4e2b710fe71d632"
+  },
+  "review": [
+    {
+      "source_id": "046-4-0242",
+      "verdict": "PASS",
+      "reason": "Olga's repeated «Что?» matches the source exactly and keeps its paragraph boundary after «Пауза.»."
+    },
+    {
+      "source_id": "046-4-0243",
+      "verdict": "PASS",
+      "reason": "Chebutykin's hesitant speech, the ellipses and the whispered stage direction match the source."
+    },
+    {
+      "source_id": "046-4-0244",
+      "verdict": "PASS",
+      "reason": "Olga's «Не может быть!» and the «(в испуге)» direction match the source."
+    },
+    {
+      "source_id": "046-4-0245",
+      "verdict": "PASS",
+      "reason": "Chebutykin's weary speech, the ellipses, the «(С досадой.)» direction and «Впрочем, все равно!» are unchanged."
+    },
+    {
+      "source_id": "046-4-0246",
+      "verdict": "PASS",
+      "reason": "Masha's line is identical to the source."
+    },
+    {
+      "source_id": "046-4-0247",
+      "verdict": "PASS",
+      "reason": "Olga's speech, the embrace direction and the ellipses match the source."
+    },
+    {
+      "source_id": "046-4-0248",
+      "verdict": "PASS",
+      "reason": "Irina's urgent questions, «Бога ради!» and «(Плачет.)» match the source."
+    },
+    {
+      "source_id": "046-4-0249",
+      "verdict": "PASS",
+      "reason": "The announcement of the baron's death is exact."
+    },
+    {
+      "source_id": "046-4-0250",
+      "verdict": "PASS",
+      "reason": "Irina's repeated «Я знала, я знала…» is preserved."
+    },
+    {
+      "source_id": "046-4-0251",
+      "verdict": "PASS",
+      "reason": "Chebutykin's song «Та-ра-ра-бумбия», his directions and «Не все ли равно!» match the source."
+    },
+    {
+      "source_id": "046-4-0252",
+      "verdict": "PASS",
+      "reason": "The stage direction is identical to the source."
+    },
+    {
+      "source_id": "046-4-0253",
+      "verdict": "PASS",
+      "reason": "Masha's speech, including the repetitions «совсем, совсем» and «Надо жить… Надо жить…», is intact."
+    },
+    {
+      "source_id": "046-4-0254",
+      "verdict": "PASS",
+      "reason": "Irina's monologue, with its repetitions and punctuation, matches the source."
+    },
+    {
+      "source_id": "046-4-0255",
+      "verdict": "PASS",
+      "reason": "Olga's monologue is complete and unchanged, including the closing «Если бы знать, если бы знать!»."
+    },
+    {
+      "source_id": "046-4-0256",
+      "verdict": "PASS",
+      "reason": "The stage direction and its character-name markup match the source."
+    },
+    {
+      "source_id": "046-4-0257",
+      "verdict": "PASS",
+      "reason": "Chebutykin's song «Тара… ра… бумбия…» and «Все равно! Все равно!» match the source."
+    },
+    {
+      "source_id": "046-4-0258",
+      "verdict": "PASS",
+      "reason": "Olga's final line is exact."
+    },
+    {
+      "source_id": "046-4-0259",
+      "verdict": "PASS",
+      "reason": "«Занавес» with its italic and character-name markup matches the source."
+    },
+    {
+      "source_id": "046-note-12",
+      "verdict": "PASS",
+      "reason": "The preserved Wikisource editorial note matches its source wording. The intentional French error «dormée» in Natasha's speech is retained rather than corrected."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjKxN5mVQWg3iDB2NZU",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 34837,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1085,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-4-0242",
+      "verdict": "PASS",
+      "reason": "«Что?» is identical to the source and follows the preceding «Пауза.» as in the act context."
+    },
+    {
+      "source_id": "046-4-0243",
+      "verdict": "PASS",
+      "reason": "Speaker markup, text, ellipses and whispered stage direction are identical to the source."
+    },
+    {
+      "source_id": "046-4-0244",
+      "verdict": "PASS",
+      "reason": "Olga's «(в испуге)» and «Не может быть!» match the source exactly."
+    },
+    {
+      "source_id": "046-4-0245",
+      "verdict": "PASS",
+      "reason": "Chebutykin's speech, ellipses, «(С досадой.)» and «Впрочем, все равно!» match the source."
+    },
+    {
+      "source_id": "046-4-0246",
+      "verdict": "PASS",
+      "reason": "Masha's line is identical to the source."
+    },
+    {
+      "source_id": "046-4-0247",
+      "verdict": "PASS",
+      "reason": "Text, embrace direction and ellipses are identical to the source."
+    },
+    {
+      "source_id": "046-4-0248",
+      "verdict": "PASS",
+      "reason": "Irina's questions, «Бога ради!» and «(Плачет.)» are identical to the source."
+    },
+    {
+      "source_id": "046-4-0249",
+      "verdict": "PASS",
+      "reason": "The announcement of the baron's death is identical to the source."
+    },
+    {
+      "source_id": "046-4-0250",
+      "verdict": "PASS",
+      "reason": "«Я знала, я знала…» keeps its repetition and ellipsis."
+    },
+    {
+      "source_id": "046-4-0251",
+      "verdict": "PASS",
+      "reason": "The directions, the song fragment «Та-ра-ра-бумбия» and the closing «Не все ли равно!» match the source."
+    },
+    {
+      "source_id": "046-4-0252",
+      "verdict": "PASS",
+      "reason": "The stage direction is identical to the source."
+    },
+    {
+      "source_id": "046-4-0253",
+      "verdict": "PASS",
+      "reason": "Masha's speech, with its repetitions and ellipses, is identical to the source."
+    },
+    {
+      "source_id": "046-4-0254",
+      "verdict": "PASS",
+      "reason": "Irina's monologue, with its repetitions and punctuation, is identical to the source."
+    },
+    {
+      "source_id": "046-4-0255",
+      "verdict": "PASS",
+      "reason": "Olga's monologue is complete and unchanged, including its repetitions and final line."
+    },
+    {
+      "source_id": "046-4-0256",
+      "verdict": "PASS",
+      "reason": "The stage direction and its character-name markup match the source."
+    },
+    {
+      "source_id": "046-4-0257",
+      "verdict": "PASS",
+      "reason": "The song «Тара… ра… бумбия…», the direction and «Все равно! Все равно!» match the source."
+    },
+    {
+      "source_id": "046-4-0258",
+      "verdict": "PASS",
+      "reason": "Olga's final line is identical to the source."
+    },
+    {
+      "source_id": "046-4-0259",
+      "verdict": "PASS",
+      "reason": "«Занавес» with its italic and character-name markup matches the source."
+    },
+    {
+      "source_id": "046-note-12",
+      "verdict": "PASS",
+      "reason": "The preserved Wikisource note matches its source wording, and the intentional error «dormée» is kept."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjLZk51kPmPUsGdykDw",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 36036,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1027,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-4-0242",
+      "source_sha256": "7940fed8254d64e346164a1dce8658d46e9b443039fd534e8de73adcb640143d",
+      "target": "Что?",
+      "target_sha256": "7940fed8254d64e346164a1dce8658d46e9b443039fd534e8de73adcb640143d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0243",
+      "source_sha256": "0a28464c0fccfd49800129208159bbe4c9190766adce989177258d9adbe45a82",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Ничего… Не знаю, как сказать вам… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Шепчет ей на ухо.)</i></small>",
+      "target_sha256": "0a28464c0fccfd49800129208159bbe4c9190766adce989177258d9adbe45a82",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0244",
+      "source_sha256": "98fc5b85a4c62cd428c393df7c7b5b8baab903290643b96af24c0c5fa4ab114c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в испуге)</i></small>. Не может быть!",
+      "target_sha256": "98fc5b85a4c62cd428c393df7c7b5b8baab903290643b96af24c0c5fa4ab114c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0245",
+      "source_sha256": "297c7f6a3b1318151dcdda585deefb64199865c24cb1f24fef30dc62bfa6ce1b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Да… такая история… Утомился я, замучился, больше не хочу говорить… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(С досадой.)</i></small> Впрочем, все равно!",
+      "target_sha256": "297c7f6a3b1318151dcdda585deefb64199865c24cb1f24fef30dc62bfa6ce1b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0246",
+      "source_sha256": "be6dae4f4df095facd0f38af2c9f266c64401298b4b4e9f6088e9edf89db12df",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Что случилось?",
+      "target_sha256": "be6dae4f4df095facd0f38af2c9f266c64401298b4b4e9f6088e9edf89db12df",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0247",
+      "source_sha256": "875e639e52a77615db22efef622396fc8e6e2a7a319f353aaeae52a0534069d8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(обнимает Ирину)</i></small>. Ужасный сегодня день… Я не знаю, как тебе сказать, моя дорогая…",
+      "target_sha256": "875e639e52a77615db22efef622396fc8e6e2a7a319f353aaeae52a0534069d8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0248",
+      "source_sha256": "ca455f59df0413646116546e15232cfef3aaefe552fa9d6ab0dbf73ae8f957d0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Что? Говорите скорей: что? Бога ради! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Плачет.)</i></small>",
+      "target_sha256": "ca455f59df0413646116546e15232cfef3aaefe552fa9d6ab0dbf73ae8f957d0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0249",
+      "source_sha256": "7c3c3d1b2e334e396ee32558c2b55899e92946f6c282acaacef851f6e29dcf0d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Сейчас на дуэли убит барон.",
+      "target_sha256": "7c3c3d1b2e334e396ee32558c2b55899e92946f6c282acaacef851f6e29dcf0d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0250",
+      "source_sha256": "45e8ca4d15a37f45882a63c642ea729b2e73ec8fa6dc2bd032730c37a0e64179",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Я знала, я знала…",
+      "target_sha256": "45e8ca4d15a37f45882a63c642ea729b2e73ec8fa6dc2bd032730c37a0e64179",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0251",
+      "source_sha256": "8ac30d6e765a9de2b2765be159d14f6802cbbed766a37b9e7b2d5b4624fc8696",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в глубине сцены садится на скамью)</i></small>. Утомился… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вынимает из кармана газету.)</i></small> Пусть поплачут… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Тихо напевает.)</i></small> Та-ра-ра-бумбия… сижу на тумбе я… Не все ли равно!",
+      "target_sha256": "8ac30d6e765a9de2b2765be159d14f6802cbbed766a37b9e7b2d5b4624fc8696",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0252",
+      "source_sha256": "208b0a4841ce1abb710fe6d554e0b2e3700891783b0014da1168fcd79c917f9d",
+      "target": "Три сестры стоят, прижавшись друг к другу.",
+      "target_sha256": "208b0a4841ce1abb710fe6d554e0b2e3700891783b0014da1168fcd79c917f9d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0253",
+      "source_sha256": "3df951e36bd4b159a937ac94f21f4cd2f5f7a5c1314ae739452c8ce77ccda53d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. О, как играет музыка! Они уходят от нас, один ушел совсем, совсем навсегда, мы останемся одни, чтобы начать нашу жизнь снова. Надо жить… Надо жить…",
+      "target_sha256": "3df951e36bd4b159a937ac94f21f4cd2f5f7a5c1314ae739452c8ce77ccda53d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0254",
+      "source_sha256": "d84b03e6f56b93b27c018bc11f81096fa07a5c6f91af55f1e6c3cb1bfc09dbe5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(кладет голову на грудь Ольге)</i></small>. Придет время, все узнают, зачем все это, для чего эти страдания, никаких не будет тайн, а пока надо жить… надо работать, только работать! Завтра я поеду одна, буду учить в школе и всю свою жизнь отдам тем, кому она, быть может, нужна. Теперь осень, скоро придет зима, засыплет снегом, а я буду работать, буду работать…",
+      "target_sha256": "d84b03e6f56b93b27c018bc11f81096fa07a5c6f91af55f1e6c3cb1bfc09dbe5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0255",
+      "source_sha256": "4e62713865598ed16e8787d208cebe6a5445dcfd4cca534aa5bf6c19ffd492de",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(обнимает обеих сестер)</i></small>. Музыка играет так весело, бодро, и хочется жить! О, боже мой! Пройдет время, и мы уйдем навеки, нас забудут, забудут наши лица, голоса и сколько нас было, но страдания наши перейдут в радость для тех, кто будет жить после нас, счастье и мир настанут на земле, и помянут добрым словом и благословят тех, кто живет теперь. О, милые сестры, жизнь наша еще не кончена. Будем жить! Музыка играет так весело, так радостно, и, кажется, еще немного, и мы узнаем, зачем мы живем, зачем страдаем… Если бы знать, если бы знать!",
+      "target_sha256": "4e62713865598ed16e8787d208cebe6a5445dcfd4cca534aa5bf6c19ffd492de",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0256",
+      "source_sha256": "f3575f729e348820fe42aff7636a1b87a60a91b6c04371e1e12c6e2b8ea2a4a4",
+      "target": "Музыка играет все тише и тише; <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Кулыгин</span>, веселый, улыбающийся, несет шляпу и тальму, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> везет другую колясочку, в которой сидит Бобик.",
+      "target_sha256": "f3575f729e348820fe42aff7636a1b87a60a91b6c04371e1e12c6e2b8ea2a4a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0257",
+      "source_sha256": "0da635361ba057489425fb86a2dccae678c4a098d30b83ace3b000a8735e8810",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(тихо напевает)</i></small>. Тара… ра… бумбия… сижу на тумбе я… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Читает газету.)</i></small> Все равно! Все равно!",
+      "target_sha256": "0da635361ba057489425fb86a2dccae678c4a098d30b83ace3b000a8735e8810",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0258",
+      "source_sha256": "fa09e9c742b8a14e413277402b1d3b646bceb26cd901ecafbeab69f4d20e0c24",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Если бы знать, если бы знать!",
+      "target_sha256": "fa09e9c742b8a14e413277402b1d3b646bceb26cd901ecafbeab69f4d20e0c24",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0259",
+      "source_sha256": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\"><i>Занавес</i></span>",
+      "target_sha256": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-note-12",
+      "source_sha256": "5d55cbd57b9b7c4405292f57b219791dae93875f35f2e760b4e2b710fe71d632",
+      "target": "фр. Il ne faut pas faire du bruit, la Sophie est dormée déjà. Vous êtes un ours — Не шумите, Софи уже спит. Вы медведь",
+      "target_sha256": "5d55cbd57b9b7c4405292f57b219791dae93875f35f2e760b4e2b710fe71d632",
+      "tag": "editorial_note"
+    }
+  ]
+}
