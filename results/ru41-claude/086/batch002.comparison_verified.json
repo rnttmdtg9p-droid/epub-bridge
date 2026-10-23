@@ -1,0 +1,127 @@
+{
+  "unit": 86,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11327",
+      "target": "Мазарини вышел после этого поступка, наполовину смиренного, наполовину галантного. Анна Австрийская проводила его взглядом, и по мере того как он удалялся, на её губах можно было увидеть, как проступает презрительная улыбка.",
+      "source_sha256": "f0ccdc5c80e67b2d3e434cf7e0a7ca6e756f52c6434600aacfc750b2a9ff9695",
+      "target_id": "ru-id11327",
+      "tag": "p",
+      "target_sha256": "e21d5dc307e89f7913350d1f5ae2a2f637dbabb0fb9ec0935029da074341d53c"
+    },
+    {
+      "source_id": "id11328",
+      "target": "— Я презрела, — прошептала она, — любовь кардинала, который никогда не говорил: «Я сделаю», а всегда: «Я сделал». Тот знал убежища более надёжные, чем Рюэй, ещё более мрачные и ещё более немые, чем Бастилия. О, мир вырождается!",
+      "source_sha256": "1ea791cbd81d0e696aa83fdd301df32837a971629bccb4e50436921a337ca927",
+      "target_id": "ru-id11328",
+      "tag": "p",
+      "target_sha256": "03de4bd1ff902a81b837a1c9aecf60ad000676751c8db519a0e12aa5c6c988d6"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11327",
+      "verdict": "CORRECTED",
+      "reason": "«Acte» передан как «поступок» вместо «движение». Восстановлены условное «on eût pu voir» и образ «se dessiner» (улыбка проступает на губах). Факты и последовательность сохранены."
+    },
+    {
+      "source_id": "id11328",
+      "verdict": "CORRECTED",
+      "reason": "«J'ai méprisé» уточнено до «презрела» (вместо «пренебрегла»). Добавлено «всегда» в противопоставление «jamais … mais». Восстановлено «encore» при обоих прилагательных, убрано добавленное «сама». Сравнение с Рюэем приведено в параллель с остальной фразой."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11327",
+      "before": "Мазарини вышел после этого движения, наполовину смиренного, наполовину галантного. Анна Австрийская проводила его взглядом, и по мере того как он удалялся, на её губах можно было увидеть презрительную улыбку.",
+      "after": "Мазарини вышел после этого поступка, наполовину смиренного, наполовину галантного. Анна Австрийская проводила его взглядом, и по мере того как он удалялся, на её губах можно было увидеть, как проступает презрительная улыбка."
+    },
+    {
+      "source_id": "id11328",
+      "before": "— Я пренебрегла, — прошептала она, — любовью кардинала, который никогда не говорил: «Я сделаю», а говорил: «Я сделал». Тот знал убежища понадёжнее Рюэя, более мрачные и более немые, чем сама Бастилия. О, мир вырождается!",
+      "after": "— Я презрела, — прошептала она, — любовь кардинала, который никогда не говорил: «Я сделаю», а всегда: «Я сделал». Тот знал убежища более надёжные, чем Рюэй, ещё более мрачные и ещё более немые, чем Бастилия. О, мир вырождается!"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXyZiDoyG1XvSUTsuML",
+    "usage": {
+      "input_tokens": 1582,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXyj9VxtXf9CrcVZ8Cs",
+    "usage": {
+      "input_tokens": 2147,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1060,
+      "output_tokens_details": {
+        "thinking_tokens": 579
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXzLkeFHVYpjR8E58pH",
+        "usage": {
+          "input_tokens": 2644,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1105,
+          "output_tokens_details": {
+            "thinking_tokens": 522
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11327",
+          "verdict": "PASS",
+          "reason": "The corrected text matches the French. «Поступок» renders the baisemain as «acte moitié humble, moitié галантный», and «проводила его взглядом» is accurate. «Проступает презрительная улыбка» conveys «se dessiner» and the sense of «on eût pu voir» as an observer's view. Nothing is omitted or added, and the prior correction holds."
+        },
+        {
+          "source_id": "id11328",
+          "verdict": "PASS",
+          "reason": "Agency and tense are preserved: «J'ai méprisé… l'amour» becomes «Я презрела… любовь». The «Je ferai / J'ai fait» contrast is kept in quotation marks. The comparative «plus sûres que Rueil, plus sombres et plus muettes encore que la Bastille» is faithful, with «ещё» correctly covering the second comparison. «Всегда» only makes explicit the «jamais… mais» contrast. The exclamations and register are intact, and the prior corrections are valid."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
