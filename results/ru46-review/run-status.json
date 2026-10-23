@@ -1,8 +1,26 @@
 {
-  "state": "RUNNING_CONTINUOUS_TRANSLATION_REVIEW",
-  "unit": 5,
-  "last_complete_batch": 0,
-  "run_id": "40009866354",
-  "utc": "2026-10-23T19:16:29.814332+00:00",
-  "checkpoint_is_stop_condition": false
+  "state": "PARTIAL_FAILURE",
+  "errors": [
+    {
+      "unit": 3,
+      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED AssertionError: AUTHENTIC_ORIGINAL_RUSSIAN_CHANGED"
+    },
+    {
+      "unit": 1,
+      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED AssertionError: AUTHENTIC_ORIGINAL_RUSSIAN_CHANGED"
+    },
+    {
+      "unit": 2,
+      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED AssertionError: AUTHENTIC_ORIGINAL_RUSSIAN_CHANGED"
+    },
+    {
+      "unit": 4,
+      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED AssertionError: AUTHENTIC_ORIGINAL_RUSSIAN_CHANGED"
+    }
+  ],
+  "source_units": 5,
+  "source_rows": 1061,
+  "translation_provider": "NOT_APPLICABLE_ORIGINAL_RUSSIAN",
+  "review_provider": "claude-sonnet-5-5",
+  "utc": "2026-10-23T19:17:03.968930+00:00"
 }
