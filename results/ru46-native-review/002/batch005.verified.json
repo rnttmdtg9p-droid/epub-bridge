@@ -1,0 +1,816 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 2,
+  "batch": 5,
+  "source_ids": [
+    "046-2-0199",
+    "046-2-0200",
+    "046-2-0201",
+    "046-2-0202",
+    "046-2-0203",
+    "046-2-0204",
+    "046-2-0205",
+    "046-2-0206",
+    "046-2-0207",
+    "046-2-0208",
+    "046-2-0209",
+    "046-2-0210",
+    "046-2-0211",
+    "046-2-0212",
+    "046-2-0213",
+    "046-2-0214",
+    "046-2-0215",
+    "046-2-0216",
+    "046-2-0217",
+    "046-2-0218",
+    "046-2-0219",
+    "046-2-0220",
+    "046-2-0221",
+    "046-2-0222",
+    "046-2-0223",
+    "046-2-0224",
+    "046-2-0225",
+    "046-2-0226",
+    "046-2-0227",
+    "046-2-0228",
+    "046-2-0229",
+    "046-2-0230",
+    "046-2-0231",
+    "046-2-0232",
+    "046-2-0233",
+    "046-2-0234",
+    "046-2-0235",
+    "046-2-0236",
+    "046-2-0237",
+    "046-2-0238"
+  ],
+  "source_hashes": {
+    "046-2-0199": "3876b06059c7144658853ca4a72b387dabb68f374472ca0ce0da0770de8ab472",
+    "046-2-0200": "27091cbf84a50475eb7784eb0418191a43dbdfd9e46e35d4020a68da6df87741",
+    "046-2-0201": "b6c06f4ed82610a2faf1c0812c65018a08d93c8a68043b08e0691939ca5ed84d",
+    "046-2-0202": "7cdeaae19ea53aa62df8eee1fc09a9b071afa46fd9783188962f854e699887c2",
+    "046-2-0203": "8660fa9bbc1d19bd34d5bd8ab155111bf47a608f6b69d9bc61c76cd38920ebcc",
+    "046-2-0204": "7cdeaae19ea53aa62df8eee1fc09a9b071afa46fd9783188962f854e699887c2",
+    "046-2-0205": "b53b272892e210fa4552fe2815e5824dd2eaf5031612e8b57faa9a4ceaa6862b",
+    "046-2-0206": "894cc28d92a7ab98c4df5f50912aafc2fc0dbfafea5ec41fca0748276ad4922d",
+    "046-2-0207": "3a29d509df31d345846a1188bc84b586a106e2b90ca570fcf63ac5ae0272e7ec",
+    "046-2-0208": "42aabc75636861ce23780406b2075fbd51ad620f7c0396dd8df84c6f7ea72308",
+    "046-2-0209": "a74c98a9fbe76d385fafc306291a410f569217e59b71df498e9532dc0dab11d2",
+    "046-2-0210": "208723682969084ea73b7379dd3605906e74b245a027c1df24804bf18d5e737e",
+    "046-2-0211": "63fee8af56576af647cbcdb3a021a7ee82e187e6d7bbb4b71dc35f3586d8a907",
+    "046-2-0212": "52624770ee865d2f0742f772388d4079695658a10ef7f1fdda808bbdb9de0394",
+    "046-2-0213": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+    "046-2-0214": "dd3b6591f285ae8e9b864377fcaf8bb4cd99b08cdf973c5adf08c28610207437",
+    "046-2-0215": "4b4ca07e7f57cee543dda9c262d6eac4898b9711c9f903b79194c8afcdd72791",
+    "046-2-0216": "c0d4047f6deff924be1c0bbeebe3176251f27fb61c7fff12f447bda522e16a00",
+    "046-2-0217": "b904478e69b35546e66d6c3ea4746d9a5ee199a9b33250957674d3dac802b908",
+    "046-2-0218": "3e3ccc3ca55e6532d12d033ec8c32d6cbe5ba545a91f2735ad31cb604e7bcda5",
+    "046-2-0219": "1fec24fdd350ef768a0ee671d047dfd0634159f1d67013bffda46061d68933fb",
+    "046-2-0220": "8867228c97e5af0e4a426d9adabc637342743876306bf697efa637a85cbace46",
+    "046-2-0221": "a43ef393010645b18285ef64750045e5940c5d5b5cf7f0e324beeb23db0aa483",
+    "046-2-0222": "945f7045c60460bf150c61887c1ef618c96f621be8639112ba1a3d36e0d375c0",
+    "046-2-0223": "0bb7824080cbee93d2ba91e269d1a93b37bb1807455c85aca852334c42c2138f",
+    "046-2-0224": "9aa2ed69cd4b95cce048e9d8420bde801737c2020c4408cc326736fafb35336f",
+    "046-2-0225": "9ab74af0f0f1e7a980abe3abb828585e4258ed20a425e8dd6272cedeba3e4f50",
+    "046-2-0226": "9d720dafc72b7a9ddc78074e054f7d823994ebef448a8a75ee47c62000582a7e",
+    "046-2-0227": "163584288581be81bbf13ceac4ac8fc1f55b45366ceb3ac6fad08e52b1e46df5",
+    "046-2-0228": "c4a76964ccca16e619ed17e807b021dc87e897db9dea2d7d9d6fdeb8735ebdc6",
+    "046-2-0229": "2896359a29ed5185516e3467f42e64cc1515cc8d696f786fa5e6ffd1b663406e",
+    "046-2-0230": "474e487af3fea8f3471925f7e0ce49ec66fac09673a64e47e3b9e5b56e1a8ec7",
+    "046-2-0231": "6f1b3a9798b5b542ae6063f1726d3f4bd25e5bfd8e75f20d223e7248e8c0f178",
+    "046-2-0232": "a6ad2de5c1c6a00adb988edbfb481af5f16474c0c56b68b348ea076eda9f3b00",
+    "046-2-0233": "f2f8cbd7929adacaaea0396c74994048fee07f0396b32fe27a1d1cc2b0589e6b",
+    "046-2-0234": "5c45d1e96317c3a6f7c61f374945392b6162f41890b3394a74fee8713097a9e3",
+    "046-2-0235": "5021dab177c19ece66f6bec179ed91a92aa9dfbe80802af0f7168f25b28e6411",
+    "046-2-0236": "af0059b920c5f2251b1f15e3e859bc60bf8da94bc9ac90dbfbfb8961904fe951",
+    "046-2-0237": "d519f3a3a1572b7b27cc00fbb73d1945638d62df19386a74d88303a38ed692a4",
+    "046-2-0238": "260a0b0b154670f7f6072786862c60549652abf8abaa504e2af4c4e08f158f54"
+  },
+  "review": [
+    {
+      "source_id": "046-2-0199",
+      "verdict": "PASS",
+      "reason": "Target matches source verbatim, including the stage direction, the em dash and 'чехартма, мясное'."
+    },
+    {
+      "source_id": "046-2-0200",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; 'Черемша' is preserved."
+    },
+    {
+      "source_id": "046-2-0201",
+      "verdict": "PASS",
+      "reason": "Target is identical to source, including 'Нет-с, ангел мой'."
+    },
+    {
+      "source_id": "046-2-0202",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the repetition is preserved."
+    },
+    {
+      "source_id": "046-2-0203",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the repetition is preserved."
+    },
+    {
+      "source_id": "046-2-0204",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the repetition is preserved."
+    },
+    {
+      "source_id": "046-2-0205",
+      "verdict": "PASS",
+      "reason": "Target is identical to source, including 'чехартмы'."
+    },
+    {
+      "source_id": "046-2-0206",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0207",
+      "verdict": "PASS",
+      "reason": "Target is identical to source, including the stage direction."
+    },
+    {
+      "source_id": "046-2-0208",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0209",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0210",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the song quotation is preserved."
+    },
+    {
+      "source_id": "046-2-0211",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0212",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the 'Решетчаты-е' hyphenation is preserved."
+    },
+    {
+      "source_id": "046-2-0213",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0214",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0215",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0216",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0217",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0218",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0219",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0220",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0221",
+      "verdict": "PASS",
+      "reason": "Target is identical to source. The speakerless continuation of Solyony's speech is preserved, as is the paragraph boundary."
+    },
+    {
+      "source_id": "046-2-0222",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0223",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the repetition is preserved."
+    },
+    {
+      "source_id": "046-2-0224",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0225",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0226",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0227",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0228",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0229",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0230",
+      "verdict": "PASS",
+      "reason": "Target is identical to source, including the punctuation '?..'."
+    },
+    {
+      "source_id": "046-2-0231",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0232",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0233",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; 'стало быть надо' is preserved without a comma."
+    },
+    {
+      "source_id": "046-2-0234",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0235",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the diminutives are preserved."
+    },
+    {
+      "source_id": "046-2-0236",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0237",
+      "verdict": "PASS",
+      "reason": "Target is identical to source."
+    },
+    {
+      "source_id": "046-2-0238",
+      "verdict": "PASS",
+      "reason": "Target is identical to source; the stage direction and quoted farewells are preserved."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjEsfRhw4d8Xng7ae2R",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 45820,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1678,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-2-0199",
+      "verdict": "PASS",
+      "reason": "Target matches the source verbatim, including the stage direction and 'чехартма, мясное'."
+    },
+    {
+      "source_id": "046-2-0200",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0201",
+      "verdict": "PASS",
+      "reason": "Identical to source, including 'Нет-с, ангел мой'."
+    },
+    {
+      "source_id": "046-2-0202",
+      "verdict": "PASS",
+      "reason": "Identical to source; the repetition is preserved."
+    },
+    {
+      "source_id": "046-2-0203",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0204",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0205",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0206",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0207",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0208",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0209",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0210",
+      "verdict": "PASS",
+      "reason": "Identical to source; the song line is intact."
+    },
+    {
+      "source_id": "046-2-0211",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0212",
+      "verdict": "PASS",
+      "reason": "Identical to source, including 'Решетчаты-е'."
+    },
+    {
+      "source_id": "046-2-0213",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0214",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0215",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0216",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0217",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0218",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0219",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0220",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0221",
+      "verdict": "PASS",
+      "reason": "Identical to source; the speakerless continuation of Solyony's speech and its paragraph boundary are preserved."
+    },
+    {
+      "source_id": "046-2-0222",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0223",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0224",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0225",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0226",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0227",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0228",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0229",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0230",
+      "verdict": "PASS",
+      "reason": "Identical to source, including '?..'."
+    },
+    {
+      "source_id": "046-2-0231",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0232",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0233",
+      "verdict": "PASS",
+      "reason": "Identical to source; 'стало быть надо' is kept without a comma."
+    },
+    {
+      "source_id": "046-2-0234",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0235",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0236",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0237",
+      "verdict": "PASS",
+      "reason": "Identical to source."
+    },
+    {
+      "source_id": "046-2-0238",
+      "verdict": "PASS",
+      "reason": "Identical to source; the stage direction and quoted farewells are preserved."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjFZUowF8b5h68MiQK9",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 47675,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1510,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-2-0199",
+      "source_sha256": "3876b06059c7144658853ca4a72b387dabb68f374472ca0ce0da0770de8ab472",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(идя в гостиную с Ириной)</i></small>. И угощение было тоже настоящее кавказское: суп с луком, а на жаркое — чехартма, мясное.",
+      "target_sha256": "3876b06059c7144658853ca4a72b387dabb68f374472ca0ce0da0770de8ab472",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0200",
+      "source_sha256": "27091cbf84a50475eb7784eb0418191a43dbdfd9e46e35d4020a68da6df87741",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Черемша вовсе не мясо, а растение вроде нашего лука.",
+      "target_sha256": "27091cbf84a50475eb7784eb0418191a43dbdfd9e46e35d4020a68da6df87741",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0201",
+      "source_sha256": "b6c06f4ed82610a2faf1c0812c65018a08d93c8a68043b08e0691939ca5ed84d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Нет-с, ангел мой. Чехартма не лук, а жаркое из баранины.",
+      "target_sha256": "b6c06f4ed82610a2faf1c0812c65018a08d93c8a68043b08e0691939ca5ed84d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0202",
+      "source_sha256": "7cdeaae19ea53aa62df8eee1fc09a9b071afa46fd9783188962f854e699887c2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. А я вам говорю, черемша — лук.",
+      "target_sha256": "7cdeaae19ea53aa62df8eee1fc09a9b071afa46fd9783188962f854e699887c2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0203",
+      "source_sha256": "8660fa9bbc1d19bd34d5bd8ab155111bf47a608f6b69d9bc61c76cd38920ebcc",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. А я вам говорю, чехартма — баранина.",
+      "target_sha256": "8660fa9bbc1d19bd34d5bd8ab155111bf47a608f6b69d9bc61c76cd38920ebcc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0204",
+      "source_sha256": "7cdeaae19ea53aa62df8eee1fc09a9b071afa46fd9783188962f854e699887c2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. А я вам говорю, черемша — лук.",
+      "target_sha256": "7cdeaae19ea53aa62df8eee1fc09a9b071afa46fd9783188962f854e699887c2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0205",
+      "source_sha256": "b53b272892e210fa4552fe2815e5824dd2eaf5031612e8b57faa9a4ceaa6862b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Что же я буду с вами спорить! Вы никогда не были на Кавказе и не ели чехартмы.",
+      "target_sha256": "b53b272892e210fa4552fe2815e5824dd2eaf5031612e8b57faa9a4ceaa6862b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0206",
+      "source_sha256": "894cc28d92a7ab98c4df5f50912aafc2fc0dbfafea5ec41fca0748276ad4922d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Не ел, потому что терпеть не могу. От черемши такой же запах, как от чеснока.",
+      "target_sha256": "894cc28d92a7ab98c4df5f50912aafc2fc0dbfafea5ec41fca0748276ad4922d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0207",
+      "source_sha256": "3a29d509df31d345846a1188bc84b586a106e2b90ca570fcf63ac5ae0272e7ec",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(умоляюще)</i></small>. Довольно, господа! Прошу вас!",
+      "target_sha256": "3a29d509df31d345846a1188bc84b586a106e2b90ca570fcf63ac5ae0272e7ec",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0208",
+      "source_sha256": "42aabc75636861ce23780406b2075fbd51ad620f7c0396dd8df84c6f7ea72308",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Когда придут ряженые?",
+      "target_sha256": "42aabc75636861ce23780406b2075fbd51ad620f7c0396dd8df84c6f7ea72308",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0209",
+      "source_sha256": "a74c98a9fbe76d385fafc306291a410f569217e59b71df498e9532dc0dab11d2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Обещали к девяти; значит, сейчас.",
+      "target_sha256": "a74c98a9fbe76d385fafc306291a410f569217e59b71df498e9532dc0dab11d2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0210",
+      "source_sha256": "208723682969084ea73b7379dd3605906e74b245a027c1df24804bf18d5e737e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(обнимает Андрея)</i></small>. Ах вы сени, мои сени, сени новые мои...",
+      "target_sha256": "208723682969084ea73b7379dd3605906e74b245a027c1df24804bf18d5e737e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0211",
+      "source_sha256": "63fee8af56576af647cbcdb3a021a7ee82e187e6d7bbb4b71dc35f3586d8a907",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(пляшет и поет)</i></small>. Сени новые, кленовые...",
+      "target_sha256": "63fee8af56576af647cbcdb3a021a7ee82e187e6d7bbb4b71dc35f3586d8a907",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0212",
+      "source_sha256": "52624770ee865d2f0742f772388d4079695658a10ef7f1fdda808bbdb9de0394",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(пляшет)</i></small>. Решетчаты-е!",
+      "target_sha256": "52624770ee865d2f0742f772388d4079695658a10ef7f1fdda808bbdb9de0394",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0213",
+      "source_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "target": "Смех.",
+      "target_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0214",
+      "source_sha256": "dd3b6591f285ae8e9b864377fcaf8bb4cd99b08cdf973c5adf08c28610207437",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(целует Андрея)</i></small>. Черт возьми, давайте выпьем. Андрюша, давайте выпьем на ты. И я с тобой, Андрюша, в Москву, в университет.",
+      "target_sha256": "dd3b6591f285ae8e9b864377fcaf8bb4cd99b08cdf973c5adf08c28610207437",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0215",
+      "source_sha256": "4b4ca07e7f57cee543dda9c262d6eac4898b9711c9f903b79194c8afcdd72791",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. В какой? В Москве два университета.",
+      "target_sha256": "4b4ca07e7f57cee543dda9c262d6eac4898b9711c9f903b79194c8afcdd72791",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0216",
+      "source_sha256": "c0d4047f6deff924be1c0bbeebe3176251f27fb61c7fff12f447bda522e16a00",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. В Москве один университет.",
+      "target_sha256": "c0d4047f6deff924be1c0bbeebe3176251f27fb61c7fff12f447bda522e16a00",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0217",
+      "source_sha256": "b904478e69b35546e66d6c3ea4746d9a5ee199a9b33250957674d3dac802b908",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. А я вам говорю — два.",
+      "target_sha256": "b904478e69b35546e66d6c3ea4746d9a5ee199a9b33250957674d3dac802b908",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0218",
+      "source_sha256": "3e3ccc3ca55e6532d12d033ec8c32d6cbe5ba545a91f2735ad31cb604e7bcda5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Пускай хоть три. Тем лучше.",
+      "target_sha256": "3e3ccc3ca55e6532d12d033ec8c32d6cbe5ba545a91f2735ad31cb604e7bcda5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0219",
+      "source_sha256": "1fec24fdd350ef768a0ee671d047dfd0634159f1d67013bffda46061d68933fb",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. В Москве два университета!",
+      "target_sha256": "1fec24fdd350ef768a0ee671d047dfd0634159f1d67013bffda46061d68933fb",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0220",
+      "source_sha256": "8867228c97e5af0e4a426d9adabc637342743876306bf697efa637a85cbace46",
+      "target": "Ропот и шиканье.",
+      "target_sha256": "8867228c97e5af0e4a426d9adabc637342743876306bf697efa637a85cbace46",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0221",
+      "source_sha256": "a43ef393010645b18285ef64750045e5940c5d5b5cf7f0e324beeb23db0aa483",
+      "target": "В Москве два университета: старый и новый. А если вам неугодно слушать, если мои слова раздражают вас, то я могу не говорить. Я даже могу уйти в другую комнату... <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит в одну из дверей.)</i></small>",
+      "target_sha256": "a43ef393010645b18285ef64750045e5940c5d5b5cf7f0e324beeb23db0aa483",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0222",
+      "source_sha256": "945f7045c60460bf150c61887c1ef618c96f621be8639112ba1a3d36e0d375c0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Браво, браво! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Господа, начинайте, я сажусь играть! Смешной этот Соленый... <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Садится за пианино, играет вальс.)</i></small>",
+      "target_sha256": "945f7045c60460bf150c61887c1ef618c96f621be8639112ba1a3d36e0d375c0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0223",
+      "source_sha256": "0bb7824080cbee93d2ba91e269d1a93b37bb1807455c85aca852334c42c2138f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(танцует вальс одна)</i></small>. Барон пьян, барон пьян, барон пьян!",
+      "target_sha256": "0bb7824080cbee93d2ba91e269d1a93b37bb1807455c85aca852334c42c2138f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0224",
+      "source_sha256": "9aa2ed69cd4b95cce048e9d8420bde801737c2020c4408cc326736fafb35336f",
+      "target": "Входит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Наташа</span>.",
+      "target_sha256": "9aa2ed69cd4b95cce048e9d8420bde801737c2020c4408cc326736fafb35336f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0225",
+      "source_sha256": "9ab74af0f0f1e7a980abe3abb828585e4258ed20a425e8dd6272cedeba3e4f50",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Чебутыкину)</i></small>. Иван Романыч! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Говорит о чем-то Чебутыкину, потом тихо уходит.)</i></small>",
+      "target_sha256": "9ab74af0f0f1e7a980abe3abb828585e4258ed20a425e8dd6272cedeba3e4f50",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0226",
+      "source_sha256": "9d720dafc72b7a9ddc78074e054f7d823994ebef448a8a75ee47c62000582a7e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Чебутыкин</span> трогает Тузенбаха за плечо и шепчет ему о чем-то.",
+      "target_sha256": "9d720dafc72b7a9ddc78074e054f7d823994ebef448a8a75ee47c62000582a7e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0227",
+      "source_sha256": "163584288581be81bbf13ceac4ac8fc1f55b45366ceb3ac6fad08e52b1e46df5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Что такое?",
+      "target_sha256": "163584288581be81bbf13ceac4ac8fc1f55b45366ceb3ac6fad08e52b1e46df5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0228",
+      "source_sha256": "c4a76964ccca16e619ed17e807b021dc87e897db9dea2d7d9d6fdeb8735ebdc6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Нам пора уходить. Будьте здоровы.",
+      "target_sha256": "c4a76964ccca16e619ed17e807b021dc87e897db9dea2d7d9d6fdeb8735ebdc6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0229",
+      "source_sha256": "2896359a29ed5185516e3467f42e64cc1515cc8d696f786fa5e6ffd1b663406e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Спокойной ночи. Пора уходить.",
+      "target_sha256": "2896359a29ed5185516e3467f42e64cc1515cc8d696f786fa5e6ffd1b663406e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0230",
+      "source_sha256": "474e487af3fea8f3471925f7e0ce49ec66fac09673a64e47e3b9e5b56e1a8ec7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Позвольте... А ряженые?..",
+      "target_sha256": "474e487af3fea8f3471925f7e0ce49ec66fac09673a64e47e3b9e5b56e1a8ec7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0231",
+      "source_sha256": "6f1b3a9798b5b542ae6063f1726d3f4bd25e5bfd8e75f20d223e7248e8c0f178",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сконфуженный)</i></small>. Ряженых не будет. Видишь ли, моя милая, Наташа говорит, что Бобик не совсем здоров, и потому... Одним словом, я не знаю, мне решительно все равно.",
+      "target_sha256": "6f1b3a9798b5b542ae6063f1726d3f4bd25e5bfd8e75f20d223e7248e8c0f178",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0232",
+      "source_sha256": "a6ad2de5c1c6a00adb988edbfb481af5f16474c0c56b68b348ea076eda9f3b00",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(пожимая плечами)</i></small>. Бобик нездоров!",
+      "target_sha256": "a6ad2de5c1c6a00adb988edbfb481af5f16474c0c56b68b348ea076eda9f3b00",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0233",
+      "source_sha256": "f2f8cbd7929adacaaea0396c74994048fee07f0396b32fe27a1d1cc2b0589e6b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Где наша не пропадала! Гонят, стало быть надо уходить. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине.)</i></small> Не Бобик болен, а она сама... Вот! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Стучит пальцем по лбу.)</i></small> Мещанка!",
+      "target_sha256": "f2f8cbd7929adacaaea0396c74994048fee07f0396b32fe27a1d1cc2b0589e6b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0234",
+      "source_sha256": "5c45d1e96317c3a6f7c61f374945392b6162f41890b3394a74fee8713097a9e3",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> уходит в правую дверь к себе, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Чебутыкин</span> идет за ним; в зале прощаются.",
+      "target_sha256": "5c45d1e96317c3a6f7c61f374945392b6162f41890b3394a74fee8713097a9e3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0235",
+      "source_sha256": "5021dab177c19ece66f6bec179ed91a92aa9dfbe80802af0f7168f25b28e6411",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Какая жалость! Я рассчитывал провести вечерок, но если болен ребеночек, то, конечно... Я завтра принесу ему игрушечку...",
+      "target_sha256": "5021dab177c19ece66f6bec179ed91a92aa9dfbe80802af0f7168f25b28e6411",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0236",
+      "source_sha256": "af0059b920c5f2251b1f15e3e859bc60bf8da94bc9ac90dbfbfb8961904fe951",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(громко)</i></small>. Я сегодня нарочно выспался после обеда, думал, что всю ночь буду танцевать. Ведь теперь только девять часов!",
+      "target_sha256": "af0059b920c5f2251b1f15e3e859bc60bf8da94bc9ac90dbfbfb8961904fe951",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0237",
+      "source_sha256": "d519f3a3a1572b7b27cc00fbb73d1945638d62df19386a74d88303a38ed692a4",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Выйдем на улицу, там потолкуем. Решим, что и как.",
+      "target_sha256": "d519f3a3a1572b7b27cc00fbb73d1945638d62df19386a74d88303a38ed692a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0238",
+      "source_sha256": "260a0b0b154670f7f6072786862c60549652abf8abaa504e2af4c4e08f158f54",
+      "target": "Слышно: «Прощайте! Будьте здоровы!» Слышен веселый смех Тузенбаха. Все уходят. Анфиса и горничная убирают со стола, тушат огни. Слышно, как поет нянька. <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> в пальто и шляпе и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Чебутыкин</span> тихо входят.",
+      "target_sha256": "260a0b0b154670f7f6072786862c60549652abf8abaa504e2af4c4e08f158f54",
+      "tag": "p"
+    }
+  ]
+}
