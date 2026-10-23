@@ -1,0 +1,75 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 1,
+  "batch": 7,
+  "source_ids": [
+    "046-note-05"
+  ],
+  "source_hashes": {
+    "046-note-05": "bb1533d04f54585d6c8173919d386cf3c8b33f45cd1aa5f4c41c41a50aae6b67"
+  },
+  "review": [
+    {
+      "source_id": "046-note-05",
+      "verdict": "PASS",
+      "reason": "The target matches the source row exactly: «лат. mens sana in corpore sano — здоровый дух в здоровом теле.» This is the preserved Wikisource editorial note (FN:5), not Chekhov's own text. It correctly glosses Kulygin's Latin phrase in Act One. The Latin spelling, em dash and Russian gloss are intact, with no corruption, omission or rewriting."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjvbFZFrw4fwwuV9SqC",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 30248,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 170,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-note-05",
+      "verdict": "PASS",
+      "reason": "The target is identical to the source row: «лат. mens sana in corpore sano — здоровый дух в здоровом теле.» This is the preserved Wikisource editorial note (FN:5) glossing Kulygin's Latin phrase in Act One, not Chekhov's own text. The Latin spelling, em dash and Russian gloss are intact, and the note is unaltered. It matches the complete-act context, where the note appears as the fifth and last of the act's notes. The prior PASS finding is confirmed."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjvtYs5kuj2vbiyoZe6",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 30478,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-note-05",
+      "source_sha256": "bb1533d04f54585d6c8173919d386cf3c8b33f45cd1aa5f4c41c41a50aae6b67",
+      "target": "лат. mens sana in corpore sano — здоровый дух в здоровом теле.",
+      "target_sha256": "bb1533d04f54585d6c8173919d386cf3c8b33f45cd1aa5f4c41c41a50aae6b67",
+      "tag": "editorial_note"
+    }
+  ]
+}
