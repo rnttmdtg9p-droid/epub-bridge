@@ -1,0 +1,516 @@
+{
+  "unit": 16,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-016-0039",
+      "target": "— Это будет очень трудно, — ответил Паганель, — ведь индеец ничего не смыслит в градусах земных координат, и история с документом покажется ему фантастической.",
+      "source_sha256": "258ad2148f81b36e8ac6cccb4832e30d314ecac3a59b1fa2e9a3d9543a1b50e7",
+      "target_id": "ru-fr42c-016-0039",
+      "tag": "p",
+      "target_sha256": "2862c5c92eb5cde69c5098f03c07e092cb3ba4ca27deaba4f671121445c680dd"
+    },
+    {
+      "source_id": "fr42c-016-0040",
+      "target": "— Но, — серьёзно спросил майор, — чего он не поймёт: саму историю или рассказчика?",
+      "source_sha256": "60c34342c7e4145fd9d4800c978407ef3e6cfa846f3c30c4c7c8910abd66d6c6",
+      "target_id": "ru-fr42c-016-0040",
+      "tag": "p",
+      "target_sha256": "1c9b6dcf34c8ed723650f823a804b4e9ba74177e5dd02974b6324d51b6b301d0"
+    },
+    {
+      "source_id": "fr42c-016-0041",
+      "target": "— Ах, Мак-Наббс, — возразил Паганель, — вы опять сомневаетесь в моём испанском!",
+      "source_sha256": "0a069cd336a000bc21e1f81e4d29083b8616386cf2bf62f39c93bb70d094dbf0",
+      "target_id": "ru-fr42c-016-0041",
+      "tag": "p",
+      "target_sha256": "545a836610009e71789e071b3f6a54097ca60d04ea19358eefb49315089cdbc6"
+    },
+    {
+      "source_id": "fr42c-016-0042",
+      "target": "— Что ж, попробуйте, мой достойный друг.",
+      "source_sha256": "f739eefbf29570c7270788bf56cf7e4e080f7296ec7c153c1ed45792810e92ce",
+      "target_id": "ru-fr42c-016-0042",
+      "tag": "p",
+      "target_sha256": "3517abfa48dc11e50a95cbdfa9d69ee28a2772d173d7cad25229bf77f242bd27"
+    },
+    {
+      "source_id": "fr42c-016-0043",
+      "target": "— Попробуем.",
+      "source_sha256": "540a54566dd26aba6abe6c0672dd98796cf4b925098db1335b6b94f58fa656e3",
+      "target_id": "ru-fr42c-016-0043",
+      "tag": "p",
+      "target_sha256": "3fbf597f158e26589958a18432fa86b0504c680be43c37e8b36fe74a5005fe32"
+    },
+    {
+      "source_id": "fr42c-016-0044",
+      "target": "Паганель вернулся к патагонцу и начал речь, которую то и дело прерывала нехватка слов, трудность передать некоторые тонкости и необходимость растолковать полуневежественному дикарю подробности, для него совершенно непонятные. Учёный был забавен. Он жестикулировал, чеканил слоги, метался на сто ладов, и капли пота каскадом стекали с его лба на грудь. Когда язык отказывался служить, на помощь приходила рука. Паганель сошёл на землю и там, на песке, начертил географическую карту, где пересекались широты и долготы, где были два океана и вытянулась дорога на Кармен. Никогда ещё профессор не попадал в такое затруднение. Талькав смотрел на это представление спокойно, не показывая, понимает он или нет.",
+      "source_sha256": "e0189918e7f7a112d33cda0d9fa3ad614573304cbfc18e1e1dac46746dbabaf7",
+      "target_id": "ru-fr42c-016-0044",
+      "tag": "p",
+      "target_sha256": "a2cbb4f1a00194b454884a551bbfc42f586d625be1d04f0bc123229ceba108c9"
+    },
+    {
+      "source_id": "fr42c-016-0045",
+      "target": "Урок географа длился более получаса. Затем он умолк, отёр лицо, которое таяло от пота, и посмотрел на патагонца.",
+      "source_sha256": "e755d5b2838327c6b216dd2bacc8bf0e6cdf9247b0c90a55de21cfd94c327963",
+      "target_id": "ru-fr42c-016-0045",
+      "tag": "p",
+      "target_sha256": "7f223f7219a891ae08fbc1c6f88465a019760c58f166d4f462a2b5c0da1bc1ae"
+    },
+    {
+      "source_id": "fr42c-016-0046",
+      "target": "— Он понял? — спросил Гленарван.",
+      "source_sha256": "4e54429c3f4b8a7a4706069efecdbc7ad8f58ea29f9b2662d87e83d1013857e1",
+      "target_id": "ru-fr42c-016-0046",
+      "tag": "p",
+      "target_sha256": "71ac44a3cbe0e66da49d766768dffff9476e89b58e263c1094b55eb6aad78ba6"
+    },
+    {
+      "source_id": "fr42c-016-0047",
+      "target": "— Увидим, — ответил Паганель, — но если не понял, я отказываюсь.",
+      "source_sha256": "48990092b5b81d5f78f51825fac4f885ef6552b147e7fd3ea5c79fb4108a94b9",
+      "target_id": "ru-fr42c-016-0047",
+      "tag": "p",
+      "target_sha256": "a88a4176f713009300255fa667f8993ce04720c572106b4d8f217c0673d555a5"
+    },
+    {
+      "source_id": "fr42c-016-0048",
+      "target": "Талькав не шевелился. Он также ничего не говорил. Его глаза оставались прикованы к фигурам, начертанным на песке, которые ветер понемногу стирал.",
+      "source_sha256": "a36c73600a4d3e9c7f040aed30faf664b60b05200fd40ee47cd12bebf76b99d6",
+      "target_id": "ru-fr42c-016-0048",
+      "tag": "p",
+      "target_sha256": "82c81280f47abf163a10bfa284beecfe029c80c94a67bf67778b95efc3364a27"
+    },
+    {
+      "source_id": "fr42c-016-0049",
+      "target": "— Ну что? — спросил его Паганель.",
+      "source_sha256": "1b281f14c4eb15067e851e7c980b24f60dc85b8fb6d39345e35253bff7bea71a",
+      "target_id": "ru-fr42c-016-0049",
+      "tag": "p",
+      "target_sha256": "acc42ef98f89529f912591d8420f0ba122696eb12cf8291a120bffd070f8e851"
+    },
+    {
+      "source_id": "fr42c-016-0050",
+      "target": "Талькав, казалось, не слышал. Паганель уже видел, как на губах майора проступает насмешливая улыбка, и, желая отстоять свою честь, собирался с новой энергией начать географические объяснения заново, когда патагонец остановил его жестом.",
+      "source_sha256": "4c0bad13c0c67b21d736d56adaa48a6aa60063951492975ce0f42c268545852b",
+      "target_id": "ru-fr42c-016-0050",
+      "tag": "p",
+      "target_sha256": "991625392665132f4c13d553c9683083afe1c6385769d57b3811b9075cdce3f1"
+    },
+    {
+      "source_id": "fr42c-016-0051",
+      "target": "— Вы ищете пленника? — сказал он.",
+      "source_sha256": "ad9c2bb402c2f8c232010aaef62cc4256805e1b493336a5e523ea5ddf84bee34",
+      "target_id": "ru-fr42c-016-0051",
+      "tag": "p",
+      "target_sha256": "1d6ee1d4b7f873ba3964db4e5b2c412be5e3c39330397b5e088e9baf319f3801"
+    },
+    {
+      "source_id": "fr42c-016-0052",
+      "target": "— Да, — ответил Паганель.",
+      "source_sha256": "8b9b5c492394ca2d173d067abc1f7e5945f284e2395240e30bdd0559c8c1c746",
+      "target_id": "ru-fr42c-016-0052",
+      "tag": "p",
+      "target_sha256": "91574dc2bb9a02cc12bf60f12768adf8a2cd621b03e512021112a2f46137f594"
+    },
+    {
+      "source_id": "fr42c-016-0053",
+      "target": "— И именно на этой линии, лежащей между заходящим солнцем и восходящим солнцем, — прибавил Талькав, уточняя сравнением на индейский лад путь с запада на восток.",
+      "source_sha256": "6331fd7b33da18c7dd7a348d8721fd01a1ae68de3dbb67d6b20984bd94785f56",
+      "target_id": "ru-fr42c-016-0053",
+      "tag": "p",
+      "target_sha256": "f39309fa1f362eda76ec81d3131f4e1a3593b06ee8f81b68869d551e53472a1a"
+    },
+    {
+      "source_id": "fr42c-016-0054",
+      "target": "— Да, да, так и есть.",
+      "source_sha256": "fef0e8927a7ecc2eecc3f8a9d4c2de2e80c2511f623c20cba162c416c103319d",
+      "target_id": "ru-fr42c-016-0054",
+      "tag": "p",
+      "target_sha256": "e9ea349f602e561468c96db42fb95dcd687a0c0af510ff071ded900422b7a319"
+    },
+    {
+      "source_id": "fr42c-016-0055",
+      "target": "— И это ваш Бог, — сказал патагонец, — доверил волнам обширного моря тайны пленника?",
+      "source_sha256": "609d436139b31a5b4c1df44883a45371c16388de844bb70862a57db807d18705",
+      "target_id": "ru-fr42c-016-0055",
+      "tag": "p",
+      "target_sha256": "39d681a26fc7d5ca29a4af8f37df70fbbfc5dcf38b8bfbc0891052f3070b27a2"
+    },
+    {
+      "source_id": "fr42c-016-0056",
+      "target": "— Сам Бог.",
+      "source_sha256": "763357df65ce69ede62345700fab1bba6dd9f09f8423245964082e32ccad03f4",
+      "target_id": "ru-fr42c-016-0056",
+      "tag": "p",
+      "target_sha256": "efd845b463cc9c9a21bde769835bcd1847f6d00ae0f3f293d1dedcf5fd50a350"
+    },
+    {
+      "source_id": "fr42c-016-0057",
+      "target": "— Да исполнится тогда его воля, — ответил Талькав с некоторой торжественностью, — мы пойдём на восток, и, если понадобится, до самого солнца!",
+      "source_sha256": "df6d802ff43447b1608bc2a73414b6f307af0cfa2eb75d9d85ea75e8a666e79a",
+      "target_id": "ru-fr42c-016-0057",
+      "tag": "p",
+      "target_sha256": "494f4747b7929461cacc37a02a27fe22b0c0b1aa962262ec25d0c58ff2f308b6"
+    },
+    {
+      "source_id": "fr42c-016-0058",
+      "target": "Паганель, торжествуя в лице своего ученика, тотчас перевёл спутникам ответы индейца.",
+      "source_sha256": "10ac4f28dbc643fa8100d93680802aaae03fe6e7ccbf085c42a38f72e58147b3",
+      "target_id": "ru-fr42c-016-0058",
+      "tag": "p",
+      "target_sha256": "d7d5415690ae8e50cfea302a6dbb813a95e0479336b0728d54070fa64a64a7f0"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-016-0039",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'degrés terrestres' and the 'fantastic' story nuance."
+    },
+    {
+      "source_id": "fr42c-016-0040",
+      "verdict": "CORRECTED",
+      "reason": "Made the major's question and 'historien' joke more precise."
+    },
+    {
+      "source_id": "fr42c-016-0041",
+      "verdict": "CORRECTED",
+      "reason": "Replaced 'ответил' with 'возразил', normalized name punctuation."
+    },
+    {
+      "source_id": "fr42c-016-0042",
+      "verdict": "CORRECTED",
+      "reason": "Improved register of 'digne ami'."
+    },
+    {
+      "source_id": "fr42c-016-0043",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray closing quote; dialogue dash retained."
+    },
+    {
+      "source_id": "fr42c-016-0044",
+      "verdict": "CORRECTED",
+      "reason": "Fixed Талькав, 'curieux', 'articulait', 'monter à terre', Carmen route, and the awkward syntax."
+    },
+    {
+      "source_id": "fr42c-016-0045",
+      "verdict": "CORRECTED",
+      "reason": "Lesson not lecture; 'patagonien' lowercase consistency; sweat detail."
+    },
+    {
+      "source_id": "fr42c-016-0046",
+      "verdict": "CORRECTED",
+      "reason": "Russian dialogue dash instead of guillemets."
+    },
+    {
+      "source_id": "fr42c-016-0047",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray quote; 'j'y renonce' made natural."
+    },
+    {
+      "source_id": "fr42c-016-0048",
+      "verdict": "CORRECTED",
+      "reason": "Name corrected; 'ne parlait pas davantage' clarified."
+    },
+    {
+      "source_id": "fr42c-016-0049",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation converted."
+    },
+    {
+      "source_id": "fr42c-016-0050",
+      "verdict": "CORRECTED",
+      "reason": "Fixed name and 'voyait' agency; 'recommencer' preserved."
+    },
+    {
+      "source_id": "fr42c-016-0051",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation and 'dit-il' tense."
+    },
+    {
+      "source_id": "fr42c-016-0052",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-016-0053",
+      "verdict": "CORRECTED",
+      "reason": "Name fixed; Indian-style comparison wording ('индейский', not 'индийский')."
+    },
+    {
+      "source_id": "fr42c-016-0054",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-016-0055",
+      "verdict": "CORRECTED",
+      "reason": "Slight wording: vaste mer; 'secrets' preserved."
+    },
+    {
+      "source_id": "fr42c-016-0056",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-016-0057",
+      "verdict": "CORRECTED",
+      "reason": "Removed erroneous quote marks; name fixed."
+    },
+    {
+      "source_id": "fr42c-016-0058",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-016-0039",
+      "before": "— Это будет очень сложно, — ответил Паганель, — ведь индеец ничего не понимает в географических широтах, и история с этим документом покажется ему сказкой.",
+      "after": "— Это будет очень трудно, — ответил Паганель, — ведь индеец ничего не смыслит в градусах земных координат, и история с документом покажется ему фантастической."
+    },
+    {
+      "source_id": "fr42c-016-0040",
+      "before": "— Но, — серьёзно заметил майор, — что же он не поймёт: саму историю или историка?",
+      "after": "— Но, — серьёзно спросил майор, — чего он не поймёт: саму историю или рассказчика?"
+    },
+    {
+      "source_id": "fr42c-016-0041",
+      "before": "— Ах! Мак-Наббс, — ответил Паганель, — вот вы опять сомневаетесь в моём испанском!",
+      "after": "— Ах, Мак-Наббс, — возразил Паганель, — вы опять сомневаетесь в моём испанском!"
+    },
+    {
+      "source_id": "fr42c-016-0042",
+      "before": "— Ну что ж, попробуйте, мой уважаемый друг.",
+      "after": "— Что ж, попробуйте, мой достойный друг."
+    },
+    {
+      "source_id": "fr42c-016-0043",
+      "before": "— Попробуем. »",
+      "after": "— Попробуем."
+    },
+    {
+      "source_id": "fr42c-016-0044",
+      "before": "Паганель повернулся к патагонцу и начал речь, которую часто прерывали нехватка слов, трудности с переводом некоторых особенностей и необходимость объяснить полуневежественному дикарю детали, которые были для него совершенно непонятны. Учёный представлял собой любопытное зрелище. Он жестикулировал, отчётливо произносил слова, извивался всеми возможными способами, а капли пота каскадом стекали с его лба на грудь. Когда язык отказал, ему на помощь пришла рука. Паганель спешился и там, на песке, начертил географическую карту, на которой пересекались широты и долготы, где были изображены два океана и пролегала дорога Кармен. Никогда ещё учитель не оказывался в таком затруднительном положении. Талкаве наблюдал за этим представлением с невозмутимым видом, не давая понять, понимает он или нет.",
+      "after": "Паганель вернулся к патагонцу и начал речь, которую то и дело прерывала нехватка слов, трудность передать некоторые тонкости и необходимость растолковать полуневежественному дикарю подробности, для него совершенно непонятные. Учёный был забавен. Он жестикулировал, чеканил слоги, метался на сто ладов, и капли пота каскадом стекали с его лба на грудь. Когда язык отказывался служить, на помощь приходила рука. Паганель сошёл на землю и там, на песке, начертил географическую карту, где пересекались широты и долготы, где были два океана и вытянулась дорога на Кармен. Никогда ещё профессор не попадал в такое затруднение. Талькав смотрел на это представление спокойно, не показывая, понимает он или нет."
+    },
+    {
+      "source_id": "fr42c-016-0045",
+      "before": "Лекция географа длилась более получаса. Затем он замолчал, вытер лицо, которое было мокрым от пота, и посмотрел на Патагона.",
+      "after": "Урок географа длился более получаса. Затем он умолк, отёр лицо, которое таяло от пота, и посмотрел на патагонца."
+    },
+    {
+      "source_id": "fr42c-016-0046",
+      "before": "«Он понял? — спросил Гленарван.",
+      "after": "— Он понял? — спросил Гленарван."
+    },
+    {
+      "source_id": "fr42c-016-0047",
+      "before": "— Посмотрим, — ответил Паганель, — но если он не понял, я отказываюсь от этой затеи. »",
+      "after": "— Увидим, — ответил Паганель, — но если не понял, я отказываюсь."
+    },
+    {
+      "source_id": "fr42c-016-0048",
+      "before": "Талкаве не шевелился. Он и не говорил. Его взгляд оставался прикованным к фигурам, начертанным на песке, которые ветер постепенно стирал.",
+      "after": "Талькав не шевелился. Он также ничего не говорил. Его глаза оставались прикованы к фигурам, начертанным на песке, которые ветер понемногу стирал."
+    },
+    {
+      "source_id": "fr42c-016-0049",
+      "before": "«Ну и что?» — спросил его Паганель.",
+      "after": "— Ну что? — спросил его Паганель."
+    },
+    {
+      "source_id": "fr42c-016-0050",
+      "before": "Талкаве, казалось, не слышал его. Паганель уже заметил, как на губах майора появилась ироническая улыбка, и, желая отстоять свою честь, он уже собирался с новой энергией возобновить свои географические объяснения, когда патагонец остановил его жестом.",
+      "after": "Талькав, казалось, не слышал. Паганель уже видел, как на губах майора проступает насмешливая улыбка, и, желая отстоять свою честь, собирался с новой энергией начать географические объяснения заново, когда патагонец остановил его жестом."
+    },
+    {
+      "source_id": "fr42c-016-0051",
+      "before": "«Вы ищете заключённого? — спросил он.",
+      "after": "— Вы ищете пленника? — сказал он."
+    },
+    {
+      "source_id": "fr42c-016-0053",
+      "before": "— И именно по этой линии, пролегающей между заходящим и восходящим солнцем, — добавил Талкав, поясняя с помощью сравнения в индийском стиле маршрут с запада на восток.",
+      "after": "— И именно на этой линии, лежащей между заходящим солнцем и восходящим солнцем, — прибавил Талькав, уточняя сравнением на индейский лад путь с запада на восток."
+    },
+    {
+      "source_id": "fr42c-016-0054",
+      "before": "— Да, да, именно так.",
+      "after": "— Да, да, так и есть."
+    },
+    {
+      "source_id": "fr42c-016-0055",
+      "before": "— И это ваш Бог, — сказал патагонец, — доверил волнам бескрайнего моря тайны пленника?",
+      "after": "— И это ваш Бог, — сказал патагонец, — доверил волнам обширного моря тайны пленника?"
+    },
+    {
+      "source_id": "fr42c-016-0057",
+      "before": "— «Пусть же исполнится его воля, — ответил Талкав с некоторой торжественностью, — мы пойдём на восток, и если понадобится, то даже к самому солнцу!»",
+      "after": "— Да исполнится тогда его воля, — ответил Талькав с некоторой торжественностью, — мы пойдём на восток, и, если понадобится, до самого солнца!"
+    },
+    {
+      "source_id": "fr42c-016-0058",
+      "before": "Паганель, торжествуя в лице своего ученика, немедленно перевёл своим товарищам ответы индейца.",
+      "after": "Паганель, торжествуя в лице своего ученика, тотчас перевёл спутникам ответы индейца."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/016/batch002.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJrKMTgXeDhcouP9PUxs",
+    "usage": {
+      "input_tokens": 9779,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2440,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJrLVMiZQa3zx7qAvmLi",
+        "usage": {
+          "input_tokens": 12188,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2328,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-016-0039",
+          "verdict": "PASS",
+          "reason": "Faithful; difficulty, Indian's ignorance of degrees, fantastic story all preserved."
+        },
+        {
+          "source_id": "fr42c-016-0040",
+          "verdict": "PASS",
+          "reason": "Major's serious wry question preserved; history/historian rendered acceptably as рассказчик."
+        },
+        {
+          "source_id": "fr42c-016-0041",
+          "verdict": "PASS",
+          "reason": "Doubt about Spanish and 'encore' preserved."
+        },
+        {
+          "source_id": "fr42c-016-0042",
+          "verdict": "PASS",
+          "reason": "Accurate invitation to try."
+        },
+        {
+          "source_id": "fr42c-016-0043",
+          "verdict": "PASS",
+          "reason": "Accurate; closing quote correctly handled in dialogue dash."
+        },
+        {
+          "source_id": "fr42c-016-0044",
+          "verdict": "PASS",
+          "reason": "All details preserved: interruptions, gestures, sweat, map, Carmen road, Thalcave's impassivity."
+        },
+        {
+          "source_id": "fr42c-016-0045",
+          "verdict": "PASS",
+          "reason": "Duration, silence, mopping, looking at Patagonian all preserved."
+        },
+        {
+          "source_id": "fr42c-016-0046",
+          "verdict": "PASS",
+          "reason": "Correct question and speaker."
+        },
+        {
+          "source_id": "fr42c-016-0047",
+          "verdict": "PASS",
+          "reason": "Conditional renunciation preserved."
+        },
+        {
+          "source_id": "fr42c-016-0048",
+          "verdict": "PASS",
+          "reason": "Stillness, silence, eyes on figures, wind erasing preserved."
+        },
+        {
+          "source_id": "fr42c-016-0049",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "fr42c-016-0050",
+          "verdict": "PASS",
+          "reason": "Negation, major's smile, honour, gesture all preserved."
+        },
+        {
+          "source_id": "fr42c-016-0051",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "fr42c-016-0052",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "fr42c-016-0053",
+          "verdict": "PASS",
+          "reason": "Sun comparison and west-east route preserved."
+        },
+        {
+          "source_id": "fr42c-016-0054",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "fr42c-016-0055",
+          "verdict": "PASS",
+          "reason": "God, waves, secrets of prisoner preserved."
+        },
+        {
+          "source_id": "fr42c-016-0056",
+          "verdict": "PASS",
+          "reason": "Correct."
+        },
+        {
+          "source_id": "fr42c-016-0057",
+          "verdict": "PASS",
+          "reason": "Solemnity, east, 'to the sun' preserved."
+        },
+        {
+          "source_id": "fr42c-016-0058",
+          "verdict": "PASS",
+          "reason": "Correct agency and meaning."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
