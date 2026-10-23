@@ -1,0 +1,41 @@
+name: BB rank41 saved-checkpoint transition
+on:
+  push:
+    paths: ['.github/workflows/bb-ru41-checkpoint-transition.yml']
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: bb-ru41-checkpoint-transition-once
+  cancel-in-progress: false
+jobs:
+  transition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify durable chapter checkpoint and transition the specific predecessor
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo='rnttmdtg9p-droid/epub-bridge'
+          predecessor='39883078624'
+          checkpoint_blob="$(gh api "repos/$repo/contents/results/ru41-claude/056/chapter.reviewed.json?ref=bb-ru41-claude-repair-v5070-20261023" --jq '.sha')"
+          test "$checkpoint_blob" = '2bf6bb280528bcb762839fce52a9a20c165ceb38'
+          branch="$(gh api "repos/$repo/actions/runs/$predecessor" --jq '.head_branch')"
+          test "$branch" = 'bb-ru41-claude-repair-v5070-20261023'
+          status="$(gh api "repos/$repo/actions/runs/$predecessor" --jq '.status')"
+          if [ "$status" != 'completed' ]; then
+            gh api --method POST "repos/$repo/actions/runs/$predecessor/cancel"
+          fi
+          for attempt in $(seq 1 40); do
+            status="$(gh api "repos/$repo/actions/runs/$predecessor" --jq '.status')"
+            if [ "$status" = 'completed' ]; then
+              echo 'Predecessor stopped after verified saved checkpoint; same-concurrency continuation may proceed.'
+              exit 0
+            fi
+            sleep 3
+          done
+          echo 'Transition wait exceeded; do not assume predecessor stopped.'
+          exit 1
