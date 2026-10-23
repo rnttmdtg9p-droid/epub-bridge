@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK5howkd213fBics64HA",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-060-0060\",\"target\":\"Место для Удупы, то есть для могилы, было выбрано за пределами укрепления, примерно в двух милях от него, на вершине небольшой горы под названием Маунганаму, расположенной на правом берегу озера.\"},{\"source_id\":\"fr42c-060-0061\",\"target\":\"Трупы, сложенные вдвое, были помещены туда. (Стр. 537.)\"},{\"source_id\":\"fr42c-060-0062\",\"target\":\"Именно туда и должны были перенести тела. К подножию холма принесли два очень примитивных подобия паланкинов или, говоря откровенно, двое носилок. Трупы, согнутые, скорее сидящие, чем лежащие, и удерживаемые в одеждах кольцом из лиан, были помещены на них. Четверо воинов подняли их на плечи, и всё племя, вновь затянув погребальный гимн, торжественной процессией двинулось за ними к месту погребения.\"},{\"source_id\":\"fr42c-060-0063\",\"target\":\"Пленники, по-прежнему под надзором, видели, как процессия покинула первую ограду пахá; затем песнопения и крики мало-помалу стихли.\"},{\"source_id\":\"fr42c-060-0064\",\"target\":\"Около получаса эта траурная процессия оставалась вне их поля зрения, в глубине долины. Потом они снова увидели её: она извивалась по горным тропам. Расстояние придавало фантастический вид волнообразному движению этой длинной, змеившейся колонны.\"},{\"source_id\":\"fr42c-060-0065\",\"target\":\"Племя остановилось на высоте восьмисот футов, то есть на вершине Маунганаму, как раз в том месте, которое было приготовлено для погребения Кара-Тете.\"},{\"source_id\":\"fr42c-060-0066\",\"target\":\"Простому маори для могилы хватило бы ямы и груды камней. Но могущественному и грозному вождю, которому, без сомнения, предстояло вскоре быть причисленным к богам, его племя приготовило гробницу, достойную его подвигов.\"},{\"source_id\":\"fr42c-060-0067\",\"target\":\"Удупа была обнесена частоколом, а возле ямы, где должны были покоиться трупы, стояли колья, украшенные фигурами, раскрашенными красной охрой. Родные не забыли, что «Вайдуа», дух умерших, питается вещественной пищей, как тело в течение этой бренной жизни. Поэтому в ограде были оставлены съестные припасы, а также оружие и одежда покойного.\"},{\"source_id\":\"fr42c-060-0068\",\"target\":\"Ничто не было забыто ради удобства могилы. Супругов положили туда рядом, а затем, после нового ряда причитаний, засыпали землёй и травой.\"},{\"source_id\":\"fr42c-060-0069\",\"target\":\"Затем процессия молча спустилась с горы, и теперь никто не мог взойти на Маунганаму под страхом смерти, ибо она была объявлена табу, как и Тонгариро, где покоятся останки вождя, раздавленного в 1846 году судорогой зеландской почвы.\"}],\"review\":[{\"source_id\":\"fr42c-060-0060\",\"verdict\":\"PASS\",\"reason\":\"Complete and accurate; location, distance, names preserved.\"},{\"source_id\":\"fr42c-060-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption wording adjusted for repliés; page note kept.\"},{\"source_id\":\"fr42c-060-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed palanquin/litter rendering, 'plutôt assis', tribe and procession wording; all facts retained.\"},{\"source_id\":\"fr42c-060-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Polished captives/surveillance phrasing; pah form and sequence preserved.\"},{\"source_id\":\"fr42c-060-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved idiom; half-hour, reappearance and distance effect preserved.\"},{\"source_id\":\"fr42c-060-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed phrasing; height, summit and Kara-Tété retained.\"},{\"source_id\":\"fr42c-060-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"Rendered deification more faithfully and fixed irrealis nuance.\"},{\"source_id\":\"fr42c-060-0067\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'vivres' agreement and ochre/redness, parents, spirit nourishment.\"},{\"source_id\":\"fr42c-060-0068\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed incorrect double negation; preserved irony of tomb comfort and burial sequence.\"},{\"source_id\":\"fr42c-060-0069\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'convulsion du sol zélandais' and taboo sense; death penalty and 1846 retained.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6950,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1693,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
