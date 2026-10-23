@@ -1,0 +1,26 @@
+name: BB Russian43 contextual captions and tobacco fidelity
+on:
+  push:
+    paths: ['.github/workflows/bb-ru43-contextual.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Correct17 source contextual rows and independently compare stable complete text
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru43_contextual.py
+      - name: Preserve actual exchanges
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru43-contextual-fidelity-comparison-v5070
+          path: results/ru43-contextual/
+          retention-days: 90
+          if-no-files-found: error
