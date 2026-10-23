@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJokdiaW5GaSwBMgk5tN",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-006-0079\",\"target\":\"— Мадам, — сказал он мисс Грант, — мисс, — сказал он леди Элен, — сударь, — добавил он, обращаясь к лорду Гленарвану…\"},{\"source_id\":\"fr42c-006-0080\",\"target\":\"— Лорд Гленарван, — сказал Джон Манглс.\"},{\"source_id\":\"fr42c-006-0081\",\"target\":\"— Милорд, — продолжал тогда незнакомец, — прошу прощения, что представляюсь сам; но в море поневоле приходится несколько отступать от этикета; надеюсь, мы скоро познакомимся и в обществе этих дам плавание на <i>«Скотии»</i> покажется нам столь же коротким, сколь и приятным.\"},{\"source_id\":\"fr42c-006-0082\",\"target\":\"Леди Элен и мисс Грант не нашлись бы, что ответить. Они ничего не понимали в присутствии этого незваного гостя на юте <i>«Дункана».</i>\"},{\"source_id\":\"fr42c-006-0083\",\"target\":\"— Сударь, — сказал тогда Гленарван, — с кем имею честь говорить?\"},{\"source_id\":\"fr42c-006-0084\",\"target\":\"— С Жаком-Элиасеном-Франсуа-Мари Паганелем, секретарём Парижского географического общества, членом-корреспондентом обществ Берлина, Бомбея, Дармштадта, Лейпцига, Лондона, Петербурга, Вены, Нью-Йорка, почётным членом Королевского географического и этнографического института Восточной Индии, который, прожив двадцать лет за кабинетной географией, захотел вступить в науку деятельную и направляется в Индию, чтобы связать между собой труды великих путешественников.\"},{\"source_id\":\"fr42c-note-014\",\"target\":\"Нюктолопия — это особое свойство глаза, позволяющее видеть предметы в темноте.\"}],\"review\":[{\"source_id\":\"fr42c-006-0079\",\"verdict\":\"PASS\",\"reason\":\"Dialogue dash, address forms, speech tags and ellipsis match the source; prior correction verified.\"},{\"source_id\":\"fr42c-006-0080\",\"verdict\":\"PASS\",\"reason\":\"Faithful and complete; speaker and phrasing match.\"},{\"source_id\":\"fr42c-006-0081\",\"verdict\":\"PASS\",\"reason\":\"Meaning, tone, etiquette remark and italic ship name preserved; stray quote removed correctly.\"},{\"source_id\":\"fr42c-006-0082\",\"verdict\":\"PASS\",\"reason\":\"Conditional negation, intruder and dunette rendered faithfully; italic Duncan preserved.\"},{\"source_id\":\"fr42c-006-0083\",\"verdict\":\"PASS\",\"reason\":\"Question and formal address accurate; Russian dialogue punctuation correct.\"},{\"source_id\":\"fr42c-006-0084\",\"verdict\":\"PASS\",\"reason\":\"All titles, societies, cities and purpose preserved; grammatical case agrees with the question; no omissions.\"},{\"source_id\":\"fr42c-note-014\",\"verdict\":\"PASS\",\"reason\":\"Note retains the term nyctalopia and its definition accurately; no omissions.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6176,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1099,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
