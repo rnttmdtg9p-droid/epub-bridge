@@ -1,0 +1,26 @@
+name: BB Russian42 final name spelling source comparisons
+on:
+  push:
+    paths: ['.github/workflows/bb-ru42-name-consistency.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Review every spelling correction and independently compare stable final text
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru42_name_consistency.py
+      - name: Preserve actual source, translation, review and correction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru42-name-consistency-source-comparison-v5070
+          path: results/ru42-name-consistency/
+          retention-days: 90
+          if-no-files-found: error
