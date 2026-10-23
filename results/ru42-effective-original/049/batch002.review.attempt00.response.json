@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK2jcZ7ZzEtzB7ZfVehU",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-049-0039\",\"target\":\"— Пятьдесят фунтов.»\"},{\"source_id\":\"fr42c-049-0040\",\"target\":\"Гленарван кивнул в знак согласия.\"},{\"source_id\":\"fr42c-049-0041\",\"target\":\"«Хорошо! Пятьдесят фунтов, — ответил Джон Манглс.\"},{\"source_id\":\"fr42c-049-0042\",\"target\":\"— Но с голым переходом, — добавил Уилл Хэлли.\"},{\"source_id\":\"fr42c-049-0043\",\"target\":\"— С голым переходом.\"},{\"source_id\":\"fr42c-049-0044\",\"target\":\"— Харчи отдельно.\"},{\"source_id\":\"fr42c-049-0045\",\"target\":\"— Отдельно.\"},{\"source_id\":\"fr42c-049-0046\",\"target\":\"— Согласен. А дальше? — сказал Уилл, протягивая руку.\"},{\"source_id\":\"fr42c-049-0047\",\"target\":\"— Что?\"},{\"source_id\":\"fr42c-049-0048\",\"target\":\"— Задаток?\"},{\"source_id\":\"fr42c-049-0049\",\"target\":\"— Вот половина платы, двадцать пять фунтов, — сказал Джон Манглс, отсчитывая деньги шкиперу, который сунул их в карман, не сказав спасибо.\"},{\"source_id\":\"fr42c-049-0050\",\"target\":\"— Завтра на борту, — сказал он. — До полудня. Будете вы там или нет, я снимаюсь с якоря.\"},{\"source_id\":\"fr42c-049-0051\",\"target\":\"— Будем.»\"},{\"source_id\":\"fr42c-049-0052\",\"target\":\"Получив этот ответ, Гленарван, майор, Роберт, Паганель и Джон Манглс покинули судно, а Уилл Хэлли так и не дотронулся пальцем до зюйдвестки[[FN:85]], нахлобученной на его рыжие вихры.\"},{\"source_id\":\"fr42c-049-0053\",\"target\":\"Это был бриг по имени «<i>Маккуори</i>». (Стр. 436.)\"},{\"source_id\":\"fr42c-049-0055\",\"target\":\"«Какой дикарь! — сказал Джон.\"},{\"source_id\":\"fr42c-049-0056\",\"target\":\"— А по мне, так он подходит, — ответил Паганель. — Настоящий морской волк.\"},{\"source_id\":\"fr42c-049-0057\",\"target\":\"— Настоящий медведь! — возразил майор.\"},{\"source_id\":\"fr42c-049-0058\",\"target\":\"— И, думаю, — добавил Джон Манглс, — этот медведь когда-то, должно быть, торговал живым товаром.\"},{\"source_id\":\"fr42c-049-0059\",\"target\":\"— Не всё ли равно! — ответил Гленарван. — Раз он командует «<i>Маккуори</i>», а «<i>Маккуори</i>» идёт в Новую Зеландию. От Туфолд-бея до Окленда мы будем видеть его мало; после Окленда не увидим вовсе.»\"}],\"review\":[{\"source_id\":\"fr42c-049-0039\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray space before closing quote.\"},{\"source_id\":\"fr42c-049-0040\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-049-0041\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-049-0042\",\"verdict\":\"CORRECTED\",\"reason\":\"'passage tout sec' means passage without provisions, not a dry passage/excerpt.\"},{\"source_id\":\"fr42c-049-0043\",\"verdict\":\"CORRECTED\",\"reason\":\"Repeated phrase corrected to echo the preceding line.\"},{\"source_id\":\"fr42c-049-0044\",\"verdict\":\"CORRECTED\",\"reason\":\"Register made brusque, as in dialogue.\"},{\"source_id\":\"fr42c-049-0045\",\"verdict\":\"CORRECTED\",\"reason\":\"'В сторону' was a mistranslation; now 'Отдельно'.\"},{\"source_id\":\"fr42c-049-0046\",\"verdict\":\"CORRECTED\",\"reason\":\"'Convenu' rendered more idiomatically.\"},{\"source_id\":\"fr42c-049-0047\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-049-0048\",\"verdict\":\"CORRECTED\",\"reason\":\"Arrhes means earnest money; 'Задаток' is more accurate.\"},{\"source_id\":\"fr42c-049-0049\",\"verdict\":\"CORRECTED\",\"reason\":\"'Counting out' to the master and 'half the price' made precise.\"},{\"source_id\":\"fr42c-049-0050\",\"verdict\":\"CORRECTED\",\"reason\":\"Addressee and 'dérape' (weighs anchor) corrected.\"},{\"source_id\":\"fr42c-049-0051\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft invented a different line; restored 'We'll be there.'\"},{\"source_id\":\"fr42c-049-0052\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray whitespace; 'surouet' is a sou'wester, not 'суруэт'; kept note token.\"},{\"source_id\":\"fr42c-049-0053\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed italic markup and quotation placement.\"},{\"source_id\":\"fr42c-049-0055\",\"verdict\":\"CORRECTED\",\"reason\":\"'Butor' means boor; softened to 'дикарь' for brute.\"},{\"source_id\":\"fr42c-049-0056\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiom smoothed.\"},{\"source_id\":\"fr42c-049-0057\",\"verdict\":\"CORRECTED\",\"reason\":\"'répliqua' is a retort.\"},{\"source_id\":\"fr42c-049-0058\",\"verdict\":\"CORRECTED\",\"reason\":\"'Chair humaine' slave-trade sense; smoother phrasing.\"},{\"source_id\":\"fr42c-049-0059\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed quotes, italics, punctuation, place name Twofold-bay and clause structure.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8293,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2083,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

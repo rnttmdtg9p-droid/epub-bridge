@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK2mmpXj4KhMsAgpyPVS",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-049-0039\",\"target\":\"— Пятьдесят фунтов.»\"},{\"source_id\":\"fr42c-049-0040\",\"target\":\"Гленарван кивнул в знак согласия.\"},{\"source_id\":\"fr42c-049-0041\",\"target\":\"«Хорошо! Пятьдесят фунтов, — ответил Джон Манглс.\"},{\"source_id\":\"fr42c-049-0042\",\"target\":\"— Но только за проезд, и ничего сверх того, — добавил Уилл Хэлли.\"},{\"source_id\":\"fr42c-049-0043\",\"target\":\"— Только за проезд.\"},{\"source_id\":\"fr42c-049-0044\",\"target\":\"— Харчи отдельно.\"},{\"source_id\":\"fr42c-049-0045\",\"target\":\"— Отдельно.\"},{\"source_id\":\"fr42c-049-0046\",\"target\":\"— Согласен. А дальше? — сказал Уилл, протягивая руку.\"},{\"source_id\":\"fr42c-049-0047\",\"target\":\"— Что?\"},{\"source_id\":\"fr42c-049-0048\",\"target\":\"— Задаток?\"},{\"source_id\":\"fr42c-049-0049\",\"target\":\"— Вот половина платы, двадцать пять фунтов, — сказал Джон Манглс, отсчитывая деньги шкиперу, который сунул их в карман, не сказав спасибо.\"},{\"source_id\":\"fr42c-049-0050\",\"target\":\"— Завтра на борту, — сказал он. — До полудня. Будете вы там или нет, я снимаюсь с якоря.\"},{\"source_id\":\"fr42c-049-0051\",\"target\":\"— Будем.»\"},{\"source_id\":\"fr42c-049-0052\",\"target\":\"Получив этот ответ, Гленарван, майор, Роберт, Паганель и Джон Манглс покинули судно, а Уилл Хэлли так и не дотронулся пальцем до зюйдвестки[[FN:85]], нахлобученной на его рыжие вихры.\"},{\"source_id\":\"fr42c-049-0053\",\"target\":\"Это был бриг по имени «<i>Маккуори</i>». (Стр. 436.)\"},{\"source_id\":\"fr42c-049-0055\",\"target\":\"«Какой грубиян! — сказал Джон.\"},{\"source_id\":\"fr42c-049-0056\",\"target\":\"— А по мне, так он подходит, — ответил Паганель. — Настоящий морской волк.\"},{\"source_id\":\"fr42c-049-0057\",\"target\":\"— Настоящий медведь! — возразил майор.\"},{\"source_id\":\"fr42c-049-0058\",\"target\":\"— И, думаю, — добавил Джон Манглс, — этот медведь когда-то, должно быть, торговал живым товаром.\"},{\"source_id\":\"fr42c-049-0059\",\"target\":\"— Не всё ли равно! — ответил Гленарван. — Раз он командует «<i>Маккуори</i>», а «<i>Маккуори</i>» идёт в Новую Зеландию. От Туфолд-бея до Окленда мы будем видеть его мало; после Окленда не увидим вовсе.»\"}],\"review\":[{\"source_id\":\"fr42c-049-0039\",\"verdict\":\"PASS\",\"reason\":\"Price and dialogue punctuation faithful.\"},{\"source_id\":\"fr42c-049-0040\",\"verdict\":\"PASS\",\"reason\":\"Glenarvan's nod of assent preserved.\"},{\"source_id\":\"fr42c-049-0041\",\"verdict\":\"PASS\",\"reason\":\"Accurate; speaker and price preserved.\"},{\"source_id\":\"fr42c-049-0042\",\"verdict\":\"PASS\",\"reason\":\"'Passage tout sec' correctly rendered as passage only, nothing extra.\"},{\"source_id\":\"fr42c-049-0043\",\"verdict\":\"PASS\",\"reason\":\"Echo of terms correctly preserved.\"},{\"source_id\":\"fr42c-049-0044\",\"verdict\":\"PASS\",\"reason\":\"Food separate; colloquial register fits.\"},{\"source_id\":\"fr42c-049-0045\",\"verdict\":\"PASS\",\"reason\":\"Echo 'à part' correct.\"},{\"source_id\":\"fr42c-049-0046\",\"verdict\":\"PASS\",\"reason\":\"'Convenu. Après?' and gesture accurate.\"},{\"source_id\":\"fr42c-049-0047\",\"verdict\":\"PASS\",\"reason\":\"'Hein?' rendered adequately.\"},{\"source_id\":\"fr42c-049-0048\",\"verdict\":\"PASS\",\"reason\":\"Arrhes means deposit; correct.\"},{\"source_id\":\"fr42c-049-0049\",\"verdict\":\"PASS\",\"reason\":\"Half price, sum, master, no thanks all preserved.\"},{\"source_id\":\"fr42c-049-0050\",\"verdict\":\"PASS\",\"reason\":\"Time, indifference to presence and weighing anchor correct.\"},{\"source_id\":\"fr42c-049-0051\",\"verdict\":\"PASS\",\"reason\":\"Prior invented text removed; 'On y sera' correct.\"},{\"source_id\":\"fr42c-049-0052\",\"verdict\":\"PASS\",\"reason\":\"All persons, departure, nor-wester hat, note token and red hair preserved.\"},{\"source_id\":\"fr42c-049-0053\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate; ship name italic.\"},{\"source_id\":\"fr42c-049-0055\",\"verdict\":\"PASS\",\"reason\":\"'Butor' as boor/lout fits; consistent with ledger final.\"},{\"source_id\":\"fr42c-049-0056\",\"verdict\":\"PASS\",\"reason\":\"Idiom 'il me va' and sea wolf accurate.\"},{\"source_id\":\"fr42c-049-0057\",\"verdict\":\"PASS\",\"reason\":\"Bear retort preserved.\"},{\"source_id\":\"fr42c-049-0058\",\"verdict\":\"PASS\",\"reason\":\"Imagination, bear, past human trafficking preserved.\"},{\"source_id\":\"fr42c-049-0059\",\"verdict\":\"PASS\",\"reason\":\"Ship italics, route and visibility joke faithful; closing punctuation consistent.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10098,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2016,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
