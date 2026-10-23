@@ -1,0 +1,816 @@
+{
+  "state": "PASS_ACTUAL_FULL_SOURCE_NATIVE_REVIEW_AND_SEPARATE_COMPARISON",
+  "unit": 2,
+  "batch": 3,
+  "source_ids": [
+    "046-2-0119",
+    "046-2-0120",
+    "046-2-0121",
+    "046-2-0122",
+    "046-2-0123",
+    "046-2-0124",
+    "046-2-0125",
+    "046-2-0126",
+    "046-2-0127",
+    "046-2-0128",
+    "046-2-0129",
+    "046-2-0130",
+    "046-2-0131",
+    "046-2-0132",
+    "046-2-0133",
+    "046-2-0134",
+    "046-2-0135",
+    "046-2-0136",
+    "046-2-0137",
+    "046-2-0138",
+    "046-2-0139",
+    "046-2-0140",
+    "046-2-0141",
+    "046-2-0142",
+    "046-2-0143",
+    "046-2-0144",
+    "046-2-0145",
+    "046-2-0146",
+    "046-2-0147",
+    "046-2-0148",
+    "046-2-0149",
+    "046-2-0150",
+    "046-2-0151",
+    "046-2-0152",
+    "046-2-0153",
+    "046-2-0154",
+    "046-2-0155",
+    "046-2-0156",
+    "046-2-0157",
+    "046-2-0158"
+  ],
+  "source_hashes": {
+    "046-2-0119": "b9b2ffc913707ad15384d2303011ac6c3e50ff7327f5edb979c5448b4a0daffa",
+    "046-2-0120": "60cf9a5a2254ce950df5d6a584906aa603fed59b1e2f5a9005f834137c2df926",
+    "046-2-0121": "78eb6d8aebfa6e6b1577f8f9f2ca81da2379ec9feaa3e4c14ae2b22f96d6ca9f",
+    "046-2-0122": "46a54bf6753166cba7e187718a81886ce599d9f9e0a76ffd309c8944a8a8789a",
+    "046-2-0123": "94eb656c12836ec9e12c91262a86b54fc85273794aabcdef77bd8c251197c57c",
+    "046-2-0124": "a9f437cae2ef213f41e66b0ec9705ebf754f8e137bc7151a608f0f852c452f52",
+    "046-2-0125": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-2-0126": "b8538a78fbd3414d5e8f2a0481064e4d7127081372a967be88efc936323543b1",
+    "046-2-0127": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+    "046-2-0128": "371b8f385d02345fc2660f04b5ac9073c93ad65820a035bdc2c8b1099ef65af7",
+    "046-2-0129": "df9d911fa2935adc79b01b3916396b31981e5013030ff5a6dca7bed642f7faec",
+    "046-2-0130": "afcec454a0de51240251307468937f9ccf9a00ae599308a72d7dc6c98cdd8e6d",
+    "046-2-0131": "960322ae2d4e6d4f5a5e4d3cc300b6f120f28cd5650c52a08eab4287bcc9d131",
+    "046-2-0132": "e4009989a58c994564a4c5b9e0df7656ec1b6ffe662b32a67de44fed75579771",
+    "046-2-0133": "56102cb9b26b14ec3ef04f5fe60e855d13c8277f301b4d4aea2bd8650ebd74d9",
+    "046-2-0134": "a98e75f813d6f319633577e2501d74d2f4888bc1ad9396c5a802e8d236e448d4",
+    "046-2-0135": "0a92d64ae62f8c0f2726263a3829a5319bff2098ec426dac167824c5a6f7c711",
+    "046-2-0136": "22bdd3f31d7d136b80ab776b3639110176b95c56e5dba17097d335568d2c67f4",
+    "046-2-0137": "882ba36e6181721c2d19bd88343b0d9059b3f87723eac3600b2704786dda1bd2",
+    "046-2-0138": "45557324f710e30b9f3cd31f65f6c0839e0e4d7368e325626ca1285177ff0a26",
+    "046-2-0139": "4dfd41803ba5ae557d6df3ac23381bd0898f894531e9ee8f566123fe764c1646",
+    "046-2-0140": "465b595ec457fb463bbf2f7bb265f0c8405f4c837cd0dde1f3ac42f5184c3588",
+    "046-2-0141": "b612a42c65ec4eaa123a7ccbc21ce9173496592c91029349cbc14f0dfd0f2633",
+    "046-2-0142": "77589ee108f662f4756a76fb75f709ada13b912524d6653efd592f79b7ef4d3e",
+    "046-2-0143": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+    "046-2-0144": "109e764d5a015cec4e72c10c9f0fcc63c5d7d2faf175aece181bb6dd387bda86",
+    "046-2-0145": "80fd97098250cad0b6afc0395b94886ea546c26520aea872ab44434e1e42b6c9",
+    "046-2-0146": "0bc6d270b85e3bf79051ad6040c3c0d7a9550d6bd745ebe35657fcb14eaf31b0",
+    "046-2-0147": "bc000bdc5339b1d76732a9acf378d2400e832cad1d2131d2d4d2bd1cec80729e",
+    "046-2-0148": "22ff637697d0854a29a6ba291664c7cec1ef581e0cee7915ce58363756591a90",
+    "046-2-0149": "bbbd45523d1b3e3c2f8916fffbb21a5c78501346b339c8f8bb861f5b8d1a467b",
+    "046-2-0150": "cdcb90d2bedc1b7a11ddba2475cadc998c293383417b503bcdd99991b99e6ffa",
+    "046-2-0151": "0db32d93639913e099086f8f054f69ee4ce6d0b419d99588888c7fd797004f7b",
+    "046-2-0152": "b38d8f80c622c9bdc4095641440232734cb5afae58b18b6dd71ed49bd6ff4dca",
+    "046-2-0153": "ef354ef29dde2712d8a6e2c9842abaf3a5daa0c8d9c8d3ade3074170ce506acb",
+    "046-2-0154": "f97f2a1fdea18304b92158dc461192f483fa084d586f34a2ffeb69e49dcd1e39",
+    "046-2-0155": "d03d7c2dcd585e507852fccc11d590b097805392baeea5c0448728b071fcdb76",
+    "046-2-0156": "bc19957fc3453e2dc36c61e28d7c4f748c7ce9b39ec0274b7cd95336b7071b35",
+    "046-2-0157": "3f18f0e6caa709420983778000f1687bf42d501a739d96bcec9e90885f35140f",
+    "046-2-0158": "d75af7ddcf0bf208d3572d0935ce0ece3b5ff449b8368e95782b4b8b92086e64"
+  },
+  "review": [
+    {
+      "source_id": "046-2-0119",
+      "verdict": "PASS",
+      "reason": "Target matches source exactly: Вершинин's 'Нет.' with speaker-name markup intact."
+    },
+    {
+      "source_id": "046-2-0120",
+      "verdict": "PASS",
+      "reason": "Tuzenbach's line and the stage direction are identical to source, with punctuation preserved."
+    },
+    {
+      "source_id": "046-2-0121",
+      "verdict": "PASS",
+      "reason": "Stage direction 'Маша тихо смеется.' is identical to source."
+    },
+    {
+      "source_id": "046-2-0122",
+      "verdict": "PASS",
+      "reason": "The speech with both inline stage directions, 'такою же', 'постоянною' and the closing ellipsis matches source exactly, with no speaker label, as in the source."
+    },
+    {
+      "source_id": "046-2-0123",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0124",
+      "verdict": "PASS",
+      "reason": "Exact match, including the ellipsis and question."
+    },
+    {
+      "source_id": "046-2-0125",
+      "verdict": "PASS",
+      "reason": "'Пауза.' matches source."
+    },
+    {
+      "source_id": "046-2-0126",
+      "verdict": "PASS",
+      "reason": "Masha's speech with repetitions 'пуста, пуста' and 'трын-трава' matches source exactly."
+    },
+    {
+      "source_id": "046-2-0127",
+      "verdict": "PASS",
+      "reason": "'Пауза.' matches source."
+    },
+    {
+      "source_id": "046-2-0128",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0129",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0130",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0131",
+      "verdict": "PASS",
+      "reason": "Exact match, including the stage direction."
+    },
+    {
+      "source_id": "046-2-0132",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0133",
+      "verdict": "PASS",
+      "reason": "Chebutykin's continuation with both inline directions matches source."
+    },
+    {
+      "source_id": "046-2-0134",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0135",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0136",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0137",
+      "verdict": "PASS",
+      "reason": "Exact match, including both stage directions and the ellipses."
+    },
+    {
+      "source_id": "046-2-0138",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0139",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0140",
+      "verdict": "PASS",
+      "reason": "Exact match, including the knife enumeration."
+    },
+    {
+      "source_id": "046-2-0141",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0142",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0143",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0144",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0145",
+      "verdict": "PASS",
+      "reason": "Stage direction with the character-name spans matches source."
+    },
+    {
+      "source_id": "046-2-0146",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0147",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0148",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0149",
+      "verdict": "PASS",
+      "reason": "Exact match, with 'осьмерка' preserved."
+    },
+    {
+      "source_id": "046-2-0150",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0151",
+      "verdict": "PASS",
+      "reason": "Exact match, with Anfisa's voice and ellipses preserved."
+    },
+    {
+      "source_id": "046-2-0152",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0153",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0154",
+      "verdict": "PASS",
+      "reason": "'Иду-у!' preserved."
+    },
+    {
+      "source_id": "046-2-0155",
+      "verdict": "PASS",
+      "reason": "Exact match, with Natasha's quoted speech and the guillemets preserved."
+    },
+    {
+      "source_id": "046-2-0156",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0157",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0158",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    }
+  ],
+  "review_api": {
+    "response_id": "msg_011CgKjBjwz4yFDv4FRhxj4F",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 46909,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1619,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "source_id": "046-2-0119",
+      "verdict": "PASS",
+      "reason": "Target is identical to source: Вершинин's 'Нет.' with speaker-name markup."
+    },
+    {
+      "source_id": "046-2-0120",
+      "verdict": "PASS",
+      "reason": "Tuzenbach's line and stage direction are identical to source."
+    },
+    {
+      "source_id": "046-2-0121",
+      "verdict": "PASS",
+      "reason": "Stage direction identical to source."
+    },
+    {
+      "source_id": "046-2-0122",
+      "verdict": "PASS",
+      "reason": "Tuzenbach's continuation speech, with both inline directions, 'такою же', 'постоянною' and the closing ellipsis, matches source exactly. It has no speaker label, as in source."
+    },
+    {
+      "source_id": "046-2-0123",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0124",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0125",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0126",
+      "verdict": "PASS",
+      "reason": "Exact match, with repetitions and 'трын-трава' preserved."
+    },
+    {
+      "source_id": "046-2-0127",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0128",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0129",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0130",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0131",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0132",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0133",
+      "verdict": "PASS",
+      "reason": "Exact match, including both inline directions."
+    },
+    {
+      "source_id": "046-2-0134",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0135",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0136",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0137",
+      "verdict": "PASS",
+      "reason": "Exact match, including the directions and ellipses."
+    },
+    {
+      "source_id": "046-2-0138",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0139",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0140",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0141",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0142",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0143",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0144",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0145",
+      "verdict": "PASS",
+      "reason": "Exact match, with character-name spans preserved."
+    },
+    {
+      "source_id": "046-2-0146",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0147",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0148",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0149",
+      "verdict": "PASS",
+      "reason": "Exact match, with 'осьмерка' preserved."
+    },
+    {
+      "source_id": "046-2-0150",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0151",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0152",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0153",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0154",
+      "verdict": "PASS",
+      "reason": "Exact match, 'Иду-у!' preserved."
+    },
+    {
+      "source_id": "046-2-0155",
+      "verdict": "PASS",
+      "reason": "Exact match, guillemets preserved."
+    },
+    {
+      "source_id": "046-2-0156",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0157",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    },
+    {
+      "source_id": "046-2-0158",
+      "verdict": "PASS",
+      "reason": "Exact match."
+    }
+  ],
+  "comparison_api": {
+    "response_id": "msg_011CgKjCUky2acCqVnRArP4W",
+    "actual_model": "claude-sonnet-5-5",
+    "usage": {
+      "input_tokens": 48705,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1513,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "target_policy": "EXACT_FROZEN_NATIVE_SOURCE_BYTES;HOST_ASSEMBLY_NOT_MODEL_TRANSLATION",
+  "immutable_targets": [
+    {
+      "source_id": "046-2-0119",
+      "source_sha256": "b9b2ffc913707ad15384d2303011ac6c3e50ff7327f5edb979c5448b4a0daffa",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Нет.",
+      "target_sha256": "b9b2ffc913707ad15384d2303011ac6c3e50ff7327f5edb979c5448b4a0daffa",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0120",
+      "source_sha256": "60cf9a5a2254ce950df5d6a584906aa603fed59b1e2f5a9005f834137c2df926",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(всплеснув руками и смеясь)</i></small>. Очевидно, мы не понимаем друг друга. Ну, как мне убедить вас?",
+      "target_sha256": "60cf9a5a2254ce950df5d6a584906aa603fed59b1e2f5a9005f834137c2df926",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0121",
+      "source_sha256": "78eb6d8aebfa6e6b1577f8f9f2ca81da2379ec9feaa3e4c14ae2b22f96d6ca9f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Маша</span> тихо смеется.",
+      "target_sha256": "78eb6d8aebfa6e6b1577f8f9f2ca81da2379ec9feaa3e4c14ae2b22f96d6ca9f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0122",
+      "source_sha256": "46a54bf6753166cba7e187718a81886ce599d9f9e0a76ffd309c8944a8a8789a",
+      "target": "<small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Показывая ей палец.)</i></small> Смейтесь! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вершинину.)</i></small> Не то что через двести или триста, но и через миллион лет жизнь останется такою же, как и была; она не меняется, остается постоянною, следуя своим собственным законам, до которых вам нет дела или, по крайней мере, которых вы никогда не узнаете. Перелетные птицы, журавли, например, летят и летят, и какие бы мысли, высокие или малые, ни бродили в их головах, все же будут лететь и не знать, зачем и куда. Они летят и будут лететь, какие бы философы ни завелись среди них; и пускай философствуют, как хотят, лишь бы летели...",
+      "target_sha256": "46a54bf6753166cba7e187718a81886ce599d9f9e0a76ffd309c8944a8a8789a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0123",
+      "source_sha256": "94eb656c12836ec9e12c91262a86b54fc85273794aabcdef77bd8c251197c57c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Все-таки смысл?",
+      "target_sha256": "94eb656c12836ec9e12c91262a86b54fc85273794aabcdef77bd8c251197c57c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0124",
+      "source_sha256": "a9f437cae2ef213f41e66b0ec9705ebf754f8e137bc7151a608f0f852c452f52",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Смысл... Вот снег идет. Какой смысл?",
+      "target_sha256": "a9f437cae2ef213f41e66b0ec9705ebf754f8e137bc7151a608f0f852c452f52",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0125",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0126",
+      "source_sha256": "b8538a78fbd3414d5e8f2a0481064e4d7127081372a967be88efc936323543b1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Мне кажется, человек должен быть верующим или должен искать веры, иначе жизнь его пуста, пуста... Жить и не знать, для чего журавли летят, для чего дети родятся, для чего звезды на небе... Или знать, для чего живешь, или же все пустяки, трын-трава.",
+      "target_sha256": "b8538a78fbd3414d5e8f2a0481064e4d7127081372a967be88efc936323543b1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0127",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0128",
+      "source_sha256": "371b8f385d02345fc2660f04b5ac9073c93ad65820a035bdc2c8b1099ef65af7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Все-таки жалко, что молодость прошла...",
+      "target_sha256": "371b8f385d02345fc2660f04b5ac9073c93ad65820a035bdc2c8b1099ef65af7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0129",
+      "source_sha256": "df9d911fa2935adc79b01b3916396b31981e5013030ff5a6dca7bed642f7faec",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. У Гоголя сказано: скучно жить на этом свете, господа!",
+      "target_sha256": "df9d911fa2935adc79b01b3916396b31981e5013030ff5a6dca7bed642f7faec",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0130",
+      "source_sha256": "afcec454a0de51240251307468937f9ccf9a00ae599308a72d7dc6c98cdd8e6d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. А я скажу: трудно с вами спорить, господа! Ну вас совсем...",
+      "target_sha256": "afcec454a0de51240251307468937f9ccf9a00ae599308a72d7dc6c98cdd8e6d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0131",
+      "source_sha256": "960322ae2d4e6d4f5a5e4d3cc300b6f120f28cd5650c52a08eab4287bcc9d131",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(читая газету)</i></small>. Бальзак венчался в Бердичеве.",
+      "target_sha256": "960322ae2d4e6d4f5a5e4d3cc300b6f120f28cd5650c52a08eab4287bcc9d131",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0132",
+      "source_sha256": "e4009989a58c994564a4c5b9e0df7656ec1b6ffe662b32a67de44fed75579771",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ирина</span> напевает тихо.",
+      "target_sha256": "e4009989a58c994564a4c5b9e0df7656ec1b6ffe662b32a67de44fed75579771",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0133",
+      "source_sha256": "56102cb9b26b14ec3ef04f5fe60e855d13c8277f301b4d4aea2bd8650ebd74d9",
+      "target": "Даже запишу себе это в книжку. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Записывает.)</i></small> Бальзак венчался в Бердичеве. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Читает газету.)</i></small>",
+      "target_sha256": "56102cb9b26b14ec3ef04f5fe60e855d13c8277f301b4d4aea2bd8650ebd74d9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0134",
+      "source_sha256": "a98e75f813d6f319633577e2501d74d2f4888bc1ad9396c5a802e8d236e448d4",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(раскладывает пасьянс, задумчиво)</i></small>. Бальзак венчался в Бердичеве.",
+      "target_sha256": "a98e75f813d6f319633577e2501d74d2f4888bc1ad9396c5a802e8d236e448d4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0135",
+      "source_sha256": "0a92d64ae62f8c0f2726263a3829a5319bff2098ec426dac167824c5a6f7c711",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Жребий брошен. Вы знаете, Мария Сергеевна, я подаю в отставку.",
+      "target_sha256": "0a92d64ae62f8c0f2726263a3829a5319bff2098ec426dac167824c5a6f7c711",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0136",
+      "source_sha256": "22bdd3f31d7d136b80ab776b3639110176b95c56e5dba17097d335568d2c67f4",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Слышала. И ничего я не вижу в этом хорошего. Не люблю я штатских.",
+      "target_sha256": "22bdd3f31d7d136b80ab776b3639110176b95c56e5dba17097d335568d2c67f4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0137",
+      "source_sha256": "882ba36e6181721c2d19bd88343b0d9059b3f87723eac3600b2704786dda1bd2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Все равно... <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Встает.)</i></small> Я не красив, какой я военный? Ну, да все равно, впрочем... Буду работать. Хоть один день в моей жизни поработать так, чтобы прийти вечером домой, в утомлении повалиться в постель и уснуть тотчас же. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходя в залу.)</i></small> Рабочие, должно быть, спят крепко!",
+      "target_sha256": "882ba36e6181721c2d19bd88343b0d9059b3f87723eac3600b2704786dda1bd2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0138",
+      "source_sha256": "45557324f710e30b9f3cd31f65f6c0839e0e4d7368e325626ca1285177ff0a26",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине)</i></small>. Сейчас на Московской у Пыжикова купил для вас цветных карандашей. И вот этот ножичек...",
+      "target_sha256": "45557324f710e30b9f3cd31f65f6c0839e0e4d7368e325626ca1285177ff0a26",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0139",
+      "source_sha256": "4dfd41803ba5ae557d6df3ac23381bd0898f894531e9ee8f566123fe764c1646",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Вы привыкли обращаться со мной, как с маленькой, но ведь я уже выросла... <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Берет карандаши и ножичек, радостно.)</i></small> Какая прелесть!",
+      "target_sha256": "4dfd41803ba5ae557d6df3ac23381bd0898f894531e9ee8f566123fe764c1646",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0140",
+      "source_sha256": "465b595ec457fb463bbf2f7bb265f0c8405f4c837cd0dde1f3ac42f5184c3588",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. А для себя я купил ножик... вот поглядите... нож, еще другой нож, третий, это в ушах ковырять, это ножнички, это ногти чистить...",
+      "target_sha256": "465b595ec457fb463bbf2f7bb265f0c8405f4c837cd0dde1f3ac42f5184c3588",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0141",
+      "source_sha256": "b612a42c65ec4eaa123a7ccbc21ce9173496592c91029349cbc14f0dfd0f2633",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(громко)</i></small>. Доктор, сколько вам лет?",
+      "target_sha256": "b612a42c65ec4eaa123a7ccbc21ce9173496592c91029349cbc14f0dfd0f2633",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0142",
+      "source_sha256": "77589ee108f662f4756a76fb75f709ada13b912524d6653efd592f79b7ef4d3e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Мне? Тридцать два.",
+      "target_sha256": "77589ee108f662f4756a76fb75f709ada13b912524d6653efd592f79b7ef4d3e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0143",
+      "source_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "target": "Смех.",
+      "target_sha256": "eae30d50deae6e228a5340f0d1064e9311a34dc10eb6102f75f4af3cdf5ccd5e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0144",
+      "source_sha256": "109e764d5a015cec4e72c10c9f0fcc63c5d7d2faf175aece181bb6dd387bda86",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Я сейчас покажу вам другой пасьянс... <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Раскладывает пасьянс.)</i></small>",
+      "target_sha256": "109e764d5a015cec4e72c10c9f0fcc63c5d7d2faf175aece181bb6dd387bda86",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0145",
+      "source_sha256": "80fd97098250cad0b6afc0395b94886ea546c26520aea872ab44434e1e42b6c9",
+      "target": "Подают самовар; <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Анфиса</span> около самовара; немного погодя приходит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Наташа</span> и тоже суетится около стола; приходит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Соленый</span> и, поздоровавшись, садится за стол.",
+      "target_sha256": "80fd97098250cad0b6afc0395b94886ea546c26520aea872ab44434e1e42b6c9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0146",
+      "source_sha256": "0bc6d270b85e3bf79051ad6040c3c0d7a9550d6bd745ebe35657fcb14eaf31b0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Однако, какой ветер!",
+      "target_sha256": "0bc6d270b85e3bf79051ad6040c3c0d7a9550d6bd745ebe35657fcb14eaf31b0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0147",
+      "source_sha256": "bc000bdc5339b1d76732a9acf378d2400e832cad1d2131d2d4d2bd1cec80729e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Да. Надоела зима. Я уже и забыла, какое лето.",
+      "target_sha256": "bc000bdc5339b1d76732a9acf378d2400e832cad1d2131d2d4d2bd1cec80729e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0148",
+      "source_sha256": "22ff637697d0854a29a6ba291664c7cec1ef581e0cee7915ce58363756591a90",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Выйдет пасьянс, я вижу. Будем в Москве.",
+      "target_sha256": "22ff637697d0854a29a6ba291664c7cec1ef581e0cee7915ce58363756591a90",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0149",
+      "source_sha256": "bbbd45523d1b3e3c2f8916fffbb21a5c78501346b339c8f8bb861f5b8d1a467b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Нет, не выйдет. Видите, осьмерка легла на двойку пик. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Значит, вы не будете в Москве.",
+      "target_sha256": "bbbd45523d1b3e3c2f8916fffbb21a5c78501346b339c8f8bb861f5b8d1a467b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0150",
+      "source_sha256": "cdcb90d2bedc1b7a11ddba2475cadc998c293383417b503bcdd99991b99e6ffa",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(читает газету)</i></small>. Цицикар. Здесь свирепствует оспа.",
+      "target_sha256": "cdcb90d2bedc1b7a11ddba2475cadc998c293383417b503bcdd99991b99e6ffa",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0151",
+      "source_sha256": "0db32d93639913e099086f8f054f69ee4ce6d0b419d99588888c7fd797004f7b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Анфиса</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(подходя к Маше)</i></small>. Маша, чай кушать, матушка. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вершинину.)</i></small> Пожалуйте, ваше высокоблагородие... простите, батюшка, забыла имя, отчество...",
+      "target_sha256": "0db32d93639913e099086f8f054f69ee4ce6d0b419d99588888c7fd797004f7b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0152",
+      "source_sha256": "b38d8f80c622c9bdc4095641440232734cb5afae58b18b6dd71ed49bd6ff4dca",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Принеси сюда, няня. Туда не пойду.",
+      "target_sha256": "b38d8f80c622c9bdc4095641440232734cb5afae58b18b6dd71ed49bd6ff4dca",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0153",
+      "source_sha256": "ef354ef29dde2712d8a6e2c9842abaf3a5daa0c8d9c8d3ade3074170ce506acb",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Няня!",
+      "target_sha256": "ef354ef29dde2712d8a6e2c9842abaf3a5daa0c8d9c8d3ade3074170ce506acb",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0154",
+      "source_sha256": "f97f2a1fdea18304b92158dc461192f483fa084d586f34a2ffeb69e49dcd1e39",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Анфиса</span>. Иду-у!",
+      "target_sha256": "f97f2a1fdea18304b92158dc461192f483fa084d586f34a2ffeb69e49dcd1e39",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0155",
+      "source_sha256": "d03d7c2dcd585e507852fccc11d590b097805392baeea5c0448728b071fcdb76",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Соленому)</i></small>. Грудные дети прекрасно понимают. «Здравствуй, говорю, Бобик. Здравствуй, милый!» Он взглянул на меня как-то особенно. Вы думаете, во мне говорит только мать, но нет, нет, уверяю вас! Это необыкновенный ребенок.",
+      "target_sha256": "d03d7c2dcd585e507852fccc11d590b097805392baeea5c0448728b071fcdb76",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0156",
+      "source_sha256": "bc19957fc3453e2dc36c61e28d7c4f748c7ce9b39ec0274b7cd95336b7071b35",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Если бы этот ребенок был мой, то я изжарил бы его на сковородке и съел бы. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Идет со стаканом в гостиную и садится в угол.)</i></small>",
+      "target_sha256": "bc19957fc3453e2dc36c61e28d7c4f748c7ce9b39ec0274b7cd95336b7071b35",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0157",
+      "source_sha256": "3f18f0e6caa709420983778000f1687bf42d501a739d96bcec9e90885f35140f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(закрыв лицо руками)</i></small>. Грубый, невоспитанный человек!",
+      "target_sha256": "3f18f0e6caa709420983778000f1687bf42d501a739d96bcec9e90885f35140f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-2-0158",
+      "source_sha256": "d75af7ddcf0bf208d3572d0935ce0ece3b5ff449b8368e95782b4b8b92086e64",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Счастлив тот, кто не замечает, лето теперь или зима. Мне кажется, если бы я была в Москве, то относилась бы равнодушно к погоде...",
+      "target_sha256": "d75af7ddcf0bf208d3572d0935ce0ece3b5ff449b8368e95782b4b8b92086e64",
+      "tag": "p"
+    }
+  ]
+}
