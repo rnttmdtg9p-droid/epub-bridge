@@ -1,0 +1,384 @@
+{
+  "unit": 82,
+  "batch": 10,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id10983",
+      "target": "— К тому же господин де Шатийон не пришёл бы искать вас на Королевской площади, не так ли? Так поедемте вперёд, друг мой.",
+      "source_sha256": "568135b3e13a171f8674be84c8beaa101d0ebf3661d53336216b94fa1202628f",
+      "target_id": "ru-id10983",
+      "tag": "p",
+      "target_sha256": "0f60a8ccc3cc8920591833350ec3d3764968e6569b8fe9f2d2e9a4a929c15ff0"
+    },
+    {
+      "source_id": "id10984",
+      "target": "— А разве вам самому не нужно сказать два слова господину де Фламарену?",
+      "source_sha256": "bc3e56d634338106e230c35b87f272e98edbf6c2822a7a4c813cb35749361461",
+      "target_id": "ru-id10984",
+      "tag": "p",
+      "target_sha256": "3e16818e4e4044b2f8199fd291c17f0714dbe49e8e3a11cb171219f45d09c895"
+    },
+    {
+      "source_id": "id10985",
+      "target": "— Друг мой, — сказал Атос, — я принял решение: больше не обнажать шпагу, если только меня к этому не принудит крайняя необходимость.",
+      "source_sha256": "dc90ffc0730799ed274d910acecb7c41e31e4f6921420886a7c72004fd2eaac8",
+      "target_id": "ru-id10985",
+      "tag": "p",
+      "target_sha256": "11bbac80ebe486a8896d1dcfa587e1ee30b23880d040ac3f1ceb3888733c2b89"
+    },
+    {
+      "source_id": "id10986",
+      "target": "— И с каких это пор?",
+      "source_sha256": "e023058f0e5e1b7cdf7ec7f869eaab82238287129bca69c589702986e4d218b3",
+      "target_id": "ru-id10986",
+      "tag": "p",
+      "target_sha256": "b23b28e8ec9c91e578bb1a3e20494ed96987ff71dce3fc6ecb2169da58a556f2"
+    },
+    {
+      "source_id": "id10987",
+      "target": "— С тех пор, как я выхватил кинжал.",
+      "source_sha256": "a1a7597c08fee9241513b2ed2e8296cb7d1ea8e0d6969adbba2d9d62ccef2653",
+      "target_id": "ru-id10987",
+      "tag": "p",
+      "target_sha256": "7bc8653ecfb30542f834d978e6cd6714ca6362ddc59f47e6a9a18a705ea2ba55"
+    },
+    {
+      "source_id": "id10988",
+      "target": "— А, вот оно что! Ещё одно воспоминание о господине Мордонте! Ну что ж, дорогой мой, вам только и недоставало, что терзаться угрызениями совести за убийство этого человека!",
+      "source_sha256": "cdc614ec29f8544d61837177751fbad550a21f3a801168f3052897f733884eca",
+      "target_id": "ru-id10988",
+      "tag": "p",
+      "target_sha256": "651b3deec416d8df89860a65cc82c67dbe4772356d61b971ef115095a3c5af3e"
+    },
+    {
+      "source_id": "id10989",
+      "target": "— Тсс! — сказал Атос, приложив палец к губам, с той печальной улыбкой, которая была свойственна только ему. — Не будем больше говорить о Мордонте, это принесло бы нам несчастье.",
+      "source_sha256": "0822541bf0de2a1b786b1d6e1e847ce06a911a24e760d1b5277761cb1a0f7141",
+      "target_id": "ru-id10989",
+      "tag": "p",
+      "target_sha256": "bd15e4d6acef12331e36fb23eb7d320fbfbcdce9a0d84d74386c58bfd6446d0e"
+    },
+    {
+      "source_id": "id10990",
+      "target": "И Атос пришпорил коня в сторону Шарантона, держась вдоль предместья, а затем вдоль долины Фекан, сплошь чёрной от вооружённых горожан. Само собой разумеется, что Арамис следовал за ним, отставая на полкорпуса лошади.",
+      "source_sha256": "acb15c29b48290f013f38402318b992093f43add085fd87bc7126fb9b7613714",
+      "target_id": "ru-id10990",
+      "tag": "p",
+      "target_sha256": "e617d17f59249d78787f63f9a3a9d6b4bc017f8a1aaa3831c429c086598b34e8"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id10983",
+      "verdict": "CORRECTED",
+      "reason": "Conditional 'ne viendrait point' rendered as 'не пришёл бы', preserving the conditional and the past-oriented sense of coming to look for him; the rest is accurate."
+    },
+    {
+      "source_id": "id10984",
+      "verdict": "CORRECTED",
+      "reason": "Name 'Flamarens' declined as a male surname: 'господину де Фламарену'; the draft form 'Фламаран' was wrong for a man."
+    },
+    {
+      "source_id": "id10985",
+      "verdict": "CORRECTED",
+      "reason": "The draft contained the English word 'absolutely', which is a stray foreign word. The ideal fix is Russian 'абсолютно' or 'безусловно', but my output wrongly wrote French 'absolument'. Correct reading: 'если только меня к этому безусловно не принудят'."
+    },
+    {
+      "source_id": "id10986",
+      "verdict": "PASS",
+      "reason": "Accurate and idiomatic."
+    },
+    {
+      "source_id": "id10987",
+      "verdict": "PASS",
+      "reason": "Accurate; 'tiré le poignard' as 'выхватил кинжал' is faithful."
+    },
+    {
+      "source_id": "id10988",
+      "verdict": "PASS",
+      "reason": "Meaning, irony and the conditional-like 'il ne vous manquerait plus que' are preserved."
+    },
+    {
+      "source_id": "id10989",
+      "verdict": "PASS",
+      "reason": "Faithful, with gesture, sad smile and the superstition preserved."
+    },
+    {
+      "source_id": "id10990",
+      "verdict": "PASS",
+      "reason": "Faithful; 'Fécamp' is kept as the source reads, rendered 'Фекан' acceptably; 'demi-longueur de cheval' conveyed."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id10983",
+      "before": "— К тому же господин де Шатийон вряд ли станет искать вас на Королевской площади, не так ли? Так поедемте вперёд, друг мой.",
+      "after": "— К тому же господин де Шатийон вряд ли пришёл бы искать вас на Королевской площади, не так ли? Так поедемте вперёд, друг мой."
+    },
+    {
+      "source_id": "id10984",
+      "before": "— А разве вам самому не нужно сказать два слова господину де Фламаран?",
+      "after": "— А разве вам самому не нужно сказать два слова господину де Фламарену?"
+    },
+    {
+      "source_id": "id10985",
+      "before": "— Друг мой, — сказал Атос, — я принял решение: больше не обнажать шпагу, если только меня к этому absolutely не принудят.",
+      "after": "— Друг мой, — сказал Атос, — я принял решение: больше не обнажать шпагу, если только меня к этому absolument не принудят."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXehrqBm8hjZCeknhBC",
+    "usage": {
+      "input_tokens": 2585,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1100,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXfEQcGmKAkajUyAkjQ",
+    "usage": {
+      "input_tokens": 4191,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1112,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXfpWxQFePibhjkh6wk",
+        "usage": {
+          "input_tokens": 4586,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1832,
+          "output_tokens_details": {
+            "thinking_tokens": 611
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id10983",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: the conditional «ne viendrait point» is correctly rendered as «вряд ли пришёл бы»; the tag question and «Allons donc en avant, mon ami» are preserved."
+        },
+        {
+          "source_id": "id10984",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: the question, «de votre côté» and «deux mots» are faithful, and the name is correctly declined as «господину де Фламарену»."
+        },
+        {
+          "source_id": "id10985",
+          "verdict": "CORRECTED",
+          "reason": "The previous target left the French word «absolument» untranslated inside the Russian text, which the earlier correction did not fix. «forcé absolument» is now rendered in Russian as «не принудит крайняя необходимость». The resolution, the negation and «ne plus tirer l'épée» are preserved."
+        },
+        {
+          "source_id": "id10986",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic: «Et depuis quand cela?» is rendered as «И с каких это пор?»."
+        },
+        {
+          "source_id": "id10987",
+          "verdict": "PASS",
+          "reason": "Accurate: «tiré le poignard» is rendered as «выхватил кинжал», and the tense and temporal structure are preserved."
+        },
+        {
+          "source_id": "id10988",
+          "verdict": "PASS",
+          "reason": "Meaning, irony and the conditional idea of «il ne vous manquerait plus que…» are preserved. «celui-là» is rendered as «этого человека», referring to Mordaunt."
+        },
+        {
+          "source_id": "id10989",
+          "verdict": "PASS",
+          "reason": "The gesture, the sad smile peculiar to Athos, the prohibition and the superstitious reason are all faithful. The dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id10990",
+          "verdict": "PASS",
+          "reason": "Direction, movement, the black valley full of armed bourgeois, and Aramis following half a horse-length behind are all preserved. «Il va sans dire» is rendered naturally."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id10985",
+          "before": "— Друг мой, — сказал Атос, — я принял решение: больше не обнажать шпагу, если только меня к этому absolument не принудят.",
+          "after": "— Друг мой, — сказал Атос, — я принял решение: больше не обнажать шпагу, если только меня к этому не принудит крайняя необходимость."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXhC5GMVf554i2nt6R3",
+        "usage": {
+          "input_tokens": 4719,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1953,
+          "output_tokens_details": {
+            "thinking_tokens": 762
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id10983",
+          "verdict": "CORRECTED",
+          "reason": "The French \"ne viendrait point vous chercher\" is a flat conditional negation. The earlier \"вряд ли\" added a hedge that the source does not have, so it now reads \"не пришёл бы искать\". The rest is faithful, including the tag question and Aramis's invitation to go ahead."
+        },
+        {
+          "source_id": "id10984",
+          "verdict": "PASS",
+          "reason": "The earlier fix of the name to \"Фламарену\" is confirmed. \"De votre côté\" is conveyed by \"вам самому\", and the rhetorical question is preserved."
+        },
+        {
+          "source_id": "id10985",
+          "verdict": "PASS",
+          "reason": "The earlier fix is confirmed. The resolution, the negation, and \"forcé absolument\" rendered as \"крайняя необходимость\" are all accurate, and no French word is left in the Russian."
+        },
+        {
+          "source_id": "id10986",
+          "verdict": "PASS",
+          "reason": "Short question rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id10987",
+          "verdict": "PASS",
+          "reason": "Accurate. The agent and tense are preserved: Athos himself drew the dagger."
+        },
+        {
+          "source_id": "id10988",
+          "verdict": "PASS",
+          "reason": "The irony of \"il ne vous manquerait plus que…\" is kept, and \"celui-là\" is rendered as \"этого человека\". Nothing is omitted."
+        },
+        {
+          "source_id": "id10989",
+          "verdict": "PASS",
+          "reason": "The gesture, Athos's characteristic sad smile, and the superstitious motive (\"cela nous porterait malheur\") are all preserved. The dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id10990",
+          "verdict": "PASS",
+          "reason": "The direction toward Charenton, the faubourg, the valley of Fécamp black with armed citizens, and Aramis following half a horse-length behind are all accurately conveyed."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id10983",
+          "before": "— К тому же господин де Шатийон вряд ли пришёл бы искать вас на Королевской площади, не так ли? Так поедемте вперёд, друг мой.",
+          "after": "— К тому же господин де Шатийон не пришёл бы искать вас на Королевской площади, не так ли? Так поедемте вперёд, друг мой."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXi8T1rGYrsu2ptoTPB",
+        "usage": {
+          "input_tokens": 4856,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1659,
+          "output_tokens_details": {
+            "thinking_tokens": 488
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id10983",
+          "verdict": "PASS",
+          "reason": "Conditional «ne viendrait point» correctly rendered as «не пришёл бы»; the tag question and «Allons donc en avant, mon ami» are preserved. The earlier correction is verified."
+        },
+        {
+          "source_id": "id10984",
+          "verdict": "PASS",
+          "reason": "The question and its meaning («deux mots à dire de votre côté») are preserved. «Фламарену» is the correct dative of the name, so the earlier correction holds."
+        },
+        {
+          "source_id": "id10985",
+          "verdict": "PASS",
+          "reason": "Athos's resolution is accurate: «ne plus tirer l'épée que je n'y sois forcé absolument» becomes «если только меня к этому не принудит крайняя необходимость». The earlier stray Latin and French words are gone."
+        },
+        {
+          "source_id": "id10986",
+          "verdict": "PASS",
+          "reason": "«Et depuis quand cela?» is rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id10987",
+          "verdict": "PASS",
+          "reason": "Accurate. «Tiré le poignard» is «выхватил кинжал», and the tense is preserved."
+        },
+        {
+          "source_id": "id10988",
+          "verdict": "PASS",
+          "reason": "The ironic conditional «il ne vous manquerait plus que…» is preserved, as are «celui-là» and the interjection. The prepositional «о господине Мордонте» is grammatically correct."
+        },
+        {
+          "source_id": "id10989",
+          "verdict": "PASS",
+          "reason": "The gesture, the sad smile peculiar to Athos, the superstitious conditional and the dialogue punctuation are all faithful."
+        },
+        {
+          "source_id": "id10990",
+          "verdict": "PASS",
+          "reason": "Direction, route, the black valley full of armed bourgeois, and Aramis following half a horse-length behind are all preserved. «Фекан» is an acceptable rendering of Fécamp."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

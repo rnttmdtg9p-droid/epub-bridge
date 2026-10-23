@@ -1,0 +1,628 @@
+{
+  "unit": 84,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11168",
+      "target": "— Без сомнения, сударь, и эти восемь человек не справились бы с ними, если бы не набрали по городу с два десятка солдат из Королевско-Итальянского полка, стоявшего в этом городе гарнизоном, так что ваши два друга были буквально задавлены числом.",
+      "source_sha256": "345c911d75b14ed88d48375b742ebafa970eade44d914ea8036d6cffe152957b",
+      "target_id": "ru-id11168",
+      "tag": "p",
+      "target_sha256": "c4cc67bf8142db75b7a23830776c59dcc1fbb2af0da9d55ec885e03a870164c0"
+    },
+    {
+      "source_id": "id11169",
+      "target": "— Задержаны! — сказал Атос. — А известно ли, за что?",
+      "source_sha256": "cff39bf0470650424918ede46525f31013f6e8a3ffb45559f5f180e97e017f8e",
+      "target_id": "ru-id11169",
+      "tag": "p",
+      "target_sha256": "1adbb0bf2d88692e6c9d9b05ae6c532252cfb5d629e06f70dc87ff5bc72af4f9"
+    },
+    {
+      "source_id": "id11170",
+      "target": "— Нет, сударь, их тут же увезли, и они не успели мне ничего сказать; только когда они уехали, я нашёл на поле боя вот этот обломок шпаги, помогая подбирать двух убитых и пять или шесть раненых.",
+      "source_sha256": "f2e90bf83a2bb5ad1c8b6e631381e36a43a9cb75bf2d1afe3d52447fc55b17ac",
+      "target_id": "ru-id11170",
+      "tag": "p",
+      "target_sha256": "8d3b93bbb5f787ec3d792c911d5cd91031dd50266aabaa42ff0b75fcd3144832"
+    },
+    {
+      "source_id": "id11171",
+      "target": "— А с ними самими, — спросил Арамис, — ничего не случилось?",
+      "source_sha256": "f1ff6f4a3175a5d5880b959356fe6eef57cb9036622f9ba4e105ad24fee1b8f3",
+      "target_id": "ru-id11171",
+      "tag": "p",
+      "target_sha256": "a4cb4db1bdb8dd432520458acd0c399c0674c9d952bad0c71fff4c7ca44a8531"
+    },
+    {
+      "source_id": "id11172",
+      "target": "— Нет, сударь, я думаю, что нет.",
+      "source_sha256": "22612002b1a971a21d5e01a5dfefb2033ea0fd07ed25d4b4facbd7d442c10678",
+      "target_id": "ru-id11172",
+      "tag": "p",
+      "target_sha256": "856e7d621197b6f82eb690643ac25ec12d5c3b191696082455e7415fc1aeaf65"
+    },
+    {
+      "source_id": "id11173",
+      "target": "— Ну что ж, — сказал Арамис, — это всё-таки утешение.",
+      "source_sha256": "6705320f20f0688a357d64d6ab67ca15ddbd04f35ca3a7639a97d0a78841538a",
+      "target_id": "ru-id11173",
+      "tag": "p",
+      "target_sha256": "118216ee5cc0078fd5b08159cd7e76256d33c17c19bd78753da687458bc17bc9"
+    },
+    {
+      "source_id": "id11174",
+      "target": "— А знаете ли вы, куда их отвезли? — спросил Атос.",
+      "source_sha256": "4e6da79f066a0af8443a8a483a538c6ef3dd65879fb15ab9a51a362849bb22a2",
+      "target_id": "ru-id11174",
+      "tag": "p",
+      "target_sha256": "58c298734233cb79d64bf1554031ca6fdebbd7343447e9d6e9465285b47e6cb0"
+    },
+    {
+      "source_id": "id11175",
+      "target": "— В сторону Лувра.",
+      "source_sha256": "c9fa54563cf89d685d77e9adc2a9e177eec8280231e88ffc8cc826d2e3324ac8",
+      "target_id": "ru-id11175",
+      "tag": "p",
+      "target_sha256": "07df1a4aad6a78559da2b95e7c9a5c69991a887f36ae6f9aaf1dd91be417a4cc"
+    },
+    {
+      "source_id": "id11176",
+      "target": "— Оставим здесь Блезуа и Гримо, — сказал Атос, — завтра они вернутся в Париж с лошадьми, которые сегодня бросили бы нас на дороге, а сами возьмём почтовых.",
+      "source_sha256": "9af6ac7d92bc06c349bd7582d3b297af68a9f758ddd8d9e865c0991099154e77",
+      "target_id": "ru-id11176",
+      "tag": "p",
+      "target_sha256": "66736e8e1ca17b37bf12fc323a26e331e9fc9a45932588cd320dbe6a09435b17"
+    },
+    {
+      "source_id": "id11177",
+      "target": "— Возьмём почтовых, — сказал Арамис.",
+      "source_sha256": "35fcf7ec9984c4c3f7ac77d5a4149483251f568e5ec6a6c186e81ef0dc59cefe",
+      "target_id": "ru-id11177",
+      "tag": "p",
+      "target_sha256": "6f6ea20357807f60831fd970ce17169ee0ae05ad6efd9e799741c3558083a2e8"
+    },
+    {
+      "source_id": "id11178",
+      "target": "Послали за лошадьми. Тем временем двое друзей наспех пообедали: они хотели, если в Лувре им удастся что-нибудь узнать, иметь возможность продолжить путь.",
+      "source_sha256": "b38f68407ac7ada14cded18b7df2de8748881af28e775429edf26b376b02f6d6",
+      "target_id": "ru-id11178",
+      "tag": "p",
+      "target_sha256": "a0303b3cd55506de848ac3adc9f6aae77093c076a158ab29a63a4cacc5326c33"
+    },
+    {
+      "source_id": "id11179",
+      "target": "Они приехали в Лувр. Там был всего один трактир. В нём пили ликёр, который и поныне сохранил свою славу и который уже в ту пору там изготовляли.",
+      "source_sha256": "a29a8b77d3f81afd09ecac88b9dc0ffdb8d88eff41432cd19059a0f8cb7cc3e2",
+      "target_id": "ru-id11179",
+      "tag": "p",
+      "target_sha256": "737d24c3bf64b2fe3c82693fc7a6eab6977607636fadac2b83e6ad388bb5c2d0"
+    },
+    {
+      "source_id": "id11180",
+      "target": "— Сойдём здесь, — сказал Атос. — Д’Артаньян не упустил этого случая, и не для того, чтобы выпить стаканчик ликёра, а чтобы оставить нам какой-нибудь знак.",
+      "source_sha256": "4a974bbfda554f99e483536778975ba7e75db9ab8bad49316e5829d8e999baa2",
+      "target_id": "ru-id11180",
+      "tag": "p",
+      "target_sha256": "8d935911e5177c7477a7e431802fad34cdd6ac3a5097f0d693c4841f73d9f1d8"
+    },
+    {
+      "source_id": "id11181",
+      "target": "Они вошли и потребовали у стойки два стаканчика ликёра, как, должно быть, требовали их д’Артаньян и Портос. Стойка, у которой обычно пили, была покрыта оловянной пластиной. На этой пластине кончиком большой булавки было написано: «Рюэй, Д.»",
+      "source_sha256": "ee334123b5a4d2f28d8ddbd8dec96437e8fac4f1aa7b25b3983d2ce8ea075c41",
+      "target_id": "ru-id11181",
+      "tag": "p",
+      "target_sha256": "73359c5bdf21bff80fd49c0835b870fdd2ec27991cfad9f53769df0ae74a9c8e"
+    },
+    {
+      "source_id": "id11182",
+      "target": "— Они в Рюэе! — сказал Арамис, которому эта надпись первому бросилась в глаза.",
+      "source_sha256": "f94602fdf9f57ff49bdd41fc262e6216fb6312f976e5efccc5be4ee7dae1a389",
+      "target_id": "ru-id11182",
+      "tag": "p",
+      "target_sha256": "5290c4b6d7462e986031608bf5c68b7543cc634344bf28b65aab76e7461cc8f8"
+    },
+    {
+      "source_id": "id11183",
+      "target": "— Так поедемте в Рюэй, — сказал Атос.",
+      "source_sha256": "5e1de083eb48dbe3c1481849424e0d4fd25ab52e8eda662070c597e8628cb039",
+      "target_id": "ru-id11183",
+      "tag": "p",
+      "target_sha256": "54d6de5000597b8e43c670a9799c37c5cee2018b0d8c0505ad2c2b918009f1e6"
+    },
+    {
+      "source_id": "id11184",
+      "target": "— Это значит кинуться прямо волку в пасть, — сказал Арамис.",
+      "source_sha256": "4658363de4109316081d622d8eb9d9f34f6e31c5fbb1615d10aab5ad81179862",
+      "target_id": "ru-id11184",
+      "tag": "p",
+      "target_sha256": "a0831d6a4957577c00e242f1216a9c0336c8b411b179fc696ff53c941468aea3"
+    },
+    {
+      "source_id": "id11185",
+      "target": "— Будь я другом Ионы так, как я друг д’Артаньяна, — сказал Атос, — я последовал бы за ним даже в чрево кита, и вы сделали бы то же, что и я, Арамис.",
+      "source_sha256": "b526bb79521fd63fedf0150458c986665b1541a9cfc07cbebf66f50347546bfa",
+      "target_id": "ru-id11185",
+      "tag": "p",
+      "target_sha256": "5f220f65d03658a22053d9883efb0dfe52ea2a40f8e29a4ed7c015424707af1a"
+    },
+    {
+      "source_id": "id11186",
+      "target": "— Право, дорогой граф, мне кажется, вы считаете меня лучше, чем я есть. Если бы я был один, не знаю, поехал ли бы я так в Рюэй без больших предосторожностей; но куда вы, туда и я.",
+      "source_sha256": "d716e1ee0a3f6b652aee92cb01deab0b53324d81ad15144260050358a223d63b",
+      "target_id": "ru-id11186",
+      "tag": "p",
+      "target_sha256": "9a5a71b27ea08b157ebf1d055c6e02af621bbc30c3f1685f3932cb4772cb3dff"
+    },
+    {
+      "source_id": "id11187",
+      "target": "Они взяли лошадей и отправились в Рюэй.",
+      "source_sha256": "c831153b77fbfa12cbcee765c22edc12a8621f16f3561604225438472e3dfdbb",
+      "target_id": "ru-id11187",
+      "tag": "p",
+      "target_sha256": "3bd636bb506c3441109677fc2e1b0cb286e18976e67fffcacc24eebff5faaa91"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11168",
+      "verdict": "PASS",
+      "reason": "Faithful: the eight men, the roughly twenty Royal-Italien soldiers, garrison, crushed by numbers all preserved."
+    },
+    {
+      "source_id": "id11169",
+      "verdict": "PASS",
+      "reason": "Accurate; question about the reason preserved."
+    },
+    {
+      "source_id": "id11170",
+      "verdict": "PASS",
+      "reason": "All details preserved: taken away at once, no time to speak, sword fragment, two dead and five or six wounded."
+    },
+    {
+      "source_id": "id11171",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11172",
+      "verdict": "PASS",
+      "reason": "Negation and hedge preserved."
+    },
+    {
+      "source_id": "id11173",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11174",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11175",
+      "verdict": "PASS",
+      "reason": "Louvres is the town, not the palace; the draft rendering Лувр kept for the town."
+    },
+    {
+      "source_id": "id11176",
+      "verdict": "PASS",
+      "reason": "Accurate; names and logic of the horses preserved."
+    },
+    {
+      "source_id": "id11177",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11178",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id11179",
+      "verdict": "CORRECTED",
+      "reason": "Clumsy participial construction smoothed: the liqueur kept its fame to this day and was already made there at that time."
+    },
+    {
+      "source_id": "id11180",
+      "verdict": "PASS",
+      "reason": "Accurate, including the contrast between drinking a glass and leaving a clue."
+    },
+    {
+      "source_id": "id11181",
+      "verdict": "CORRECTED",
+      "reason": "Rueil corrected to the standard Russian form Рюэль."
+    },
+    {
+      "source_id": "id11182",
+      "verdict": "CORRECTED",
+      "reason": "Place name corrected to Рюэль; 'frappa le premier' rendered as the inscription first caught Aramis's eye."
+    },
+    {
+      "source_id": "id11183",
+      "verdict": "CORRECTED",
+      "reason": "Place name corrected to Рюэль."
+    },
+    {
+      "source_id": "id11184",
+      "verdict": "CORRECTED",
+      "reason": "Idiom made natural and reflexive sense kept: throwing ourselves into the wolf's jaws."
+    },
+    {
+      "source_id": "id11185",
+      "verdict": "PASS",
+      "reason": "Conditional past, Jonah and whale, and Aramis's implied agreement preserved."
+    },
+    {
+      "source_id": "id11186",
+      "verdict": "CORRECTED",
+      "reason": "Place name corrected to Рюэль; the rest is faithful."
+    },
+    {
+      "source_id": "id11187",
+      "verdict": "CORRECTED",
+      "reason": "Place name corrected to Рюэль."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11179",
+      "before": "Они приехали в Лувр. Там был всего один трактир. В нём пили ликёр, сохранивший до наших дней свою славу и уже в ту эпоху там изготовлявшийся.",
+      "after": "Они приехали в Лувр. Там был всего один трактир. В нём пили ликёр, который и поныне сохранил свою славу и который уже в ту пору там изготовляли."
+    },
+    {
+      "source_id": "id11181",
+      "before": "Они вошли и потребовали у стойки два стаканчика ликёра, как, должно быть, требовали их д’Артаньян и Портос. Стойка, у которой обычно пили, была покрыта оловянной пластиной. На этой пластине кончиком большой булавки было написано: «Рюэй, Д.»",
+      "after": "Они вошли и потребовали у стойки два стаканчика ликёра, как, должно быть, требовали их д’Артаньян и Портос. Стойка, у которой обычно пили, была покрыта оловянной пластиной. На этой пластине кончиком большой булавки было написано: «Рюэль, Д.»"
+    },
+    {
+      "source_id": "id11182",
+      "before": "— Они в Рюэе! — сказал Арамис, которого эта надпись поразила первым.",
+      "after": "— Они в Рюэле! — сказал Арамис, которому эта надпись первому бросилась в глаза."
+    },
+    {
+      "source_id": "id11183",
+      "before": "— Так поедемте в Рюэй, — сказал Атос.",
+      "after": "— Так поедемте в Рюэль, — сказал Атос."
+    },
+    {
+      "source_id": "id11184",
+      "before": "— Это значит сунуться волку прямо в пасть, — сказал Арамис.",
+      "after": "— Это значит кинуться прямо волку в пасть, — сказал Арамис."
+    },
+    {
+      "source_id": "id11186",
+      "before": "— Право, дорогой граф, мне кажется, вы считаете меня лучше, чем я есть. Если бы я был один, не знаю, поехал ли бы я так в Рюэй без больших предосторожностей; но куда вы, туда и я.",
+      "after": "— Право, дорогой граф, мне кажется, вы считаете меня лучше, чем я есть. Если бы я был один, не знаю, поехал ли бы я так в Рюэль без больших предосторожностей; но куда вы, туда и я."
+    },
+    {
+      "source_id": "id11187",
+      "before": "Они взяли лошадей и отправились в Рюэй.",
+      "after": "Они взяли лошадей и отправились в Рюэль."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXXedfC14bixDawdFMj",
+    "usage": {
+      "input_tokens": 5363,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1297,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXYJahGCpUHXKVoLPu4",
+    "usage": {
+      "input_tokens": 9270,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3867,
+      "output_tokens_details": {
+        "thinking_tokens": 1593
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXa3GzedjrWvaPhjxz9",
+        "usage": {
+          "input_tokens": 10197,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3866,
+          "output_tokens_details": {
+            "thinking_tokens": 1305
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11168",
+          "verdict": "PASS",
+          "reason": "Faithful: huit hommes, recrutement d'une vingtaine de soldats de Royal-Italien, garnison, 'accablés par le nombre' all preserved."
+        },
+        {
+          "source_id": "id11169",
+          "verdict": "PASS",
+          "reason": "Exclamation and question rendered accurately; Athos's agency preserved."
+        },
+        {
+          "source_id": "id11170",
+          "verdict": "PASS",
+          "reason": "All details preserved: immediate removal, no time to speak, sword fragment found on battlefield while helping gather two dead and five or six wounded."
+        },
+        {
+          "source_id": "id11171",
+          "verdict": "PASS",
+          "reason": "Accurate, with correct dialogue punctuation."
+        },
+        {
+          "source_id": "id11172",
+          "verdict": "PASS",
+          "reason": "Accurate; 'je ne crois pas' rendered idiomatically."
+        },
+        {
+          "source_id": "id11173",
+          "verdict": "PASS",
+          "reason": "Accurate; 'toujours' conveyed by 'всё-таки'."
+        },
+        {
+          "source_id": "id11174",
+          "verdict": "PASS",
+          "reason": "Accurate question and attribution."
+        },
+        {
+          "source_id": "id11175",
+          "verdict": "PASS",
+          "reason": "Accurate: 'Du côté de Louvres' (the town); the Russian form 'Лувр' is the conventional rendering of the town name."
+        },
+        {
+          "source_id": "id11176",
+          "verdict": "PASS",
+          "reason": "Accurate: leaving Blaisois and Grimaud, horses that would fail them today, taking post-horses."
+        },
+        {
+          "source_id": "id11177",
+          "verdict": "PASS",
+          "reason": "Accurate echo of the preceding line."
+        },
+        {
+          "source_id": "id11178",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic; purpose clause preserved."
+        },
+        {
+          "source_id": "id11179",
+          "verdict": "CORRECTED",
+          "reason": "The prior correction (liqueur still famous today and already made there at that time) is faithful and idiomatic. Row verified and kept unchanged."
+        },
+        {
+          "source_id": "id11180",
+          "verdict": "PASS",
+          "reason": "Accurate: d'Artagnan would not have missed the occasion, not to drink but to leave a clue."
+        },
+        {
+          "source_id": "id11181",
+          "verdict": "CORRECTED",
+          "reason": "Meaning is faithful. The place name Rueil is conventionally rendered in Russian as 'Рюэй' (cf. Рюэй-Мальмезон), not 'Рюэль'; the prior ledger spelling was reverted for correct transliteration and consistency."
+        },
+        {
+          "source_id": "id11182",
+          "verdict": "CORRECTED",
+          "reason": "The prior fix of the clause 'que cette inscription frappa le premier' is good, but the form 'Рюэле' reflects the incorrect 'Рюэль'; restored to 'Рюэе' for the standard rendering of Rueil."
+        },
+        {
+          "source_id": "id11183",
+          "verdict": "CORRECTED",
+          "reason": "Meaning faithful; place name corrected to the standard 'Рюэй'."
+        },
+        {
+          "source_id": "id11184",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'кинуться прямо волку в пасть' faithfully renders 'nous jeter dans la gueule du loup'."
+        },
+        {
+          "source_id": "id11185",
+          "verdict": "PASS",
+          "reason": "Accurate: pluperfect subjunctive conditional, Jonah and the whale, and Athos's confidence in Aramis preserved."
+        },
+        {
+          "source_id": "id11186",
+          "verdict": "CORRECTED",
+          "reason": "Meaning and register faithful; place name corrected to the standard 'Рюэй'."
+        },
+        {
+          "source_id": "id11187",
+          "verdict": "CORRECTED",
+          "reason": "Meaning faithful; place name corrected to the standard 'Рюэй'."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id11181",
+          "before": "Они вошли и потребовали у стойки два стаканчика ликёра, как, должно быть, требовали их д’Артаньян и Портос. Стойка, у которой обычно пили, была покрыта оловянной пластиной. На этой пластине кончиком большой булавки было написано: «Рюэль, Д.»",
+          "after": "Они вошли и потребовали у стойки два стаканчика ликёра, как, должно быть, требовали их д’Артаньян и Портос. Стойка, у которой обычно пили, была покрыта оловянной пластиной. На этой пластине кончиком большой булавки было написано: «Рюэй, Д.»"
+        },
+        {
+          "source_id": "id11182",
+          "before": "— Они в Рюэле! — сказал Арамис, которому эта надпись первому бросилась в глаза.",
+          "after": "— Они в Рюэе! — сказал Арамис, которому эта надпись первому бросилась в глаза."
+        },
+        {
+          "source_id": "id11183",
+          "before": "— Так поедемте в Рюэль, — сказал Атос.",
+          "after": "— Так поедемте в Рюэй, — сказал Атос."
+        },
+        {
+          "source_id": "id11186",
+          "before": "— Право, дорогой граф, мне кажется, вы считаете меня лучше, чем я есть. Если бы я был один, не знаю, поехал ли бы я так в Рюэль без больших предосторожностей; но куда вы, туда и я.",
+          "after": "— Право, дорогой граф, мне кажется, вы считаете меня лучше, чем я есть. Если бы я был один, не знаю, поехал ли бы я так в Рюэй без больших предосторожностей; но куда вы, туда и я."
+        },
+        {
+          "source_id": "id11187",
+          "before": "Они взяли лошадей и отправились в Рюэль.",
+          "after": "Они взяли лошадей и отправились в Рюэй."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJXbjePw5AEh1ktKuAtC",
+        "usage": {
+          "input_tokens": 10845,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3502,
+          "output_tokens_details": {
+            "thinking_tokens": 859
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11168",
+          "verdict": "PASS",
+          "reason": "Faithful: the condition (eight men would not have managed without recruiting about twenty soldiers of Royal-Italien), the garrison detail and 'accablés par le nombre' are all preserved."
+        },
+        {
+          "source_id": "id11169",
+          "verdict": "PASS",
+          "reason": "'Arrêtés' and the question about the reason are accurately rendered; dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id11170",
+          "verdict": "PASS",
+          "reason": "Complete and accurate: they were taken away at once, said nothing, the sword fragment was found while helping pick up two dead and five or six wounded."
+        },
+        {
+          "source_id": "id11171",
+          "verdict": "PASS",
+          "reason": "The inverted question 'Et à eux… ne leur est-il rien arrivé?' is correctly rendered, with the negation preserved."
+        },
+        {
+          "source_id": "id11172",
+          "verdict": "PASS",
+          "reason": "'Je ne crois pas' is correctly rendered as 'я думаю, что нет'."
+        },
+        {
+          "source_id": "id11173",
+          "verdict": "PASS",
+          "reason": "Correct meaning and register for 'c'est toujours une consolation'."
+        },
+        {
+          "source_id": "id11174",
+          "verdict": "PASS",
+          "reason": "Accurate; agency (where they were taken) preserved."
+        },
+        {
+          "source_id": "id11175",
+          "verdict": "PASS",
+          "reason": "'Louvres' is the town, not the palace. The rendering is consistent with the other rows, and the Russian form is accepted for the town."
+        },
+        {
+          "source_id": "id11176",
+          "verdict": "PASS",
+          "reason": "Blaisois and Grimaud, the return to Paris tomorrow with the horses that would leave them on the road today, and taking post-horses are all conveyed."
+        },
+        {
+          "source_id": "id11177",
+          "verdict": "PASS",
+          "reason": "Accurate echo of the previous line."
+        },
+        {
+          "source_id": "id11178",
+          "verdict": "PASS",
+          "reason": "Sending for horses, the hasty dinner and the purpose (to be able to continue if they found information at Louvres) are all preserved."
+        },
+        {
+          "source_id": "id11179",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: the relative clauses 'qui a conservé de nos jours sa réputation' and 'qui s'y fabriquait déjà à cette époque' are rendered with correct tense and idiom; the sentence about the single inn is complete."
+        },
+        {
+          "source_id": "id11180",
+          "verdict": "PASS",
+          "reason": "The nuance 'not to drink a glass of liqueur but to leave an indication' is conveyed; 'indice' as 'знак' is acceptable."
+        },
+        {
+          "source_id": "id11181",
+          "verdict": "PASS",
+          "reason": "Counter, tin plate, pin point and the inscription are accurate. The final form «Рюэй, Д.» is consistent with the standard Russian spelling of Rueil, and the earlier back-and-forth in the ledger is resolved to it."
+        },
+        {
+          "source_id": "id11182",
+          "verdict": "PASS",
+          "reason": "'Que cette inscription frappa le premier' is rendered idiomatically; Rueil spelling is consistent."
+        },
+        {
+          "source_id": "id11183",
+          "verdict": "PASS",
+          "reason": "Accurate; place name consistent with the rest of the chapter."
+        },
+        {
+          "source_id": "id11184",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'nous jeter dans la gueule du loup' is rendered as 'кинуться прямо волку в пасть' without loss."
+        },
+        {
+          "source_id": "id11185",
+          "verdict": "PASS",
+          "reason": "The unreal conditional with Jonah and the whale, and Athos' assertion about Aramis, are preserved."
+        },
+        {
+          "source_id": "id11186",
+          "verdict": "PASS",
+          "reason": "Aramis' modest hedging ('je ne sais pas si j'irais… sans de grandes précautions') and 'où vous irez, j'irai' are accurately rendered; the place name is consistent."
+        },
+        {
+          "source_id": "id11187",
+          "verdict": "PASS",
+          "reason": "Accurate and complete; place name consistent."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
