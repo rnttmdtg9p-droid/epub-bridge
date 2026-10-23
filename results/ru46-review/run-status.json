@@ -1,8 +1,8 @@
 {
-  "state": "RUNNING_CONTINUOUS_COMPLETE_SOURCE_REVIEW",
+  "state": "RUNNING_CONTINUOUS_TRANSLATION_REVIEW",
+  "unit": 5,
+  "last_complete_batch": 0,
   "run_id": "40010600564",
-  "source_units": 5,
-  "source_rows": 1058,
-  "checkpoint_is_stop_condition": false,
-  "utc": "2026-10-23T19:20:27.127220+00:00"
+  "utc": "2026-10-23T19:22:07.004257+00:00",
+  "checkpoint_is_stop_condition": false
 }
