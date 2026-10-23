@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJLgepYa2gpa5C78AvF6",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id02642\",\"target\":\"— Тот же, что и вчера?\"},{\"source_id\":\"id02643\",\"target\":\"Гримо повторил свой знак.\"},{\"source_id\":\"id02644\",\"target\":\"— Тогда граф де Рошфор?\"},{\"source_id\":\"id02645\",\"target\":\"Гримо трижды подал знак, что да.\"},{\"source_id\":\"id02646\",\"target\":\"— Но послушай, — сказал герцог, — расскажи мне хотя бы кое-какие подробности о том, как мы будем бежать.\"},{\"source_id\":\"id02647\",\"target\":\"— Мне это запрещено, — сказал Гримо, — до самой минуты исполнения.\"},{\"source_id\":\"id02648\",\"target\":\"— Кто будет ждать меня по ту сторону рва?\"},{\"source_id\":\"id02649\",\"target\":\"— Этого я не знаю, монсеньор.\"},{\"source_id\":\"id02650\",\"target\":\"— Но хотя бы скажи мне, что будет в этом знаменитом пироге, если ты не хочешь, чтобы я сошёл с ума.\"},{\"source_id\":\"id02651\",\"target\":\"— Монсеньор, — сказал Гримо, — в нём будут два кинжала, верёвка с узлами и кляп.\"},{\"source_id\":\"id02652\",\"target\":\"— Хорошо, я понимаю.\"},{\"source_id\":\"id02653\",\"target\":\"— Монсеньор видит, что хватит на всех.\"},{\"source_id\":\"id02654\",\"target\":\"— Кинжалы и верёвку мы возьмём себе, — сказал герцог.\"},{\"source_id\":\"id02655\",\"target\":\"— А кляп дадим съесть Ла Раме, — ответил Гримо.\"},{\"source_id\":\"id02656\",\"target\":\"— Мой дорогой Гримо, — сказал герцог, — ты говоришь не часто, но, надо отдать тебе справедливость, когда говоришь, то говоришь золотые слова.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3295,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 650,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
