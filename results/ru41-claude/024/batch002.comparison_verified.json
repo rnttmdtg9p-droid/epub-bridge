@@ -1,0 +1,763 @@
+{
+  "unit": 24,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id03104",
+      "target": "— Будьте осторожны, Рауль, — сказал он ему, — я вам уже не раз это говорил; об этом не следовало бы забывать, ибо это большой недостаток для наездника. Посмотрите! Ваша лошадь уже устала; она в пене, тогда как моя словно только что вышла из конюшни. Вы делаете ей рот жёстким, так стягивая удила; и, обратите на это внимание, вы уже не можете заставить её маневрировать с нужной быстротой. Спасение всадника порой в быстром повиновении его лошади. Через восемь дней, подумайте об этом, вы будете маневрировать уже не в манеже, а на поле битвы.",
+      "source_sha256": "86631dd4c3cce8e7fa31da7f81049c2210b11e35e7210bc84146c30de2525d8e",
+      "target_id": "ru-id03104",
+      "tag": "p",
+      "target_sha256": "192a7100fd7cda6bc472de7c817a528c9b95ef11a0f58b47b2ffbb44dc0b0bb1"
+    },
+    {
+      "source_id": "id03105",
+      "target": "Затем вдруг, чтобы не придавать этому замечанию слишком печальной важности:",
+      "source_sha256": "ef1d14e45da936eb44f25535dd65c7601d1b3d77c131443bd54613c22d52bd24",
+      "target_id": "ru-id03105",
+      "tag": "p",
+      "target_sha256": "6609ccb304616a63d90a359dd35300b6197b16f06a8da8805354d7d06abe1e18"
+    },
+    {
+      "source_id": "id03106",
+      "target": "— Взгляните-ка, Рауль, — продолжал Атос, — какая прекрасная равнина для охоты на куропаток с ловчей птицей.",
+      "source_sha256": "6eae6df84bffaf1939ddaa8521650e1dfc55b1046e534c63190775af5278049a",
+      "target_id": "ru-id03106",
+      "tag": "p",
+      "target_sha256": "8016c86b301a5766b5e9fb6ce56b010de554bf556b7cdb19916e97395d5653ab"
+    },
+    {
+      "source_id": "id03107",
+      "target": "Молодой человек извлекал пользу из урока и особенно восхищался тем, с какой нежной деликатностью он был преподан.",
+      "source_sha256": "375c7e8022fa02b7bf73b517be0edf9b781613026701fb0ade7248c16ac47c44",
+      "target_id": "ru-id03107",
+      "tag": "p",
+      "target_sha256": "760885bccfec436038d77bf0a2336fff143f786b038905a5b54f53d490ada70b"
+    },
+    {
+      "source_id": "id03108",
+      "target": "— На днях я заметил ещё одну вещь, — говорил Атос, — а именно, что, стреляя из пистолета, вы держали руку слишком вытянутой. Это напряжение лишает выстрел меткости. Поэтому из двенадцати раз вы трижды не попали в цель.",
+      "source_sha256": "37086c6d79a13c9b92ccb7a7254cb8f4c9be0fbd743e84b027890fb3cee0e1b9",
+      "target_id": "ru-id03108",
+      "tag": "p",
+      "target_sha256": "a8a2f57a79485c7dc4cce4e7c9403e9652fc04e316c43f3b7bd59efc78b014c7"
+    },
+    {
+      "source_id": "id03109",
+      "target": "— Тогда как вы, сударь, попали все двенадцать раз, — с улыбкой ответил Рауль.",
+      "source_sha256": "d9b103db9c25d86e60a0fd582e09230ee86d9635b007c5f2054a2d60807a9f9d",
+      "target_id": "ru-id03109",
+      "tag": "p",
+      "target_sha256": "bc8c4449e2a2b6315030f709db23f5d7f5f0ee015b4a572967cf9a13ee3c2640"
+    },
+    {
+      "source_id": "id03110",
+      "target": "— Потому что я сгибал руку в локтевом сгибе и таким образом опирал кисть на локоть. Хорошо ли вы понимаете, что я хочу вам сказать, Рауль?",
+      "source_sha256": "7d0e34c0f3360b3bfb01eb28f53613d46e16b045595add1d949eed1f54bddc01",
+      "target_id": "ru-id03110",
+      "tag": "p",
+      "target_sha256": "98192a732d34a5216dcd8528e650e1683c7495c85b40167daf3cdd9a64235074"
+    },
+    {
+      "source_id": "id03111",
+      "target": "— Да, сударь; с тех пор я стрелял один, следуя этому совету, и добился полного успеха.",
+      "source_sha256": "ff03a435dc02cb4019ece0adf8810c79cec38c673ff7e3d08b826c1e82175058",
+      "target_id": "ru-id03111",
+      "tag": "p",
+      "target_sha256": "3e93f63cc82fda8360a5bd1e12ed77057090f07e62a062491d635eea14264892"
+    },
+    {
+      "source_id": "id03112",
+      "target": "— Вот, — продолжал Атос, — так же и в фехтовании: вы слишком наседаете на противника. Это недостаток вашего возраста, я знаю; но движение корпуса при наскоке всегда сбивает шпагу с линии; и если бы вам пришлось иметь дело с хладнокровным человеком, он остановил бы вас на первом же таком шаге простым освобождением клинка или даже прямым ударом.",
+      "source_sha256": "dd3e62f874032c45351f27879c7fe7c85fe1fb4be493d9605f332dd0cfe2e4c6",
+      "target_id": "ru-id03112",
+      "tag": "p",
+      "target_sha256": "c516b83b49983e3536b170e772691f21e2f8232c866988067ad0d46023511dfa"
+    },
+    {
+      "source_id": "id03113",
+      "target": "— Да, сударь, как вы это делали очень часто, но не у всякого найдётся ваша ловкость и ваше мужество.",
+      "source_sha256": "74f771a2ea97a573e15d76c20e5e9d9d67aa57f2e67ae4f14132e394a623b5e8",
+      "target_id": "ru-id03113",
+      "tag": "p",
+      "target_sha256": "5845b5055605f1d84de81797927cb02f0de1b2b734d1d4fe41045b66389dca41"
+    },
+    {
+      "source_id": "id03114",
+      "target": "— Какой свежий ветер! — заметил Атос. — Это память о зиме. Кстати, скажите мне: если вы пойдёте в огонь, а вы пойдёте, ибо вы рекомендованы молодому генералу, который очень любит порох, помните хорошенько: в единоборстве, как это особенно часто бывает с нами, кавалеристами, помните хорошенько, что никогда не следует стрелять первым: тот, кто стреляет первым, редко попадает в своего человека, потому что стреляет с боязнью остаться безоружным перед вооружённым врагом; а затем, когда он выстрелит, поднимите вашу лошадь на дыбы; этот приём два или три раза спасал мне жизнь.",
+      "source_sha256": "55cdba661658344c82d583bea8f942b2e34b69c37830a82f643521bea00fc2f0",
+      "target_id": "ru-id03114",
+      "tag": "p",
+      "target_sha256": "c67f1990c2f6cda6f1a3d21d0ab91d9beb9d0dd112a8d9b0e17e846c92ea7af8"
+    },
+    {
+      "source_id": "id03115",
+      "target": "— Я им воспользуюсь, хотя бы из признательности.",
+      "source_sha256": "516cf847cc0d3c1b310e6375a3ef642d65531c78cb745ead140ca38444a2a263",
+      "target_id": "ru-id03115",
+      "tag": "p",
+      "target_sha256": "1cd79603aca96f65b8194d7bbd776c4f6bec8bf3875ef93ad28879e2131e4b0c"
+    },
+    {
+      "source_id": "id03116",
+      "target": "— Эге! — сказал Атос. — Не браконьеров ли там задерживают? Да, в самом деле… И ещё одна важная вещь, Рауль: если вы будете ранены в атаке, если упадёте с лошади и у вас ещё останутся какие-нибудь силы, уйдите с линии, по которой двигался ваш полк; иначе его могут отбросить назад, и вас растопчут копыта лошадей. Во всяком случае, если вы будете ранены, напишите мне тотчас же или велите написать; уж мы-то знаем толк в ранах, — прибавил Атос с улыбкой.",
+      "source_sha256": "49a0feed52d9b34754f6f6128da4a8664d337767977bf34d4ebfb47c6b95a818",
+      "target_id": "ru-id03116",
+      "tag": "p",
+      "target_sha256": "19edab09511c3b4dd46035d5b040c17e456ffe88466be22345abe06d933b119e"
+    },
+    {
+      "source_id": "id03117",
+      "target": "— Благодарю вас, сударь, — ответил молодой человек, сильно взволнованный.",
+      "source_sha256": "b8a64cffc18975660909524c7d34f2d22db3df32066afd4ce3fa12171bfd1309",
+      "target_id": "ru-id03117",
+      "tag": "p",
+      "target_sha256": "e9620e1bd555d4ff07eb4458e24d35ecc2bb67239493e32ceb3d5a3238b2f98a"
+    },
+    {
+      "source_id": "id03118",
+      "target": "— А, вот мы и в Сен-Дени, — прошептал Атос.",
+      "source_sha256": "f216cfd857f0855e50880eb749da5929751ecfb2065bfc2bed74976a90e1d9f7",
+      "target_id": "ru-id03118",
+      "tag": "p",
+      "target_sha256": "63a4ab2dedd47ce09219646c3a3650970c1880be05ecc61ea2aa193507608d70"
+    },
+    {
+      "source_id": "id03119",
+      "target": "Они действительно в эту минуту подъехали к городским воротам, которые охраняли двое часовых. Один сказал другому:",
+      "source_sha256": "5d5d1f8981d3d52bd3f346068e56d37b247c1ef323ee7dfb5dcc6d902e27bdd1",
+      "target_id": "ru-id03119",
+      "tag": "p",
+      "target_sha256": "4c0c22193f89741a33696d93690ff5cbcf9098b15fe929dfd5332d8f79f94520"
+    },
+    {
+      "source_id": "id03120",
+      "target": "— Вот ещё один молодой дворянин, который, по-моему, едет в армию.",
+      "source_sha256": "403a476e6ec3fcf41def2e6d38d96b272f03c5a66042bc9f8914a1d73b04c620",
+      "target_id": "ru-id03120",
+      "tag": "p",
+      "target_sha256": "437d2ba570784d15756807aa92829e068685faf3010e3c8221194cc1b3f88c89"
+    },
+    {
+      "source_id": "id03121",
+      "target": "Атос обернулся: всё, что, пусть даже косвенно, занималось Раулем, тотчас приобретало в его глазах интерес.",
+      "source_sha256": "db97a81327841aa88fe5b525e84ca7aa80053bb281e07ab3947836fd330ac682",
+      "target_id": "ru-id03121",
+      "tag": "p",
+      "target_sha256": "ef6f26a238bf23a241b8d19392452e0c4d2434d83e31df5c399803711c4bfeb0"
+    },
+    {
+      "source_id": "id03122",
+      "target": "— По каким признакам вы это определяете? — спросил он.",
+      "source_sha256": "bdca137471668626fa841db88d5f475c91561160e3e82495c8cae9ca6358bddd",
+      "target_id": "ru-id03122",
+      "tag": "p",
+      "target_sha256": "c50106e347cbdff07f28629ecbd65c360c26b106f93248ad7ce65289b0134e73"
+    },
+    {
+      "source_id": "id03123",
+      "target": "— По его виду, сударь, — сказал часовой. — Да и возраст подходящий. Это уже второй сегодня.",
+      "source_sha256": "5ffaf07443b3373dba06f38b86285d5b67237533892997c2f42317f4e9efdbf7",
+      "target_id": "ru-id03123",
+      "tag": "p",
+      "target_sha256": "fef0f0c14b8d0d207e5b7e3c364f0b2879cabbf1bb911e10f96e8ff7b2282291"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id03104",
+      "verdict": "CORRECTED",
+      "reason": "«ожесточаете ей рот» — неидиоматичный перевод «endurcir la bouche»; заменено на «делаете ей рот жёстким»; «il faudrait ne point oublier» передано условно («не следовало бы забывать»); «faites-y attention» — «обратите на это внимание»."
+    },
+    {
+      "source_id": "id03105",
+      "verdict": "PASS",
+      "reason": "Точно и идиоматично."
+    },
+    {
+      "source_id": "id03106",
+      "verdict": "PASS",
+      "reason": "«voler la perdrix» (охота с ловчей птицей) передано верно; интонация сохранена."
+    },
+    {
+      "source_id": "id03107",
+      "verdict": "PASS",
+      "reason": "Смысл и подлежащее верны."
+    },
+    {
+      "source_id": "id03108",
+      "verdict": "CORRECTED",
+      "reason": "«manquâtes-vous trois fois le but» уточнено: «трижды не попали в цель» (промах по цели, а не просто «промахнулись»)."
+    },
+    {
+      "source_id": "id03109",
+      "verdict": "CORRECTED",
+      "reason": "Добавлено «раз» после «все двенадцать» для естественности и сохранения «douze fois»; смысл прежний."
+    },
+    {
+      "source_id": "id03110",
+      "verdict": "CORRECTED",
+      "reason": "«pliais la saignée» — сгибание руки в локтевом сгибе, а не просто «сгибал локоть»; уточнено."
+    },
+    {
+      "source_id": "id03111",
+      "verdict": "PASS",
+      "reason": "Верно."
+    },
+    {
+      "source_id": "id03112",
+      "verdict": "CORRECTED",
+      "reason": "«Tenez» передано как «Вот» вместо «Вот видите» (нет логического подтверждения); остальное — термины фехтования и смысл — сохранены."
+    },
+    {
+      "source_id": "id03113",
+      "verdict": "PASS",
+      "reason": "Верно и идиоматично."
+    },
+    {
+      "source_id": "id03114",
+      "verdict": "CORRECTED",
+      "reason": "Убрано добавленное «так вот»; «lutte particulière» — «единоборство» вместо добавленного «один на один»; восстановлено «surtout» (особенно с кавалеристами)."
+    },
+    {
+      "source_id": "id03115",
+      "verdict": "CORRECTED",
+      "reason": "«reconnaissance» — признательность/благодарность; выбран более точный оттенок «признательности»."
+    },
+    {
+      "source_id": "id03116",
+      "verdict": "CORRECTED",
+      "reason": "Добавление «мы, старики» отсутствует в оригинале («nous autres»); заменено на «уж мы-то знаем толк в ранах». Остальное верно."
+    },
+    {
+      "source_id": "id03117",
+      "verdict": "PASS",
+      "reason": "Верно."
+    },
+    {
+      "source_id": "id03118",
+      "verdict": "PASS",
+      "reason": "Верно."
+    },
+    {
+      "source_id": "id03119",
+      "verdict": "PASS",
+      "reason": "Верно."
+    },
+    {
+      "source_id": "id03120",
+      "verdict": "PASS",
+      "reason": "Верно, разговорный регистр сохранён."
+    },
+    {
+      "source_id": "id03121",
+      "verdict": "CORRECTED",
+      "reason": "«s'occupait de Raoul» — «занималось Раулем»; черновик ослабил это до «имело отношение»; восстановлено подлежащее-действие."
+    },
+    {
+      "source_id": "id03122",
+      "verdict": "CORRECTED",
+      "reason": "«По чему вы это видите?» неестественно; заменено на «По каким признакам вы это определяете?»."
+    },
+    {
+      "source_id": "id03123",
+      "verdict": "CORRECTED",
+      "reason": "«dit la sentinelle» — «сказал», а не «ответил» (нейтральный глагол речи); остальное верно."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id03104",
+      "before": "— Будьте осторожны, Рауль, — сказал он ему, — я вам уже не раз это говорил; об этом не следует забывать, ибо это большой недостаток для наездника. Посмотрите! Ваша лошадь уже устала; она в пене, тогда как моя словно только что вышла из конюшни. Вы ожесточаете ей рот, так стягивая удила; и, заметьте, вы уже не можете заставить её маневрировать с нужной быстротой. Спасение всадника порой в быстром повиновении его лошади. Через восемь дней, подумайте об этом, вы будете маневрировать уже не в манеже, а на поле битвы.",
+      "after": "— Будьте осторожны, Рауль, — сказал он ему, — я вам уже не раз это говорил; об этом не следовало бы забывать, ибо это большой недостаток для наездника. Посмотрите! Ваша лошадь уже устала; она в пене, тогда как моя словно только что вышла из конюшни. Вы делаете ей рот жёстким, так стягивая удила; и, обратите на это внимание, вы уже не можете заставить её маневрировать с нужной быстротой. Спасение всадника порой в быстром повиновении его лошади. Через восемь дней, подумайте об этом, вы будете маневрировать уже не в манеже, а на поле битвы."
+    },
+    {
+      "source_id": "id03108",
+      "before": "— На днях я заметил ещё одну вещь, — говорил Атос, — а именно, что, стреляя из пистолета, вы держали руку слишком вытянутой. Это напряжение лишает выстрел меткости. Поэтому из двенадцати раз вы промахнулись три раза.",
+      "after": "— На днях я заметил ещё одну вещь, — говорил Атос, — а именно, что, стреляя из пистолета, вы держали руку слишком вытянутой. Это напряжение лишает выстрел меткости. Поэтому из двенадцати раз вы трижды не попали в цель."
+    },
+    {
+      "source_id": "id03109",
+      "before": "— Тогда как вы, сударь, попали все двенадцать, — с улыбкой ответил Рауль.",
+      "after": "— Тогда как вы, сударь, попали все двенадцать раз, — с улыбкой ответил Рауль."
+    },
+    {
+      "source_id": "id03110",
+      "before": "— Потому что я сгибал локоть и опирал таким образом руку на локоть. Хорошо ли вы понимаете, что я хочу вам сказать, Рауль?",
+      "after": "— Потому что я сгибал руку в локтевом сгибе и таким образом опирал руку на локоть. Хорошо ли вы понимаете, что я хочу вам сказать, Рауль?"
+    },
+    {
+      "source_id": "id03112",
+      "before": "— Вот видите, — продолжал Атос, — то же и в фехтовании: вы слишком наседаете на противника. Это недостаток вашего возраста, я знаю; но движение корпуса при наскоке всегда сбивает шпагу с линии; и если бы вам пришлось иметь дело с хладнокровным человеком, он остановил бы вас на первом же таком шаге простым освобождением клинка или даже прямым ударом.",
+      "after": "— Вот, — продолжал Атос, — так же и в фехтовании: вы слишком наседаете на противника. Это недостаток вашего возраста, я знаю; но движение корпуса при наскоке всегда сбивает шпагу с линии; и если бы вам пришлось иметь дело с хладнокровным человеком, он остановил бы вас на первом же таком шаге простым освобождением клинка или даже прямым ударом."
+    },
+    {
+      "source_id": "id03114",
+      "before": "— Какой свежий ветер! — заметил Атос. — Это память о зиме. Кстати, скажите мне: если вы пойдёте в огонь, а вы пойдёте, ибо вы рекомендованы молодому генералу, который очень любит порох, — так вот, помните хорошенько: в поединке один на один, как это часто бывает с нами, кавалеристами, помните хорошенько, что никогда не следует стрелять первым: тот, кто стреляет первым, редко попадает в своего человека, потому что стреляет с боязнью остаться безоружным перед вооружённым врагом; а затем, когда он выстрелит, поднимите вашу лошадь на дыбы; этот приём два или три раза спасал мне жизнь.",
+      "after": "— Какой свежий ветер! — заметил Атос. — Это память о зиме. Кстати, скажите мне: если вы пойдёте в огонь, а вы пойдёте, ибо вы рекомендованы молодому генералу, который очень любит порох, помните хорошенько: в единоборстве, как это часто бывает с нами, кавалеристами, особенно, помните хорошенько, что никогда не следует стрелять первым: тот, кто стреляет первым, редко попадает в своего человека, потому что стреляет с боязнью остаться безоружным перед вооружённым врагом; а затем, когда он выстрелит, поднимите вашу лошадь на дыбы; этот приём два или три раза спасал мне жизнь."
+    },
+    {
+      "source_id": "id03115",
+      "before": "— Я им воспользуюсь, хотя бы из благодарности.",
+      "after": "— Я им воспользуюсь, хотя бы из признательности."
+    },
+    {
+      "source_id": "id03116",
+      "before": "— Эге! — сказал Атос. — Не браконьеров ли там задерживают? Да, в самом деле… И ещё одна важная вещь, Рауль: если вы будете ранены в атаке, если упадёте с лошади и у вас ещё останутся какие-нибудь силы, уйдите с линии, по которой двигался ваш полк; иначе его могут отбросить назад, и вас растопчут копыта лошадей. Во всяком случае, если вы будете ранены, напишите мне тотчас же или велите написать; мы, старики, знаем толк в ранах, — прибавил Атос с улыбкой.",
+      "after": "— Эге! — сказал Атос. — Не браконьеров ли там задерживают? Да, в самом деле… И ещё одна важная вещь, Рауль: если вы будете ранены в атаке, если упадёте с лошади и у вас ещё останутся какие-нибудь силы, уйдите с линии, по которой двигался ваш полк; иначе его могут отбросить назад, и вас растопчут копыта лошадей. Во всяком случае, если вы будете ранены, напишите мне тотчас же или велите написать; уж мы-то знаем толк в ранах, — прибавил Атос с улыбкой."
+    },
+    {
+      "source_id": "id03121",
+      "before": "Атос обернулся: всё, что имело отношение к Раулю, пусть даже косвенное, тотчас приобретало для него интерес.",
+      "after": "Атос обернулся: всё, что, пусть даже косвенно, занималось Раулем, тотчас приобретало в его глазах интерес."
+    },
+    {
+      "source_id": "id03122",
+      "before": "— По чему вы это видите? — спросил он.",
+      "after": "— По каким признакам вы это определяете? — спросил он."
+    },
+    {
+      "source_id": "id03123",
+      "before": "— По его виду, сударь, — ответил часовой. — Да и возраст подходящий. Это уже второй сегодня.",
+      "after": "— По его виду, сударь, — сказал часовой. — Да и возраст подходящий. Это уже второй сегодня."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJG3tVpCD5tqT2AE4Woh",
+    "usage": {
+      "input_tokens": 6785,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2792,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJG6D5aMLegxyjUdUxPQ",
+    "usage": {
+      "input_tokens": 11176,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 7515,
+      "output_tokens_details": {
+        "thinking_tokens": 3487
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJLnVc5muRDzaHU6kARN",
+        "usage": {
+          "input_tokens": 13822,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4809,
+          "output_tokens_details": {
+            "thinking_tokens": 1463
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03104",
+          "verdict": "PASS",
+          "reason": "Faithful to the French: the warning, the tired foaming horse, the hardened mouth from tight reining, loss of manoeuvrability, and the 'huit jours' contrast between manège and battlefield are all preserved. The prior corrections ('не следовало бы забывать', 'рот жёстким', 'обратите на это внимание') are accurate."
+        },
+        {
+          "source_id": "id03105",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Accurate: the 'tout à coup' and the purpose clause (not to give the remark too sad an importance) are intact."
+        },
+        {
+          "source_id": "id03106",
+          "verdict": "PASS",
+          "reason": "'Voler la perdrix' is hunting with a hawk; the Russian renders this correctly and idiomatically, and the dialogue turn is intact."
+        },
+        {
+          "source_id": "id03107",
+          "verdict": "PASS",
+          "reason": "Agency and meaning are faithful: the young man profits from the lesson and admires the tender delicacy with which it is given."
+        },
+        {
+          "source_id": "id03108",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. 'Трижды не попали в цель' renders 'manquâtes trois fois le but' exactly, and the passé simple nuance is handled adequately."
+        },
+        {
+          "source_id": "id03109",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'douze fois' is rendered, and the ironic retort with 'vous, monsieur' is preserved."
+        },
+        {
+          "source_id": "id03110",
+          "verdict": "CORRECTED",
+          "reason": "The French says 'pliais la saignée' and 'reposais ma main sur mon coude'. The prior text repeated 'руку' for both 'bras' and 'main'; 'main' is now rendered as 'кисть', which is more exact and avoids the repetition."
+        },
+        {
+          "source_id": "id03111",
+          "verdict": "PASS",
+          "reason": "Faithful: 'seul depuis' and 'succès entier' are both rendered correctly."
+        },
+        {
+          "source_id": "id03112",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. 'Tenez' is rendered as 'Вот', and the fencing terms (наседаете, освобождение клинка, прямой удар) are correct. Conditional logic and meaning are intact."
+        },
+        {
+          "source_id": "id03113",
+          "verdict": "PASS",
+          "reason": "Meaning, tone and the compliment on Athos's skill and courage are preserved."
+        },
+        {
+          "source_id": "id03114",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. The advice not to fire first, the reason given, the instruction to rear the horse, and 'deux ou trois fois la vie' are all preserved. The repetition of 'souvenez-vous bien' follows the source."
+        },
+        {
+          "source_id": "id03115",
+          "verdict": "PASS",
+          "reason": "'Par reconnaissance' is correctly rendered as 'из признательности', and 'ne fût-ce que' as 'хотя бы'."
+        },
+        {
+          "source_id": "id03116",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. 'Уж мы-то знаем толк в ранах' matches 'nous nous connaissons en blessures, nous autres'; the advice and the poachers remark are complete."
+        },
+        {
+          "source_id": "id03117",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic."
+        },
+        {
+          "source_id": "id03118",
+          "verdict": "PASS",
+          "reason": "Faithful: murmured 'Ah! nous voici à Saint-Denis'."
+        },
+        {
+          "source_id": "id03119",
+          "verdict": "PASS",
+          "reason": "Faithful: the gate is guarded by two sentries, and one speaks to the other."
+        },
+        {
+          "source_id": "id03120",
+          "verdict": "PASS",
+          "reason": "'M'a l'air' is rendered idiomatically as 'по-моему', and 'encore un' is preserved."
+        },
+        {
+          "source_id": "id03121",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. It keeps the source's agency ('s'occupait de Raoul', even indirectly) and 'à ses yeux'."
+        },
+        {
+          "source_id": "id03122",
+          "verdict": "PASS",
+          "reason": "The prior correction is acceptable. 'По каким признакам вы это определяете' renders 'À quoi voyez-vous cela?' naturally."
+        },
+        {
+          "source_id": "id03123",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'dit la sentinelle' is rendered as 'сказал часовой', and 'à son air', 'il a l'âge' and 'le second d'aujourd'hui' are all intact."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id03110",
+          "before": "— Потому что я сгибал руку в локтевом сгибе и таким образом опирал руку на локоть. Хорошо ли вы понимаете, что я хочу вам сказать, Рауль?",
+          "after": "— Потому что я сгибал руку в локтевом сгибе и таким образом опирал кисть на локоть. Хорошо ли вы понимаете, что я хочу вам сказать, Рауль?"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJLpfUhvgjh8GezwnMMz",
+        "usage": {
+          "input_tokens": 13814,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5302,
+          "output_tokens_details": {
+            "thinking_tokens": 1977
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03104",
+          "verdict": "PASS",
+          "reason": "Faithful: advice, comparison of the two horses, the hard-mouth point, the 'eight days' remark and the manège/battlefield contrast are all preserved. The prior correction (жёсткий рот, softer conditional) is confirmed."
+        },
+        {
+          "source_id": "id03105",
+          "verdict": "PASS",
+          "reason": "Accurate; 'tout à coup' and the purpose clause 'pour ne point donner une trop triste importance' are rendered correctly."
+        },
+        {
+          "source_id": "id03106",
+          "target_note": "unchanged",
+          "verdict": "PASS",
+          "reason": "'Voler la perdrix' is falconry (hunting partridge with a hawk), correctly rendered; the tone of Athos's deflecting remark is kept."
+        },
+        {
+          "source_id": "id03107",
+          "verdict": "PASS",
+          "reason": "Agency and meaning preserved: Raoul profits from the lesson and admires the tender delicacy with which it was given."
+        },
+        {
+          "source_id": "id03108",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed: 'manquâtes-vous trois fois le but' = three misses out of twelve; the 'Aussi' consequence is retained."
+        },
+        {
+          "source_id": "id03109",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed: 'atteignîtes douze fois' is a hit all twelve times; the ironic reply with a smile is intact."
+        },
+        {
+          "source_id": "id03110",
+          "verdict": "PASS",
+          "reason": "'Pliais la saignée' (bending the crook of the arm) and resting the hand on the elbow are correctly conveyed, and the closing question is preserved."
+        },
+        {
+          "source_id": "id03111",
+          "verdict": "PASS",
+          "reason": "Accurate: he shot alone since then, following the advice, with complete success."
+        },
+        {
+          "source_id": "id03112",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed. The fencing terms (наседаете, сбивает шпагу с линии, освобождение клинка, прямой удар) and the conditional structure are faithful."
+        },
+        {
+          "source_id": "id03113",
+          "verdict": "PASS",
+          "reason": "Faithful; 'bien souvent' and the compliment to Athos's skill and courage are retained."
+        },
+        {
+          "source_id": "id03114",
+          "verdict": "CORRECTED",
+          "reason": "In the prior text, 'особенно' hung awkwardly after 'кавалеристами'. In the French, 'surtout' qualifies 'comme cela arrive souvent à nous autres cavaliers'. It now reads 'как это особенно часто бывает с нами, кавалеристами'. The rest (not firing first, rearing the horse, saved my life two or three times) was already accurate."
+        },
+        {
+          "source_id": "id03115",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed: 'reconnaissance' here means gratitude, and 'признательность' fits; 'ne fût-ce que' is rendered as 'хотя бы'."
+        },
+        {
+          "source_id": "id03116",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed. All instructions are preserved, and the 'nous autres' joke is idiomatically rendered without the added 'старики' of the earlier draft."
+        },
+        {
+          "source_id": "id03117",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "id03118",
+          "verdict": "PASS",
+          "reason": "Accurate; 'murmura' is rendered as 'прошептал'."
+        },
+        {
+          "source_id": "id03119",
+          "verdict": "PASS",
+          "reason": "Faithful: two sentinels guard the gate, and one speaks to the other."
+        },
+        {
+          "source_id": "id03120",
+          "verdict": "PASS",
+          "reason": "'M'a l'air de se rendre à l'armée' is conveyed as 'по-моему, едет в армию'; 'encore un' is preserved."
+        },
+        {
+          "source_id": "id03121",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed: 'tout ce qui s'occupait... de Raoul' keeps the source's agency, and 'prenait un intérêt à ses yeux' is retained."
+        },
+        {
+          "source_id": "id03122",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed: 'À quoi voyez-vous cela?' is now idiomatic Russian."
+        },
+        {
+          "source_id": "id03123",
+          "verdict": "PASS",
+          "reason": "Prior correction confirmed: the verb 'dit' is rendered as 'сказал'; 'il a l'âge' and 'le second d'aujourd'hui' are preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id03114",
+          "before": "— Какой свежий ветер! — заметил Атос. — Это память о зиме. Кстати, скажите мне: если вы пойдёте в огонь, а вы пойдёте, ибо вы рекомендованы молодому генералу, который очень любит порох, помните хорошенько: в единоборстве, как это часто бывает с нами, кавалеристами, особенно, помните хорошенько, что никогда не следует стрелять первым: тот, кто стреляет первым, редко попадает в своего человека, потому что стреляет с боязнью остаться безоружным перед вооружённым врагом; а затем, когда он выстрелит, поднимите вашу лошадь на дыбы; этот приём два или три раза спасал мне жизнь.",
+          "after": "— Какой свежий ветер! — заметил Атос. — Это память о зиме. Кстати, скажите мне: если вы пойдёте в огонь, а вы пойдёте, ибо вы рекомендованы молодому генералу, который очень любит порох, помните хорошенько: в единоборстве, как это особенно часто бывает с нами, кавалеристами, помните хорошенько, что никогда не следует стрелять первым: тот, кто стреляет первым, редко попадает в своего человека, потому что стреляет с боязнью остаться безоружным перед вооружённым врагом; а затем, когда он выстрелит, поднимите вашу лошадь на дыбы; этот приём два или три раза спасал мне жизнь."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJLrx5eiuRsHF7pGbMmy",
+        "usage": {
+          "input_tokens": 13817,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4624,
+          "output_tokens_details": {
+            "thinking_tokens": 1394
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03104",
+          "verdict": "PASS",
+          "reason": "Faithful. The prior corrections ('делаете ей рот жёстким', 'обратите на это внимание', conditional 'не следовало бы') match 'endurcissez la bouche', 'faites-y attention', 'il faudrait'. Nothing omitted."
+        },
+        {
+          "source_id": "id03105",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Accurate: 'tout à coup', 'ne point donner une trop triste importance' and the colon are all preserved."
+        },
+        {
+          "source_id": "id03106",
+          "verdict": "PASS",
+          "reason": "'Voler la perdrix' is correctly rendered as hunting partridges with a hawk; the address and the 'Voyez donc' tone are kept."
+        },
+        {
+          "source_id": "id03107",
+          "verdict": "PASS",
+          "reason": "Correct: the imperfect tense, 'profitait de la leçon', and the admiration for the tender delicacy with which it was given are all kept."
+        },
+        {
+          "source_id": "id03108",
+          "verdict": "PASS",
+          "reason": "The prior correction 'трижды не попали в цель' matches 'manquâtes trois fois le but'. The imperfect 'disait' and 'sur douze fois' are preserved."
+        },
+        {
+          "source_id": "id03109",
+          "verdict": "PASS",
+          "reason": "Correct: 'douze fois' is made explicit as the elliptical reply, and the 'vous, monsieur' contrast is kept."
+        },
+        {
+          "source_id": "id03110",
+          "verdict": "PASS",
+          "reason": "'Pliais la saignée' is rendered as bending the arm at the elbow crease, and 'ma main sur mon coude' as the hand resting on the elbow. The question is intact."
+        },
+        {
+          "source_id": "id03111",
+          "verdict": "PASS",
+          "reason": "Faithful: 'seul depuis', 'en suivant ce conseil', 'succès entier' are all preserved."
+        },
+        {
+          "source_id": "id03112",
+          "verdict": "PASS",
+          "reason": "The fencing sense is accurate (charging the opponent, line, disengage, straight thrust). The prior correction of the 'Tenez' rendering is sound."
+        },
+        {
+          "source_id": "id03113",
+          "verdict": "PASS",
+          "reason": "Faithful, including 'bien souvent' and the compliment on skill and courage."
+        },
+        {
+          "source_id": "id03114",
+          "verdict": "PASS",
+          "reason": "The prior correction restores the position of 'surtout' (especially of us cavalrymen) and gives 'lutte particulière' as 'единоборство'. The first-shot advice, the rearing horse and the 'deux ou trois fois' are all preserved."
+        },
+        {
+          "source_id": "id03115",
+          "verdict": "PASS",
+          "reason": "'Par reconnaissance' is correctly 'из признательности'; the subjunctive concession is kept."
+        },
+        {
+          "source_id": "id03116",
+          "verdict": "PASS",
+          "reason": "Complete. The prior correction 'уж мы-то знаем толк в ранах' matches 'nous nous connaissons en blessures, nous autres' and removes the unsupported 'старики'."
+        },
+        {
+          "source_id": "id03117",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "id03118",
+          "verdict": "PASS",
+          "reason": "Faithful; the murmured tone is kept."
+        },
+        {
+          "source_id": "id03119",
+          "verdict": "PASS",
+          "reason": "Faithful: 'effectivement', the gate guarded by two sentinels, and one speaking to the other."
+        },
+        {
+          "source_id": "id03120",
+          "verdict": "PASS",
+          "reason": "Faithful: 'm'a l'air' as 'по-моему… едет'; 'encore' is kept."
+        },
+        {
+          "source_id": "id03121",
+          "verdict": "PASS",
+          "reason": "The prior correction restores the source's agency and nuance ('s'occupait… de Raoul', 'd'une façon même indirecte'; 'aux yeux')."
+        },
+        {
+          "source_id": "id03122",
+          "verdict": "PASS",
+          "reason": "The question is correct and idiomatic; the prior correction avoids the literal 'по чему… видите'."
+        },
+        {
+          "source_id": "id03123",
+          "verdict": "PASS",
+          "reason": "Faithful: 'dit la sentinelle' is restored, and 'Il a l'âge' and 'le second d'aujourd'hui' are preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
