@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK5cbjtijDuTudWaVk6Z",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-060-0019\",\"target\":\"Гленарван прижал жену к сердцу. В этот миг Мэри Грант подошла к Джону Манглсу:\"},{\"source_id\":\"fr42c-060-0020\",\"target\":\"«Лорд и леди Гленарван, — сказала она, — подумают, что если жена может умереть от руки мужа, чтобы избежать позорной жизни, то и невеста может умереть от руки жениха, чтобы в свой черёд избежать её. Джон, я могу сказать вам это в такую предсмертную минуту: разве я не давно уже ваша невеста в тайне вашего сердца? Могу ли я рассчитывать на вас, дорогой Джон, как леди Элен — на лорда Гленарвана?\"},{\"source_id\":\"fr42c-060-0021\",\"target\":\"— Мэри! — воскликнул молодой капитан, потеряв голову. — Ах, дорогая Мэри!..»\"},{\"source_id\":\"fr42c-060-0022\",\"target\":\"Он не мог договорить: циновка приподнялась, и пленников повлекли к Кай-Куму; обе женщины были покорны своей участи; мужчины скрывали свои муки под спокойствием, говорившим о нечеловеческой силе духа.\"},{\"source_id\":\"fr42c-060-0023\",\"target\":\"Они предстали перед зеландским вождём. Тот не заставил ждать свой приговор:\"},{\"source_id\":\"fr42c-060-0024\",\"target\":\"«Ты убил Кара-Тете? — спросил он Гленарвана.\"},{\"source_id\":\"fr42c-060-0025\",\"target\":\"— Я убил его, — ответил лорд.\"},{\"source_id\":\"fr42c-060-0026\",\"target\":\"— Завтра, при восходе солнца, ты умрёшь.\"},{\"source_id\":\"fr42c-060-0027\",\"target\":\"— Один? — спросил Гленарван; сердце его сильно билось.\"},{\"source_id\":\"fr42c-060-0028\",\"target\":\"— Ах! Если бы жизнь нашего тохонги не была дороже вашей! — воскликнул Кай-Куму; в его глазах выражалось свирепое сожаление!\"},{\"source_id\":\"fr42c-060-0029\",\"target\":\"В этот миг среди туземцев поднялось волнение. Гленарван быстро оглянулся. Вскоре толпа раздалась, и появился воин, обливающийся потом, изнемогающий от усталости.\"},{\"source_id\":\"fr42c-060-0030\",\"target\":\"Кай-Куму, едва завидев его, сказал ему по-английски, с явным намерением, чтобы его поняли пленники:\"},{\"source_id\":\"fr42c-060-0031\",\"target\":\"«Ты идёшь из лагеря пакеха?\"},{\"source_id\":\"fr42c-060-0032\",\"target\":\"— Да, — ответил маори.\"},{\"source_id\":\"fr42c-060-0033\",\"target\":\"— Ты видел пленника, нашего тохонгу?\"},{\"source_id\":\"fr42c-060-0034\",\"target\":\"— Я видел его.\"},{\"source_id\":\"fr42c-060-0035\",\"target\":\"— Он жив?\"},{\"source_id\":\"fr42c-060-0036\",\"target\":\"— Он мёртв! Англичане расстреляли его!»\"},{\"source_id\":\"fr42c-060-0037\",\"target\":\"Для Гленарвана и его спутников всё было кончено.\"},{\"source_id\":\"fr42c-060-0038\",\"target\":\"«Все вы, — воскликнул Кай-Куму, — умрёте завтра с восходом зари!»\"}],\"review\":[{\"source_id\":\"fr42c-060-0019\",\"verdict\":\"PASS\",\"reason\":\"Faithful; names and sequence correct.\"},{\"source_id\":\"fr42c-060-0020\",\"verdict\":\"PASS\",\"reason\":\"Complete and faithful; the opening quote mark is present and the speech continues into the next row, so there is no closing quote.\"},{\"source_id\":\"fr42c-060-0021\",\"verdict\":\"PASS\",\"reason\":\"Dialogue turn, exclamations and closing quote preserved.\"},{\"source_id\":\"fr42c-060-0022\",\"verdict\":\"PASS\",\"reason\":\"Natte as циновка, passive agency and all clauses preserved.\"},{\"source_id\":\"fr42c-060-0023\",\"verdict\":\"PASS\",\"reason\":\"Meaning preserved; the idiom about the judgment rendered naturally.\"},{\"source_id\":\"fr42c-060-0024\",\"target\":\"«Ты убил Кара-Тете? — спросил он Гленарвана.\",\"verdict\":\"PASS\",\"reason\":\"Accurate question and attribution.\"},{\"source_id\":\"fr42c-060-0025\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-060-0026\",\"verdict\":\"PASS\",\"reason\":\"Future tense and time phrase preserved.\"},{\"source_id\":\"fr42c-060-0027\",\"verdict\":\"PASS\",\"reason\":\"Accurate; heartbeat clause preserved.\"},{\"source_id\":\"fr42c-060-0028\",\"verdict\":\"PASS\",\"reason\":\"Dialogue and ferocious regret preserved; the closing quote is correctly dropped in favour of the dash form, with the opening quote carried over from the previous row.\"},{\"source_id\":\"fr42c-060-0029\",\"verdict\":\"PASS\",\"reason\":\"All events preserved.\"},{\"source_id\":\"fr42c-060-0030\",\"verdict\":\"PASS\",\"reason\":\"English-language intention for captives preserved.\"},{\"source_id\":\"fr42c-060-0031\",\"verdict\":\"PASS\",\"reason\":\"Pakéka rendered as пакеха; the question is accurate.\"},{\"source_id\":\"fr42c-060-0032\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-060-0033\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-060-0034\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-060-0035\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-060-0036\",\"verdict\":\"PASS\",\"reason\":\"Agency (the English shot him) preserved.\"},{\"source_id\":\"fr42c-060-0037\",\"verdict\":\"PASS\",\"reason\":\"Idiom rendered correctly.\"},{\"source_id\":\"fr42c-060-0038\",\"verdict\":\"PASS\",\"reason\":\"Accurate; all will die at daybreak.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11084,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2182,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
