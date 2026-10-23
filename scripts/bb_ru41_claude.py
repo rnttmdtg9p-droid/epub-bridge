@@ -139,6 +139,19 @@ def translate(unit):
         print('UNIT',number,'BATCH',index+1,'OF',len(batches),'COMPARISON_VERIFIED',flush=True)
     assert len(final)==len(allrows)
     save(folder/'chapter.reviewed.json',{'unit':number,'heading':final[0],'rows':final[1:],'source_rows':len(unit['rows']),'state':'SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA','review_batches':len(reviews),'master':'5.0.70'})
+    # Persist real provider exchanges before independent acceptance checks.
+    commit()
+    from bb_ru41_verify import qualify_unit
+    try:
+        accepted,qualification=qualify_unit(ROOT,SOURCE,number)
+        save(OUT/'qualified'/f'unit-{number:03}.json',accepted)
+        save(OUT/'qualified'/f'unit-{number:03}.evidence.json',qualification)
+        (OUT/'qualified'/f'unit-{number:03}.blocked.json').unlink(missing_ok=True)
+    except Exception as error:
+        (OUT/'qualified'/f'unit-{number:03}.json').unlink(missing_ok=True)
+        (OUT/'qualified'/f'unit-{number:03}.evidence.json').unlink(missing_ok=True)
+        save(OUT/'qualified'/f'unit-{number:03}.blocked.json',{'unit':number,'state':'REVIEW_REQUIRED','error':type(error).__name__+': '+str(error),'book_release':False})
+        print('INDEPENDENT_RECONCILIATION_BLOCKED',number,str(error),flush=True)
     commit();print('UNIT_CHECKPOINT',number,'ROWS',len(unit['rows']),flush=True)
     return number
 
