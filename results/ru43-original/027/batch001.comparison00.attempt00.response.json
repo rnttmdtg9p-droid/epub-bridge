@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKKzcQaYCQjYz9gy1Lx1",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-027-0020\",\"target\":\"— О, он живёт в Англии, в Шеффилде, проповедует там, в этой стране никогда не бывал. Времени у него было не так уж много, да и письмо он, может, вовсе не получил, понимаете.\"},{\"source_id\":\"043-027-0021\",\"target\":\"— Как жаль, как жаль, что он не дожил до встречи с братьями, бедная душа. Вы, говорите, едете в Орлеан?\"},{\"source_id\":\"043-027-0022\",\"target\":\"— Да, но это ещё не всё. В следующую среду я отплываю на корабле в Рио-Жанейро, где живёт мой дядя.\"},{\"source_id\":\"043-027-0023\",\"target\":\"— Путь неблизкий. Зато как чудесно будет; мне бы так хотелось поехать. А Мэри Джейн старшая? Сколько лет остальным?\"},{\"source_id\":\"043-027-0024\",\"target\":\"— Мэри Джейн девятнадцать, Сьюзен пятнадцать, а Джоанне около четырнадцати — это та, что посвящает себя добрым делам, и у неё заячья губа.\"},{\"source_id\":\"043-027-0025\",\"target\":\"— Бедняжки! Остаться так одним в этом холодном свете.\"},{\"source_id\":\"043-027-0026\",\"target\":\"— Ну, могло быть и хуже. У старого Питера были друзья, и они не дадут им пропасть. Есть Хобсон, баптистский проповедник; и дьякон Лот Хови, и Бен Раккер, и Абнер Шекелфорд, и Леви Белл, адвокат; и доктор Робинсон, и их жёны, и вдова Бартли, и… ну, их много; но с этими Питер был ближе всего и иногда писал о них, когда писал домой; так что Харви будет знать, где искать друзей, когда приедет.\"},{\"source_id\":\"043-027-0027\",\"target\":\"Он буквально выпотрошил того молодого человека\"},{\"source_id\":\"043-027-0028\",\"target\":\"Так вот, старик всё расспрашивал и расспрашивал, пока совсем не выпотрошил того молодого человека. Будь я проклят, если он не расспросил обо всех и обо всём в этом распрекрасном городке, и всё про Уилксов; и про дело Питера — он был кожевник; и про дело Джорджа — он был плотник; и про дело Харви — он был священник-диссентер; и так далее, и так далее. Потом он говорит:\"},{\"source_id\":\"043-027-0029\",\"target\":\"— Зачем вам понадобилось тащиться пешком аж до самой пристани, где пароход?\"},{\"source_id\":\"043-027-0030\",\"target\":\"— Потому что это большой орлеанский пароход, и я боялся, что он там не остановится. Когда они сильно осядут в воде, то на окрик не останавливаются. Цинциннатский остановится, а этот из Сент-Луиса.\"},{\"source_id\":\"043-027-0031\",\"target\":\"— Питер Уилкс был человек зажиточный?\"},{\"source_id\":\"043-027-0032\",\"target\":\"— О да, вполне зажиточный. У него были дома и земля, и, считают, он оставил три-четыре тысячи наличными, спрятанные где-то.\"},{\"source_id\":\"043-027-0033\",\"target\":\"— Когда, вы говорите, он умер?\"},{\"source_id\":\"043-027-0034\",\"target\":\"— Я не говорил, но это было вчера ночью.\"},{\"source_id\":\"043-027-0035\",\"target\":\"— Похороны, надо думать, завтра?\"},{\"source_id\":\"043-027-0036\",\"target\":\"— Да, около полудня.\"},{\"source_id\":\"043-027-0037\",\"target\":\"— Что ж, всё это ужасно печально; но всем нам рано или поздно идти туда же. Так что надо быть готовым; тогда всё хорошо.\"},{\"source_id\":\"043-027-0038\",\"target\":\"— Да, сэр, это лучший способ. Мама всегда так говорила.\"},{\"source_id\":\"043-027-0039\",\"target\":\"Когда мы подгребли к пароходу, он почти закончил погрузку, а вскоре отчалил. Король ни слова не сказал о том, чтобы подняться на борт, так что прокатиться мне всё-таки не удалось. Когда пароход ушёл, король заставил меня грести ещё милю вверх до глухого места, потом вышел на берег и говорит:\"}],\"review\":[{\"source_id\":\"043-027-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Faithful; only punctuation tidied versus earlier prose style.\"},{\"source_id\":\"043-027-0021\",\"verdict\":\"PASS\",\"reason\":\"Meaning, tone and question preserved.\"},{\"source_id\":\"043-027-0022\",\"verdict\":\"PASS\",\"reason\":\"Ryo Janeero rendered as Рио-Жанейро; Wednesday and ship preserved.\"},{\"source_id\":\"043-027-0023\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic; content and questions intact.\"},{\"source_id\":\"043-027-0024\",\"verdict\":\"CORRECTED\",\"reason\":\"Added comma before the final clause for clarity; ages and hare-lip preserved.\"},{\"source_id\":\"043-027-0025\",\"verdict\":\"PASS\",\"reason\":\"Faithful, natural.\"},{\"source_id\":\"043-027-0026\",\"verdict\":\"PASS\",\"reason\":\"All names, friends and meaning preserved.\"},{\"source_id\":\"043-027-0027\",\"verdict\":\"PASS\",\"reason\":\"Caption matches source.\"},{\"source_id\":\"043-027-0028\",\"verdict\":\"PASS\",\"reason\":\"Complete, humour preserved, occupations correct.\"},{\"source_id\":\"043-027-0029\",\"verdict\":\"PASS\",\"reason\":\"Idiomatic and faithful.\"},{\"source_id\":\"043-027-0030\",\"verdict\":\"PASS\",\"reason\":\"Deep-loaded boats not stopping, Cincinnati vs St. Louis preserved.\"},{\"source_id\":\"043-027-0031\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"043-027-0032\",\"verdict\":\"PASS\",\"reason\":\"Houses, land, hidden cash preserved.\"},{\"source_id\":\"043-027-0033\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"043-027-0034\",\"verdict\":\"PASS\",\"reason\":\"Negation and timing preserved.\"},{\"source_id\":\"043-027-0035\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"043-027-0036\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"043-027-0037\",\"verdict\":\"PASS\",\"reason\":\"Meaning and pious tone preserved.\"},{\"source_id\":\"043-027-0038\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"043-027-0039\",\"verdict\":\"PASS\",\"reason\":\"Agency, lost ride and king's order preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 12710,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2352,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
