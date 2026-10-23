@@ -1,0 +1,803 @@
+{
+  "unit": 7,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-007-0128",
+      "target": "— Что ж, я не имею никакого отношения к другим людям, которые наводили справки, — небрежно сказал Холмс. — Не хотите говорить — пари не состоится, вот и всё. Но в вопросах птицеводства я всегда готов постоять за своё мнение и ставлю пятёрку на то, что птица, которую я съел, деревенской выкормки.",
+      "source_sha256": "dfaa36f75619216650f4047f9b23bc77dfaa68d79b87c56ca4a7b3046340cd85",
+      "target_id": "ru-045-007-0128",
+      "tag": "p",
+      "target_sha256": "cf9a8a3ec140054889bc064a73553b86aeb80ebb9b6e88bd99cd316416bd2ecc"
+    },
+    {
+      "source_id": "045-007-0129",
+      "target": "— Ну, тогда вы проиграли свою пятёрку: птица городская, — отрезал торговец.",
+      "source_sha256": "bfe233e2c4ae3902c1b59ac28ec12ae61b4bd6281fef0ecbe4ca2c156190bde3",
+      "target_id": "ru-045-007-0129",
+      "tag": "p",
+      "target_sha256": "ffc7ff6f257c7b6b381b0c419aaec56d2c7f7c5727d7347814216997247c5c0b"
+    },
+    {
+      "source_id": "045-007-0130",
+      "target": "— Ничего подобного.",
+      "source_sha256": "2e4f2d0297e3f26e2697d6c670dcb6fc5ada56dc2b75f4fd41cfd274f6aa4e75",
+      "target_id": "ru-045-007-0130",
+      "tag": "p",
+      "target_sha256": "3cc4ae557d8e95bf08ea5d05d824e0c34eaee8500515933da791915b90ad7714"
+    },
+    {
+      "source_id": "045-007-0131",
+      "target": "— Говорю вам, городская.",
+      "source_sha256": "557e4321f72e60fbeeec1964eab3778e68e24b0672f1a78ee05561b2ffef8255",
+      "target_id": "ru-045-007-0131",
+      "tag": "p",
+      "target_sha256": "d3664b8eef2ba48214186c8202639e74155bd38751c10565383d12ef78b5ca35"
+    },
+    {
+      "source_id": "045-007-0132",
+      "target": "— Не верю.",
+      "source_sha256": "6234b7cda71ced947a27bd07ba649e3090bddc33eab158a3fffcb414d08d85d5",
+      "target_id": "ru-045-007-0132",
+      "tag": "p",
+      "target_sha256": "f051fc7e50e89edea8961dff95dd0cde57661d0f50cb142ad85c335c7c8cd6ca"
+    },
+    {
+      "source_id": "045-007-0133",
+      "target": "— Вы думаете, что смыслите в птице больше меня, который возится с ней с самого детства? Говорю вам, все птицы, что пошли в «Альфу», были городской выкормки.",
+      "source_sha256": "a35c2dd6de5bfc604684d2d1f672db57cdb0e39f2dac07e811d0a7425e386aca",
+      "target_id": "ru-045-007-0133",
+      "tag": "p",
+      "target_sha256": "d0ab482f439ffdf565c0fc8e5594d3560e969a1e8220588d353c02e3a447fe0d"
+    },
+    {
+      "source_id": "045-007-0134",
+      "target": "— Вам никогда не убедить меня в этом.",
+      "source_sha256": "90214ae70a8695416041448a21520d703c3e26a048198bd5d5bddc572bd85ad4",
+      "target_id": "ru-045-007-0134",
+      "tag": "p",
+      "target_sha256": "6473422434f41838f3013304af78df6dd56d5011b2959829087b823a53e3cd85"
+    },
+    {
+      "source_id": "045-007-0135",
+      "target": "— Так спорим?",
+      "source_sha256": "ef2b103c1533852bac2d7826f946581dd12afac75b994d26538a3ff1de84788e",
+      "target_id": "ru-045-007-0135",
+      "tag": "p",
+      "target_sha256": "92a2004a07351d38a10de0887c9c9d2a10fde383f0006d6d8c4e3e2e5a3fba08"
+    },
+    {
+      "source_id": "045-007-0136",
+      "target": "— Это значит просто взять ваши деньги, ведь я знаю, что прав. Но поставлю с вами соверен, чтобы научить вас не упрямиться.",
+      "source_sha256": "9e823b87c12770b3eaae429aab68297498a662557f1e4dda9358f75160bd241d",
+      "target_id": "ru-045-007-0136",
+      "tag": "p",
+      "target_sha256": "38932e489324afb25e00db5b48b8c72fbc13d7e2aebc9eebc5dc974358e84267"
+    },
+    {
+      "source_id": "045-007-0137",
+      "target": "Торговец мрачно усмехнулся. — Принеси книги, Билл, — сказал он.",
+      "source_sha256": "d27758c072ce19d75621c3b09ce83b58a8d26d8c1a617232347390b888851c88",
+      "target_id": "ru-045-007-0137",
+      "tag": "p",
+      "target_sha256": "df702c9d439781b1220b17b9f9ab411a1fd5c4bd65143a9e0f2e75fc930537ee"
+    },
+    {
+      "source_id": "045-007-0138",
+      "target": "Мальчуган принёс тонкую небольшую книжку и огромный фолиант с засаленным корешком и разложил их рядом под висячей лампой.",
+      "source_sha256": "a2074a8dbb9df054d16152c712649559f4e5df8cd5dcd29e814a449ba94cabc8",
+      "target_id": "ru-045-007-0138",
+      "tag": "p",
+      "target_sha256": "9ce22dabaa0ae4087178fdcd932dbe65c425a0938c7083f288a45cc30fa02309"
+    },
+    {
+      "source_id": "045-007-0139",
+      "target": "— Ну-с, мистер Самоуверенный, — сказал торговец, — я думал, что гусей у меня не осталось, но прежде чем я кончу, вы увидите, что в лавке остался ещё один. Видите эту книжечку?",
+      "source_sha256": "a9a69a2e593507b9bf96dfbd04a64e7f17a9c801a8cad8c5ecb5f856cb6482b2",
+      "target_id": "ru-045-007-0139",
+      "tag": "p",
+      "target_sha256": "78791d005005e7cd5001e44d02733dac8b925d812e9856e552663553d8e6c896"
+    },
+    {
+      "source_id": "045-007-0140",
+      "target": "— Ну?",
+      "source_sha256": "0226f79ba13580adaa4581a53c6acd6c97384103b7b97d9988466bcc3111c67c",
+      "target_id": "ru-045-007-0140",
+      "tag": "p",
+      "target_sha256": "577c61c1603c9aeb8a3681ecb67c0618b810778cedfdb50accda826e889a2fb5"
+    },
+    {
+      "source_id": "045-007-0141",
+      "target": "— Это список тех, у кого я покупаю. Видите? Так вот, на этой странице — деревенские, а цифры после фамилий указывают, где их счета в большой книге. Теперь! Видите эту другую страницу, красными чернилами? Это список моих городских поставщиков. Взгляните на третье имя. Прочтите-ка мне его вслух.",
+      "source_sha256": "24a77f082626b7c03ed6d7b6f5226ee1be258a9307c4e7f11eb359bf0da73b5c",
+      "target_id": "ru-045-007-0141",
+      "tag": "p",
+      "target_sha256": "25ff70a76b5c1bf1580dbdeebbfe885071bde5972e006da148bd35050df8be33"
+    },
+    {
+      "source_id": "045-007-0142",
+      "target": "— Миссис Оукшотт, Брикстон-роуд, 117 — 249, — прочёл Холмс.",
+      "source_sha256": "f473bc5c1a0266fa8a45ac9e9f9e6ad6cae704fbc9f738d2d4aaabd0380297fa",
+      "target_id": "ru-045-007-0142",
+      "tag": "p",
+      "target_sha256": "e3b7db9117331a0e74ad57e74a78b2b6803dac24e26f9fdb8dd8b9859f1ee115"
+    },
+    {
+      "source_id": "045-007-0143",
+      "target": "— Верно. Теперь найдите это в большой книге.",
+      "source_sha256": "e482541493fa9534a17692a878d51a77dbd5b63c09913979a7eaf934676ba1e2",
+      "target_id": "ru-045-007-0143",
+      "tag": "p",
+      "target_sha256": "731d02415d3637bc826122492922cc47818af234e9b72b20dc7f0eaad9342af5"
+    },
+    {
+      "source_id": "045-007-0144",
+      "target": "Холмс перевернул указанную страницу. — Вот: «Миссис Оукшотт, Брикстон-роуд, 117, поставщица яиц и птицы».",
+      "source_sha256": "bc087a666f3fbfa5aec017e38d3f9c306323ac7462c7067306da00998032f22a",
+      "target_id": "ru-045-007-0144",
+      "tag": "p",
+      "target_sha256": "afc81dce1ade9397dfc45ef2cb4348da96ab4d997450057ddc3be4459390fb4a"
+    },
+    {
+      "source_id": "045-007-0145",
+      "target": "— Ну, а какая там последняя запись?",
+      "source_sha256": "ecaf2e5ca2170b0ddad6446bd72eaf61acefbbf57d222f4458cd50fc66f73a90",
+      "target_id": "ru-045-007-0145",
+      "tag": "p",
+      "target_sha256": "f3e8ef192a93316076f63183a2a4f21cf3436b36e873b494fba18777f461e023"
+    },
+    {
+      "source_id": "045-007-0146",
+      "target": "— «22 декабря. Двадцать четыре гуся по 7 <i>ш.</i> 6 <i>п.</i>»",
+      "source_sha256": "4d94017c0fd293bf53a5572945a229772e1e27c8c50f003ab35d01e954ae0b10",
+      "target_id": "ru-045-007-0146",
+      "tag": "p",
+      "target_sha256": "7ed10c32e5182a03674d60b49512094a8e6fe9aa694ffa2514c8bcc3564648a0"
+    },
+    {
+      "source_id": "045-007-0147",
+      "target": "— Совершенно верно. Вот так. А ниже?",
+      "source_sha256": "c5d5cb70567937e17c4140f0fdb9492d35fc3365d8bee0f19fe0ffc4e011d4c3",
+      "target_id": "ru-045-007-0147",
+      "tag": "p",
+      "target_sha256": "55d5015f639d52242f6c13e70de95a62512f48cd92a8ab127aaf3ce43adda312"
+    },
+    {
+      "source_id": "045-007-0148",
+      "target": "— «Продано мистеру Уиндигейту из „Альфы“ по 12 <i>ш.</i>»",
+      "source_sha256": "b8a099dcfc7ac2cbc6b3419208317c80c49e05f7c1cd4b0d5d7b4c7b449807b6",
+      "target_id": "ru-045-007-0148",
+      "tag": "p",
+      "target_sha256": "00f9ce04a0adb7dc4ce850c873e6b9eb88754c5cbb460594465845f1e964f4e0"
+    },
+    {
+      "source_id": "045-007-0149",
+      "target": "— Что вы теперь скажете?",
+      "source_sha256": "00d6e993ac8789e09f24170a0d2564b7551cbf132c8d54aac9782c36cc44a277",
+      "target_id": "ru-045-007-0149",
+      "tag": "p",
+      "target_sha256": "6fa7fde65efabe099d666c83ec8eaaa357e1853bbdd82603ffe181e3a0008c51"
+    },
+    {
+      "source_id": "045-007-0150",
+      "target": "Шерлок Холмс выглядел глубоко раздосадованным. Он достал из кармана соверен, швырнул его на мраморную плиту и отвернулся с видом человека, чьё отвращение слишком велико для слов. В нескольких ярдах оттуда он остановился под фонарным столбом и рассмеялся своим особенным, сердечным, беззвучным смехом.",
+      "source_sha256": "55b4955498b8e53755bcb6b84e4a32976dd16581347c1a2279785c4a038b48a2",
+      "target_id": "ru-045-007-0150",
+      "tag": "p",
+      "target_sha256": "47e42de37f5ce948668f3d579bef559e1cacbd9442107b4fe2011732cde598e7"
+    },
+    {
+      "source_id": "045-007-0151",
+      "target": "— Когда видишь человека с такими бакенбардами и с «Розовой газетой» в кармане, его всегда можно поймать на пари, — сказал он. — Смею думать, что, положи я перед ним сто фунтов, он не выдал бы мне столько сведений, сколько выложил, думая, что обводит меня вокруг пальца в споре. Ну, Ватсон, мне кажется, наши поиски близятся к концу, и остаётся решить лишь, идти ли нам к этой миссис Оукшотт сегодня вечером или отложить до завтра. Из слов этого сердитого малого ясно, что, кроме нас, есть и другие, кто беспокоится об этом деле, и я бы…",
+      "source_sha256": "f14579dd1e8f7f99011165b73f8f42e09153dfc021d611be85d2aba00c49a3be",
+      "target_id": "ru-045-007-0151",
+      "tag": "p",
+      "target_sha256": "4fd5d33c6cd6cafdf6eedfa5d85d5bfe66b8cb43dcb6e22e4ee34c109c5007ce"
+    },
+    {
+      "source_id": "045-007-0152",
+      "target": "Его слова вдруг оборвал громкий шум, поднявшийся у лавки, которую мы только что покинули. Обернувшись, мы увидели низенького человечка с крысиным лицом, стоявшего посреди круга жёлтого света от качающейся лампы, а торговец Брекинридж, застывший в дверях лавки, яростно грозил кулаками съёжившейся фигуре.",
+      "source_sha256": "320cebf31cda56bbb9d3fd9c388bab9d2c15ff76a921d6a8e993814a08a85259",
+      "target_id": "ru-045-007-0152",
+      "tag": "p",
+      "target_sha256": "e7a0bf8ec1fd04bbe278aaf1029dc75d445d1dab293787e8bff229faeb413812"
+    },
+    {
+      "source_id": "045-007-0153",
+      "target": "— С меня довольно вас и ваших гусей! — кричал он. — Чтоб вам всем провалиться к дьяволу! Если ещё раз явитесь ко мне со своей дурацкой болтовнёй, спущу на вас собаку. Приведите сюда миссис Оукшотт, ей я отвечу, а вам-то какое дело? Разве я покупал у вас гусей?",
+      "source_sha256": "9df2a01aa73835f650bd60f074c596fbde11deb1cbe7ec3b3ac52798de598bc8",
+      "target_id": "ru-045-007-0153",
+      "tag": "p",
+      "target_sha256": "ab52c356d9273d03034841e69785d06d575d82049469ea3184d7df94408b60ba"
+    },
+    {
+      "source_id": "045-007-0154",
+      "target": "— Нет; но один из них всё-таки был мой, — заныл человечек.",
+      "source_sha256": "5fe6c84265ef3ada27082b4f4779244689275e15da6a3e66cf7e044f262b13e3",
+      "target_id": "ru-045-007-0154",
+      "tag": "p",
+      "target_sha256": "3e4a590dbfcaa35b143a6c1f07d2f884806c46a78260c7235957c537f43c6b19"
+    },
+    {
+      "source_id": "045-007-0155",
+      "target": "— Ну так спросите о нём миссис Оукшотт.",
+      "source_sha256": "cd15b2bbc52598a25eee3d012f9b876f731e9b6c26d956f10c062ee94d729b89",
+      "target_id": "ru-045-007-0155",
+      "tag": "p",
+      "target_sha256": "837c4434810a226a9121911e7279075356eb0bd696bf59cdc766dcada8d50e00"
+    },
+    {
+      "source_id": "045-007-0156",
+      "target": "— Она велела спросить вас.",
+      "source_sha256": "2d423f744571fdbcdea91fe6b782d386765422d353d63bb2977ed1a0bb234fe6",
+      "target_id": "ru-045-007-0156",
+      "tag": "p",
+      "target_sha256": "9529db031284375d51dbea8bb6789dc3e67c9750c1396a7d09aa10f931ecaab6"
+    },
+    {
+      "source_id": "045-007-0157",
+      "target": "— Можете спрашивать хоть прусского короля, мне наплевать. С меня хватит. Убирайтесь отсюда! — Он яростно рванулся вперёд, и расспрашивавший юркнул в темноту.",
+      "source_sha256": "9b5a903b3f93d6aac6883fb58b883d5b44f2bd8c485e5bdb02b4bd7391ebcfd4",
+      "target_id": "ru-045-007-0157",
+      "tag": "p",
+      "target_sha256": "5a9e7d3a24a3d741f665778478e0530cb96753bc844f48ceed5ee867188a4424"
+    },
+    {
+      "source_id": "045-007-0158",
+      "target": "— Ха! Возможно, это избавит нас от поездки на Брикстон-роуд, — прошептал Холмс. — Идёмте со мной, посмотрим, что можно сделать с этим малым. — Шагая между разрозненными кучками людей, слонявшихся вокруг пылающих ларьков, мой спутник быстро нагнал человечка и тронул его за плечо. Тот резко обернулся, и при свете газа я увидел, что с его лица согнаны все краски.",
+      "source_sha256": "61c9c3913c93105b818ef494cd86bf406c7469e784fb67d1889d4b9441044123",
+      "target_id": "ru-045-007-0158",
+      "tag": "p",
+      "target_sha256": "6cb8f49ec0387c471eabff84ec1bad34124ebcb11f181ba0ef4730279ebd9646"
+    },
+    {
+      "source_id": "045-007-0159",
+      "target": "— Кто вы такой? Что вам нужно? — спросил он дрожащим голосом.",
+      "source_sha256": "f2220220f7fa384547858fd54008bfc8239c6ef7eaf9719d06bb2fc1b39809cc",
+      "target_id": "ru-045-007-0159",
+      "tag": "p",
+      "target_sha256": "30aa9208cba13a0e76bc259c8d99e93edf01c58ba2b41c54574f7e4166d84aab"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-007-0128",
+      "verdict": "CORRECTED",
+      "reason": "Fixed bet idiom ('bet is off'), fiver, stray structure; natural speech."
+    },
+    {
+      "source_id": "045-007-0129",
+      "verdict": "CORRECTED",
+      "reason": "Clarified fiver and town-bred; snapped tone."
+    },
+    {
+      "source_id": "045-007-0130",
+      "verdict": "CORRECTED",
+      "reason": "Draft mistranslated denial; now 'nothing of the kind'."
+    },
+    {
+      "source_id": "045-007-0131",
+      "verdict": "CORRECTED",
+      "reason": "Draft wrongly 'Yes, it's she'; now assertion it is town bred."
+    },
+    {
+      "source_id": "045-007-0132",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray quotation marks."
+    },
+    {
+      "source_id": "045-007-0133",
+      "verdict": "CORRECTED",
+      "reason": "Smoother idiom; 'nipper' childhood, town bred."
+    },
+    {
+      "source_id": "045-007-0134",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic."
+    },
+    {
+      "source_id": "045-007-0135",
+      "verdict": "CORRECTED",
+      "reason": "Natural 'Спорим?' phrasing."
+    },
+    {
+      "source_id": "045-007-0136",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray closing quote, fixed wording."
+    },
+    {
+      "source_id": "045-007-0137",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue format (dashes, no guillemets)."
+    },
+    {
+      "source_id": "045-007-0138",
+      "verdict": "CORRECTED",
+      "reason": "Book/volume wording improved."
+    },
+    {
+      "source_id": "045-007-0139",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; 'little book' not tetrad."
+    },
+    {
+      "source_id": "045-007-0140",
+      "verdict": "CORRECTED",
+      "reason": "Consistent dash dialogue format."
+    },
+    {
+      "source_id": "045-007-0141",
+      "verdict": "CORRECTED",
+      "reason": "Format and ledger wording; clearer."
+    },
+    {
+      "source_id": "045-007-0142",
+      "verdict": "CORRECTED",
+      "reason": "Format; address order."
+    },
+    {
+      "source_id": "045-007-0143",
+      "verdict": "CORRECTED",
+      "reason": "Format normalized."
+    },
+    {
+      "source_id": "045-007-0144",
+      "verdict": "CORRECTED",
+      "reason": "Format; nested quotes simplified."
+    },
+    {
+      "source_id": "045-007-0145",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray quote; wording."
+    },
+    {
+      "source_id": "045-007-0146",
+      "verdict": "CORRECTED",
+      "reason": "Restored italic s./d. abbreviations."
+    },
+    {
+      "source_id": "045-007-0147",
+      "verdict": "CORRECTED",
+      "reason": "Format, stray quote removed."
+    },
+    {
+      "source_id": "045-007-0148",
+      "verdict": "CORRECTED",
+      "reason": "Restored italic s.; Windigate spelling."
+    },
+    {
+      "source_id": "045-007-0149",
+      "verdict": "CORRECTED",
+      "reason": "Draft wrongly used ты; Holmes is addressed as вы."
+    },
+    {
+      "source_id": "045-007-0150",
+      "verdict": "CORRECTED",
+      "reason": "Slab is marble; chagrin wording."
+    },
+    {
+      "source_id": "045-007-0151",
+      "verdict": "CORRECTED",
+      "reason": "Pink 'un, Oakshott spelling, stray quote, idiom fixes."
+    },
+    {
+      "source_id": "045-007-0152",
+      "verdict": "CORRECTED",
+      "reason": "Stall/rat-faced/cringing rendered correctly."
+    },
+    {
+      "source_id": "045-007-0153",
+      "verdict": "CORRECTED",
+      "reason": "Livelier register; 'off you' sense."
+    },
+    {
+      "source_id": "045-007-0154",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "045-007-0155",
+      "verdict": "CORRECTED",
+      "reason": "'for it' sense added."
+    },
+    {
+      "source_id": "045-007-0156",
+      "verdict": "CORRECTED",
+      "reason": "'told me' not 'asked'."
+    },
+    {
+      "source_id": "045-007-0157",
+      "verdict": "CORRECTED",
+      "reason": "Draft wrote Prussia/Proosia dialect lost; idiom fixed."
+    },
+    {
+      "source_id": "045-007-0158",
+      "verdict": "CORRECTED",
+      "reason": "Fluency; colour driven from face."
+    },
+    {
+      "source_id": "045-007-0159",
+      "verdict": "CORRECTED",
+      "reason": "Removed 'тогда', natural."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-007-0128",
+      "before": "— Что ж, я не имею никакого отношения к другим людям, которые задавали вопросы, — небрежно ответил Холмс. — Если вы не хотите объявить пари аннулированным, то на этом всё. Но я всегда готов отстаивать своё мнение по поводу птицы, и я готов поставить пять фунтов на то, что птица, которую я съел, выращена в деревне.",
+      "after": "— Что ж, я не имею никакого отношения к другим людям, которые наводили справки, — небрежно сказал Холмс. — Не хотите говорить — пари не состоится, вот и всё. Но в вопросах птицеводства я всегда готов постоять за своё мнение и ставлю пятёрку на то, что птица, которую я съел, деревенской выкормки."
+    },
+    {
+      "source_id": "045-007-0129",
+      "before": "— Ну, тогда вы потеряли свои пять фунтов, потому что она городская, — резко ответил продавец.",
+      "after": "— Ну, тогда вы проиграли свою пятёрку: птица городская, — отрезал торговец."
+    },
+    {
+      "source_id": "045-007-0130",
+      "before": "— Это совсем не то, что нужно.",
+      "after": "— Ничего подобного."
+    },
+    {
+      "source_id": "045-007-0131",
+      "before": "— Да, это она.",
+      "after": "— Говорю вам, городская."
+    },
+    {
+      "source_id": "045-007-0132",
+      "before": "— «Я в это не верю».",
+      "after": "— Не верю."
+    },
+    {
+      "source_id": "045-007-0133",
+      "before": "— Вы думаете, что знаете о птицах больше, чем я, который имею с ними дело с тех пор, как был малышом? Говорю вам, все те птицы, что ушли в «Альфу», были выращены в городе.",
+      "after": "— Вы думаете, что смыслите в птице больше меня, который возится с ней с самого детства? Говорю вам, все птицы, что пошли в «Альфу», были городской выкормки."
+    },
+    {
+      "source_id": "045-007-0134",
+      "before": "— Вы никогда не убедите меня в этом.",
+      "after": "— Вам никогда не убедить меня в этом."
+    },
+    {
+      "source_id": "045-007-0135",
+      "before": "— Так вы готовы поспорить?",
+      "after": "— Так спорим?"
+    },
+    {
+      "source_id": "045-007-0136",
+      "before": "— Это просто чтобы забрать с вас деньги, ведь я знаю, что прав. Но я возьму с вас суверен, просто чтобы научить вас не быть упрямым».",
+      "after": "— Это значит просто взять ваши деньги, ведь я знаю, что прав. Но поставлю с вами соверен, чтобы научить вас не упрямиться."
+    },
+    {
+      "source_id": "045-007-0137",
+      "before": "Продавец мрачно хмыкнул. «Принеси мне книги, Билл», — сказал он.",
+      "after": "Торговец мрачно усмехнулся. — Принеси книги, Билл, — сказал он."
+    },
+    {
+      "source_id": "045-007-0138",
+      "before": "Мальчик принес небольшой тонкий томик и большой томик с засаленным корешком и разложил их вместе под висящей лампой.",
+      "after": "Мальчуган принёс тонкую небольшую книжку и огромный фолиант с засаленным корешком и разложил их рядом под висячей лампой."
+    },
+    {
+      "source_id": "045-007-0139",
+      "before": "«Итак, мистер Самоуверенный, — сказал продавец, — я думал, что гусей у меня больше нет, но прежде чем я закончу, вы увидите, что в моём магазине ещё остался один. Видите эту маленькую тетрадь?»",
+      "after": "— Ну-с, мистер Самоуверенный, — сказал торговец, — я думал, что гусей у меня не осталось, но прежде чем я кончу, вы увидите, что в лавке остался ещё один. Видите эту книжечку?"
+    },
+    {
+      "source_id": "045-007-0140",
+      "before": "«Ну?»",
+      "after": "— Ну?"
+    },
+    {
+      "source_id": "045-007-0141",
+      "before": "«Это список людей, у которых я закупаю. Видите? Итак, на этой странице — сельские поставщики, а цифры после их имен обозначают, где находятся их счета в большой бухгалтерской книге. А теперь! Видите эту другую страницу, написанную красными чернилами? Это список моих городских поставщиков. Посмотрите на третье имя. Просто прочтите его мне вслух».",
+      "after": "— Это список тех, у кого я покупаю. Видите? Так вот, на этой странице — деревенские, а цифры после фамилий указывают, где их счета в большой книге. Теперь! Видите эту другую страницу, красными чернилами? Это список моих городских поставщиков. Взгляните на третье имя. Прочтите-ка мне его вслух."
+    },
+    {
+      "source_id": "045-007-0142",
+      "before": "«Миссис Оукшотт, 117, Брикстон-роуд — 249», — прочитал Холмс.",
+      "after": "— Миссис Оукшотт, Брикстон-роуд, 117 — 249, — прочёл Холмс."
+    },
+    {
+      "source_id": "045-007-0143",
+      "before": "«Совершенно верно. А теперь найдите это в бухгалтерской книге».",
+      "after": "— Верно. Теперь найдите это в большой книге."
+    },
+    {
+      "source_id": "045-007-0144",
+      "before": "Холмс перелистнул на указанную страницу. «Вот, пожалуйста: „Миссис Оукшотт, 117, Брикстон-роуд, поставщик яиц и птицы“».",
+      "after": "Холмс перевернул указанную страницу. — Вот: «Миссис Оукшотт, Брикстон-роуд, 117, поставщица яиц и птицы»."
+    },
+    {
+      "source_id": "045-007-0145",
+      "before": "— Ну, а какая у вас последняя запись?»",
+      "after": "— Ну, а какая там последняя запись?"
+    },
+    {
+      "source_id": "045-007-0146",
+      "before": "«22 декабря. Двадцать четыре гуся по 7 шиллингов 6 пенсов».",
+      "after": "— «22 декабря. Двадцать четыре гуся по 7 <i>ш.</i> 6 <i>п.</i>»"
+    },
+    {
+      "source_id": "045-007-0147",
+      "before": "— Совершенно верно. Вот так. А что там внизу?»",
+      "after": "— Совершенно верно. Вот так. А ниже?"
+    },
+    {
+      "source_id": "045-007-0148",
+      "before": "«„Продано мистеру Уиндигейту с „Альфы“ за 12 шиллингов“».",
+      "after": "— «Продано мистеру Уиндигейту из „Альфы“ по 12 <i>ш.</i>»"
+    },
+    {
+      "source_id": "045-007-0149",
+      "before": "— А что ты теперь скажешь?",
+      "after": "— Что вы теперь скажете?"
+    },
+    {
+      "source_id": "045-007-0150",
+      "before": "Шерлок Холмс выглядел глубоко огорчённым. Он вытащил соверен из кармана, бросил его на стол и отвернулся с видом человека, чьё отвращение слишком велико, чтобы выразить его словами. В нескольких ярдах оттуда он остановился под фонарным столбом и рассмеялся тем сердечным, бесшумным смехом, который был ему свойственен.",
+      "after": "Шерлок Холмс выглядел глубоко раздосадованным. Он достал из кармана соверен, швырнул его на мраморную плиту и отвернулся с видом человека, чьё отвращение слишком велико для слов. В нескольких ярдах оттуда он остановился под фонарным столбом и рассмеялся своим особенным, сердечным, беззвучным смехом."
+    },
+    {
+      "source_id": "045-007-0151",
+      "before": "— Когда видишь человека с бакенбардами такой формы и с газетой «Pink ’un», торчащей из кармана, его всегда можно вытянуть на пари, — сказал он. — Уверен, что если бы я положил перед ним сто фунтов, этот человек не дал бы мне столь полной информации, какую из него вытянула мысль о том, что он обманывает меня ради пари. Что ж, Ватсон, я полагаю, мы приближаемся к завершению нашего расследования, и остался решить лишь один вопрос: стоит ли нам пойти к этой миссис Оукшот сегодня вечером или лучше отложить это на завтра. Из слов того угрюмого парня ясно, что, кроме нас, есть и другие, кого волнует это дело, и я бы…»",
+      "after": "— Когда видишь человека с такими бакенбардами и с «Розовой газетой» в кармане, его всегда можно поймать на пари, — сказал он. — Смею думать, что, положи я перед ним сто фунтов, он не выдал бы мне столько сведений, сколько выложил, думая, что обводит меня вокруг пальца в споре. Ну, Ватсон, мне кажется, наши поиски близятся к концу, и остаётся решить лишь, идти ли нам к этой миссис Оукшотт сегодня вечером или отложить до завтра. Из слов этого сердитого малого ясно, что, кроме нас, есть и другие, кто беспокоится об этом деле, и я бы…"
+    },
+    {
+      "source_id": "045-007-0152",
+      "before": "Его слова внезапно прервал громкий шум, раздавшийся из лавки, которую мы только что покинули. Обернувшись, мы увидели маленького парня с лицом крысы, стоящего в центре круга желтого света, бросаемого качающейся лампой, а продавец Брекинридж, стоя в дверном проеме своей лавки, яростно грозил кулаками прижавшейся к земле фигуре.",
+      "after": "Его слова вдруг оборвал громкий шум, поднявшийся у лавки, которую мы только что покинули. Обернувшись, мы увидели низенького человечка с крысиным лицом, стоявшего посреди круга жёлтого света от качающейся лампы, а торговец Брекинридж, застывший в дверях лавки, яростно грозил кулаками съёжившейся фигуре."
+    },
+    {
+      "source_id": "045-007-0153",
+      "before": "— С меня хватит вас и ваших гусей, — крикнул он. — Хотел бы я, чтобы вы все вместе свалили к черту. Если вы будете и дальше досаждать мне своей глупой болтовней, я натравлю на вас собаку. Приведите сюда миссис Оукшотт, и я отвечу ей, но какое вам до этого дело? Разве я покупал у вас гусей?",
+      "after": "— С меня довольно вас и ваших гусей! — кричал он. — Чтоб вам всем провалиться к дьяволу! Если ещё раз явитесь ко мне со своей дурацкой болтовнёй, спущу на вас собаку. Приведите сюда миссис Оукшотт, ей я отвечу, а вам-то какое дело? Разве я покупал у вас гусей?"
+    },
+    {
+      "source_id": "045-007-0154",
+      "before": "— Нет, но один из них всё равно был мой, — заныл маленький человечек.",
+      "after": "— Нет; но один из них всё-таки был мой, — заныл человечек."
+    },
+    {
+      "source_id": "045-007-0155",
+      "before": "— Ну, тогда спросите об этом у миссис Оукшотт.",
+      "after": "— Ну так спросите о нём миссис Оукшотт."
+    },
+    {
+      "source_id": "045-007-0156",
+      "before": "— Она попросила меня спросить у вас.",
+      "after": "— Она велела спросить вас."
+    },
+    {
+      "source_id": "045-007-0157",
+      "before": "— Ну, можете спросить у короля Пруссии, мне всё равно. С меня хватит. Убирайтесь отсюда! — Он яростно бросился вперёд, и расспрашивающий исчез в темноте.",
+      "after": "— Можете спрашивать хоть прусского короля, мне наплевать. С меня хватит. Убирайтесь отсюда! — Он яростно рванулся вперёд, и расспрашивавший юркнул в темноту."
+    },
+    {
+      "source_id": "045-007-0158",
+      "before": "— Ха! Это, пожалуй, избавит нас от поездки на Брикстон-роуд, — прошептал Холмс. — Пойдемте со мной, и мы посмотрим, что можно выяснить об этом человеке. Пробираясь через разбросанные группки людей, слонявшихся вокруг ярко освещенных ларьков, мой спутник быстро догнал маленького человечка и коснулся его плеча. Тот резко обернулся, и я заметил при свете газовых фонарей, что с его лица исчезли все следы румянца.",
+      "after": "— Ха! Возможно, это избавит нас от поездки на Брикстон-роуд, — прошептал Холмс. — Идёмте со мной, посмотрим, что можно сделать с этим малым. — Шагая между разрозненными кучками людей, слонявшихся вокруг пылающих ларьков, мой спутник быстро нагнал человечка и тронул его за плечо. Тот резко обернулся, и при свете газа я увидел, что с его лица согнаны все краски."
+    },
+    {
+      "source_id": "045-007-0159",
+      "before": "— Кто же вы, тогда? Чего вы хотите? — спросил он дрожащим голосом.",
+      "after": "— Кто вы такой? Что вам нужно? — спросил он дрожащим голосом."
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKddzmF15KSe1MWyRBoR",
+    "usage": {
+      "input_tokens": 34924,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3921,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKdg691skqdDXDGJS7TG",
+        "usage": {
+          "input_tokens": 39447,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4582,
+          "output_tokens_details": {
+            "thinking_tokens": 583
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-007-0128",
+          "verdict": "PASS",
+          "reason": "Faithful: bet off, fiver, country-bred bird, Holmes's carelessness all preserved; idiomatic Russian."
+        },
+        {
+          "source_id": "045-007-0129",
+          "verdict": "PASS",
+          "reason": "Salesman's snapped retort and town-bred claim accurately rendered."
+        },
+        {
+          "source_id": "045-007-0130",
+          "target": "— Ничего подобного.",
+          "verdict": "PASS",
+          "reason": "Correct denial, natural idiom."
+        },
+        {
+          "source_id": "045-007-0131",
+          "verdict": "PASS",
+          "reason": "Insistence 'I say it is' correctly conveyed as town-bred."
+        },
+        {
+          "source_id": "045-007-0132",
+          "verdict": "PASS",
+          "reason": "Brief disbelief preserved, no stray quotes."
+        },
+        {
+          "source_id": "045-007-0133",
+          "verdict": "PASS",
+          "reason": "Claim of expertise since boyhood and Alpha birds all town bred preserved."
+        },
+        {
+          "source_id": "045-007-0134",
+          "verdict": "PASS",
+          "reason": "Negation and 'never persuade' preserved."
+        },
+        {
+          "source_id": "045-007-0135",
+          "verdict": "PASS",
+          "reason": "Challenge to bet rendered concisely."
+        },
+        {
+          "source_id": "045-007-0136",
+          "verdict": "PASS",
+          "reason": "Sovereign stake and teaching-not-to-be-obstinate nuance preserved."
+        },
+        {
+          "source_id": "045-007-0137",
+          "verdict": "PASS",
+          "reason": "Grim chuckle, order to Bill preserved."
+        },
+        {
+          "source_id": "045-007-0138",
+          "verdict": "PASS",
+          "reason": "Thin small volume, greasy-backed large one, hanging lamp all present."
+        },
+        {
+          "source_id": "045-007-0139",
+          "verdict": "PASS",
+          "reason": "Mr. Cocksure humour, one goose left, little book all kept."
+        },
+        {
+          "source_id": "045-007-0140",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0141",
+          "verdict": "PASS",
+          "reason": "Country/town lists, ledger numbers, red ink, third name preserved."
+        },
+        {
+          "source_id": "045-007-0142",
+          "verdict": "PASS",
+          "reason": "Name, address and number 249 correct."
+        },
+        {
+          "source_id": "045-007-0143",
+          "verdict": "PASS",
+          "reason": "Instruction to consult ledger preserved."
+        },
+        {
+          "source_id": "045-007-0144",
+          "verdict": "PASS",
+          "reason": "Ledger entry accurate, including egg and poultry supplier."
+        },
+        {
+          "source_id": "045-007-0145",
+          "verdict": "PASS",
+          "reason": "Question about last entry preserved."
+        },
+        {
+          "source_id": "045-007-0146",
+          "verdict": "PASS",
+          "reason": "Date, quantity, prices and italic s/d spans preserved as <i>."
+        },
+        {
+          "source_id": "045-007-0147",
+          "verdict": "PASS",
+          "reason": "Faithful, short turn kept."
+        },
+        {
+          "source_id": "045-007-0148",
+          "verdict": "PASS",
+          "reason": "Windigate, Alpha, 12s with italic preserved."
+        },
+        {
+          "source_id": "045-007-0149",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0150",
+          "verdict": "PASS",
+          "reason": "Chagrin, sovereign thrown, silent laugh under lamp-post all preserved."
+        },
+        {
+          "source_id": "045-007-0151",
+          "verdict": "PASS",
+          "reason": "Pink 'un, betting insight, £100, quest ending, Oakshott decision, interrupted ending all faithful."
+        },
+        {
+          "source_id": "045-007-0152",
+          "verdict": "PASS",
+          "reason": "Hubbub, rat-faced man, lamp light, Breckinridge shaking fists all preserved."
+        },
+        {
+          "source_id": "045-007-0153",
+          "verdict": "PASS",
+          "reason": "Angry voice, dog threat, Mrs. Oakshott challenge preserved."
+        },
+        {
+          "source_id": "045-007-0154",
+          "verdict": "PASS",
+          "reason": "Whining claim of ownership preserved."
+        },
+        {
+          "source_id": "045-007-0155",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "045-007-0156",
+          "verdict": "PASS",
+          "reason": "Agency correct: she told him to ask the salesman."
+        },
+        {
+          "source_id": "045-007-0157",
+          "verdict": "PASS",
+          "reason": "King of Proosia joke kept; fierce rush, inquirer vanishing preserved."
+        },
+        {
+          "source_id": "045-007-0158",
+          "verdict": "PASS",
+          "reason": "Whisper, Brixton Road, overtaking, touch on shoulder, colour drained all faithful."
+        },
+        {
+          "source_id": "045-007-0159",
+          "verdict": "PASS",
+          "reason": "Quavering questions preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
