@@ -1,0 +1,511 @@
+{
+  "unit": 65,
+  "batch": 1,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-065-0019",
+      "target": "— Послушайте, — продолжил Гленарван, — давайте объяснимся, потому что мне кажется, что я грежу. Вы получили письмо, Том?",
+      "source_sha256": "0948ad03a3c336268757a3a7cdb6dc860a9ebb6ec5871ca5afe993bc3b20c8be",
+      "target_id": "ru-fr42c-065-0019",
+      "tag": "p",
+      "target_sha256": "f96fd73190e66e41dc39235d9c488d9b2faa39df03b55ea438ddecd14826e4b2"
+    },
+    {
+      "source_id": "fr42c-065-0020",
+      "target": "— Да, письмо от вашей милости.",
+      "source_sha256": "61c469d49a939d5a77ed3ab5c724c180dd3d7eec9b695ae7ce7e5964bddd975e",
+      "target_id": "ru-fr42c-065-0020",
+      "tag": "p",
+      "target_sha256": "29e9400dc5ac8f95457b6a8a01b92664ea7ec543c5825457207ff5c85e77c5e9"
+    },
+    {
+      "source_id": "fr42c-065-0021",
+      "target": "— В Мельбурне?",
+      "source_sha256": "d79139b40f9ee2544c2d2c8c58fca1edbab82737f49eaf8dc40d0c3a901f11e8",
+      "target_id": "ru-fr42c-065-0021",
+      "tag": "p",
+      "target_sha256": "39aa4c5b80397c67670f1ec7eabe12f8e775fc06fb3f241534fa8b907911612f"
+    },
+    {
+      "source_id": "fr42c-065-0022",
+      "target": "— В Мельбурне, в ту минуту, когда я заканчивал починку своих повреждений.",
+      "source_sha256": "77a4da766080cf872ac41320f604c9c299110e2dd80791582783afcc5d431abc",
+      "target_id": "ru-fr42c-065-0022",
+      "tag": "p",
+      "target_sha256": "9253fd7eabb8674bee4aa7ac95a5a37bb7e99ab5a6e26cff71ece9197c64d0f0"
+    },
+    {
+      "source_id": "fr42c-065-0023",
+      "target": "— А это письмо?",
+      "source_sha256": "d798b73509945392a66527fe48cb49480b34552b1448c3448cf9b4a9ddf79416",
+      "target_id": "ru-fr42c-065-0023",
+      "tag": "p",
+      "target_sha256": "c942f3ba9a11c7b4cbdb74a2d2528e17e6e6e8edea4783c06d231553063ede32"
+    },
+    {
+      "source_id": "fr42c-065-0024",
+      "target": "— Оно было написано не вашей рукой, но подписано вами, милорд.",
+      "source_sha256": "4e55f83f9c788b15bc2e272c83ecb4eddb2b747b06e9065096ca8d9e8b6d0f1a",
+      "target_id": "ru-fr42c-065-0024",
+      "tag": "p",
+      "target_sha256": "a1ad10b8714f0b4d9d33e04ee4dd55b24544b1a631a16cbfc125284df85d0a32"
+    },
+    {
+      "source_id": "fr42c-065-0025",
+      "target": "— Совершенно верно. Моё письмо доставил вам каторжник по имени Бен Джойс.",
+      "source_sha256": "ad197473de8ef13027e7ef6ca8a21ef19b780b09dc4d2445256486b2eebd9fbb",
+      "target_id": "ru-fr42c-065-0025",
+      "tag": "p",
+      "target_sha256": "aa2d1bee9f9c1bd63b91b7581c7ee39286d36812a4c86dbe7887d0c7540041ff"
+    },
+    {
+      "source_id": "fr42c-065-0026",
+      "target": "— Нет, матрос по имени Айртон, квартирмейстер с <i>«Британии»</i>.",
+      "source_sha256": "f9af464674cf4a3acd3356ad737ee64ab9a90bac7d17935d8e00a3f92c39d42e",
+      "target_id": "ru-fr42c-065-0026",
+      "tag": "p",
+      "target_sha256": "082cb9c9e54b202a74a55d5610b99590fbc51ee32f62c9954df72f77ed3e5f74"
+    },
+    {
+      "source_id": "fr42c-065-0027",
+      "target": "— Да! Айртон, Бен Джойс — это один и тот же человек. Ну так что же говорилось в этом письме?",
+      "source_sha256": "31465aa18f36d8cd8bae3f8c4313a032e1e293b36e0e2f2dfab5066b031359ec",
+      "target_id": "ru-fr42c-065-0027",
+      "tag": "p",
+      "target_sha256": "d78b9e9b3576a5440702e1102909c93599fb4e08544bb5d9510d701cb947cf10"
+    },
+    {
+      "source_id": "fr42c-065-0028",
+      "target": "— Мне приказывали немедленно покинуть Мельбурн и крейсировать у восточных берегов…",
+      "source_sha256": "9c83e3fab57c8dc19b11514984e27e97b23f411a52dae05156843ae38b7059c1",
+      "target_id": "ru-fr42c-065-0028",
+      "tag": "p",
+      "target_sha256": "a867837e832f35bdfb8c31fb840ef1cb2a0f4bcbb5f95556270dd33a10f79314"
+    },
+    {
+      "source_id": "fr42c-065-0029",
+      "target": "— Австралии! — воскликнул Гленарван с такой горячностью, что старый моряк растерялся.",
+      "source_sha256": "d759ad145b251399f6ca9927c389ecfcacd06b1ffccb48f0ce0edc88dbcd12d7",
+      "target_id": "ru-fr42c-065-0029",
+      "tag": "p",
+      "target_sha256": "7351d61e3c1f9713406dc32159f1a68d6e17b8d445b86ba93cf6388556cf1253"
+    },
+    {
+      "source_id": "fr42c-065-0030",
+      "target": "— Австралии? — повторил Том, широко раскрыв глаза. — Да нет же! Новой Зеландии!",
+      "source_sha256": "73b2c86c777ff370a0f050332b37d94dd06e0b89178f9a65f88217522c7202b8",
+      "target_id": "ru-fr42c-065-0030",
+      "tag": "p",
+      "target_sha256": "5902be225634a825bff67c04c4f54155a923cf9dc0cb9b40d39609164df9698a"
+    },
+    {
+      "source_id": "fr42c-065-0031",
+      "target": "— Австралии! Том! Австралии! — в один голос ответили спутники Гленарвана.",
+      "source_sha256": "d8afdce5fac0c9968f9db2ed4ad9e794bd5041e1513899a6d6c4b1ba7cfa6cd0",
+      "target_id": "ru-fr42c-065-0031",
+      "tag": "p",
+      "target_sha256": "e27a6820043543ddd2d057265f2c40240140b891291a542ec5bb403654d064cb"
+    },
+    {
+      "source_id": "fr42c-065-0032",
+      "target": "В этот миг у Остина помутилось в глазах. Гленарван говорил с ним с такой уверенностью, что он испугался, не ошибся ли, читая письмо. Неужели он, верный и точный моряк, мог допустить такую ошибку? Он покраснел, смутился.",
+      "source_sha256": "a42fdc681b052dd21c416a75730a05aac1f27ced8a4570c2264ee9555e118614",
+      "target_id": "ru-fr42c-065-0032",
+      "tag": "p",
+      "target_sha256": "b7da6e0e184fa9039d8c8d66b023fa73e45c53184e627374b899aeb3e88f52a7"
+    },
+    {
+      "source_id": "fr42c-065-0033",
+      "target": "— Успокойтесь, Том, — сказала леди Элен, — это Провидение захотело…",
+      "source_sha256": "ff5f112fee6b3bcb9a2e4b27272d372526197a80b5ef5c48d126a6e1fe2edd35",
+      "target_id": "ru-fr42c-065-0033",
+      "tag": "p",
+      "target_sha256": "f1299e49602b45c8da38c6650aff63762d11f95a4435251fb18cc5d34370347e"
+    },
+    {
+      "source_id": "fr42c-065-0034",
+      "target": "— Нет, сударыня, простите меня, — возразил старый Том. — Нет! Это невозможно! Я не ошибся! Айртон читал письмо так же, как я, и именно он, он сам, напротив, хотел вернуть меня к австралийскому берегу!",
+      "source_sha256": "f5e37e61788a1ddbe48d792f838b350da153946d4710cc17cd90f3d877a14b9d",
+      "target_id": "ru-fr42c-065-0034",
+      "tag": "p",
+      "target_sha256": "0505047d6c0a4e30d5b746deec58292879f02ed3c01551686c68b76d87e6ff44"
+    },
+    {
+      "source_id": "fr42c-065-0035",
+      "target": "— Айртон? — воскликнул Гленарван.",
+      "source_sha256": "18bfa9cbf0b7247b5342c088408544d6f856053a8ea197be3329d11a8a788c86",
+      "target_id": "ru-fr42c-065-0035",
+      "tag": "p",
+      "target_sha256": "72de99db3030be92189f3bdd86930fa9ca274dfd28d0f5197d665046b6a6873e"
+    },
+    {
+      "source_id": "fr42c-065-0036",
+      "target": "— Он самый! Он уверял меня, что это ошибка и что вы назначили мне встречу в бухте Туфолд!",
+      "source_sha256": "69c7d41ca3eeb7b72749951965ebb738d1d3a44f85a4a66a8953d9c5fbcc5838",
+      "target_id": "ru-fr42c-065-0036",
+      "tag": "p",
+      "target_sha256": "32002f6c6a352bef8e3ece49d53708b476ed29d560912fa067fcd52f52b9e4f2"
+    },
+    {
+      "source_id": "fr42c-065-0037",
+      "target": "— У вас есть это письмо, Том? — спросил майор, крайне заинтригованный.",
+      "source_sha256": "05bf634529cdd02835a51f06dd299632edf95ad305e03fd613999a64ae8e4362",
+      "target_id": "ru-fr42c-065-0037",
+      "tag": "p",
+      "target_sha256": "731113f92054fbf60d619ef2453fa4dd231a9ae43fd926e486891ac85d40a48d"
+    },
+    {
+      "source_id": "fr42c-065-0038",
+      "target": "— Да, мистер Мак-Наббс, — ответил Остин. — Сейчас принесу.",
+      "source_sha256": "82716cbe9afd5f6eda01dab6a0b01b34c15e48f360b05856f6bda0a9bdf0ee0a",
+      "target_id": "ru-fr42c-065-0038",
+      "tag": "p",
+      "target_sha256": "fe791e608e5d70fc7578792d742bdae778451e489f71eaef85e6389d921f00bf"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-065-0019",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue punctuation and rendered «je crois rêver» naturally."
+    },
+    {
+      "source_id": "fr42c-065-0020",
+      "verdict": "CORRECTED",
+      "reason": "Honorific normalized to lowercase: «вашей милости»."
+    },
+    {
+      "source_id": "fr42c-065-0021",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "fr42c-065-0022",
+      "verdict": "CORRECTED",
+      "reason": "Made «avaries» and the nautical sense more faithful."
+    },
+    {
+      "source_id": "fr42c-065-0023",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "fr42c-065-0024",
+      "verdict": "PASS",
+      "reason": "Accurate; negation and signature preserved."
+    },
+    {
+      "source_id": "fr42c-065-0025",
+      "verdict": "CORRECTED",
+      "reason": "«Convict» rendered as «каторжник»; wording improved."
+    },
+    {
+      "source_id": "fr42c-065-0026",
+      "verdict": "CORRECTED",
+      "reason": "Name Ayrton fixed as Айртон; italic ship title preserved."
+    },
+    {
+      "source_id": "fr42c-065-0027",
+      "verdict": "CORRECTED",
+      "reason": "Name corrected and question made idiomatic."
+    },
+    {
+      "source_id": "fr42c-065-0028",
+      "verdict": "CORRECTED",
+      "reason": "Restored «croiser» as «крейсировать» and the sentence break into the next line."
+    },
+    {
+      "source_id": "fr42c-065-0029",
+      "verdict": "CORRECTED",
+      "reason": "Made the continuation of Tom's sentence («Австралии!») explicit."
+    },
+    {
+      "source_id": "fr42c-065-0030",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray comma/dash; restored «Новой Зеландии» sense."
+    },
+    {
+      "source_id": "fr42c-065-0031",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "fr42c-065-0032",
+      "verdict": "CORRECTED",
+      "reason": "«Éblouissement» is dizziness/dazzle, not blindness; refined."
+    },
+    {
+      "source_id": "fr42c-065-0033",
+      "verdict": "CORRECTED",
+      "reason": "Fixed «Remettez-vous» as polite vous, Элен, «сударыня» register."
+    },
+    {
+      "source_id": "fr42c-065-0034",
+      "verdict": "CORRECTED",
+      "reason": "Fixed «australienne», not southern; restored Ayrton's agency."
+    },
+    {
+      "source_id": "fr42c-065-0035",
+      "verdict": "CORRECTED",
+      "reason": "Name corrected."
+    },
+    {
+      "source_id": "fr42c-065-0036",
+      "verdict": "CORRECTED",
+      "reason": "Idiom improved; bay name Twofold kept as Туфолд."
+    },
+    {
+      "source_id": "fr42c-065-0037",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "fr42c-065-0038",
+      "verdict": "CORRECTED",
+      "reason": "Fixed closing punctuation; natural phrasing."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-065-0019",
+      "before": "«Ну же, — продолжил Гленарван, — давайте разберёмся, потому что мне кажется, что я сплю. Вы получили письмо, Том?»",
+      "after": "— Послушайте, — продолжил Гленарван, — давайте объяснимся, потому что мне кажется, что я грежу. Вы получили письмо, Том?"
+    },
+    {
+      "source_id": "fr42c-065-0020",
+      "before": "— Да, письмо от Вашей Чести.",
+      "after": "— Да, письмо от вашей милости."
+    },
+    {
+      "source_id": "fr42c-065-0022",
+      "before": "— В Мельбурне, как раз когда я заканчивал ремонт повреждений.",
+      "after": "— В Мельбурне, в ту минуту, когда я заканчивал починку своих повреждений."
+    },
+    {
+      "source_id": "fr42c-065-0025",
+      "before": "— Именно так. Моё письмо принёс вам заключённый по имени Бен Джойс.",
+      "after": "— Совершенно верно. Моё письмо доставил вам каторжник по имени Бен Джойс."
+    },
+    {
+      "source_id": "fr42c-065-0026",
+      "before": "— Нет, его принёс матрос по имени Эйртон, квартирмейстер с <i>«Британии».</i>",
+      "after": "— Нет, матрос по имени Айртон, квартирмейстер с <i>«Британии»</i>."
+    },
+    {
+      "source_id": "fr42c-065-0027",
+      "before": "— Да! Эйртон, Бен Джойс — это один и тот же человек. Ну что же, что было написано в этом письме?",
+      "after": "— Да! Айртон, Бен Джойс — это один и тот же человек. Ну так что же говорилось в этом письме?"
+    },
+    {
+      "source_id": "fr42c-065-0028",
+      "before": "— В нём мне приказывали немедленно покинуть Мельбурн и выйти в море у восточного побережья…",
+      "after": "— Мне приказывали немедленно покинуть Мельбурн и крейсировать у восточных берегов…"
+    },
+    {
+      "source_id": "fr42c-065-0029",
+      "before": "— Из Австралии! — воскликнул Гленарван с такой страстью, что старый моряк растерялся.",
+      "after": "— Австралии! — воскликнул Гленарван с такой горячностью, что старый моряк растерялся."
+    },
+    {
+      "source_id": "fr42c-065-0030",
+      "before": "— Из Австралии? — повторил Том, широко раскрыв глаза, — но нет! Из Новой Зеландии!",
+      "after": "— Австралии? — повторил Том, широко раскрыв глаза. — Да нет же! Новой Зеландии!"
+    },
+    {
+      "source_id": "fr42c-065-0031",
+      "before": "— Из Австралии! Том! Из Австралии! — ответили в один голос спутники Гленарвана.",
+      "after": "— Австралии! Том! Австралии! — в один голос ответили спутники Гленарвана."
+    },
+    {
+      "source_id": "fr42c-065-0032",
+      "before": "В этот момент Остин как будто ослеп. Гленарван говорил с ним с такой уверенностью, что он испугался: не ошибся ли он при чтении этого письма? Неужели он, верный и аккуратный моряк, допустил такую ошибку? Он покраснел, растерялся.",
+      "after": "В этот миг у Остина помутилось в глазах. Гленарван говорил с ним с такой уверенностью, что он испугался, не ошибся ли, читая письмо. Неужели он, верный и точный моряк, мог допустить такую ошибку? Он покраснел, смутился."
+    },
+    {
+      "source_id": "fr42c-065-0033",
+      "before": "«Приходи в себя, Том, — сказала леди Елена, — Провидение так распорядилось…",
+      "after": "— Успокойтесь, Том, — сказала леди Элен, — это Провидение захотело…"
+    },
+    {
+      "source_id": "fr42c-065-0034",
+      "before": "— Но нет, мадам, простите меня, — возобновил старый Том. — Нет! Это невозможно! Я не ошибся! Эйртон прочитал письмо так же, как и я, и именно он, именно он хотел, напротив, отвести меня обратно к южному побережью!",
+      "after": "— Нет, сударыня, простите меня, — возразил старый Том. — Нет! Это невозможно! Я не ошибся! Айртон читал письмо так же, как я, и именно он, он сам, напротив, хотел вернуть меня к австралийскому берегу!"
+    },
+    {
+      "source_id": "fr42c-065-0035",
+      "before": "— Эйртон? — воскликнул Гленарван.",
+      "after": "— Айртон? — воскликнул Гленарван."
+    },
+    {
+      "source_id": "fr42c-065-0036",
+      "before": "— Он сам! Он утверждал, что это была ошибка, что вы назначили мне встречу в бухте Туфолд!",
+      "after": "— Он самый! Он уверял меня, что это ошибка и что вы назначили мне встречу в бухте Туфолд!"
+    },
+    {
+      "source_id": "fr42c-065-0037",
+      "before": "— У вас есть письмо, Том? — спросил майор, крайне заинтригованный.",
+      "after": "— У вас есть это письмо, Том? — спросил майор, крайне заинтригованный."
+    },
+    {
+      "source_id": "fr42c-065-0038",
+      "before": "— Да, мистер Мак-Наббс, — ответил Остин. — Я пойду за ним.»",
+      "after": "— Да, мистер Мак-Наббс, — ответил Остин. — Сейчас принесу."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/065/batch001.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK6wHvjn37Jp21kf5UGZ",
+    "usage": {
+      "input_tokens": 9092,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2223,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK6xLfxf8bpAJrCYfrQy",
+        "usage": {
+          "input_tokens": 11022,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2158,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-065-0019",
+          "verdict": "PASS",
+          "reason": "Faithful; dialogue punctuation correct; 'je crois rêver' rendered acceptably."
+        },
+        {
+          "source_id": "fr42c-065-0020",
+          "verdict": "PASS",
+          "reason": "'Votre Honneur' idiomatically rendered as 'ваша милость'."
+        },
+        {
+          "source_id": "fr42c-065-0021",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-065-0022",
+          "verdict": "PASS",
+          "reason": "Time clause and repairs of damage preserved."
+        },
+        {
+          "source_id": "fr42c-065-0023",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-065-0024",
+          "verdict": "PASS",
+          "reason": "Negation and contrast preserved."
+        },
+        {
+          "source_id": "fr42c-065-0025",
+          "verdict": "PASS",
+          "reason": "Convict as каторжник; agency preserved."
+        },
+        {
+          "source_id": "fr42c-065-0026",
+          "verdict": "PASS",
+          "reason": "Italic ship name preserved; correction of Айртон consistent."
+        },
+        {
+          "source_id": "fr42c-065-0027",
+          "verdict": "PASS",
+          "reason": "Identity of Ayrton and Ben Joyce and question preserved."
+        },
+        {
+          "source_id": "fr42c-065-0028",
+          "verdict": "PASS",
+          "reason": "Interrupted sentence preserved; 'croiser' as крейсировать."
+        },
+        {
+          "source_id": "fr42c-065-0029",
+          "verdict": "PASS",
+          "reason": "Completes the interrupted phrase; vehemence accurate."
+        },
+        {
+          "source_id": "fr42c-065-0030",
+          "verdict": "PASS",
+          "reason": "Contrast Australia/New Zealand preserved."
+        },
+        {
+          "source_id": "fr42c-065-0031",
+          "verdict": "PASS",
+          "reason": "Chorus response accurate."
+        },
+        {
+          "source_id": "fr42c-065-0032",
+          "verdict": "PASS",
+          "reason": "Meaning, rhetorical question and reactions preserved."
+        },
+        {
+          "source_id": "fr42c-065-0033",
+          "verdict": "PASS",
+          "reason": "Interrupted speech preserved; name Элен consistent."
+        },
+        {
+          "source_id": "fr42c-065-0034",
+          "verdict": "PASS",
+          "reason": "Ayrton's agency and 'côte australienne' accurate."
+        },
+        {
+          "source_id": "fr42c-065-0035",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-065-0036",
+          "verdict": "PASS",
+          "reason": "Ayrton's claim of error and rendezvous at Twofold Bay preserved."
+        },
+        {
+          "source_id": "fr42c-065-0037",
+          "verdict": "PASS",
+          "reason": "Accurate; major's intrigue preserved."
+        },
+        {
+          "source_id": "fr42c-065-0038",
+          "verdict": "PASS",
+          "reason": "Accurate; closing quote handled by dash style."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

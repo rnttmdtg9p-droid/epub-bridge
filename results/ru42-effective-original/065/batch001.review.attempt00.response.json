@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK6wHvjn37Jp21kf5UGZ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-065-0019\",\"target\":\"— Послушайте, — продолжил Гленарван, — давайте объяснимся, потому что мне кажется, что я грежу. Вы получили письмо, Том?\"},{\"source_id\":\"fr42c-065-0020\",\"target\":\"— Да, письмо от вашей милости.\"},{\"source_id\":\"fr42c-065-0021\",\"target\":\"— В Мельбурне?\"},{\"source_id\":\"fr42c-065-0022\",\"target\":\"— В Мельбурне, в ту минуту, когда я заканчивал починку своих повреждений.\"},{\"source_id\":\"fr42c-065-0023\",\"target\":\"— А это письмо?\"},{\"source_id\":\"fr42c-065-0024\",\"target\":\"— Оно было написано не вашей рукой, но подписано вами, милорд.\"},{\"source_id\":\"fr42c-065-0025\",\"target\":\"— Совершенно верно. Моё письмо доставил вам каторжник по имени Бен Джойс.\"},{\"source_id\":\"fr42c-065-0026\",\"target\":\"— Нет, матрос по имени Айртон, квартирмейстер с <i>«Британии»</i>.\"},{\"source_id\":\"fr42c-065-0027\",\"target\":\"— Да! Айртон, Бен Джойс — это один и тот же человек. Ну так что же говорилось в этом письме?\"},{\"source_id\":\"fr42c-065-0028\",\"target\":\"— Мне приказывали немедленно покинуть Мельбурн и крейсировать у восточных берегов…\"},{\"source_id\":\"fr42c-065-0029\",\"target\":\"— Австралии! — воскликнул Гленарван с такой горячностью, что старый моряк растерялся.\"},{\"source_id\":\"fr42c-065-0030\",\"target\":\"— Австралии? — повторил Том, широко раскрыв глаза. — Да нет же! Новой Зеландии!\"},{\"source_id\":\"fr42c-065-0031\",\"target\":\"— Австралии! Том! Австралии! — в один голос ответили спутники Гленарвана.\"},{\"source_id\":\"fr42c-065-0032\",\"target\":\"В этот миг у Остина помутилось в глазах. Гленарван говорил с ним с такой уверенностью, что он испугался, не ошибся ли, читая письмо. Неужели он, верный и точный моряк, мог допустить такую ошибку? Он покраснел, смутился.\"},{\"source_id\":\"fr42c-065-0033\",\"target\":\"— Успокойтесь, Том, — сказала леди Элен, — это Провидение захотело…\"},{\"source_id\":\"fr42c-065-0034\",\"target\":\"— Нет, сударыня, простите меня, — возразил старый Том. — Нет! Это невозможно! Я не ошибся! Айртон читал письмо так же, как я, и именно он, он сам, напротив, хотел вернуть меня к австралийскому берегу!\"},{\"source_id\":\"fr42c-065-0035\",\"target\":\"— Айртон? — воскликнул Гленарван.\"},{\"source_id\":\"fr42c-065-0036\",\"target\":\"— Он самый! Он уверял меня, что это ошибка и что вы назначили мне встречу в бухте Туфолд!\"},{\"source_id\":\"fr42c-065-0037\",\"target\":\"— У вас есть это письмо, Том? — спросил майор, крайне заинтригованный.\"},{\"source_id\":\"fr42c-065-0038\",\"target\":\"— Да, мистер Мак-Наббс, — ответил Остин. — Сейчас принесу.\"}],\"review\":[{\"source_id\":\"fr42c-065-0019\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed dialogue punctuation and rendered «je crois rêver» naturally.\"},{\"source_id\":\"fr42c-065-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Honorific normalized to lowercase: «вашей милости».\"},{\"source_id\":\"fr42c-065-0021\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-065-0022\",\"verdict\":\"CORRECTED\",\"reason\":\"Made «avaries» and the nautical sense more faithful.\"},{\"source_id\":\"fr42c-065-0023\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-065-0024\",\"verdict\":\"PASS\",\"reason\":\"Accurate; negation and signature preserved.\"},{\"source_id\":\"fr42c-065-0025\",\"verdict\":\"CORRECTED\",\"reason\":\"«Convict» rendered as «каторжник»; wording improved.\"},{\"source_id\":\"fr42c-065-0026\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Ayrton fixed as Айртон; italic ship title preserved.\"},{\"source_id\":\"fr42c-065-0027\",\"verdict\":\"CORRECTED\",\"reason\":\"Name corrected and question made idiomatic.\"},{\"source_id\":\"fr42c-065-0028\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored «croiser» as «крейсировать» and the sentence break into the next line.\"},{\"source_id\":\"fr42c-065-0029\",\"verdict\":\"CORRECTED\",\"reason\":\"Made the continuation of Tom's sentence («Австралии!») explicit.\"},{\"source_id\":\"fr42c-065-0030\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray comma/dash; restored «Новой Зеландии» sense.\"},{\"source_id\":\"fr42c-065-0031\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-065-0032\",\"verdict\":\"CORRECTED\",\"reason\":\"«Éblouissement» is dizziness/dazzle, not blindness; refined.\"},{\"source_id\":\"fr42c-065-0033\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed «Remettez-vous» as polite vous, Элен, «сударыня» register.\"},{\"source_id\":\"fr42c-065-0034\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed «australienne», not southern; restored Ayrton's agency.\"},{\"source_id\":\"fr42c-065-0035\",\"verdict\":\"CORRECTED\",\"reason\":\"Name corrected.\"},{\"source_id\":\"fr42c-065-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiom improved; bay name Twofold kept as Туфолд.\"},{\"source_id\":\"fr42c-065-0037\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-065-0038\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed closing punctuation; natural phrasing.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9092,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2223,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
