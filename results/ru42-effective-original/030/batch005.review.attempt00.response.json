@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJvVpikzex2tRv9uHghc",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-030-0100\",\"target\":\"— Сию минуту, майор.\"},{\"source_id\":\"fr42c-030-0101\",\"target\":\"— Уговор?\"},{\"source_id\":\"fr42c-030-0102\",\"target\":\"— Уговор!\"},{\"source_id\":\"fr42c-030-0103\",\"target\":\"— Прекрасно. Знаете ли вы, Паганель, почему Австралия не принадлежит Франции?\"},{\"source_id\":\"fr42c-030-0104\",\"target\":\"— Но, мне кажется…\"},{\"source_id\":\"fr42c-030-0105\",\"target\":\"— Или, по крайней мере, какую причину этому приводят англичане?\"},{\"source_id\":\"fr42c-030-0106\",\"target\":\"— Нет, майор, — ответил Паганель с обиженным видом.\"},{\"source_id\":\"fr42c-030-0107\",\"target\":\"— Просто потому, что капитан Боден, который, однако, не был робок, так испугался в 1802 году кваканья австралийских лягушек, что поскорее поднял якорь и бежал, чтобы никогда не возвращаться.\"},{\"source_id\":\"fr42c-030-0108\",\"target\":\"— Как! — воскликнул учёный. — Неужели это говорят в Англии? Да это же дурная шутка!\"},{\"source_id\":\"fr42c-030-0109\",\"target\":\"— Очень дурная, признаю, — ответил майор, — но в Соединённом Королевстве она стала исторической.\"},{\"source_id\":\"fr42c-030-0110\",\"target\":\"— Это возмутительно! — воскликнул патриотичный географ. — И это повторяют всерьёз?\"},{\"source_id\":\"fr42c-030-0111\",\"target\":\"— Вынужден с этим согласиться, дорогой Паганель, — ответил Гленарван среди общего взрыва смеха. — Как! Вы не знали этой подробности?\"},{\"source_id\":\"fr42c-030-0112\",\"target\":\"— Совершенно не знал. Но я протестую! К тому же англичане зовут нас «лягушатниками»! А ведь, как правило, не боятся того, что едят.\"},{\"source_id\":\"fr42c-030-0113\",\"target\":\"— И всё же так говорят, Паганель, — ответил майор, скромно улыбаясь.\"},{\"source_id\":\"fr42c-030-0114\",\"target\":\"Вот так этот знаменитый карабин работы «Пурдей, Мур и Диксон» остался собственностью майора Мак-Наббса.\"},{\"source_id\":\"fr42c-note-061\",\"target\":\"1300 льё.\"},{\"source_id\":\"fr42c-note-062\",\"target\":\"Прохождение планеты Венеры по диску Солнца должно было произойти в 1769 году. Это довольно редкое явление представляло очень большой астрономический интерес; оно должно было, в самом деле, позволить точно вычислить расстояние от Земли до Солнца.\"}],\"review\":[{\"source_id\":\"fr42c-030-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed idiom for «À l’instant»; meaning preserved.\"},{\"source_id\":\"fr42c-030-0101\",\"verdict\":\"CORRECTED\",\"reason\":\"Made the bargain formula more idiomatic and consistent with the next reply.\"},{\"source_id\":\"fr42c-030-0102\",\"verdict\":\"CORRECTED\",\"reason\":\"Matches the previous row's bargain formula.\"},{\"source_id\":\"fr42c-030-0103\",\"verdict\":\"CORRECTED\",\"reason\":\"«Bien» rendered as «Прекрасно»; the question is faithful.\"},{\"source_id\":\"fr42c-030-0104\",\"verdict\":\"PASS\",\"reason\":\"Faithful hesitant interjection.\"},{\"source_id\":\"fr42c-030-0105\",\"verdict\":\"CORRECTED\",\"reason\":\"«Raison» rendered as «причину»; the Englishmen's agency is kept.\"},{\"source_id\":\"fr42c-030-0106\",\"verdict\":\"PASS\",\"reason\":\"Negation, speaker and vexed manner are preserved.\"},{\"source_id\":\"fr42c-030-0107\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored the concessive nuance of «pourtant» and the fear of the frogs; the tone is closer to the original.\"},{\"source_id\":\"fr42c-030-0108\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved the idiom and kept both questions and the exclamation.\"},{\"source_id\":\"fr42c-030-0109\",\"verdict\":\"CORRECTED\",\"reason\":\"«Est historique» is made closer in wording («стала исторической»).\"},{\"source_id\":\"fr42c-030-0110\",\"verdict\":\"CORRECTED\",\"reason\":\"«Indignité» rendered as «возмутительно»; seriousness preserved.\"},{\"source_id\":\"fr42c-030-0111\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved the register and preserved the general laughter.\"},{\"source_id\":\"fr42c-030-0112\",\"verdict\":\"CORRECTED\",\"reason\":\"«Absolument» is a denial of knowing; «лягушатники» is the idiomatic translation of «mangeurs de grenouilles».\"},{\"source_id\":\"fr42c-030-0113\",\"verdict\":\"CORRECTED\",\"reason\":\"«Cela ne se dit pas moins» means it is said all the same, not that it is true.\"},{\"source_id\":\"fr42c-030-0114\",\"verdict\":\"CORRECTED\",\"reason\":\"Gun-maker name made closer to Purdey; the outcome is kept.\"},{\"source_id\":\"fr42c-note-061\",\"verdict\":\"CORRECTED\",\"reason\":\"«Лиев» is wrong; the unit is «льё».\"},{\"source_id\":\"fr42c-note-062\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed the stray Italian «infatti» and rendered «en effet» in Russian; the content is otherwise faithful.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 7789,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1976,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

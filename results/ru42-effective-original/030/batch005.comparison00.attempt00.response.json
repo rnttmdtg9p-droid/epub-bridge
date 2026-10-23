@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJvWmhDrhPRYUnxpaqPp",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-030-0100\",\"target\":\"— Сию минуту, майор.\"},{\"source_id\":\"fr42c-030-0101\",\"target\":\"— Уговор?\"},{\"source_id\":\"fr42c-030-0102\",\"target\":\"— Уговор!\"},{\"source_id\":\"fr42c-030-0103\",\"target\":\"— Прекрасно. Знаете ли вы, Паганель, почему Австралия не принадлежит Франции?\"},{\"source_id\":\"fr42c-030-0104\",\"target\":\"— Но, мне кажется…\"},{\"source_id\":\"fr42c-030-0105\",\"target\":\"— Или, по крайней мере, какую причину этому приводят англичане?\"},{\"source_id\":\"fr42c-030-0106\",\"target\":\"— Нет, майор, — ответил Паганель с обиженным видом.\"},{\"source_id\":\"fr42c-030-0107\",\"target\":\"— Просто потому, что капитан Боден, который, однако, не был робок, так испугался в 1802 году кваканья австралийских лягушек, что поскорее поднял якорь и бежал, чтобы никогда не возвращаться.\"},{\"source_id\":\"fr42c-030-0108\",\"target\":\"— Как! — воскликнул учёный. — Неужели это говорят в Англии? Да это же дурная шутка!\"},{\"source_id\":\"fr42c-030-0109\",\"target\":\"— Очень дурная, признаю, — ответил майор, — но в Соединённом Королевстве она стала исторической.\"},{\"source_id\":\"fr42c-030-0110\",\"target\":\"— Это возмутительно! — воскликнул патриотичный географ. — И это повторяют всерьёз?\"},{\"source_id\":\"fr42c-030-0111\",\"target\":\"— Вынужден с этим согласиться, дорогой Паганель, — ответил Гленарван среди общего взрыва смеха. — Как! Вы не знали этой подробности?\"},{\"source_id\":\"fr42c-030-0112\",\"target\":\"— Совершенно не знал. Но я протестую! К тому же англичане зовут нас «лягушатниками»! А ведь, как правило, не боятся того, что едят.\"},{\"source_id\":\"fr42c-030-0113\",\"target\":\"— И всё же так говорят, Паганель, — ответил майор, скромно улыбаясь.\"},{\"source_id\":\"fr42c-030-0114\",\"target\":\"Вот так этот знаменитый карабин работы «Пурдей, Мур и Диксон» остался собственностью майора Мак-Наббса.\"},{\"source_id\":\"fr42c-note-061\",\"target\":\"1300 льё.\"},{\"source_id\":\"fr42c-note-062\",\"target\":\"Прохождение планеты Венеры по диску Солнца должно было произойти в 1769 году. Это довольно редкое явление представляло очень большой астрономический интерес; оно должно было, в самом деле, позволить точно вычислить расстояние от Земли до Солнца.\"}],\"review\":[{\"source_id\":\"fr42c-030-0100\",\"verdict\":\"PASS\",\"reason\":\"«À l’instant» correctly rendered; correction verified.\"},{\"source_id\":\"fr42c-030-0101\",\"verdict\":\"PASS\",\"reason\":\"Brief bargain question preserved.\"},{\"source_id\":\"fr42c-030-0102\",\"verdict\":\"PASS\",\"reason\":\"Matching affirmative reply preserved.\"},{\"source_id\":\"fr42c-030-0103\",\"verdict\":\"PASS\",\"reason\":\"Question and address faithful.\"},{\"source_id\":\"fr42c-030-0104\",\"verdict\":\"PASS\",\"reason\":\"Interrupted hesitation preserved.\"},{\"source_id\":\"fr42c-030-0105\",\"verdict\":\"PASS\",\"reason\":\"Major's follow-up; 'причину' matches 'raison'.\"},{\"source_id\":\"fr42c-030-0106\",\"verdict\":\"PASS\",\"reason\":\"Negation, speaker and vexed manner preserved.\"},{\"source_id\":\"fr42c-030-0107\",\"verdict\":\"PASS\",\"reason\":\"Baudin, 1802, frogs, flight and no return all preserved.\"},{\"source_id\":\"fr42c-030-0108\",\"verdict\":\"PASS\",\"reason\":\"Exclamation, question and 'mauvaise plaisanterie' faithful.\"},{\"source_id\":\"fr42c-030-0109\",\"verdict\":\"PASS\",\"reason\":\"Admission and 'historique' faithfully rendered.\"},{\"source_id\":\"fr42c-030-0110\",\"verdict\":\"PASS\",\"reason\":\"Indignation, patriotic geographer and serious repetition preserved.\"},{\"source_id\":\"fr42c-030-0111\",\"verdict\":\"PASS\",\"reason\":\"Glenarvan's concession, general laughter and 'particularité' preserved.\"},{\"source_id\":\"fr42c-030-0112\",\"verdict\":\"PASS\",\"reason\":\"'Absolument' answers 'ignoriez'; frog-eaters joke and logic preserved.\"},{\"source_id\":\"fr42c-030-0113\",\"verdict\":\"PASS\",\"reason\":\"'Cela ne se dit pas moins' conveyed; modest smile kept.\"},{\"source_id\":\"fr42c-030-0114\",\"verdict\":\"PASS\",\"reason\":\"Conclusion, carbine makers and ownership preserved.\"},{\"source_id\":\"fr42c-note-061\",\"verdict\":\"PASS\",\"reason\":\"Lieues correctly 'льё'.\"},{\"source_id\":\"fr42c-note-062\",\"verdict\":\"PASS\",\"reason\":\"Venus transit 1769 and distance calculation accurate; stray Italian fixed.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9421,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1843,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
