@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJVgid3GqHsaY74nkv7W",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id09591\",\"target\":\"— Ты его знаешь?\"},{\"source_id\":\"id09592\",\"target\":\"— Мне показалось, что я его узнал, и я не ошибся: толстый и коротконогий.\"},{\"source_id\":\"id09593\",\"target\":\"— Кто это? — спросили разом, вполголоса, все четверо друзей.\"},{\"source_id\":\"id09594\",\"target\":\"— Генерал Оливер Кромвель.\"},{\"source_id\":\"id09595\",\"target\":\"Четверо друзей переглянулись.\"},{\"source_id\":\"id09596\",\"target\":\"— А другой? — спросил Атос.\"},{\"source_id\":\"id09597\",\"target\":\"— Худой и стройный.\"},{\"source_id\":\"id09598\",\"target\":\"— Это палач, — в один голос сказали д’Артаньян и Арамис.\"},{\"source_id\":\"id09599\",\"target\":\"— Я вижу только его спину, — продолжал Гримо, — но погодите, он шевельнулся, он оборачивается; и если он снял маску, я смогу увидеть… Ах!\"},{\"source_id\":\"id09600\",\"target\":\"Гримо, словно его ударили в самое сердце, выпустил железный крюк и отшатнулся назад, издав глухой стон. Портос подхватил его на руки.\"},{\"source_id\":\"id09601\",\"target\":\"— Ты его видел? — спросили четверо друзей.\"},{\"source_id\":\"id09602\",\"target\":\"— Да, — сказал Гримо; волосы у него стояли дыбом, на лбу выступил пот.\"},{\"source_id\":\"id09603\",\"target\":\"— Худого и стройного? — спросил д’Артаньян.\"},{\"source_id\":\"id09604\",\"target\":\"— Да.\"},{\"source_id\":\"id09605\",\"target\":\"— Палача, словом? — спросил Арамис.\"},{\"source_id\":\"id09606\",\"target\":\"— Да.\"},{\"source_id\":\"id09607\",\"target\":\"— И кто же это? — спросил Портос.\"},{\"source_id\":\"id09608\",\"target\":\"— Он! Он! — пролепетал Гримо, бледный как мертвец, дрожащими руками схватив руку своего господина.\"},{\"source_id\":\"id09609\",\"target\":\"— Кто — он? — спросил Атос.\"},{\"source_id\":\"id09610\",\"target\":\"— Мордаунт!.. — ответил Гримо.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4024,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 773,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJVjFXi29DTR7bHApLYe",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id09611\",\"target\":\"Д’Артаньян, Портос и Арамис радостно вскрикнули.\"},{\"source_id\":\"id09612\",\"target\":\"Атос отступил на шаг и провёл рукой по лбу:\"},{\"source_id\":\"id09613\",\"target\":\"— Фатальность! — прошептал он.\"}],\"review\":[{\"source_id\":\"id09611\",\"verdict\":\"PASS\",\"reason\":\"Faithful to the French: the three friends (d'Artagnan, Porthos, Aramis) utter a joyful exclamation. The names are correct and the tense and agency are preserved.\"},{\"source_id\":\"id09612\",\"verdict\":\"PASS\",\"reason\":\"Accurate: Athos steps back one pace and passes his hand over his forehead, with the colon preserved before the following line of speech.\"},{\"source_id\":\"id09613\",\"verdict\":\"CORRECTED\",\"reason\":\"\\\"Fatalité!\\\" is rendered closer to the source as \\\"Фатальность!\\\" rather than the draft's \\\"Рок!\\\", which is a stronger and more specific word. The dialogue punctuation and the verb \\\"murmura-t-il\\\" are preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1853,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 388,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

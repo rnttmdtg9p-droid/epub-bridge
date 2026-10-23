@@ -1,0 +1,97 @@
+{
+  "unit": 72,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id09611",
+      "target": "Д’Артаньян, Портос и Арамис радостно вскрикнули.",
+      "source_sha256": "cbae15300b918b18691e6634f44dd884f793d2dc172c21636d3feae8b91f0f11",
+      "target_id": "ru-id09611",
+      "tag": "p",
+      "target_sha256": "0e9cfda9d622c759893fe623064ce8ef1bb39fb8f9ba93a9faa146b9fd6ac21e"
+    },
+    {
+      "source_id": "id09612",
+      "target": "Атос отступил на шаг и провёл рукой по лбу:",
+      "source_sha256": "07729366fed99648bc31457460cf3cf8c95af665faf34035d410e132d233207c",
+      "target_id": "ru-id09612",
+      "tag": "p",
+      "target_sha256": "d9020766fa0246e6ddfb1d9fb0a7418b008c0f0b975e7d649f837b21eb37292c"
+    },
+    {
+      "source_id": "id09613",
+      "target": "— Фатальность! — прошептал он.",
+      "source_sha256": "78181105fab7211b41db46c51ab103e07e3367d9eb392fe88db9d41cf06fb491",
+      "target_id": "ru-id09613",
+      "tag": "p",
+      "target_sha256": "2eaf74a4376eb64c8abb7eaf36c035e306a5bd55c9a338d49a6ba2d36f08fc39"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id09611",
+      "verdict": "PASS",
+      "reason": "Faithful to the French: the three friends (d'Artagnan, Porthos, Aramis) utter a joyful exclamation. The names are correct and the tense and agency are preserved."
+    },
+    {
+      "source_id": "id09612",
+      "verdict": "PASS",
+      "reason": "Accurate: Athos steps back one pace and passes his hand over his forehead, with the colon preserved before the following line of speech."
+    },
+    {
+      "source_id": "id09613",
+      "verdict": "CORRECTED",
+      "reason": "\"Fatalité!\" is rendered closer to the source as \"Фатальность!\" rather than the draft's \"Рок!\", which is a stronger and more specific word. The dialogue punctuation and the verb \"murmura-t-il\" are preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id09613",
+      "before": "— Рок! — прошептал он.",
+      "after": "— Фатальность! — прошептал он."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJVj92XvZGEDweEgCTX2",
+    "usage": {
+      "input_tokens": 1275,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 117,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJVjFXi29DTR7bHApLYe",
+    "usage": {
+      "input_tokens": 1853,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 388,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

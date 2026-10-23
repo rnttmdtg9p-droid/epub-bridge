@@ -1,0 +1,187 @@
+{
+  "unit": 72,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id09611",
+      "target": "Д’Артаньян, Портос и Арамис радостно вскрикнули.",
+      "source_sha256": "cbae15300b918b18691e6634f44dd884f793d2dc172c21636d3feae8b91f0f11",
+      "target_id": "ru-id09611",
+      "tag": "p",
+      "target_sha256": "0e9cfda9d622c759893fe623064ce8ef1bb39fb8f9ba93a9faa146b9fd6ac21e"
+    },
+    {
+      "source_id": "id09612",
+      "target": "Атос отступил на шаг и провёл рукой по лбу:",
+      "source_sha256": "07729366fed99648bc31457460cf3cf8c95af665faf34035d410e132d233207c",
+      "target_id": "ru-id09612",
+      "tag": "p",
+      "target_sha256": "d9020766fa0246e6ddfb1d9fb0a7418b008c0f0b975e7d649f837b21eb37292c"
+    },
+    {
+      "source_id": "id09613",
+      "target": "— Рок! — прошептал он.",
+      "source_sha256": "78181105fab7211b41db46c51ab103e07e3367d9eb392fe88db9d41cf06fb491",
+      "target_id": "ru-id09613",
+      "tag": "p",
+      "target_sha256": "90430a2d83a2736b765d05b57c282e9fdd3f5f3d93a8f693ff9259c7032fffbb"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id09611",
+      "verdict": "PASS",
+      "reason": "Faithful to the French: the three friends (d'Artagnan, Porthos, Aramis) utter a joyful exclamation. The names are correct and the tense and agency are preserved."
+    },
+    {
+      "source_id": "id09612",
+      "verdict": "PASS",
+      "reason": "Accurate: Athos steps back one pace and passes his hand over his forehead, with the colon preserved before the following line of speech."
+    },
+    {
+      "source_id": "id09613",
+      "verdict": "CORRECTED",
+      "reason": "\"Fatalité!\" is rendered closer to the source as \"Фатальность!\" rather than the draft's \"Рок!\", which is a stronger and more specific word. The dialogue punctuation and the verb \"murmura-t-il\" are preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id09613",
+      "before": "— Рок! — прошептал он.",
+      "after": "— Фатальность! — прошептал он."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJVj92XvZGEDweEgCTX2",
+    "usage": {
+      "input_tokens": 1275,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 117,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJVjFXi29DTR7bHApLYe",
+    "usage": {
+      "input_tokens": 1853,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 388,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJVjWSuAMYsaJoh5FcPM",
+        "usage": {
+          "input_tokens": 1967,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 836,
+          "output_tokens_details": {
+            "thinking_tokens": 377
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id09611",
+          "verdict": "PASS",
+          "reason": "Faithful. The three names, the plural verb and the exclamation of joy are all preserved; «радостно вскрикнули» renders «poussèrent une exclamation de joie» idiomatically."
+        },
+        {
+          "source_id": "id09612",
+          "verdict": "PASS",
+          "reason": "Faithful. Athos takes one step back (отступил на шаг), passes his hand over his forehead, and the colon leading into the next line is kept."
+        },
+        {
+          "source_id": "id09613",
+          "verdict": "CORRECTED",
+          "reason": "The prior change to «Фатальность!» is not supported. As a murmured exclamation, «Fatalité!» means 'fate, a fatal turn of events'. «Фатальность» is an abstract, calque-like noun that sounds unnatural in Russian dialogue. «Рок!» is the idiomatic literary equivalent and keeps the murmured register. The dialogue punctuation and «прошептал он» (murmura-t-il) are unchanged."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id09613",
+          "before": "— Фатальность! — прошептал он.",
+          "after": "— Рок! — прошептал он."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJVk1gYAGMBdKbEXuwTt",
+        "usage": {
+          "input_tokens": 2010,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 465,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id09611",
+          "verdict": "PASS",
+          "reason": "Faithful: the three named characters, the exclamation of joy (poussèrent une exclamation de joie → радостно вскрикнули), and the past tense are all preserved. The name д’Артаньян matches the established form."
+        },
+        {
+          "source_id": "id09612",
+          "verdict": "PASS",
+          "reason": "Faithful: Athos stepped back one pace and passed his hand over his forehead; the closing colon is kept, so the sentence still leads into the next line of dialogue. Idiomatic Russian."
+        },
+        {
+          "source_id": "id09613",
+          "verdict": "PASS",
+          "reason": "«Fatalité!» is rendered as «Рок!», a natural literary equivalent for an exclamation of fate. The prior ledger shows a change to «Фатальность!» and then a reversal to «Рок!». The final reading is correct: «Фатальность» is an unidiomatic calque here. The murmured delivery (murmura-t-il → прошептал он) and the dialogue punctuation are preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
