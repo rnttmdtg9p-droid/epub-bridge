@@ -1,0 +1,111 @@
+{
+  "state": "ACTUAL2_EMPHASIS_RESTORATIONS_AND_SEPARATE_SOURCE_COMPARISON",
+  "run_id": "40006201241",
+  "rows": [
+    {
+      "source_id": "045-001-0250",
+      "target": "ИРЕН НОРТОН, <i>урождённая</i> АДЛЕР».",
+      "source_sha256": "a2089555e1681305e08817ae51d5683c8fb0dfa5baefacf712dfd753795d18bb",
+      "target_id": "ru-045-001-0250",
+      "tag": "signature",
+      "target_sha256": "a3d313aae4f2b3142cd796d5b663f5a4f48e1456f48911ca5fb8d51e717f5c99"
+    },
+    {
+      "source_id": "045-002-0185",
+      "target": "— Боюсь, что да. Я захватил в кармане колоду карт и думал, что, раз <i>нас четверо</i>, вы всё-таки сыграете свой роббер. Но вижу, что приготовления врага зашли так далеко, что мы не можем рисковать присутствием света. И прежде всего нужно выбрать места. Это люди отчаянные, и хотя мы застанем их врасплох, они могут причинить нам вред, если мы не будем осторожны. Я встану за этим ящиком, а вы спрячьтесь за теми. Потом, когда я посвечу на них, быстро смыкайтесь. Если они выстрелят, Ватсон, не стесняйтесь стрелять в них.",
+      "source_sha256": "347f38a83f6cb5be3978c1351278c0e6dcaa5b891d78658abacced7e41e28755",
+      "target_id": "ru-045-002-0185",
+      "tag": "p",
+      "target_sha256": "51a52bf304e21c48b2e0c1100f951b870a0e006f0601e316921ee59fab200b60"
+    }
+  ],
+  "turns": [
+    {
+      "phase": 0,
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKfgBNku34W25Ewg4jX6",
+        "usage": {
+          "input_tokens": 2884,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 500,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-001-0250",
+          "verdict": "CORRECTED",
+          "reason": "Restored the italic span on урождённая (née) as instructed; the wording and punctuation are otherwise unchanged. The closing quote has no opening mark, which was left as reviewed."
+        },
+        {
+          "source_id": "045-002-0185",
+          "verdict": "CORRECTED",
+          "reason": "Restored the italic span on нас четверо (partie carrée). All other wording, punctuation and the dialogue dash are unchanged, and the content matches the English paragraph."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "045-001-0250",
+          "before": "ИРЕН НОРТОН, урождённая АДЛЕР».",
+          "after": "ИРЕН НОРТОН, <i>урождённая</i> АДЛЕР»."
+        },
+        {
+          "source_id": "045-002-0185",
+          "before": "— Боюсь, что да. Я захватил в кармане колоду карт и думал, что, раз нас четверо, вы всё-таки сыграете свой роббер. Но вижу, что приготовления врага зашли так далеко, что мы не можем рисковать присутствием света. И прежде всего нужно выбрать места. Это люди отчаянные, и хотя мы застанем их врасплох, они могут причинить нам вред, если мы не будем осторожны. Я встану за этим ящиком, а вы спрячьтесь за теми. Потом, когда я посвечу на них, быстро смыкайтесь. Если они выстрелят, Ватсон, не стесняйтесь стрелять в них.",
+          "after": "— Боюсь, что да. Я захватил в кармане колоду карт и думал, что, раз <i>нас четверо</i>, вы всё-таки сыграете свой роббер. Но вижу, что приготовления врага зашли так далеко, что мы не можем рисковать присутствием света. И прежде всего нужно выбрать места. Это люди отчаянные, и хотя мы застанем их врасплох, они могут причинить нам вред, если мы не будем осторожны. Я встану за этим ящиком, а вы спрячьтесь за теми. Потом, когда я посвечу на них, быстро смыкайтесь. Если они выстрелят, Ватсон, не стесняйтесь стрелять в них."
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKfgTMCTu5Ee4NfY3E2h",
+        "usage": {
+          "input_tokens": 2896,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 501,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-001-0250",
+          "verdict": "PASS",
+          "reason": "Signature role kept; née rendered as italic урождённая; name Адлер preserved. The closing quote has no opening mark in the target, but the reviewed wording is to be kept exactly."
+        },
+        {
+          "source_id": "045-002-0185",
+          "verdict": "PASS",
+          "reason": "Faithful: cards, rubber, partie carrée as italic нас четверо, positions, flash of light, and instruction to Watson to shoot are all preserved. Paragraph is intact."
+        }
+      ],
+      "corrections": []
+    }
+  ],
+  "input_sha256": "76736926c32a8a498e608921a05fcf5ae20dd37159952a28d63ef1cc6df2a15c",
+  "book_release": false
+}
