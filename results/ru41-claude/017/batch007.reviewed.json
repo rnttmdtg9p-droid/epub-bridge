@@ -1,0 +1,104 @@
+{
+  "unit": 17,
+  "batch": 7,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_BOOK_RECONCILIATION",
+  "rows": [
+    {
+      "source_id": "id02086",
+      "source_sha256": "64dbe3992f5eac59500a2addf51a53a51dc8ace8424e6b1650c6d31e23dfb82d",
+      "target": "— Решительно, — сказал д’Артаньян, — мне нравится эта проза, и кардинал пишет лучше, чем я думал. Ну что же, Планше, отправимся с визитом к господину казначею короля, а потом пришпорим коней.",
+      "target_id": "ru-id02086",
+      "tag": "p",
+      "target_sha256": "cf1483cd296be0170447c37becd771888fb07f4745f55b008001a4b20b6de2a0"
+    },
+    {
+      "source_id": "id02087",
+      "source_sha256": "854149d1cf1320b070d110010d64afb5428691d4b50024f57755496a3447e7bd",
+      "target": "— В сторону Парижа, сударь.",
+      "target_id": "ru-id02087",
+      "tag": "p",
+      "target_sha256": "ac4cb1a80458d6217a2719dc5a75c37ef2031ec12a5f02a550070b57737277c4"
+    },
+    {
+      "source_id": "id02088",
+      "source_sha256": "bd65bd66312d31df44424f6a16cd92af2228046ad6e56dbe9509f77ab23196de",
+      "target": "— В сторону Парижа.",
+      "target_id": "ru-id02088",
+      "tag": "p",
+      "target_sha256": "f982a8408984e44220b3be89a635b027ab0ff23be593204db9a5547b9527bf91"
+    },
+    {
+      "source_id": "id02089",
+      "source_sha256": "aa30c74def157fc9e4968f361888132775d8fcf3194c059b1710f8a5b16db046",
+      "target": "И оба пустились самой быстрой рысью, на какую были способны их лошади.",
+      "target_id": "ru-id02089",
+      "tag": "p",
+      "target_sha256": "d65da52557cdd45cb993b108319241a53b149d928f743d45aeade3f9d6049352"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id02086",
+      "verdict": "PASS",
+      "reason": "Faithful and idiomatic. Meaning, speaker, the ironic praise of the cardinal's prose, the name Планше and the sequence of actions (visit the treasurer, then spur on) are all preserved; 'piquons' is rendered correctly as 'пришпорим коней'. No omissions or additions."
+    },
+    {
+      "source_id": "id02087",
+      "verdict": "PASS",
+      "reason": "Faithful. 'Vers Paris' is kept as 'В сторону Парижа' and 'monsieur' as 'сударь', appropriate for Planchet addressing d'Artagnan. The dialogue dash is correct."
+    },
+    {
+      "source_id": "id02088",
+      "verdict": "PASS",
+      "reason": "Faithful. D'Artagnan's echo repeats the previous line exactly, as in the source."
+    },
+    {
+      "source_id": "id02089",
+      "verdict": "PASS",
+      "reason": "Faithful. Both men set off at the fastest trot of their horses; 'tous deux' becomes 'оба', and the clause 'на какую были способны' is a natural way to express the superlative 'au plus grand trot' without adding any fact."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJFUXLvD9YEp9quPd2hM",
+    "usage": {
+      "input_tokens": 1693,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 396,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJFUz41f8Z5QYqYJQgd9",
+    "usage": {
+      "input_tokens": 2515,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1337,
+      "output_tokens_details": {
+        "thinking_tokens": 550
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
