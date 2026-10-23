@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK8QNQUqYaS67k41yp45",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-069-0099\",\"target\":\"— Да, Джон, — живо ответил Гленарван, взволнованный сильнее, чем хотел показать.\"},{\"source_id\":\"fr42c-069-0100\",\"target\":\"— Go head! — крикнул Джон инженеру.\"},{\"source_id\":\"fr42c-069-0101\",\"target\":\"Пар засвистел в трубах, винт ударил по волнам, и в восемь часов последние вершины острова Табор скрылись во мраке ночи.\"}],\"review\":[{\"source_id\":\"fr42c-069-0099\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed the participial phrase; kept Glenarvan's quick reply and greater emotion than he wished to show.\"},{\"source_id\":\"fr42c-069-0100\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed dialogue punctuation: the draft had a dash plus quotation marks. Kept the source's English 'Go head' form.\"},{\"source_id\":\"fr42c-069-0101\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the tense: 'battit' and 'siffla' are perfective. Kept 'at eight o'clock' and 'shadows of night' accurate, with 'hélice battit les flots' rendered as the screw striking the waves.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2406,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 444,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

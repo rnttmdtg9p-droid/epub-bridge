@@ -1,0 +1,92 @@
+{
+  "unit": 69,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-069-0099",
+      "target": "— Да, Джон, — живо ответил Гленарван, взволнованный сильнее, чем хотел показать.",
+      "source_sha256": "0351a923ce799fff152db240fa26b4bb225629945773f3da536e36bdcbc6de18",
+      "target_id": "ru-fr42c-069-0099",
+      "tag": "p",
+      "target_sha256": "0eaa263daa5049b43d5dc4e4f4bde896a7c36d0b48cea0d8f6420ec0bd3919ab"
+    },
+    {
+      "source_id": "fr42c-069-0100",
+      "target": "— Go head! — крикнул Джон инженеру.",
+      "source_sha256": "a0482e71df27f59647ce6eaa950fe9bdc5fd0bcded9c7fe7ea5a46d818c850dd",
+      "target_id": "ru-fr42c-069-0100",
+      "tag": "p",
+      "target_sha256": "73e835341cd40c4ce1c8ef3ce17ff960a3c6e118e782b20066f5de985407b33d"
+    },
+    {
+      "source_id": "fr42c-069-0101",
+      "target": "Пар засвистел в трубах, винт ударил по волнам, и в восемь часов последние вершины острова Табор скрылись во мраке ночи.",
+      "source_sha256": "67b639ac826c6c1d14c38ebe50057d284ddb9e7d8f104fa9a9124f49705833ad",
+      "target_id": "ru-fr42c-069-0101",
+      "tag": "p",
+      "target_sha256": "0426be8ad23d318b981802c33d56852c66b73e783efcb17dc5fb4be9aa2d96f6"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-069-0099",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed the participial phrase; kept Glenarvan's quick reply and greater emotion than he wished to show."
+    },
+    {
+      "source_id": "fr42c-069-0100",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue punctuation: the draft had a dash plus quotation marks. Kept the source's English 'Go head' form."
+    },
+    {
+      "source_id": "fr42c-069-0101",
+      "verdict": "CORRECTED",
+      "reason": "Fixed the tense: 'battit' and 'siffla' are perfective. Kept 'at eight o'clock' and 'shadows of night' accurate, with 'hélice battit les flots' rendered as the screw striking the waves."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-069-0099",
+      "before": "— Да, Джон, — быстро ответил Гленарван, будучи более взволнованным, чем хотел показать.",
+      "after": "— Да, Джон, — живо ответил Гленарван, взволнованный сильнее, чем хотел показать."
+    },
+    {
+      "source_id": "fr42c-069-0100",
+      "before": "— «Go head!» — крикнул Джон инженеру.",
+      "after": "— Go head! — крикнул Джон инженеру."
+    },
+    {
+      "source_id": "fr42c-069-0101",
+      "before": "Пар зашипел в трубах, винт взбивал волны, и к восьми часам последние вершины острова Табор исчезли в тени ночи.",
+      "after": "Пар засвистел в трубах, винт ударил по волнам, и в восемь часов последние вершины острова Табор скрылись во мраке ночи."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/069/batch005.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK8QNQUqYaS67k41yp45",
+    "usage": {
+      "input_tokens": 2406,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 444,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
