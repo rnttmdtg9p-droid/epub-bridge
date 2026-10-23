@@ -1,0 +1,172 @@
+{
+  "unit": 11,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01416",
+      "target": "— Что такое? — спросил Арамис.",
+      "source_sha256": "767c80f651067148d0d359abbfc2f485ba33049471527116c94b7ab0a54a98be",
+      "target_id": "ru-id01416",
+      "tag": "p",
+      "target_sha256": "ef795112aed98f5ffc4442c3eb2dcb36bdb585498e8186ef0997b030036d9320"
+    },
+    {
+      "source_id": "id01417",
+      "target": "— Да разве вы не видите, что ветер унёс мою шляпу?",
+      "source_sha256": "f6d347aac3a67842c4fcff1d89a40ecf072da569ee5548b50f65285ff83c66dd",
+      "target_id": "ru-id01417",
+      "tag": "p",
+      "target_sha256": "69c1f818803ae2650942d2a1e02a6c6216d17c28f22674c5eb612dc1072ac977"
+    },
+    {
+      "source_id": "id01418",
+      "target": "И Арамис бросился вдогонку за беглой шляпой. Д’Артаньян воспользовался случаем и стал искать в изгороди место пореже, чтобы взгляд его мог беспрепятственно проникнуть до самого загадочного всадника. В это самое мгновение луна, быть может, такая же любопытная, как и офицер, выплыла из-за облака, и при её нескромном свете д’Артаньян узнал большие голубые глаза, золотые волосы и благородную голову герцогини де Лонгвиль.",
+      "source_sha256": "021342b01cfc379198a74ced76444b1e005c69ea1186547e3600279b0a0f0ca9",
+      "target_id": "ru-id01418",
+      "tag": "p",
+      "target_sha256": "6a125b41136e3927be68a0f40c689302dae9e08ab3b238c934562373fca3bd56"
+    },
+    {
+      "source_id": "id01419",
+      "target": "Арамис вернулся, смеясь, с одной шляпой на голове и другой в руке, и они оба продолжили путь к монастырю иезуитов.",
+      "source_sha256": "e122a21d9e0077e69a0234fde641079308986908f91ee09e6ec1ac8becb1a47a",
+      "target_id": "ru-id01419",
+      "tag": "p",
+      "target_sha256": "0e9fe197d8eaabf748633384f500127b14ca6a67e5006b813353e7717b688cdc"
+    },
+    {
+      "source_id": "id01420",
+      "target": "— Отлично! — сказал д’Артаньян, поднимаясь и отряхивая колено. — Теперь ты у меня в руках: ты фрондёр и любовник госпожи де Лонгвиль.",
+      "source_sha256": "11756db0e23c7c64ad37d984984ba377d1e7d506536c96dba6adcb66407cca10",
+      "target_id": "ru-id01420",
+      "tag": "p",
+      "target_sha256": "6c6a081ca244323619fd72893195d24cdcca27c82afba622c9b97297722534a8"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01416",
+      "verdict": "PASS",
+      "reason": "Faithful short question and speech tag; no omissions or changes."
+    },
+    {
+      "source_id": "id01417",
+      "target": "",
+      "verdict": "PASS",
+      "reason": "Rhetorical question, the wind carrying off the hat, and the 'Mais' nuance (Да разве) are all preserved."
+    },
+    {
+      "source_id": "id01418",
+      "verdict": "PASS",
+      "reason": "All facts and agency kept: Aramis dashes after the hat, d'Artagnan seeks a thinner spot in the hedge, the moon (curious like the officer) emerges, and he recognises the duchess's blue eyes, golden hair and noble head. 'Problématique' rendered acceptably as 'загадочного'; name form de Лонгвиль is correct."
+    },
+    {
+      "source_id": "id01419",
+      "verdict": "PASS",
+      "reason": "Hat on the head and one in the hand, laughing return, both continuing to the Jesuit convent: all preserved."
+    },
+    {
+      "source_id": "id01420",
+      "verdict": "PASS",
+      "reason": "Dialogue, d'Artagnan's rising and brushing his knee, 'je te tiens', frondeur and lover of Madame de Longueville all rendered accurately with natural register."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJKhkocgYnnBMmc76Ev2",
+    "usage": {
+      "input_tokens": 2055,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 428,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJKhzjmcPVy7AtnGu4Cn",
+    "usage": {
+      "input_tokens": 3171,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1388,
+      "output_tokens_details": {
+        "thinking_tokens": 547
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJKiepjEea9iYkcCJRoY",
+        "usage": {
+          "input_tokens": 3232,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1443,
+          "output_tokens_details": {
+            "thinking_tokens": 511
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01416",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic; the question and speaker attribution match the French, and the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id01417",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Rhetorical negative question 'ne voyez-vous pas' is preserved by 'Да разве вы не видите'; the agency (the wind carried off the hat) and the tense are correct."
+        },
+        {
+          "source_id": "id01418",
+          "verdict": "PASS",
+          "reason": "All details are preserved: Aramis's dash after the fugitive felt hat, d'Artagnan seizing the opportunity to find a thinner spot in the hedge, the 'problematic' rider, the moon as curious as the officer and its indiscreet light, and the recognition of the duchess's blue eyes, golden hair and noble head. Nothing is omitted or added."
+        },
+        {
+          "source_id": "id01419",
+          "verdict": "PASS",
+          "reason": "The one-hat-on-head, one-in-hand detail, the laughter, the pair continuing toward the Jesuit convent are all rendered accurately, with the past tense preserved."
+        },
+        {
+          "source_id": "id01420",
+          "verdict": "PASS",
+          "reason": "'Je te tiens' is rendered idiomatically as 'ты у меня в руках'; the gestures (rising, brushing the knee) and the claim that Aramis is a Frondeur and Madame de Longueville's lover are fully preserved, and the established naming conventions are respected."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
