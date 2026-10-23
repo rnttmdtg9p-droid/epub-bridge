@@ -1,0 +1,134 @@
+{
+  "unit": 13,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01635",
+      "target": "— Но он сделает меня бароном.",
+      "source_sha256": "82cb4f3372253bb97be7af53192306865675b48737f76f7d2103a42df64f5172",
+      "target_id": "ru-id01635",
+      "tag": "p",
+      "target_sha256": "078cf37813cecd279ea994db8e8faa0838c559c95826548c418a125b212da06c"
+    },
+    {
+      "source_id": "id01636",
+      "target": "— Ну разумеется! — сказал д’Артаньян. — Это решено заранее; я вам это говорил и повторяю снова: за ваше баронство я ручаюсь.",
+      "source_sha256": "7234d128442110ab4f1aaab835c83d2708442055f08ad0edd7127207653a40b5",
+      "target_id": "ru-id01636",
+      "tag": "p",
+      "target_sha256": "f25bd8cf8c5b497684d216d63d68ef5a9b5acdd3c11078ff63a1995fa6d5f81c"
+    },
+    {
+      "source_id": "id01637",
+      "target": "После этого обещания Портос, который никогда не сомневался в слове своего друга, вместе с ним вновь направился к замку.",
+      "source_sha256": "5a60e3f86b3bfa9e4d04d44960c0325955e04a79d4ad71420beffe59ea7ef3bf",
+      "target_id": "ru-id01637",
+      "tag": "p",
+      "target_sha256": "7f6711eb6ce5feed98717114d94f4dd84075ddd2dd5925b4ebaaadf44f0782da"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01635",
+      "verdict": "PASS",
+      "reason": "Faithful: «Mais il me fera baron» — future tense, agency (Mazarin makes Porthos baron) and the continuation of the previous «Mais…» are preserved."
+    },
+    {
+      "source_id": "id01636",
+      "verdict": "PASS",
+      "reason": "Faithful: «Eh pardieu!» rendered as «Ну разумеется!»; «c'est arrêté d'avance», «je vous l'ai dit et je vous le répète», and «je réponds de votre baronnie» are all preserved; dialogue punctuation is correct."
+    },
+    {
+      "source_id": "id01637",
+      "verdict": "PASS",
+      "reason": "Faithful: the promise, Porthos's never having doubted his friend's word (negation preserved), and the return together to the château are all conveyed accurately. «Reprit le chemin» is rendered as «вновь направился к замку»."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJKVivRonUvzSCKLHn88",
+    "usage": {
+      "input_tokens": 1369,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 171,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJKVrvtLb6TtD5HqSaEG",
+    "usage": {
+      "input_tokens": 1999,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 475,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJKW86D7jVvBiJeBkTJX",
+        "usage": {
+          "input_tokens": 2060,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 503,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01635",
+          "verdict": "PASS",
+          "reason": "Faithful: «il me fera baron» = «он сделает меня бароном»; the future tense, agency (Mazarin as subject) and the 'Mais' continuation of the previous dialogue turn are preserved."
+        },
+        {
+          "source_id": "id01636",
+          "verdict": "PASS",
+          "reason": "Accurate: 'Eh pardieu' rendered as «Ну разумеется»; 'arrêté d'avance' = «решено заранее»; the repetition («je vous l'ai dit et je vous le répète») and the guarantee of the baronnie are preserved. Russian dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id01637",
+          "verdict": "PASS",
+          "reason": "Faithful: Porthos, who never doubted his friend's word, 'reprit avec lui le chemin du château' = «вместе с ним вновь направился к замку». No omissions or additions; the negation 'n'avait jamais douté' is retained."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
