@@ -1,8 +1,14 @@
 {
-  "state": "RUNNING_CONTINUOUS_TRANSLATION_REVIEW",
-  "unit": 5,
-  "last_complete_batch": 1,
-  "run_id": "39916925074",
-  "utc": "2026-10-23T07:25:36.099959+00:00",
-  "checkpoint_is_stop_condition": false
+  "state": "PARTIAL_FAILURE",
+  "errors": [
+    {
+      "unit": 5,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    }
+  ],
+  "source_units": 70,
+  "source_rows": 5738,
+  "translation_provider": "DeepL quality_optimized",
+  "review_provider": "claude-sonnet-5-5",
+  "utc": "2026-10-23T07:25:38.770721+00:00"
 }
