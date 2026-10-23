@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKLcXQhSqzn3i4S8esPU",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-029-0100\",\"target\":\"— Почему?\"},{\"source_id\":\"043-029-0101\",\"target\":\"— Потому что Мэри Джейн с этих пор будет в трауре; и не успеешь оглянуться, как негру, который убирает комнаты, прикажут уложить это тряпьё в ящики и убрать подальше; а ты думаешь, негр может наткнуться на деньги и не взять себе взаймы частичку?\"},{\"source_id\":\"043-029-0102\",\"target\":\"— Опять у тебя голова на месте, герцог, — говорит король; и он начинает шарить под занавеской в двух-трёх футах от меня. Я прижался к стене и сидел тихо-претихо, хотя меня трясло; и я думал, что бы эти молодчики мне сказали, если бы поймали меня; и пытался сообразить, что мне лучше делать, если поймают. Но король достал мешок раньше, чем я успел додумать хотя бы полмысли, и даже не заподозрил, что я тут. Они взяли и пропихнули мешок в дыру в соломенном тюфяке, что лежал под пуховой периной, затолкали его на фут-другой в солому и сказали, что теперь всё в порядке: негр только заправляет пуховую перину, а соломенный тюфяк переворачивает разве что раза два в год, так что теперь мешку не грозит никакая опасность быть украденным.\"},{\"source_id\":\"043-029-0103\",\"target\":\"Гек берёт деньги\"},{\"source_id\":\"043-029-0104\",\"target\":\"Но я-то знал лучше. Я вытащил его оттуда, не успели они дойти и до середины лестницы. Я ощупью добрался до своей каморки и спрятал его там, пока не подвернётся случай придумать что-нибудь получше. Я рассудил, что лучше спрятать его где-нибудь вне дома, потому что, если они хватятся пропажи, то устроят в доме хороший обыск: это я знал распрекрасно. Потом я лёг, не раздеваясь; но заснуть я не смог бы, даже если бы хотел, — так мне не терпелось покончить с этим делом. Немного погодя я услышал, как король с герцогом поднялись наверх; тогда я скатился со своей подстилки, лёг, положив подбородок на верхнюю ступеньку лестницы, и стал ждать, не случится ли чего. Но ничего не случилось.\"},{\"source_id\":\"043-029-0105\",\"target\":\"Так я и пролежал, пока не стихли все поздние звуки и ещё не начались ранние; а потом соскользнул вниз по лестнице.\"},{\"source_id\":\"043-029-0106\",\"target\":\"Щель в двери столовой\"}],\"review\":[{\"source_id\":\"043-029-0100\",\"verdict\":\"PASS\",\"reason\":\"Faithful; dialogue dash correct.\"},{\"source_id\":\"043-029-0101\",\"verdict\":\"PASS\",\"reason\":\"Meaning, 'borrow' irony, and historical term preserved; the prior correction is verified.\"},{\"source_id\":\"043-029-0102\",\"verdict\":\"PASS\",\"reason\":\"All actions, agency and negations are preserved; colloquial tone good; the correction is verified.\"},{\"source_id\":\"043-029-0103\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate; the name Гек is consistent.\"},{\"source_id\":\"043-029-0104\",\"verdict\":\"PASS\",\"reason\":\"Accurate: 'it' is the bag (masculine), hiding, ransack, waiting and the ending are preserved. The correction is verified.\"},{\"source_id\":\"043-029-0105\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'held on' rendered as waiting in place, which fits the context.\"},{\"source_id\":\"043-029-0106\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6840,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1299,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
