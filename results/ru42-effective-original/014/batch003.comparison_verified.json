@@ -1,0 +1,273 @@
+{
+  "unit": 14,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-014-0059",
+      "target": "— Он наш! Наш! — воскликнул Гленарван.",
+      "source_sha256": "ca31776f96bafb3b7722741d81fdcaf5c33ae4474bb5b0d89fa3643185425435",
+      "target_id": "ru-fr42c-014-0059",
+      "tag": "p",
+      "target_sha256": "77ae4beda9b409f3d24498742b12f0b9804e3b320f610d45aa6add399f4d364f"
+    },
+    {
+      "source_id": "fr42c-014-0060",
+      "target": "И, не доискиваясь, откуда раздался этот провиденциальный выстрел, он бросился к кондору. Его спутники побежали следом.",
+      "source_sha256": "cf5d0108bac4dcca8ad38e29537af4304cc30809c8604213627207d6a885e5f6",
+      "target_id": "ru-fr42c-014-0060",
+      "tag": "p",
+      "target_sha256": "3983abd95793e4db34496b83eb3f0b31026d4f74fcaac6488aada82688541605"
+    },
+    {
+      "source_id": "fr42c-014-0061",
+      "target": "Когда они подбежали, птица была уже мертва, а тело Роберта исчезало под её широкими крыльями. Гленарван бросился на труп ребёнка, вырвал его из когтей птицы, уложил на траву и приложил ухо к груди этого бездыханного тела.",
+      "source_sha256": "a9aa00312fe5c6732fb644da27cd0c22738541ed5779af7b86dc0e07bfec3103",
+      "target_id": "ru-fr42c-014-0061",
+      "tag": "p",
+      "target_sha256": "6bdec5a6f4221372d1ba374b55a9f8ec9a5d2530c077b344e1d45f650e2dcef6"
+    },
+    {
+      "source_id": "fr42c-014-0062",
+      "target": "Никогда более страшный крик радости не вырывался из человеческих уст, чем в тот миг, когда Гленарван поднялся, повторяя:",
+      "source_sha256": "494bca363a4704262b38acb3ad36fa52e8ab1049277e2b4f619011997304e4fa",
+      "target_id": "ru-fr42c-014-0062",
+      "tag": "p",
+      "target_sha256": "e528d688801c84d20a17cc608c098fa7095f1e937472db38052df356465f28a6"
+    },
+    {
+      "source_id": "fr42c-014-0063",
+      "target": "— Он жив! Он ещё жив!",
+      "source_sha256": "bfa93c82963233765fe1458d26f9eb554cdc452e5f6a4ca4e2793323ade6f8a6",
+      "target_id": "ru-fr42c-014-0063",
+      "tag": "p",
+      "target_sha256": "36fe2c4d3caf6c0e45995089240acf0b6f9e7f8491a88dc52f2bb3167e952909"
+    },
+    {
+      "source_id": "fr42c-014-0064",
+      "target": "Птица уносила Роберта, зацепив его за одежду. (Стр. 103.)",
+      "source_sha256": "a5d1986dfe11414fce9e6042810e79f82c3b2cc6faf463a8056bc68d91d57ccb",
+      "target_id": "ru-fr42c-014-0064",
+      "tag": "figcaption",
+      "target_sha256": "d0f88a76baa697211f6c9746e9493623c3e4d07ca7d261eb3bf12f2a465ae4ea"
+    },
+    {
+      "source_id": "fr42c-014-0065",
+      "target": "В одно мгновение с Роберта сняли одежду, а лицо его омыли свежей водой. Он шевельнулся, открыл глаза, взглянул, произнёс несколько слов, и слова эти были:",
+      "source_sha256": "783ce3509ead9a10775e451ed938da5e130bbc58ef11ad175908554d7304bb66",
+      "target_id": "ru-fr42c-014-0065",
+      "tag": "p",
+      "target_sha256": "eccff9ee9263b7ed025b45b7dcf853bd77ed9488a7ba844a6aa1e3292b02822e"
+    },
+    {
+      "source_id": "fr42c-014-0066",
+      "target": "— Ах! это вы, милорд… отец мой!..",
+      "source_sha256": "a1efb671a26c08719bb39f2f8bc8e843440601146f5969ad8e1d2ff2a9d0d1c4",
+      "target_id": "ru-fr42c-014-0066",
+      "tag": "p",
+      "target_sha256": "22e0ea254138b919d9c89a86cd3a69cc995c0d6585c2ab31e29c14f4bf9a1bb1"
+    },
+    {
+      "source_id": "fr42c-014-0067",
+      "target": "Гленарван не мог ответить; волнение душило его, и, опустившись на колени, он заплакал возле этого мальчика, так чудесно спасённого.",
+      "source_sha256": "bb922f12423daaf3e0287a3568a89afa696d0cc35240aae3c3c1a5a6580275a8",
+      "target_id": "ru-fr42c-014-0067",
+      "tag": "p",
+      "target_sha256": "b3bbe3b2aed3938d8af003e7c2628230361938740c2d38cbfc59e6b4d9a2b9c3"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-014-0059",
+      "verdict": "CORRECTED",
+      "reason": "Использована русская диалоговая пунктуация; «Нам!» заменено на естественное «Он наш!» без изменения смысла."
+    },
+    {
+      "source_id": "fr42c-014-0060",
+      "verdict": "CORRECTED",
+      "reason": "Уточнены «провиденциальный выстрел» и «не доискиваясь»; действия сохранены."
+    },
+    {
+      "source_id": "fr42c-014-0061",
+      "verdict": "CORRECTED",
+      "reason": "Исправлено «подошли» на «подбежали» по контексту, сохранено «труп/тело», все действия Гленарвана."
+    },
+    {
+      "source_id": "fr42c-014-0062",
+      "verdict": "CORRECTED",
+      "reason": "Убрано «на ноги» и «в тот момент» для более точной и естественной фразы."
+    },
+    {
+      "source_id": "fr42c-014-0063",
+      "verdict": "CORRECTED",
+      "reason": "Реплика оформлена тире по русской норме; смысл сохранён."
+    },
+    {
+      "source_id": "fr42c-014-0064",
+      "verdict": "CORRECTED",
+      "reason": "Исправлено «ухватившись за его одежду» — птица зацепила Роберта за одежду; подпись сохранена."
+    },
+    {
+      "source_id": "fr42c-014-0065",
+      "verdict": "CORRECTED",
+      "reason": "Исправлена конструкция «и это было, чтобы сказать»; сохранены безличный залог и последовательность действий."
+    },
+    {
+      "source_id": "fr42c-014-0066",
+      "verdict": "CORRECTED",
+      "reason": "Реплика оформлена тире; «Ah! vous» передано как «это вы», многоточия сохранены."
+    },
+    {
+      "source_id": "fr42c-014-0067",
+      "verdict": "CORRECTED",
+      "reason": "«Эмоции» заменено на «волнение»; «мальчика, так чудесно спасённого» точнее передаёт «si miraculeusement sauvé»."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-014-0059",
+      "before": "«Нам! Нам!» — воскликнул Гленарван.",
+      "after": "— Он наш! Наш! — воскликнул Гленарван."
+    },
+    {
+      "source_id": "fr42c-014-0060",
+      "before": "И, не пытаясь выяснить, откуда раздался этот спасительный выстрел, он бросился к кондору. Его товарищи побежали за ним.",
+      "after": "И, не доискиваясь, откуда раздался этот провиденциальный выстрел, он бросился к кондору. Его спутники побежали следом."
+    },
+    {
+      "source_id": "fr42c-014-0061",
+      "before": "Когда они подошли, птица уже была мертва, а тело Роберта скрывалось под её широкими крыльями. Гленарван бросился к телу ребёнка, вырвал его из когтей птицы, уложил на траву и прижал ухо к груди этого безжизненного тела.",
+      "after": "Когда они подбежали, птица была уже мертва, а тело Роберта исчезало под её широкими крыльями. Гленарван бросился на труп ребёнка, вырвал его из когтей птицы, уложил на траву и приложил ухо к груди этого бездыханного тела."
+    },
+    {
+      "source_id": "fr42c-014-0062",
+      "before": "Никогда ещё из человеческих уст не вырывался более страшный крик радости, чем в тот момент, когда Гленарван поднялся на ноги, повторяя:",
+      "after": "Никогда более страшный крик радости не вырывался из человеческих уст, чем в тот миг, когда Гленарван поднялся, повторяя:"
+    },
+    {
+      "source_id": "fr42c-014-0063",
+      "before": "«Он жив! Он ещё жив!»",
+      "after": "— Он жив! Он ещё жив!"
+    },
+    {
+      "source_id": "fr42c-014-0064",
+      "before": "Птица уносила Роберта, ухватившись за его одежду. (Стр. 103.)",
+      "after": "Птица уносила Роберта, зацепив его за одежду. (Стр. 103.)"
+    },
+    {
+      "source_id": "fr42c-014-0065",
+      "before": "В мгновение ока Роберта раздели, а его лицо облили прохладной водой. Он пошевелился, открыл глаза, посмотрел, произнес несколько слов, и это было, чтобы сказать:",
+      "after": "В одно мгновение с Роберта сняли одежду, а лицо его омыли свежей водой. Он шевельнулся, открыл глаза, взглянул, произнёс несколько слов, и слова эти были:"
+    },
+    {
+      "source_id": "fr42c-014-0066",
+      "before": "«Ах! Вы, милорд… мой отец!…»",
+      "after": "— Ах! это вы, милорд… отец мой!.."
+    },
+    {
+      "source_id": "fr42c-014-0067",
+      "before": "Гленарван не смог ответить; эмоции душили его, и, опустившись на колени, он заплакал рядом с этим ребенком, чудом спасённым.",
+      "after": "Гленарван не мог ответить; волнение душило его, и, опустившись на колени, он заплакал возле этого мальчика, так чудесно спасённого."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/014/batch003.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJqsrNkqDLexRwP5h6R3",
+    "usage": {
+      "input_tokens": 5155,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1265,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJqtWCbS7mmpCDsXJv7z",
+        "usage": {
+          "input_tokens": 6286,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1252,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-014-0059",
+          "verdict": "PASS",
+          "reason": "Faithful in sense; the expansion «Он наш!» is a defensible rendering of the elliptical «À nous!» (the prey is ours), with dialogue punctuation correct."
+        },
+        {
+          "source_id": "fr42c-014-0060",
+          "verdict": "PASS",
+          "reason": "Meaning, agency and sequence preserved; «провиденциальный» keeps the source word, and the companions run after him."
+        },
+        {
+          "source_id": "fr42c-014-0061",
+          "verdict": "PASS",
+          "reason": "All actions preserved: arrival, bird dead, body vanishing under the wings, rescue from the talons, laid on grass, ear to chest. Correct."
+        },
+        {
+          "source_id": "fr42c-014-0062",
+          "verdict": "PASS",
+          "reason": "Comparative structure and the repeated words are preserved; the sentence is idiomatic."
+        },
+        {
+          "source_id": "fr42c-014-0063",
+          "verdict": "PASS",
+          "reason": "«Il vit ! il vit encore !» is rendered exactly, with Russian dialogue dash."
+        },
+        {
+          "source_id": "fr42c-014-0064",
+          "verdict": "PASS",
+          "reason": "The caption is faithful: the bird carried Robert off by his clothes, and the page reference is kept."
+        },
+        {
+          "source_id": "fr42c-014-0065",
+          "verdict": "PASS",
+          "reason": "Passive agency preserved (clothes removed, face bathed in fresh water), and the sequence of Robert's movements is intact."
+        },
+        {
+          "source_id": "fr42c-014-0066",
+          "verdict": "PASS",
+          "reason": "Dialogue preserved, including the ellipses and the cry «mon père»; the Russian is idiomatic."
+        },
+        {
+          "source_id": "fr42c-014-0067",
+          "verdict": "PASS",
+          "reason": "Glenarvan's inability to answer, the choking emotion, kneeling and weeping, and the miraculous rescue are all preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
