@@ -1,0 +1,123 @@
+{
+  "unit": 29,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id03901",
+      "target": "— Вот что значит служить своей стране по совести, — с удовлетворением сказал Бруссель.",
+      "source_sha256": "98618808575da3e544d4a680a44cfc716b3f8a9779c55c30c69ed7961e43aee5",
+      "target_id": "ru-id03901",
+      "tag": "p",
+      "target_sha256": "b8876f4995bdb25f9ab3d77ffe170bee084696c9909b4e8afee0e44a8b240e1c"
+    },
+    {
+      "source_id": "id03902",
+      "target": "Врачи вышли после часового совещания и предписали обмывать ушибы водой с солью.",
+      "source_sha256": "b5c60e179b6c835439bf5aa9571bde582f11fe2b3e8d276df0a0896bf8485a39",
+      "target_id": "ru-id03902",
+      "tag": "p",
+      "target_sha256": "ac907831c8dcda4a85e39f64e497b8cc4521eac5c7c399670bf1052a1e87b63a"
+    },
+    {
+      "source_id": "id03903",
+      "target": "Весь день тянулась вереница карет. Вся Фронда записалась у Брусселя.",
+      "source_sha256": "fc48db507e9b00e1e9208872485531827b7a97cc4d61cc008817701642c60d59",
+      "target_id": "ru-id03903",
+      "tag": "p",
+      "target_sha256": "c1a2532a300bce27cc6cf88cd974825a963f80b06878044db08fddea770b4230"
+    },
+    {
+      "source_id": "id03904",
+      "target": "— Какой прекрасный триумф, отец! — сказал молодой человек, который, не понимая истинной причины, влекущей всех этих людей к его отцу, принимал всерьёз эту демонстрацию вельмож, принцев и их друзей. — Увы! мой милый Жак, — сказал Бруссель, — я очень боюсь, что заплачу за этот триумф довольно дорого, и я сильно ошибаюсь, если господин Мазарини в эту минуту не выписывает мне счёт за огорчения, которые я ему причиняю.",
+      "source_sha256": "0edefff6051ad7cf657a0ba31968eb489a37a70bdc23f54b0bcceaa9763b724d",
+      "target_id": "ru-id03904",
+      "tag": "p",
+      "target_sha256": "ad2ef6fec93e4ae27354dd7005f22a2cd2c6f9f45ceb6ef6e624b3fc1ff8cf6f"
+    },
+    {
+      "source_id": "id03905",
+      "target": "Фрике вернулся в полночь: ему не удалось найти врача.",
+      "source_sha256": "af831fd6dc78b75662927add4e50b635ff8a6c9b27d3f16e4c84f75607f8b2b9",
+      "target_id": "ru-id03905",
+      "tag": "p",
+      "target_sha256": "84c9aef87d51d3f8f173ee7feb2bf508c3232e582d68c4e8ff18abadee2c9a3e"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id03901",
+      "verdict": "PASS",
+      "reason": "Faithful to the source: the maxim, the agent and the tone are all preserved."
+    },
+    {
+      "source_id": "id03902",
+      "verdict": "PASS",
+      "reason": "Complete and accurate: the hour of deliberation, the order to bathe the contusions, and water with salt are all rendered."
+    },
+    {
+      "source_id": "id03903",
+      "verdict": "PASS",
+      "reason": "Both sentences are rendered accurately, and the idiom of the whole Fronde signing up at Broussel's is natural in Russian."
+    },
+    {
+      "source_id": "id03904",
+      "verdict": "CORRECTED",
+      "reason": "\"un peu cher\" had been strengthened to \"слишком дорого\", so it is now \"довольно дорого\". \"cette démonstration\" had been padded as \"изъявление чувств\", so it is now \"демонстрация\". \"j'ai bien peur\" is now \"я очень боюсь\". \"faire la carte\" in the context of paying had been literally \"составляет карту\", which is unidiomatic, so it is now \"выписывает счёт\". The single paragraph with both speakers is kept."
+    },
+    {
+      "source_id": "id03905",
+      "verdict": "PASS",
+      "reason": "Accurate: the time, the return, and the failure to find a doctor are all preserved, with negation and tense intact."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id03904",
+      "before": "— Какой прекрасный триумф, отец! — сказал молодой человек, который, не понимая истинной причины, влекущей всех этих людей к его отцу, принимал всерьёз это изъявление чувств со стороны вельмож, принцев и их друзей. — Увы! мой милый Жак, — сказал Бруссель, — боюсь, что этот триумф обойдётся мне слишком дорого, и я сильно ошибаюсь, если господин Мазарини в эту минуту не составляет мне карту огорчений, которые я ему причиняю.",
+      "after": "— Какой прекрасный триумф, отец! — сказал молодой человек, который, не понимая истинной причины, влекущей всех этих людей к его отцу, принимал всерьёз эту демонстрацию вельмож, принцев и их друзей. — Увы! мой милый Жак, — сказал Бруссель, — я очень боюсь, что заплачу за этот триумф довольно дорого, и я сильно ошибаюсь, если господин Мазарини в эту минуту не выписывает мне счёт за огорчения, которые я ему причиняю."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMeLRKkL4jytD3q8TUs",
+    "usage": {
+      "input_tokens": 2225,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMecArVhyZf1JNziJtq",
+    "usage": {
+      "input_tokens": 3326,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1846,
+      "output_tokens_details": {
+        "thinking_tokens": 1006
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

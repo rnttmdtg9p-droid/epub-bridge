@@ -1,0 +1,624 @@
+{
+  "unit": 28,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id03733",
+      "target": "Что до д’Артаньяна, то, опасаясь обманного выпада, он оставался настороже.",
+      "source_sha256": "a100d15a6e8c7fca6a92d30ff05851e98646464d62f7093f4165d87225b6a190",
+      "target_id": "ru-id03733",
+      "tag": "p",
+      "target_sha256": "0955631f8a55708a0f620f29d862b305d5c4457b005a63c4063b3b5c5404526b"
+    },
+    {
+      "source_id": "id03734",
+      "target": "— Берегитесь, — сказал Портос своему противнику, — у меня ещё оба пистолета заряжены.",
+      "source_sha256": "3a25c2181ae47524d3534b11def6f5ff1c1b99d30e4579597517eb601821f7e6",
+      "target_id": "ru-id03734",
+      "tag": "p",
+      "target_sha256": "e3fbcddfea980cf9f630907e5b45e371bacad7a858473b55fc03f0d5654068cd"
+    },
+    {
+      "source_id": "id03735",
+      "target": "— Тем больше оснований вам стрелять первым, — ответил тот.",
+      "source_sha256": "0528aa8e35c36172ef00b9dad05bdf46cb280ee733f1e5504dc88082de3e91aa",
+      "target_id": "ru-id03735",
+      "tag": "p",
+      "target_sha256": "6e5d58bab7d09da577f64900f5495e3b78ecb334f543ff9133e20eb914f2b65a"
+    },
+    {
+      "source_id": "id03736",
+      "target": "Портос выстрелил: вспышка осветила поле боя.",
+      "source_sha256": "238ed4ee103bd846ba1e7f975ee2108fe7e694ecccb5c7315a69ba936e7cbff2",
+      "target_id": "ru-id03736",
+      "tag": "p",
+      "target_sha256": "13675a61ce5915102693948e4dda5234b1b59e77306041815df4431cf2a5da16"
+    },
+    {
+      "source_id": "id03737",
+      "target": "При этом свете оба других бойца издали каждый по крику.",
+      "source_sha256": "4482cc5c213dc6f91ca85a223881ba2ce7853431a937d9730d7ff127668615e6",
+      "target_id": "ru-id03737",
+      "tag": "p",
+      "target_sha256": "1516f22a5331ccce214fff1beadcfa27f2137872d0145d595ed453294c7f4310"
+    },
+    {
+      "source_id": "id03738",
+      "target": "— Атос! — сказал д’Артаньян.",
+      "source_sha256": "55b560792a73ab3bee78f0bd06dd97387c39945845e1445efeb898de9aa1e6ba",
+      "target_id": "ru-id03738",
+      "tag": "p",
+      "target_sha256": "995c00f1d88a2acc5dfa9f2303a0f2281ddd46608c94d1a8dae1adc36146f14c"
+    },
+    {
+      "source_id": "id03739",
+      "target": "— Д’Артаньян! — сказал Атос.",
+      "source_sha256": "19de0edbdb9f0cf7c87aeaaeca23a1bd6a9f5036e2fb7b7776e844c17ec1f5d6",
+      "target_id": "ru-id03739",
+      "tag": "p",
+      "target_sha256": "d762dda48f0db146724128ab0f54523796b090e8a4d69fa7b510011799b80950"
+    },
+    {
+      "source_id": "id03740",
+      "target": "Атос поднял шпагу, д’Артаньян опустил свою.",
+      "source_sha256": "fdc744bdd27d781617cf8f22039548c4f9c9c3b96fb771cc944d4b84979bf6ab",
+      "target_id": "ru-id03740",
+      "tag": "p",
+      "target_sha256": "7c563034317b3cd868d5b8c95c82cdc4b9578a02f50e4c385c265e80e21d42de"
+    },
+    {
+      "source_id": "id03741",
+      "target": "— Арамис! — крикнул Атос. — Не стреляйте!",
+      "source_sha256": "4d7eb2cf1a27c529546c452fcda93b11934c21e20ea9d8629ac5d71909d3cb70",
+      "target_id": "ru-id03741",
+      "tag": "p",
+      "target_sha256": "190eb0a1d4774ca1c1b082dbb18f41e92e988f515072ba449a0e82fef9a64cc7"
+    },
+    {
+      "source_id": "id03742",
+      "target": "— А-а! Это вы, Арамис? — сказал Портос.",
+      "source_sha256": "ad1f49a8e4afee88a442135fe2c8efd456a798d529698c44d0fa541429201256",
+      "target_id": "ru-id03742",
+      "tag": "p",
+      "target_sha256": "4f027084337f2df3750bb8ee529d33cf664b85c7f88116cdb5ee56b9343aa398"
+    },
+    {
+      "source_id": "id03743",
+      "target": "И он бросил пистолет.",
+      "source_sha256": "72acd9d5b2fa58c04d3913aa2cf091af3ddef5ce9fd2b16ca8f6e50e77056e93",
+      "target_id": "ru-id03743",
+      "tag": "p",
+      "target_sha256": "3ac9f173ac2b41ba623a0e23da71eaf2f3b9d208861c0ebf98492a5a2a97fe68"
+    },
+    {
+      "source_id": "id03744",
+      "target": "Арамис сунул свой обратно в седельную кобуру и вложил шпагу в ножны.",
+      "source_sha256": "a1df5f89f2b726d24045d26cb295f8e506a3539babe8be11b6f09d10e95f1674",
+      "target_id": "ru-id03744",
+      "tag": "p",
+      "target_sha256": "c7b7e22f30a8c01e6eff226458772a3fc3926aaf1497f52a7643d69b5bfd94cc"
+    },
+    {
+      "source_id": "id03745",
+      "target": "— Сын мой! — сказал Атос, протягивая руку д’Артаньяну.",
+      "source_sha256": "5732c485629c9d44df8448928345840278baba86d9cd9743410a21e09aa9e771",
+      "target_id": "ru-id03745",
+      "tag": "p",
+      "target_sha256": "218b01d182386e42e01995423e418603c01aead7da69da7ad4630757fc0d548e"
+    },
+    {
+      "source_id": "id03746",
+      "target": "Так он называл его когда-то в минуты нежности.",
+      "source_sha256": "4a3f9625008fe002ef618591736f1dffa8a982146209e62cc1adb179d74bbd23",
+      "target_id": "ru-id03746",
+      "tag": "p",
+      "target_sha256": "585a8fc1733602a4e52f3cb4c1341467db106d7b7750c23d0b1939bb8bfe1da9"
+    },
+    {
+      "source_id": "id03747",
+      "target": "— Атос, — сказал д’Артаньян, ломая руки, — так вы, значит, его защищаете? А я ведь поклялся доставить его живым или мёртвым! Ах, я обесчещен!",
+      "source_sha256": "f90a8eeb7c8042445e34f4f3e3cb4df56fcc2c982b5310d36b349de2faee614f",
+      "target_id": "ru-id03747",
+      "tag": "p",
+      "target_sha256": "63e60d3781fca85637e6eacd350dc7fdf2240172d22815ece7fdc270520bad72"
+    },
+    {
+      "source_id": "id03748",
+      "target": "— Убейте меня, — сказал Атос, распахивая грудь, — если вашей чести нужна моя смерть.",
+      "source_sha256": "bd71b5c89101417ac24105aa43ce54193a4ff7aed93ca1c22d0d4e6a689d5ae5",
+      "target_id": "ru-id03748",
+      "tag": "p",
+      "target_sha256": "fe25b66025c27d1f4d5df84a9243940216bae5e457061ad7ec8583af16184dd5"
+    },
+    {
+      "source_id": "id03749",
+      "target": "— О, горе мне! Горе мне! — восклицал д’Артаньян. — Был на свете один-единственный человек, который мог меня остановить, и надо же, чтобы рок поставил этого человека на моём пути! Ах, что я скажу кардиналу?",
+      "source_sha256": "5de4409adea664374f3d2082b9168ee6a9037f671754fa98111a07b19e07c06c",
+      "target_id": "ru-id03749",
+      "tag": "p",
+      "target_sha256": "e6681a1911b3178ef3cf7a8cd73ce069711da7d4f69467eb09957c0b44bb337a"
+    },
+    {
+      "source_id": "id03750",
+      "target": "— Вы скажете ему, сударь, — ответил голос, разносившийся над полем боя, — что он послал против меня двух единственных людей, способных повалить четверых, сойтись врукопашную с графом де Ла Фер и шевалье д’Эрбле, не оказавшись в невыгодном положении, и сдаться лишь пятидесяти.",
+      "source_sha256": "2d16027d772751c33719615190bf7d15338eeae27b6166d15f1a96a70893d2ce",
+      "target_id": "ru-id03750",
+      "tag": "p",
+      "target_sha256": "6b794aa066fc7329449d2f4db3321a827e4d35eee8632c96cae9af14d523766d"
+    },
+    {
+      "source_id": "id03751",
+      "target": "— Принц! — сказали одновременно Атос и Арамис, сделав движение, чтобы открыть герцога де Бофора, меж тем как д’Артаньян и Портос, со своей стороны, отступили на шаг.",
+      "source_sha256": "f8ad17c936597904bc8f4a4f23a6e0f04e41cc1233cc0fd8bb68d786a77f7eec",
+      "target_id": "ru-id03751",
+      "tag": "p",
+      "target_sha256": "d57e7b7fb6e6e34f12e3e15bda6d555d499bb2cba262f587c68591c75d4cc5a8"
+    },
+    {
+      "source_id": "id03752",
+      "target": "— Пятьдесят всадников! — пробормотали д’Артаньян и Портос.",
+      "source_sha256": "6444187012f0fb7a75e90d39fef6c8d181f52c361aeb30ed70bec0358b9c8e36",
+      "target_id": "ru-id03752",
+      "tag": "p",
+      "target_sha256": "56d32ea952b78bb48486f86add883ed0e2d6bcabaed8eb8ec77ed08abcf10aaa"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id03733",
+      "verdict": "PASS",
+      "reason": "Faithful: caution against a feint, defensive stance preserved."
+    },
+    {
+      "source_id": "id03734",
+      "verdict": "PASS",
+      "reason": "Accurate; both pistols still loaded."
+    },
+    {
+      "source_id": "id03735",
+      "verdict": "CORRECTED",
+      "reason": "Draft 'Тем более причин, чтобы вы стреляли' was clumsy; rendered idiomatically while keeping 'raison de plus'."
+    },
+    {
+      "source_id": "id03736",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id03737",
+      "verdict": "CORRECTED",
+      "reason": "'chacun' (each) was replaced by 'разом' (simultaneously), which is not in the source; restored 'каждый'."
+    },
+    {
+      "source_id": "id03738",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id03739",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id03740",
+      "verdict": "PASS",
+      "reason": "Accurate; agency preserved."
+    },
+    {
+      "source_id": "id03741",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id03742",
+      "verdict": "CORRECTED",
+      "reason": "Removed added 'Так' not in the source."
+    },
+    {
+      "source_id": "id03743",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id03744",
+      "verdict": "PASS",
+      "reason": "Accurate; 'fontes' as saddle holster."
+    },
+    {
+      "source_id": "id03745",
+      "verdict": "CORRECTED",
+      "reason": "'Mon fils' is the name mentioned in the next sentence; 'Сын мой' preserves it, rather than 'мальчик'."
+    },
+    {
+      "source_id": "id03746",
+      "verdict": "CORRECTED",
+      "reason": "Adjusted to 'когда-то' for 'autrefois'; the 'name' link now matches the previous row."
+    },
+    {
+      "source_id": "id03747",
+      "verdict": "CORRECTED",
+      "reason": "Added 'ведь' to render the emphatic 'moi qui avais juré'; the rest is preserved."
+    },
+    {
+      "source_id": "id03748",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id03749",
+      "verdict": "CORRECTED",
+      "reason": "'la fatalité' rendered as 'роковой случай' with correct agency: fate puts the man on his path."
+    },
+    {
+      "source_id": "id03750",
+      "verdict": "CORRECTED",
+      "reason": "Draft 'перекрывший шум' added 'noise'; the voice 'dominait' the battlefield, so rendered as a voice carrying over it. All counts and names preserved."
+    },
+    {
+      "source_id": "id03751",
+      "verdict": "PASS",
+      "reason": "Accurate; simultaneity, 'démasquer' and the retreat preserved."
+    },
+    {
+      "source_id": "id03752",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id03735",
+      "before": "— Тем более причин, чтобы вы стреляли первым, — ответил тот.",
+      "after": "— Тем больше оснований вам стрелять первым, — ответил тот."
+    },
+    {
+      "source_id": "id03737",
+      "before": "При этом свете оба других бойца разом вскрикнули.",
+      "after": "При этом свете оба других бойца, каждый, вскрикнули."
+    },
+    {
+      "source_id": "id03742",
+      "before": "— А-а! Так это вы, Арамис? — сказал Портос.",
+      "after": "— А-а! Это вы, Арамис? — сказал Портос."
+    },
+    {
+      "source_id": "id03745",
+      "before": "— Мой мальчик! — сказал Атос, протягивая руку д’Артаньяну.",
+      "after": "— Сын мой! — сказал Атос, протягивая руку д’Артаньяну."
+    },
+    {
+      "source_id": "id03746",
+      "before": "Так он называл его прежде в минуты нежности.",
+      "after": "Так он называл его когда-то в минуты нежности."
+    },
+    {
+      "source_id": "id03747",
+      "before": "— Атос, — сказал д’Артаньян, ломая руки, — так вы, значит, его защищаете? А я клялся доставить его живым или мёртвым! Ах, я обесчещен!",
+      "after": "— Атос, — сказал д’Артаньян, ломая руки, — так вы, значит, его защищаете? А я ведь поклялся доставить его живым или мёртвым! Ах, я обесчещен!"
+    },
+    {
+      "source_id": "id03749",
+      "before": "— О, горе мне! Горе мне! — восклицал д’Артаньян. — Был на свете один-единственный человек, который мог меня остановить, и судьбе угодно было поставить его на моём пути! Ах, что я скажу кардиналу?",
+      "after": "— О, горе мне! Горе мне! — восклицал д’Артаньян. — Был на свете один-единственный человек, который мог меня остановить, и роковой случай должен был поставить именно его на моём пути! Ах, что я скажу кардиналу?"
+    },
+    {
+      "source_id": "id03750",
+      "before": "— Вы скажете ему, сударь, — ответил голос, перекрывший шум поля боя, — что он послал против меня двух единственных людей, способных повалить четверых, сойтись врукопашную с графом де Ла Фер и шевалье д’Эрбле, не оказавшись в невыгодном положении, и сдаться лишь пятидесяти.",
+      "after": "— Вы скажете ему, сударь, — ответил голос, разнёсшийся над полем боя, — что он послал против меня двух единственных людей, способных повалить четверых, сойтись врукопашную с графом де Ла Фер и шевалье д’Эрбле, не оказавшись в невыгодном положении, и сдаться лишь пятидесяти."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMaCzy8AHXAsuMDbnNm",
+    "usage": {
+      "input_tokens": 4718,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1070,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJMakz5RvcGdvaVpuewH",
+    "usage": {
+      "input_tokens": 8390,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3580,
+      "output_tokens_details": {
+        "thinking_tokens": 1494
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMcR6YUAT2ED8nnn7MD",
+        "usage": {
+          "input_tokens": 9401,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3816,
+          "output_tokens_details": {
+            "thinking_tokens": 1531
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03733",
+          "verdict": "PASS",
+          "reason": "Faithful: the feint, the defensive stance and the participial cause are all preserved."
+        },
+        {
+          "source_id": "id03734",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Faithful: 'encore' and 'deux pistolets chargés' are rendered correctly, and the address to the opponent is kept."
+        },
+        {
+          "source_id": "id03735",
+          "verdict": "PASS",
+          "reason": "The prior correction holds. 'Raison de plus' is rendered idiomatically and the sense of 'shoot first' is kept."
+        },
+        {
+          "source_id": "id03736",
+          "verdict": "PASS",
+          "reason": "Faithful: Porthos fires and the flash lights up the battlefield."
+        },
+        {
+          "source_id": "id03737",
+          "verdict": "CORRECTED",
+          "reason": "The earlier 'каждый' set off in commas was clumsy. 'Jetèrent chacun un cri' now reads 'издали каждый по крику', which keeps both the plural subject and the 'each' distribution."
+        },
+        {
+          "source_id": "id03738",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "id03739",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "id03740",
+          "verdict": "PASS",
+          "reason": "Faithful: the contrast between raising and lowering the sword is kept."
+        },
+        {
+          "source_id": "id03741",
+          "verdict": "PASS",
+          "reason": "Faithful: the imperative and the dialogue punctuation are correct."
+        },
+        {
+          "source_id": "id03742",
+          "verdict": "PASS",
+          "reason": "The prior correction holds: no 'Так' is added, and Porthos's surprise is kept."
+        },
+        {
+          "source_id": "id03743",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "id03744",
+          "verdict": "PASS",
+          "reason": "Faithful: 'fontes' as saddle holsters and the sword returned to its scabbard."
+        },
+        {
+          "source_id": "id03745",
+          "verdict": "PASS",
+          "reason": "The prior correction holds: 'Сын мой' matches 'Mon fils', with the following sentence explaining the term of endearment."
+        },
+        {
+          "source_id": "id03746",
+          "verdict": "PASS",
+          "reason": "Faithful: 'autrefois' is rendered as 'когда-то' and the tenderness is kept."
+        },
+        {
+          "source_id": "id03747",
+          "verdict": "PASS",
+          "reason": "The prior correction holds: the oath, 'mort ou vif', the rhetorical question and the dishonour are all preserved."
+        },
+        {
+          "source_id": "id03748",
+          "verdict": "PASS",
+          "reason": "Faithful: the conditional about honour needing Athos's death is kept."
+        },
+        {
+          "source_id": "id03749",
+          "verdict": "CORRECTED",
+          "reason": "The earlier 'должен был поставить именно его' added the emphasis 'именно' and shifted the present 'il faut que la fatalité mette' into the past. It now reads 'надо же, чтобы рок поставил этого человека', keeping the exclamatory present and 'cet homme'."
+        },
+        {
+          "source_id": "id03750",
+          "verdict": "CORRECTED",
+          "reason": "'Dominait' is imperfect. The perfective 'разнёсшийся' became the imperfective 'разносившийся', which keeps the sense of a voice sounding over the battlefield. The rest (four men, hand-to-hand combat, fifty men, the names) is accurate."
+        },
+        {
+          "source_id": "id03751",
+          "verdict": "PASS",
+          "reason": "Faithful: the simultaneity, the movement to uncover the duke, and the other two stepping back are all preserved."
+        },
+        {
+          "source_id": "id03752",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id03737",
+          "before": "При этом свете оба других бойца, каждый, вскрикнули.",
+          "after": "При этом свете оба других бойца издали каждый по крику."
+        },
+        {
+          "source_id": "id03749",
+          "before": "— О, горе мне! Горе мне! — восклицал д’Артаньян. — Был на свете один-единственный человек, который мог меня остановить, и роковой случай должен был поставить именно его на моём пути! Ах, что я скажу кардиналу?",
+          "after": "— О, горе мне! Горе мне! — восклицал д’Артаньян. — Был на свете один-единственный человек, который мог меня остановить, и надо же, чтобы рок поставил этого человека на моём пути! Ах, что я скажу кардиналу?"
+        },
+        {
+          "source_id": "id03750",
+          "before": "— Вы скажете ему, сударь, — ответил голос, разнёсшийся над полем боя, — что он послал против меня двух единственных людей, способных повалить четверых, сойтись врукопашную с графом де Ла Фер и шевалье д’Эрбле, не оказавшись в невыгодном положении, и сдаться лишь пятидесяти.",
+          "after": "— Вы скажете ему, сударь, — ответил голос, разносившийся над полем боя, — что он послал против меня двух единственных людей, способных повалить четверых, сойтись врукопашную с графом де Ла Фер и шевалье д’Эрбле, не оказавшись в невыгодном положении, и сдаться лишь пятидесяти."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJMeAivKSWH2ByRWd5hv",
+        "usage": {
+          "input_tokens": 9399,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3312,
+          "output_tokens_details": {
+            "thinking_tokens": 975
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id03733",
+          "verdict": "PASS",
+          "reason": "Faithful: d'Artagnan, fearing a feint, stays on the defensive; agency and participial clause preserved."
+        },
+        {
+          "source_id": "id03734",
+          "verdict": "PASS",
+          "reason": "Warning, speaker, 'still' and 'both pistols loaded' all preserved; dialogue punctuation correct."
+        },
+        {
+          "source_id": "id03735",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'raison de plus pour que vous tiriez le premier' is rendered accurately and idiomatically."
+        },
+        {
+          "source_id": "id03736",
+          "verdict": "PASS",
+          "reason": "Porthos fires; the flash lights up the battlefield; colon structure kept."
+        },
+        {
+          "source_id": "id03737",
+          "verdict": "PASS",
+          "reason": "'Les deux autres combattants… chacun un cri' is preserved: each of the two cries out. The prior fix is acceptable and not erroneous."
+        },
+        {
+          "source_id": "id03738",
+          "verdict": "PASS",
+          "reason": "Exact meaning; speaker and exclamation preserved."
+        },
+        {
+          "source_id": "id03739",
+          "verdict": "PASS",
+          "reason": "Exact; the capitalised name at the start of the dialogue line is correct."
+        },
+        {
+          "source_id": "id03740",
+          "verdict": "PASS",
+          "reason": "Opposed actions preserved: Athos raises his sword, d'Artagnan lowers his."
+        },
+        {
+          "source_id": "id03741",
+          "verdict": "PASS",
+          "reason": "Athos calls to Aramis not to fire; imperative and punctuation correct."
+        },
+        {
+          "source_id": "id03742",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'c'est vous' rendered without the added 'так'; the interjection is preserved."
+        },
+        {
+          "source_id": "id03743",
+          "verdict": "PASS",
+          "reason": "Porthos throws down his pistol; faithful."
+        },
+        {
+          "source_id": "id03744",
+          "verdict": "PASS",
+          "reason": "Aramis puts his pistol back in the saddle holsters and sheathes his sword; both actions preserved."
+        },
+        {
+          "source_id": "id03745",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'Mon fils!' rendered as 'Сын мой!' and not softened to 'мальчик'; the outstretched hand is preserved."
+        },
+        {
+          "source_id": "id03746",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'autrefois' as 'когда-то'; the imperfect tense and the tender moments are preserved."
+        },
+        {
+          "source_id": "id03747",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'avais juré' as 'поклялся', 'mort ou vif' and 'déshonoré' all preserved; the incredulous question is kept."
+        },
+        {
+          "source_id": "id03748",
+          "verdict": "PASS",
+          "reason": "Athos's offer and the condition about honour and his death are faithfully rendered."
+        },
+        {
+          "source_id": "id03749",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'la fatalité' as 'рок', 'il faut que… mette' as 'надо же, чтобы… поставил'; the sole man and the imperfect 's'écriait' are preserved."
+        },
+        {
+          "source_id": "id03750",
+          "verdict": "PASS",
+          "reason": "Voice dominating the battlefield, the four men, the count and the chevalier, and 'only to fifty' are all preserved; the prior fix on the voice is retained in the final text."
+        },
+        {
+          "source_id": "id03751",
+          "verdict": "PASS",
+          "reason": "Simultaneous speech, the movement to unmask Beaufort, and the step back by d'Artagnan and Porthos are all preserved."
+        },
+        {
+          "source_id": "id03752",
+          "verdict": "PASS",
+          "reason": "Faithful: 'cinquante cavaliers' murmured by both speakers."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
