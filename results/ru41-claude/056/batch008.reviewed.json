@@ -1,0 +1,136 @@
+{
+  "unit": 56,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id07601",
+      "target": "Он решил, что это д’Артаньян, и не шелохнулся.",
+      "source_sha256": "7c5c6fbed04a7255d5eefcdfb0712c773694a6b57a182de4c0d294007f72139c",
+      "target_id": "ru-id07601",
+      "tag": "p",
+      "target_sha256": "6c05ba9c049e5e98a44a6a8da3a1a63e69166bf0696e588bb34b085676954383"
+    },
+    {
+      "source_id": "id07602",
+      "target": "— От имени кардинала, — сказал офицер.",
+      "source_sha256": "be241fd02fd4f0345d7219fb378f081ad65590633885cd3a4450584b9aad462c",
+      "target_id": "ru-id07602",
+      "tag": "p",
+      "target_sha256": "5b4633b9a249f98c15e20682aba271b2a2fa8f66b658a435a705a1475989f6bc"
+    },
+    {
+      "source_id": "id07603",
+      "target": "— Что?! — сказал Портос, широко раскрыв глаза. — Что вы говорите?",
+      "source_sha256": "a11d1aea98d3b8af607e4bc6b9053a78300e104af5a4004da016a11d1b492f45",
+      "target_id": "ru-id07603",
+      "tag": "p",
+      "target_sha256": "5ddee311a336532a8aefd5197d2fb4cf533284f260a4524b70a9eeb73ee47cf7"
+    },
+    {
+      "source_id": "id07604",
+      "target": "— Я говорю, что его высокопреосвященство посылает вас в Англию и что господин д’Артаньян ждёт вас у конюшен.",
+      "source_sha256": "293a492a9bc437260d8e8d5f75981cd6a9a74d57d39e4c8f329401da66099ffe",
+      "target_id": "ru-id07604",
+      "tag": "p",
+      "target_sha256": "e0b3e9821e5d66609bcd19a077ee94ec0c2abbb2eb52af8cdde725a0a82c69fe"
+    },
+    {
+      "source_id": "id07605",
+      "target": "Портос глубоко вздохнул, встал, взял свою фетровую шляпу, пистолеты, шпагу и плащ и вышел, бросив печальный взгляд на постель, в которой он обещал себе так хорошо выспаться.",
+      "source_sha256": "76730667bb5dcb96c2715a1ad6bc381412eb3f3d3348df7258479dfc94969138",
+      "target_id": "ru-id07605",
+      "tag": "p",
+      "target_sha256": "1f9304c373288b9169de39bcfb8efd3e8fbffc2f34e77462c3b4a0e8887fa9a4"
+    },
+    {
+      "source_id": "id07606",
+      "target": "Едва он повернулся спиной, как офицер уже устроился на постели, и не успел Портос переступить порог, как его преемник, в свою очередь, захрапел во всю мочь. Это было вполне естественно: во всём этом собрании только он, наравне с королём, королевой и монсеньором Гастоном Орлеанским, спал даром.",
+      "source_sha256": "da51cbc72ea46a909a5c64ce18bb01d31b479ddf540425b2d6e8c4db33488a32",
+      "target_id": "ru-id07606",
+      "tag": "p",
+      "target_sha256": "27bd0e0ea3c2560961fa809d2abfb433190e6c8746d292baf14fcec11bb76614"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id07601",
+      "verdict": "PASS",
+      "reason": "Faithful: Porthos assumes it is d'Artagnan and does not move; agency and tense preserved."
+    },
+    {
+      "source_id": "id07602",
+      "verdict": "PASS",
+      "reason": "Accurate rendering of 'De la part du cardinal'; dialogue punctuation correct."
+    },
+    {
+      "source_id": "id07603",
+      "verdict": "CORRECTED",
+      "reason": "Source verb is 'dit', not an exclamatory verb; 'воскликнул' replaced with 'сказал'. 'Hein!' kept as an exclamatory 'Что?!'."
+    },
+    {
+      "source_id": "id07604",
+      "verdict": "PASS",
+      "reason": "Complete and accurate: Eminence sends him to England, d'Artagnan waits at the stables."
+    },
+    {
+      "source_id": "id07605",
+      "verdict": "PASS",
+      "reason": "All actions and items (hat, pistols, sword, cloak), the regretful look and the unfulfilled promise of sleep are preserved."
+    },
+    {
+      "source_id": "id07606",
+      "verdict": "PASS",
+      "reason": "The officer's immediate takeover of the bed, the snoring successor and the humorous 'slept gratis' remark (together with the king, queen and Gaston d'Orléans) are all preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id07603",
+      "before": "— Что?! — воскликнул Портос, широко раскрыв глаза. — Что вы говорите?",
+      "after": "— Что?! — сказал Портос, широко раскрыв глаза. — Что вы говорите?"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRWN81FtJicXSEFrkTK",
+    "usage": {
+      "input_tokens": 2388,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 423,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRWdKZm1Wy1jNTCuUEW",
+    "usage": {
+      "input_tokens": 3653,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1651,
+      "output_tokens_details": {
+        "thinking_tokens": 805
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

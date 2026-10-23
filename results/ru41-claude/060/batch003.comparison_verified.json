@@ -1,0 +1,727 @@
+{
+  "unit": 60,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id08162",
+      "target": "— А шотландцы? — спросил Кромвель.",
+      "source_sha256": "68807844c841258ed988ac3832b4349c8557bfff64f2500b032fe2e41c0418b9",
+      "target_id": "ru-id08162",
+      "tag": "p",
+      "target_sha256": "2571989a46ccbe25c777e6a40f433d25a6c5593a8bfeaa24de96915f2d4de524"
+    },
+    {
+      "source_id": "id08163",
+      "target": "— Они сдержали слово, — сказал Мордонт, — и не двинулись с места.",
+      "source_sha256": "5be96f1fab3bc3717093c65496d3640b9b5f9aa235fcc63457dfe7e86feab3d8",
+      "target_id": "ru-id08163",
+      "tag": "p",
+      "target_sha256": "f9747047331ab731234e355b7fdd25a19cacaaf1d621bd5f3f548cbf7d0ddd0f"
+    },
+    {
+      "source_id": "id08164",
+      "target": "— Негодяи! — пробормотал Кромвель.",
+      "source_sha256": "6def41776f7765fb882abe35ad87f7755b6db614cfbe15ee5870b5ca79785184",
+      "target_id": "ru-id08164",
+      "tag": "p",
+      "target_sha256": "b4eb8d79ac9a7c61810e8b4fc3e2838e53fba39f0cc30645d513185266641a80"
+    },
+    {
+      "source_id": "id08165",
+      "target": "— Их офицеры просят увидеться с вами, сударь.",
+      "source_sha256": "ac6ff22eba7abe492bae2164b138cace90e1823f7ed267d99f1dcb3ef13e6283",
+      "target_id": "ru-id08165",
+      "tag": "p",
+      "target_sha256": "1c0c0d5c5bec721077baaa3333103c1a846c8dfe5731160a6ec10c6c35385e3e"
+    },
+    {
+      "source_id": "id08166",
+      "target": "— У меня нет времени. Им заплатили?",
+      "source_sha256": "99efea9d3952b43e989b3f10c985aac63601414f2e2e1ac03c1b12bf7ffc3cf4",
+      "target_id": "ru-id08166",
+      "tag": "p",
+      "target_sha256": "98c8e17e2946854226607806958917f4d6fba237c9ea1f7c01c028486cb17a2d"
+    },
+    {
+      "source_id": "id08167",
+      "target": "— Этой ночью.",
+      "source_sha256": "81f95f9b95d4e41a1626d2f5360971542ec5c1fe4d8f6902d4cd3e6a921593d7",
+      "target_id": "ru-id08167",
+      "tag": "p",
+      "target_sha256": "2978457fbcd76c72b4afe19ed598e8036d9d6438d9f18ed2add0fae27a4864d3"
+    },
+    {
+      "source_id": "id08168",
+      "target": "— Тогда пусть уходят, пусть возвращаются в свои горы, пусть прячут там свой позор, если только их горы достаточно высоки для этого; у меня больше нет с ними дела, а у них — со мной. А теперь ступайте, Мордонт.",
+      "source_sha256": "9cdeda18618c787da55555d3c5a60ac1b2933f121202c263bcec7dba5b71bc91",
+      "target_id": "ru-id08168",
+      "tag": "p",
+      "target_sha256": "0b29b9033a5de1da9b4e456127a127dfdae8ea65f89c5069d5bbadb0cabbed9a"
+    },
+    {
+      "source_id": "id08169",
+      "target": "— Прежде чем уйти, — сказал Мордонт, — у меня есть к вам несколько вопросов, сударь, и одна просьба, мой господин.",
+      "source_sha256": "e020cfb28ba2047b032c9b829e1415b3e1de05f3d1507da363a77d90b4854f67",
+      "target_id": "ru-id08169",
+      "tag": "p",
+      "target_sha256": "301e5c45bdc8e6922b22783226f77e3aa38fc1e0022e5983ebdc636717a248b3"
+    },
+    {
+      "source_id": "id08170",
+      "target": "— Ко мне?",
+      "source_sha256": "ce95db591a43f47c22fc332b28c4bbf792b519db1ffcc022404c1e668942ac8c",
+      "target_id": "ru-id08170",
+      "tag": "p",
+      "target_sha256": "9bb894cf1d47b1dbc52bd693c303aadd411dae97962c55a166d1a59bdbe1d846"
+    },
+    {
+      "source_id": "id08171",
+      "target": "Мордонт поклонился:",
+      "source_sha256": "98e1f1302c7edfe4594cc35d44f2fb1329f6f84a85c6312715c766318c29d390",
+      "target_id": "ru-id08171",
+      "tag": "p",
+      "target_sha256": "233c8280e646649ec2f78ec6ec86746811e67b3ebe8355d3e4cab742a088eaa0"
+    },
+    {
+      "source_id": "id08172",
+      "target": "— Я прихожу к вам, мой герой, мой покровитель, мой отец, и говорю вам: господин мой, довольны ли вы мною?",
+      "source_sha256": "cc46ea7772ea89b3f2550de7cfe2dfb2963d31d55463982fd29bf30a95e37626",
+      "target_id": "ru-id08172",
+      "tag": "p",
+      "target_sha256": "a1eb751823c1fca849d7b0f64ac62b595d4d1cc2fcc6112f7fe88eb3ee031a92"
+    },
+    {
+      "source_id": "id08173",
+      "target": "Кромвель посмотрел на него с удивлением.",
+      "source_sha256": "b395f3701a6d73fa9ef9dc8c096371ce001fdfba79203ea57f4fde945f5a9a81",
+      "target_id": "ru-id08173",
+      "tag": "p",
+      "target_sha256": "0e2f197f5294c8bdc214be0d9621b9ad2be83690b903bd88bd01a6556159f549"
+    },
+    {
+      "source_id": "id08174",
+      "target": "Молодой человек оставался невозмутим.",
+      "source_sha256": "e11a664cf3d82f1645be4f161d58a0b0635dc3f6fe73e8ef4af4fe373e2dd42b",
+      "target_id": "ru-id08174",
+      "tag": "p",
+      "target_sha256": "fbc1098d65a4c68f0497cdcdf7fc3272a2fcbd71f453f8eb74a4d0aa94532323"
+    },
+    {
+      "source_id": "id08175",
+      "target": "— Да, — сказал Кромвель, — с тех пор как я вас знаю, вы исполняли не только свой долг, но и более того: вы были верным другом, ловким переговорщиком, хорошим солдатом.",
+      "source_sha256": "3aebb6c0163fdcf0dfabea30e206d57ff0413c9d9c870d3557a0f1c62ffa7107",
+      "target_id": "ru-id08175",
+      "tag": "p",
+      "target_sha256": "71c8d78ab8dd0a32b2359d13f4527a761c7d2a1591e2346f6dbfbbe3b9665691"
+    },
+    {
+      "source_id": "id08176",
+      "target": "— Помните ли вы, сударь, что именно мне первому пришла мысль условиться с шотландцами о том, чтобы они бросили своего короля?",
+      "source_sha256": "42c8376a9674dabd676a2552534c4d6c97a21d9bb92947f2cfb75fbb3956c73c",
+      "target_id": "ru-id08176",
+      "tag": "p",
+      "target_sha256": "741d5e9dea81100fd7affc2050fc42f5bcea7f94808a246e9b3c6edba13a6be0"
+    },
+    {
+      "source_id": "id08177",
+      "target": "— Да, мысль исходит от вас, это правда; я еще не заходил в презрении к людям так далеко.",
+      "source_sha256": "a64688bc7056d846c346e076f1499861421ee909daad361e8b0c2e6e6faa05de",
+      "target_id": "ru-id08177",
+      "tag": "p",
+      "target_sha256": "58da2e763bb8b83d3bd075abb933767e783d85bd9982ab7f18748078d9fa0190"
+    },
+    {
+      "source_id": "id08178",
+      "target": "— Хорошим ли послом я был во Франции?",
+      "source_sha256": "897e7d308297ef994dc7b52bcdde80d91b3972737a8cede54dd27e2e67a736ce",
+      "target_id": "ru-id08178",
+      "tag": "p",
+      "target_sha256": "454854a23a291322c5e1c462a8285a300cdcfab8af78e7323ccb220c264d703d"
+    },
+    {
+      "source_id": "id08179",
+      "target": "— Да, и вы добились от Мазарини того, о чем я просил.",
+      "source_sha256": "5ebe9eccf6e7a16ff6e624e76213e998d646096a85b0f09e112089233a2b65b1",
+      "target_id": "ru-id08179",
+      "tag": "p",
+      "target_sha256": "660d36b707fc73daab7f105af45b22564266314d64555950e1696b049306bb95"
+    },
+    {
+      "source_id": "id08180",
+      "target": "— Всегда ли я сражался ревностно за вашу славу и ваши интересы?",
+      "source_sha256": "b0a42ecc39f7194b68c630c6e64ff15c98bde4d6101c9221701683d4cbbaf1b5",
+      "target_id": "ru-id08180",
+      "tag": "p",
+      "target_sha256": "ae8550142ba455e2bdae7249f922ba9129fd9bd06fd980488930fd90c644e0eb"
+    },
+    {
+      "source_id": "id08181",
+      "target": "— Быть может, даже слишком ревностно, — именно это я и ставил вам в упрек только что. Но к чему вы клоните всеми этими вопросами?",
+      "source_sha256": "e92b289cc2fc79455205a184fe397d62f3b677db3bc3424a670252ff08837262",
+      "target_id": "ru-id08181",
+      "tag": "p",
+      "target_sha256": "0e5bd1b4c90f8c648f0e08753453132d642acf3db98e252d0a21f0042742e428"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id08162",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08163",
+      "verdict": "PASS",
+      "reason": "Accurate; negation and agency preserved."
+    },
+    {
+      "source_id": "id08164",
+      "verdict": "PASS",
+      "reason": "Accurate exclamation."
+    },
+    {
+      "source_id": "id08165",
+      "verdict": "CORRECTED",
+      "reason": "Removed added 'позволения'; 'demandent à vous voir' rendered more directly."
+    },
+    {
+      "source_id": "id08166",
+      "verdict": "PASS",
+      "reason": "Accurate; impersonal passive preserved."
+    },
+    {
+      "source_id": "id08167",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08168",
+      "verdict": "PASS",
+      "reason": "Complete and faithful, including the reciprocal clause."
+    },
+    {
+      "source_id": "id08169",
+      "verdict": "CORRECTED",
+      "reason": "'я должен задать' overstated obligation; softened to match 'j'ai quelques questions à vous adresser'."
+    },
+    {
+      "source_id": "id08170",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08171",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08172",
+      "verdict": "PASS",
+      "reason": "Accurate, including the address sequence and present tense."
+    },
+    {
+      "source_id": "id08173",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08174",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08175",
+      "verdict": "PASS",
+      "reason": "Accurate; all three qualities preserved."
+    },
+    {
+      "source_id": "id08176",
+      "verdict": "PASS",
+      "reason": "Accurate; agency of first idea preserved."
+    },
+    {
+      "source_id": "id08177",
+      "verdict": "CORRECTED",
+      "reason": "Removed added 'тогда'; 'pas encore' with 'jusque-là' rendered closely."
+    },
+    {
+      "source_id": "id08178",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08179",
+      "verdict": "CORRECTED",
+      "reason": "'requested' ('demandais') had been rendered as 'требовал'; changed to 'просил'."
+    },
+    {
+      "source_id": "id08180",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id08181",
+      "verdict": "PASS",
+      "reason": "Accurate; reproach reference preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id08165",
+      "before": "— Их офицеры просят позволения увидеть вас, сударь.",
+      "after": "— Их офицеры просят увидеться с вами, сударь."
+    },
+    {
+      "source_id": "id08169",
+      "before": "— Прежде чем уйти, — сказал Мордонт, — я должен задать вам несколько вопросов, сударь, и обратиться к вам с просьбой, мой господин.",
+      "after": "— Прежде чем уйти, — сказал Мордонт, — я хотел бы задать вам несколько вопросов, сударь, и обратиться к вам с просьбой, мой господин."
+    },
+    {
+      "source_id": "id08177",
+      "before": "— Да, мысль исходит от вас, это правда; я тогда еще не доводил презрение к людям до такой степени.",
+      "after": "— Да, мысль исходит от вас, это правда; я еще не заходил в презрении к людям так далеко."
+    },
+    {
+      "source_id": "id08179",
+      "before": "— Да, и вы добились от Мазарини того, чего я требовал.",
+      "after": "— Да, и вы добились от Мазарини того, о чем я просил."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJSMkwZH3hnmbvwr9ZKB",
+    "usage": {
+      "input_tokens": 4410,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 971,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJSNCQ1E6mYUWBqJGDTe",
+    "usage": {
+      "input_tokens": 7992,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2767,
+      "output_tokens_details": {
+        "thinking_tokens": 995
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSPUKVJc4D7RPceEQ9f",
+        "usage": {
+          "input_tokens": 8409,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3251,
+          "output_tokens_details": {
+            "thinking_tokens": 966
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08162",
+          "verdict": "PASS",
+          "reason": "Faithful question and speech tag; dialogue punctuation correct."
+        },
+        {
+          "source_id": "id08163",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "'Tenu leur parole' and 'n'ont pas bougé' are rendered accurately; the negation is preserved."
+        },
+        {
+          "source_id": "id08164",
+          "verdict": "PASS",
+          "reason": "Exclamation and murmured delivery preserved; 'Негодяи' is an apt register for 'Les misérables'."
+        },
+        {
+          "source_id": "id08165",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'demandent à vous voir' is now the idiomatic 'просят увидеться с вами'; the form of address 'monsieur' is kept."
+        },
+        {
+          "source_id": "id08166",
+          "verdict": "PASS",
+          "reason": "Negation and the impersonal passive 'Les a-t-on payés' are conveyed accurately."
+        },
+        {
+          "source_id": "id08167",
+          "verdict": "PASS",
+          "reason": "'Cette nuit' (the night just past) is rendered correctly as 'Этой ночью'."
+        },
+        {
+          "source_id": "id08168",
+          "verdict": "PASS",
+          "reason": "All clauses are present, including the concessive 'si leurs montagnes sont assez hautes' and the reciprocal 'ni eux à moi'; the order of the imperatives is kept."
+        },
+        {
+          "source_id": "id08169",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'я должен' was an overstatement and the current wording is acceptable; both the questions and the request are kept, and the forms of address 'сударь' and 'мой господин' are preserved."
+        },
+        {
+          "source_id": "id08170",
+          "verdict": "PASS",
+          "reason": "Short interjection rendered accurately."
+        },
+        {
+          "source_id": "id08171",
+          "verdict": "PASS",
+          "reason": "Narration plus colon introducing the speech is preserved."
+        },
+        {
+          "source_id": "id08172",
+          "verdict": "PASS",
+          "reason": "The sequence 'héros, protecteur, père' and the vocative 'Maître' are retained; the question is accurate."
+        },
+        {
+          "source_id": "id08173",
+          "verdict": "PASS",
+          "reason": "Agency (Cromwell looks at Mordaunt) and 'avec étonnement' are accurate."
+        },
+        {
+          "source_id": "id08174",
+          "verdict": "PASS",
+          "reason": "'Demeura impassible' is rendered accurately."
+        },
+        {
+          "source_id": "id08175",
+          "verdict": "PASS",
+          "reason": "The gradation 'devoir / plus que votre devoir' and the three qualities are preserved."
+        },
+        {
+          "source_id": "id08176",
+          "verdict": "CORRECTED",
+          "reason": "'Отказались от своего короля' was ambiguous, since it could be read as renouncing a king; 'l'abandon de leur roi' means deserting him, so I used the more precise and idiomatic 'бросили своего короля'. The agency (the idea came first from Mordaunt) is preserved."
+        },
+        {
+          "source_id": "id08177",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'je ne poussais pas encore le mépris des hommes jusque-là' is now accurate, with the tense and 'pas encore' kept."
+        },
+        {
+          "source_id": "id08178",
+          "verdict": "PASS",
+          "reason": "Question about the embassy in France is faithful, with the inversion rendered naturally."
+        },
+        {
+          "source_id": "id08179",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'ce que je demandais' becomes 'о чем я просил', which is the correct register and tense; 'Mazarin' is rendered as 'Мазарини' per the established name."
+        },
+        {
+          "source_id": "id08180",
+          "verdict": "PASS",
+          "reason": "'Toujours ardemment' and the objects 'gloire' and 'intérêts' are preserved."
+        },
+        {
+          "source_id": "id08181",
+          "verdict": "PASS",
+          "reason": "'Trop ardemment peut-être', the reference to the earlier reproach and the final question are all faithful."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id08176",
+          "before": "— Помните ли вы, сударь, что именно мне первому пришла мысль условиться с шотландцами о том, чтобы они отказались от своего короля?",
+          "after": "— Помните ли вы, сударь, что именно мне первому пришла мысль условиться с шотландцами о том, чтобы они бросили своего короля?"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSRdJYgbVXsrYoF2CxS",
+        "usage": {
+          "input_tokens": 8407,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2935,
+          "output_tokens_details": {
+            "thinking_tokens": 940
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08162",
+          "verdict": "PASS",
+          "reason": "Faithful question and speech tag; punctuation correct."
+        },
+        {
+          "source_id": "id08163",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Meaning and agency preserved: they kept their word and did not move."
+        },
+        {
+          "source_id": "id08164",
+          "verdict": "PASS",
+          "reason": "'Les misérables' rendered as 'Негодяи' with the right register and the murmured tag."
+        },
+        {
+          "source_id": "id08165",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'demandent à vous voir' is accurately and idiomatically rendered as 'просят увидеться с вами'."
+        },
+        {
+          "source_id": "id08166",
+          "verdict": "PASS",
+          "reason": "Negation and the impersonal passive question ('Les a-t-on payés') preserved."
+        },
+        {
+          "source_id": "id08167",
+          "verdict": "PASS",
+          "reason": "Accurate time adverbial."
+        },
+        {
+          "source_id": "id08168",
+          "verdict": "PASS",
+          "reason": "All clauses, the concession and the final order are preserved; mutual 'no more dealings' is correct."
+        },
+        {
+          "source_id": "id08169",
+          "verdict": "CORRECTED",
+          "reason": "The prior fix 'я хотел бы задать' still added a conditional modality absent from 'j'ai quelques questions à vous adresser'. It is now literal ('у меня есть к вам несколько вопросов') and keeps the request ('une demande') and the address 'мой господин'."
+        },
+        {
+          "source_id": "id08170",
+          "verdict": "PASS",
+          "reason": "Accurate surprised response."
+        },
+        {
+          "source_id": "id08171",
+          "verdict": "PASS",
+          "reason": "Accurate; colon preserved before the speech."
+        },
+        {
+          "source_id": "id08172",
+          "verdict": "PASS",
+          "reason": "Epithets, present tense and the question to the master are preserved."
+        },
+        {
+          "source_id": "id08173",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08174",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id08175",
+          "verdict": "PASS",
+          "reason": "Full praise list and the 'not only duty but more' structure preserved."
+        },
+        {
+          "source_id": "id08176",
+          "verdict": "PASS",
+          "reason": "'La première idée' and the agency (Mordaunt first conceived it) are preserved; the abandonment of the king is accurate."
+        },
+        {
+          "source_id": "id08177",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'je ne poussais pas encore le mépris des hommes jusque-là' is now rendered faithfully and idiomatically."
+        },
+        {
+          "source_id": "id08178",
+          "verdict": "PASS",
+          "reason": "Accurate question."
+        },
+        {
+          "source_id": "id08179",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'ce que je demandais' becomes 'о чем я просил', which is correct."
+        },
+        {
+          "source_id": "id08180",
+          "verdict": "PASS",
+          "reason": "'Toujours ardemment' preserved."
+        },
+        {
+          "source_id": "id08181",
+          "verdict": "PASS",
+          "reason": "Reproach, 'tout à l'heure' and the final question are all preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id08169",
+          "before": "— Прежде чем уйти, — сказал Мордонт, — я хотел бы задать вам несколько вопросов, сударь, и обратиться к вам с просьбой, мой господин.",
+          "after": "— Прежде чем уйти, — сказал Мордонт, — у меня есть к вам несколько вопросов, сударь, и одна просьба, мой господин."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSSwEqBtELzdR7zuvLv",
+        "usage": {
+          "input_tokens": 8403,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2905,
+          "output_tokens_details": {
+            "thinking_tokens": 554
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id08162",
+          "verdict": "PASS",
+          "reason": "Faithful to the French; the question and the speaker attribution are preserved."
+        },
+        {
+          "source_id": "id08163",
+          "verdict": "PASS",
+          "reason": "'Ont tenu leur parole' and 'n'ont pas bougé' are accurately rendered, and the interrupting speech tag is placed correctly."
+        },
+        {
+          "source_id": "id08164",
+          "verdict": "PASS",
+          "reason": "'Les misérables' is rendered as 'Негодяи', which fits the register, and 'murmura' is preserved."
+        },
+        {
+          "source_id": "id08165",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'demandent à vous voir' becomes 'просят увидеться с вами', which is idiomatic and keeps 'monsieur' as 'сударь'."
+        },
+        {
+          "source_id": "id08166",
+          "verdict": "PASS",
+          "reason": "Both the negation and the impersonal passive 'Les a-t-on payés' are correctly rendered as 'Им заплатили?'."
+        },
+        {
+          "source_id": "id08167",
+          "verdict": "PASS",
+          "reason": "'Cette nuit' (last night) is rendered as 'Этой ночью'; the meaning is retained."
+        },
+        {
+          "source_id": "id08168",
+          "verdict": "PASS",
+          "reason": "All the jussives and the conditional clause are preserved, and 'ni eux à moi' is carried by 'а у них — со мной'. The final order to go to Mordaunt is kept."
+        },
+        {
+          "source_id": "id08169",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified; the final form is faithful: 'quelques questions à vous adresser' and 'une demande à vous faire' are both rendered, and 'mon maître' is kept. The final wording differs slightly from the ledger's 'after' text but is accurate and idiomatic."
+        },
+        {
+          "source_id": "id08170",
+          "verdict": "PASS",
+          "reason": "'À moi?' is rendered correctly as 'Ко мне?'."
+        },
+        {
+          "source_id": "id08171",
+          "verdict": "PASS",
+          "reason": "Faithful, with the colon preserved."
+        },
+        {
+          "source_id": "id08172",
+          "verdict": "PASS",
+          "reason": "The address 'mon héros, mon protecteur, mon père' and the question 'Maître, êtes-vous content de moi?' are preserved."
+        },
+        {
+          "source_id": "id08173",
+          "verdict": "PASS",
+          "reason": "Agency and 'avec étonnement' are preserved."
+        },
+        {
+          "source_id": "id08174",
+          "verdict": "PASS",
+          "reason": "'Demeura impassible' is rendered as 'оставался невозмутим'; the tense is acceptable."
+        },
+        {
+          "source_id": "id08175",
+          "verdict": "PASS",
+          "reason": "The structure 'non seulement… mais encore plus que votre devoir' and the three attributes (friend, negotiator, soldier) are preserved."
+        },
+        {
+          "source_id": "id08176",
+          "verdict": "PASS",
+          "reason": "'Moi qui ai eu la première idée' is correctly rendered as 'именно мне первому пришла мысль', and the treaty with the Scots over the abandonment of their king is retained."
+        },
+        {
+          "source_id": "id08177",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'je ne poussais pas encore le mépris des hommes jusque-là' becomes 'я еще не заходил в презрении к людям так далеко', accurate and idiomatic."
+        },
+        {
+          "source_id": "id08178",
+          "verdict": "PASS",
+          "reason": "Faithful: 'ambassadeur en France' becomes 'посол во Франции'."
+        },
+        {
+          "source_id": "id08179",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: 'ce que je demandais' becomes 'то, о чем я просил', and 'Mazarin' is given in the established form 'Мазарини'."
+        },
+        {
+          "source_id": "id08180",
+          "verdict": "PASS",
+          "reason": "'Toujours ardemment' and 'gloire et intérêts' are preserved."
+        },
+        {
+          "source_id": "id08181",
+          "verdict": "PASS",
+          "reason": "'Trop ardemment peut-être', the earlier reproach ('tout à l'heure'), and the closing question 'où voulez-vous en venir' are all rendered accurately."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "unit": 51,
+  "batch": 10,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id06679",
+      "target": "— Решительно, господин д’Артаньян, вы именно тот человек, которого я искал, и вы можете рассчитывать на меня, так же как и ваш друг.",
+      "source_sha256": "6909b84ecb21f81c7511125ebfc686afba64e5e407aaf6e65b85ac7fdb81fbba",
+      "target_id": "ru-id06679",
+      "tag": "p",
+      "target_sha256": "8a2fdb868bbd050e03145600be6b48c5982b0baa4352f183830187cd6d478432"
+    },
+    {
+      "source_id": "id06680",
+      "target": "Затем, поклонившись обоим друзьям с самой очаровательной из своих улыбок, он вернулся в кабинет уже спокойнее, так как после ухода Гонди шум стих, словно по волшебству.",
+      "source_sha256": "29f72d053606704739cb2b261e9d298328abd2efa6aba8f99f981e1ab08d2459",
+      "target_id": "ru-id06680",
+      "tag": "p",
+      "target_sha256": "af73ee26fc5cb8cbf89e083b415fe0b5c55a6b7dd64d3bfa533464a313b25844"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id06679",
+      "verdict": "PASS",
+      "reason": "Complete and faithful. The address, the sense of «décidément», the relative clause «l'homme que je cherchais» and the promise extended to the friend are all preserved. The register is appropriate."
+    },
+    {
+      "source_id": "id06680",
+      "verdict": "CORRECTED",
+      "reason": "«saluant» is a bow or greeting, so «поклонившись» fits better than «приветствовав». The causal «car» was a colon in the draft and is now «так как». «à la sortie de Gondy» is kept as «после ухода Гонди», and «comme par enchantement» as «словно по волшебству». Nothing is omitted or added."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id06680",
+      "before": "Затем, приветствовав обоих друзей самой обворожительной из своих улыбок, он вернулся в кабинет уже спокойнее: с уходом Гонди шум стих, словно по волшебству.",
+      "after": "Затем, поклонившись обоим друзьям с самой очаровательной из своих улыбок, он вернулся в кабинет уже спокойнее, так как после ухода Гонди шум стих, словно по волшебству."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQvQo3XrQWj8m7PeeMk",
+    "usage": {
+      "input_tokens": 1382,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQvbCcLBYaj5yyc4q1T",
+    "usage": {
+      "input_tokens": 1882,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 828,
+      "output_tokens_details": {
+        "thinking_tokens": 429
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

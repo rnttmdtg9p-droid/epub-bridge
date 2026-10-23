@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJSFLTk4jqCczVBkX1o1",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id08122\",\"target\":\"— Ваши поздравления! С чем же?\"},{\"source_id\":\"id08123\",\"target\":\"— С пленением Карла Стюарта. Теперь вы властелин Англии.\"},{\"source_id\":\"id08124\",\"target\":\"— Я был им куда более два часа назад, — сказал Кромвель.\"},{\"source_id\":\"id08125\",\"target\":\"— Как так, генерал?\"},{\"source_id\":\"id08126\",\"target\":\"— Англии я был нужен, чтобы взять тирана; теперь тиран взят. Вы его видели?\"},{\"source_id\":\"id08127\",\"target\":\"— Да, сударь, — сказал Мордонт.\"},{\"source_id\":\"id08128\",\"target\":\"— Как он держится?\"},{\"source_id\":\"id08129\",\"target\":\"Мордонт замялся, но правда словно сама против воли сорвалась с его губ.\"},{\"source_id\":\"id08130\",\"target\":\"— Спокойно и достойно, — сказал он.\"},{\"source_id\":\"id08131\",\"target\":\"— Что он сказал?\"},{\"source_id\":\"id08132\",\"target\":\"— Несколько слов на прощание своим друзьям.\"},{\"source_id\":\"id08133\",\"target\":\"— Своим друзьям! — пробормотал Кромвель. — Так у него, значит, есть друзья?\"},{\"source_id\":\"id08134\",\"target\":\"Затем громко:\"},{\"source_id\":\"id08135\",\"target\":\"— Защищался ли он?\"},{\"source_id\":\"id08136\",\"target\":\"— Нет, сударь, его покинули все, кроме трёх или четырёх человек; защищаться было невозможно.\"},{\"source_id\":\"id08137\",\"target\":\"— Кому он отдал свою шпагу?\"},{\"source_id\":\"id08138\",\"target\":\"— Он её не отдал, он её сломал.\"},{\"source_id\":\"id08139\",\"target\":\"— Он хорошо сделал; но вместо того, чтобы ломать её, ещё лучше было бы употребить её с большей пользой.\"},{\"source_id\":\"id08140\",\"target\":\"Наступило мгновение молчания.\"},{\"source_id\":\"id08141\",\"target\":\"— Полковник полка, который служил конвоем королю, Карлу, был, кажется, убит? — сказал Кромвель, пристально глядя на Мордонта.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4205,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 760,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

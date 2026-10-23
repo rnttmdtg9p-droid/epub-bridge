@@ -1,0 +1,448 @@
+{
+  "unit": 58,
+  "batch": 1,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id07828",
+      "target": "— Граф, — сказал Атос, — в таком шатком положении, как наше, надо смотреть на землю, а не на небо. Вы изучили наших шотландцев и уверены в них?",
+      "source_sha256": "f64fec76cd734b90a24222e838607d59497a457ae37a4d3c96458e6b124d85e5",
+      "target_id": "ru-id07828",
+      "tag": "p",
+      "target_sha256": "57ae435b6f73bc21ccb3c50db6ea42b61ff2982ce8d8c8ade72c87d0dfe542b4"
+    },
+    {
+      "source_id": "id07829",
+      "target": "— Шотландцев? — спросил де Винтер. — Каких шотландцев?",
+      "source_sha256": "a1d4a2daafc47158bce162e2468f829209cc867c429d3ed855bbe26a9e0e6980",
+      "target_id": "ru-id07829",
+      "tag": "p",
+      "target_sha256": "205a459bd2249805556442fc17c73f2575442535490ee74df029215e4e6eedc4"
+    },
+    {
+      "source_id": "id07830",
+      "target": "— Ну конечно, наших, чёрт возьми! — сказал Атос. — Тех, которым доверился король, — шотландцев графа Лёвена.",
+      "source_sha256": "bd97b4058b0c3b983f30d2478b8a6dfbf3bb630fc67614c83c763495f73d978d",
+      "target_id": "ru-id07830",
+      "tag": "p",
+      "target_sha256": "eee06a3742ed117863ffbdebbbe05a2ac674bdca510cd183b7c914ec7dc65995"
+    },
+    {
+      "source_id": "id07831",
+      "target": "— Нет, — сказал де Винтер. Потом добавил: — Так скажите мне, вы не видите, как я, этого красноватого оттенка, что покрывает небо?",
+      "source_sha256": "0202c9b9b309d18a626569f75f47849a462f6303564ea69261eab29d8d2fd639",
+      "target_id": "ru-id07831",
+      "tag": "p",
+      "target_sha256": "37512b7987090e5644fd487e63f7af062e7b3f8d2616ed1f8a946e508655c552"
+    },
+    {
+      "source_id": "id07832",
+      "target": "— Нисколько, — в один голос ответили Атос и Арамис.",
+      "source_sha256": "43434efca497a0c6b82f19b74e952d1aa944f2e81f4f4cbe68226d2fc31bee51",
+      "target_id": "ru-id07832",
+      "tag": "p",
+      "target_sha256": "b5f4b49fe7cf3b49fc643fbd216cb7b7a11ec6ef88c1d583612227edad8861aa"
+    },
+    {
+      "source_id": "id07833",
+      "target": "— Скажите, — продолжал де Винтер, всё ещё занятый той же мыслью, — не существует ли во Франции предание, будто накануне того дня, когда был убит Генрих IV, он, играя в шахматы с господином де Бассомпьером, увидел на шахматной доске пятна крови?",
+      "source_sha256": "73cda19af89f5831c4a25222d5539acbb898472e1078887a2f83931f5cfcc6d1",
+      "target_id": "ru-id07833",
+      "tag": "p",
+      "target_sha256": "cb65c4943e5af03cb7530c2049549b9e61be0243b5a2714989bcd29031fe5209"
+    },
+    {
+      "source_id": "id07834",
+      "target": "— Да, — сказал Атос, — и маршал не раз рассказывал это мне самому.",
+      "source_sha256": "0ac855b4db00a5274e8b4820f85aa027fffc0acd67c5c4c401af38cd6fa5ea7f",
+      "target_id": "ru-id07834",
+      "tag": "p",
+      "target_sha256": "256d8baba2c7c8840f33c662d5d7a711ad142a0c8aca73b36db33af8453cfcba"
+    },
+    {
+      "source_id": "id07835",
+      "target": "— Вот именно, — прошептал де Винтер, — а на следующий день Генрих IV был убит.",
+      "source_sha256": "6cee61c541fd57381031313af0fb36b6467d4077ce6f0000b75b4fe10622bea8",
+      "target_id": "ru-id07835",
+      "tag": "p",
+      "target_sha256": "72fd0cc91cb6d13a2d4e24cf6d1b7d85d9a21af8177bf84f22d869714cc6211c"
+    },
+    {
+      "source_id": "id07836",
+      "target": "— Но какое отношение это видение Генриха IV имеет к вам, граф? — спросил Арамис.",
+      "source_sha256": "44cc29561ab36d8f97342bf4e17b0955d48e042f2e5431c07a0f7bc657aff7e9",
+      "target_id": "ru-id07836",
+      "tag": "p",
+      "target_sha256": "e207cecf35d1075e0dc50f14c69eda8360dc570f36c491704ae3e44d9b5c2ed8"
+    },
+    {
+      "source_id": "id07837",
+      "target": "— Никакого, господа, и, по правде, я безумец, что занимаю вас подобными вещами, когда ваше появление в моей палатке в такой час говорит мне, что вы принесли какую-то важную новость.",
+      "source_sha256": "61648811385ec1bd190cbb6d4ad815bd860299dc41b5831a01492901ff6213a3",
+      "target_id": "ru-id07837",
+      "tag": "p",
+      "target_sha256": "92735c883ff778cfd690d8ba91f90ade83669b83ac46f70c8d694d5c68c12dcc"
+    },
+    {
+      "source_id": "id07838",
+      "target": "— Да, милорд, — сказал Атос, — я хотел бы поговорить с королём.",
+      "source_sha256": "8dd2a3ec80323d6d7f6bf1ae1f7764d96aef63d2ec60fd41564a2c47d021a1e3",
+      "target_id": "ru-id07838",
+      "tag": "p",
+      "target_sha256": "82fb6d467b95bf08eb9f4e9e50f19fdb9a87d467803b215a7a9c904add8d21fc"
+    },
+    {
+      "source_id": "id07839",
+      "target": "— С королём? Но король спит.",
+      "source_sha256": "ae6b6019dbc5789426f60578bc9f55a75c28edb5cbbc3633059c0642441a69e4",
+      "target_id": "ru-id07839",
+      "tag": "p",
+      "target_sha256": "3a48e8fb505e251f9b20311d2d3540a84134401de7b08ced26708e224c00bf52"
+    },
+    {
+      "source_id": "id07840",
+      "target": "— Мне нужно открыть ему весьма важные вещи.",
+      "source_sha256": "2c57ffa867b2ba656c05dc5adc2a74d920de2e5f86d8ac5d97db2c3c200d4925",
+      "target_id": "ru-id07840",
+      "tag": "p",
+      "target_sha256": "60eeaba636cebf6f2bf5a9f6fd6b92f1ad65a6887f7a31ce856f3f6aa27e3006"
+    },
+    {
+      "source_id": "id07841",
+      "target": "— Нельзя ли отложить их до завтра?",
+      "source_sha256": "bbd4a97507bb1da91845cf21ef343410baf09d4a95709061e8d8bc80e6a2e0b4",
+      "target_id": "ru-id07841",
+      "tag": "p",
+      "target_sha256": "3a2ad6eb700f9f97e8add275b6b614e75485333d4ed844a836d6cbbe3a8e9a2c"
+    },
+    {
+      "source_id": "id07842",
+      "target": "— Он должен узнать их немедленно, и, быть может, уже слишком поздно.",
+      "source_sha256": "6162acba48369cc08c04128230bdefffe3c572f1f235c3e4e83285fe43e9079b",
+      "target_id": "ru-id07842",
+      "tag": "p",
+      "target_sha256": "287315073ee076b6e9fbb8fe26b4b8fc176298319f2be35f0cda63c84ebfc617"
+    },
+    {
+      "source_id": "id07843",
+      "target": "— Войдёмте, господа, — сказал де Винтер.",
+      "source_sha256": "6320211a09744bfcdda92b9e0adfb7c95d1158fe45ca78eb5888924eafa1347f",
+      "target_id": "ru-id07843",
+      "tag": "p",
+      "target_sha256": "149c7afb77fcb7505655c3fa517c3c55c4c677ef80c81ad36398b4ddbd62bdfa"
+    },
+    {
+      "source_id": "id07844",
+      "target": "Палатка де Винтера стояла рядом с королевской, и нечто вроде коридора соединяло одну с другой. Этот коридор охранял не часовой, а доверенный слуга Карла I, чтобы в случае нужды король мог тотчас переговорить со своим верным слугой.",
+      "source_sha256": "224600027433a89bb002e2dd775128b0a42bb2e9975e8fb238f6f3189d706df5",
+      "target_id": "ru-id07844",
+      "tag": "p",
+      "target_sha256": "f3ddf6987707a47189d85289fd9e068199568cafd11fef6f2d679c2dbd92f259"
+    },
+    {
+      "source_id": "id07845",
+      "target": "— Эти господа со мной, — сказал де Винтер.",
+      "source_sha256": "bb0f6cc38d2ac1d63e15f69387ffe884fb654626d714aa55629f25d99956d0d7",
+      "target_id": "ru-id07845",
+      "tag": "p",
+      "target_sha256": "84dd0cfbc0c73bfff669f60c99fdb6f2d58b44b145d7d21988b8e88dc5310eaa"
+    },
+    {
+      "source_id": "id07846",
+      "target": "Лакей поклонился и пропустил их.",
+      "source_sha256": "d1547f0af325c07ddc4905be3827c38345bc666f6a04a0e08ed16a3a3d7e7780",
+      "target_id": "ru-id07846",
+      "tag": "p",
+      "target_sha256": "bcf141f50ec1fd547133c1d6f866d08bd10c06a612335e43ddd32d4faef43536"
+    },
+    {
+      "source_id": "id07847",
+      "target": "И в самом деле, на походной кровати, одетый в чёрный камзол, в высоких сапогах, с ослабленным поясом и с фетровой шляпой подле себя, король Карл, уступив непреодолимой потребности во сне, уснул. Мужчины подошли ближе, и Атос, шедший первым, с минуту молча смотрел на это благородное, такое бледное лицо, обрамлённое длинными чёрными волосами, которые прилипли к вискам от пота дурного сна и которые мраморно испещряли крупные голубые жилы, казавшиеся набухшими от слёз под усталыми глазами.",
+      "source_sha256": "478cb23495c0d7249acb16b379d450c1b6fa127d71a0475a00a2bb5225c55a93",
+      "target_id": "ru-id07847",
+      "tag": "p",
+      "target_sha256": "8e418121c03fd5424a423175a557ba74d2c2f5374e22bfaad22ba23e3fe997f3"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id07828",
+      "verdict": "PASS",
+      "reason": "Faithful: precarious position, earth vs sky, question about the Scots preserved."
+    },
+    {
+      "source_id": "id07829",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07830",
+      "verdict": "PASS",
+      "reason": "Accurate; pardieu rendered idiomatically; Loewen as Лёвен."
+    },
+    {
+      "source_id": "id07831",
+      "verdict": "PASS",
+      "reason": "Negation, tag and content preserved."
+    },
+    {
+      "source_id": "id07832",
+      "verdict": "PASS",
+      "reason": "Accurate, simultaneous reply kept."
+    },
+    {
+      "source_id": "id07833",
+      "video": "",
+      "verdict": "PASS",
+      "reason": "Tradition, Henri IV, Bassompierre, blood spots on chessboard all preserved."
+    },
+    {
+      "source_id": "id07834",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07835",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07836",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07837",
+      "verdict": "PASS",
+      "reason": "Accurate; sense of self-reproach and inference preserved."
+    },
+    {
+      "source_id": "id07838",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07839",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07840",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07841",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07842",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07843",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07844",
+      "verdict": "PASS",
+      "reason": "Accurate; valet/serviteur repetition follows the source."
+    },
+    {
+      "source_id": "id07845",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07846",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id07847",
+      "verdict": "CORRECTED",
+      "reason": "«Все вошли» replaced the source's 'Les hommes s'avancèrent' (they moved closer); fixed. Also rewrote the clumsy hair/veins clause to follow the source's syntax (hair stuck to temples by sweat and marbled by veins) and restored 'gonflées de larmes' as «набухшими от слёз»."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id07847",
+      "before": "И в самом деле, на походной кровати, одетый в чёрный камзол, в высоких сапогах, с ослабленным поясом и с фетровой шляпой подле себя, король Карл, уступив непреодолимой потребности во сне, уснул. Все вошли, и Атос, шедший первым, с минуту молча смотрел на это благородное, такое бледное лицо, обрамлённое длинными чёрными волосами, которые прилипли к вискам от пота дурного сна и по которым, как мрамор, шли крупные голубые жилы, казалось, набухшие слезами под усталыми глазами.",
+      "after": "И в самом деле, на походной кровати, одетый в чёрный камзол, в высоких сапогах, с ослабленным поясом и с фетровой шляпой подле себя, король Карл, уступив непреодолимой потребности во сне, уснул. Мужчины подошли ближе, и Атос, шедший первым, с минуту молча смотрел на это благородное, такое бледное лицо, обрамлённое длинными чёрными волосами, которые прилипли к вискам от пота дурного сна и которые мраморно испещряли крупные голубые жилы, казавшиеся набухшими от слёз под усталыми глазами."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRhGR1ocaneNiz5DwSj",
+    "usage": {
+      "input_tokens": 5270,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1285,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJRibQ3ncC5m3rGVLNPp",
+    "usage": {
+      "input_tokens": 9159,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 4186,
+      "output_tokens_details": {
+        "thinking_tokens": 2054
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJRkTRt88iT9eBSRYE1o",
+        "usage": {
+          "input_tokens": 9669,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3720,
+          "output_tokens_details": {
+            "thinking_tokens": 1330
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id07828",
+          "verdict": "PASS",
+          "reason": "Faithful: precarious position, земля vs небо, the question about studying and trusting the Scots are all preserved."
+        },
+        {
+          "source_id": "id07829",
+          "verdict": "PASS",
+          "reason": "Both questions rendered accurately, dialogue punctuation correct."
+        },
+        {
+          "source_id": "id07830",
+          "verdict": "PASS",
+          "reason": "Accurate; 'pardieu' rendered idiomatically, relative clause about the king's trust and the Loewen Scots preserved."
+        },
+        {
+          "source_id": "id07831",
+          "verdict": "PASS",
+          "reason": "Negation, the narrative interjection 'Puis il ajouta' and the question about the reddish tint are preserved."
+        },
+        {
+          "source_id": "id07832",
+          "verdict": "PASS",
+          "reason": "'Pas le moins du monde' and simultaneous speech by Athos and Aramis preserved."
+        },
+        {
+          "source_id": "id07833",
+          "verdict": "PASS",
+          "reason": "Tradition, eve of the assassination, chess with Bassompierre (the established Бассомпьер), bloodstains on the board all accurate."
+        },
+        {
+          "source_id": "id07834",
+          "venue": "",
+          "verdict": "PASS",
+          "reason": "Accurate: the marshal told it many times to Athos himself."
+        },
+        {
+          "source_id": "id07835",
+          "verdict": "PASS",
+          "reason": "Accurate, including murmured delivery and the following day's death."
+        },
+        {
+          "source_id": "id07836",
+          "verdict": "PASS",
+          "reason": "Aramis's question about the relevance of the vision to de Winter is accurate."
+        },
+        {
+          "source_id": "id07837",
+          "verdict": "PASS",
+          "reason": "Accurate; self-reproach and inference from their entrance preserved."
+        },
+        {
+          "source_id": "id07838",
+          "verdict": "PASS",
+          "reason": "Accurate; conditional 'je voudrais' kept as 'хотел бы'."
+        },
+        {
+          "source_id": "id07839",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07840",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07841",
+          "verdict": "PASS",
+          "reason": "Negative-interrogative rendered as a natural Russian question with the same meaning."
+        },
+        {
+          "source_id": "id07842",
+          "verdict": "PASS",
+          "reason": "Urgency and 'peut-être déjà trop tard' preserved."
+        },
+        {
+          "source_id": "id07843",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07844",
+          "verdict": "PASS",
+          "reason": "Tents, corridor, valet of confidence instead of a sentinel, and purpose clause are all preserved; the repetition of 'слуга' is tolerable and mirrors valet/serviteur."
+        },
+        {
+          "source_id": "id07845",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07846",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id07847",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: 'Les hommes s'avancèrent' is now 'Мужчины подошли ближе' (not the looser 'Все вошли'), and the veins marbling the hair/temples are rendered faithfully as 'казавшиеся набухшими от слёз'. Clothing, posture, sleep, silence of Athos and all details are preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

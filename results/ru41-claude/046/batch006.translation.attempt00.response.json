@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJPfaDYKVJShpXmCGc2V",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id05828\",\"target\":\"Гримо издал глухое ворчание, похожее на рычание.\"},{\"source_id\":\"id05829\",\"target\":\"В этот миг с шлюпа их окликнул чей-то голос. Лоцман, сидевший у руля, ответил, и лодка пристала к судну.\"},{\"source_id\":\"id05830\",\"target\":\"В одно мгновение господа, слуги и багаж оказались на борту. Хозяин ждал лишь пассажиров, чтобы отплыть; и едва те ступили на палубу, как судно взяло курс на Гастингс, где им предстояло высадиться.\"},{\"source_id\":\"id05831\",\"target\":\"В этот миг трое друзей, сами того не желая, бросили последний взгляд на скалу, где всё ещё виднелась отчётливо вырисовывавшаяся грозная тень, преследовавшая их.\"},{\"source_id\":\"id05832\",\"target\":\"Потом до них долетел голос, посылавший им последнюю угрозу:\"},{\"source_id\":\"id05833\",\"target\":\"— До свидания, господа, в Англии!\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2210,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 374,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

@@ -1,0 +1,609 @@
+{
+  "unit": 52,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id06761",
+      "target": "— И всё же вы меня одобряете?",
+      "source_sha256": "71947f3d9c2e5c4a4312c804d29493a897ca52b90e9f2521647afa3c15db07c8",
+      "target_id": "ru-id06761",
+      "tag": "p",
+      "target_sha256": "35af36a20bd438f2c0ae302e36419ce8257c280b1cf01a04d6da4b9eddcab5ef"
+    },
+    {
+      "source_id": "id06762",
+      "target": "— Да, если вижу, что это возможно.",
+      "source_sha256": "e46046a7b6e8c3cea7433690119fe14bbcb64c4af9b90facc7a7e3b29a29f303",
+      "target_id": "ru-id06762",
+      "tag": "p",
+      "target_sha256": "8903bc0c21a8198ab90b1fadb698542373f37a5700f91f7947c588041347c2c3"
+    },
+    {
+      "source_id": "id06763",
+      "target": "— Возможно, и говорю это вам я; готовьте всё к отъезду.",
+      "source_sha256": "7fe915aed344b953eb3b940bb52b5c7154e320bfc913c21a99e6b1388e4fcbbf",
+      "target_id": "ru-id06763",
+      "tag": "p",
+      "target_sha256": "69273339c1a6c5734a9a967f02ee6809c5e460011842411778c655b2805c928e"
+    },
+    {
+      "source_id": "id06764",
+      "target": "— Я! Я всегда готов уехать; только, вы же знаете, я никогда не уезжаю… и на этот раз, вероятно, не уеду, как и во все прочие разы.",
+      "source_sha256": "48c485f450cc37b081ddf800b6168061ea16da18effcdb8927502d07ee3ffc01",
+      "target_id": "ru-id06764",
+      "tag": "p",
+      "target_sha256": "07edcc305a6e67e39ffa673293cae23c86b26ab244dc6b5e99e038c30710f007"
+    },
+    {
+      "source_id": "id06765",
+      "target": "— Ну а если уеду я, вы поедете?",
+      "source_sha256": "0fceccb440713c530815561a2a1c5b2446932dadd32d58a0b999104fe86b51a6",
+      "target_id": "ru-id06765",
+      "tag": "p",
+      "target_sha256": "f46002f53212cd98dcc4b3852487ed5f514657caf2efae4d69cefc432ec17b6e"
+    },
+    {
+      "source_id": "id06766",
+      "target": "— Попробую.",
+      "source_sha256": "c6adcdbac83d5ab22c470ac4b300b8a19f26430d07c6389af3bb947a8df8a72b",
+      "target_id": "ru-id06766",
+      "tag": "p",
+      "target_sha256": "a350b2760ea484e807fe136f10b3e3b21f154735c579b7c6dc0bccf034d7f54b"
+    },
+    {
+      "source_id": "id06767",
+      "target": "— Вы сводите меня в могилу своими страхами, Джулио, да чего же вы боитесь?",
+      "source_sha256": "3777f06e455699984a04448c3f354874ee2902229c4138b89d94ea28cd422a7e",
+      "target_id": "ru-id06767",
+      "tag": "p",
+      "target_sha256": "c1bc403ddc8e6b785e412825a375136f2b0552de1366c1934ba00b8a0ae534ce"
+    },
+    {
+      "source_id": "id06768",
+      "target": "— Многого.",
+      "source_sha256": "95f89b71236063250bc29b225a0c0ee165258fadd92b8a0297e35b8798e130a7",
+      "target_id": "ru-id06768",
+      "tag": "p",
+      "target_sha256": "66bb9e43c8a04e8ad8cbc9fcb9d34ffb09859a9cc8512e56d3948ed85f76830d"
+    },
+    {
+      "source_id": "id06769",
+      "target": "— Чего именно?",
+      "source_sha256": "3c6d18e0e2aec2544a92c25f236478eece6101cfc0e8ec4968f2c6bcf30d3884",
+      "target_id": "ru-id06769",
+      "tag": "p",
+      "target_sha256": "9e26d01854d6bf755f31381d2714cee65d0c30351df011b40c3d7152d50af10b"
+    },
+    {
+      "source_id": "id06770",
+      "target": "Лицо Мазарини, прежде насмешливое, стало мрачным.",
+      "source_sha256": "f6204c32ea300608ece8972398d9d73279b9c64dbfea1ce8b25734d7cc27d0a1",
+      "target_id": "ru-id06770",
+      "tag": "p",
+      "target_sha256": "30929dddf73aab77d6d14fd36568ada62f33fb9bd98344f8a1a9f375d82bd3f7"
+    },
+    {
+      "source_id": "id06771",
+      "target": "— Анна, — сказал он, — вы всего лишь женщина, и как женщина можете сколько угодно оскорблять мужчин, будучи уверены в своей безнаказанности: вы обвиняете меня в том, что я боюсь; но я боюсь не так сильно, как вы, ведь я-то не убегаю. Против кого кричат? Против вас или против меня? Кого хотят повесить? Вас или меня? Так вот, я, однако, держусь перед бурей, я, которого вы обвиняете в страхе, — не бахвалясь, это не в моём вкусе, но держусь. Подражайте мне: поменьше шума, побольше толку. Вы кричите очень громко, а ничего не добиваетесь. Вы говорите о бегстве!",
+      "source_sha256": "cfd3775be0f7a0c79f3d6bb235a4ed13784e6fd6812ac94d6a0dd702f01e4a63",
+      "target_id": "ru-id06771",
+      "tag": "p",
+      "target_sha256": "04056026dc845132fdfeef20a8199fb5eee69ed8c6309408880909e21446c095"
+    },
+    {
+      "source_id": "id06772",
+      "target": "Мазарини пожал плечами, взял королеву за руку и подвёл её к окну:",
+      "source_sha256": "9dbd0e25614a7ae3f064298e1ea7f3e52e7bc0f60ccdf556c5df25eb76294d46",
+      "target_id": "ru-id06772",
+      "tag": "p",
+      "target_sha256": "fcf64b9163ddbcbd2fbfdbc330f276e3b2c4cd8f284006ab182f4e01682a4d25"
+    },
+    {
+      "source_id": "id06773",
+      "target": "— Смотрите!",
+      "source_sha256": "2549f5c4c4d4c3886f936e95be904f06188a0795c1c23ba47330fed5ee1bf76a",
+      "target_id": "ru-id06773",
+      "tag": "p",
+      "target_sha256": "38e7009175a0445f60a2dfa297ce0f69b30150ae8fbdf0621069338b6beb9c92"
+    },
+    {
+      "source_id": "id06774",
+      "target": "— Ну и что? — сказала королева, ослеплённая своим упрямством.",
+      "source_sha256": "63baea1ff9589ea9ef24fca3bcaffad9345581686f47df748905e5fc1e874c1c",
+      "target_id": "ru-id06774",
+      "tag": "p",
+      "target_sha256": "d2b009d642ac04d5c2a011f558f9f45881850fd9cc96ae521ee71dd04c386f0b"
+    },
+    {
+      "source_id": "id06775",
+      "target": "— Ну так что вы видите из этого окна? Это, если я не ошибаюсь, горожане в кирасах, в касках, вооружённые добрыми мушкетами, как во времена Лиги, и они так пристально смотрят на окно, из которого вы смотрите на них, что вас заметят, если вы так сильно приподнимете занавеску. Теперь подойдите к другому: что вы видите? Простолюдинов с алебардами, которые стерегут ваши двери. У каждого отверстия этого дворца, к которому я подвёл бы вас, вы увидели бы то же самое; ваши двери охраняются, отдушины ваших погребов охраняются, и я скажу вам в свой черёд то, что этот славный Ла Рамэ говорил мне о господине де Бофоре: «Если только вы не станете птицей или мышью, вам не выйти».",
+      "source_sha256": "e9fdc20dfc938684fa09cbdb1d7117a97b21c22c481a1d1c2cdcab05c09967d9",
+      "target_id": "ru-id06775",
+      "tag": "p",
+      "target_sha256": "3ddab9381116694e21f3bf959af065e2b72e4d381dbf258e02bc03a5e107c522"
+    },
+    {
+      "source_id": "id06776",
+      "target": "— Однако он-то вышел.",
+      "source_sha256": "e4affd5c215a049099fd245d2979a73fa94826b0dd95f6d02d43a3c8b0f4efec",
+      "target_id": "ru-id06776",
+      "tag": "p",
+      "target_sha256": "dba44eb5d8067b6f55a0b9607a799fb4478565b875e86e357f8720dd578ee9ee"
+    },
+    {
+      "source_id": "id06777",
+      "target": "— Вы рассчитываете выйти тем же способом?",
+      "source_sha256": "975a6e816b5133ef3f081cc8305ea3055503a4a82a04445f77d3c273b9febb96",
+      "target_id": "ru-id06777",
+      "tag": "p",
+      "target_sha256": "0c5fd9d2ec7fc6cae623a00aabd99d7b5cbd10160e8cca1ade361b3dbad84e83"
+    },
+    {
+      "source_id": "id06778",
+      "target": "— Значит, я пленница?",
+      "source_sha256": "83bca9ba48c1776c2cc3fd32ce8e767a07f39fd34bddb555262b791c2ae98e20",
+      "target_id": "ru-id06778",
+      "tag": "p",
+      "target_sha256": "91454d9b2a38a59c4df79719441de294067bb5a28674adcbcb27d8b6b8259427"
+    },
+    {
+      "source_id": "id06779",
+      "target": "— Чёрт возьми! — сказал Мазарини. — Вот уже час, как я вам это доказываю.",
+      "source_sha256": "d5da48065ddd0c965d6251bcaf512e6367818f13e71df2590af0b3170ea237fc",
+      "target_id": "ru-id06779",
+      "tag": "p",
+      "target_sha256": "a2bd7466ae57e775a8103d68a6672647c0466ed1c7b7250d3376c6c72e6eabe1"
+    },
+    {
+      "source_id": "id06780",
+      "target": "И Мазарини спокойно продолжил начатую депешу с того места, где прервал её.",
+      "source_sha256": "84b2373dc8a6b121a0f764d228a4fa6d44463ecbe2c8f1d660f07a5680a40a8d",
+      "target_id": "ru-id06780",
+      "tag": "p",
+      "target_sha256": "e7d7be21bb937b319c16ff89068dd851570daf2e1c8937a0d202fb75ee7aae57"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id06761",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06762",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06763",
+      "verdict": "CORRECTED",
+      "reason": "Draft read as 'perhaps, this I tell you', altering 'Elle l'est' (it is possible) and the emphasis on the speaker; fixed."
+    },
+    {
+      "source_id": "id06764",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed 'pas plus que les autres' to 'как и во все прочие разы'."
+    },
+    {
+      "source_id": "id06765",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06766",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06767",
+      "verdict": "PASS",
+      "reason": "Faithful idiom."
+    },
+    {
+      "source_id": "id06768",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06769",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06770",
+      "verdict": "CORRECTED",
+      "reason": "Replaced 'до того' with 'прежде' to render 'de railleuse qu'elle était' accurately."
+    },
+    {
+      "source_id": "id06771",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'не по-бахвальски' to 'не бахвалясь', 'n'aboutissez à rien' to 'ничего не добиваетесь', and 'effet' to 'толку'."
+    },
+    {
+      "source_id": "id06772",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06773",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06774",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06775",
+      "verdict": "CORRECTED",
+      "reason": "'À moins d'être oiseau ou souris' means 'unless you become bird or mouse'; draft changed the logic. Also marked the quoted saying as speech, and normalised La Ramée as Ла Рамэ."
+    },
+    {
+      "source_id": "id06776",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06777",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06778",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id06779",
+      "verdict": "CORRECTED",
+      "reason": "Orthography: Чёрт."
+    },
+    {
+      "source_id": "id06780",
+      "verdict": "CORRECTED",
+      "reason": "'dépêche' is a dispatch, not a 'донесение'; changed to 'депешу'."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id06763",
+      "before": "— Возможно, это я вам говорю; готовьтесь к отъезду.",
+      "after": "— Возможно, и говорю это вам я; готовьте всё к отъезду."
+    },
+    {
+      "source_id": "id06764",
+      "before": "— Я! Я всегда готов уехать; только, вы же знаете, я никогда не уезжаю… и на этот раз, вероятно, не уеду, как и в другие.",
+      "after": "— Я! Я всегда готов уехать; только, вы же знаете, я никогда не уезжаю… и на этот раз, вероятно, не уеду, как и во все прочие разы."
+    },
+    {
+      "source_id": "id06770",
+      "before": "Лицо Мазарини, до того насмешливое, стало мрачным.",
+      "after": "Лицо Мазарини, прежде насмешливое, стало мрачным."
+    },
+    {
+      "source_id": "id06771",
+      "before": "— Анна, — сказал он, — вы всего лишь женщина, и как женщина можете сколько угодно оскорблять мужчин, будучи уверены в своей безнаказанности: вы обвиняете меня в трусости; но я боюсь не так сильно, как вы, ведь я-то не убегаю. Против кого кричат? Против вас или против меня? Кого хотят повесить? Вас или меня? Так вот, я держусь перед бурей, я, которого вы обвиняете в страхе, — не по-бахвальски, это не в моём вкусе, но держусь. Подражайте мне: поменьше шума, побольше дела. Вы кричите очень громко, а ни к чему не приходите. Вы говорите о бегстве!",
+      "after": "— Анна, — сказал он, — вы всего лишь женщина, и как женщина можете сколько угодно оскорблять мужчин, будучи уверены в своей безнаказанности: вы обвиняете меня в трусости; но я боюсь не так сильно, как вы, ведь я-то не убегаю. Против кого кричат? Против вас или против меня? Кого хотят повесить? Вас или меня? Так вот, я держусь перед бурей, я, которого вы обвиняете в страхе, — не бахвалясь, это не в моём вкусе, но держусь. Подражайте мне: поменьше шума, побольше толку. Вы кричите очень громко, а ничего не добиваетесь. Вы говорите о бегстве!"
+    },
+    {
+      "source_id": "id06775",
+      "before": "— Ну так что вы видите из этого окна? Это, если я не ошибаюсь, горожане в кирасах, в касках, вооружённые добрыми мушкетами, как во времена Лиги, и они так пристально смотрят на окно, из которого вы смотрите на них, что вас заметят, если вы так сильно приподнимете занавеску. Теперь подойдите к другому: что вы видите? Простолюдинов с алебардами, которые стерегут ваши двери. У каждого отверстия этого дворца, к которому я подвёл бы вас, вы увидели бы то же самое; ваши двери охраняются, отдушины ваших погребов охраняются, и я скажу вам в свой черёд то, что этот славный Ла Рамей говорил мне о господине де Бофоре: если вы не птица и не мышь, вам не выйти.",
+      "after": "— Ну так что вы видите из этого окна? Это, если я не ошибаюсь, горожане в кирасах, в касках, вооружённые добрыми мушкетами, как во времена Лиги, и они так пристально смотрят на окно, из которого вы смотрите на них, что вас заметят, если вы так сильно приподнимете занавеску. Теперь подойдите к другому: что вы видите? Простолюдинов с алебардами, которые стерегут ваши двери. У каждого отверстия этого дворца, к которому я подвёл бы вас, вы увидели бы то же самое; ваши двери охраняются, отдушины ваших погребов охраняются, и я скажу вам в свой черёд то, что этот славный Ла Рамэ говорил мне о господине де Бофоре: «Если только вы не станете птицей или мышью, вам не выйти»."
+    },
+    {
+      "source_id": "id06779",
+      "before": "— Черт возьми! — сказал Мазарини. — Вот уже час, как я вам это доказываю.",
+      "after": "— Чёрт возьми! — сказал Мазарини. — Вот уже час, как я вам это доказываю."
+    },
+    {
+      "source_id": "id06780",
+      "before": "И Мазарини спокойно продолжил начатое донесение с того места, где прервал его.",
+      "after": "И Мазарини спокойно продолжил начатую депешу с того места, где прервал её."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQmyLdTaS1fXkg54mrD",
+    "usage": {
+      "input_tokens": 5223,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1231,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQnZN23cXNMB5Nen74a",
+    "usage": {
+      "input_tokens": 9058,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3489,
+      "output_tokens_details": {
+        "thinking_tokens": 1351
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJQp7mgiPHgVHiw7NGZj",
+        "usage": {
+          "input_tokens": 10721,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3575,
+          "output_tokens_details": {
+            "thinking_tokens": 1172
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id06761",
+          "verdict": "PASS",
+          "reason": "Faithful: «Cependant» = «И всё же», question preserved."
+        },
+        {
+          "source_id": "id06762",
+          "verdict": "PASS",
+          "reason": "Conditional and meaning accurate."
+        },
+        {
+          "source_id": "id06763",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: emphatic «c'est moi qui vous le dis» preserved; «préparatifs de départ» rendered correctly."
+        },
+        {
+          "source_id": "id06764",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: «ne pars jamais», «probablement pas plus que les autres» are accurately conveyed."
+        },
+        {
+          "source_id": "id06765",
+          "verdict": "PASS",
+          "reason": "Agency of «si je pars, partirez-vous» preserved."
+        },
+        {
+          "source_id": "id06766",
+          "verdict": "PASS",
+          "reason": "Future 'I shall try' rendered adequately as «Попробую»."
+        },
+        {
+          "source_id": "id06767",
+          "verdict": "PASS",
+          "reason": "Idiom «me faites mourir» and the name Giulio rendered faithfully."
+        },
+        {
+          "source_id": "id06768",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id06769",
+          "verdict": "PASS",
+          "reason": "«Desquelles?» correctly rendered."
+        },
+        {
+          "source_id": "id06770",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: «de railleuse qu'elle était, devint sombre» preserved."
+        },
+        {
+          "source_id": "id06771",
+          "verdict": "CORRECTED",
+          "reason": "Prior corrections verified (бахвалясь, толку, ничего не добиваетесь). However, «cependant» was omitted, restored as «однако». «M'accusez d'avoir peur» had been rendered as «в трусости», which shifts the sense (accusation of fear, as repeated later), so it now reads «в том, что я боюсь». The rest (rhetorical questions, «pas tant d'éclat, plus d'effet») is faithful."
+        },
+        {
+          "source_id": "id06772",
+          "verdict": "PASS",
+          "reason": "Sequence of actions and agency preserved."
+        },
+        {
+          "source_id": "id06773",
+          "verdict": "PASS",
+          "reason": "Imperative accurate."
+        },
+        {
+          "source_id": "id06774",
+          "verdict": "PASS",
+          "reason": "Accurate, including «aveuglée par son entêtement»."
+        },
+        {
+          "source_id": "id06775",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: La Ramée's remark is now in quotation marks and keeps the conditional sense of «À moins d'être oiseau ou souris»; the details on bourgeois, Ligue, windows, vents and the doors are all preserved."
+        },
+        {
+          "source_id": "id06776",
+          "verdict": "PASS",
+          "reason": "«cependant ... lui» rendered with «Однако он-то»."
+        },
+        {
+          "source_id": "id06777",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id06778",
+          "verdict": "PASS",
+          "reason": "«donc ... alors» rendered by «Значит»; meaning intact."
+        },
+        {
+          "source_id": "id06779",
+          "verdict": "PASS",
+          "reason": "Prior correction verified («Чёрт» spelling); «il y a une heure que je vous le prouve» faithfully rendered."
+        },
+        {
+          "source_id": "id06780",
+          "verdict": "PASS",
+          "reason": "Prior correction verified: «dépêche» = «депеша», resumption at the interrupted point preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id06771",
+          "before": "— Анна, — сказал он, — вы всего лишь женщина, и как женщина можете сколько угодно оскорблять мужчин, будучи уверены в своей безнаказанности: вы обвиняете меня в трусости; но я боюсь не так сильно, как вы, ведь я-то не убегаю. Против кого кричат? Против вас или против меня? Кого хотят повесить? Вас или меня? Так вот, я держусь перед бурей, я, которого вы обвиняете в страхе, — не бахвалясь, это не в моём вкусе, но держусь. Подражайте мне: поменьше шума, побольше толку. Вы кричите очень громко, а ничего не добиваетесь. Вы говорите о бегстве!",
+          "after": "— Анна, — сказал он, — вы всего лишь женщина, и как женщина можете сколько угодно оскорблять мужчин, будучи уверены в своей безнаказанности: вы обвиняете меня в том, что я боюсь; но я боюсь не так сильно, как вы, ведь я-то не убегаю. Против кого кричат? Против вас или против меня? Кого хотят повесить? Вас или меня? Так вот, я, однако, держусь перед бурей, я, которого вы обвиняете в страхе, — не бахвалясь, это не в моём вкусе, но держусь. Подражайте мне: поменьше шума, побольше толку. Вы кричите очень громко, а ничего не добиваетесь. Вы говорите о бегстве!"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJQqiCuEBbDbZRoEepSa",
+        "usage": {
+          "input_tokens": 10721,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3264,
+          "output_tokens_details": {
+            "thinking_tokens": 778
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id06761",
+          "verdict": "PASS",
+          "reason": "Faithful: «Cependant» is rendered as «И всё же», and the question is preserved."
+        },
+        {
+          "source_id": "id06762",
+          "verdict": "PASS",
+          "reason": "Conditional «si je vois la chose possible» is accurately conveyed."
+        },
+        {
+          "source_id": "id06763",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "The emphatic «c'est moi qui vous le dis» is kept as «говорю это вам я»; the order to prepare for departure is intact. The prior correction is verified."
+        },
+        {
+          "source_id": "id06764",
+          "verdict": "PASS",
+          "reason": "«Toujours prêt», «je ne pars jamais» and «pas plus que les autres» are preserved, as are the exclamation and the ellipsis. The prior correction is verified."
+        },
+        {
+          "source_id": "id06765",
+          "verdict": "PASS",
+          "reason": "Agency is correct (if I leave, will you go?); register is natural."
+        },
+        {
+          "source_id": "id06766",
+          "verdict": "PASS",
+          "reason": "Future tense «J'essaierai» is rendered correctly as «Попробую»."
+        },
+        {
+          "source_id": "id06767",
+          "verdict": "PASS",
+          "reason": "«Vous me faites mourir» is rendered idiomatically; «Giulio» and the question about fear are preserved."
+        },
+        {
+          "source_id": "id06768",
+          "verdict": "PASS",
+          "reason": "Accurate and concise."
+        },
+        {
+          "source_id": "id06769",
+          "verdict": "PASS",
+          "reason": "«Desquelles?» is correctly rendered as «Чего именно?»."
+        },
+        {
+          "source_id": "id06770",
+          "verdict": "PASS",
+          "reason": "The change from mocking to gloomy is preserved. The prior correction is verified."
+        },
+        {
+          "source_id": "id06771",
+          "verdict": "PASS",
+          "reason": "All rhetorical questions, the accusation of fear («в том, что я боюсь»), «je fais tête à l'orage», the disclaimer about bravado and the closing line are preserved. «Pas tant d'éclat, plus d'effet» is rendered idiomatically. The prior corrections are verified."
+        },
+        {
+          "source_id": "id06772",
+          "verdict": "PASS",
+          "reason": "The sequence of shrugging, taking her hand and leading her to the window is faithful."
+        },
+        {
+          "source_id": "id06773",
+          "verdict": "PASS",
+          "reason": "Imperative preserved."
+        },
+        {
+          "source_id": "id06774",
+          "verdict": "PASS",
+          "reason": "The queen's obstinate blindness is preserved, with the dialogue punctuated correctly."
+        },
+        {
+          "source_id": "id06775",
+          "verdict": "PASS",
+          "reason": "All details are present: armed citizens as in the time of the League, the curtain, the halberdiers, the guarded doors and cellar vents, and La Ramée's remark about Beaufort. Guillemets for the quoted saying are acceptable Russian punctuation. The prior corrections are verified."
+        },
+        {
+          "source_id": "id06776",
+          "verdict": "PASS",
+          "reason": "«Cependant... lui» is correctly rendered as «Однако он-то вышел»."
+        },
+        {
+          "source_id": "id06777",
+          "verdict": "PASS",
+          "reason": "Faithful rendering of the question."
+        },
+        {
+          "source_id": "id06778",
+          "verdict": "PASS",
+          "reason": "«donc... alors» is conveyed adequately by «Значит»."
+        },
+        {
+          "source_id": "id06779",
+          "verdict": "PASS",
+          "reason": "«Parbleu» is rendered as «Чёрт возьми» and the one-hour detail is preserved. The prior orthography correction is verified."
+        },
+        {
+          "source_id": "id06780",
+          "verdict": "PASS",
+          "reason": "«Dépêche» is rendered as «депеша», and the calm resumption where he left off is preserved. The prior correction is verified."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

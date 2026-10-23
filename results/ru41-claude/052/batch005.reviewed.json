@@ -1,0 +1,172 @@
+{
+  "unit": 52,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id06781",
+      "target": "Анна, дрожа от гнева, пунцовая от унижения, вышла из кабинета, с силой захлопнув за собою дверь.",
+      "source_sha256": "d091dc90ec4003993c0317eaedf53eb88845b5bb6be566072db679dca312c44a",
+      "target_id": "ru-id06781",
+      "tag": "p",
+      "target_sha256": "2d03ecb6e1cb9b7be5e9495663f92e58988505d1045c303c20c2fe11acbcbeb1"
+    },
+    {
+      "source_id": "id06782",
+      "target": "Мазарини даже не повернул головы.",
+      "source_sha256": "86e117b44bfb5d87662a76e85d652bf86f312e14ec88a594c0d351a831a96012",
+      "target_id": "ru-id06782",
+      "tag": "p",
+      "target_sha256": "94bfd746cd8e43f3a0b8f286c283806c328ac3998d782843bf0097117f5f8053"
+    },
+    {
+      "source_id": "id06783",
+      "target": "Вернувшись в свои покои, королева опустилась в кресло и заплакала.",
+      "source_sha256": "b89fbc8163593573a689a67d232c5898c43a6cf5e1aba4bfb5c49dd1ee60a9f9",
+      "target_id": "ru-id06783",
+      "tag": "p",
+      "target_sha256": "5abeee8a2b3f6e2a1afb10796e247a6f0d0fe4b2ead7216b28048b276a7e4c22"
+    },
+    {
+      "source_id": "id06784",
+      "target": "Потом вдруг, поражённая внезапной мыслью:",
+      "source_sha256": "daad1ef610e3626ccabc7349e91c17e9f42c535431dc053787005a18cc78de29",
+      "target_id": "ru-id06784",
+      "tag": "p",
+      "target_sha256": "b67f75b23a6a8c0bfc6de6b60c976a6df00536e61642ad42bf1c6f6d51610bcd"
+    },
+    {
+      "source_id": "id06785",
+      "target": "— Я спасена! — сказала она, поднимаясь. — О да, да, я знаю человека, который сумеет вывезти меня из Парижа, — именно он, человек, которого я слишком долго забывала.",
+      "source_sha256": "0b7cdf69d9f30aa7229fed8ac9639da442d9264c156506ae6db652b9d6c068d1",
+      "target_id": "ru-id06785",
+      "tag": "p",
+      "target_sha256": "a9757c689e0e06924f28a30f8f682e8ec480a115de1217d301294179e1efbbee"
+    },
+    {
+      "source_id": "id06786",
+      "target": "И, задумчиво, хотя с чувством радости:",
+      "source_sha256": "ac98d4db11f5aa11b4e9cef751191b979226e5157a656fb7258cddb1f964ef73",
+      "target_id": "ru-id06786",
+      "tag": "p",
+      "target_sha256": "7a77e3b229c4c5909e7617e00abc1ca8bb2a4c29ebe45fc6d27593b58d0832a3"
+    },
+    {
+      "source_id": "id06787",
+      "target": "— Какая же я неблагодарная! — сказала она. — Двадцать лет я забывала этого человека, а ведь должна была сделать его маршалом Франции. Моя свекровь осыпала золотом, почестями и ласками Кончини, который её погубил; король сделал Витри маршалом Франции за убийство, а я оставила в забвении и в нищете этого благородного д’Артаньяна, который меня спас.",
+      "source_sha256": "b3a9ab03910aa351322cc108a2c6e111341de8396cebbfdb67d3b78ae0263b10",
+      "target_id": "ru-id06787",
+      "tag": "p",
+      "target_sha256": "c5e452765a82c48dc6a5b56fb6c8241c5d128a86d9e66fb5ddbfb49620c5bc2d"
+    },
+    {
+      "source_id": "id06788",
+      "target": "И она бросилась к столу, на котором лежали бумага и чернила, и принялась писать.",
+      "source_sha256": "0f3063b066ad8f9f37805653fd08e01a27af483d9098c4917c6d5a78ab44ce72",
+      "target_id": "ru-id06788",
+      "tag": "p",
+      "target_sha256": "c6463e161d84987519ebb74dcfd91fe161e3ff77d466dacba0d041e40c566164"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id06781",
+      "verdict": "PASS",
+      "reason": "Faithful: trembling with anger, red with humiliation, leaving and violently pushing the door shut behind her."
+    },
+    {
+      "source_id": "id06782",
+      "verdict": "PASS",
+      "reason": "Accurate, including the negation with 'même'."
+    },
+    {
+      "source_id": "id06783",
+      "verdict": "PASS",
+      "reason": "Accurate: the queen returns to her apartments, drops into an armchair and begins to weep."
+    },
+    {
+      "source_id": "id06784",
+      "verdict": "CORRECTED",
+      "reason": "The draft added a verb ('она сказала') that is absent from the source; the source ends with a bare colon, and the next paragraph already has its own speech tag. The added verb is removed."
+    },
+    {
+      "source_id": "id06785",
+      "verdict": "PASS",
+      "reason": "Content, tense and the emphatic 'lui' are preserved; the speech tag is rendered correctly."
+    },
+    {
+      "source_id": "id06786",
+      "verdict": "CORRECTED",
+      "reason": "The draft added 'прибавила' and turned the adjective 'rêveuse' into a participle. Restored the verbless lead-in to the colon and a manner adverb for 'rêveuse'."
+    },
+    {
+      "source_id": "id06787",
+      "verdict": "CORRECTED",
+      "reason": "'j'ai oublié' was rendered as 'не вспоминала', which shifts the sense; it now reads 'забывала', and the construction with 'dont j'eusse dû faire' is kept. The rest (belle-mère = свекровь, Concini, Vitry, d'Artagnan) is accurate."
+    },
+    {
+      "source_id": "id06788",
+      "verdict": "PASS",
+      "reason": "Faithful: she ran to a table with paper and ink and began to write."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id06784",
+      "before": "Потом вдруг, пронзённая внезапной мыслью, она сказала:",
+      "after": "Потом вдруг, поражённая внезапной мыслью:"
+    },
+    {
+      "source_id": "id06786",
+      "before": "И, задумавшись, хотя с чувством радости, прибавила:",
+      "after": "И, задумчиво, хотя с чувством радости:"
+    },
+    {
+      "source_id": "id06787",
+      "before": "— Какая же я неблагодарная! — сказала она. — Двадцать лет я не вспоминала об этом человеке, а должна была сделать его маршалом Франции. Моя свекровь осыпала золотом, почестями и ласками Кончини, который её погубил; король сделал Витри маршалом Франции за убийство, а я оставила в забвении и в нищете этого благородного д’Артаньяна, который меня спас.",
+      "after": "— Какая же я неблагодарная! — сказала она. — Двадцать лет я забывала этого человека, а ведь должна была сделать его маршалом Франции. Моя свекровь осыпала золотом, почестями и ласками Кончини, который её погубил; король сделал Витри маршалом Франции за убийство, а я оставила в забвении и в нищете этого благородного д’Артаньяна, который меня спас."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQsBEdgRMZ1hbvK3hni",
+    "usage": {
+      "input_tokens": 2573,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 515,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQsU69GixEsNEbjyQp8",
+    "usage": {
+      "input_tokens": 4170,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2310,
+      "output_tokens_details": {
+        "thinking_tokens": 1236
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
