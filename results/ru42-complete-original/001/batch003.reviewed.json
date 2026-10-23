@@ -1,0 +1,74 @@
+{
+  "unit": 1,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-note-001",
+      "target": "Балансе-фиш (balance-fish) получила такое название у английских моряков потому, что её голова имеет форму весов, а ещё точнее — форму двойного молотка. Именно по этой причине во Франции это животное известно под названием «акула-молот» (requin-marteau).",
+      "source_sha256": "64ace4bcc7595755890213a2e22aac4f5e15f28905c4046ead486e58facd7364",
+      "target_id": "ru-fr42c-note-001",
+      "tag": "note",
+      "target_sha256": "947863dce669f858d650e962840031975c03c593c92c2c747553d6687d5b0e1a"
+    },
+    {
+      "source_id": "fr42c-note-002",
+      "target": "Должностное лицо, ведущее следствие по уголовным делам.",
+      "source_sha256": "66ae483497e0671c25850f7968827a138289d7b73dfd190a1c4de732973479b3",
+      "target_id": "ru-fr42c-note-002",
+      "tag": "note",
+      "target_sha256": "98a3927a4b764b96d2b14de53f0e618cc4c884e82563ce49d517a2461a8ebb5a"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-note-001",
+      "verdict": "CORRECTED",
+      "reason": "Source says the English sailors named the fish balance-fish; the draft's 'баланс-фиш' was a loose rendering and 'рыба' was an added noun. Corrected to keep the English name balance-fish explicit, kept 'that is for this very reason' (C'est même pour cette raison), and kept the French name requin-marteau with the Russian equivalent, since the explanation depends on the name. 'Двойного молотка' retained. No note token is present in this row."
+    },
+    {
+      "source_id": "fr42c-note-002",
+      "verdict": "CORRECTED",
+      "reason": "'Officier' here means a judicial officer (magistrate/official), not a generic 'сотрудник'. 'L'instruction des affaires criminelles' is the conducting of a judicial investigation, rendered as 'ведущее следствие по уголовным делам'."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-note-001",
+      "before": "Рыба «баланс-фиш» получила такое название от английских моряков из-за того, что её голова имеет форму весов, а точнее — форму двойного молотка. Именно по этой причине во Франции это животное известно под названием «акула-молоток».",
+      "after": "Балансе-фиш (balance-fish) получила такое название у английских моряков потому, что её голова имеет форму весов, а ещё точнее — форму двойного молотка. Именно по этой причине во Франции это животное известно под названием «акула-молот» (requin-marteau)."
+    },
+    {
+      "source_id": "fr42c-note-002",
+      "before": "Сотрудник, ведущий расследование уголовных дел.",
+      "after": "Должностное лицо, ведущее следствие по уголовным делам."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-complete-original/001/batch003.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJgj2YtXBncPS9L8TNMK",
+    "usage": {
+      "input_tokens": 2300,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 474,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
