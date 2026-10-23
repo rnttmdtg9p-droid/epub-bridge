@@ -1,0 +1,98 @@
+{
+  "unit": 93,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id11923",
+      "target": "Во всей этой компании один лишь господин де Мазарини был в прескверном расположении духа.",
+      "source_sha256": "e92d03846e493fb31a038c24179b61b42d1164b61e82f9172dd01601304e02d1",
+      "target_id": "ru-id11923",
+      "tag": "p",
+      "target_sha256": "096a604ea47b4d54172c9722d270a44c5ec6d4c18f459d19c413daf670828616"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11923",
+      "verdict": "PASS",
+      "reason": "Проверено по французскому тексту. Смысл, отрицательно-ограничительная конструкция («не было никого, кроме…» передана через «один лишь»), имя и степень дурного настроения (fort mauvaise humeur → «прескверном расположении духа») переданы верно. Ничего не пропущено и не добавлено. Исправлений не требуется."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJYqY2euR6uhbEC17pbL",
+    "usage": {
+      "input_tokens": 1021,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 57,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJYqhd81s5m8aV7MCo6p",
+    "usage": {
+      "input_tokens": 1287,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 578,
+      "output_tokens_details": {
+        "thinking_tokens": 372
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJYr3YB7VY8Wokr9vajq",
+        "usage": {
+          "input_tokens": 1348,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 511,
+          "output_tokens_details": {
+            "thinking_tokens": 236
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id11923",
+          "verdict": "PASS",
+          "reason": "Перевод точно передаёт смысл: ограничительная конструкция «Il n'y avait… que» передана как «один лишь», «fort mauvaise humeur» — как «прескверное расположение духа», а «M. de Mazarin» — как «господин де Мазарини» в соответствии с установленным именем. «Groupe» передано как «компания», что идиоматично и не искажает смысла. Агентность, время и отрицание сохранены, пропусков и добавлений нет, границы абзаца соблюдены. Предыдущих исправлений в реестре нет."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
