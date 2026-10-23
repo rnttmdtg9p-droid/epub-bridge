@@ -1,0 +1,19 @@
+{
+  "unit": 2,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 3,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 4,
+      "actual_provider_review_rows": 4,
+      "source_native_untranslated_rows": 0,
+      "response_id": "msg_011CgKDcviLimHsEFFyYDMLk",
+      "actual_request_response": "PASS",
+      "final_source_comparison": "PASS"
+    }
+  ],
+  "source_native_policy": "Untranslated original foreign documents/verse copied exactly and independently compared; not represented as model-translated or provider-reviewed output",
+  "qualified_target_sha256": "df569e6d784f36e72261d9025a71091d85ca3156412b76c3db7209889d79e3f1",
+  "book_release": false
+}
