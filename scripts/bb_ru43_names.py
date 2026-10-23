@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,hashlib,os
+import bb_ru43_original as api
+R=api.ROOT;O=R/'results/ru43-names';O.mkdir(parents=True,exist_ok=True);p=R/'inputs/ru43-names.json';data=json.loads(p.read_text());items=data['items'];sources=[x['source'] for x in items];current=api.validate([{'source_id':x['source']['id'],'target':x['prior_target']} for x in items],sources);turns=[]
+for phase in range(6):
+ payload={'task':'Review the complete existing Russian source-aligned paragraphs for proper-name consistency and fidelity. Huckleberry must be Гекльберри, matching the approved book title Приключения Гекльберри Финна and character Гек. Replace Хаклберри with Гекльберри in all three actual vocatives of the first supplied paragraph. Preserve the remaining already reviewed text unless a concrete source discrepancy requires correction. Return JSON ONLY with rows (source_id,target) and review (source_id,verdict PASS or CORRECTED, specific source-based reason). Every supplied source_id exactly once. Independently compare corrected full paragraphs against English source in subsequent phases, preserving bytes when correct.','source_rows':sources,'final_rows':current,'phase':'INDEPENDENT_SOURCE_COMPARISON' if phase else 'COMPLETE_PARAGRAPH_NAME_AND_FIDELITY_REVIEW'}
+ result,meta=api.checked_call(api.SYSTEM,payload,O/f'phase{phase:02}',sources,True);changes=[{'source_id':a['source_id'],'before':a['target'],'after':b['target']} for a,b in zip(current,result['rows']) if a['target']!=b['target']];turns.append({'phase':phase,'api':meta,'review':result['review'],'corrections':changes});current=result['rows']
+ if phase>=1 and not changes and all(x['verdict']=='PASS' for x in result['review']):
+  assert all('Хаклберри' not in x['target'] for x in current);api.save(O/'names.verified.json',{'state':'ACTUAL_COMPLETE_PARAGRAPH_NAME_REVIEW_AND_STABLE_SOURCE_COMPARISON','items':items,'rows':current,'turns':turns,'input_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'run_id':os.environ.get('GITHUB_RUN_ID'),'book_release':False});break
+else:raise RuntimeError('NAME_COMPARISON_NOT_STABLE')
