@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJmWJVofkBx2bnrkpNPB",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-004-0039\",\"target\":\"— Я пойду и брошусь к ногам королевы, — ответила девушка, — и посмотрим, останется ли она глуха к мольбам двух детей, которые просят жизни для своего отца!\"},{\"source_id\":\"fr42c-004-0040\",\"target\":\"Лорд Гленарван покачал головой — не потому, что сомневался в сердце Её Милостивого Величества, но потому, что знал: Мэри Грант не сумеет дойти до неё. Просители слишком редко доходят до ступеней трона, и, кажется, на дверях королевских дворцов написано то же, что англичане пишут на штурвалах своих кораблей:\"},{\"source_id\":\"fr42c-004-0041\",\"target\":\"<i>Passengers are requested not to speak to the man at the wheel</i>[[FN:6]].\"},{\"source_id\":\"fr42c-004-0042\",\"target\":\"Леди Элен поняла мысль мужа; она знала, что девушка собирается предпринять бесполезный шаг; она видела, что отныне этим двум детям предстоит отчаянное существование. И тогда ей пришла великая и великодушная мысль.\"},{\"source_id\":\"fr42c-004-0043\",\"target\":\"— Мэри Грант, — воскликнула она, — подождите, дитя моё, и выслушайте, что я скажу!\"},{\"source_id\":\"fr42c-004-0044\",\"target\":\"Девушка держала брата за руку и собиралась уйти. Она остановилась.\"},{\"source_id\":\"fr42c-004-0045\",\"target\":\"Тогда леди Элен, с влажными глазами, но с твёрдым голосом и оживлённым лицом, подошла к мужу.\"},{\"source_id\":\"fr42c-004-0046\",\"target\":\"— Эдвард, — сказала она ему, — когда капитан Грант писал это письмо и бросал его в море, он поручил его заботам самого Бога. Бог передал его нам! Без сомнения, Бог пожелал возложить на нас спасение этих несчастных.\"},{\"source_id\":\"fr42c-004-0047\",\"target\":\"— Что вы хотите сказать, Элен? — спросил лорд Гленарван.\"},{\"source_id\":\"fr42c-004-0048\",\"target\":\"Глубокая тишина стояла во всём собрании.\"},{\"source_id\":\"fr42c-004-0049\",\"target\":\"— Я хочу сказать, — продолжала леди Элен, — что надо почитать себя счастливыми, начиная супружескую жизнь с доброго дела. Вы, мой дорогой Эдвард, чтобы доставить мне удовольствие, задумали увеселительное путешествие! Но какое удовольствие будет истиннее и полезнее, чем спасти несчастных, которых покинула их родина?\"},{\"source_id\":\"fr42c-004-0050\",\"target\":\"— Элен! — воскликнул лорд Гленарван.\"},{\"source_id\":\"fr42c-004-0051\",\"target\":\"— Да, вы меня понимаете, Эдвард! «<i>Дункан</i>» — отважный и добрый корабль! Он может выдержать южные моря! Он может обойти вокруг света, и обойдёт, если понадобится! Отправимся, Эдвард! Поищем капитана Гранта!\"},{\"source_id\":\"fr42c-004-0052\",\"target\":\"При этих смелых словах лорд Гленарван протянул руки к своей молодой жене; он улыбался, прижимал её к сердцу, а Мэри и Роберт целовали ему руки.\"},{\"source_id\":\"fr42c-004-0053\",\"target\":\"И во время этой трогательной сцены слуги замка, взволнованные и воодушевлённые, не удержали вырвавшегося из сердец крика благодарности:\"},{\"source_id\":\"fr42c-004-0054\",\"target\":\"— Ура даме Лосса! Ура! Трижды ура лорду и леди Гленарван!\"},{\"source_id\":\"fr42c-note-006\",\"target\":\"Пассажиров просят не разговаривать с человеком, стоящим у штурвала.\"}],\"review\":[{\"source_id\":\"fr42c-004-0039\",\"verdict\":\"PASS\",\"reason\":\"Faithful; agency, future-doubt and plea for father's life preserved; dialogue punctuation correct.\"},{\"source_id\":\"fr42c-004-0040\",\"verdict\":\"PASS\",\"reason\":\"Meaning, negation and 'Sa Gracieuse Majesté' preserved; wheel of rudders rendered as штурвал idiomatically.\"},{\"source_id\":\"fr42c-004-0041\",\"verdict\":\"PASS\",\"reason\":\"English inscription kept in italics with footnote token intact.\"},{\"source_id\":\"fr42c-004-0042\",\"verdict\":\"PASS\",\"reason\":\"Understanding, futile attempt and generous idea all preserved.\"},{\"source_id\":\"fr42c-004-0043\",\"verdict\":\"PASS\",\"reason\":\"Address, imperative and dialogue turn faithful.\"},{\"source_id\":\"fr42c-004-0044\",\"verdict\":\"PASS\",\"reason\":\"Accurate and complete.\"},{\"source_id\":\"fr42c-004-0045\",\"verdict\":\"PASS\",\"reason\":\"Moist eyes, firm voice, animated features and approach preserved.\"},{\"source_id\":\"fr42c-004-0046\",\"verdict\":\"PASS\",\"reason\":\"God's care, the letter given to us, and charge of salvation faithfully rendered.\"},{\"source_id\":\"fr42c-004-0047\",\"verdict\":\"PASS\",\"reason\":\"Question and speaker correct.\"},{\"source_id\":\"fr42c-004-0048\",\"verdict\":\"PASS\",\"reason\":\"Deep silence in whole assembly preserved.\"},{\"source_id\":\"fr42c-004-0049\",\"verdict\":\"PASS\",\"reason\":\"Marriage, good deed, pleasure trip and abandoned unfortunates preserved; no omissions.\"},{\"source_id\":\"fr42c-004-0050\",\"verdict\":\"PASS\",\"reason\":\"Exclamation and speaker correct.\"},{\"source_id\":\"fr42c-004-0051\",\"verdict\":\"PASS\",\"reason\":\"Italic ship name kept; all claims and imperatives preserved.\"},{\"source_id\":\"fr42c-004-0052\",\"verdict\":\"PASS\",\"reason\":\"Gestures and agency correct.\"},{\"source_id\":\"fr42c-004-0053\",\"verdict\":\"PASS\",\"reason\":\"Servants' emotion and cry of gratitude preserved.\"},{\"source_id\":\"fr42c-004-0054\",\"verdict\":\"PASS\",\"reason\":\"Cheer faithful; 'dame de Luss' retained as lady of Luss.\"},{\"source_id\":\"fr42c-note-006\",\"verdict\":\"PASS\",\"reason\":\"Note translation accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11621,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2261,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
