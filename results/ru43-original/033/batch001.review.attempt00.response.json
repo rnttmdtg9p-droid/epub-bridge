@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKMgymBseVXUsMZYqYsB",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-033-0020\",\"target\":\"Король как будто весь взъерошился и говорит:\"},{\"source_id\":\"043-033-0021\",\"target\":\"— Слушай-ка, Бриджуотер, на что это ты намекаешь?\"},{\"source_id\":\"043-033-0022\",\"target\":\"Герцог говорит довольно резко:\"},{\"source_id\":\"043-033-0023\",\"target\":\"— Раз уж на то пошло, позвольте и мне спросить: на что намекали <i>вы</i>?\"},{\"source_id\":\"043-033-0024\",\"target\":\"— Тьфу ты! — говорит король очень язвительно. — Да только <i>я</i> не знаю… может, ты спал и не понимал, что делаешь.\"},{\"source_id\":\"043-033-0025\",\"target\":\"Тут герцог ощетинился и говорит:\"},{\"source_id\":\"043-033-0026\",\"target\":\"— А ну, <i>брось</i> эту проклятую чепуху! Ты что, принимаешь меня за круглого дурака? Думаешь, я не знаю, кто спрятал эти деньги в гробу?\"},{\"source_id\":\"043-033-0027\",\"target\":\"— <i>Да</i>, сэр! Знаю, что <i>знаете</i>, потому что сами это и сделали!\"},{\"source_id\":\"043-033-0028\",\"target\":\"— Это ложь! — и герцог набросился на него. Король вопит:\"},{\"source_id\":\"043-033-0029\",\"target\":\"— Руки прочь! Пусти горло! Беру всё назад!\"},{\"source_id\":\"043-033-0030\",\"target\":\"Герцог набросился на него\"},{\"source_id\":\"043-033-0031\",\"target\":\"Герцог говорит:\"},{\"source_id\":\"043-033-0032\",\"target\":\"— Ну так сперва признайся, что ты <i>спрятал</i> там эти деньги, собираясь в один прекрасный день ускользнуть от меня, вернуться, выкопать их и присвоить всё себе.\"},{\"source_id\":\"043-033-0033\",\"target\":\"— Погоди-ка минутку, герцог. Ответь мне на один-единственный вопрос, честно и по совести: если ты не клал туда деньги, так и скажи, и я тебе поверю и возьму назад всё, что говорил.\"},{\"source_id\":\"043-033-0034\",\"target\":\"— Старый ты мерзавец, не клал, и ты знаешь, что не клал. Ну вот, доволен?\"},{\"source_id\":\"043-033-0035\",\"target\":\"— Ну, тогда я тебе верю. Но ответь мне ещё только на один вопрос — да <i>не</i> сердись: разве у тебя не было в мыслях стащить деньги и припрятать их?\"},{\"source_id\":\"043-033-0036\",\"target\":\"Герцог немного помолчал, а потом говорит:\"},{\"source_id\":\"043-033-0037\",\"target\":\"— Ну, мне наплевать, хоть бы и <i>было</i>; всё равно я этого не <i>делал</i>. А вот ты не только думал это сделать, но и <i>сделал</i>.\"},{\"source_id\":\"043-033-0038\",\"target\":\"— Чтоб мне вовек не помереть, если это я, герцог, честное слово. Не скажу, что я не <i>собирался</i> этого сделать, потому что <i>собирался</i>; но ты… то есть кто-то… опередил меня.\"},{\"source_id\":\"043-033-0039\",\"target\":\"— Это ложь! Это сделал ты, и ты должен <i>сказать</i>, что сделал, а не то…\"}],\"review\":[{\"source_id\":\"043-033-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Made idiom more natural; meaning preserved.\"},{\"source_id\":\"043-033-0021\",\"verdict\":\"CORRECTED\",\"reason\":\"Used established name герцог Бриджуотер for Bilgewater, dialogue dash, natural idiom.\"},{\"source_id\":\"043-033-0022\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"043-033-0023\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed ungrammatical rendering; dialogue dash; italic kept.\"},{\"source_id\":\"043-033-0024\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'Shucks' and punctuation; italics kept.\"},{\"source_id\":\"043-033-0025\",\"verdict\":\"CORRECTED\",\"reason\":\"Bristles rendered more precisely.\"},{\"source_id\":\"043-033-0026\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed misplaced italics and register.\"},{\"source_id\":\"043-033-0027\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed italic placement and wording.\"},{\"source_id\":\"043-033-0028\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation and tag.\"},{\"source_id\":\"043-033-0029\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format, colloquial.\"},{\"source_id\":\"043-033-0030\",\"verdict\":\"CORRECTED\",\"reason\":\"Caption: 'Him' is the king, not capitalised pronoun; fixed verb.\"},{\"source_id\":\"043-033-0031\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"043-033-0032\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; idiom; italic kept.\"},{\"source_id\":\"043-033-0033\",\"verdict\":\"CORRECTED\",\"reason\":\"King addresses duke informally ('ты') consistently, as elsewhere.\"},{\"source_id\":\"043-033-0034\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed error: 'я не думал' mistranslated 'I didn't' (put it there).\"},{\"source_id\":\"043-033-0035\",\"verdict\":\"CORRECTED\",\"reason\":\"Rendered 'hook' as steal; negation question preserved.\"},{\"source_id\":\"043-033-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Natural phrasing.\"},{\"source_id\":\"043-033-0037\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed meaning of 'don't care if I did' and italics.\"},{\"source_id\":\"043-033-0038\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed oath, and 'you—I mean somebody' agency.\"},{\"source_id\":\"043-033-0039\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dash; 'say' italic corrected.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8309,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2181,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
