@@ -1,0 +1,97 @@
+{
+  "unit": 68,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id09146",
+      "target": "Двое мужчин, немые, с волосами, вставшими дыбом, смотрели на тело своего товарища, плававшее в потоках чёрной крови; затем, обретя разом и голос, и силы, они с криком бросились прочь, сжав руки.",
+      "source_sha256": "90a58ceb7e6dfb72c872be7a5397f282f4da12745d913e7eb6329630c5c30342",
+      "target_id": "ru-id09146",
+      "tag": "p",
+      "target_sha256": "04086ac56ff4806e6a2c9f067b0e491a36edddd8ef056a7ab763c90d75718b62"
+    },
+    {
+      "source_id": "id09147",
+      "target": "— Правосудие свершилось! — сказал Портос, отирая лоб.",
+      "source_sha256": "0b10da149c64e44a60d872963cb7ef362b2584fa318003f468478aa2834a618a",
+      "target_id": "ru-id09147",
+      "tag": "p",
+      "target_sha256": "d8a4f70907f3181a8c114eaf69009c1c97f7f904bfe06c7e5ccb481073ede26d"
+    },
+    {
+      "source_id": "id09148",
+      "target": "— А теперь, — сказал д’Артаньян Атосу, — не сомневайтесь во мне и будьте спокойны: я беру на себя всё, что касается короля.",
+      "source_sha256": "5a6655dbdf084444bc7e5aff0548f484bff8c6c8a8c31656a32298b2d96b4937",
+      "target_id": "ru-id09148",
+      "tag": "p",
+      "target_sha256": "9967ad955af18e764748870de6e69741e5198f0606ef0a12d29e6b67327da806"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id09146",
+      "verdict": "CORRECTED",
+      "reason": "The French \"en joignant les mains\" means clasping the hands together. The draft's \"ломая руки\" means wringing them, which is a different gesture, so it is replaced with \"сжав руки\". Everything else is faithful: the mute men with bristling hair, the body in flows of black blood, regaining voice and strength together, and fleeing with a cry."
+    },
+    {
+      "source_id": "id09147",
+      "verdict": "PASS",
+      "reason": "Faithful. Porthos's exclamation, the speech verb and the gesture of wiping his forehead are all preserved, and the dialogue punctuation is correct."
+    },
+    {
+      "source_id": "id09148",
+      "verdict": "PASS",
+      "reason": "Faithful. The speaker, the addressee, the imperative \"ne doutez point de moi\", the instruction to keep calm, and d'Artagnan taking charge of everything concerning the king are all preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id09146",
+      "before": "Двое мужчин, немые, с волосами, вставшими дыбом, смотрели на тело своего товарища, плававшее в потоках чёрной крови; затем, обретя разом и голос, и силы, они с криком бросились прочь, ломая руки.",
+      "after": "Двое мужчин, немые, с волосами, вставшими дыбом, смотрели на тело своего товарища, плававшее в потоках чёрной крови; затем, обретя разом и голос, и силы, они с криком бросились прочь, сжав руки."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJUv7vVjHvvWR17k3aAQ",
+    "usage": {
+      "input_tokens": 1664,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJUvHWU1ixqPuxUM7qJ3",
+    "usage": {
+      "input_tokens": 2349,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1082,
+      "output_tokens_details": {
+        "thinking_tokens": 538
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
