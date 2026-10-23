@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKNLXPkMzvDeLA8k4ZGN",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-036-heading\",\"target\":\"ГЛАВА XXXIII.\"},{\"source_id\":\"043-036-0001\",\"target\":\"Похититель негров. — Южное гостеприимство. — Довольно длинное благословение. — Деготь и перья.\"},{\"source_id\":\"043-036-0002\",\"target\":\"Ну, я поехал в город в повозке, и когда был на полпути, вижу — навстречу едет другая повозка, и точно, это был Том Сойер. Я остановился и подождал, пока он подъедет. Я сказал: «Стой!» — и его повозка встала рядом, а рот у него раскрылся, как чемодан, и так и остался; он сглотнул два-три раза, как человек с пересохшим горлом, а потом сказал:\"},{\"source_id\":\"043-036-0003\",\"target\":\"— Я тебе никогда никакого зла не делал. Сам знаешь. Так чего ж ты вернулся и пристал с привидениями ко *мне*?\"},{\"source_id\":\"043-036-0004\",\"target\":\"Я говорю:\"},{\"source_id\":\"043-036-0005\",\"target\":\"— Я не возвращался — я никуда и не *уходил*.\"},{\"source_id\":\"043-036-0006\",\"target\":\"Как услыхал мой голос, ему малость полегчало, но он всё ещё не был до конца уверен. Он говорит:\"},{\"source_id\":\"043-036-0007\",\"target\":\"— Ты со мной никаких шуток не шути, потому что я бы с тобой не стал. Честное индейское, ты ведь не привидение?\"},{\"source_id\":\"043-036-0008\",\"target\":\"— Честное индейское, не привидение, — говорю я.\"},{\"source_id\":\"043-036-0009\",\"target\":\"— Ну… я… я… ну, это, конечно, должно всё решить; но я всё равно как-то никак не могу этого понять. Слушай, тебя что, *совсем* не убивали?\"},{\"source_id\":\"043-036-0010\",\"target\":\"— Нет. Меня совсем не убивали — я их обвёл вокруг пальца. Залезай сюда и пощупай меня, если не веришь.\"},{\"source_id\":\"043-036-0011\",\"target\":\"Он так и сделал, и это его убедило; и он так обрадовался, что снова меня видит, что не знал, что и делать. И ему сразу захотелось узнать обо всём, потому что это было великое приключение, да ещё таинственное, так что оно задело его за самое живое. Но я сказал, чтобы он пока оставил это на потом; и велел его кучеру подождать, и мы отъехали немного, и я рассказал ему, в какую передрягу попал, и спросил, как он думает, что нам лучше сделать. Он сказал, чтобы я оставил его на минутку в покое и не мешал. Он думал и думал, и скоро говорит:\"},{\"source_id\":\"043-036-0012\",\"target\":\"— Всё в порядке, я придумал. Возьми мой чемодан в свою повозку и сделай вид, что он твой; а сам поезжай назад и тащись потихоньку, чтобы приехать к дому примерно в то время, когда надо; а я проеду немного в сторону города, начну заново и приеду туда на четверть часа или на полчаса позже тебя; и сначала тебе не надо показывать, что ты меня знаешь.\"},{\"source_id\":\"043-036-0013\",\"target\":\"Я говорю:\"},{\"source_id\":\"043-036-0014\",\"target\":\"— Ладно, но погоди минутку. Есть ещё одна вещь — вещь, о которой *никто* не знает, кроме меня. А именно: тут есть один негр, которого я пытаюсь выкрасть из рабства, и зовут его *Джим* — Джим старой мисс Уотсон.\"},{\"source_id\":\"043-036-0015\",\"target\":\"Он говорит:\"},{\"source_id\":\"043-036-0016\",\"target\":\"— Что! Да ведь Джим же…\"},{\"source_id\":\"043-036-0017\",\"target\":\"Он осёкся и принялся соображать. Я говорю:\"},{\"source_id\":\"043-036-0018\",\"target\":\"— *Я* знаю, что ты скажешь. Ты скажешь, что это грязное, подлое дело; ну и что с того? *Я* и есть подлый; и я собираюсь его украсть, и хочу, чтобы ты помалкивал и не выдавал. Согласен?\"},{\"source_id\":\"043-036-0019\",\"target\":\"Глаза у него загорелись, и он говорит:\"}],\"review\":[{\"source_id\":\"043-036-heading\",\"verdict\":\"PASS\",\"reason\":\"Chapter heading correct.\"},{\"source_id\":\"043-036-0001\",\"verdict\":\"PASS\",\"reason\":\"Argument faithfully rendered.\"},{\"source_id\":\"043-036-0002\",\"target\":\"\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'trunk' (not 'хобот'), restored 'Hold on', narrative flow.\"},{\"source_id\":\"043-036-0003\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic converted to *me*; colloquial 'ha'nt' haunting sense; dialogue dash.\"},{\"source_id\":\"043-036-0004\",\"verdict\":\"PASS\",\"reason\":\"Correct.\"},{\"source_id\":\"043-036-0005\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation; italic gone preserved.\"},{\"source_id\":\"043-036-0006\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed nonexistent 'приоправился'; register.\"},{\"source_id\":\"043-036-0007\",\"verdict\":\"CORRECTED\",\"reason\":\"Honest injun is an oath, not about being Native.\"},{\"source_id\":\"043-036-0008\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft mistranslated 'honest injun' as 'I'm not an Indian'.\"},{\"source_id\":\"043-036-0009\",\"verdict\":\"CORRECTED\",\"reason\":\"Italic 'at all' placed correctly; stray italic removed.\"},{\"source_id\":\"043-036-0010\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft used polite 'вы'; Huck addresses Tom as ты.\"},{\"source_id\":\"043-036-0011\",\"verdict\":\"CORRECTED\",\"reason\":\"Reported speech was wrongly turned into direct quotes; restored indirect form.\"},{\"source_id\":\"043-036-0012\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'прибуду', register, 'quarter or half hour' sense.\"},{\"source_id\":\"043-036-0013\",\"verdict\":\"PASS\",\"reason\":\"Correct.\"},{\"source_id\":\"043-036-0014\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dash; italics kept; colloquial 'steal out of slavery'.\"},{\"source_id\":\"043-036-0015\",\"verdict\":\"PASS\",\"reason\":\"Correct.\"},{\"source_id\":\"043-036-0016\",\"verdict\":\"PASS\",\"reason\":\"Faithful, interrupted speech preserved.\"},{\"source_id\":\"043-036-0017\",\"verdict\":\"CORRECTED\",\"reason\":\"'went to studying' means thinking, not reading.\"},{\"source_id\":\"043-036-0018\",\"verdict\":\"CORRECTED\",\"reason\":\"Italics kept, dialogue dash, register.\"},{\"source_id\":\"043-036-0019\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8959,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2485,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
