@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKjANvfRTTj2kAA1bqZ9",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"assessments\":[{\"source_id\":\"046-2-0079\",\"verdict\":\"PASS\",\"reason\":\"Target is identical to source, including the speaker name, the stage direction and the ellipsis.\"},{\"source_id\":\"046-2-0080\",\"verdict\":\"PASS\",\"reason\":\"Stage direction matches the source.\"},{\"source_id\":\"046-2-0081\",\"verdict\":\"PASS\",\"reason\":\"Matches the source, including the repetition.\"},{\"source_id\":\"046-2-0082\",\"verdict\":\"PASS\",\"reason\":\"Matches the source, including the inline stage direction.\"},{\"source_id\":\"046-2-0083\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0084\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0085\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0086\",\"verdict\":\"PASS\",\"reason\":\"Matches the source. Irina's continuation without a speaker label is as in the source.\"},{\"source_id\":\"046-2-0087\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0088\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0089\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0090\",\"verdict\":\"PASS\",\"reason\":\"Matches the source, including 'всё' and the ellipses.\"},{\"source_id\":\"046-2-0091\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0092\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0093\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0094\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0095\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0096\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0097\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0098\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0099\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0100\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0101\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0102\",\"verdict\":\"PASS\",\"reason\":\"The French 'Venez ici' is preserved as in the source.\"},{\"source_id\":\"046-2-0103\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0104\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0105\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0106\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0107\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0108\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0109\",\"verdict\":\"PASS\",\"reason\":\"Matches the source, including the guillemets and dashes.\"},{\"source_id\":\"046-2-0110\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0111\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0112\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0113\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0114\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0115\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0116\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0117\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"},{\"source_id\":\"046-2-0118\",\"verdict\":\"PASS\",\"reason\":\"Matches the source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 45140,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1468,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
