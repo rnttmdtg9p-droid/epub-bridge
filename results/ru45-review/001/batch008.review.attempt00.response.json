@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKcb1s2gGPKMNsE5D3Uk",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"045-001-0256\",\"target\":\"— У Вашего Величества есть нечто, что я ценил бы ещё выше, — сказал Холмс.\"},{\"source_id\":\"045-001-0257\",\"target\":\"— Вам стоит лишь назвать это.\"},{\"source_id\":\"045-001-0258\",\"target\":\"— Эту фотографию!\"},{\"source_id\":\"045-001-0259\",\"target\":\"Король изумлённо уставился на него.\"},{\"source_id\":\"045-001-0260\",\"target\":\"— Фотографию Ирен! — воскликнул он. — Разумеется, если вы того желаете.\"},{\"source_id\":\"045-001-0261\",\"target\":\"— Благодарю Ваше Величество. Значит, в этом деле больше нечего делать. Имею честь пожелать вам доброго утра. — Он поклонился и, отвернувшись, не заметив руки, которую протянул ему король, отправился вместе со мной к себе на квартиру.\"},{\"source_id\":\"045-001-0262\",\"target\":\"Так великий скандал едва не потряс королевство Богемию, и так лучшие планы мистера Шерлока Холмса были разбиты женской хитростью. Прежде он любил потешаться над умом женщин, но в последнее время я не слышал от него ничего подобного. И когда он говорит об Ирен Адлер или упоминает её фотографию, то всегда называет её почётным титулом — <i>та самая</i> женщина.\"}],\"review\":[{\"source_id\":\"045-001-0256\",\"verdict\":\"CORRECTED\",\"reason\":\"Added missing dash logic kept; fixed conditional 'should value' as 'ценил бы ещё выше'.\"},{\"source_id\":\"045-001-0257\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft invented 'что нужно'; rendered 'You have but to name it' faithfully.\"},{\"source_id\":\"045-001-0258\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed erroneous quotation marks inside dialogue; exclamation preserved.\"},{\"source_id\":\"045-001-0259\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed word order; meaning unchanged.\"},{\"source_id\":\"045-001-0260\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed spurious quotation marks; fixed dialogue punctuation and speaker attribution.\"},{\"source_id\":\"045-001-0261\",\"verdict\":\"CORRECTED\",\"reason\":\"Converted speech to dialogue dash format, restored 'chambers' naturally, fixed awkward phrasing.\"},{\"source_id\":\"045-001-0262\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed 'Bohemia' construction, 'wit' rendering, restored italic on 'the' woman, smoothed repetitions.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 21096,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 933,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
