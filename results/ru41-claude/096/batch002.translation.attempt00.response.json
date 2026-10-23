@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJYzAEyxdFKzAX8E6EiY",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id12168\",\"target\":\"— Дальше, сударыня?..\"},{\"source_id\":\"id12169\",\"target\":\"— Да.\"},{\"source_id\":\"id12170\",\"target\":\"— Это всё.\"},{\"source_id\":\"id12171\",\"target\":\"— Разве у вас нет четвёртого товарища?\"},{\"source_id\":\"id12172\",\"target\":\"— Есть, сударыня: господин граф де Ла Фер.\"},{\"source_id\":\"id12173\",\"target\":\"— Чего он просит?\"},{\"source_id\":\"id12174\",\"target\":\"— Он ничего не просит.\"},{\"source_id\":\"id12175\",\"target\":\"— Ничего?\"},{\"source_id\":\"id12176\",\"target\":\"— Нет.\"},{\"source_id\":\"id12177\",\"target\":\"— Есть на свете человек, который, имея возможность просить, не просит?\"},{\"source_id\":\"id12178\",\"target\":\"— Есть господин граф де Ла Фер, сударыня; господин граф де Ла Фер не человек.\"},{\"source_id\":\"id12179\",\"target\":\"— Кто же он?\"},{\"source_id\":\"id12180\",\"target\":\"— Господин граф де Ла Фер — полубог.\"},{\"source_id\":\"id12181\",\"target\":\"— Нет ли у него сына, молодого человека, родственника, племянника, о котором мне говорил Коменж как о славном юноше и который вместе с господином де Шатильоном привёз знамёна Ланса?\"},{\"source_id\":\"id12182\",\"target\":\"— У него есть, как говорит Ваше Величество, воспитанник, которого зовут виконт де Бражелон.\"},{\"source_id\":\"id12183\",\"target\":\"— Если бы этому молодому человеку дали полк, что сказал бы его опекун?\"},{\"source_id\":\"id12184\",\"target\":\"— Быть может, он согласился бы.\"},{\"source_id\":\"id12185\",\"target\":\"— Быть может!\"},{\"source_id\":\"id12186\",\"target\":\"— Да, если бы сама Ваше Величество попросила его согласиться.\"},{\"source_id\":\"id12187\",\"target\":\"— Вы правы, сударь, это поистине необыкновенный человек. Что ж, мы подумаем об этом и, быть может, попросим его. Довольны ли вы, сударь?\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4168,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 741,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
