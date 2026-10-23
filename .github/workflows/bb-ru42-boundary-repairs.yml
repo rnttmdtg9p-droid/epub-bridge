@@ -1,0 +1,27 @@
+name: BB Russian42 four complete paragraph boundary repairs
+on:
+  push:
+    paths: ['.github/workflows/bb-ru42-boundary-repairs.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and review four complete authored paragraphs
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru42_boundary_repairs.py
+      - name: Preserve actual source, translation, review and correction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru42-four-complete-paragraph-repairs-v5070
+          path: results/ru42-boundary-repairs/
+          retention-days: 90
+          if-no-files-found: error
