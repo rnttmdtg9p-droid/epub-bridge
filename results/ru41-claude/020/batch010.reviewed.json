@@ -1,0 +1,128 @@
+{
+  "unit": 20,
+  "batch": 10,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id02477",
+      "target": "— Могу ли я пообещать вашу клиентуру преемнику папаши Марто, монсеньор?",
+      "source_sha256": "742917c8fe2112e8037b44d56515f2eb43bb03aeec077ec762bb1cd4cbf8d315",
+      "target_id": "ru-id02477",
+      "tag": "p",
+      "target_sha256": "44127b70f55dd3a36516588a4455d7afae3a0215a9f5b24799b3fdbde087b3ee"
+    },
+    {
+      "source_id": "id02478",
+      "target": "— Да, лишь бы он не клал грибов в свои паштеты; ты ведь знаешь, — добавил принц, — что грибы из Венсенского леса смертельны для моей семьи.",
+      "source_sha256": "76778ce641fc30f1589c4eab59665a7b20181bb8c3f9b96ad8ea0feea94828b9",
+      "target_id": "ru-id02478",
+      "tag": "p",
+      "target_sha256": "dc4afa1e9091137c5142336df7c8956a1ee404f160ee7adb9d1395b42fa60566"
+    },
+    {
+      "source_id": "id02479",
+      "target": "Ла Рамэ вышел, не отозвавшись на намёк, и спустя пять минут после его ухода вошёл караульный офицер — якобы затем, чтобы оказать принцу честь и составить ему компанию, а на деле чтобы исполнить приказ кардинала, который, как мы уже говорили, наказывал не упускать узника из виду.",
+      "source_sha256": "feb54cc1825e0cba9e54990432ea5b19716f68194b75992f057bebcee4d10a01",
+      "target_id": "ru-id02479",
+      "tag": "p",
+      "target_sha256": "9c891378c6ef2f82b7f011e84c77fb439197d8a99a2d65d945ffbf6c2343fbfd"
+    },
+    {
+      "source_id": "id02480",
+      "target": "Но за те пять минут, что герцог оставался один, он успел перечитать записку госпожи де Монбазон, которая доказывала узнику, что друзья не забыли его и хлопочут о его освобождении. Каким образом? Этого он пока не знал, но твёрдо обещал себе, как бы молчалив ни был Гримо, заставить его заговорить; доверие к нему было тем больше, что теперь герцог отдавал себе отчёт во всём его поведении и понимал: все те мелкие притеснения, которыми Гримо донимал герцога, он выдумал лишь для того, чтобы отнять у стражей всякую мысль, будто он может с ним сговориться.",
+      "source_sha256": "618dd04025d6f761f6fe21a4da560924a34de444d04af7e44ddfa8c654507179",
+      "target_id": "ru-id02480",
+      "tag": "p",
+      "target_sha256": "65dbee48820a9c33b6d34cb9de8c455e357d8e30937652f61adcd048cd118386"
+    },
+    {
+      "source_id": "id02481",
+      "target": "Эта хитрость внушила герцогу высокое мнение об уме Гримо, которому он решил довериться полностью.",
+      "source_sha256": "3e8d2bf61b9ea4813259ae16204200e738d489ff4f9d83a7c42251e659ca7033",
+      "target_id": "ru-id02481",
+      "tag": "p",
+      "target_sha256": "9f854a0013592a5e6c03f90cb649e1cbb3acd42683dc7aae6eef80246ad1d810"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id02477",
+      "verdict": "PASS",
+      "reason": "Question, address and the pâtissier's successor are rendered faithfully; register is natural."
+    },
+    {
+      "source_id": "id02478",
+      "verdict": "PASS",
+      "reason": "Condition, aside to La Ramée and the grim joke about the Vincennes mushrooms are all preserved; no omissions."
+    },
+    {
+      "source_id": "id02479",
+      "verdict": "CORRECTED",
+      "reason": "\"recommandait\" is weaker than \"предписывал\"; changed to \"наказывал\". The rest (the unacknowledged allusion, the five minutes, the pretext versus the real purpose) is accurate."
+    },
+    {
+      "source_id": "id02480",
+      "verdict": "PASS",
+      "reason": "All facts kept: five minutes alone, rereading of the note, friends' efforts, unknown means, resolve to make Grimaud talk, the reasoning about the persecutions as a ruse. Agency is clear. \"se promettait\" is rendered as \"обещал себе\" to match the source."
+    },
+    {
+      "source_id": "id02481",
+      "verdict": "PASS",
+      "reason": "Faithful: the ruse gave the duke a high opinion of Grimaud's intellect, and he resolved to trust him entirely."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id02479",
+      "before": "Ла Рамэ вышел, не отозвавшись на намёк, и спустя пять минут после его ухода вошёл караульный офицер — якобы затем, чтобы оказать принцу честь и составить ему компанию, а на деле чтобы исполнить приказ кардинала, который, как мы уже говорили, предписывал не упускать узника из виду.",
+      "after": "Ла Рамэ вышел, не отозвавшись на намёк, и спустя пять минут после его ухода вошёл караульный офицер — якобы затем, чтобы оказать принцу честь и составить ему компанию, а на деле чтобы исполнить приказ кардинала, который, как мы уже говорили, наказывал не упускать узника из виду."
+    },
+    {
+      "source_id": "id02480",
+      "before": "Но за те пять минут, что герцог оставался один, он успел перечитать записку госпожи де Монбазон, которая доказывала узнику, что друзья не забыли его и хлопочут о его освобождении. Каким образом? Этого он пока не знал, но твёрдо решил, как бы молчалив ни был Гримо, заставить его заговорить; доверие к нему было тем больше, что теперь герцог отдавал себе отчёт во всём его поведении и понимал: все те мелкие притеснения, которыми Гримо донимал герцога, он выдумал лишь для того, чтобы отнять у стражей всякую мысль, будто он может с ним сговориться.",
+      "after": "Но за те пять минут, что герцог оставался один, он успел перечитать записку госпожи де Монбазон, которая доказывала узнику, что друзья не забыли его и хлопочут о его освобождении. Каким образом? Этого он пока не знал, но твёрдо обещал себе, как бы молчалив ни был Гримо, заставить его заговорить; доверие к нему было тем больше, что теперь герцог отдавал себе отчёт во всём его поведении и понимал: все те мелкие притеснения, которыми Гримо донимал герцога, он выдумал лишь для того, чтобы отнять у стражей всякую мысль, будто он может с ним сговориться."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJLYeVULUo5vbRDrQSiK",
+    "usage": {
+      "input_tokens": 2529,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 573,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJLYzCtizVevvMY9qkwn",
+    "usage": {
+      "input_tokens": 3812,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1927,
+      "output_tokens_details": {
+        "thinking_tokens": 939
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
