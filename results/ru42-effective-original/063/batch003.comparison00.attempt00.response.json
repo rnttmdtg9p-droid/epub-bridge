@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK6cVgPLfhQfW58tgaRK",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-063-0060\",\"target\":\"В двухстах футах над вершиной Джон Манглс и его матрос достигли опасного гребня, который так упорно обороняли туземцы. Если бы, на беду, маори, хитрее беглецов, притворились, будто отступили, чтобы заманить их к себе, если бы они не были одурачены вулканическим явлением, то именно здесь их присутствие и обнаружилось бы. Гленарван, несмотря на всю свою уверенность и вопреки шуткам Паганеля, не мог не содрогнуться. Спасение всех его близких должно было решиться целиком за те десять минут, что требовались, чтобы пройти гребень. Он чувствовал, как бьётся сердце леди Элен, вцепившейся в его руку.\"},{\"source_id\":\"fr42c-063-0061\",\"target\":\"Впрочем, он и не думал отступать. Джон — тоже. Молодой капитан, за которым следовали все остальные, защищённый полной темнотой, полз по узкому гребню и останавливался всякий раз, когда какой-нибудь оторвавшийся камень скатывался до самого низа плато. Если дикари всё ещё прятались в засаде внизу, эти необычные звуки должны были вызвать с обеих сторон страшную перестрелку.\"},{\"source_id\":\"fr42c-063-0062\",\"target\":\"Однако, ползя, как змеи, по этому наклонному гребню, беглецы продвигались небыстро. Когда Джон Манглс достиг самой низкой точки, его отделяли всего двадцать пять футов от плато, где накануне стояли лагерем туземцы; затем гребень поднимался довольно крутым склоном и на протяжении четверти мили шёл вверх к перелеску.\"},{\"source_id\":\"fr42c-063-0063\",\"target\":\"Тем не менее эту нижнюю часть миновали без происшествий, и путешественники начали молча подниматься. Рощи не было видно, но все знали, что она там, и если только там не подготовлена засада, Гленарван надеялся найти в ней надёжное укрытие. Однако он заметил, что с этой минуты табу его уже не защищает. Поднимающийся гребень принадлежал не Маунганаму, а орографической системе, ощетинившейся на восточной стороне озера Таупо. Стало быть, следовало опасаться не только ружейных выстрелов туземцев, но и рукопашной схватки.\"},{\"source_id\":\"fr42c-063-0064\",\"target\":\"Десять минут маленький отряд почти неощутимо поднимался к верхним плато. Джон ещё не различал тёмного перелеска, но до него должно было оставаться менее двухсот футов.\"},{\"source_id\":\"fr42c-063-0065\",\"target\":\"Внезапно он остановился и чуть не попятился. Ему почудился какой-то шум в темноте. Его замешательство задержало движение спутников.\"},{\"source_id\":\"fr42c-063-0066\",\"target\":\"Он стоял неподвижно, и так долго, что встревожил идущих следом. Ждали. В какой тревоге — этого не передать! Неужели придётся повернуть назад и вернуться на вершину Маунганаму?\"},{\"source_id\":\"fr42c-063-0067\",\"target\":\"Но Джон, видя, что шум не повторяется, возобновил подъём по узкой тропе гребня.\\n\\nВскоре перелесок смутно обозначился в темноте. Через несколько шагов его достигли, и беглецы укрылись под густой листвой деревьев.\"}],\"review\":[{\"source_id\":\"fr42c-063-0060\",\"verdict\":\"PASS\",\"reason\":\"Faithful: 200 feet, conditional clauses, Glenarvan's shudder, ten minutes, Lady Helena's heart all preserved; prior corrections verified.\"},{\"source_id\":\"fr42c-063-0061\",\"verdict\":\"PASS\",\"reason\":\"Agency, negation, stopping at falling stones and the two-sided fusillade are accurately rendered.\"},{\"source_id\":\"fr42c-063-0062\",\"verdict\":\"PASS\",\"reason\":\"Serpent-like crawling, 25 feet, previous day's camp and quarter-mile slope to the thicket are correct.\"},{\"source_id\":\"fr42c-063-0063\",\"verdict\":\"PASS\",\"reason\":\"Taboo, orographic system, ambush hope and close combat danger are preserved accurately.\"},{\"source_id\":\"fr42c-063-0064\",\"verdict\":\"PASS\",\"reason\":\"Ten minutes, imperceptible climb and under 200 feet from thicket correctly conveyed.\"},{\"source_id\":\"fr42c-063-0065\",\"verdict\":\"PASS\",\"reason\":\"Sudden halt, near retreat, supposed noise and hesitation halting companions are accurate.\"},{\"source_id\":\"fr42c-063-0066\",\"verdict\":\"PASS\",\"reason\":\"Immobility, waiting, inexpressible anguish and the rhetorical question are faithfully rendered.\"},{\"source_id\":\"fr42c-063-0067\",\"verdict\":\"PASS\",\"reason\":\"Paragraph break preserved; noise not repeating, thicket emerging, arrival and hiding under foliage correct.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 9667,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1758,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
