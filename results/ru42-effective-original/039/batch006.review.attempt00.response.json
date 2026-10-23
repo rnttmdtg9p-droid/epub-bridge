@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJyGFawkthkKY5ftQJkW",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-039-0119\",\"target\":\"Но на следующий день, когда в шесть часов луч солнца разбудил спящих, они напрасно искали австралийского мальчика. Толине исчез. Хотел ли он без промедления добраться до края Лаклана? Обиделся ли на смех Паганеля? Этого никто не знал.\"},{\"source_id\":\"fr42c-039-0120\",\"target\":\"Но когда леди Элен проснулась, она обнаружила у себя на груди свежий букет мимоз с простыми листьями, а Паганель — в кармане своей куртки «<i>Географию</i>» Сэмюэля Ричардсона.\"},{\"source_id\":\"fr42c-note-077\",\"target\":\"Толине, для доставки в Эчуку, на попечение Джеффриса Смита, железнодорожного служащего. Провоз оплачен.\"}],\"review\":[{\"source_id\":\"fr42c-039-0119\",\"verdict\":\"CORRECTED\",\"reason\":\"Name aligned to Толине; «рayon» rendered as луч; «contrées» as край; added the sense of «Никто не знал» kept as unknown; fidelity otherwise preserved.\"},{\"source_id\":\"fr42c-039-0120\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed name Элен; sensitives rendered as мимозы; veste as куртка; italics placed inside the quotation marks as in source; Paganel's finding made parallel.\"},{\"source_id\":\"fr42c-note-077\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Толине; «aux soins de» as на попечение; facteur du chemin de fer rendered as railway employee; port payé kept.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2915,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 571,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

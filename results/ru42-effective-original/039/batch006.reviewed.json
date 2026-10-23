@@ -1,0 +1,92 @@
+{
+  "unit": 39,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-039-0119",
+      "target": "Но на следующий день, когда в шесть часов луч солнца разбудил спящих, они напрасно искали австралийского мальчика. Толине исчез. Хотел ли он без промедления добраться до края Лаклана? Обиделся ли на смех Паганеля? Этого никто не знал.",
+      "source_sha256": "58d7b41e157baaf92b1d66307e6fa1ea7f3ac7da62e554b1def555ea3c12e806",
+      "target_id": "ru-fr42c-039-0119",
+      "tag": "p",
+      "target_sha256": "bb0b5bef2922923f378c405c54a3c339c5e7a48d7dfdf82a8f02d27e8e8e6abc"
+    },
+    {
+      "source_id": "fr42c-039-0120",
+      "target": "Но когда леди Элен проснулась, она обнаружила у себя на груди свежий букет мимоз с простыми листьями, а Паганель — в кармане своей куртки «<i>Географию</i>» Сэмюэля Ричардсона.",
+      "source_sha256": "ee01e48c7facdc8908aaf29bdebc00246c479f3d4aaf8fbac6f8880c3210366f",
+      "target_id": "ru-fr42c-039-0120",
+      "tag": "p",
+      "target_sha256": "28085fd32b8e207addbe9a56e8f14d501f8738246353b0e8b0f3a37fa7e87133"
+    },
+    {
+      "source_id": "fr42c-note-077",
+      "target": "Толине, для доставки в Эчуку, на попечение Джеффриса Смита, железнодорожного служащего. Провоз оплачен.",
+      "source_sha256": "4344c6af8ea2190f8a6308bac1bb598959fec42a8aeee66b6e73b6799efa4fd4",
+      "target_id": "ru-fr42c-note-077",
+      "tag": "note",
+      "target_sha256": "af66d384cced308842194fff4e35f7a0dee9cbbe156fc10d2cc488715c8b0173"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-039-0119",
+      "verdict": "CORRECTED",
+      "reason": "Name aligned to Толине; «рayon» rendered as луч; «contrées» as край; added the sense of «Никто не знал» kept as unknown; fidelity otherwise preserved."
+    },
+    {
+      "source_id": "fr42c-039-0120",
+      "verdict": "CORRECTED",
+      "reason": "Fixed name Элен; sensitives rendered as мимозы; veste as куртка; italics placed inside the quotation marks as in source; Paganel's finding made parallel."
+    },
+    {
+      "source_id": "fr42c-note-077",
+      "verdict": "CORRECTED",
+      "reason": "Name Толине; «aux soins de» as на попечение; facteur du chemin de fer rendered as railway employee; port payé kept."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-039-0119",
+      "before": "Но на следующий день, когда в шесть часов лучик солнца разбудил спящих, они тщетно искали австралийского мальчика. Толин исчез. Хотел ли он без промедления добраться до земель Лаклана? Обиделся ли он на смех Паганеля? Никто не знал.",
+      "after": "Но на следующий день, когда в шесть часов луч солнца разбудил спящих, они напрасно искали австралийского мальчика. Толине исчез. Хотел ли он без промедления добраться до края Лаклана? Обиделся ли на смех Паганеля? Этого никто не знал."
+    },
+    {
+      "source_id": "fr42c-039-0120",
+      "before": "Но когда леди Елена проснулась, она обнаружила на своей груди свежий букет сенситив с простыми листьями, а у Паганеля в кармане пиджака — <i>«Географию»</i> Сэмюэля Ричардсона.",
+      "after": "Но когда леди Элен проснулась, она обнаружила у себя на груди свежий букет мимоз с простыми листьями, а Паганель — в кармане своей куртки «<i>Географию</i>» Сэмюэля Ричардсона."
+    },
+    {
+      "source_id": "fr42c-note-077",
+      "before": "Толине, для доставки в Эчуку под опекой Джеффриса Смита, железнодорожного почтальона. Провоз оплачен.",
+      "after": "Толине, для доставки в Эчуку, на попечение Джеффриса Смита, железнодорожного служащего. Провоз оплачен."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/039/batch006.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJyGFawkthkKY5ftQJkW",
+    "usage": {
+      "input_tokens": 2915,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 571,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
