@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJusPgcuVEUvKwQ7vukB",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-028-0041\",\"target\":\"«Всего один европеец, — добавил Паганель, — капрал, шотландец…\"},{\"source_id\":\"fr42c-028-0042\",\"target\":\"— А, шотландец! — сказал майор, которого соотечественники всегда интересовали особенно.\"},{\"source_id\":\"fr42c-028-0043\",\"target\":\"— Его звали Уильям Гласс, — ответил Паганель, — и он остался на острове с женой и двумя готтентотами. Вскоре к шотландцу присоединились двое англичан — матрос и рыбак с Темзы, бывший драгун аргентинской армии, — и, наконец, в 1821 году один из потерпевших крушение на <i>«Блендон-Холле»</i> с молодой женой нашёл приют на острове Тристан. Итак, в 1821 году на острове насчитывалось шесть мужчин и две женщины. В 1829 году их было уже семь мужчин, шесть женщин и четырнадцать детей. В 1835 году число жителей поднялось до сорока, а теперь оно утроилось.\"},{\"source_id\":\"fr42c-028-0044\",\"target\":\"— Так начинаются нации, — сказал Гленарван.\"},{\"source_id\":\"fr42c-028-0045\",\"target\":\"— Добавлю, — продолжал Паганель, — чтобы завершить историю Тристан-да-Кунья, что этот остров, как мне кажется, заслуживает славы острова Робинзонов не меньше, чем Хуан-Фернандес. В самом деле, если на Хуан-Фернандесе были брошены поочерёдно два моряка, то на Тристан-да-Кунья едва не были брошены двое учёных. В 1793 году один из моих соотечественников, натуралист Обер Дюпети-Туар, увлечённый страстью к сбору растений, заблудился и сумел вернуться на своё судно лишь в ту минуту, когда капитан поднимал якорь. В 1824 году один из ваших соотечественников, мой дорогой Гленарван, искусный рисовальщик Огюст Эрл, провёл восемь месяцев брошенным на острове. Его капитан, забыв, что тот на берегу, отплыл к мысу Доброй Надежды.\"},{\"source_id\":\"fr42c-028-0046\",\"target\":\"— Вот что называется рассеянным капитаном, — ответил майор. — Это, без сомнения, был кто-нибудь из ваших родственников, Паганель?\"},{\"source_id\":\"fr42c-028-0047\",\"target\":\"— Если он им не был, майор, то заслуживал быть!»\"},{\"source_id\":\"fr42c-028-0048\",\"target\":\"Ответ географа положил конец этому разговору.\"},{\"source_id\":\"fr42c-028-0049\",\"target\":\"Ночью экипаж «<i>Дункана</i>» славно поохотился, и около пятидесяти крупных тюленей отправились на тот свет. Разрешив охоту, Гленарван не мог запретить пользоваться её добычей. Поэтому следующий день был употреблён на сбор жира и выделку шкур этих выгодных амфибий. Пассажиры, естественно, употребили этот второй день стоянки на новую экскурсию по острову. Гленарван и майор взяли ружья, чтобы испробовать акуньскую дичь. Во время прогулки дошли до подножия горы по почве, усеянной разложившимися обломками, шлаком, пористой чёрной лавой и всякими вулканическими остатками. Подножие горы поднималось из хаоса шатких скал. Трудно было ошибиться относительно природы огромного конуса, и английский капитан Кармайкл был прав, признав его потухшим вулканом.\"},{\"source_id\":\"fr42c-028-0050\",\"target\":\"Охотники заметили нескольких кабанов. Один из них упал, сражённый пулей майора. Гленарван ограничился тем, что подстрелил несколько пар чёрных куропаток, из которых корабельный повар должен был приготовить превосходный сальми. На вершинах высоких плато мелькало множество коз. Что до диких кошек — гордых, смелых и сильных, опасных даже для собак, — то они кишели повсюду и обещали со временем стать весьма выдающимися хищными зверями.\"},{\"source_id\":\"fr42c-028-0051\",\"target\":\"В восемь часов все были уже на борту, а ночью «<i>Дункан</i>» покинул остров Тристан-да-Кунья, которого ему больше не суждено было увидеть.\"},{\"source_id\":\"fr42c-note-051\",\"target\":\"4900 лье.\"},{\"source_id\":\"fr42c-note-052\",\"target\":\"4000 лье.\"},{\"source_id\":\"fr42c-note-053\",\"target\":\"875 лье.\"},{\"source_id\":\"fr42c-note-054\",\"target\":\"13° 4′ к западу от парижского меридиана. Разница между этими двумя меридианами составляет 2° 20′.\"}],\"review\":[{\"source_id\":\"fr42c-028-0041\",\"verdict\":\"PASS\",\"reason\":\"Faithful; ellipsis and quotation opening preserved.\"},{\"source_id\":\"fr42c-028-0042\",\"verdict\":\"PASS\",\"reason\":\"Correction verified: major's special interest in compatriots rendered accurately.\"},{\"source_id\":\"fr42c-028-0043\",\"verdict\":\"PASS\",\"reason\":\"Facts, numbers, italic ship name and corrections verified; complete.\"},{\"source_id\":\"fr42c-028-0044\",\"verdict\":\"PASS\",\"reason\":\"'Ainsi commencent' correctly rendered.\"},{\"source_id\":\"fr42c-028-0045\",\"verdict\":\"PASS\",\"reason\":\"Corrections verified; dates, names, abandonment logic and captain's forgetfulness preserved.\"},{\"source_id\":\"fr42c-028-0046\",\"verdict\":\"PASS\",\"reason\":\"Accurate, idiomatic; question to Paganel preserved.\"},{\"source_id\":\"fr42c-028-0047\",\"verdict\":\"PASS\",\"reason\":\"Correction verified; closing quote and wit preserved, no spurious opening dash quote.\"},{\"source_id\":\"fr42c-028-0048\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"fr42c-028-0049\",\"verdict\":\"PASS\",\"reason\":\"Complete and faithful; italic Duncan retained; hunting, seals, volcano details preserved.\"},{\"source_id\":\"fr42c-028-0050\",\"verdict\":\"PASS\",\"reason\":\"Corrections verified; boars, partridges, goats, wild cats and humour preserved.\"},{\"source_id\":\"fr42c-028-0051\",\"verdict\":\"PASS\",\"reason\":\"Correct; italic span fixed, final clause preserved.\"},{\"source_id\":\"fr42c-note-051\",\"verdict\":\"PASS\",\"reason\":\"Lieues correctly rendered as лье.\"},{\"source_id\":\"fr42c-note-052\",\"verdict\":\"PASS\",\"reason\":\"Correct unit and number.\"},{\"source_id\":\"fr42c-note-053\",\"verdict\":\"PASS\",\"reason\":\"Correct unit and number.\"},{\"source_id\":\"fr42c-note-054\",\"verdict\":\"PASS\",\"reason\":\"Coordinates and meridian difference accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 13951,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2447,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
