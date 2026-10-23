@@ -1,0 +1,34 @@
+{
+  "unit": 12,
+  "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 53,
+  "batch_evidence": [
+    {
+      "batch": 0,
+      "rows": 20,
+      "response_id": "msg_011CgJK6wRczCWPxvDRkjUhg",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 1,
+      "rows": 20,
+      "response_id": "msg_011CgJK9DFgFx9dapHJH5YTn",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    },
+    {
+      "batch": 2,
+      "rows": 14,
+      "response_id": "msg_011CgJKB9C9d5QgkSb4tnyfg",
+      "source_order_hashes": "PASS",
+      "actual_request_response": "PASS",
+      "final_comparison": "PASS"
+    }
+  ],
+  "controlling_corrections": 0,
+  "qualified_target_sha256": "01c64cd2c94f2238decca5dfcdf799b014c1a93672389b9605cddbf1f42203a3",
+  "book_release": false
+}
