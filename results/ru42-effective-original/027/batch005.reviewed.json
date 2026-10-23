@@ -1,0 +1,128 @@
+{
+  "unit": 27,
+  "batch": 5,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-027-0100",
+      "target": "— Эта предосторожность кажется мне разумной, — ответил Гленарван.",
+      "source_sha256": "aa7a5b9090ac7a381c10b52c76c73044e289e98ec593c1729ea50644fe617a4b",
+      "target_id": "ru-fr42c-027-0100",
+      "tag": "p",
+      "target_sha256": "906dc529a2ce486e2f40aa617d6aab97eade1346a4066a899a96fd1d505ddb4f"
+    },
+    {
+      "source_id": "fr42c-027-0101",
+      "target": "— И не я стану отговаривать вас от неё, — возразил Паганель. — Напротив.",
+      "source_sha256": "8880db750b4b417c8d2eb463fa27b5d3cea9cc2223a16d7e488ba5f82e493bd1",
+      "target_id": "ru-fr42c-027-0101",
+      "tag": "p",
+      "target_sha256": "27a7b28aa3eb1cbaf0e8115a3001cbc21cc38b53adfce2c0fc749442bdf0efe3"
+    },
+    {
+      "source_id": "fr42c-027-0102",
+      "target": "— Тогда, Джон, — сказал Гленарван, — прикажите взять курс на Тристан-да-Кунья.",
+      "source_sha256": "467a1282c651e6ab3111dd8b07fc1dd2592ba5515b47ffcd99d34256731eb029",
+      "target_id": "ru-fr42c-027-0102",
+      "tag": "p",
+      "target_sha256": "48dee04d8d61b1fe4a84ef5c4ac9dd32a6384b9b3ccd71917c87e143d34e53a1"
+    },
+    {
+      "source_id": "fr42c-027-0103",
+      "target": "— Сию минуту, Ваша Честь, — ответил капитан и поднялся на палубу, а Роберт и Мэри Грант тем временем горячо благодарили лорда Гленарвана.",
+      "source_sha256": "fc2581c06271939c8e47e5c9340008ba0ba1fa68a2c2a0ea0b9f195bc49e0cb3",
+      "target_id": "ru-fr42c-027-0103",
+      "tag": "p",
+      "target_sha256": "e7079536d4cdeabb7037ca46852ace4dec30d2538d3051e03ac7c957818129be"
+    },
+    {
+      "source_id": "fr42c-027-0104",
+      "target": "Вскоре «<i>Дункан</i>», удаляясь от американского берега и держа путь на восток, быстрым форштевнем рассекал волны Атлантического океана.",
+      "source_sha256": "e5831dbc3ce4470ee49a0ef8b1958c921c8819ec2eaaca8c968d463b48813058",
+      "target_id": "ru-fr42c-027-0104",
+      "tag": "p",
+      "target_sha256": "a6fe030f0b1c9f4e51f3c8b75f71cba6884ad354f865e0fde18dd0d22461ce80"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-027-0100",
+      "verdict": "CORRECTED",
+      "reason": "Made word order closer to source and natural; meaning preserved."
+    },
+    {
+      "source_id": "fr42c-027-0101",
+      "verdict": "CORRECTED",
+      "reason": "Replaced repeated 'ответил' with 'возразил' for 'répliqua'; negation and agency preserved."
+    },
+    {
+      "source_id": "fr42c-027-0102",
+      "verdict": "CORRECTED",
+      "reason": "Rendered 'faites mettre le cap' as an order to have the course set; 'Alors' as 'Тогда'."
+    },
+    {
+      "source_id": "fr42c-027-0103",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue punctuation including closing quote logic; 'Immédiatement' idiom; thanks expressed warmly, all agents preserved."
+    },
+    {
+      "source_id": "fr42c-027-0104",
+      "verdict": "CORRECTED",
+      "reason": "Italic limited to ship name, removed stray italic comma; 'étrave' rendered as nautical 'форштевень'; ship's agency kept."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-027-0100",
+      "before": "— Мне кажется, это разумная мера предосторожности, — ответил Гленарван.",
+      "after": "— Эта предосторожность кажется мне разумной, — ответил Гленарван."
+    },
+    {
+      "source_id": "fr42c-027-0101",
+      "before": "— И я не буду отговаривать вас от этого, — ответил Паганель. — Наоборот.",
+      "after": "— И не я стану отговаривать вас от неё, — возразил Паганель. — Напротив."
+    },
+    {
+      "source_id": "fr42c-027-0102",
+      "before": "— Итак, Джон, — сказал Гленарван, — держите курс на Тристан-да-Кунья.",
+      "after": "— Тогда, Джон, — сказал Гленарван, — прикажите взять курс на Тристан-да-Кунья."
+    },
+    {
+      "source_id": "fr42c-027-0103",
+      "before": "— Сейчас же, Ваша Честь, — ответил капитан и поднялся на палубу, в то время как Роберт и Мэри Грант выражали лорду Гленарвану самые горячие слова благодарности.",
+      "after": "— Сию минуту, Ваша Честь, — ответил капитан и поднялся на палубу, а Роберт и Мэри Грант тем временем горячо благодарили лорда Гленарвана."
+    },
+    {
+      "source_id": "fr42c-027-0104",
+      "before": "Вскоре «<i>Дункан</i>»<i>,</i> удаляясь от американского побережья и направляясь на восток, своим быстрым носом рассекал волны Атлантического океана.",
+      "after": "Вскоре «<i>Дункан</i>», удаляясь от американского берега и держа путь на восток, быстрым форштевнем рассекал волны Атлантического океана."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/027/batch005.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJudBBQ9TTynAn1h57Et",
+    "usage": {
+      "input_tokens": 3371,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 712,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

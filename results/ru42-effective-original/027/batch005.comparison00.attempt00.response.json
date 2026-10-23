@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJuddQDv4DBmt8XtTiV6",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-027-0100\",\"target\":\"— Эта предосторожность кажется мне разумной, — ответил Гленарван.\"},{\"source_id\":\"fr42c-027-0101\",\"target\":\"— И не я стану отговаривать вас от неё, — возразил Паганель. — Напротив.\"},{\"source_id\":\"fr42c-027-0102\",\"target\":\"— Тогда, Джон, — сказал Гленарван, — прикажите взять курс на Тристан-да-Кунья.\"},{\"source_id\":\"fr42c-027-0103\",\"target\":\"— Сию минуту, Ваша Честь, — ответил капитан и поднялся на палубу, а Роберт и Мэри Грант тем временем горячо благодарили лорда Гленарвана.\"},{\"source_id\":\"fr42c-027-0104\",\"target\":\"Вскоре «<i>Дункан</i>», удаляясь от американского берега и держа путь на восток, быстрым форштевнем рассекал волны Атлантического океана.\"}],\"review\":[{\"source_id\":\"fr42c-027-0100\",\"verdict\":\"PASS\",\"reason\":\"Faithful: precaution deemed good, Glenarvan replies. Prior correction verified; idiomatic.\"},{\"source_id\":\"fr42c-027-0101\",\"verdict\":\"PASS\",\"reason\":\"Preserves 'not I who will dissuade you' emphasis, répliqua, and 'Au contraire'. Correction verified.\"},{\"source_id\":\"fr42c-027-0102\",\"verdict\":\"PASS\",\"reason\":\"'Alors', order to John to set course for Tristan d'Acunha preserved; correction accurate.\"},{\"source_id\":\"fr42c-027-0103\",\"verdict\":\"PASS\",\"reason\":\"Captain's reply, going up on deck, and Robert and Mary's warm thanks to Glenarvan all preserved. Closing quote omitted in Russian dialogue, acceptable.\"},{\"source_id\":\"fr42c-027-0104\",\"verdict\":\"PASS\",\"reason\":\"Italic Duncan kept; duplicate italic comma removed correctly; eastward course, stem cutting Atlantic waves preserved.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4061,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 719,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
