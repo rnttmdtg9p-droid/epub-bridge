@@ -1,0 +1,800 @@
+{
+  "unit": 54,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-054-heading",
+      "target": "ГЛАВА VI. В КОТОРОЙ ТЕОРЕТИЧЕСКИ РАССМАТРИВАЕТСЯ ВОПРОС О КАННИБАЛИЗМЕ.",
+      "source_sha256": "e481b745b520fc905330e84c8d0c6ad0ecfda9b22f323287c34cb391af26cc7e",
+      "target_id": "ru-fr42c-054-heading",
+      "tag": "heading",
+      "target_sha256": "0451ca7f2de5c03aac56f8fb83706b8f6310970c46ffaaae8bac0ad90b6c9c10"
+    },
+    {
+      "source_id": "fr42c-054-0000",
+      "target": "Первое средство спасения, к которому прибег Джон Мэнглс, не удалось. Следовало без промедления обратиться ко второму. Было очевидно, что <i>«Маккуори»</i> снять с мели нельзя, и не менее очевидно, что единственное, что оставалось, — покинуть судно. Ждать на борту сомнительной помощи было бы неосторожностью и безумием. До того как на месте крушения чудесным образом появится какой-нибудь корабль, <i>«Маккуори»</i> будет разбит в щепы! Ближайшая буря или даже просто довольно сильное волнение, поднятое ветрами с открытого моря, покатит его по песку, разобьёт, разломает и разбросает обломки. До этого неизбежного разрушения Джон хотел добраться до земли.",
+      "source_sha256": "3b63e97bf2fcecc4da7ccc4326c50f9b900dec4ddbbdd14769162b0d810323ed",
+      "target_id": "ru-fr42c-054-0000",
+      "tag": "p",
+      "target_sha256": "b6ad4da119c0a40153fc3e59bdb0100527c0c38b187bd23644e1aec7f0815180"
+    },
+    {
+      "source_id": "fr42c-054-0001",
+      "target": "Поэтому он предложил построить плот, или, на морском языке, «рас», достаточно прочный, чтобы доставить пассажиров и достаточный запас провизии к берегу Новой Зеландии.",
+      "source_sha256": "a1d28239be9aafe9533e3cc7c3c6308886d8d944dce3d742345800338744644c",
+      "target_id": "ru-fr42c-054-0001",
+      "tag": "p",
+      "target_sha256": "af59aba7a3a09ab350b960feb3b99d14088b2896309714d5227c7bc010ee744a"
+    },
+    {
+      "source_id": "fr42c-054-0002",
+      "target": "Тут не о чем было спорить — надо было действовать. Работы начались и сильно продвинулись вперёд, когда ночь прервала их.",
+      "source_sha256": "c24d365dfe267d5968df066d674a05c65740d68d5ed3d260dfe6e8d6f8f2ed2b",
+      "target_id": "ru-fr42c-054-0002",
+      "tag": "p",
+      "target_sha256": "65808b972b8d745fe03e4375e55fb73534c584ea044fde404991494deebc061b"
+    },
+    {
+      "source_id": "fr42c-054-0003",
+      "target": "Около восьми часов вечера, после ужина, пока леди Элен и Мэри Грант отдыхали на койках в рубке, Паганель и его друзья, прохаживаясь по палубе, беседовали о серьёзных вещах. Роберт не захотел с ними расстаться. Славный мальчик слушал во все уши, готовый оказать любую услугу, готовый посвятить себя опасному предприятию.",
+      "source_sha256": "582ddbf906e750475b71622038447418590aeeb85e418da4cf6171d6a02ab365",
+      "target_id": "ru-fr42c-054-0003",
+      "tag": "p",
+      "target_sha256": "126b8216f705eefb4a27865888d18a43b3fb7f2e76ce6c7be9cbcac2652c4adb"
+    },
+    {
+      "source_id": "fr42c-054-0004",
+      "target": "Паганель спросил Джона Мэнглса, не мог бы плот идти вдоль берега до Окленда, вместо того чтобы высаживать пассажиров на сушу.",
+      "source_sha256": "116f38e1af0fc6dcf1f786f8df9e541ae0ebc8534414046f32635aa85162dbbe",
+      "target_id": "ru-fr42c-054-0004",
+      "tag": "p",
+      "target_sha256": "0fa81e4f4e4332e87b2dd5fac7c490530321a1e5a56f6d86e5f5bf5b594aa3ca"
+    },
+    {
+      "source_id": "fr42c-054-0005",
+      "target": "Джон ответил, что такое плавание невозможно на столь несовершенном сооружении.",
+      "source_sha256": "8b2383c67a710ea3c4d2530ca0e68b24a76e4d755b795240670517e2cd9125c0",
+      "target_id": "ru-fr42c-054-0005",
+      "tag": "p",
+      "target_sha256": "370236f0142ec8984d33cc6c905bd6ed82859223b71f6e479ebc4c453cbd194f"
+    },
+    {
+      "source_id": "fr42c-054-0006",
+      "target": "— А то, чего мы не можем сделать на плоту, — сказал Паганель, — можно ли было бы сделать на шлюпке брига?",
+      "source_sha256": "ef1fd8a0d09eec3ba5406094a62efaf512239bea82dda657b78da93c1644e382",
+      "target_id": "ru-fr42c-054-0006",
+      "tag": "p",
+      "target_sha256": "03405632b113fee4d13029a20cb6f38de0b45afdcd335cafbd7f4e3951a1443b"
+    },
+    {
+      "source_id": "fr42c-054-0007",
+      "target": "— Да, в случае крайности, — ответил Джон Мэнглс, — но при условии плыть днём, а ночью становиться на якорь.",
+      "source_sha256": "efdb3a53588f177be155c2ddeef741999e10a62419462b4139d5536265ff0ac4",
+      "target_id": "ru-fr42c-054-0007",
+      "tag": "p",
+      "target_sha256": "4da6f0bbf87cd921cf5c5580c4af7ee34facd9e7261ed8045062d4455de1bbfe"
+    },
+    {
+      "source_id": "fr42c-054-0008",
+      "target": "— Значит, эти негодяи, которые нас бросили...",
+      "source_sha256": "50ee8d3e6bd609e892dc7097ee1f6232b43555d3eda4648d68bed79c395e98e2",
+      "target_id": "ru-fr42c-054-0008",
+      "tag": "p",
+      "target_sha256": "c62b2d53d556c55ff4f3476a03d33deaf45ebdb274c020c1efd8fd285679f4a7"
+    },
+    {
+      "source_id": "fr42c-054-0009",
+      "target": "— О, эти! — ответил Джон Мэнглс. — Они были пьяны, и в такой глубокой темноте, боюсь, они заплатили жизнью за это подлое бегство.",
+      "source_sha256": "be17f1b75089a95e21d04340cfeed4a9b3c7f7a78a876823a457e510ff714fc5",
+      "target_id": "ru-fr42c-054-0009",
+      "tag": "p",
+      "target_sha256": "480856f6f1be61027b15e7d7a70f74a67942d901c1e4a91db177bc3807518d31"
+    },
+    {
+      "source_id": "fr42c-054-0010",
+      "target": "— Тем хуже для них, — продолжал Паганель, — и тем хуже для нас, ибо эта шлюпка была бы очень полезна.",
+      "source_sha256": "ba5df9cb57d977c613a87bae39db69a9fd1e324a50be3160543e733dfdb666df",
+      "target_id": "ru-fr42c-054-0010",
+      "tag": "p",
+      "target_sha256": "5da9398f8539b2df75e3007c917e93319eeab9e042097cc3b7dfc917f8a09634"
+    },
+    {
+      "source_id": "fr42c-054-0011",
+      "target": "— Что поделаешь, Паганель? — сказал Гленарван. — Плот доставит нас на берег.",
+      "source_sha256": "ccc54064f9f696613ad5d40bf9a155de834ab7eaf933bb43a9af6295bb6c9f73",
+      "target_id": "ru-fr42c-054-0011",
+      "tag": "p",
+      "target_sha256": "18c4e25bddfedc59dec09c1745f16251d69af4d806fbef7da09ac818e781df96"
+    },
+    {
+      "source_id": "fr42c-054-0012",
+      "target": "— Именно этого я и хотел бы избежать, — ответил географ.",
+      "source_sha256": "a504bd8b293b9ab7cdcb18b27a7abd6d491608da49ed540ce62a1bc62a6c35fd",
+      "target_id": "ru-fr42c-054-0012",
+      "tag": "p",
+      "target_sha256": "97d17059f8b5fdf30e6b810725a5e980fba6d4a4f9ba0877393c1e9bcd5ad333"
+    },
+    {
+      "source_id": "fr42c-054-0013",
+      "target": "— Как! Неужели путь не более чем в двадцать миль, после всего, что мы проделали в пампасах и по Австралии, может испугать людей, закалённых в трудностях?",
+      "source_sha256": "022295904b75a0d563aa3d456777144ca7cbcf2f7fc3dee7bc38efb17b8dbc77",
+      "target_id": "ru-fr42c-054-0013",
+      "tag": "p",
+      "target_sha256": "c0704e734c20e35e69fb7943c5a953e7247326ccc018171d64be3497224da6a1"
+    },
+    {
+      "source_id": "fr42c-054-0014",
+      "target": "— Друзья мои, — ответил Паганель, — я не сомневаюсь ни в вашем мужестве, ни в стойкости наших спутниц. Двадцать миль! В любой другой стране, кроме Новой Зеландии, это пустяк. Вы не заподозрите меня в малодушии. Я первый увлёк вас через Америку, через Австралию. Но здесь, повторяю, всё лучше, чем пускаться в эту коварную страну.",
+      "source_sha256": "79b7da684afef19ed0eb17790b2833a2ba8e3ccf3b5c7022945b49cc20e0a559",
+      "target_id": "ru-fr42c-054-0014",
+      "tag": "p",
+      "target_sha256": "4dad627c9a494b74f03d0b7b666c0e4d146d82aba8d4cafa2d56c45d459b9ae6"
+    },
+    {
+      "source_id": "fr42c-054-0015",
+      "target": "— Всё лучше, чем подвергаться верной гибели на севшем на мель корабле, — заметил Джон Мэнглс.",
+      "source_sha256": "58984258bf7f4d7478b5e1a4493249c8518f09250071191971685457c6633df1",
+      "target_id": "ru-fr42c-054-0015",
+      "tag": "p",
+      "target_sha256": "4aad009c1f1f0e5da74fb792c76b2897b250e4fec413370d17f1c4215eeeac73"
+    },
+    {
+      "source_id": "fr42c-054-0016",
+      "target": "— Что же нам так страшно в Новой Зеландии? — спросил Гленарван.",
+      "source_sha256": "e35eeefd56f139f629a5dcbaa5ab6ebd6476b4bf4cb81eb755bedcd47f533f18",
+      "target_id": "ru-fr42c-054-0016",
+      "tag": "p",
+      "target_sha256": "972a9d5868e2cb9c73eeb483bb428f94872edbb803abcbfe169777f31a76d491"
+    },
+    {
+      "source_id": "fr42c-054-0017",
+      "target": "— Дикари, — ответил Паганель.",
+      "source_sha256": "40cefa7273f3c1514e7d57f675dd0a4b19b49b031aaaa9f959790580a3aec10e",
+      "target_id": "ru-fr42c-054-0017",
+      "tag": "p",
+      "target_sha256": "dab285c44b97c8aaf5be6958c2ad95fad76a97bce181782e9838c3b2c86cc102"
+    },
+    {
+      "source_id": "fr42c-054-0018",
+      "target": "— Дикари! — возразил Гленарван. — Разве нельзя избежать их, держась берега? К тому же нападение нескольких жалких людишек не должно тревожить десять хорошо вооружённых европейцев, решивших защищаться.",
+      "source_sha256": "336013dfe2297d5a53f967ccb4fcac63ca4f9081fa92b0b3731d7b5fafda953b",
+      "target_id": "ru-fr42c-054-0018",
+      "tag": "p",
+      "target_sha256": "9ab306d907887de4baf4d8304fa7613f22707c8a332a49fe3946356840323c3a"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-054-heading",
+      "verdict": "CORRECTED",
+      "reason": "Heading rendered more idiomatically; theoretical treatment of cannibalism preserved."
+    },
+    {
+      "source_id": "fr42c-054-0000",
+      "verdict": "CORRECTED",
+      "reason": "Fixed grammar, removed HTML tags, restored italics-free ship name, corrected tense and sense of the storm and wreck."
+    },
+    {
+      "source_id": "fr42c-054-0001",
+      "verdict": "CORRECTED",
+      "reason": "Improved wording; Zélande rendered as Новая Зеландия, avoided repetition."
+    },
+    {
+      "source_id": "fr42c-054-0002",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed idiom while keeping all facts."
+    },
+    {
+      "source_id": "fr42c-054-0003",
+      "verdict": "CORRECTED",
+      "reason": "Name Элен, roufle as deckhouse, tidied phrasing."
+    },
+    {
+      "source_id": "fr42c-054-0004",
+      "verdict": "CORRECTED",
+      "reason": "Minor idiom fix."
+    },
+    {
+      "source_id": "fr42c-054-0005",
+      "verdict": "CORRECTED",
+      "reason": "Appareil defective rendered as несовершенное сооружение, not судно."
+    },
+    {
+      "source_id": "fr42c-054-0006",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue dash punctuation instead of guillemets; canot as шлюпка."
+    },
+    {
+      "source_id": "fr42c-054-0007",
+      "verdict": "CORRECTED",
+      "reason": "Name Мэнглс and idiom fixed."
+    },
+    {
+      "source_id": "fr42c-054-0008",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-054-0009",
+      "verdict": "CORRECTED",
+      "reason": "Fixed gender error and idiom; lâche abandon as подлое бегство."
+    },
+    {
+      "source_id": "fr42c-054-0010",
+      "verdict": "CORRECTED",
+      "reason": "Fixed register and conditional sense; canot as шлюпка."
+    },
+    {
+      "source_id": "fr42c-054-0011",
+      "verdict": "CORRECTED",
+      "reason": "More natural idiom."
+    },
+    {
+      "source_id": "fr42c-054-0012",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-054-0013",
+      "verdict": "CORRECTED",
+      "reason": "Fixed plural/pace of trials, and rompus aux fatigues idiom."
+    },
+    {
+      "source_id": "fr42c-054-0014",
+      "verdict": "CORRECTED",
+      "reason": "Improved idiom; Новая Зеландия; s'aventurer sense."
+    },
+    {
+      "source_id": "fr42c-054-0015",
+      "verdict": "CORRECTED",
+      "reason": "Removed spurious quotes/dash; fixed 'седнувшем' to севшем на мель."
+    },
+    {
+      "source_id": "fr42c-054-0016",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-054-0017",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-054-0018",
+      "verdict": "CORRECTED",
+      "reason": "Clarified éviter sauvages and the final clause; misérables as жалкие туземцы."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-054-heading",
+      "before": "ГЛАВА VI — ГДЕ КАННИБАЛИЗМ РАССМАТРИВАЕТСЯ С ТЕОРЕТИЧЕСКОЙ ТОЧКИ ЗРЕНИЯ.",
+      "after": "ГЛАВА VI. В КОТОРОЙ ТЕОРЕТИЧЕСКИ РАССМАТРИВАЕТСЯ ВОПРОС О КАННИБАЛИЗМЕ."
+    },
+    {
+      "source_id": "fr42c-054-0000",
+      "before": "Первая попытка спасения, предпринятая Джоном Мэнглсом, закончилась неудачей. Необходимо было незамедлительно прибегнуть ко второй. Очевидно, что поднять <i>«Маккуори»</i> было невозможно, и не менее очевидно, что единственным выходом из положения было покинуть судно. Ожидать на борту помощи, появление которой было сомнительным, было бы неосторожностью и безумием. До того как на место кораблекрушения провидением пришёл бы какой-нибудь корабль, <i>«Маккуори»</i> был бы разбит вдребезги! Следующий шторм или даже просто немного волнение, поднятое морскими ветрами, перевернуло бы его на песок, разбило бы, разорвало бы на части и разбросало бы обломки. Прежде чем наступило бы это неизбежное разрушение, Джон хотел добраться до берега.",
+      "after": "Первое средство спасения, к которому прибег Джон Мэнглс, не удалось. Следовало без промедления обратиться ко второму. Было очевидно, что «Маккуори» снять с мели нельзя, и не менее очевидно, что единственное, что оставалось, — покинуть судно. Ждать на борту сомнительной помощи было бы неосторожностью и безумием. Пока на месте крушения чудесным образом появится какой-нибудь корабль, «Маккуори» будет разбит в щепы! Ближайшая буря или даже просто довольно сильное волнение, поднятое ветрами с открытого моря, покатит его по песку, разобьёт, разломает и разбросает обломки. До этого неизбежного разрушения Джон хотел добраться до земли."
+    },
+    {
+      "source_id": "fr42c-054-0001",
+      "before": "Поэтому он предложил построить плот, или, говоря морским языком, «рас», достаточно прочный, чтобы доставить пассажиров и достаточное количество провианта к побережью Зеландии.",
+      "after": "Поэтому он предложил построить плот, или, на морском языке, «рас», достаточно прочный, чтобы доставить пассажиров и достаточный запас провизии к берегу Новой Зеландии."
+    },
+    {
+      "source_id": "fr42c-054-0002",
+      "before": "Здесь не было места для обсуждений — нужно было действовать. Работы были начаты и уже значительно продвинулись, когда наступила ночь и прервала их.",
+      "after": "Тут не о чем было спорить — надо было действовать. Работы начались и сильно продвинулись вперёд, когда ночь прервала их."
+    },
+    {
+      "source_id": "fr42c-054-0003",
+      "before": "Около восьми часов вечера, после ужина, пока леди Елена и Мэри Грант отдыхали на койках в руфле, Паганель и его друзья обсуждали серьёзные вопросы, прогуливаясь по палубе корабля. Роберт не захотел от них отставать. Этот храбрый мальчик прислушивался со всем вниманием, готовый оказать любую услугу, готовый посвятить себя опасному предприятию.",
+      "after": "Около восьми часов вечера, после ужина, пока леди Элен и Мэри Грант отдыхали на койках в рубке, Паганель и его друзья, прохаживаясь по палубе, беседовали о серьёзных вещах. Роберт не захотел с ними расстаться. Славный мальчик слушал во все уши, готовый оказать любую услугу, готовый посвятить себя опасному предприятию."
+    },
+    {
+      "source_id": "fr42c-054-0004",
+      "before": "Паганель спросил Джона Мэнглса, не мог бы плот следовать вдоль побережья до Окленда, вместо того чтобы высадить пассажиров на берег.",
+      "after": "Паганель спросил Джона Мэнглса, не мог бы плот идти вдоль берега до Окленда, вместо того чтобы высаживать пассажиров на сушу."
+    },
+    {
+      "source_id": "fr42c-054-0005",
+      "before": "Джон ответил, что такое плавание невозможно на столь неисправном судне.",
+      "after": "Джон ответил, что такое плавание невозможно на столь несовершенном сооружении."
+    },
+    {
+      "source_id": "fr42c-054-0006",
+      "before": "«А то, что мы не можем попробовать на плоту, — сказал Паганель, — можно ли было бы сделать на шлюпке брика?»",
+      "after": "— А то, чего мы не можем сделать на плоту, — сказал Паганель, — можно ли было бы сделать на шлюпке брига?"
+    },
+    {
+      "source_id": "fr42c-054-0007",
+      "before": "— Да, в крайнем случае, — ответил Джон Мэнглз, — но при условии, что днём мы будем плыть, а ночью бросать якорь.",
+      "after": "— Да, в случае крайности, — ответил Джон Мэнглс, — но при условии, что днём идти, а ночью становиться на якорь."
+    },
+    {
+      "source_id": "fr42c-054-0008",
+      "before": "— Итак, эти несчастные, которые бросили нас...",
+      "after": "— Значит, эти негодяи, которые нас бросили...."
+    },
+    {
+      "source_id": "fr42c-054-0009",
+      "before": "— О! Те, — ответил Джон Мэнглз, — они были пьяны, и, судя по этой глубокой тьме, боюсь, что они поплатились жизнью за эту трусливую бегство.",
+      "after": "— О, эти! — ответил Джон Мэнглс. — Они были пьяны, и в такой глубокой темноте, боюсь, они заплатили жизнью за это подлое бегство."
+    },
+    {
+      "source_id": "fr42c-054-0010",
+      "before": "— Ну и ладно им, — продолжил Паганель, — и нам тоже, ведь эта лодка пригодилась бы нам очень.",
+      "after": "— Тем хуже для них, — продолжал Паганель, — и тем хуже для нас, ибо эта шлюпка была бы очень полезна."
+    },
+    {
+      "source_id": "fr42c-054-0011",
+      "before": "— Что вы хотите, Паганель? — сказал Гленарван. — Плот доставит нас на берег.",
+      "after": "— Что поделаешь, Паганель? — сказал Гленарван. — Плот доставит нас на берег."
+    },
+    {
+      "source_id": "fr42c-054-0012",
+      "before": "— Это как раз то, чего я и хотел бы избежать, — ответил географ.",
+      "after": "— Именно этого я и хотел бы избежать, — ответил географ."
+    },
+    {
+      "source_id": "fr42c-054-0013",
+      "before": "— Что же! Разве путешествие длиной не более двадцати миль после того, что мы пережили в Пампасах и в Австралии, может испугать людей, привыкших к тяготам?",
+      "after": "— Как! Неужели путь не более чем в двадцать миль, после всего, что мы проделали в пампасах и по Австралии, может испугать людей, закалённых в трудностях?"
+    },
+    {
+      "source_id": "fr42c-054-0014",
+      "before": "— Друзья мои, — ответил Паганель, — я не сомневаюсь ни в вашем мужестве, ни в доблести наших спутниц. Двадцать миль! Это ничто в любой другой стране, кроме Новой Зеландии. Вы же не заподозрите меня в малодушии. Я первым повёл вас через Америку, через Австралию. Но здесь, повторяю, всё лучше, чем рисковать, отправляясь в эту коварную страну.",
+      "after": "— Друзья мои, — ответил Паганель, — я не сомневаюсь ни в вашем мужестве, ни в стойкости наших спутниц. Двадцать миль! В любой другой стране, кроме Новой Зеландии, это пустяк. Вы не заподозрите меня в малодушии. Я первый увлёк вас через Америку, через Австралию. Но здесь, повторяю, всё лучше, чем отважиться в эту коварную страну."
+    },
+    {
+      "source_id": "fr42c-054-0015",
+      "before": "— «Лучше что угодно, чем подвергаться верной гибели на седнувшем корабле», — сказал Джон Мэнглз.",
+      "after": "— Всё лучше, чем подвергаться верной гибели на севшем на мель корабле, — заметил Джон Мэнглс."
+    },
+    {
+      "source_id": "fr42c-054-0016",
+      "before": "— Чего же нам так бояться Новой Зеландии? — спросил Гленарван.",
+      "after": "— Что же нам так страшно в Новой Зеландии? — спросил Гленарван."
+    },
+    {
+      "source_id": "fr42c-054-0018",
+      "before": "— Дикари! — воскликнул Гленарван. — Разве нельзя их обойти, идя вдоль побережья? К тому же нападение нескольких ничтожеств не может угрожать десяти хорошо вооружённым европейцам, решительным защищаться.",
+      "after": "— Дикари! — возразил Гленарван. — Разве нельзя избежать их, держась берега? К тому же нападение нескольких жалких туземцев не должно тревожить десять хорошо вооружённых европейцев, решивших защищаться."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/054/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK3vSADLAeFWetSPUd2M",
+    "usage": {
+      "input_tokens": 10532,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2891,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK3wqvy3yp4Te8UmTesX",
+        "usage": {
+          "input_tokens": 13845,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3785,
+          "output_tokens_details": {
+            "thinking_tokens": 879
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-054-heading",
+          "verdict": "PASS",
+          "reason": "Faithful chapter title; heading not turned into anything else."
+        },
+        {
+          "source_id": "fr42c-054-0000",
+          "verdict": "PASS",
+          "reason": "Meaning, tenses, exclamation and ship name preserved; idiomatic and complete."
+        },
+        {
+          "source_id": "fr42c-054-0001",
+          "verdict": "PASS",
+          "reason": "Raft, nautical term «ras», passengers, provisions, Zealand coast all rendered accurately."
+        },
+        {
+          "source_id": "fr42c-054-0002",
+          "verdict": "PASS",
+          "reason": "Accurate; work advanced, night interrupted."
+        },
+        {
+          "source_id": "fr42c-054-0003",
+          "verdict": "PASS",
+          "reason": "All details preserved: time, ladies resting, Paganel's walk, Robert listening."
+        },
+        {
+          "source_id": "fr42c-054-0004",
+          "verdict": "PASS",
+          "reason": "Question about following the coast to Auckland rendered faithfully."
+        },
+        {
+          "source_id": "fr42c-054-0005",
+          "verdict": "PASS",
+          "reason": "Accurate; impossibility with defective craft."
+        },
+        {
+          "source_id": "fr42c-054-0006",
+          "verdict": "PASS",
+          "reason": "Dialogue turn and conditional question preserved."
+        },
+        {
+          "source_id": "fr42c-054-0007",
+          "verdict": "CORRECTED",
+          "reason": "Smoothed the awkward infinitive construction: sail by day, anchor at night."
+        },
+        {
+          "source_id": "fr42c-054-0008",
+          "verdict": "CORRECTED",
+          "reason": "Fixed ellipsis to three dots, as in the source."
+        },
+        {
+          "source_id": "fr42c-054-0009",
+          "verdict": "PASS",
+          "reason": "Drunkenness, darkness, fear of death and cowardly desertion all preserved."
+        },
+        {
+          "source_id": "fr42c-054-0010",
+          "verdict": "PASS",
+          "reason": "Correct sense of «tant pis» and the usefulness of the boat."
+        },
+        {
+          "source_id": "fr42c-054-0011",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "fr42c-054-0012",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0013",
+          "verdict": "PASS",
+          "reason": "Rhetorical question, Pampas, Australia, hardened men all preserved."
+        },
+        {
+          "source_id": "fr42c-054-0014",
+          "verdict": "CORRECTED",
+          "reason": "Replaced ungrammatical «отважиться в страну» with an idiomatic rendering of «s'aventurer dans»; rest faithful."
+        },
+        {
+          "source_id": "fr42c-054-0015",
+          "verdict": "PASS",
+          "reason": "Accurate; stranded ship, certain loss."
+        },
+        {
+          "source_id": "fr42c-054-0016",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0017",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0018",
+          "verdict": "CORRECTED",
+          "reason": "Removed the added «туземцев» for «quelques misérables»; the rest is faithful."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-054-0007",
+          "before": "— Да, в случае крайности, — ответил Джон Мэнглс, — но при условии, что днём идти, а ночью становиться на якорь.",
+          "after": "— Да, в случае крайности, — ответил Джон Мэнглс, — но при условии плыть днём, а ночью становиться на якорь."
+        },
+        {
+          "source_id": "fr42c-054-0008",
+          "before": "— Значит, эти негодяи, которые нас бросили....",
+          "after": "— Значит, эти негодяи, которые нас бросили..."
+        },
+        {
+          "source_id": "fr42c-054-0014",
+          "before": "— Друзья мои, — ответил Паганель, — я не сомневаюсь ни в вашем мужестве, ни в стойкости наших спутниц. Двадцать миль! В любой другой стране, кроме Новой Зеландии, это пустяк. Вы не заподозрите меня в малодушии. Я первый увлёк вас через Америку, через Австралию. Но здесь, повторяю, всё лучше, чем отважиться в эту коварную страну.",
+          "after": "— Друзья мои, — ответил Паганель, — я не сомневаюсь ни в вашем мужестве, ни в стойкости наших спутниц. Двадцать миль! В любой другой стране, кроме Новой Зеландии, это пустяк. Вы не заподозрите меня в малодушии. Я первый увлёк вас через Америку, через Австралию. Но здесь, повторяю, всё лучше, чем пускаться в эту коварную страну."
+        },
+        {
+          "source_id": "fr42c-054-0018",
+          "before": "— Дикари! — возразил Гленарван. — Разве нельзя избежать их, держась берега? К тому же нападение нескольких жалких туземцев не должно тревожить десять хорошо вооружённых европейцев, решивших защищаться.",
+          "after": "— Дикари! — возразил Гленарван. — Разве нельзя избежать их, держась берега? К тому же нападение нескольких жалких людишек не должно тревожить десять хорошо вооружённых европейцев, решивших защищаться."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK3yTKVNyf9pJZqnnk5G",
+        "usage": {
+          "input_tokens": 14572,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3388,
+          "output_tokens_details": {
+            "thinking_tokens": 594
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-054-heading",
+          "verdict": "PASS",
+          "reason": "Faithful chapter heading; meaning preserved."
+        },
+        {
+          "source_id": "fr42c-054-0000",
+          "verdict": "CORRECTED",
+          "reason": "Restored italics on the ship name; fixed 'avant l'arrivée' to «До того как», which the prior wording blurred. Rest faithful."
+        },
+        {
+          "source_id": "fr42c-054-0001",
+          "verdict": "PASS",
+          "reason": "Raft, 'ras', passengers, provisions and Zealand coast all preserved."
+        },
+        {
+          "source_id": "fr42c-054-0002",
+          "verdict": "PASS",
+          "reason": "Meaning and sequence accurate and idiomatic."
+        },
+        {
+          "source_id": "fr42c-054-0003",
+          "verdict": "PASS",
+          "reason": "Time, characters, roufle and Robert's eagerness faithfully rendered."
+        },
+        {
+          "source_id": "fr42c-054-0004",
+          "verdict": "PASS",
+          "reason": "Question about Auckland and landing preserved."
+        },
+        {
+          "source_id": "fr42c-054-0005",
+          "verdict": "PASS",
+          "reason": "Impossibility due to defective craft preserved."
+        },
+        {
+          "source_id": "fr42c-054-0006",
+          "verdict": "PASS",
+          "reason": "Dialogue punctuation correct; meaning accurate."
+        },
+        {
+          "source_id": "fr42c-054-0007",
+          "verdict": "PASS",
+          "reason": "Condition of sailing by day and anchoring at night accurate."
+        },
+        {
+          "source_id": "fr42c-054-0008",
+          "verdict": "PASS",
+          "reason": "Interrupted speech with ellipsis preserved."
+        },
+        {
+          "source_id": "fr42c-054-0009",
+          "verdict": "PASS",
+          "reason": "Drunkenness, darkness and fear for their lives accurate."
+        },
+        {
+          "source_id": "fr42c-054-0010",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic."
+        },
+        {
+          "source_id": "fr42c-054-0011",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0012",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0013",
+          "verdict": "PASS",
+          "reason": "Pampas, Australia and hardened men preserved."
+        },
+        {
+          "source_id": "fr42c-054-0014",
+          "verdict": "PASS",
+          "reason": "Negations, courage, Paganel's first lead and perfidious country preserved."
+        },
+        {
+          "source_id": "fr42c-054-0015",
+          "verdict": "PASS",
+          "reason": "John's retort accurate."
+        },
+        {
+          "source_id": "fr42c-054-0016",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0017",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "fr42c-054-0018",
+          "verdict": "PASS",
+          "reason": "Avoiding savages, ten armed Europeans and resolve to defend all preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-054-0000",
+          "before": "Первое средство спасения, к которому прибег Джон Мэнглс, не удалось. Следовало без промедления обратиться ко второму. Было очевидно, что «Маккуори» снять с мели нельзя, и не менее очевидно, что единственное, что оставалось, — покинуть судно. Ждать на борту сомнительной помощи было бы неосторожностью и безумием. Пока на месте крушения чудесным образом появится какой-нибудь корабль, «Маккуори» будет разбит в щепы! Ближайшая буря или даже просто довольно сильное волнение, поднятое ветрами с открытого моря, покатит его по песку, разобьёт, разломает и разбросает обломки. До этого неизбежного разрушения Джон хотел добраться до земли.",
+          "after": "Первое средство спасения, к которому прибег Джон Мэнглс, не удалось. Следовало без промедления обратиться ко второму. Было очевидно, что <i>«Маккуори»</i> снять с мели нельзя, и не менее очевидно, что единственное, что оставалось, — покинуть судно. Ждать на борту сомнительной помощи было бы неосторожностью и безумием. До того как на месте крушения чудесным образом появится какой-нибудь корабль, <i>«Маккуори»</i> будет разбит в щепы! Ближайшая буря или даже просто довольно сильное волнение, поднятое ветрами с открытого моря, покатит его по песку, разобьёт, разломает и разбросает обломки. До этого неизбежного разрушения Джон хотел добраться до земли."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgK3zoUUEf9ZhDNavmpxq",
+        "usage": {
+          "input_tokens": 15150,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2795,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-054-heading",
+          "verdict": "PASS",
+          "reason": "Heading faithful; cannibalism treated theoretically."
+        },
+        {
+          "source_id": "fr42c-054-0000",
+          "verdict": "PASS",
+          "reason": "Complete; italics on ship name preserved; sequence and conditional futures faithful."
+        },
+        {
+          "source_id": "fr42c-054-0001",
+          "verdict": "PASS",
+          "reason": "Raft, 'ras', supplies and Zealand coast correctly rendered."
+        },
+        {
+          "source_id": "fr42c-054-0002",
+          "verdict": "PASS",
+          "reason": "Meaning and sequence preserved; idiomatic."
+        },
+        {
+          "source_id": "fr42c-054-0003",
+          "verdict": "PASS",
+          "reason": "All details present; roufle as рубка acceptable; Robert's eagerness kept."
+        },
+        {
+          "source_id": "fr42c-054-0004",
+          "verdict": "PASS",
+          "reason": "Question about following coast to Auckland accurate."
+        },
+        {
+          "source_id": "fr42c-054-0005",
+          "verdict": "PASS",
+          "reason": "Impossible navigation with defective craft; accurate."
+        },
+        {
+          "source_id": "fr42c-054-0006",
+          "verdict": "PASS",
+          "reason": "Dash dialogue and conditional question accurate."
+        },
+        {
+          "source_id": "fr42c-054-0007",
+          "verdict": "PASS",
+          "reason": "Condition day sailing/night anchoring correct."
+        },
+        {
+          "source_id": "fr42c-054-0008",
+          "verdict": "PASS",
+          "reason": "Interrupted speech with ellipsis preserved."
+        },
+        {
+          "source_id": "fr42c-054-0009",
+          "verdict": "PASS",
+          "reason": "Drunkenness, darkness, fear of death accurately conveyed."
+        },
+        {
+          "source_id": "fr42c-054-0010",
+          "verdict": "PASS",
+          "reason": "Tant pis twice and usefulness of boat preserved."
+        },
+        {
+          "source_id": "fr42c-054-0011",
+          "verdict": "PASS",
+          "reason": "Accurate and idiomatic."
+        },
+        {
+          "source_id": "fr42c-054-0012",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "fr42c-054-0013",
+          "verdict": "PASS",
+          "reason": "Twenty miles at most, Pampas, Australia, hardened men; faithful."
+        },
+        {
+          "source_id": "fr42c-054-0014",
+          "verdict": "PASS",
+          "reason": "All statements preserved, including negations and pusillanimity."
+        },
+        {
+          "source_id": "fr42c-054-0015",
+          "verdict": "PASS",
+          "reason": "Certain loss on stranded ship correctly rendered."
+        },
+        {
+          "source_id": "fr42c-054-0016",
+          "verdict": "PASS",
+          "reason": "Faithful question."
+        },
+        {
+          "source_id": "fr42c-054-0017",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "fr42c-054-0018",
+          "verdict": "PASS",
+          "reason": "Avoidance, attack by wretches, ten armed Europeans all preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
