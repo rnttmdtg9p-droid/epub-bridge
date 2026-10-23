@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKj7d4PFSKZMMx2JRtHn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"assessments\":[{\"source_id\":\"046-act-2-heading\",\"verdict\":\"PASS\",\"reason\":\"Heading matches source exactly.\"},{\"source_id\":\"046-2-0000\",\"verdict\":\"PASS\",\"reason\":\"Stage direction identical to source.\"},{\"source_id\":\"046-2-0001\",\"verdict\":\"PASS\",\"reason\":\"Stage direction identical to source.\"},{\"source_id\":\"046-2-0002\",\"verdict\":\"PASS\",\"reason\":\"Stage direction and character-name span match source; only namespace serialization differs.\"},{\"source_id\":\"046-2-0003\",\"verdict\":\"PASS\",\"reason\":\"Dialogue, ellipses and stage direction match source.\"},{\"source_id\":\"046-2-0004\",\"verdict\":\"PASS\",\"reason\":\"Speaker, direction and line match source.\"},{\"source_id\":\"046-2-0005\",\"verdict\":\"PASS\",\"reason\":\"Text matches source, including 'масленица' and the stage direction.\"},{\"source_id\":\"046-2-0006\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0007\",\"verdict\":\"PASS\",\"reason\":\"Matches source including quoted speech and repetitions.\"},{\"source_id\":\"046-2-0008\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0009\",\"verdict\":\"PASS\",\"reason\":\"Original spelling 'диэта' preserved; matches source.\"},{\"source_id\":\"046-2-0010\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0011\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0012\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0013\",\"verdict\":\"PASS\",\"reason\":\"Matches source including directions.\"},{\"source_id\":\"046-2-0014\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0015\",\"verdict\":\"PASS\",\"reason\":\"Continuation of Natasha's speech without speaker label, as in source; 'Андрюшанчик' preserved.\"},{\"source_id\":\"046-2-0016\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0017\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0018\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0019\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0020\",\"verdict\":\"PASS\",\"reason\":\"Unlabeled continuation of Andrei's speech, matching source paragraph structure.\"},{\"source_id\":\"046-2-0021\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0022\",\"verdict\":\"PASS\",\"reason\":\"Matches source, including 'так не рано'.\"},{\"source_id\":\"046-2-0023\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0024\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0025\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0026\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0027\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0028\",\"verdict\":\"PASS\",\"reason\":\"Unlabeled continuation of Andrei's monologue matching source.\"},{\"source_id\":\"046-2-0029\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0030\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0031\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0032\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0033\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0034\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0035\",\"verdict\":\"PASS\",\"reason\":\"Unlabeled continuation of Ferapont's speech, matching source.\"},{\"source_id\":\"046-2-0036\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0037\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"},{\"source_id\":\"046-2-0038\",\"verdict\":\"PASS\",\"reason\":\"Matches source.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 47226,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1528,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
