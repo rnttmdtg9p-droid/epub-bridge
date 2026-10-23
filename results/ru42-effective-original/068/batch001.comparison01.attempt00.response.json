@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK7oQUXJC9PNRvKom5XR",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-068-0020\",\"target\":\"— В самом деле, — сказал Паганель, — этот вулкан сверкает, но не подаёт голоса. Кроме того, можно подумать, что он действует с перерывами, как маяк с проблесковым огнём.\"},{\"source_id\":\"fr42c-068-0021\",\"target\":\"— Вы правы, — продолжал Джон Манглс, — и всё же мы не у берега, где есть маяки. Ах! — воскликнул он. — Другой огонь! На этот раз на берегу! Смотрите! Он движется! Он меняет место!\"},{\"source_id\":\"fr42c-068-0022\",\"target\":\"Джон не ошибался. Появился новый огонь, который то как будто гас, то вдруг снова разгорался.\"},{\"source_id\":\"fr42c-068-0023\",\"target\":\"— Значит, остров обитаем? — сказал Гленарван.\"},{\"source_id\":\"fr42c-068-0024\",\"target\":\"— Дикарями, разумеется, — ответил Паганель.\"},{\"source_id\":\"fr42c-068-0025\",\"target\":\"— Но тогда мы не можем оставить там квартирмейстера.\"},{\"source_id\":\"fr42c-068-0026\",\"target\":\"— Нет, — ответил майор, — это был бы слишком скверный подарок, даже для дикарей.\"},{\"source_id\":\"fr42c-068-0027\",\"target\":\"— Мы поищем какой-нибудь другой необитаемый остров, — сказал Гленарван, который не мог не улыбнуться «деликатности» Мак-Наббса. — Я обещал Айртону сохранить жизнь и хочу сдержать обещание.\"},{\"source_id\":\"fr42c-068-0028\",\"target\":\"— Во всяком случае, будем осторожны, — добавил Паганель. — У зеландцев есть варварский обычай обманывать корабли движущимися огнями, как некогда жители Корнуолла. А туземцы Марии-Терезии могут знать этот приём.\"},{\"source_id\":\"fr42c-068-0029\",\"target\":\"— Уваливай на четверть румба! — крикнул Джон рулевому. — Завтра, на восходе солнца, мы узнаем, как обстоит дело.\"},{\"source_id\":\"fr42c-068-0030\",\"target\":\"В одиннадцать часов пассажиры и Джон Манглс вернулись в свои каюты. На носу по палубе яхты прогуливалась вахта. На корме у руля был один рулевой.\"},{\"source_id\":\"fr42c-068-0031\",\"target\":\"В эту минуту Мэри Грант и Роберт поднялись на ют.\"},{\"source_id\":\"fr42c-068-0032\",\"target\":\"Двое детей капитана, облокотившись на поручень, печально смотрели на фосфоресцирующее море и светящийся след <i>Дункана</i>. Мэри думала о будущем Роберта; Роберт думал о будущем сестры. Оба думали об отце. Жив ли ещё этот обожаемый отец? Неужели придётся отказаться от надежды? Но нет: без него чем была бы жизнь? Что стало бы с ними без него? Чем бы они уже стали без лорда Гленарвана, без леди Элен?\"},{\"source_id\":\"fr42c-068-0033\",\"target\":\"Мальчик, возмужавший от несчастий, угадывал мысли, волновавшие сестру. Он взял руку Мэри в свою.\"},{\"source_id\":\"fr42c-068-0034\",\"target\":\"— Мэри, — сказал он ей, — никогда не надо отчаиваться. Вспомни уроки нашего отца: «Мужество заменяет здесь, на земле, всё», — говорил он. Так будем же мужественны, упорно мужественны, как он, — это делало его выше всего. До сих пор ты работала для меня, сестра, теперь я хочу в свой черёд работать для тебя.\"},{\"source_id\":\"fr42c-068-0035\",\"target\":\"— Дорогой Роберт! — отвечала девушка.\"},{\"source_id\":\"fr42c-068-0036\",\"target\":\"— Я должен тебе кое-что сказать, — продолжал Роберт. — Ты не рассердишься, Мэри?\"},{\"source_id\":\"fr42c-068-0037\",\"target\":\"— Почему я должна сердиться, дитя моё?\"},{\"source_id\":\"fr42c-068-0038\",\"target\":\"— И ты позволишь мне поступить по-своему?\"},{\"source_id\":\"fr42c-068-0039\",\"target\":\"— Что ты хочешь сказать? — встревоженно спросила Мэри.\"}],\"review\":[{\"source_id\":\"fr42c-068-0020\",\"verdict\":\"PASS\",\"reason\":\"Faithful: volcano shines but is silent; intermittence like a flashing light.\"},{\"source_id\":\"fr42c-068-0021\",\"verdict\":\"PASS\",\"reason\":\"Complete; lighted-coast idea, new fire on beach, movement all preserved.\"},{\"source_id\":\"fr42c-068-0022\",\"verdict\":\"PASS\",\"reason\":\"Accurate; new fire, seeming to die and revive.\"},{\"source_id\":\"fr42c-068-0023\",\"verdict\":\"PASS\",\"reason\":\"Correct question and dialogue punctuation.\"},{\"source_id\":\"fr42c-068-0024\",\"verdict\":\"PASS\",\"reason\":\"Agency 'by savages' preserved.\"},{\"source_id\":\"fr42c-068-0025\",\"verdict\":\"PASS\",\"reason\":\"Quartermaster correctly restored; meaning intact.\"},{\"source_id\":\"fr42c-068-0026\",\"verdict\":\"PASS\",\"reason\":\"Humour and negation preserved.\"},{\"source_id\":\"fr42c-068-0027\",\"verdict\":\"PASS\",\"reason\":\"Promise, smile at 'delicacy', names correct.\"},{\"source_id\":\"fr42c-068-0028\",\"verdict\":\"PASS\",\"reason\":\"Warning, Cornwall custom and natives' possible knowledge preserved.\"},{\"source_id\":\"fr42c-068-0029\",\"verdict\":\"PASS\",\"reason\":\"Helm order idiomatic; tomorrow sunrise statement correct.\"},{\"source_id\":\"fr42c-068-0030\",\"verdict\":\"PASS\",\"reason\":\"Positions and persons accurate.\"},{\"source_id\":\"fr42c-068-0031\",\"verdict\":\"PASS\",\"reason\":\"Dunette as ют correct.\"},{\"source_id\":\"fr42c-068-0032\",\"verdict\":\"PASS\",\"reason\":\"All questions and italic Duncan preserved; sense accurate.\"},{\"source_id\":\"fr42c-068-0033\",\"verdict\":\"PASS\",\"reason\":\"Accurate and idiomatic.\"},{\"source_id\":\"fr42c-068-0034\",\"verdict\":\"PASS\",\"reason\":\"Father's quote and dialogue preserved; meaning faithful.\"},{\"source_id\":\"fr42c-068-0035\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-068-0036\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-068-0037\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-068-0038\",\"verdict\":\"PASS\",\"reason\":\"Faithful, natural.\"},{\"source_id\":\"fr42c-068-0039\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 13207,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2471,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
