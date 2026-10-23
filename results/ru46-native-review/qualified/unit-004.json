@@ -1,0 +1,1823 @@
+{
+  "unit": 4,
+  "heading": {
+    "source_id": "046-act-4-heading",
+    "source_sha256": "a3f429236f399794c1aba14046a9d07ed0cb2b3e03a826a86672c51b0343613b",
+    "target": "Действие четвертое",
+    "target_sha256": "a3f429236f399794c1aba14046a9d07ed0cb2b3e03a826a86672c51b0343613b",
+    "tag": "heading"
+  },
+  "rows": [
+    {
+      "source_id": "046-4-0000",
+      "source_sha256": "4ccb55e89e93382c403d79e8b95b5ca82e29cb3e1d1bb652bf1cadd0200c08f8",
+      "target": "Старый сад при доме Прозоровых. Длинная еловая аллея, в конце которой видна река. На той стороне реки — лес. Направо терраса дома; здесь на столе бутылки и стаканы; видно, что только что пили шампанское. Двенадцать часов дня. С улицы к реке через сад ходят изредка прохожие; быстро проходят человек пять солдат.",
+      "target_sha256": "4ccb55e89e93382c403d79e8b95b5ca82e29cb3e1d1bb652bf1cadd0200c08f8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0001",
+      "source_sha256": "c2d65b26045c7d5b408af221513c45f01fa2252239cd33b642beff2235ff15d1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Чебутыкин</span> в благодушном настроении, которое не покидает его в течение всего акта, сидит в кресле, в саду, ждет, когда его позовут; он в фуражке и с палкой. <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ирина</span>, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Кулыгин</span> с орденом на шее, без усов, и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Тузенбах</span>, стоя на террасе, провожают <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Федотика</span> и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Родэ</span>, которые сходят вниз; оба офицера в походной форме.",
+      "target_sha256": "c2d65b26045c7d5b408af221513c45f01fa2252239cd33b642beff2235ff15d1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0002",
+      "source_sha256": "4096084e2f90852bc846d69c0e51b596914482af2055fac783c78149592f7c82",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(целуется с Федотиком)</i></small>. Вы хороший, мы жили так дружно. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Целуется с Родэ.)</i></small> Еще раз… Прощайте, дорогой мой!",
+      "target_sha256": "4096084e2f90852bc846d69c0e51b596914482af2055fac783c78149592f7c82",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0003",
+      "source_sha256": "4484e6fd1444804a30cfbf68b34f9b2d4759d2de003c42924684ad4a2c7d235d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. До свиданья!",
+      "target_sha256": "4484e6fd1444804a30cfbf68b34f9b2d4759d2de003c42924684ad4a2c7d235d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0004",
+      "source_sha256": "c999744b08120027a3274d82ebd24895e7e22397bf0fd2adfec582b36225d938",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Не до свиданья, а прощайте, мы больше уже никогда не увидимся!",
+      "target_sha256": "c999744b08120027a3274d82ebd24895e7e22397bf0fd2adfec582b36225d938",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0005",
+      "source_sha256": "a35095870b5e2f722021e8a3c4ca3b2f6e6f8c9cb6c6f8a5d302d26d0ce89736",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Кто знает! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вытирает глаза, улыбается.)</i></small> Вот и я заплакал.",
+      "target_sha256": "a35095870b5e2f722021e8a3c4ca3b2f6e6f8c9cb6c6f8a5d302d26d0ce89736",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0006",
+      "source_sha256": "83353a10ba7ce32edb28321059d8f8a3a0cdf6fa254796425b807f3de9ee2b2b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Когда-нибудь встретимся.",
+      "target_sha256": "83353a10ba7ce32edb28321059d8f8a3a0cdf6fa254796425b807f3de9ee2b2b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0007",
+      "source_sha256": "5d812b58d0f438db1bab5b358996ebe24ee20b55c4d21098c6dc2c6686f7e19f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. Лет через десять-пятнадцать? Но тогда мы едва узнаем друг друга, холодно поздороваемся… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Снимает фотографию.)</i></small> Стойте… Еще в последний раз.",
+      "target_sha256": "5d812b58d0f438db1bab5b358996ebe24ee20b55c4d21098c6dc2c6686f7e19f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0008",
+      "source_sha256": "c3873094090c72cad7255977068a3a57d2fa826756f3f65653f102ee513dfbca",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(обнимает Тузенбаха)</i></small>. Не увидимся больше… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Целует руку Ирине.)</i></small> Спасибо за все, за все!",
+      "target_sha256": "c3873094090c72cad7255977068a3a57d2fa826756f3f65653f102ee513dfbca",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0009",
+      "source_sha256": "5a51896573ce22984d07915c4338c3fb3baf30dd2c951fb32e64984e63b92e9e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(с досадой)</i></small>. Да постой!",
+      "target_sha256": "5a51896573ce22984d07915c4338c3fb3baf30dd2c951fb32e64984e63b92e9e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0010",
+      "source_sha256": "fa4ce4f4405dbb737d1819528f3ce13b806ddd273bbdc47e86494d8b7107298b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Даст бог, увидимся. Пишите же нам. Непременно пишите.",
+      "target_sha256": "fa4ce4f4405dbb737d1819528f3ce13b806ddd273bbdc47e86494d8b7107298b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0011",
+      "source_sha256": "a949294df5656f1b4a2f9ab1dc2aaeed9ed82e780acac053b24e76d45adcd91c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(окидывает взглядом сад)</i></small>. Прощайте, деревья! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Кричит.)</i></small> Гоп-гоп!",
+      "target_sha256": "a949294df5656f1b4a2f9ab1dc2aaeed9ed82e780acac053b24e76d45adcd91c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0012",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0013",
+      "source_sha256": "d89f81848777ddd65f15c8b70150e5cc04e6c2015607b54c0568ed0ec8e89944",
+      "target": "Прощай, эхо!",
+      "target_sha256": "d89f81848777ddd65f15c8b70150e5cc04e6c2015607b54c0568ed0ec8e89944",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0014",
+      "source_sha256": "4b0b128db5993e4d5b4a4c4265ffe366f1461b2d01971ae6a846455cd8ef25c6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Чего доброго женитесь там, в Польше… Жена полька обнимет и скажет: «кохане!» <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small>",
+      "target_sha256": "4b0b128db5993e4d5b4a4c4265ffe366f1461b2d01971ae6a846455cd8ef25c6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0015",
+      "source_sha256": "9f3a5738184a1c5f79e6dc7e5a00e415c7944e4c10a604c31a32ef3aec8ad9fd",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(взглянув на часы)</i></small>. Осталось меньше часа. Из нашей батареи только Соленый пойдет на барже, мы же со строевой частью. Сегодня уйдут три батареи дивизионно, завтра опять три — и в городе наступит тишина и спокойствие.",
+      "target_sha256": "9f3a5738184a1c5f79e6dc7e5a00e415c7944e4c10a604c31a32ef3aec8ad9fd",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0016",
+      "source_sha256": "aa3d12554828bb71ab20d23f4b8719f9ec0ee93e0daf5f40d97ebba34cd39bf5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. И скучища страшная.",
+      "target_sha256": "aa3d12554828bb71ab20d23f4b8719f9ec0ee93e0daf5f40d97ebba34cd39bf5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0017",
+      "source_sha256": "ded20780f5a8df278c787912025f788b2cc49290cf40bcfe9ea738828299076a",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span>. А Мария Сергеевна где?",
+      "target_sha256": "ded20780f5a8df278c787912025f788b2cc49290cf40bcfe9ea738828299076a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0018",
+      "source_sha256": "655af777e1e897cd4f663fce2e4c1dde13706256e525716e97386c6682f63690",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Маша в саду.",
+      "target_sha256": "655af777e1e897cd4f663fce2e4c1dde13706256e525716e97386c6682f63690",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0019",
+      "source_sha256": "104c06e8dba29250a806e18321647c9477c8b2424eb34093686919fc6f47f9d7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span>. С ней проститься.",
+      "target_sha256": "104c06e8dba29250a806e18321647c9477c8b2424eb34093686919fc6f47f9d7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0020",
+      "source_sha256": "f8aea5077dd264ebc926c25ff0169c4f32dfe7c8735ff8b61531ee6dba77a621",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span>. Прощайте, надо уходить, а то я заплачу… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Обнимает быстро Тузенбаха и Кулыгина, целует руку Ирине.)</i></small> Прекрасно мы здесь пожили…",
+      "target_sha256": "f8aea5077dd264ebc926c25ff0169c4f32dfe7c8735ff8b61531ee6dba77a621",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0021",
+      "source_sha256": "e65ca0560d747e35456e435f898338cee654fab3b02c665d40011f9b74eca3a4",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Федотик</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Кулыгину)</i></small>. Это вам на память… книжка с карандашиком… Мы здесь пойдем к реке…",
+      "target_sha256": "e65ca0560d747e35456e435f898338cee654fab3b02c665d40011f9b74eca3a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0022",
+      "source_sha256": "0d92f36bd76a02cc6f14d61ed8d5aa529e8672207a096ad394192b790c2e84a0",
+      "target": "Отходят, оба оглядываются.",
+      "target_sha256": "0d92f36bd76a02cc6f14d61ed8d5aa529e8672207a096ad394192b790c2e84a0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0023",
+      "source_sha256": "a06e3063b854c93bd80adc1571128cd815cf7cbe1b3ff7a48a37d1163b861447",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Родэ</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(кричит)</i></small>. Гоп-гоп!",
+      "target_sha256": "a06e3063b854c93bd80adc1571128cd815cf7cbe1b3ff7a48a37d1163b861447",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0024",
+      "source_sha256": "fcec0c85abc4db210849c4fee48dbce866bc2f00893fdee33909fe19f95e6732",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(кричит)</i></small>. Прощайте!",
+      "target_sha256": "fcec0c85abc4db210849c4fee48dbce866bc2f00893fdee33909fe19f95e6732",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0025",
+      "source_sha256": "d84f84a0e082d2341cd836c0eaba2c972c99c1dd2b6ea8583479ba8d88c56036",
+      "target": "В глубине сцены Федотик и Родэ встречаются с <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Машей</span> и прощаются с нею; она уходит с ними.",
+      "target_sha256": "d84f84a0e082d2341cd836c0eaba2c972c99c1dd2b6ea8583479ba8d88c56036",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0026",
+      "source_sha256": "9097533efcef6e8d7f6be8b2ee8010bd2f6c8dc970601070c153e7f7737db9a1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Ушли… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Садится на нижнюю ступень террасы.)</i></small>",
+      "target_sha256": "9097533efcef6e8d7f6be8b2ee8010bd2f6c8dc970601070c153e7f7737db9a1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0027",
+      "source_sha256": "400910b17ffbe56e035e47b9181b2cf5b29eb4b675d1a47233d29123fba23dc5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. А со мной забыли проститься.",
+      "target_sha256": "400910b17ffbe56e035e47b9181b2cf5b29eb4b675d1a47233d29123fba23dc5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0028",
+      "source_sha256": "b89410a3bfa3d5a1ce22f1a7f281655da8c029c02c860affb1b046187531a9ed",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Вы же чего?",
+      "target_sha256": "b89410a3bfa3d5a1ce22f1a7f281655da8c029c02c860affb1b046187531a9ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0029",
+      "source_sha256": "c10bb21767c6818e8e4aa06a3f3efce0683ecf1d08ddf5ff25513b168e13ef3a",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Да и я как-то забыл. Впрочем, скоро увижусь с ними, ухожу завтра. Да… Еще один денек остался. Через год дадут мне отставку, опять приеду сюда и буду доживать свой век около вас. Мне до пенсии только один годочек остался… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Кладет в карман газету, вынимает другую.)</i></small> Приеду сюда к вам и изменю жизнь коренным образом. Стану таким тихоньким, благо… благоугодным, приличненьким…",
+      "target_sha256": "c10bb21767c6818e8e4aa06a3f3efce0683ecf1d08ddf5ff25513b168e13ef3a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0030",
+      "source_sha256": "e8ffc5e3cc1a64300dadd6807b4dfc3fa2f7e96ab5eeb73c6744b316b11f39c6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. А вам надо бы изменить жизнь, голубчик. Надо бы как-нибудь.",
+      "target_sha256": "e8ffc5e3cc1a64300dadd6807b4dfc3fa2f7e96ab5eeb73c6744b316b11f39c6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0031",
+      "source_sha256": "89088ffc03958db8296bb03292018e808353b2e22e5dac701b3678b57bb5ed8c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Да. Чувствую. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Тихо напевает.)</i></small> Тарара… бумбия… сижу на тумбе я…",
+      "target_sha256": "89088ffc03958db8296bb03292018e808353b2e22e5dac701b3678b57bb5ed8c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0032",
+      "source_sha256": "d41ec75087fedeae5f5fc8ece6cd07f85b4587217ebdbfd161957d61c006c547",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Неисправим Иван Романыч! Неисправим!",
+      "target_sha256": "d41ec75087fedeae5f5fc8ece6cd07f85b4587217ebdbfd161957d61c006c547",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0033",
+      "source_sha256": "31210b2abd77398bab5ee232f79cbaf5348f67449dfb6daaf13b7a2d7060e262",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Да вот к вам бы на выучку. Тогда бы исправился.",
+      "target_sha256": "31210b2abd77398bab5ee232f79cbaf5348f67449dfb6daaf13b7a2d7060e262",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0034",
+      "source_sha256": "aa8a698793681d533e38e47319e2d2e4b344a3d94e445db2f644417eaff02a0d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Федор сбрил себе усы. Видеть не могу!",
+      "target_sha256": "aa8a698793681d533e38e47319e2d2e4b344a3d94e445db2f644417eaff02a0d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0035",
+      "source_sha256": "717dcaa69db3f0fe9d5989da91dfae0099a021e5a1ff05e1c5fd32ef2ef37867",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. А что?",
+      "target_sha256": "717dcaa69db3f0fe9d5989da91dfae0099a021e5a1ff05e1c5fd32ef2ef37867",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0036",
+      "source_sha256": "5967bc1dd922dde5ca6a100bf8407babdd086b4707c87d1caa519f85c861224c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Я бы сказал, на что теперь похожа ваша физиономия, да не могу.",
+      "target_sha256": "5967bc1dd922dde5ca6a100bf8407babdd086b4707c87d1caa519f85c861224c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0037",
+      "source_sha256": "4ad527ae2ff75f944a903c9da5d6eef67f3dc05b437ec9e3aaae36d6d5c3cf83",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Что ж! Так принято, это <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"lang-la\">modus vivendi</span> Директор у нас с выбритыми усами, и я тоже, как стал инспектором, побрился. Никому не нравится, а для меня все равно. Я доволен. С усами я или без усов, а я одинаково доволен… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Садится.)</i></small>",
+      "target_sha256": "4ad527ae2ff75f944a903c9da5d6eef67f3dc05b437ec9e3aaae36d6d5c3cf83",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0038",
+      "source_sha256": "b827d125b710f0408cbd7bdc46aea165207aba3b0b030daadcc0ea4b219fad70",
+      "target": "В глубине сцены <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> провозит в колясочке спящего ребенка.",
+      "target_sha256": "b827d125b710f0408cbd7bdc46aea165207aba3b0b030daadcc0ea4b219fad70",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0039",
+      "source_sha256": "25db75254b1a2a311126156d59acb4730652bfb82526722d13f5c01347b46c69",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Иван Романыч, голубчик, родной мой, я страшно обеспокоена. Вы вчера были на бульваре, скажите, что произошло там?",
+      "target_sha256": "25db75254b1a2a311126156d59acb4730652bfb82526722d13f5c01347b46c69",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0040",
+      "source_sha256": "2894ee232583ba49ae7ac2514eb678b3176954a03e4f6dae47407ca9cfe0ce55",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Что произошло? Ничего. Пустяки. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Читает газету.)</i></small> Все равно!",
+      "target_sha256": "2894ee232583ba49ae7ac2514eb678b3176954a03e4f6dae47407ca9cfe0ce55",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0041",
+      "source_sha256": "6f9cb1db266fd5836af8767ae141c6cd15278c0a2dc43c7208eaf89bd262e8e8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Так рассказывают, будто Соленый и барон встретились вчера на бульваре около театра…",
+      "target_sha256": "6f9cb1db266fd5836af8767ae141c6cd15278c0a2dc43c7208eaf89bd262e8e8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0042",
+      "source_sha256": "36fe7658bca8de5f31807d072f1f816812b986a668a00295e49279b1d3bbac43",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Перестаньте! Ну, что право… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Машет рукой и уходит в дом.)</i></small>",
+      "target_sha256": "36fe7658bca8de5f31807d072f1f816812b986a668a00295e49279b1d3bbac43",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0043",
+      "source_sha256": "d02ea7571db4d5dc4e8bc67d7ad62a872dd2caed6ce24c8be2415992181a1074",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Около театра… Соленый стал придираться к барону, а тот не стерпел, сказал что-то обидное…",
+      "target_sha256": "d02ea7571db4d5dc4e8bc67d7ad62a872dd2caed6ce24c8be2415992181a1074",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0044",
+      "source_sha256": "c564da0252b94709344d67b0d4745038b061f5ead4ef648a5c582f629f89002b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Не знаю. Чепуха все.",
+      "target_sha256": "c564da0252b94709344d67b0d4745038b061f5ead4ef648a5c582f629f89002b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0045",
+      "source_sha256": "e8aba10c2cfd4f4439928f65252dacefdf47df88b439340008785dbb67b1d7b2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. В какой-то семинарии учитель написал на сочинении «чепуха», а ученик прочел «реникса» — думал, по-латыни написано. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Смешно удивительно. Говорят, Соленый влюблен в Ирину и будто возненавидел барона… Это понятно. Ирина очень хорошая девушка. Она даже похожа на Машу, такая же задумчивая. Только у тебя, Ирина, характер мягче. Хотя и у Маши, впрочем, тоже очень хороший характер. Я ее люблю, Машу.",
+      "target_sha256": "e8aba10c2cfd4f4439928f65252dacefdf47df88b439340008785dbb67b1d7b2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0046",
+      "source_sha256": "9c02db31649195d3a761f71f9b782bad224612af5679bc42157177245d3fb168",
+      "target": "В глубине сада за сценой: «Ау! Гоп-гоп!»",
+      "target_sha256": "9c02db31649195d3a761f71f9b782bad224612af5679bc42157177245d3fb168",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0047",
+      "source_sha256": "ae1ab91cd23e331cc566836416f680b3b078d9e8bb68a00fd100a2ff96dfc5b3",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(вздрагивает)</i></small>. Меня как-то все пугает сегодня.",
+      "target_sha256": "ae1ab91cd23e331cc566836416f680b3b078d9e8bb68a00fd100a2ff96dfc5b3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0048",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0049",
+      "source_sha256": "347b2ea4813471b1d71ad520bb85e48c31e3d83ddffe6daabebe8cd6336d0292",
+      "target": "У меня уже все готово, я после обеда отправляю свои вещи. Мы с бароном завтра венчаемся, завтра же уезжаем на кирпичный завод, и послезавтра я уже в школе, начинается новая жизнь. Как-то мне поможет бог! Когда я держала экзамен на учительницу, то даже плакала от радости, от благости…",
+      "target_sha256": "347b2ea4813471b1d71ad520bb85e48c31e3d83ddffe6daabebe8cd6336d0292",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0050",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0051",
+      "source_sha256": "fe4a4f3cce8186d4dac72109ea08c857bafe33869970174831ac46828d4f67e6",
+      "target": "Сейчас приедет подвода за вещами…",
+      "target_sha256": "fe4a4f3cce8186d4dac72109ea08c857bafe33869970174831ac46828d4f67e6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0052",
+      "source_sha256": "62bcebae6ff9fd8fc367b6d9c394ab10a4ee6735c91bc2133b1b5285b395cd85",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Так-то оно так, только как-то все это не серьезно. Одни только идеи, а серьезного мало. Впрочем, от души тебе желаю.",
+      "target_sha256": "62bcebae6ff9fd8fc367b6d9c394ab10a4ee6735c91bc2133b1b5285b395cd85",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0053",
+      "source_sha256": "cd4a95c3dc06b880f1c6644e0270dd5d461e10856a9de704a5bd844a3f501625",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в умилении)</i></small>. Славная моя, хорошая… Золотая моя… Далеко вы ушли, не догонишь вас. Остался я позади, точно перелетная птица, которая состарилась, не может лететь. Летите, мои милые, летите с богом!",
+      "target_sha256": "cd4a95c3dc06b880f1c6644e0270dd5d461e10856a9de704a5bd844a3f501625",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0054",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0055",
+      "source_sha256": "c94234c4ba828c3ef4e40f35575f8994a55b00c886559d6a9940625f2cf1a63d",
+      "target": "Напрасно, Федор Ильич, вы усы себе сбрили.",
+      "target_sha256": "c94234c4ba828c3ef4e40f35575f8994a55b00c886559d6a9940625f2cf1a63d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0056",
+      "source_sha256": "1de4f0f3d11a8034fe17c52f59a89925f2f0ee5a6fc3b378eb3899e3327a2362",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Будет вам! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вздыхает.)</i></small> Вот сегодня уйдут военные, и все опять пойдет по-старому. Что бы там ни говорили, Маша хорошая, честная женщина, я ее очень люблю и благодарю свою судьбу. Судьба у людей разная… Тут в акцизе служит некто Козырев. Он учился со мной, его уволили из пятого класса гимназии за то, что никак не мог понять ut consecutivum. Теперь он ужасно бедствует, болен, и я, когда встречаюсь, то говорю ему: «Здравствуй, ut consecutivum» — Да, говорит, именно consecutivum… а сам кашляет. А мне вот всю мою жизнь везет, я счастлив, вот имею даже Станислава второй степени и сам теперь преподаю другим это ut consecutivum. Конечно, я умный человек, умнее очень многих, но счастье не в этом…",
+      "target_sha256": "1de4f0f3d11a8034fe17c52f59a89925f2f0ee5a6fc3b378eb3899e3327a2362",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0057",
+      "source_sha256": "ffc82451b0feceefb5d9a992ce0c0c6fa3092fee8865351c57c7324bae6dd304",
+      "target": "В доме играют на рояле «Молитву девы».",
+      "target_sha256": "ffc82451b0feceefb5d9a992ce0c0c6fa3092fee8865351c57c7324bae6dd304",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0058",
+      "source_sha256": "e16677d50382719807ae5fd65cd165de8738f4f2e0c96940fab4f4da54e30039",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. А завтра вечером я уже не буду слышать этой «Молитвы девы», не буду встречаться с Протопоповым…",
+      "target_sha256": "e16677d50382719807ae5fd65cd165de8738f4f2e0c96940fab4f4da54e30039",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0059",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0060",
+      "source_sha256": "2ec2be3d6dee3a4de79c80415a9631c616e89fb9f27ef9c01a7fa29cafab15a5",
+      "target": "А Протопопов сидит там в гостиной; и сегодня пришел…",
+      "target_sha256": "2ec2be3d6dee3a4de79c80415a9631c616e89fb9f27ef9c01a7fa29cafab15a5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0061",
+      "source_sha256": "59a14a3971ad302c3c8cb7c53315c6119e2c50d1817a0224385e3dc82ea21dec",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Начальница еще не приехала?",
+      "target_sha256": "59a14a3971ad302c3c8cb7c53315c6119e2c50d1817a0224385e3dc82ea21dec",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0063",
+      "source_sha256": "253d10c5bf1a02bb4cef84bf2e4af0ffa8e517a6abfdfd9978c3b6dae4f3d3a3",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Нет. За ней послали. Если б только вы знали, как мне трудно жить здесь одной, без Оли… Она живет в гимназии; она начальница, целый день занята делом, а я одна, мне скучно, нечего делать, и ненавистна комната, в которой живу… Я так и решила: если мне не суждено быть в Москве, то так тому и быть. Значит, судьба. Ничего не поделаешь… Всё в божьей воле, это правда. Николай Львович сделал мне предложение… Что ж? Подумала и решила. Он хороший человек, удивительно даже, такой хороший… И у меня вдруг точно крылья выросли на душе, я повеселела, стало мне легко и опять захотелось работать, работать… Только вот вчера произошло что-то, какая-то тайна нависла надо мной…",
+      "target_sha256": "253d10c5bf1a02bb4cef84bf2e4af0ffa8e517a6abfdfd9978c3b6dae4f3d3a3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0064",
+      "source_sha256": "97242316f340a12cb70be546f4d8ce610bc4d4bcf7f110bb5f5e88a3525015bc",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Реникса. Чепуха.",
+      "target_sha256": "97242316f340a12cb70be546f4d8ce610bc4d4bcf7f110bb5f5e88a3525015bc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0065",
+      "source_sha256": "97989136531065cce36190952b1d9474e55ff83366df6af18292cd04c5b5006b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в окно)</i></small>. Начальница!",
+      "target_sha256": "97989136531065cce36190952b1d9474e55ff83366df6af18292cd04c5b5006b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0066",
+      "source_sha256": "4d7741f5e09de112ec73dc37a9fd06c53657bd6e0401830b799b74b03f3427a7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Приехала начальница. Пойдем.",
+      "target_sha256": "4d7741f5e09de112ec73dc37a9fd06c53657bd6e0401830b799b74b03f3427a7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0067",
+      "source_sha256": "c85b56175db62b30e5dc4a5bdb411574e7a65967a7d517b9523ed156eb1a4e88",
+      "target": "Уходит с <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ириной</span> в дом.",
+      "target_sha256": "c85b56175db62b30e5dc4a5bdb411574e7a65967a7d517b9523ed156eb1a4e88",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0068",
+      "source_sha256": "c745f7b334ca98719439995a9a837beae5c928b56a4e4d0df3c0fcec785facca",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(читает газету и тихо напевает)</i></small>. Тара-ра… бумбия… сижу на тумбе я…",
+      "target_sha256": "c745f7b334ca98719439995a9a837beae5c928b56a4e4d0df3c0fcec785facca",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0069",
+      "source_sha256": "979d5fc870d0872960ed3151918d6509449a3345c084902ceffbdc6002fa75a4",
+      "target": "Маша подходит; в глубине <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> провозит колясочку.",
+      "target_sha256": "979d5fc870d0872960ed3151918d6509449a3345c084902ceffbdc6002fa75a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0070",
+      "source_sha256": "5cd7faea11b279f9b202e2370ba4098f872d580909b641cc43afb94cde44ffd8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Сидит себе здесь, посиживает…",
+      "target_sha256": "5cd7faea11b279f9b202e2370ba4098f872d580909b641cc43afb94cde44ffd8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0071",
+      "source_sha256": "535813bae3236bdeaa7ea1173b0701144389bfbb0aa4e970a8e9ba480b0a57e1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. А что?",
+      "target_sha256": "535813bae3236bdeaa7ea1173b0701144389bfbb0aa4e970a8e9ba480b0a57e1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0072",
+      "source_sha256": "9495fef142be5767cddc4c20e438f503abf9d22f56439d11cffdbf5518dac018",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(садится)</i></small>. Ничего…",
+      "target_sha256": "9495fef142be5767cddc4c20e438f503abf9d22f56439d11cffdbf5518dac018",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0073",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0074",
+      "source_sha256": "90d9c9eb851029b0f9de3b3cc06a9082adaa8b446caad251293b99845f905362",
+      "target": "Вы любили мою мать?",
+      "target_sha256": "90d9c9eb851029b0f9de3b3cc06a9082adaa8b446caad251293b99845f905362",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0075",
+      "source_sha256": "400b3da2b70889e0b04e17703dad8763c1441be816e94cf95f81befc5da2fb73",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Очень.",
+      "target_sha256": "400b3da2b70889e0b04e17703dad8763c1441be816e94cf95f81befc5da2fb73",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0076",
+      "source_sha256": "f690535f58d341d01733d32a47167f825b5880a7543b74d4ef3818fb9c163c78",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. А она вас?",
+      "target_sha256": "f690535f58d341d01733d32a47167f825b5880a7543b74d4ef3818fb9c163c78",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0077",
+      "source_sha256": "e5e7e2a067b08a88e015cc7d3515b5b08a12fb4a61b70f85c457e8bb0ee009bb",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(после паузы)</i></small>. Этого я уже не помню.",
+      "target_sha256": "e5e7e2a067b08a88e015cc7d3515b5b08a12fb4a61b70f85c457e8bb0ee009bb",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0078",
+      "source_sha256": "f5b4317226bf949235a48dd06508dfad24f097151fb4bf78164b1f9a15619208",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Мой здесь? Так когда-то наша кухарка Марфа говорила про своего городового: мой. Мой здесь?",
+      "target_sha256": "f5b4317226bf949235a48dd06508dfad24f097151fb4bf78164b1f9a15619208",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0079",
+      "source_sha256": "a40de91a5d0fd68b54794f45e44e753d9073233a633889d1a0c12c98ffb09d65",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Нет еще.",
+      "target_sha256": "a40de91a5d0fd68b54794f45e44e753d9073233a633889d1a0c12c98ffb09d65",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0080",
+      "source_sha256": "0625f2b8fe0ef84ea2863f20a3ff9da41fee1e3c070f4b3338c8ddc689bfa04f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Когда берешь счастье урывочками, по кусочкам, потом его теряешь, как я, то мало-помалу грубеешь, становишься злющей. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Указывает себе на грудь.)</i></small> Вот тут у меня кипит… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Глядя на брата Андрея, который провозит колясочку.)</i></small> Вот Андрей наш, братец… Все надежды пропали. Тысячи народа поднимали колокол, потрачено было много труда и денег, а он вдруг упал и разбился. Вдруг, ни с того ни с сего. Так и Андрей…",
+      "target_sha256": "0625f2b8fe0ef84ea2863f20a3ff9da41fee1e3c070f4b3338c8ddc689bfa04f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0081",
+      "source_sha256": "0ec4271ff91d27a4b93f9327419554bbd78e2b039e87f66bc91f2f3ac589cf3f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. И когда, наконец, в доме успокоятся. Такой шум.",
+      "target_sha256": "0ec4271ff91d27a4b93f9327419554bbd78e2b039e87f66bc91f2f3ac589cf3f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0082",
+      "source_sha256": "8b1ef8dfe2af165c58df4d3479704f861c5c4ca5b4035282f70badd6f2d5deac",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Скоро. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы, потом заводит их; часы бьют.)</i></small> У меня часы старинные, с боем… Первая, вторая и пятая батарея уйдут ровно в час.",
+      "target_sha256": "8b1ef8dfe2af165c58df4d3479704f861c5c4ca5b4035282f70badd6f2d5deac",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0083",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0084",
+      "source_sha256": "e192430fb8d8e8f2e050e0657f3b9032f232562b705fd803a8d38e0da04c135a",
+      "target": "А я завтра.",
+      "target_sha256": "e192430fb8d8e8f2e050e0657f3b9032f232562b705fd803a8d38e0da04c135a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0085",
+      "source_sha256": "bf3cdff1da8ad321908b86545866590fd77adc9856444efd9bb043d018ee38b0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Навсегда?",
+      "target_sha256": "bf3cdff1da8ad321908b86545866590fd77adc9856444efd9bb043d018ee38b0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0086",
+      "source_sha256": "a259dff226b33ad3a77049d15ffeaeff7605cf85dce62bb6aa068bb5e175b997",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Не знаю. Может, через год вернусь. Хотя черт его знает… все равно…",
+      "target_sha256": "a259dff226b33ad3a77049d15ffeaeff7605cf85dce62bb6aa068bb5e175b997",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0087",
+      "source_sha256": "b4f4002d603b10dcb19a922e0153c448e098a6deeef56f5f45890627b1324b71",
+      "target": "Слышно, как где-то далеко играют на арфе и скрипке.",
+      "target_sha256": "b4f4002d603b10dcb19a922e0153c448e098a6deeef56f5f45890627b1324b71",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0088",
+      "source_sha256": "35ad5f4674f1855082f48e5ba9536e3e8aef63601fb109e19bf816445ae8df69",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Опустеет город. Точно его колпаком накроют.",
+      "target_sha256": "35ad5f4674f1855082f48e5ba9536e3e8aef63601fb109e19bf816445ae8df69",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0089",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0090",
+      "source_sha256": "5f71a981cc5787b76916d27a78bbb022712a4176a523e87d43e036c8e7318b9d",
+      "target": "Что-то произошло вчера около театра; все говорят, а я не знаю.",
+      "target_sha256": "5f71a981cc5787b76916d27a78bbb022712a4176a523e87d43e036c8e7318b9d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0091",
+      "source_sha256": "73288a90de8c752c9e4124d1ecb541c14deced24e0f7e7addb2316a5a4014013",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Ничего. Глупости. Соленый стал придираться к барону, а тот вспылил и оскорбил его, и вышло так в конце концов, что Соленый обязан был вызвать его на дуэль. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Пора бы, кажется, уж… В половине первого, в казенной роще, вот в той, что отсюда видать за рекой… Пиф-паф. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Соленый воображает, что он Лермонтов, и даже стихи пишет. Вот шутки шутками, а уж у него третья дуэль.",
+      "target_sha256": "73288a90de8c752c9e4124d1ecb541c14deced24e0f7e7addb2316a5a4014013",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0092",
+      "source_sha256": "c706b00206899ac35582cd338a8d4e6ec0aa4265b4d5d8e4f7680367613c9493",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. У кого?",
+      "target_sha256": "c706b00206899ac35582cd338a8d4e6ec0aa4265b4d5d8e4f7680367613c9493",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0093",
+      "source_sha256": "e7cec2a75da3828313d07dc413728daecaa6079aa10ac6726a78ea5438427ec7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. У Соленого.",
+      "target_sha256": "e7cec2a75da3828313d07dc413728daecaa6079aa10ac6726a78ea5438427ec7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0094",
+      "source_sha256": "b0fccde85c061d935523aa9c1ab879edf99ff8a57f06a8666f5e225e0ee9d6cc",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. А у барона?",
+      "target_sha256": "b0fccde85c061d935523aa9c1ab879edf99ff8a57f06a8666f5e225e0ee9d6cc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0095",
+      "source_sha256": "34cb141c34bdbb96c50d6b5a816b7dc535b021bb1532fb0d9bd12aa00648cf48",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Что у барона?",
+      "target_sha256": "34cb141c34bdbb96c50d6b5a816b7dc535b021bb1532fb0d9bd12aa00648cf48",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0096",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0097",
+      "source_sha256": "da3a5d3ae2b262c2bf1e3975e27073b5e1edc6136f6cfdbc97319975b8744f8c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. В голове у меня перепуталось… Все-таки, я говорю, не следует им позволять. Он может ранить барона или даже убить.",
+      "target_sha256": "da3a5d3ae2b262c2bf1e3975e27073b5e1edc6136f6cfdbc97319975b8744f8c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0098",
+      "source_sha256": "515640f19be46d2be8c1470f53e456338f38992c818977e51919581b5d94706a",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Барон хороший человек, но одним бароном больше, одним меньше — не все ли равно? Пускай! Все равно!",
+      "target_sha256": "515640f19be46d2be8c1470f53e456338f38992c818977e51919581b5d94706a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0099",
+      "source_sha256": "dbb5a261c133d7b08f5f04bf33c5341ac45beb1bbcf3f0c2974c6b6ad9825e89",
+      "target": "За садом крик: «Ау! Гоп-гоп!»",
+      "target_sha256": "dbb5a261c133d7b08f5f04bf33c5341ac45beb1bbcf3f0c2974c6b6ad9825e89",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0100",
+      "source_sha256": "3a00a36a3ccfe889098a6a6fce5e1ae288e121eb21816d5b7c0ff88fb6e411aa",
+      "target": "Подождешь. Это Скворцов кричит, секундант. В лодке сидит.",
+      "target_sha256": "3a00a36a3ccfe889098a6a6fce5e1ae288e121eb21816d5b7c0ff88fb6e411aa",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0101",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0102",
+      "source_sha256": "2befdd03d01f3e07051f88890131474535d361c7f8b20fc8221e95978eef85a0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. По-моему, и участвовать на дуэли, и присутствовать на ней, хотя бы в качестве врача, просто безнравственно.",
+      "target_sha256": "2befdd03d01f3e07051f88890131474535d361c7f8b20fc8221e95978eef85a0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0103",
+      "source_sha256": "0fea9cbd14dc582eebb7795976b4838ba06c1e158bccafeb86406227d81e61de",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Это только кажется… Ничего нет на свете, нас нет, мы не существуем, а только кажется, что существуем… Все равно!",
+      "target_sha256": "0fea9cbd14dc582eebb7795976b4838ba06c1e158bccafeb86406227d81e61de",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0104",
+      "source_sha256": "87bbe3c05331a37611d2d2d2fa292be5d1929adefd94a1dba33ed7c2425d78b1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Так вот целый день говорят, говорят… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Идет.)</i></small> Живешь в таком климате, того гляди снег пойдет, а тут еще эти разговоры… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Останавливаясь.)</i></small> Я не пойду в дом, я не могу туда ходить… Когда придет Вершинин, скажете мне… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Идет по аллее.)</i></small> А уже летят перелетные птицы… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Глядит вверх.)</i></small> Лебеди, или гуси… Милые мои, счастливые мои… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит.)</i></small>",
+      "target_sha256": "87bbe3c05331a37611d2d2d2fa292be5d1929adefd94a1dba33ed7c2425d78b1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0105",
+      "source_sha256": "42c7bc507f5443e1b7d28b757379647b855e639a0fd7fcd49111a446b75f2351",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Опустеет наш дом. Уедут офицеры, уедете вы, сестра замуж выйдет, и останусь в доме я один.",
+      "target_sha256": "42c7bc507f5443e1b7d28b757379647b855e639a0fd7fcd49111a446b75f2351",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0106",
+      "source_sha256": "b6ee2d56ec3b3fa0d2e7ddb8242e1032614b1f9e46f85d720ba5d7f7dbe6b1c8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. А жена?",
+      "target_sha256": "b6ee2d56ec3b3fa0d2e7ddb8242e1032614b1f9e46f85d720ba5d7f7dbe6b1c8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0107",
+      "source_sha256": "59e15635db0c27c90dafa801e1b862a17909c8d6eff654a75367862dfb3c9860",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ферапонт</span> входит с бумагами.",
+      "target_sha256": "59e15635db0c27c90dafa801e1b862a17909c8d6eff654a75367862dfb3c9860",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0108",
+      "source_sha256": "bc09ca1041fa4a7b2ba3898908f894484ba80c69557478f76b7437dfa5c81244",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Жена есть жена. Она честная, порядочная, ну, добрая, но в ней есть при всем том нечто принижающее ее до мелкого, слепого, этакого шаршавого животного. Во всяком случае, она не человек. Говорю вам как другу, единственному человеку, которому могу открыть свою душу. Я люблю Наташу, это так, но иногда она мне кажется удивительно пошлой, и тогда я теряюсь, не понимаю, за что, отчего я так люблю ее, или, по крайней мере, любил…",
+      "target_sha256": "bc09ca1041fa4a7b2ba3898908f894484ba80c69557478f76b7437dfa5c81244",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0109",
+      "source_sha256": "bb70a116c84d9a0cdbf668d0538197820398852e1302ef84bab067ddb7737337",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(встает)</i></small>. Я, брат, завтра уезжаю, может, никогда не увидимся, так вот тебе мой совет. Знаешь, надень шапку, возьми в руки палку и уходи… уходи и иди, иди без оглядки. И чем дальше уйдешь, тем лучше.",
+      "target_sha256": "bb70a116c84d9a0cdbf668d0538197820398852e1302ef84bab067ddb7737337",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0110",
+      "source_sha256": "5a06fe4705f689801f30ff28c2f45633b5535ef4607708586fb23c394760a082",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Соленый</span> проходит в глубине сцены с <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"rem\">двумя офицерами</span>; увидев Чебутыкина, он поворачивает к нему; офицеры идут дальше.",
+      "target_sha256": "5a06fe4705f689801f30ff28c2f45633b5535ef4607708586fb23c394760a082",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0111",
+      "source_sha256": "b592a4a677dd4655b4d932684267e3f16625650466b6523b82782efd78fb209a",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Доктор, пора! Уже половина первого. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Здоровается с Андреем.)</i></small>",
+      "target_sha256": "b592a4a677dd4655b4d932684267e3f16625650466b6523b82782efd78fb209a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0112",
+      "source_sha256": "23b94b6557615b561754f88d17b30d4457e092af11c7d8eeb6eb603d0f939a2c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Сейчас. Надоели вы мне все. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Андрею.)</i></small> Если кто спросит меня, Андрюша, то скажешь, я сейчас… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вздыхает.)</i></small> Охо-хо-хо!",
+      "target_sha256": "23b94b6557615b561754f88d17b30d4457e092af11c7d8eeb6eb603d0f939a2c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0113",
+      "source_sha256": "0b1538925bd2f1df93c9574ba4b1c769b70b419f1d5b0c2335e3a1395f049b13",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Он ахнуть не успел, как на него медведь насел. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Идет с ним.)</i></small> Что вы кряхтите, старик?",
+      "target_sha256": "0b1538925bd2f1df93c9574ba4b1c769b70b419f1d5b0c2335e3a1395f049b13",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0114",
+      "source_sha256": "9d8cf5116fcbd3cc6f4c87ab3790667a0678e24413e0d7360352013471d105e9",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Ну!",
+      "target_sha256": "9d8cf5116fcbd3cc6f4c87ab3790667a0678e24413e0d7360352013471d105e9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0115",
+      "source_sha256": "46948de0e9513731cc818e6b79d70e26249b5ceab63762870573b5f09761eb6e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Как здоровье?",
+      "target_sha256": "46948de0e9513731cc818e6b79d70e26249b5ceab63762870573b5f09761eb6e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0116",
+      "source_sha256": "65fa20731e9c404d20ee26ae5b2b47902ebb5e89645289e0c9f4ad1895f133bd",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сердито)</i></small>. Как масло коровье.",
+      "target_sha256": "65fa20731e9c404d20ee26ae5b2b47902ebb5e89645289e0c9f4ad1895f133bd",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0117",
+      "source_sha256": "bdb200ce7161be14362a3af6cc71a7602e8378ad91d15dfdca886fce186bc14d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Соленый</span>. Старик волнуется напрасно. Я позволю себе немного, я только подстрелю его, как вальдшнепа. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вынимает духи и брызгает на руки.)</i></small> Вот вылил сегодня целый флакон, а они всё пахнут. Они у меня пахнут трупом.",
+      "target_sha256": "bdb200ce7161be14362a3af6cc71a7602e8378ad91d15dfdca886fce186bc14d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0118",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0119",
+      "source_sha256": "cdf502ebc17bae9c15664104715f9edd2b391791c8753fcf372481b220f4ac61",
+      "target": "Так-с… Помните стихи? А он, мятежный, ищет бури, как будто в бурях есть покой…",
+      "target_sha256": "cdf502ebc17bae9c15664104715f9edd2b391791c8753fcf372481b220f4ac61",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0120",
+      "source_sha256": "16cf722903eac90476be5de99b9c3853cba48e48e6a70db195af0d5247ba48bf",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Да. Он ахнуть не успел, как на него медведь насел. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит с Соленым.)</i></small>",
+      "target_sha256": "16cf722903eac90476be5de99b9c3853cba48e48e6a70db195af0d5247ba48bf",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0121",
+      "source_sha256": "de5ca8a32218fe9889676e03da6c7ffbc6af5ecf3f63ddc9db0e2c5da0f4e556",
+      "target": "Слышны крики: «Гоп! Ау!» <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ферапонт</span> входят.",
+      "target_sha256": "de5ca8a32218fe9889676e03da6c7ffbc6af5ecf3f63ddc9db0e2c5da0f4e556",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0122",
+      "source_sha256": "b549ab60776c1c4135e5496bc5704d95842cba0c8a975525d7e7ee59b80099a0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Бумаги подписать…",
+      "target_sha256": "b549ab60776c1c4135e5496bc5704d95842cba0c8a975525d7e7ee59b80099a0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0123",
+      "source_sha256": "9e0299ef001afb79c7ae440a3806c836d90c2d1121ba4f041a99267515b2b82a",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(нервно)</i></small>. Отстань от меня! Отстань! Умоляю! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит с колясочкой.)</i></small>",
+      "target_sha256": "9e0299ef001afb79c7ae440a3806c836d90c2d1121ba4f041a99267515b2b82a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0124",
+      "source_sha256": "b713e92c8b396d6b8d1cd30009ef10f5423586a618b78df1deda6b45dc44f4c6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. На то ведь и бумаги, чтоб их подписывать. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит в глубину сцены.)</i></small>",
+      "target_sha256": "b713e92c8b396d6b8d1cd30009ef10f5423586a618b78df1deda6b45dc44f4c6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0125",
+      "source_sha256": "c028b9df5f3b2d4dd348f144124dff99695213a81c677c692716e8da54606f96",
+      "target": "Входят <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ирина</span> и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Тузенбах</span> в соломенной шляпе, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Кулыгин</span> проходит через сцену, крича: «Ау, Маша, ау!»",
+      "target_sha256": "c028b9df5f3b2d4dd348f144124dff99695213a81c677c692716e8da54606f96",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0126",
+      "source_sha256": "715ee95a3dfbdd93d97d0627b3f739f69edecc10e475f446467af97b50c22ba1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Это, кажется, единственный человек в городе, который рад, что уходят военные.",
+      "target_sha256": "715ee95a3dfbdd93d97d0627b3f739f69edecc10e475f446467af97b50c22ba1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0127",
+      "source_sha256": "d57d2d674e92a12d439221b5c6182bbcc257e7ec79448a5e797e6c41b6acd243",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Это понятно.",
+      "target_sha256": "d57d2d674e92a12d439221b5c6182bbcc257e7ec79448a5e797e6c41b6acd243",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0128",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0129",
+      "source_sha256": "26e4d4e033bb7f32d2f7a0b080cae8073d04a1c106acee1482004e788e8602b9",
+      "target": "Наш город опустеет теперь.",
+      "target_sha256": "26e4d4e033bb7f32d2f7a0b080cae8073d04a1c106acee1482004e788e8602b9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0130",
+      "source_sha256": "cfefe6371e817e609fd8cd239e4eae0e9f9c82653dc84ffead9f17a36c04e253",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Милая, я сейчас приду.",
+      "target_sha256": "cfefe6371e817e609fd8cd239e4eae0e9f9c82653dc84ffead9f17a36c04e253",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0131",
+      "source_sha256": "b191588ba3d0bcf56d9f2737a852b734130eb95b16f5623dd81819248a01e241",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Куда ты?",
+      "target_sha256": "b191588ba3d0bcf56d9f2737a852b734130eb95b16f5623dd81819248a01e241",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0132",
+      "source_sha256": "68080cdc04feaf9b2e87516f09660b2f868b1ec382d4e6e6f18b2ce8d51f53cc",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Мне нужно в город, затем… проводить товарищей.",
+      "target_sha256": "68080cdc04feaf9b2e87516f09660b2f868b1ec382d4e6e6f18b2ce8d51f53cc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0133",
+      "source_sha256": "4b7b55e9b0a70b3eea56035359bc13f4078dd89067529e76273a5279d9a05728",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Неправда… Николай, отчего ты такой рассеянный сегодня?",
+      "target_sha256": "4b7b55e9b0a70b3eea56035359bc13f4078dd89067529e76273a5279d9a05728",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0134",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0135",
+      "source_sha256": "0a7bd5a32bfa1e435b0daa687813ac92daabfe25a3499d517c33b7d0d254afb2",
+      "target": "Что вчера произошло около театра?",
+      "target_sha256": "0a7bd5a32bfa1e435b0daa687813ac92daabfe25a3499d517c33b7d0d254afb2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0136",
+      "source_sha256": "cbec7afdc5040529f70b3d5bc14dc5d6cd96f876d7d5c1ef5a1a11c036705348",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(нетерпеливое движение)</i></small>. Через час я вернусь и опять буду с тобой. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Целует ей руки.)</i></small> Ненаглядная моя… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Всматривается ей в лицо.)</i></small> Уже пять лет прошло, как я люблю тебя, и все не могу привыкнуть, и ты кажешься мне все прекраснее. Какие прелестные, чудные волосы! Какие глаза! Я увезу тебя завтра, мы будем работать, будем богаты, мечты мои оживут. Ты будешь счастлива. Только вот одно, только одно: ты меня не любишь!",
+      "target_sha256": "cbec7afdc5040529f70b3d5bc14dc5d6cd96f876d7d5c1ef5a1a11c036705348",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0137",
+      "source_sha256": "2d06b508c29b8080f39a99457ffcb5821ad963b5859c822f4eca5553214ae321",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Это не в моей власти! Я буду твоей женой, и верной, и покорной, но любви нет, что же делать! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Плачет.)</i></small> Я не любила ни разу в жизни. О, я так мечтала о любви, мечтаю уже давно, дни и ночи, но душа моя, как дорогой рояль, который заперт и ключ потерян.",
+      "target_sha256": "2d06b508c29b8080f39a99457ffcb5821ad963b5859c822f4eca5553214ae321",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0138",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0139",
+      "source_sha256": "3849f0d458c45db2a9672ea9917b4107b5325c7d041807b91db3bca2524709fb",
+      "target": "У тебя беспокойный взгляд.",
+      "target_sha256": "3849f0d458c45db2a9672ea9917b4107b5325c7d041807b91db3bca2524709fb",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0140",
+      "source_sha256": "72bd729f5f2d1a00bf6c2a7ee02da8a40b5f98b1b94236e5d98e7414c553bc22",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Я не спал всю ночь. В моей жизни нет ничего такого страшного, что могло бы испугать меня, и только этот потерянный ключ терзает мою душу, не дает мне спать. Скажи мне что-нибудь.",
+      "target_sha256": "72bd729f5f2d1a00bf6c2a7ee02da8a40b5f98b1b94236e5d98e7414c553bc22",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0141",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0142",
+      "source_sha256": "e4f9f9305e0e16393cee265d53da20059489d1cd74364c8bfd22c503c4ba3c7a",
+      "target": "Скажи мне что-нибудь…",
+      "target_sha256": "e4f9f9305e0e16393cee265d53da20059489d1cd74364c8bfd22c503c4ba3c7a",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0145",
+      "source_sha256": "6174ce11e41381df7203b4fcd905f0a0b4e7d92dc994ee7fe8b8f1417f80f2b4",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Что? Что сказать? Что?",
+      "target_sha256": "6174ce11e41381df7203b4fcd905f0a0b4e7d92dc994ee7fe8b8f1417f80f2b4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0146",
+      "source_sha256": "8d996d436db859eabdb62fb298b541fd0f221010c1f9fcd7022f7477e216ce8e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Что-нибудь.",
+      "target_sha256": "8d996d436db859eabdb62fb298b541fd0f221010c1f9fcd7022f7477e216ce8e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0147",
+      "source_sha256": "88436da88b96035d49da3a083883bc73752cb62769bfe2dbb3bd29d212b0f0c0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Полно! Полно!",
+      "target_sha256": "88436da88b96035d49da3a083883bc73752cb62769bfe2dbb3bd29d212b0f0c0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0148",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0149",
+      "source_sha256": "451c9fca7d972b5d16c1a62cce1f4268f944a053fa9f696c748997eb2b0b2823",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span>. Какие пустяки, какие глупые мелочи иногда приобретают в жизни значение, вдруг ни с того ни с сего. По-прежнему смеешься над ними, считаешь пустяками, и все же идешь и чувствуешь, что у тебя нет сил остановиться. О, не будем говорить об этом! Мне весело. Я точно первый раз в жизни вижу эти ели, клены, березы, и все смотрит на меня с любопытством и ждет. Какие красивые деревья и, в сущности, какая должна быть около них красивая жизнь!",
+      "target_sha256": "451c9fca7d972b5d16c1a62cce1f4268f944a053fa9f696c748997eb2b0b2823",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0150",
+      "source_sha256": "4ad9336bd26b0696075dd9f08a4a0686a3c4b2f58a3d5c0e34cd16ca9b77fbcf",
+      "target": "Крик: «Ау! Гоп-гоп!»",
+      "target_sha256": "4ad9336bd26b0696075dd9f08a4a0686a3c4b2f58a3d5c0e34cd16ca9b77fbcf",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0151",
+      "source_sha256": "aaba0244a0d48db495c822e993b75e055da7c786a68393be9cd2906fa7d08aba",
+      "target": "Надо идти, уже пора… Вот дерево засохло, но все же оно вместе с другими качается от ветра. Так, мне кажется, если я и умру, то все же буду участвовать в жизни так или иначе. Прощай, моя милая… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Целует руки.)</i></small> Твои бумаги, что ты мне дала, лежат у меня на столе, под календарем.",
+      "target_sha256": "aaba0244a0d48db495c822e993b75e055da7c786a68393be9cd2906fa7d08aba",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0152",
+      "source_sha256": "020b75dd403fe7c284ff9413cca53ec12dfbafa8dd64a01a897c8555c12e2eba",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. И я с тобой пойду.",
+      "target_sha256": "020b75dd403fe7c284ff9413cca53ec12dfbafa8dd64a01a897c8555c12e2eba",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0153",
+      "source_sha256": "4dfbd6e28c54df32ca4339847f0b7c660db41ff566f96cd5e229a0d4e0966d9c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(тревожно)</i></small>. Нет, нет! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Быстро идет, на аллее останавливается.)</i></small> Ирина!",
+      "target_sha256": "4dfbd6e28c54df32ca4339847f0b7c660db41ff566f96cd5e229a0d4e0966d9c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0154",
+      "source_sha256": "1cafc660968a5774ab29795a2275ca9ba64c88330484f5b4495534f4fe23e018",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Что?",
+      "target_sha256": "1cafc660968a5774ab29795a2275ca9ba64c88330484f5b4495534f4fe23e018",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0155",
+      "source_sha256": "7d73332b7501b6a207c61e657461add205db102cb20086768b121474685c7e33",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Тузенбах</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(не зная, что сказать)</i></small>. Я не пил сегодня кофе. Скажешь, чтобы мне сварили… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Быстро уходит.)</i></small>",
+      "target_sha256": "7d73332b7501b6a207c61e657461add205db102cb20086768b121474685c7e33",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0156",
+      "source_sha256": "3806f8caa5ff270b9a5930f86122b6dbb46b326bff03872fe8b43e8b41b0ac4e",
+      "target": "Ирина стоит задумавшись, потом уходит в глубину сцены и садится на качели. Входит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> с колясочкой, показывается <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ферапонт</span>.",
+      "target_sha256": "3806f8caa5ff270b9a5930f86122b6dbb46b326bff03872fe8b43e8b41b0ac4e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0157",
+      "source_sha256": "03b11453986d554a5e7f160193748da704bb384056c35d0f4ffc3d3c06a1ab69",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Андрей Сергеич, бумаги-то ведь не мои, а казенные. Не я их выдумал.",
+      "target_sha256": "03b11453986d554a5e7f160193748da704bb384056c35d0f4ffc3d3c06a1ab69",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0158",
+      "source_sha256": "5e5a506a284626a0b47bc4d3318399a713021ccc7791c66026f4c9491b362de0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. О, где оно, куда ушло мое прошлое, когда я был молод, весел, умен, когда я мечтал и мыслил изящно, когда настоящее и будущее мое озарялись надеждой? Отчего мы, едва начавши жить, становимся скучны, серы, неинтересны, ленивы, равнодушны, бесполезны, несчастны… Город наш существует уже двести лет, в нем сто тысяч жителей, и ни одного, который не был бы похож на других, ни одного подвижника ни в прошлом, ни в настоящем, ни одного ученого, ни одного художника, ни мало-мальски заметного человека, который возбуждал бы зависть или страстное желание подражать ему. Только едят, пьют, спят, потом умирают… родятся другие и тоже едят, пьют, спят и, чтобы не отупеть от скуки, разнообразят жизнь свою гадкой сплетней, водкой, картами, сутяжничеством, и жены обманывают мужей, а мужья лгут, делают вид, что ничего не видят, ничего не слышат, и неотразимо пошлое влияние гнетет детей, и искра божия гаснет в них, и они становятся такими же жалкими, похожими друг на друга мертвецами, как их отцы и матери… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ферапонту сердито.)</i></small> Что тебе?",
+      "target_sha256": "5e5a506a284626a0b47bc4d3318399a713021ccc7791c66026f4c9491b362de0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0159",
+      "source_sha256": "41a87a4ecbd8870212407e1227616ae7d66f44e42961f937d17d4f637645a3e3",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Чего? Бумаги подписать.",
+      "target_sha256": "41a87a4ecbd8870212407e1227616ae7d66f44e42961f937d17d4f637645a3e3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0160",
+      "source_sha256": "37892260dc7068cec7458fa2dacec8f531747e9d2e88f53e477782500262f442",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Надоел ты мне.",
+      "target_sha256": "37892260dc7068cec7458fa2dacec8f531747e9d2e88f53e477782500262f442",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0161",
+      "source_sha256": "ba2461243871095fe1092b1c1135b6294f0968acadc23478b8e350857bebf88e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(подавая бумаги)</i></small>. Сейчас швейцар из казенной палаты сказывал… Будто, говорит, зимой в Петербурге мороз был в двести градусов.",
+      "target_sha256": "ba2461243871095fe1092b1c1135b6294f0968acadc23478b8e350857bebf88e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0162",
+      "source_sha256": "0e8631b0a0183fc08322750e32ef5b28fa4c10c8512d6be4ffda7bbf73e98a48",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span>. Настоящее противно, но зато когда я думаю о будущем, то как хорошо! Становится так легко, так просторно; и вдали забрезжит свет, я вижу свободу, я вижу, как я и дети мои становимся свободны от праздности, от квасу, от гуся с капустой, от сна после обеда, от подлого тунеядства…",
+      "target_sha256": "0e8631b0a0183fc08322750e32ef5b28fa4c10c8512d6be4ffda7bbf73e98a48",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0163",
+      "source_sha256": "db813314f34a3f77c764f169dd1af5df8100475c36d1f8e3e464b46285cfc9b6",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Две тысячи людей померзло будто. Народ, говорит, ужасался. Не то в Петербурге, не то в Москве — не упомню.",
+      "target_sha256": "db813314f34a3f77c764f169dd1af5df8100475c36d1f8e3e464b46285cfc9b6",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0164",
+      "source_sha256": "7590b90c305d38e6a64cc1b57fd70cb63f0ed7817e0456ad3260bbdb2469d0ee",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(охваченный нежным чувством)</i></small>. Милые мои сестры, чудные мои сестры! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Сквозь слезы.)</i></small> Маша, сестра моя…",
+      "target_sha256": "7590b90c305d38e6a64cc1b57fd70cb63f0ed7817e0456ad3260bbdb2469d0ee",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0165",
+      "source_sha256": "5ab7e70b801fc620cddf16ff82714dd5190a75e3075f3dabc615ef91cf29d8ad",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в окне)</i></small>. Кто здесь разговаривает так громко? Это ты, Андрюша? Софочку разбудишь. <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"lang-fr\">Il ne faut pas faire du bruit, la Sophie est dormée déjà. Vous êtes un ours</span>.[[FN:12]] <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Рассердившись.)</i></small> Если хочешь разговаривать, то отдай колясочку с ребенком кому-нибудь другому. Ферапонт, возьми у барина колясочку!",
+      "target_sha256": "5ab7e70b801fc620cddf16ff82714dd5190a75e3075f3dabc615ef91cf29d8ad",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0166",
+      "source_sha256": "40f9b0ed6e029dddffcb33c5ade6299c5c7d570f2c14360aea5e36f251bdaca9",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ферапонт</span>. Слушаю. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Берет колясочку.)</i></small>",
+      "target_sha256": "40f9b0ed6e029dddffcb33c5ade6299c5c7d570f2c14360aea5e36f251bdaca9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0167",
+      "source_sha256": "48d00b0daf2be4d56433183641fe46315a978eb5c6c708d9f104c5955909550d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сконфуженно)</i></small>. Я говорю тихо.",
+      "target_sha256": "48d00b0daf2be4d56433183641fe46315a978eb5c6c708d9f104c5955909550d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0168",
+      "source_sha256": "3367a292e19a0f8e6b67994a788d9ce9e8d26a9eda444cae2e2933311c581844",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(за окном, лаская своего мальчика)</i></small>. Бобик! Шалун Бобик! Дурной Бобик!",
+      "target_sha256": "3367a292e19a0f8e6b67994a788d9ce9e8d26a9eda444cae2e2933311c581844",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0169",
+      "source_sha256": "6255493482d27810549dc0db7948f84114fc4023d6e1e5150ce16f1552f9145e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Андрей</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(оглядывая бумаги)</i></small>. Ладно, пересмотрю и, что нужно, подпишу, а ты снесешь опять в управу…",
+      "target_sha256": "6255493482d27810549dc0db7948f84114fc4023d6e1e5150ce16f1552f9145e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0170",
+      "source_sha256": "1199dc56c8a5c64a66986902bbdbe0803553137914b8ca317704b5719787dafc",
+      "target": "<small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит в дом, читая бумаги; Ферапонт везет колясочку.)</i></small>",
+      "target_sha256": "1199dc56c8a5c64a66986902bbdbe0803553137914b8ca317704b5719787dafc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0171",
+      "source_sha256": "aeb8e24cdedc1fb6e304f28e9a509ac4816380666241ad2b3e929dd2163aec46",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(за окном)</i></small>. Бобик, как зовут твою маму? Милый, милый! А это кто? Это тетя Оля. Скажи тете: здравствуй, Оля!",
+      "target_sha256": "aeb8e24cdedc1fb6e304f28e9a509ac4816380666241ad2b3e929dd2163aec46",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0172",
+      "source_sha256": "025e203dad80a4924a84f3962efbfc5fc6069bf6492c32aa900f55ecb06ad55c",
+      "target": "Бродячие музыканты, мужчина и девушка, играют на скрипке и арфе; из дому выходят <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Вершинин</span>, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ольга</span> и <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Анфиса</span> и с минуту слушают молча; подходит Ирина.",
+      "target_sha256": "025e203dad80a4924a84f3962efbfc5fc6069bf6492c32aa900f55ecb06ad55c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0173",
+      "source_sha256": "73c5de4ebd644356096ec188d05a26ecd518c7a0dba0617bf5e53bbaac92f0d9",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Наш сад, как проходной двор, через него и ходят, и ездят. Няня, дай этим музыкантам что-нибудь!..",
+      "target_sha256": "73c5de4ebd644356096ec188d05a26ecd518c7a0dba0617bf5e53bbaac92f0d9",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0174",
+      "source_sha256": "614904a21db2f01257a8c9549be1d17b6af331f2f5bd474365f6c97e0be92783",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Анфиса</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(подает музыкантам)</i></small>. Уходите с богом, сердечные. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Музыканты кланяются и уходят.)</i></small> Горький народ. От сытости не заиграешь. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине.)</i></small> Здравствуй, Ариша! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Целует ее.)</i></small> И-и, деточка, вот живу! Вот живу! В гимназии на казенной квартире, золотая, вместе с Олюшкой — определил господь на старости лет. Отродясь я, грешница, так не жила… Квартира большая, казенная, и мне цельная комнатка и кроватка. Все казенное. Проснусь ночью и — о господи, матерь божия, счастливей меня человека нету!",
+      "target_sha256": "614904a21db2f01257a8c9549be1d17b6af331f2f5bd474365f6c97e0be92783",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0175",
+      "source_sha256": "e1390cfd6cb85f06a69d1e5025da5f3ee0f0e477cdf01a84ebf757510d00e6b0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(взглянув на часы)</i></small>. Сейчас уходим, Ольга Сергеевна. Мне пора.",
+      "target_sha256": "e1390cfd6cb85f06a69d1e5025da5f3ee0f0e477cdf01a84ebf757510d00e6b0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0176",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0177",
+      "source_sha256": "c710177f66f33a4ea61e9d7c4eff2993b82e59ae9cdef2c6f1ddc953508a9756",
+      "target": "Я желаю вам всего, всего… Где Мария Сергеевна?",
+      "target_sha256": "c710177f66f33a4ea61e9d7c4eff2993b82e59ae9cdef2c6f1ddc953508a9756",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0178",
+      "source_sha256": "ee6089563e8b3754edae7bb775d379c0f8229cf688e1673ba40af53c722f713d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Она где-то в саду. Я пойду поищу ее.",
+      "target_sha256": "ee6089563e8b3754edae7bb775d379c0f8229cf688e1673ba40af53c722f713d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0179",
+      "source_sha256": "367bbba9f2c01260608d596790874b8781f7a46a0bae4a4edf573f239ba253ac",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Будьте добры. Я тороплюсь.",
+      "target_sha256": "367bbba9f2c01260608d596790874b8781f7a46a0bae4a4edf573f239ba253ac",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0180",
+      "source_sha256": "fea9a2fc31ef7b9c123592b43122006b341a18392dec5fea801f2e940e0e1527",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Анфиса</span>. Пойду и я поищу. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Кричит.)</i></small> Машенька, ау!",
+      "target_sha256": "fea9a2fc31ef7b9c123592b43122006b341a18392dec5fea801f2e940e0e1527",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0181",
+      "source_sha256": "c764c55631e8307ef07bb13b3d103922e55142721b1f5ddd5aa3494c922d60b2",
+      "target": "Уходит вместе с <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ириной</span> в глубину сада.",
+      "target_sha256": "c764c55631e8307ef07bb13b3d103922e55142721b1f5ddd5aa3494c922d60b2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0182",
+      "source_sha256": "61849b577de84d5695650f24b153b406935294fb51de461df1d593017ea9ec8c",
+      "target": "А-у, а-у!",
+      "target_sha256": "61849b577de84d5695650f24b153b406935294fb51de461df1d593017ea9ec8c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0183",
+      "source_sha256": "7e2ea575a785d6718aee21966dcb509f3f5a610ef0ab85e18d7f32db531e3916",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Все имеет свой конец. Вот и мы расстаемся. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Город давал нам что-то вроде завтрака, пили шампанское, городской голова говорил речь, я ел и слушал, а душой был здесь, у вас… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Оглядывает сад.)</i></small> Привык я к вам.",
+      "target_sha256": "7e2ea575a785d6718aee21966dcb509f3f5a610ef0ab85e18d7f32db531e3916",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0184",
+      "source_sha256": "412b5eead52a87c6fdf60e6cc926278334fbdf294324474adbfc5ac9704209bc",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Увидимся ли мы еще когда-нибудь?",
+      "target_sha256": "412b5eead52a87c6fdf60e6cc926278334fbdf294324474adbfc5ac9704209bc",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0185",
+      "source_sha256": "93cb689be7484220cc82ef80e94faa14bc444b1be5e6b40eb2700092519b9c5e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Должно быть, нет.",
+      "target_sha256": "93cb689be7484220cc82ef80e94faa14bc444b1be5e6b40eb2700092519b9c5e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0186",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0187",
+      "source_sha256": "ce5bbb481e3508c531077090468983ed74e7061393b426d123364e54f336cad0",
+      "target": "Жена моя и обе девочки проживут здесь еще месяца два; пожалуйста, если что случится, если что понадобится…",
+      "target_sha256": "ce5bbb481e3508c531077090468983ed74e7061393b426d123364e54f336cad0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0188",
+      "source_sha256": "59d55a06054f147a3c78eca8402ac06aeed7304103b638290ba876b949640124",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Да, да, конечно. Будьте покойны.",
+      "target_sha256": "59d55a06054f147a3c78eca8402ac06aeed7304103b638290ba876b949640124",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0189",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0190",
+      "source_sha256": "a1c6fcd903597be5569b77a35dfd4bcf8da200eb02d769af053d5ddc8281a090",
+      "target": "В городе завтра не будет уже ни одного военного, все станет воспоминанием, и, конечно, для нас начнется новая жизнь…",
+      "target_sha256": "a1c6fcd903597be5569b77a35dfd4bcf8da200eb02d769af053d5ddc8281a090",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0191",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0192",
+      "source_sha256": "8a06063b5b2fb58b950c103f06b0a770f5222cebf7d67afb1cf1e371d149ea3f",
+      "target": "Все делается не по-нашему. Я не хотела быть начальницей и все-таки сделалась ею. В Москве, значит, не быть…",
+      "target_sha256": "8a06063b5b2fb58b950c103f06b0a770f5222cebf7d67afb1cf1e371d149ea3f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0193",
+      "source_sha256": "975840ef7b14ead047bc7b9de5ff71451a93352e0d928bb7f2bee16141d6a0b8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Ну… Спасибо вам за все. Простите мне, если что не так… Много, очень уж много я говорил — и за это простите, не поминайте лихом.",
+      "target_sha256": "975840ef7b14ead047bc7b9de5ff71451a93352e0d928bb7f2bee16141d6a0b8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0194",
+      "source_sha256": "f252abf99a36124c9513915b4838669c85b55ee9b236d186f4c8d1ebd2af3ab8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(утирает глаза)</i></small>. Что ж это Маша не идет…",
+      "target_sha256": "f252abf99a36124c9513915b4838669c85b55ee9b236d186f4c8d1ebd2af3ab8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0195",
+      "source_sha256": "844ac050c24e352aeb70bae3e48a29b608394cc99e3ebe628baeb97fe7e9e2c7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Что же еще вам сказать на прощание? О чем пофилософствовать?.. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Жизнь тяжела. Она представляется многим из нас глухой и безнадежной, но все же, надо сознаться, она становится все яснее и легче, и, по-видимому, не далеко время, когда она станет совсем светлой. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Пора мне, пора! Прежде человечество было занято войнами, заполняя все свое существование походами, набегами, победами, теперь же все это отжило, оставив после себя громадное пустое место, которое пока нечем заполнить; человечество страстно ищет и конечно найдет. Ах, только бы поскорее!",
+      "target_sha256": "844ac050c24e352aeb70bae3e48a29b608394cc99e3ebe628baeb97fe7e9e2c7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0196",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0197",
+      "source_sha256": "04315a6f49428dc56f1cbbd5aacd9158db77f37dc6636aff935dc281e3f9c1a4",
+      "target": "Если бы, знаете, к трудолюбию прибавить образование, а к образованию трудолюбие. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смотрит на часы.)</i></small> Мне, однако, пора…",
+      "target_sha256": "04315a6f49428dc56f1cbbd5aacd9158db77f37dc6636aff935dc281e3f9c1a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0198",
+      "source_sha256": "cd9859cf3f8f537b8b6f367cf67218d51c152c76c08e73e4c58fca00fa6e7ec2",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Вот она идет.",
+      "target_sha256": "cd9859cf3f8f537b8b6f367cf67218d51c152c76c08e73e4c58fca00fa6e7ec2",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0199",
+      "source_sha256": "3cc029abf4dfb89682df71f1c969af6b62300b66d1b60855734d204da8a32c17",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Маша</span> входит.",
+      "target_sha256": "3cc029abf4dfb89682df71f1c969af6b62300b66d1b60855734d204da8a32c17",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0200",
+      "source_sha256": "23e595649b56489557974280de47886182cdfebe6cda1b1ff66fb30fdc3c7cd8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Я пришел проститься…",
+      "target_sha256": "23e595649b56489557974280de47886182cdfebe6cda1b1ff66fb30fdc3c7cd8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0201",
+      "source_sha256": "138ac30431144fba3485e835a3038703c76eda0444fdb608638d6d3b9c680350",
+      "target": "Ольга отходит немного в сторону, чтобы не помешать прощанию.",
+      "target_sha256": "138ac30431144fba3485e835a3038703c76eda0444fdb608638d6d3b9c680350",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0202",
+      "source_sha256": "861f21e4f272648d85e88b59900cb137bf22fc1cf034f1e7a5f03d953ddcfcef",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(смотрит ему в лицо)</i></small>. Прощай…",
+      "target_sha256": "861f21e4f272648d85e88b59900cb137bf22fc1cf034f1e7a5f03d953ddcfcef",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0203",
+      "source_sha256": "87dbd83a57e52f2eb1c64ee18a5d96676f592acee8891c74658ac48d30e32e56",
+      "target": "Продолжительный поцелуй.",
+      "target_sha256": "87dbd83a57e52f2eb1c64ee18a5d96676f592acee8891c74658ac48d30e32e56",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0204",
+      "source_sha256": "0aff6987d0b9ed7af1794cc6a0388ecaabffe4bcd368576d1a36596579f3516c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Будет, будет…",
+      "target_sha256": "0aff6987d0b9ed7af1794cc6a0388ecaabffe4bcd368576d1a36596579f3516c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0205",
+      "source_sha256": "cd4487121bc5e1fda769bbbbaeae04705b6ccebe9d13d3e474e45542d872820f",
+      "target": "Маша сильно рыдает.",
+      "target_sha256": "cd4487121bc5e1fda769bbbbaeae04705b6ccebe9d13d3e474e45542d872820f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0206",
+      "source_sha256": "e6492ff0936d1154f23de4ad67523cc718aa4299d21a25f554b71a28df69bd6e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Вершинин</span>. Пиши мне… Не забывай! Пусти меня… пора… Ольга Сергеевна, возьмите ее, мне уже… пора… опоздал… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Растроганный, целует руки Ольге, потом еще раз обнимает Машу и быстро уходит.)</i></small>",
+      "target_sha256": "e6492ff0936d1154f23de4ad67523cc718aa4299d21a25f554b71a28df69bd6e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0207",
+      "source_sha256": "eac2e09f8e128c63e500f11cc4503e251966feb1ddf17343b27d2c5865441c87",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Будет, Маша! Перестань, милая…",
+      "target_sha256": "eac2e09f8e128c63e500f11cc4503e251966feb1ddf17343b27d2c5865441c87",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0208",
+      "source_sha256": "5a7f30c77045b28c6accc5989294cc26bd9d562dd3135f81bae945b7d29c1351",
+      "target": "Входит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Кулыгин</span>.",
+      "target_sha256": "5a7f30c77045b28c6accc5989294cc26bd9d562dd3135f81bae945b7d29c1351",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0209",
+      "source_sha256": "6102bff4bf78b520ff3719891bd749d67febf8f5e03e8cb820d53444ed902e5f",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в смущении)</i></small>. Ничего, пусть поплачет, пусть… Хорошая моя Маша, добрая моя Маша… Ты моя жена, и я счастлив, что бы там ни было… Я не жалуюсь, не делаю тебе ни одного упрека… вот и Оля свидетельница… Начнем жить опять по-старому, и я тебе ни одного слова, ни намека…",
+      "target_sha256": "6102bff4bf78b520ff3719891bd749d67febf8f5e03e8cb820d53444ed902e5f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0210",
+      "source_sha256": "1dc924d6a01317ecf7c71aed89e5bd4a92daa835f9d740cd7e9ad17b3ef16cf3",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сдерживая рыдания)</i></small>. У лукоморья дуб зеленый, златая цепь на дубе том… златая цепь на дубе том… Я с ума схожу… У лукоморья… дуб зеленый…",
+      "target_sha256": "1dc924d6a01317ecf7c71aed89e5bd4a92daa835f9d740cd7e9ad17b3ef16cf3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0211",
+      "source_sha256": "cd04c6e0457619c2c08ed6e89a196cf5e7b406913e108216bb728e0380466a05",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Успокойся, Маша… Успокойся… Дай ей воды.",
+      "target_sha256": "cd04c6e0457619c2c08ed6e89a196cf5e7b406913e108216bb728e0380466a05",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0212",
+      "source_sha256": "e4b5c1599c287c9521dba38504d278ac1223081a8f293dce89dd46af04682a31",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Я больше не плачу…",
+      "target_sha256": "e4b5c1599c287c9521dba38504d278ac1223081a8f293dce89dd46af04682a31",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0213",
+      "source_sha256": "67dab0e81d5d83881bcd052123f324c2eb14e1f50383e4c62e6f8a470f28e807",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Она уже не плачет… она добрая…",
+      "target_sha256": "67dab0e81d5d83881bcd052123f324c2eb14e1f50383e4c62e6f8a470f28e807",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0214",
+      "source_sha256": "65670a7fc773a33200c6a23dfaad34d4a05ff56a8bb79871c2a391c27fbdcf23",
+      "target": "Слышен глухой далекий выстрел.",
+      "target_sha256": "65670a7fc773a33200c6a23dfaad34d4a05ff56a8bb79871c2a391c27fbdcf23",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0215",
+      "source_sha256": "0976863fc16b7032d0d4ef0418ad16e2703c5fb5bb2e15d9c7a027c4b6e3cbd1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. У лукоморья дуб зеленый, златая цепь на дубе том… Кот зеленый… дуб зеленый… Я путаю… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Пьет воду.)</i></small> Неудачная жизнь… Ничего мне теперь не нужно… Я сейчас успокоюсь… Все равно… Что значит у лукоморья? Почему это слово у меня в голове? Путаются мысли.",
+      "target_sha256": "0976863fc16b7032d0d4ef0418ad16e2703c5fb5bb2e15d9c7a027c4b6e3cbd1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0216",
+      "source_sha256": "799f8a565685591cded3f0871e2339f6cd050ee1e47f88c1171c86cf8251ab85",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Ирина</span> входит.",
+      "target_sha256": "799f8a565685591cded3f0871e2339f6cd050ee1e47f88c1171c86cf8251ab85",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0217",
+      "source_sha256": "a5f3948b93805f0e16831037f15185aa4d376e610d748285e375ed689c812cc0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Успокойся, Маша. Ну, вот умница… Пойдем в комнату.",
+      "target_sha256": "a5f3948b93805f0e16831037f15185aa4d376e610d748285e375ed689c812cc0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0218",
+      "source_sha256": "ab8ccb58441390691ef2b1b7295430ee33491d695e757c375ab2aabf800a7a05",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(сердито)</i></small>. Не пойду я туда. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Рыдает, но тотчас же останавливается.)</i></small> Я в дом уже не хожу, и не пойду…",
+      "target_sha256": "ab8ccb58441390691ef2b1b7295430ee33491d695e757c375ab2aabf800a7a05",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0219",
+      "source_sha256": "e953e39eaf9130e67273f2038f882f6a3e6b049bdbc27ac421b20e035963f7ee",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Давайте посидим вместе, хоть помолчим. Ведь завтра я уезжаю…",
+      "target_sha256": "e953e39eaf9130e67273f2038f882f6a3e6b049bdbc27ac421b20e035963f7ee",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0220",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0221",
+      "source_sha256": "a7aac10677ac9e07b6b8e209fa60890c2f7f9fd337d2fe2c813d04105ae5fe19",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Вчера в третьем классе у одного мальчугана я отнял вот усы и бороду… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Надевает усы и бороду.)</i></small> Похож на учителя немецкого языка…",
+      "target_sha256": "a7aac10677ac9e07b6b8e209fa60890c2f7f9fd337d2fe2c813d04105ae5fe19",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0222",
+      "source_sha256": "2d94e843848d22675f2ce53f2bd171192d5f4449e775c57405ceadb2bae42091",
+      "target": "<small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Смеется.)</i></small> Не правда ли? Смешные эти мальчишки.",
+      "target_sha256": "2d94e843848d22675f2ce53f2bd171192d5f4449e775c57405ceadb2bae42091",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0223",
+      "source_sha256": "3428821ea0563c296cc8246c80bb52ee9b885586413e2632940c083cced530c1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. В самом деле похож на вашего немца.",
+      "target_sha256": "3428821ea0563c296cc8246c80bb52ee9b885586413e2632940c083cced530c1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0224",
+      "source_sha256": "bd64392aa6385b85bcac34458748b1a4d9a96821120f54fae079e2832e3fb036",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(смеется)</i></small>. Да.",
+      "target_sha256": "bd64392aa6385b85bcac34458748b1a4d9a96821120f54fae079e2832e3fb036",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0225",
+      "source_sha256": "fc958b2b04f6dfc1fd13658ae82d15cc6d3e22cba7dcb250336cbb55672833b3",
+      "target": "Маша плачет.",
+      "target_sha256": "fc958b2b04f6dfc1fd13658ae82d15cc6d3e22cba7dcb250336cbb55672833b3",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0226",
+      "source_sha256": "3571b9ecc140f17e52e1dd5c4ee5237c5f3f472ec3fffa6dd4dbad72b757a04e",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Будет, Маша!",
+      "target_sha256": "3571b9ecc140f17e52e1dd5c4ee5237c5f3f472ec3fffa6dd4dbad72b757a04e",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0227",
+      "source_sha256": "cf84902798656be7ae195c12805e28e0cd19d9bfe31240ca798d77e3d338be50",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Очень похож…",
+      "target_sha256": "cf84902798656be7ae195c12805e28e0cd19d9bfe31240ca798d77e3d338be50",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0228",
+      "source_sha256": "9aa2ed69cd4b95cce048e9d8420bde801737c2020c4408cc326736fafb35336f",
+      "target": "Входит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Наташа</span>.",
+      "target_sha256": "9aa2ed69cd4b95cce048e9d8420bde801737c2020c4408cc326736fafb35336f",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0229",
+      "source_sha256": "7c0ecb71446b27815e47dfc5a4fc3e7492325319cf15d77211904d50bf6515b1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(горничной)</i></small>. Что? С Софочкой посидит Протопопов, Михаил Иваныч, а Бобика пусть покатает Андрей Сергеич. Столько хлопот с детьми… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине.)</i></small> Ты завтра уезжаешь, Ирина, — такая жалость. Останься еще хоть недельку. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Увидев Кулыгина, вскрикивает; тот смеется и снимает усы и бороду.)</i></small> Ну вас совсем, испугали! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине.)</i></small> Я к тебе привыкла и расстаться с тобой, ты думаешь, мне будет легко? В твою комнату я велю переселить Андрея с его скрипкой — пусть там пилит! — а в его комнату мы поместим Софочку. Дивный, чудный ребенок! Что за девчурочка! Сегодня она посмотрела на меня своими глазками и — «мама»!",
+      "target_sha256": "7c0ecb71446b27815e47dfc5a4fc3e7492325319cf15d77211904d50bf6515b1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0230",
+      "source_sha256": "b62adc7aafe4d0ef205ba504cd9ef412e86dc9ea4de13d5eb655ee699cc4c718",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Прекрасный ребенок, это верно.",
+      "target_sha256": "b62adc7aafe4d0ef205ba504cd9ef412e86dc9ea4de13d5eb655ee699cc4c718",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0231",
+      "source_sha256": "7e620cc63b182abf7a77ef3a461a5e2a72511adedc9a787cb823e5e5d34cf8f7",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Наташа</span>. Значит, завтра я уже одна тут. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вздыхает.)</i></small> Велю прежде всего срубить эту еловую аллею, потом вот этот клен. По вечерам он такой страшный, некрасивый… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Ирине.)</i></small> Милая, совсем не к лицу тебе этот пояс… Это безвкусица. Надо что-нибудь светленькое. И тут везде я велю понасажать цветочков, цветочков, и будет запах… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Строго.)</i></small> Зачем здесь на скамье валяется вилка? <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Проходя в дом, горничной.)</i></small> Зачем здесь на скамье валяется вилка, я спрашиваю? <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Кричит.)</i></small> Молчать!",
+      "target_sha256": "7e620cc63b182abf7a77ef3a461a5e2a72511adedc9a787cb823e5e5d34cf8f7",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0232",
+      "source_sha256": "825f94861582be046e56cb76080f50979946798a506c453b26f7b5b00c14cf70",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Разошлась!",
+      "target_sha256": "825f94861582be046e56cb76080f50979946798a506c453b26f7b5b00c14cf70",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0233",
+      "source_sha256": "6742bc51af1d24957ae0b75d7452ac998ce29e8e3cd88de84ea0661b4eecf66d",
+      "target": "За сценой музыка играет марш; все слушают.",
+      "target_sha256": "6742bc51af1d24957ae0b75d7452ac998ce29e8e3cd88de84ea0661b4eecf66d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0234",
+      "source_sha256": "e40af53612e5515a9bb8ef1d2cde08a31384f01dbb124a73437a16b96facca62",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Уходят.",
+      "target_sha256": "e40af53612e5515a9bb8ef1d2cde08a31384f01dbb124a73437a16b96facca62",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0235",
+      "source_sha256": "b057a4bf6174f549fe917cff70e55cbeb4601f41a0d9bca4451f0943a9b39f58",
+      "target": "Входит <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Чебутыкин</span>.",
+      "target_sha256": "b057a4bf6174f549fe917cff70e55cbeb4601f41a0d9bca4451f0943a9b39f58",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0236",
+      "source_sha256": "7fa51710b90db0d520cc66772cab4ebf4762817308f77416d9a336a21a4b077b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Уходят наши. Ну, что ж… Счастливый им путь! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Мужу.)</i></small> Надо домой… Где моя шляпа и тальма…",
+      "target_sha256": "7fa51710b90db0d520cc66772cab4ebf4762817308f77416d9a336a21a4b077b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0237",
+      "source_sha256": "6a23e83c2288f162d855d9a70c2966e48feb1c8722937b37bd5b79dd781d5c73",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Кулыгин</span>. Я в дом отнес… Принесу сейчас. <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Уходит в дом.)</i></small>",
+      "target_sha256": "6a23e83c2288f162d855d9a70c2966e48feb1c8722937b37bd5b79dd781d5c73",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0238",
+      "source_sha256": "2a147e571eba771248d8835c3af94723c4a63cdec5d4a89c50d6fc4fb911bcf5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Да, теперь можно по домам. Пора.",
+      "target_sha256": "2a147e571eba771248d8835c3af94723c4a63cdec5d4a89c50d6fc4fb911bcf5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0239",
+      "source_sha256": "85f9d8cd0be86f7d3a32f6f8f34839c2025c0bd24e8db679d63258482ea9a1ee",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Ольга Сергеевна!",
+      "target_sha256": "85f9d8cd0be86f7d3a32f6f8f34839c2025c0bd24e8db679d63258482ea9a1ee",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0240",
+      "source_sha256": "fcd1ada06eae2c157163546c6bef68d2f66b5531131add099011e84a0401a4d1",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Что?",
+      "target_sha256": "fcd1ada06eae2c157163546c6bef68d2f66b5531131add099011e84a0401a4d1",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0241",
+      "source_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "target": "Пауза.",
+      "target_sha256": "fbc33af56b4e86f339f969312b9badd208a71a6e0fe3cf530138944ba3f7e1ed",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0242",
+      "source_sha256": "7940fed8254d64e346164a1dce8658d46e9b443039fd534e8de73adcb640143d",
+      "target": "Что?",
+      "target_sha256": "7940fed8254d64e346164a1dce8658d46e9b443039fd534e8de73adcb640143d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0243",
+      "source_sha256": "0a28464c0fccfd49800129208159bbe4c9190766adce989177258d9adbe45a82",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Ничего… Не знаю, как сказать вам… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Шепчет ей на ухо.)</i></small>",
+      "target_sha256": "0a28464c0fccfd49800129208159bbe4c9190766adce989177258d9adbe45a82",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0244",
+      "source_sha256": "98fc5b85a4c62cd428c393df7c7b5b8baab903290643b96af24c0c5fa4ab114c",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в испуге)</i></small>. Не может быть!",
+      "target_sha256": "98fc5b85a4c62cd428c393df7c7b5b8baab903290643b96af24c0c5fa4ab114c",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0245",
+      "source_sha256": "297c7f6a3b1318151dcdda585deefb64199865c24cb1f24fef30dc62bfa6ce1b",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Да… такая история… Утомился я, замучился, больше не хочу говорить… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(С досадой.)</i></small> Впрочем, все равно!",
+      "target_sha256": "297c7f6a3b1318151dcdda585deefb64199865c24cb1f24fef30dc62bfa6ce1b",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0246",
+      "source_sha256": "be6dae4f4df095facd0f38af2c9f266c64401298b4b4e9f6088e9edf89db12df",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. Что случилось?",
+      "target_sha256": "be6dae4f4df095facd0f38af2c9f266c64401298b4b4e9f6088e9edf89db12df",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0247",
+      "source_sha256": "875e639e52a77615db22efef622396fc8e6e2a7a319f353aaeae52a0534069d8",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(обнимает Ирину)</i></small>. Ужасный сегодня день… Я не знаю, как тебе сказать, моя дорогая…",
+      "target_sha256": "875e639e52a77615db22efef622396fc8e6e2a7a319f353aaeae52a0534069d8",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0248",
+      "source_sha256": "ca455f59df0413646116546e15232cfef3aaefe552fa9d6ab0dbf73ae8f957d0",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Что? Говорите скорей: что? Бога ради! <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Плачет.)</i></small>",
+      "target_sha256": "ca455f59df0413646116546e15232cfef3aaefe552fa9d6ab0dbf73ae8f957d0",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0249",
+      "source_sha256": "7c3c3d1b2e334e396ee32558c2b55899e92946f6c282acaacef851f6e29dcf0d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span>. Сейчас на дуэли убит барон.",
+      "target_sha256": "7c3c3d1b2e334e396ee32558c2b55899e92946f6c282acaacef851f6e29dcf0d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0250",
+      "source_sha256": "45e8ca4d15a37f45882a63c642ea729b2e73ec8fa6dc2bd032730c37a0e64179",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span>. Я знала, я знала…",
+      "target_sha256": "45e8ca4d15a37f45882a63c642ea729b2e73ec8fa6dc2bd032730c37a0e64179",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0251",
+      "source_sha256": "8ac30d6e765a9de2b2765be159d14f6802cbbed766a37b9e7b2d5b4624fc8696",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(в глубине сцены садится на скамью)</i></small>. Утомился… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Вынимает из кармана газету.)</i></small> Пусть поплачут… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Тихо напевает.)</i></small> Та-ра-ра-бумбия… сижу на тумбе я… Не все ли равно!",
+      "target_sha256": "8ac30d6e765a9de2b2765be159d14f6802cbbed766a37b9e7b2d5b4624fc8696",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0252",
+      "source_sha256": "208b0a4841ce1abb710fe6d554e0b2e3700891783b0014da1168fcd79c917f9d",
+      "target": "Три сестры стоят, прижавшись друг к другу.",
+      "target_sha256": "208b0a4841ce1abb710fe6d554e0b2e3700891783b0014da1168fcd79c917f9d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0253",
+      "source_sha256": "3df951e36bd4b159a937ac94f21f4cd2f5f7a5c1314ae739452c8ce77ccda53d",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Маша</span>. О, как играет музыка! Они уходят от нас, один ушел совсем, совсем навсегда, мы останемся одни, чтобы начать нашу жизнь снова. Надо жить… Надо жить…",
+      "target_sha256": "3df951e36bd4b159a937ac94f21f4cd2f5f7a5c1314ae739452c8ce77ccda53d",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0254",
+      "source_sha256": "d84b03e6f56b93b27c018bc11f81096fa07a5c6f91af55f1e6c3cb1bfc09dbe5",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ирина</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(кладет голову на грудь Ольге)</i></small>. Придет время, все узнают, зачем все это, для чего эти страдания, никаких не будет тайн, а пока надо жить… надо работать, только работать! Завтра я поеду одна, буду учить в школе и всю свою жизнь отдам тем, кому она, быть может, нужна. Теперь осень, скоро придет зима, засыплет снегом, а я буду работать, буду работать…",
+      "target_sha256": "d84b03e6f56b93b27c018bc11f81096fa07a5c6f91af55f1e6c3cb1bfc09dbe5",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0255",
+      "source_sha256": "4e62713865598ed16e8787d208cebe6a5445dcfd4cca534aa5bf6c19ffd492de",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(обнимает обеих сестер)</i></small>. Музыка играет так весело, бодро, и хочется жить! О, боже мой! Пройдет время, и мы уйдем навеки, нас забудут, забудут наши лица, голоса и сколько нас было, но страдания наши перейдут в радость для тех, кто будет жить после нас, счастье и мир настанут на земле, и помянут добрым словом и благословят тех, кто живет теперь. О, милые сестры, жизнь наша еще не кончена. Будем жить! Музыка играет так весело, так радостно, и, кажется, еще немного, и мы узнаем, зачем мы живем, зачем страдаем… Если бы знать, если бы знать!",
+      "target_sha256": "4e62713865598ed16e8787d208cebe6a5445dcfd4cca534aa5bf6c19ffd492de",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0256",
+      "source_sha256": "f3575f729e348820fe42aff7636a1b87a60a91b6c04371e1e12c6e2b8ea2a4a4",
+      "target": "Музыка играет все тише и тише; <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Кулыгин</span>, веселый, улыбающийся, несет шляпу и тальму, <span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\">Андрей</span> везет другую колясочку, в которой сидит Бобик.",
+      "target_sha256": "f3575f729e348820fe42aff7636a1b87a60a91b6c04371e1e12c6e2b8ea2a4a4",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0257",
+      "source_sha256": "0da635361ba057489425fb86a2dccae678c4a098d30b83ace3b000a8735e8810",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Чебутыкин</span> <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(тихо напевает)</i></small>. Тара… ра… бумбия… сижу на тумбе я… <small xmlns=\"http://www.w3.org/1999/xhtml\"><i>(Читает газету.)</i></small> Все равно! Все равно!",
+      "target_sha256": "0da635361ba057489425fb86a2dccae678c4a098d30b83ace3b000a8735e8810",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0258",
+      "source_sha256": "fa09e9c742b8a14e413277402b1d3b646bceb26cd901ecafbeab69f4d20e0c24",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"speaker-name\">Ольга</span>. Если бы знать, если бы знать!",
+      "target_sha256": "fa09e9c742b8a14e413277402b1d3b646bceb26cd901ecafbeab69f4d20e0c24",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-4-0259",
+      "source_sha256": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+      "target": "<span xmlns=\"http://www.w3.org/1999/xhtml\" class=\"character-name\"><i>Занавес</i></span>",
+      "target_sha256": "f46d3a0a6bf58d0d4554a175359726540819f4eedf91c106b9874a9e5d8b9576",
+      "tag": "p"
+    },
+    {
+      "source_id": "046-note-12",
+      "source_sha256": "5d55cbd57b9b7c4405292f57b219791dae93875f35f2e760b4e2b710fe71d632",
+      "target": "фр. Il ne faut pas faire du bruit, la Sophie est dormée déjà. Vous êtes un ours — Не шумите, Софи уже спит. Вы медведь",
+      "target_sha256": "5d55cbd57b9b7c4405292f57b219791dae93875f35f2e760b4e2b710fe71d632",
+      "tag": "editorial_note"
+    }
+  ],
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "source_rows": 258,
+  "review_batches": 7,
+  "master": "5.0.70",
+  "method": "AI_LITERARY_REVIEW_COMPLETE_NATIVE_ORIGINAL;NO_TRANSLATION"
+}

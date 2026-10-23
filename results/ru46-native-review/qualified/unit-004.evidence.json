@@ -1,0 +1,136 @@
+{
+  "unit": 4,
+  "state": "PASS_INDEPENDENT_ACTUAL_NATIVE_REVIEW_REPLAY",
+  "source_rows": 258,
+  "headings": 1,
+  "evidence": [
+    {
+      "batch": 0,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjAdWGCJ7YfUeAMsMty",
+          "request_sha256": "3b8047564c79a6d924f2993e5ed045be21e4d7c951a648c06beb265a5028b788",
+          "response_sha256": "60d8c737baeaa9e4b5ce53941226edeee0124d62cd91895acdfb22c42c07313d"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjBLkyB4q5j3jjBkWB1",
+          "request_sha256": "a3c74d11f1d4b927d0335913a1091c9323afc8d2f82bbf76d578020d3d7194c8",
+          "response_sha256": "1744d6f6e76bb989a9d4930513154711954220c71d17800eb1e8d11d0d8f1c04"
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjC9gkC9m429rroPN7f",
+          "request_sha256": "be0aaae9536be53304384c7028888832e1d4b8b8d0b5322af6c67bec24bfc2fb",
+          "response_sha256": "7c3bf8dc439dcd7ec1b76f54fcb4564a4e39601bf705fdd5b14e4c80a1d98e86"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjCsSyLidLJH2gmcZyx",
+          "request_sha256": "18dc6e7aab57a55c49f81ec51f9f4e15b09034720f8228520615d780c04e03ae",
+          "response_sha256": "5324ff4402161c954023f57e6a0f8214b425bc822fb29d4a9af94caf493befa2"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjDhArthZgG31ByLZU3",
+          "request_sha256": "466a1c18c1a3d6330c252e91c36c58cebfd1951bd7a8c46177f3ec1e465e6439",
+          "response_sha256": "6db9f07c95d8551389bc88b2e6d66ff492a155135f32af6f94cd01d2270b0614"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjETiG9EaY354bNr1e5",
+          "request_sha256": "24656d85fab1bfd02220c9f55fc5afabb661007074d0d5893ea9998968079f2f",
+          "response_sha256": "52bafeebb7ce2ebcfc64f4a6c88bc6508e4f7d5c0706580feccab6ce3815011d"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjFBZCdRi6MN8b9hNhX",
+          "request_sha256": "abaedc5cc703e0c3cf52746f8892dba6203d5bf0351aa2030df10169162c8bdb",
+          "response_sha256": "9b8377bb4029f2e9ab9263c41f67cf93a00a9ea0ba3b24adfcabd3ba76224c50"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjFvCzNZXLQp5wX5krj",
+          "request_sha256": "751413e5961f8dc14618fb15c03bf0a22d2762d45d8944f030de04f59b904f66",
+          "response_sha256": "3d0e1f9719f13d1a88c3858139d09d177b414b0769164ef4fda84cab4faa375c"
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjGkeJah6vgvk4nQuLX",
+          "request_sha256": "7d6f3fe9b58a358007d63596a1eb093505e5c3451ffb4882c2aad24cff2074d1",
+          "response_sha256": "4bbf7ccfd13c5584dbf2417e6133cb6d9c1cd9731af0e635af22bbfdde523e65"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjHWaV5VrtcuHkSjDkv",
+          "request_sha256": "b90c4fce20ce37b211c542d7283bdfb9e6b509e985c2cc958ae9c2b1438942c0",
+          "response_sha256": "33c07bb1b46b14e1ee70b1b8b1ac7f0cbe240a0986433a51c1bb840ebc211f5e"
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "rows": 40,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjJKr6y7BBMFMSqbJJg",
+          "request_sha256": "912d00aac3136ed812f0deb241816cd5d8f3633ff7ebdc256ed98c6bfa55b697",
+          "response_sha256": "f2afebb815966627d23468fb7b5fa5c64d11baf20fb3f70ff43075669cbd6d0a"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjK4NDVjcSNfi9wMmBw",
+          "request_sha256": "5ab265e16bbea3f2903cc7091db6cc2f04be4b337d1197180726b48bdc0acfcc",
+          "response_sha256": "50b47ebd9ed6bf13e4053b33d6e72aefab67141c6768b2ef3b63c851d6579ea6"
+        }
+      ]
+    },
+    {
+      "batch": 6,
+      "rows": 19,
+      "actual_exchanges": [
+        {
+          "phase": "review",
+          "response_id": "msg_011CgKjKxN5mVQWg3iDB2NZU",
+          "request_sha256": "c392c8290bb7a7c3d75707a4ac754ddd7ea574169a0dea804f45b3f65160bc82",
+          "response_sha256": "40ed8d62db431b26384b10d59b0d472ba945647f5d37c1d2554b00f5dc341a98"
+        },
+        {
+          "phase": "comparison",
+          "response_id": "msg_011CgKjLZk51kPmPUsGdykDw",
+          "request_sha256": "24675608087abc664d82fa19c1281b332955371b55361768152eb8ef1d3e90a7",
+          "response_sha256": "b005b40cce8aacd051d84ba5ff75a96294d33ed329dd068e372ee702d1785f61"
+        }
+      ]
+    }
+  ],
+  "all_source_bytes_preserved": true,
+  "book_release": false
+}
