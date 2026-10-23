@@ -1,0 +1,458 @@
+{
+  "unit": 38,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-038-0060",
+      "target": "— Не знаю.",
+      "source_sha256": "f6fac03047a60bbfd2c3944f1c280e954d9680dbebbfb7021a2f265375b12230",
+      "target_id": "ru-043-038-0060",
+      "tag": "p",
+      "target_sha256": "fa65e4326ed21a5b313de973b45d991f67b4e73507fcd3976b1eb2b5ac27b03d"
+    },
+    {
+      "source_id": "043-038-0061",
+      "target": "— Ну, угадай.",
+      "source_sha256": "d46e1e7c934aeadda184864c43ab6d0bc34513003212b75883a60f50ababe151",
+      "target_id": "ru-043-038-0061",
+      "tag": "p",
+      "target_sha256": "f02374e5a7dd7a72919282967204568916423c73537ccea83b6fee32ed109938"
+    },
+    {
+      "source_id": "043-038-0062",
+      "target": "— Не знаю. Полтора месяца.",
+      "source_sha256": "fc38833d7550693a62d9d648982fa24f8951a16e7615d6d8d76c8c25a8711e22",
+      "target_id": "ru-043-038-0062",
+      "tag": "p",
+      "target_sha256": "346abfa09484868c899cf4ddac675f76fb44ee016570f9de8bd2a820615a39ff"
+    },
+    {
+      "source_id": "043-038-0063",
+      "target": "— <i>Тридцать семь лет</i> — и вылез в Китае. Вот <i>это</i> по-нашему. Эх, кабы дно <i>этой</i> крепости было из цельной скалы!",
+      "source_sha256": "4747d23235a9c6935c9d2d27cde49067251e2a33803f91d948cdf2e19446f5f4",
+      "target_id": "ru-043-038-0063",
+      "tag": "p",
+      "target_sha256": "a488f70a44346ebbd12dde8445ff4ad6a3780375c424c159ad69d46908e26670"
+    },
+    {
+      "source_id": "043-038-0064",
+      "target": "— <i>Джим</i> никого в Китае не знает.",
+      "source_sha256": "6d0c88f32d093ca6ec55f1228e7976ef300f113508d8453905b3ea2da7c9a448",
+      "target_id": "ru-043-038-0064",
+      "tag": "p",
+      "target_sha256": "b19145dd7b257817e52860bc28b9406897fe049dadc970a3c2b8926f7023872b"
+    },
+    {
+      "source_id": "043-038-0065",
+      "target": "— А <i>это</i> тут при чём? И тот другой тоже никого не знал. Но ты вечно сворачиваешь на побочное. Почему нельзя держаться главного?",
+      "source_sha256": "aeafcddc5dc140be2295c0aec570c6e0c0518a95fec1083b247c52b9980f684c",
+      "target_id": "ru-043-038-0065",
+      "tag": "p",
+      "target_sha256": "07b83b8361fbf132b9b34c38d138925c798c0df81464c3a1e8a056838133bf79"
+    },
+    {
+      "source_id": "043-038-0066",
+      "target": "— Ладно. <i>Мне</i> всё равно, где он вылезет, лишь бы <i>вылез</i>; и Джиму, думаю, тоже. Но вот что: Джим слишком стар, чтобы его выкапывать столовым ножом. Он не дотянет.",
+      "source_sha256": "2c07ede2ec21e0f5b742eb14968616f4f33824ecf37a9ba91340dedccd4b5f90",
+      "target_id": "ru-043-038-0066",
+      "tag": "p",
+      "target_sha256": "aeadf7fa6083ccf747bc1b81d76a5adc679285038d7efe21d5b773efc8b48fdf"
+    },
+    {
+      "source_id": "043-038-0067",
+      "target": "— Нет, как раз дотянет. Ты же не думаешь, что на подкоп под <i>земляной</i> фундамент уйдёт тридцать семь лет, а?",
+      "source_sha256": "d3fed1da2a0420d12228365223e6a119654dd834ac7093ba823af34bf8849878",
+      "target_id": "ru-043-038-0067",
+      "tag": "p",
+      "target_sha256": "fa052674cfe4861c6faccc4edb85f370623c123667d3872754cf1f6e2dd2af29"
+    },
+    {
+      "source_id": "043-038-0068",
+      "target": "— А сколько уйдёт, Том?",
+      "source_sha256": "dbd148baf5ece5212f4123985a0a6174a9923716fcb6b1ef95c701b5dced0f8d",
+      "target_id": "ru-043-038-0068",
+      "tag": "p",
+      "target_sha256": "e3085711d540b9de90b33eac931601e97e110414ee07b7c80dc8256152e627e7"
+    },
+    {
+      "source_id": "043-038-0069",
+      "target": "— Ну, мы не можем рисковать и тянуть так долго, как следовало бы, потому что дядя Сайлас может очень скоро получить весточку оттуда, из-под Нового Орлеана. Он узнает, что Джим не оттуда. Тогда он следующим делом даст про Джима объявление или что-нибудь в этом роде. Так что мы не можем рисковать и копать так долго, как положено. По-хорошему, нам бы надо года два; но нельзя. Раз всё так неопределённо, я предлагаю вот что: давай и вправду копать как можно скорее, а потом будем между собой <i>считать</i>, будто копали тридцать семь лет. Тогда при первой же тревоге мы выхватим его и быстро уведём. Да, по-моему, так будет лучше всего.",
+      "source_sha256": "bb26efaa3107d260d5e0006acaaff84a270c6cac53cedf8cd91386deeaeb3e5f",
+      "target_id": "ru-043-038-0069",
+      "tag": "p",
+      "target_sha256": "812c3176ba2bcae9bbfd60d2a093f2f7204b2332071e3ddb1ee42723245583f5"
+    },
+    {
+      "source_id": "043-038-0070",
+      "target": "— Вот это <i>толково</i>, — говорю я. — Считать — это ничего не стоит; считать — никакого труда; и если для дела надо, я не против считать, что мы копали хоть сто пятьдесят лет. Мне это не в тягость, как только руку набью. Так что я потихоньку пойду и стяну пару столовых ножей.",
+      "source_sha256": "4b8abd837c94d57dd50ab0ded46e6d2e4829f09360e8f03d1ff3b0a0ce70e623",
+      "target_id": "ru-043-038-0070",
+      "tag": "p",
+      "target_sha256": "0d36445bc190f80b9e3b4d9a87e359f2288da25e89ee82fb65c6730ee58324d2"
+    },
+    {
+      "source_id": "043-038-0071",
+      "target": "Стягиваю ножи",
+      "source_sha256": "dd5990a834dcaa1e000153e1e6c6fc39af6785074a5da46b6c81980231c85781",
+      "target_id": "ru-043-038-0071",
+      "tag": "source_caption",
+      "target_sha256": "2fb1b3cf2a3ab9f71bd8721e0b23f7344bc45f3fd327bc2fc06b8fab7ac6e9e9"
+    },
+    {
+      "source_id": "043-038-0072",
+      "target": "— Стяни три, — говорит он. — Нам нужен один, чтобы сделать из него пилу.",
+      "source_sha256": "e937ccc81770de0bff693f82ccf9d7797c2e9737084e88d5f2d7984bc9d31969",
+      "target_id": "ru-043-038-0072",
+      "tag": "p",
+      "target_sha256": "b538cbf0383bbaf35925970710de92f752ebb6a197c9e5a531048c0b9f9f641d"
+    },
+    {
+      "source_id": "043-038-0073",
+      "target": "— Том, если не будет против правил и нечестиво предложить, — говорю я, — вон там, за коптильней, под обшивкой торчит старое ржавое пильное полотно.",
+      "source_sha256": "b826b10074029e1bd7490cda875ec9e44fa1172a9beda2c2f7c5882b0c068ee6",
+      "target_id": "ru-043-038-0073",
+      "tag": "p",
+      "target_sha256": "834ea318093920b7a0eda33c51fb6c4aae2e7907260d893195c1fecd9bf7ae1f"
+    },
+    {
+      "source_id": "043-038-0074",
+      "target": "Вид у него стал какой-то усталый и приунывший, и он говорит:",
+      "source_sha256": "e95a45be95eba4ba4b0d2dfe1aabe1021905ae16baf952cdff5ba6158f6be3fb",
+      "target_id": "ru-043-038-0074",
+      "tag": "p",
+      "target_sha256": "cf9f69a81b7fa476b96955a587e538f2308388f5dbda4fe7d85dd128f4574bc6"
+    },
+    {
+      "source_id": "043-038-0075",
+      "target": "— Бесполезно тебя чему-нибудь учить, Гек. Беги и стяни ножи — три штуки. — Я так и сделал.",
+      "source_sha256": "e29a8d38b6673b9db59db2e89fff1bfdeecb35f73b0d7e4157367423a3cae3ba",
+      "target_id": "ru-043-038-0075",
+      "tag": "p",
+      "target_sha256": "dd42b71ef62ad0e245c524c16f9c0b7dd6ba6659cf672529d91cfaa4b34e3c38"
+    },
+    {
+      "source_id": "043-038-0076",
+      "target": "Спуск по громоотводу",
+      "source_sha256": "431787e9d58e92174718a1e3b03050bf2b0d714892618a999a9a88dd606487f5",
+      "target_id": "ru-043-038-0076",
+      "tag": "source_caption",
+      "target_sha256": "2a0e80250ae0dd4e9027bf12fa92a2ca7c35dde306e5fe187477479eaac43234"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-038-0060",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation changed to Russian dash format."
+    },
+    {
+      "source_id": "043-038-0061",
+      "verdict": "CORRECTED",
+      "reason": "Dash dialogue format."
+    },
+    {
+      "source_id": "043-038-0062",
+      "verdict": "CORRECTED",
+      "reason": "Dash dialogue format; meaning preserved."
+    },
+    {
+      "source_id": "043-038-0063",
+      "verdict": "CORRECTED",
+      "reason": "Fixed misplaced italics, dialogue punctuation, and idiom; Tom's line made natural."
+    },
+    {
+      "source_id": "043-038-0064",
+      "verdict": "CORRECTED",
+      "reason": "Dash format; italic on Jim restored."
+    },
+    {
+      "source_id": "043-038-0065",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'neither did' meaning (didn't know anyone) and idiom."
+    },
+    {
+      "source_id": "043-038-0066",
+      "verdict": "CORRECTED",
+      "reason": "Case-knife is not a pocket knife; fixed to table knife; italics and flow improved."
+    },
+    {
+      "source_id": "043-038-0067",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'will last' and italics; dash format."
+    },
+    {
+      "source_id": "043-038-0068",
+      "verdict": "CORRECTED",
+      "reason": "Dash format and colloquial register."
+    },
+    {
+      "source_id": "043-038-0069",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'let on' as pretending/counting, 'from down there by New Orleans', and stiffness; alarm logic clarified."
+    },
+    {
+      "source_id": "043-038-0070",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'let on' sense, 'case-knives' not folding knives, 'smouch' as steal, and dash format."
+    },
+    {
+      "source_id": "043-038-0071",
+      "verdict": "CORRECTED",
+      "reason": "Smouch means steal/pilfer, not grease; quotes removed from caption."
+    },
+    {
+      "source_id": "043-038-0072",
+      "verdict": "CORRECTED",
+      "reason": "Replaced invented 'Смуч' with idiomatic verb; dash format."
+    },
+    {
+      "source_id": "043-038-0073",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'weather-boarding' location and Huck's humorous register."
+    },
+    {
+      "source_id": "043-038-0074",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed colloquial narration."
+    },
+    {
+      "source_id": "043-038-0075",
+      "verdict": "CORRECTED",
+      "reason": "Smouch means steal, not hide; dash format."
+    },
+    {
+      "source_id": "043-038-0076",
+      "verdict": "CORRECTED",
+      "reason": "Lightning-rod is громоотвод in idiomatic usage."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-038-0060",
+      "before": "«Не знаю».",
+      "after": "— Не знаю."
+    },
+    {
+      "source_id": "043-038-0061",
+      "before": "«Ну, угадай».",
+      "after": "— Ну, угадай."
+    },
+    {
+      "source_id": "043-038-0062",
+      "before": "«Не знаю. Полтора месяца».",
+      "after": "— Не знаю. Полтора месяца."
+    },
+    {
+      "source_id": "043-038-0063",
+      "before": "<i>«Тридцать семь лет</i> — и он выбрался в Китай. <i>Вот</i> такой <i>вот</i>. Хотел бы я, чтобы дно <i>этой</i> крепости было из цельной скалы».",
+      "after": "— <i>Тридцать семь лет</i> — и вылез в Китае. Вот <i>это</i> по-нашему. Эх, кабы дно <i>этой</i> крепости было из цельной скалы!"
+    },
+    {
+      "source_id": "043-038-0064",
+      "before": "«Джим никого не знает в Китае».",
+      "after": "— <i>Джим</i> никого в Китае не знает."
+    },
+    {
+      "source_id": "043-038-0065",
+      "before": "«А какое <i>это</i> имеет отношение к делу? Тот другой парень тоже не делал этого. Но ты всегда уходишь в сторону, отклоняясь от темы. Почему ты не можешь придерживаться главного?»",
+      "after": "— А <i>это</i> тут при чём? И тот другой тоже никого не знал. Но ты вечно сворачиваешь на побочное. Почему нельзя держаться главного?"
+    },
+    {
+      "source_id": "043-038-0066",
+      "before": "«Ладно — <i>мне</i> всё равно, откуда он выберется, главное, чтобы <i>выбрался</i>; и Джиму, по-моему, тоже всё равно. Но вот в чём дело — Джим слишком стар, чтобы его выкопали с помощью карманного ножа. Он не выдержит».",
+      "after": "— Ладно. <i>Мне</i> всё равно, где он вылезет, лишь бы <i>вылез</i>; и Джиму, думаю, тоже. Но вот что: Джим слишком стар, чтобы его выкапывать столовым ножом. Он не дотянет."
+    },
+    {
+      "source_id": "043-038-0067",
+      "before": "«Да, он тоже продержится. Ты же не думаешь, что на то, чтобы прокопаться сквозь <i>земляной</i> фундамент, уйдет тридцать семь лет, правда?»",
+      "after": "— Нет, как раз дотянет. Ты же не думаешь, что на подкоп под <i>земляной</i> фундамент уйдёт тридцать семь лет, а?"
+    },
+    {
+      "source_id": "043-038-0068",
+      "before": "«Сколько времени это займет, Том?»",
+      "after": "— А сколько уйдёт, Том?"
+    },
+    {
+      "source_id": "043-038-0069",
+      "before": "«Ну, мы не можем рисковать и тратить на это столько времени, сколько нужно, потому что дяде Силасу, возможно, не понадобится много времени, чтобы получить известия оттуда, из Нового Орлеана. Он узнает, что Джим не оттуда. Тогда его следующим шагом будет объявление о розыске Джима или что-то в этом роде. Так что мы не можем рисковать и тратить на его откопание столько времени, сколько нужно. По правде говоря, я считаю, что нам понадобилось бы пару лет; но мы не можем. Поскольку ситуация такая неопределённая, я предлагаю следующее: давайте действительно приступим к делу как можно быстрее; а потом будем <i>делать вид</i>, что занимались этим тридцать семь лет. Тогда, как только раздастся сигнал тревоги, мы сможем вытащить его и увести прочь. Да, я думаю, это будет лучший способ».",
+      "after": "— Ну, мы не можем рисковать и тянуть так долго, как следовало бы, потому что дядя Сайлас может очень скоро получить весточку оттуда, из-под Нового Орлеана. Он узнает, что Джим не оттуда. Тогда он следующим делом даст про Джима объявление или что-нибудь в этом роде. Так что мы не можем рисковать и копать так долго, как положено. По-хорошему, нам бы надо года два; но нельзя. Раз всё так неопределённо, я предлагаю вот что: давай и вправду копать как можно скорее, а потом будем между собой <i>считать</i>, будто копали тридцать семь лет. Тогда при первой же тревоге мы выхватим его и быстро уведём. Да, по-моему, так будет лучше всего."
+    },
+    {
+      "source_id": "043-038-0070",
+      "before": "«Ну, в этом есть <i>смысл</i>, — говорю я. — Притворяться ничего не стоит; притворяться — нетрудно; и если это имеет какое-то значение, я не против притвориться, что мы этим занимались сто пятьдесят лет. Мне это не составит никакого труда, раз я уже вошёл в раж. Так что я сейчас пойду-ка и раздобуду пару складных ножей».",
+      "after": "— Вот это <i>толково</i>, — говорю я. — Считать — это ничего не стоит; считать — никакого труда; и если для дела надо, я не против считать, что мы копали хоть сто пятьдесят лет. Мне это не в тягость, как только руку набью. Так что я потихоньку пойду и стяну пару столовых ножей."
+    },
+    {
+      "source_id": "043-038-0071",
+      "before": "«Смазывая ножи»",
+      "after": "Стягиваю ножи"
+    },
+    {
+      "source_id": "043-038-0072",
+      "before": "«Смуч три», — говорит он; «нам нужен один, чтобы сделать из него пилу».",
+      "after": "— Стяни три, — говорит он. — Нам нужен один, чтобы сделать из него пилу."
+    },
+    {
+      "source_id": "043-038-0073",
+      "before": "«Том, если это не будет считаться неуместным и неблагочестивым, — говорю я, — там, вон там, за обшивкой за коптильней торчит старое ржавое лезвие пилы».",
+      "after": "— Том, если не будет против правил и нечестиво предложить, — говорю я, — вон там, за коптильней, под обшивкой торчит старое ржавое пильное полотно."
+    },
+    {
+      "source_id": "043-038-0074",
+      "before": "Он выглядел как-то утомлённым и подавленным и говорит:",
+      "after": "Вид у него стал какой-то усталый и приунывший, и он говорит:"
+    },
+    {
+      "source_id": "043-038-0075",
+      "before": "«Бесполезно пытаться чему-то тебя научить, Хак. Иди-ка и спрячь ножи — все три». И я так и сделал.",
+      "after": "— Бесполезно тебя чему-нибудь учить, Гек. Беги и стяни ножи — три штуки. — Я так и сделал."
+    },
+    {
+      "source_id": "043-038-0076",
+      "before": "Спуск по молниеотводу",
+      "after": "Спуск по громоотводу"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/038/batch003.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKP2bjYdmpA39Ex2AyAt",
+    "usage": {
+      "input_tokens": 8506,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2174,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKP3haK6zVigLu4NjLHw",
+        "usage": {
+          "input_tokens": 10868,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1999,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-038-0060",
+          "verdict": "PASS",
+          "reason": "Faithful; dialogue dash correct."
+        },
+        {
+          "source_id": "043-038-0061",
+          "verdict": "PASS",
+          "reason": "Faithful imperative; idiomatic."
+        },
+        {
+          "source_id": "043-038-0062",
+          "verdict": "PASS",
+          "reason": "Both statements preserved."
+        },
+        {
+          "source_id": "043-038-0063",
+          "verdict": "PASS",
+          "reason": "Italics, thirty-seven years, China and wish preserved; idiomatic."
+        },
+        {
+          "source_id": "043-038-0064",
+          "verdict": "PASS",
+          "reason": "Negation and italic Jim preserved."
+        },
+        {
+          "source_id": "043-038-0065",
+          "verdict": "PASS",
+          "reason": "Meaning, 'neither did' and rebuke preserved; italic kept."
+        },
+        {
+          "source_id": "043-038-0066",
+          "verdict": "PASS",
+          "reason": "Italics, case-knife and 'won't last' faithful."
+        },
+        {
+          "source_id": "043-038-0067",
+          "verdict": "PASS",
+          "reason": "Contradiction, italic dirt and question preserved."
+        },
+        {
+          "source_id": "043-038-0068",
+          "verdict": "PASS",
+          "reason": "Accurate and natural."
+        },
+        {
+          "source_id": "043-038-0069",
+          "verdict": "PASS",
+          "reason": "All plan details, 'let on' italic, tense and logic preserved."
+        },
+        {
+          "source_id": "043-038-0070",
+          "verdict": "PASS",
+          "reason": "Humour, italic sense, hundred and fifty years, smouch preserved."
+        },
+        {
+          "source_id": "043-038-0071",
+          "verdict": "PASS",
+          "reason": "Caption faithful."
+        },
+        {
+          "source_id": "043-038-0072",
+          "verdict": "PASS",
+          "reason": "Faithful; saw purpose preserved."
+        },
+        {
+          "source_id": "043-038-0073",
+          "verdict": "PASS",
+          "reason": "Location and comic phrasing preserved acceptably."
+        },
+        {
+          "source_id": "043-038-0074",
+          "verdict": "PASS",
+          "reason": "Mood and speech tag faithful."
+        },
+        {
+          "source_id": "043-038-0075",
+          "verdict": "PASS",
+          "reason": "Complete; 'So I done it' preserved."
+        },
+        {
+          "source_id": "043-038-0076",
+          "verdict": "PASS",
+          "reason": "Caption faithful."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
