@@ -1,0 +1,122 @@
+{
+  "unit": 30,
+  "batch": 8,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id04066",
+      "target": "— Увы! да, — сказал Атос, глубоко вздохнув.",
+      "source_sha256": "8eae839aec4ca087b8e421f775d1616b7e908a0acd954ff0a87390bfecb10daf",
+      "target_id": "ru-id04066",
+      "tag": "p",
+      "target_sha256": "d1de2563cc408b01aa689e1565297bcd531ffebce8b5b7fcfd6c6ed1d560515c"
+    },
+    {
+      "source_id": "id04067",
+      "target": "И он вошёл третьим. Арамис вошёл последним и закрыл за собой решётку. Двое слуг остались снаружи; но, словно и они не доверяли друг другу, держались поодаль.",
+      "source_sha256": "9edef7b74e725e4ddbd5c91f3503a82abcf8f25db6d7a1c0c4b177d2e2180d81",
+      "target_id": "ru-id04067",
+      "tag": "p",
+      "target_sha256": "878ae82f5c37a7a6a6d78244e0354f02fadf320bb192655d31860fef9ad3a08b"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id04066",
+      "verdict": "PASS",
+      "reason": "Faithful to the source: the interjection, the agreement, the speaker and the deep sigh are all preserved, and the dialogue punctuation is correct."
+    },
+    {
+      "source_id": "id04067",
+      "verdict": "CORRECTED",
+      "reason": "\"ferma la grille\" was rendered as \"запер ... калитку\". This overstated \"ferma\" (closed) as \"locked\", and it was inconsistent with the preceding row, where \"grille\" is \"решётку\". It now reads \"закрыл за собой решётку\". The rest is faithful: the valets stayed outside, the \"as if they too distrusted each other\" nuance is kept, and so is the distance."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id04067",
+      "before": "И он вошёл третьим. Арамис вошёл последним и запер за собой калитку. Двое слуг остались снаружи; но, словно и они не доверяли друг другу, держались поодаль.",
+      "after": "И он вошёл третьим. Арамис вошёл последним и закрыл за собой решётку. Двое слуг остались снаружи; но, словно и они не доверяли друг другу, держались поодаль."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJN9RBsdaFXWRMdAHrux",
+    "usage": {
+      "input_tokens": 1559,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 131,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJN9Y2sceNwsWsmghCiY",
+    "usage": {
+      "input_tokens": 2043,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 948,
+      "output_tokens_details": {
+        "thinking_tokens": 566
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJNA3er1gBk4gQGG5vmn",
+        "usage": {
+          "input_tokens": 2257,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 652,
+          "output_tokens_details": {
+            "thinking_tokens": 261
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04066",
+          "verdict": "PASS",
+          "reason": "Faithful to the French: the interjection «Hélas! oui», the speaker, and the deep sigh are all kept, with correct Russian dialogue punctuation. No omissions or additions."
+        },
+        {
+          "source_id": "id04067",
+          "verdict": "PASS",
+          "reason": "The prior correction is confirmed. «la grille» is now «решётку», which matches the earlier «решётка» in the same scene and replaces the incorrect «калитку». The order of entry (Athos third, Aramis last) is kept. The two valets stay outside and keep their distance, with the «comme si eux aussi se méfiaient l'un de l'autre» nuance intact. Tenses, agency and paragraph boundary are preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
