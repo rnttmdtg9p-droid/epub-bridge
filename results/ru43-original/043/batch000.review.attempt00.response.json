@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKQ3dxtHwfK3YfzQxiAP",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-043-heading\",\"target\":\"ГЛАВА XL.\"},{\"source_id\":\"043-043-0001\",\"target\":\"Рыбалка. — Комитет бдительности. — Весёлая гонка. — Джим советует позвать доктора.\"},{\"source_id\":\"043-043-0002\",\"target\":\"После завтрака мы чувствовали себя вполне славно, взяли мою лодку, переехали реку и отправились ловить рыбу, прихватив с собой обед, и отлично провели время; заодно заглянули к плоту и увидели, что с ним всё в порядке, а домой вернулись поздно, к ужину, и застали всех в такой горячке и тревоге, что они не соображали, на каком они свете; нас тут же отправили спать, как только мы кончили ужинать, и не хотели сказать, что стряслось, и ни словечком не обмолвились про новое письмо, да им и не надо было, потому что мы знали про него не хуже любого другого; и как только мы поднялись до половины лестницы и она отвернулась, мы шмыгнули к буфету в погребе, набрали хорошую порцию еды, отнесли её в нашу комнату, легли спать, а встали около половины двенадцатого, и Том надел платье тёти Салли, которое он украл, и уже собирался идти с едой, но говорит:\"},{\"source_id\":\"043-043-0003\",\"target\":\"— А где масло?\"},{\"source_id\":\"043-043-0004\",\"target\":\"— Я отрезал кусок, — говорю я, — и положил на ломоть кукурузной лепёшки.\"},{\"source_id\":\"043-043-0005\",\"target\":\"— Ну, ты его там <i>оставил</i>, значит, здесь его нет.\"},{\"source_id\":\"043-043-0006\",\"target\":\"— Мы и без него обойдёмся, — говорю я.\"},{\"source_id\":\"043-043-0007\",\"target\":\"— Мы и <i>с</i> ним обойдёмся, — говорит он. — Сползай-ка в погреб и принеси. А потом живо спускайся по громоотводу и приходи. Я пойду набью соломой одежду Джима, чтобы она изображала его мать в маскировке, и буду готов <i>бе-е</i>кать по-овечьи и толкаться, как только ты туда придёшь.\"},{\"source_id\":\"043-043-0008\",\"target\":\"Он ушёл, а я спустился в погреб. Кусок масла, с человеческий кулак величиной, лежал там, где я его оставил, так что я взял ломоть лепёшки вместе с ним, задул свечу и очень тихонько пошёл вверх по лестнице; до первого этажа добрался благополучно, но тут навстречу появилась тётя Салли со свечой, и я сунул всё это добро в шляпу, нахлобучил шляпу на голову, и в следующую секунду она меня увидела; и говорит:\"},{\"source_id\":\"043-043-0009\",\"target\":\"— Ты был в погребе?\"},{\"source_id\":\"043-043-0010\",\"target\":\"— Да, мэм.\"},{\"source_id\":\"043-043-0011\",\"target\":\"— Что ты там делал?\"},{\"source_id\":\"043-043-0012\",\"target\":\"— Ничего.\"},{\"source_id\":\"043-043-0013\",\"target\":\"— <i>Ничего!</i>\"},{\"source_id\":\"043-043-0014\",\"target\":\"— Нет, мэм.\"},{\"source_id\":\"043-043-0015\",\"target\":\"— Так что же тебя понесло туда в такое время ночи?\"},{\"source_id\":\"043-043-0016\",\"target\":\"— Не знаю, мэм.\"},{\"source_id\":\"043-043-0017\",\"target\":\"— Не <i>знаешь?</i> Не отвечай мне так. Том, я хочу знать, что ты там <i>делал</i>.\"},{\"source_id\":\"043-043-0018\",\"target\":\"— Я ничегошеньки не делал, тётя Салли, провалиться мне на этом месте.\"},{\"source_id\":\"043-043-0019\",\"target\":\"Я думал, она теперь меня отпустит, и обычно так бы и вышло; но, наверно, творилось столько странного, что она вся кипела из-за каждой мелочи, которая была не по линейке; так что она сказала очень решительно:\"}],\"review\":[{\"source_id\":\"043-043-heading\",\"verdict\":\"PASS\",\"reason\":\"Heading correct.\"},{\"source_id\":\"043-043-0001\",\"verdict\":\"CORRECTED\",\"reason\":\"\\\"Lively Run\\\" rendered as a merry race, not a pursuit; doctor advice clarified.\"},{\"source_id\":\"043-043-0002\",\"target\":\"\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed canoe gender, idioms, sweat/worry, lunch, and colloquial register; kept long run-on.\"},{\"source_id\":\"043-043-0003\",\"verdict\":\"CORRECTED\",\"reason\":\"Russian dialogue dash punctuation.\"},{\"source_id\":\"043-043-0004\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed corn-pone and butter reference.\"},{\"source_id\":\"043-043-0005\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft misread 'it ain't here'; now logical, italic kept.\"},{\"source_id\":\"043-043-0006\",\"verdict\":\"CORRECTED\",\"reason\":\"Dash dialogue; 'without it' refers to butter.\"},{\"source_id\":\"043-043-0007\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed butter reference, sheep bleat, italics, dialogue.\"},{\"source_id\":\"043-043-0008\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft lost that butter was taken with pone; fixed candle and hat details.\"},{\"source_id\":\"043-043-0009\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation.\"},{\"source_id\":\"043-043-0010\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation.\"},{\"source_id\":\"043-043-0011\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation.\"},{\"source_id\":\"043-043-0012\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation.\"},{\"source_id\":\"043-043-0013\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed italic span and dialogue.\"},{\"source_id\":\"043-043-0014\",\"verdict\":\"CORRECTED\",\"reason\":\"Matches her question 'Nothing?'; dash dialogue.\"},{\"source_id\":\"043-043-0015\",\"verdict\":\"CORRECTED\",\"reason\":\"More idiomatic 'what possessed you'.\"},{\"source_id\":\"043-043-0016\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft mistranslated as 'I don't know them'.\"},{\"source_id\":\"043-043-0017\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dashes, italics kept.\"},{\"source_id\":\"043-043-0018\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft garbled the oath; made idiomatic.\"},{\"source_id\":\"043-043-0019\",\"verdict\":\"CORRECTED\",\"reason\":\"'Yard-stick straight' idiom restored; sweat rendered colloquially.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8795,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2417,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
