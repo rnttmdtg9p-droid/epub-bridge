@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJvoBwRawgC9oaBfYrWT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-031-0081\",\"target\":\"Эти слова были быстро поняты всем экипажем. Речь шла о средстве, которое иногда удаётся: можно укротить ярость волн, покрыв их слоем масла; этот слой держится на поверхности и смягчает удар воды, которую он смазывает. Действие его мгновенно, но непродолжительно. Когда корабль минует это искусственное море, оно удваивает свою ярость, и горе тому, кто рискнёт идти следом[[FN:66]].\"},{\"source_id\":\"fr42c-031-0082\",\"target\":\"Бочки с запасом тюленьего жира были подняты экипажем на бак; опасность удесятеряла, даже усотеряла силы людей. Там их выбили топорами донья и подвесили над фальшбортами правого и левого бортов.\"},{\"source_id\":\"fr42c-031-0083\",\"target\":\"«Держись крепче!» — крикнул Джон Манглс, выжидая удобный момент.\"},{\"source_id\":\"fr42c-031-0084\",\"target\":\"Через двадцать секунд яхта достигла входа в проход, перегороженный ревущим бором. Настала минута.\"},{\"source_id\":\"fr42c-031-0085\",\"target\":\"«С Богом!» — крикнул молодой капитан.\"},{\"source_id\":\"fr42c-031-0086\",\"target\":\"Бочки опрокинули, и из их боков хлынули потоки масла. Мгновенно маслянистая плёнка, так сказать, выровняла пенистую поверхность моря. «<i>Дункан</i>» полетел по усмирённым водам и вскоре очутился в спокойной заводи за грозными банками, а Океан, освобождённый от оков, с неописуемой яростью бесновался позади него.\"},{\"source_id\":\"fr42c-note-063\",\"target\":\"Ветры, дующие в Индийском океане с чрезвычайной силой. Направление их непостоянно, оно меняется в зависимости от времени года, и летние муссоны, как правило, противоположны зимним.\"},{\"source_id\":\"fr42c-note-064\",\"target\":\"73,09 сантиметра. Нормальная высота барометрического столба — 76 сантиметров.\"},{\"source_id\":\"fr42c-note-065\",\"target\":\"Стеклянные трубки со смесью химических веществ, которая меняет вид в зависимости от направления ветра и электрического напряжения атмосферы. Лучшие из них изготовляют господа Негретти и Замбра, оптики британского флота.\"},{\"source_id\":\"fr42c-note-066\",\"target\":\"Поэтому морские правила запрещают капитанам прибегать к этому отчаянному средству, когда за ними следует другое судно и входит в тот же проход.\"}],\"review\":[{\"source_id\":\"fr42c-031-0081\",\"verdict\":\"CORRECTED\",\"reason\":\"Smoothed syntax; \\\"qui réussit quelquefois\\\" and \\\"passe vite\\\" rendered more precisely; note token preserved.\"},{\"source_id\":\"fr42c-031-0082\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed nautical terms (бак, фальшборты), \\\"défoncés\\\" as knocking out heads, and the force-multiplication clause; I also removed the draft's wrong \\\"under the influence\\\" paraphrase.\"},{\"source_id\":\"fr42c-031-0083\",\"verdict\":\"CORRECTED\",\"reason\":\"\\\"Tiens bon\\\" rendered as \\\"Держись крепче\\\"; the rest is faithful.\"},{\"source_id\":\"fr42c-031-0084\",\"verdict\":\"CORRECTED\",\"reason\":\"Mascaret is a tidal bore, not simply a tidal current; \\\"passe\\\" rendered as a channel passage; \\\"C'était l'instant\\\" kept literal.\"},{\"source_id\":\"fr42c-031-0085\",\"verdict\":\"CORRECTED\",\"reason\":\"The French exclamation is translated rather than left untranslated; it is not a foreign document.\"},{\"source_id\":\"fr42c-031-0086\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the italic span and the grammatical gender error (неслась after океан); \\\"bancs\\\" restored as banks; wording tightened.\"},{\"source_id\":\"fr42c-note-063\",\"verdict\":\"CORRECTED\",\"reason\":\"Minor grammar and idiom fixes: \\\"непостоянно\\\", \\\"времени года\\\".\"},{\"source_id\":\"fr42c-note-064\",\"verdict\":\"CORRECTED\",\"reason\":\"Minor stylistic fix; figures preserved.\"},{\"source_id\":\"fr42c-note-065\",\"verdict\":\"CORRECTED\",\"reason\":\"\\\"Verres\\\" clarified as glass tubes, and the wording \\\"изготовляют\\\" made more natural; facts preserved.\"},{\"source_id\":\"fr42c-note-066\",\"verdict\":\"CORRECTED\",\"reason\":\"\\\"passé\\\" is an obvious typo for \\\"passe\\\"; rendered as \\\"проход\\\", consistent with the main text.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 6630,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1669,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

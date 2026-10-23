@@ -1,0 +1,378 @@
+{
+  "unit": 31,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-031-0081",
+      "target": "Эти слова были быстро поняты всем экипажем. Речь шла о средстве, которое иногда удаётся: можно укротить ярость волн, покрыв их слоем масла; этот слой держится на поверхности и смягчает удар воды, которую он смазывает. Действие его мгновенно, но непродолжительно. Когда корабль минует это искусственное море, оно удваивает свою ярость, и горе тому, кто рискнёт идти следом[[FN:66]].",
+      "source_sha256": "c6eb84d69f291b488438c0dc0fee4bcdffbc2ccd41b0540d544695ce7116601f",
+      "target_id": "ru-fr42c-031-0081",
+      "tag": "p",
+      "target_sha256": "29678e5e095a3ba315bb4be94503281e9a0dfe5f201fd1d126e55d63a70fdbc0"
+    },
+    {
+      "source_id": "fr42c-031-0082",
+      "target": "Бочки с запасом тюленьего жира были подняты экипажем на бак; опасность удесятеряла силы людей. Там их выбили топорами донья и подвесили над фальшбортами правого и левого бортов.",
+      "source_sha256": "baaecb87a763d3c47c1d81781ec12a58f6d714f7a258d29b4fdb27b79e1448f0",
+      "target_id": "ru-fr42c-031-0082",
+      "tag": "p",
+      "target_sha256": "e86b8087a05692001b12274da8d17e5a8d587fc94afdd74f65e1f465b28d4467"
+    },
+    {
+      "source_id": "fr42c-031-0083",
+      "target": "«Держись крепче!» — крикнул Джон Манглс, выжидая удобный момент.",
+      "source_sha256": "fc2883983613316abc3301014d4d413effea03a1119fe46b8ce4e55a1a1a9059",
+      "target_id": "ru-fr42c-031-0083",
+      "tag": "p",
+      "target_sha256": "87a1108b989c6d5ab5683e08a85800e60be661acde395676960b880068c7099b"
+    },
+    {
+      "source_id": "fr42c-031-0084",
+      "target": "Через двадцать секунд яхта достигла входа в проход, перегороженный ревущим бором. Настала минута.",
+      "source_sha256": "336b1ec719c6629b0bdd3045efb9e6f169bc2d2aec255fdcb4d16d995805ba91",
+      "target_id": "ru-fr42c-031-0084",
+      "tag": "p",
+      "target_sha256": "a3162ea6d6210706cf0ec90945c40603d6b044b135c921b6afbd3ef8445b11c4"
+    },
+    {
+      "source_id": "fr42c-031-0085",
+      "target": "«С Богом!» — крикнул молодой капитан.",
+      "source_sha256": "5b2da8b8ea1ad9c3d1aca0920acf1303f0e6a531d29b5c11ba21271babae1d17",
+      "target_id": "ru-fr42c-031-0085",
+      "tag": "p",
+      "target_sha256": "33011bb8d59b35a95d6309464651f526645e1a9ceeac339759cb6893e6ffdb6a"
+    },
+    {
+      "source_id": "fr42c-031-0086",
+      "target": "Бочки опрокинули, и из их боков хлынули потоки масла. Мгновенно маслянистая плёнка, так сказать, выровняла пенистую поверхность моря. «<i>Дункан</i>» полетел по усмирённым водам и вскоре очутился в спокойной заводи за грозными банками, а Океан, освобождённый от оков, с неописуемой яростью бесновался позади него.",
+      "source_sha256": "298a526e02e56e64aecc47a4ae62d22422947243967e732ac36d910a8297c7e8",
+      "target_id": "ru-fr42c-031-0086",
+      "tag": "p",
+      "target_sha256": "38fc3d00ceb697b7f5b2698a087986741b3242bbba0f9ed52ba9caf10cdef418"
+    },
+    {
+      "source_id": "fr42c-note-063",
+      "target": "Ветры, дующие в Индийском океане с чрезвычайной силой. Направление их непостоянно, оно меняется в зависимости от времени года, и летние муссоны, как правило, противоположны зимним.",
+      "source_sha256": "06d0671b7d514a1de328b2afafa5f69e742f56e0e3882deba8f9688559654435",
+      "target_id": "ru-fr42c-note-063",
+      "tag": "note",
+      "target_sha256": "466cb253e8ae38f448f01aa5aca693cf0aa22be10c761833fa6e980e60175161"
+    },
+    {
+      "source_id": "fr42c-note-064",
+      "target": "73,09 сантиметра. Нормальная высота барометрического столба — 76 сантиметров.",
+      "source_sha256": "1ba20e980c8cf5ba3acd419113b65450d2c34ddad604f6a77ba45c52ec568838",
+      "target_id": "ru-fr42c-note-064",
+      "tag": "note",
+      "target_sha256": "c8f07a0f4e5cc29cd5db3e4f5c8e463b0343ad45183a766ae0b55be839549684"
+    },
+    {
+      "source_id": "fr42c-note-065",
+      "target": "Стеклянные трубки со смесью химических веществ, которая меняет вид в зависимости от направления ветра и электрического напряжения атмосферы. Лучшие из них изготовляют господа Негретти и Замбра, оптики британского флота.",
+      "source_sha256": "8baaad3a4cd88882da6e64be8dcd3eeff2ad1c92035beb2654c786ffb980527c",
+      "target_id": "ru-fr42c-note-065",
+      "tag": "note",
+      "target_sha256": "9227eda7044da824ef21447eb173dc5c9e06e0cdbb9fe3697832d1c9e71a2651"
+    },
+    {
+      "source_id": "fr42c-note-066",
+      "target": "Поэтому морские правила запрещают капитанам прибегать к этому отчаянному средству, когда за ними следует другое судно и входит в тот же проход.",
+      "source_sha256": "811d4b1287cc1fe5a35b7210dcfac0ab6ac61552955c1758095e28890b45cb61",
+      "target_id": "ru-fr42c-note-066",
+      "tag": "note",
+      "target_sha256": "2c7a0302346748f86736897eb6867bc5b2e83792e38aeba1de3b575c227614e9"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-031-0081",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed syntax; \"qui réussit quelquefois\" and \"passe vite\" rendered more precisely; note token preserved."
+    },
+    {
+      "source_id": "fr42c-031-0082",
+      "verdict": "CORRECTED",
+      "reason": "Fixed nautical terms (бак, фальшборты), \"défoncés\" as knocking out heads, and the force-multiplication clause; I also removed the draft's wrong \"under the influence\" paraphrase."
+    },
+    {
+      "source_id": "fr42c-031-0083",
+      "verdict": "CORRECTED",
+      "reason": "\"Tiens bon\" rendered as \"Держись крепче\"; the rest is faithful."
+    },
+    {
+      "source_id": "fr42c-031-0084",
+      "verdict": "CORRECTED",
+      "reason": "Mascaret is a tidal bore, not simply a tidal current; \"passe\" rendered as a channel passage; \"C'était l'instant\" kept literal."
+    },
+    {
+      "source_id": "fr42c-031-0085",
+      "verdict": "CORRECTED",
+      "reason": "The French exclamation is translated rather than left untranslated; it is not a foreign document."
+    },
+    {
+      "source_id": "fr42c-031-0086",
+      "verdict": "CORRECTED",
+      "reason": "Fixed the italic span and the grammatical gender error (неслась after океан); \"bancs\" restored as banks; wording tightened."
+    },
+    {
+      "source_id": "fr42c-note-063",
+      "verdict": "CORRECTED",
+      "reason": "Minor grammar and idiom fixes: \"непостоянно\", \"времени года\"."
+    },
+    {
+      "source_id": "fr42c-note-064",
+      "verdict": "CORRECTED",
+      "reason": "Minor stylistic fix; figures preserved."
+    },
+    {
+      "source_id": "fr42c-note-065",
+      "verdict": "CORRECTED",
+      "reason": "\"Verres\" clarified as glass tubes, and the wording \"изготовляют\" made more natural; facts preserved."
+    },
+    {
+      "source_id": "fr42c-note-066",
+      "verdict": "CORRECTED",
+      "reason": "\"passé\" is an obvious typo for \"passe\"; rendered as \"проход\", consistent with the main text."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-031-0081",
+      "before": "Эти слова были быстро поняты всем экипажем. Речь шла о применении средства, которое иногда дает результат; можно успокоить ярость волн, покрыв их слоем масла; этот слой плавает на поверхности и гасит удар воды, которую он смазывает. Эффект наступает немедленно, но быстро проходит. Как только корабль преодолевает это искусственное море, оно удваивает свою ярость, и горе тому, кто осмелится последовать за ним[[FN:66]].",
+      "after": "Эти слова были быстро поняты всем экипажем. Речь шла о средстве, которое иногда удаётся: можно укротить ярость волн, покрыв их слоем масла; этот слой держится на поверхности и смягчает удар воды, которую он смазывает. Действие его мгновенно, но непродолжительно. Когда корабль минует это искусственное море, оно удваивает свою ярость, и горе тому, кто рискнёт идти следом[[FN:66]]."
+    },
+    {
+      "source_id": "fr42c-031-0082",
+      "before": "Бочки с запасом тюленьего жира были подняты на носовую палубу экипажем, чьи силы стократно усилились под влиянием опасности. Там их разбили топорами и подвесили над релингами по правому и левому борту.",
+      "after": "Бочки с запасом тюленьего жира были подняты экипажем на бак; опасность удесятеряла, даже усотеряла силы людей. Там их выбили топорами донья и подвесили над фальшбортами правого и левого бортов."
+    },
+    {
+      "source_id": "fr42c-031-0083",
+      "before": "«Держись!» — крикнул Джон Манглс, выжидая подходящий момент.",
+      "after": "«Держись крепче!» — крикнул Джон Манглс, выжидая удобный момент."
+    },
+    {
+      "source_id": "fr42c-031-0084",
+      "before": "Через двадцать секунд яхта достигла входа в пролив, перекрытого ревущим приливным течением. Настал решающий момент.",
+      "after": "Через двадцать секунд яхта достигла входа в проход, перегороженный ревущим бором. Настала минута."
+    },
+    {
+      "source_id": "fr42c-031-0085",
+      "before": "«À Dieu vat!» — воскликнул молодой капитан.",
+      "after": "«С Богом!» — крикнул молодой капитан."
+    },
+    {
+      "source_id": "fr42c-031-0086",
+      "before": "Бочки опрокинули, и из их боков хлынули потоки масла. Мгновенно маслянистая пленка, так сказать, сгладила пенистую поверхность моря. <i>«Дункан</i>» мчался по успокоившимся водам и вскоре оказался в тихом заливе, за грозными отмелями, в то время как океан, освободившись от своих оков, неслась за ним с неописуемой яростью.",
+      "after": "Бочки опрокинули, и из их боков хлынули потоки масла. Мгновенно маслянистая плёнка, так сказать, выровняла пенистую поверхность моря. «<i>Дункан</i>» полетел по усмирённым водам и вскоре очутился в спокойной заводи за грозными банками, а Океан, освобождённый от оков, с неописуемой яростью бесновался позади него."
+    },
+    {
+      "source_id": "fr42c-note-063",
+      "before": "Ветры, дующие в Индийском океане с чрезвычайной силой. Их направление не постоянное, оно меняется в зависимости от сезона, и летние муссоны, как правило, противоположны зимним.",
+      "after": "Ветры, дующие в Индийском океане с чрезвычайной силой. Направление их непостоянно, оно меняется в зависимости от времени года, и летние муссоны, как правило, противоположны зимним."
+    },
+    {
+      "source_id": "fr42c-note-064",
+      "before": "73,09 сантиметра. Нормальная высота барометрического столба составляет 76 сантиметров.",
+      "after": "73,09 сантиметра. Нормальная высота барометрического столба — 76 сантиметров."
+    },
+    {
+      "source_id": "fr42c-note-065",
+      "before": "Стаканы, содержащие химическую смесь, которая меняет свой вид в зависимости от направления ветра и электрического напряжения в атмосфере. Лучшие из них изготавливают господа Негретти и Замбра, оптики британского флота.",
+      "after": "Стеклянные трубки со смесью химических веществ, которая меняет вид в зависимости от направления ветра и электрического напряжения атмосферы. Лучшие из них изготовляют господа Негретти и Замбра, оптики британского флота."
+    },
+    {
+      "source_id": "fr42c-note-066",
+      "before": "Поэтому морские правила запрещают капитанам прибегать к этому отчаянному средству, когда за ними следует другое судно и входит в тот же пролив.",
+      "after": "Поэтому морские правила запрещают капитанам прибегать к этому отчаянному средству, когда за ними следует другое судно и входит в тот же проход."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/031/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJvoBwRawgC9oaBfYrWT",
+    "usage": {
+      "input_tokens": 6630,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1669,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJvpAFG3CbfGorxxP4xT",
+        "usage": {
+          "input_tokens": 8356,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1495,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-031-0081",
+          "verdict": "PASS",
+          "reason": "Accurate: oil remedy, temporary effect, warning and note token preserved."
+        },
+        {
+          "source_id": "fr42c-031-0082",
+          "verdict": "CORRECTED",
+          "reason": "Removed the added 'даже усотеряла'; source says danger centupled strength, rendered as intensified strength without the extra doublet. Barrels, axes, bulwarks preserved."
+        },
+        {
+          "source_id": "fr42c-031-0083",
+          "verdict": "PASS",
+          "reason": "Command, speaker and watching for the favourable moment are faithful."
+        },
+        {
+          "source_id": "fr42c-031-0084",
+          "verdict": "PASS",
+          "reason": "Twenty seconds, pass entrance, roaring mascaret and the moment are accurate."
+        },
+        {
+          "source_id": "fr42c-031-0085",
+          "verdict": "PASS",
+          "reason": "Idiomatic rendering of the nautical exclamation; speaker preserved."
+        },
+        {
+          "source_id": "fr42c-031-0086",
+          "verdict": "PASS",
+          "reason": "Events, agency, italic ship name and Ocean's fury are faithful."
+        },
+        {
+          "source_id": "fr42c-note-063",
+          "verdict": "PASS",
+          "reason": "Monsoon note is accurate."
+        },
+        {
+          "source_id": "fr42c-note-064",
+          "verdict": "PASS",
+          "reason": "Numbers and barometer meaning are accurate."
+        },
+        {
+          "source_id": "fr42c-note-065",
+          "verdict": "PASS",
+          "reason": "Chemical mixture, wind and electrical tension, makers are accurate."
+        },
+        {
+          "source_id": "fr42c-note-066",
+          "verdict": "PASS",
+          "reason": "Regulation note is accurate; typo 'passé' read as 'passe'."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-031-0082",
+          "before": "Бочки с запасом тюленьего жира были подняты экипажем на бак; опасность удесятеряла, даже усотеряла силы людей. Там их выбили топорами донья и подвесили над фальшбортами правого и левого бортов.",
+          "after": "Бочки с запасом тюленьего жира были подняты экипажем на бак; опасность удесятеряла силы людей. Там их выбили топорами донья и подвесили над фальшбортами правого и левого бортов."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJvpnQdJPPnEy756W8eW",
+        "usage": {
+          "input_tokens": 8532,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1642,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-031-0081",
+          "verdict": "PASS",
+          "reason": "Meaning, tenses, the oil-slick explanation and the [[FN:66]] token are faithful and idiomatic. Minor liberty: «горе» for malheur is fine."
+        },
+        {
+          "source_id": "fr42c-031-0082",
+          "verdict": "PASS",
+          "reason": "Barrels, seal oil, crew, danger, axes and both sides are faithful. The earlier 'centuplait' became 'удесятеряла', a mild weakening of 'hundredfold', but acceptable idiom."
+        },
+        {
+          "source_id": "fr42c-031-0083",
+          "verdict": "PASS",
+          "reason": "The order, speaker and watching for the favourable moment are preserved."
+        },
+        {
+          "source_id": "fr42c-031-0084",
+          "verdict": "PASS",
+          "reason": "Twenty seconds, the entrance to the pass, the roaring bore and 'the moment' are preserved."
+        },
+        {
+          "source_id": "fr42c-031-0085",
+          "verdict": "PASS",
+          "reason": "'À Dieu vat' is rendered with the idiomatic «С Богом!»; the young captain is preserved."
+        },
+        {
+          "source_id": "fr42c-031-0086",
+          "verdict": "PASS",
+          "reason": "The oil flow, the levelled surface, the calm basin, the shoals and the furious Ocean behind are preserved. The italic ship name is correct."
+        },
+        {
+          "source_id": "fr42c-note-063",
+          "verdict": "PASS",
+          "reason": "Violence, variable direction by season and opposed monsoons are preserved."
+        },
+        {
+          "source_id": "fr42c-note-064",
+          "verdict": "PASS",
+          "reason": "The figures and the normal barometric height are accurate."
+        },
+        {
+          "source_id": "fr42c-note-065",
+          "verdict": "PASS",
+          "reason": "The chemical mixture, wind and electrical tension, the makers and the British navy opticians are preserved. 'Verres' as «трубки» is an interpretive but acceptable choice."
+        },
+        {
+          "source_id": "fr42c-note-066",
+          "verdict": "PASS",
+          "reason": "The regulations, the prohibition, the following ship and the same pass are preserved; the source typo 'passé' is read as 'passe'."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
