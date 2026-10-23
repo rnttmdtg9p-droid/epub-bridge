@@ -1,0 +1,123 @@
+{
+  "unit": 85,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id11282",
+      "target": "— Арамис, — сказал Атос, — меня арестовывают.",
+      "source_sha256": "7e0a19331764e19582761a45e77587d5eebb8d6f244f82749599dfc253d6bca5",
+      "target_id": "ru-id11282",
+      "tag": "p",
+      "target_sha256": "a9f9230c073d4467db0cb0c01ee7c4fa1f814b11a38ec6e56fd3a4715c436298"
+    },
+    {
+      "source_id": "id11283",
+      "target": "— Хорошо, — флегматично ответил Арамис.",
+      "source_sha256": "8ead6a6cae71f2556ef93462c4e5290aaeb852e336e8ca42da5216a2d39e4286",
+      "target_id": "ru-id11283",
+      "tag": "p",
+      "target_sha256": "d9abb92a9d03413798715eab85314ab878448104f74d3c29cead0dbc6416e8cf"
+    },
+    {
+      "source_id": "id11284",
+      "target": "— Сударь, — сказал Атос, обернувшись к Коменжу и учтиво протягивая ему шпагу эфесом вперёд, — вот моя шпага; прошу вас бережно сохранить её, чтобы вернуть мне, когда я выйду из тюрьмы. Я ею дорожу: её подарил моему предку король Франциск I. В его время дворян вооружали, а не обезоруживали. А теперь куда вы меня поведёте?",
+      "source_sha256": "2a64849ae73bd2b3970ca93f35f3282f3187b987849036c61b1d0691b5314aaa",
+      "target_id": "ru-id11284",
+      "tag": "p",
+      "target_sha256": "e6a596a804bd132177fd17f8b706fbc6949133f9011e236a56008200c336df08"
+    },
+    {
+      "source_id": "id11285",
+      "target": "— Но… сначала в мою комнату, — сказал Коменж. — Место вашего жительства королева определит позднее.",
+      "source_sha256": "419f5ff02ce737e0d410a46768395c7d16c648e0bbea152e8fb1ec412eda5d68",
+      "target_id": "ru-id11285",
+      "tag": "p",
+      "target_sha256": "f0477a6f0c9bc8ccf4ae20474c3b3f0659d1758839df4025a586e5ee68f3b497"
+    },
+    {
+      "source_id": "id11286",
+      "target": "Атос последовал за Коменжем, не прибавив ни слова.",
+      "source_sha256": "bd829ee35d5a110fc78066ff2d1abb6d6b82ccebe43edab6ed2994c556c7ccc3",
+      "target_id": "ru-id11286",
+      "tag": "p",
+      "target_sha256": "8964f62154c4d623e7b22b4d6234c7d3ab0642eb06c0484edfbc78d7accda7d1"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id11282",
+      "verdict": "PASS",
+      "reason": "Faithful; the present tense of 'on m'arrête' and the impersonal agency are preserved."
+    },
+    {
+      "source_id": "id11283",
+      "verdict": "PASS",
+      "reason": "Faithful; 'flegmatiquement' and Aramis's brevity are preserved."
+    },
+    {
+      "source_id": "id11284",
+      "verdict": "PASS",
+      "reason": "Complete and accurate: the courteous offer of the sword, the request to keep it carefully, the François I heirloom, the arming/disarming contrast, and the final question are all present."
+    },
+    {
+      "source_id": "id11285",
+      "verdict": "CORRECTED",
+      "reason": "'Le lieu de votre domicile' was rendered as 'место вашего заключения', which makes explicit what Comminges's euphemism leaves unsaid. Changed to 'место вашего жительства'."
+    },
+    {
+      "source_id": "id11286",
+      "verdict": "PASS",
+      "reason": "Faithful; Athos follows Comminges without adding a word."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id11285",
+      "before": "— Но… сначала в мою комнату, — сказал Коменж. — Место вашего заключения королева определит позднее.",
+      "after": "— Но… сначала в мою комнату, — сказал Коменж. — Место вашего жительства королева определит позднее."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXioz3SFmgu2tHxGoth",
+    "usage": {
+      "input_tokens": 1961,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 348,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJXj7zmJoDHRcTxa8RNd",
+    "usage": {
+      "input_tokens": 3018,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1170,
+      "output_tokens_details": {
+        "thinking_tokens": 485
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
