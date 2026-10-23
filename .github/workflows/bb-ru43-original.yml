@@ -1,0 +1,33 @@
+name: BB Russian43 complete English original translation and AI review
+on:
+  push:
+    paths: ['.github/workflows/bb-ru43-original.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Configure durable production checkpoints
+        run: |
+          git config user.name 'Boundary Bay Production'
+          git config user.email 'production@boundarybaypublishing.com'
+      - name: Translate every original unit and review every aligned row
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru43_original.py
+      - name: Preserve every actual exchange and qualification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru43-original-translation-review-v5070
+          path: results/ru43-original/
+          retention-days: 90
+          if-no-files-found: error
