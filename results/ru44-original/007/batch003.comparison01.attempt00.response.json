@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKZLjwLPZHqWK6YeHBjW",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"044-007-0046\",\"target\":\"Тогда вперёд вышел старый волк, тощий, весь в боевых шрамах. Бэк скривил губы, начиная было рычать, но всё же обнюхался с ним носами. Тут старый волк сел, поднял морду к луне и разразился долгим волчьим воем. Остальные сели и завыли. И теперь зов дошёл до Бэка в безошибочных звуках. Он тоже сел и завыл. Когда вой смолк, он вышел из своего угла, и стая сгрудилась вокруг него, обнюхивая его наполовину дружелюбно, наполовину свирепо. Вожаки подхватили лай стаи и скрылись в лесу. Волки хлынули следом, лая хором. И Бэк бежал вместе с ними, бок о бок с диким братом, лая на бегу.\"},{\"source_id\":\"044-007-0047\",\"target\":\"На этом вполне может кончиться повесть о Бэке. Прошло не много лет, и йихэты заметили перемену в породе лесных волков: у некоторых на голове и морде появились бурые пятна, а по груди шла посередине белая полоса. Но ещё удивительнее то, что йихэты рассказывают о Призрачном Псе, который бежит во главе стаи. Они боятся этого Призрачного Пса, ибо хитрости в нём больше, чем в них: в лютые зимы он крадёт из их лагерей, грабит их капканы, убивает их собак и бросает вызов храбрейшим их охотникам.\"},{\"source_id\":\"044-007-0048\",\"target\":\"Нет, рассказ становится ещё мрачнее. Есть охотники, которые не возвращаются в лагерь, и бывали такие, которых соплеменники находили с жестоко перерезанным горлом, а вокруг на снегу виднелись волчьи следы, крупнее следов любого волка. Каждую осень, когда йихэты идут за передвижением лосей, есть одна долина, в которую они никогда не входят. И есть женщины, которые становятся печальны, когда у костра заходит речь о том, как Злой Дух избрал эту долину своим пристанищем.\"},{\"source_id\":\"044-007-0049\",\"target\":\"Однако летом в эту долину приходит один гость, о котором йихэты не знают. Это огромный волк с великолепной шерстью, похожий и всё же непохожий на всех прочих волков. Он в одиночку переходит из улыбчивой лесной страны и спускается на открытое место среди деревьев. Здесь жёлтый ручеёк течёт из истлевших мешков из лосиной шкуры и уходит в землю; сквозь него растёт высокая трава, его застилает растительный перегной, пряча его желтизну от солнца; и здесь волк некоторое время размышляет, раз протяжно и скорбно завыв, прежде чем уйти.\"},{\"source_id\":\"044-007-0050\",\"target\":\"Но он не всегда один. Когда наступают долгие зимние ночи и волки идут за своей добычей в нижние долины, его можно увидеть бегущим во главе стаи в бледном лунном свете или в мерцании северного сияния: он взлетает в прыжках исполином над своими собратьями, и могучее горло его гудит, когда он поёт песню юного мира, песню стаи.\"},{\"source_id\":\"044-007-caption-plate-16\",\"target\":\"Взошла полная луна\"},{\"source_id\":\"044-007-caption-plate-17\",\"target\":\"Ложась, когда лось стоял неподвижно\"},{\"source_id\":\"044-007-caption-plate-18\",\"target\":\"Летом есть один гость … в эту долину, … огромный волк с великолепной шерстью\"}],\"review\":[{\"source_id\":\"044-007-0046\",\"verdict\":\"PASS\",\"reason\":\"Faithful: old wolf, snarl turned to nose-sniffing, howl, pack, departure all preserved; Бэк name correct; prior corrections verified.\"},{\"source_id\":\"044-007-0047\",\"verdict\":\"PASS\",\"reason\":\"Complete and accurate; йихэты, Ghost Dog, cunning, traps, dogs and hunters preserved; earlier name errors fixed.\"},{\"source_id\":\"044-007-0048\",\"verdict\":\"PASS\",\"reason\":\"Meaning, ominous tone, oversized prints, avoided valley and Evil Spirit all accurate; idiomatic.\"},{\"source_id\":\"044-007-0049\",\"verdict\":\"PASS\",\"reason\":\"Summer visitor, unknown to Yeehats, yellow stream, moose-hide sacks, single howl all preserved; good Russian.\"},{\"source_id\":\"044-007-0050\",\"verdict\":\"PASS\",\"reason\":\"Winter running at pack's head, borealis, gigantic leaps, song of the younger world faithfully rendered.\"},{\"source_id\":\"044-007-caption-plate-16\",\"verdict\":\"PASS\",\"reason\":\"Accurate concise caption.\"},{\"source_id\":\"044-007-caption-plate-17\",\"verdict\":\"PASS\",\"reason\":\"Accurate; 'lying down' as participle with moose standing still.\"},{\"source_id\":\"044-007-caption-plate-18\",\"verdict\":\"PASS\",\"reason\":\"Ellipses retained; 'one visitor… to that valley… great, gloriously coated wolf' translated fully.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 22157,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1800,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
