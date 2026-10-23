@@ -1,0 +1,802 @@
+{
+  "unit": 7,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "045-007-0096",
+      "target": "— Не особенно.",
+      "source_sha256": "ce380cdac95fa58d5b5cd457ec4b955771f44a2400c73cdc6956c8cafdae5e66",
+      "target_id": "ru-045-007-0096",
+      "tag": "p",
+      "target_sha256": "dbd2b8b2193994744061988d5da5a94c543081cbf56a682b42401133c13deb41"
+    },
+    {
+      "source_id": "045-007-0097",
+      "target": "— Тогда предлагаю превратить наш обед в ужин и пойти по этому следу, пока он ещё горяч.",
+      "source_sha256": "268f7a34f8078b007010870c9859a1044aea28674b836819f0ad4ca633ebf4c4",
+      "target_id": "ru-045-007-0097",
+      "tag": "p",
+      "target_sha256": "8addafffe2abbaf62bb328e954e6660f97b93568b4d6e34f73f3bb4f9dab0359"
+    },
+    {
+      "source_id": "045-007-0098",
+      "target": "— Разумеется.",
+      "source_sha256": "ec5ba692dfd95be18100a6e1a212c166f393c0c438872c67730c20a2d5d1f259",
+      "target_id": "ru-045-007-0098",
+      "tag": "p",
+      "target_sha256": "23bf5c47abe76b78a34f80486be29b9d77772f377644954fd5fe5841d4e14227"
+    },
+    {
+      "source_id": "045-007-0099",
+      "target": "Ночь была жестокая, поэтому мы надели ульстеры и обмотали шеи шарфами. Снаружи холодно сияли звёзды в безоблачном небе, а дыхание прохожих вылетало клубами дыма, словно выстрелы из множества пистолетов. Наши шаги звонко и отчётливо отдавались, пока мы быстро шли через квартал врачей — Уимпол-стрит, Харли-стрит, а затем по Вигмор-стрит выходили на Оксфорд-стрит. Через четверть часа мы были в Блумсбери, у «Альфы» — небольшого трактира на углу одной из улиц, сбегающих к Холборну. Холмс толкнул дверь отдельного бара и заказал два стакана пива у краснолицего хозяина в белом фартуке.",
+      "source_sha256": "d787112d010a8acad6efee16a6e86e8f6f010f641c18ba77bb157897a5f1279c",
+      "target_id": "ru-045-007-0099",
+      "tag": "p",
+      "target_sha256": "db02c8d0915b5410a9588f6e1ffc398628a460fe80742773f4b0ed2743794a50"
+    },
+    {
+      "source_id": "045-007-0100",
+      "target": "— Ваше пиво, должно быть, превосходно, если оно так же хорошо, как ваши гуси, — сказал он.",
+      "source_sha256": "faef579481ce4e95bbfdb4866b759719830ed36a773876ca172f853354fb1240",
+      "target_id": "ru-045-007-0100",
+      "tag": "p",
+      "target_sha256": "8d55deab3247c399de163e53ea9bbbe42df8151facf64b496486334dc4a398ce"
+    },
+    {
+      "source_id": "045-007-0101",
+      "target": "— Мои гуси! — Мужчина, казалось, удивился.",
+      "source_sha256": "467f62b7789812126f3db6a9827c53741d6662dbf0d33f8c0799d5a87a2f390d",
+      "target_id": "ru-045-007-0101",
+      "tag": "p",
+      "target_sha256": "7a982bb47b89cdfe2796495155c5ba0b02464f8e1eb146124f28f5b2d4d6dbf9"
+    },
+    {
+      "source_id": "045-007-0102",
+      "target": "— Да. Всего полчаса назад я разговаривал с мистером Генри Бейкером, членом вашего гусиного клуба.",
+      "source_sha256": "df529fa2454441208937db18ae5a856748b44f4a6ba06e27fff38ed9ac3293b4",
+      "target_id": "ru-045-007-0102",
+      "tag": "p",
+      "target_sha256": "36dfced28dd079485526e233ae50ff68132f96f4aada96b23df2d5844e6fdce7"
+    },
+    {
+      "source_id": "045-007-0103",
+      "target": "— А! Да, понимаю. Но, видите ли, сэр, это не <i>наши</i> гуси.",
+      "source_sha256": "75d953ed4f666a9565b64b83145bfabdc446e0e340f821d7e07be8be1adee659",
+      "target_id": "ru-045-007-0103",
+      "tag": "p",
+      "target_sha256": "f37399bff65faa2ab76b9a72ed482973814f8464b30b107380243ef5aeca5702"
+    },
+    {
+      "source_id": "045-007-0104",
+      "target": "— Вот как! А чьи же?",
+      "source_sha256": "59ba1cbf3c0585ac2288d91ade5175eb2fad1644ebeea6c5940326e49f1d0241",
+      "target_id": "ru-045-007-0104",
+      "tag": "p",
+      "target_sha256": "57a1128dd18069833f5f192d74adffdbf06c3385f788ceadbe2461a9ced742c3"
+    },
+    {
+      "source_id": "045-007-0105",
+      "target": "— Да я взял эти две дюжины у торговца в Ковент-Гардене.",
+      "source_sha256": "fd2a6be21dbee1f8816bd4b492c32b7fe1e04994c22d13f3e5f753cdff72671b",
+      "target_id": "ru-045-007-0105",
+      "tag": "p",
+      "target_sha256": "08dcd106a55f562578d399242be0f38c10dfc3482e88e600e05b6da1a75559c7"
+    },
+    {
+      "source_id": "045-007-0106",
+      "target": "— В самом деле? Я знаю кое-кого из них. Кто именно?",
+      "source_sha256": "f4a330bebbfe0e2c84d2d305bf3e6f436f8180252f45640ac85f9ece3eb342b1",
+      "target_id": "ru-045-007-0106",
+      "tag": "p",
+      "target_sha256": "9200e2fed1761e0524a66a36ccac1e618d24c213c8920fb6fc93c6d994ecba32"
+    },
+    {
+      "source_id": "045-007-0107",
+      "target": "— Брекинридж его зовут.",
+      "source_sha256": "3039808d6fbff15e834657bf458b312465b6dbf54fe72fcd809ec0dd839e7baf",
+      "target_id": "ru-045-007-0107",
+      "tag": "p",
+      "target_sha256": "f858d3dd5e8e14ed797659d216f0d57841074712dc57a8ac6523838374ad1d26"
+    },
+    {
+      "source_id": "045-007-0108",
+      "target": "— А! Его я не знаю. Ну что ж, за ваше здоровье, хозяин, и процветания вашему заведению. Доброй ночи.",
+      "source_sha256": "e96155d9f4cb078bab878789eb797bbc813d67b5cf3924e2c86beee7d8dd7331",
+      "target_id": "ru-045-007-0108",
+      "tag": "p",
+      "target_sha256": "b7efbd566d0400998e762bc9433cfdafe0af8586e285acaa151a333f38dc0486"
+    },
+    {
+      "source_id": "045-007-0109",
+      "target": "— А теперь за мистера Брекинриджа, — продолжал он, застёгивая пальто, когда мы вышли на морозный воздух. — Помните, Ватсон: хотя на одном конце этой цепи у нас столь будничная вещь, как гусь, на другом — человек, который наверняка получит семь лет каторжных работ, если мы не докажем его невиновность. Возможно, наше расследование лишь подтвердит его вину; но в любом случае у нас есть линия розыска, упущенная полицией и отданная нам в руки редкой случайностью. Пойдём по ней до горького конца. Лицом к югу — и быстрым шагом марш!",
+      "source_sha256": "d65270c6cf68ae2faba81f88ab8b5b1b04732d44355dee6bdfbea00e57b2e0d7",
+      "target_id": "ru-045-007-0109",
+      "tag": "p",
+      "target_sha256": "2989f71c1aed7962ea720dde3a43cb87d291e3790992e367455bcf4084062231"
+    },
+    {
+      "source_id": "045-007-0110",
+      "target": "Мы пересекли Холборн, прошли по Эндел-стрит и зигзагом через трущобы вышли к рынку Ковент-Гарден. На одном из самых больших прилавков стояло имя Брекинриджа, а хозяин — человек с лошадиной повадкой, острым лицом и аккуратными бакенбардами — помогал мальчику запирать ставни.",
+      "source_sha256": "4e50a073072819e38e8e135a6194808c91e1683565b05cae009eda5f3d0bdf76",
+      "target_id": "ru-045-007-0110",
+      "tag": "p",
+      "target_sha256": "70122b19f0001238e8c766d9dfff82575ea74ac2fa3086c5efdd32b88c0ba48f"
+    },
+    {
+      "source_id": "045-007-0111",
+      "target": "— Добрый вечер. Холодная ночь, — сказал Холмс.",
+      "source_sha256": "8919a9fe2adce7703720017b21d0f8a02b6ea1b093af645ceb406c711cd25f68",
+      "target_id": "ru-045-007-0111",
+      "tag": "p",
+      "target_sha256": "e724c88d0c677c4355c69c3c29b472aaca07945e05e1778afc486b7439270f0c"
+    },
+    {
+      "source_id": "045-007-0112",
+      "target": "Торговец кивнул и бросил на моего спутника вопросительный взгляд.",
+      "source_sha256": "f6f0183078b6a9b3ef84149061ce409fc11ff9c2b805a94e9cacdc098de8f784",
+      "target_id": "ru-045-007-0112",
+      "tag": "p",
+      "target_sha256": "7b06bf2dd9e5eabbfa08cb201af4bda63c107ad1286dcd186980c2d4f8588ef4"
+    },
+    {
+      "source_id": "045-007-0113",
+      "target": "— Вижу, гуси у вас все распроданы, — продолжал Холмс, указывая на голые мраморные плиты.",
+      "source_sha256": "23aaa63f807ed4a95803872c49496b0f34602021ce65a27af848ccb4687b9b1b",
+      "target_id": "ru-045-007-0113",
+      "tag": "p",
+      "target_sha256": "18ca1d0f677f61722bb0a50a66fd2dabe78cdf32cddff12da331562ef631fdcb"
+    },
+    {
+      "source_id": "045-007-0114",
+      "target": "— Завтра утром могу дать вам пять сотен.",
+      "source_sha256": "fbc5c646cf9ed8c70da9195311ce6e29dcd7cee73324b494237144119b6fdf96",
+      "target_id": "ru-045-007-0114",
+      "tag": "p",
+      "target_sha256": "dc246e7edbef91f55675f0e73bdb20c3619aac61d868e796177beb892d43089f"
+    },
+    {
+      "source_id": "045-007-0115",
+      "target": "— Это мне не годится.",
+      "source_sha256": "2d87fa8cce14767d0412cf3f158fa1f18a11ca757669239a30cc1a11bf5618aa",
+      "target_id": "ru-045-007-0115",
+      "tag": "p",
+      "target_sha256": "bdbda3981cb42459d28ddd4f3766da0507f9c3a0563dc29b5f8f0d5202c04c65"
+    },
+    {
+      "source_id": "045-007-0116",
+      "target": "— Ну, на том прилавке, где газовый рожок, ещё есть.",
+      "source_sha256": "38432c58242c21b896a835c491e87790d209702eb1c59076e97dbb9338ad7dd3",
+      "target_id": "ru-045-007-0116",
+      "tag": "p",
+      "target_sha256": "f33a70f9a193b3365920f451ead88f1e6a2bf2070c344d95d1d8527877f406c2"
+    },
+    {
+      "source_id": "045-007-0117",
+      "target": "— Ах, но мне вас рекомендовали.",
+      "source_sha256": "b932ba16b86489f851c4c34082ed08fe1505539e0f2d310431bf0afcdbba548f",
+      "target_id": "ru-045-007-0117",
+      "tag": "p",
+      "target_sha256": "4ddf14bfe201c048c81e52dfb227744dcc9bbfca4f773c6da07e0dd12e7ad502"
+    },
+    {
+      "source_id": "045-007-0118",
+      "target": "— Кто?",
+      "source_sha256": "824e85fb63dcaa380f4125c6278f97d0d9da71d4991762235f5302f6c734ec9a",
+      "target_id": "ru-045-007-0118",
+      "tag": "p",
+      "target_sha256": "1516880e44e2169ba6c471c34d2daa3090dc60f05bf0d3a9405de9bf21afb36b"
+    },
+    {
+      "source_id": "045-007-0119",
+      "target": "— Хозяин «Альфы».",
+      "source_sha256": "fe602e892c0600054ea46ececa7c3ba1132aac0408018dc793d749c4fe0add12",
+      "target_id": "ru-045-007-0119",
+      "tag": "p",
+      "target_sha256": "186d7f4ba9bece1202d6615f9f071000c02762a767cbcf2c030c4562a8f8de33"
+    },
+    {
+      "source_id": "045-007-0120",
+      "target": "— А, да; я послал ему пару дюжин.",
+      "source_sha256": "1353e8549d5146735cbed17740811481bcfdabff9d6b81fa86b5f5adc6d55366",
+      "target_id": "ru-045-007-0120",
+      "tag": "p",
+      "target_sha256": "869bff847d9de5380fc7fb045ee9b83afc55e616f8f0053063a49cce3abbe969"
+    },
+    {
+      "source_id": "045-007-0121",
+      "target": "— И отличные были птицы. А откуда вы их взяли?",
+      "source_sha256": "6491209ed56b19f4f738ae99d9128133e9d4dbf4812cddc3c1414c23a277a5ec",
+      "target_id": "ru-045-007-0121",
+      "tag": "p",
+      "target_sha256": "53028d6180fe9ecd60b677c6af5d9389b2837df445a5d010e3c03eed061ff685"
+    },
+    {
+      "source_id": "045-007-0122",
+      "target": "К моему удивлению, этот вопрос вызвал у торговца вспышку гнева.",
+      "source_sha256": "85fa1af80944f6a0c0256be30f18fd09e562643d718dcf592eeaf8c677f8f5ea",
+      "target_id": "ru-045-007-0122",
+      "tag": "p",
+      "target_sha256": "beeea7f6f47ceed26b5001c4e6529aaa096e3c73b212c33022ee5384c5fc4e15"
+    },
+    {
+      "source_id": "045-007-0123",
+      "target": "— Послушайте-ка, мистер, — сказал он, склонив голову набок и подбоченившись, — к чему вы клоните? Говорите прямо.",
+      "source_sha256": "b93bc9dde9b345cbbb4e9fbddf50360fda3cd8f4f4ab4558576b3ad7a9536737",
+      "target_id": "ru-045-007-0123",
+      "tag": "p",
+      "target_sha256": "264e7d5afbeabca39040016ce3882a1de08e71662b43a19a899010a4dfb66930"
+    },
+    {
+      "source_id": "045-007-0124",
+      "target": "— Куда уж прямее. Я хотел бы знать, кто продал вам гусей, которых вы поставили в «Альфу».",
+      "source_sha256": "05ee13f9d4cc3b8a3d8bb792898eeded3644b288140f26f26662f4c7ed1176f1",
+      "target_id": "ru-045-007-0124",
+      "tag": "p",
+      "target_sha256": "59dea16e16b974420e23c1b83f989f1f223002812eeab48ed34605dd3590ca3d"
+    },
+    {
+      "source_id": "045-007-0125",
+      "target": "— Ну так я вам не скажу. Вот так!",
+      "source_sha256": "50deeeb16aec07f01d3c800494057405996f92426cd103306070c8d142fed9cd",
+      "target_id": "ru-045-007-0125",
+      "tag": "p",
+      "target_sha256": "50239242eb60b891d46438d4b53a5f41f641b23abb2f1dddecbed0e7bb158a59"
+    },
+    {
+      "source_id": "045-007-0126",
+      "target": "— О, дело вовсе не важное; но не понимаю, с чего вы так горячитесь из-за такого пустяка.",
+      "source_sha256": "954c9f6af8fe650ff5a908a248f704fdddea86a7d82ce59aaee2b16b9e123c21",
+      "target_id": "ru-045-007-0126",
+      "tag": "p",
+      "target_sha256": "150249ecaf041c5a9d68563805b7c28ae3d7723eb0a9dbe0c7a8ac4d19510874"
+    },
+    {
+      "source_id": "045-007-0127",
+      "target": "— Горячусь! Вы бы, пожалуй, тоже горячились, если бы вам так докучали, как мне. Когда я плачу хорошие деньги за хороший товар, на этом дело должно кончаться; а тут — «Где гуси?», «Кому вы продали гусей?», «Сколько возьмёте за гусей?» Послушаешь, какой вокруг них шум, — подумаешь, будто это единственные гуси на свете.",
+      "source_sha256": "bb078328297857e209ed64f9488a0ca6716b19329cfceaee799daad901a63eac",
+      "target_id": "ru-045-007-0127",
+      "tag": "p",
+      "target_sha256": "7a8b21214b32845ad1d75e342caa885d4a417939bc4bde8b26e669686025741e"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "045-007-0096",
+      "verdict": "CORRECTED",
+      "reason": "Made the reply natural; fixed dialogue dash/register."
+    },
+    {
+      "source_id": "045-007-0097",
+      "verdict": "CORRECTED",
+      "reason": "Fixed dialogue format and idiom for the hot clue."
+    },
+    {
+      "source_id": "045-007-0098",
+      "verdict": "CORRECTED",
+      "reason": "Standardized dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0099",
+      "verdict": "CORRECTED",
+      "reason": "Fixed errors: cravats, 'звеняли', breath like pistol shots, bitter night, Alpha Inn."
+    },
+    {
+      "source_id": "045-007-0100",
+      "verdict": "CORRECTED",
+      "reason": "Fixed grammar ('хорош') and dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0101",
+      "verdict": "CORRECTED",
+      "reason": "Standardized dialogue punctuation and phrasing."
+    },
+    {
+      "source_id": "045-007-0102",
+      "verdict": "CORRECTED",
+      "reason": "Standardized dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0103",
+      "verdict": "CORRECTED",
+      "reason": "Preserved italic; standardized dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0104",
+      "verdict": "CORRECTED",
+      "reason": "Punctuation and idiom adjusted."
+    },
+    {
+      "source_id": "045-007-0105",
+      "verdict": "CORRECTED",
+      "reason": "Colloquial register; dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0106",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue consistency and natural wording."
+    },
+    {
+      "source_id": "045-007-0107",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation; Breckinridge name normalized in context."
+    },
+    {
+      "source_id": "045-007-0108",
+      "verdict": "CORRECTED",
+      "reason": "Fixed toast phrasing and punctuation."
+    },
+    {
+      "source_id": "045-007-0109",
+      "verdict": "CORRECTED",
+      "reason": "Fixed stray quote, penal servitude, line of investigation, 'bitter end' fidelity."
+    },
+    {
+      "source_id": "045-007-0110",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'horsey-looking' and stall name; Endell Street."
+    },
+    {
+      "source_id": "045-007-0111",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation and natural phrasing."
+    },
+    {
+      "source_id": "045-007-0112",
+      "verdict": "PASS",
+      "reason": "Faithful and natural."
+    },
+    {
+      "source_id": "045-007-0113",
+      "verdict": "CORRECTED",
+      "reason": "Improved idiom; slabs of marble clarified."
+    },
+    {
+      "source_id": "045-007-0114",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue dash; natural phrasing."
+    },
+    {
+      "source_id": "045-007-0115",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation, natural phrasing."
+    },
+    {
+      "source_id": "045-007-0116",
+      "verdict": "CORRECTED",
+      "reason": "Fixed awkward gas-flare rendering."
+    },
+    {
+      "source_id": "045-007-0117",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0118",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0119",
+      "verdict": "CORRECTED",
+      "reason": "Removed odd quote style; punctuation."
+    },
+    {
+      "source_id": "045-007-0120",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation."
+    },
+    {
+      "source_id": "045-007-0121",
+      "verdict": "CORRECTED",
+      "reason": "Fixed stray closing quote and dialogue format."
+    },
+    {
+      "source_id": "045-007-0122",
+      "verdict": "CORRECTED",
+      "reason": "Salesman rendered consistently as торговец; fidelity kept."
+    },
+    {
+      "source_id": "045-007-0123",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'arms akimbo' and 'straight' idiom."
+    },
+    {
+      "source_id": "045-007-0124",
+      "verdict": "CORRECTED",
+      "reason": "Natural 'straight enough' idiom."
+    },
+    {
+      "source_id": "045-007-0125",
+      "verdict": "CORRECTED",
+      "reason": "Colloquial tone refined."
+    },
+    {
+      "source_id": "045-007-0126",
+      "verdict": "CORRECTED",
+      "reason": "Smoothed phrasing."
+    },
+    {
+      "source_id": "045-007-0127",
+      "verdict": "CORRECTED",
+      "reason": "Fixed stray quote and mistranslated opening; smoother colloquial voice."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "045-007-0096",
+      "before": "— Не особо.",
+      "after": "— Не особенно."
+    },
+    {
+      "source_id": "045-007-0097",
+      "before": "«Тогда я предлагаю превратить наш обед в ужин и проследить за этой зацепкой, пока она ещё свежа».",
+      "after": "— Тогда предлагаю превратить наш обед в ужин и пойти по этому следу, пока он ещё горяч."
+    },
+    {
+      "source_id": "045-007-0098",
+      "before": "«Конечно».",
+      "after": "— Разумеется."
+    },
+    {
+      "source_id": "045-007-0099",
+      "before": "Ночь была морозной, поэтому мы накинули ульстеры и повязали галстуки вокруг шеи. Снаружи звезды холодно сияли в безоблачном небе, а дыхание прохожих превращалось в пар, словно выстрелы из пистолетов. Наши шаги звеняли отчетливо и громко, когда мы шли через квартал врачей — Уимпол-стрит, Харли-стрит, а затем по Вигмор-стрит на Оксфорд-стрит. Через четверть часа мы оказались в Блумсбери, в «Альфа-Инн» — небольшом пабе на углу одной из улиц, ведущих в Холборн. Холмс распахнул дверь частного бара и заказал два бокала пива у краснолицего хозяина в белом фартуке.",
+      "after": "Ночь была жестокая, поэтому мы надели ульстеры и обмотали шеи шарфами. Снаружи холодно сияли звёзды в безоблачном небе, а дыхание прохожих вылетало клубами дыма, словно выстрелы из множества пистолетов. Наши шаги звонко и отчётливо отдавались, пока мы быстро шли через квартал врачей — Уимпол-стрит, Харли-стрит, а затем по Вигмор-стрит выходили на Оксфорд-стрит. Через четверть часа мы были в Блумсбери, у «Альфы» — небольшого трактира на углу одной из улиц, сбегающих к Холборну. Холмс толкнул дверь отдельного бара и заказал два стакана пива у краснолицего хозяина в белом фартуке."
+    },
+    {
+      "source_id": "045-007-0100",
+      "before": "«Ваше пиво должно быть превосходным, если оно так же хорош, как ваши гуси», — сказал он.",
+      "after": "— Ваше пиво, должно быть, превосходно, если оно так же хорошо, как ваши гуси, — сказал он."
+    },
+    {
+      "source_id": "045-007-0101",
+      "before": "«Мои гуси!» Мужчина, казалось, был удивлён.",
+      "after": "— Мои гуси! — Мужчина, казалось, удивился."
+    },
+    {
+      "source_id": "045-007-0102",
+      "before": "«Да. Буквально полчаса назад я разговаривал с мистером Генри Бейкером, который был членом вашего гусиного клуба».",
+      "after": "— Да. Всего полчаса назад я разговаривал с мистером Генри Бейкером, членом вашего гусиного клуба."
+    },
+    {
+      "source_id": "045-007-0103",
+      "before": "«Ах! Да, понимаю. Но, видите ли, сэр, это не <i>наши</i> гуси».",
+      "after": "— А! Да, понимаю. Но, видите ли, сэр, это не <i>наши</i> гуси."
+    },
+    {
+      "source_id": "045-007-0104",
+      "before": "«Неужели! А чьи же они тогда?»",
+      "after": "— Вот как! А чьи же?"
+    },
+    {
+      "source_id": "045-007-0105",
+      "before": "— Ну, я достал эти две дюжины у продавца в Ковент-Гардене.",
+      "after": "— Да я взял эти две дюжины у торговца в Ковент-Гардене."
+    },
+    {
+      "source_id": "045-007-0106",
+      "before": "— Неужели? Я знаю некоторых из них. Кто именно?",
+      "after": "— В самом деле? Я знаю кое-кого из них. Кто именно?"
+    },
+    {
+      "source_id": "045-007-0107",
+      "before": "— Его зовут Брекинридж.",
+      "after": "— Брекинридж его зовут."
+    },
+    {
+      "source_id": "045-007-0108",
+      "before": "— Ах! Я его не знаю. Что ж, за ваше здоровье, хозяин, и процветание вашему дому. Спокойной ночи.",
+      "after": "— А! Его я не знаю. Ну что ж, за ваше здоровье, хозяин, и процветания вашему заведению. Доброй ночи."
+    },
+    {
+      "source_id": "045-007-0109",
+      "before": "— А теперь о мистере Брекинридже, — продолжил он, застегивая пальто, когда мы вышли на морозный воздух. — Помните, Ватсон, что хотя на одном конце этой цепочки у нас есть такая простая вещь, как гусь, на другом конце находится человек, которому непременно грозит семь лет каторги, если мы не сможем доказать его невиновность. Возможно, наше расследование лишь подтвердит его вину; но в любом случае у нас есть след, который упустила полиция и который по странному стечению обстоятельств оказался в наших руках. Давайте проследим его до самого конца. Лицом на юг, значит, и быстрым шагом вперед!»",
+      "after": "— А теперь за мистера Брекинриджа, — продолжал он, застёгивая пальто, когда мы вышли на морозный воздух. — Помните, Ватсон: хотя на одном конце этой цепи у нас столь будничная вещь, как гусь, на другом — человек, который наверняка получит семь лет каторжных работ, если мы не докажем его невиновность. Возможно, наше расследование лишь подтвердит его вину; но в любом случае у нас есть линия розыска, упущенная полицией и отданная нам в руки редкой случайностью. Пойдём по ней до горького конца. Лицом к югу — и быстрым шагом марш!"
+    },
+    {
+      "source_id": "045-007-0110",
+      "before": "Мы пересекли Холборн, спустились по Энделл-стрит и, пробравшись через лабиринт трущоб, добрались до рынка Ковент-Гарден. На одном из самых больших прилавков красовалась вывеска «Брекинридж», а владелец — мужчина с конным видом, с острым лицом и аккуратными бакенбардами — помогал мальчику закрывать ставни.",
+      "after": "Мы пересекли Холборн, прошли по Эндел-стрит и зигзагом через трущобы вышли к рынку Ковент-Гарден. На одном из самых больших прилавков стояло имя Брекинриджа, а хозяин — человек с лошадиной повадкой, острым лицом и аккуратными бакенбардами — помогал мальчику запирать ставни."
+    },
+    {
+      "source_id": "045-007-0111",
+      "before": "«Добрый вечер. Сегодня холодная ночь», — сказал Холмс.",
+      "after": "— Добрый вечер. Холодная ночь, — сказал Холмс."
+    },
+    {
+      "source_id": "045-007-0112",
+      "before": "Продавец кивнул и бросил вопросительный взгляд на моего спутника.",
+      "after": "Торговец кивнул и бросил на моего спутника вопросительный взгляд."
+    },
+    {
+      "source_id": "045-007-0113",
+      "before": "— Вижу, гуси распроданы, — продолжил Холмс, указывая на пустые мраморные прилавки.",
+      "after": "— Вижу, гуси у вас все распроданы, — продолжал Холмс, указывая на голые мраморные плиты."
+    },
+    {
+      "source_id": "045-007-0114",
+      "before": "«Завтра утром я дам вам пятьсот».",
+      "after": "— Завтра утром могу дать вам пять сотен."
+    },
+    {
+      "source_id": "045-007-0115",
+      "before": "«Так не пойдет».",
+      "after": "— Это мне не годится."
+    },
+    {
+      "source_id": "045-007-0116",
+      "before": "«Ну, на прилавке с газовой факельной лампой есть несколько штук».",
+      "after": "— Ну, на том прилавке, где газовый рожок, ещё есть."
+    },
+    {
+      "source_id": "045-007-0117",
+      "before": "«Ах, но меня ведь вам порекомендовали».",
+      "after": "— Ах, но мне вас рекомендовали."
+    },
+    {
+      "source_id": "045-007-0118",
+      "before": "«Кто?»",
+      "after": "— Кто?"
+    },
+    {
+      "source_id": "045-007-0119",
+      "before": "«Хозяин заведения „Альфа“».",
+      "after": "— Хозяин «Альфы»."
+    },
+    {
+      "source_id": "045-007-0120",
+      "before": "«Ах да, я послал ему пару дюжин».",
+      "after": "— А, да; я послал ему пару дюжин."
+    },
+    {
+      "source_id": "045-007-0121",
+      "before": "— Это были отличные птицы. А откуда вы их взяли?»",
+      "after": "— И отличные были птицы. А откуда вы их взяли?"
+    },
+    {
+      "source_id": "045-007-0122",
+      "before": "К моему удивлению, этот вопрос вызвал у продавца приступ гнева.",
+      "after": "К моему удивлению, этот вопрос вызвал у торговца вспышку гнева."
+    },
+    {
+      "source_id": "045-007-0123",
+      "before": "— Ну, так что же, мистер, — сказал он, наклонив голову и заложив руки за пояс, — к чему вы клоните? Давайте разберемся в этом как следует.",
+      "after": "— Послушайте-ка, мистер, — сказал он, склонив голову набок и подбоченившись, — к чему вы клоните? Говорите прямо."
+    },
+    {
+      "source_id": "045-007-0124",
+      "before": "— Всё ясно как божий день. Мне бы хотелось знать, кто продал вам гусей, которые вы поставляли в «Альфу».",
+      "after": "— Куда уж прямее. Я хотел бы знать, кто продал вам гусей, которых вы поставили в «Альфу»."
+    },
+    {
+      "source_id": "045-007-0125",
+      "before": "— Ну, тогда я вам не скажу. Вот и всё!",
+      "after": "— Ну так я вам не скажу. Вот так!"
+    },
+    {
+      "source_id": "045-007-0126",
+      "before": "— О, это не имеет никакого значения; но я не понимаю, почему вы так разгорячились из-за такой мелочи.",
+      "after": "— О, дело вовсе не важное; но не понимаю, с чего вы так горячитесь из-за такого пустяка."
+    },
+    {
+      "source_id": "045-007-0127",
+      "before": "— Да ладно вам! Вы бы, наверное, так же раздражались, если бы вас так же донимали, как меня. Когда я плачу хорошие деньги за хороший товар, на этом дело должно быть закончено; но вместо этого — «Где гуси?», «Кому вы продали гусей?» и «Сколько вы хотите за гусей?» Судя по той суете, что вокруг них поднимается, можно подумать, будто это единственные гуси на свете».",
+      "after": "— Горячусь! Вы бы, пожалуй, тоже горячились, если бы вам так докучали, как мне. Когда я плачу хорошие деньги за хороший товар, на этом дело должно кончаться; а тут — «Где гуси?», «Кому вы продали гусей?», «Сколько возьмёте за гусей?» Послушаешь, какой вокруг них шум, — подумаешь, будто это единственные гуси на свете."
+    }
+  ],
+  "translation_api": {
+    "state": "REUSED_USER_APPROVED_PRIOR_COMPLETE_DEEPL_DRAFT_NOT_A_FRESH_TRANSLATION_API_CALL",
+    "prior_translation_run_id": 35552644728,
+    "input_packed_sha256": "0efc1b13d66b2dfebf165305e76cc6ed0170ac8efea4f54e78cba9b7b9c11ef8",
+    "prior_prepared_drafts_embedded_in_frozen_input": true
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKdb2EyHbD9t68jWeSDu",
+    "usage": {
+      "input_tokens": 33886,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3671,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKdcey6Q5NRDSkWZ3wBc",
+        "usage": {
+          "input_tokens": 37764,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3343,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "045-007-0096",
+          "verdict": "PASS",
+          "reason": "Faithful, idiomatic."
+        },
+        {
+          "source_id": "045-007-0097",
+          "verdict": "PASS",
+          "reason": "Suggestion, dinner into supper, hot clue preserved."
+        },
+        {
+          "source_id": "045-007-0098",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0099",
+          "verdict": "PASS",
+          "reason": "Streets, cold, breath like pistol shots, Alpha Inn, bar and landlord all preserved."
+        },
+        {
+          "source_id": "045-007-0100",
+          "verdict": "PASS",
+          "reason": "Conditional compliment preserved."
+        },
+        {
+          "source_id": "045-007-0101",
+          "verdict": "PASS",
+          "reason": "Surprise preserved."
+        },
+        {
+          "source_id": "045-007-0102",
+          "verdict": "PASS",
+          "reason": "Half an hour, Baker, club member all correct."
+        },
+        {
+          "source_id": "045-007-0103",
+          "verdict": "PASS",
+          "reason": "Italic on 'our' preserved; dialect register acceptable."
+        },
+        {
+          "source_id": "045-007-0104",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0105",
+          "verdict": "PASS",
+          "reason": "Two dozen, Covent Garden salesman correct."
+        },
+        {
+          "source_id": "045-007-0106",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0107",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0108",
+          "verdict": "PASS",
+          "reason": "Toast and farewell preserved."
+        },
+        {
+          "source_id": "045-007-0109",
+          "verdict": "PASS",
+          "reason": "Seven years' penal servitude, missed line, south, march all preserved."
+        },
+        {
+          "source_id": "045-007-0110",
+          "verdict": "PASS",
+          "reason": "Route, stall, proprietor description, shutters correct."
+        },
+        {
+          "source_id": "045-007-0111",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0112",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0113",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0114",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0115",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0116",
+          "verdict": "PASS",
+          "reason": "Gas-flare stall preserved."
+        },
+        {
+          "source_id": "045-007-0117",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0118",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0119",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0120",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0121",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0122",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0123",
+          "verdict": "PASS",
+          "reason": "Posture and demand for straight talk preserved."
+        },
+        {
+          "source_id": "045-007-0124",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0125",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0126",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "045-007-0127",
+          "verdict": "PASS",
+          "reason": "Complaint, quoted questions, final irony preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
