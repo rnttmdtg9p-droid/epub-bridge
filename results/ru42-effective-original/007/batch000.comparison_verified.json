@@ -1,0 +1,668 @@
+{
+  "unit": 7,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "fr42c-007-heading",
+      "target": "ГЛАВА VII. ОТКУДА ПРИХОДИТ И КУДА ИДЁТ ЖАК ПАГАНЕЛЬ",
+      "source_sha256": "49513818dc11dc9054484b6d95624f20b26634fb35b52e798eb9ea3998292c6f",
+      "target_id": "ru-fr42c-007-heading",
+      "tag": "heading",
+      "target_sha256": "40d039d7a94858e22cc5ec616445719a1c9b50c12e7886dd335afefebc580151"
+    },
+    {
+      "source_id": "fr42c-007-0000",
+      "target": "Секретарь Географического общества, должно быть, был любезнейшим человеком, ибо всё это было сказано с большим изяществом. Впрочем, лорд Гленарван прекрасно знал, с кем имеет дело: имя и заслуги Жака Паганеля были ему отлично известны; его географические труды, его доклады об открытиях последнего времени, помещённые в бюллетенях Общества, его переписка со всем миром делали его одним из самых выдающихся учёных Франции. Поэтому Гленарван сердечно протянул руку своему неожиданному гостю.",
+      "source_sha256": "9afb687ee89f7de4a887c9d4816dd98db500952d5dd6d0ed3090c5f36739a277",
+      "target_id": "ru-fr42c-007-0000",
+      "tag": "p",
+      "target_sha256": "97500d81e536687c1672abbe93e8a05909c12dae1082b0a581e815be7fbc863c"
+    },
+    {
+      "source_id": "fr42c-007-0001",
+      "target": "— А теперь, когда мы представились друг другу, — добавил он, — позвольте, господин Паганель, задать вам один вопрос.",
+      "source_sha256": "2dc73d0d7b650fd470008c7a8538badf1f3369dfc6ddaeb404906daecc47a8b0",
+      "target_id": "ru-fr42c-007-0001",
+      "tag": "p",
+      "target_sha256": "b248b8de9ff0cb9e638012d307e9f16831199424bc9d6af06b6ee904d4416e02"
+    },
+    {
+      "source_id": "fr42c-007-0002",
+      "target": "— Хоть двадцать, милорд, — ответил Жак Паганель. — Мне всегда будет приятно побеседовать с вами.",
+      "source_sha256": "8e4a9d81db4f8f9ad145491b9910ea4454e2191d1e2160f2cb97e7a78df94694",
+      "target_id": "ru-fr42c-007-0002",
+      "tag": "p",
+      "target_sha256": "404cb252dee00c076d032f53c7ed90b6cddeb3766cacbed0c55ce68262e72039"
+    },
+    {
+      "source_id": "fr42c-007-0003",
+      "target": "— Вы прибыли на борт этого судна позавчера вечером?",
+      "source_sha256": "738ccf3b8252558308a37c2a6efe9065c50be1ccac1c01187f83628f005366a8",
+      "target_id": "ru-fr42c-007-0003",
+      "tag": "p",
+      "target_sha256": "b785f657591b322e53d192c3fb3f6cdbe457ae9b33c67128852c8c1e5ede83b5"
+    },
+    {
+      "source_id": "fr42c-007-0004",
+      "target": "— Да, милорд, позавчера вечером, в восемь часов. Я выскочил из поезда Каледонской железной дороги, сел в кэб, а из кэба — на <i>«Скотию»</i>, где из Парижа заказал себе каюту номер шесть. Ночь была тёмная. На борту я никого не видел. А так как я чувствовал себя усталым после тридцати часов пути и знал, что, дабы избежать морской болезни, хорошо по приходе лечь и не вставать с койки в первые дни плавания, я немедленно улёгся и, поверьте, добросовестно проспал тридцать шесть часов.",
+      "source_sha256": "16ec912f56b61496d2de701430e93e5238af767e12bcd0fc7bc9a201c0ef2af3",
+      "target_id": "ru-fr42c-007-0004",
+      "tag": "p",
+      "target_sha256": "09f627e2ecb972e20217026898e13fc44d9d901221d91cfcadfbd914cd6e3393"
+    },
+    {
+      "source_id": "fr42c-007-0005",
+      "target": "Теперь слушатели Жака Паганеля знали, чем объясняется его присутствие на борту. Французский путешественник, ошибившись судном, поднялся на борт в то время, когда команда <i>«Дункана»</i> присутствовала на церемонии Святого Мунго. Всё объяснилось. Но что скажет учёный географ, когда узнает название и назначение судна, на котором он взял место?",
+      "source_sha256": "5a4f430ab0bec0ef01eac2a043ddbd91496fc3f71670aa9d8d4c55f77eb10da8",
+      "target_id": "ru-fr42c-007-0005",
+      "tag": "p",
+      "target_sha256": "bc3ee2e29a3823edbbd974b6acefc12e7c334d33a18994fa510ffac132c619f3"
+    },
+    {
+      "source_id": "fr42c-007-0006",
+      "target": "— Итак, господин Паганель, — сказал Гленарван, — вы избрали Калькутту отправным пунктом своих путешествий?",
+      "source_sha256": "352e120f2bd1a694684b1cd0e7c2aa233172fb7b962a6d9a491a44ab1cfe3350",
+      "target_id": "ru-fr42c-007-0006",
+      "tag": "p",
+      "target_sha256": "989407836f6ee020d835160f13b96d1faf0a24a9f4b5fff0708e560023c9020d"
+    },
+    {
+      "source_id": "fr42c-007-0007",
+      "target": "— Да, милорд. Увидеть Индию — мысль, которую я лелеял всю жизнь. Моя прекраснейшая мечта наконец сбудется в стране слонов и тугов.",
+      "source_sha256": "01f01e0edba0f223635f9ed56331f7ea163368eba82d94d0a0cb4e1d89018349",
+      "target_id": "ru-fr42c-007-0007",
+      "tag": "p",
+      "target_sha256": "a0250af559ed5c33531b44ad6459d5d32966ad4bfa7b22c2be55835462e00f04"
+    },
+    {
+      "source_id": "fr42c-007-0008",
+      "target": "— Значит, господин Паганель, вам было бы небезразлично посетить другую страну?",
+      "source_sha256": "6284bdfb57f96039a2a8a9d9a746cc26b6615eee0837990953f4b3126563147f",
+      "target_id": "ru-fr42c-007-0008",
+      "tag": "p",
+      "target_sha256": "c21ac8c4fa9198d6005c0a7a9d384ebc271df4608c01b2eb49fb31c56db0710f"
+    },
+    {
+      "source_id": "fr42c-007-0009",
+      "target": "— Нет, милорд, это было бы мне даже неприятно, ибо у меня есть рекомендации к лорду Сомерсету, генерал-губернатору Индии, и поручение Географического общества, которое я намерен выполнить.",
+      "source_sha256": "9c80e20eca3b6884698227a11be29b08ddc48907454eca1737d9e626a9127b16",
+      "target_id": "ru-fr42c-007-0009",
+      "tag": "p",
+      "target_sha256": "48e60c4856d4f667d813ba6a8cbc0af847de9711f616066a2209cb4514755fa0"
+    },
+    {
+      "source_id": "fr42c-007-0010",
+      "target": "— А! У вас есть поручение?",
+      "source_sha256": "c134b046e94f1517b7488e51d46e8c0257762a872ab58ab0e58f3e0b2f6ecdf2",
+      "target_id": "ru-fr42c-007-0010",
+      "tag": "p",
+      "target_sha256": "c8066b2fb54e9bb1a9a60bb604f8b4ddc6d145633d5dd1ec828652cb6e2d8180"
+    },
+    {
+      "source_id": "fr42c-007-0011",
+      "target": "— Да, предстоит полезное и любопытное путешествие, программу которого составил мой учёный друг и коллега господин Вивьен де Сен-Мартен. Речь идёт о том, чтобы пойти по следам братьев Шлагинтвейт, полковника Во, Уэбба, Ходжсона, миссионеров Гюка и Габе, Муркрофта, господина Жюля Реми и стольких других знаменитых путешественников. Я хочу добиться успеха там, где миссионер Крик, к несчастью, потерпел неудачу в 1846 году; словом, исследовать течение Яру-Дзангбо-Чу, которая орошает Тибет на протяжении полутора тысяч километров, огибая северное подножие Гималаев, и наконец узнать, не соединяется ли эта река с Брахмапутрой на северо-востоке Ассама. Золотая медаль, милорд, обеспечена путешественнику, которому удастся таким образом разрешить одну из самых насущных <i>desiderata</i> индийской географии.",
+      "source_sha256": "62fa161964b4ac5bf3dae5bae8005a74b8dae7853c940e7c3524d63665168c6a",
+      "target_id": "ru-fr42c-007-0011",
+      "tag": "p",
+      "target_sha256": "23aa23fa720d1cfd2db740e7fe65122b3813e8fb12914b16c0b408a7e4bc41df"
+    },
+    {
+      "source_id": "fr42c-007-0012",
+      "target": "Паганель был великолепен. Он говорил с превосходным оживлением. Он дал увлечь себя на быстрых крыльях воображения. Остановить его было бы так же невозможно, как Рейн у Шаффхаузенского водопада.",
+      "source_sha256": "0962fa10840352289e66158f37cd4860afc9538c09c47e418bca938cfefeaa19",
+      "target_id": "ru-fr42c-007-0012",
+      "tag": "p",
+      "target_sha256": "c6e69b1ae5d06cd84367269b053a8cc9bbc190b0188bdb31e46a1d6293991147"
+    },
+    {
+      "source_id": "fr42c-007-0013",
+      "target": "— Господин Жак Паганель, — сказал лорд Гленарван после минутного молчания, — это, несомненно, прекрасное путешествие, за которое наука будет вам весьма признательна; но я не хочу долее длить ваше заблуждение, и, по крайней мере сейчас, вам придётся отказаться от удовольствия посетить Индию.",
+      "source_sha256": "59ea0c7af99cd6b27d9f06bdb9263f04b9521a15eb8d3f73d2cb944bebddc971",
+      "target_id": "ru-fr42c-007-0013",
+      "tag": "p",
+      "target_sha256": "c5f5994bfe195118e849856b00944e29e7df9d49f1b51f6401fb4fa1cbe8d02d"
+    },
+    {
+      "source_id": "fr42c-007-0014",
+      "target": "— Отказаться! Но почему?",
+      "source_sha256": "2a650c2a35097451cfcbdc30860a3d024ef16b0ad05b8abcec0393432202df66",
+      "target_id": "ru-fr42c-007-0014",
+      "tag": "p",
+      "target_sha256": "18b413886a0b97fa3c3d071a7cd93b80968b97b1017c65927aa8282aa7becc16"
+    },
+    {
+      "source_id": "fr42c-007-0015",
+      "target": "— Потому что вы повернулись спиной к Индийскому полуострову.",
+      "source_sha256": "19bb42ef418192a1bd28655ce88f90d4a4fa0ce98db678b30b7f928a7500964a",
+      "target_id": "ru-fr42c-007-0015",
+      "tag": "p",
+      "target_sha256": "4c7c4f00a3bef6392c948d26d19898991ff9b3e2cd87b0c674ec12b1cba28925"
+    },
+    {
+      "source_id": "fr42c-007-0016",
+      "target": "— Как! Капитан Бёртон…",
+      "source_sha256": "0c4641bc1a83a8b1928f652c01608c1019803829d889aec73c24ad4129dfec01",
+      "target_id": "ru-fr42c-007-0016",
+      "tag": "p",
+      "target_sha256": "f121701eed8b6ac6e5d89fa18d03339c01d07ff473a9cfac9de725383117a93b"
+    },
+    {
+      "source_id": "fr42c-007-0017",
+      "target": "— Я не капитан Бёртон, — ответил Джон Манглс.",
+      "source_sha256": "22399f7b8f84b4c42805c5451aff4d9acdf3143cce64e98708ef7518f52c62fe",
+      "target_id": "ru-fr42c-007-0017",
+      "tag": "p",
+      "target_sha256": "c575c323065abf13db8f5cd135c6182494ffb76bd1a601d044c53f0e9e9791ae"
+    },
+    {
+      "source_id": "fr42c-007-0018",
+      "target": "— Но «<i>Скотия</i>»?",
+      "source_sha256": "c0ec3b6e0c5029735f2c1bea3870d6491d59b52e91b559fbb9a2b200d98c0d72",
+      "target_id": "ru-fr42c-007-0018",
+      "tag": "p",
+      "target_sha256": "c845abc7163728377c2d3363dc07afd763325fed61a2598593f3247ff524a605"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-007-heading",
+      "verdict": "CORRECTED",
+      "reason": "Heading smoothed to idiomatic present tense; meaning preserved."
+    },
+    {
+      "source_id": "fr42c-007-0000",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'изящностью', 'кстати' (d'ailleurs) and the clause structure; all facts kept."
+    },
+    {
+      "source_id": "fr42c-007-0001",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation made Russian (dash); 'месье' normalised."
+    },
+    {
+      "source_id": "fr42c-007-0002",
+      "verdict": "CORRECTED",
+      "reason": "Removed incorrect semicolon; dash dialogue; idiom of 'twenty questions'."
+    },
+    {
+      "source_id": "fr42c-007-0003",
+      "verdict": "CORRECTED",
+      "reason": "'Корабль' to 'судно'; meaning intact."
+    },
+    {
+      "source_id": "fr42c-007-0004",
+      "verdict": "CORRECTED",
+      "reason": "Fixed serious error 'в извозчику'; train, cab, cadre/berth, italics and stray quotes corrected."
+    },
+    {
+      "source_id": "fr42c-007-0005",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'сел на борт'; Saint-Mungo ceremony; italic Duncan; 'ученый' spelling."
+    },
+    {
+      "source_id": "fr42c-007-0006",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation and register adjusted."
+    },
+    {
+      "source_id": "fr42c-007-0007",
+      "verdict": "CORRECTED",
+      "reason": "Taugs rendered as тугов; removed redundant wording."
+    },
+    {
+      "source_id": "fr42c-007-0008",
+      "verdict": "CORRECTED",
+      "reason": "Removed false 'Итак'; 'Alors' as 'Значит'."
+    },
+    {
+      "source_id": "fr42c-007-0009",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'Нет' answer to a negative question; 'recommandations' kept as recommendations."
+    },
+    {
+      "source_id": "fr42c-007-0010",
+      "verdict": "CORRECTED",
+      "reason": "Minor interjection and punctuation fix."
+    },
+    {
+      "source_id": "fr42c-007-0011",
+      "verdict": "CORRECTED",
+      "reason": "Corrected names/river, restored desiderata italic as source, removed quote marks, style."
+    },
+    {
+      "source_id": "fr42c-007-0012",
+      "verdict": "CORRECTED",
+      "reason": "Fixed Schaffhausen and wording of reflexive 'se laissait emporter'."
+    },
+    {
+      "source_id": "fr42c-007-0013",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; 'les Indes' plural sense kept as Индию; style."
+    },
+    {
+      "source_id": "fr42c-007-0014",
+      "verdict": "CORRECTED",
+      "reason": "Idiomatic rendering of 'Y renoncer'."
+    },
+    {
+      "source_id": "fr42c-007-0015",
+      "verdict": "CORRECTED",
+      "reason": "Tense/aspect adjusted to idiom."
+    },
+    {
+      "source_id": "fr42c-007-0016",
+      "verdict": "CORRECTED",
+      "reason": "Burton spelled Бёртон; ellipsis kept."
+    },
+    {
+      "source_id": "fr42c-007-0017",
+      "verdict": "CORRECTED",
+      "reason": "Name standardised to Джон Манглс."
+    },
+    {
+      "source_id": "fr42c-007-0018",
+      "verdict": "CORRECTED",
+      "reason": "Italic span normalised; wording closer to 'Mais le Scotia?'."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-007-heading",
+      "before": "ГЛАВА VII — ОТКУДА ПРИШЁЛ И КУДА ИДЁТ ЖАК ПАГАНЕЛЬ.",
+      "after": "ГЛАВА VII. ОТКУДА ПРИХОДИТ И КУДА ИДЁТ ЖАК ПАГАНЕЛЬ"
+    },
+    {
+      "source_id": "fr42c-007-0000",
+      "before": "Секретарь Географического общества, должно быть, был приятным человеком, ибо всё это было сказано с большой изящностью. Лорд Гленарван, кстати, прекрасно знал, с кем имеет дело; имя и заслуги Жака Паганеля были ему хорошо известны; его географические труды, доклады о современных открытиях, публиковавшиеся в бюллетенях Общества, а также его переписка со всем миром делали его одним из самых выдающихся учёных Франции. Поэтому Гленарван сердечно протянул руку своему неожиданному гостю.",
+      "after": "Секретарь Географического общества, должно быть, был любезнейшим человеком, ибо всё это было сказано с большим изяществом. Впрочем, лорд Гленарван прекрасно знал, с кем имеет дело: имя и заслуги Жака Паганеля были ему отлично известны; его географические труды, его доклады об открытиях последнего времени, помещённые в бюллетенях Общества, его переписка со всем миром делали его одним из самых выдающихся учёных Франции. Поэтому Гленарван сердечно протянул руку своему неожиданному гостю."
+    },
+    {
+      "source_id": "fr42c-007-0001",
+      "before": "«И теперь, когда мы уже познакомились, — добавил он, — позвольте мне, месье Паганель, задать вам один вопрос?»",
+      "after": "— А теперь, когда мы представились друг другу, — добавил он, — позвольте, господин Паганель, задать вам один вопрос."
+    },
+    {
+      "source_id": "fr42c-007-0002",
+      "before": "— Двадцать вопросов, милорд, — ответил Жак Паганель; — для меня всегда будет удовольствием беседовать с вами.",
+      "after": "— Хоть двадцать, милорд, — ответил Жак Паганель. — Мне всегда будет приятно побеседовать с вами."
+    },
+    {
+      "source_id": "fr42c-007-0003",
+      "before": "— Вы прибыли на борт этого корабля позавчера вечером?",
+      "after": "— Вы прибыли на борт этого судна позавчера вечером?"
+    },
+    {
+      "source_id": "fr42c-007-0004",
+      "before": "— Да, милорд, позавчера вечером, в восемь часов. Я пересел с «Каледониан-Рейлвей» в извозчику, а из извозчика — на <i>«Скотию</i>», где я заранее забронировал из Парижа каюту номер шесть. Ночь была темной. Я никого не видел на борту. Поскольку я чувствовал себя уставшим после тридцати часов пути и знал, что для предотвращения морской болезни следует сразу же после прибытия лечь в кровать и не вставать из постели в первые дни переправы, я немедленно улегся и, поверьте, добросовестно проспал тридцать шесть часов».",
+      "after": "— Да, милорд, позавчера вечером, в восемь часов. Я выскочил из поезда Каледонской железной дороги, сел в кэб, а из кэба — на <i>«Скотию»</i>, где из Парижа заказал себе каюту номер шесть. Ночь была тёмная. На борту я никого не видел. А так как я чувствовал себя усталым после тридцати часов пути и знал, что, дабы избежать морской болезни, хорошо по приходе лечь и не вставать с койки в первые дни плавания, я немедленно улёгся и, поверьте, добросовестно проспал тридцать шесть часов."
+    },
+    {
+      "source_id": "fr42c-007-0005",
+      "before": "Слушатели Жака Паганеля теперь знали, как обстоят дела с его присутствием на борту. Французский путешественник, перепутав корабли, сел на борт в то время, как экипаж <i>«Дункана</i>» участвовал в церемонии Святого Мунго. Всё стало ясно. Но что скажет ученый географ, когда узнает название и пункт назначения корабля, на котором он отправился в путь?",
+      "after": "Теперь слушатели Жака Паганеля знали, чем объясняется его присутствие на борту. Французский путешественник, ошибившись судном, поднялся на борт в то время, когда команда <i>«Дункана»</i> присутствовала на церемонии в соборе Святого Мунго. Всё объяснилось. Но что скажет учёный географ, когда узнает название и назначение судна, на котором он взял место?"
+    },
+    {
+      "source_id": "fr42c-007-0006",
+      "before": "«Итак, месье Паганель, — сказал Гленарван, — вы выбрали Калькутту в качестве отправной точки для своих путешествий?»",
+      "after": "— Итак, господин Паганель, — сказал Гленарван, — вы избрали Калькутту отправным пунктом своих путешествий?"
+    },
+    {
+      "source_id": "fr42c-007-0007",
+      "before": "— Да, милорд. Увидеть Индию — это мечта, которую я лелеял всю свою жизнь. Это моя самая заветная мечта, которая наконец-то сбудется на родине слонов и таугов.",
+      "after": "— Да, милорд. Увидеть Индию — мысль, которую я лелеял всю жизнь. Моя прекраснейшая мечта наконец сбудется в стране слонов и тугов."
+    },
+    {
+      "source_id": "fr42c-007-0008",
+      "before": "— Итак, месье Паганель, вам не было бы безразлично посетить другую страну?",
+      "after": "— Значит, господин Паганель, вам было бы небезразлично посетить другую страну?"
+    },
+    {
+      "source_id": "fr42c-007-0009",
+      "before": "— Нет, милорд, это было бы для меня даже неприятно, ибо у меня есть рекомендательные письма к лорду Сомерсету, генерал-губернатору Индии, и поручение Географического общества, которое я намерен выполнить.",
+      "after": "— Да, милорд, это было бы мне даже неприятно, ибо у меня есть рекомендации к лорду Сомерсету, генерал-губернатору Индии, и поручение Географического общества, которое я намерен выполнить."
+    },
+    {
+      "source_id": "fr42c-007-0010",
+      "before": "— Ах! У вас есть поручение?",
+      "after": "— А! У вас есть поручение?"
+    },
+    {
+      "source_id": "fr42c-007-0011",
+      "before": "— Да, это полезное и любопытное путешествие, программу которого составил мой ученый друг и коллега г-н Вивиен де Сен-Мартен. Речь, действительно, идет о том, чтобы отправиться по стопам братьев Шлагинвейтов, полковника Во, Вебба, Ходжсона, миссионеров Юка и Габе, Муркрофта, г-на Жюля Реми и многих других знаменитых путешественников. Я хочу добиться успеха там, где миссионер Крик, к сожалению, потерпел неудачу в 1846 году; одним словом, определить русло реки Яру-Дзангбо-Чу, которая орошает Тибет на протяжении полутора тысяч километров, протекая вдоль северного подножия Гималаев, и наконец выяснить, не впадает ли эта река в Брахмапутру на северо-востоке Ассама. Золотая медаль, милорд, гарантирована путешественнику, которому удастся таким образом осуществить одно из самых насущных <i>желаний</i> индийской географии».",
+      "after": "— Да, предстоит полезное и любопытное путешествие, программу которого составил мой учёный друг и коллега господин Вивьен де Сен-Мартен. Речь идёт о том, чтобы пойти по следам братьев Шлагинтвейт, полковника Во, Уэбба, Ходжсона, миссионеров Гюка и Габе, Муркрофта, господина Жюля Реми и стольких других знаменитых путешественников. Я хочу добиться успеха там, где миссионер Крик, к несчастью, потерпел неудачу в 1846 году; словом, исследовать течение Ярлунг-Цангпо, которая орошает Тибет на протяжении полутора тысяч километров, огибая северное подножие Гималаев, и наконец узнать, не соединяется ли эта река с Брахмапутрой на северо-востоке Ассама. Золотая медаль, милорд, обеспечена путешественнику, которому удастся таким образом разрешить одну из самых насущных <i>desiderata</i> индийской географии."
+    },
+    {
+      "source_id": "fr42c-007-0012",
+      "before": "Паганель был великолепен. Он говорил с потрясающим воодушевлением. Он уносился на быстрых крыльях воображения. Остановить его было так же невозможно, как Рейн у водопадов Шаффузена.",
+      "after": "Паганель был великолепен. Он говорил с превосходным оживлением. Он дал увлечь себя на быстрых крыльях воображения. Остановить его было бы так же невозможно, как Рейн у Шаффхаузенского водопада."
+    },
+    {
+      "source_id": "fr42c-007-0013",
+      "before": "«Месье Жак Паганель, — сказал лорд Гленарван после минутного молчания, — это, безусловно, прекрасное путешествие, за которое наука будет вам очень благодарна; но я не хочу дольше поддерживать ваше заблуждение, и, по крайней мере на данный момент, вам придётся отказаться от удовольствия посетить Индию».",
+      "after": "— Господин Жак Паганель, — сказал лорд Гленарван после минутного молчания, — это, несомненно, прекрасное путешествие, за которое наука будет вам весьма признательна; но я не хочу долее длить ваше заблуждение, и, по крайней мере сейчас, вам придётся отказаться от удовольствия посетить Индию."
+    },
+    {
+      "source_id": "fr42c-007-0014",
+      "before": "— Отказаться от этого! И зачем?",
+      "after": "— Отказаться! Но почему?"
+    },
+    {
+      "source_id": "fr42c-007-0015",
+      "before": "— Потому что вы поворачиваетесь спиной к Индийскому полуострову.",
+      "after": "— Потому что вы повернулись спиной к Индийскому полуострову."
+    },
+    {
+      "source_id": "fr42c-007-0016",
+      "before": "— Что?! Капитан Бертон…",
+      "after": "— Как! Капитан Бёртон…"
+    },
+    {
+      "source_id": "fr42c-007-0017",
+      "before": "— Я не капитан Бертон, — ответил Джон Мэнглз.",
+      "after": "— Я не капитан Бёртон, — ответил Джон Манглс."
+    },
+    {
+      "source_id": "fr42c-007-0018",
+      "before": "— А как же <i>«Скотия</i>»<i>?</i>",
+      "after": "— Но «<i>Скотия</i>»?"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/007/batch000.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJomm2P8tt8MNBSZBLS8",
+    "usage": {
+      "input_tokens": 11413,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3239,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJooKr8JXaEqb8Gs8wtn",
+        "usage": {
+          "input_tokens": 15247,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 4691,
+          "output_tokens_details": {
+            "thinking_tokens": 1515
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-007-heading",
+          "verdict": "PASS",
+          "reason": "Faithful heading; present tense 'приходит/идёт' matches 'vient/va'."
+        },
+        {
+          "source_id": "fr42c-007-0000",
+          "verdict": "PASS",
+          "reason": "Meaning, 'd'ailleurs', and the list of Paganel's merits are all preserved."
+        },
+        {
+          "source_id": "fr42c-007-0001",
+          "verdict": "PASS",
+          "reason": "Faithful, with correct Russian dialogue punctuation."
+        },
+        {
+          "source_id": "fr42c-007-0002",
+          "verdict": "PASS",
+          "reason": "Idiomatic rendering of 'Vingt questions'; the sense is preserved."
+        },
+        {
+          "source_id": "fr42c-007-0003",
+          "verdict": "PASS",
+          "reason": "Accurate: 'avant-hier soir' and the arrival on board are preserved."
+        },
+        {
+          "source_id": "fr42c-007-0004",
+          "verdict": "PASS",
+          "reason": "All facts preserved: train, cab, cabin six, thirty hours, thirty-six hours of sleep; italic ship name kept."
+        },
+        {
+          "source_id": "fr42c-007-0005",
+          "verdict": "CORRECTED",
+          "reason": "Removed the added word 'в соборе'; the source says only 'cérémonie de Saint-Mungo'. The rest is accurate and the italics are kept."
+        },
+        {
+          "source_id": "fr42c-007-0006",
+          "verdict": "PASS",
+          "reason": "Faithful to the source."
+        },
+        {
+          "source_id": "fr42c-007-0007",
+          "verdict": "PASS",
+          "reason": "Faithful; 'Taugs' rendered as 'тугов'."
+        },
+        {
+          "source_id": "fr42c-007-0008",
+          "verdict": "PASS",
+          "reason": "The negation 'ne ... point indifférent' is preserved."
+        },
+        {
+          "source_id": "fr42c-007-0009",
+          "verdict": "CORRECTED",
+          "reason": "Restored the source's 'Non' in place of the earlier 'Да'; the rest is unchanged."
+        },
+        {
+          "source_id": "fr42c-007-0010",
+          "verdict": "PASS",
+          "reason": "Faithful to the source."
+        },
+        {
+          "source_id": "fr42c-007-0011",
+          "verdict": "CORRECTED",
+          "reason": "Restored the source's river name 'Яру-Дзангбо-Чу' in place of the modernised 'Ярлунг-Цангпо'. Other names, facts and the italic 'desiderata' are preserved."
+        },
+        {
+          "source_id": "fr42c-007-0012",
+          "verdict": "PASS",
+          "reason": "Faithful to the source, including the Rhine/Schaffhausen simile."
+        },
+        {
+          "source_id": "fr42c-007-0013",
+          "verdict": "PASS",
+          "reason": "Accurate, including 'pour le moment du moins'."
+        },
+        {
+          "source_id": "fr42c-007-0014",
+          "verdict": "PASS",
+          "reason": "Faithful to the source."
+        },
+        {
+          "source_id": "fr42c-007-0015",
+          "verdict": "PASS",
+          "reason": "Idiomatic and accurate."
+        },
+        {
+          "source_id": "fr42c-007-0016",
+          "verdict": "PASS",
+          "reason": "Faithful; the interruption is preserved."
+        },
+        {
+          "source_id": "fr42c-007-0017",
+          "verdict": "PASS",
+          "reason": "The negation is preserved; the name John Mangles is rendered as established."
+        },
+        {
+          "source_id": "fr42c-007-0018",
+          "verdict": "PASS",
+          "reason": "Italic ship name preserved."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "fr42c-007-0005",
+          "before": "Теперь слушатели Жака Паганеля знали, чем объясняется его присутствие на борту. Французский путешественник, ошибившись судном, поднялся на борт в то время, когда команда <i>«Дункана»</i> присутствовала на церемонии в соборе Святого Мунго. Всё объяснилось. Но что скажет учёный географ, когда узнает название и назначение судна, на котором он взял место?",
+          "after": "Теперь слушатели Жака Паганеля знали, чем объясняется его присутствие на борту. Французский путешественник, ошибившись судном, поднялся на борт в то время, когда команда <i>«Дункана»</i> присутствовала на церемонии Святого Мунго. Всё объяснилось. Но что скажет учёный географ, когда узнает название и назначение судна, на котором он взял место?"
+        },
+        {
+          "source_id": "fr42c-007-0009",
+          "before": "— Да, милорд, это было бы мне даже неприятно, ибо у меня есть рекомендации к лорду Сомерсету, генерал-губернатору Индии, и поручение Географического общества, которое я намерен выполнить.",
+          "after": "— Нет, милорд, это было бы мне даже неприятно, ибо у меня есть рекомендации к лорду Сомерсету, генерал-губернатору Индии, и поручение Географического общества, которое я намерен выполнить."
+        },
+        {
+          "source_id": "fr42c-007-0011",
+          "before": "— Да, предстоит полезное и любопытное путешествие, программу которого составил мой учёный друг и коллега господин Вивьен де Сен-Мартен. Речь идёт о том, чтобы пойти по следам братьев Шлагинтвейт, полковника Во, Уэбба, Ходжсона, миссионеров Гюка и Габе, Муркрофта, господина Жюля Реми и стольких других знаменитых путешественников. Я хочу добиться успеха там, где миссионер Крик, к несчастью, потерпел неудачу в 1846 году; словом, исследовать течение Ярлунг-Цангпо, которая орошает Тибет на протяжении полутора тысяч километров, огибая северное подножие Гималаев, и наконец узнать, не соединяется ли эта река с Брахмапутрой на северо-востоке Ассама. Золотая медаль, милорд, обеспечена путешественнику, которому удастся таким образом разрешить одну из самых насущных <i>desiderata</i> индийской географии.",
+          "after": "— Да, предстоит полезное и любопытное путешествие, программу которого составил мой учёный друг и коллега господин Вивьен де Сен-Мартен. Речь идёт о том, чтобы пойти по следам братьев Шлагинтвейт, полковника Во, Уэбба, Ходжсона, миссионеров Гюка и Габе, Муркрофта, господина Жюля Реми и стольких других знаменитых путешественников. Я хочу добиться успеха там, где миссионер Крик, к несчастью, потерпел неудачу в 1846 году; словом, исследовать течение Яру-Дзангбо-Чу, которая орошает Тибет на протяжении полутора тысяч километров, огибая северное подножие Гималаев, и наконец узнать, не соединяется ли эта река с Брахмапутрой на северо-востоке Ассама. Золотая медаль, милорд, обеспечена путешественнику, которому удастся таким образом разрешить одну из самых насущных <i>desiderata</i> индийской географии."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJoqNVvCX8J4vS439PXW",
+        "usage": {
+          "input_tokens": 16477,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3837,
+          "output_tokens_details": {
+            "thinking_tokens": 648
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "fr42c-007-heading",
+          "verdict": "PASS",
+          "reason": "Heading faithful; present tense of the title preserved."
+        },
+        {
+          "source_id": "fr42c-007-0000",
+          "verdict": "PASS",
+          "reason": "All facts, the reasoning about Paganel's merit, and Glenarvan's gesture are preserved; register is idiomatic."
+        },
+        {
+          "source_id": "fr42c-007-0001",
+          "verdict": "PASS",
+          "reason": "Question and 'ajouta-t-il' preserved; dialogue punctuation is correct."
+        },
+        {
+          "source_id": "fr42c-007-0002",
+          "verdict": "PASS",
+          "reason": "'Vingt questions' rendered idiomatically; the pleasure of conversing is preserved."
+        },
+        {
+          "source_id": "fr42c-007-0003",
+          "verdict": "PASS",
+          "reason": "'Avant-hier soir' and the ship are accurate."
+        },
+        {
+          "source_id": "fr42c-007-0004",
+          "verdict": "PASS",
+          "reason": "Time, cab, cabin six, seasickness precaution and 36 hours of sleep all preserved; the italic ship name is kept."
+        },
+        {
+          "source_id": "fr42c-007-0005",
+          "verdict": "PASS",
+          "reason": "Mistaken ship, Duncan italic, Saint-Mungo ceremony and closing question preserved; no addition."
+        },
+        {
+          "source_id": "fr42c-007-0006",
+          "verdict": "PASS",
+          "reason": "Calcutta as point of departure is accurate."
+        },
+        {
+          "source_id": "fr42c-007-0007",
+          "verdict": "PASS",
+          "reason": "Lifelong idea, dream, and the land of elephants and Thugs are preserved."
+        },
+        {
+          "source_id": "fr42c-007-0008",
+          "verdict": "PASS",
+          "reason": "The negated conditional ('ne … point indifférent') is preserved."
+        },
+        {
+          "source_id": "fr42c-007-0009",
+          "verdict": "PASS",
+          "reason": "Negation 'Non', the recommendations, Lord Somerset and the mission are all correct."
+        },
+        {
+          "source_id": "fr42c-007-0010",
+          "verdict": "PASS",
+          "reason": "Short exclamation and question are accurate."
+        },
+        {
+          "source_id": "fr42c-007-0011",
+          "verdict": "PASS",
+          "reason": "Names, 1846, 1,500 km, the Himalaya, Assam, the gold medal and the italic desiderata are all preserved."
+        },
+        {
+          "source_id": "fr42c-007-0012",
+          "verdict": "PASS",
+          "reason": "Animation, imagination and the Rhine at Schaffhausen are preserved, with the conditional force."
+        },
+        {
+          "source_id": "fr42c-007-0013",
+          "verdict": "PASS",
+          "reason": "Pause, praise, reluctance to prolong the error, and the renunciation are faithful."
+        },
+        {
+          "source_id": "fr42c-007-0014",
+          "verdict": "PASS",
+          "reason": "Brief exclamation and question are preserved."
+        },
+        {
+          "source_id": "fr42c-007-0015",
+          "verdict": "PASS",
+          "reason": "'Tournez le dos' is rendered as a completed action."
+        },
+        {
+          "source_id": "fr42c-007-0016",
+          "verdict": "PASS",
+          "reason": "Interrupted exclamation preserved with the ellipsis."
+        },
+        {
+          "source_id": "fr42c-007-0017",
+          "verdict": "PASS",
+          "reason": "Negation and speaker preserved; the name is consistent."
+        },
+        {
+          "source_id": "fr42c-007-0018",
+          "verdict": "PASS",
+          "reason": "Italic ship name preserved in an elliptical question."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
