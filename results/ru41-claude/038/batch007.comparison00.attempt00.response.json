@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJPB2GA91DmiVaPoDB2H",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id04987\",\"target\":\"— Да, — сказал Атос, — но этот ребёнок приходит во имя Бога.\"},{\"source_id\":\"id04988\",\"target\":\"И они торопливо вышли из гостиницы.\"}],\"review\":[{\"source_id\":\"id04987\",\"verdict\":\"PASS\",\"reason\":\"Соответствует оригиналу: «Oui» — «Да», «dit Athos» — вставная реплика с правильной русской пунктуацией диалога, «mais» — «но», «cet enfant vient au nom de Dieu» — «этот ребёнок приходит во имя Бога». Настоящее время сохранено, ничего не пропущено и не добавлено. Контрастное «но» продолжает предыдущую реплику д’Артаньяна о страхе перед ребёнком.\"},{\"source_id\":\"id04988\",\"verdict\":\"PASS\",\"reason\":\"Предыдущая правка («поспешно» → «торопливо») проверена: «empressés» означает поспешность, рвение, и «торопливо» это передаёт приемлемо. Остальное верно: «Et» — «И», «ils sortirent» — «они вышли» (прошедшее совершенное), «de l'hôtellerie» — «из гостиницы». Абзац сохранён, фактов не добавлено и не потеряно.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1875,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 447,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

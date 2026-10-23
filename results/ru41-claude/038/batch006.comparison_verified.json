@@ -1,0 +1,609 @@
+{
+  "unit": 38,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id04967",
+      "target": "— Чёрт возьми! — сказал Портос. — Ты уверен?",
+      "source_sha256": "f393151f5ceee8fae5a44e466e005d683655071796f94ae6b5f96d47bd58c34f",
+      "target_id": "ru-id04967",
+      "tag": "p",
+      "target_sha256": "f78a4d2b413bece84b52b99ac079878633dd92aad76279365a07fe3806bad995"
+    },
+    {
+      "source_id": "id04968",
+      "target": "— Уверен, — сказал Гримо.",
+      "source_sha256": "da6581df31bbcdfaa9cad8b1be24cc7e76e640773d7a000e2c1939689f5d2ad1",
+      "target_id": "ru-id04968",
+      "tag": "p",
+      "target_sha256": "521ad61d742822b54671ce8496560d844ba85b1ae5179b95c7067502064034fb"
+    },
+    {
+      "source_id": "id04969",
+      "target": "Это заявление было встречено долгим молчанием. Гримо так запыхался, так устал, что упал на стул.",
+      "source_sha256": "3756b6317c0ccae0df3034cd636d9070bb729600ba5b7b1357e336dd6e2bacb9",
+      "target_id": "ru-id04969",
+      "tag": "p",
+      "target_sha256": "c95aadfb971485ac30edf97a9cd68ab1e6b1a43ac1d5ba8168a614a16f5db736"
+    },
+    {
+      "source_id": "id04970",
+      "target": "Атос налил бокал шампанского и поднёс ему.",
+      "source_sha256": "fd9ce0e03eb54200359c7cb04050a1cbea457ebd03dcc51adaece39372c59d78",
+      "target_id": "ru-id04970",
+      "tag": "p",
+      "target_sha256": "de42a17097fc9374980362ffd87c2cc50dbc40118a711679b6bc86ba6090497d"
+    },
+    {
+      "source_id": "id04971",
+      "target": "— Ну и что ж, — сказал д’Артаньян, — даже если он жив, даже если он приедет в Париж, мы видывали и не такое! Пусть приезжает!",
+      "source_sha256": "d86973a8cff427d8c6f866dcb91f093ebc09b78b2bf8080d7330f824b583fe66",
+      "target_id": "ru-id04971",
+      "tag": "p",
+      "target_sha256": "4238915032ae9fe43c4e257dcefda1647aa3f0d7ab96775631a4870440616e45"
+    },
+    {
+      "source_id": "id04972",
+      "target": "— Да, — сказал Портос, лаская взглядом свою шпагу, висевшую на стене, — мы его ждём: пусть приезжает!",
+      "source_sha256": "d52333b78163b2b8a0c26f719c100e3213f6832501f102f5a6f015f434f4eceb",
+      "target_id": "ru-id04972",
+      "tag": "p",
+      "target_sha256": "1196e7c85f80474adc8e2b437691baec17ff427b423a5e65992130c05120d87a"
+    },
+    {
+      "source_id": "id04973",
+      "target": "— К тому же это всего лишь ребёнок, — сказал Арамис.",
+      "source_sha256": "a76d3301f284b5f46dd39bf9f6ba9a7c3a78549daa02790a17425986717a9204",
+      "target_id": "ru-id04973",
+      "tag": "p",
+      "target_sha256": "629e86e552e8cf69ef88d3aff3ee9a19c6ed3697a4698d21803ce2997e6b5ff7"
+    },
+    {
+      "source_id": "id04974",
+      "target": "Гримо встал.",
+      "source_sha256": "65676b2436c5eab652e47b5d64e4ad2257ff4f485194878c87dddfca92fb8630",
+      "target_id": "ru-id04974",
+      "tag": "p",
+      "target_sha256": "39b5d33b2917e18917b8b240338f7b9bba5c1c7a46c454d9d49bd76e10055d14"
+    },
+    {
+      "source_id": "id04975",
+      "target": "— Ребёнок! — сказал он. — А знаете, что он натворил, этот ребёнок? Переодевшись монахом, он выведал всю историю, исповедуя бетюнского палача, а исповедав его и всё от него узнав, вместо отпущения грехов вонзил ему в сердце вот этот кинжал. Смотрите, он ещё красный и влажный, ведь не прошло и тридцати часов, как он вышел из раны.",
+      "source_sha256": "8eabbcc8d05536c9bf520debfa417fb9a44d1603a553b16e4f0c619e1441bc0b",
+      "target_id": "ru-id04975",
+      "tag": "p",
+      "target_sha256": "c5f76c94e22e46dc0cd7cf340eb93f4e9941de03434bd208e10dd8222262cb11"
+    },
+    {
+      "source_id": "id04976",
+      "target": "И Гримо бросил на стол кинжал, забытый монахом в ране палача.",
+      "source_sha256": "522a39175eedf606b8c1fe521d3dff27b47d7ace11ceafda4d30b7b64a6e91ab",
+      "target_id": "ru-id04976",
+      "tag": "p",
+      "target_sha256": "b30c2f1aceba148fff2963ea138cc5a1e78e6f4753a32cdc7ffe0cf7966897b2"
+    },
+    {
+      "source_id": "id04977",
+      "target": "Д’Артаньян, Портос и Арамис вскочили и невольным движением бросились к своим шпагам.",
+      "source_sha256": "a91858a20c4742255f0294e0bc4536b9c0769a70458d7a3986f4b70701dd22cf",
+      "target_id": "ru-id04977",
+      "tag": "p",
+      "target_sha256": "ca20aa3098d415243d4ddc0b2aae9a54102de893dce1aefdf3ad10d0c75d99d2"
+    },
+    {
+      "source_id": "id04978",
+      "target": "Один Атос остался сидеть на стуле, спокойный и задумчивый.",
+      "source_sha256": "931b35ba3a0e3d8da884b7d596dc77ee2177d7277d78fa958ab3c2746cafd99a",
+      "target_id": "ru-id04978",
+      "tag": "p",
+      "target_sha256": "b60a29310e2dd1aa0066e2d98d8e1331f82e6cdfa19e4517ace9685455f8414a"
+    },
+    {
+      "source_id": "id04979",
+      "target": "— И ты говоришь, он одет монахом, Гримо?",
+      "source_sha256": "80ffdf37ca8716e90dce5f983603827b164cd5116e00902065c297a768b332ba",
+      "target_id": "ru-id04979",
+      "tag": "p",
+      "target_sha256": "924f46fe8d92ff11c6daba9a8da83cad6a5541c0b8eee1de72e6441c1453553e"
+    },
+    {
+      "source_id": "id04980",
+      "target": "— Да, монахом-августинцем.",
+      "source_sha256": "ed8dbbc8bddde870610a2cd8dab4b2248657d2ca43a512b75f093f9a634d82c9",
+      "target_id": "ru-id04980",
+      "tag": "p",
+      "target_sha256": "695a4367a44dd2bd912b3393f0567ab38bcc3f98d278ab639ce553e461be5025"
+    },
+    {
+      "source_id": "id04981",
+      "target": "— Что это за человек?",
+      "source_sha256": "66be59e757f74fd56177d752aecf3eaaccf64e939370fff166aa9c707b60a6a1",
+      "target_id": "ru-id04981",
+      "tag": "p",
+      "target_sha256": "ac50cfea1b9c1ecf7a98e8043fbafafa0cd89cd029e3ba9ab0da32425d5284df"
+    },
+    {
+      "source_id": "id04982",
+      "target": "— Моего роста, как сказал мне хозяин, худой, бледный, со светло-голубыми глазами и белокурыми волосами!",
+      "source_sha256": "9974cc70d74fb104846dff86f1775aa6961bd94e10dab0843164eb4335d8de80",
+      "target_id": "ru-id04982",
+      "tag": "p",
+      "target_sha256": "16644ce33173c53babe3cf9cabcf283148c290d91a91eaaf45404b0136b1c4ee"
+    },
+    {
+      "source_id": "id04983",
+      "target": "— И… он не видел Рауля? — спросил Атос.",
+      "source_sha256": "4c22a1ca872f73ec0b9eb6cb73d86e75f54f9e7596c44e7515f8d4b7c9540699",
+      "target_id": "ru-id04983",
+      "tag": "p",
+      "target_sha256": "91663a299346f54c06961de84ca8a8123318a98305937ca9958a2ff79e980568"
+    },
+    {
+      "source_id": "id04984",
+      "target": "— Напротив, они встретились, и сам виконт привёл его к постели умирающего.",
+      "source_sha256": "bdaa415b69869840c340d08623aa0708816bd1a90631989e197478126a35cb3f",
+      "target_id": "ru-id04984",
+      "tag": "p",
+      "target_sha256": "e9ac58c93a325341ea0bb4978e506fbc14f5abd121b5da3fc617e55b492a51d1"
+    },
+    {
+      "source_id": "id04985",
+      "target": "Атос поднялся, не говоря ни слова, и в свою очередь пошёл снять со стены шпагу.",
+      "source_sha256": "4fd02afa354e9fbc491d1438264a1c272931a937bf6ff1e3f14fd6fcf599333f",
+      "target_id": "ru-id04985",
+      "tag": "p",
+      "target_sha256": "1839abc3bde3bd7582385c848593a84ab523b47df47d3fe2d5220363339ad999"
+    },
+    {
+      "source_id": "id04986",
+      "target": "— Послушайте, господа, — сказал д’Артаньян, пытаясь засмеяться, — вы понимаете, что мы похожи на трусливых баб! Как же так: мы, четверо мужчин, не моргнув глазом противостоявшие армиям, а теперь дрожим перед ребёнком!",
+      "source_sha256": "cd7363365a37d0a02febee0069b6e25f70b8c41cf96880c0454b88e579c18170",
+      "target_id": "ru-id04986",
+      "tag": "p",
+      "target_sha256": "8569e3b4a1ac8660be10047079e6e2f649942847d89c34f092d76bdaa22a82f5"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id04967",
+      "verdict": "PASS",
+      "reason": "Faithful: exclamation and question preserved."
+    },
+    {
+      "source_id": "id04968",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04969",
+      "verdict": "CORRECTED",
+      "reason": "Made the passive construction more idiomatic; meaning unchanged."
+    },
+    {
+      "source_id": "id04970",
+      "target_note": "",
+      "verdict": "CORRECTED",
+      "reason": "'verre de Champagne' rendered as 'бокал шампанского'; more natural."
+    },
+    {
+      "source_id": "id04971",
+      "verdict": "PASS",
+      "reason": "Conditional 'quand il vivrait' and the challenge are preserved."
+    },
+    {
+      "source_id": "id04972",
+      "verdict": "CORRECTED",
+      "reason": "'caressant du regard' rendered literally as 'лаская взглядом' instead of the weaker 'ласково поглядывая'."
+    },
+    {
+      "source_id": "id04973",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04974",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04975",
+      "verdict": "CORRECTED",
+      "reason": "'pour absolution' became 'вместо отпущения грехов'; 'Tenez' became 'Смотрите'; 'sorti de la plaie' made intransitive as in the source; the participial 'исповедав… узнав' tracks the French."
+    },
+    {
+      "source_id": "id04976",
+      "verdict": "CORRECTED",
+      "reason": "'oublié' rendered as 'забытый', not 'оставленный'."
+    },
+    {
+      "source_id": "id04977",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04978",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04979",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04980",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04981",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04982",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'с светло-' to 'со светло-'; 'blonds' rendered as 'белокурыми'."
+    },
+    {
+      "source_id": "id04983",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04984",
+      "verdict": "PASS",
+      "reason": "Faithful, including the agency of the vicomte."
+    },
+    {
+      "source_id": "id04985",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "id04986",
+      "verdict": "CORRECTED",
+      "reason": "'Ah çà' rendered as 'Послушайте'; 'femmelettes' as 'трусливые бабы' instead of the anachronistic 'кисейные барышни'; removed the added 'целым'; kept 'voilà que nous tremblons' with 'а теперь дрожим'."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id04969",
+      "before": "Это заявление встретило долгое молчание. Гримо так запыхался, так устал, что упал на стул.",
+      "after": "Это заявление было встречено долгим молчанием. Гримо так запыхался, так устал, что упал на стул."
+    },
+    {
+      "source_id": "id04970",
+      "before": "Атос наполнил стакан шампанским и поднёс ему.",
+      "after": "Атос налил бокал шампанского и поднёс ему."
+    },
+    {
+      "source_id": "id04972",
+      "before": "— Да, — сказал Портос, ласково поглядывая на свою шпагу, висевшую на стене, — мы его ждём: пусть приезжает!",
+      "after": "— Да, — сказал Портос, лаская взглядом свою шпагу, висевшую на стене, — мы его ждём: пусть приезжает!"
+    },
+    {
+      "source_id": "id04975",
+      "before": "— Ребёнок! — сказал он. — А знаете, что он натворил, этот ребёнок? Переодевшись монахом, он выведал всю историю, исповедуя бетюнского палача, а когда исповедал его и всё от него узнал, то в виде отпущения грехов вонзил ему в сердце вот этот кинжал. Вот, он ещё красный и влажный, ведь не прошло и тридцати часов, как его вынули из раны.",
+      "after": "— Ребёнок! — сказал он. — А знаете, что он натворил, этот ребёнок? Переодевшись монахом, он выведал всю историю, исповедуя бетюнского палача, а исповедав его и всё от него узнав, вместо отпущения грехов вонзил ему в сердце вот этот кинжал. Смотрите, он ещё красный и влажный, ведь не прошло и тридцати часов, как он вышел из раны."
+    },
+    {
+      "source_id": "id04976",
+      "before": "И Гримо бросил на стол кинжал, оставленный монахом в ране палача.",
+      "after": "И Гримо бросил на стол кинжал, забытый монахом в ране палача."
+    },
+    {
+      "source_id": "id04982",
+      "before": "— Моего роста, как сказал мне хозяин, худой, бледный, с светло-голубыми глазами и светлыми волосами!",
+      "after": "— Моего роста, как сказал мне хозяин, худой, бледный, со светло-голубыми глазами и белокурыми волосами!"
+    },
+    {
+      "source_id": "id04986",
+      "before": "— Ну полно, господа, — сказал д’Артаньян, пытаясь засмеяться, — вы понимаете, что мы похожи на кисейных барышень! Как же так: мы, четверо мужчин, не моргнув глазом противостоявшие целым армиям, дрожим перед ребёнком!",
+      "after": "— Послушайте, господа, — сказал д’Артаньян, пытаясь засмеяться, — вы понимаете, что мы похожи на трусливых баб! Как же так: мы, четверо мужчин, не моргнув глазом противостоявшие армиям, а теперь дрожим перед ребёнком!"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJP5sG2MRd4RxsNSywm7",
+    "usage": {
+      "input_tokens": 4850,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1083,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJP6UX563ujQQGhbWKRd",
+    "usage": {
+      "input_tokens": 8511,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3238,
+      "output_tokens_details": {
+        "thinking_tokens": 1182
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJP7um94fQgWkb8CjkTK",
+        "usage": {
+          "input_tokens": 9595,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3448,
+          "output_tokens_details": {
+            "thinking_tokens": 892
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04967",
+          "verdict": "CORRECTED",
+          "reason": "Meaning, tone and dialogue turn match the French. Only the orthography was changed: «Черт» became «Чёрт», to match the ё used elsewhere in the chapter («ребёнок», «поднёс»)."
+        },
+        {
+          "source_id": "id04968",
+          "verdict": "PASS",
+          "reason": "«Sûr» is rendered faithfully and the Russian dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id04969",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: the passive «было встречено долгим молчанием» matches the French and keeps the agency. Grimaud's breathlessness and his fall onto a chair are preserved."
+        },
+        {
+          "source_id": "id04970",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «налил бокал шампанского» is idiomatic and faithful. The champagne, the glass and Athos bringing it to Grimaud are all kept."
+        },
+        {
+          "source_id": "id04971",
+          "verdict": "PASS",
+          "reason": "The conditional «quand il vivrait / viendrait» is rendered as «даже если он жив… приедет». «Мы видывали и не такое» and «Пусть приезжает!» carry the idiom and the defiant register."
+        },
+        {
+          "source_id": "id04972",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «лаская взглядом» is faithful to «caressant du regard». The sword on the wall, «nous l'attendons» and «qu'il vienne» are all kept."
+        },
+        {
+          "source_id": "id04973",
+          "verdict": "PASS",
+          "reason": "«D'ailleurs ce n'est qu'un enfant» is rendered faithfully, and the speaker is Aramis."
+        },
+        {
+          "source_id": "id04974",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "id04975",
+          "verdict": "PASS",
+          "reason": "The prior corrections are verified. The disguise as a monk, the confession of the Béthune executioner, the dagger as «absolution», the dagger still red and damp, and the thirty hours are all preserved. The dagger is the subject of «il est sorti de la plaie», as in the French. «Вместо отпущения грехов» is an acceptable rendering of the ironic «pour absolution»."
+        },
+        {
+          "source_id": "id04976",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: «забытый монахом в ране палача» matches «oublié par le moine dans la blessure du bourreau»."
+        },
+        {
+          "source_id": "id04977",
+          "verdict": "PASS",
+          "reason": "The three men rise and run to their swords by a spontaneous movement, as in the French."
+        },
+        {
+          "source_id": "id04978",
+          "verdict": "PASS",
+          "reason": "«Athos seul» is rendered as «Один Атос», and «calme et rêveur» is rendered accurately."
+        },
+        {
+          "source_id": "id04979",
+          "verdict": "PASS",
+          "reason": "Question and address to Grimaud are preserved."
+        },
+        {
+          "source_id": "id04980",
+          "verdict": "PASS",
+          "reason": "«Moine augustin» is rendered correctly as «монахом-августинцем»."
+        },
+        {
+          "source_id": "id04981",
+          "verdict": "PASS",
+          "reason": "Faithful and idiomatic."
+        },
+        {
+          "source_id": "id04982",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified: the grammar is fixed with «со светло-голубыми» and «белокурыми» renders «blonds». The height, the thin and pale appearance, and the innkeeper as the source of the description are all kept."
+        },
+        {
+          "source_id": "id04983",
+          "verdict": "PASS",
+          "reason": "The ellipsis, the negation and «dit Athos» are preserved."
+        },
+        {
+          "source_id": "id04984",
+          "verdict": "PASS",
+          "reason": "«Au contraire» and the emphasis of «le vicomte lui-même» are rendered, as is the agency: the vicomte led him to the dying man's bedside."
+        },
+        {
+          "source_id": "id04985",
+          "verdict": "PASS",
+          "reason": "Athos rises without a word and takes down his own sword in turn, as in the French."
+        },
+        {
+          "source_id": "id04986",
+          "verdict": "PASS",
+          "reason": "The prior correction is verified. «Ah çà, messieurs» becomes «Послушайте, господа», «femmelettes» becomes «трусливых баб», and «des armées» becomes «армиям», with no added «целым». The contrast between facing armies unflinchingly and trembling before a child is kept."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id04967",
+          "before": "— Черт возьми! — сказал Портос. — Ты уверен?",
+          "after": "— Чёрт возьми! — сказал Портос. — Ты уверен?"
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJP9Prd2r9isyV8djQ27",
+        "usage": {
+          "input_tokens": 9593,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3028,
+          "output_tokens_details": {
+            "thinking_tokens": 520
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id04967",
+          "verdict": "PASS",
+          "reason": "Faithful: the exclamation «Diable!» and the question «tu es sûr?» are rendered naturally, and the dialogue punctuation is correct."
+        },
+        {
+          "source_id": "id04968",
+          "verdict": "PASS",
+          "reason": "Accurate and concise; the repetition of «Sûr» and the speaker are preserved."
+        },
+        {
+          "source_id": "id04969",
+          "verdict": "PASS",
+          "reason": "The prior correction to the passive «было встречено долгим молчанием» matches «accueillit»; the degree of Grimaud's breathlessness and exhaustion and the fall onto a chair are preserved."
+        },
+        {
+          "source_id": "id04970",
+          "verdict": "PASS",
+          "reason": "«Un verre de Champagne» is rendered as «бокал шампанского», which is correct; Athos is the agent and the glass is brought to Grimaud."
+        },
+        {
+          "source_id": "id04971",
+          "verdict": "PASS",
+          "reason": "The conditional «quand il vivrait / viendrait» is conveyed by «даже если»; «nous en avons vu bien d'autres» and the final «Qu'il vienne!» are preserved."
+        },
+        {
+          "source_id": "id04972",
+          "verdict": "PASS",
+          "reason": "«Caressant du regard» is rendered as «лаская взглядом», which is faithful; the sword on the wall, the colon and the repeated «qu'il vienne» are preserved."
+        },
+        {
+          "source_id": "id04973",
+          "verdict": "PASS",
+          "reason": "«D'ailleurs ce n'est qu'un enfant» is rendered accurately, and the speaker is correct."
+        },
+        {
+          "source_id": "id04974",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id04975",
+          "verdict": "PASS",
+          "reason": "The prior corrections are correct: «исповедав… узнав», «вместо отпущения грехов» for «pour absolution», «Смотрите» for «Tenez», and «вышел из раны» for «est sorti de la plaie». The thirty hours, the confession of the Béthune executioner, the disguise and the dagger in the heart are all preserved."
+        },
+        {
+          "source_id": "id04976",
+          "verdict": "PASS",
+          "reason": "«Oublié» is rendered as «забытый», which is correct; the dagger is thrown on the table and the monk left it in the executioner's wound."
+        },
+        {
+          "source_id": "id04977",
+          "verdict": "PASS",
+          "reason": "The three men rise and run to their swords with a spontaneous movement; the agency and the order of the names are preserved."
+        },
+        {
+          "source_id": "id04978",
+          "verdict": "PASS",
+          "reason": "«Seul… calme et rêveur» is conveyed accurately."
+        },
+        {
+          "source_id": "id04979",
+          "verdict": "PASS",
+          "reason": "The question is accurate, «vêtu en moine» is rendered as «одет монахом», and the address to Grimaud is preserved."
+        },
+        {
+          "source_id": "id04980",
+          "verdict": "PASS",
+          "reason": "«Moine augustin» is rendered accurately as «монахом-августинцем»."
+        },
+        {
+          "source_id": "id04981",
+          "verdict": "PASS",
+          "reason": "Idiomatic and accurate."
+        },
+        {
+          "source_id": "id04982",
+          "verdict": "PASS",
+          "reason": "The prior correction is correct («со светло-голубыми глазами», «белокурыми волосами»); the hearsay «à ce que m'a dit l'hôte» and all features are preserved."
+        },
+        {
+          "source_id": "id04983",
+          "verdict": "PASS",
+          "reason": "The negation, the ellipsis and Athos's concern for Raoul are preserved."
+        },
+        {
+          "source_id": "id04984",
+          "verdict": "PASS",
+          "reason": "«Au contraire», the emphatic «le vicomte lui-même» and the agency are all preserved; the source's typographical line break after «lui-» is correctly ignored."
+        },
+        {
+          "source_id": "id04985",
+          "verdict": "PASS",
+          "reason": "Athos rises without a word and in his turn takes down his sword; this is faithful."
+        },
+        {
+          "source_id": "id04986",
+          "verdict": "PASS",
+          "reason": "The prior correction is accepted: «Ah çà» as «Послушайте», «femmelettes» as «трусливых баб», and the contrast between facing armies without flinching and now trembling before a child are preserved. The four men and d'Artagnan's attempt at laughter are intact."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

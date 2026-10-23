@@ -1,0 +1,84 @@
+{
+  "unit": 38,
+  "batch": 7,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id04987",
+      "target": "— Да, — сказал Атос, — но этот ребёнок приходит во имя Бога.",
+      "source_sha256": "a67afa29332177d440273a594d928f5f59030e9d6a84835039be8e9d83fa549b",
+      "target_id": "ru-id04987",
+      "tag": "p",
+      "target_sha256": "6e39d5d69cc6c091804b4641dd74b8dfda72adfe1496eb8d57ab6c18e3ddac54"
+    },
+    {
+      "source_id": "id04988",
+      "target": "И они торопливо вышли из гостиницы.",
+      "source_sha256": "8b973906f952d1b51c289f2681ab6bb3ad209dc0421ab31127e6457528a4dcdb",
+      "target_id": "ru-id04988",
+      "tag": "p",
+      "target_sha256": "c5eaafdec98e929ff721a2456319eb32901c9aaed07e3306a8099caa7f7eefa0"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id04987",
+      "verdict": "PASS",
+      "reason": "Faithful to the French: dialogue turn, speaker attribution, the contrast 'Oui... mais' and 'au nom de Dieu' are all preserved. The Russian dialogue punctuation is correct."
+    },
+    {
+      "source_id": "id04988",
+      "verdict": "CORRECTED",
+      "reason": "'empressés' describes the manner of their leaving; changed 'поспешно' to 'торопливо' to convey their eager haste more naturally. 'l'hôtellerie' is rendered as 'гостиница'; meaning and agency are unchanged."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id04988",
+      "before": "И они поспешно вышли из гостиницы.",
+      "after": "И они торопливо вышли из гостиницы."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJPAgu4pkzEu4DafB3MJ",
+    "usage": {
+      "input_tokens": 1332,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 87,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJPAoSyXrSFsfkoysTZa",
+    "usage": {
+      "input_tokens": 1761,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 296,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
