@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK2aPgCdU212EQfVsa4A",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-048-0060\",\"target\":\"В полдень, после подкрепляющей трапезы, все путешественники, усевшись в мейл-коуч, покинули Делегет, и пять крепких лошадей помчали их галопом.\"},{\"source_id\":\"fr42c-048-0061\",\"target\":\"Форейторы, подстёгнутые обещанием княжеских чаевых, мчали быструю карету по хорошо содержимой дороге. Они не теряли и двух минут на станциях, которые следовали одна за другой через каждые десять миль. Казалось, Гленарван передал им снедавший его самого пыл.\"},{\"source_id\":\"fr42c-048-0062\",\"target_id\":\"ru-fr42c-048-0062\",\"target\":\"Весь день неслись так, по шесть миль в час, и всю ночь тоже.\"},{\"source_id\":\"fr42c-048-0063\",\"target\":\"На другой день, при восходе солнца, глухой ропот возвестил о близости Индийского океана. Пришлось обогнуть бухту, чтобы выйти к берегу под тридцать седьмой параллелью, как раз в том месте, где Том Остин должен был ожидать путешественников.\"},{\"source_id\":\"fr42c-048-0064\",\"target\":\"Когда показалось море, все взгляды устремились вдаль, допытываясь у пространства. Не стоял ли там, по чуду Провидения, «<i>Дункан</i>», лавируя галсами, как месяц назад на траверзе мыса Корриентес у аргентинских берегов?\"},{\"source_id\":\"fr42c-048-0065\",\"target\":\"Ничего не было видно. Небо и вода сливались в один горизонт. Ни единый парус не оживлял обширной глади океана.\"},{\"source_id\":\"fr42c-048-0066\",\"target\":\"Оставалась ещё надежда. Быть может, Том Остин счёл нужным бросить якорь в заливе Туфолд, ибо море было бурное, и судно не могло стоять в безопасности у подобного берега.\"},{\"source_id\":\"fr42c-048-0067\",\"target\":\"— В Эден! — сказал Гленарван.\"},{\"source_id\":\"fr42c-048-0068\",\"target\":\"Тотчас мейл-коуч свернул направо, на окружную дорогу, тянувшуюся вдоль берегов залива, и направился к городку Эден, отстоявшему на пять миль.\"},{\"source_id\":\"fr42c-048-0069\",\"target\":\"Форейторы остановились неподалёку от постоянного огня, отмечающего вход в порт. На рейде стояло несколько судов, но ни одно не несло на гафеле флага Малкольма.\"},{\"source_id\":\"fr42c-048-0070\",\"target\":\"Гленарван, Джон Манглс и Паганель сошли с экипажа, бросились в таможню, расспросили служащих и справились о судах, прибывших в последние дни.\"},{\"source_id\":\"fr42c-048-0071\",\"target\":\"Ни одно судно не заходило в залив за последнюю неделю.\"},{\"source_id\":\"fr42c-048-0072\",\"target\":\"— Неужели он не ушёл! — воскликнул Гленарван, который, по свойственной человеческому сердцу лёгкой перемене, уже не хотел отчаиваться. — Быть может, мы прибыли раньше него!\"},{\"source_id\":\"fr42c-048-0073\",\"target\":\"Джон Манглс покачал головой. Он знал Тома Остина. Его помощник никогда не задержал бы исполнение приказа на десять дней.\"},{\"source_id\":\"fr42c-048-0074\",\"target\":\"— Я хочу знать, чего держаться, — сказал Гленарван. — Лучше уверенность, чем сомнение!\"},{\"source_id\":\"fr42c-048-0075\",\"target\":\"Через четверть часа телеграмма была послана синдику корабельных маклеров в Мельбурне.\"},{\"source_id\":\"fr42c-048-0076\",\"target\":\"Затем путешественники велели отвезти себя в гостиницу «<i>Виктория</i>».\"},{\"source_id\":\"fr42c-048-0077\",\"target\":\"В два часа лорду Гленарвану вручили телеграфную депешу. Она была составлена в следующих выражениях:\"},{\"source_id\":\"fr42c-048-0078\",\"target\":\"«Лорду Гленарвану, Эден,\"},{\"source_id\":\"fr42c-048-0079\",\"target\":\"«Туфолд-Бей.\"}],\"review\":[{\"source_id\":\"fr42c-048-0060\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed Delegete name, mail-coach, and the galloping horses.\"},{\"source_id\":\"fr42c-048-0061\",\"verdict\":\"CORRECTED\",\"reason\":\"Corrected postillions, tip, road, relays and idiom.\"},{\"source_id\":\"fr42c-048-0062\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored word order and 'toute la nuit aussi'.\"},{\"source_id\":\"fr42c-048-0063\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed murmur, sunrise and parallel phrasing.\"},{\"source_id\":\"fr42c-048-0064\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed sea gaze, tacking, cape and italics placement.\"},{\"source_id\":\"fr42c-048-0065\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed agreement and sense.\"},{\"source_id\":\"fr42c-048-0066\",\"verdict\":\"CORRECTED\",\"reason\":\"Improved causal structure and wording.\"},{\"source_id\":\"fr42c-048-0067\",\"verdict\":\"CORRECTED\",\"reason\":\"Verb 'dit' restored, not 'воскликнул'.\"},{\"source_id\":\"fr42c-048-0068\",\"verdict\":\"CORRECTED\",\"reason\":\"Mail-coach and road wording.\"},{\"source_id\":\"fr42c-048-0069\",\"verdict\":\"CORRECTED\",\"reason\":\"Postillions, fixed light, and flag placement.\"},{\"source_id\":\"fr42c-048-0070\",\"verdict\":\"CORRECTED\",\"reason\":\"Name Манглс and arrivals consulted.\"},{\"source_id\":\"fr42c-048-0071\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiomatic 'за последнюю неделю'.\"},{\"source_id\":\"fr42c-048-0072\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed the heart-revirement idiom.\"},{\"source_id\":\"fr42c-048-0073\",\"verdict\":\"CORRECTED\",\"reason\":\"Name and conditional negation.\"},{\"source_id\":\"fr42c-048-0074\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiom 'à quoi m'en tenir' and dialogue dash.\"},{\"source_id\":\"fr42c-048-0075\",\"verdict\":\"CORRECTED\",\"reason\":\"Wording of broker syndic improved.\"},{\"source_id\":\"fr42c-048-0076\",\"verdict\":\"CORRECTED\",\"reason\":\"Italics inside quotes; 'se firent conduire'.\"},{\"source_id\":\"fr42c-048-0077\",\"verdict\":\"CORRECTED\",\"reason\":\"Phrase 'libellée' rendered closely.\"},{\"source_id\":\"fr42c-048-0078\",\"verdict\":\"CORRECTED\",\"reason\":\"Address form and Eden.\"},{\"source_id\":\"fr42c-048-0079\",\"verdict\":\"CORRECTED\",\"reason\":\"Kept Twofold-Bay as given in telegram.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10250,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2517,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
