@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgK7PDtcddtuBCqec7mah",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-067-heading\",\"target\":\"ГЛАВА XIX — СДЕЛКА.\"},{\"source_id\":\"fr42c-067-0000\",\"target\":\"Как только квартирмейстер предстал перед лордом, его стражи удалились.\"},{\"source_id\":\"fr42c-067-0001\",\"target\":\"— Вы желали говорить со мной, Айртон? — спросил Гленарван.\"},{\"source_id\":\"fr42c-067-0002\",\"target\":\"— Да, милорд, — ответил квартирмейстер.\"},{\"source_id\":\"fr42c-067-0003\",\"target\":\"— С одним мной?\"},{\"source_id\":\"fr42c-067-0004\",\"target\":\"— Да, но я думаю, что если бы майор Мак-Наббс и господин Паганель присутствовали при разговоре, это было бы лучше.\"},{\"source_id\":\"fr42c-067-0005\",\"target\":\"— Для кого?\"},{\"source_id\":\"fr42c-067-0006\",\"target\":\"— Для меня.\"},{\"source_id\":\"fr42c-067-0007\",\"target\":\"Айртон говорил спокойно. Гленарван пристально посмотрел на него, затем велел позвать Мак-Наббса и Паганеля, которые тотчас явились на его приглашение.\"},{\"source_id\":\"fr42c-067-0008\",\"target\":\"— Мы вас слушаем, — сказал Гленарван, как только оба его друга заняли места за столом в кают-компании.\"},{\"source_id\":\"fr42c-067-0009\",\"target\":\"Айртон несколько мгновений собирался с мыслями, затем сказал:\"},{\"source_id\":\"fr42c-067-0010\",\"target\":\"— Милорд, принято, чтобы при любом договоре или сделке между двумя сторонами присутствовали свидетели. Вот почему я попросил о присутствии господ Паганеля и Мак-Наббса. Ибо, собственно говоря, я пришёл предложить вам сделку.\"},{\"source_id\":\"fr42c-067-0011\",\"target\":\"Гленарван, привыкший к манерам Айртона, не поднял бровей, хотя дело между этим человеком и им казалось странным.\"},{\"source_id\":\"fr42c-067-0012\",\"target\":\"— Что это за дело? — спросил он.\"},{\"source_id\":\"fr42c-067-0013\",\"target\":\"— Вот оно, — ответил Айртон. — Вы хотите узнать от меня некоторые подробности, которые могут быть вам полезны. Я хочу получить от вас некоторые выгоды, которые будут для меня драгоценны. Баш на баш, милорд. Подходит это вам или нет?\"},{\"source_id\":\"fr42c-067-0014\",\"target\":\"— Что это за подробности? — спросил Паганель.\"},{\"source_id\":\"fr42c-067-0015\",\"target\":\"— Нет, — возразил Гленарван, — что это за выгоды?\"},{\"source_id\":\"fr42c-067-0016\",\"target\":\"Айртон кивком головы показал, что понял оттенок, подмеченный Гленарваном.\"},{\"source_id\":\"fr42c-067-0017\",\"target\":\"— Вот, — сказал он, — каких выгод я требую. Вы по-прежнему намерены, милорд, передать меня в руки английских властей?\"},{\"source_id\":\"fr42c-067-0018\",\"target\":\"— Да, Айртон, и это не более чем справедливо.\"}],\"review\":[{\"source_id\":\"fr42c-067-heading\",\"verdict\":\"PASS\",\"reason\":\"Heading accurate.\"},{\"source_id\":\"fr42c-067-0000\",\"verdict\":\"CORRECTED\",\"reason\":\"Draft 'наедине' was inaccurate; restored 'in the lord's presence'.\"},{\"source_id\":\"fr42c-067-0001\",\"verdict\":\"CORRECTED\",\"reason\":\"Айртон spelling; 'désiré' register.\"},{\"source_id\":\"fr42c-067-0002\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-067-0003\",\"verdict\":\"CORRECTED\",\"reason\":\"'À moi seul' means 'with me alone', not 'only to me'.\"},{\"source_id\":\"fr42c-067-0004\",\"verdict\":\"CORRECTED\",\"reason\":\"Used 'господин'; smoothed syntax.\"},{\"source_id\":\"fr42c-067-0005\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-067-0006\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed stray closing guillemet; dialogue dash punctuation.\"},{\"source_id\":\"fr42c-067-0007\",\"verdict\":\"CORRECTED\",\"reason\":\"Name spelling; 'fit prévenir' as ordered to summon.\"},{\"source_id\":\"fr42c-067-0008\",\"verdict\":\"CORRECTED\",\"reason\":\"Converted to dash dialogue; 'два друга' made natural.\"},{\"source_id\":\"fr42c-067-0009\",\"verdict\":\"CORRECTED\",\"reason\":\"More natural rendering of 'se recueillit'.\"},{\"source_id\":\"fr42c-067-0010\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation; 'affaire' as deal; 'господа'; draft misrendered 'я пришёл'.\"},{\"source_id\":\"fr42c-067-0011\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'affaire' and 'ne sourcilla pas' nuance; names.\"},{\"source_id\":\"fr42c-067-0012\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored 'affaire' and dash punctuation.\"},{\"source_id\":\"fr42c-067-0013\",\"verdict\":\"CORRECTED\",\"reason\":\"'Donnant, donnant' idiom fixed; 'affaire' pronoun; avantages.\"},{\"source_id\":\"fr42c-067-0014\",\"verdict\":\"PASS\",\"reason\":\"Faithful.\"},{\"source_id\":\"fr42c-067-0015\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed erroneous quotation marks; 'Non' correction retained.\"},{\"source_id\":\"fr42c-067-0016\",\"verdict\":\"CORRECTED\",\"reason\":\"Removed redundancy; nuance wording.\"},{\"source_id\":\"fr42c-067-0017\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue punctuation; 'avantages' not 'conditions'.\"},{\"source_id\":\"fr42c-067-0018\",\"verdict\":\"CORRECTED\",\"reason\":\"Name spelling; 'ce n'est que justice' = no more than justice.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8566,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2204,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
