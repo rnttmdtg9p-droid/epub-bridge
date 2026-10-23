@@ -1,0 +1,33 @@
+name: BB Russian44 scoped name consistency correction and source comparison
+on:
+  push:
+    paths: ['.github/workflows/bb-ru44-names.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Configure durable production checkpoints
+        run: |
+          git config user.name 'Boundary Bay Production'
+          git config user.email 'production@boundarybaypublishing.com'
+      - name: Translate every original unit and review every aligned row
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru44_names.py
+      - name: Preserve every actual exchange and qualification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru44-names-actual-exchanges-v5070
+          path: results/ru44-names/
+          retention-days: 90
+          if-no-files-found: error
