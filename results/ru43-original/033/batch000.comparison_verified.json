@@ -1,0 +1,782 @@
+{
+  "unit": 33,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-033-heading",
+      "target": "ГЛАВА XXX.",
+      "source_sha256": "a422083fe92bc53d7b8126702d91e69cf17dfcdab0eaf3c8f62695e8a69462d6",
+      "target_id": "ru-043-033-heading",
+      "tag": "heading",
+      "target_sha256": "f46388dd0134a7380d47c973081cf280529e07d23d6e89855c06404340bcd996"
+    },
+    {
+      "source_id": "043-033-0001",
+      "target": "Король набросился на него. — Королевская ссора. — Изрядно подвыпившие.",
+      "source_sha256": "cc237463d76ef153bf2f5b06f383875b57017310adff075e327a6f634c94f9b3",
+      "target_id": "ru-043-033-0001",
+      "tag": "source_argument",
+      "target_sha256": "45b7c451a236d530e67e6679ceb4d322162a1513a3630e2cb026154e6c45464b"
+    },
+    {
+      "source_id": "043-033-0002",
+      "target": "Когда они поднялись на борт, король набросился на меня, схватил за шиворот и сказал:",
+      "source_sha256": "ab61c9256dcf4c25cb976970d53fb14a63b09dd89d67ec1bd6796268b1bc77b1",
+      "target_id": "ru-043-033-0002",
+      "tag": "p",
+      "target_sha256": "87b84f22d04dd9e5a5eece665b9794245e95165b82f9619bf7db734cf90cc8b9"
+    },
+    {
+      "source_id": "043-033-0003",
+      "target": "— Хотел от нас улизнуть, а, щенок! Надоела тебе наша компания, а?",
+      "source_sha256": "f8861dac3fd17e3a572dabf5991d1a96058c1e94e542db79d4d3e03739e098a4",
+      "target_id": "ru-043-033-0003",
+      "tag": "p",
+      "target_sha256": "44be5bd9fd824a572cc6e46d151c739cf7888366137c8436db1a7cba9a33ac01"
+    },
+    {
+      "source_id": "043-033-0004",
+      "target": "Я говорю:",
+      "source_sha256": "0e568af30022d4c6b08be6c92743d85cbf120134610018b892e098e0fe72f7eb",
+      "target_id": "ru-043-033-0004",
+      "tag": "p",
+      "target_sha256": "fa163bba54dc6558fc348978f79413775cd345d5e175c50769a5d6e4566f034e"
+    },
+    {
+      "source_id": "043-033-0005",
+      "target": "— Нет, ваше величество, не хотели… <i>пожалуйста</i>, не надо, ваше величество!",
+      "source_sha256": "123749d214b7ad1b269c171e7d224c1e7900512ecf81a5ef22563eeb50981441",
+      "target_id": "ru-043-033-0005",
+      "tag": "p",
+      "target_sha256": "e70412bac51d8e407bb296de779305b6c6a746ead37ad91489b385e0d6a1670b"
+    },
+    {
+      "source_id": "043-033-0006",
+      "target": "— Живо рассказывай, что ты <i>там</i> задумал, а не то я вытряхну из тебя душу!",
+      "source_sha256": "16ecaee6d4fb3eee077f07634c03ed2dfbf88b1b325131a2303fabc2734c6bf4",
+      "target_id": "ru-043-033-0006",
+      "tag": "p",
+      "target_sha256": "a8468c3728fb6205129e2afb43fae66be3303f09c9fc6bdc01b0cf364ce0dc93"
+    },
+    {
+      "source_id": "043-033-0007",
+      "target": "— Честное слово, ваше величество, я расскажу всё как было. Тот человек, что держал меня, был очень добр ко мне и всё твердил, что у него был сын примерно моего роста, да умер в прошлом году, и ему жалко видеть мальчишку в такой опасной переделке; а когда все были ошарашены тем, что нашли золото, и кинулись к гробу, он выпустил меня и шепнул: «Дуй отсюда, а то тебя точно повесят!» — и я задал стрекача. <i>Мне</i> там оставаться не было никакого проку — <i>я</i> ничего не мог поделать, а висеть не хотел, раз можно было удрать. Так я и бежал без остановки, пока не нашёл каноэ; а когда добрался сюда, сказал Джиму, чтобы поторапливался, а то меня поймают и всё-таки повесят, и сказал, что боюсь, как бы вас с герцогом уже не было в живых, и мне было ужасно жалко, и Джиму тоже, и мы страшно обрадовались, когда увидели, что вы идёте; можете спросить Джима, правда ли это.",
+      "source_sha256": "1de98f67c10130d7ffab89b7d68f832fc00fec5595356ae88351d8aeb442bd3f",
+      "target_id": "ru-043-033-0007",
+      "tag": "p",
+      "target_sha256": "6732c80379dc2497008cce3e27862d8eb330818775f6007928f25049d2fc118f"
+    },
+    {
+      "source_id": "043-033-0008",
+      "target": "Джим подтвердил, что так оно и было; а король велел ему заткнуться и сказал: «Ну да, это <i>очень</i> похоже на правду!» — и снова встряхнул меня и сказал, что, пожалуй, утопит меня. Но герцог говорит:",
+      "source_sha256": "a7b7f78f479f2f312022d7039e4bba20600f3b0e57bcbe25b6aa63e0199cdb0e",
+      "target_id": "ru-043-033-0008",
+      "tag": "p",
+      "target_sha256": "502994fd850a7b2b3cf9458946ccf31704b1a8234e6b09e5026687484792afe4"
+    },
+    {
+      "source_id": "043-033-0009",
+      "target": "— Пусти мальчишку, старый болван! Разве <i>ты</i> поступил бы иначе? Ты, когда вырвался, разве справлялся о <i>нём</i>? <i>Я</i> что-то не припомню.",
+      "source_sha256": "227fb035a74503d05917ef03c8cc429902c88bbef45bae92e88cc074fa30ffce",
+      "target_id": "ru-043-033-0009",
+      "tag": "p",
+      "target_sha256": "84f0bdea9d0d63ad8124fb2493279cd1eae86278b8e2bba286a20a19f3007bb9"
+    },
+    {
+      "source_id": "043-033-0010",
+      "target": "Король выпустил меня и принялся клясть этот город и всех, кто в нём живёт. Но герцог говорит:",
+      "source_sha256": "11edf39873e3772c2223cfbddff7c16010c044a81fe2951d162f9dcba4019fdf",
+      "target_id": "ru-043-033-0010",
+      "tag": "p",
+      "target_sha256": "ad330d6f9886305cec56c9adc7bde652830bf2075a0686025578e8fe332b18a9"
+    },
+    {
+      "source_id": "043-033-0011",
+      "target": "— Тебе бы, чёрт возьми, лучше как следует выругать <i>самого себя</i>, потому что ты этого заслуживаешь больше всех. С самого начала ты не сделал ни одной толковой вещи, кроме того, что так хладнокровно и нахально заявил про воображаемую синюю стрелу. Вот это <i>было</i> умно — просто здорово; это нас и спасло. Не будь этого, нас бы продержали в тюрьме до прихода багажа тех англичан — а потом каторга, будь уверен! Но эта уловка привела их на кладбище, а золото оказало нам ещё большую услугу: не потеряй эти ошалелые дураки голову и не кинься они поглядеть, мы бы сегодня ночью спали в галстуках — и в галстуках, рассчитанных на долгую <i>носку</i>, — дольше, чем <i>нам</i> бы того хотелось.",
+      "source_sha256": "8574c0d7292872d8f760a5b0f9d9a0d7c5054884c3e73fe0b62ea00330b4dd08",
+      "target_id": "ru-043-033-0011",
+      "tag": "p",
+      "target_sha256": "55fe793c433ef8151e26e33fb3fc987bf46333b8eac93b7e6dc0f785cb615332"
+    },
+    {
+      "source_id": "043-033-0012",
+      "target": "С минуту они молчали, раздумывая; потом король сказал как бы рассеянно:",
+      "source_sha256": "b176f6c0d0a2781862df6235ee3e12c21cb3182f5f3eebbc256afbf6f400a6be",
+      "target_id": "ru-043-033-0012",
+      "tag": "p",
+      "target_sha256": "1e8cbc4ff120b58fd6b869aeb010a6249e2a0e724a0674d662a83166b9708934"
+    },
+    {
+      "source_id": "043-033-0013",
+      "target": "— Хм! А мы-то думали, что это <i>негры</i> украли!",
+      "source_sha256": "1f5823a75aba7cf8301394e58fb4d1c07d7a0c3d20834685fb717e0cdbfe47a6",
+      "target_id": "ru-043-033-0013",
+      "tag": "p",
+      "target_sha256": "a3bf19c5cd812f80f43b0d5ccc280a7b4f168536286c58e3271a8df01be9337a"
+    },
+    {
+      "source_id": "043-033-0014",
+      "target": "Меня аж передёрнуло!",
+      "source_sha256": "55ffc603d8dfd5dced19e5ba0138c48fe6a1384835db8b3d66395f4802e355bf",
+      "target_id": "ru-043-033-0014",
+      "tag": "p",
+      "target_sha256": "a25e6e7e7fb63a7a34b03962fc6c24c20993e095646330e27dcfad6ce8a1501c"
+    },
+    {
+      "source_id": "043-033-0015",
+      "target": "— Да, — говорит герцог, медленно, с расстановкой и язвительно, — <i>мы</i> так думали.",
+      "source_sha256": "39cef71f71be19acda5fd5784bc487a8c0b9a3bf800a30871fb0e3036367c18c",
+      "target_id": "ru-043-033-0015",
+      "tag": "p",
+      "target_sha256": "feb3408826b76ba2aedbd13ec98909a94251d875b69b5a12e7c60a7fc2d05c08"
+    },
+    {
+      "source_id": "043-033-0016",
+      "target": "Примерно через полминуты король протянул:",
+      "source_sha256": "8450db7fd3f0fd07a0b679474ec38f7f0313ccd8a1fb0d499b831feb4aa47ad2",
+      "target_id": "ru-043-033-0016",
+      "tag": "p",
+      "target_sha256": "7c86794ba0264dd2f35ae17e4ed5c1ef76b2a933e2482bef9f816dce23f64d2f"
+    },
+    {
+      "source_id": "043-033-0017",
+      "target": "— Во всяком случае, <i>я</i> думал.",
+      "source_sha256": "4fdc4400e6f48b8b54bc1060d884e8e18ac09fa1c5e82bd13cb79d2bd1c87104",
+      "target_id": "ru-043-033-0017",
+      "tag": "p",
+      "target_sha256": "71687c9a48482b786ba43a78af55b750c6c26e5c5fe83acfa6932b8bf37c2a83"
+    },
+    {
+      "source_id": "043-033-0018",
+      "target": "Герцог говорит тем же тоном:",
+      "source_sha256": "2d80550fd158a6e7f90525cfd0a8462f823097eec23898d0efced4fe79c40d7a",
+      "target_id": "ru-043-033-0018",
+      "tag": "p",
+      "target_sha256": "e7d368f7f030e903b14d120c74484c2ac32c338c056a813ab48626f6990b352b"
+    },
+    {
+      "source_id": "043-033-0019",
+      "target": "— Напротив, <i>я</i> думал.",
+      "source_sha256": "9671f798e572bb36c2afe3d1473918122c4e256b1512720ea7a5928549480a8c",
+      "target_id": "ru-043-033-0019",
+      "tag": "p",
+      "target_sha256": "4a9fdf13aa50ee5b34633de0dd1f4261d3e27eae4dc0a0ace31614c603ce8c45"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-033-heading",
+      "verdict": "PASS",
+      "reason": "Heading correct."
+    },
+    {
+      "source_id": "043-033-0001",
+      "verdict": "CORRECTED",
+      "reason": "Argument fixed: 'went for him' and 'powerful mellow' (drunk) were mistranslated."
+    },
+    {
+      "source_id": "043-033-0002",
+      "verdict": "CORRECTED",
+      "reason": "'Went for me' means attacked; idiom fixed."
+    },
+    {
+      "source_id": "043-033-0003",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation and idiom 'give the slip' improved."
+    },
+    {
+      "source_id": "043-033-0004",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "043-033-0005",
+      "verdict": "CORRECTED",
+      "reason": "Italic 'please' kept; Russian dialogue dash, consistent address."
+    },
+    {
+      "source_id": "043-033-0006",
+      "verdict": "CORRECTED",
+      "reason": "Italic 'was' rendered idiomatically; threat fixed."
+    },
+    {
+      "source_id": "043-033-0007",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'вы/ты' inconsistency, italic 'I', negation and quote marks, colloquial voice."
+    },
+    {
+      "source_id": "043-033-0008",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue punctuation, idiom and italic 'mighty' fixed."
+    },
+    {
+      "source_id": "043-033-0009",
+      "verdict": "CORRECTED",
+      "reason": "Italics and dash dialogue corrected."
+    },
+    {
+      "source_id": "043-033-0010",
+      "verdict": "CORRECTED",
+      "reason": "Removed 'И вот'; tense and present-tense fidelity."
+    },
+    {
+      "source_id": "043-033-0011",
+      "verdict": "CORRECTED",
+      "reason": "Fixed 'handles' mistranslation, penitentiary, 'warranted to wear' pun, italics."
+    },
+    {
+      "source_id": "043-033-0012",
+      "verdict": "PASS",
+      "reason": "Accurate with natural phrasing."
+    },
+    {
+      "source_id": "043-033-0013",
+      "verdict": "CORRECTED",
+      "reason": "Dialogue format; italic niggers retained as 'негры'."
+    },
+    {
+      "source_id": "043-033-0014",
+      "verdict": "PASS",
+      "reason": "Acceptable idiom."
+    },
+    {
+      "source_id": "043-033-0015",
+      "verdict": "CORRECTED",
+      "reason": "Original verb was 'reckoned', not 'did it'; italic on we."
+    },
+    {
+      "source_id": "043-033-0016",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "043-033-0017",
+      "verdict": "CORRECTED",
+      "reason": "Restored 'reckoned' sense, italic I."
+    },
+    {
+      "source_id": "043-033-0018",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "043-033-0019",
+      "verdict": "CORRECTED",
+      "reason": "Restored 'reckoned' sense, italic I."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-033-0001",
+      "before": "Король отправился за ним. — Королевская ссора. — Мощный мелодичный голос.",
+      "after": "Король набросился на него. — Королевская ссора. — Изрядно подвыпившие."
+    },
+    {
+      "source_id": "043-033-0002",
+      "before": "Когда они поднялись на борт, король подошёл ко мне, схватил меня за воротник и сказал:",
+      "after": "Когда они поднялись на борт, король набросился на меня, схватил за шиворот и сказал:"
+    },
+    {
+      "source_id": "043-033-0003",
+      "before": "«Пытался от нас сбежать, да, щенок! Надоела наша компания, а?»",
+      "after": "— Хотел от нас улизнуть, а, щенок! Надоела тебе наша компания, а?"
+    },
+    {
+      "source_id": "043-033-0005",
+      "before": "«Нет, Ваше Величество, мы не… <i>Прошу Вас</i>, не делайте этого, Ваше Величество!»",
+      "after": "— Нет, ваше величество, не хотели… <i>пожалуйста</i>, не надо, ваше величество!"
+    },
+    {
+      "source_id": "043-033-0006",
+      "before": "«Ну же, скорее, рассказывай, что ты <i>задумал</i>, а то я вытряхну из тебя все внутренности!»",
+      "after": "— Живо рассказывай, что ты <i>там</i> задумал, а не то я вытряхну из тебя душу!"
+    },
+    {
+      "source_id": "043-033-0007",
+      "before": "«Честно, я расскажу вам всё так, как было на самом деле, ваше величество. Человек, который меня схватил, был со мной очень добр и всё время говорил, что у него был мальчик примерно моего роста, который умер в прошлом году, и что ему жаль видеть мальчика в таком опасном положении; а когда все были застигнуты врасплох, обнаружив золото, и бросились к гробу, он отпустил меня и прошептал: „Убегай сейчас же, а то тебя точно повесят!“ — и я сбежал. <i>Мне</i> не стоило там оставаться — <i>я</i> ничего не мог сделать, да и не хотел, чтобы меня повесили, если у меня был шанс сбежать. Так что я не останавливался, пока не нашел каноэ; а когда добрался сюда, сказал Джиму, чтобы он торопился, иначе меня поймают и всё-таки повесят, и добавил, что боюсь, что ты и герцог уже мертвы, и что мне ужасно жаль, как и Джиму, и мы были безумно рады, когда увидели, как ты идёшь; можешь спросить Джима, правда ли это».",
+      "after": "— Честное слово, ваше величество, я расскажу всё как было. Тот человек, что держал меня, был очень добр ко мне и всё твердил, что у него был сын примерно моего роста, да умер в прошлом году, и ему жалко видеть мальчишку в такой опасной переделке; а когда все были ошарашены тем, что нашли золото, и кинулись к гробу, он выпустил меня и шепнул: «Дуй отсюда, а то тебя точно повесят!» — и я задал стрекача. Мне там оставаться не было никакого проку — <i>я</i> ничего не мог поделать, а висеть не хотел, раз можно было удрать. Так я и бежал без остановки, пока не нашёл каноэ; а когда добрался сюда, сказал Джиму, чтобы поторапливался, а то меня поймают и всё-таки повесят, и сказал, что боюсь, как бы вас с герцогом уже не было в живых, и мне было ужасно жалко, и Джиму тоже, и мы страшно обрадовались, когда увидели, что вы идёте; можете спросить Джима, правда ли это."
+    },
+    {
+      "source_id": "043-033-0008",
+      "before": "Джим сказал, что это так; а король велел ему заткнуться и сказал: «О, да, это <i>вполне</i> вероятно!», — и снова встряхнул меня, добавив, что, по его мнению, он утопит меня. Но герцог говорит:",
+      "after": "Джим подтвердил, что так оно и было; а король велел ему заткнуться и сказал: «Ну да, это <i>очень</i> похоже на правду!» — и снова встряхнул меня и сказал, что, пожалуй, утопит меня. Но герцог говорит:"
+    },
+    {
+      "source_id": "043-033-0009",
+      "before": "«Отпусти мальчика, старый идиот! А <i>ты</i> бы поступил иначе? Ты разве разыскивал <i>его</i>, когда тебе удалось сбежать? <i>Я</i> этого не помню».",
+      "after": "— Пусти мальчишку, старый болван! Разве <i>ты</i> поступил бы иначе? Ты, когда вырвался, разве справлялся о <i>нём</i>? <i>Я</i> что-то не припомню."
+    },
+    {
+      "source_id": "043-033-0010",
+      "before": "И вот король отпустил меня и начал ругать этот город и всех, кто в нём жил. Но герцог говорит:",
+      "after": "Король выпустил меня и принялся клясть этот город и всех, кто в нём живёт. Но герцог говорит:"
+    },
+    {
+      "source_id": "043-033-0011",
+      "before": "«Тебе лучше, черт возьми, хорошенько <i>себя</i> поругать, потому что именно ты заслуживаешь этого больше всех. С самого начала ты не сделал ни одной вещи, в которой был бы хоть какой-то смысл, кроме как выступил так круто и нагло с этой выдуманной синей стрелкой. Это <i>было</i> умно — просто великолепно; и именно это нас и спасло. Ведь если бы не это, нас бы засадили в тюрьму до прихода багажа тех англичан — а потом… в исправительное учреждение, будь уверен! Но эта уловка завела их на кладбище, а золото оказало нам ещё большую услугу; ведь если бы эти возбуждённые дураки не отпустили все ручки и не бросились посмотреть, мы бы сегодня ночью спали в наших галстуках — причём в галстуках, которые гарантированно пришлось бы <i>носить</i>, — дольше, чем <i>нам</i> это <i>было</i> <i>бы</i> нужно».",
+      "after": "— Тебе бы, чёрт возьми, лучше как следует выругать <i>самого себя</i>, потому что ты этого заслуживаешь больше всех. С самого начала ты не сделал ни одной толковой вещи, кроме того, что так хладнокровно и нахально заявил про воображаемую синюю стрелу. Вот это <i>было</i> умно — просто здорово; это нас и спасло. Не будь этого, нас бы продержали в тюрьме до прихода багажа тех англичан — а потом каторга, будь уверен! Но эта уловка привела их на кладбище, а золото оказало нам ещё большую услугу: не потеряй эти ошалелые дураки голову и не кинься они поглядеть, мы бы сегодня ночью спали в галстуках — и в галстуках, рассчитанных на <i>долгую носку</i>, — дольше, чем <i>нам</i> бы того хотелось."
+    },
+    {
+      "source_id": "043-033-0012",
+      "before": "Они ещё минуту молчали, погрузившись в раздумья; потом король сказал, как бы отвлечённо:",
+      "after": "С минуту они молчали, раздумывая; потом король сказал как бы рассеянно:"
+    },
+    {
+      "source_id": "043-033-0013",
+      "before": "«Фу! А мы-то думали, что это <i>негры</i> украли!»",
+      "after": "— Хм! А мы-то думали, что это <i>негры</i> украли!"
+    },
+    {
+      "source_id": "043-033-0014",
+      "before": "От этого у меня мурашки по коже побежали!",
+      "after": "Меня аж передёрнуло!"
+    },
+    {
+      "source_id": "043-033-0015",
+      "before": "«Да, — говорит герцог, ещё более медленно, выдержанно и саркастично, — <i>мы так и</i> сделали».",
+      "after": "— Да, — говорит герцог, медленно, с расстановкой и язвительно, — <i>мы</i> так думали."
+    },
+    {
+      "source_id": "043-033-0016",
+      "before": "Примерно через полминуты король протяжно произносит:",
+      "after": "Примерно через полминуты король протянул:"
+    },
+    {
+      "source_id": "043-033-0017",
+      "before": "«По крайней мере, <i>я так и</i> сделал».",
+      "after": "— Во всяком случае, <i>я</i> думал."
+    },
+    {
+      "source_id": "043-033-0018",
+      "before": "Герцог говорит точно так же:",
+      "after": "Герцог говорит тем же тоном:"
+    },
+    {
+      "source_id": "043-033-0019",
+      "before": "«Наоборот, <i>я это</i> сделал».",
+      "after": "— Напротив, <i>я</i> думал."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/033/batch000.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKMatbxm51cibY1nLDYh",
+    "usage": {
+      "input_tokens": 9452,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2647,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKMcE71LVaw2F4PtT4Lg",
+        "usage": {
+          "input_tokens": 12498,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3409,
+          "output_tokens_details": {
+            "thinking_tokens": 829
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-033-heading",
+          "verdict": "PASS",
+          "reason": "Chapter heading correctly rendered."
+        },
+        {
+          "source_id": "043-033-0001",
+          "verdict": "PASS",
+          "reason": "Prior fix verified: 'went for him' and 'powerful mellow' (very tipsy) now conveyed."
+        },
+        {
+          "source_id": "043-033-0002",
+          "verdict": "PASS",
+          "reason": "King attacks Huck, shakes by collar; agency correct."
+        },
+        {
+          "source_id": "043-033-0003",
+          "target": "",
+          "verdict": "PASS",
+          "reason": "Colloquial, accurate; dialogue dash used."
+        },
+        {
+          "source_id": "043-033-0004",
+          "verdict": "PASS",
+          "reason": "Faithful."
+        },
+        {
+          "source_id": "043-033-0005",
+          "verdict": "PASS",
+          "reason": "Negation and italic 'please' preserved."
+        },
+        {
+          "source_id": "043-033-0006",
+          "verdict": "PASS",
+          "reason": "Threat and italic emphasis on 'was' preserved."
+        },
+        {
+          "source_id": "043-033-0007",
+          "verdict": "CORRECTED",
+          "reason": "Italic 'me' in 'good for me to stay' was lost; restored. Rest verified faithful, including addressing king with 'вы'."
+        },
+        {
+          "source_id": "043-033-0008",
+          "verdict": "PASS",
+          "reason": "Sarcasm and italic 'mighty' kept; meaning accurate."
+        },
+        {
+          "source_id": "043-033-0009",
+          "verdict": "PASS",
+          "reason": "Italics on you/him/I preserved; sense correct."
+        },
+        {
+          "source_id": "043-033-0010",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0011",
+          "verdict": "PASS",
+          "reason": "Complete; cravat/hanging joke and italics preserved; prior errors fixed."
+        },
+        {
+          "source_id": "043-033-0012",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0013",
+          "verdict": "PASS",
+          "reason": "Italic kept; period term rendered, no omission."
+        },
+        {
+          "source_id": "043-033-0014",
+          "verdict": "PASS",
+          "reason": "Idiomatic equivalent of 'squirm'."
+        },
+        {
+          "source_id": "043-033-0015",
+          "verdict": "PASS",
+          "reason": "Italic 'we' and sarcastic manner preserved."
+        },
+        {
+          "source_id": "043-033-0016",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0017",
+          "verdict": "PASS",
+          "reason": "Italic 'I' preserved."
+        },
+        {
+          "source_id": "043-033-0018",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0019",
+          "verdict": "PASS",
+          "reason": "Italic 'I' preserved; contrast correct."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "043-033-0007",
+          "before": "— Честное слово, ваше величество, я расскажу всё как было. Тот человек, что держал меня, был очень добр ко мне и всё твердил, что у него был сын примерно моего роста, да умер в прошлом году, и ему жалко видеть мальчишку в такой опасной переделке; а когда все были ошарашены тем, что нашли золото, и кинулись к гробу, он выпустил меня и шепнул: «Дуй отсюда, а то тебя точно повесят!» — и я задал стрекача. Мне там оставаться не было никакого проку — <i>я</i> ничего не мог поделать, а висеть не хотел, раз можно было удрать. Так я и бежал без остановки, пока не нашёл каноэ; а когда добрался сюда, сказал Джиму, чтобы поторапливался, а то меня поймают и всё-таки повесят, и сказал, что боюсь, как бы вас с герцогом уже не было в живых, и мне было ужасно жалко, и Джиму тоже, и мы страшно обрадовались, когда увидели, что вы идёте; можете спросить Джима, правда ли это.",
+          "after": "— Честное слово, ваше величество, я расскажу всё как было. Тот человек, что держал меня, был очень добр ко мне и всё твердил, что у него был сын примерно моего роста, да умер в прошлом году, и ему жалко видеть мальчишку в такой опасной переделке; а когда все были ошарашены тем, что нашли золото, и кинулись к гробу, он выпустил меня и шепнул: «Дуй отсюда, а то тебя точно повесят!» — и я задал стрекача. <i>Мне</i> там оставаться не было никакого проку — <i>я</i> ничего не мог поделать, а висеть не хотел, раз можно было удрать. Так я и бежал без остановки, пока не нашёл каноэ; а когда добрался сюда, сказал Джиму, чтобы поторапливался, а то меня поймают и всё-таки повесят, и сказал, что боюсь, как бы вас с герцогом уже не было в живых, и мне было ужасно жалко, и Джиму тоже, и мы страшно обрадовались, когда увидели, что вы идёте; можете спросить Джима, правда ли это."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKMdfaj8TX8wJ28ub7tJ",
+        "usage": {
+          "input_tokens": 13295,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3275,
+          "output_tokens_details": {
+            "thinking_tokens": 743
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-033-heading",
+          "verdict": "PASS",
+          "reason": "Chapter heading faithful."
+        },
+        {
+          "source_id": "043-033-0001",
+          "verdict": "PASS",
+          "reason": "Argument faithful: the king went for him, royal row, very mellow."
+        },
+        {
+          "source_id": "043-033-0002",
+          "verdict": "PASS",
+          "reason": "Agency and action correct."
+        },
+        {
+          "source_id": "043-033-0003",
+          "verdict": "PASS",
+          "reason": "Colloquial, accurate, questions preserved."
+        },
+        {
+          "source_id": "043-033-0004",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0005",
+          "verdict": "PASS",
+          "reason": "Negation and italic 'please' preserved."
+        },
+        {
+          "source_id": "043-033-0006",
+          "verdict": "PASS",
+          "reason": "Threat and italic emphasis on 'was' conveyed."
+        },
+        {
+          "source_id": "043-033-0007",
+          "verdict": "PASS",
+          "reason": "Complete; italics 'me' and 'I' restored; prior fix verified."
+        },
+        {
+          "source_id": "043-033-0008",
+          "verdict": "PASS",
+          "reason": "Faithful; italic 'mighty' kept."
+        },
+        {
+          "source_id": "043-033-0009",
+          "verdict": "PASS",
+          "reason": "Italics and rhetorical questions preserved."
+        },
+        {
+          "source_id": "043-033-0010",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0011",
+          "verdict": "CORRECTED",
+          "reason": "Italic on 'wear' pun was spread over 'долгую носку'; narrowed to 'носку'. Rest faithful."
+        },
+        {
+          "source_id": "043-033-0012",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0013",
+          "verdict": "PASS",
+          "reason": "Italic 'niggers' kept as негры, historical register preserved."
+        },
+        {
+          "source_id": "043-033-0014",
+          "verdict": "PASS",
+          "reason": "Idiomatic and accurate."
+        },
+        {
+          "source_id": "043-033-0015",
+          "verdict": "PASS",
+          "reason": "'We did' reckon: italic 'мы' kept; tone correct."
+        },
+        {
+          "source_id": "043-033-0016",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0017",
+          "verdict": "PASS",
+          "reason": "Italic 'I' preserved."
+        },
+        {
+          "source_id": "043-033-0018",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0019",
+          "verdict": "PASS",
+          "reason": "Italic 'I' preserved; contrary sense kept."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "043-033-0011",
+          "before": "— Тебе бы, чёрт возьми, лучше как следует выругать <i>самого себя</i>, потому что ты этого заслуживаешь больше всех. С самого начала ты не сделал ни одной толковой вещи, кроме того, что так хладнокровно и нахально заявил про воображаемую синюю стрелу. Вот это <i>было</i> умно — просто здорово; это нас и спасло. Не будь этого, нас бы продержали в тюрьме до прихода багажа тех англичан — а потом каторга, будь уверен! Но эта уловка привела их на кладбище, а золото оказало нам ещё большую услугу: не потеряй эти ошалелые дураки голову и не кинься они поглядеть, мы бы сегодня ночью спали в галстуках — и в галстуках, рассчитанных на <i>долгую носку</i>, — дольше, чем <i>нам</i> бы того хотелось.",
+          "after": "— Тебе бы, чёрт возьми, лучше как следует выругать <i>самого себя</i>, потому что ты этого заслуживаешь больше всех. С самого начала ты не сделал ни одной толковой вещи, кроме того, что так хладнокровно и нахально заявил про воображаемую синюю стрелу. Вот это <i>было</i> умно — просто здорово; это нас и спасло. Не будь этого, нас бы продержали в тюрьме до прихода багажа тех англичан — а потом каторга, будь уверен! Но эта уловка привела их на кладбище, а золото оказало нам ещё большую услугу: не потеряй эти ошалелые дураки голову и не кинься они поглядеть, мы бы сегодня ночью спали в галстуках — и в галстуках, рассчитанных на долгую <i>носку</i>, — дольше, чем <i>нам</i> бы того хотелось."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKMfKigZMnvc4g5V6ikN",
+        "usage": {
+          "input_tokens": 13945,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3442,
+          "output_tokens_details": {
+            "thinking_tokens": 846
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-033-heading",
+          "verdict": "PASS",
+          "reason": "Chapter heading correctly rendered."
+        },
+        {
+          "source_id": "043-033-0001",
+          "verdict": "PASS",
+          "reason": "Argument faithful; 'Powerful Mellow' conveyed as being well drunk; prior correction verified."
+        },
+        {
+          "source_id": "043-033-0002",
+          "verdict": "PASS",
+          "reason": "Agency and action faithful; 'went for me' and collar shake correct."
+        },
+        {
+          "source_id": "043-033-0003",
+          "verdict": "PASS",
+          "reason": "Colloquial, insulting tone preserved; dialogue punctuation correct."
+        },
+        {
+          "source_id": "043-033-0004",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0005",
+          "verdict": "PASS",
+          "reason": "Negation and italic 'please' preserved; royal address correct."
+        },
+        {
+          "source_id": "043-033-0006",
+          "verdict": "PASS",
+          "reason": "Threat and italic 'was' emphasis preserved idiomatically."
+        },
+        {
+          "source_id": "043-033-0007",
+          "verdict": "PASS",
+          "reason": "Complete, all facts and italics (me, I) preserved; 'you and the duke' rendered politely; correction verified."
+        },
+        {
+          "source_id": "043-033-0008",
+          "verdict": "PASS",
+          "reason": "Jim's confirmation, king's sarcasm, italic 'mighty' and drowning threat preserved."
+        },
+        {
+          "source_id": "043-033-0009",
+          "verdict": "PASS",
+          "reason": "Italic emphases on you/him/I preserved; meaning accurate."
+        },
+        {
+          "source_id": "043-033-0010",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0011",
+          "verdict": "PASS",
+          "reason": "All points preserved, including hanging joke, penitentiary and italics; idiomatic."
+        },
+        {
+          "source_id": "043-033-0012",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0013",
+          "verdict": "PASS",
+          "reason": "Historical term and italic preserved."
+        },
+        {
+          "source_id": "043-033-0014",
+          "verdict": "PASS",
+          "reason": "Narrator's reaction rendered colloquially."
+        },
+        {
+          "source_id": "043-033-0015",
+          "verdict": "PASS",
+          "reason": "Sarcastic delivery and italic 'we' preserved."
+        },
+        {
+          "source_id": "043-033-0016",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0017",
+          "verdict": "PASS",
+          "reason": "Italic 'I' and sense preserved."
+        },
+        {
+          "source_id": "043-033-0018",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "043-033-0019",
+          "verdict": "PASS",
+          "reason": "Contrast and italic 'I' preserved."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
