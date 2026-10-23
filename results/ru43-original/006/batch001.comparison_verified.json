@@ -1,0 +1,107 @@
+{
+  "unit": 6,
+  "batch": 1,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "043-006-0020",
+      "target": "Трём лампу",
+      "source_sha256": "ac0044c17e08b97f2478861656f1ba1ed499ee902aaf64657b2379957d3dbaeb",
+      "target_id": "ru-043-006-0020",
+      "tag": "source_caption",
+      "target_sha256": "31c12042a34d2531d80c95f7154d56a93630c4716bcb40ef3d56475b0ecba08d"
+    },
+    {
+      "source_id": "043-006-0021",
+      "target": "! ! ! !",
+      "source_sha256": "a6d0aa082704dea1427f6c38d31aa9cd8bd77c5c2c836214f89490fa2a68e07a",
+      "target_id": "ru-043-006-0021",
+      "tag": "source_caption",
+      "target_sha256": "a6d0aa082704dea1427f6c38d31aa9cd8bd77c5c2c836214f89490fa2a68e07a"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-006-0020",
+      "verdict": "CORRECTED",
+      "reason": "Caption \"Rubbing the Lamp\" is better rendered as a short caption matching the scene (Huck rubbing the lamp); \"Потирание\" was stiff. Now \"Трём лампу\", a colloquial, idiomatic caption."
+    },
+    {
+      "source_id": "043-006-0021",
+      "verdict": "PASS",
+      "reason": "Caption is only punctuation \"! ! ! !\"; retained exactly, no text added or lost."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "043-006-0020",
+      "before": "Потирание лампы",
+      "after": "Трём лампу"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/006/batch001.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKE84Tyy6ChB68CvjHeo",
+    "usage": {
+      "input_tokens": 2267,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgKE8MhKa4xiqWxEjYW3w",
+        "usage": {
+          "input_tokens": 2365,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 226,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "043-006-0020",
+          "verdict": "PASS",
+          "reason": "Caption \"Rubbing the Lamp\" is rendered faithfully; the prior correction to the active, colloquial \"Трём лампу\" fits the illustration caption and the narrator's rubbing scene."
+        },
+        {
+          "source_id": "043-006-0021",
+          "verdict": "PASS",
+          "reason": "Caption consists solely of four exclamation marks; retained exactly with spacing, nothing added or omitted."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
