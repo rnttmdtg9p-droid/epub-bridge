@@ -2,9 +2,9 @@ import base64, concurrent.futures, datetime, gzip, hashlib, json, os, subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'results/ru42-original'; OUT.mkdir(parents=True,exist_ok=True)
+OUT=ROOT/'results/ru42-complete-original'; OUT.mkdir(parents=True,exist_ok=True)
 PACKED=base64.b64decode((ROOT/'inputs/ru42-source.json.gz.b64').read_text())
-assert hashlib.sha256(PACKED).hexdigest()=='f6edf06339aea986816daf6eab43b86ad49188bde56e2b41698bd4f76fc519fb'
+assert hashlib.sha256(PACKED).hexdigest()=='85acf8afe9c3576a79c1b3c8739c939e531e31cbbb0d7a50b39e31880fc3277b'
 SOURCE=json.loads(gzip.decompress(PACKED))
 KEY=os.environ.get('ANTHROPIC_API_KEY','').strip()
 MODEL='claude-sonnet-5-5'
@@ -15,13 +15,13 @@ def save(p,v):
     t=p.with_suffix(p.suffix+'.tmp'); t.write_text(json.dumps(v,ensure_ascii=False,indent=2));t.replace(p)
 def commit():
     with LOCK:
-        subprocess.run(['git','add','results/ru42-original'],cwd=ROOT,check=True)
+        subprocess.run(['git','add','results/ru42-complete-original'],cwd=ROOT,check=True)
         if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode:
             subprocess.run(['git','commit','-m','Checkpoint rank 42 Claude translation and review'],cwd=ROOT,check=True)
             subprocess.run(['git','push','origin','HEAD'],cwd=ROOT,check=True)
 
 GLOSSARY='Гленарван; леди Элен; Мэри Грант; Роберт Грант; Гарри Грант; Джон Манглс; Мак-Наббс; Жак Паганель; Айртон; Талькав; Дункан; Британия. Names are consistency guidance only; preserve source distinctions.'
-SYSTEM='You are the authorized Boundary Bay literary translator for Jules Verne, Les enfants du capitaine Grant (1868), French to Russian. Create a NEW complete fluent literary Russian translation directly from the supplied French. Never consult or reproduce a published Russian translation. Preserve every fact, agency, negation, tense, humour, ambiguity, dialogue turn and paragraph boundary. Preserve historical anomalies faithfully. Use Russian dialogue punctuation and idiomatic prose. Retain authentic source verse line counts exactly, and italic spans semantically. Do not merge, omit, summarize, modernize facts, or add explanations. Source HTML br may encode mechanical wrapping of prose; preserve genuine verse or document layout when semantically indicated, without treating every prose wrap as a verse line. Names already established: '+GLOSSARY+' Return JSON only.'
+SYSTEM='You are the authorized Boundary Bay literary translator for Jules Verne, Les enfants du capitaine Grant (1868), French to Russian. Create a NEW complete fluent literary Russian translation directly from the supplied French. Never consult or reproduce a published Russian translation. Preserve every fact, agency, negation, tense, humour, ambiguity, dialogue turn and paragraph boundary. Preserve historical anomalies faithfully. Use Russian dialogue punctuation and idiomatic prose. Retain authentic source verse line counts exactly, and italic spans semantically. Do not merge, omit, summarize, modernize facts, or add explanations. Source HTML br may encode mechanical wrapping of prose; preserve genuine verse or document layout when semantically indicated, without treating every prose wrap as a verse line. Names already established: '+GLOSSARY+' Preserve every [[FN:number]] note token exactly. Rows with translate=false are authentic foreign-language documents or verse and MUST retain their text exactly, including line breaks. Source role identifies notes, captions, source signatures and documentary headings; never turn these into new chapters. Return JSON only.'
 
 def call(system,payload,path):
     body={'model':MODEL,'max_tokens':16000,'system':system,'messages':[{'role':'user','content':json.dumps(payload,ensure_ascii=False)}]}
@@ -57,7 +57,8 @@ def deepl_translate(rows,path,context):
             if tag in ('i','em'):self.parts.append('</i>')
         def handle_data(self,data):self.parts.append(escape(data))
     texts=[]
-    for row in rows:
+    selected=[row for row in rows if row.get('translate',True)]
+    for row in selected:
         c=Clean();c.feed(row.get('source_html') or escape(row['text']));texts.append('<p>'+''.join(c.parts)+'</p>')
     host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
     payload={'text':texts,'source_lang':'FR','target_lang':'RU','model_type':'quality_optimized','tag_handling':'html','context':'New complete literary Russian translation of Jules Verne, Les enfants du capitaine Grant (1868), directly from French. Preserve every paragraph, fact, name, historical peculiarity and italic span. '+json.dumps(context,ensure_ascii=False)}
@@ -67,12 +68,14 @@ def deepl_translate(rows,path,context):
             req=urllib.request.Request(host+'/v2/translate',data=json.dumps(payload,ensure_ascii=False).encode(),headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json'})
             with urllib.request.urlopen(req,timeout=180) as response:raw=json.load(response)
             save(Path(str(path)+f'.deepl.attempt{attempt:02}.response.json'),raw)
-            targets=raw.get('translations',[]);assert len(targets)==len(rows),'DEEPL_ROW_COUNT'
+            targets=raw.get('translations',[]);assert len(targets)==len(selected),'DEEPL_ROW_COUNT'
             result=[]
-            for row,target in zip(rows,targets):
+            for row,target in zip(selected,targets):
                 assert target.get('model_type_used')=='quality_optimized','DEEPL_MODEL_NOT_QUALITY_OPTIMIZED'
                 c=Clean();c.feed(target['text']);text=''.join(c.parts).strip();assert text
                 result.append({'source_id':row['id'],'target':text})
+            byid={row['source_id']:row for row in result}
+            result=[byid[row['id']] if row.get('translate',True) else {'source_id':row['id'],'target':row['text'],'source_native_verbatim':True} for row in rows]
             return {'rows':result},{'provider':'DeepL','requested_model':'quality_optimized','actual_model':'quality_optimized','response_file':str(Path(str(path)+f'.deepl.attempt{attempt:02}.response.json').relative_to(ROOT))}
         except urllib.error.HTTPError as error:
             save(Path(str(path)+f'.deepl.attempt{attempt:02}.error.json'),{'http_status':error.code})
@@ -88,6 +91,9 @@ def validate(rows,original):
         assert row.get('source_sha256',src['sha256'])==src['sha256'],'SOURCE_HASH_ALIGNMENT'
         row['source_sha256']=src['sha256']
         assert isinstance(row['target'],str) and row['target'].strip(),'EMPTY_TARGET'
+        import re
+        assert re.findall(r'\[\[FN:\d+\]\]',row['target'])==re.findall(r'\[\[FN:\d+\]\]',src['text']),'NOTE_TOKEN_PRESERVATION'
+        if not src.get('translate',True):assert row['target']==src['text'],'AUTHENTIC_FOREIGN_SOURCE_VERBATIM'
         if src.get('source_lines'):assert len(row['target'].splitlines())==len(src['source_lines']),'VERSE_LINE_COUNT'
         row.update(target_id='ru-'+src['id'],tag=src['tag'],target_sha256=sha(row['target']))
     return rows
@@ -192,7 +198,7 @@ def translate(unit):
     return number
 
 if __name__=='__main__':
-    assert len(SOURCE)==70 and sum(len(u['rows']) for u in SOURCE)==5988
+    assert len(SOURCE)==70 and sum(len(u['rows']) for u in SOURCE)==5738
     if not KEY:raise SystemExit('MISSING_ANTHROPIC_API_KEY')
     if not os.environ.get('DEEPL_AUTH_KEY','').strip():raise SystemExit('MISSING_DEEPL_AUTH_KEY')
     errors=[]
@@ -201,6 +207,6 @@ if __name__=='__main__':
         except Exception as error:
             errors.append({'unit':unit['unit'],'error':str(error)});print('UNIT_FAILED',unit['unit'],str(error),flush=True)
             break
-    save(OUT/'run-status.json',{'state':'PARTIAL_FAILURE' if errors else 'API_TRANSLATION_REVIEW_COMPLETE_PENDING_BOOK_QA','errors':errors,'source_units':70,'source_rows':5988,'translation_provider':'DeepL quality_optimized','review_provider':MODEL,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+    save(OUT/'run-status.json',{'state':'PARTIAL_FAILURE' if errors else 'API_TRANSLATION_REVIEW_COMPLETE_PENDING_BOOK_QA','errors':errors,'source_units':70,'source_rows':5738,'translation_provider':'DeepL quality_optimized','review_provider':MODEL,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
     commit()
     if errors:raise SystemExit(1)
