@@ -1,0 +1,71 @@
+{
+  "unit": 1,
+  "state": "INDEPENDENT_PRIOR_ACTUAL_EXCHANGES_AND_EFFECTIVE_SOURCE_RECONCILED_PENDING_BOOK_QA",
+  "source_rows": 61,
+  "prior_complete_actual_qualification": {
+    "unit": 1,
+    "state": "INDEPENDENT_SOURCE_AND_ACTUAL_AI_EVIDENCE_RECONCILED_PENDING_BOOK_QA",
+    "source_rows": 61,
+    "batch_evidence": [
+      {
+        "batch": 0,
+        "rows": 20,
+        "actual_provider_review_rows": 20,
+        "source_native_untranslated_rows": 0,
+        "response_id": "msg_011CgJgS3GKpiYmZgPijokGR",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 1,
+        "rows": 20,
+        "actual_provider_review_rows": 20,
+        "source_native_untranslated_rows": 0,
+        "response_id": "msg_011CgJgcgmqYTkUXFLxfKfLn",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 2,
+        "rows": 20,
+        "actual_provider_review_rows": 20,
+        "source_native_untranslated_rows": 0,
+        "response_id": "msg_011CgJghG997rDLnLrPrAPxv",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      },
+      {
+        "batch": 3,
+        "rows": 2,
+        "actual_provider_review_rows": 2,
+        "source_native_untranslated_rows": 0,
+        "response_id": "msg_011CgJgkEZUGKT7ddcvdaeXP",
+        "actual_request_response": "PASS",
+        "final_source_comparison": "PASS"
+      }
+    ],
+    "source_native_policy": "Untranslated original foreign documents/verse copied exactly and independently compared; not represented as model-translated or provider-reviewed output",
+    "qualified_target_sha256": "8040ac79bed169a254ea77ee29c03fb63ad13adcae9dd4c642b99757a5f20002",
+    "book_release": false
+  },
+  "heading_source_correction": {
+    "state": "PASS_ACTUAL_CORRECTED_SOURCE_HEADING_EXCHANGES",
+    "actual": [
+      {
+        "response_id": "msg_011CgJiCWZEWTeWNMX2zG4Lu",
+        "verdict": "PASS",
+        "actual_model": "claude-sonnet-5-5"
+      },
+      {
+        "response_id": "msg_011CgJiDWfiRKdtXMNoAx7di",
+        "verdict": "PASS",
+        "actual_model": "claude-sonnet-5-5"
+      }
+    ],
+    "source_sha256": "f0ad122d6da6a7e1ba1fd076069a70e949c696bd560d6846456891cc35b3bb0f",
+    "target_sha256": "9c55bae4c19d0540f4482a9d4798f8f625c54b9be8d74665bef03ccf43eb0bd8"
+  },
+  "all_retained_source_body_rows_exactly_unchanged": true,
+  "source_effective_unit_sha256": "d1cd0b45139a87944681e2d0cdab81879cb1c514cf13f260f3832f0038ab88de",
+  "book_release": false
+}
