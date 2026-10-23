@@ -1,0 +1,98 @@
+{
+  "unit": 57,
+  "batch": 10,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id07807",
+      "target": "У Мушкетона была морская болезнь.",
+      "source_sha256": "ab0ae22d81d4e5e336610d4b65bba0193fabf158c552c325d3bfc7b51bdd10a4",
+      "target_id": "ru-id07807",
+      "tag": "p",
+      "target_sha256": "9daf4a4485b6fc3b4e12c0efe665335bfadcf0820d24f69c834c2e6efea5ab86"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id07807",
+      "verdict": "PASS",
+      "reason": "The single sentence is rendered completely and accurately. The imperfect tense \"avait\" matches the Russian past \"была\". Nothing is added or omitted. The name Mousqueton is given in the usual Russian form, Мушкетон. There are no italics, verse or dialogue to preserve."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJSGdQF4wkRT9MgagFrr",
+    "usage": {
+      "input_tokens": 1121,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 40,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJSGihjf2H6zno5fAWNv",
+    "usage": {
+      "input_tokens": 1384,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "thinking_tokens": 93
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJSGu36FqnQoNJLzio96",
+        "usage": {
+          "input_tokens": 1445,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 168,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id07807",
+          "verdict": "PASS",
+          "reason": "Точно передаёт французское «Mousqueton avait le mal de mer»: подлежащее, прошедшее время и смысл сохранены, имя Мушкетон дано в устоявшейся форме, ничего не опущено и не добавлено. Предыдущих исправлений в ledger нет."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJSGihjf2H6zno5fAWNv",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "",
+      "signature": "CAQS8wYKEAgTGAI4AUIIdGhpbmtpbmcSDMAXybqFkvkx4/e/fBoM98agHkPqbYRExOZQIjDylMXFavG9HWJUD03OZH8IhhCm9vj2J2GaHYSctMuu/fylD+XCum8qnqeXAwFJqUUqkAY9ZsWBj2PID+s/2g51WHMk0F5EukZfg03ADZmHcgS2KpPVyxQ/eS6QURhAok+v3b8sS+meOPhFOMEhDGvpZ+Sr9f451jOXrqiPXnqtAfnPj43CT+f2Kly8uwpx5GSz9y1WimNzSqkkt5eQGLz82h+mtXgZjIEptL/O5FAYaiu3oNzTOwIbB2k5+P4s2oBa5oI2IcLOduILyM87rr2UcG9Bp3ugMimokY2dOUJZuaeeG93eenThz2zV+SKlstINFuV2NyhgqpJRXI4xV++8rwWrZF5dFgogyGH7EZRtlymlJEZUETbhDBccD+CDXx9nJDt4MAwrvhKFDxsCb7684oUCvDvZXAWXrRvM0CsyGLLY9bL5pXxqET0d9Hf9EBdGYvaau1KGiU7gAXO1iFRVTnVmH3k1gY3xadycll48FwXfV7qQROVWrLARqJavHDpz67+MOjr5N80Gfkd0OsRZtA6W+6cp4kxhiV989YgzZmlh3YcmgF4TXlGqGEBCUypQkGfsryTb5a7Jd5jGuACm0Fwn0oZKtVo0PL5MypbVKUiu5crdKXxW9pOqN/qPOlM4ua9/qm+sSI/4MQmlM31aLT/jvtdM1RyKWdf/zBdwPDH89m9JPy+t8zSCNC812+yQOApYIPry6qzPhdL+XLqTx13DcQXGbi6MZNVCsByNhPrhx/9wozygzHqSbxvAU9ztUJYR1nwdV9YFGGkaeeQMOqJ8uy4Te5AbPqxTV0n/jnMzNW+FcduiQd11c7aqbrA4xXVX2M5w14JfFqB/48pEMNa1frOKpf4Bh1JbARRfW7rYkHJg2MztGD3iEIiFemTAOYfPK9uqRfawzoLzHTR7yD3e9MqknT5t7pUX21Ffxq6KKWGmm/48EobcJ5dM1wQf94Vyp/gmKtqlkLEvSCUGKlymgmutP9D+4oOrUQ6G+Jy08MrOtk64IlxlrRorsQJ1ygPTphlWmXuSVDSbdwioh0KqjaG65THFtPS3g4bhn0zvuQxdbZcEU3xuqH4Ti1WWtTODUzlcrk+iB8yFWCdhiaPvGAE="
+    },
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"id07807\",\"target\":\"У Мушкетона была морская болезнь.\"}],\"review\":[{\"source_id\":\"id07807\",\"verdict\":\"PASS\",\"reason\":\"The single sentence is rendered completely and accurately. The imperfect tense \\\"avait\\\" matches the Russian past \\\"была\\\". Nothing is added or omitted. The name Mousqueton is given in the usual Russian form, Мушкетон. There are no italics, verse or dialogue to preserve.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1384,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 259,
+    "output_tokens_details": {
+      "thinking_tokens": 93
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
