@@ -1,0 +1,98 @@
+{
+  "unit": 50,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id06478",
+      "target": "Сделав крюк, он вернулся в гостиную через другую дверь.",
+      "source_sha256": "210c1363553ca0e2015411858a732b561fa3c9856acd09bfcb10888c5c3d9ef0",
+      "target_id": "ru-id06478",
+      "tag": "p",
+      "target_sha256": "3df349085080dcfce38acb165aeb85f39f9ad6b1b68cc7920c458cd0ecf1313e"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id06478",
+      "verdict": "PASS",
+      "reason": "The draft is faithful to the source: the detour (\"en faisant un détour\" → \"сделав крюк\"), the subject's return into the salon (\"rentra dans le salon\" → \"вернулся в гостиную\") and the other door (\"par une autre porte\" → \"через другую дверь\") are all preserved. Tense, agency and register are natural, and no names, italics or verse are involved."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQ9Qd7g1KZK3oxWhDVa",
+    "usage": {
+      "input_tokens": 1048,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 50,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJQ9Wv9Sg4kcfwc6ZiSA",
+    "usage": {
+      "input_tokens": 1315,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJQ9frfPPcEWMPeu8gJZ",
+        "usage": {
+          "input_tokens": 1376,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 222,
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id06478",
+          "verdict": "PASS",
+          "reason": "The Russian conveys the whole French sentence. \"En faisant un détour\" is rendered as \"Сделав крюк\", \"il rentra dans le salon\" as \"он вернулся в гостиную\", and \"par une autre porte\" as \"через другую дверь\". Tense, agency and register are preserved, and nothing is added or omitted. No prior corrections were supplied to verify, so the exact target bytes are kept."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
