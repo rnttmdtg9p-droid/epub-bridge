@@ -1,0 +1,71 @@
+{
+  "unit": 31,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_BOOK_RECONCILIATION",
+  "rows": [
+    {
+      "source_id": "id04128",
+      "source_sha256": "093c36eecb9be2b29389037012ce44247fe63b3335163943f5ec40a902adf5fa",
+      "target": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии какой-то фрондёрки.",
+      "target_id": "ru-id04128",
+      "tag": "p",
+      "target_sha256": "15001ba4a3e2c7bdbb1060e0faa0b8856a1e3af479e7c4b5532e81292c4876f5"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id04128",
+      "verdict": "CORRECTED",
+      "reason": "The draft was accurate in agency, tone, tense and dialogue structure. I made one small change: \"какой-то фрондёрки\" instead of \"фрондёрки\". The source's \"d'une frondeuse\" is indefinite and carries a slightly mocking tone, and the phrase captures that more idiomatically. Nothing was omitted or added, and the paragraph boundary is intact."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id04128",
+      "before": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии фрондёрки.",
+      "after": "— Ах, предатель! — тихо сказал д’Артаньян, наклонившись к уху Арамиса. — Вы заставили нас клясться на распятии какой-то фрондёрки."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJGxB3w9HBRLV54phtHg",
+    "usage": {
+      "input_tokens": 1154,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 132,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJGxHMwUej2EiM7EEhJ9",
+    "usage": {
+      "input_tokens": 1497,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
