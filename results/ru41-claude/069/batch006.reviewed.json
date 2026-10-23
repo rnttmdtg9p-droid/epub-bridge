@@ -1,0 +1,104 @@
+{
+  "unit": 69,
+  "batch": 6,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "id09269",
+      "target": "— Нет, клянусь душой!",
+      "source_sha256": "fc458b2256036d10bdfce9e31df1cd545f57014e59a4abf17e4515c90190cc52",
+      "target_id": "ru-id09269",
+      "tag": "p",
+      "target_sha256": "845eca0a91f86fd9c17dd08ba955c862bcd9a182437a24a714f21880d280d4bb"
+    },
+    {
+      "source_id": "id09270",
+      "target": "— Так вот, дорогой Атос, вы, говорящий по-английски, как сам Джон Буль, — вы мастер Том Лоу, а мы — ваши трое товарищей. Теперь понимаете?",
+      "source_sha256": "1cb0a343c3beaad4d1f588b970dd2b3c6d0f3bba46e65fdbe674d05cc1200cab",
+      "target_id": "ru-id09270",
+      "tag": "p",
+      "target_sha256": "b8c93fdf2b1e4044191ca77065527712d9cbea50d6339c3691f6127a95468b80"
+    },
+    {
+      "source_id": "id09271",
+      "target": "Атос вскрикнул от радости и восхищения, подбежал к шкафу, достал оттуда рабочее платье, и четверо друзей тотчас облачились в него; после этого они вышли из гостиницы: Атос нёс пилу, Портос — лом, Арамис — топор, а д’Артаньян — молоток и гвозди.",
+      "source_sha256": "fd29225c0770964aa495ef8b2e1eb5749e63084525f4a273fdffb285914152e8",
+      "target_id": "ru-id09271",
+      "tag": "p",
+      "target_sha256": "d007687dcadeb7131eb25c7b24065d5e20f666d6588d495db3c0d0d7250359a3"
+    },
+    {
+      "source_id": "id09272",
+      "target": "Письмо помощника палача служило для мастера-плотника порукой того, что это были именно те, кого ждали.",
+      "source_sha256": "1f52422155f14b1a09f014ce16230b366870973661f480f2595fd9745c3319e8",
+      "target_id": "ru-id09272",
+      "tag": "p",
+      "target_sha256": "152228a6a704e4f65707b0a5379990c53bc1f30e7d435a59810d51f7a5ed5fea"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id09269",
+      "verdict": "PASS",
+      "reason": "Negation and the oath \"sur mon âme\" are rendered faithfully; the register suits Athos's reply."
+    },
+    {
+      "source_id": "id09270",
+      "verdict": "PASS",
+      "reason": "Complete. Athos as Tom Low and the three companions are correctly assigned, and the emphatic \"nous\" and the question \"comprenez-vous maintenant\" are kept."
+    },
+    {
+      "source_id": "id09271",
+      "verdict": "PASS",
+      "reason": "Sequence of actions, the tool assigned to each man and the cry of joy and admiration are all preserved; no omissions or additions."
+    },
+    {
+      "source_id": "id09272",
+      "verdict": "PASS",
+      "reason": "The letter vouches to the master carpenter that these were the men expected. Agency and meaning are intact."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJV5AexWdYuHMXdye9Kx",
+    "usage": {
+      "input_tokens": 2187,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJV5NbJDF5Rg5a4RL5Wa",
+    "usage": {
+      "input_tokens": 3075,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1390,
+      "output_tokens_details": {
+        "thinking_tokens": 806
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

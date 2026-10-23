@@ -1,0 +1,608 @@
+{
+  "unit": 70,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id09313",
+      "target": "— Что ж, прощайте и мужайтесь, — сказал Атос. — Доложите королю, как обстоят дела; пусть, когда останется один, постучит в пол, чтобы я мог спокойно продолжать работу. Если бы Парри помог мне и заранее снял нижнюю плиту камина — она, без сомнения, мраморная, — это была бы уже часть дела. А вы, Арамис, постарайтесь не отходить от короля. Говорите громко, очень громко, потому что у двери вас будут слушать. Если внутри покоев есть часовой, убейте его без разговоров; если их двое, пусть Парри убьёт одного, а вы другого; если их трое — дайте себя убить, но спасите короля.",
+      "source_sha256": "9b3d5662e182081ba82b2d4912dbd8ec3e3ab5a07fc0ffaf69ae2299bf8d512d",
+      "target_id": "ru-id09313",
+      "tag": "p",
+      "target_sha256": "0d1baf4fe48834321d603e7b01745f063bf4e640f19257a27abc537d010b34e6"
+    },
+    {
+      "source_id": "id09314",
+      "target": "— Будьте спокойны, — сказал Арамис, — я возьму два кинжала, чтобы один отдать Парри. Это всё?",
+      "source_sha256": "5005a03ef255a69a1c2936fb1c495fe07d9c61706cbf778d79e7909b8b850e27",
+      "target_id": "ru-id09314",
+      "tag": "p",
+      "target_sha256": "a6d2599dcb6af0d3abf3535f6fcc8eecfb7f42a291ef0bd4e3302ed9ce628961"
+    },
+    {
+      "source_id": "id09315",
+      "target": "— Да, ступайте; но настоятельно посоветуйте королю не выказывать ложного великодушия. Пока вы будете сражаться, если дойдёт до боя, пусть он бежит; когда плита вернётся на место над его головой, а вы, мёртвый или живой, будете лежать на этой плите, им понадобится минут десять, не меньше, чтобы отыскать лаз, через который он ушёл. За эти десять минут мы успеем уйти далеко, и король будет спасён.",
+      "source_sha256": "efe2a88e9e22faa39324885efadd11f3890adb826f5c3821a02c04f5e967697e",
+      "target_id": "ru-id09315",
+      "tag": "p",
+      "target_sha256": "803eef5afd05bb0dbb6ebeaa2dcc16818c20185b67468f6de13f1dc9d63a4715"
+    },
+    {
+      "source_id": "id09316",
+      "target": "— Будет сделано так, как вы говорите, Атос. Вашу руку, ведь, быть может, мы больше не увидимся.",
+      "source_sha256": "d25477f7a3cb4491dee6639e563439a508936cb55612bfff71f1da229250797e",
+      "target_id": "ru-id09316",
+      "tag": "p",
+      "target_sha256": "098068e0efe3d0855bb8a42fcf22f794d65d911a7be74b7e2d8be48b5328372e"
+    },
+    {
+      "source_id": "id09317",
+      "target": "Атос обвил руками шею Арамиса и поцеловал его:",
+      "source_sha256": "f246b5a072560c9f522e04c9dc5f04b564c649ebe62b2b59b7145db143fcb2ca",
+      "target_id": "ru-id09317",
+      "tag": "p",
+      "target_sha256": "52f073d96a12f9a40101166e2ed78be2e7234494b768fe91f18de95fd4e2d192"
+    },
+    {
+      "source_id": "id09318",
+      "target": "— Это за вас, — сказал он. — А теперь, если я умру, скажите д’Артаньяну, что я люблю его, как родное дитя, и поцелуйте его за меня. Поцелуйте также нашего доброго и храброго Портоса. Прощайте.",
+      "source_sha256": "fdfef4a15665095233224c1ef0fcdf188d3a4f319c18ba216fd2ec4497ccdea2",
+      "target_id": "ru-id09318",
+      "tag": "p",
+      "target_sha256": "da2d43505ff53b636ad7423cba353bdcd29f689d377814b66432c0db2d258aa6"
+    },
+    {
+      "source_id": "id09319",
+      "target": "— Прощайте, — сказал Арамис. — Теперь я так же уверен, что король спасётся, как уверен в том, что держу и пожимаю самую честную руку на свете.",
+      "source_sha256": "af6038ac37ea1409b70620bab2b65810e676d4cebb60f645c8d959d8f4023de0",
+      "target_id": "ru-id09319",
+      "tag": "p",
+      "target_sha256": "d2622a38e88340376c469036fea50f744c39ac2b37dd5b70233e3882226dee23"
+    },
+    {
+      "source_id": "id09320",
+      "target": "Арамис покинул Атоса, в свою очередь сошёл с эшафота и вернулся в гостиницу, насвистывая мотив песенки во славу Кромвеля. Двух других друзей он застал за столом у доброго огня: они пили бутылку портвейна и поедали холодного цыплёнка. Портос ел, ворча и осыпая бранью этих подлых парламентариев; д’Артаньян ел молча, но в мыслях строил самые дерзкие планы.",
+      "source_sha256": "125572dd5cdc801b3cf020ea30ff1e39d74b2a9bdd727430b15cdd94e5424bf1",
+      "target_id": "ru-id09320",
+      "tag": "p",
+      "target_sha256": "b9ac0ba64f54d873bbcb8d318cbe745200564c0f278e76d79677f690fbcc1d8e"
+    },
+    {
+      "source_id": "id09321",
+      "target": "Арамис рассказал ему обо всём, что было условлено; д’Артаньян одобрил кивком головы, а Портос — голосом.",
+      "source_sha256": "061cb52f2043c12533681e767f3fed8cdbf40700a860f358ea56235a76dfc2d9",
+      "target_id": "ru-id09321",
+      "tag": "p",
+      "target_sha256": "df00b7c0200db285d3fe8a1ba9e2ca99acb20b8d732582ba7aa64e815e4ad58f"
+    },
+    {
+      "source_id": "id09322",
+      "target": "— Браво! — сказал он. — К тому же мы будем там в минуту его бегства: под этим эшафотом очень хорошо спрятаться, и мы можем там оставаться. Вчетвером — д’Артаньян, я, Гримо и Мушкетон — мы уложим не меньше восьми человек; о Блезуа я не говорю, он годится только караулить лошадей. По две минуты на человека — это четыре минуты; Мушкетон потеряет одну, значит, пять; за эти пять минут вы можете уже пробежать четверть льё.",
+      "source_sha256": "2eafad6be2c5c2d6222891a097e0b5079e116949a4d1f3c8f83248d6b9be87f8",
+      "target_id": "ru-id09322",
+      "tag": "p",
+      "target_sha256": "d168640d935ed707364b3c3a1243800a2bfe2da4106404daef096c9b86af2ba1"
+    },
+    {
+      "source_id": "id09323",
+      "target": "Арамис наскоро перекусил, выпил стакан вина и переоделся.",
+      "source_sha256": "a584916e52c7a4e95473e30a93a5717c9ef1a7047be3c7e7f9ff212a68930d47",
+      "target_id": "ru-id09323",
+      "tag": "p",
+      "target_sha256": "78a7be66095d64dd2b456990f809092c4477880039e242373715ee36aa99621d"
+    },
+    {
+      "source_id": "id09324",
+      "target": "— Теперь, — сказал он, — я отправляюсь к его преосвященству. Вы, Портос, займитесь приготовлением оружия; а вы, д’Артаньян, хорошенько присматривайте за вашим палачом.",
+      "source_sha256": "dd28223ab370eb8413c42a854f486c5a903107828a8cb611347f1b8e6737b3a1",
+      "target_id": "ru-id09324",
+      "tag": "p",
+      "target_sha256": "95bb33dd4c8c3a38dbb955a7fb1404de881fc9eafaab62d5c0478004855b2531"
+    },
+    {
+      "source_id": "id09325",
+      "target": "— Будьте покойны, Гримо сменил Мушкетона и держит на нём ногу.",
+      "source_sha256": "d05160d027f281ff2f387ee3aed679e7d0d21981db86b3a3c780e59b7dc6df94",
+      "target_id": "ru-id09325",
+      "tag": "p",
+      "target_sha256": "50cf8f453a6c93a288376dd4c0922fa53c652def4ea8216463f461afef53a5d3"
+    },
+    {
+      "source_id": "id09326",
+      "target": "— Всё равно, удвойте надзор и ни на миг не оставайтесь без дела.",
+      "source_sha256": "3ad296959a13ddad33e014263af75349075d037603b369cb97cd8a5a4063bb28",
+      "target_id": "ru-id09326",
+      "tag": "p",
+      "target_sha256": "4c7edef78c759a069e08e68a220be6942d79521df0f6a06827d214eee72352a9"
+    },
+    {
+      "source_id": "id09327",
+      "target": "— Без дела! Друг мой, спросите Портоса: я не живу, я беспрестанно на ногах, я похож на танцора. Мордиё! Как я люблю Францию в эту минуту и как хорошо иметь собственную родину, когда так скверно приходится в чужой.",
+      "source_sha256": "7460f81a371f58222aa457b23263f4fbaaf0de9cf2c9d035d122c46454c13acf",
+      "target_id": "ru-id09327",
+      "tag": "p",
+      "target_sha256": "6db457ce06269c5dbff929ba2d1ede26e4657e16d5c985e9cec98528d3dcc5b1"
+    },
+    {
+      "source_id": "id09328",
+      "target": "Арамис простился с ними так же, как простился с Атосом, то есть обняв их; затем он отправился к епископу Джаксону и передал ему свою просьбу. Джаксон согласился взять Арамиса тем охотнее, что уже предупредил, что ему понадобится священник — на тот несомненный случай, если король пожелает причаститься, и особенно на вероятный случай, если король пожелает прослушать обедню.",
+      "source_sha256": "923c9877c91e0bff672a0c04c32cf39269186169b2cfc829af0179be5f8cc860",
+      "target_id": "ru-id09328",
+      "tag": "p",
+      "target_sha256": "f0f36d7a1a82c2c455b7a9a9d64f7911057f9a67b48f46c1a980fa51fe681c92"
+    },
+    {
+      "source_id": "id09329",
+      "target": "Одетый так, как накануне был одет Арамис, епископ сел в свою карету. Арамис, ещё более неузнаваемый из-за бледности и печали, чем из-за дьяконского платья, сел рядом с ним. Карета остановилась у ворот Уайт-Холла; было около девяти часов утра. Ничто, казалось, не изменилось; передние и коридоры, как и накануне, были полны стражи. Двое часовых стояли у двери короля, двое других прохаживались перед балконом, на площадке эшафота, где уже была установлена плаха.",
+      "source_sha256": "38670372f661d009c9751ef630661761cbcbd88c013489f3b4be8c6807b3a22a",
+      "target_id": "ru-id09329",
+      "tag": "p",
+      "target_sha256": "2728869cbba31d81833ad85f759fba88d43c5cec2960a8533032282c9a7a92ff"
+    },
+    {
+      "source_id": "id09330",
+      "target": "Король был полон надежды; увидев вновь Арамиса, он обратил эту надежду в радость. Он обнял Джаксона, пожал руку Арамису. Епископ нарочито громко и при всех заговорил об их вчерашней беседе. Король ответил ему, что слова, сказанные им в той беседе, принесли плоды и что он желает ещё одной такой же беседы. Джаксон обернулся к присутствующим и попросил их оставить его наедине с королём. Все удалились.",
+      "source_sha256": "90eaa8ff42686f40b05ae431aba855dcfac064e9dbca49b2cf4a759e4a3b5aa0",
+      "target_id": "ru-id09330",
+      "tag": "p",
+      "target_sha256": "5ba0da07041c97f65ff507f0136d41968beed3e5c81f7427e07f15cea2d686dd"
+    },
+    {
+      "source_id": "id09331",
+      "target": "Как только дверь закрылась:",
+      "source_sha256": "47b8fcaf8fa6709593dc2a20f063104a22503c1a7b40d97cddb3a77570327fa0",
+      "target_id": "ru-id09331",
+      "tag": "p",
+      "target_sha256": "7cd395878d2b64817622439e7842a6f06140182ed6627b1a6b78b97f322f5166"
+    },
+    {
+      "source_id": "id09332",
+      "target": "— Государь, — быстро сказал Арамис, — вы спасены! Лондонский палач исчез; его помощник вчера сломал себе бедро под окнами Вашего Величества. Тот крик, что мы слышали, был его. Без сомнения, исчезновение палача уже заметили; но палач есть только в Бристоле, и нужно время, чтобы за ним послать. Значит, у нас есть время по крайней мере до завтра.",
+      "source_sha256": "84e460262f1534645eec95e045d0aa7c2c66c90293573b4328827de4f9ace29a",
+      "target_id": "ru-id09332",
+      "tag": "p",
+      "target_sha256": "225ba44d96d8b128d3c6e86b2c8dfc781027cd2cb15ae980b4c7578e9e6ab80f"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id09313",
+      "verdict": "CORRECTED",
+      "reason": "«ce serait autant de fait» was rendered as «было бы уже сделано», which overstates; changed to «была бы уже часть дела». Also «de la porte» now «у двери»."
+    },
+    {
+      "source_id": "id09314",
+      "verdict": "PASS",
+      "reason": "Faithful: two daggers, one for Parry, closing question preserved."
+    },
+    {
+      "source_id": "id09315",
+      "verdict": "CORRECTED",
+      "reason": "«recommandez bien» strengthened to «настоятельно посоветуйте»; rest of the plan, the plate, and the ten minutes are accurate."
+    },
+    {
+      "source_id": "id09316",
+      "verdict": "PASS",
+      "reason": "Accurate, including the negation «ne nous reverrons-nous plus»."
+    },
+    {
+      "source_id": "id09317",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id09318",
+      "verdict": "CORRECTED",
+      "reason": "«comme un enfant» was narrowed to «как сына»; restored as «как родное дитя»."
+    },
+    {
+      "source_id": "id09319",
+      "verdict": "PASS",
+      "reason": "Accurate; the comparison of certainty is preserved."
+    },
+    {
+      "source_id": "id09320",
+      "verdict": "CORRECTED",
+      "reason": "«un bon feu» became «жарко горевший камин», which adds a fireplace; changed to «у доброго огня». «Изрыгал бранные слова» was too strong for «maugréant force injures»; changed to «ворча и осыпая бранью»."
+    },
+    {
+      "source_id": "id09321",
+      "verdict": "PASS",
+      "reason": "Accurate; the nod and the voice are preserved."
+    },
+    {
+      "source_id": "id09322",
+      "verdict": "CORRECTED",
+      "reason": "«Втроём» contradicted the four named people; changed to «Вчетвером». Also «bien huit» → «не меньше восьми», and «nous pouvons nous y tenir» → «мы можем там оставаться»."
+    },
+    {
+      "source_id": "id09323",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id09324",
+      "verdict": "PASS",
+      "reason": "Accurate; the typo «je, me rends» in the source is rendered naturally."
+    },
+    {
+      "source_id": "id09325",
+      "verdict": "CORRECTED",
+      "reason": "«стоит на нём ногой» was awkward and slightly altered the image; changed to «держит на нём ногу» for «il a le pied dessus»."
+    },
+    {
+      "source_id": "id09326",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id09327",
+      "verdict": "PASS",
+      "reason": "Accurate; the humour, the oath and the remark about the homeland are preserved."
+    },
+    {
+      "source_id": "id09328",
+      "verdict": "PASS",
+      "reason": "Accurate; the certain and probable cases are preserved."
+    },
+    {
+      "source_id": "id09329",
+      "verdict": "PASS",
+      "reason": "Accurate; the sentries, the scaffold and the block are all present."
+    },
+    {
+      "source_id": "id09330",
+      "verdict": "CORRECTED",
+      "reason": "Wrong agency: «он преобразил эту надежду в радость» had the king transform the hope, but in the source the hope itself changed into joy. Also «porté leur fruit» → «принесли плоды»."
+    },
+    {
+      "source_id": "id09331",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id09332",
+      "verdict": "PASS",
+      "reason": "Accurate: executioner's disappearance, assistant's broken thigh, the cry, Bristol, and the delay until tomorrow."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id09313",
+      "before": "— Что ж, прощайте и мужайтесь, — сказал Атос. — Доложите королю, как обстоят дела; пусть, когда останется один, постучит в пол, чтобы я мог спокойно продолжать работу. Если бы Парри помог мне и заранее снял нижнюю плиту камина — она, без сомнения, мраморная, — это было бы уже сделано. А вы, Арамис, постарайтесь не отходить от короля. Говорите громко, очень громко, потому что от двери вас будут слушать. Если внутри покоев есть часовой, убейте его без разговоров; если их двое, пусть Парри убьёт одного, а вы другого; если их трое — дайте себя убить, но спасите короля.",
+      "after": "— Что ж, прощайте и мужайтесь, — сказал Атос. — Доложите королю, как обстоят дела; пусть, когда останется один, постучит в пол, чтобы я мог спокойно продолжать работу. Если бы Парри помог мне и заранее снял нижнюю плиту камина — она, без сомнения, мраморная, — это была бы уже часть дела. А вы, Арамис, постарайтесь не отходить от короля. Говорите громко, очень громко, потому что у двери вас будут слушать. Если внутри покоев есть часовой, убейте его без разговоров; если их двое, пусть Парри убьёт одного, а вы другого; если их трое — дайте себя убить, но спасите короля."
+    },
+    {
+      "source_id": "id09315",
+      "before": "— Да, ступайте; но хорошенько посоветуйте королю не выказывать ложного великодушия. Пока вы будете сражаться, если дойдёт до боя, пусть он бежит; когда плита вернётся на место над его головой, а вы, мёртвый или живой, будете лежать на этой плите, им понадобится минут десять, не меньше, чтобы отыскать лаз, через который он ушёл. За эти десять минут мы успеем уйти далеко, и король будет спасён.",
+      "after": "— Да, ступайте; но настоятельно посоветуйте королю не выказывать ложного великодушия. Пока вы будете сражаться, если дойдёт до боя, пусть он бежит; когда плита вернётся на место над его головой, а вы, мёртвый или живой, будете лежать на этой плите, им понадобится минут десять, не меньше, чтобы отыскать лаз, через который он ушёл. За эти десять минут мы успеем уйти далеко, и король будет спасён."
+    },
+    {
+      "source_id": "id09318",
+      "before": "— Это за вас, — сказал он. — А теперь, если я умру, скажите д’Артаньяну, что я люблю его, как сына, и поцелуйте его за меня. Поцелуйте также нашего доброго и храброго Портоса. Прощайте.",
+      "after": "— Это за вас, — сказал он. — А теперь, если я умру, скажите д’Артаньяну, что я люблю его, как родное дитя, и поцелуйте его за меня. Поцелуйте также нашего доброго и храброго Портоса. Прощайте."
+    },
+    {
+      "source_id": "id09320",
+      "before": "Арамис покинул Атоса, в свою очередь сошёл с эшафота и вернулся в гостиницу, насвистывая мотив песенки во славу Кромвеля. Двух других друзей он застал за столом у жарко горевшего камина: они пили бутылку портвейна и поедали холодного цыплёнка. Портос ел и при этом изрыгал бранные слова в адрес этих подлых парламентариев; д’Артаньян ел молча, но в мыслях строил самые дерзкие планы.",
+      "after": "Арамис покинул Атоса, в свою очередь сошёл с эшафота и вернулся в гостиницу, насвистывая мотив песенки во славу Кромвеля. Двух других друзей он застал за столом у доброго огня: они пили бутылку портвейна и поедали холодного цыплёнка. Портос ел, ворча и осыпая бранью этих подлых парламентариев; д’Артаньян ел молча, но в мыслях строил самые дерзкие планы."
+    },
+    {
+      "source_id": "id09322",
+      "before": "— Браво! — сказал он. — К тому же мы будем там в минуту его бегства: под этим эшафотом очень хорошо спрятаться, и мы можем там держаться. Втроём — д’Артаньян, я, Гримо и Мушкетон — мы уложим человек восемь; о Блезуа я не говорю, он годится только караулить лошадей. По две минуты на человека — это четыре минуты; Мушкетон потеряет одну, значит, пять; за эти пять минут вы успеете пробежать четверть льё.",
+      "after": "— Браво! — сказал он. — К тому же мы будем там в минуту его бегства: под этим эшафотом очень хорошо спрятаться, и мы можем там оставаться. Вчетвером — д’Артаньян, я, Гримо и Мушкетон — мы уложим не меньше восьми человек; о Блезуа я не говорю, он годится только караулить лошадей. По две минуты на человека — это четыре минуты; Мушкетон потеряет одну, значит, пять; за эти пять минут вы можете уже пробежать четверть льё."
+    },
+    {
+      "source_id": "id09325",
+      "before": "— Будьте покойны, Гримо сменил Мушкетона и стоит на нём ногой.",
+      "after": "— Будьте покойны, Гримо сменил Мушкетона и держит на нём ногу."
+    },
+    {
+      "source_id": "id09330",
+      "before": "Король был полон надежды; увидев вновь Арамиса, он преобразил эту надежду в радость. Он обнял Джаксона, пожал руку Арамису. Епископ нарочито громко и при всех заговорил об их вчерашней беседе. Король ответил ему, что слова, сказанные им в той беседе, принесли плод и что он желает ещё одной такой же беседы. Джаксон обернулся к присутствующим и попросил их оставить его наедине с королём. Все удалились.",
+      "after": "Король был полон надежды; увидев вновь Арамиса, он почувствовал, что надежда перешла в радость. Он обнял Джаксона, пожал руку Арамису. Епископ нарочито громко и при всех заговорил об их вчерашней беседе. Король ответил ему, что слова, сказанные им в той беседе, принесли плоды и что он желает ещё одной такой же беседы. Джаксон обернулся к присутствующим и попросил их оставить его наедине с королём. Все удалились."
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJUuUHpUXic8Ean4L7iq",
+    "usage": {
+      "input_tokens": 7802,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2323,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJUvjnm2CnqnBpwu2qXE",
+    "usage": {
+      "input_tokens": 12699,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 5843,
+      "output_tokens_details": {
+        "thinking_tokens": 2343
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJUyDrnAMZYEM1Dup7HJ",
+        "usage": {
+          "input_tokens": 15021,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5677,
+          "output_tokens_details": {
+            "thinking_tokens": 1884
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id09313",
+          "verdict": "PASS",
+          "reason": "Faithful: 'autant de fait' rendered as 'часть дела'; 'у двери' for 'de la porte'; the sentry instructions (one, two, three) and the final 'faites-vous tuer, mais sauvez le roi' are exact. Prior correction verified."
+        },
+        {
+          "source_id": "id09314",
+          "verdict": "PASS",
+          "reason": "Two daggers, one for Parry; the closing question is preserved."
+        },
+        {
+          "source_id": "id09315",
+          "verdict": "PASS",
+          "reason": "The sequence (fight, flight, plate replaced, 'mort ou vivant', ten minutes, the king saved) is intact. 'Настоятельно посоветуйте' fits 'recommandez bien'. Prior correction verified."
+        },
+        {
+          "source_id": "id09316",
+          "verdict": "PASS",
+          "reason": "Accurate, including the 'peut-être ne nous reverrons-nous plus' nuance."
+        },
+        {
+          "source_id": "id09317",
+          "verdict": "PASS",
+          "reason": "Accurate, with the colon preserved."
+        },
+        {
+          "source_id": "id09318",
+          "verdict": "PASS",
+          "reason": "'Pour vous' as 'Это за вас' is clear; 'comme un enfant' as 'как родное дитя' is acceptable and idiomatic. Prior correction verified."
+        },
+        {
+          "source_id": "id09319",
+          "verdict": "PASS",
+          "reason": "The comparison of certainties is preserved; 'loyale' as 'честную' is acceptable."
+        },
+        {
+          "source_id": "id09320",
+          "verdict": "PASS",
+          "reason": "'Bon feu' as 'доброго огня', 'maugréant force injures' as 'ворча и осыпая бранью', and the plans in d'Artagnan's head are all accurate. Prior correction verified."
+        },
+        {
+          "source_id": "id09321",
+          "verdict": "PASS",
+          "reason": "The nod of the head against the voice is kept, and the agency is correct."
+        },
+        {
+          "source_id": "id09322",
+          "verdict": "PASS",
+          "reason": "Four fighters (d'Artagnan, Porthos, Grimaud, Mousqueton), 'bien huit', Blaisois excluded, and the minute arithmetic are all preserved. Prior correction verified; the verb 'пробежать' is a slight but acceptable rendering of 'avoir fait'."
+        },
+        {
+          "source_id": "id09323",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id09324",
+          "verdict": "PASS",
+          "reason": "Accurate; 'Sa Grandeur' as 'его преосвященство' suits the context, and the instructions to Porthos and d'Artagnan are correct."
+        },
+        {
+          "source_id": "id09325",
+          "verdict": "PASS",
+          "reason": "Grimaud relieved Mousqueton and keeps his foot on it. The French 'dessus' is equally ambiguous, so the Russian keeps that ambiguity. Prior correction verified."
+        },
+        {
+          "source_id": "id09326",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id09327",
+          "verdict": "PASS",
+          "reason": "Humour and the Mordioux oath are preserved; 'inactif' rendered as 'без дела' is idiomatic."
+        },
+        {
+          "source_id": "id09328",
+          "verdict": "PASS",
+          "reason": "Accurate, including the certain case (communion) versus the probable case (mass)."
+        },
+        {
+          "source_id": "id09329",
+          "verdict": "PASS",
+          "reason": "Accurate: Aramis's clothes the day before, the diacre costume, about nine o'clock, two sentries at the door and two before the balcony, the block already set in place."
+        },
+        {
+          "source_id": "id09330",
+          "verdict": "CORRECTED",
+          "reason": "The previous 'он почувствовал, что надежда перешла в радость' added a verb of perception absent from the French 'cette espérance se changea en joie'. Replaced with the closer 'он обратил эту надежду в радость'. 'Принесли плоды' for 'avaient porté leur fruit' is verified."
+        },
+        {
+          "source_id": "id09331",
+          "verdict": "PASS",
+          "reason": "Accurate."
+        },
+        {
+          "source_id": "id09332",
+          "verdict": "PASS",
+          "reason": "Accurate: the executioner has disappeared, the assistant broke his thigh, the cry was his, the only other executioner is at Bristol, and there is time until tomorrow."
+        }
+      ],
+      "corrections": [
+        {
+          "source_id": "id09330",
+          "before": "Король был полон надежды; увидев вновь Арамиса, он почувствовал, что надежда перешла в радость. Он обнял Джаксона, пожал руку Арамису. Епископ нарочито громко и при всех заговорил об их вчерашней беседе. Король ответил ему, что слова, сказанные им в той беседе, принесли плоды и что он желает ещё одной такой же беседы. Джаксон обернулся к присутствующим и попросил их оставить его наедине с королём. Все удалились.",
+          "after": "Король был полон надежды; увидев вновь Арамиса, он обратил эту надежду в радость. Он обнял Джаксона, пожал руку Арамису. Епископ нарочито громко и при всех заговорил об их вчерашней беседе. Король ответил ему, что слова, сказанные им в той беседе, принесли плоды и что он желает ещё одной такой же беседы. Джаксон обернулся к присутствующим и попросил их оставить его наедине с королём. Все удалились."
+        }
+      ]
+    },
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJV1cxPLNm816Nexp9D7",
+        "usage": {
+          "input_tokens": 15375,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 5241,
+          "output_tokens_details": {
+            "thinking_tokens": 1461
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id09313",
+          "verdict": "PASS",
+          "reason": "Faithful. The prior corrections (\"это была бы уже часть дела\" for \"autant de fait\" and \"у двери\" for \"de la porte\") match the French. Imperatives, the sentinel counts and \"mais sauvez le roi\" are all preserved."
+        },
+        {
+          "source_id": "id09314",
+          "verdict": "PASS",
+          "reason": "Complete and accurate: two daggers, one for Parry, and the closing question."
+        },
+        {
+          "source_id": "id09315",
+          "verdict": "PASS",
+          "reason": "The correction \"настоятельно посоветуйте\" fits \"recommandez bien\". Conditional and temporal structure, the plate over his head, the ten minutes and the saved king are all preserved."
+        },
+        {
+          "source_id": "id09316",
+          "verdict": "PASS",
+          "reason": "Faithful, including the negated future \"ne nous reverrons-nous plus\"."
+        },
+        {
+          "source_id": "id09317",
+          "verdict": "PASS",
+          "reason": "Agency and action preserved; the colon leading into the speech is kept."
+        },
+        {
+          "source_id": "id09318",
+          "verdict": "PASS",
+          "reason": "\"Pour vous\" is rendered as the embrace meant for Aramis. \"Comme un enfant\" is rendered idiomatically as \"как родное дитя\", which is acceptable. Embracing d'Artagnan and Porthos is preserved."
+        },
+        {
+          "source_id": "id09319",
+          "verdict": "PASS",
+          "reason": "The parallel comparison of certainty is preserved, and \"loyale\" is acceptably rendered as \"честную\"."
+        },
+        {
+          "source_id": "id09320",
+          "verdict": "PASS",
+          "reason": "The corrections (\"у доброго огня\" and \"ворча и осыпая бранью\") fit \"près d'un bon feu\" and \"maugréant force injures\". The Cromwell song, the Porto wine, the cold chicken and the contrast between the two friends are all preserved."
+        },
+        {
+          "source_id": "id09321",
+          "verdict": "PASS",
+          "reason": "Faithful to the source, including singular \"lui\" and the head/voice contrast."
+        },
+        {
+          "source_id": "id09322",
+          "verdict": "PASS",
+          "reason": "The correction to four men (\"Вчетвером\") and \"не меньше восьми\" fit \"Entre d'Artagnan, moi, Grimaud et Mousqueton\" and \"bien huit\". The arithmetic and the quarter-league are preserved, and Blaisois is correctly excluded."
+        },
+        {
+          "source_id": "id09323",
+          "verdict": "PASS",
+          "reason": "Sequence of actions preserved."
+        },
+        {
+          "source_id": "id09324",
+          "verdict": "PASS",
+          "reason": "Faithful, including \"Sa Grandeur\" as \"его преосвященство\" and the instructions to Porthos and d'Artagnan."
+        },
+        {
+          "source_id": "id09325",
+          "verdict": "PASS",
+          "reason": "The correction \"держит на нём ногу\" matches \"a le pied dessus\"; Grimaud relieving Mousqueton is preserved."
+        },
+        {
+          "source_id": "id09326",
+          "verdict": "PASS",
+          "reason": "Imperatives and the negation \"ne demeurez pas un instant inactif\" are preserved."
+        },
+        {
+          "source_id": "id09327",
+          "verdict": "PASS",
+          "reason": "Humour, the dancer image, the oath and the reflection on homeland are all preserved."
+        },
+        {
+          "source_id": "id09328",
+          "verdict": "PASS",
+          "reason": "Faithful: the embrace, the visit to Juxon, the request, and the certain versus probable cases (communion, mass)."
+        },
+        {
+          "source_id": "id09329",
+          "verdict": "PASS",
+          "reason": "Complete. The nine o'clock hour, the guards, the two sentinels at the door, the two on the platform and the block already placed are all preserved."
+        },
+        {
+          "source_id": "id09330",
+          "verdict": "PASS",
+          "reason": "The final correction \"обратил эту надежду в радость\" correctly keeps hope as the subject of the change. The king's agency, the bishop's loud speech, the \"fruit\" and the departure of the others are preserved."
+        },
+        {
+          "source_id": "id09331",
+          "verdict": "PASS",
+          "reason": "Accurate and complete."
+        },
+        {
+          "source_id": "id09332",
+          "verdict": "PASS",
+          "reason": "All facts preserved: the executioner's disappearance, the assistant's broken thigh, the cry, Bristol, and time until at least tomorrow."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
