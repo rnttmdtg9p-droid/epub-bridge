@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKLpNevk3f1kDRorazUw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-030-0020\",\"target\":\"— Нет, ваше величество, — так я всегда его называл, когда рядом не было никого, кроме нашей шайки.\"},{\"source_id\":\"043-030-0021\",\"target\":\"«Ты был в моей комнате?»\"},{\"source_id\":\"043-030-0022\",\"target\":\"— А вчера или прошлой ночью ты там был?\"},{\"source_id\":\"043-030-0023\",\"target\":\"— Нет, ваше величество.\"},{\"source_id\":\"043-030-0024\",\"target\":\"— Честное слово? Смотри у меня — без вранья.\"},{\"source_id\":\"043-030-0025\",\"target\":\"— Честное слово, ваше величество, говорю вам правду. Я близко не подходил к вашей комнате с тех пор, как мисс Мэри Джейн привела вас с герцогом и показала её вам.\"},{\"source_id\":\"043-030-0026\",\"target\":\"Герцог говорит:\"},{\"source_id\":\"043-030-0027\",\"target\":\"— А ты не видел, чтобы туда ещё кто-нибудь заходил?\"},{\"source_id\":\"043-030-0028\",\"target\":\"— Нет, ваша светлость, не припомню, вроде бы.\"},{\"source_id\":\"043-030-0029\",\"target\":\"— Постой и подумай.\"},{\"source_id\":\"043-030-0030\",\"target\":\"Я немного подумал и увидел свой случай; тогда я говорю:\"},{\"source_id\":\"043-030-0031\",\"target\":\"— Ну, я видел, как туда несколько раз заходили негры.\"},{\"source_id\":\"043-030-0032\",\"target\":\"Оба слегка подпрыгнули и вид у них был такой, будто они этого никак не ждали, а потом — будто как раз <i>ждали</i>. Тут герцог говорит:\"},{\"source_id\":\"043-030-0033\",\"target\":\"— Что, <i>все</i> они?\"},{\"source_id\":\"043-030-0034\",\"target\":\"— Нет… то есть не все сразу… то есть, по-моему, я ни разу не видел, чтобы они все сразу <i>выходили</i>, только один раз.\"},{\"source_id\":\"043-030-0035\",\"target\":\"— Эге! Когда это было?\"},{\"source_id\":\"043-030-0036\",\"target\":\"— В день похорон. Утром. Не рано, потому что я проспал. Я как раз начал спускаться по лестнице и увидел их.\"},{\"source_id\":\"043-030-0037\",\"target\":\"— Ну, продолжай, <i>продолжай</i>! Что они делали? Как себя вели?\"},{\"source_id\":\"043-030-0038\",\"target\":\"— Ничего они не делали. И вообще особо никак не вели себя, насколько я видел. Они ушли на цыпочках; так что я без труда понял: они забрались туда прибрать комнату вашего величества или что-нибудь такое, думая, что вы уже встали, и увидели, что вы <i>не</i> встали, и понадеялись улизнуть от неприятностей, не разбудив вас, если только уже не разбудили.\"},{\"source_id\":\"043-030-0039\",\"target\":\"— Громы небесные, вот так история! — говорит король; и оба выглядели совсем больными и довольно глупыми. Постояли они там минуту, думая и почёсывая головы, а герцог вдруг разразился каким-то скрипучим смешком и говорит:\"}],\"review\":[{\"source_id\":\"043-030-0020\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed dialogue punctuation and 'gang' register.\"},{\"source_id\":\"043-030-0021\",\"verdict\":\"PASS\",\"reason\":\"Caption is faithful.\"},{\"source_id\":\"043-030-0022\",\"verdict\":\"CORRECTED\",\"reason\":\"Russian dialogue dash; colloquial tone.\"},{\"source_id\":\"043-030-0023\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dash and lowercase title.\"},{\"source_id\":\"043-030-0024\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed ungrammatical negation; idiomatic.\"},{\"source_id\":\"043-030-0025\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format, colloquial; meaning preserved.\"},{\"source_id\":\"043-030-0026\",\"verdict\":\"PASS\",\"reason\":\"Accurate.\"},{\"source_id\":\"043-030-0027\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue dash and idiom.\"},{\"source_id\":\"043-030-0028\",\"verdict\":\"CORRECTED\",\"reason\":\"Title 'your grace' rendered idiomatically; hedging kept.\"},{\"source_id\":\"043-030-0029\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format.\"},{\"source_id\":\"043-030-0030\",\"verdict\":\"CORRECTED\",\"reason\":\"'See my chance' made natural.\"},{\"source_id\":\"043-030-0031\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; historical term retained as 'негры'.\"},{\"source_id\":\"043-030-0032\",\"verdict\":\"CORRECTED\",\"reason\":\"Clarified 'jumped'; italics kept.\"},{\"source_id\":\"043-030-0033\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; italic kept.\"},{\"source_id\":\"043-030-0034\",\"verdict\":\"CORRECTED\",\"reason\":\"Restored italic on 'out'; dash format.\"},{\"source_id\":\"043-030-0035\",\"verdict\":\"CORRECTED\",\"reason\":\"Idiomatic interjection.\"},{\"source_id\":\"043-030-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; natural phrasing.\"},{\"source_id\":\"043-030-0037\",\"verdict\":\"CORRECTED\",\"reason\":\"Dialogue format; italic kept.\"},{\"source_id\":\"043-030-0038\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed agency and italic 'warn't'; smoother.\"},{\"source_id\":\"043-030-0039\",\"verdict\":\"CORRECTED\",\"reason\":\"Fixed italic placement, idiom, and 'sick' sense.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 8451,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2038,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

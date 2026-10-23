@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKLrdpoCDT6MkXKx6Bot",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-030-0020\",\"target\":\"— Нет, ваше величество, — так я всегда его называл, когда рядом не было никого, кроме нашей шайки.\"},{\"source_id\":\"043-030-0021\",\"target\":\"«Ты был в моей комнате?»\"},{\"source_id\":\"043-030-0022\",\"target\":\"— А вчера или прошлой ночью ты там был?\"},{\"source_id\":\"043-030-0023\",\"target\":\"— Нет, ваше величество.\"},{\"source_id\":\"043-030-0024\",\"target\":\"— Честное слово? Смотри у меня — без вранья.\"},{\"source_id\":\"043-030-0025\",\"target\":\"— Честное слово, ваше величество, говорю вам правду. Я близко не подходил к вашей комнате с тех пор, как мисс Мэри Джейн привела вас с герцогом и показала её вам.\"},{\"source_id\":\"043-030-0026\",\"target\":\"Герцог говорит:\"},{\"source_id\":\"043-030-0027\",\"target\":\"— А ты не видел, чтобы туда ещё кто-нибудь заходил?\"},{\"source_id\":\"043-030-0028\",\"target\":\"— Нет, ваша светлость, не припомню, вроде бы.\"},{\"source_id\":\"043-030-0029\",\"target\":\"— Постой и подумай.\"},{\"source_id\":\"043-030-0030\",\"target\":\"Я немного подумал и увидел свой случай; тогда я говорю:\"},{\"source_id\":\"043-030-0031\",\"target\":\"— Ну, я видел, как туда несколько раз заходили негры.\"},{\"source_id\":\"043-030-0032\",\"target\":\"Оба слегка подпрыгнули, и вид у них был такой, будто они этого никак не ждали, а потом — будто как раз <i>ждали</i>. Тут герцог говорит:\"},{\"source_id\":\"043-030-0033\",\"target\":\"— Что, <i>все</i> они?\"},{\"source_id\":\"043-030-0034\",\"target\":\"— Нет… то есть не все сразу… то есть, по-моему, я ни разу не видел, чтобы они все сразу <i>выходили</i>, только один раз.\"},{\"source_id\":\"043-030-0035\",\"target\":\"— Эге! Когда это было?\"},{\"source_id\":\"043-030-0036\",\"target\":\"— В день похорон. Утром. Не рано, потому что я проспал. Я как раз начал спускаться по лестнице и увидел их.\"},{\"source_id\":\"043-030-0037\",\"target\":\"— Ну, продолжай, <i>продолжай</i>! Что они делали? Как себя вели?\"},{\"source_id\":\"043-030-0038\",\"target\":\"— Ничего они не делали. И вообще особо никак не вели себя, насколько я видел. Они ушли на цыпочках; так что я без труда понял: они забрались туда прибрать комнату вашего величества или что-нибудь такое, думая, что вы уже встали, и увидели, что вы <i>не</i> встали, и понадеялись улизнуть от неприятностей, не разбудив вас, если только уже не разбудили.\"},{\"source_id\":\"043-030-0039\",\"target\":\"— Громы небесные, вот так история! — говорит король; и оба выглядели совсем больными и довольно глупыми. Постояли они там минуту, думая и почёсывая головы, а герцог вдруг разразился каким-то скрипучим смешком и говорит:\"}],\"review\":[{\"source_id\":\"043-030-0020\",\"verdict\":\"PASS\",\"reason\":\"Faithful; 'our gang' as шайка, address and negation preserved.\"},{\"source_id\":\"043-030-0021\",\"verdict\":\"PASS\",\"reason\":\"Caption accurate.\"},{\"source_id\":\"043-030-0022\",\"verdict\":\"PASS\",\"reason\":\"Dialect rendered idiomatically; yesterday or last night kept.\"},{\"source_id\":\"043-030-0023\",\"verdict\":\"PASS\",\"reason\":\"Exact.\"},{\"source_id\":\"043-030-0024\",\"verdict\":\"PASS\",\"reason\":\"Honor bright and no lies conveyed.\"},{\"source_id\":\"043-030-0025\",\"verdict\":\"PASS\",\"reason\":\"Facts and agency correct; Mary Jane showed room.\"},{\"source_id\":\"043-030-0026\",\"verdict\":\"PASS\",\"reason\":\"Correct.\"},{\"source_id\":\"043-030-0027\",\"verdict\":\"PASS\",\"reason\":\"Meaning preserved.\"},{\"source_id\":\"043-030-0028\",\"verdict\":\"PASS\",\"reason\":\"Hedging preserved; 'your grace' as светлость acceptable.\"},{\"source_id\":\"043-030-0029\",\"verdict\":\"PASS\",\"reason\":\"Correct.\"},{\"source_id\":\"043-030-0030\",\"verdict\":\"PASS\",\"reason\":\"Acceptable; 'see my chance' slightly literal but faithful.\"},{\"source_id\":\"043-030-0031\",\"verdict\":\"PASS\",\"reason\":\"Historical term retained; meaning exact.\"},{\"source_id\":\"043-030-0032\",\"verdict\":\"PASS\",\"reason\":\"Italic ждали preserved; comma fix verified.\"},{\"source_id\":\"043-030-0033\",\"verdict\":\"PASS\",\"reason\":\"Italic preserved.\"},{\"source_id\":\"043-030-0034\",\"verdict\":\"PASS\",\"reason\":\"Italic 'out' preserved; hesitation kept.\"},{\"source_id\":\"043-030-0035\",\"verdict\":\"PASS\",\"reason\":\"Correct.\"},{\"source_id\":\"043-030-0036\",\"verdict\":\"PASS\",\"reason\":\"All details preserved.\"},{\"source_id\":\"043-030-0037\",\"verdict\":\"PASS\",\"reason\":\"Italic preserved.\"},{\"source_id\":\"043-030-0038\",\"verdict\":\"PASS\",\"reason\":\"Negations, italic 'не', and logic preserved.\"},{\"source_id\":\"043-030-0039\",\"verdict\":\"PASS\",\"reason\":\"Italic 'this' lost in source-level emphasis but meaning and humour intact.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 10589,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1960,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
