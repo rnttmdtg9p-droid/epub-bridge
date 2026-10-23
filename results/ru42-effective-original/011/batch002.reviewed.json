@@ -1,0 +1,123 @@
+{
+  "unit": 11,
+  "batch": 2,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-011-0036",
+      "target": "Катапас не понял, ибо пожал плечами и вернулся во главу отряда.",
+      "source_sha256": "a85ef52d3ce2de241e5ed321a3e955b552310a7259107cfd66560f0a2da4d280",
+      "target_id": "ru-fr42c-011-0036",
+      "tag": "p",
+      "target_sha256": "f5c2a1600f2bb189c41d6ce3db9ce2906f8dc7c3e919c54d5c8bbdca0acdb95a"
+    },
+    {
+      "source_id": "fr42c-011-0037",
+      "target": "В пять часов вечера он остановился в неглубоком ущелье, в нескольких милях выше городка Лоха; и в ту ночь путешественники расположились лагерем у подножия сьерр, первых ступеней великой Кордильеры.",
+      "source_sha256": "f329cf5da56dd00712bd227bf8b0846ffa640f3577ab8389dac0da6474fee585",
+      "target_id": "ru-fr42c-011-0037",
+      "tag": "p",
+      "target_sha256": "d9454139ac5f8019ffc9d4ed01555d1618e7399e0def03bb321f93a31ae725e7"
+    },
+    {
+      "source_id": "fr42c-note-020",
+      "target": "Арроба — местная мера, равная 11 килограммам 50 сантиграммам.",
+      "source_sha256": "ae5a2d0328884f08f59c6b78c3af30013c9dfebca62ed31f522cfcb6e64d46c7",
+      "target_id": "ru-fr42c-note-020",
+      "tag": "note",
+      "target_sha256": "1aaa9a171a5c9b400d2b321659ced04a24d79ebe145917ef6cc55ee12ecae50c"
+    },
+    {
+      "source_id": "fr42c-note-021",
+      "target": "500 франков.",
+      "source_sha256": "a8a03dd5180c31746c66fc66850e263a90e4630b59d29c436f759374082f19c9",
+      "target_id": "ru-fr42c-note-021",
+      "tag": "note",
+      "target_sha256": "1cf1b4dedc834b41afc74635bc83d0e7d673ef415a63f298321434fb434baa3f"
+    },
+    {
+      "source_id": "fr42c-note-022",
+      "target": "Водка из ферментированной кукурузы.",
+      "source_sha256": "5be113f76c90f80e7549c4256ddb8d96e549a90a3004e1e34a607f3aeae8c7f3",
+      "target_id": "ru-fr42c-note-022",
+      "tag": "note",
+      "target_sha256": "bfe6ffce8edb1b618a75c59987e8245b077072122648b4fb4fefe91145b8b728"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-011-0036",
+      "verdict": "CORRECTED",
+      "reason": "Переданы «ибо» и «во главу отряда»; катапаз унифицирован как «катапас». Смысл сохранён."
+    },
+    {
+      "source_id": "fr42c-011-0037",
+      "verdict": "CORRECTED",
+      "reason": "Исправлено «сьерры» (мн. число, строчная) и «ступени» (échelons); «великая Кордильера»; лагерь разбит «в ту ночь»."
+    },
+    {
+      "source_id": "fr42c-note-020",
+      "verdict": "CORRECTED",
+      "reason": "Исходное «centigrammes» — сантиграммы, а не «центиграммы»; формулировка приближена к оригиналу. Числа сохранены."
+    },
+    {
+      "source_id": "fr42c-note-021",
+      "verdict": "PASS",
+      "reason": "Точно: сумма в франках сохранена."
+    },
+    {
+      "source_id": "fr42c-note-022",
+      "verdict": "CORRECTED",
+      "reason": "Eau-de-vie — «водка/крепкий спиртной напиток», не просто «напиток»; добавлено значение дистиллята."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-011-0036",
+      "before": "Катапаз ничего не понял, потому что пожал плечами и вернулся во главе отряда.",
+      "after": "Катапас не понял, ибо пожал плечами и вернулся во главу отряда."
+    },
+    {
+      "source_id": "fr42c-011-0037",
+      "before": "В пять часов вечера он остановился в неглубоком ущелье, в нескольких милях выше небольшого городка Лоха; и той ночью путешественники разбили лагерь у подножия Сьерры, первых отрогов Великой Кордильеры.",
+      "after": "В пять часов вечера он остановился в неглубоком ущелье, в нескольких милях выше городка Лоха; и в ту ночь путешественники расположились лагерем у подножия сьерр, первых ступеней великой Кордильеры."
+    },
+    {
+      "source_id": "fr42c-note-020",
+      "before": "Арроба — это местная мера веса, равная 11 килограммам и 50 центиграммам.",
+      "after": "Арроба — местная мера, равная 11 килограммам 50 сантиграммам."
+    },
+    {
+      "source_id": "fr42c-note-022",
+      "before": "Напиток из ферментированной кукурузы.",
+      "after": "Водка из ферментированной кукурузы."
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/011/batch002.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJqADuPaoQ4X76jNJwF4",
+    "usage": {
+      "input_tokens": 2974,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 653,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}

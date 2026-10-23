@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgJqADuPaoQ4X76jNJwF4",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr42c-011-0036\",\"target\":\"Катапас не понял, ибо пожал плечами и вернулся во главу отряда.\"},{\"source_id\":\"fr42c-011-0037\",\"target\":\"В пять часов вечера он остановился в неглубоком ущелье, в нескольких милях выше городка Лоха; и в ту ночь путешественники расположились лагерем у подножия сьерр, первых ступеней великой Кордильеры.\"},{\"source_id\":\"fr42c-note-020\",\"target\":\"Арроба — местная мера, равная 11 килограммам 50 сантиграммам.\"},{\"source_id\":\"fr42c-note-021\",\"target\":\"500 франков.\"},{\"source_id\":\"fr42c-note-022\",\"target\":\"Водка из ферментированной кукурузы.\"}],\"review\":[{\"source_id\":\"fr42c-011-0036\",\"verdict\":\"CORRECTED\",\"reason\":\"Переданы «ибо» и «во главу отряда»; катапаз унифицирован как «катапас». Смысл сохранён.\"},{\"source_id\":\"fr42c-011-0037\",\"verdict\":\"CORRECTED\",\"reason\":\"Исправлено «сьерры» (мн. число, строчная) и «ступени» (échelons); «великая Кордильера»; лагерь разбит «в ту ночь».\"},{\"source_id\":\"fr42c-note-020\",\"verdict\":\"CORRECTED\",\"reason\":\"Исходное «centigrammes» — сантиграммы, а не «центиграммы»; формулировка приближена к оригиналу. Числа сохранены.\"},{\"source_id\":\"fr42c-note-021\",\"verdict\":\"PASS\",\"reason\":\"Точно: сумма в франках сохранена.\"},{\"source_id\":\"fr42c-note-022\",\"verdict\":\"CORRECTED\",\"reason\":\"Eau-de-vie — «водка/крепкий спиртной напиток», не просто «напиток»; добавлено значение дистиллята.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2974,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 653,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
