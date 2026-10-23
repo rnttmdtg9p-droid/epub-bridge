@@ -1,0 +1,438 @@
+{
+  "unit": 47,
+  "batch": 4,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "fr42c-047-0080",
+      "target": "« А теперь, вы, остальные, — продолжал Бен Джойс, — ловите лошадь. Через два дня я буду на борту <i>«Дункана»</i>, через шесть — в бухте Туфолд. Там мы и встретимся. Отряд милорда будет всё ещё увязать в болотах Сноуи. Переправьтесь через реку по мосту Кемпл-Пир, выйдите к побережью и ждите меня. Уж я найду способ ввести вас на борт. Когда экипаж окажется в море, с таким кораблём, как <i>«Дункан»</i>, мы станем хозяевами Индийского океана. — Ура Бену Джойсу! — закричали каторжники. Лошадь Мулрэди привели, и Бен Джойс галопом исчез по дороге на Лакнау, а шайка двинулась на юго-восток, к реке Сноуи. Мулрэди, хотя и был тяжело ранен, нашёл в себе силы дотащиться до места в трёхстах шагах от лагеря, где мы подобрали его почти умирающим. Вот, — сказал Мак-Наббс, — история Мулрэди. Теперь вы понимаете, почему отважный матрос так хотел говорить. »",
+      "verdict": "CORRECTED",
+      "reason": "Fixed italics/quotation markup, spacing, 'vous autres', 'reprit', Lucknow, Mulrady, 'embourbée', nested quotation not in source.",
+      "source_sha256": "f54681fc1f0a1c26ade730cfe360f1290f0b346707f544d4071587a891709fee",
+      "target_id": "ru-fr42c-047-0080",
+      "tag": "p",
+      "target_sha256": "f52a1a470ba5f6f99eea421218dbc057ad15d8e9cfdddaa138bf6c49c73ebf0b"
+    },
+    {
+      "source_id": "fr42c-047-0081",
+      "target": "Это известие ужаснуло Гленарвана и его спутников.",
+      "verdict": "CORRECTED",
+      "reason": "'Révélation' and 'terrifia' rendered more naturally; sense preserved.",
+      "source_sha256": "91cea51bb756c0e9d073513bc5634338942389e02fe2b89111e20aa405a5df1b",
+      "target_id": "ru-fr42c-047-0081",
+      "tag": "p",
+      "target_sha256": "0b6edd94f289186124e444e61965d35e730b436d83e16c2a616c5bb8cd6d7874"
+    },
+    {
+      "source_id": "fr42c-047-0082",
+      "target": "« Пираты! Пираты! — воскликнул Гленарван. — Моя команда перебита! Мой <i>«Дункан»</i> в руках этих бандитов!",
+      "verdict": "CORRECTED",
+      "reason": "Source quotation continues into next row, so closing quote removed; italic quotes normalized; 'massacré' strengthened.",
+      "source_sha256": "c5a7280b8820a3c6e10f65c04476ece0eb4901f8f0fae380bf18d2742c06dd0c",
+      "target_id": "ru-fr42c-047-0082",
+      "tag": "p",
+      "target_sha256": "bdcd9ecb978e7f9ce453bd372fd6eda9b79ceadb59efa62c2a2dd2967ca76582"
+    },
+    {
+      "source_id": "fr42c-047-0083",
+      "target": "— Да! Ведь Бен Джойс захватит судно врасплох, — ответил майор, — и тогда…",
+      "verdict": "CORRECTED",
+      "reason": "'surprendra le navire' means take by surprise; added.",
+      "source_sha256": "9d5d651371f2ce0a21af1348ad4498e90cdecef5aae05b29012dd6e3710ca51c",
+      "target_id": "ru-fr42c-047-0083",
+      "tag": "p",
+      "target_sha256": "3f6350d379b089bc12dd5d6255cd25c1c4fc744be24bb94b9e940ec20ddeeafd"
+    },
+    {
+      "source_id": "fr42c-047-0084",
+      "target": "— Что ж! Надо, чтобы мы добрались до побережья раньше этих негодяев! — сказал Паганель.",
+      "verdict": "PASS",
+      "reason": "Faithful; minor idiom polish.",
+      "source_sha256": "b6c8e41b5b0d7c4992c06c4875bf62bcfcdfddb49a7d68c0e746053f120c5bf6",
+      "target_id": "ru-fr42c-047-0084",
+      "tag": "p",
+      "target_sha256": "b954cfa2c187843271b2bce27d1ee8aace76b926e33d0b1120dd4fc0447db1d5"
+    },
+    {
+      "source_id": "fr42c-047-0085",
+      "target": "— Но как переправиться через Сноуи? — спросил Вильсон.",
+      "verdict": "CORRECTED",
+      "reason": "Wilson name rendered consistently as Вильсон.",
+      "source_sha256": "e34530db7b995f8eff613cf62f982f5b05ba6de5bed4006aa314e172b6bceef5",
+      "target_id": "ru-fr42c-047-0085",
+      "tag": "p",
+      "target_sha256": "de2d3fbd406cbbb5ab66634dfc432ece40656e39d63cfa6ea29edc6412cd1314"
+    },
+    {
+      "source_id": "fr42c-047-0086",
+      "target": "— Как и они, — ответил Гленарван. — Они пойдут по мосту Кемпл-Пир, и мы пойдём там же.",
+      "verdict": "PASS",
+      "reason": "Meaning and agency preserved; minor smoothing.",
+      "source_sha256": "eaa9d10224995944fdc41dfb5886aa221895abf52a7741ee994da5968d5c4a7c",
+      "target_id": "ru-fr42c-047-0086",
+      "tag": "p",
+      "target_sha256": "ab747a49abe3b22eabc4d7876b6a1f096f161c2bb287200702b0438350c32e33"
+    },
+    {
+      "source_id": "fr42c-047-0087",
+      "target": "— А что станет с Мулрэди? — спросила леди Элен.",
+      "verdict": "CORRECTED",
+      "reason": "Name established as леди Элен; Mulrady spelling harmonized.",
+      "source_sha256": "985803cdbef740382d6f026d1c05da3522b64c34d13366764159be166509a487",
+      "target_id": "ru-fr42c-047-0087",
+      "tag": "p",
+      "target_sha256": "9f3ae9570abfc864a6eec1170c6d0bb14e8a413a59deb3462f89bfbf645ae668"
+    },
+    {
+      "source_id": "fr42c-047-0088",
+      "target": "— Его понесут! Будем сменяться! Разве могу я отдать мою беззащитную команду шайке Бена Джойса? »",
+      "verdict": "CORRECTED",
+      "reason": "Passive 'on le portera' restored; 'troupe' as band; punctuation.",
+      "source_sha256": "34e8664b63afd269df8ce49a6506b4e1dbf14e42d958aa4b82821581c44b6261",
+      "target_id": "ru-fr42c-047-0088",
+      "tag": "p",
+      "target_sha256": "42c2387e7313f8114070d68f88787c10664f0310c6f16dfef99f6e22a64b1953"
+    },
+    {
+      "source_id": "fr42c-047-0089",
+      "target": "Мысль перейти Сноуи по мосту Кемпл-Пир была осуществимой, но рискованной. Каторжники могли обосноваться в этом месте и защищать его. Их было бы по меньшей мере тридцать против семи! Но бывают минуты, когда людей не считают, когда нужно идти, несмотря ни на что.",
+      "verdict": "CORRECTED",
+      "reason": "Corrected 'по реке к мосту' error; restored impersonal sense of 'l'on ne se compte pas'.",
+      "source_sha256": "afdeb1ce63144fdf1b20b70e70e614f48ef36bd4be1de820e0ba8f4f33fe88f0",
+      "target_id": "ru-fr42c-047-0089",
+      "tag": "p",
+      "target_sha256": "c5a28b82879c7d62b95f916a0372507d389083ab2605679e6350b96986ab573d"
+    },
+    {
+      "source_id": "fr42c-047-0090",
+      "target": "« Милорд, — сказал тогда Джон Манглс, — прежде чем рисковать нашим последним шансом, прежде чем отважиться идти к этому мосту, благоразумно было бы сперва осмотреть его. Я берусь за это.",
+      "verdict": "CORRECTED",
+      "reason": "Name made consistent as Джон Манглс; 'dernière chance' and 'je m'en charge' clarified.",
+      "source_sha256": "bd91d6faa6c0e392580e6c61af864b6f72efa0878d5b54a7ad097060e86ea7bc",
+      "target_id": "ru-fr42c-047-0090",
+      "tag": "p",
+      "target_sha256": "40df6de1a97a86bd18e1fd3b52e0cace33e05432a595a6ce935e8b7adf7a584f"
+    },
+    {
+      "source_id": "fr42c-047-0091",
+      "target": "— Я пойду с вами, Джон, — ответил Паганель. »",
+      "verdict": "CORRECTED",
+      "reason": "Source uses 'vous', not 'ты'; closing quote spacing.",
+      "source_sha256": "2228f905e425cc55646b72ffa56cfa91d7a2a175d71f3fa60e11ec60c4ab9478",
+      "target_id": "ru-fr42c-047-0091",
+      "tag": "p",
+      "target_sha256": "70ee2c06910065d84f90e53c41329d5969aab1aab2a987d7038837016c2accb2"
+    },
+    {
+      "source_id": "fr42c-047-0092",
+      "target": "Предложение было принято, и Джон Манглс с Паганелем тотчас приготовились к выходу. Им предстояло спуститься вдоль Сноуи, идти по её берегам до места, названного Беном Джойсом, и главное — укрыться от глаз каторжников, которые должны были прочёсывать берега.",
+      "verdict": "CORRECTED",
+      "reason": "Removed invented 'вероятно'; restored 'devaient battre les rives' and 'point signalé'.",
+      "source_sha256": "315645bc80fb36f9e3a1d8e069abbcdea948ed07a334823cc62d5dadd2ce7afc",
+      "target_id": "ru-fr42c-047-0092",
+      "tag": "p",
+      "target_sha256": "52f092710248fe47f778a7d8312d2e31d23cadcf2fafb21b25eab115a5e6a77a"
+    },
+    {
+      "source_id": "fr42c-047-0093",
+      "target": "Итак, запасшись провизией и хорошо вооружившись, двое отважных товарищей ушли и вскоре скрылись, пробравшись среди высоких тростников у реки.",
+      "verdict": "CORRECTED",
+      "reason": "'Roseaux' are reeds; 'se faufilant' clarified.",
+      "source_sha256": "06a67fd80b36a35c96ecf0f8999e68d5e2fcf906b04ee4426928e28545a72610",
+      "target_id": "ru-fr42c-047-0093",
+      "tag": "p",
+      "target_sha256": "25d643b54d8a06d4a7dbf120101258de80c84504f2f8620fdae535e9a154be6f"
+    },
+    {
+      "source_id": "fr42c-047-0094",
+      "target": "Весь день их ждали. Наступил вечер, а они всё не возвращались. Тревога была очень сильна.",
+      "verdict": "PASS",
+      "reason": "Tense and negation preserved; idiom smoothed.",
+      "source_sha256": "6627c4a520f29185838f6b4aa4ddbaedf9e78e543e68ed5a8fecd5d91675fa4e",
+      "target_id": "ru-fr42c-047-0094",
+      "tag": "p",
+      "target_sha256": "3a839f825c1869947ea0afaca97bfb671e87f5d98d8bb423a050443fc972bcc8"
+    },
+    {
+      "source_id": "fr42c-047-0095",
+      "target": "Наконец, около одиннадцати часов, Вильсон возвестил об их возвращении. Паганель и Джон Манглс были изнурены усталостью десятимильного перехода.",
+      "verdict": "CORRECTED",
+      "reason": "Name consistency; 'marche' as trek, not military march.",
+      "source_sha256": "bc6c6fb6eba83e3a1f7bb9d8e40a26a3479dc0ef58b0af07e86e9378f489be44",
+      "target_id": "ru-fr42c-047-0095",
+      "tag": "p",
+      "target_sha256": "01458fa5a4f0c94e8915dec6a6d7c5209c1b947b68a39649dc1cf67c3e1f42b8"
+    },
+    {
+      "source_id": "fr42c-047-0096",
+      "target": "« Этот мост! Существует ли этот мост? — спросил Гленарван, бросаясь им навстречу.",
+      "verdict": "PASS",
+      "reason": "Repetition retained; faithful.",
+      "source_sha256": "43d5fe89226c8149f20ac054426bd0d8d0fbd48f8f59f6e18fad2b149ea6be89",
+      "target_id": "ru-fr42c-047-0096",
+      "tag": "p",
+      "target_sha256": "d02ec75e40b94ca0cb0abb57e0eeb581ddd57094d41faaa883a84dcac66c4cb9"
+    },
+    {
+      "source_id": "fr42c-047-0097",
+      "target": "— Да! Мост из лиан, — сказал Джон Манглс. — Каторжники действительно по нему прошли. Но…",
+      "verdict": "PASS",
+      "reason": "Faithful; names consistent.",
+      "source_sha256": "826a0574f183a07fc3fc0117bac496d4c25bdcface746ed11b64f4ee33247e43",
+      "target_id": "ru-fr42c-047-0097",
+      "tag": "p",
+      "target_sha256": "1644f66b987729480ebbb15fac1fb7c16fa41872f0bf1132f1a5239073a08574"
+    },
+    {
+      "source_id": "fr42c-047-0098",
+      "target": "— Но?.. — произнёс Гленарван, предчувствуя новую беду.",
+      "verdict": "CORRECTED",
+      "reason": "Slight punctuation adjustment for suspense.",
+      "source_sha256": "e8a6c10e6e2c1d4e37f8e9c411df9d22535b310db98c2d38dd81ef23e01bcd7d",
+      "target_id": "ru-fr42c-047-0098",
+      "tag": "p",
+      "target_sha256": "cd98205b5af569da812642ce78ae5ed691cd47a064bdb9b3f5cae2435b72440e"
+    },
+    {
+      "source_id": "fr42c-047-0099",
+      "target": "— Они сожгли его после переправы! — ответил Паганель. »",
+      "verdict": "CORRECTED",
+      "reason": "Removed misplaced quotes; 'après leur passage' means after crossing, not 'visit'.",
+      "source_sha256": "e54d6fe414738aac04123eea486bf1f8d436f49143449872b2867bb06b6cbe4f",
+      "target_id": "ru-fr42c-047-0099",
+      "tag": "p",
+      "target_sha256": "0f65a7b0d3ad391071daa4f652a02aea25a1f4043b0810ba57c7098065e644a9"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "fr42c-047-0080",
+      "verdict": "CORRECTED",
+      "reason": "Fixed italics, names, address, geography and quotation structure."
+    },
+    {
+      "source_id": "fr42c-047-0081",
+      "verdict": "CORRECTED",
+      "reason": "Improved idiom while keeping meaning."
+    },
+    {
+      "source_id": "fr42c-047-0082",
+      "verdict": "CORRECTED",
+      "reason": "Quote continues; italics and 'massacré' corrected."
+    },
+    {
+      "source_id": "fr42c-047-0083",
+      "verdict": "CORRECTED",
+      "reason": "Added surprise nuance."
+    },
+    {
+      "source_id": "fr42c-047-0084",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-047-0085",
+      "verdict": "CORRECTED",
+      "reason": "Name form harmonized."
+    },
+    {
+      "source_id": "fr42c-047-0086",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-047-0087",
+      "verdict": "CORRECTED",
+      "reason": "Established name леди Элен."
+    },
+    {
+      "source_id": "fr42c-047-0088",
+      "verdict": "CORRECTED",
+      "reason": "Restored passives and tone."
+    },
+    {
+      "source_id": "fr42c-047-0089",
+      "verdict": "CORRECTED",
+      "reason": "Fixed route error and impersonal sense."
+    },
+    {
+      "source_id": "fr42c-047-0090",
+      "verdict": "CORRECTED",
+      "reason": "Name and nuance corrected."
+    },
+    {
+      "source_id": "fr42c-047-0091",
+      "verdict": "CORRECTED",
+      "reason": "Vous register restored."
+    },
+    {
+      "source_id": "fr42c-047-0092",
+      "verdict": "CORRECTED",
+      "reason": "Removed addition; restored sense."
+    },
+    {
+      "source_id": "fr42c-047-0093",
+      "verdict": "CORRECTED",
+      "reason": "Reeds and movement corrected."
+    },
+    {
+      "source_id": "fr42c-047-0094",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-047-0095",
+      "verdict": "CORRECTED",
+      "reason": "Names and 'marche' fixed."
+    },
+    {
+      "source_id": "fr42c-047-0096",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-047-0097",
+      "verdict": "PASS",
+      "reason": "Faithful."
+    },
+    {
+      "source_id": "fr42c-047-0098",
+      "verdict": "CORRECTED",
+      "reason": "Punctuation polish."
+    },
+    {
+      "source_id": "fr42c-047-0099",
+      "verdict": "CORRECTED",
+      "reason": "Removed stray quotes; fixed 'passage' mistranslation."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "fr42c-047-0080",
+      "before": "«А теперь, ребята, — продолжил Бен Джойс, — хватайте лошадь. Через два дня я буду на борту <i>„Дункана</i>“, через шесть — в бухте Туфолд. Там и встретимся. Отряд милорда будет по-прежнему увязвать в болотах Сноуи. Перейдите реку по мосту Кемпл-Пир, доберитесь до побережья и ждите меня. Я найду способ пропустить вас на борт. Как только экипаж выйдет в море на таком корабле, как <i>«Дункан</i>», мы станем хозяевами Индийского океана. — Ура Бену Джойсу! — воскликнули каторжники. Привели лошадь Мулради, и Бен Джойс исчез в галопе по дороге на Лакхнау, в то время как отряд направился на юго-восток к реке Сноуи. Мулради, хотя и был тяжело ранен, нашел в себе силы дотащиться до трехсот шагов от лагеря, где мы подобрали его почти мертвым. «Вот, — сказал Мак-Наббс, — история Мулради. Теперь вы понимаете, почему этот храбрый матрос так хотел рассказать об этом».",
+      "after": "« А теперь, вы, остальные, — продолжал Бен Джойс, — ловите лошадь. Через два дня я буду на борту <i>«Дункана»</i>, через шесть — в бухте Туфолд. Там мы и встретимся. Отряд милорда будет всё ещё увязать в болотах Сноуи. Переправьтесь через реку по мосту Кемпл-Пир, выйдите к побережью и ждите меня. Уж я найду способ ввести вас на борт. Когда экипаж окажется в море, с таким кораблём, как <i>«Дункан»</i>, мы станем хозяевами Индийского океана. — Ура Бену Джойсу! — закричали каторжники. Лошадь Мулрэди привели, и Бен Джойс галопом исчез по дороге на Лакнау, а шайка двинулась на юго-восток, к реке Сноуи. Мулрэди, хотя и был тяжело ранен, нашёл в себе силы дотащиться до места в трёхстах шагах от лагеря, где мы подобрали его почти умирающим. Вот, — сказал Мак-Наббс, — история Мулрэди. Теперь вы понимаете, почему отважный матрос так хотел говорить. »"
+    },
+    {
+      "source_id": "fr42c-047-0081",
+      "before": "Это открытие привело Гленарвана и его спутников в ужас.",
+      "after": "Это известие ужаснуло Гленарвана и его спутников."
+    },
+    {
+      "source_id": "fr42c-047-0082",
+      "before": "«Пираты! Пираты! — воскликнул Гленарван. — Моя команда убита! Мой <i>„Дункан“</i> в руках этих бандитов!»",
+      "after": "« Пираты! Пираты! — воскликнул Гленарван. — Моя команда перебита! Мой <i>«Дункан»</i> в руках этих бандитов!"
+    },
+    {
+      "source_id": "fr42c-047-0083",
+      "before": "— Да! Потому что Бен Джойс захватит корабль, — ответил майор, — и тогда…",
+      "after": "— Да! Ведь Бен Джойс захватит судно врасплох, — ответил майор, — и тогда…"
+    },
+    {
+      "source_id": "fr42c-047-0084",
+      "before": "— Ну что ж! Мы должны добраться до побережья раньше этих негодяев! — сказал Паганель.",
+      "after": "— Что ж! Надо, чтобы мы добрались до побережья раньше этих негодяев! — сказал Паганель."
+    },
+    {
+      "source_id": "fr42c-047-0085",
+      "before": "— Но как перебраться через Сноуи? — спросил Уилсон.",
+      "after": "— Но как переправиться через Сноуи? — спросил Вильсон."
+    },
+    {
+      "source_id": "fr42c-047-0086",
+      "before": "— Как и они, — ответил Гленарван. — Они пройдут через мост Кемпл-Пир, мы тоже там пройдем.",
+      "after": "— Как и они, — ответил Гленарван. — Они пойдут по мосту Кемпл-Пир, и мы пойдём там же."
+    },
+    {
+      "source_id": "fr42c-047-0087",
+      "before": "— Но что же станет с Мулради? — спросила леди Елена.",
+      "after": "— А что станет с Мулрэди? — спросила леди Элен."
+    },
+    {
+      "source_id": "fr42c-047-0088",
+      "before": "— Мы его понесем! Будем сменяться! Разве я могу отдать свою беззащитную команду в руки отряда Бена Джойса?»",
+      "after": "— Его понесут! Будем сменяться! Разве могу я отдать мою беззащитную команду шайке Бена Джойса? »"
+    },
+    {
+      "source_id": "fr42c-047-0089",
+      "before": "Идея пройти по реке Сноуи к мосту Кемпл-Пир была осуществимой, но рискованной. Каторжники могли закрепиться на этом участке и защищать его. Их было бы не менее тридцати против семи! Но бывают моменты, когда не считают сил, когда нужно идти в любом случае.",
+      "after": "Мысль перейти Сноуи по мосту Кемпл-Пир была осуществимой, но рискованной. Каторжники могли обосноваться в этом месте и защищать его. Их было бы по меньшей мере тридцать против семи! Но бывают минуты, когда людей не считают, когда нужно идти, несмотря ни на что."
+    },
+    {
+      "source_id": "fr42c-047-0090",
+      "before": "«Милорд, — сказал тогда Джон Мэнглз, — прежде чем рискнуть нашей последней возможностью, прежде чем отважиться на этот мост, было бы разумно сначала осмотреть его. Я этим займусь.",
+      "after": "« Милорд, — сказал тогда Джон Манглс, — прежде чем рисковать нашим последним шансом, прежде чем отважиться идти к этому мосту, благоразумно было бы сперва осмотреть его. Я берусь за это."
+    },
+    {
+      "source_id": "fr42c-047-0091",
+      "before": "— Я пойду с тобой, Джон, — ответил Паганель.",
+      "after": "— Я пойду с вами, Джон, — ответил Паганель. »"
+    },
+    {
+      "source_id": "fr42c-047-0092",
+      "before": "Согласившись с этим предложением, Джон Манглс и Паганель приготовились немедленно выйти в путь. Им предстояло спуститься по реке Сноуи, следовать вдоль её берегов до того места, где они найдут точку, указанную Беном Джойсом, и, прежде всего, не попадаться на глаза каторжникам, которые, вероятно, патрулировали берега.",
+      "after": "Предложение было принято, и Джон Манглс с Паганелем тотчас приготовились к выходу. Им предстояло спуститься вдоль Сноуи, идти по её берегам до места, названного Беном Джойсом, и главное — укрыться от глаз каторжников, которые должны были прочёсывать берега."
+    },
+    {
+      "source_id": "fr42c-047-0093",
+      "before": "Итак, запасшись провизией и хорошо вооружившись, два отважных товарища отправились в путь и вскоре исчезли, пробираясь сквозь высокие камыши у реки.",
+      "after": "Итак, запасшись провизией и хорошо вооружившись, двое отважных товарищей ушли и вскоре скрылись, пробравшись среди высоких тростников у реки."
+    },
+    {
+      "source_id": "fr42c-047-0094",
+      "before": "Весь день их ждали. Наступил вечер, а они так и не вернулись. Опасения были очень сильными.",
+      "after": "Весь день их ждали. Наступил вечер, а они всё не возвращались. Тревога была очень сильна."
+    },
+    {
+      "source_id": "fr42c-047-0095",
+      "before": "Наконец, около одиннадцати часов Уилсон сообщил об их возвращении. Паганель и Джон Мэнглз были измотаны усталостью после десятимильного марша.",
+      "after": "Наконец, около одиннадцати часов, Вильсон возвестил об их возвращении. Паганель и Джон Манглс были изнурены усталостью десятимильного перехода."
+    },
+    {
+      "source_id": "fr42c-047-0096",
+      "before": "«Этот мост! Существует ли он? — спросил Гленарван, бросившись им навстречу.",
+      "after": "« Этот мост! Существует ли этот мост? — спросил Гленарван, бросаясь им навстречу."
+    },
+    {
+      "source_id": "fr42c-047-0097",
+      "before": "— Да! Мост из лиан, — сказал Джон Манглс. — Каторжники действительно перешли по нему. Но…",
+      "after": "— Да! Мост из лиан, — сказал Джон Манглс. — Каторжники действительно по нему прошли. Но…"
+    },
+    {
+      "source_id": "fr42c-047-0098",
+      "before": "— Но… — сказал Гленарван, предчувствуя новую беду.",
+      "after": "— Но?.. — произнёс Гленарван, предчувствуя новую беду."
+    },
+    {
+      "source_id": "fr42c-047-0099",
+      "before": "— «Они сожгли его после своего визита!» — ответил Паганель.",
+      "after": "— Они сожгли его после переправы! — ответил Паганель. »"
+    }
+  ],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru42-effective-original/047/batch004.translation.deepl.attempt00.response.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgK2EBdMLWrhBN7eBcsH4",
+    "usage": {
+      "input_tokens": 10794,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3486,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
