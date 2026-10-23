@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgKL49hb9moX1DBKtC2UX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"043-027-0040\",\"target\":\"— А теперь живо назад, сию минуту, и приведи сюда герцога и новые дорожные сумки. А если он перебрался на ту сторону, ступай туда и притащи его. И скажи, чтоб вырядился как следует, невзирая ни на что. Давай, пошевеливайся.\"},{\"source_id\":\"043-027-0041\",\"target\":\"Я понял, к чему <i>он</i> клонит; но, понятно, ни слова не сказал. Когда я вернулся с герцогом, мы спрятали каноэ, а потом они уселись на бревно, и король выложил ему всё, точь-в-точь как рассказал тот молодой человек, — до последнего слова. И всё время, пока он это делал, он старался говорить как англичанин; и выходило у него довольно недурно для такого растяпы. Я его передразнивать не умею, так что и пытаться не стану; но он правда справился неплохо. Потом он говорит:\"},{\"source_id\":\"043-027-0042\",\"target\":\"— Как у тебя с глухонемотой, Бильджвотер?\"},{\"source_id\":\"043-027-0043\",\"target\":\"Герцог сказал, что насчёт этого можно на него положиться; сказал, что играл глухонемого на подмостках. Ну, и стали они ждать парохода.\"},{\"source_id\":\"043-027-0044\",\"target\":\"Около середины дня прошли два маленьких суденышка, но они шли не из такого далёка вверх по реке; наконец показался большой пароход, и они его окликнули. Он выслал шлюпку, мы поднялись на борт, и оказалось, что он из Цинциннати; а когда там узнали, что нам надо проехать всего четыре или пять миль, они пришли в бешенство, обругали нас и сказали, что не станут нас высаживать. Но король был спокоен. Он говорит:\"},{\"source_id\":\"043-027-0045\",\"target\":\"— Если джентльмены могут заплатить по доллару за милю с носа, чтобы их взяли и высадили со шлюпки, то пароход может позволить себе их повезти, разве не так?\"},{\"source_id\":\"043-027-0046\",\"target\":\"Тут они смягчились и сказали, что ладно; а когда мы доплыли до селения, нас на шлюпке доставили на берег. Человек двадцать четыре высыпали к воде, увидев приближающуюся шлюпку, и когда король говорит:\"},{\"source_id\":\"043-027-0047\",\"target\":\"— Не скажет ли мне кто-нибудь из вас, господа, где живёт мистер Питер Уилкс? — они переглянулись и закивали, словно говоря: «А что я вам говорил?» Потом один из них говорит, как-то тихо и мягко:\"},{\"source_id\":\"043-027-0048\",\"target\":\"— Простите, сэр, но самое большее, что мы можем сделать, — это сказать вам, где он <i>жил</i> вчера вечером.\"},{\"source_id\":\"043-027-0049\",\"target\":\"Мигом этот пакостный старый тип совсем раскис, повалился на этого человека, положил ему подбородок на плечо, заплакал ему в спину и говорит:\"},{\"source_id\":\"043-027-0050\",\"target\":\"— Увы, увы, наш бедный брат — ушёл, а мы так и не увидели его; о, это слишком, <i>слишком</i> тяжело!\"},{\"source_id\":\"043-027-0051\",\"target\":\"«Увы, наш бедный брат»\"},{\"source_id\":\"043-027-0052\",\"target\":\"Потом он повернулся, всхлипывая, и стал делать герцогу на пальцах кучу дурацких знаков, а герцог, будь я проклят, <i>тоже</i> уронил дорожную сумку и разревелся. Хитрее парочки этих двух мошенников я в жизни не встречал.\"},{\"source_id\":\"043-027-0053\",\"target\":\"Ну, люди собрались вокруг, сочувствовали им, говорили всякие добрые слова, понесли за них дорожные сумки в гору, давали им на себя опереться и поплакать, рассказали королю обо всех последних минутах его брата, а король пересказал всё это на пальцах герцогу, и оба убивались по этому покойному кожевнику так, будто потеряли двенадцать апостолов. Да если я когда видел что-нибудь подобное, то я негр. Тут любому стало бы стыдно за род человеческий.\"},{\"source_id\":\"043-027-0054\",\"target\":\"«Ещё бы!»\"}],\"review\":[{\"source_id\":\"043-027-0040\",\"verdict\":\"PASS\",\"reason\":\"Commands, conditional, and 'regardless' are faithful; colloquial register fits.\"},{\"source_id\":\"043-027-0041\",\"verdict\":\"PASS\",\"reason\":\"Italic 'he' preserved; narrative and imitation remark are accurate.\"},{\"source_id\":\"043-027-0042\",\"verdict\":\"PASS\",\"reason\":\"Question and nickname are faithful; the dialogue dash is used correctly.\"},{\"source_id\":\"043-027-0043\",\"verdict\":\"PASS\",\"reason\":\"Reported speech and waiting for a steamboat are preserved.\"},{\"source_id\":\"043-027-0044\",\"verdict\":\"PASS\",\"reason\":\"Events, the Cincinnati steamboat, distance, anger and the king's calm are all intact.\"},{\"source_id\":\"043-027-0045\",\"verdict\":\"PASS\",\"reason\":\"A dollar a mile apiece and the tag question are preserved.\"},{\"source_id\":\"043-027-0046\",\"verdict\":\"PASS\",\"reason\":\"Softening, the landing and about two dozen men are rendered; the sentence is left suspended as in the source.\"},{\"source_id\":\"043-027-0047\",\"verdict\":\"PASS\",\"reason\":\"Question, nods and gesture are accurate; the speech tag is kept.\"},{\"source_id\":\"043-027-0048\",\"verdict\":\"PASS\",\"reason\":\"Italic 'did' is kept as 'жил'; the meaning is accurate.\"},{\"source_id\":\"043-027-0049\",\"verdict\":\"PASS\",\"reason\":\"Abrupt collapse, chin on shoulder and crying down the back are rendered.\"},{\"source_id\":\"043-027-0050\",\"verdict\":\"PASS\",\"reason\":\"Lament and italic 'too' are preserved.\"},{\"source_id\":\"043-027-0051\",\"verdict\":\"PASS\",\"reason\":\"Caption is accurate.\"},{\"source_id\":\"043-027-0052\",\"verdict\":\"PASS\",\"reason\":\"Italic 'he' is kept as 'тоже' without the tag; the signs and the closing remark are rendered idiomatically.\"},{\"source_id\":\"043-027-0053\",\"verdict\":\"PASS\",\"reason\":\"All actions, the 'nigger' term in Huck's idiom, and the twelve disciples are preserved.\"},{\"source_id\":\"043-027-0054\",\"verdict\":\"PASS\",\"reason\":\"Caption is idiomatic and accurate.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 11365,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2331,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
