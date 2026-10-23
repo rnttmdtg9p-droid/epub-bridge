@@ -1,0 +1,446 @@
+{
+  "unit": 11,
+  "batch": 0,
+  "state": "SOURCE_ALIGNED_AI_REVIEW_AND_CORRECTION_COMPARISON_COMPLETE_PENDING_BOOK_QA",
+  "rows": [
+    {
+      "source_id": "id01256",
+      "target": "XI. Два Гаспара",
+      "source_sha256": "7d5b3f0b609390115b6afb2635607b6e066c4c536d3cfdb05fce3abe1e3de8c6",
+      "target_id": "ru-id01256",
+      "tag": "heading",
+      "target_sha256": "e9d7db62cac44571bc127ba79f48452e3377555722d9eff0ecd6c055e10d0fb7"
+    },
+    {
+      "source_id": "id01257",
+      "target": "— О чём вы думаете, д’Артаньян? — спросил он. — И какая мысль заставляет вас улыбаться?",
+      "source_sha256": "67d4644634aacd1854ed5f40a5401a50e5b8580a835ea57c28cd4a29851494ef",
+      "target_id": "ru-id01257",
+      "tag": "p",
+      "target_sha256": "f4f96cf8562ad0bc515ba8dd9207e7ab10b5d52377a1a748144c1ca9a1bcb4e3"
+    },
+    {
+      "source_id": "id01258",
+      "target": "— Я думаю, мой милый, что когда вы были мушкетёром, вы всё время смахивали на аббата, а теперь, когда вы аббат, вы, по-моему, сильно смахиваете на мушкетёра.",
+      "source_sha256": "038fac84ecac508f5ce0c4bf32f5cc6146fe5b092b756ef83b4bad67933bb7da",
+      "target_id": "ru-id01258",
+      "tag": "p",
+      "target_sha256": "df114d67ec804a3f1a265121e266c065e631808811b5105331cc9a92db4685fd"
+    },
+    {
+      "source_id": "id01259",
+      "target": "— Это правда, — смеясь, сказал Арамис. — Человек, как вы знаете, мой милый д’Артаньян, странное животное, целиком составленное из противоречий. С тех пор как я аббат, я грежу одними сражениями.",
+      "source_sha256": "b2c6bfc3bdab4fb3a4ed3020eb3c87971562f375e65202148bf761c8ec2b2274",
+      "target_id": "ru-id01259",
+      "tag": "p",
+      "target_sha256": "7c53661c2ef40cf4bebae0beeac3b2137ea94744e7017735104ce7293c8269a1"
+    },
+    {
+      "source_id": "id01260",
+      "target": "— Это видно по вашей обстановке: у вас тут рапиры всех форм, на самые взыскательные вкусы. Вы по-прежнему хорошо фехтуете?",
+      "source_sha256": "9f3479d354b1d5d7b05d0fa0077a03c88b735570ef3b4efa65e2f1181d303c01",
+      "target_id": "ru-id01260",
+      "tag": "p",
+      "target_sha256": "8ca907cf9f191fed9a6845d7264b8a8bb58bc05be4082ab6d477efb62220d373"
+    },
+    {
+      "source_id": "id01261",
+      "target": "— Я фехтую так, как фехтовали когда-то вы, а может быть, и ещё лучше. Я только этим и занимаюсь целыми днями.",
+      "source_sha256": "b12b93fe8adbe72ee31fc337d773298f17aabdfc015742349ff23c252c053f10",
+      "target_id": "ru-id01261",
+      "tag": "p",
+      "target_sha256": "a22dffe0cee4b41780969d43ddad01894815b5f6d0732f1ae15ef1b14f7b8a32"
+    },
+    {
+      "source_id": "id01262",
+      "target": "— И с кем же?",
+      "source_sha256": "743e8f70b982348898870b42d440795c1dca59775193f2b37362d7b918598e1d",
+      "target_id": "ru-id01262",
+      "tag": "p",
+      "target_sha256": "1a88986190e461a9d0a5fc6163c355f4fd5d8f7fc41fbad8028238e534894e39"
+    },
+    {
+      "source_id": "id01263",
+      "target": "— С превосходным учителем фехтования, который у нас здесь есть.",
+      "source_sha256": "5f08de6a8d4614e21c25ceb8c6504a30ad8c08195d9b0218497dc49bc85046a1",
+      "target_id": "ru-id01263",
+      "tag": "p",
+      "target_sha256": "d454aff5f99787d1f08b484b6969c6be1d9b058eb07ec37f492e45cec2517f39"
+    },
+    {
+      "source_id": "id01264",
+      "target": "— Как, здесь?",
+      "source_sha256": "89bfe36db6a45a30dda20c84149d5e8f44491b6e5c8639cce385826ff5ddea2a",
+      "target_id": "ru-id01264",
+      "tag": "p",
+      "target_sha256": "d8fe7d792a06087c1b2d45939f744f87410b1f59ea5bd164180e3331c58ac947"
+    },
+    {
+      "source_id": "id01265",
+      "target": "— Да, здесь, в этом монастыре, мой милый. В иезуитском монастыре найдётся всё.",
+      "source_sha256": "42eac29fcfb2ea06eea7131f20b5cd5bc98e73d33db7ce4c96aab932b088f1a6",
+      "target_id": "ru-id01265",
+      "tag": "p",
+      "target_sha256": "1623aa0bf53cd3c30da642b7102b163fa3fb19e5366c68785f2287fb672718a9"
+    },
+    {
+      "source_id": "id01266",
+      "target": "— Значит, вы убили бы г-на де Марсильяка, если бы он явился напасть на вас один, вместо того чтобы вам пришлось противостоять двадцати людям?",
+      "source_sha256": "943faefac68a6b415ef67d5dd1c1a135bbb3981b66089a3944506f5c51fa1615",
+      "target_id": "ru-id01266",
+      "tag": "p",
+      "target_sha256": "aaa8f3990099f51733bf6a66b52c49ca799ea137e1cdbc1968d44f496bc00ad5"
+    },
+    {
+      "source_id": "id01267",
+      "target": "— Разумеется, — сказал Арамис, — и даже во главе его двадцати людей, если бы я мог обнажить шпагу, не будучи узнанным.",
+      "source_sha256": "bc19d940a57467f12d7edf621964ae9755bc69ff3d226adc208f77d465268bed",
+      "target_id": "ru-id01267",
+      "tag": "p",
+      "target_sha256": "e29c7439ccb666173f14275211679a83ee68ce85cc35342624d04525a3950a15"
+    },
+    {
+      "source_id": "id01268",
+      "target": "— Господи, прости меня, — тихо сказал д’Артаньян, — по-моему, он стал большим гасконцем, чем я.",
+      "source_sha256": "bed3d734cf949fd9048662ddd83eab6039bc53904a5b221fb10d3c38a1ff6e75",
+      "target_id": "ru-id01268",
+      "tag": "p",
+      "target_sha256": "7edea44f15408e5ef2cc9abcec2d225ab537adbf9cfb8e7391f4e2babad6822a"
+    },
+    {
+      "source_id": "id01269",
+      "target": "Затем вслух:",
+      "source_sha256": "65833e871df6bdb5b09b488c0a72ff2d1671902d9f7050b32e4328a70e265890",
+      "target_id": "ru-id01269",
+      "tag": "p",
+      "target_sha256": "23b0b612380884d48ebd1fb20970bc790952eadfbe350110c8c6471588d04338"
+    },
+    {
+      "source_id": "id01270",
+      "target": "— Ну так вот, мой милый Арамис, вы спрашиваете, зачем я вас искал?",
+      "source_sha256": "b118a83c8e3ae11fd9f778a70c959c23110fce655c881209873a0cd0ee1e2648",
+      "target_id": "ru-id01270",
+      "tag": "p",
+      "target_sha256": "d677fb5139eeaf0ad1fde53dd11505a90cb8685de769513b75d327b13c51ec35"
+    },
+    {
+      "source_id": "id01271",
+      "target": "— Нет, я вас об этом не спрашивал, — сказал Арамис со своим лукавым видом, — но ждал, что вы сами мне скажете.",
+      "source_sha256": "82716ea52e1965797a9fc142d63d00648570d19ef995402ab9309256ac3f23fe",
+      "target_id": "ru-id01271",
+      "tag": "p",
+      "target_sha256": "ce7af594647595262f3d871605e8d1baccb6a6fc26ba420498f4a6edfdbcd18b"
+    },
+    {
+      "source_id": "id01272",
+      "target": "— Так вот, я искал вас, чтобы предложить вам всего-навсего способ убить г-на де Марсильяка, когда вам это будет угодно, хоть он и принц.",
+      "source_sha256": "11b3e91c7111c1b4ebef12050efbb479e39db0cc9bc4f14a9bd4075a0ed61840",
+      "target_id": "ru-id01272",
+      "tag": "p",
+      "target_sha256": "a0425e5097d29e5997a2511740fb3c463d906878b5cd47db1f0097a76c759ba7"
+    },
+    {
+      "source_id": "id01273",
+      "target": "— Так, так, так! — сказал Арамис. — А это мысль.",
+      "source_sha256": "2e461a0d9f4feb5b79ac36aae3417545662a43a997649df797149d356e3042d2",
+      "target_id": "ru-id01273",
+      "tag": "p",
+      "target_sha256": "14f56ad5e673a0feed37ab69042347d124f3ff45e55549692d45773486433d17"
+    },
+    {
+      "source_id": "id01274",
+      "target": "— Которой я советую вам воспользоваться, мой милый. Ну-ка! С вашим аббатством в тысячу экю и двенадцатью тысячами ливров, которые вы выручаете, продавая проповеди, вы богаты? Отвечайте откровенно.",
+      "source_sha256": "6b564d25a0a0ccb23bfac599ee2f8ed2d244232413b62cf814140e4b81084b11",
+      "target_id": "ru-id01274",
+      "tag": "p",
+      "target_sha256": "0da3e095be356b8aa079804c3c0d9bb9c6208352838fea081a09140a29742b79"
+    },
+    {
+      "source_id": "id01275",
+      "target": "— Я! Я беден, как Иов, и, думаю, если порыться в карманах и сундуках, вы не найдёте здесь и ста пистолей.",
+      "source_sha256": "55a03f877ce90c70838837c489a79f08bdce998e9322283c679666402f3f7a91",
+      "target_id": "ru-id01275",
+      "tag": "p",
+      "target_sha256": "7425f0ef4b5764ea86ca4d19a3228a7458da21c1e3617298f57793f4201be3bc"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "id01256",
+      "verdict": "PASS",
+      "reason": "Heading accurate."
+    },
+    {
+      "source_id": "id01257",
+      "verdict": "PASS",
+      "reason": "Faithful; dialogue punctuation correct."
+    },
+    {
+      "source_id": "id01258",
+      "verdict": "PASS",
+      "reason": "Chiasmus abbé/mousquetaire preserved."
+    },
+    {
+      "source_id": "id01259",
+      "verdict": "CORRECTED",
+      "reason": "'je ne rêve plus que batailles' means he dreams/longs only of battles; 'мне снятся' narrowed it to night dreams, replaced with 'грежу'."
+    },
+    {
+      "source_id": "id01260",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01261",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01262",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01263",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01264",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01265",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01266",
+      "verdict": "PASS",
+      "reason": "Conditional, agency and contrast preserved."
+    },
+    {
+      "source_id": "id01267",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01268",
+      "verdict": "CORRECTED",
+      "reason": "'Dieu me pardonne' is 'God forgive me', not 'God be my judge'; fixed."
+    },
+    {
+      "source_id": "id01269",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01270",
+      "verdict": "PASS",
+      "reason": "Accurate."
+    },
+    {
+      "source_id": "id01271",
+      "verdict": "CORRECTED",
+      "reason": "'avec son air fin' is his characteristic look; made it 'со своим лукавым видом'."
+    },
+    {
+      "source_id": "id01272",
+      "verdict": "PASS",
+      "reason": "Accurate, including concessive 'tout prince qu'il est'."
+    },
+    {
+      "source_id": "id01273",
+      "verdict": "CORRECTED",
+      "reason": "Tripled 'Tiens, tiens, tiens' restored as a triple interjection instead of 'Вот те на'."
+    },
+    {
+      "source_id": "id01274",
+      "verdict": "PASS",
+      "reason": "Figures and sense preserved."
+    },
+    {
+      "source_id": "id01275",
+      "verdict": "PASS",
+      "reason": "Accurate; Job idiom and negation preserved."
+    }
+  ],
+  "corrections": [
+    {
+      "source_id": "id01259",
+      "before": "— Это правда, — смеясь, сказал Арамис. — Человек, как вы знаете, мой милый д’Артаньян, странное животное, целиком составленное из противоречий. С тех пор как я аббат, мне снятся одни сражения.",
+      "after": "— Это правда, — смеясь, сказал Арамис. — Человек, как вы знаете, мой милый д’Артаньян, странное животное, целиком составленное из противоречий. С тех пор как я аббат, я грежу одними сражениями."
+    },
+    {
+      "source_id": "id01268",
+      "before": "— Бог мне судья, — тихо сказал д’Артаньян, — по-моему, он стал большим гасконцем, чем я.",
+      "after": "— Господи, прости меня, — тихо сказал д’Артаньян, — по-моему, он стал большим гасконцем, чем я."
+    },
+    {
+      "source_id": "id01271",
+      "before": "— Нет, я вас об этом не спрашивал, — сказал Арамис с хитрым видом, — но ждал, что вы сами мне скажете.",
+      "after": "— Нет, я вас об этом не спрашивал, — сказал Арамис со своим лукавым видом, — но ждал, что вы сами мне скажете."
+    },
+    {
+      "source_id": "id01273",
+      "before": "— Вот те на! — сказал Арамис. — А это мысль.",
+      "after": "— Так, так, так! — сказал Арамис. — А это мысль."
+    }
+  ],
+  "translation_api": {
+    "state": "LEGACY_DRAFT_RECOVERED_FROM_REVIEW_REQUEST",
+    "original_http_response": "OVERWRITTEN_BY_V1_SUFFIX_BUG",
+    "evidence_file": "results/ru41-claude/011/batch000.request.json"
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgJK4uDc8ibpe3gWheyTm",
+    "usage": {
+      "input_tokens": 8393,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3970,
+      "output_tokens_details": {
+        "thinking_tokens": 1933
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "comparison": [
+    {
+      "api": {
+        "requested_model": "claude-sonnet-5-5",
+        "actual_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgJK6hHZp5z7rwp2g8dcN",
+        "usage": {
+          "input_tokens": 8947,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3422,
+          "output_tokens_details": {
+            "thinking_tokens": 939
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        }
+      },
+      "review": [
+        {
+          "source_id": "id01256",
+          "verdict": "PASS",
+          "reason": "Heading rendered accurately; «Два Гаспара» matches «Les deux Gaspards»."
+        },
+        {
+          "source_id": "id01257",
+          "verdict": "PASS",
+          "reason": "Question and its two parts preserved; the speaker's attribution and the name д’Артаньян are correct."
+        },
+        {
+          "source_id": "id01258",
+          "venue": "",
+          "verdict": "PASS",
+          "reason": "The mirrored contrast mousquetaire/abbé is preserved with the idiomatic «смахивать на»; tenses are correct."
+        },
+        {
+          "source_id": "id01259",
+          "verdict": "PASS",
+          "reason": "The prior correction («я грежу одними сражениями» for «je ne rêve plus que batailles») is verified. The aphorism about man as a creature of contrasts is intact."
+        },
+        {
+          "source_id": "id01260",
+          "verdict": "PASS",
+          "reason": "The remark about the furnishings, the swords «de toutes les formes» and the question about fencing are all preserved; «tirer» is correctly rendered as «фехтовать»."
+        },
+        {
+          "source_id": "id01261",
+          "verdict": "PASS",
+          "reason": "The comparison with d'Artagnan's past fencing, the «peut-être» hedge and «toute la journée» are all kept."
+        },
+        {
+          "source_id": "id01262",
+          "verdict": "PASS",
+          "reason": "Short question rendered faithfully."
+        },
+        {
+          "source_id": "id01263",
+          "verdict": "PASS",
+          "reason": "«Maître d'armes» and «ici» are preserved accurately."
+        },
+        {
+          "source_id": "id01264",
+          "verdict": "PASS",
+          "reason": "The exclamation of surprise is rendered faithfully."
+        },
+        {
+          "source_id": "id01265",
+          "verdict": "PASS",
+          "reason": "The repetition of «ici» and the humorous remark about a Jesuit convent are kept."
+        },
+        {
+          "source_id": "id01266",
+          "verdict": "PASS",
+          "reason": "The conditional «s'il fût venu», the «seul» versus «vingt hommes» contrast and the agency are correct."
+        },
+        {
+          "source_id": "id01267",
+          "verdict": "PASS",
+          "reason": "«Parfaitement», «même à la tête de ses vingt hommes» and the condition about being recognised are all preserved."
+        },
+        {
+          "source_id": "id01268",
+          "verdict": "PASS",
+          "reason": "The prior correction («Господи, прости меня» for «Dieu me pardonne») is verified. The aside «tout bas» and the comparative «plus Gascon que moi» are kept."
+        },
+        {
+          "source_id": "id01269",
+          "verdict": "PASS",
+          "reason": "«Puis tout haut» is correctly rendered as «Затем вслух»."
+        },
+        {
+          "source_id": "id01270",
+          "verdict": "PASS",
+          "reason": "Faithful; the question and the past tense «cherchais» are preserved."
+        },
+        {
+          "source_id": "id01271",
+          "verdict": "PASS",
+          "reason": "The prior correction («со своим лукавым видом» for «avec son air fin») is verified. The imperfect «ne demandais pas» and «attendais» are kept."
+        },
+        {
+          "source_id": "id01272",
+          "verdict": "PASS",
+          "reason": "«Tout uniquement», the future «quand cela vous fera plaisir» and the concessive «tout prince qu'il est» are all rendered accurately."
+        },
+        {
+          "source_id": "id01273",
+          "verdict": "PASS",
+          "reason": "The prior correction («Так, так, так!» for «Tiens, tiens, tiens!») is verified. «C'est une idée» is kept."
+        },
+        {
+          "source_id": "id01274",
+          "verdict": "PASS",
+          "reason": "The figures (mille écus, douze mille livres), the sermon-selling jibe and the demand for a frank answer are preserved."
+        },
+        {
+          "source_id": "id01275",
+          "verdict": "PASS",
+          "reason": "«Gueux comme Job» is rendered as «беден, как Иов», and the hundred pistoles and the search of pockets and chests are kept."
+        }
+      ],
+      "corrections": []
+    }
+  ]
+}
