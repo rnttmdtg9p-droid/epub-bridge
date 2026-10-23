@@ -1,0 +1,51 @@
+{
+  "unit": 22,
+  "batch": 3,
+  "state": "SOURCE_ALIGNED_AI_REVIEWED_PENDING_COMPARISON",
+  "rows": [
+    {
+      "source_id": "043-022-0060",
+      "target": "На плоту",
+      "source_sha256": "58cc5b7a2358c379ee1acd4c356422b537f4201b9ec4ca5bfd3a153445adc049",
+      "target_id": "ru-043-022-0060",
+      "tag": "source_caption",
+      "target_sha256": "8de3ecc73f587d7f11c7c24ea019f2406b5fca11924432ab5879df2908c2ad4d"
+    }
+  ],
+  "review": [
+    {
+      "source_id": "043-022-0060",
+      "verdict": "PASS",
+      "reason": "Caption 'On the Raft' is rendered accurately and concisely as 'На плоту'; no omissions, additions or register problems, and it remains a caption rather than a new heading."
+    }
+  ],
+  "corrections": [],
+  "translation_api": {
+    "provider": "DeepL",
+    "requested_model": "quality_optimized",
+    "actual_model": "quality_optimized",
+    "response_file": "results/ru43-original/022/batch003.translation.deepl.attempt00.response.json",
+    "source_line_recoveries": []
+  },
+  "review_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgKJrVS39AfANJRBe1FPW",
+    "usage": {
+      "input_tokens": 2042,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 124,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
