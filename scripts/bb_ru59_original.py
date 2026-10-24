@@ -234,7 +234,7 @@ def translate(unit):
             # Preserve malformed actual exchange; repeat source comparison from the saved draft.
             verified.rename(verified.with_name(verified.name+'.superseded-invalid-verdict-schema.json'))
             save(folder/f'batch{index:03}.cache-rejection.json',{'state':'RECHECK_REQUIRED','reason':'Final actual review lacks exact PASS/CORRECTED verdict field; do not infer or repair provider verdicts locally.'})
-        context={'book':'Michel Strogoff','chapter':unit['heading'],'part':unit['part'],'chapter_name':next(r['text'] for r in unit['rows'] if r['role']=='SOURCE_CHAPTER_NAME'),'unit':number,'complete_chapter_french':[r['text'] for r in unit['rows'] if r['tag']!='illustration_caption'],'previous_french':[r['text'] for r in allrows[max(0,allrows.index(rows[0])-3):allrows.index(rows[0])]],'previous_reviewed_russian':[r['target'] for r in final[-3:]]}
+        context={'book':'The Hound of the Baskervilles','chapter':unit['heading'],'chapter_name':unit['heading'],'unit':number,'complete_chapter_english':[r['text'] for r in unit['rows'] if r['tag']!='illustration_caption'],'previous_english':[r['text'] for r in allrows[max(0,allrows.index(rows[0])-3):allrows.index(rows[0])]],'previous_reviewed_russian':[r['target'] for r in final[-3:]]}
         done=folder/f'batch{index:03}.reviewed.json'
         if done.exists():
             item=json.loads(done.read_text());validate(item['rows'],rows)
