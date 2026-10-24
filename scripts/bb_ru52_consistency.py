@@ -3,7 +3,20 @@ from pathlib import Path
 import json,hashlib,re,os
 from bb_ru52_original import ROOT,SOURCE,call,SYSTEM,save,sha
 OUT=ROOT/'results/ru52-consistency';OUT.mkdir(parents=True,exist_ok=True)
-inp=json.loads((ROOT/'inputs/ru52-consistency.json').read_text());assert inp['complete_source_units']==45 and inp['frozen_source_sha256']=='6ebe811a5993d5aa2cb25c7c219d1383502ee422ed121d691113d14f581ba093';rows=inp['rows'];assert 1<=len(rows)<=40
+from bb_ru52_verify import qualify_unit
+correction_rows=[];unit_proofs=[]
+for u in SOURCE:
+ n=u['unit'];chapter,report=qualify_unit(ROOT,SOURCE,n);unit_proofs.append({'unit':n,'initial_qualified_target_sha256':report['qualified_target_sha256']});targets={r['source_id']:r for r in chapter['rows']}
+ for src in u['rows']:
+  if not src.get('translate',True):continue
+  before=targets[src['id']]['target'];proposal=re.sub(r'Сакнуссем(?!м)','Сакнуссемм',before)
+  if proposal==before:continue
+  assert 'Saknussemm' in src['text']
+  correction_rows.append({'unit':n,'source_id':src['id'],'source':src['text'],'source_sha256':src['sha256'],'before':before,'before_target_sha256':sha(before),'proposal':proposal})
+assert len(unit_proofs)==45 and correction_rows
+inp={'state':'COMPLETE45_INITIAL_ACTUAL_REVIEWS_PASS_NARROW_CORRECTIONS_FOR_FURTHER_AI_REVIEW','complete_source_units':45,'frozen_source_sha256':'6ebe811a5993d5aa2cb25c7c219d1383502ee422ed121d691113d14f581ba093','initial_unit_qualifications':unit_proofs,'canonical_name':'Арне Сакнуссемм','native_Latin_cipher_and_documents':'IMMUTABLE_NOT_INCLUDED','rows':correction_rows,'book_release':False}
+save(OUT/'input.json',inp)
+assert inp['complete_source_units']==45 and inp['frozen_source_sha256']=='6ebe811a5993d5aa2cb25c7c219d1383502ee422ed121d691113d14f581ba093';rows=inp['rows'];assert 1<=len(rows)<=40
 source={r['id']:r for u in SOURCE for r in u['rows']}
 for r in rows:
  s=source[r['source_id']];assert s.get('translate',True) and r['source']==s['text'] and r['source_sha256']==s['sha256']==sha(r['source']);assert sha(r['before'])==r['before_target_sha256'];assert r['proposal']==re.sub(r'Сакнуссем(?!м)','Сакнуссемм',r['before']) and r['proposal']!=r['before'];assert re.findall(r'\[\[FN:\d+\]\]',r['proposal'])==re.findall(r'\[\[FN:\d+\]\]',r['before'])
@@ -24,4 +37,4 @@ for stage in range(2):
    last=type(error).__name__+': '+str(error);save(Path(str(path)+'.validation-error.json'),{'error':last})
  else:raise RuntimeError('CONSISTENCY_REVIEW_NOT_ACCEPTED '+str(last))
  if stage==0:accepted=[{'source_id':r['source_id'],'unit':r['unit'],'source_sha256':r['source_sha256'],'before_target_sha256':r['before_target_sha256'],'target_sha256':sha(r['proposal']),'before':r['before'],'target':r['proposal'],'scope':'MISSING_SECOND_M_IN_CANONICAL_RUSSIAN_SAKNUSSEMM_NAME_ONLY'} for r in rows]
-save(OUT/'accepted-overrides.json',{'state':'ACTUAL_AI_TERMINOLOGY_CORRECTION_AND_UNCHANGED_SOURCE_COMPARISON_PASS_PENDING_INDEPENDENT_BINDING','workflow_run_id':os.environ.get('GITHUB_RUN_ID'),'execution_commit':os.environ.get('GITHUB_SHA'),'input_sha256':hashlib.sha256((ROOT/'inputs/ru52-consistency.json').read_bytes()).hexdigest(),'frozen_source_sha256':inp['frozen_source_sha256'],'rows':accepted,'actual_review_stages':proof,'book_release':False});print('ACTUAL_CONSISTENCY_CORRECTIONS_AND_SOURCE_COMPARISON_PASS',len(accepted))
+save(OUT/'accepted-overrides.json',{'state':'ACTUAL_AI_TERMINOLOGY_CORRECTION_AND_UNCHANGED_SOURCE_COMPARISON_PASS_PENDING_INDEPENDENT_BINDING','workflow_run_id':os.environ.get('GITHUB_RUN_ID'),'execution_commit':os.environ.get('GITHUB_SHA'),'input_sha256':hashlib.sha256((OUT/'input.json').read_bytes()).hexdigest(),'frozen_source_sha256':inp['frozen_source_sha256'],'rows':accepted,'actual_review_stages':proof,'book_release':False});print('ACTUAL_CONSISTENCY_CORRECTIONS_AND_SOURCE_COMPARISON_PASS',len(accepted))
