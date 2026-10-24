@@ -1,4 +1,4 @@
-name: BB Russian52 source-bound italic markup correction and verification
+name: BB Russian53 source-bound italic markup correction and verification
 on:
   push:
     paths: [".github/workflows/bb-ru53-emphasis.yml"]
@@ -23,7 +23,7 @@ jobs:
           github-token: ${{ github.token }}
           repository: rnttmdtg9p-droid/epub-bridge
           run-id: 40060493494
-      - name: Correct only source-verified source italic markup and independently compare every correction
+      - name: Correct source HTML italic markup and preserve visible text and independently compare every correction
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
