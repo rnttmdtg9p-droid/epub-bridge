@@ -34,7 +34,7 @@ def call(system,payload,path,max_tokens=32768):
             if raw.get('stop_reason')!='end_turn':raise ValueError('INCOMPLETE_RESPONSE_'+str(raw.get('stop_reason')))
             text='\n'.join(x['text'] for x in raw['content'] if x.get('type')=='text').strip()
             if text.startswith('```'):text=text.split('\n',1)[1].rsplit('```',1)[0]
-            return json.JSONDecoder().raw_decode(text[text.index('{'):])[0],{'requested_model':MODEL,'actual_model':raw.get('model'),'response_id':raw.get('id'),'usage':raw.get('usage')}
+            return json.loads(text),{'requested_model':MODEL,'actual_model':raw.get('model'),'response_id':raw.get('id'),'usage':raw.get('usage')}
         except urllib.error.HTTPError as e:
             if e.code in (429,500,502,503,529) and attempt<3:time.sleep(5*(attempt+1));continue
             raise RuntimeError('CLAUDE_HTTP_'+str(e.code)) from None
