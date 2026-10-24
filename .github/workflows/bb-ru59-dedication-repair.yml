@@ -1,4 +1,4 @@
-name: BB Russian59 source-bound dedication dateline correction
+name: BB Russian59 strict source-bound dedication dateline correction
 on:
   push:
     paths: ['.github/workflows/bb-ru59-dedication-repair.yml']
