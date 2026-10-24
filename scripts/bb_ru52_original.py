@@ -170,6 +170,7 @@ def checked_call(system,payload,path,source,review=False):
                 for r in result.get('review',[]):r['source_id']=r.get('source_id',r.get('id'))
                 assert [r['source_id'] for r in result['review']]==[r['id'] for r in editable],'REVIEW_COVERAGE'
                 assert all(r.get('reason') for r in result['review']),'REVIEW_REASON'
+                assert all(r.get('verdict') in ['PASS','CORRECTED'] for r in result['review']),'REVIEW_VERDICT_SCHEMA'
             if native:
                 byid={r['source_id']:r for r in result['rows']}
                 for r in native:byid[r['id']]=validate([{'source_id':r['id'],'target':r['text']}],[r])[0]
@@ -224,7 +225,15 @@ def translate(unit):
     for index,rows in enumerate(batches):
         verified=folder/f'batch{index:03}.comparison_verified.json'
         if verified.exists():
-            item=json.loads(verified.read_text());final.extend(validate(item['rows'],rows));reviews.append(item);continue
+            item=json.loads(verified.read_text())
+            expected_native={r['id'] for r in rows if not r.get('translate',True)}
+            last_review=item.get('comparison',[{}])[-1].get('review',[])
+            valid_schema=len(last_review)==len(rows) and all(r.get('verdict') in (['NOT_APPLICABLE_SOURCE_NATIVE_FOREIGN'] if r.get('source_id') in expected_native else ['PASS','CORRECTED']) and r.get('reason') for r in last_review)
+            if valid_schema:
+                final.extend(validate(item['rows'],rows));reviews.append(item);continue
+            # Preserve malformed actual exchange; repeat source comparison from the saved draft.
+            verified.rename(verified.with_name(verified.name+'.superseded-invalid-verdict-schema.json'))
+            save(folder/f'batch{index:03}.cache-rejection.json',{'state':'RECHECK_REQUIRED','reason':'Final actual review lacks exact PASS/CORRECTED verdict field; do not infer or repair provider verdicts locally.'})
         context={'book':'Voyage au centre de la Terre','chapter':unit['heading'],'unit':number,'complete_chapter_french':[r['text'] for r in unit['rows'] if r['tag']!='illustration_caption'],'previous_french':[r['text'] for r in allrows[max(0,allrows.index(rows[0])-3):allrows.index(rows[0])]],'previous_reviewed_russian':[r['target'] for r in final[-3:]]}
         done=folder/f'batch{index:03}.reviewed.json'
         if done.exists():
