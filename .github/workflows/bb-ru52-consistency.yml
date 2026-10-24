@@ -1,0 +1,48 @@
+name: BB Russian52 source-bound terminology correction and verification
+on:
+  push:
+    paths: [".github/workflows/bb-ru52-consistency.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: bb-ru52-original-v5070
+  cancel-in-progress: false
+jobs:
+  verify-consistency:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read the exact successful first three original unit artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: ru52-original-unit-00[1-3]-v5070
+          path: results/ru52-original/
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          repository: rnttmdtg9p-droid/epub-bridge
+          run-id: 40050355745
+      - name: Read the exact successful resumed unit04 through45 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: ru52-original-unit-*-v5070
+          path: results/ru52-original/
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          repository: rnttmdtg9p-droid/epub-bridge
+          run-id: 40051081051
+      - name: Correct only source-verified canonical name spelling and independently compare every correction
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru52_consistency.py
+      - name: Preserve exact actual correction and comparison provider exchanges
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-book-consistency-v5070
+          path: results/ru52-consistency/
+          retention-days: 90
+          if-no-files-found: warn
