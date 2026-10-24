@@ -1,0 +1,34 @@
+name: BB Russian59 authorial document lineation correction
+on:
+  push:
+    paths: ['.github/workflows/bb-ru59-document-lineation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  restore-source-breaks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru59-original-unit-003-v5070
+          path: results/ru59-original/
+          github-token: ${{ github.token }}
+          repository: rnttmdtg9p-droid/epub-bridge
+          run-id: 40106391556
+      - name: Restore exact authorial document breaks and compare source
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru59_document_lineation.py
+      - name: Preserve actual lineation correction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru59-document-lineation-v5070
+          path: results/ru59-document-lineation/
+          retention-days: 90
+          if-no-files-found: warn
