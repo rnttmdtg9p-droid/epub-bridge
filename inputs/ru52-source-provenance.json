@@ -1,0 +1,48 @@
+{
+  "title": "Voyage au centre de la Terre",
+  "author": "Jules Verne",
+  "author_death": 1905,
+  "language": "FR",
+  "edition": "J.Hetzel etCie,Paris,1867 expanded illustrated edition",
+  "selected_source_url": "https://fr.wikisource.org/wiki/Voyage_au_centre_de_la_Terre/Texte_entier",
+  "selected_capture_revision": 12858015,
+  "selected_capture_sha256": "deb3da483f890973c0566a50d5ef8efeab91ea5a5053305ee57f31b7b5636e6b",
+  "independent_extent": {
+    "wikisource_modern_index_units": 45,
+    "gutenberg_independent_units": 45,
+    "gutenberg_sha256": "b017f3a69a51e19ea5043f2f82779397d75f5756670a2fdc6148e7ee8ec60dbc",
+    "index_sha256": "ce99435535768b904dca3823ad6d50214b4816953ba1548a3ba73a456fa3a61b",
+    "whole_print_collation": "WAIVED_NOT_CLAIMED"
+  },
+  "printed_heading_anomaly": {
+    "unit": 44,
+    "printed_number": "LXIV",
+    "source_printed_page": 212,
+    "image_path": "original-source/printed212-heading.jpg",
+    "image_sha256": "1749aa94b3dca298a29522a2b4cca88d8778b44da97187fe8bf8830f3060ed00",
+    "actual_pixels_viewed": true,
+    "disposition": "PRESERVE_AUTHENTIC_PRINTED_NUMERAL_NO_MISSING_CHAPTER_INVENTED"
+  },
+  "rights": {
+    "scope": [
+      "Canada",
+      "USA"
+    ],
+    "Canada": "Verne died1905;term expired before2022extension.",
+    "USA": "Specific1867 publication before1931.",
+    "new_translation_rights": "Recorded separately;not inferred publicdomain from original."
+  },
+  "source_conservation": {
+    "state": "PASS_INDEPENDENT_ALL2233_NONEMPTY_ORIGINAL_PARAGRAPHS_AND2317_CLASSIFIED_ROWS45_HEADINGS14_NOTES2_GRIDS4_RUNIC_DOCUMENTS",
+    "source_sha256": "6ebe811a5993d5aa2cb25c7c219d1383502ee422ed121d691113d14f581ba093",
+    "capture_sha256": "deb3da483f890973c0566a50d5ef8efeab91ea5a5053305ee57f31b7b5636e6b",
+    "validator_sha256": "bc730f3c7a28861b5941431e49072d44cab1401b53d7715ed13df7c39a6c88ab",
+    "original_nonempty_paragraphs": 2233,
+    "classified_rows": 2317,
+    "heading_count": 45,
+    "source_notes": 14,
+    "unmapped": [],
+    "errors": []
+  },
+  "transcription_attribution": "French Wikisource contributors;faithful1867 public-domain original;applicable transcription contributions CC BY-SA4.0, https://creativecommons.org/licenses/by-sa/4.0/"
+}
