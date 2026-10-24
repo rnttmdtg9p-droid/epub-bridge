@@ -1,0 +1,1000 @@
+name: BB Russian52 read-only sequential original translation and review
+on:
+  push:
+    paths: [".github/workflows/bb-ru52-original.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-ru52-original-v5070
+  cancel-in-progress: false
+jobs:
+  chapter01:
+    name: Chapter 01 of45, exact original translation and independent review
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "1"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-001-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter02:
+    name: Chapter 02 of45, exact original translation and independent review
+    needs: chapter01
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "2"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-002-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter03:
+    name: Chapter 03 of45, exact original translation and independent review
+    needs: chapter02
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "3"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-003-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter04:
+    name: Chapter 04 of45, exact original translation and independent review
+    needs: chapter03
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "4"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-004-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter05:
+    name: Chapter 05 of45, exact original translation and independent review
+    needs: chapter04
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "5"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-005-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter06:
+    name: Chapter 06 of45, exact original translation and independent review
+    needs: chapter05
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "6"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-006-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter07:
+    name: Chapter 07 of45, exact original translation and independent review
+    needs: chapter06
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "7"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-007-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter08:
+    name: Chapter 08 of45, exact original translation and independent review
+    needs: chapter07
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "8"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-008-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter09:
+    name: Chapter 09 of45, exact original translation and independent review
+    needs: chapter08
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "9"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-009-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter10:
+    name: Chapter 10 of45, exact original translation and independent review
+    needs: chapter09
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "10"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-010-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter11:
+    name: Chapter 11 of45, exact original translation and independent review
+    needs: chapter10
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "11"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-011-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter12:
+    name: Chapter 12 of45, exact original translation and independent review
+    needs: chapter11
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "12"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-012-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter13:
+    name: Chapter 13 of45, exact original translation and independent review
+    needs: chapter12
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "13"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-013-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter14:
+    name: Chapter 14 of45, exact original translation and independent review
+    needs: chapter13
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "14"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-014-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter15:
+    name: Chapter 15 of45, exact original translation and independent review
+    needs: chapter14
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "15"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-015-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter16:
+    name: Chapter 16 of45, exact original translation and independent review
+    needs: chapter15
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "16"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-016-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter17:
+    name: Chapter 17 of45, exact original translation and independent review
+    needs: chapter16
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "17"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-017-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter18:
+    name: Chapter 18 of45, exact original translation and independent review
+    needs: chapter17
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "18"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-018-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter19:
+    name: Chapter 19 of45, exact original translation and independent review
+    needs: chapter18
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "19"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-019-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter20:
+    name: Chapter 20 of45, exact original translation and independent review
+    needs: chapter19
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "20"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-020-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter21:
+    name: Chapter 21 of45, exact original translation and independent review
+    needs: chapter20
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "21"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-021-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter22:
+    name: Chapter 22 of45, exact original translation and independent review
+    needs: chapter21
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "22"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-022-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter23:
+    name: Chapter 23 of45, exact original translation and independent review
+    needs: chapter22
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "23"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-023-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter24:
+    name: Chapter 24 of45, exact original translation and independent review
+    needs: chapter23
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "24"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-024-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter25:
+    name: Chapter 25 of45, exact original translation and independent review
+    needs: chapter24
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "25"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-025-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter26:
+    name: Chapter 26 of45, exact original translation and independent review
+    needs: chapter25
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "26"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-026-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter27:
+    name: Chapter 27 of45, exact original translation and independent review
+    needs: chapter26
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "27"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-027-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter28:
+    name: Chapter 28 of45, exact original translation and independent review
+    needs: chapter27
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "28"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-028-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter29:
+    name: Chapter 29 of45, exact original translation and independent review
+    needs: chapter28
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "29"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-029-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter30:
+    name: Chapter 30 of45, exact original translation and independent review
+    needs: chapter29
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "30"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-030-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter31:
+    name: Chapter 31 of45, exact original translation and independent review
+    needs: chapter30
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "31"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-031-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter32:
+    name: Chapter 32 of45, exact original translation and independent review
+    needs: chapter31
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "32"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-032-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter33:
+    name: Chapter 33 of45, exact original translation and independent review
+    needs: chapter32
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "33"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-033-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter34:
+    name: Chapter 34 of45, exact original translation and independent review
+    needs: chapter33
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "34"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-034-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter35:
+    name: Chapter 35 of45, exact original translation and independent review
+    needs: chapter34
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "35"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-035-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter36:
+    name: Chapter 36 of45, exact original translation and independent review
+    needs: chapter35
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "36"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-036-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter37:
+    name: Chapter 37 of45, exact original translation and independent review
+    needs: chapter36
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "37"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-037-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter38:
+    name: Chapter 38 of45, exact original translation and independent review
+    needs: chapter37
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "38"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-038-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter39:
+    name: Chapter 39 of45, exact original translation and independent review
+    needs: chapter38
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "39"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-039-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter40:
+    name: Chapter 40 of45, exact original translation and independent review
+    needs: chapter39
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "40"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-040-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter41:
+    name: Chapter 41 of45, exact original translation and independent review
+    needs: chapter40
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "41"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-041-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter42:
+    name: Chapter 42 of45, exact original translation and independent review
+    needs: chapter41
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "42"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-042-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter43:
+    name: Chapter 43 of45, exact original translation and independent review
+    needs: chapter42
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "43"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-043-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter44:
+    name: Chapter 44 of45, exact original translation and independent review
+    needs: chapter43
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "44"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-044-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
+  chapter45:
+    name: Chapter 45 of45, exact original translation and independent review
+    needs: chapter44
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate and completely review this source-authenticated unit
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: "45"
+        run: python3 scripts/bb_ru52_original.py
+      - name: Preserve actual provider exchanges and accepted or partial unit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-original-unit-045-v5070
+          path: results/ru52-original/
+          retention-days: 90
+          if-no-files-found: warn
