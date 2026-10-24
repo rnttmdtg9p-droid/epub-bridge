@@ -15,14 +15,14 @@ for sid in ids:
   start=plain.index('«',1);end=plain.index('»',start)+1;proposal='<i>'+plain[:start]+'</i>'+plain[start:end]+'<i>'+plain[end:]+'</i>'
  else:proposal='<i>'+before+'</i>'
  assert re.sub(r'</?i>','',proposal)==plain and proposal.count('\n')==before.count('\n')
- src=source[sid];assert len(re.findall(r'<i(?:\s[^>]*)?>',src['text']))==proposal.count('<i>')
- rows.append(dict(unit=17,source_id=sid,source=src['text'],source_sha256=src['sha256'],before=before,before_target_sha256=sha(before),proposal=proposal))
+ src=source[sid];assert len(re.findall(r'<i(?:\s[^>]*)?>',src.get('source_html') or src['text']))==proposal.count('<i>')
+ rows.append(dict(unit=17,source_id=sid,source=src['text'],source_sha256=src['sha256'],source_html=src['source_html'],source_html_sha256=sha(src['source_html']),before=before,before_target_sha256=sha(before),proposal=proposal))
 inp=dict(state='ACTUAL_INITIAL_UNIT17_FULL_AI_REVIEW_VERIFIED_NARROW_MARKUP_REPAIR',frozen_source_sha256='6ee415d89050dc6875ea96b1b3850d528e881503fa926b3361bebc6ff9135099',initial_unit_qualifications=[dict(unit=17,initial_qualified_target_sha256=report['qualified_target_sha256'])],rows=rows,book_release=False)
 save(OUT/'input.json',inp)
 accepted=[];proof=[]
 for stage in range(2):
  task=('Review every complete French source paragraph against the Russian translation and proposed minimal italic-tag correction. Restore all source emphasis including distinct spans in dispatch heading and Genesis quotations; leave the newspaper title unitalic when source does. Every visible character and logical newline must remain unchanged. Return the proposed targets exactly only when valid.' if stage==0 else 'Independently compare every corrected full Russian paragraph against its French source. Verify source emphasis, distinct span boundaries, newspaper title exception, unchanged visible characters and logical lines. Return each fully verified target exactly without another edit.')
- payload={'task':task+' Return JSON only with rows:[{source_id,target}] and review:[{source_id,verdict,reason}]. Return every supplied ID in source order; verdict CORRECTED for the first correction pass and PASS for the final unchanged comparison. Give a specific source-based reason.','frozen_source_sha256':inp['frozen_source_sha256'],'source_rows':[{'id':r['source_id'],'text':r['source'],'sha256':r['source_sha256']} for r in rows],'current_rows':[{'source_id':r['source_id'],'target':r['before'] if stage==0 else r['proposal']} for r in rows],'proposed_rows':[{'source_id':r['source_id'],'target':r['proposal']} for r in rows],'prior_corrections':[] if stage==0 else accepted}
+ payload={'task':task+' Return JSON only with rows:[{source_id,target}] and review:[{source_id,verdict,reason}]. Return every supplied ID in source order; verdict CORRECTED for the first correction pass and PASS for the final unchanged comparison. Give a specific source-based reason.','frozen_source_sha256':inp['frozen_source_sha256'],'source_rows':[{'id':r['source_id'],'text':r['source'],'sha256':r['source_sha256'],'source_html':r['source_html'],'source_html_sha256':r['source_html_sha256']} for r in rows],'current_rows':[{'source_id':r['source_id'],'target':r['before'] if stage==0 else r['proposal']} for r in rows],'proposed_rows':[{'source_id':r['source_id'],'target':r['proposal']} for r in rows],'prior_corrections':[] if stage==0 else accepted}
  last=None
  for attempt in range(3):
   request=dict(payload)
