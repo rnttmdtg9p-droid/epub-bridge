@@ -1,0 +1,38 @@
+name: BB Russian59 source-bound dedication dateline correction
+on:
+  push:
+    paths: ['.github/workflows/bb-ru59-dedication-repair.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: bb-ru59-dedication-repair-v5070
+  cancel-in-progress: false
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read actual qualified dedication and provider evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: ru59-original-unit-001-v5070
+          path: results/ru59-original/
+          github-token: ${{ github.token }}
+          repository: rnttmdtg9p-droid/epub-bridge
+          run-id: 40106391556
+      - name: Correct dateline and independently compare source
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru59_dedication_repair.py
+      - name: Preserve actual correction and comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru59-dedication-dateline-repair-v5070
+          path: results/ru59-dedication-repair/
+          retention-days: 90
+          if-no-files-found: warn
