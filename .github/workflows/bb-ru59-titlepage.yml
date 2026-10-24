@@ -1,0 +1,30 @@
+name: BB Russian59 authentic titlepage subtitle translation
+on:
+  push:
+    paths: ['.github/workflows/bb-ru59-titlepage.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-ru59-titlepage-v5070
+  cancel-in-progress: false
+jobs:
+  translate-titlepage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate titlepage and review against original
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru59_titlepage.py
+      - name: Preserve actual translation and review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru59-titlepage-paratext-v5070
+          path: results/ru59-original/
+          retention-days: 90
+          if-no-files-found: warn
