@@ -1,0 +1,38 @@
+name: BB Russian52 source-bound italic markup correction and verification
+on:
+  push:
+    paths: [".github/workflows/bb-ru53-emphasis.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: bb-ru53-original-v5070
+  cancel-in-progress: false
+jobs:
+  verify-emphasis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read exact independently qualifying unit17 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ru53-original-unit-17-v5070
+          path: results/ru53-original/
+          github-token: ${{ github.token }}
+          repository: rnttmdtg9p-droid/epub-bridge
+          run-id: 40060493494
+      - name: Correct only source-verified source italic markup and independently compare every correction
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru53_emphasis.py
+      - name: Preserve exact actual correction and comparison provider exchanges
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru53-book-emphasis-v5070
+          path: results/ru53-emphasis/
+          retention-days: 90
+          if-no-files-found: warn
