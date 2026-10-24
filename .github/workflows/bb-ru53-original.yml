@@ -1,0 +1,37 @@
+name: BB Russian53 complete original translation and source-aligned AI review
+on:
+  push:
+    paths: [".github/workflows/bb-ru53-original.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-ru53-original-v5070
+  cancel-in-progress: false
+jobs:
+  source-chapter:
+    name: French chapter ${{ matrix.unit }} of32, translation and complete independent review
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        unit: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Translate every row, review, apply corrections and independently compare
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+          BB_UNIT: ${{ matrix.unit }}
+        run: python3 scripts/bb_ru53_original.py
+      - name: Preserve actual provider exchanges and qualified or partial chapter evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru53-original-unit-${{ matrix.unit }}-v5070
+          path: results/ru53-original/
+          retention-days: 90
+          if-no-files-found: warn
