@@ -60,7 +60,7 @@ def deepl_translate(rows,path,context):
     for row in selected:
         c=Clean();c.feed(row.get('source_html') or escape(row['text']));texts.append('<p>'+''.join(c.parts)+'</p>')
     host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
-    payload={'text':texts,'source_lang':'EN','target_lang':'RU','model_type':'quality_optimized','tag_handling':'html','context':'New complete literary Russian translation of Jules Verne, Michel Strogoff (Hetzel1905;first published1876), directly from English. Preserve every paragraph, fact, name, historical peculiarity and italic span. '+json.dumps(context,ensure_ascii=False)}
+    payload={'text':texts,'source_lang':'EN','target_lang':'RU','model_type':'quality_optimized','tag_handling':'html','context':'New complete literary Russian translation of Arthur Conan Doyle, The Hound of the Baskervilles (1902), directly from the English original. Preserve every paragraph, fact, name, historical peculiarity and italic span. '+json.dumps(context,ensure_ascii=False)}
     request_file=Path(str(path)+'.deepl.request.json')
     if request_file.exists():assert json.loads(request_file.read_text())==payload,'EXISTING_DEEPL_REQUEST_MISMATCH'
     else:save(request_file,payload)
