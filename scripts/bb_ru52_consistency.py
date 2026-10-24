@@ -1,6 +1,6 @@
 """Read-only final terminology correction and independent source comparison; no retranslations."""
 from pathlib import Path
-import json,hashlib,re
+import json,hashlib,re,os
 from bb_ru52_original import ROOT,SOURCE,call,SYSTEM,save,sha
 OUT=ROOT/'results/ru52-consistency';OUT.mkdir(parents=True,exist_ok=True)
 inp=json.loads((ROOT/'inputs/ru52-consistency.json').read_text());assert inp['complete_source_units']==45 and inp['frozen_source_sha256']=='6ebe811a5993d5aa2cb25c7c219d1383502ee422ed121d691113d14f581ba093';rows=inp['rows'];assert 1<=len(rows)<=40
@@ -24,4 +24,4 @@ for stage in range(2):
    last=type(error).__name__+': '+str(error);save(Path(str(path)+'.validation-error.json'),{'error':last})
  else:raise RuntimeError('CONSISTENCY_REVIEW_NOT_ACCEPTED '+str(last))
  if stage==0:accepted=[{'source_id':r['source_id'],'unit':r['unit'],'source_sha256':r['source_sha256'],'before_target_sha256':r['before_target_sha256'],'target_sha256':sha(r['proposal']),'before':r['before'],'target':r['proposal'],'scope':'MISSING_SECOND_M_IN_CANONICAL_RUSSIAN_SAKNUSSEMM_NAME_ONLY'} for r in rows]
-save(OUT/'accepted-overrides.json',{'state':'ACTUAL_AI_TERMINOLOGY_CORRECTION_AND_UNCHANGED_SOURCE_COMPARISON_PASS_PENDING_INDEPENDENT_BINDING','input_sha256':hashlib.sha256((ROOT/'inputs/ru52-consistency.json').read_bytes()).hexdigest(),'frozen_source_sha256':inp['frozen_source_sha256'],'rows':accepted,'actual_review_stages':proof,'book_release':False});print('ACTUAL_CONSISTENCY_CORRECTIONS_AND_SOURCE_COMPARISON_PASS',len(accepted))
+save(OUT/'accepted-overrides.json',{'state':'ACTUAL_AI_TERMINOLOGY_CORRECTION_AND_UNCHANGED_SOURCE_COMPARISON_PASS_PENDING_INDEPENDENT_BINDING','workflow_run_id':os.environ.get('GITHUB_RUN_ID'),'execution_commit':os.environ.get('GITHUB_SHA'),'input_sha256':hashlib.sha256((ROOT/'inputs/ru52-consistency.json').read_bytes()).hexdigest(),'frozen_source_sha256':inp['frozen_source_sha256'],'rows':accepted,'actual_review_stages':proof,'book_release':False});print('ACTUAL_CONSISTENCY_CORRECTIONS_AND_SOURCE_COMPARISON_PASS',len(accepted))
