@@ -3,8 +3,10 @@ from pathlib import Path
 import json,hashlib,re
 
 def sha(s):return hashlib.sha256(s.encode()).hexdigest()
-def decoded(response):
- text='\n'.join(c['text'] for c in response['content'] if c.get('type')=='text');return json.JSONDecoder().raw_decode(text[text.index('{'):])[0]
+def decoded(response,strict=False):
+ text='\n'.join(c['text'] for c in response['content'] if c.get('type')=='text');
+ if text.strip().startswith('```'):text=text.strip().split('\n',1)[1].rsplit('```',1)[0]
+ return json.loads(text) if strict else json.JSONDecoder().raw_decode(text[text.index('{'):])[0]
 def sid(row):return row.get('source_id',row.get('id'))
 def qualify_unit(root,source,unit,output_name="ru59-original"):
  root=Path(root);u=next(x for x in source if x['unit']==unit);folder=root/f'results/{output_name}/{unit:03}';chapter=json.loads((folder/'chapter.reviewed.json').read_text());assert 'CORRECTION_COMPARISON_COMPLETE' in chapter['state']
@@ -39,7 +41,7 @@ def qualify_unit(root,source,unit,output_name="ru59-original"):
   request=requests[-1];body=json.loads(request.read_text());payload=json.loads(body['messages'][0]['content']);frozen=payload['source_rows'];protected=payload.get('protected_source_native_rows',[])
   assert [r['id'] for r in frozen]==active and [r['id'] for r in protected]==[i for i in ids if i in native],'ACTUAL_EDITABLE_AND_NATIVE_SOURCE_COVERAGE'
   assert [r['target'] for r in payload['final_rows']]==[r['target'] for r in rows if r['source_id'] not in native],'ACTUAL_REQUEST_TARGETS'
-  response=json.loads(request.with_name(request.name.replace('.request.json','.response.json')).read_text());assert response['model']==last['api']['actual_model']=='claude-sonnet-5-5';assert response['id']==last['api']['response_id'] and response['stop_reason']=='end_turn';raw=decoded(response)
+  response=json.loads(request.with_name(request.name.replace('.request.json','.response.json')).read_text());assert response['model']==last['api']['actual_model']=='claude-sonnet-5-5';assert response['id']==last['api']['response_id'] and response['stop_reason']=='end_turn';raw=decoded(response,True)
   assert [sid(r) for r in raw['rows']]==active and [r['target'] for r in raw['rows']]==[r['target'] for r in rows if r['source_id'] not in native],'ACTUAL_RESPONSE_TARGETS'
   assert [sid(r) for r in raw['review']]==active and all(verdict(r) for r in raw['review']),'ACTUAL_PROVIDER_FINAL_VERDICTS'
   supplied={r['id']:r for r in frozen+protected};assert set(supplied)==set(ids)
