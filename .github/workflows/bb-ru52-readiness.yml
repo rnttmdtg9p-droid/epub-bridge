@@ -1,0 +1,29 @@
+name: BB Russian52 original translation service readiness
+on:
+  push:
+    paths: [".github/workflows/bb-ru52-readiness.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-ru52-service-readiness-v5070
+  cancel-in-progress: false
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check authorized services without exposing credentials
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru52_service_readiness.py
+      - name: Preserve exact readiness evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru52-service-readiness-v5070
+          path: results/ru52-readiness/
+          retention-days: 90
