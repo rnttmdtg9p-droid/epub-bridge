@@ -1,0 +1,62 @@
+name: BB Russian 75 remaining fixed native source images
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-native-source-art-recovery3.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  recover-remaining:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Restore actual source metadata and preserved original bytes
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 40229181516
+          name: ru75-native-source-art-recovery2
+          path: evidence
+      - name: Recover remaining source identities once with conservative pacing
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib,urllib.request,urllib.error,urllib.parse,time,datetime
+          root=Path('evidence');art=root/'art';art.mkdir(exist_ok=True);records=[]
+          for p in sorted((root/'metadata').glob('commons-*.json')):
+              for item in json.loads(p.read_text())['query']['pages'].values(): records.append(dict(title=item['title'],**item['imageinfo'][0]))
+          assert len(records)==79
+          # These25 exact identities are already native-hash-verified in the
+          # active project. Do not request them again.15 are in the restored
+          # artifact;10 more are held in the current source-bound workspace.
+          known={'File:Cinq Semaines en ballon '+f'{i:03}'+('.jpg' if i==12 else '.png') for i in range(1,26)}
+          pending=sorted([r for r in records if r['title'] not in known],key=lambda r:r['title'])
+          assert len(pending)==54
+          data=dict(rank=75,state='RUNNING_FIXED54_REMAINING_SOURCE_IMAGES',source_identities=79,already_verified_outside_this_attempt=25,request_limit=54,attempts_per_file=1,pacing_seconds=20,records=[],failures=[],release_ready=False)
+          path=root/'remaining-native-acquisition.json'
+          def save():
+              data['updated_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat();path.write_text(json.dumps(data,ensure_ascii=False,indent=2))
+          save()
+          for r in pending:
+              name=urllib.parse.unquote(urllib.parse.urlsplit(r['url']).path.rsplit('/',1)[1])
+              req=urllib.request.Request(r['url'],headers={'User-Agent':'BoundaryBaySourceVerification/1.0'})
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as response: b=response.read()
+                  assert len(b)==r['size'] and hashlib.sha1(b).hexdigest()==r['sha1']
+                  (art/name).write_bytes(b)
+              except Exception as error:
+                  data['failures'].append(dict(title=r['title'],error_type=type(error).__name__,http_status=getattr(error,'code',None),retry_after=getattr(error,'headers',{}).get('Retry-After')))
+                  data['state']='PAUSED_SOURCE_RESPONSE_NO_RETRY_REQUESTS_STOPPED_GLOBALLY';save();print(data['state'],r['title'],getattr(error,'code',None),flush=True);break
+              data['records'].append(dict(title=r['title'],file_name=name,bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),sha1=r['sha1'],native_width=r['width'],native_height=r['height'],source_url=r['url'],rights_metadata=r.get('extmetadata'),state='NATIVE_BYTES_VERIFIED'))
+              save();print('NEW_NATIVE_SOURCE_FILE',len(data['records']),'OF54',name,flush=True);time.sleep(20)
+          else: data['state']='COMPLETE54_REMAINING_NATIVE_SOURCE_FILES_REQUIRES_LOCAL79_FILE_JOIN_AND_QUALIFICATION';save()
+          PY
+      - name: Preserve every actually recovered file and service finding
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-native-source-art-recovery3
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
