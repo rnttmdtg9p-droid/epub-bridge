@@ -35,7 +35,8 @@
     "independent_verification_head_sha": "cfffb8b197a8caf35e5e62635748e3ba1252586d",
     "superseded_verification_only_run": 40179759821,
     "superseded_verification_cancelled": true,
-    "active_paid_review_not_cancelled": true
+    "active_paid_review_not_cancelled": true,
+    "independent_verification_client_commit": "3a6ef12910c984d66909bd124f3362b31716a6d3"
   },
   "workspace_failure": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
   "preserved_provisional_checks": {
@@ -71,5 +72,6 @@
     "Run all final-byte source,semantic,resource,source-format,opening,full6480-profile,actual-visual,cover,art,notes/navigation,EPUBCheck andGOV13checks. All24releasegatesrequiretrueAIreviewPASS.",
     "Resolve final4existing native identities/versions; save,verify every nativefile andEvidence-indexpayload; actually link all4before canonical releasecountor advancement72.",
     "Continue sequentially to rank72 only after71durablefinalclosure."
-  ]
+  ],
+  "final_evidence_source_selection": "Do not republish complete protected modern news articles or explanatory web guides in the final Evidence archive. Retain source URLs, retrieval/hash receipts, relevant factual paraphrases and bounded compliant excerpts; original public-domain book/art and permissively licensed required source material remain separately accounted. Full internal research receipts are not falsely described as publication content."
 }
