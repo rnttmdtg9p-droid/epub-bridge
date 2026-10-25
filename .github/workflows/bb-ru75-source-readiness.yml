@@ -1,0 +1,48 @@
+name: BB Russian 75 original source and approved connection readiness
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-source-readiness.yml'
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Recover source witness and check existing DeepL access
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: |
+          mkdir -p evidence
+          python3 - <<'PY'
+          import urllib.request, urllib.error, json, hashlib, os, datetime
+          from pathlib import Path
+          out=Path('evidence'); records=[]
+          sources=[('wikisource-1863-toc.html','https://fr.wikisource.org/wiki/Cinq_Semaines_en_ballon'),('wikisource-1863-full.html','https://fr.wikisource.org/wiki/Cinq_Semaines_en_ballon/Texte_entier'),('gutenberg-metadata.html','https://www.gutenberg.org/ebooks/4548')]
+          for name,url in sources:
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBaySourceVerification/1.0 (single title edition recovery)'})
+                  with urllib.request.urlopen(req,timeout=90) as r: data=r.read()
+                  (out/name).write_bytes(data); records.append(dict(name=name,url=url,bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),state='RETRIEVED'))
+              except Exception as e:records.append(dict(name=name,url=url,state='FETCH_FAILED',error_type=type(e).__name__,http_status=getattr(e,'code',None)))
+          key=os.environ.get('DEEPL_AUTH_KEY','').strip();ready=dict(key_configured=bool(key),translation_requests=0)
+          if key:
+              host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
+              req=urllib.request.Request(host+'/v2/usage',headers={'Authorization':'DeepL-Auth-Key '+key})
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as r: usage=json.load(r)
+                  ready.update(state='AUTHENTICATED_USAGE_READINESS_PASS',usage=usage)
+              except Exception as e:ready.update(state='READINESS_FAILED',error_type=type(e).__name__,http_status=getattr(e,'code',None))
+          else:ready['state']='MISSING_APPROVED_DEEPL_CONNECTION'
+          result=dict(rank=75,master='5.0.70',retrieved_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),sources=records,deepl=ready,release_ready=False)
+          (out/'readiness.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False))
+          PY
+      - name: Preserve actual source and readiness evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-source-readiness
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
