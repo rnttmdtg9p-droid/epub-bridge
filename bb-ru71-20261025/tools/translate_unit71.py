@@ -26,7 +26,8 @@ def contract(source,target):
  a=E.fromstring(source);b=E.fromstring(target)
  if a.tag!='p' or b.tag!='p':raise ValueError('PARAGRAPH_XML_ROOT_CHANGED')
  from collections import Counter
- if Counter(x.tag for x in a.iter())!=Counter(x.tag for x in b.iter()):raise ValueError('SOURCE_INLINE_TAG_COUNTS_CHANGED')
+ source_tags=Counter(x.tag for x in a.iter());target_tags=Counter(x.tag for x in b.iter());findings=[]
+ if source_tags!=target_tags:findings.append(dict(kind='SOURCE_INLINE_MARKUP_REPAIR_REQUIRED',source_tags=dict(source_tags),target_tags=dict(target_tags),state='UNRESOLVED_BLOCKS_FINAL_RELEASE',reason='Provider may omit or fragment emphasis; complete source-aligned AI review must repair or evidence semantic preservation. Raw response retained; not an inline PASS.'))
  if [(x.get('n'),x.text) for x in a.iter('bbnote')]!=[(x.get('n'),x.text) for x in b.iter('bbnote')]:raise ValueError('SOURCE_NOTE_REFERENCES_CHANGED')
  def plaintext(n):
   value=n.text or ''
@@ -35,7 +36,7 @@ def contract(source,target):
   return value
  text=plaintext(b).strip()
  if not text:raise ValueError('EMPTY_TARGET')
- return text
+ return text,findings
 save()
 try:
  usage=call('/v2/usage');remaining=sum(len(r['source']) for r in data['rows'] if not r.get('target_xml'))
@@ -47,17 +48,21 @@ try:
   context='Jerome K. Jerome, Three Men in a Boat (1889). First-person British comic narrative with dry irony and lyrical river descriptions. Chapter: '+unit['source_heading']+'. Terminology: George — Джордж; Harris — Гаррис; Montmorency — Монморанси; Thames — Темза; Mrs. Poppets — миссис Поппетс. Surrounding original source, for context only:\n'+'\n\n'.join(r['source'] for r in unit['rows'][max(0,start-3):min(len(unit['rows']),start+11)])
   payload=dict(text=[r['source_xml'] for r in pending],source_lang='EN',target_lang='RU',model_type='quality_optimized',context=context,tag_handling='xml',tag_handling_version='v2',split_sentences='nonewlines',ignore_tags=['bbnote'],non_splitting_tags=['em','bbnote'])
   serialized=json.dumps(payload,ensure_ascii=False);assert len(serialized.encode())<128*1024
-  answer=call('/v2/translate',payload);translations=answer.get('translations',[])
+  cached=next((b for b in reversed(data['batches']) if b.get('ids')==[r['id'] for r in pending] and b.get('state')=='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING' and b.get('request_sha256')==H(serialized)),None)
+  answer=cached['response'] if cached else call('/v2/translate',payload);translations=answer.get('translations',[])
   if len(translations)!=len(pending):raise RuntimeError('SOURCE_TARGET_ROW_COUNT_MISMATCH')
-  exchange=dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(context),response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING');data['batches'].append(exchange);save()
+  exchange=cached if cached else dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(context),response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING')
+  if cached:exchange['reused_preserved_response_without_retranslation']=True
+  else:data['batches'].append(exchange)
+  save()
   accepted=[]
   for row,value in zip(pending,translations):
    model=value.get('model_type_used');version=value.get('tag_handling_version');target=value.get('text','').strip()
    if model!='quality_optimized':raise RuntimeError('RETURNED_MODEL_NOT_CONFIRMED_QUALITY_OPTIMIZED')
-   text=contract(row['source_xml'],target);accepted.append(dict(target=text,target_xml=target,target_sha256=H(text),target_xml_sha256=H(target),model_type_used=model,tag_handling_version_used=version,detected_source_language=value.get('detected_source_language')))
+   text,findings=contract(row['source_xml'],target);accepted.append(dict(inline_markup_findings=findings,inline_markup_state='REPAIR_REQUIRED_BLOCKS_RELEASE' if findings else 'COUNTS_PRESERVED_FULL_SEMANTIC_REVIEW_STILL_REQUIRED',target=text,target_xml=target,target_sha256=H(text),target_xml_sha256=H(target),model_type_used=model,tag_handling_version_used=version,detected_source_language=value.get('detected_source_language')))
   for row,value in zip(pending,accepted):row.update(value)
-  exchange.update(state='PASS_ALL_ROWS_ACCEPTED',source_to_target_count_equal=True,inline_contract='PASS_TAG_COUNTS_NOTE_MARKERS_AND_NONEMPTY_TEXT')
+  exchange.update(state='ALL_PROVIDER_ROWS_PRESERVED_FOR_MANDATORY_AI_REVIEW',source_to_target_count_equal=True,inline_contract='REPAIR_REQUIRED_BLOCKS_RELEASE' if any(r.get('inline_markup_findings') for r in pending) else 'PASS_TAG_COUNTS_NOTE_MARKERS_AND_NONEMPTY_TEXT')
   save();print('TRANSLATED',uid,min(start+8,len(data['rows'])),'OF',len(data['rows']),flush=True)
- assert all(r.get('target_xml') and r.get('model_type_used')=='quality_optimized' for r in data['rows']);data['state']='COMPLETE_TRANSLATION_DRAFT_REQUIRES_COMPLETE_AI_REVIEW';data['fidelity_review']='NOT_RUN';data['literary_review']='NOT_RUN';save();print('AUTHENTIC_UNIT_COMPLETE_DRAFT',index,uid,len(data['rows']),flush=True)
+ assert all(r.get('target_xml') and r.get('model_type_used')=='quality_optimized' for r in data['rows']);data['state']='COMPLETE_TRANSLATION_DRAFT_REQUIRES_COMPLETE_AI_REVIEW';data['fidelity_review']='NOT_RUN';data['literary_review']='NOT_RUN';data['inline_markup_findings']=[dict(id=r['id'],findings=r.get('inline_markup_findings',[])) for r in data['rows'] if r.get('inline_markup_findings')];data['release_ready']=False;save();print('AUTHENTIC_UNIT_COMPLETE_DRAFT',index,uid,len(data['rows']),flush=True)
 except Exception as e:
  data['state']='TRANSLATION_UNIT_PENDING_RECOVERY';data['error_type']=type(e).__name__;data['error_code']=str(e) if isinstance(e,(RuntimeError,ValueError)) else 'SANITIZED_PROVIDER_OR_RUNTIME_FAILURE';save();print('UNIT_PENDING_RECOVERY',uid,data['error_type'],data['error_code'],flush=True);raise SystemExit(1)
