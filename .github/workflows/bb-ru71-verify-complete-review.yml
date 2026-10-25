@@ -1,0 +1,29 @@
+name: BB Russian71 independent complete native review verification
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru71-verify-complete-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile the independent verification client
+        run: python3 -m py_compile bb-ru71-20261025/tools/verify_complete_review71.py
+      - name: Wait for complete review then verify all40 native provider archives and all1417 source aligned rows
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 bb-ru71-20261025/tools/verify_complete_review71.py
+      - name: Preserve complete source aligned review and native verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-complete-native-reviewed-translation-verification
+          path: verified-review/
+          if-no-files-found: warn
+          retention-days: 90
