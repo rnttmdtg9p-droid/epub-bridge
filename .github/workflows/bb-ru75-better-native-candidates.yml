@@ -1,0 +1,60 @@
+name: BB Russian75 finite better-native portrait and image candidates
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-better-native-candidates.yml'
+permissions:
+  contents: read
+jobs:
+  finite-source-candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Fetch exact finite original-file metadata and candidate bytes once
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,urllib.request,urllib.parse,hashlib,time,datetime
+          root=Path('evidence');root.mkdir();(root/'art').mkdir()
+          titles=['File:Jules Verne by Étienne Carjat.jpg','File:Jules Verne by Étienne Carjat.png','File:Jules Verne by Étienne Carjat - Original.jpg','File:Cinq Semaines en ballon 012.png','File:Cinq Semaines en ballon 033.png','File:Cinq Semaines en ballon 044.png','File:Cinq Semaines en ballon 079.png','File:Verne, Jules - Cinq semaines en ballon, pages 180-181.png']
+          def api(params):
+              u='https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(dict(action='query',format='json',**params))
+              with urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'BoundaryBaySourceVerification/1.0'}),timeout=60) as response:return json.load(response)
+          meta=api(dict(titles='|'.join(titles),prop='imageinfo',iiprop='url|size|sha1|extmetadata',iilimit=1))
+          (root/'075_Better_Candidates_Commons_Metadata.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
+          history=api(dict(titles=titles[-1],prop='imageinfo',iiprop='url|size|sha1|timestamp|comment',iilimit=50))
+          (root/'075_Route_Map_Native_History.json').write_text(json.dumps(history,ensure_ascii=False,indent=2))
+          data=dict(rank=75,state='RUNNING_FINITE_BETTER_NATIVE_CANDIDATES',initial79_source_list_complete=True,max_new_file_requests=8,pacing_seconds=65,attempts_per_file=1,records=[],missing=[],failures=[],release_ready=False)
+          out=root/'075_Better_Native_Candidate_Acquisition.json'
+          def save():data['updated_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat();out.write_text(json.dumps(data,ensure_ascii=False,indent=2))
+          pending=[]
+          for p in meta['query']['pages'].values():
+              if not p.get('imageinfo'):data['missing'].append(dict(title=p['title'],state='SOURCE_FILE_IDENTITY_ABSENT_NO_RETRY'));continue
+              if p['title']==titles[-1]:continue
+              pending.append(dict(title=p['title'],**p['imageinfo'][0]))
+          hist=next(iter(history['query']['pages'].values()))['imageinfo'];best=max(hist,key=lambda x:x['width']*x['height']);current=hist[0]
+          data['map_history_current_dimensions']=[current['width'],current['height']];data['map_history_best_dimensions']=[best['width'],best['height']]
+          if best['width']*best['height']>current['width']*current['height']:pending.append(dict(title=titles[-1]+' / highest native history revision',output_name='075_Route_Map_Highest_Native_History.png',**best))
+          assert len(pending)<=8;save()
+          for n,r in enumerate(pending):
+              name=r.get('output_name') or urllib.parse.unquote(urllib.parse.urlsplit(r['url']).path.rsplit('/',1)[1])
+              try:
+                  req=urllib.request.Request(r['url'],headers={'User-Agent':'BoundaryBaySourceVerification/1.0'})
+                  with urllib.request.urlopen(req,timeout=120) as response:b=response.read()
+                  assert len(b)==r['size'] and hashlib.sha1(b).hexdigest()==r['sha1']
+                  (root/'art'/name).write_bytes(b)
+              except Exception as error:
+                  data['failures'].append(dict(title=r['title'],error_type=type(error).__name__,http_status=getattr(error,'code',None),retry_after=getattr(error,'headers',{}).get('Retry-After')));data['state']='PAUSED_SOURCE_RESPONSE_ALL_REQUESTS_STOPPED_NO_RETRY';save();print(data['state'],flush=True);break
+              data['records'].append(dict(title=r['title'],file_name=name,bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),sha1=r['sha1'],native_width=r['width'],native_height=r['height'],source_url=r['url'],rights_metadata=r.get('extmetadata'),state='NATIVE_BYTES_VERIFIED_CANDIDATE_NOT_YET_ACCEPTED'))
+              save();print('NATIVE_CANDIDATE',len(data['records']),name,flush=True)
+              if n+1<len(pending):time.sleep(65)
+          else:data['state']='COMPLETE_FINITE_SOURCE_CANDIDATE_BYTES_REQUIRES_PIXEL_ROLE_RIGHTS_QUALIFICATION';save()
+          PY
+      - name: Preserve every candidate and actual source finding
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-better-native-candidates
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
