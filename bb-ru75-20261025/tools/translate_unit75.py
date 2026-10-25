@@ -59,6 +59,18 @@ def restore_note_identity(source,raw):
  expected=[(n.get('n'),n.text) for n in E.fromstring(source).iter('bbnote')]
  if not expected:return raw,[]
  before=H(raw);root=E.fromstring(raw);repairs=[]
+ opaque=re.findall(r'BBNOTE_REF_(\d{4})_Z',raw)
+ if opaque:
+  if [str(int(n)) for n in opaque]!=[n for n,t in expected]:raise ValueError('OPAQUE_NOTE_IDENTITY_SEQUENCE_CHANGED')
+  # v2 may fragment an ignored wrapper around translated lexical text. Strip
+  # only that wrapper, preserving every text character and all other tags;
+  # the unique unchanged opaque tokens still fix each callout's position.
+  raw=re.sub(r'</?bbnote\b[^>]*>','',raw)
+  for n,t in expected:raw=raw.replace('BBNOTE_REF_'+n.zfill(4)+'_Z',f'<bbnote n="{n}">{n}</bbnote>',1)
+  root=E.fromstring(raw)
+  if [(n.get('n'),n.text) for n in root.iter('bbnote')]!=expected:raise ValueError('RESTORED_OPAQUE_NOTE_IDENTITY_MISMATCH')
+  repairs.append(dict(operations=['UNWRAP_FRAGMENTED_PROVIDER_NOTE_TAGS_WITH_ALL_LEXICAL_TEXT_UNCHANGED','RESTORE_CANONICAL_CALLOUT_AT_EVERY_UNIQUE_OPAQUE_TOKEN'],provider_raw_target_sha256=before,canonical_target_xml_sha256=H(raw),scope='NOTE_LINK_IDENTITIES_ONLY_NO_TRANSLATED_WORD_CHANGES_NO_LITERARY_PASS'))
+  return raw,repairs
  for n in root.iter('bbnote'):
   value='BBNOTE_REF_'+str(n.get('n')).zfill(4)+'_Z'
   if n.text==value:n.text=n.get('n');repairs.append('OPAQUE_TOKEN_INSIDE_NOTE_TAG_TO_CANONICAL_MARKER')
