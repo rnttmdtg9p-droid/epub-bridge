@@ -1,0 +1,124 @@
+{
+  "rank": 75,
+  "master": "5.0.70",
+  "master_sha256": "c5e27e97c2b6a4a2cd6cac37c3b41698b2078e1321dc071d5505ce7abd48ca6f",
+  "state": "PASS_VERIFIED_ORIGINAL_COMPLETE_EXTENT_AND_REUSE_BASIS",
+  "accepted_utc": "2026-10-25T20:09:46.473889+00:00",
+  "original": {
+    "title": "Cinq Semaines en ballon",
+    "author": "Jules Verne",
+    "author_life": "1828–1905",
+    "language": "French",
+    "first_publication": 1863,
+    "selected_edition": "J. Hetzel et Cie, Paris; undated illustrated title page; Robarts catalogue [1867?]",
+    "edition_metadata_conflict": "Wikisource labels 1863; selected print title page is undated. Do not describe this scan as the 1863 first edition.",
+    "repository": "French Wikisource scan-linked transcription and Commons DjVu from Robarts/University of Toronto, IA cinqsemainesenba00vernuoft",
+    "source_url": "https://fr.wikisource.org/wiki/Cinq_Semaines_en_ballon/Texte_entier",
+    "source_permanent_url": "https://fr.wikisource.org/w/index.php?title=Cinq_Semaines_en_ballon/Texte_entier&oldid=6710530",
+    "source_document_sha256": "ff9a50ad932e1830c1fab826f2788748d5f706a4abde4cf2b9ee8fa51a4c46b1",
+    "source_document_bytes": 741372,
+    "print_scan_sha256": "387debbcd507cea1dc47231776dd396165b3db4c79533e7b175366d8aaf4a0ec",
+    "print_scan_bytes": 8991503,
+    "print_scan_pages": 271,
+    "reading_extent": "printed pages1–259, 44 chapters; genuine source notes and concluding geographic postscript retained",
+    "territory": "US_ONLY",
+    "reuse_basis": "Historical French original and nineteenth-century illustrated print are public domain in the United States. Project Gutenberg record4548 independently confirms US public-domain work status. The selected modern Wikisource transcription explicitly offers CC BY-SA4.0; retain source/permanent/history links, contributor attribution, change notice and share-alike treatment for any protectable transcription/adaptation contribution. No worldwide clearance or automatic public-domain status of the new translation is claimed.",
+    "attribution": "Jules Verne; French Wikisource contributors, linked permanent version and page histories; J. Hetzel et Cie source edition; Riou and de Montaut for separately qualified illustrations."
+  },
+  "extent_witness": {
+    "independent_repository": "Project Gutenberg4548",
+    "independent_document_sha256": "64ac01aab062680dcf3bb001d70d003733a6c91908f645abddc28bf7802d683f",
+    "chapters": 44,
+    "first_heading": "CHAPITRE I",
+    "last_heading": "CHAPITRE XLIV",
+    "selected_headings": 44,
+    "selected_arguments": 44,
+    "source_body_paragraphs": 2679,
+    "selected_text_rows": 2905,
+    "notes": 59,
+    "source_map_sha256": "b3c1bf7f34feb2981ea806e7fa7d4f3eab12579dfc44ca58712b45b330c1fcfc",
+    "source_unit_bundle": {
+      "units": 45,
+      "chapters": 44,
+      "rows": 2905,
+      "packed_sha256": "222c58cb97f22e3fcc14b393cb18e31bc6b2739824e0edc95a5688a02340e6fe",
+      "raw_sha256": "1871258ad2a71df08058742aa2212dafe109e38fba54e2b0c5b616af02fb22c6",
+      "packed_bytes": 542474
+    },
+    "pixel_review": [
+      {
+        "scan_page": 3,
+        "sha256": "b6bb615c87fc5890e73f904c6761029e79be4c40224bac0f217e4c4265f34a49",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 5,
+        "sha256": "5c100b8943cc72d384bdfb1cc7c525c80a8754ce8228617fdc36c22803f1c3df",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 263,
+        "sha256": "81637d12db39041ae8d2804dd99b85884b739e13db51095858a4ded83e702867",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 265,
+        "sha256": "dc11e762ddad2945cbc316002c11e3d275976af98ab24f2eb25f17b78528360b",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 266,
+        "sha256": "839b9d4fdda8c235cd5afcb9ac6aafb93242833e7034f8e2a626c39b0510b13c",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 267,
+        "sha256": "ee39dafd8564813a6eae6395d7473a9d8605d859c1424bc48292f0fa7116463b",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 268,
+        "sha256": "b92b4f8c776d608d47c40f4115eb85087db9ad87d5e7f55c33fdf2ec7dc85a69",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 269,
+        "sha256": "170bccf5f21b837c069ad0243891f75c58e63bbd691052c02f53d200d4a3181e",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 270,
+        "sha256": "36d1c6a1977ee707123babf4a6b85d81954d428c59d65cc969218c6d0625e460",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      },
+      {
+        "scan_page": 271,
+        "sha256": "bbb18b3c28f48e5d895a0ba9de7d0792c3f893e4d0b6e77c5fffb4deaf387ec6",
+        "disposition": "ACTUALLY_VIEWED_TITLE_OPENING_ENDING_OR_COMPLETE_CONTENTS"
+      }
+    ],
+    "print_toc": "All44 ordered divisions actually viewed. Printed TOC abbreviates some arguments and contains page-number differences; principal unit identities agree. Do not overwrite the full chapter-opening arguments from abbreviated TOC.",
+    "spatial_source": "Chapter7 table has two three-row grouping braces, weights and total4000. Chapter30 double-page image is a geographic route map, not omitted prose; retain as meaningful spatial image and provide accessible description."
+  },
+  "target_rejection": {
+    "state": "TARGET_LANGUAGE_COPYRIGHT_SOURCE_UNVERIFIED_TRANSLATE_AUTOMATICALLY",
+    "rejected_library_id": "libfile_6a928ea4ac1c8191aa78a6d0ddd7c3d8",
+    "rejected_source_checkpoint_sha256": "9c57d1b2efdc503c90caca909597c56e48ad7ffb8606cfaec75bd2d6942b72cd",
+    "finding": "Frozen Beketova derivative has unresolved selected-version/editorial rights and known print/digital variants. Retained immutable only. It is not input to this translation.",
+    "bounded_research": "PRESERVED_NOT_RESTARTED",
+    "extra_whole_print_comparison": "WAIVED_BY_EXISTING_USER_DIRECTIVE_NOT_REIMPOSED"
+  },
+  "provider": {
+    "selected": "DeepL",
+    "requested_model": "quality_optimized",
+    "readiness": "AUTHENTICATED_USAGE_READINESS_PASS",
+    "readiness_run": 40228485330,
+    "route": "rnttmdtg9p-droid/epub-bridge isolated branch bb-ru75-production-20261025-a; existing DEEPL_AUTH_KEY repository secret",
+    "no_local_credentials": true,
+    "new_subscription_or_limit_change": false,
+    "translation_terms": "DeepL Pro current terms7.4–7.5: customer retains content/processed-content rights; DeepL assumes no translation copyright and assigns any accruing rights. This does not establish statutory copyright in AI output or erase source licence obligations.",
+    "terms_url": "https://www.deepl.com/en/pro-license",
+    "review_restriction": "User12October2026: Claude only for initial translation when no copyright-free translation is available; no Claude literary review, correction verification, QA, or reprocessing. Use actual in-thread Codex review unless another authorized non-Claude reviewer connection is verified."
+  },
+  "release_ready": false
+}
