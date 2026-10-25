@@ -1,0 +1,75 @@
+{
+  "rank": 71,
+  "state": "CONTINUATION_REMOTE_AI_REVIEW_AND_INDEPENDENT_NATIVE_VERIFICATION_LOCAL_WORKSPACE_UNAVAILABLE",
+  "title": "Трое в лодке, не считая собаки",
+  "master_version": "5.0.70",
+  "master_sha256": "c5e27e97c2b6a4a2cd6cac37c3b41698b2078e1321dc071d5505ce7abd48ca6f",
+  "source_document_sha256": "ce89228f73983326dc0a3a4c368caa4002741ae7dea168ba114829615493e1f3",
+  "source_rows": 1417,
+  "source_units": 20,
+  "counts": {
+    "released": 66,
+    "historical_saved": 112,
+    "initial_remaining": 74,
+    "active_rank": 71
+  },
+  "released": false,
+  "checkpoint_is_stop_condition": false,
+  "last_durably_verified_working_checkpoint": {
+    "version": 4,
+    "sha256": "0a11bf8275a4e7f145cbddf2f958339f6d594f5160dee32ee87b3eb25f4a971a",
+    "bytes": 145575736,
+    "payloads": 586,
+    "complete_review_units": 8,
+    "complete_review_rows": 493
+  },
+  "last_durably_verified_canonical": {
+    "version": 3513,
+    "sha256": "b5dc734a5b9b6a663ce9c1fcb487052866b7a73d34115f30e9c613b02bf79617"
+  },
+  "remote": {
+    "complete_deepl_run": 40169507560,
+    "complete_review_run": 40173299575,
+    "review_head_sha": "d6bb728368260604491080e6c129d8571873dfa8",
+    "independent_verification_run": 40179928431,
+    "independent_verification_head_sha": "cfffb8b197a8caf35e5e62635748e3ba1252586d",
+    "superseded_verification_only_run": 40179759821,
+    "superseded_verification_cancelled": true,
+    "active_paid_review_not_cancelled": true
+  },
+  "workspace_failure": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
+  "preserved_provisional_checks": {
+    "full_book_render_cases": 6480,
+    "geometry_errors": 0,
+    "images": 69,
+    "fonts": 9,
+    "xhtml": 31,
+    "initial_fixture_profiles": 3240,
+    "toc_mouse_clicks": 1958,
+    "note_chains": 432,
+    "note_mouse_clicks": 864,
+    "actual_container_controls": 17,
+    "actual_corrupt_epubs_blocked": 27,
+    "qualification": "PROVISIONAL_DRAFT_ONLY_FINAL_REVIEWED_TARGET_BYTES_MUST_BE_REBUILT_AND_RECHECKED"
+  },
+  "post_checkpoint_changes_to_recover_or_reapply": [
+    "Strict source block and complete spine order; authenticate every literary text node; validate actual preceding-paragraph art anchors and exact captions/alt; integrate canonical headings/nav and note graph into source audit.",
+    "Full and partial source text visibility in production geometry; actual-format alignment and responsive logical-indent spacers for15source display rows.",
+    "Body source-display roles and logical-line/space attributes; remove spurious top margin from unnumbered primary name; preserve 14body-em default inset.",
+    "Visible1..2note labels and accessible callouts with exact accepted note text and reciprocal links.",
+    "New BBSourceSymbols/DejaVu license credit while retaining exact supplied license/font bytes.",
+    "Complete native1417row AI review freeze and explicit21raw-inline-finding closure ledger; independently enforce all173sourceem spans,28br,2notemarkers.",
+    "Final complete-source opening oracle; GOV13expected20units180corewidth/scalecases16negativecontrols; native-readerdeferralonly.",
+    "Canada portrait reuse: proven1906publication gives pre1949creationbound; UBCspecialphoto-termguide plus1997section54.1/2012section59no-revival and CIPO2022extension rules; no invented photographer first name. Jerome1927andFrederics/FrederickArthurHipp1929oldlife+50expired. Final scopeCA/US,notworldwide.",
+    "Final preparation code exists in unavailable workspace; post-checkpoint code is not falsely represented as already in the durable working ZIP."
+  ],
+  "final_required_sequence": [
+    "Finish remote complete20unitreview and independent40artifactbyte/model/source/inline/correctionverification without newtranslationrequests.",
+    "When execution workspace becomes available, recover latest verified checkpoint and every new native review artifact; reapply post-checkpoint code as needed; independently freeze all1417acceptedtargetrows.",
+    "Rebuild all30linearresources/31XHTMLwith65nativeillustrationsonceinprogrammeorder,2authorialnotes,ninefonts,correctnewtranslationcovercredit,exactapprovedDiscovery/afterword;omitunauthenticatedfrontispiece.",
+    "Remeasure all20actual reviewed opening leads at3widths before initial insertion; apply source-first two-line BB initials and measured default14em/height adaptation.",
+    "Run all final-byte source,semantic,resource,source-format,opening,full6480-profile,actual-visual,cover,art,notes/navigation,EPUBCheck andGOV13checks. All24releasegatesrequiretrueAIreviewPASS.",
+    "Resolve final4existing native identities/versions; save,verify every nativefile andEvidence-indexpayload; actually link all4before canonical releasecountor advancement72.",
+    "Continue sequentially to rank72 only after71durablefinalclosure."
+  ]
+}
