@@ -1,0 +1,42 @@
+name: BB Russian 71 approved DeepL connection check
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru71-connection-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check approved connection and existing character quota
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,datetime
+          from pathlib import Path
+          out=Path("connection");out.mkdir()
+          key=os.environ.get("DEEPL_AUTH_KEY","").strip()
+          result={"rank":71,"purpose":"Approved provider connection and quota check only; no translation request","translation_requests":0,"checked_utc":datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          if not key:
+              result["state"]="MISSING_APPROVED_DEEPL_SECRET"
+          else:
+              host="https://api-free.deepl.com" if key.endswith(":fx") else "https://api.deepl.com"
+              req=urllib.request.Request(host+"/v2/usage",headers={"Authorization":"DeepL-Auth-Key "+key})
+              try:
+                  with urllib.request.urlopen(req,timeout=90) as response: usage=json.load(response)
+                  result.update(state="PASS_APPROVED_DEEPL_CONNECTION",character_count=usage.get("character_count"),character_limit=usage.get("character_limit"),character_usage_includes_source_not_context=True)
+              except urllib.error.HTTPError as e:result.update(state="DEEPL_HTTP_ERROR",http_status=e.code)
+              except Exception as e:result.update(state="DEEPL_NETWORK_ERROR",error_type=type(e).__name__)
+          (out/"071_Approved_DeepL_Connection_Check.json").write_text(json.dumps(result,indent=2))
+          print(json.dumps(result))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru71-approved-connection-check
+          path: connection/
+          retention-days: 30
