@@ -13,15 +13,28 @@ def save():
  data['updated_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat();tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(data,ensure_ascii=False,indent=2));tmp.replace(path)
 def call(endpoint,payload=None):
  req=urllib.request.Request(host+endpoint,data=json.dumps(payload,ensure_ascii=False).encode() if payload is not None else None,headers={'Authorization':'DeepL-Auth-Key '+key,'Content-Type':'application/json','X-DeepL-Reporting-Tag':'boundary-bay-ru71'})
+ cachekey=H(json.dumps(payload,ensure_ascii=False)) if payload is not None else None
+ if endpoint=='/v2/translate':
+  cached=next((x for x in data.get('provider_exchange_cache',[]) if x['request_sha256']==cachekey),None)
+  if cached:return cached['response']
  for attempt in range(5):
   try:
-   with urllib.request.urlopen(req,timeout=120) as response:return json.load(response)
+   with urllib.request.urlopen(req,timeout=120) as response:answer=json.load(response)
+   if endpoint=='/v2/translate':
+    data.setdefault('provider_exchange_cache',[]).append(dict(request_sha256=cachekey,response=answer));save()
+   return answer
   except urllib.error.HTTPError as e:
+   body=e.read(6000).decode(errors='replace').replace(key,'[REDACTED]');data.setdefault('provider_errors',[]).append(dict(endpoint=endpoint,http_status=e.code,message=body,request_sha256=cachekey));save()
    if e.code not in [429,500,502,503,504,529] or attempt==4:raise RuntimeError('DEEPL_HTTP_'+str(e.code)) from None
    delay=min(30,max(5,int(e.headers.get('Retry-After','5')) if str(e.headers.get('Retry-After','5')).isdigit() else 5)*(attempt+1));print('PROVIDER_RETRY_HTTP',e.code,'DELAY',delay,flush=True);time.sleep(delay)
   except (TimeoutError,urllib.error.URLError) as e:
    if attempt==4:raise RuntimeError('DEEPL_NETWORK_'+type(e).__name__) from None
    time.sleep(min(30,5*(attempt+1)))
+def translate(payload):
+ try:return call('/v2/translate',payload)
+ except RuntimeError as e:
+  if str(e)!='DEEPL_HTTP_400' or len(payload['text'])<=1:raise
+  size=len(payload['text']);middle=size//2;data.setdefault('request_recovery',[]).append(dict(reason='HTTP400_SPLIT_REJECTED_BATCH_WITH_SAME_MODEL_CONTEXT_AND_MARKUP_PARAMETERS',texts=size,parts=[middle,size-middle]));save();left={**payload,'text':payload['text'][:middle]};right={**payload,'text':payload['text'][middle:]};a=translate(left);b=translate(right);return dict(translations=a['translations']+b['translations'],batch_recovery='COMBINED_ORDERED_SUBREQUESTS_ALL_RAW_RESPONSES_SAVED')
 def contract(source,target):
  a=E.fromstring(source);b=E.fromstring(target)
  if a.tag!='p' or b.tag!='p':raise ValueError('PARAGRAPH_XML_ROOT_CHANGED')
@@ -49,7 +62,7 @@ try:
   payload=dict(text=[r['source_xml'] for r in pending],source_lang='EN',target_lang='RU',model_type='quality_optimized',context=context,tag_handling='xml',tag_handling_version='v2',split_sentences='nonewlines',ignore_tags=['bbnote'],non_splitting_tags=['em','bbnote'])
   serialized=json.dumps(payload,ensure_ascii=False);assert len(serialized.encode())<128*1024
   cached=next((b for b in reversed(data['batches']) if b.get('ids')==[r['id'] for r in pending] and b.get('state')=='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING' and b.get('request_sha256')==H(serialized)),None)
-  answer=cached['response'] if cached else call('/v2/translate',payload);translations=answer.get('translations',[])
+  answer=cached['response'] if cached else translate(payload);translations=answer.get('translations',[])
   if len(translations)!=len(pending):raise RuntimeError('SOURCE_TARGET_ROW_COUNT_MISMATCH')
   exchange=cached if cached else dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(context),response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING')
   if cached:exchange['reused_preserved_response_without_retranslation']=True
