@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,os,urllib.request,urllib.error,hashlib,sys,time,datetime,xml.etree.ElementTree as E
+import json,html,os,urllib.request,urllib.error,hashlib,sys,time,datetime,xml.etree.ElementTree as E
 H=lambda s:hashlib.sha256(s.encode()).hexdigest();index=int(sys.argv[1]);root=Path(__file__).resolve().parents[2];inputs=root/'bb-ru71-20261025/source';out=root/'translation/ru71';out.mkdir(parents=True,exist_ok=True);src=json.load(open(inputs/f'{index:02}.json'));unit=src['unit'];assert H(json.dumps(unit,ensure_ascii=False,sort_keys=True,separators=(',',':')))==src['unit_source_sha256'];assert all(H(r['source'])==r['source_sha256'] and H(r['source_xml'])==r['source_xml_sha256'] for r in unit['rows']);uid=unit['id'];path=out/f'{index:02}-{uid}.json';key=os.environ.get('DEEPL_AUTH_KEY','').strip()
 if not key:raise SystemExit('MISSING_APPROVED_DEEPL_CONNECTION')
 host='https://api-free.deepl.com' if key.endswith(':fx') else 'https://api.deepl.com'
@@ -59,12 +59,12 @@ try:
   batch=data['rows'][start:start+8];pending=[r for r in batch if not r.get('target_xml')]
   if not pending:continue
   context='Jerome K. Jerome, Three Men in a Boat (1889). First-person British comic narrative with dry irony and lyrical river descriptions. Chapter: '+unit['source_heading']+'. Terminology: George — Джордж; Harris — Гаррис; Montmorency — Монморанси; Thames — Темза; Mrs. Poppets — миссис Поппетс. Surrounding original source, for context only:\n'+'\n\n'.join(r['source'] for r in unit['rows'][max(0,start-3):min(len(unit['rows']),start+11)])
-  payload=dict(text=[r['source_xml'] for r in pending],source_lang='EN',target_lang='RU',model_type='quality_optimized',context=context,tag_handling='xml',tag_handling_version='v2',split_sentences='nonewlines',ignore_tags=['bbnote'],non_splitting_tags=['em','bbnote'])
+  payload=dict(text=[r['source_xml'] for r in pending],source_lang='EN',target_lang='RU',model_type='quality_optimized',context=html.escape(context,quote=False),tag_handling='xml',tag_handling_version='v2',split_sentences='nonewlines',ignore_tags=['bbnote'],non_splitting_tags=['em','bbnote'])
   serialized=json.dumps(payload,ensure_ascii=False);assert len(serialized.encode())<128*1024
   cached=next((b for b in reversed(data['batches']) if b.get('ids')==[r['id'] for r in pending] and b.get('state')=='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING' and b.get('request_sha256')==H(serialized)),None)
   answer=cached['response'] if cached else translate(payload);translations=answer.get('translations',[])
   if len(translations)!=len(pending):raise RuntimeError('SOURCE_TARGET_ROW_COUNT_MISMATCH')
-  exchange=cached if cached else dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(context),response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING')
+  exchange=cached if cached else dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(payload['context']),plain_context_sha256=H(context),context_xml_escaped=True,response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING')
   if cached:exchange['reused_preserved_response_without_retranslation']=True
   else:data['batches'].append(exchange)
   save()
@@ -76,6 +76,8 @@ try:
   for row,value in zip(pending,accepted):row.update(value)
   exchange.update(state='ALL_PROVIDER_ROWS_PRESERVED_FOR_MANDATORY_AI_REVIEW',source_to_target_count_equal=True,inline_contract='REPAIR_REQUIRED_BLOCKS_RELEASE' if any(r.get('inline_markup_findings') for r in pending) else 'PASS_TAG_COUNTS_NOTE_MARKERS_AND_NONEMPTY_TEXT')
   save();print('TRANSLATED',uid,min(start+8,len(data['rows'])),'OF',len(data['rows']),flush=True)
+ if data.get('error_code'):
+  data.setdefault('prior_interruption_dispositions',[]).append(dict(error_code=data.pop('error_code'),error_type=data.pop('error_type',None),disposition='TRANSPORT_RESUMED_DRAFT_STILL_REQUIRES_COMPLETE_AI_REVIEW_AND_ALL_MARKUP_FINDING_CLOSURES'));
  assert all(r.get('target_xml') and r.get('model_type_used')=='quality_optimized' for r in data['rows']);data['state']='COMPLETE_TRANSLATION_DRAFT_REQUIRES_COMPLETE_AI_REVIEW';data['fidelity_review']='NOT_RUN';data['literary_review']='NOT_RUN';data['inline_markup_findings']=[dict(id=r['id'],findings=r.get('inline_markup_findings',[])) for r in data['rows'] if r.get('inline_markup_findings')];data['release_ready']=False;save();print('AUTHENTIC_UNIT_COMPLETE_DRAFT',index,uid,len(data['rows']),flush=True)
 except Exception as e:
  data['state']='TRANSLATION_UNIT_PENDING_RECOVERY';data['error_type']=type(e).__name__;data['error_code']=str(e) if isinstance(e,(RuntimeError,ValueError)) else 'SANITIZED_PROVIDER_OR_RUNTIME_FAILURE';save();print('UNIT_PENDING_RECOVERY',uid,data['error_type'],data['error_code'],flush=True);raise SystemExit(1)
