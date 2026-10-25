@@ -1,0 +1,73 @@
+name: BB Russian 75 exact French scan and native historical illustrations
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-native-source-art.yml'
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover native source and file-level artwork rights evidence
+        run: |
+          python3 - <<'PY'
+          import urllib.request, urllib.parse, json, hashlib, time, concurrent.futures
+          from pathlib import Path
+          root=Path('evidence');(root/'art').mkdir(parents=True);(root/'metadata').mkdir()
+          names=json.loads(Path('bb-ru75-20261025/asset-names.json').read_text())
+          def fetch(url):
+              for a in range(4):
+                  try:
+                      req=urllib.request.Request(url,headers={'User-Agent':'BoundaryBayTitle75SourceRecovery/1.0'})
+                      with urllib.request.urlopen(req,timeout=90) as r:return r.read()
+                  except Exception:
+                      if a==3:raise
+                      time.sleep(3*(a+1))
+          records=[]
+          for start in range(0,len(names),20):
+              query=urllib.parse.urlencode(dict(action='query',format='json',prop='imageinfo',iiprop='url|size|sha1|extmetadata',titles='|'.join('File:'+x for x in names[start:start+20])))
+              raw=fetch('https://commons.wikimedia.org/w/api.php?'+query);(root/'metadata'/f'commons-{start:03}.json').write_bytes(raw)
+              for p in json.loads(raw)['query']['pages'].values():
+                  info=p['imageinfo'][0];records.append(dict(title=p['title'],**info))
+          assert len(records)==len(names)
+          def download(r):
+              b=fetch(r['url']);assert len(b)==r['size'] and hashlib.sha1(b).hexdigest()==r['sha1']
+              name=urllib.parse.unquote(r['url'].rsplit('/',1)[1]);p=root/'art'/name;p.write_bytes(b)
+              return dict(file_name=name,bytes=len(b),sha256=hashlib.sha256(b).hexdigest(),commons=r)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:results=list(pool.map(download,records))
+          (root/'native-art-receipts.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+          u='https://upload.wikimedia.org/wikipedia/commons/f/fc/Verne_-_Cinq_Semaines_en_ballon.djvu';b=fetch(u);(root/'Verne_Cinq_Semaines_scan.djvu').write_bytes(b)
+          (root/'scan-receipt.json').write_text(json.dumps(dict(url=u,bytes=len(b),sha256=hashlib.sha256(b).hexdigest()),indent=2))
+          for name,url in [('source-index.html','https://fr.wikisource.org/wiki/Livre:Verne_-_Cinq_Semaines_en_ballon.djvu'),('source-titlepage.html','https://fr.wikisource.org/wiki/Page:Verne_-_Cinq_Semaines_en_ballon.djvu/3'),('scan-commons-record.html','https://commons.wikimedia.org/wiki/File:Verne_-_Cinq_Semaines_en_ballon.djvu'),('scan-library-record.html','https://archive.org/details/cinqsemainesenba00vernuoft'),('deepl-current-terms.html','https://www.deepl.com/en/pro-license')]:
+              try:(root/'metadata'/name).write_bytes(fetch(url))
+              except Exception as e:(root/'metadata'/(name+'.failure.json')).write_text(json.dumps(dict(error_type=type(e).__name__)))
+          print('NATIVE_ART_COMPLETE',len(results),'SCAN',len(b))
+          PY
+      - name: Decode exact source front matter, extent, and terminal pages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y djvulibre-bin
+          python3 -m pip install pillow -q
+          mkdir -p evidence/scan-pages
+          djvused evidence/Verne_Cinq_Semaines_scan.djvu -e n > evidence/scan-page-count.txt
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+          from PIL import Image
+          root=Path('evidence');src=root/'Verne_Cinq_Semaines_scan.djvu'
+          for n in [1,2,3,4,5,6,263,264,265,266,267,268,269,270,271]:
+              p=root/'scan-pages'/f'{n:03}.ppm';subprocess.run(['ddjvu','-format=ppm',f'-page={n}',str(src),str(p)],check=True)
+              Image.open(p).save(p.with_suffix('.png'));p.unlink()
+          subprocess.run(['djvutxt',str(src),str(root/'scan-embedded-ocr.txt')],check=True)
+          PY
+      - name: Preserve source recovery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-native-source-art
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
