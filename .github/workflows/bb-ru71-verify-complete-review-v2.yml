@@ -1,0 +1,44 @@
+name: BB Russian71 independent complete native review verification
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru71-verify-complete-review-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stop superseded verification-only checker while preserving active paid review
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os,urllib.request,urllib.error
+          target=40179759821
+          assert target!=40173299575 and str(target)!=os.environ['GITHUB_RUN_ID']
+          req=urllib.request.Request('https://api.github.com/repos/rnttmdtg9p-droid/epub-bridge/actions/runs/'+str(target)+'/cancel',data=b'',headers={'Authorization':'Bearer '+os.environ['GITHUB_TOKEN'],'Accept':'application/vnd.github+json'},method='POST')
+          try:
+           with urllib.request.urlopen(req,timeout=60) as response:print('SUPERSEDED_VERIFICATION_CANCEL_REQUEST',response.status)
+          except urllib.error.HTTPError as error:
+           if error.code not in [409,422]:raise
+           print('SUPERSEDED_VERIFICATION_ALREADY_FINISHED')
+          PY
+      - name: Compile the independent verification client
+        run: python3 -m py_compile bb-ru71-20261025/tools/verify_complete_review71.py
+      - name: Wait for complete review then verify all40 native provider archives and all1417 source aligned rows
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 bb-ru71-20261025/tools/verify_complete_review71.py
+      - name: Preserve complete source aligned review and native verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-complete-native-reviewed-translation-verification
+          path: verified-review/
+          if-no-files-found: warn
+          retention-days: 90
