@@ -28,7 +28,12 @@ def contract(source,target):
  from collections import Counter
  if Counter(x.tag for x in a.iter())!=Counter(x.tag for x in b.iter()):raise ValueError('SOURCE_INLINE_TAG_COUNTS_CHANGED')
  if [(x.get('n'),x.text) for x in a.iter('bbnote')]!=[(x.get('n'),x.text) for x in b.iter('bbnote')]:raise ValueError('SOURCE_NOTE_REFERENCES_CHANGED')
- text=''.join(b.itertext()).strip()
+ def plaintext(n):
+  value=n.text or ''
+  for child in n:
+   value+=('\n' if child.tag=='br' else plaintext(child))+(child.tail or '')
+  return value
+ text=plaintext(b).strip()
  if not text:raise ValueError('EMPTY_TARGET')
  return text
 save()
