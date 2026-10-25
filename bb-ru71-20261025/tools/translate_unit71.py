@@ -49,13 +49,14 @@ try:
   serialized=json.dumps(payload,ensure_ascii=False);assert len(serialized.encode())<128*1024
   answer=call('/v2/translate',payload);translations=answer.get('translations',[])
   if len(translations)!=len(pending):raise RuntimeError('SOURCE_TARGET_ROW_COUNT_MISMATCH')
+  exchange=dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(context),response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING');data['batches'].append(exchange);save()
   accepted=[]
   for row,value in zip(pending,translations):
    model=value.get('model_type_used');version=value.get('tag_handling_version');target=value.get('text','').strip()
    if model!='quality_optimized':raise RuntimeError('RETURNED_MODEL_NOT_CONFIRMED_QUALITY_OPTIMIZED')
    text=contract(row['source_xml'],target);accepted.append(dict(target=text,target_xml=target,target_sha256=H(text),target_xml_sha256=H(target),model_type_used=model,tag_handling_version_used=version,detected_source_language=value.get('detected_source_language')))
   for row,value in zip(pending,accepted):row.update(value)
-  data['batches'].append(dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(context),response=answer,source_to_target_count_equal=True,inline_contract='PASS_TAG_COUNTS_NOTE_MARKERS_AND_NONEMPTY_TEXT'))
+  exchange.update(state='PASS_ALL_ROWS_ACCEPTED',source_to_target_count_equal=True,inline_contract='PASS_TAG_COUNTS_NOTE_MARKERS_AND_NONEMPTY_TEXT')
   save();print('TRANSLATED',uid,min(start+8,len(data['rows'])),'OF',len(data['rows']),flush=True)
  assert all(r.get('target_xml') and r.get('model_type_used')=='quality_optimized' for r in data['rows']);data['state']='COMPLETE_TRANSLATION_DRAFT_REQUIRES_COMPLETE_AI_REVIEW';data['fidelity_review']='NOT_RUN';data['literary_review']='NOT_RUN';save();print('AUTHENTIC_UNIT_COMPLETE_DRAFT',index,uid,len(data['rows']),flush=True)
 except Exception as e:
