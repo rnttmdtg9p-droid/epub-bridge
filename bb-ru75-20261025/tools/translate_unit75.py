@@ -50,6 +50,37 @@ def contract(source,target):
  text=plaintext(b).strip()
  if not text:raise ValueError('EMPTY_TARGET')
  return text,findings
+def protected_xml(source):
+ root=E.fromstring(source)
+ for n in root.iter('bbnote'):n.text='BBNOTE_REF_'+n.get('n').zfill(4)+'_Z'
+ return E.tostring(root,encoding='unicode')
+def restore_note_identity(source,raw):
+ import re
+ expected=[(n.get('n'),n.text) for n in E.fromstring(source).iter('bbnote')]
+ if not expected:return raw,[]
+ before=H(raw);root=E.fromstring(raw);repairs=[]
+ for n in root.iter('bbnote'):
+  value='BBNOTE_REF_'+str(n.get('n')).zfill(4)+'_Z'
+  if n.text==value:n.text=n.get('n');repairs.append('OPAQUE_TOKEN_INSIDE_NOTE_TAG_TO_CANONICAL_MARKER')
+ xml=E.tostring(root,encoding='unicode')
+ tokens=re.findall(r'BBNOTE_REF_(\d{4})_Z',xml)
+ for token in tokens:
+  n=str(int(token))
+  if (n,n) not in expected:raise ValueError('UNKNOWN_RETURNED_NOTE_TOKEN')
+  xml=xml.replace('BBNOTE_REF_'+token+'_Z',f'<bbnote n="{n}">{n}</bbnote>',1);repairs.append('OPAQUE_TOKEN_TO_CANONICAL_NOTE_AT_UNCHANGED_TARGET_POSITION')
+ if not list(E.fromstring(xml).iter('bbnote')):
+  # Recover the already preserved response only when every returned numeric
+  # superscript matches the complete ordered source-reference identities and
+  # no source numeric superscript could make that identity ambiguous.
+  numeric_sup=[n for n in E.fromstring(source).iter('sup') if ''.join(n.itertext()).isdigit()]
+  digits='⁰¹²³⁴⁵⁶⁷⁸⁹';trans=str.maketrans(digits,'0123456789');found=re.findall('['+digits+']+',xml)
+  if not numeric_sup and [x.translate(trans) for x in found]==[n for n,t in expected]:
+   def replace(m):
+    n=m.group(0).translate(trans);return f'<bbnote n="{n}">{n}</bbnote>'
+   xml=re.sub('['+digits+']+',replace,xml);repairs.append('COMPLETE_ORDERED_UNAMBIGUOUS_SUPERSCRIPT_IDENTITIES_RESTORED_FROM_PRESERVED_RESPONSE')
+ if [(n.get('n'),n.text) for n in E.fromstring(xml).iter('bbnote')]!=expected:raise ValueError('SOURCE_NOTE_REFERENCES_CHANGED')
+ if repairs:repairs=[dict(operations=repairs,provider_raw_target_sha256=before,canonical_target_xml_sha256=H(xml),scope='NOTE_LINK_IDENTITIES_ONLY_NO_TRANSLATED_WORD_CHANGES_NO_LITERARY_PASS')]
+ return xml,repairs
 save()
 try:
  usage=call('/v2/usage');remaining=sum(len(r['source']) for r in data['rows'] if not r.get('target_xml'))
@@ -60,8 +91,10 @@ try:
   if not pending:continue
   context='Jules Verne, Cinq Semaines en ballon (first published 1863). French scientific adventure novel; NEW complete Russian translation from this frozen French original only. Keep all source details, dates, historical geography, imperial and metric units, formulas, numbers, source captions, dialogue, irony, and the narrator voice. Do not borrow or reproduce any existing Russian translation. Terminology: Samuel Fergusson — Сэмюэль Фергюсон; Dick Kennedy — Дик Кеннеди; Joe — Джо; Victoria (balloon) — Виктория; Resolute — Резолют; Zanzibar — Занзибар; Tchad — Чад. Chapter: '+unit['source_heading']+'. Surrounding original source for context only:\n'+'\n\n'.join(r['source'] for r in unit['rows'][max(0,start-3):min(len(unit['rows']),start+11)])
   payload=dict(text=[r['source_xml'] for r in pending],source_lang='FR',target_lang='RU',model_type='quality_optimized',context=html.escape(context,quote=False),tag_handling='xml',tag_handling_version='v2',split_sentences='nonewlines',ignore_tags=['bbnote'],non_splitting_tags=['em','strong','sup','sub','small','bbnote'])
+  legacy_serialized=json.dumps(payload,ensure_ascii=False)
+  cached=next((b for b in reversed(data['batches']) if b.get('ids')==[r['id'] for r in pending] and b.get('state')=='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING' and b.get('request_sha256')==H(legacy_serialized)),None)
+  if not cached:payload['text']=[protected_xml(r['source_xml']) for r in pending]
   serialized=json.dumps(payload,ensure_ascii=False);assert len(serialized.encode())<128*1024
-  cached=next((b for b in reversed(data['batches']) if b.get('ids')==[r['id'] for r in pending] and b.get('state')=='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING' and b.get('request_sha256')==H(serialized)),None)
   answer=cached['response'] if cached else translate(payload);translations=answer.get('translations',[])
   if len(translations)!=len(pending):raise RuntimeError('SOURCE_TARGET_ROW_COUNT_MISMATCH')
   exchange=cached if cached else dict(start=start,ids=[r['id'] for r in pending],request_sha256=H(serialized),context_sha256=H(payload['context']),plain_context_sha256=H(context),context_xml_escaped=True,response=answer,state='RESPONSE_RECEIVED_INLINE_VALIDATION_PENDING')
@@ -72,7 +105,8 @@ try:
   for row,value in zip(pending,translations):
    model=value.get('model_type_used');version=value.get('tag_handling_version');target=value.get('text','').strip()
    if model!='quality_optimized':raise RuntimeError('RETURNED_MODEL_NOT_CONFIRMED_QUALITY_OPTIMIZED')
-   text,findings=contract(row['source_xml'],target);accepted.append(dict(inline_markup_findings=findings,inline_markup_state='REPAIR_REQUIRED_BLOCKS_RELEASE' if findings else 'COUNTS_PRESERVED_FULL_SEMANTIC_REVIEW_STILL_REQUIRED',target=text,target_xml=target,target_sha256=H(text),target_xml_sha256=H(target),model_type_used=model,tag_handling_version_used=version,detected_source_language=value.get('detected_source_language')))
+   target,marker_repairs=restore_note_identity(row['source_xml'],target)
+   text,findings=contract(row['source_xml'],target);accepted.append(dict(note_marker_transport_repairs=marker_repairs,inline_markup_findings=findings,inline_markup_state='REPAIR_REQUIRED_BLOCKS_RELEASE' if findings else 'COUNTS_PRESERVED_FULL_SEMANTIC_REVIEW_STILL_REQUIRED',target=text,target_xml=target,target_sha256=H(text),target_xml_sha256=H(target),model_type_used=model,tag_handling_version_used=version,detected_source_language=value.get('detected_source_language')))
   for row,value in zip(pending,accepted):row.update(value)
   exchange.update(state='ALL_PROVIDER_ROWS_PRESERVED_FOR_MANDATORY_AI_REVIEW',source_to_target_count_equal=True,inline_contract='REPAIR_REQUIRED_BLOCKS_RELEASE' if any(r.get('inline_markup_findings') for r in pending) else 'PASS_TAG_COUNTS_NOTE_MARKERS_AND_NONEMPTY_TEXT')
   save();print('TRANSLATED',uid,min(start+8,len(data['rows'])),'OF',len(data['rows']),flush=True)
