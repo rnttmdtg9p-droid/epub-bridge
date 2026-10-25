@@ -1,0 +1,48 @@
+name: BB Russian 75 exact source page identity and extent
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-source-pages.yml'
+permissions:
+  contents: read
+jobs:
+  source-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Recover exact public source scan
+        run: |
+          mkdir -p evidence
+          python3 - <<'PYCODE'
+          import urllib.request, pathlib, hashlib, json
+          u='https://upload.wikimedia.org/wikipedia/commons/f/fc/Verne_-_Cinq_Semaines_en_ballon.djvu?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org'
+          req=urllib.request.Request(u,headers={'User-Agent':'BoundaryBaySourceVerification/1.0'})
+          with urllib.request.urlopen(req,timeout=90) as f: b=f.read()
+          assert hashlib.sha256(b).hexdigest()=='387debbcd507cea1dc47231776dd396165b3db4c79533e7b175366d8aaf4a0ec'
+          pathlib.Path('evidence/Verne_Cinq_Semaines_scan.djvu').write_bytes(b)
+          PYCODE
+      - name: Decode exact source front matter, extent, and terminal pages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y djvulibre-bin
+          python3 -m pip install pillow -q
+          mkdir -p evidence/scan-pages
+          djvused evidence/Verne_Cinq_Semaines_scan.djvu -e n > evidence/scan-page-count.txt
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+          from PIL import Image
+          root=Path('evidence');src=root/'Verne_Cinq_Semaines_scan.djvu'
+          for n in [1,2,3,4,5,6,263,264,265,266,267,268,269,270,271]:
+              p=root/'scan-pages'/f'{n:03}.ppm';subprocess.run(['ddjvu','-format=ppm',f'-page={n}',str(src),str(p)],check=True)
+              Image.open(p).save(p.with_suffix('.png'));p.unlink()
+          subprocess.run(['djvutxt',str(src),str(root/'scan-embedded-ocr.txt')],check=True)
+          PY
+      - name: Save exact source page verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-source-pages
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
