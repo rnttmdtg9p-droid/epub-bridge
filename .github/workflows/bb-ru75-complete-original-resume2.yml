@@ -1,0 +1,577 @@
+name: BB Russian 75 complete verified original DeepL translation
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-complete-original-resume2.yml'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: bb-ru75-complete-original
+  cancel-in-progress: false
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bind accepted complete original source
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          import json,base64,gzip,hashlib
+          root=Path('bb-ru75-20261025');gate=json.loads((root/'075_Original_Source_Acceptance.json').read_text())
+          assert gate['state']=='PASS_VERIFIED_ORIGINAL_COMPLETE_EXTENT_AND_REUSE_BASIS'
+          packed=base64.b64decode((root/'source-units.json.gz.b64').read_text());assert hashlib.sha256(packed).hexdigest()=='222c58cb97f22e3fcc14b393cb18e31bc6b2739824e0edc95a5688a02340e6fe'
+          data=json.loads(gzip.decompress(packed));assert len(data)==45 and sum(len(d['unit']['rows']) for d in data)==2905
+          (root/'source').mkdir(exist_ok=True)
+          for i,d in enumerate(data):(root/'source'/f'{i:02}.json').write_text(json.dumps(d,ensure_ascii=False,indent=2))
+          PYCODE
+      - name: Restore all preserved rank75 responses before continuation
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 40229728763
+          pattern: ru75-deepl-*
+          path: translation/ru75
+          merge-multiple: true
+      - name: Translate authenticated unit 00 front-matter
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 0
+      - name: Preserve aligned unit 00 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-00-front-matter
+          path: translation/ru75/00-front-matter.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 01 chapter-01
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 1
+      - name: Preserve aligned unit 01 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-01-chapter-01
+          path: translation/ru75/01-chapter-01.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 02 chapter-02
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 2
+      - name: Preserve aligned unit 02 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-02-chapter-02
+          path: translation/ru75/02-chapter-02.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 03 chapter-03
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 3
+      - name: Preserve aligned unit 03 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-03-chapter-03
+          path: translation/ru75/03-chapter-03.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 04 chapter-04
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 4
+      - name: Preserve aligned unit 04 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-04-chapter-04
+          path: translation/ru75/04-chapter-04.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 05 chapter-05
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 5
+      - name: Preserve aligned unit 05 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-05-chapter-05
+          path: translation/ru75/05-chapter-05.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 06 chapter-06
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 6
+      - name: Preserve aligned unit 06 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-06-chapter-06
+          path: translation/ru75/06-chapter-06.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 07 chapter-07
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 7
+      - name: Preserve aligned unit 07 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-07-chapter-07
+          path: translation/ru75/07-chapter-07.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 08 chapter-08
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 8
+      - name: Preserve aligned unit 08 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-08-chapter-08
+          path: translation/ru75/08-chapter-08.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 09 chapter-09
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 9
+      - name: Preserve aligned unit 09 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-09-chapter-09
+          path: translation/ru75/09-chapter-09.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 10 chapter-10
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 10
+      - name: Preserve aligned unit 10 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-10-chapter-10
+          path: translation/ru75/10-chapter-10.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 11 chapter-11
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 11
+      - name: Preserve aligned unit 11 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-11-chapter-11
+          path: translation/ru75/11-chapter-11.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 12 chapter-12
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 12
+      - name: Preserve aligned unit 12 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-12-chapter-12
+          path: translation/ru75/12-chapter-12.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 13 chapter-13
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 13
+      - name: Preserve aligned unit 13 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-13-chapter-13
+          path: translation/ru75/13-chapter-13.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 14 chapter-14
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 14
+      - name: Preserve aligned unit 14 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-14-chapter-14
+          path: translation/ru75/14-chapter-14.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 15 chapter-15
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 15
+      - name: Preserve aligned unit 15 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-15-chapter-15
+          path: translation/ru75/15-chapter-15.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 16 chapter-16
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 16
+      - name: Preserve aligned unit 16 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-16-chapter-16
+          path: translation/ru75/16-chapter-16.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 17 chapter-17
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 17
+      - name: Preserve aligned unit 17 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-17-chapter-17
+          path: translation/ru75/17-chapter-17.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 18 chapter-18
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 18
+      - name: Preserve aligned unit 18 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-18-chapter-18
+          path: translation/ru75/18-chapter-18.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 19 chapter-19
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 19
+      - name: Preserve aligned unit 19 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-19-chapter-19
+          path: translation/ru75/19-chapter-19.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 20 chapter-20
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 20
+      - name: Preserve aligned unit 20 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-20-chapter-20
+          path: translation/ru75/20-chapter-20.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 21 chapter-21
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 21
+      - name: Preserve aligned unit 21 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-21-chapter-21
+          path: translation/ru75/21-chapter-21.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 22 chapter-22
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 22
+      - name: Preserve aligned unit 22 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-22-chapter-22
+          path: translation/ru75/22-chapter-22.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 23 chapter-23
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 23
+      - name: Preserve aligned unit 23 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-23-chapter-23
+          path: translation/ru75/23-chapter-23.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 24 chapter-24
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 24
+      - name: Preserve aligned unit 24 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-24-chapter-24
+          path: translation/ru75/24-chapter-24.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 25 chapter-25
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 25
+      - name: Preserve aligned unit 25 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-25-chapter-25
+          path: translation/ru75/25-chapter-25.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 26 chapter-26
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 26
+      - name: Preserve aligned unit 26 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-26-chapter-26
+          path: translation/ru75/26-chapter-26.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 27 chapter-27
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 27
+      - name: Preserve aligned unit 27 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-27-chapter-27
+          path: translation/ru75/27-chapter-27.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 28 chapter-28
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 28
+      - name: Preserve aligned unit 28 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-28-chapter-28
+          path: translation/ru75/28-chapter-28.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 29 chapter-29
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 29
+      - name: Preserve aligned unit 29 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-29-chapter-29
+          path: translation/ru75/29-chapter-29.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 30 chapter-30
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 30
+      - name: Preserve aligned unit 30 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-30-chapter-30
+          path: translation/ru75/30-chapter-30.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 31 chapter-31
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 31
+      - name: Preserve aligned unit 31 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-31-chapter-31
+          path: translation/ru75/31-chapter-31.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 32 chapter-32
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 32
+      - name: Preserve aligned unit 32 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-32-chapter-32
+          path: translation/ru75/32-chapter-32.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 33 chapter-33
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 33
+      - name: Preserve aligned unit 33 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-33-chapter-33
+          path: translation/ru75/33-chapter-33.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 34 chapter-34
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 34
+      - name: Preserve aligned unit 34 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-34-chapter-34
+          path: translation/ru75/34-chapter-34.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 35 chapter-35
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 35
+      - name: Preserve aligned unit 35 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-35-chapter-35
+          path: translation/ru75/35-chapter-35.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 36 chapter-36
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 36
+      - name: Preserve aligned unit 36 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-36-chapter-36
+          path: translation/ru75/36-chapter-36.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 37 chapter-37
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 37
+      - name: Preserve aligned unit 37 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-37-chapter-37
+          path: translation/ru75/37-chapter-37.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 38 chapter-38
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 38
+      - name: Preserve aligned unit 38 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-38-chapter-38
+          path: translation/ru75/38-chapter-38.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 39 chapter-39
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 39
+      - name: Preserve aligned unit 39 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-39-chapter-39
+          path: translation/ru75/39-chapter-39.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 40 chapter-40
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 40
+      - name: Preserve aligned unit 40 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-40-chapter-40
+          path: translation/ru75/40-chapter-40.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 41 chapter-41
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 41
+      - name: Preserve aligned unit 41 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-41-chapter-41
+          path: translation/ru75/41-chapter-41.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 42 chapter-42
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 42
+      - name: Preserve aligned unit 42 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-42-chapter-42
+          path: translation/ru75/42-chapter-42.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 43 chapter-43
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 43
+      - name: Preserve aligned unit 43 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-43-chapter-43
+          path: translation/ru75/43-chapter-43.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Translate authenticated unit 44 chapter-44
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        run: python3 bb-ru75-20261025/tools/translate_unit75.py 44
+      - name: Preserve aligned unit 44 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-deepl-44-chapter-44
+          path: translation/ru75/44-chapter-44.json
+          if-no-files-found: warn
+          retention-days: 90
