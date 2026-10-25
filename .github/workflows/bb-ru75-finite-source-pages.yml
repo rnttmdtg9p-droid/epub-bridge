@@ -1,0 +1,57 @@
+name: BB Russian 75 finite French source-page checks and local decoder
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru75-finite-source-pages.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  finite-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Restore exact already verified source scan without a new repository request
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 40229217726
+          name: ru75-source-pages
+          path: input
+      - name: Install signed distribution source-decoding tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y djvulibre-bin
+      - name: Render finite source pages and preserve decoder provenance
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess,re,shutil,json,hashlib,datetime
+          src=Path('input/Verne_Cinq_Semaines_scan.djvu');assert hashlib.sha256(src.read_bytes()).hexdigest()=='387debbcd507cea1dc47231776dd396165b3db4c79533e7b175366d8aaf4a0ec'
+          out=Path('evidence');(out/'source-pages').mkdir(parents=True);(out/'runtime/bin').mkdir(parents=True);(out/'runtime/lib').mkdir()
+          binaries=['/usr/bin/ddjvu','/usr/bin/djvutxt','/usr/bin/djvused'];files=[]
+          for binary in binaries:
+              p=Path(binary);dest=out/'runtime/bin'/p.name;shutil.copyfile(p,dest);dest.chmod(0o755)
+              listing=subprocess.check_output(['ldd',binary],text=True)
+              for line in listing.splitlines():
+                  match=re.search(r'(?:=>\s*)?(/[^\s]+)',line)
+                  if not match:continue
+                  lib=Path(match.group(1)).resolve();target=out/'runtime/lib'/Path(match.group(1)).name
+                  if target.exists():assert hashlib.sha256(target.read_bytes()).digest()==hashlib.sha256(lib.read_bytes()).digest()
+                  else:shutil.copyfile(lib,target);target.chmod(0o755)
+          for n in [14,15,16]:
+              p=out/'source-pages'/f'{n:03}.ppm';subprocess.run(['ddjvu','-format=ppm',f'-page={n}',str(src),str(p)],check=True)
+          packages=subprocess.check_output(['dpkg-query','-W','-f=${binary:Package}\t${Version}\n','djvulibre-bin','libdjvulibre21','libc6','libstdc++6'],text=True)
+          for p in sorted(out.rglob('*')):
+              if p.is_file():files.append(dict(path=p.relative_to(out).as_posix(),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+          receipt=dict(rank=75,state='ACTUAL_NATIVE_PAGE14_15_16_DECODE_AND_TRUSTED_DISTRIBUTION_RUNTIME_ONLY',source_scan_sha256=hashlib.sha256(src.read_bytes()).hexdigest(),source_page_count=subprocess.check_output(['djvused',str(src),'-e','n'],text=True).strip(),retrieved_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),distribution='Ubuntu24.04 signed APT packages in GitHub hosted runner',packages=packages,tools_source='djvulibre-bin distribution package; internal decoding runtime, not a book asset or user-facing binary deliverable',files=files,release_ready=False)
+          (out/'075_Source_Decoder_Receipts.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2));print('FINITE_SOURCE_DECODE_COMPLETE',len(files))
+          PY
+      - name: Preserve finite source proof and internal decoder
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru75-finite-source-pages-decoder
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 90
