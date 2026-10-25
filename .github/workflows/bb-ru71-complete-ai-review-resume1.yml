@@ -1,0 +1,291 @@
+name: BB Russian 71 complete source aligned AI literary review
+on:
+  push:
+    paths:
+      - '.github/workflows/bb-ru71-complete-ai-review-resume1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore every complete native DeepL source aligned unit
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 40169507560
+          pattern: ru71-deepl-*
+          path: translation/ru71
+          merge-multiple: true
+      - name: Restore all native completed and partial AI review responses
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 40170535894
+          pattern: ru71-reviewed-*
+          path: review/ru71
+          merge-multiple: true
+      - name: Complete fidelity literary and correction verification 00 preface
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 0
+      - name: Preserve complete review 00 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-00-preface
+          path: review/ru71/00-preface.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 01 chapter-01
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 1
+      - name: Preserve complete review 01 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-01-chapter-01
+          path: review/ru71/01-chapter-01.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 02 chapter-02
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 2
+      - name: Preserve complete review 02 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-02-chapter-02
+          path: review/ru71/02-chapter-02.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 03 chapter-03
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 3
+      - name: Preserve complete review 03 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-03-chapter-03
+          path: review/ru71/03-chapter-03.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 04 chapter-04
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 4
+      - name: Preserve complete review 04 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-04-chapter-04
+          path: review/ru71/04-chapter-04.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 05 chapter-05
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 5
+      - name: Preserve complete review 05 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-05-chapter-05
+          path: review/ru71/05-chapter-05.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 06 chapter-06
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 6
+      - name: Preserve complete review 06 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-06-chapter-06
+          path: review/ru71/06-chapter-06.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 07 chapter-07
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 7
+      - name: Preserve complete review 07 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-07-chapter-07
+          path: review/ru71/07-chapter-07.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 08 chapter-08
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 8
+      - name: Preserve complete review 08 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-08-chapter-08
+          path: review/ru71/08-chapter-08.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 09 chapter-09
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 9
+      - name: Preserve complete review 09 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-09-chapter-09
+          path: review/ru71/09-chapter-09.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 10 chapter-10
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 10
+      - name: Preserve complete review 10 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-10-chapter-10
+          path: review/ru71/10-chapter-10.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 11 chapter-11
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 11
+      - name: Preserve complete review 11 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-11-chapter-11
+          path: review/ru71/11-chapter-11.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 12 chapter-12
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 12
+      - name: Preserve complete review 12 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-12-chapter-12
+          path: review/ru71/12-chapter-12.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 13 chapter-13
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 13
+      - name: Preserve complete review 13 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-13-chapter-13
+          path: review/ru71/13-chapter-13.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 14 chapter-14
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 14
+      - name: Preserve complete review 14 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-14-chapter-14
+          path: review/ru71/14-chapter-14.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 15 chapter-15
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 15
+      - name: Preserve complete review 15 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-15-chapter-15
+          path: review/ru71/15-chapter-15.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 16 chapter-16
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 16
+      - name: Preserve complete review 16 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-16-chapter-16
+          path: review/ru71/16-chapter-16.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 17 chapter-17
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 17
+      - name: Preserve complete review 17 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-17-chapter-17
+          path: review/ru71/17-chapter-17.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 18 chapter-18
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 18
+      - name: Preserve complete review 18 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-18-chapter-18
+          path: review/ru71/18-chapter-18.json
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Complete fidelity literary and correction verification 19 chapter-19
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 bb-ru71-20261025/tools/review_unit71.py 19
+      - name: Preserve complete review 19 before advancing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru71-reviewed-19-chapter-19
+          path: review/ru71/19-chapter-19.json
+          if-no-files-found: warn
+          retention-days: 90
