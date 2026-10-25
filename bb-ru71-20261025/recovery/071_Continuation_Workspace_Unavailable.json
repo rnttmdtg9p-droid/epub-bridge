@@ -1,6 +1,6 @@
 {
   "rank": 71,
-  "state": "CONTINUATION_REMOTE_AI_REVIEW_AND_INDEPENDENT_NATIVE_VERIFICATION_LOCAL_WORKSPACE_UNAVAILABLE",
+  "state": "COMPLETE_AI_REVIEW_AND_ALL40_NATIVE_VERIFICATION_FINAL_EPUB_BUILD_BLOCKED_BY_UNAVAILABLE_EXECUTION_WORKSPACE",
   "title": "Трое в лодке, не считая собаки",
   "master_version": "5.0.70",
   "master_sha256": "c5e27e97c2b6a4a2cd6cac37c3b41698b2078e1321dc071d5505ce7abd48ca6f",
@@ -73,5 +73,27 @@
     "Resolve final4existing native identities/versions; save,verify every nativefile andEvidence-indexpayload; actually link all4before canonical releasecountor advancement72.",
     "Continue sequentially to rank72 only after71durablefinalclosure."
   ],
-  "final_evidence_source_selection": "Do not republish complete protected modern news articles or explanatory web guides in the final Evidence archive. Retain source URLs, retrieval/hash receipts, relevant factual paraphrases and bounded compliant excerpts; original public-domain book/art and permissively licensed required source material remain separately accounted. Full internal research receipts are not falsely described as publication content."
+  "final_evidence_source_selection": "Do not republish complete protected modern news articles or explanatory web guides in the final Evidence archive. Retain source URLs, retrieval/hash receipts, relevant factual paraphrases and bounded compliant excerpts; original public-domain book/art and permissively licensed required source material remain separately accounted. Full internal research receipts are not falsely described as publication content.",
+  "complete_review": {
+    "state": "PASS_ALL40_NATIVE_PROVIDER_ARTIFACTS_ALL20_REVIEWED_UNITS1417_ROWS",
+    "reviewed_rows": 1417,
+    "corrected_rows": 966,
+    "source_emphasis_spans": 173,
+    "source_line_breaks": 28,
+    "note_markers": 2,
+    "raw_inline_findings_closed": 21,
+    "actual_translation_model": "DeepL_quality_optimized",
+    "actual_review_model": "claude-sonnet-5-5",
+    "frozen_reviewed_translation_sha256": "a0e4f8115f988cefc2cb7a9517b520969f04ba4b4fb6b3b11beee3a007058414",
+    "artifact": {
+      "run": 40179928431,
+      "id": 12594699295,
+      "name": "ru71-complete-native-reviewed-translation-verification",
+      "bytes": 15292721,
+      "sha256": "59db160106403bc7d9c2bcdb285d066b48bc3e709f6acd2b2dc6ee3772235bf8"
+    },
+    "verified_at_utc": "2026-10-25T10:13:47Z",
+    "release_ready": false
+  },
+  "remaining_blocker": "Execution workspace unavailable; no usable execution environment. Final reviewed-text EPUB build, exact-byte final acceptance, final4native-save/readback/actual-linkclosure and advancement72 remain pending. No new translation/review permission or paid retranslation is needed."
 }
