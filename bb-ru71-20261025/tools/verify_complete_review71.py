@@ -58,7 +58,8 @@ for i in range(20):
   assert H(json.dumps(e['request_body'],ensure_ascii=False).encode())==e['request_sha256']
   assert H(json.dumps(e['response'],ensure_ascii=False).encode())==e['response_sha256']
   assert e['response_model']==e['response']['model']=='claude-sonnet-5-5';models.add(e['response_model'])
- returned={(t['text'],t.get('model_type_used')) for e in draft.get('provider_exchange_cache',[]) for t in e['response'].get('translations',[])}
+ response_records=draft.get('provider_exchange_cache',[])+draft.get('batches',[])
+ returned={(t['text'].strip(),t.get('model_type_used')) for e in response_records for t in e.get('response',{}).get('translations',[])}
  for s,d,r in zip(u['rows'],draft['rows'],review['rows']):
   allids.append(s['id']);assert H(s['source'].encode())==s['source_sha256'] and H(s['source_xml'].encode())==s['source_xml_sha256']
   assert r['source_sha256']==d['source_sha256']==s['source_sha256'] and r['source_xml_sha256']==d['source_xml_sha256']==s['source_xml_sha256']
