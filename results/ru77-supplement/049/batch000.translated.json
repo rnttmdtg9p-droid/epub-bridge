@@ -1,0 +1,120 @@
+{
+  "unit": 49,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-supp-newspaper-internal-batch-title",
+      "target": "ВЕСЕЛЫЕ ДЕНЬКИ В ДОЛИНЕ",
+      "source_sha256": "84f0efdfd4c38e5510561c11785102e7531e3901c9ae5ff95433fe851ef11c80",
+      "target_id": "ru-ru77-supp-newspaper-internal-batch-title",
+      "tag": "heading",
+      "target_sha256": "079997532b7588c745e80f11dd0ed693a978b42b750b8e0b3a06b8b7b303b29a"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-01",
+      "target": "ВЕСЕЛЫЕ ДЕНЬКИ В ДОЛИНЕ",
+      "source_sha256": "84f0efdfd4c38e5510561c11785102e7531e3901c9ae5ff95433fe851ef11c80",
+      "target_id": "ru-ru77-supp-newspaper-01",
+      "tag": "display",
+      "target_sha256": "079997532b7588c745e80f11dd0ed693a978b42b750b8e0b3a06b8b7b303b29a"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-02",
+      "target": "СВЯТОСТИ!",
+      "source_sha256": "c169f6f91d663edaeaf041812bf0d21d763e0a71e99caccda1c6292ea611f835",
+      "target_id": "ru-ru77-supp-newspaper-02",
+      "tag": "display",
+      "target_sha256": "92b6e0497c55169c2e7595c60fdb34296b288ccd5d9e556b2e1f9badd10123bb"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-03",
+      "target": "ВОДОПРОВОД ЗАКУПОРЕН!",
+      "source_sha256": "ed9b07f48f9c57e2ca972ca5344d95034c3894ca99ab5f0bc67c184d7de7f433",
+      "target_id": "ru-ru77-supp-newspaper-03",
+      "tag": "display",
+      "target_sha256": "f7beeedaf8bdec13b49dfd05166ddd99af9382fce210aafb62233877daa7fc39"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-04",
+      "target": "БРАТЕЦ МЕРЛИН ПУСКАЕТ В ХОД СВОИ ЧАРЫ, НО ОСТАЁТСЯ\nС НОСОМ?",
+      "source_sha256": "e111ad10f3eccabfb3e3acc84c090a33d497b55597a73f651a919a2c907f4f73",
+      "target_id": "ru-ru77-supp-newspaper-04",
+      "tag": "display",
+      "target_sha256": "57f25113e85cb50fd63117c15c334c4a5b098794b2efe635666363867b825d93"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-05",
+      "target": "Но Босс берёт очко в своём первом же иннинге!",
+      "source_sha256": "76913737b2d04714b31868601c6a193f2fb6c40575710c568e26be0359c584a2",
+      "target_id": "ru-ru77-supp-newspaper-05",
+      "tag": "display",
+      "target_sha256": "2b920a227eb3ab92dc50e2ba440710722b3fc6a56ba67478fe7c58a70086edea"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-06",
+      "target": "Чудотворный колодец раскупорен при\nужасающих извержениях",
+      "source_sha256": "5ecf6eea3ae6e9999d1f57e404d0d63df9b580c235c8864c7784ea78aef97035",
+      "target_id": "ru-ru77-supp-newspaper-06",
+      "tag": "display",
+      "target_sha256": "8273f5dfbecfad763578db3aa3cd4e188e893e3922106245ec2e6951b7ff77a5"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-07",
+      "target": "АДСКОГО ОГНЯ И ДЫМА\nГРОМОГРЕМНО!",
+      "source_sha256": "f9ff4001ac9e65f0f4de455a023d7e8de85ac1850efea529db2bc81b3ad2a534",
+      "target_id": "ru-ru77-supp-newspaper-07",
+      "tag": "display",
+      "target_sha256": "813efffe599b60e1fa4141f6bfbc7c541b6d652c64902b518fc68d526a73af19"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-08",
+      "target": "ПРИСТАНИЩЕ КАНЮКОВ ПОТРЯСЕНО!",
+      "source_sha256": "6585bdb2b7746c90b7cd3f15e68967499799ac8031118444e129fa1fbbc07f36",
+      "target_id": "ru-ru77-supp-newspaper-08",
+      "tag": "display",
+      "target_sha256": "00c54bab1351e50f92631484e3760fc5a82a97a1842d45c2100c67f54343dd85"
+    },
+    {
+      "source_id": "ru77-supp-newspaper-09",
+      "target": "НЕСРАВНЕННЫЕ ЛИБОВАНИЯ!",
+      "source_sha256": "1f5c37e81d67e09b1c9bf1511e302ac1421a8e87acecc702b9f2eb761fea6a2e",
+      "target_id": "ru-ru77-supp-newspaper-09",
+      "tag": "display",
+      "target_sha256": "f6c1c571f0a80ed19441b0facbf6985861f68e26fe90074ab3eb7e179d20501a"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRW2SDQP49V23i2eCk4Y",
+    "usage": {
+      "input_tokens": 1983,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2162,
+      "output_tokens_details": {
+        "thinking_tokens": 1563
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-supp-newspaper-internal-batch-title",
+    "ru77-supp-newspaper-01",
+    "ru77-supp-newspaper-02",
+    "ru77-supp-newspaper-03",
+    "ru77-supp-newspaper-04",
+    "ru77-supp-newspaper-05",
+    "ru77-supp-newspaper-06",
+    "ru77-supp-newspaper-07",
+    "ru77-supp-newspaper-08",
+    "ru77-supp-newspaper-09"
+  ]
+}
