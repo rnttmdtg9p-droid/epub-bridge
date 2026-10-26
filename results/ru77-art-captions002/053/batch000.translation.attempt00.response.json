@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRh9TSJ2NhKkphRTbd8f",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-u053-heading\",\"target\":\"ВНУТРЕННИЙ ПАКЕТ ПОДПИСЕЙ К ИЛЛЮСТРАЦИЯМ, ПАРТИЯ 002: НЕ ВКЛЮЧАТЬ В ТЕКСТ ДЛЯ ЧИТАТЕЛЯ\"},{\"source_id\":\"ru77-art-caption-18-223\",\"target\":\"СОБСТВЕННАЯ КОРОЛЕВЫ.\"},{\"source_id\":\"ru77-art-caption-20-243\",\"target\":\"СЭНДИ В ОБЩЕСТВЕ КОРОНОВАННЫХ ОСОБ.\"},{\"source_id\":\"ru77-art-caption-21-260\",\"target\":\"ВЕРЕНИЦА РАБОВ.\"},{\"source_id\":\"ru77-art-caption-22-279\",\"target\":\"«ОН РАСЧЕХЛИЛ СВОЙ ЯЗЫК И ЗАРУГАЛСЯ, КАК ЕПИСКОП».”\"},{\"source_id\":\"ru77-art-caption-23-290\",\"target\":\"«ТОРЖЕСТВЕННОЕ ШЕСТВИЕ АББАТА».”\"},{\"source_id\":\"ru77-art-caption-26-337\",\"target\":\"«НЕ ВИДАЛ ЛИ ТЫ ГДЕ-ЛИБО СЭРА ЛАНСЕЛОТА?»\"},{\"source_id\":\"ru77-art-caption-26-338\",\"target\":\"«КАК ПРИЯТНО БЫЛО СНОВА УВИДЕТЬ ГАЗЕТУ».”\"},{\"source_id\":\"ru77-art-caption-26-343\",\"target\":\"ОСНОВАТЕЛЬНОЕ УТЕШЕНИЕ.\"},{\"source_id\":\"ru77-art-caption-28-362\",\"target\":\"«ЭЙ, ХОЛОП, ПОДАЙ МНЕ ТО УГОЩЕНИЕ, КАКОЕ У ТЕБЯ ЕСТЬ».”\"},{\"source_id\":\"ru77-art-caption-28-365\",\"target\":\"«ДОСПЕХ ТЯЖЕЛ, НО ТО ГОРДОЕ БРЕМЯ, И ЧЕЛОВЕК В НЁМ СТОИТ ПРЯМО».”\"},{\"source_id\":\"ru77-art-caption-29-373\",\"target\":\"НЕКОТОРАЯ МУЖЕСТВЕННОСТЬ ДАЖЕ В КОРОЛЕ.\"},{\"source_id\":\"ru77-art-caption-29-375\",\"target\":\"ПОД ПРОКЛЯТИЕМ РИМА.\"},{\"source_id\":\"ru77-art-caption-31-400\",\"target\":\"«КОГДА МИМО ПРОХОДИЛ РАБ, ОН ДАЖЕ НЕ ВИДЕЛ ЕГО».”\"},{\"source_id\":\"ru77-art-caption-32-409\",\"target\":\"«И ВСКОРЕ УЖЕ БЫЛИ ТАК ОБЩИТЕЛЬНЫ, СЛОВНО СТАРЫЕ ЗНАКОМЫЕ».”\"},{\"source_id\":\"ru77-art-caption-32-413\",\"target\":\"ПИР.\"}]}\n\nWait — I need to correct stray punctuation in my output. Here is the corrected JSON:\n\n{\"rows\":[{\"source_id\":\"ru77-u053-heading\",\"target\":\"ВНУТРЕННИЙ ПАКЕТ ПОДПИСЕЙ К ИЛЛЮСТРАЦИЯМ, ПАРТИЯ 002: НЕ ВКЛЮЧАТЬ В ТЕКСТ ДЛЯ ЧИТАТЕЛЯ\"},{\"source_id\":\"ru77-art-caption-18-223\",\"target\":\"СОБСТВЕННАЯ КОРОЛЕВЫ.\"},{\"source_id\":\"ru77-art-caption-20-243\",\"target\":\"СЭНДИ В ОБЩЕСТВЕ КОРОНОВАННЫХ ОСОБ.\"},{\"source_id\":\"ru77-art-caption-21-260\",\"target\":\"ВЕРЕНИЦА РАБОВ.\"},{\"source_id\":\"ru77-art-caption-22-279\",\"target\":\"«ОН РАСЧЕХЛИЛ СВОЙ ЯЗЫК И ЗАРУГАЛСЯ, КАК ЕПИСКОП».\"},{\"source_id\":\"ru77-art-caption-23-290\",\"target\":\"«ТОРЖЕСТВЕННОЕ ШЕСТВИЕ АББАТА».\"},{\"source_id\":\"ru77-art-caption-26-337\",\"target\":\"«НЕ ВИДАЛ ЛИ ТЫ ГДЕ-ЛИБО СЭРА ЛАНСЕЛОТА?»\"},{\"source_id\":\"ru77-art-caption-26-338\",\"target\":\"«КАК ПРИЯТНО БЫЛО СНОВА УВИДЕТЬ ГАЗЕТУ».\"},{\"source_id\":\"ru77-art-caption-26-343\",\"target\":\"ОСНОВАТЕЛЬНОЕ УТЕШЕНИЕ.\"},{\"source_id\":\"ru77-art-caption-28-362\",\"target\":\"«ЭЙ, ХОЛОП, ПОДАЙ МНЕ ТО УГОЩЕНИЕ, КАКОЕ У ТЕБЯ ЕСТЬ».\"},{\"source_id\":\"ru77-art-caption-28-365\",\"target\":\"«ДОСПЕХ ТЯЖЕЛ, НО ТО ГОРДОЕ БРЕМЯ, И ЧЕЛОВЕК В НЁМ СТОИТ ПРЯМО».\"},{\"source_id\":\"ru77-art-caption-29-373\",\"target\":\"НЕКОТОРАЯ МУЖЕСТВЕННОСТЬ ДАЖЕ В КОРОЛЕ.\"},{\"source_id\":\"ru77-art-caption-29-375\",\"target\":\"ПОД ПРОКЛЯТИЕМ РИМА.\"},{\"source_id\":\"ru77-art-caption-31-400\",\"target\":\"«КОГДА МИМО ПРОХОДИЛ РАБ, ОН ДАЖЕ НЕ ВИДЕЛ ЕГО».\"},{\"source_id\":\"ru77-art-caption-32-409\",\"target\":\"«И ВСКОРЕ УЖЕ БЫЛИ ТАК ОБЩИТЕЛЬНЫ, СЛОВНО СТАРЫЕ ЗНАКОМЫЕ».\"},{\"source_id\":\"ru77-art-caption-32-413\",\"target\":\"ПИР.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3781,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2413,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

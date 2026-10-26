@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRhAVa4y4XYSP5H9X6LU",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-caption-36-471\",\"target\":\"МАЛЬЧИШКА-ГАЗЕТЧИК.\"},{\"source_id\":\"ru77-art-caption-38-487\",\"target\":\"СЭР ГАЛАХАД ЛЕТИТ ВНИЗ ГОЛОВОЙ.\"},{\"source_id\":\"ru77-art-caption-38-490\",\"target\":\"«КТО ПОТЕРПИТ НЕУДАЧУ, ТОТ СЕГОДНЯ ВЕЧЕРОМ УЖИНАТЬ БУДЕТ В АДУ».”\"},{\"source_id\":\"ru77-art-caption-39-499\",\"target\":\"«ДАВАЙ, ДЛИННЫЙ ДЖИМ!»\"},{\"source_id\":\"ru77-art-caption-39-507\",\"target\":\"АТАКА ПЯТИСОТ РЫЦАРЕЙ.\"},{\"source_id\":\"ru77-art-caption-40-519\",\"target\":\"КЭТЧЕР АЛЬСТЕРСКОЙ ДЕВЯТКИ.\"},{\"source_id\":\"ru77-art-caption-43-550\",\"target\":\"«Я МОГ ПРЕДСТАВИТЬ, КАК МАЛЫШ ЛЕПЕЧЕТ «ГУ-ГУ»».”\"},{\"source_id\":\"ru77-art-caption-43-562\",\"target\":\"ПОСЛЕ ВЗРЫВА.\"},{\"source_id\":\"ru77-art-caption-00-021\",\"target\":\"РАССКАЗ НЕЗНАКОМЦА.\"},{\"source_id\":\"ru77-art-caption-01-029\",\"target\":\"«ГОЛОВА КАВАЛЬКАДЫ ПОМЧАЛАСЬ ВПЕРЁД».”\"},{\"source_id\":\"ru77-art-caption-04-054\",\"target\":\"ШУТКА ЗАБАВНИКА-ШУТНИКА.\"},{\"source_id\":\"ru77-art-caption-13-159\",\"target\":\"«ПАРА ОДНОГО ПОЛЯ ЯГОД».”\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3391,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 748,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
