@@ -1,0 +1,75 @@
+{
+  "unit": 41,
+  "batch": 4,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u041-r0064",
+      "target": "— Именно так. Тогда я только [[I]]думал[[/I]], а теперь [[I]]знаю[[/I]].",
+      "source_sha256": "02937b4796e30e1385ea2bc6a81935ce3964aa82a06c807990dcd853fa58f6f9",
+      "target_id": "ru-ru77-u041-r0064",
+      "tag": "p",
+      "target_sha256": "7ac0b578d6b47205eb0b2676de32c30b79f0f1e566e7677bb65fb93fd94d0b5c"
+    },
+    {
+      "source_id": "ru77-u041-r0065",
+      "target": "Мне захотелось съязвить, и я сказал:",
+      "source_sha256": "dfc3f92d12ee7a24dd5c053090714d7ddab626932a9c844b9fc023a847425a76",
+      "target_id": "ru-ru77-u041-r0065",
+      "tag": "p",
+      "target_sha256": "6bfa823ffe32b9e29fac5eb7f4cf15b772aa959a86c42f3037430b9708e90c83"
+    },
+    {
+      "source_id": "ru77-u041-r0066",
+      "target": "— О мудрый слуга закона, соблаговолите же сообщить нам, что именно вы [[I]]знаете[[/I]].",
+      "source_sha256": "0adf0ccdbc33fed91c082f17dd6909711435be3fdfba1161fb6dfaa26f6b6759",
+      "target_id": "ru-ru77-u041-r0066",
+      "tag": "p",
+      "target_sha256": "1ea96b84cbb60a1175327db055461784dd5482da4534fe3287a104238145c6dd"
+    },
+    {
+      "source_id": "ru77-u041-r0067",
+      "target": "— Что вас всех повесят [[I]]сегодня[[/I]], в середине дня! Ого! Этот выстрел попал в цель! Обопритесь на меня.",
+      "source_sha256": "bc91685dc155bc56184a98649e3e4be050034e70b684bdd1b0ab2c83898d79cc",
+      "target_id": "ru-ru77-u041-r0067",
+      "tag": "p",
+      "target_sha256": "355f8ca14639914791c4c120b8ac416c4df6564ad2dae2188ad7628cb13ecc16"
+    },
+    {
+      "source_id": "ru77-u041-r0068",
+      "target": "Дело в том, что мне и в самом деле нужно было на кого-нибудь опереться. Мои рыцари не могли поспеть вовремя. Они опоздали бы часа на три, не меньше. Ничто на свете не могло спасти английского короля; не могло спасти и меня, что было ещё важнее. Важнее не только для меня самого, но и для нации — единственной нации на земле, готовой расцвести цивилизацией. Мне стало дурно. Я больше ничего не сказал: говорить было нечего. Я понял, что имел в виду этот человек: если пропавшего раба найдут, отсрочку отменят, и казнь состоится сегодня. Что ж, пропавшего раба нашли.",
+      "source_sha256": "72c80b84337b8b3261257eaa883c553b110bba33ff2603d2edbcde24fd223554",
+      "target_id": "ru-ru77-u041-r0068",
+      "tag": "p",
+      "target_sha256": "b9c41d373fc0a29771fb03f5c09d4d1d6c35096adfc69fbcccca4136c6db721d"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRVLKbAyQ1jTfh1inFB4",
+    "usage": {
+      "input_tokens": 2146,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u041-r0064",
+    "ru77-u041-r0065",
+    "ru77-u041-r0066",
+    "ru77-u041-r0067",
+    "ru77-u041-r0068"
+  ]
+}
