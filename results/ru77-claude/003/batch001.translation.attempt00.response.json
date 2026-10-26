@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRS8UQZNoD9iyEL2oJmx",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-u003-r0016\",\"target\":\"— Начните вот отсюда. Что было до этого, я вам уже рассказал. — К этому времени он совсем утонул в дремоте. Когда я выходил из его двери, я услышал, как он сонно бормочет: — Да пошлёт вам Бог добрый вечер, прекрасный сэр.\"},{\"source_id\":\"ru77-u003-r0017\",\"target\":\"Я сел у своего камина и стал рассматривать свою сокровищницу. Первая часть рукописи, и притом самая большая, была написана на пергаменте, пожелтевшем от времени. Я внимательно рассмотрел один лист и увидел, что это палимпсест. Под старым, потускневшим письмом янки-летописца проступали следы почерка ещё более древнего и ещё более бледного: латинские слова и фразы, очевидно, обрывки старых монашеских легенд. Я перешёл к месту, которое указал мне мой незнакомец, и начал читать следующее.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1605,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 355,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
