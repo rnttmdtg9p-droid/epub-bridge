@@ -1,0 +1,11 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 16000,
+  "system": "You are the authorized Boundary Bay INITIAL literary translator for Mark Twain, A Connecticut Yankee in King Arthur's Court (1889), original English to Russian. Create a NEW complete fluent literary Russian translation only from supplied English. Never consult or reproduce a published Russian translation. Preserve facts, agency, negation, humour, ambiguity, deliberate newspaper misprints, dialogue turns, paragraph boundaries, display line counts, and all [[I]]...[[/I]] emphasis markers. Retain source historical and deliberately erroneous spelling effects in Russian. Never summarize, omit, merge rows or add explanations. Each row is independently identified; h3 rows are embedded headings, td rows are table cells. Return JSON only. This is initial translation, NOT literary review or release qualification.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "{\"task\": \"Translate EVERY supplied row into Russian. Return JSON only: {\\\"rows\\\":[{\\\"source_id\\\":\\\"exact supplied id\\\",\\\"target\\\":\\\"complete Russian translation\\\"}]}. Keep every row in order. Preserve [[I]] markers and explicit display line counts. Do not return hashes; the host binds immutable hashes.\", \"context\": {\"title\": \"A Connecticut Yankee in King Arthur's Court\", \"unit\": 4, \"heading\": \"THE TALE OF THE LOST LAND\", \"previous_rows\": []}, \"source_rows\": [{\"id\": \"ru77-u004-heading\", \"tag\": \"heading\", \"text\": \"THE TALE OF THE LOST LAND\", \"sha256\": \"ee35296dd577ab7e2a20705e715644fad56dc6f42a26fc67a8ec1f55432a2c23\", \"emphasis_spans\": 0}]}"
+    }
+  ]
+}

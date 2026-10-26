@@ -1,0 +1,39 @@
+{
+  "unit": 4,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u004-heading",
+      "target": "ПОВЕСТЬ О ПОТЕРЯННОЙ ЗЕМЛЕ",
+      "source_sha256": "ee35296dd577ab7e2a20705e715644fad56dc6f42a26fc67a8ec1f55432a2c23",
+      "target_id": "ru-ru77-u004-heading",
+      "tag": "heading",
+      "target_sha256": "0fa027b7766d9d52e0c58f4222dabf40b9b8e2f5ed62ea5ae05da122754101ca"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRS8rXpjKzB7zzLGPawG",
+    "usage": {
+      "input_tokens": 588,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 69,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u004-heading"
+  ]
+}
