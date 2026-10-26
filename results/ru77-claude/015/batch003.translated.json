@@ -1,0 +1,48 @@
+{
+  "unit": 15,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u015-r0048",
+      "target": "— Ой, ну и чучело! — И давай швырять в нас комьями земли.",
+      "source_sha256": "82637979be6fccbe3c28e85ed77b2865bbbe2fe9466f370064b9ec3381b14c4c",
+      "target_id": "ru-ru77-u015-r0048",
+      "tag": "p",
+      "target_sha256": "92fae1127c232a80f7c0304ae780a5535f785d8b16c9f21477e2b9242f4b1837"
+    },
+    {
+      "source_id": "ru77-u015-r0049",
+      "target": "По моему опыту, мальчишки во все века одинаковы. Они ничего не уважают, им ни до чего и ни до кого нет дела. «Лысый, пошёл вверх!» — кричат они пророку, мирно идущему своей дорогой в сером тумане древности; дерзят мне в священном сумраке Средних веков; а я видел, как они вели себя точно так же и при президенте Бьюкенене; помню это хорошо, потому что был там и сам в этом участвовал. У пророка были свои медведи, и он расправился со своими мальчишками; а мне тоже хотелось слезть и расправиться со своими, но это не годилось, потому что обратно я бы уже не забрался. Терпеть не могу страну, где нет подъёмного крана.",
+      "source_sha256": "3ea81eda2cb3bb2e97ba2ddd19a31c0ed4b920b7089e4adbac61e696fefdc39b",
+      "target_id": "ru-ru77-u015-r0049",
+      "tag": "p",
+      "target_sha256": "5209ca383d98c64c448e3e11508b439f7ef703773dae08173f4fd4550d536a86"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRSo9ysiN2nmkjUKi8ke",
+    "usage": {
+      "input_tokens": 2444,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 338,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u015-r0048",
+    "ru77-u015-r0049"
+  ]
+}
