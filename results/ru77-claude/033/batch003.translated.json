@@ -1,0 +1,48 @@
+{
+  "unit": 33,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u033-r0048",
+      "target": "— С того дня нас сторонятся, избегают с ужасом. Никто не подходил к этой хижине, чтобы узнать, живы мы или нет. Остальных свалило. Тогда я поднялась и встала на ноги, как встанет всякая жена и мать. Они и так мало что могли бы съесть; но и есть им было меньше чем нечего. Зато была вода, и я давала им её. Как они жаждали её! и как благословляли! Но вчера пришёл конец; силы мои иссякли. Вчера в последний раз я видела мужа и это младшее дитя живыми. Я пролежала здесь все эти часы — эти века, можно сказать, — вслушиваясь, вслушиваясь, не раздастся ли наверху какой-нибудь звук, что…",
+      "source_sha256": "fb3fd3b854ee0c366f3997c1b09ddfcc24177548f9318ecfd19547b772f6087d",
+      "target_id": "ru-ru77-u033-r0048",
+      "tag": "p",
+      "target_sha256": "86e300ef9600ffb2ace481fd53c5575466c81806a1a95e93c20a16f32e0d9404"
+    },
+    {
+      "source_id": "ru77-u033-r0049",
+      "target": "Она бросила резкий быстрый взгляд на старшую дочь, потом вскрикнула: «О, моя родная!» — и слабыми руками привлекла в защищающие объятия коченеющее тело. Она узнала предсмертный хрип.",
+      "source_sha256": "146ac0aad963f036ff06ba329b5442bbcbeeab9fb43f7996a47278003ef5e77e",
+      "target_id": "ru-ru77-u033-r0049",
+      "tag": "p",
+      "target_sha256": "df4eb68e6fe0d9791aea5a3f2aabfb56be717e708b86aff883a970dc1b6121a3"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRUaRnzsFUt3Mo2pV7eV",
+    "usage": {
+      "input_tokens": 2433,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 401,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u033-r0048",
+    "ru77-u033-r0049"
+  ]
+}
