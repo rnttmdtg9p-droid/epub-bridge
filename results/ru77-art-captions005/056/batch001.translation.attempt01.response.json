@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRkKBZwqggs1G7BT67ra",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-inscription-25-326-16\",\"target\":\"ЗЛО ДЛЯ МЕНЯ — ДОБРО\"},{\"source_id\":\"ru77-art-inscription-25-326-17\",\"target\":\"ЗАХВАТЧИК ЗЕМЕЛЬ\"},{\"source_id\":\"ru77-art-inscription-25-326-18\",\"target\":\"HONI SOIT QUI MAL Y PENSE\"},{\"source_id\":\"ru77-art-caption-23-292\",\"target\":\"«ТОТ ЧЕЛОВЕК НА СТОЛПЕ, СТОЯЩИЙ НЕПОДВИЖНО».»\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2237,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

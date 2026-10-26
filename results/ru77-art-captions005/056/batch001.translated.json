@@ -1,0 +1,66 @@
+{
+  "unit": 56,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-art-inscription-25-326-16",
+      "target": "ЗЛО ДЛЯ МЕНЯ — ДОБРО",
+      "source_sha256": "e2afa446809ebac8273bdd7e4c991634eed492403194a46eb21b07d1f17c45c0",
+      "target_id": "ru-ru77-art-inscription-25-326-16",
+      "tag": "figcaption",
+      "target_sha256": "27b8ee119f898b5548034d14656a3c7ab627d67eb55e43287aafd6e0c5679ff8"
+    },
+    {
+      "source_id": "ru77-art-inscription-25-326-17",
+      "target": "ЗАХВАТЧИК ЗЕМЕЛЬ",
+      "source_sha256": "71c5f38e17f189a77a9d763389502ea110bacb72db6e56486b376c8cc81cf7dd",
+      "target_id": "ru-ru77-art-inscription-25-326-17",
+      "tag": "figcaption",
+      "target_sha256": "9cbb44277e7186c2eb436dab1ce680bb51d370f05e95d1bfce371e6048bca6a6"
+    },
+    {
+      "source_id": "ru77-art-inscription-25-326-18",
+      "target": "HONI SOIT QUI MAL Y PENSE",
+      "source_sha256": "43313d8d5c75261a6536080c1482f184111765959925959d093544d3d4ad3197",
+      "target_id": "ru-ru77-art-inscription-25-326-18",
+      "tag": "figcaption",
+      "target_sha256": "43313d8d5c75261a6536080c1482f184111765959925959d093544d3d4ad3197"
+    },
+    {
+      "source_id": "ru77-art-caption-23-292",
+      "target": "«ТОТ ЧЕЛОВЕК НА СТОЛПЕ, СТОЯЩИЙ НЕПОДВИЖНО».»",
+      "source_sha256": "f30bf3358ebe5941d4916f3c24ae1d838e8a2ad54054b310c51ff518b428066e",
+      "target_id": "ru-ru77-art-caption-23-292",
+      "tag": "figcaption",
+      "target_sha256": "ae2932fe37a180d1a2b80fc5fff1f1948388976a042759f3b7e98d094ed83a0c"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRkKBZwqggs1G7BT67ra",
+    "usage": {
+      "input_tokens": 2237,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-art-inscription-25-326-16",
+    "ru77-art-inscription-25-326-17",
+    "ru77-art-inscription-25-326-18",
+    "ru77-art-caption-23-292"
+  ]
+}
