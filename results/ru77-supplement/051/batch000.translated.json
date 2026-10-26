@@ -1,0 +1,174 @@
+{
+  "unit": 51,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-supp-prices-internal-batch-title",
+      "target": "2 фунта соли",
+      "source_sha256": "7c62597b41788a79fadce41746b60a3ba35ae4a434edb8d500d231921a47b04e",
+      "target_id": "ru-ru77-supp-prices-internal-batch-title",
+      "tag": "heading",
+      "target_sha256": "abc0f93c05bf0c79027ab86e74820347034d370e35dcf1f6fcfbdc7b552ea52b"
+    },
+    {
+      "source_id": "ru77-supp-prices-01-item",
+      "target": "2 фунта соли",
+      "source_sha256": "7c62597b41788a79fadce41746b60a3ba35ae4a434edb8d500d231921a47b04e",
+      "target_id": "ru-ru77-supp-prices-01-item",
+      "tag": "td",
+      "target_sha256": "abc0f93c05bf0c79027ab86e74820347034d370e35dcf1f6fcfbdc7b552ea52b"
+    },
+    {
+      "source_id": "ru77-supp-prices-01-price",
+      "target": "200",
+      "source_sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf",
+      "target_id": "ru-ru77-supp-prices-01-price",
+      "tag": "td",
+      "target_sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+    },
+    {
+      "source_id": "ru77-supp-prices-02-item",
+      "target": "8 дюжин пинт пива, из бочки",
+      "source_sha256": "a4a4f587c55897e5d7987f7dc4749e20e637f43f1567c22e6165698502e74f21",
+      "target_id": "ru-ru77-supp-prices-02-item",
+      "tag": "td",
+      "target_sha256": "9ea79ef18b5702dcb2a9419d85f3a331af0989939100b82fb9de472578e565f7"
+    },
+    {
+      "source_id": "ru77-supp-prices-02-price",
+      "target": "800",
+      "source_sha256": "1a1cf797fabe7f95836fabeca626907c77b3e6c9aff7c2290b396a238c69362e",
+      "target_id": "ru-ru77-supp-prices-02-price",
+      "tag": "td",
+      "target_sha256": "1a1cf797fabe7f95836fabeca626907c77b3e6c9aff7c2290b396a238c69362e"
+    },
+    {
+      "source_id": "ru77-supp-prices-03-item",
+      "target": "3 бушеля пшеницы",
+      "source_sha256": "7e22129ba44a71c70ea12bc61ce0c842f50ec749936f1529fb4fb3c61eadfe89",
+      "target_id": "ru-ru77-supp-prices-03-item",
+      "tag": "td",
+      "target_sha256": "6c421a6b56d10a51c676fd00da5a8f60b6801fffb3bf18ebfb96f594f8b7fbb5"
+    },
+    {
+      "source_id": "ru77-supp-prices-03-price",
+      "target": "2,700",
+      "source_sha256": "57d5d930cd3bfab7f7992e8a8da344a0dfdd7a6e2d284481fa55bac36732aec0",
+      "target_id": "ru-ru77-supp-prices-03-price",
+      "tag": "td",
+      "target_sha256": "57d5d930cd3bfab7f7992e8a8da344a0dfdd7a6e2d284481fa55bac36732aec0"
+    },
+    {
+      "source_id": "ru77-supp-prices-04-item",
+      "target": "2 фунта рыбы",
+      "source_sha256": "b65cf78f048c73ba63a2465f92699a1dadd317c1ea56df31acd67e0f44298fb8",
+      "target_id": "ru-ru77-supp-prices-04-item",
+      "tag": "td",
+      "target_sha256": "a73107dd5fcb524109fdd04161962834616f591924b4d799129d2fe52aade2d3"
+    },
+    {
+      "source_id": "ru77-supp-prices-04-price",
+      "target": "100",
+      "source_sha256": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+      "target_id": "ru-ru77-supp-prices-04-price",
+      "tag": "td",
+      "target_sha256": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306"
+    },
+    {
+      "source_id": "ru77-supp-prices-05-item",
+      "target": "3 курицы",
+      "source_sha256": "3dd7c0f829f3d40fa4ee4eca5f60b0b9fcc9690815947294f59b5ea8860b09f2",
+      "target_id": "ru-ru77-supp-prices-05-item",
+      "tag": "td",
+      "target_sha256": "9ec7ca2c1169b9183127ae9d317363e8d70d6dbc6c6faca334cfbdfe305d45c4"
+    },
+    {
+      "source_id": "ru77-supp-prices-05-price",
+      "target": "400",
+      "source_sha256": "26d228663f13a88592a12d16cf9587caab0388b262d6d9f126ed62f9333aca94",
+      "target_id": "ru-ru77-supp-prices-05-price",
+      "tag": "td",
+      "target_sha256": "26d228663f13a88592a12d16cf9587caab0388b262d6d9f126ed62f9333aca94"
+    },
+    {
+      "source_id": "ru77-supp-prices-06-item",
+      "target": "1 гусь",
+      "source_sha256": "f469017f6df72098ed3dae6e077894febb93f31d81c71b35a61c45df338a6587",
+      "target_id": "ru-ru77-supp-prices-06-item",
+      "tag": "td",
+      "target_sha256": "44579b994b0d9c18d38edfdbe81f4d54462a517d84f733438895dda362ac53b7"
+    },
+    {
+      "source_id": "ru77-supp-prices-06-price",
+      "target": "400",
+      "source_sha256": "26d228663f13a88592a12d16cf9587caab0388b262d6d9f126ed62f9333aca94",
+      "target_id": "ru-ru77-supp-prices-06-price",
+      "tag": "td",
+      "target_sha256": "26d228663f13a88592a12d16cf9587caab0388b262d6d9f126ed62f9333aca94"
+    },
+    {
+      "source_id": "ru77-supp-prices-07-item",
+      "target": "3 дюжины яиц",
+      "source_sha256": "e738f42f9ce8a88911d8a7efa0e2ee6e377a22d70160956615f9219b411f8f22",
+      "target_id": "ru-ru77-supp-prices-07-item",
+      "tag": "td",
+      "target_sha256": "8421b72a07f33b608d911b0fab22bc1b6a5114927cb4286ff6e2bceb94c012ef"
+    },
+    {
+      "source_id": "ru77-supp-prices-07-price",
+      "target": "150",
+      "source_sha256": "9ae2bdd7beedc2e766c6b76585530e16925115707dc7a06ab5ee4aa2776b2c7b",
+      "target_id": "ru-ru77-supp-prices-07-price",
+      "tag": "td",
+      "target_sha256": "9ae2bdd7beedc2e766c6b76585530e16925115707dc7a06ab5ee4aa2776b2c7b"
+    },
+    {
+      "source_id": "ru77-supp-prices-08-item",
+      "target": "1 жаркое из говядины",
+      "source_sha256": "0e69d74714bba26387224b284f48833e95e9548cbbb29d749a6942897701ac77",
+      "target_id": "ru-ru77-supp-prices-08-item",
+      "tag": "td",
+      "target_sha256": "19202fbc6a13a63cdf2ef9747383d919d43a4819e98faef3e3d83244f6ff7fed"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRW4TSNDVoQof76DZ2Vv",
+    "usage": {
+      "input_tokens": 2371,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 518,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-supp-prices-internal-batch-title",
+    "ru77-supp-prices-01-item",
+    "ru77-supp-prices-01-price",
+    "ru77-supp-prices-02-item",
+    "ru77-supp-prices-02-price",
+    "ru77-supp-prices-03-item",
+    "ru77-supp-prices-03-price",
+    "ru77-supp-prices-04-item",
+    "ru77-supp-prices-04-price",
+    "ru77-supp-prices-05-item",
+    "ru77-supp-prices-05-price",
+    "ru77-supp-prices-06-item",
+    "ru77-supp-prices-06-price",
+    "ru77-supp-prices-07-item",
+    "ru77-supp-prices-07-price",
+    "ru77-supp-prices-08-item"
+  ]
+}

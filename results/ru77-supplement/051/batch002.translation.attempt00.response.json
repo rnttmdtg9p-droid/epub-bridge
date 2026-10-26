@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRW4ybbECZLtEPNrKhXA",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-supp-prices-16-price\",\"target\":\"10,000\"},{\"source_id\":\"ru77-supp-prices-17-item\",\"target\":\"1 еловый стол\"},{\"source_id\":\"ru77-supp-prices-17-price\",\"target\":\"3,000\"},{\"source_id\":\"ru77-supp-prices-18-item\",\"target\":\"8 табуретов\"},{\"source_id\":\"ru77-supp-prices-18-price\",\"target\":\"4,000\"},{\"source_id\":\"ru77-supp-prices-19-item\",\"target\":\"2 мельничных ружья, заряженных\"},{\"source_id\":\"ru77-supp-prices-19-price\",\"target\":\"3,000\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1685,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

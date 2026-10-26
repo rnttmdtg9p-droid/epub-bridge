@@ -1,0 +1,93 @@
+{
+  "unit": 51,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-supp-prices-16-price",
+      "target": "10,000",
+      "source_sha256": "28ec039832f5bc96c2be0eaee016dafeb7547ed76b510ed5a24d25b180493271",
+      "target_id": "ru-ru77-supp-prices-16-price",
+      "tag": "td",
+      "target_sha256": "28ec039832f5bc96c2be0eaee016dafeb7547ed76b510ed5a24d25b180493271"
+    },
+    {
+      "source_id": "ru77-supp-prices-17-item",
+      "target": "1 еловый стол",
+      "source_sha256": "9abdf83cb5c735918013bdd886d7436470d51cf4bcf18dca0061325c5741448e",
+      "target_id": "ru-ru77-supp-prices-17-item",
+      "tag": "td",
+      "target_sha256": "cf3d7d7083b668c49bdf835a91adcb924c6a7a81b9837d0a91b6fa5ef712130d"
+    },
+    {
+      "source_id": "ru77-supp-prices-17-price",
+      "target": "3,000",
+      "source_sha256": "5161dfd1e2d5f4fb0622f9877fc651086f50aa5c96b12e57d62913293776f912",
+      "target_id": "ru-ru77-supp-prices-17-price",
+      "tag": "td",
+      "target_sha256": "5161dfd1e2d5f4fb0622f9877fc651086f50aa5c96b12e57d62913293776f912"
+    },
+    {
+      "source_id": "ru77-supp-prices-18-item",
+      "target": "8 табуретов",
+      "source_sha256": "90871976f5ef0ce391169501f029bbf53cc2889078743c655e3959a685b6435a",
+      "target_id": "ru-ru77-supp-prices-18-item",
+      "tag": "td",
+      "target_sha256": "18f4c30e749774bd823e0a7dbbabc0668db15d44d7dc02a4410146103b625681"
+    },
+    {
+      "source_id": "ru77-supp-prices-18-price",
+      "target": "4,000",
+      "source_sha256": "b0fba6c920d895a9e8062c840566ec148a377e44e54218eb28b6837409e9d6b2",
+      "target_id": "ru-ru77-supp-prices-18-price",
+      "tag": "td",
+      "target_sha256": "b0fba6c920d895a9e8062c840566ec148a377e44e54218eb28b6837409e9d6b2"
+    },
+    {
+      "source_id": "ru77-supp-prices-19-item",
+      "target": "2 мельничных ружья, заряженных",
+      "source_sha256": "72ac47a8ec0b106f577ed6cf71d1f72512b0ddd59c68ba6e626b2d60ff28c67b",
+      "target_id": "ru-ru77-supp-prices-19-item",
+      "tag": "td",
+      "target_sha256": "4d6b7c074ce7a16f053fbf10cd76aabcaf693f62adaa0e6ca10f7e616bf38e82"
+    },
+    {
+      "source_id": "ru77-supp-prices-19-price",
+      "target": "3,000",
+      "source_sha256": "5161dfd1e2d5f4fb0622f9877fc651086f50aa5c96b12e57d62913293776f912",
+      "target_id": "ru-ru77-supp-prices-19-price",
+      "tag": "td",
+      "target_sha256": "5161dfd1e2d5f4fb0622f9877fc651086f50aa5c96b12e57d62913293776f912"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRW4ybbECZLtEPNrKhXA",
+    "usage": {
+      "input_tokens": 1685,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-supp-prices-16-price",
+    "ru77-supp-prices-17-item",
+    "ru77-supp-prices-17-price",
+    "ru77-supp-prices-18-item",
+    "ru77-supp-prices-18-price",
+    "ru77-supp-prices-19-item",
+    "ru77-supp-prices-19-price"
+  ]
+}
