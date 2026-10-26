@@ -1,0 +1,104 @@
+{
+  "unit": 50,
+  "heading": {
+    "source_id": "ru77-supp-circular-internal-batch-title",
+    "target": "ПРИДВОРНЫЙ ВЕСТНИК.",
+    "source_sha256": "80cb67772932d5afdc3afc9aca34c87352773e4b906d44f9bbabebf5de8ddaa0",
+    "target_id": "ru-ru77-supp-circular-internal-batch-title",
+    "tag": "heading",
+    "target_sha256": "b089b08200b5611909c08ba63de5850c7daca988a82ec121a0cd3a527a37918c"
+  },
+  "rows": [
+    {
+      "source_id": "ru77-supp-circular-01",
+      "target": "ПРИДВОРНЫЙ ВЕСТНИК.",
+      "source_sha256": "80cb67772932d5afdc3afc9aca34c87352773e4b906d44f9bbabebf5de8ddaa0",
+      "target_id": "ru-ru77-supp-circular-01",
+      "tag": "display",
+      "target_sha256": "b089b08200b5611909c08ba63de5850c7daca988a82ec121a0cd3a527a37918c"
+    },
+    {
+      "source_id": "ru77-supp-circular-02",
+      "target": "В понедельник король ездил верхом по парку.",
+      "source_sha256": "c43d61c205a27e088e852132a830bb3204d669143c7cb1095f2c23ba06d9bbf0",
+      "target_id": "ru-ru77-supp-circular-02",
+      "tag": "display",
+      "target_sha256": "b93469e391c3e2a6a6390d530464300bf2df31e336a4c081bd629994198b37e9"
+    },
+    {
+      "source_id": "ru77-supp-circular-03",
+      "target": "“  Вторник,      “      “        ”",
+      "source_sha256": "b356bcc153599797e3ca6bdcd1f59cf15699cc5d9894e5468bb9af921ced731b",
+      "target_id": "ru-ru77-supp-circular-03",
+      "tag": "display",
+      "target_sha256": "858ef185f744725f7b083b2851981fa38b5b7976957e6767f9fe45fa6c34d6b5"
+    },
+    {
+      "source_id": "ru77-supp-circular-04",
+      "target": "“  Серда          “      “        ”",
+      "source_sha256": "dee4d823f59534f5190e9c217f941c55e32d2208473c917e89a614da5ad4392e",
+      "target_id": "ru-ru77-supp-circular-04",
+      "tag": "display",
+      "target_sha256": "7b7d0379fbfd5c877f144666a5e4b2659722d14c88ccd0a44c2273e6c793c55f"
+    },
+    {
+      "source_id": "ru77-supp-circular-05",
+      "target": "“  Четверг        “      “        ”",
+      "source_sha256": "9e972fcaa963e33fd02ac2178060f6d2274ec3a8e4132d61d00d48fceaac037a",
+      "target_id": "ru-ru77-supp-circular-05",
+      "tag": "display",
+      "target_sha256": "cc3593d84fbd600accb6a6aa0af014e941b0bee5e37e8676d2e3acf35ae9039a"
+    },
+    {
+      "source_id": "ru77-supp-circular-06",
+      "target": "“  Пятница,       “      “        ”",
+      "source_sha256": "729159d0dbbb3f087df5d87c551f06196664b1b558496ff20e99a0be2a7508bc",
+      "target_id": "ru-ru77-supp-circular-06",
+      "tag": "display",
+      "target_sha256": "45a89c09cf21bde9bea408790b036c35f68cd58fbf1bfad4f4ea8e73d137885f"
+    },
+    {
+      "source_id": "ru77-supp-circular-07",
+      "target": "“  Суббота        “      “        ”",
+      "source_sha256": "fd7842a3018fe1fd9caa6dd6136864cdf17d5b62f6871554d968d6d68118cc24",
+      "target_id": "ru-ru77-supp-circular-07",
+      "tag": "display",
+      "target_sha256": "aadce61f41238916bde25b0a136e6db168dd92ee5c01606abc69d368c6121408"
+    },
+    {
+      "source_id": "ru77-supp-circular-08",
+      "target": "“  Воскресенье,   “      “        ”",
+      "source_sha256": "6c2535c33aba0c3d2f3d0a4c29bfa62692d06f0038e2cec4f730bb80b8b7d80f",
+      "target_id": "ru-ru77-supp-circular-08",
+      "tag": "display",
+      "target_sha256": "eb713be13c03b31023f5d77a920630c8f053a5d40b6bda8062797fbd92cd7534"
+    }
+  ],
+  "source_rows": 8,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgRW3k7CXMdtTqh3mryRT",
+      "usage": {
+        "input_tokens": 1527,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1034,
+        "output_tokens_details": {
+          "thinking_tokens": 657
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
