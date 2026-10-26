@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRTJLyjE2X11wFxmVbhi",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-u021-r0064\",\"target\":\"— Так почему же, ради всего святого, он [[I]]не[[/I]] признался?\"},{\"source_id\":\"ru77-u021-r0065\",\"target\":\"— Ах, добрый сэр, и оставить жену и дитя без хлеба и крова?\"},{\"source_id\":\"ru77-u021-r0066\",\"target\":\"— О, золотое сердце, теперь я понимаю! Жестокий закон отбирает имущество осуждённого и пускает по миру его вдову и сирот. Вас могли замучить до смерти, но без приговора или признания они не могли ограбить вашу жену и ребёнка. Вы стояли за них как мужчина; а [[I]]вы[[/I]] — верная жена и такая женщина, какая вы есть, — вы купили бы ему избавление от пытки ценой собственного медленного голода и смерти. Что ж, смиряешься, когда думаешь, на что способен ваш пол, если дело доходит до самопожертвования. Я запишу вас обоих в свою колонию; вам там понравится: это Фабрика, где я собираюсь превращать ощупью бредущие, копошащиеся автоматы в [[I]]людей[[/I]].\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1851,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 430,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
