@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRhz9GGvwYExXYZTYhWn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-caption-10-121\",\"target\":\"ВЫПУСКНИК ВЕСТ-ПОЙНТА.\"},{\"source_id\":\"ru77-art-caption-11-125\",\"target\":\"СЭНДИ\"},{\"source_id\":\"ru77-art-caption-11-131\",\"target\":\"«ЧЁРТ ПОБЕРИ, НЕУЖЕЛИ ТАКОЙ ПУСТЯК НЕЛЬЗЯ ПОНЯТЬ?»\"},{\"source_id\":\"ru77-art-caption-11-136\",\"target\":\"«И ТАК МЫ ОТПРАВИЛИСЬ».”\"},{\"source_id\":\"ru77-art-caption-12-139\",\"target\":\"Сей Железный Хлыщ\"},{\"source_id\":\"ru77-art-caption-12-144\",\"target\":\"ДЕЙСТВИЕ СОЛНЦА НА ЖЕЛЕЗНОЕ ОДЕЯНИЕ.\"},{\"source_id\":\"ru77-art-caption-12-146\",\"target\":\"«ОНА ПРОДОЛЖАЛА ПРИНОСИТЬ И ЛИТЬ, ПОКА Я НЕ ПРОМОК НАСКВОЗЬ».”\"},{\"source_id\":\"ru77-art-caption-13-149\",\"target\":\"Audi Alteram\"},{\"source_id\":\"ru77-art-caption-13-156\",\"target\":\"ПОХОРОНЫ СВОБОДНОГО ЧЕЛОВЕКА.\"},{\"source_id\":\"ru77-art-caption-14-163\",\"target\":\"Они приняли меня за одного из тех ОГНЕДЫШАЩИХ ДРАКОНОВ\"},{\"source_id\":\"ru77-art-caption-14-166\",\"target\":\"ДЕЙСТВИЕ ТРУБКИ НА СВОБОДНЫХ ЛЮДЕЙ.\"},{\"source_id\":\"ru77-art-caption-14-168\",\"target\":\"«ЗАЩИТИ ТЕБЯ, ГОСПОДИ! — ЖИЗНИ УГРОЖАЕТ ОПАСНОСТЬ!»\"},{\"source_id\":\"ru77-art-caption-14-169\",\"target\":\"«ОНИ ПРИШЛИ ВСЕ РАЗОМ, ОНИ ПРИШЛИ С ШУМОМ КРЫЛЬЕВ».”\"},{\"source_id\":\"ru77-art-caption-15-173\",\"target\":\"Три девицы\"},{\"source_id\":\"ru77-art-caption-15-185\",\"target\":\"«ЭТО БЫЛ САМЫЙ БОЛЬШОЙ ЗАМОК ИЗ ВИДЕННЫХ НАМИ».”\"},{\"source_id\":\"ru77-art-caption-16-187\",\"target\":\"Моргана ле Фэй\"}]}\n\nWait—correcting stray punctuation errors in the above rows.\n\n```json\n{\"rows\":[{\"source_id\":\"ru77-art-caption-10-121\",\"target\":\"ВЫПУСКНИК ВЕСТ-ПОЙНТА.\"},{\"source_id\":\"ru77-art-caption-11-125\",\"target\":\"СЭНДИ\"},{\"source_id\":\"ru77-art-caption-11-131\",\"target\":\"«ЧЁРТ ПОБЕРИ, НЕУЖЕЛИ ТАКОЙ ПУСТЯК НЕЛЬЗЯ ПОНЯТЬ?»\"},{\"source_id\":\"ru77-art-caption-11-136\",\"target\":\"«И ТАК МЫ ОТПРАВИЛИСЬ».\");\n```\n\nCorrected final output:\n\n{\"rows\":[{\"source_id\":\"ru77-art-caption-10-121\",\"target\":\"ВЫПУСКНИК ВЕСТ-ПОЙНТА.\"},{\"source_id\":\"ru77-art-caption-11-125\",\"target\":\"СЭНДИ\"},{\"source_id\":\"ru77-art-caption-11-131\",\"target\":\"«ЧЁРТ ПОБЕРИ, НЕУЖЕЛИ ТАКОЙ ПУСТЯК НЕЛЬЗЯ ПОНЯТЬ?»\"},{\"source_id\":\"ru77-art-caption-11-136\",\"target\":\"«И ТАК МЫ ОТПРАВИЛИСЬ».»\"},{\"source_id\":\"ru77-art-caption-12-139\",\"target\":\"Сей Железный Хлыщ\"},{\"source_id\":\"ru77-art-caption-12-144\",\"target\":\"ДЕЙСТВИЕ СОЛНЦА НА ЖЕЛЕЗНОЕ ОДЕЯНИЕ.\"},{\"source_id\":\"ru77-art-caption-12-146\",\"target\":\"«ОНА ПРОДОЛЖАЛА ПРИНОСИТЬ И ЛИТЬ, ПОКА Я НЕ ПРОМОК НАСКВОЗЬ».»\"},{\"source_id\":\"ru77-art-caption-13-149\",\"target\":\"Audi Alteram\"},{\"source_id\":\"ru77-art-caption-13-156\",\"target\":\"ПОХОРОНЫ СВОБОДНОГО ЧЕЛОВЕКА.\"},{\"source_id\":\"ru77-art-caption-14-163\",\"target\":\"Они приняли меня за одного из тех ОГНЕДЫШАЩИХ ДРАКОНОВ\"},{\"source_id\":\"ru77-art-caption-14-166\",\"target\":\"ДЕЙСТВИЕ ТРУБКИ НА СВОБОДНЫХ ЛЮДЕЙ.\"},{\"source_id\":\"ru77-art-caption-14-168\",\"target\":\"«ЗАЩИТИ ТЕБЯ, ГОСПОДИ! — ЖИЗНИ УГРОЖАЕТ ОПАСНОСТЬ!»\"},{\"source_id\":\"ru77-art-caption-14-169\",\"target\":\"«ОНИ ПРИШЛИ ВСЕ РАЗОМ, ОНИ ПРИШЛИ С ШУМОМ КРЫЛЬЕВ».»\"},{\"source_id\":\"ru77-art-caption-15-173\",\"target\":\"Три девицы\"},{\"source_id\":\"ru77-art-caption-15-185\",\"target\":\"«ЭТО БЫЛ САМЫЙ БОЛЬШОЙ ЗАМОК ИЗ ВИДЕННЫХ НАМИ».»\"},{\"source_id\":\"ru77-art-caption-16-187\",\"target\":\"Моргана ле Фэй\"}]}\n\nSorry — that still carries stray characters. The clean, valid JSON is:\n\n{\"rows\":[{\"source_id\":\"ru77-art-caption-10-121\",\"target\":\"ВЫПУСКНИК ВЕСТ-ПОЙНТА.\"},{\"source_id\":\"ru77-art-caption-11-125\",\"target\":\"СЭНДИ\"},{\"source_id\":\"ru77-art-caption-11-131\",\"target\":\"«ЧЁРТ ПОБЕРИ, НЕУЖЕЛИ ТАКОЙ ПУСТЯК НЕЛЬЗЯ ПОНЯТЬ?»\"},{\"source_id\":\"ru77-art-caption-11-136\",\"target\":\"«И ТАК МЫ ОТПРАВИЛИСЬ».\"},{\"source_id\":\"ru77-art-caption-12-139\",\"target\":\"Сей Железный Хлыщ\"},{\"source_id\":\"ru77-art-caption-12-144\",\"target\":\"ДЕЙСТВИЕ СОЛНЦА НА ЖЕЛЕЗНОЕ ОДЕЯНИЕ.\"},{\"source_id\":\"ru77-art-caption-12-146\",\"target\":\"«ОНА ПРОДОЛЖАЛА ПРИНОСИТЬ И ЛИТЬ, ПОКА Я НЕ ПРОМОК НАСКВОЗЬ».\"},{\"source_id\":\"ru77-art-caption-13-149\",\"target\":\"Audi Alteram\"},{\"source_id\":\"ru77-art-caption-13-156\",\"target\":\"ПОХОРОНЫ СВОБОДНОГО ЧЕЛОВЕКА.\"},{\"source_id\":\"ru77-art-caption-14-163\",\"target\":\"Они приняли меня за одного из тех ОГНЕДЫШАЩИХ ДРАКОНОВ\"},{\"source_id\":\"ru77-art-caption-14-166\",\"target\":\"ДЕЙСТВИЕ ТРУБКИ НА СВОБОДНЫХ ЛЮДЕЙ.\"},{\"source_id\":\"ru77-art-caption-14-168\",\"target\":\"«ЗАЩИТИ ТЕБЯ, ГОСПОДИ! — ЖИЗНИ УГРОЖАЕТ ОПАСНОСТЬ!»\"},{\"source_id\":\"ru77-art-caption-14-169\",\"target\":\"«ОНИ ПРИШЛИ ВСЕ РАЗОМ, ОНИ ПРИШЛИ С ШУМОМ КРЫЛЬЕВ».\"},{\"source_id\":\"ru77-art-caption-15-173\",\"target\":\"Три девицы\"},{\"source_id\":\"ru77-art-caption-15-185\",\"target\":\"«ЭТО БЫЛ САМЫЙ БОЛЬШОЙ ЗАМОК ИЗ ВИДЕННЫХ НАМИ».\"},{\"source_id\":\"ru77-art-caption-16-187\",\"target\":\"Моргана ле Фэй\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4118,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 3313,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
