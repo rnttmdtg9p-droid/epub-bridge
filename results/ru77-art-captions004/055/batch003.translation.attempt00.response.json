@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRjQxSxJXzfQG3Ui9Zrk",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-caption-38-485\",\"target\":\"«Ланселот ворвался»\"},{\"source_id\":\"ru77-art-caption-38-489\",\"target\":\"РЫЦАРИ УПРАЖНЯЮТСЯ ТАЙКОМ.\"},{\"source_id\":\"ru77-art-caption-39-493\",\"target\":\"Тощий Джим\"},{\"source_id\":\"ru77-art-caption-39-501\",\"target\":\"«ВОТ ТЕБЕ И НА, ВЕЛИКИЙ СКОТТ, ЭТО БЫЛА НАСТОЯЩАЯ СЕНСАЦИЯ!»\"},{\"source_id\":\"ru77-art-caption-39-504\",\"target\":\"БРАТЕЦ МЕРЛИН КРАДЁТ ЛАССО.\"},{\"source_id\":\"ru77-art-caption-40-509\",\"target\":\"«Ярд белоснежного церковного старосты»\"},{\"source_id\":\"ru77-art-caption-40-512\",\"target\":\"ТРИ ГОДА СПУСТЯ.\"},{\"source_id\":\"ru77-art-caption-40-517\",\"target\":\"«И ВОТ МЫ ВЗЯЛИ ВОЕННЫЙ КОРАБЛЬ.»\"},{\"source_id\":\"ru77-art-caption-41-521\",\"target\":\"Снимание нагара со свечи\"},{\"source_id\":\"ru77-art-caption-41-525\",\"target\":\"«АЛЛО, ЦЕНТРАЛЬНАЯ!»\"},{\"source_id\":\"ru77-art-caption-41-527\",\"target\":\"«ГДЕ ЖЕ БЫЛА МОЯ ВЕЛИКАЯ ТОРГОВЛЯ?»\"},{\"source_id\":\"ru77-art-caption-42-529\",\"target\":\"Сэр Мордред\"},{\"source_id\":\"ru77-art-caption-42-533\",\"target\":\"РЕШЕНИЕ СПОРА.\"},{\"source_id\":\"ru77-art-caption-42-535\",\"target\":\"«ОСТАЛЬНОЕ В ЭТОЙ ИСТОРИИ — ПРОСТО ВОЙНА, ЧИСТАЯ И НЕХИТРАЯ.»\"},{\"source_id\":\"ru77-art-caption-42-537\",\"target\":\"«ИЗМЕННИК, НАСТАЛ ТВОЙ СМЕРТНЫЙ ЧАС.»\"},{\"source_id\":\"ru77-art-caption-42-539\",\"target\":\"«ТЕПЕРЬ ЦЕРКОВЬ — ХОЗЯИН.»\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4158,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 915,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRjRSQDC4XKHG8rtXzVE",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-caption-43-547\",\"target\":\"Один из 52\"},{\"source_id\":\"ru77-art-caption-43-559\",\"target\":\"ВЫСОКАЯ ЦЕРКОВЬ.\"},{\"source_id\":\"ru77-art-caption-43-565\",\"target\":\"ЦЕРКОВЬ СУЕТ СВОЮ НОГУ.\"},{\"source_id\":\"ru77-art-caption-44-567\",\"target\":\"ИСТОРИЯ АНГЛИИ\"},{\"source_id\":\"ru77-art-caption-44-572\",\"target\":\"«БРЕД, РАЗУМЕЕТСЯ, НО ДО ЧЕГО НАСТОЯЩИЙ!»\"},{\"source_id\":\"ru77-art-inscription-44-572-1\",\"target\":\"VI ВЕК\"},{\"source_id\":\"ru77-art-inscription-44-572-2\",\"target\":\"XIX ВЕК\"},{\"source_id\":\"ru77-art-caption-44-573\",\"target\":\"«ПРОЧЬ РУКИ! МОЯ ПЕРСОНА НЕПРИКОСНОВЕННА.»\"},{\"source_id\":\"ru77-art-inscription-44-573-1\",\"target\":\"МАКАРОНЫ\"},{\"source_id\":\"ru77-art-inscription-44-573-2\",\"target\":\"НЕИЗВЕСТНОЕ МОРЕ\"},{\"source_id\":\"ru77-art-caption-44-575\",\"target\":\"Конец\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3144,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 520,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

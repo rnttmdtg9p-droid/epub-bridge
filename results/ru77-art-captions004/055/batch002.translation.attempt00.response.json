@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRjQUzx5pZ3RWcji9JhT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-caption-33-429\",\"target\":\"РАЗНИЦА В НОСАХ НИЧЕГО НЕ МЕНЯЕТ.\"},{\"source_id\":\"ru77-art-caption-34-435\",\"target\":\"Милорд граф Грип\"},{\"source_id\":\"ru77-art-caption-34-440\",\"target\":\"«ЕМУ ТАК И ХОТЕЛОСЬ ДРАКИ.»\"},{\"source_id\":\"ru77-art-caption-34-443\",\"target\":\"«ДА, ГОСУДАРЬ, БОЮСЬ, ИМЕННО ТАК ОНО И ЕСТЬ.»\"},{\"source_id\":\"ru77-art-caption-34-447\",\"target\":\"ОРАТОР.\"},{\"source_id\":\"ru77-art-caption-34-450\",\"target\":\"«МЫ СОСТАВЛЯЛИ ХВОСТ ЕГО ПРОЦЕССИИ.»\"},{\"source_id\":\"ru77-art-caption-35-453\",\"target\":\"Он был мужчиной\"},{\"source_id\":\"ru77-art-caption-35-457\",\"target\":\"В СТРАНСТВИИ.\"},{\"source_id\":\"ru77-art-caption-35-460\",\"target\":\"РАБЫ ГРЕЮТСЯ.\"},{\"source_id\":\"ru77-art-caption-35-462\",\"target\":\"«ОБРАЗЧИК ОДНОГО ИЗ РАЗРЯДОВ ЛОНДОНСКОГО ОБЩЕСТВА.»\"},{\"source_id\":\"ru77-art-caption-36-465\",\"target\":\"Надсмотрщик над рабами!\"},{\"source_id\":\"ru77-art-caption-36-468\",\"target\":\"«ПРОСТО ОГРОМНАЯ ДЕРЕВНЯ.»\"},{\"source_id\":\"ru77-art-caption-36-469\",\"target\":\"СЭНДИ ПРОЕХАЛА МИМО НА МУЛЕ.\"},{\"source_id\":\"ru77-art-caption-37-473\",\"target\":\"Сестрица, у вас штора съехала\"},{\"source_id\":\"ru77-art-caption-37-479\",\"target\":\"УЛИЦЫ ЛОНДОНА.\"},{\"source_id\":\"ru77-art-caption-37-481\",\"target\":\"«ОН ВДРУГ ВЗГЛЯНУЛ НА МЕНЯ ТАК, ЧТО ПРОНЗИЛО ДО САМОГО КОСТНОГО МОЗГА.»\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4121,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 882,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
