@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgReRJojHN2yHt252ugNy",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-caption-11-128\",\"target\":\"ТРИ БРАТА В ОПИСАНИИ СЭНДИ.\"},{\"source_id\":\"ru77-art-caption-13-154\",\"target\":\"ПО САРКАЗМУ ЗАКОНА И СЛОВА ОНИ БЫЛИ СВОБОДНЫМИ ЛЮДЬМИ.\"},{\"source_id\":\"ru77-art-caption-14-167\",\"target\":\"ДЕЙСТВИЕ ТРУБКИ НА СЭНДИ.\"},{\"source_id\":\"ru77-art-caption-15-177\",\"target\":\"СЭР ГАВЕЙН И СЭР УЭЙН.\"},{\"source_id\":\"ru77-art-caption-15-179\",\"target\":\"ОСТОРОЖНО, ДЕРЖИТЕСЬ КРЕПЧЕ!\"},{\"source_id\":\"ru77-art-caption-16-192\",\"target\":\"СЭР КОТ МАЛЬ ТАЙЕ.\"},{\"source_id\":\"ru77-art-caption-16-194\",\"target\":\"СТРАЖИ ОКЛИКНУЛИ НАС, И ПОСЛЕ ПЕРЕГОВОРОВ НАС ВПУСТИЛИ.\"},{\"source_id\":\"ru77-art-caption-17-208\",\"target\":\"Я УВИДЕЛ КАРТИНУ, КОТОРАЯ НЕ ВЫЙДЕТ У МЕНЯ ИЗ ПАМЯТИ.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2702,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 545,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

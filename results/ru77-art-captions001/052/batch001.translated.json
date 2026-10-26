@@ -1,0 +1,102 @@
+{
+  "unit": 52,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-art-caption-11-128",
+      "target": "ТРИ БРАТА В ОПИСАНИИ СЭНДИ.",
+      "source_sha256": "483ec1a64f9412a4ff109de8642edc1a721c191af90506584a93e79d17274200",
+      "target_id": "ru-ru77-art-caption-11-128",
+      "tag": "figcaption",
+      "target_sha256": "4508d7538e86780803c75e434da95eeb6b20804e15654eedb74b5f5af1862881"
+    },
+    {
+      "source_id": "ru77-art-caption-13-154",
+      "target": "ПО САРКАЗМУ ЗАКОНА И СЛОВА ОНИ БЫЛИ СВОБОДНЫМИ ЛЮДЬМИ.",
+      "source_sha256": "8decbece3d6ca5dd1e1c342f0f90b1f2b12b3d0d4c5cd3cafb31d4d199acb066",
+      "target_id": "ru-ru77-art-caption-13-154",
+      "tag": "figcaption",
+      "target_sha256": "5aea18db7c76b640797711ae08aa50cc8f353cf664646ab43cf8aa2e6f6880fe"
+    },
+    {
+      "source_id": "ru77-art-caption-14-167",
+      "target": "ДЕЙСТВИЕ ТРУБКИ НА СЭНДИ.",
+      "source_sha256": "bee55b52006ef4bc7166cd43c9915cc3e5701a964359fc853fc488c9ff404a03",
+      "target_id": "ru-ru77-art-caption-14-167",
+      "tag": "figcaption",
+      "target_sha256": "701edc9d17786921b047768d28ad6afb90fc6a1f9d3cc6c01386319a566e22d9"
+    },
+    {
+      "source_id": "ru77-art-caption-15-177",
+      "target": "СЭР ГАВЕЙН И СЭР УЭЙН.",
+      "source_sha256": "017b358cf7ce3b0f75c34dd92ab5c0ebed053396fc6b0aff672c41eefe50230b",
+      "target_id": "ru-ru77-art-caption-15-177",
+      "tag": "figcaption",
+      "target_sha256": "9ee7dfaa1b4f5ecde8f92ec6ec12763d37f28d6e176dce083cca690ea70b67eb"
+    },
+    {
+      "source_id": "ru77-art-caption-15-179",
+      "target": "ОСТОРОЖНО, ДЕРЖИТЕСЬ КРЕПЧЕ!",
+      "source_sha256": "4f6c720dadaea8a3dbc3187845a4b19ba3cb41fffc5f20c53a35f40d3dd293a9",
+      "target_id": "ru-ru77-art-caption-15-179",
+      "tag": "figcaption",
+      "target_sha256": "ad75484b5c977246cc9eb0939a982ce019857f7016eb7a7bba87a2dfbf221771"
+    },
+    {
+      "source_id": "ru77-art-caption-16-192",
+      "target": "СЭР КОТ МАЛЬ ТАЙЕ.",
+      "source_sha256": "7ae1e424c3ac36d05092ad43347fc9543bfcf8021e39bf8a7abed55f4ec664e9",
+      "target_id": "ru-ru77-art-caption-16-192",
+      "tag": "figcaption",
+      "target_sha256": "cba06940951a9136af07121ca69d92f2635902328867eb178e1b3ea5904cf239"
+    },
+    {
+      "source_id": "ru77-art-caption-16-194",
+      "target": "СТРАЖИ ОКЛИКНУЛИ НАС, И ПОСЛЕ ПЕРЕГОВОРОВ НАС ВПУСТИЛИ.",
+      "source_sha256": "893ef4cd11a9d3c5238dd103300345b037a93ae482845e90bb323ea880cedcd6",
+      "target_id": "ru-ru77-art-caption-16-194",
+      "tag": "figcaption",
+      "target_sha256": "2fab19520ac901ef5962f1cc922c8a655467ae18a2aa8011ae943d6ffd3fb120"
+    },
+    {
+      "source_id": "ru77-art-caption-17-208",
+      "target": "Я УВИДЕЛ КАРТИНУ, КОТОРАЯ НЕ ВЫЙДЕТ У МЕНЯ ИЗ ПАМЯТИ.",
+      "source_sha256": "6050ad93e5d10fb5088e2f236f983fbc709992611ebd75409e04aee64259835e",
+      "target_id": "ru-ru77-art-caption-17-208",
+      "tag": "figcaption",
+      "target_sha256": "77bd6d57c9ef6b267cbb0a3e996fa6881b3f1808e0c26adc73fa8da4ef2cafb8"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgReRJojHN2yHt252ugNy",
+    "usage": {
+      "input_tokens": 2702,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 545,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-art-caption-11-128",
+    "ru77-art-caption-13-154",
+    "ru77-art-caption-14-167",
+    "ru77-art-caption-15-177",
+    "ru77-art-caption-15-179",
+    "ru77-art-caption-16-192",
+    "ru77-art-caption-16-194",
+    "ru77-art-caption-17-208"
+  ]
+}
