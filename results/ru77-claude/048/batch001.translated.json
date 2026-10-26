@@ -1,0 +1,39 @@
+{
+  "unit": 48,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u048-r0016",
+      "target": "Он готовил свой последний «эффект», но так и не довёл его до конца.",
+      "source_sha256": "f8270b547d9a1a9a49a70a35ed2b76d613317f468e925ff3645c49e2c662f261",
+      "target_id": "ru-ru77-u048-r0016",
+      "tag": "p",
+      "target_sha256": "3f55fd62078c89b13898565952daf962fc7f100fcafc7d49bc930046204f9350"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRW18nsgMtgoWJapzb1V",
+    "usage": {
+      "input_tokens": 1135,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 58,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u048-r0016"
+  ]
+}
