@@ -1,0 +1,67 @@
+{
+  "unit": 9,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u009-r0048",
+      "target": "— В котором часу?",
+      "source_sha256": "c2a498928c67ca73921ee22a3e95449e2a3fecffa98b959e003aa3c45c9724df",
+      "target_id": "ru-ru77-u009-r0048",
+      "tag": "p",
+      "target_sha256": "b37c1eae5fed732d479a002241560a7d07735da1b7011251d5712fdbe581d4f3"
+    },
+    {
+      "source_id": "ru77-u009-r0049",
+      "target": "— В самый полдень.",
+      "source_sha256": "a745225793c876ea27c4ffc65a67e1b9f8199762e2aaec1e330ae180cae27c88",
+      "target_id": "ru-ru77-u009-r0049",
+      "tag": "p",
+      "target_sha256": "f0e6d32b8409d6ac357b7041298caaa6ee487d6e4a0da1968d280946e1b09e9b"
+    },
+    {
+      "source_id": "ru77-u009-r0050",
+      "target": "— Ну так вот, слушай, что ты должен сказать. — Я умолк и целую минуту стоял над съёжившимся мальчишкой в жуткой тишине; затем голосом глубоким, размеренным, чреватым погибелью начал и, поднимаясь по ступеням драматического нарастания, достиг своей грандиозной кульминации, которую произнёс так возвышенно и величаво, как никогда в жизни ничего подобного не произносил: — Ступай назад и скажи королю, что в тот час я окутаю весь мир мёртвой чернотой полуночи; я погашу солнце, и оно никогда более не засияет; плоды земные сгниют без света и тепла, и народы земные будут томиться голодом и вымрут до последнего человека!",
+      "target_note": null,
+      "source_sha256": "49e2236898f8e5ee5e02781649d18df42dbca07b10aac9241b9ea4d2e0e5726e",
+      "target_id": "ru-ru77-u009-r0050",
+      "tag": "p",
+      "target_sha256": "9a4d23cb6d3df483b6fa18ecec480127779f62b6ae736fd4079be26a252c5f54"
+    },
+    {
+      "source_id": "ru77-u009-r0051",
+      "target": "Мальчишку мне пришлось выносить самому — так он обмяк и рухнул духом. Я передал его солдатам и вернулся.",
+      "source_sha256": "6f442ffa7ab17fd44c5c78ab8a4d897fcf8cf64baf2a317ad7c30e76a43cbd73",
+      "target_id": "ru-ru77-u009-r0051",
+      "tag": "p",
+      "target_sha256": "24e20feae6fb1bd62f5131fc77c3ace71464e702c06249a46c59c1c67b7575ec"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRSNVh6Vvu7mF1oepi7V",
+    "usage": {
+      "input_tokens": 1923,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 425,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u009-r0048",
+    "ru77-u009-r0049",
+    "ru77-u009-r0050",
+    "ru77-u009-r0051"
+  ]
+}
