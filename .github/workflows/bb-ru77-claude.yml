@@ -1,0 +1,36 @@
+name: BB Russian rank77 initial Claude translation
+on:
+  push:
+    paths: ['.github/workflows/bb-ru77-claude.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-russian-sequential-rank77
+  cancel-in-progress: false
+jobs:
+  initial-translation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Configure durable unit checkpoints
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 -m py_compile scripts/bb_ru77_claude.py
+      - name: Translate original English to Russian; independent review remains separate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru77_claude.py
+      - name: Preserve translation receipts and checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru77-initial-claude-translation-v5070
+          path: results/ru77-claude/
+          retention-days: 90
+          if-no-files-found: warn
