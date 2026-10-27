@@ -1,0 +1,66 @@
+{
+  "unit": 21,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u021-r0080",
+      "target": "Поистине бесстрашен был в ту минуту Торрес — бесстрашен от древнего напитка, что жёг ему кровь и мозг, и оттого, что он был хозяином положения. К тому же, как истый латиноамериканец, он обожал сцены, в которых можно было важничать и декламировать.",
+      "source_sha256": "3f992a304309d7667aa8f6473afe460ddf77de9891fde1c05c9193468673f3b9",
+      "target_id": "ru-ru78-u021-r0080",
+      "tag": "p",
+      "target_sha256": "6b30c4e987260dab67fdc5ee824d9c04370aea38aacabfdb069e6062d7a5e349"
+    },
+    {
+      "source_id": "ru78-u021-r0081",
+      "target": "Но она поразила его, издав шипение, подобное тому, каким на латинский лад подзывают слугу. Он подозрительно посмотрел на неё, взглянул на дверной проём спальни, затем снова перевёл взгляд на неё.",
+      "source_sha256": "80159e5c8b334ce12d37cda4a43c94b1dec7cb50bfd74fed159f95c9fc407bb9",
+      "target_id": "ru-ru78-u021-r0081",
+      "tag": "p",
+      "target_sha256": "b706c2be4f1dea0fdcad2242ede7037d1fb1f0bf8d44bd4c4eeeaf8d44aca689"
+    },
+    {
+      "source_id": "ru78-u021-r0082",
+      "target": "Словно призрак, замеченный лишь смутно, краем глаза, огромный белый пёс вырвался из дверного проёма. Торрес, снова испуганный, невольно шагнул в сторону. Но нога его не нашла опоры в пустоте воздуха, на которую наступила, и тяжесть тела свалила его с помоста в воду. Ещё падая и крича от отчаяния, он увидел пса, который в воздухе прыгнул вслед за ним.",
+      "source_sha256": "9d09e5d9a9ae166af217a1055eb4729b140ed8e3737ed78f606ebf97a00acefd",
+      "target_id": "ru-ru78-u021-r0082",
+      "tag": "p",
+      "target_sha256": "25329fc9442d4b585ed483903fe7062077e6b8c7b598fb0b17f7bdc0f559d381"
+    },
+    {
+      "source_id": "ru78-u021-r0083",
+      "target": "Каким бы пловцом он ни был, Торрес в тисках течения был как соломинка; и Дама, Которая Грезит, заворожённо глядя вниз с края помоста, видела, как он исчез, а за ним и пёс — в самом сердце водоворота, откуда нет возврата.",
+      "source_sha256": "3f2a2b62a00245c65e85fcb03b936e2f4292f1fbb57155a8095a013159814344",
+      "target_id": "ru-ru78-u021-r0083",
+      "tag": "p",
+      "target_sha256": "f82b1bf05f1f5592b001dad58faeeaaac8928563786666e664f6037c0ac0bcab"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS3UbxcNx4CjiHD7eFWr",
+    "usage": {
+      "input_tokens": 2640,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 541,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u021-r0080",
+    "ru78-u021-r0081",
+    "ru78-u021-r0082",
+    "ru78-u021-r0083"
+  ]
+}
