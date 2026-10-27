@@ -1,0 +1,75 @@
+{
+  "unit": 71,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u071-r0064",
+      "target": "Час спустя человек, пробираясь сквозь деревья и туман, быстро удалялся от Монтрейль-сюр-Мер в направлении Парижа. Этим человеком был Жан Вальжан. Свидетельства двух или трёх возчиков, повстречавших его, установили, что он нёс узелок и что на нём была блуза. Откуда он взял эту блузу? Этого так и не узнали. Между тем несколькими днями раньше в больнице при фабрике умер старый рабочий, не оставив ничего, кроме блузы. Быть может, это была как раз она.",
+      "source_sha256": "8338345850e2bd66991fb5daabbc889f7b39165cec379e8bd4af687747529be1",
+      "target_id": "ru-fr81-u071-r0064",
+      "tag": "prose",
+      "target_sha256": "dfca455018ff32c08edd3da7fbfff3f6344acc4717609daf3e38e4a2e24a7c1c"
+    },
+    {
+      "source_id": "fr81-u071-r0065",
+      "target": "Ещё одно слово о Фантине.",
+      "source_sha256": "934caf48e01b7718577cb799d0b6843f7b88a3019fa7acce49d6c549e5ce875e",
+      "target_id": "ru-fr81-u071-r0065",
+      "tag": "prose",
+      "target_sha256": "3a444be8f72f3e10a6d584dfdbdf1a0a7802486c7fd7ed3240f2eaf8a758dbd2"
+    },
+    {
+      "source_id": "fr81-u071-r0066",
+      "target": "У всех нас есть мать — земля. Фантину возвратили этой матери.",
+      "source_sha256": "d7e9bc11fb939f93fd5d958a6692b036bca64170bef399fbd8d0a22b104344e4",
+      "target_id": "ru-fr81-u071-r0066",
+      "tag": "prose",
+      "target_sha256": "b96daf167d0f6afbb51a9f26c5f01fc1a21cdfdd5d47721008d3260a849260c2"
+    },
+    {
+      "source_id": "fr81-u071-r0067",
+      "target": "Священник счёл, что поступает хорошо, и, быть может, поступил хорошо, отложив из того, что оставил Жан Вальжан, как можно больше денег для бедных. В конце концов, о ком шла речь? О каторжнике и о публичной женщине. Поэтому он упростил похороны Фантины и свёл их к тому строго необходимому, что зовётся общей могилой.",
+      "source_sha256": "fa5c8f1dce602349fe84f0ec502b51a76905f83bf1133e43fad1cfb3bdfdeab2",
+      "target_id": "ru-fr81-u071-r0067",
+      "tag": "prose",
+      "target_sha256": "9df9fe6c4bcffb0b2436a0eb381506854fad893502ac1800f34cfc3e90822658"
+    },
+    {
+      "source_id": "fr81-u071-r0068",
+      "target": "Итак, Фантину похоронили в даровом уголке кладбища, принадлежащем всем и никому, где теряют бедняков. К счастью, Бог знает, где вновь найти душу. Фантину уложили во мраке среди первых попавшихся костей; она претерпела общность праха. Её бросили в общую яму. Её могила походила на её постель.",
+      "source_sha256": "c3b6df67e5f71c0e967d0ed9b15c99f98e5f0d109f39051ef18ee22589f4fa92",
+      "target_id": "ru-fr81-u071-r0068",
+      "tag": "prose",
+      "target_sha256": "49189e3a1814d15daf4899538a006611bba6fc66eff41a05ecdac6b16821bff9"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSraTs6b4VHrXdRmjPo6",
+    "usage": {
+      "input_tokens": 3124,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 609,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u071-r0064",
+    "fr81-u071-r0065",
+    "fr81-u071-r0066",
+    "fr81-u071-r0067",
+    "fr81-u071-r0068"
+  ]
+}
