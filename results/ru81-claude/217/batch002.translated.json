@@ -1,0 +1,75 @@
+{
+  "unit": 217,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u217-r0064",
+      "target": "Старшая дочь проворчала:",
+      "source_sha256": "a2b1c1b997e584661935ef5a6c0fb4fa3aadcfcde609506e3fceb5c737e9d988",
+      "target_id": "ru-fr81-u217-r0064",
+      "tag": "prose",
+      "target_sha256": "62c4bde25f2d74dded41e6e565576c0a9b8595a1a6f94ab0d2b5a0a3ba070bf3"
+    },
+    {
+      "source_id": "fr81-u217-r0065",
+      "target": "— Стоять на карауле босиком, на снегу!",
+      "source_sha256": "0e5f45c823fa0c83f25c74e124628a839c65537a311f6213ba67b0c7f71d51dd",
+      "target_id": "ru-fr81-u217-r0065",
+      "tag": "prose",
+      "target_sha256": "c7f6ddbbcdbc7509b490f079d0a9c4f66448827b61e50cc9b74648052f9edd51"
+    },
+    {
+      "source_id": "fr81-u217-r0066",
+      "target": "— Завтра у вас будут шёлковые ботинки цвета жука-скарабея! — сказал отец.",
+      "source_sha256": "ccdf8ec4322492200dd7a5301dd5a9c3469d242bae945b4097b2c3a580dc8497",
+      "target_id": "ru-fr81-u217-r0066",
+      "tag": "prose",
+      "target_sha256": "388276417d71894ce19421ecafad3ccaba2c8527fdebfb65f4743193f53efdd6"
+    },
+    {
+      "source_id": "fr81-u217-r0067",
+      "target": "Они спустились по лестнице, и несколько секунд спустя стук захлопнувшейся внизу двери возвестил, что обе уже на улице.",
+      "source_sha256": "ecba2da7dd31fb50d53d44f49f9e193f1d68a5fde2319dcbce5ccc9a3d0f29d9",
+      "target_id": "ru-fr81-u217-r0067",
+      "tag": "prose",
+      "target_sha256": "e540230443eb67b045fdb9a51b7bf8e50b105218ab10eb6e7cdc2e276ad32a6c"
+    },
+    {
+      "source_id": "fr81-u217-r0068",
+      "target": "В доме не оставалось теперь никого, кроме Мариуса и Жондретов, да, вероятно, ещё тех загадочных существ, которых Мариус мельком увидел в сумерках за дверью необитаемой каморки.",
+      "source_sha256": "3620e968fd79fda0ef75099b493de132958104cc50e38f5ae851db1bab1fca28",
+      "target_id": "ru-fr81-u217-r0068",
+      "tag": "prose",
+      "target_sha256": "21f395ba03998686a10cbeacd90730258baa1234140242f45c0570a1d053bb91"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgT1348WygB3pJLNC1om4",
+    "usage": {
+      "input_tokens": 2819,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 317,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u217-r0064",
+    "fr81-u217-r0065",
+    "fr81-u217-r0066",
+    "fr81-u217-r0067",
+    "fr81-u217-r0068"
+  ]
+}
