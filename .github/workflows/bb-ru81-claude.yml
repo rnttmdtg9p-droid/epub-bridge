@@ -32,3 +32,5 @@ jobs:
           path: results/ru81-claude/
           retention-days: 90
           if-no-files-found: warn
+
+# Resume 2026-10-27 after validated unit171 marker-only recovery; reuse every saved batch.
