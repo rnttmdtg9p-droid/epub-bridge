@@ -1,0 +1,66 @@
+{
+  "unit": 29,
+  "batch": 4,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u029-r0062",
+      "target": "— А, Питер Макгилл, мой враг, — бормотал он. — Питер Макгилл из Глазго, который довёл меня до такого конца!.. Это тебе!.. И это!.. И это!",
+      "source_sha256": "04f97e876da0abb33e907c9872f2ebc9085b1113869b0923f15b5ea972b0d088",
+      "target_id": "ru-ru78-u029-r0062",
+      "tag": "p",
+      "target_sha256": "32d38fa0d779d23ee44056d601b75d3d58efafa3650fb49cd155473279ca0853"
+    },
+    {
+      "source_id": "ru78-u029-r0063",
+      "target": "Так говоря, он вонзил тяжёлый нож в хрупкий лоб черепа. Костная пыль от того, что некогда было вместилищем мозга Питера Макгилла, поднялась ему в ноздри и ещё сильнее распалила его исступление. Он набросился на скелет голыми руками, рвал его, разламывал, наполняя тесное пространство вокруг себя летящими костями. Это было похоже на битву, в которой он уничтожал то, что осталось от бренных останков некогда жившего в Глазго человека.",
+      "source_sha256": "f12c87adb0a61785653377edf51dc4849260602e9de286fcea081b147881f0b0",
+      "target_id": "ru-ru78-u029-r0063",
+      "tag": "p",
+      "target_sha256": "6a566a0860ef9c2a08de2dfd8b13d318d9cadc084791853c2d1d2d4ce44fb673"
+    },
+    {
+      "source_id": "ru78-u029-r0064",
+      "target": "Ещё раз Торрес протиснул голову сквозь щель, чтобы взглянуть на меркнущее великолепие мира. Словно крыса, схваченная за шею в капкане, придуманном древними майя, он видел, как яркий мир и день тускнеют до темноты, а последние проблески его сознания тонут во мраке смерти.",
+      "source_sha256": "fab8b1768c1e3cf15dd86a29a11f07d32c71f575a34ff52cb7866ff6ef8de301",
+      "target_id": "ru-ru78-u029-r0064",
+      "tag": "p",
+      "target_sha256": "8225c97fc117b96c9b4ac2be4cb72e8202a0eb673fe88e84d572a1a4fc1e3128"
+    },
+    {
+      "source_id": "ru78-u029-r0065",
+      "target": "А коровы всё так же стояли в воде, дремали и отмахивались от мух, и позднее олень вернулся, презрительно не замечая коров, чтобы докончить прерванное питьё.",
+      "source_sha256": "6164aab8ea1866c7c618ff209bfaeb00692dab86c9018a6b4794a37e7f6f1d74",
+      "target_id": "ru-ru78-u029-r0065",
+      "tag": "p",
+      "target_sha256": "ca4153970e7e037985557da1a003214bb733c0292b2d0ef59a6db30e42b9a62f"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS4pXfpfporiNyFf2Ryr",
+    "usage": {
+      "input_tokens": 2850,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1045,
+      "output_tokens_details": {
+        "thinking_tokens": 514
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u029-r0062",
+    "ru78-u029-r0063",
+    "ru78-u029-r0064",
+    "ru78-u029-r0065"
+  ]
+}
