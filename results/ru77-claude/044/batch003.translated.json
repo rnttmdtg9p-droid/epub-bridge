@@ -1,0 +1,57 @@
+{
+  "unit": 44,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u044-r0048",
+      "target": "СУЛТАН СИРИЙСКИЙ.",
+      "source_sha256": "3907f5ec2017032985f8855e7d10a0124b2826f8ed5f34297ab551f854826d65",
+      "target_id": "ru-ru77-u044-r0048",
+      "tag": "td",
+      "target_sha256": "0cf10931c093344649db37284924564273ef300e1d8275c176982bc28ca921dc"
+    },
+    {
+      "source_id": "ru77-u044-r0049",
+      "target": "Судья — КЛАРЕНС.",
+      "source_sha256": "4548fa96f2b9f14d5d1b9242f5c81c0a1779f24d47f98721f17a7bc52fe415a9",
+      "target_id": "ru-ru77-u044-r0049",
+      "tag": "td",
+      "target_sha256": "cff33fd8ef0edafa7cd97e2a1987069ce2ca61f0b4984853c471ddb562a529df"
+    },
+    {
+      "source_id": "ru77-u044-r0050",
+      "target": "Первая публичная игра непременно собрала бы пятьдесят тысяч человек, а по части настоящего веселья стоила бы того, чтобы ради неё объехать полсвета. Всё складывалось благоприятно: стояла мягкая, прекрасная весенняя погода, и Природа вся была обряжена в новые наряды.",
+      "source_sha256": "ecb10debf1ae744f1766a43ff1ae79ecbef02bd230141894862af73fc6fb5fde",
+      "target_id": "ru-ru77-u044-r0050",
+      "tag": "p",
+      "target_sha256": "eb9ca579e23ed1649b4814e5a2d497af298370dd3ad2dd1f5981edc8e6051a5b"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRVfYteyLnbtJJ1D1sFh",
+    "usage": {
+      "input_tokens": 1480,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u044-r0048",
+    "ru77-u044-r0049",
+    "ru77-u044-r0050"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "unit": 46,
+  "batch": 8,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u046-r0128",
+      "target": "— Именно так. Мы [[I]]наносим удар[[/I]] — своей Прокламацией, — а потом их очередь бить по мячу. Теперь пусть это немедленно наберут, напечатают и расклеят; то есть отдайте приказ; а потом, если у подножия холма найдётся пара велосипедов, — в путь, к пещере Мерлина!",
+      "source_sha256": "81ab59f0efb97f8f29424296483430cbf9083550f0329491958cbd85742777d5",
+      "target_id": "ru-ru77-u046-r0128",
+      "tag": "p",
+      "target_sha256": "f2747ac818f38f8c32b7f4905066ebb8569271ef45342c99aed13e7d2584a6e8"
+    },
+    {
+      "source_id": "ru77-u046-r0129",
+      "target": "— Я буду готов через десять минут. Какой ураган разразится завтра, когда этот клочок бумаги примется за дело!.. Славный он, этот старый дворец; интересно, доведётся ли нам когда-нибудь снова… впрочем, неважно.",
+      "source_sha256": "038a3337f6cf6706090d8807fb5399f3dfd5b9441d4fb43b05e78cf9d9e96d56",
+      "target_id": "ru-ru77-u046-r0129",
+      "tag": "p",
+      "target_sha256": "3710632ae10b7e945737dea610e63e11e0ccebdffbb900857b384e20b09b3290"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRVqEryLJnUxYt3JFYPf",
+    "usage": {
+      "input_tokens": 1502,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u046-r0128",
+    "ru77-u046-r0129"
+  ]
+}

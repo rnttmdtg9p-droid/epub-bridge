@@ -1,8 +1,18 @@
 {
   "rank": 77,
-  "completed_unit": 38,
+  "completed_unit": 48,
   "source_units": 48,
   "source_rows": 1916,
-  "state": "INITIAL_TRANSLATION_RUNNING_REVIEW_NOT_RUN",
-  "utc": "2026-10-26T20:33:05.580206+00:00"
+  "state": "INITIAL_TRANSLATION_COMPLETE_REVIEW_AND_RELEASE_EVIDENCE_SEPARATE",
+  "utc": "2026-10-26T20:44:29.496639+00:00",
+  "checkpoint_reconciliation": "results/ru77-reconciliation/reconciliation.json",
+  "legacy_progress": {
+    "rank": 77,
+    "completed_unit": 48,
+    "source_units": 48,
+    "source_rows": 1916,
+    "state": "INITIAL_TRANSLATION_RUNNING_REVIEW_NOT_RUN",
+    "utc": "2026-10-26T20:44:29.496639+00:00"
+  },
+  "release_approval_inferred": false
 }

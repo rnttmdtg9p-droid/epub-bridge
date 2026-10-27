@@ -1,0 +1,66 @@
+{
+  "unit": 42,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u042-r0016",
+      "target": "Я всегда прибегаю к этому высокому слогу, когда подвожу эффект к кульминации. Что ж, было великолепно смотреть, как Ланселот и его молодцы роем взбираются на помост и сбрасывают шерифов и прочих за борт. И было отрадно видеть, как эта ошеломлённая толпа опускается на колени и вымаливает себе жизнь у короля, которого только что осмеивала и оскорбляла. А когда он стоял в стороне, принимая это поклонение в лохмотьях, я подумал про себя: нет, право же, в поступи и осанке короля всё-таки есть что-то особенно величественное.",
+      "tag": "p",
+      "source_sha256": "9607e80ecdc4cd0f0a4c7dbe780604f2d9c00ff6dc6cf3d8473df881306d4c95",
+      "target_id": "ru-ru77-u042-r0016",
+      "target_sha256": "fd0c4970e8f1ad32d0469881fd0495570d736c3452f8d51205fd4379f0b54277"
+    },
+    {
+      "source_id": "ru77-u042-r0017",
+      "target": "Я был безмерно доволен. Если взять всё положение в целом, это был один из самых пёстрых и блистательных эффектов, какие я когда-либо устраивал.",
+      "tag": "p",
+      "source_sha256": "8ba9902ae85d86fc249fa762f0e21335c4aa661c56392b9324becdf5e899347b",
+      "target_id": "ru-ru77-u042-r0017",
+      "target_sha256": "baad3128caf6dba767b3b2cedcc6e11e2816803825a89d2f19e9e54125fc9629"
+    },
+    {
+      "source_id": "ru77-u042-r0018",
+      "target": "И вот сейчас же подходит Кларенс собственной персоной! — подмигивает и говорит совсем по-современному:",
+      "tag": "p",
+      "source_sha256": "0ed250633eb82f29ddfb6d32d1e436e7afc6c0b73de35bf055f031b1b9135518",
+      "target_id": "ru-ru77-u042-r0018",
+      "target_sha256": "9b252a79f885ab613bc47f1a84e6e640cb94a65162c3307d443077f3a3ad610e"
+    },
+    {
+      "source_id": "ru77-u042-r0019",
+      "target": "— Порядочный сюрприз, не правда ли? Я знал, что вам понравится. Я давно уже тайком упражнял ребят, и они просто изголодались по случаю блеснуть.",
+      "tag": "p",
+      "source_sha256": "d4b8b805dd2f66bf9df92f9e9452d43a68783a89788b979a66cdabca55e69045",
+      "target_id": "ru-ru77-u042-r0019",
+      "target_sha256": "4ea514e1676a53ecd40731c0b357c4096c1d31a72adc5611a9f75a379ddbcf99"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRVMzE9tPmgvJfchriet",
+    "usage": {
+      "input_tokens": 2051,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 510,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u042-r0016",
+    "ru77-u042-r0017",
+    "ru77-u042-r0018",
+    "ru77-u042-r0019"
+  ]
+}
