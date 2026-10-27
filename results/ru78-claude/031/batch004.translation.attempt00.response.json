@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgS5CR4p8GijbaNg4cK4B",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru78-u031-r0064\",\"target\":\"— Сдаюсь! — воскликнул Фрэнсис. — Иду к Леонсии. Поговорим потом, когда ты придёшь в здравый ум.\"},{\"source_id\":\"ru78-u031-r0065\",\"target\":\"Он направился к двери, но Генри остановил его.\"},{\"source_id\":\"ru78-u031-r0066\",\"target\":\"— Ещё секунду, Фрэнсис, и я закончу, — сказал он. — Хочу дать тебе подсказку. Я не женат. Там тебя ждёт только одна женщина. Эта женщина — моя сестра. И она же — Леонсия.\"},{\"source_id\":\"ru78-u031-r0067\",\"target\":\"Фрэнсису потребовалось ошеломлённых полминуты, чтобы это прочно уложилось у него в голове. Он снова, стремительно, бросился к двери, но Генри опять остановил его.\"},{\"source_id\":\"ru78-u031-r0068\",\"target\":\"— Я выиграл? — спросил Генри.\"},{\"source_id\":\"ru78-u031-r0069\",\"target\":\"Но Фрэнсис стряхнул его руку, вылетел в дверь и захлопнул её за собой.\"},{\"source_id\":\"ru78-u031-r0070\",\"target\":\"КОНЕЦ.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2772,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 459,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

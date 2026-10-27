@@ -1,0 +1,93 @@
+{
+  "unit": 31,
+  "batch": 4,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u031-r0064",
+      "target": "— Сдаюсь! — воскликнул Фрэнсис. — Иду к Леонсии. Поговорим потом, когда ты придёшь в здравый ум.",
+      "source_sha256": "4f4efc97b660b81be538c7030878782e5c01d5243ab0c7e5a65fca30c2124b92",
+      "target_id": "ru-ru78-u031-r0064",
+      "tag": "p",
+      "target_sha256": "3cc6a9d1ac31dc29ad2a353810168746ef017c15915404ab2a785fc29d392e26"
+    },
+    {
+      "source_id": "ru78-u031-r0065",
+      "target": "Он направился к двери, но Генри остановил его.",
+      "source_sha256": "17a7cc126dfcdcf82b6e37d0ee21b4420304de02170415360d8501904634fd10",
+      "target_id": "ru-ru78-u031-r0065",
+      "tag": "p",
+      "target_sha256": "546fa864e4539ff08f25a5a422596800f9f450dec4bb50a872833bc56789171d"
+    },
+    {
+      "source_id": "ru78-u031-r0066",
+      "target": "— Ещё секунду, Фрэнсис, и я закончу, — сказал он. — Хочу дать тебе подсказку. Я не женат. Там тебя ждёт только одна женщина. Эта женщина — моя сестра. И она же — Леонсия.",
+      "source_sha256": "e6222d0566b86a7c36917570c190f8bf6721cbfd32d2c27b7bf1d1ea7c48fd35",
+      "target_id": "ru-ru78-u031-r0066",
+      "tag": "p",
+      "target_sha256": "e671b4707820481a00a179a0ea2bfd89414fb5a6bcc0fc2e1198b89e864ac396"
+    },
+    {
+      "source_id": "ru78-u031-r0067",
+      "target": "Фрэнсису потребовалось ошеломлённых полминуты, чтобы это прочно уложилось у него в голове. Он снова, стремительно, бросился к двери, но Генри опять остановил его.",
+      "source_sha256": "e9139a7ffa452efc15b3dd77876dd044f158a266c469aea459ef1e5e767abf5f",
+      "target_id": "ru-ru78-u031-r0067",
+      "tag": "p",
+      "target_sha256": "8365651d33ebb38c837bff95e212ec9a2a27bd7bce91b84389b15d2398ae4a72"
+    },
+    {
+      "source_id": "ru78-u031-r0068",
+      "target": "— Я выиграл? — спросил Генри.",
+      "source_sha256": "b80195f08e2b1587c277f5c11af3e55381030ac6a2681e02bd0885ac5b6be651",
+      "target_id": "ru-ru78-u031-r0068",
+      "tag": "p",
+      "target_sha256": "e43d220549d2ee832ad73a177323e569b53339b8aaddce3731f18469f143a6d0"
+    },
+    {
+      "source_id": "ru78-u031-r0069",
+      "target": "Но Фрэнсис стряхнул его руку, вылетел в дверь и захлопнул её за собой.",
+      "source_sha256": "1ed459f5972a83d1b526c18d857280cfe87861e7b8b17bc927507927a4daef3f",
+      "target_id": "ru-ru78-u031-r0069",
+      "tag": "p",
+      "target_sha256": "c063bdd9691606df65a7a939ba1c09394f7f9e5195cc463ea1a3364a4bc10e76"
+    },
+    {
+      "source_id": "ru78-u031-r0070",
+      "target": "КОНЕЦ.",
+      "source_sha256": "f953533f03ed670716edd55fe0468e2a66c6a9f5e781b53bbf568b58fe2de7ee",
+      "target_id": "ru-ru78-u031-r0070",
+      "tag": "source_end_marker",
+      "target_sha256": "b10f9b1c681200c2bb8addf9b96e17dc18d8a293b2b2db2454224a98f05aba0e"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS5CR4p8GijbaNg4cK4B",
+    "usage": {
+      "input_tokens": 2772,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 459,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u031-r0064",
+    "ru78-u031-r0065",
+    "ru78-u031-r0066",
+    "ru78-u031-r0067",
+    "ru78-u031-r0068",
+    "ru78-u031-r0069",
+    "ru78-u031-r0070"
+  ]
+}
