@@ -1,0 +1,39 @@
+{
+  "unit": 60,
+  "batch": 6,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u060-r0192",
+      "target": "Ночь становилась всё глубже и темнее.",
+      "source_sha256": "729e067dd452bf02681b1d72ca911a3a9d262c8f16be893d639ca4156ee2d3c1",
+      "target_id": "ru-fr81-u060-r0192",
+      "tag": "prose",
+      "target_sha256": "99d127d3e26dfadbdaa2329fc71e7cc23261047ddd187c63e006d92033497f48"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSqyDsytxU5WrS6hrGM7",
+    "usage": {
+      "input_tokens": 2265,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 49,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u060-r0192"
+  ]
+}
