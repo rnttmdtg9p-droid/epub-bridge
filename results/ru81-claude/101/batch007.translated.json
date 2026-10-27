@@ -1,0 +1,66 @@
+{
+  "unit": 101,
+  "batch": 7,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u101-r0224",
+      "target": "Это нечто возвышенное и нежное — надежда в ребёнке, который никогда не знал ничего, кроме отчаяния.",
+      "source_sha256": "45a675860211764cf51f0fc660dfc18969315733557fa4cbcc2338c047577116",
+      "target_id": "ru-fr81-u101-r0224",
+      "tag": "prose",
+      "target_sha256": "4a48c310fb264e903dfc5937c87ff34a97eaf1a4b11e40d31a6ab701d54100a6"
+    },
+    {
+      "source_id": "fr81-u101-r0225",
+      "target": "В этом сабо ничего не было.",
+      "source_sha256": "bd5cc239fd173d38b988d22466caf7a59fd3f8208365897d7cba59938e3157b0",
+      "target_id": "ru-fr81-u101-r0225",
+      "tag": "prose",
+      "target_sha256": "127d3cece1455ea237f6f2897470f8ee59d97f3fd22b6cf501ad8cd323d92e3b"
+    },
+    {
+      "source_id": "fr81-u101-r0226",
+      "target": "Незнакомец пошарил в жилете, нагнулся и положил в сабо Козетты золотой луидор.",
+      "source_sha256": "4f7622c8bcec20d3171c411ae7339e98f7048f69e9b19e2a11ccc78b3b6b6f1e",
+      "target_id": "ru-fr81-u101-r0226",
+      "tag": "prose",
+      "target_sha256": "7c958592b9129148ac486c8a6968edef5c6e9a4bdde6b9d25aa346de51544df5"
+    },
+    {
+      "source_id": "fr81-u101-r0227",
+      "target": "Затем он крадучись, неслышными шагами вернулся в свою комнату.",
+      "source_sha256": "87bd8dfee00743aa37525979a3282840231a4c64b00b65501bbe80351a96a64b",
+      "target_id": "ru-fr81-u101-r0227",
+      "tag": "prose",
+      "target_sha256": "730cf06b0b04df8a5dd738ddbfb7b7748f544b7870dfa8dbc8ca0c2db45bcc13"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSt2cueW3hQY4UTTHiw8",
+    "usage": {
+      "input_tokens": 2695,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u101-r0224",
+    "fr81-u101-r0225",
+    "fr81-u101-r0226",
+    "fr81-u101-r0227"
+  ]
+}
