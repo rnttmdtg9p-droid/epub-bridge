@@ -1,0 +1,96 @@
+{
+  "unit": 148,
+  "heading": {
+    "source_id": "fr81-u148-h",
+    "target": "I. Parvulus",
+    "source_sha256": "9932f7cc7bc02dafa2a30e0b8de071221174a4ed965604c1d04bbd44da27bacf",
+    "target_id": "ru-fr81-u148-h",
+    "tag": "heading",
+    "target_sha256": "fe7594ad7743dc289d31f327cee2fa0b1434df398a1a3d6e21cabdc3a936f401"
+  },
+  "rows": [
+    {
+      "source_id": "fr81-part3-h",
+      "target": "Часть третья. Мариус",
+      "source_sha256": "882703256a47de050f98bac52596aae735816e793909a712ecf167566326b8c4",
+      "target_id": "ru-fr81-part3-h",
+      "tag": "part_heading",
+      "target_sha256": "6dece38394db66edcc17ebfb6c33f21b36963b8cd1ad282c6fd1ae3e311b9bc9"
+    },
+    {
+      "source_id": "fr81-p3-b01-h",
+      "target": "Книга первая. Париж, рассмотренный в его атоме",
+      "source_sha256": "24de0a62453fef60d8de263f5785eb1d1ba1d912e9eced3b57bf874682d7d3cf",
+      "target_id": "ru-fr81-p3-b01-h",
+      "tag": "book_heading",
+      "target_sha256": "562796b521d67ff93f504a053dff265477b12e10be15b015e91671b3908f8529"
+    },
+    {
+      "source_id": "fr81-u148-h",
+      "target": "I. Parvulus",
+      "source_sha256": "9932f7cc7bc02dafa2a30e0b8de071221174a4ed965604c1d04bbd44da27bacf",
+      "target_id": "ru-fr81-u148-h",
+      "tag": "heading",
+      "target_sha256": "fe7594ad7743dc289d31f327cee2fa0b1434df398a1a3d6e21cabdc3a936f401"
+    },
+    {
+      "source_id": "fr81-u148-r0001",
+      "target": "У Парижа есть дитя, а у леса есть птица; птица зовётся воробьём, дитя зовётся гаменом.",
+      "source_sha256": "38a323cd49a1081619263347001a0ce2bd55c6ca5ad85fb17ed496b75bdb692c",
+      "target_id": "ru-fr81-u148-r0001",
+      "tag": "prose",
+      "target_sha256": "a7bc6b0b3f50a0ef46b98a4984eb7f5760ceeb838b5b5ad5be56a6153b49beaf"
+    },
+    {
+      "source_id": "fr81-u148-r0002",
+      "target": "Сочетайте эти две мысли, из которых одна заключает в себе весь жар горнила, другая — всю зарю, столкните эти искры — Париж, детство, — и брызнет из них маленькое существо. [[I]]Homuncio[[/I]], сказал бы Плавт.",
+      "source_sha256": "3e8cd0da14c26be5467a7b4bec5ee9b1bd847399518a9725344b53b025cd646a",
+      "target_id": "ru-fr81-u148-r0002",
+      "tag": "prose",
+      "target_sha256": "4a55f97b4c8dbeaec6378c95715e4fd4a44e24be3dc48450f360e2c48a6723ec"
+    },
+    {
+      "source_id": "fr81-u148-r0003",
+      "target": "Это маленькое существо весело. Оно ест не каждый день, а в театр ходит, если ему вздумается, каждый вечер. На теле у него нет рубашки, на ногах — башмаков, над головой — крыши; оно подобно мухам небесным, у которых нет ничего этого. Ему от семи до тринадцати лет, оно живёт ватагами, бьёт мостовую, ночует под открытым небом, носит старые отцовские штаны, которые спускаются ниже пяток, старую шляпу какого-то чужого отца, которая спускается ниже ушей, одну-единственную подтяжку из жёлтой каймы, бегает, высматривает, выпрашивает, попусту тратит время, обкуривает трубки, ругается как проклятый, пропадает в кабаке, знается с ворами, говорит «ты» уличным девицам, болтает на жаргоне, распевает непристойные песни — и нет в его сердце ничего дурного. Потому что в душе у него жемчужина — невинность, а жемчуг не растворяется в грязи. Пока человек дитя, Бог хочет, чтобы он был невинен.",
+      "source_sha256": "9421d75789f19762e8b80e769d306da2e79f31d8f0f5b512ca2f8920781e0329",
+      "target_id": "ru-fr81-u148-r0003",
+      "tag": "prose",
+      "target_sha256": "917a63eabf85190c66047382c2281fec5cd5d12df7781832fe68666ba0e6cf44"
+    },
+    {
+      "source_id": "fr81-u148-r0004",
+      "target": "Если бы спросили огромный город: «Что это такое?» — он ответил бы: «Это мой малыш».",
+      "source_sha256": "181e4ed85fc55b8d9f683a678a214d82dbd196e11f85216d61423f5672e733ad",
+      "target_id": "ru-fr81-u148-r0004",
+      "tag": "prose",
+      "target_sha256": "2ed9a16536bec4a0639dd9ed19dc21fe78e108ab3e90198358fc4c3a1f09634a"
+    }
+  ],
+  "source_rows": 7,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgSvDep3VKWJqTiypcpNc",
+      "usage": {
+        "input_tokens": 2994,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 765,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
