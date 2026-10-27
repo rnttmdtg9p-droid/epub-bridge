@@ -1,0 +1,39 @@
+{
+  "unit": 339,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u339-r0032",
+      "target": "— Кучер, — сказал он, — улица Ом-Арме, дом номер семь.",
+      "source_sha256": "3e1f86585438a7a368a3a47356bad52bd50d80d12a1844d5cf5dd5a22e9ab0cb",
+      "target_id": "ru-fr81-u339-r0032",
+      "tag": "prose",
+      "target_sha256": "82c2f25045ec407d4a02baaec1e6f13af7f50cbfa6751038a5afff6f72127cce"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgT8eo1z9N4HFBsu3WQeN",
+    "usage": {
+      "input_tokens": 2074,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 62,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u339-r0032"
+  ]
+}
