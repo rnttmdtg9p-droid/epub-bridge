@@ -1,0 +1,66 @@
+{
+  "unit": 362,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u362-r0032",
+      "target": "— Что он вам сказал?",
+      "source_sha256": "c316ff5571e751d5d2db4bf9ca2375b67c48f454ca7cd3a82c796e0a6b81f412",
+      "target_id": "ru-fr81-u362-r0032",
+      "tag": "prose",
+      "target_sha256": "6ff6aa66c3158a6784317e4b686a61d0c31cb86ced12d713a79663ff8c5dac1b"
+    },
+    {
+      "source_id": "fr81-u362-r0033",
+      "target": "— Он сказал мне, что чувствует себя хорошо.",
+      "source_sha256": "924a823b703fdda35bca7567d25f0cc775a9022d9e99a08c3790d182b8eaab60",
+      "target_id": "ru-fr81-u362-r0033",
+      "tag": "prose",
+      "target_sha256": "02b8683feb7ab4d5746124cbd70446f064ea11a396d0fcdda15c6e20664cd025"
+    },
+    {
+      "source_id": "fr81-u362-r0034",
+      "target": "— Вы придёте ещё, доктор?",
+      "source_sha256": "1b09a8e3f99f3a4bcec8fc304ecfc525b6c0820f1520b941b4c862c7ce9e014f",
+      "target_id": "ru-fr81-u362-r0034",
+      "tag": "prose",
+      "target_sha256": "579f93dea5b94e51b3f4ec399a19384f1f538c3080fea841745bab11d2dae354"
+    },
+    {
+      "source_id": "fr81-u362-r0035",
+      "target": "— Да, — ответил врач. — Но нужно, чтобы пришёл кто-нибудь другой, а не я.",
+      "source_sha256": "6bacabe1c6965d196f12f32861188e4c3e90a7d0dec900ca09ca2c0f1900f14d",
+      "target_id": "ru-fr81-u362-r0035",
+      "tag": "prose",
+      "target_sha256": "be83bb23a8e99aa93f68b587cc2cd1eef6736be6a04c6b5e446227c9e520f350"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgTAPq2c5VAGfhuUnD3bt",
+    "usage": {
+      "input_tokens": 2474,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u362-r0032",
+    "fr81-u362-r0033",
+    "fr81-u362-r0034",
+    "fr81-u362-r0035"
+  ]
+}
