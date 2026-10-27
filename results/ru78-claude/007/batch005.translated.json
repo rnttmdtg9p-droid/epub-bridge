@@ -1,0 +1,75 @@
+{
+  "unit": 7,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u007-r0080",
+      "target": "— «Ибо даже благородный Нарваэс, сын Бальтасара де Хесус-и-Сервальос-э-Нарваэс, сына генерала Нарваэса, памятного своими ратными подвигами, может быть разносчиком, а разносчику тоже надо жить, э, сеньоры, не так ли?» — передразнил Фрэнсис.",
+      "source_sha256": "b03ab951044ad280b5485249f0602b4b28b58b89f4ef3b7c96d9d8cd5213aaa6",
+      "target_id": "ru-ru78-u007-r0080",
+      "tag": "p",
+      "target_sha256": "e8663685a0441a7206e01e75c36245f80c7c286cfdf2822bb318f2109c339f4e"
+    },
+    {
+      "source_id": "ru78-u007-r0081",
+      "target": "Генри взглянул на него с радостным узнаванием и серьёзно добавил:",
+      "source_sha256": "13cfe63efce29bbd989ff83fec35782ff31dc76ce66958a9ec7d0b97a0e425da",
+      "target_id": "ru-ru78-u007-r0081",
+      "tag": "p",
+      "target_sha256": "c36486dadef9abf74284bd1cf963bdb75983ebc50295802b073374d4deaad6e7"
+    },
+    {
+      "source_id": "ru78-u007-r0082",
+      "target": "— Фрэнсис, одному я рад, чертовски рад....",
+      "source_sha256": "09d86c337c2af559e35d82b994cb365763eb290173bb46b41641c6bc199eadd8",
+      "target_id": "ru-ru78-u007-r0082",
+      "tag": "p",
+      "target_sha256": "b67eb19f40837c433a69a5d5fdc05f47531337c43ed9377778783067d42aabea"
+    },
+    {
+      "source_id": "ru78-u007-r0083",
+      "target": "— Чему же? — спросил Фрэнсис в наступившей паузе, как раз когда они завернули за угол, где стояли лошади.",
+      "source_sha256": "61c1fac55f4626f02f02f23b4ed0eeb3786377a85ff55d2efe64dabeb094fba5",
+      "target_id": "ru-ru78-u007-r0083",
+      "tag": "p",
+      "target_sha256": "1652d81b29ccd9bf223ac2a38ed60de2fb337ec1b7d21c16e2c5f5efac10d61f"
+    },
+    {
+      "source_id": "ru78-u007-r0084",
+      "target": "— Тому, что я не отрезал тебе уши в тот день на Телёнке, когда ты лежал подо мной и сам на этом настаивал.",
+      "source_sha256": "5d82c6149500cdd1744ac8952b0fcb25c9d2a1f3c502198a0191faa1e3447469",
+      "target_id": "ru-ru78-u007-r0084",
+      "tag": "p",
+      "target_sha256": "9f59fef5ccaa50bd0c0798c26c7ec5670739f55ae7756e6e24fd3a634b524b3a"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS12GLhvgFE7GCC6vXFj",
+    "usage": {
+      "input_tokens": 2563,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1178,
+      "output_tokens_details": {
+        "thinking_tokens": 786
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u007-r0080",
+    "ru78-u007-r0081",
+    "ru78-u007-r0082",
+    "ru78-u007-r0083",
+    "ru78-u007-r0084"
+  ]
+}
