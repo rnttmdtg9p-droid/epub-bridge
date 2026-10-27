@@ -1,0 +1,64 @@
+{
+  "unit": 1,
+  "heading": {
+    "source_id": "fr81-u001-h",
+    "target": "Предисловие",
+    "source_sha256": "36466455059cc54de10a9665f1bd65fbf767d3895c01410b7f80df2308258322",
+    "target_id": "ru-fr81-u001-h",
+    "tag": "heading",
+    "target_sha256": "63b7d4b6acaf4b4ba6da88ac4e6be3ae7645f8b918a89e2a0c93709c41848a1c"
+  },
+  "rows": [
+    {
+      "source_id": "fr81-u001-h",
+      "target": "Предисловие",
+      "source_sha256": "36466455059cc54de10a9665f1bd65fbf767d3895c01410b7f80df2308258322",
+      "target_id": "ru-fr81-u001-h",
+      "tag": "heading",
+      "target_sha256": "63b7d4b6acaf4b4ba6da88ac4e6be3ae7645f8b918a89e2a0c93709c41848a1c"
+    },
+    {
+      "source_id": "fr81-u001-r0001",
+      "target": "Пока по вине законов и нравов будет существовать социальное проклятие, искусственно создающее среди расцвета цивилизации адские муки и осложняющее человеческой злой судьбой судьбу божественную; пока не будут разрешены три главные проблемы века — унижение мужчины в нищете, падение женщины от голода, увядание ребёнка во мраке; пока в иных краях будет возможно социальное удушье; иными словами, и с точки зрения ещё более широкой, пока на земле будут существовать невежество и нужда, книги, подобные этой, не окажутся бесполезными.",
+      "source_sha256": "0e03eecf8801c085ff407221ca3cf784000f4a160ce307262327f65ca56133ad",
+      "target_id": "ru-fr81-u001-r0001",
+      "tag": "prose",
+      "target_sha256": "4b4952678e14cdb98dac898b55e9efa3954b86dd624ed10a244e1c83d5b0ae82"
+    },
+    {
+      "source_id": "fr81-u001-r0002",
+      "target": "Отквиль-Хаус, 1862.",
+      "source_sha256": "497a523d90c096ce78cedaf0a79b69b6c3640fa67d0cc870480408201411649d",
+      "target_id": "ru-fr81-u001-r0002",
+      "tag": "display_group",
+      "target_sha256": "344e339d8e564c650d5398f03e64680775aa55bbebc6efa0333dff1be4a5c862"
+    }
+  ],
+  "source_rows": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgSnVCtaMyzgKJgNbwn1Q",
+      "usage": {
+        "input_tokens": 2122,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 295,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
