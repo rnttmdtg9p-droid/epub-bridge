@@ -1,0 +1,84 @@
+{
+  "unit": 58,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-art-inscription007-048",
+      "target": "БОЖЕ, ХРАНИ КОРОЛЯ",
+      "source_sha256": "ad53bcbec448fd54f09e991f6ed119cc7334334ef9883cc99e3eb22a30f9086a",
+      "target_id": "ru-ru77-art-inscription007-048",
+      "tag": "figcaption",
+      "target_sha256": "23833085b8e76a50e0a8dd90f8d748d9f510486ea43fcc542945621ec4424561"
+    },
+    {
+      "source_id": "ru77-art-inscription007-049",
+      "target": "ПИЛЮЛИ «БОСС»",
+      "source_sha256": "b7004309c40934f72662692e475ab896e8546f2c203ac9979522b1e7d9e02355",
+      "target_id": "ru-ru77-art-inscription007-049",
+      "tag": "figcaption",
+      "target_sha256": "fac0f2a4f378494bfbcd8f463872e320507324d432be3659241cf45323452409"
+    },
+    {
+      "source_id": "ru77-art-inscription007-050",
+      "target": "ТРУД",
+      "source_sha256": "f52288d7fb51bd71f5558e5dd3ba6e3cea379de4e69a575e8a57e4b4a839353d",
+      "target_id": "ru-ru77-art-inscription007-050",
+      "tag": "figcaption",
+      "target_sha256": "3919cc35b2db04ff1444ab4e0b4bf9c541ffa8d105f1ab4c28b52bd8df1f5a44"
+    },
+    {
+      "source_id": "ru77-art-inscription007-051",
+      "target": "ТИТУЛЫ",
+      "source_sha256": "c1f32c10725c3a77d2a876a39637ae1639693227731720a86c1cc105ad54b5cf",
+      "target_id": "ru-ru77-art-inscription007-051",
+      "tag": "figcaption",
+      "target_sha256": "7b00397624c51d16dbfb25bdce585a32b5b69a2e8a0a8a632c5f5b979670f41a"
+    },
+    {
+      "source_id": "ru77-art-inscription007-052",
+      "target": "БОЖЕ, БЛАГОСЛОВИ НАШ ДОМ",
+      "source_sha256": "bd0e91dd7f2c2b14566262423fae54d65a2405db3b41ca4ea4a7192c093c5258",
+      "target_id": "ru-ru77-art-inscription007-052",
+      "tag": "figcaption",
+      "target_sha256": "d3231b381d2353c569ce632f99a19b20c3f0d7e1bb18dfa08c9d651618793b4b"
+    },
+    {
+      "source_id": "ru77-art-inscription007-053",
+      "target": "ВЗРЫВ!",
+      "source_sha256": "ad24203eedbee97760be8d63f2c95bb617e24a3ce90f105cf579ea264035029f",
+      "target_id": "ru-ru77-art-inscription007-053",
+      "tag": "figcaption",
+      "target_sha256": "6f312382960e4e72526030aa739be694b97ee1a154b77a57c4ba4a2eb1b2033c"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRqTZ5Z6XH11rUTtdTij",
+    "usage": {
+      "input_tokens": 2249,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 256,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-art-inscription007-048",
+    "ru77-art-inscription007-049",
+    "ru77-art-inscription007-050",
+    "ru77-art-inscription007-051",
+    "ru77-art-inscription007-052",
+    "ru77-art-inscription007-053"
+  ]
+}

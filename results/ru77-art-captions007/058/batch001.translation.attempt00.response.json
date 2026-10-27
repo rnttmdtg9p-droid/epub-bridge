@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRqSvtSr3cjtujuH4ZaX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-art-inscription007-016\",\"target\":\"НЕЗАВИСИМОСТЬ\"},{\"source_id\":\"ru77-art-inscription007-017\",\"target\":\"НАГРАДА ЗА ПРОИСХОЖДЕНИЕ\"},{\"source_id\":\"ru77-art-inscription007-018\",\"target\":\"НАГРАДА ЗА ЗАСЛУГИ\"},{\"source_id\":\"ru77-art-inscription007-019\",\"target\":\"АРЕНДНАЯ ПЛАТА\"},{\"source_id\":\"ru77-art-inscription007-020\",\"target\":\"НАЛОГ\"},{\"source_id\":\"ru77-art-inscription007-021\",\"target\":\"ШТРАФ\"},{\"source_id\":\"ru77-art-inscription007-022\",\"target\":\"ДОЛГ\"},{\"source_id\":\"ru77-art-inscription007-023\",\"target\":\"ЗАКРЕПЛЁННЫЕ ПРАВА\"},{\"source_id\":\"ru77-art-inscription007-024\",\"target\":\"РЕЛИГИОЗНАЯ НЕТЕРПИМОСТЬ\"},{\"source_id\":\"ru77-art-inscription007-025\",\"target\":\"ПОЧВА ЭГОИЗМА\"},{\"source_id\":\"ru77-art-inscription007-026\",\"target\":\"ЗОЛОТОЕ ПРАВИЛО\"},{\"source_id\":\"ru77-art-inscription007-027\",\"target\":\"ЛИТЕРАТУРА\"},{\"source_id\":\"ru77-art-inscription007-028\",\"target\":\"МЕХАНИКА\"},{\"source_id\":\"ru77-art-inscription007-029\",\"target\":\"РЕЛИГИЯ\"},{\"source_id\":\"ru77-art-inscription007-030\",\"target\":\"МИР\"},{\"source_id\":\"ru77-art-inscription007-031\",\"target\":\"СВОБОДНЫЕ ЛЮДИ\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4108,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 668,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

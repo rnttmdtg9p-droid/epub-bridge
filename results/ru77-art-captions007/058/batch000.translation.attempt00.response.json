@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgRqSV2TLPFAvypNQ5W8T",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"ru77-u058-heading\",\"target\":\"ВНУТРЕННИЙ ПАКЕТ ПЕРЕДАЧИ ПОДПИСЕЙ К ИЛЛЮСТРАЦИЯМ BATCH007 — НЕ ВКЛЮЧАТЬ В ТЕКСТ ДЛЯ ЧИТАТЕЛЯ\"},{\"source_id\":\"ru77-art-inscription007-001\",\"target\":\"БОЖЕСТВЕННОЕ ПРАВО КОРОЛЕЙ\"},{\"source_id\":\"ru77-art-inscription007-002\",\"target\":\"ЗЕМЛЯ ПРИНАДЛЕЖИТ МНЕ\"},{\"source_id\":\"ru77-art-inscription007-003\",\"target\":\"РОЖДЁН БЛАГОРОДНЕЕ\"},{\"source_id\":\"ru77-art-inscription007-004\",\"target\":\"МЕСТО ДЛЯ РЕПОРТЁРА\"},{\"source_id\":\"ru77-art-inscription007-005\",\"target\":\"МЫЛО\"},{\"source_id\":\"ru77-art-inscription007-006\",\"target\":\"Оставьте всё, вы, входящие сюда.\"},{\"source_id\":\"ru77-art-inscription007-007\",\"target\":\"ПОКРОВИТЕЛЬСТВО\"},{\"source_id\":\"ru77-art-inscription007-008\",\"target\":\"ВЕРХОВНЫЙ ГЛАВА ЦЕРКВИ И НЕКОТОРЫЕ ПРОЧИЕ ГЛАВЫ\"},{\"source_id\":\"ru77-art-inscription007-009\",\"target\":\"ПОЛИТИКА\"},{\"source_id\":\"ru77-art-inscription007-010\",\"target\":\"ЦЕРКОВЬ\"},{\"source_id\":\"ru77-art-inscription007-011\",\"target\":\"ГОСУДАРСТВО\"},{\"source_id\":\"ru77-art-inscription007-012\",\"target\":\"СУЕВЕРИЕ\"},{\"source_id\":\"ru77-art-inscription007-013\",\"target\":\"РАБСТВО\"},{\"source_id\":\"ru77-art-inscription007-014\",\"target\":\"НЕВЕЖЕСТВО\"},{\"source_id\":\"ru77-art-inscription007-015\",\"target\":\"ЗАВИСИМОСТЬ\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3710,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 828,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
