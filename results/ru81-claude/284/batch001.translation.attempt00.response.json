@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgT61eWG3duEMVj65RkLq",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-u284-r0032\",\"target\":\"Жавер, прислонённый к столбу и так опутанный верёвками, что не мог пошевелиться, держал голову прямо, с бесстрашной безмятежностью человека, который никогда не лгал.\"},{\"source_id\":\"fr81-u284-r0033\",\"target\":\"— Это шпик, — сказал Анжольрас.\"},{\"source_id\":\"fr81-u284-r0034\",\"target\":\"И, повернувшись к Жаверу:\"},{\"source_id\":\"fr81-u284-r0035\",\"target\":\"— Вас расстреляют за десять минут до того, как баррикада будет взята.\"},{\"source_id\":\"fr81-u284-r0036\",\"target\":\"Жавер ответил самым повелительным тоном:\"},{\"source_id\":\"fr81-u284-r0037\",\"target\":\"— Почему не сейчас же?\"},{\"source_id\":\"fr81-u284-r0038\",\"target\":\"— Мы бережём порох.\"},{\"source_id\":\"fr81-u284-r0039\",\"target\":\"— Тогда покончите с этим ударом ножа.\"},{\"source_id\":\"fr81-u284-r0040\",\"target\":\"— Шпик, — сказал прекрасный Анжольрас, — мы судьи, а не убийцы.\"},{\"source_id\":\"fr81-u284-r0041\",\"target\":\"Потом он позвал Гавроша.\"},{\"source_id\":\"fr81-u284-r0042\",\"target\":\"— Ты! Ступай по своему делу! Сделай, что я тебе сказал.\"},{\"source_id\":\"fr81-u284-r0043\",\"target\":\"— Иду, — крикнул Гаврош.\"},{\"source_id\":\"fr81-u284-r0044\",\"target\":\"И, остановившись перед уходом:\"},{\"source_id\":\"fr81-u284-r0045\",\"target\":\"— Кстати, вы отдадите мне его ружьё! А он добавил: Музыканта я вам оставляю, но кларнет хочу себе.\"},{\"source_id\":\"fr81-u284-r0046\",\"target\":\"Мальчишка отдал честь по-военному и весело перемахнул через проход в большой баррикаде.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4156,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 719,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
