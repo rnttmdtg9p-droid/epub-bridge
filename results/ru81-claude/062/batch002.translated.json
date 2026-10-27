@@ -1,0 +1,57 @@
+{
+  "unit": 62,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u062-r0064",
+      "target": "Сказав это, пристав повернулся к нему спиной.",
+      "source_sha256": "2ebb71a48d24b317f28f19de10e57b189e3d0a700aac0f70664e5e4f8e572e51",
+      "target_id": "ru-fr81-u062-r0064",
+      "tag": "prose",
+      "target_sha256": "b4a0556455eb87339ca542047a9e8751265427f68e1643d287eca27fa44abc16"
+    },
+    {
+      "source_id": "fr81-u062-r0065",
+      "target": "Он удалился с опущенной головой, пересёк прихожую и медленно пошёл вниз по лестнице, словно колеблясь на каждой ступени. Вероятно, он держал совет с самим собой. Жестокая борьба, что шла в нём со вчерашнего дня, не кончилась; и ежеминутно в ней наступала какая-нибудь новая перемена. Дойдя до лестничной площадки, он прислонился к перилам и скрестил руки. Вдруг он распахнул сюртук, достал бумажник, вынул из него карандаш, вырвал листок и быстро написал на нём при свете фонаря одну строку: [[I]]Г-н Мадлен, мэр Монтрейль-сюр-Мера[[/I]]. Затем он большими шагами поднялся обратно по лестнице, прорезал толпу, подошёл прямо к приставу, протянул ему бумагу и сказал властно: — Отнесите это господину председателю.",
+      "source_sha256": "5a8e8cff1c560d30acd81d63c3a6545255e4e3f8745dda75cfbf01d1b11dbaf5",
+      "target_id": "ru-fr81-u062-r0065",
+      "tag": "prose",
+      "target_sha256": "fb9b5e1cde9b5c4f310c39c20feb9297d26c13caeb72990d713f01ebffb38f5a"
+    },
+    {
+      "source_id": "fr81-u062-r0066",
+      "target": "Пристав взял бумагу, бросил на неё взгляд и повиновался.",
+      "source_sha256": "f145fa8a882cd6a66f3ff7b373155084ee7664def2917837e03bc0a239e5ee8e",
+      "target_id": "ru-fr81-u062-r0066",
+      "tag": "prose",
+      "target_sha256": "b5a61b2d01e8c8c200da487af391f38e7996c8a8e79717d0dc98e43bcff329ef"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSr76hcvRookKtCW7KcJ",
+    "usage": {
+      "input_tokens": 2680,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 450,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u062-r0064",
+    "fr81-u062-r0065",
+    "fr81-u062-r0066"
+  ]
+}
