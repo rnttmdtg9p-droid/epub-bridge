@@ -1,0 +1,39 @@
+{
+  "unit": 23,
+  "batch": 7,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u023-r0110",
+      "target": "Долго медлили две индианки. Ибо они условились ничего не бросать, и если бы что-нибудь поднялось, то совпадение было бы доказано. Но если ничего не поднимется, потому что ничего больше ими не вызвано, им оставалось заключить лишь одно: что магия и вправду принадлежит им. Они лежали в укрытии и смотрели на воду, пока тьма не скрыла её от их глаз; и, медленно и неспешно, они пошли по тропе назад, в свою деревню, охваченные сознанием того, что боги благословили их.",
+      "source_sha256": "679bc967b472d4956788e064e1d4f03c7f738de1891e03f0b807c471c14e8129",
+      "target_id": "ru-ru78-u023-r0110",
+      "tag": "p",
+      "target_sha256": "331791be9093dffffa4845df44db7b0251077ebd05ad43c588a8bc666af4d5de"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS3q4DjFV1wNzKHvs22F",
+    "usage": {
+      "input_tokens": 1845,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u023-r0110"
+  ]
+}
