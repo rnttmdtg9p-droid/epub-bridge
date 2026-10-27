@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgT6xdzHumsftH7poDT6K",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-u303-r0064\",\"target\":\"— Я его знаю.\"},{\"source_id\":\"fr81-u303-r0065\",\"target\":\"Этого поручительства было довольно для всех.\"},{\"source_id\":\"fr81-u303-r0066\",\"target\":\"Анжольрас повернулся к Жану Вальжану.\"},{\"source_id\":\"fr81-u303-r0067\",\"target\":\"— Гражданин, добро пожаловать.\"},{\"source_id\":\"fr81-u303-r0068\",\"target\":\"И добавил:\"},{\"source_id\":\"fr81-u303-r0069\",\"target\":\"— Вы знаете, что мы умрём.\"},{\"source_id\":\"fr81-u303-r0070\",\"target\":\"Жан Вальжан, ничего не ответив, помог повстанцу, которого спас, надеть мундир.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2841,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 280,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
