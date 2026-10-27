@@ -1,0 +1,48 @@
+{
+  "unit": 144,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u144-r0032",
+      "target": "Потом четвёртая.",
+      "source_sha256": "b6dc7f38de68e64442db4899ebb3ea13fe164f6fc9dd1a5b9fcc72c4deb923ad",
+      "target_id": "ru-fr81-u144-r0032",
+      "tag": "prose",
+      "target_sha256": "126d2651afc4ee194ecb52628a0da420b032b9f7a9c5d343304dc18361ef8b15"
+    },
+    {
+      "source_id": "fr81-u144-r0033",
+      "target": "Есть вещи, которые сильнее самого сильного человека. Жан Вальжан потерял сознание.",
+      "source_sha256": "0cd609d45f07b8aae909337775b59385826b48078fffcf6f62af6a8aa2372911",
+      "target_id": "ru-fr81-u144-r0033",
+      "tag": "prose",
+      "target_sha256": "e46925ba833cb80254fc06a8a5ea5a06f0a17c59b917cfc18eb8b0c066d116e2"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSuz4MEqQgf1f9JsbyNq",
+    "usage": {
+      "input_tokens": 2169,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 99,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u144-r0032",
+    "fr81-u144-r0033"
+  ]
+}
