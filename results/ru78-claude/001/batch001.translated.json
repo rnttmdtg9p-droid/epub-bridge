@@ -1,0 +1,57 @@
+{
+  "unit": 1,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u001-r0014",
+      "target": "Если это приключение с «Сердцами трёх» и есть сотрудничество, то я им в полном восторге. Но увы! — боюсь, мистер Годдард в таком случае должен быть единственным соавтором на миллион. У нас не было ни слова, ни спора, ни обсуждения. Впрочем, и я, надо думать, сам сущий клад, а не соавтор. Разве не позволил я ему, без шёпота и без нытья жалоб, «регистрировать» через пятнадцать эпизодов сценария, через тринадцать сотен сцен и тридцать одну тысячу футов плёнки, через сто одиннадцать тысяч слов романизации? И всё же, закончив работу, я жалею, что вообще её написал, — потому что мне хотелось бы прочесть её самому и посмотреть, читается ли она гладко. Мне любопытно это знать. Мне любопытно это знать.",
+      "source_sha256": "c2c03c4c6fbbadc803a13e7953e7507ecb93d893f38cce8a2ed4904b7c4a39a5",
+      "target_id": "ru-ru78-u001-r0014",
+      "tag": "p",
+      "target_sha256": "73b848c9ae686c57013b758c0e11cde00e6c81c96a5eb983b6747037240686ed"
+    },
+    {
+      "source_id": "ru78-u001-r0015",
+      "target": "Джек Лондон.",
+      "source_sha256": "d9c9f2d5e710b11f976f47a0f3b1f70db68741b37d33c8bf27c3fec20267b745",
+      "target_id": "ru-ru78-u001-r0015",
+      "tag": "source_display_unclassified",
+      "target_sha256": "3f7dc36c4d39096035957d19b83502b5fc0fa35d37fc0047a83a3c0d0942ba9e"
+    },
+    {
+      "source_id": "ru78-u001-r0016",
+      "target": "Вайкики, Гавайи,\n[[I]]23 марта 1916 года[[/I]].",
+      "source_sha256": "db4dc53c84cce6ce87bfacd6cd6bbdf85b06219c76dc5067dd8975b27fa58019",
+      "target_id": "ru-ru78-u001-r0016",
+      "tag": "display_group",
+      "target_sha256": "ee974b4ae120e0e8393e68b5e3f9f4f116d6e442b0cb1e8c242e2c0f8d86b732"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRyrEo3bkbuGqLXcEvsJ",
+    "usage": {
+      "input_tokens": 2824,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 823,
+      "output_tokens_details": {
+        "thinking_tokens": 397
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u001-r0014",
+    "ru78-u001-r0015",
+    "ru78-u001-r0016"
+  ]
+}
