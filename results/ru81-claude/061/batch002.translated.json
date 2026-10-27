@@ -1,0 +1,48 @@
+{
+  "unit": 61,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u061-r0064",
+      "target": "— Господин доктор, — продолжала она, — сестра сказала вам, что господин мэр поехал за тряпкой?",
+      "source_sha256": "6967f47667416415755a5d9e613fb91e957506db92bcbb4260c98b527a4081b0",
+      "target_id": "ru-fr81-u061-r0064",
+      "tag": "prose",
+      "target_sha256": "a0a7fc4158bb3ed83b2cbed662d719cefb111cd9ac5343989e55954dcb3b210f"
+    },
+    {
+      "source_id": "fr81-u061-r0065",
+      "target": "Врач предписал молчание и велел избегать всякого тягостного волнения. Он прописал настой чистой хины, а на случай, если ночью вернётся жар, — успокоительное питьё. Уходя, он сказал сестре: — Дело идёт на лад. Если бы счастье в самом деле судило господину мэру приехать завтра с ребёнком, кто знает? Бывают такие удивительные переломы; случалось, что великая радость разом останавливала болезнь. Я хорошо знаю, что здесь болезнь органическая и далеко зашедшая, но это такая тайна, всё это! Быть может, мы её спасём.",
+      "source_sha256": "138e1a96d3ba7fa98a7364f9d4b32480fa22b6f2f821afa48b852188996ed49c",
+      "target_id": "ru-fr81-u061-r0065",
+      "tag": "prose",
+      "target_sha256": "841f20556d59bf5adef1f7f1e52058fb27f18d4e43e8f5573c2cb5c369445ba2"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSr4G18RNiZYu6Ugafjh",
+    "usage": {
+      "input_tokens": 2490,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 311,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u061-r0064",
+    "fr81-u061-r0065"
+  ]
+}
