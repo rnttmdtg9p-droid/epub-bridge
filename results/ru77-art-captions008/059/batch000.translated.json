@@ -1,0 +1,48 @@
+{
+  "unit": 59,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u059-heading",
+      "target": "ВНУТРЕННИЙ ТРАНСПОРТНЫЙ ПАКЕТ ПОДПИСЕЙ К ИЛЛЮСТРАЦИЯМ BATCH008, НЕ ВКЛЮЧАТЬ В ТЕКСТ ДЛЯ ЧИТАТЕЛЯ",
+      "source_sha256": "5c2c2c91161c9bd8b3c0b01f79cf7218a2598db46befed8249f16ceb25ad9bce",
+      "target_id": "ru-ru77-u059-heading",
+      "tag": "heading",
+      "target_sha256": "dc1ad004f72e1e60239cb3c1da84f96adccddc04b7d591cf42a88446de70b687"
+    },
+    {
+      "source_id": "ru77-art-inscription008-001",
+      "target": "МЫЛО ПЕРСИММОНА. ЕГО УПОТРЕБЛЯЮТ ВСЕ ПРИМ-ДОННЫ.",
+      "source_sha256": "211e42e048a168e6aaefb39373b6bf6808b5875e291292c62f821c0dd46fb218",
+      "target_id": "ru-ru77-art-inscription008-001",
+      "tag": "figcaption",
+      "target_sha256": "101f532d85adbc3e213141fa6774b499c115e9aee5a5de84c555ae218970e3f7"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRqz5Wik39x7cQJzZ6Ac",
+    "usage": {
+      "input_tokens": 1037,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 707,
+      "output_tokens_details": {
+        "thinking_tokens": 468
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u059-heading",
+    "ru77-art-inscription008-001"
+  ]
+}
