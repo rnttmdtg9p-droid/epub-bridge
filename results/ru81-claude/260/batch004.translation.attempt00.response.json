@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgT4bd9sJjCykapsfzUMy",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-u260-r0128\",\"target\":\"[[B]]Кэб катит по-английски и тявкает по-воровски[[/B]]\"},{\"source_id\":\"fr81-u260-r0129\",\"target\":\"Тогда она прислонилась спиной к решётке, повернулась лицом к шестерым разбойникам, вооружённым до зубов, которым ночь придавала обличье демонов, и сказала твёрдым, тихим голосом:\"},{\"source_id\":\"fr81-u260-r0130\",\"target\":\"— Ну так вот, а я не хочу.\"},{\"source_id\":\"fr81-u260-r0131\",\"target\":\"Они остановились в изумлении.\"},{\"source_id\":\"fr81-u260-r0132\",\"target\":\"Собака.\"},{\"source_id\":\"fr81-u260-r0133\",\"target\":\"Принесённый. От испанского [[I]]llevar[[/I]].\"},{\"source_id\":\"fr81-u260-r0134\",\"target\":\"Есть.\"},{\"source_id\":\"fr81-u260-r0135\",\"target\":\"[[I]]Выбить стекло[[/I]] с помощью пластыря из замазки, который, приложенный к стеклу, удерживает осколки и не даёт шуму раздаться.\"},{\"source_id\":\"fr81-u260-r0136\",\"target\":\"Закричит.\"},{\"source_id\":\"fr81-u260-r0137\",\"target\":\"Пила.\"},{\"source_id\":\"fr81-u260-r0138\",\"target\":\"Резать.\"},{\"source_id\":\"fr81-u260-r0139\",\"target\":\"Работать здесь.\"},{\"source_id\":\"fr81-u260-r0140\",\"target\":\"Нож.\"},{\"source_id\":\"fr81-u260-r0141\",\"target\":\"Франки, су или лиары.\"},{\"source_id\":\"fr81-u260-r0142\",\"target\":\"Еврей.\"},{\"source_id\":\"fr81-u260-r0143\",\"target\":\"[[I]]Пантен[[/I]], Париж.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 4256,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 653,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
