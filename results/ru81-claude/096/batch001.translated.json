@@ -1,0 +1,111 @@
+{
+  "unit": 96,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u096-r0032",
+      "target": "Ведро было больше самой девочки, и ребёнок мог бы усесться в нём и поместиться без труда.",
+      "source_sha256": "63caff1f1c2d81381cde688508172c1f0d355f796ade5a082cdea67774d7d360",
+      "target_id": "ru-fr81-u096-r0032",
+      "tag": "prose",
+      "target_sha256": "3e6a4d3dd6cb3090f7a90284087e47c58994382b6da0625f46f18f5d36cefa6f"
+    },
+    {
+      "source_id": "fr81-u096-r0033",
+      "target": "Тенардье вернулась к своей плите и, ворча, попробовала деревянной ложкой то, что варилось в кастрюле:",
+      "source_sha256": "d7230dfa39223334c783e2ffa3c73ae6224d22e2d62fe107371716c6f0935217",
+      "target_id": "ru-fr81-u096-r0033",
+      "tag": "prose",
+      "target_sha256": "09899e52e295582bc0eb62ffa3d09613fe484efddaab7a435b961ab01dc2b6c5"
+    },
+    {
+      "source_id": "fr81-u096-r0034",
+      "target": "— У источника ещё осталась вода. Тут ума много не надо. Пожалуй, мне лучше было бы заняться своим луком.",
+      "source_sha256": "8c03ce8475981f574b8c6961f2d9d1a983212cdfd7290db423cfb75e5d9505ea",
+      "target_id": "ru-fr81-u096-r0034",
+      "tag": "prose",
+      "target_sha256": "587b0e130a1e3e8130522f9d4758c7a81cd82c3045075cb9caa128f1a1fe9b73"
+    },
+    {
+      "source_id": "fr81-u096-r0035",
+      "target": "Потом она порылась в ящике, где лежали медяки, перец и лук-шалот.",
+      "source_sha256": "b0280df8d481ce6d79c2468bbe4d62a8c08c3a99465ef7fa7ac8fcc5753281b9",
+      "target_id": "ru-fr81-u096-r0035",
+      "tag": "prose",
+      "target_sha256": "04f22c99ce49e3be6345ecbb22274c56dcc51fae30bcc46130bda9a55a230b16"
+    },
+    {
+      "source_id": "fr81-u096-r0036",
+      "target": "— На, барышня Жаба, — прибавила она, — на обратном пути возьмёшь у булочника большой хлеб. Вот тебе монета в пятнадцать су.",
+      "source_sha256": "45b6d18381ff769d707867ce0b69ad9249ede69b2772bba49f6d1a72a7181159",
+      "target_id": "ru-fr81-u096-r0036",
+      "tag": "prose",
+      "target_sha256": "f271bd66077608157778d8e2738766e55fa846ab57c8666ac87f4231d1ad32ee"
+    },
+    {
+      "source_id": "fr81-u096-r0037",
+      "target": "У Козетты на переднике был сбоку маленький карман; она взяла монету, не сказав ни слова, и положила её в этот карман.",
+      "source_sha256": "5f83989ec2537128fcb47a88d5b10261d23eef1feba9c54f4c40cc872070a1a0",
+      "target_id": "ru-fr81-u096-r0037",
+      "tag": "prose",
+      "target_sha256": "2cc5a5a8715feda42a7aa13647d32e0eb0ba8a3434db43712f0d9b9655a91321"
+    },
+    {
+      "source_id": "fr81-u096-r0038",
+      "target": "Потом она осталась стоять неподвижно, с ведром в руке, перед открытой дверью. Казалось, она ждала, что кто-нибудь придёт ей на помощь.",
+      "source_sha256": "8bf9b51e9b944f575c954b5398c2b357b870b0be999388b4e794c5b26c523452",
+      "target_id": "ru-fr81-u096-r0038",
+      "tag": "prose",
+      "target_sha256": "6b2ad029cf45f16fede025de06c46c8b9f2d58e1c06e45dba32070c1adda6e85"
+    },
+    {
+      "source_id": "fr81-u096-r0039",
+      "target": "— Ну, иди же! — крикнула Тенардье.",
+      "source_sha256": "868b82e16c6f4c4ad76036c79913d57f203cf4988b090fee48da07b5595ad6e5",
+      "target_id": "ru-fr81-u096-r0039",
+      "tag": "prose",
+      "target_sha256": "5546bd012bd33dba820ab61a4c2dc931953c264d37316959f2e0e258515d8e75"
+    },
+    {
+      "source_id": "fr81-u096-r0040",
+      "target": "Козетта вышла. Дверь закрылась.",
+      "source_sha256": "452e048eff0f08039876d9e7408ae4a3aa37941f444963c5b202434618c3d665",
+      "target_id": "ru-fr81-u096-r0040",
+      "tag": "prose",
+      "target_sha256": "afa81e61c15ca5f8c0be8bbfc2dc7142bb894a494a63dfb85222bdda0e3edc9e"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSseJXjdTWeDaiv2Jzhh",
+    "usage": {
+      "input_tokens": 3362,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 571,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u096-r0032",
+    "fr81-u096-r0033",
+    "fr81-u096-r0034",
+    "fr81-u096-r0035",
+    "fr81-u096-r0036",
+    "fr81-u096-r0037",
+    "fr81-u096-r0038",
+    "fr81-u096-r0039",
+    "fr81-u096-r0040"
+  ]
+}
