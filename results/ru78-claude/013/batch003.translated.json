@@ -1,0 +1,75 @@
+{
+  "unit": 13,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u013-r0048",
+      "target": "— Я тоже скажу, — произнёс он. — Пусть этот человек не умрёт собачьей смертью, какой заслуживает, — уличённый в предательстве пёс.",
+      "source_sha256": "f8845559a740390fabd33c762d5f54e85242154f160a2ea057a091a9c0b7fdad",
+      "target_id": "ru-ru78-u013-r0048",
+      "tag": "p",
+      "target_sha256": "22a0397fcdf0a86659fc6a1696eea1bc24e58bfa328710f8cbde83ddabdca199"
+    },
+    {
+      "source_id": "ru78-u013-r0049",
+      "target": "Метиска вслух прочла чек.",
+      "source_sha256": "b78c409000c00aa01542b63bbddf131e032a57901175e0394244e375e4731936",
+      "target_id": "ru-ru78-u013-r0049",
+      "tag": "p",
+      "target_sha256": "a9ec4120a55512ec151019f90f6cbebb65ab094efa7b1a1a673e13cc1a1fb547"
+    },
+    {
+      "source_id": "ru78-u013-r0050",
+      "target": "— Объяснять нет нужды, — оборвал Фрэнсиса Слепой Разбойник. — Я существо разумное и жил не всегда в Кордильерах. Меня обучали торговому делу в Барселоне. Я знаю Химический национальный банк Нью-Йорка и через своих агентов прежде имел с ним дела. Сумма выписана на десять тысяч долларов золотом. Человек, написавший этот чек, уже сегодня сказал правду. Чек надёжен. Более того, я знаю, что платежа он не остановит. Тот, кто платит выкуп за недруга, — одно из трёх: человек очень добрый, глупец или человек очень богатый. Скажи мне, о Человек, есть ли женщина дивная?",
+      "source_sha256": "0cb5c66a5ec84e43af15b45687368ec04adce8f4446c15933a372b661f793823",
+      "target_id": "ru-ru78-u013-r0050",
+      "tag": "p",
+      "target_sha256": "041bd6e6f0711bef22aa1c8fdaaa920c9046c4114cd039a9fba057f04a1c73d2"
+    },
+    {
+      "source_id": "ru78-u013-r0051",
+      "target": "И Фрэнсис, не смея взглянуть ни вправо, ни влево, ни на Леонсию, ни на Генри, а глядя прямо перед собой в лицо Слепого Разбойника, ответил, потому что чувствовал: иначе ответить он не может:",
+      "source_sha256": "117c57520928e79152ef970452c25be43199fdb987a2dc52588a130fe51aa824",
+      "target_id": "ru-ru78-u013-r0051",
+      "tag": "p",
+      "target_sha256": "77d737df1a5106d840bffbe5505d5802f2408cc0fd091d950b91d91f90d5fb97"
+    },
+    {
+      "source_id": "ru78-u013-r0052",
+      "target": "— Да, о Жестокий и Справедливый, есть женщина дивная.",
+      "source_sha256": "bcd0b8abc52355755adb8042d14bebc4efc8ad3f346829ec3362b5a417f40bb6",
+      "target_id": "ru-ru78-u013-r0052",
+      "tag": "p",
+      "target_sha256": "710ea63dec512285a1588d0a527e97dc5c98c85a2aaef8d58c39bdccaf05a5f9"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS24Y2gxg5ATYFgAXzZ6",
+    "usage": {
+      "input_tokens": 2704,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1172,
+      "output_tokens_details": {
+        "thinking_tokens": 603
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u013-r0048",
+    "ru78-u013-r0049",
+    "ru78-u013-r0050",
+    "ru78-u013-r0051",
+    "ru78-u013-r0052"
+  ]
+}
