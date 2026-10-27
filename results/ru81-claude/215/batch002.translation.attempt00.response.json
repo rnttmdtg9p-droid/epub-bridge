@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgSzxKQtVwXrpoB4936X5",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-u215-r0064\",\"target\":\"Мариус спрятал пистолеты в карманчики жилета.\"},{\"source_id\":\"fr81-u215-r0065\",\"target\":\"— Теперь, — продолжал инспектор, — ни у кого из нас нет ни одной лишней минуты. Который час? Половина третьего. Это назначено на семь часов?\"},{\"source_id\":\"fr81-u215-r0066\",\"target\":\"— На шесть, — сказал Мариус.\"},{\"source_id\":\"fr81-u215-r0067\",\"target\":\"— Время у меня есть, — отозвался инспектор, — но только время и есть. Не забудьте ничего из того, что я вам сказал. Паф! Выстрел из пистолета.\"},{\"source_id\":\"fr81-u215-r0068\",\"target\":\"— Будьте спокойны, — ответил Мариус.\"},{\"source_id\":\"fr81-u215-r0069\",\"target\":\"И когда Мариус взялся за щеколду двери, чтобы выйти, инспектор крикнул ему:\"},{\"source_id\":\"fr81-u215-r0070\",\"target\":\"— Кстати, если я понадоблюсь вам до тех пор, приходите или пришлите сюда. Спросите инспектора Жавера.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3053,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 429,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
