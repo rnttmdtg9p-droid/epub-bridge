@@ -1,0 +1,66 @@
+{
+  "unit": 24,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u024-r0080",
+      "target": "— И она сама пожертвовала великим сокровищем, — храбро проговорила Леонсия.",
+      "source_sha256": "4f124fe22b62cbafc2c4d605477d938ee350ba2fb2760a554da8a6cba2f78d22",
+      "target_id": "ru-ru78-u024-r0080",
+      "tag": "p",
+      "target_sha256": "55a3eb317b14a545cd95498645710003de5613c71fc71c57433236b7d73896a2"
+    },
+    {
+      "source_id": "ru78-u024-r0081",
+      "target": "— Она была королевой маленького королевства, — добавил Фрэнсис, благодарно и восхищённо блеснув глазами в сторону Леонсии, которая поспешно прибавила:",
+      "source_sha256": "338970283883441532d8f69c02410a01cb11bba57b9dd51b3c3c034e75fb605f",
+      "target_id": "ru-ru78-u024-r0081",
+      "tag": "p",
+      "target_sha256": "801368f45bf916398de05fbfdd847a728d66c7cf429d3ad948bbe07f7f83ec45"
+    },
+    {
+      "source_id": "ru78-u024-r0082",
+      "target": "— И она спасла всем нам жизнь, но ради этого пожертвовала своим маленьким королевством.",
+      "source_sha256": "de0c9ad5079a4bb023760d67049864ccc707108e1d700588c77eb947b78298cc",
+      "target_id": "ru-ru78-u024-r0082",
+      "tag": "p",
+      "target_sha256": "3efb0b45317fbdb44f691574d7caa2a16d727d601cc63be5fbcc7ebe4e1946c7"
+    },
+    {
+      "source_id": "ru78-u024-r0083",
+      "target": "И Леонсия, в порыве великодушия, обняла Королеву за талию, увела её от Фрэнсиса и первой направилась в гасиенду.",
+      "source_sha256": "fbed7db47b5860d419da6006dfd5db340bf715bce3d647851f68737b81a09c28",
+      "target_id": "ru-ru78-u024-r0083",
+      "tag": "p",
+      "target_sha256": "1076c339f4bd1b98f13642463147eb5da9198fd74e7099f87146639f2e9800a2"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS3ync8d5pfGEwZ4BoFk",
+    "usage": {
+      "input_tokens": 2352,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 284,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u024-r0080",
+    "ru78-u024-r0081",
+    "ru78-u024-r0082",
+    "ru78-u024-r0083"
+  ]
+}
