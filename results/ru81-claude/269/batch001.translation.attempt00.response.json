@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgT5Aba2vYpz2jwxfKw3P",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-u269-r0016\",\"target\":\"Тогда всё решено: буря разражается, камни сыплются градом, вспыхивает перестрелка; многие бросаются вниз, к подножию набережной, и переходят малый рукав Сены, ныне засыпанный; лесные склады острова Лувье, эта огромная готовая цитадель, ощетиниваются бойцами; вырывают колья, стреляют из пистолетов, намечается баррикада; оттеснённые юноши бегом проносят катафалк по мосту Аустерлиц и бросаются на муниципальную гвардию; прибегают карабинеры, драгуны рубят саблями, толпа разбегается во все стороны, молва о войне летит по всем четырём концам Парижа; кричат: к оружию! бегут, опрокидывают друг друга, спасаются, сопротивляются. Гнев несёт мятеж, как ветер несёт огонь.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2657,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 330,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
