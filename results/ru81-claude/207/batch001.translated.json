@@ -1,0 +1,84 @@
+{
+  "unit": 207,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u207-r0032",
+      "target": "Мужчина проворчал, не переставая писать:",
+      "source_sha256": "2eca6b176791fa164afe43ba7d8aaa70d2ec54048ec179da8f8b9d8d4fdeaa9b",
+      "target_id": "ru-fr81-u207-r0032",
+      "tag": "prose",
+      "target_sha256": "e94c2e1ae2904230ec336567e6c287999914a2fdd968acac4c10ef1b7f246a77"
+    },
+    {
+      "source_id": "fr81-u207-r0033",
+      "target": "— Сволочь! Сволочь! Всё — сволочь!",
+      "source_sha256": "8e84643bc67576526efd983fcb6ceea4119270329cb967e164a5ddc720b0480a",
+      "target_id": "ru-fr81-u207-r0033",
+      "tag": "prose",
+      "target_sha256": "1cda64f711bb5b9eb2188459de86608966f69df31bf12a67d0087602222b66a6"
+    },
+    {
+      "source_id": "fr81-u207-r0034",
+      "target": "Этот вариант соломонова эпифонемы исторг у женщины вздох.",
+      "source_sha256": "bd412aa919b698c80793e701dd875e5624d34cdaab9588f0635aa244a582681d",
+      "target_id": "ru-fr81-u207-r0034",
+      "tag": "prose",
+      "target_sha256": "e8e99dc41ed397bb67ed77933c365ce66adbec3e530129b5d0b646fcc7c1ba96"
+    },
+    {
+      "source_id": "fr81-u207-r0035",
+      "target": "— Дружок, успокойся, — сказала она. — Не терзай себя, милый. Ты слишком добр, что пишешь всем этим людям, муженёк.",
+      "source_sha256": "549fbe8f6b39d4816888e7cfa9a97f0f4b6eef62e84883fb866c45955d224940",
+      "target_id": "ru-fr81-u207-r0035",
+      "tag": "prose",
+      "target_sha256": "6f21f7eb04190b6259ca9e7c2f3cbd081d6c7030d37097b4e35f821fa1fcbc7c"
+    },
+    {
+      "source_id": "fr81-u207-r0036",
+      "target": "В нищете тела жмутся друг к другу, как в холоде, но сердца отдаляются. Эта женщина, судя по всему, некогда любила этого человека всем запасом любви, что был в ней; но, вероятно, в ежедневных, взаимных упрёках, в ужасающей беде, давившей на всю семью, это угасло. Для мужа в ней оставался лишь пепел привязанности. И всё же ласковые прозвания, как это часто бывает, пережили чувство. Она говорила ему: [[I]]милый, дружок, муженёк[[/I]] и так далее — одними устами, а сердце молчало.",
+      "source_sha256": "1ceed72c2a64fba10a131e87a0fc7eb7af6635a27a0385ac1e1a0059d5eb737c",
+      "target_id": "ru-fr81-u207-r0036",
+      "tag": "prose",
+      "target_sha256": "bea52001d6ba410994599d254d23db4e16457351ae87ed92e4240f91aa125611"
+    },
+    {
+      "source_id": "fr81-u207-r0037",
+      "target": "Мужчина снова принялся писать.",
+      "source_sha256": "b65a98f58d52edfba42f629a8c65ebe53cb1c752d826e771521af7ec325283dc",
+      "target_id": "ru-fr81-u207-r0037",
+      "tag": "prose",
+      "target_sha256": "6d2d5f3fd6fd1a786827392177a213e16d23401c2a423084154608bdb253a8d5"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSzZ33FgPomZtveN8NRh",
+    "usage": {
+      "input_tokens": 3133,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 490,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u207-r0032",
+    "fr81-u207-r0033",
+    "fr81-u207-r0034",
+    "fr81-u207-r0035",
+    "fr81-u207-r0036",
+    "fr81-u207-r0037"
+  ]
+}

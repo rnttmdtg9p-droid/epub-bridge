@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgSzZ33FgPomZtveN8NRh",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-u207-r0032\",\"target\":\"Мужчина проворчал, не переставая писать:\"},{\"source_id\":\"fr81-u207-r0033\",\"target\":\"— Сволочь! Сволочь! Всё — сволочь!\"},{\"source_id\":\"fr81-u207-r0034\",\"target\":\"Этот вариант соломонова эпифонемы исторг у женщины вздох.\"},{\"source_id\":\"fr81-u207-r0035\",\"target\":\"— Дружок, успокойся, — сказала она. — Не терзай себя, милый. Ты слишком добр, что пишешь всем этим людям, муженёк.\"},{\"source_id\":\"fr81-u207-r0036\",\"target\":\"В нищете тела жмутся друг к другу, как в холоде, но сердца отдаляются. Эта женщина, судя по всему, некогда любила этого человека всем запасом любви, что был в ней; но, вероятно, в ежедневных, взаимных упрёках, в ужасающей беде, давившей на всю семью, это угасло. Для мужа в ней оставался лишь пепел привязанности. И всё же ласковые прозвания, как это часто бывает, пережили чувство. Она говорила ему: [[I]]милый, дружок, муженёк[[/I]] и так далее — одними устами, а сердце молчало.\"},{\"source_id\":\"fr81-u207-r0037\",\"target\":\"Мужчина снова принялся писать.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3133,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 490,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
