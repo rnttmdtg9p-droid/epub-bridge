@@ -1,0 +1,66 @@
+{
+  "unit": 289,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u289-r0031",
+      "target": "Анжольрас продолжал:",
+      "source_sha256": "7865f1243f778b8c15c524274bd1e1ea3f57cef329e25bb3ba85737f58948c82",
+      "target_id": "ru-fr81-u289-r0031",
+      "tag": "prose",
+      "target_sha256": "14d22b8cdcaf7fd7bbe8a590d4f89f0bcb60ad697325c92221a55632090f2fff"
+    },
+    {
+      "source_id": "fr81-u289-r0032",
+      "target": "— Есть ли здесь кто-нибудь с сердцем? Кто снова водрузит знамя на баррикаде?",
+      "source_sha256": "9e54b8549ebca7d24fd017226fa683c0861d537f0676ecb61c1c42b39ff0a0b5",
+      "target_id": "ru-fr81-u289-r0032",
+      "tag": "prose",
+      "target_sha256": "aeccd4e6e64d629b653ac948fdcb590f1886a7d7ea3308e0ec4d16f3bf5d2906"
+    },
+    {
+      "source_id": "fr81-u289-r0033",
+      "target": "Никто не ответил. Взойти на баррикаду в ту минуту, когда на неё, без сомнения, снова были наведены ружья, — это значило просто умереть. Даже храбрейший колеблется, прежде чем осудить себя на смерть. Сам Анжольрас содрогнулся. Он повторил:",
+      "source_sha256": "12c02e8145d25d903f446b772f1174d67bf9041ccc580b0345b5c7967caebd36",
+      "target_id": "ru-fr81-u289-r0033",
+      "tag": "prose",
+      "target_sha256": "40a50e71856001a2ed382df6b024ce97cfd084315bb00ca6803486f80a852916"
+    },
+    {
+      "source_id": "fr81-u289-r0034",
+      "target": "— Никто не вызывается?",
+      "source_sha256": "9652ad1d2cd5e11823cebd9433e54ba2deadb35a015d4386c2c84ad7bf3fe21f",
+      "target_id": "ru-fr81-u289-r0034",
+      "tag": "prose",
+      "target_sha256": "664bc914498dfb44006c288c0e8dec66aa899b0f20ff51fa0402e5e0daa49759"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgT6EmHuJRBy26WNDGavG",
+    "usage": {
+      "input_tokens": 2522,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u289-r0031",
+    "fr81-u289-r0032",
+    "fr81-u289-r0033",
+    "fr81-u289-r0034"
+  ]
+}
