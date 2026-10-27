@@ -1,0 +1,48 @@
+{
+  "unit": 57,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru77-u057-heading",
+      "target": "ВНУТРЕННИЙ ПАКЕТ ПОДПИСЕЙ К ИЛЛЮСТРАЦИЯМ, ПАРТИЯ 006: НЕ ВКЛЮЧАТЬ В ТЕКСТ ДЛЯ ЧИТАТЕЛЯ",
+      "source_sha256": "396dfa9bab11f3e4b7721ddeeaf6f4a0dc5e488f4dd23ef34042eadca20668c5",
+      "target_id": "ru-ru77-u057-heading",
+      "tag": "heading",
+      "target_sha256": "4c1ac889b9f26623d5811b927b202398b57bb5c9aef2436395f56667ca9de692"
+    },
+    {
+      "source_id": "ru77-art-caption-02-031",
+      "target": "КРУГЛЫЙ СТОЛ.",
+      "source_sha256": "9d58de4b1e70f36a5334c259d8e9d5f9339e7d605747a78e14ac25b5e99e5827",
+      "target_id": "ru-ru77-art-caption-02-031",
+      "tag": "figcaption",
+      "target_sha256": "76861b14e07d63d432e78e608db91f39f5a0aa82fd1411f5e7e15bfad7261fcf"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRoLXkkrHDdUThXxxSWw",
+    "usage": {
+      "input_tokens": 1015,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 188,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru77-u057-heading",
+    "ru77-art-caption-02-031"
+  ]
+}
