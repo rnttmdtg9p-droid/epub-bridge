@@ -1,0 +1,57 @@
+{
+  "unit": 5,
+  "batch": 12,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u005-r0192",
+      "target": "При виде него досаду испытал лишь один из присутствующих — Торрес, но в общем волнении это осталось незамеченным. Народ был согласен с хефе, который пожал плечами и объявил, что один человек ничем не хуже другого, лишь бы повешение состоялось. Тут люди Солано горячо запротестовали: Генри, мол, так же неповинен в убийстве Альфаро. Но громче всех, перекрывая шум, закричал Фрэнсис, стоя на эшафоте, пока ему развязывали руки и ноги:",
+      "source_sha256": "1d2a178b1dee78e5e1087b6c1c7a2bad8ec01ca4770772c729d310652b9f751d",
+      "target_id": "ru-ru78-u005-r0192",
+      "tag": "p",
+      "target_sha256": "945a101c03e35eb56b4938236e335f6a5eb486492fa18064a167eda0aa91cbf2"
+    },
+    {
+      "source_id": "ru78-u005-r0193",
+      "target": "«Меня вы судили! Его вы не судили! Нельзя повесить человека без суда! Ему должны устроить суд!»",
+      "source_sha256": "e3714862ad1172cb7188b2978a439fec330be39ff7299ff399f183a6cc33d4ec",
+      "target_id": "ru-ru78-u005-r0193",
+      "tag": "p",
+      "target_sha256": "7e0b3ed43cdaebb0b577f4a9c9beffe143938613c549995a59eebcfb9567d616"
+    },
+    {
+      "source_id": "ru78-u005-r0194",
+      "target": "И когда Фрэнсис сошёл с эшафота и пожимал руку Генри, сжимая её в обеих своих, комиссарио, а за его спиной хефе, по всей форме арестовал Генри Моргана за убийство Альфаро Солано.",
+      "source_sha256": "508d66951637218bab7abcc78caab7520328b1e7453fe0bc3dd5902155e6d55c",
+      "target_id": "ru-ru78-u005-r0194",
+      "tag": "p",
+      "target_sha256": "b07d07a771ba06e0d468e1e6925c6b548656d5e262d3b6ce1e4b0df30054b89d"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgRziDDBo1sVkRYXmxMQ1",
+    "usage": {
+      "input_tokens": 2295,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1222,
+      "output_tokens_details": {
+        "thinking_tokens": 828
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u005-r0192",
+    "ru78-u005-r0193",
+    "ru78-u005-r0194"
+  ]
+}
