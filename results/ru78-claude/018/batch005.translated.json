@@ -1,0 +1,57 @@
+{
+  "unit": 18,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u018-r0080",
+      "target": "Когда они утолили самые острые муки голода, солнце уже стояло так низко, что Торрес снял шлем Да Васко.",
+      "source_sha256": "eaec938894651f9cce1887198f51a1397b78365b562b19f3890c3c6ccade127a",
+      "target_id": "ru-ru78-u018-r0080",
+      "tag": "p",
+      "target_sha256": "cf762ae15abf1d9133bf727eb9134e8fde8b05d69d5d99a3a9a7752272bc6c48"
+    },
+    {
+      "source_id": "ru78-u018-r0081",
+      "target": "«Мы можем с тем же успехом остановиться здесь на ночь, — сказал он. — Свои башмаки я оставил в пещере с мумиями, а старые сапоги Да Васко потерял, пока мы плыли. Ноги у меня изрезаны в лоскуты, а здесь вдоволь выдержанной сухой травы, из которой я смогу сплести пару сандалий».",
+      "source_sha256": "0152a16c46aa4ee59a90e275e3b57a91b39872555e146b3ee934f01619124a46",
+      "target_id": "ru-ru78-u018-r0081",
+      "tag": "p",
+      "target_sha256": "2646c034d14bfa914cbaa2ed1440feaf27b303bc00e660ae08ae198f0e1488f1"
+    },
+    {
+      "source_id": "ru78-u018-r0082",
+      "target": "Пока Фрэнсис был занят этим делом, он разложил костёр и собрал запас дров, ибо, несмотря на низкую широту, высота над морем делала огонь необходимым для ночлега. Не успел он закончить заготовку, как Леонсия, свернувшись на боку и положив голову на сгиб руки, уже крепко спала. С той её стороны, что была дальше от огня, Фрэнсис заботливо нагрёб холм из сухих листьев и сухого лесного перегноя.",
+      "source_sha256": "c5862c5a38c38422e0233db863ebdc6232ccb8473694d592ee21e8436283ad6e",
+      "target_id": "ru-ru78-u018-r0082",
+      "tag": "p",
+      "target_sha256": "0404dbe817a752a28a8df2f09825aa5268aa9b3c4ae370590a74c2662a65e109"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS2wAy6NHmzD5Ppe59fR",
+    "usage": {
+      "input_tokens": 2383,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 425,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u018-r0080",
+    "ru78-u018-r0081",
+    "ru78-u018-r0082"
+  ]
+}
