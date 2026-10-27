@@ -1,0 +1,102 @@
+{
+  "unit": 27,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u027-r0080",
+      "target": "— Нас не поймают, дорогая сестра. Положись на меня и смотри. Вот они уже едут. Ты только смотри.",
+      "source_sha256": "795b68cbd741bb776cfecf2109b9a9401e23141d12003cb83bd0511d4b75ecae",
+      "target_id": "ru-ru78-u027-r0080",
+      "tag": "p",
+      "target_sha256": "52d9bf60981c082d8d61caf591405966f6681ea803e94e1ca0565621afa96ff9"
+    },
+    {
+      "source_id": "ru78-u027-r0081",
+      "target": "Кто на лошадях, кто на вьючных мулах — на чём пришлось, что подвернулось под руку в спешке, — Торрес, Хефе и их люди с грохотом показались в виду. Генри взял на прицел не их, а точку чуть ближе к ним, где он заложил первый заряд динамита. Когда он спустил курок, всё расстояние между ними взметнулось облаком дыма и земляной пыли, скрывшим преследователей. Когда облако медленно рассеялось, стало видно, что половина из них, и животные, и люди, повержена наземь, а все остальные оглушены и потрясены взрывом.",
+      "source_sha256": "5679d9ffb69f23494080614788ccbdd08189b76653989e8113a91582bc634c8f",
+      "target_id": "ru-ru78-u027-r0081",
+      "tag": "p",
+      "target_sha256": "bb71063750122636b2013100b86c466663d9802833bdc837b34b252252a7f9f1"
+    },
+    {
+      "source_id": "ru78-u027-r0082",
+      "target": "Генри схватил Леонсию за руку, рывком поднял её на ноги и побежал бок о бок с нею. Удобно миновав место второй закладки, он усадил её рядом с собой, чтобы передохнуть и перевести дух.",
+      "source_sha256": "1091224ec573b9f4db6f926c6872a93591eee8173ff7022e1fa4b1b3e95fbf81",
+      "target_id": "ru-ru78-u027-r0082",
+      "tag": "p",
+      "target_sha256": "c8810733109adfbedc243bf882dd7e0a1d2e961342d935aadca55944f570bf3c"
+    },
+    {
+      "source_id": "ru78-u027-r0083",
+      "target": "— На этот раз они так быстро не поскачут, — прошипел он с торжеством. — И чем дольше они нас преследуют, тем медленнее будут идти.",
+      "source_sha256": "cd99939f51ae07f428ff2b13e9dd490c0ac862890b082444dfa6563d86576aae",
+      "target_id": "ru-ru78-u027-r0083",
+      "tag": "p",
+      "target_sha256": "2acaf8db9aa553a25f8b38595977886439bd29a7b5c0875518a31fe8ffbf3800"
+    },
+    {
+      "source_id": "ru78-u027-r0084",
+      "target": "Как он и предсказывал, когда погоня появилась, она двигалась очень осторожно и очень медленно.",
+      "source_sha256": "d88894a6e5e66ba7a9d09d9f8bfee71dfdbf695d2adbcaef1cb4c68ce93c2138",
+      "target_id": "ru-ru78-u027-r0084",
+      "tag": "p",
+      "target_sha256": "2b32ca0da763675b5055bd962fca94cf55e95934a31dc735466a018cb2ee1d50"
+    },
+    {
+      "source_id": "ru78-u027-r0085",
+      "target": "— Их следовало бы перебить, — сказал Генри. — Но у них нет никаких шансов, и у меня не хватает духу это сделать. А вот как следует встряхнуть их я непременно сумею.",
+      "source_sha256": "da4880d3d30dbf79f1e29a5e4897e00f0c79df0eaf692a947ca2ff5efa3ec3b1",
+      "target_id": "ru-ru78-u027-r0085",
+      "tag": "p",
+      "target_sha256": "b6bbdac316675458a70af38cc316622e162e8704439d73950b86ae9d3ee3fdd2"
+    },
+    {
+      "source_id": "ru78-u027-r0086",
+      "target": "Он снова выстрелил в заложенный динамит и снова, повернувшись спиной к поднявшейся суматохе, бросился бежать к третьей закладке.",
+      "source_sha256": "59628dae5369dfe798b9bc816a0392e3e766b856253d2558f4242ade06ee6ee4",
+      "target_id": "ru-ru78-u027-r0086",
+      "tag": "p",
+      "target_sha256": "709d294eed1527be225db59d279b7210f8eea0d7b1663c84d88a66532c533416"
+    },
+    {
+      "source_id": "ru78-u027-r0087",
+      "target": "Когда он взорвал третий заряд, они вдвоём с Леонсией помчались к его привязанной лошади; он посадил её в седло и побежал рядом, держась за её стремя.",
+      "source_sha256": "d447553ca68ef024bdd7a43cf074b884fe7dc5bfbc1629eb66b78680c0a6796d",
+      "target_id": "ru-ru78-u027-r0087",
+      "tag": "p",
+      "target_sha256": "ab7ceb6a1653ffee9eaf139798dfb5d3fc27a8e83da4ad70d592ce1f0bc43bd3"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS4X7FfDsKBjs2nEdhyj",
+    "usage": {
+      "input_tokens": 3493,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1310,
+      "output_tokens_details": {
+        "thinking_tokens": 505
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u027-r0080",
+    "ru78-u027-r0081",
+    "ru78-u027-r0082",
+    "ru78-u027-r0083",
+    "ru78-u027-r0084",
+    "ru78-u027-r0085",
+    "ru78-u027-r0086",
+    "ru78-u027-r0087"
+  ]
+}
