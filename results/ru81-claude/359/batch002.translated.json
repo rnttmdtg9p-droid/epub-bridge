@@ -1,0 +1,48 @@
+{
+  "unit": 359,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u359-r0064",
+      "target": "Войдя к господину Жану, Николетта повторила ему подлинные слова своей госпожи: сударыня прислала узнать, «почему господин Жан не приходил накануне». — Я не приходил уже два дня, — мягко сказал Жан Вальжан.",
+      "source_sha256": "f334522c6cabf05745a45054c9003df59f385c9ca31306bd8e841c475a4e3dad",
+      "target_id": "ru-fr81-u359-r0064",
+      "tag": "prose",
+      "target_sha256": "7ae5fb7558d93d5fcfdd19f0b412907937341a3bf2b71d9eb9c78e293a51f605"
+    },
+    {
+      "source_id": "fr81-u359-r0065",
+      "target": "Но замечание скользнуло мимо Николетты, и она ничего не передала Козетте.",
+      "source_sha256": "7334286c0f82c498dbb9612a5aa4ebb35ab8198ae370d05676f1fab2138f44dd",
+      "target_id": "ru-fr81-u359-r0065",
+      "tag": "prose",
+      "target_sha256": "6e5086e30c4c6f3a626b75d709f18d1988874ea435270c7f507421caf20862b3"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgTAKv7qXEfuCNwteEwAj",
+    "usage": {
+      "input_tokens": 2468,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 174,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u359-r0064",
+    "fr81-u359-r0065"
+  ]
+}
