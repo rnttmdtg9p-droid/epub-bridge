@@ -1,0 +1,84 @@
+{
+  "unit": 14,
+  "batch": 4,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "ru78-u014-r0064",
+      "target": "— Как я могу дольше оставаться в этой стране, любя вас так, как люблю, когда вы любите Генри?",
+      "source_sha256": "de6a525604be0b1c9c4630810b7e3af0766ebe2ba1c360d904e4e517f7c9fe07",
+      "target_id": "ru-ru78-u014-r0064",
+      "tag": "p",
+      "target_sha256": "8eed88218dc0fcc078069f69fd4b7b87bc252b851ccb1b40980cfcf293488238"
+    },
+    {
+      "source_id": "ru78-u014-r0065",
+      "target": "Он впервые открыто признался в своей любви, и Леонсия ощутила стремительный прилив радости, а вслед за ним столь же стремительный прилив заливающего краской стыда: она, женщина, всегда считавшая себя доброй, могла любить двоих мужчин одновременно. Она взглянула на Генри, словно желая проверить своё сердце, и сердце ответило: да. Она любила Генри так же искренне, как и Фрэнсиса, и чувство это казалось сходным там, где сходны были они сами, и различным там, где они были различны.",
+      "source_sha256": "1797b44640b19ef57b1ab15af74b8c21c94e355db0149bff908ac6564582fbf7",
+      "target_id": "ru-ru78-u014-r0065",
+      "tag": "p",
+      "target_sha256": "bc1f28710a62ef536f58fd04df31758b5415b63e92b051793254ed51a96dd5af"
+    },
+    {
+      "source_id": "ru78-u014-r0066",
+      "target": "— Боюсь, мне придётся связаться с [[I]]«Анжеликой»[[/I]], скорее всего в Бокас-дель-Торо, и уехать, — сказал Фрэнсис Генри. — Вы с Энрико можете найти сокровище и поделить его на двоих.",
+      "source_sha256": "99da007e0bba233f6c82733eeaf7bb82fa280d347a4211af9c0c0f0e443b52ef",
+      "target_id": "ru-ru78-u014-r0066",
+      "tag": "p",
+      "target_sha256": "07feb2c620f5526fd45f57e27b263995be82f96ca4dfa5abbee51d978993fcbc"
+    },
+    {
+      "source_id": "ru78-u014-r0067",
+      "target": "Но пеон, услышав это, быстро заговорил с отцом, а затем с Генри.",
+      "source_sha256": "47d0f61572c1544a936b657ce3b40e24f8df05050a98f346b98892d95d40a519",
+      "target_id": "ru-ru78-u014-r0067",
+      "tag": "p",
+      "target_sha256": "5bb47ac6df3d213f26962a646ff78ee2e1a5b8ff74cef013f375cb13781dc9d9"
+    },
+    {
+      "source_id": "ru78-u014-r0068",
+      "target": "— Слышишь, что он говорит, Фрэнсис, — сказал тот, поднимая священную кисть. — Ты должен идти с нами. Он благодарен именно тебе — за сына. Он отдаёт сокровище не нам, а тебе. А если ты не пойдёшь, он не прочтёт ни одного узелка из этого письма.",
+      "source_sha256": "9321d0c80bb3bedd246fdf7425d1e5e81c89e4ff874e616b0f3e4becf4ee90a4",
+      "target_id": "ru-ru78-u014-r0068",
+      "tag": "p",
+      "target_sha256": "289a81766a977acbf8642a44d560afa53bf062ddcd00e503508ad93589d9179b"
+    },
+    {
+      "source_id": "ru78-u014-r0069",
+      "target": "Но на самом деле заставила Фрэнсиса переменить решение Леонсия: она смотрела на него с тихой, тоскующей мольбой, будто вот-вот скажет: «Прошу тебя, ради меня».",
+      "source_sha256": "29f93a36d476c8d435b7660b776d129145d5c74c1d974810124f7a7c2c3ed6d5",
+      "target_id": "ru-ru78-u014-r0069",
+      "tag": "p",
+      "target_sha256": "a742371c3f08bf66673e09edbdf6efb77d80e95be314d9dc462ca0ade2d79699"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgS2C3K2NfExDcjD5TKY3",
+    "usage": {
+      "input_tokens": 3028,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 698,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "ru78-u014-r0064",
+    "ru78-u014-r0065",
+    "ru78-u014-r0066",
+    "ru78-u014-r0067",
+    "ru78-u014-r0068",
+    "ru78-u014-r0069"
+  ]
+}
