@@ -1,0 +1,84 @@
+{
+  "unit": 114,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u114-r0032",
+      "target": "Жан Вальжан подхватил её, посадил к себе на спину, взял обе её маленькие руки в свою левую, лёг плашмя и пополз по верху стены к срезанному углу. Как он и угадал, там стояло строение, крыша которого начиналась от верха деревянной ограды и спускалась совсем близко к земле, довольно отлогим скатом, задевая липу.",
+      "source_sha256": "ec0c941878b93b14b7ae59560c22300289f81ed4338af078400ca46b485022ce",
+      "target_id": "ru-fr81-u114-r0032",
+      "tag": "prose",
+      "target_sha256": "a9d6f4294b01adc1c45409d343a3d0cb7f10cd70c809bf63fde2dd2659426d6d"
+    },
+    {
+      "source_id": "fr81-u114-r0033",
+      "target": "Счастливое обстоятельство, ибо стена с этой стороны была много выше, чем со стороны улицы. Жан Вальжан видел землю под собою лишь где-то очень глубоко внизу.",
+      "source_sha256": "5cbcd9765b413c4d06e809b79621578b5cefca342d5dbcd6115465e4bb930253",
+      "target_id": "ru-fr81-u114-r0033",
+      "tag": "prose",
+      "target_sha256": "bc0f26dba9443030500f46b61c694abf6d22f43128e8ebd344fa747692e04d40"
+    },
+    {
+      "source_id": "fr81-u114-r0034",
+      "target": "Он только что добрался до отлогого ската крыши и ещё не выпустил гребня стены, когда яростный шум возвестил о приходе патруля. Раздался громовой голос Жавера:",
+      "source_sha256": "d353a9021777c8c385a11b7c355383a25cf84220677cf134c1e25241967020d2",
+      "target_id": "ru-fr81-u114-r0034",
+      "tag": "prose",
+      "target_sha256": "371a2c063c7af0113994e80edcd326ce052c3aba0ebc25389021b79d882c48fb"
+    },
+    {
+      "source_id": "fr81-u114-r0035",
+      "target": "— Обыщите тупик! Улица Друа-Мюр охраняется, малая улица Пикпюс тоже. Ручаюсь, что он в тупике!",
+      "source_sha256": "136c02568dfd97cdef9f16e32b6db02f8ce7a0f89d470f69ed1ff9528756fd64",
+      "target_id": "ru-fr81-u114-r0035",
+      "tag": "prose",
+      "target_sha256": "8b70dbdb2cf52e2b1c05aec6cd5f9f61f5399b3270b2a6e5481ad5abc2e3ba89"
+    },
+    {
+      "source_id": "fr81-u114-r0036",
+      "target": "Солдаты бросились в тупик Женро.",
+      "source_sha256": "1a6780b02043619e088beb3b5ba2c97a5d3978292fc0d588c2c6fa7a7690137e",
+      "target_id": "ru-fr81-u114-r0036",
+      "tag": "prose",
+      "target_sha256": "c957c62fe7b5a3b99dd6c7932ab542011d5acbd1cd02740cc09b5cb7c93675c5"
+    },
+    {
+      "source_id": "fr81-u114-r0037",
+      "target": "Жан Вальжан соскользнул по крыше, придерживая Козетту, достиг липы и спрыгнул на землю. От ужаса ли, от мужества ли, но Козетта не проронила ни звука. Руки у неё были немного ободраны.",
+      "source_sha256": "0fb66591c7c64a9db8dbd6e29342ff47e5abb34b521b0d0f08bae9abd3ac061d",
+      "target_id": "ru-fr81-u114-r0037",
+      "tag": "prose",
+      "target_sha256": "cf0cc351fa4529b4dc22385c60871d1a61bb682941cf2a5806f9c42c4f99be6e"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgStakauN6gkivNYcvQjT",
+    "usage": {
+      "input_tokens": 3119,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 565,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u114-r0032",
+    "fr81-u114-r0033",
+    "fr81-u114-r0034",
+    "fr81-u114-r0035",
+    "fr81-u114-r0036",
+    "fr81-u114-r0037"
+  ]
+}
