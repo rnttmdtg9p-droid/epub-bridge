@@ -1,0 +1,57 @@
+{
+  "unit": 262,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u262-r0096",
+      "target": "И, не сказав друг другу ни слова, движимые одной мыслью, увлечённые теми электрическими токами, которые держат двух влюблённых в непрерывном общении, оба опьянённые наслаждением даже в самой своей скорби, они упали в объятия друг другу, не заметив, что губы их слились, меж тем как их взоры, поднятые к небу, переполненные восторгом и полные слёз, созерцали звёзды.",
+      "source_sha256": "dc42c4b463244ff59e4cd2190edcd2365368351e378265d17546996ba3d998e6",
+      "target_id": "ru-fr81-u262-r0096",
+      "tag": "prose",
+      "target_sha256": "db69b396528e69b9125c871d663df77bfe541a70926ca257b52c664a51336779"
+    },
+    {
+      "source_id": "fr81-u262-r0097",
+      "target": "Когда Мариус вышел, улица была пустынна. Это было то самое время, когда Эпонина шла за бандитами до самого бульвара.",
+      "source_sha256": "2f53f434eaf3e74814a3f3668b62cdbf938f580c78694845b1415124b029366c",
+      "target_id": "ru-fr81-u262-r0097",
+      "tag": "prose",
+      "target_sha256": "67798cacd396bc3a3f609094397cdd84f92f2430ea0de1398ce2cfc2a13cb30c"
+    },
+    {
+      "source_id": "fr81-u262-r0098",
+      "target": "Пока Мариус мечтал, прислонившись головой к дереву, ему пришла в голову одна мысль — мысль, увы, которую он и сам считал безумной и неосуществимой. Он принял крайнее решение.",
+      "source_sha256": "0c1c5e0dbb01e76e67cfcb1a7019daa759aad2c88e8975063c5500953304a05d",
+      "target_id": "ru-fr81-u262-r0098",
+      "tag": "prose",
+      "target_sha256": "5580a3df80898d8517f7ed61c5592472d59f553665d8d06bdfd0df5fe9e79da9"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgT4gwGvHTBHyKG3P2WLU",
+    "usage": {
+      "input_tokens": 2753,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 348,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u262-r0096",
+    "fr81-u262-r0097",
+    "fr81-u262-r0098"
+  ]
+}
