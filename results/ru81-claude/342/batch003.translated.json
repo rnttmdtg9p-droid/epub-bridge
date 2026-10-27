@@ -1,0 +1,39 @@
+{
+  "unit": 342,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u342-r0093",
+      "target": "Жавер несколько минут оставался неподвижен, глядя на это отверстие во мраке; он рассматривал невидимое с неподвижностью, похожей на внимание. Вода шумела. Вдруг он снял шляпу и положил её на край набережной. Мгновение спустя высокая чёрная фигура, которую издали какой-нибудь запоздалый прохожий мог бы принять за призрак, показалась стоя на парапете, склонилась к Сене, потом выпрямилась и упала прямо в темноту; послышался глухой всплеск; и только тень одна была посвящена в тайну судорог этой смутной фигуры, исчезнувшей под водой.",
+      "source_sha256": "7b7194a502c52f0b53d34689f392719e50540cb47efefd5128ac8c0248f0867f",
+      "target_id": "ru-fr81-u342-r0093",
+      "tag": "prose",
+      "target_sha256": "8f961bf849057f2a24faa59e5fdc872c8088db2620939ca31ea7c1380feda367"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgT8z59NtPP7L62FAi4xQ",
+    "usage": {
+      "input_tokens": 2563,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u342-r0093"
+  ]
+}
