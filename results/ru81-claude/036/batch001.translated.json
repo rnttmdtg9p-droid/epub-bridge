@@ -1,0 +1,84 @@
+{
+  "unit": 36,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr81-u036-r0032",
+      "target": "— Начинается всё с поцелуя, — сказал Блашвель.",
+      "source_sha256": "9ddb8fafd3582d196da95a2ae2b2d217d88ec9ee65799956fb5700513373f713",
+      "target_id": "ru-fr81-u036-r0032",
+      "tag": "prose",
+      "target_sha256": "d379affc6654734eb662810e7b3b0a35247d276a21c7b121453474f39e8826ae"
+    },
+    {
+      "source_id": "fr81-u036-r0033",
+      "target": "— В лоб, — добавил Толомьес.",
+      "source_sha256": "76e0fbd60cf7b83a34d6d1290f42a638e9f077262ec33539433067bb81c69b9b",
+      "target_id": "ru-fr81-u036-r0033",
+      "tag": "prose",
+      "target_sha256": "737d8d2118c1589c86c6bb17e51fb457346c8f541e6eb5d8bbb08c2708b46adc"
+    },
+    {
+      "source_id": "fr81-u036-r0034",
+      "target": "Каждый торжественно поцеловал свою возлюбленную в лоб; затем все четверо гуськом направились к двери, приложив палец к губам.",
+      "source_sha256": "32bdf50325a531cd1cb12384043b6a137d21a7307fc4f09394a869d02bb5cd27",
+      "target_id": "ru-fr81-u036-r0034",
+      "tag": "prose",
+      "target_sha256": "248f3e2948c501225e004a56eaddecfaa8ebb8023cb9fad2877d386de9b2266b"
+    },
+    {
+      "source_id": "fr81-u036-r0035",
+      "target": "Фаворита захлопала в ладоши, когда они вышли.",
+      "source_sha256": "8f81a282d199b06648404e2b3a7a6abd53484de09ea469ac11ac6bc99dd3b721",
+      "target_id": "ru-fr81-u036-r0035",
+      "tag": "prose",
+      "target_sha256": "6922e13c4d25dac9f07891cc36ff9c21b14061bff417dc16472e4e5d080cacb6"
+    },
+    {
+      "source_id": "fr81-u036-r0036",
+      "target": "— Уже забавно, — сказала она.",
+      "source_sha256": "c186e75b176fdc8bb57ea58b840e40f564688fef0a5afc14441c94c298a7d557",
+      "target_id": "ru-fr81-u036-r0036",
+      "tag": "prose",
+      "target_sha256": "5498d180b58e79fe82fceb166cdf81106db6bf66f78ce1643b8b2392508df677"
+    },
+    {
+      "source_id": "fr81-u036-r0037",
+      "target": "— Не задерживайтесь слишком долго, — шепнула Фантина. — Мы вас ждём.",
+      "source_sha256": "b7d56e0c16006fae3ea263e1aa98a7a778b5549e1ed568bd01113d185e4be123",
+      "target_id": "ru-fr81-u036-r0037",
+      "tag": "prose",
+      "target_sha256": "4b79d1c14201f7a61b530af77b09acaab03f2c34c3794bc67b918e87d92a5de2"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgSpbbMLJ8TDcGSAkGHjL",
+    "usage": {
+      "input_tokens": 2799,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr81-u036-r0032",
+    "fr81-u036-r0033",
+    "fr81-u036-r0034",
+    "fr81-u036-r0035",
+    "fr81-u036-r0036",
+    "fr81-u036-r0037"
+  ]
+}
