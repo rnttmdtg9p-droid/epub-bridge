@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgVPW7nr5jAvEEdjkzERF",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr81-art147-01\",\"target\":\"Католическая армия\"},{\"source_id\":\"fr81-art147-02\",\"target\":\"Именем Короля\"},{\"source_id\":\"fr81-art147-03\",\"target\":\"Обменный билет на десять ЛИВРОВ.\"},{\"source_id\":\"fr81-art147-04\",\"target\":\"за предметы, поставленные армии\"},{\"source_id\":\"fr81-art147-05\",\"target\":\"подлежит выплате по заключении мира\"},{\"source_id\":\"fr81-art147-06\",\"target\":\"Серия 5.\"},{\"source_id\":\"fr81-art147-07\",\"target\":\"№ 10390.\"},{\"source_id\":\"fr81-art147-08\",\"target\":\"Стофле\"},{\"source_id\":\"fr81-art147-09\",\"target\":\"и Королевская.\"},{\"source_id\":\"fr81-art228-01\",\"target\":\"ПЕРРО\"},{\"source_id\":\"fr81-art228-02\",\"target\":\"ПРОДАЖА\"},{\"source_id\":\"fr81-art277-01\",\"target\":\"Б. КАФЕ БОРДЕЛЕ\"},{\"source_id\":\"fr81-art277-02\",\"target\":\"КАФЕ …TAMINET\"},{\"source_id\":\"fr81-art365-01\",\"target\":\"СМЕРТЬ ЖАНА ВАЛЬЖАНА\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1782,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 452,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

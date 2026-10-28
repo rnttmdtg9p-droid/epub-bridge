@@ -1,0 +1,111 @@
+{
+  "state": "INITIAL_CLAUDE_TRANSLATION_ONLY_PENDING_COMPLETE_INDEPENDENT_REVIEW",
+  "utc": "2026-10-28T22:01:39.194246+00:00",
+  "rows": [
+    {
+      "source_id": "fr81-art147-01",
+      "target": "Католическая армия",
+      "source_sha256": "ec9f489253f47eccef88ccb574b61797327c29991d09cde42a976b03950f0f93",
+      "target_sha256": "0cdb66496353b94b4df923f389e784d991f98523fc64a27f7535989d9ae34271"
+    },
+    {
+      "source_id": "fr81-art147-02",
+      "target": "Именем Короля",
+      "source_sha256": "1aa5ce3658cf0adfb6781af2f38ad282be95d4cbb1047a57366df708d60d37af",
+      "target_sha256": "472f31790d92f353b19539a7b8ad1bfa1fe2e67f79ecf3a8508ac95c57c491d1"
+    },
+    {
+      "source_id": "fr81-art147-03",
+      "target": "Обменный билет на десять ЛИВРОВ.",
+      "source_sha256": "89bc9a51eeee07cdff1b16f675ee8301cc5ba2899bc6a4275635e5641e01d2bb",
+      "target_sha256": "ade13674655af0646555063fc36f090fddadd1d4e867ed84ff512960f5782511"
+    },
+    {
+      "source_id": "fr81-art147-04",
+      "target": "за предметы, поставленные армии",
+      "source_sha256": "726777175e8fae280a54abb14e6b121a5e1295a8bb18cee29dd107c76f3ee1b5",
+      "target_sha256": "70fd2241fdf39c1881108be22f332668e0e7bbe3d6092043364789a5bdbf1759"
+    },
+    {
+      "source_id": "fr81-art147-05",
+      "target": "подлежит выплате по заключении мира",
+      "source_sha256": "17766b15d424cd7eb57ce98f0f230e6538ff466f0bc73744c6103871787357de",
+      "target_sha256": "a5086ff4c77d263921a536ddae80a90474b943e0e48ed3baaa481c1ea60d2d36"
+    },
+    {
+      "source_id": "fr81-art147-06",
+      "target": "Серия 5.",
+      "source_sha256": "46d5fccc856dbc2ec97bbfede7715a40f1222345808ca1e3519c9731c1b972be",
+      "target_sha256": "dd8b81d211c63460ad36ed94c004f3bd48eec4a2ee46d02a9a2ce718d03540f2"
+    },
+    {
+      "source_id": "fr81-art147-07",
+      "target": "№ 10390.",
+      "source_sha256": "8f02f76610fb71dd64fa6897aefafc22194e7df9a46ec0abce3a7518e0e98916",
+      "target_sha256": "f93ba855238568a573eb0f55889843c2407b2ef4b133529d0992447fc281c144"
+    },
+    {
+      "source_id": "fr81-art147-08",
+      "target": "Стофле",
+      "source_sha256": "f9ef92a2196b60783747cbf248eb52f579f4bd1a4e8d5425925c2014c76b8682",
+      "target_sha256": "40b0364a917bc5551e56693631023260f2a70d77a7f03bb4c49cc2c3dac4628c"
+    },
+    {
+      "source_id": "fr81-art147-09",
+      "target": "и Королевская.",
+      "source_sha256": "c0aad5c1cb58b22b8ad7cb2e6bc4059f8a3b166be9e0255cf42121ed94040aee",
+      "target_sha256": "bd6439582e2fa795dbd94fac36fd447bd23680bd16d06ab1c26caf388c45d725"
+    },
+    {
+      "source_id": "fr81-art228-01",
+      "target": "ПЕРРО",
+      "source_sha256": "bae88ac5f965544880d2036b0cfb096e39f9fd002e50acaa10f3646eeda5bae2",
+      "target_sha256": "ca30a9586a67ea26499159c72504e5d5b04ef079e79da81a875b42762f79c6f9"
+    },
+    {
+      "source_id": "fr81-art228-02",
+      "target": "ПРОДАЖА",
+      "source_sha256": "df3b33a5b491f43ec1277a7ef2e822ac050508d7f247ef52a6a91d5bf487cf9a",
+      "target_sha256": "f8b07e255cc2b43a5359fd7c7854aa226e6b4f3519021881272f51aaaf242ed6"
+    },
+    {
+      "source_id": "fr81-art277-01",
+      "target": "Б. КАФЕ БОРДЕЛЕ",
+      "source_sha256": "ae49f66a3e84ba8d2f4ad175d5d88cd7006e1622cf01dde205a6331e0b9e266c",
+      "target_sha256": "36f6f477545e863759ee8d734a2ef423455ca37f1608d9d32140c3103c200606"
+    },
+    {
+      "source_id": "fr81-art277-02",
+      "target": "КАФЕ …TAMINET",
+      "source_sha256": "36b74e260d3aac496e3b01f49ac12ee57257864ef406c9a100a9e77ae4f14585",
+      "target_sha256": "36d5f14657fefc85af5ed835b72d4b9e67eb92b7018493863b6d477e9e5302db"
+    },
+    {
+      "source_id": "fr81-art365-01",
+      "target": "СМЕРТЬ ЖАНА ВАЛЬЖАНА",
+      "source_sha256": "0bce465ffc9cb8a085c80893e086ed479fd25aab9c3162f33555ccc04aeb38f3",
+      "target_sha256": "93fd713fd0ee024094145aaeae01d4ae1b0325c6b61db9a4f5269629f4b3efea"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgVPW7nr5jAvEEdjkzERF",
+    "usage": {
+      "input_tokens": 1782,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 452,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  }
+}
