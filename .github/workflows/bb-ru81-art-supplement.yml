@@ -1,0 +1,59 @@
+name: BB Russian rank81 artwork initial Claude supplement
+on:
+  push:
+    paths: ['.github/workflows/bb-ru81-art-supplement.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-russian-sequential-rank81-art-supplement
+  cancel-in-progress: false
+jobs:
+  initial-translation-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure provenance checkpoints
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 -m py_compile scripts/bb_ru81_art_supplement.py
+      - name: Probe public selected-print recovery from runner network
+        run: |
+          python3 - <<'PY'
+          import urllib.request, json
+          from pathlib import Path
+          out=Path('results/ru81-art-supplement-20261028')
+          out.mkdir(parents=True,exist_ok=True)
+          records=[]
+          urls=['https://gallica.bnf.fr/iiif/ark:/12148/bpt6k726983/manifest.json','https://gallica.bnf.fr/ark:/12148/bpt6k726983/f79.highres','https://gallica.bnf.fr/iiif/ark:/12148/bpt6k726983/f79/full/2000,/0/native.jpg']
+          for i,u in enumerate(urls):
+              try:
+                  response=urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=30)
+                  data=response.read()
+                  if i==0:
+                      value=json.loads(data)
+                      (out/'public-gallica-manifest.json').write_text(json.dumps(value))
+                  else:
+                      assert data[:2]==bytes([255,216]),'NOT_JPEG'
+                      (out/('public-gallica-f79-attempt%d.jpg'%i)).write_bytes(data)
+                  records.append({'url':u,'state':'ACQUIRED_NOT_PIXEL_REVIEWED','bytes':len(data)})
+              except Exception as e:
+                  records.append({'url':u,'state':'PUBLIC_RECOVERY_FAILED','failure':str(e)})
+          (out/'public-print-recovery.json').write_text(json.dumps(records,indent=2))
+          print('PUBLIC_PRINT_PROBE_COMPLETE',len(records))
+          PY
+      - name: Initial translation only; literary review remains foreground
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru81_art_supplement.py
+      - name: Preserve raw provider and public print-recovery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru81-art-supplement-20261028
+          path: results/ru81-art-supplement-20261028/
+          retention-days: 90
+          if-no-files-found: warn
