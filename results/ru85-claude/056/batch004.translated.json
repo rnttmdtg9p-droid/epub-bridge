@@ -1,0 +1,75 @@
+{
+  "unit": 56,
+  "batch": 4,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en85-u056-b0128",
+      "target": "«Выдан ещё один приказ (в Высоком суде Королевской скамьи Его Величества в Вестминстере) по другому делу — ХИП против МИКОБЕРА, и ответчик по этому делу стал добычей шерифа, обладающего законной юрисдикцией в сём округе.",
+      "source_sha256": "0c06daf87858428f8374d8b12b4604a3b720a25396ab5646588339401b82bce7",
+      "target_id": "ru-en85-u056-b0128",
+      "tag": "p",
+      "target_sha256": "aa05df95bb404cc041a894c54bb068c712e7976ba2f5e76f43fa3cadf494d820"
+    },
+    {
+      "source_id": "en85-u056-b0129",
+      "target": "«Вот день настал, и вот он, час,\nХмурится вражий строй на нас,\nГордый Эдуард мощь ведёт —\nЦепи и рабство!",
+      "source_sha256": "a0865ed59ddcf95e7e2a432465e26a5a2143bf6eb9c3144ca0cca4030f1d4873",
+      "target_id": "ru-en85-u056-b0129",
+      "tag": "p",
+      "target_sha256": "2f03fedb18fbcc02ddac7fd4709e22b0da2a6f6ec38f37416564ca38eec851fa"
+    },
+    {
+      "source_id": "en85-u056-b0130",
+      "target": "«Преданный им и скорому концу (ибо душевная пытка невыносима сверх известного предела, а этот предел, чувствую, мною достигнут), я завершил свой путь. Благослови вас Бог, благослови! Некий будущий путник, посетив из любопытства, не лишённого, будем надеяться, и сочувствия, место заключения, отведённое в этом городе должникам, может и, смею верить, будет Размышлять, читая на стене, выцарапанные ржавым гвоздём",
+      "source_sha256": "c2fed8b2353abcda2c4c593321fea04798ecdf62f3f4a8965d0bb0e84c6ed564",
+      "target_id": "ru-en85-u056-b0130",
+      "tag": "p",
+      "target_sha256": "65092fa278a3c2ceeb0e02885b6e82bbff56f713cd5f1bd1c17bcdcc6b239be9"
+    },
+    {
+      "source_id": "en85-u056-b0131",
+      "target": "«Тёмные инициалы,\n«У. М.",
+      "source_sha256": "a8817c029719fe2104eb1685cd49fb73225e9a67497d6318b29ce781df8b9b78",
+      "target_id": "ru-en85-u056-b0131",
+      "tag": "p",
+      "target_sha256": "ef818711d7903a1c7a9645e3460fcab55fcd81e1b1639a26f071a759a802fbd7"
+    },
+    {
+      "source_id": "en85-u056-b0132",
+      "target": "«P.S. Вновь вскрываю это письмо, чтобы сообщить, что наш общий друг, мистер Томас Трэдлс (который ещё не покинул нас и выглядит превосходно), уплатил долг и издержки от благородного имени мисс Тротвуд; и что я с семейством достиг вершины земного блаженства.»",
+      "source_sha256": "74270ec39fc18cb95b7f5c4fef5ef1c0784c1e5ac62ec0b563ff9026578be9a2",
+      "target_id": "ru-en85-u056-b0132",
+      "tag": "p",
+      "target_sha256": "373679f86a70a8d023da3d0a457cee2e328233f00e36d250ed25558b4d9a73fb"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgWujr2x4yVLhozpTcnRn",
+    "usage": {
+      "input_tokens": 3287,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1846,
+      "output_tokens_details": {
+        "thinking_tokens": 1266
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en85-u056-b0128",
+    "en85-u056-b0129",
+    "en85-u056-b0130",
+    "en85-u056-b0131",
+    "en85-u056-b0132"
+  ]
+}
