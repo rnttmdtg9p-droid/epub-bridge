@@ -1,0 +1,318 @@
+{
+  "state": "ACTUAL_SOURCE_LINE_BOUNDARIES_REPAIRED_NO_WORD_CHANGES",
+  "rows": [
+    {
+      "id": "en85-u001-b0005",
+      "old_sha256": "c66097efbf361bcf1dfb9360ef083db1b8e1ce3b232f445805b0f2beea72fcb6",
+      "new_sha256": "e013f93354391b889939aa13789de99fc2773ff595519101543c4f1a1b6714b0",
+      "old_lines": [
+        "",
+        "London,",
+        "",
+        "[[I]]October[[/I]], 1850.",
+        ""
+      ],
+      "new_lines": [
+        "London,",
+        "[[I]]October[[/I]], 1850."
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u014-b0020",
+      "old_sha256": "1b1c568c3d9101619a8f4ff933d3aa01b058f775cbdd833dd718e140425134fd",
+      "new_sha256": "0695db2a36b9ff32f0f5ab97bd734ffc06f0c64139fe732044d18dc5bafd016c",
+      "old_lines": [
+        "",
+        "Gee up, Dobbin,",
+        "",
+        "Gee ho, Dobbin,",
+        "",
+        "Gee up, Dobbin,",
+        "",
+        "Gee up, and gee ho—o—o!",
+        ""
+      ],
+      "new_lines": [
+        "Gee up, Dobbin,",
+        "Gee ho, Dobbin,",
+        "Gee up, Dobbin,",
+        "Gee up, and gee ho—o—o!"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u019-b0120",
+      "old_sha256": "6de8f1ca0f4a243551002e0b9a1dc082d593fcb2923cf4c7728fee75bc2dd27c",
+      "new_sha256": "469e9d574166f34a4976b7fef4df27673720d93e9c9c44f3db094210ad3a9316",
+      "old_lines": [
+        "",
+        "‘From",
+        "",
+        "‘The",
+        "",
+        "‘Beggared Outcast,",
+        "",
+        "‘WILKINS MICAWBER.’",
+        ""
+      ],
+      "new_lines": [
+        "‘From",
+        "‘The",
+        "‘Beggared Outcast,",
+        "‘WILKINS MICAWBER.’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u030-b0056",
+      "old_sha256": "1b3900cde61ed2e9e9e805160f3abb66f4d6aa9599ce7dff98daa0c185a1605e",
+      "new_sha256": "2a3fa82d5fd786be6c1a140bb1b3c489968fc45dee4b0094462b2b91c5903c2f",
+      "old_lines": [
+        "",
+        "We twa hae run about the braes",
+        "",
+        "And pu’d the gowans’ fine",
+        ""
+      ],
+      "new_lines": [
+        "We twa hae run about the braes",
+        "And pu’d the gowans’ fine"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u030-b0164",
+      "old_sha256": "d70acb031e14b6815f7087847316face7efeb4fe3be13dfa6eaa169b5c1adde0",
+      "new_sha256": "04b1c747f9c20720326f69daec9c50be928c6a64980a2575ea30b6145e4cd30f",
+      "old_lines": [
+        "",
+        "‘On",
+        "",
+        "‘The",
+        "",
+        "‘Head",
+        "",
+        "‘Of",
+        "",
+        "‘WILKINS MICAWBER.’",
+        ""
+      ],
+      "new_lines": [
+        "‘On",
+        "‘The",
+        "‘Head",
+        "‘Of",
+        "‘WILKINS MICAWBER.’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u038-b0078",
+      "old_sha256": "f970f746500af5a991af0e63824bba6a6a657b288ebae37443127a0fa6849d18",
+      "new_sha256": "7b106f6262cf8ba0f197ce54a1875428610d8bd2b6190dd098921c477c0fa3b5",
+      "old_lines": [
+        "",
+        "‘On",
+        "",
+        "‘One",
+        "",
+        "‘Who",
+        "",
+        "‘Is",
+        "",
+        "‘Ever yours,",
+        "",
+        "‘WILKINS MICAWBER.’",
+        ""
+      ],
+      "new_lines": [
+        "‘On",
+        "‘One",
+        "‘Who",
+        "‘Is",
+        "‘Ever yours,",
+        "‘WILKINS MICAWBER.’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u044-b0168",
+      "old_sha256": "8c5218827c21dcc43b4d919d191fecd3862ee1f2e2b754f73398d6971b3fd76e",
+      "new_sha256": "b02957df5c6ebaff0a57162e060c4270783318e93df4b224e696e1d3e8498c1a",
+      "old_lines": [
+        "",
+        "‘Your afflicted,",
+        "",
+        "‘EMMA MICAWBER.’",
+        ""
+      ],
+      "new_lines": [
+        "‘Your afflicted,",
+        "‘EMMA MICAWBER.’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u051-b0008",
+      "old_sha256": "13d2d82db7498cd2b40790a146b9b90ef2770460fd20bd256256728175a12d8c",
+      "new_sha256": "9ca59c51673f0c03a350a016518c452f6f756de6a99945f141e65820074e7544",
+      "old_lines": [
+        "",
+        "‘Remain,",
+        "",
+        "‘Of",
+        "",
+        "‘A",
+        "",
+        "‘Fallen Tower,",
+        "",
+        "‘WILKINS MICAWBER.",
+        ""
+      ],
+      "new_lines": [
+        "‘Remain,",
+        "‘Of",
+        "‘A",
+        "‘Fallen Tower,",
+        "‘WILKINS MICAWBER."
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u051-b0090",
+      "old_sha256": "061a391da3fe01b3ee69dd2c56da23e2fb48447b2927cc7a7f199ac3d1a82244",
+      "new_sha256": "8df7080b845f248fd57e84f2ec85c3640d8b72f0385ded2b6d11c32049aeb45e",
+      "old_lines": [
+        "",
+        "Each in his narrow cell for ever laid,",
+        "",
+        "The rude forefathers of the hamlet sleep,",
+        ""
+      ],
+      "new_lines": [
+        "Each in his narrow cell for ever laid,",
+        "The rude forefathers of the hamlet sleep,"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u051-b0091",
+      "old_sha256": "5548c38ad632b25090a56a686a286b69fac6f60444871426a4cf6c08e9f41d3a",
+      "new_sha256": "dcd57170ccc020c9c43d1731ff2162da36b761f388b6110027e42fd3bac403d6",
+      "old_lines": [
+        "",
+        "‘—With the plain Inscription,",
+        "",
+        "‘WILKINS MICAWBER.’",
+        ""
+      ],
+      "new_lines": [
+        "‘—With the plain Inscription,",
+        "‘WILKINS MICAWBER.’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u054-b0139",
+      "old_sha256": "2b0f6e6232d1caca0c67d04d0e59874de64cfe8d1ad23684bbdf8660582372ef",
+      "new_sha256": "259699f2ce894c8ebab11f222d1021098d7a37d7404aa27ffd78223be677b0a9",
+      "old_lines": [
+        "",
+        "For England, home, and Beauty.",
+        "",
+        "‘“Remaining always, &c. &c., WILKINS",
+        "MICAWBER.”’",
+        ""
+      ],
+      "new_lines": [
+        "For England, home, and Beauty.",
+        "‘“Remaining always, &c. &c., WILKINS MICAWBER.”’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u056-b0125",
+      "old_sha256": "d71bc30202b92cbaf1698b536db92ab9f7c2449ec6a878c3c386235a6267171a",
+      "new_sha256": "d256b68168921e2188d78a468df01d5743563e6a0c991c947e983d02414db617",
+      "old_lines": [
+        "",
+        "‘Canterbury,",
+        "",
+        "‘Friday.",
+        ""
+      ],
+      "new_lines": [
+        "‘Canterbury,",
+        "‘Friday."
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u056-b0129",
+      "old_sha256": "c317ed9cec272a21fc8de510bd033240014b105bab53145f8eb7a48cf6503a56",
+      "new_sha256": "a0865ed59ddcf95e7e2a432465e26a5a2143bf6eb9c3144ca0cca4030f1d4873",
+      "old_lines": [
+        "",
+        "‘Now’s the day, and now’s the hour,",
+        "",
+        "See the front of battle lower,",
+        "",
+        "See approach proud EDWARD’S power—",
+        "",
+        "Chains and slavery!",
+        ""
+      ],
+      "new_lines": [
+        "‘Now’s the day, and now’s the hour,",
+        "See the front of battle lower,",
+        "See approach proud EDWARD’S power—",
+        "Chains and slavery!"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u056-b0131",
+      "old_sha256": "ff275f12624e9f5f735243699de3ddcd08727429c45b58e6dd23ae6ab9fca770",
+      "new_sha256": "a8817c029719fe2104eb1685cd49fb73225e9a67497d6318b29ce781df8b9b78",
+      "old_lines": [
+        "",
+        "‘The obscure initials,",
+        "",
+        "‘W. M.",
+        ""
+      ],
+      "new_lines": [
+        "‘The obscure initials,",
+        "‘W. M."
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    },
+    {
+      "id": "en85-u065-b0062",
+      "old_sha256": "6cae10aca095df33885362899a0ee82890070f8d942fd009101d3b071ef4e91b",
+      "new_sha256": "3916f36a7f59469067c37ed3771e008050e6f76d61725e070996c5284e35d038",
+      "old_lines": [
+        "",
+        "‘The",
+        "",
+        "‘Eye",
+        "",
+        "‘Appertaining to",
+        "",
+        "‘WILKINS MICAWBER,",
+        "",
+        "‘Magistrate.’",
+        ""
+      ],
+      "new_lines": [
+        "‘The",
+        "‘Eye",
+        "‘Appertaining to",
+        "‘WILKINS MICAWBER,",
+        "‘Magistrate.’"
+      ],
+      "reason": "PreserveactualHTMLbrboundaries;discardphysicalHTMLsourcewrappingandouterwhitespace,unchangedwords"
+    }
+  ]
+}

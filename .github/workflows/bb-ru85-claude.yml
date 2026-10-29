@@ -32,3 +32,5 @@ jobs:
           path: results/ru85-claude/
           retention-days: 90
           if-no-files-found: warn
+
+# Resume after source HTML line-boundary repair; reuse6completedinitialrows.

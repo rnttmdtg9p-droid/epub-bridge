@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'results/ru85-claude'; OUT.mkdir(parents=True,exist_ok=True)
 PACKED=base64.b64decode(''.join(p.read_text() for p in sorted((ROOT/'inputs').glob('ru85-source.part*.b64'))))
-assert hashlib.sha256(PACKED).hexdigest()=='2214a417f3df6a689873ab9fe470604924db1ed72df555181b9d7970f678c5e2'
+assert hashlib.sha256(PACKED).hexdigest()=='05197a9ea3b66cd574bfaf1039c2ca918aeff2116f192d6661308049fc32a87b'
 SOURCE=json.loads(gzip.decompress(PACKED))
 KEY=os.environ.get('ANTHROPIC_API_KEY','').strip()
 MODEL='claude-sonnet-5-5'
