@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgWvnBygPtzqSyfaPRK9z",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"en85-u062-b0096\",\"target\":\"— О нет! О нет!\"},{\"source_id\":\"en85-u062-b0097\",\"target\":\"На миг скорбная тень легла на её лицо; но даже в ту секунду, что я вздрогнул, она уже исчезла; Агнес продолжала играть и смотрела на меня со своей спокойной улыбкой.\"},{\"source_id\":\"en85-u062-b0098\",\"target\":\"Когда я ехал обратно одинокой ночью и ветер проносился мимо меня, как беспокойное воспоминание, я думал об этом и боялся, что она несчастлива. Я и сам не был счастлив; но до сих пор я свято хранил печать на Прошлом и, думая о ней, указывающей вверх, думал о ней как о той, что указывает на небо надо мной, где в грядущей тайне я, быть может, ещё полюблю её любовью, неведомой на земле, и расскажу ей, какая борьба шла во мне, когда я любил её здесь.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2639,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 352,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
