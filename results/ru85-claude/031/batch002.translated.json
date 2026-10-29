@@ -1,0 +1,67 @@
+{
+  "unit": 31,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en85-u031-b0064",
+      "target": "— Для меня нет в тебе ни лучшего, ни худшего, Стирфорт, — сказал я. — Ты всегда одинаково любим и дорог моему сердцу.",
+      "source_sha256": "946178401c59dbff9af95ce8bb198c031f4ffe570686e8cbe3b726dc4ce281a5",
+      "target_id": "ru-en85-u031-b0064",
+      "tag": "p",
+      "target_sha256": "ca20cb6f11b719d5afd3431beee972d4bd900af0e0d78d1fd26fe3e7e842c460"
+    },
+    {
+      "source_id": "en85-u031-b0065",
+      "target": "Меня так мучило раскаяние в том, что я когда-либо был несправедлив к нему, пусть даже в смутной, неоформившейся мысли, что признание в этом уже готово было сорваться с моих губ. Если бы не нежелание предать доверие Агнес, если бы не моя неуверенность, как коснуться этого предмета, не рискуя его предать, оно дошло бы до них прежде, чем он сказал: «Благослови тебя Бог, Дейзи, и спокойной ночи!» В моём сомнении оно до них НЕ дошло; мы пожали друг другу руки и расстались.",
+      "note": null,
+      "source_sha256": "0c3100ff14d1e8f4ba47ba47b3cc14e8faab44450b4e1e308b7891ff2926ada1",
+      "target_id": "ru-en85-u031-b0065",
+      "tag": "p",
+      "target_sha256": "55dde21979e9e7cfa36d85c288822350a48a89e6d76212e9675887f61db85951"
+    },
+    {
+      "source_id": "en85-u031-b0066",
+      "target": "Я встал с тусклым рассветом и, одевшись как мог тише, заглянул в его комнату. Он крепко спал, лежа привольно, головой на руке, как я часто видел его лежащим в школе.",
+      "source_sha256": "46e89d4351a205c8ccef5786fd57c269d1e787106f572c1c9d00db818dbc2c5e",
+      "target_id": "ru-en85-u031-b0066",
+      "tag": "p",
+      "target_sha256": "da0cb4734524ed3db2fbe94d2d0f3a16a89dbcf6c0321b861e306091565c7b2c"
+    },
+    {
+      "source_id": "en85-u031-b0067",
+      "target": "Пришло время — в свой срок, и очень скоро, — когда я почти удивлялся, что ничто не тревожит его покой, пока я смотрел на него. Но он спал — позвольте мне думать о нём так снова, — как я часто видел его спящим в школе; и таким, в этот безмолвный час, я его оставил. — Никогда больше — о, Боже, прости тебя, Стирфорт! — не коснуться мне этой безвольной руки с любовью и дружбой. Никогда, никогда больше!",
+      "source_sha256": "94ef1480f7d51161e46ebf8d6a6f92d5b5f0e31403fb06a8846a33d04642657d",
+      "target_id": "ru-en85-u031-b0067",
+      "tag": "p",
+      "target_sha256": "43c938b0bfa57228829f9b9d91b6a1bf5c4441e5abdf36d8da52ddb32a3f126f"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgWpReMQdJ22jxX4x2UKG",
+    "usage": {
+      "input_tokens": 3026,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 612,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en85-u031-b0064",
+    "en85-u031-b0065",
+    "en85-u031-b0066",
+    "en85-u031-b0067"
+  ]
+}
