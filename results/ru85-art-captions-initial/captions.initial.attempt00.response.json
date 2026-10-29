@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgWswP7JzEZ2Dj4XMVdB1",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"en85-art-0008\",\"target\":\"Фронтиспис\"},{\"source_id\":\"en85-art-0041\",\"target\":\"Наша скамья в церкви\"},{\"source_id\":\"en85-art-0061\",\"target\":\"Мистер Пегготи radушно принимает меня\"},{\"source_id\":\"en85-art-0111\",\"target\":\"Мой музыкальный завтрак\"},{\"source_id\":\"en85-art-0101\",\"target\":\"Дружелюбный официант и я\"},{\"source_id\":\"en85-art-0151\",\"target\":\"Перемены дома\"},{\"source_id\":\"en85-art-0135\",\"target\":\"Стирфорт и мистер Мелл\"},{\"source_id\":\"en85-art-0193\",\"target\":\"Миссис Гаммидж омрачает наш отъезд\"},{\"source_id\":\"en85-art-0211\",\"target\":\"Мой великолепный заказ в трактире\"},{\"source_id\":\"en85-art-0245\",\"target\":\"Я открываюсь моей тётушке\"},{\"source_id\":\"en85-art-0265\",\"target\":\"Роковой разговор\"},{\"source_id\":\"en85-art-0305\",\"target\":\"Я возвращаюсь к доктору после приёма\"},{\"source_id\":\"en85-art-0319\",\"target\":\"Кто-то подворачивается\"},{\"source_id\":\"en85-art-0349\",\"target\":\"Моё первое падение в жизни\"},{\"source_id\":\"en85-art-0379\",\"target\":\"Мы неожиданно приходим к очагу мистера Пегготи\"},{\"source_id\":\"en85-art-0401\",\"target\":\"Я знакомлюсь с мисс Моучер\"},{\"source_id\":\"en85-art-0411\",\"target\":\"Марта\"},{\"source_id\":\"en85-art-0469\",\"target\":\"Я попадаю в плен\"},{\"source_id\":\"en85-art-0453\",\"target\":\"Урия упорно вьётся возле нас на званом обеде\"},{\"source_id\":\"en85-art-0497\",\"target\":\"Нам мешают стряпать\"},{\"source_id\":\"en85-art-0531\",\"target\":\"Я застаю мистера Баркиса «уходящим с отливом»\"},{\"source_id\":\"en85-art-20069\",\"target\":\"Тётушка изумляет меня\"},{\"source_id\":\"en85-art-20009\",\"target\":\"Мистер Пегготи и миссис Стирфорт\"},{\"source_id\":\"en85-art-20091\",\"target\":\"Мистер Микобер произносит прощальные слова\"},{\"source_id\":\"en85-art-20114\",\"target\":\"Мистер Уикфилд и его компаньон наносят визит моей тётушке\"},{\"source_id\":\"en85-art-20008\",\"target\":\"Странник\"},{\"source_id\":\"en85-art-20128\",\"target\":\"Трэдлс выступает в парламенте, а я стенографирую его речь\"},{\"source_id\":\"en85-art-20226\",\"target\":\"Я женат\"},{\"source_id\":\"en85-art-20182\",\"target\":\"Трэдлс и я совещаемся с мисс Спенлоу\"},{\"source_id\":\"en85-art-20238\",\"target\":\"Наше домашнее хозяйство\"},{\"source_id\":\"en85-art-20256\",\"target\":\"Мистер Дик исполняет предсказание моей тётушки\"},{\"source_id\":\"en85-art-20333\",\"target\":\"Сон мистера Пегготи сбывается\"},{\"source_id\":\"en85-art-20284\",\"target\":\"Река\"},{\"source_id\":\"en85-art-20383\",\"target\":\"Давняя подруга моей жены-ребёнка\"},{\"source_id\":\"en85-art-20373\",\"target\":\"Восстановление взаимного доверия между мистером и миссис Микобер\"},{\"source_id\":\"en85-art-20423\",\"target\":\"Эмигранты\"},{\"source_id\":\"en85-art-20417\",\"target\":\"Я приношу дурные вести\"},{\"source_id\":\"en85-art-20495\",\"target\":\"Меня навещает незнакомец\"},{\"source_id\":\"en85-art-20481\",\"target\":\"Мне показывают двух любопытных кающихся\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 44429,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1327,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
