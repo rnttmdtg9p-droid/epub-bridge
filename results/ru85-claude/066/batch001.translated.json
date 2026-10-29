@@ -1,0 +1,57 @@
+{
+  "unit": 66,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en85-u066-b0032",
+      "target": "Я поворачиваю голову и вижу его — в его прекрасной безмятежности — рядом с собой.",
+      "source_sha256": "6bb4e9afa61dd4146c40b0cfcb3f30f07cf7aa74dc4143b1ab6b65feffd06fea",
+      "target_id": "ru-en85-u066-b0032",
+      "tag": "p",
+      "target_sha256": "f29ad2ac58e3a1dea35af5a192c8d446a8931ad9598c1a8b359015ce0143a633"
+    },
+    {
+      "source_id": "en85-u066-b0033",
+      "target": "Лампа моя догорает, и я писал далеко за полночь; но дорогое присутствие, без которого я был бы ничем, делит со мной это бдение.",
+      "source_sha256": "9b8fdd71030453ce7a3073ae688bd86d9fe8e03cbaf233415f8c8a5cd89728eb",
+      "target_id": "ru-en85-u066-b0033",
+      "tag": "p",
+      "target_sha256": "f64042840642da82cdf36884ff78d64c8b6b93a1b528ff483e5e2541368afbf7"
+    },
+    {
+      "source_id": "en85-u066-b0034",
+      "target": "О Агнес, о душа моя! Пусть так же будет лицо твоё рядом со мной, когда я воистину закрою жизнь свою; пусть так же, когда действительность будет таять вокруг меня, подобно теням, которых я теперь отпускаю, я найду тебя возле себя, указующую ввысь!",
+      "source_sha256": "db37029f7b7438d958d8780fd77c7cc3f3a4a7e92fdad06e7e9f96d3deb4cd52",
+      "target_id": "ru-en85-u066-b0034",
+      "tag": "p",
+      "target_sha256": "f41323ce1ff9459c757d6c59878ebab8b87687b1e0cb496a269050feb994735a"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgWwJRVNT6LYge4CHjvkq",
+    "usage": {
+      "input_tokens": 3063,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en85-u066-b0032",
+    "en85-u066-b0033",
+    "en85-u066-b0034"
+  ]
+}
