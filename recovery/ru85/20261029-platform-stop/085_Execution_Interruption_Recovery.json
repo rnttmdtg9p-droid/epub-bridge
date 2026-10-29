@@ -1,0 +1,208 @@
+{
+  "rank": 85,
+  "target_rank_inclusive": 100,
+  "utc": "2026-10-29T18:28:49.595Z",
+  "state": "FORCED_STOP_HARD_PLATFORM_EXECUTION_ENVIRONMENT_UNAVAILABLE",
+  "released": false,
+  "release_ready": false,
+  "strict_rank_order": "Rank85 unreleased; no release progress claimed for86–100",
+  "canonical": {
+    "library_file_id": "libfile_14b9e10ba7888191b98a069b1a8e11a4",
+    "version": 3706,
+    "file_id": "file_0000000007a081fb887869339017cd5b",
+    "status": "Latest canonical version independently read after failure; current main counts1503 reviewed555 corrected; newer work is preserved by this addendum and recovery files. Canonical replacement requires restored execution environment.",
+    "expected_next_write_previous_version": 3706
+  },
+  "master": {
+    "version": "5.0.70",
+    "sha256": "c5e27e97c2b6a4a2cd6cac37c3b41698b2078e1321dc071d5505ce7abd48ca6f"
+  },
+  "latest_archive": {
+    "library_file_id": "libfile_e8b34c9b18548191a0b6555976de9606",
+    "version": 15,
+    "file_id": "file_00000000b1c8820c9551f700dd08aeb8",
+    "file_name": "085_Production_Recovery_Checkpoint_20261029.zip",
+    "bytes": 293539456,
+    "sha256_local_before_upload": "d47389815ad20eca3f9b8e2567893dab46fe2897221687754b7f60d0149928b3",
+    "indexed_payloads": 774,
+    "verification": "Local CRC and every indexed SHA256 verified before upload; remote metadata independently confirms version15,size293539456,modified2026-10-29T18:22:01.678949Z. FRESH_ARCHIVE_READBACK_NOT_RUN_AFTER_ENVIRONMENT_FAILURE; do not invent PASS.",
+    "snapshot_main_reviewed": 1821,
+    "snapshot_main_corrected": 654,
+    "complete_units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "next_unit_at_archive_snapshot": 18,
+    "next_row_at_archive_snapshot": 0
+  },
+  "last_fresh_archive_verified": {
+    "version": 14,
+    "file_id": "file_00000000daf482309873045fc0478f0e",
+    "bytes": 293442835,
+    "sha256": "cbc25d6b587153cf21d98792e396d0e4407ba79bd3bdb02815951ef57ef853c9",
+    "indexed_payloads": 764,
+    "verification": "FRESH_READBACK_CRC_ALL_INDEXED_SHA256_VERIFIED",
+    "snapshot_main_reviewed": 1747,
+    "snapshot_main_corrected": 631,
+    "utc_fresh": "2026-10-29T18:19:06.110535+00:00"
+  },
+  "additional_review_recovery": {
+    "repository": "rnttmdtg9p-droid/epub-bridge",
+    "branch": "bb-ru85-recovery-20261029-platform-stop",
+    "path": "recovery/ru85/20261029-platform-stop/018_Recovered_Review_Parts01_02.json",
+    "commit": "b285fdc67cec4fb97c08bc3609659db8b2033432",
+    "sha256": "5cee63333f693dbc2613f06ce47d280efa18f1ea9ea6c71fcaae711c962f2b8a",
+    "fresh_remote_exact_readback_verified": true,
+    "main_rows": 39,
+    "corrected_rows": 16,
+    "unit": 18,
+    "indices_inclusive": [
+      0,
+      38
+    ],
+    "parts": [
+      {
+        "part": 1,
+        "rows": 19,
+        "corrected": 6
+      },
+      {
+        "part": 2,
+        "rows": 20,
+        "corrected": 10
+      }
+    ],
+    "initial_172_targets_sha256_verified_against_real_provider_result": true,
+    "initial_actual_model": "claude-sonnet-5-5",
+    "reviewer": "Foreground OpenAI Codex; exact model ID unexposed; not Claude"
+  },
+  "exact_accepted_state": {
+    "main_source_rows": 7180,
+    "main_reviewed_rows": 1860,
+    "main_corrected_rows": 670,
+    "complete_units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "complete_original_chapters": 15,
+    "prefaces_complete": 2,
+    "partial_unit": 18,
+    "partial_original_chapter": 16,
+    "partial_unit_reviewed": 39,
+    "partial_unit_total": 172,
+    "partial_unit_corrected": 16,
+    "next_unit": 18,
+    "next_zero_based_row_index": 39,
+    "next_source_id": "en85-u018-b0039",
+    "supplemental_rows": 40,
+    "supplemental_reviewed_rows": 40,
+    "supplemental_corrected_rows": 7,
+    "supplemental_details": {
+      "authentic_dedication": {
+        "rows": 1,
+        "corrected": 1
+      },
+      "historical_captions": {
+        "rows": 39,
+        "corrected": 6
+      }
+    },
+    "full_review_scope": 7220,
+    "whole_book_review": "INCOMPLETE_NOT_PASS"
+  },
+  "initial_translation": {
+    "source_units": 66,
+    "source_rows": 7180,
+    "completed_units": 66,
+    "completed_rows": 7180,
+    "actual_model": "claude-sonnet-5-5",
+    "workflow_run": 40893775606,
+    "workflow_status_fresh_after_failure": "completed",
+    "workflow_conclusion_fresh_after_failure": "success",
+    "url": "https://github.com/rnttmdtg9p-droid/epub-bridge/actions/runs/40893775606",
+    "raw_progress_metadata_bug": "Inherited rank81 and running label; actual source/output/workflow85 and66 completed units verified. Preserve raw evidence and use corrected binding; no retranslation."
+  },
+  "art": {
+    "source_compositions_selected": 40,
+    "selected_second_1850_witness": 39,
+    "selected_first_1850_witness": 1,
+    "full_composition_pairs_visually_compared": 40,
+    "caption_completeness_strips_visually_compared": 40,
+    "blank_second_leaf7_rejected": true,
+    "actual_second_frontispiece_leaf8_recovered": true,
+    "first_leaf633_selected_instead_of_clipped_second642": true,
+    "engraved_title_vignette_conservative_crop": [
+      0,
+      1000,
+      1839,
+      2860
+    ],
+    "placement_repairs": {
+      "phiz-20009": "en85-u034-b0108",
+      "phiz-20008": "en85-u042-b0051",
+      "phiz-20383": "en85-u055-b0059"
+    },
+    "state": "SOURCE_IMAGE_CANDIDATES_SELECTED_NOT_FINAL_ART_OR_EPUB_PASS"
+  },
+  "policies": {
+    "native_reader": "TEMPORARILY_DEFERRED_BY_MASTER_V5_0_66",
+    "extra_whole_book_print": "USER_DIRECTED_REMOVAL_OF_EXTRA_WHOLE_BOOK_PRINT_REQUIREMENT_20261010",
+    "historical_non_AI_translation_exemption": "PRESERVE_FOR_OTHER_WORKS; rank85 newAI translation requires complete independent review",
+    "initial_translation_provider": "Claude only where required; no Claude literary review",
+    "isbn": "9781774966846; source register row86; final EPUB embedding not audited"
+  },
+  "blocker": {
+    "first_failure": "exec_command failed: CreateProcess { message: \"Rejected(\\\"Failed to create unified exec process: exec-server transport disconnected; failed to resume exec-server session: recovery timed out after 25s\\\")\" }",
+    "observed_platform_environment_status": "unavailable",
+    "read_only_retry_command": "pwd",
+    "read_only_retry_failure": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
+    "effect": "Cannot access working filesystem, run source-aligned continuation pipeline, assemble/render/validate EPUBs, or perform local-byte canonical replacement. Available connectors salvaged completed review and verified current durable metadata.",
+    "attempted_remedies": [
+      "Automatic exec-server recovery timed out after25seconds",
+      "Read-only execution retry returned No usable execution environment is available",
+      "Verified Claude job completed success via connected GitHub",
+      "Verified latest archivev15 and canonicalv3706 metadata via connected file tools",
+      "Reconstructed already-performed39-row review from immutable provider result; checked all172 target hashes; wrote recovery bundle and verified exact remote bytes"
+    ]
+  },
+  "foreground_work": "STOPPED_BY_PLATFORM_LIMIT",
+  "running_background_production_jobs": false,
+  "no_future_execution_claim": "No translation, literary review, assembly or production continues after this turn.",
+  "next_actions": [
+    "Restore execution environment; restore latest archivev15 and verify actual full CRC/all774 indexed SHA256 and expected whole-file SHA256 before reuse. If v15 unavailable, use fresh-verifiedv14 plus retained recovery history to reconcile newer completed work, never invent validation.",
+    "Fetch and exact-hash verify recovered018 parts01/02 bundle; restore four named per-row review/correction files, reusing matching existing copies. Accepted count becomes1860 main rows670 corrected. Do not repeat valid review0–38 or prior17 units, nor any initial translation.",
+    "Update canonical using latest manifest lease (last confirmed3706), exact current counts and this forced-stop evidence; preserve other ranks and both approved waivers. Save recovery addendum with canonical next successful durable write.",
+    "Resume source-aligned independent review unit18/chapter16 zero-based row39, sourceIDen85-u018-b0039; complete remaining main and validated supplements, reconcile source-bound names/registers, qualify art/context/diversity and final embedded pixels.",
+    "Complete rank85 assembly/currentMaster validation/ISBN/save/fresh release verification; deliver released EPUB link, then immediately86 through100 in strict order."
+  ]
+}
