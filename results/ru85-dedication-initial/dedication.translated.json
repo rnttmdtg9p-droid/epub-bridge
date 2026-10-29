@@ -1,0 +1,50 @@
+{
+  "rank": 85,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en85-supp-dedication",
+      "target": "С ЛЮБОВЬЮ\nПОСВЯЩАЕТСЯ\nДОСТОПОЧТЕННОМУ МИСТЕРУ И МИССИС РИЧАРД УОТСОН,\nИЗ\nРОКИНГЕМА, НОРТГЕМПТОНШИР.",
+      "source_sha256": "f56ba8f98853848013e17884ce628d491ccf5031a00635b19bce954cbf5b9848",
+      "target_id": "ru-en85-supp-dedication",
+      "tag": "p",
+      "target_sha256": "d8be20428a1b5b2652c2a43a59cbe26d4bcac21afe7ed91275498e98a0e2d627"
+    }
+  ],
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWpMjbJwRtwk6H3AeoaP",
+      "usage": {
+        "input_tokens": 610,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1922,
+        "output_tokens_details": {
+          "thinking_tokens": 1776
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "source_qualification": {
+    "state": "AUTHENTIC_1850_PRINT_DEDICATION_ACTUALLY_PIXEL_READ_AND_HTML_AGREES",
+    "source_html": "https://www.gutenberg.org/cache/epub/43111/pg43111-images.html",
+    "native_leaf": 15,
+    "native_image_sha256": "a268bd86adcd148da94ee5456fe796dc082d51f18f17454582a8fbf8802b1679",
+    "native_width": 1000,
+    "handwritten_owner_inscription": "EXCLUDED_NOT_AUTHOR_TEXT",
+    "edition_disposition": "Explicit authentic1850 paratext restoration alongside selected1869 main text; not silently claimed present in PG766. Main7180 rows unchanged.",
+    "placement": "Front matter before1850 preface",
+    "review": "NOT_RUN",
+    "utc": "2026-10-29T16:07:41.219573+00:00"
+  },
+  "utc": "2026-10-29T16:08:22.956275+00:00"
+}

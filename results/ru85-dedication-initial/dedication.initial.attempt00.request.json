@@ -1,0 +1,11 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 16000,
+  "system": "Authorized INITIAL translation ONLY of one newly recovered authentic 1850 author dedication from David Copperfield into modern literary Russian. This is not literary review. Translate solely supplied English, never consult any published Russian translation. Preserve complete dedication meaning, honorific, both recipients, Richard Watson, Rockingham and Northamptonshire. The 5 source lines are typographic dedication lines, not 5 sentences: preserve exactly5 nonempty target lines while allowing natural Russian grammar across lines. Preserve identifiers. Do not translate the reader's handwritten ownership inscription: it is not in supplied source. No invented heading, names, dates, notes or explanation. Return requested JSON only.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "{\"task\": \"Return {\\\"rows\\\":[{\\\"source_id\\\":\\\"en85-supp-dedication\\\",\\\"target\\\":\\\"complete dedication in5 nonempty lines\\\"}]}\", \"source_rows\": [{\"id\": \"en85-supp-dedication\", \"role\": \"dedication\", \"tag\": \"p\", \"text\": \"AFFECTIONATELY INSCRIBED\\nTO\\nTHE HON. MR. AND MRS. RICHARD WATSON,\\nOF\\nROCKINGHAM, NORTHAMPTONSHIRE.\", \"source_lines\": [\"AFFECTIONATELY INSCRIBED\", \"TO\", \"THE HON. MR. AND MRS. RICHARD WATSON,\", \"OF\", \"ROCKINGHAM, NORTHAMPTONSHIRE.\"], \"sha256\": \"f56ba8f98853848013e17884ce628d491ccf5031a00635b19bce954cbf5b9848\", \"note_markers\": [], \"emphasis_spans\": 0, \"bold_spans\": 0, \"smallcaps_spans\": 0}]}"
+    }
+  ]
+}
