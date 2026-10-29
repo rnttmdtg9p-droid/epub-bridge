@@ -1,0 +1,96 @@
+{
+  "unit": 2,
+  "heading": {
+    "source_id": "en85-u002-h",
+    "target": "ПРЕДИСЛОВИЕ К ИЗДАНИЮ ЧАРЛЬЗА ДИККЕНСА",
+    "source_sha256": "5606697e2023b29d77cc9590ea21a1ad7fe013ca925677a68ac64f4c1e51029c",
+    "target_id": "ru-en85-u002-h",
+    "tag": "h2",
+    "target_sha256": "0626042fc753e898d12683d3cfc3781285278f225ffd2a76d5de861fdd4743ad"
+  },
+  "rows": [
+    {
+      "source_id": "en85-u002-h",
+      "target": "ПРЕДИСЛОВИЕ К ИЗДАНИЮ ЧАРЛЬЗА ДИККЕНСА",
+      "source_sha256": "5606697e2023b29d77cc9590ea21a1ad7fe013ca925677a68ac64f4c1e51029c",
+      "target_id": "ru-en85-u002-h",
+      "tag": "h2",
+      "target_sha256": "0626042fc753e898d12683d3cfc3781285278f225ffd2a76d5de861fdd4743ad"
+    },
+    {
+      "source_id": "en85-u002-b0001",
+      "target": "В первоначальном предисловии к этой книге я заметил, что мне нелегко отойти от неё достаточно далеко, пока свежи первые ощущения оконченного труда, чтобы говорить о ней с тем спокойствием, какого, казалось бы, требует этот официальный заголовок. Мой интерес к ней был так недавен и силён, а душа моя так разделилась между радостью и сожалением — радостью от осуществления давно задуманного и сожалением о разлуке со столькими спутниками, — что я рисковал утомить читателя личными признаниями и сокровенными переживаниями.",
+      "source_sha256": "dd83beec5876874dc672b76ed6ea4893d5a62c3ec1bf6583262ec636402b6779",
+      "target_id": "ru-en85-u002-b0001",
+      "tag": "p",
+      "target_sha256": "fd07b7bebd47a6be10f31b6bd901b86bbdc4edcbdb379337d2926c66aafd951c"
+    },
+    {
+      "source_id": "en85-u002-b0002",
+      "target": "Кроме того, всё, что я мог бы с пользой сказать об этой повести, я старался сказать в ней самой.",
+      "source_sha256": "5df90e451d7147ff535600cf537f3feefd20dc74a10832a0795bb23391834d37",
+      "target_id": "ru-en85-u002-b0002",
+      "tag": "p",
+      "target_sha256": "08af156de81456ddcc1fd9629fd9f647166cd12592a00a1e12ef2c56da2bac32"
+    },
+    {
+      "source_id": "en85-u002-b0003",
+      "target": "Читателю, пожалуй, мало дела до того, с какой печалью откладывается перо по окончании двухлетнего труда воображения; или до того, как автор чувствует себя так, словно отпускает часть самого себя в мир теней, когда толпа созданий его мысли уходит от него навсегда. И всё же мне нечего было больше сообщить — разве что признаться (а это, может быть, ещё менее важно), что никто никогда не поверит этому повествованию, читая его, больше, чем я верил в него, когда писал.",
+      "source_sha256": "4fed3bf4cf78d3925f69e45ae1fc94cc1ea017d88f5dcad26687e7882d93c1f5",
+      "target_id": "ru-en85-u002-b0003",
+      "tag": "p",
+      "target_sha256": "4552935a1549f820a9e3b0760d3548782e4f44799314197006cbda3c4dc1a6f5"
+    },
+    {
+      "source_id": "en85-u002-b0004",
+      "target": "Эти признания и ныне так справедливы, что я могу лишь открыть читателю ещё одну тайну. Из всех моих книг я люблю эту больше всех. Нетрудно поверить, что я нежный родитель каждому дитя моей фантазии и что никто никогда не полюбит это семейство так сильно, как люблю его я. Но, как у многих нежных родителей, в глубине моего сердца есть любимое дитя. И имя его —",
+      "source_sha256": "3604e3771ef7ca38ab27f62c07cbb5a1df18c9ad5bf96fd75f3089560945f8cb",
+      "target_id": "ru-en85-u002-b0004",
+      "tag": "p",
+      "target_sha256": "5fdb0b5f2ea2ebfacc42abef060d611aa0b7ce87fa107aae820b46cf3336ac8b"
+    },
+    {
+      "source_id": "en85-u002-b0005",
+      "target": "ДЭВИД КОПЕРФИЛД.",
+      "source_sha256": "508d16026ee2bf5d1fa6f6e7341c5330c43231f0df533c653ab12ee91f4a8eb6",
+      "target_id": "ru-en85-u002-b0005",
+      "tag": "p",
+      "target_sha256": "5ba712ab6ebd9095efc03b81cc1a51b38b92f95d06fb1c0383a5726623d97b6b"
+    },
+    {
+      "source_id": "en85-u002-b0006",
+      "target": "1869",
+      "source_sha256": "930f7bc78c2340e72256603f3c3803be6664b9b05bd91a996fcec771c6917dab",
+      "target_id": "ru-en85-u002-b0006",
+      "tag": "p",
+      "target_sha256": "930f7bc78c2340e72256603f3c3803be6664b9b05bd91a996fcec771c6917dab"
+    }
+  ],
+  "source_rows": 7,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWhfGDiBC1xvyZWxGqzR",
+      "usage": {
+        "input_tokens": 3171,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 797,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
