@@ -1,0 +1,32 @@
+name: BB rank85 recovered dedication initial Claude only
+on:
+  push:
+    paths: ['.github/workflows/bb-ru85-dedication.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bb-russian-rank85-dedication-initial
+  cancel-in-progress: false
+jobs:
+  initial-dedication-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure provenance checkpoint
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Initial Claude translation of dedication only
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru85_dedication_initial.py
+      - name: Preserve provider receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru85-dedication-initial
+          path: results/ru85-dedication-initial/
+          retention-days: 90
