@@ -1,0 +1,13 @@
+{
+  "state": "PARTIAL_FAILURE",
+  "errors": [
+    {
+      "unit": 1,
+      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED AssertionError: VERSE_LINE_COUNT"
+    }
+  ],
+  "source_units": 66,
+  "source_rows": 7180,
+  "claude_role": "INITIAL_TRANSLATION_ONLY",
+  "utc": "2026-10-29T14:37:36.706693+00:00"
+}
