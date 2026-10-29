@@ -1,0 +1,719 @@
+{
+  "rank": 85,
+  "unit": 18,
+  "utc": "2026-10-29T18:27:09.962Z",
+  "source_witness": "085_Qualified_English_Source.json in saved production recovery archive; source hashes carried by each verified immutable initial row",
+  "initial_result_url": "https://github.com/rnttmdtg9p-droid/epub-bridge/blob/bb-ru85-claude-20261029/results/ru85-claude/018/chapter.translated.json",
+  "initial_provider_actual": "claude-sonnet-5-5",
+  "initial_provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWm9G3gA4AzUYynbJjPF",
+      "usage": {
+        "input_tokens": 9896,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 7743,
+        "output_tokens_details": {
+          "thinking_tokens": 3150
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    },
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWmD1CK9dM2bAp5Je3B7",
+      "usage": {
+        "input_tokens": 9432,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 6505,
+        "output_tokens_details": {
+          "thinking_tokens": 2990
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    },
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWmGALZt9N6DJaCfVcLW",
+      "usage": {
+        "input_tokens": 8936,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 4119,
+        "output_tokens_details": {
+          "thinking_tokens": 1157
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    },
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWmJLBE39RAZidhVhprG",
+      "usage": {
+        "input_tokens": 10465,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 6468,
+        "output_tokens_details": {
+          "thinking_tokens": 1008
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    },
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWmMtJ6WY1AdwfF9Cf1L",
+      "usage": {
+        "input_tokens": 10847,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 6660,
+        "output_tokens_details": {
+          "thinking_tokens": 1597
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    },
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgWmRHnYTFARbhPK7h8vf",
+      "usage": {
+        "input_tokens": 6252,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2493,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "reviewer": "Foreground OpenAI Codex; exact model ID unexposed",
+  "review_scope": "Unit18/chapter16 rows0–38 inclusive,39 rows,16 corrected; whole unit and book NOT complete",
+  "reports": [
+    {
+      "rank": 85,
+      "unit": 18,
+      "row_indices": [
+        0,
+        18
+      ],
+      "reviewer": "OpenAI Codex; exact model ID unexposed",
+      "method": "AI_LITERARY_REVIEW",
+      "utc": "2026-10-29T18:26:39.117Z",
+      "state": "PARTIAL_UNIT_REVIEW_COMPLETE",
+      "reviewed_rows": 19,
+      "corrected_rows": 6,
+      "rows": [
+        {
+          "source_id": "en85-u018-h",
+          "source_sha256": "3f536d5d6a328df91e8aca1c21ff744b8b97ba8b605a0ea0c5add643ef57f8a2",
+          "initial_target_sha256": "b6021698eaafabd4fdd724c02bc2ff4f68d19037cdb2d3cfbc3baacadc20a550",
+          "final_target_sha256": "b6021698eaafabd4fdd724c02bc2ff4f68d19037cdb2d3cfbc3baacadc20a550",
+          "final_target": "ГЛАВА 16. Я — НОВЫЙ МАЛЬЧИК ВО МНОГИХ СМЫСЛАХ",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0001",
+          "source_sha256": "8ba158f3d7e1bb4d313c4114162b41e74606f94734d8bc34f2f34ac65e6b1393",
+          "initial_target_sha256": "fbd0e5950f37d8d304cb1b30657ea9fbe38df19bccb290b42665b455f77bd146",
+          "final_target_sha256": "fb87adcaf0e9d1ee3eddf5ceb7376f18f362b30088f8a7bb2d9721f063e46122",
+          "final_target": "На следующее утро после завтрака я снова вступил в школьную жизнь. В сопровождении мистера Уикфилда я отправился к месту моих будущих занятий — к серьёзному зданию во дворе, с учёным видом, который, казалось, очень подходил забредшим грачам и галкам, слетавшим с соборных башен, чтобы с учёной важностью прогуливаться по травяной лужайке, — и был представлен моему новому наставнику, доктору Стронгу.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Clerkly bearing matches learned/scholarly rooks and school surroundings, not added civil-service bureaucracy.",
+          "before": "На следующее утро после завтрака я снова вступил в школьную жизнь. В сопровождении мистера Уикфилда я отправился к месту моих будущих занятий — к серьёзному зданию во дворе, с учёным видом, который, казалось, очень подходил забредшим грачам и галкам, слетавшим с соборных башен, чтобы с чиновничьей важностью прогуливаться по травяной лужайке, — и был представлен моему новому наставнику, доктору Стронгу.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0002",
+          "source_sha256": "38576b95514b41eefa41713c82018a946d6184d525d012f45165b1f583dc3bb7",
+          "initial_target_sha256": "0349b11c52e22b04c60bdf3cc7fd3d63784b2a181915014385fccb3dbb016c4f",
+          "final_target_sha256": "3684bc03b870fbc4ccdbbb7188222fe950d81a154f7d13761a875dafa057084b",
+          "final_target": "Доктор Стронг, на мой взгляд, выглядел почти таким же ржавым, как высокие железные решётки и ворота снаружи дома, и почти таким же негнущимся и тяжёлым, как большие каменные урны, что стояли по сторонам от них и были водружены на красную кирпичную стену через равные промежутки вокруг всего двора, точно возвышенные кегли для игры Времени. Он был в своей библиотеке (я имею в виду доктора Стронга), одежда его была вычищена не слишком тщательно, волосы не слишком тщательно причёсаны; короткие панталоны были расстёгнуты, длинные чёрные гетры были расстёгнуты, а туфли зияли на коврике у камина, точно две пещеры. Обратив на меня тусклый глаз, напомнивший мне давно забытую слепую старую лошадь, которая когда-то щипала траву и спотыкалась о могилы на бландерстонском кладбище, он сказал, что рад меня видеть, и протянул мне руку; я не знал, что с нею делать, поскольку сама она ничего не делала.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Unbraced is loosened/unfastened breeches, not proof suspenders are absent; preserve authored rusty iron/stone urn similes.",
+          "before": "Доктор Стронг, на мой взгляд, выглядел почти таким же ржавым, как высокие железные решётки и ворота снаружи дома, и почти таким же негнущимся и тяжёлым, как большие каменные урны, что стояли по сторонам от них и были водружены на красную кирпичную стену через равные промежутки вокруг всего двора, точно возвышенные кегли для игры Времени. Он был в своей библиотеке (я имею в виду доктора Стронга), одежда его была вычищена не слишком тщательно, волосы не слишком тщательно причёсаны; короткие панталоны держались без подтяжек, длинные чёрные гетры были расстёгнуты, а туфли зияли на коврике у камина, точно две пещеры. Обратив на меня тусклый глаз, напомнивший мне давно забытую слепую старую лошадь, которая когда-то щипала траву и спотыкалась о могилы на бландерстонском кладбище, он сказал, что рад меня видеть, и протянул мне руку; я не знал, что с нею делать, поскольку сама она ничего не делала.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0003",
+          "source_sha256": "12a264ba66564e59e70bfc742c4e265e289bf4855d8501d44c78aff988bd054c",
+          "initial_target_sha256": "4a7a3416fa98df28b5f151dd3409595d7ba6a6f097f03c71ce2042354afdfd05",
+          "final_target_sha256": "4a7a3416fa98df28b5f151dd3409595d7ba6a6f097f03c71ce2042354afdfd05",
+          "final_target": "Но неподалёку от доктора Стронга за работой сидела очень хорошенькая молодая леди — он называл её Энни, и я решил, что это его дочь, — и она вывела меня из затруднения: опустилась на колени, чтобы обуть доктору туфли и застегнуть ему гетры, что проделала с большой весёлостью и проворством. Когда она закончила и мы направились в классную комнату, я был очень удивлён, услышав, как мистер Уикфилд, прощаясь с нею, назвал её «миссис Стронг»; я недоумевал, может ли она быть женой сына доктора Стронга или же она — миссис доктор Стронг, как вдруг сам доктор Стронг, сам того не ведая, просветил меня.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0004",
+          "source_sha256": "920c18a4af6b67c435d190e1748d6466a0e7b0742d881ea8b41f15b6df6867b4",
+          "initial_target_sha256": "522fa8bb20439bfa9b25462395744b5080142bb88d3caec90a7107633baeff6d",
+          "final_target_sha256": "522fa8bb20439bfa9b25462395744b5080142bb88d3caec90a7107633baeff6d",
+          "final_target": "— Кстати, Уикфилд, — сказал он, остановившись в коридоре и положив руку мне на плечо, — вы всё ещё не нашли подходящего места для кузена моей жены?",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0005",
+          "source_sha256": "4fb5a0363e49c1bba421736fbe315abfb4f8d751ca7ac3f0709b4e91de721bd7",
+          "initial_target_sha256": "b88b562a5395b7eceba6af48d7c356e7f7feac8766a3db835619a75673f9bd7a",
+          "final_target_sha256": "b88b562a5395b7eceba6af48d7c356e7f7feac8766a3db835619a75673f9bd7a",
+          "final_target": "— Нет, — сказал мистер Уикфилд. — Нет. Пока нет.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0006",
+          "source_sha256": "a8af5770cd49e16aae8bd871958fddf2ffa0fea42efe648f2f15b3b561222775",
+          "initial_target_sha256": "7281972b287345455b82f90eea9329c74ee00f8a74d6d7a7e4efe76d9cf1d41c",
+          "final_target_sha256": "7281972b287345455b82f90eea9329c74ee00f8a74d6d7a7e4efe76d9cf1d41c",
+          "final_target": "— Мне хотелось бы, чтобы это было сделано, как только возможно, Уикфилд, — сказал доктор Стронг, — ибо Джек Мэлдон нуждается и праздно живёт; а от этих двух дурных вещей порою происходят вещи и похуже. Что говорит доктор Уоттс, — добавил он, глядя на меня и покачивая головой в такт цитате, — «Для праздных рук всегда найдёт проказу сатана».",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0007",
+          "source_sha256": "159606587dd3bb2e73a4497b84a736f09a7fc61434b2066a6912d530fa2c9e28",
+          "initial_target_sha256": "47b14af5ead6de16dca035c4c3818064446c38afe342ad24588c9f3ff3b0514f",
+          "final_target_sha256": "0d37a595fbb26936ba154acb23d88bf9763db1124f1c21824ac4739bc7355da4",
+          "final_target": "— Право слово, доктор, — отозвался мистер Уикфилд, — если бы доктор Уоттс знал людей, он с тою же правдивостью мог бы написать: «Для занятых рук всегда найдёт проказу сатана». Занятые люди вносят в мировые пакости свою полную долю, можете на это положиться. Чем занимались за последний век или два люди, которые больше всех были заняты добыванием денег и власти? Неужели обошлось без пакостей?",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Busiest means most active/occupied, not most nimble; preceding century or two and busy/idle quotation contrast restored.",
+          "before": "— Право слово, доктор, — отозвался мистер Уикфилд, — если бы доктор Уоттс знал людей, он с тою же правдивостью мог бы написать: «Для занятых рук всегда найдёт проказу сатана». Занятые люди вносят в мировые пакости свою полную долю, можете на это положиться. Чем занимались люди, самые расторопные в добывании денег и власти, за этот век или два? Неужели обошлось без пакостей?",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0008",
+          "source_sha256": "a25cc2c9bd811d8452dbc322665b393b7c64f3b1f193bb70e54eafd7361b27b2",
+          "initial_target_sha256": "5f42b5989baa1e989b9d2ccc352d1123247c938ef196e2aa45391bbd8364f53b",
+          "final_target_sha256": "82854fc78e26b2f995314994bb9f15a74e3ede81239a8f02472931063d21f751",
+          "final_target": "— Джек Мэлдон, я полагаю, никогда не станет слишком усердствовать ни в том, ни в другом, — сказал доктор Стронг, задумчиво потирая подбородок.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Strong predicts little effort in wealth/power acquisition, not a lack of agility.",
+          "before": "— Джек Мэлдон, я полагаю, никогда не будет слишком расторопен ни в том, ни в другом, — сказал доктор Стронг, задумчиво потирая подбородок.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0009",
+          "source_sha256": "b96d7bd4cf4aac89e63d736393606fe5db6961423c273192d160b04aab25a7b6",
+          "initial_target_sha256": "94ab671c0aee9d1f943ddf8c48b60bab59fc059caceb08246acbf64641ad55dc",
+          "final_target_sha256": "ff8dee5947b046a0d5b5c93a42c0930bf208bb7eb9f68f121e01c53b886c6078",
+          "final_target": "— Возможно, что нет, — сказал мистер Уикфилд, — и вы возвращаете меня к вопросу, а я прошу прощения за отступление. Нет, мне пока не удалось пристроить мистера Джека Мэлдона. Я полагаю, — сказал он это с некоторой запинкой, — что я понимаю ваше побуждение, и это делает дело труднее.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Natural penetrate-motive phrasing and recurring motive noun; preserve hesitant belief without asserting an actual hidden affair.",
+          "before": "— Возможно, что нет, — сказал мистер Уикфилд, — и вы возвращаете меня к вопросу, а я прошу прощения за отступление. Нет, мне пока не удалось пристроить мистера Джека Мэлдона. Я полагаю, — сказал он это с некоторой запинкой, — что я проник в ваш мотив, и это делает дело труднее.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0010",
+          "source_sha256": "57e891d484be3f4ac1ac669eb9e97034fb10663060a78f1c7092de4441f1b581",
+          "initial_target_sha256": "6936bbd6703db1b5f603c7337319a999bd2b5dc61336073df7152260f56655f6",
+          "final_target_sha256": "636586a0a6830b762a339c578e5768cbd7631a600c38d4c8ed3781039745c9ec",
+          "final_target": "— Моё побуждение, — возразил доктор Стронг, — в том, чтобы найти подходящее место для кузена и старого товарища детских игр Энни.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Preserve repeated motive term.",
+          "before": "— Мой мотив, — возразил доктор Стронг, — в том, чтобы найти подходящее место для кузена и старого товарища детских игр Энни.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0011",
+          "source_sha256": "44a0a3244ad366a52ff32dc241c28364c843ca863b9218691e53e6a59d09b1d8",
+          "initial_target_sha256": "d95286fa5db9373cc555f37093c4104f7ebc4e8cb15aeb468fa1916e58b6edbe",
+          "final_target_sha256": "d95286fa5db9373cc555f37093c4104f7ebc4e8cb15aeb468fa1916e58b6edbe",
+          "final_target": "— Да, я знаю, — сказал мистер Уикфилд, — дома или за границей.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0012",
+          "source_sha256": "e4544058e8b78c7da784921f6ddb1a857bf8f25696bc697856c6b7b2cfbb1daa",
+          "initial_target_sha256": "2ac18fda5bae680c7729b19e760a91cc7dca09333989cd1257a4a9284e191d4a",
+          "final_target_sha256": "2ac18fda5bae680c7729b19e760a91cc7dca09333989cd1257a4a9284e191d4a",
+          "final_target": "— Да! — ответил доктор, по-видимому недоумевая, отчего тот так подчёркивает эти слова. — Дома или за границей.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0013",
+          "source_sha256": "4bcda12c3a39d5f93d8927441647ba33fb8246a7f78f8106606c8855f249bfa0",
+          "initial_target_sha256": "e074d690d8962a41510390de67ba8f085313b6d9f802cd39a4a4c6df171e5ce4",
+          "final_target_sha256": "e074d690d8962a41510390de67ba8f085313b6d9f802cd39a4a4c6df171e5ce4",
+          "final_target": "— Ваше собственное выражение, как вы помните, — сказал мистер Уикфилд. — Или за границей.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0014",
+          "source_sha256": "8f9802cdf2b1e93a015e0f1854af40cb4a0148a902c3a3f6ce2b0e8820d00dce",
+          "initial_target_sha256": "5084a8dab0638ab48bd57b3d2321a6a142b4efd186c8d1845cb1c85d7b1085bb",
+          "final_target_sha256": "5084a8dab0638ab48bd57b3d2321a6a142b4efd186c8d1845cb1c85d7b1085bb",
+          "final_target": "— Разумеется, — ответил доктор. — Разумеется. То или другое.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0015",
+          "source_sha256": "21304754d46b87c68c00b8b773554a269261feb753d0ff21ed6d8c1545343aea",
+          "initial_target_sha256": "cd591b428c66da89fd01080e24e9cfd6ad150e23357e47504c7a0c7f3299c0fe",
+          "final_target_sha256": "cd591b428c66da89fd01080e24e9cfd6ad150e23357e47504c7a0c7f3299c0fe",
+          "final_target": "— То или другое? У вас нет предпочтения? — спросил мистер Уикфилд.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0016",
+          "source_sha256": "5089ee45de06e3a8cdf2fb53c2230d27c6bc80d147b2f61164b4462864eb16ee",
+          "initial_target_sha256": "b20fb1f3f788ebed2dd716e96c6cdf0a80a37994e690a4c6c45afdfe46bd923c",
+          "final_target_sha256": "b20fb1f3f788ebed2dd716e96c6cdf0a80a37994e690a4c6c45afdfe46bd923c",
+          "final_target": "— Нет, — ответил доктор.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0017",
+          "source_sha256": "812df63e4a616559c98aaa95d95667315223c85430c25145ca10948b09c87c27",
+          "initial_target_sha256": "393bd3f5ed49e45003ff364a4e184fdedf50109a7876bc53ce56ba26e22d4cfd",
+          "final_target_sha256": "393bd3f5ed49e45003ff364a4e184fdedf50109a7876bc53ce56ba26e22d4cfd",
+          "final_target": "— Нет? — с изумлением.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0018",
+          "source_sha256": "ec50cac83bc2da2c5027419c162d9e1637ffd039c339f5eff2137f2aa989b2f9",
+          "initial_target_sha256": "630c65239de862cca265a125700b037abc2198dc3018cd2b7d9368fb0978fd1c",
+          "final_target_sha256": "630c65239de862cca265a125700b037abc2198dc3018cd2b7d9368fb0978fd1c",
+          "final_target": "— Ни малейшего.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        }
+      ],
+      "recovery_note": "Local save completed before platform failure; durable recovery copy prevents repeating valid review."
+    },
+    {
+      "rank": 85,
+      "unit": 18,
+      "row_indices": [
+        19,
+        38
+      ],
+      "reviewer": "OpenAI Codex; exact model ID unexposed",
+      "method": "AI_LITERARY_REVIEW",
+      "utc": "2026-10-29T18:26:39.117Z",
+      "state": "PARTIAL_UNIT_REVIEW_COMPLETE",
+      "reviewed_rows": 20,
+      "corrected_rows": 10,
+      "rows": [
+        {
+          "source_id": "en85-u018-b0019",
+          "source_sha256": "6a7ff81d5c3354594c8a159e51e4e1f9e3a315b2df5d8e88580511b12fe1b762",
+          "initial_target_sha256": "b44cc9d3bf831d349ef837629037fe7daceed55293e538924e983e801d804e24",
+          "final_target_sha256": "2268d4cb2d910e42300d62bde94506ff0f61655c0db77705e426ea7ba32859e7",
+          "final_target": "— И нет никакого побуждения, — сказал мистер Уикфилд, — предпочесть место за границей месту на родине?",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Restore repeated motive motif; home/abroad is domestic/foreign employment.",
+          "before": "— И нет причины, — сказал мистер Уикфилд, — подразумевать именно заграницу, а не дом?",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0020",
+          "source_sha256": "5089ee45de06e3a8cdf2fb53c2230d27c6bc80d147b2f61164b4462864eb16ee",
+          "initial_target_sha256": "b20fb1f3f788ebed2dd716e96c6cdf0a80a37994e690a4c6c45afdfe46bd923c",
+          "final_target_sha256": "b20fb1f3f788ebed2dd716e96c6cdf0a80a37994e690a4c6c45afdfe46bd923c",
+          "final_target": "— Нет, — ответил доктор.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0021",
+          "source_sha256": "753dbe7f702d679dee0e4f4737c052b041ef90fe0aa1a1a35922389cd2a0c945",
+          "initial_target_sha256": "1cc23a8fca08468a2811ee422284d6c335d7df7a39e6e60e01fc3618aea18b40",
+          "final_target_sha256": "1cc23a8fca08468a2811ee422284d6c335d7df7a39e6e60e01fc3618aea18b40",
+          "final_target": "— Я обязан вам верить и, разумеется, верю, — сказал мистер Уикфилд. — Это очень упростило бы мою задачу, если бы я знал об этом раньше. Но, признаюсь, у меня сложилось иное впечатление.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0022",
+          "source_sha256": "395d5f2c4410513e44840231fe32a0a17ddfd48eceb4b68f2db3dfc0e6fe6ab5",
+          "initial_target_sha256": "00de1d2e68339ab0b8e52e1faab3b38963ac799a28e378ceb5c94f56ae6162d8",
+          "final_target_sha256": "5ffc8a14381a1730174574b414f9d38070811a53a727c7d835442bbf236f810c",
+          "final_target": "Доктор Стронг посмотрел на него озадаченным, полным сомнения взглядом, который почти тотчас растаял в улыбке, весьма меня ободрившей: она была полна доброты и мягкости, а в ней, да и во всей его манере, когда удавалось пробиться сквозь учёный, задумчивый ледок, была простота, очень привлекательная и обнадёживающая для юного школяра вроде меня. Повторяя «нет», и «ни малейшего», и другие краткие заверения того же смысла, доктор Стронг затрусил впереди нас странной, неровной походкой, а мы последовали за ним; мистер Уикфилд, как я заметил, выглядел серьёзным и качал головой про себя, не зная, что я это вижу.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Doubting is uncertainty about implication, not assertive distrust; kindly smile and studious frost preserved.",
+          "before": "Доктор Стронг посмотрел на него озадаченным и недоверчивым взглядом, который почти тотчас растаял в улыбке, весьма меня ободрившей: она была полна доброты и мягкости, а в ней, да и во всей его манере, когда удавалось пробиться сквозь учёный, задумчивый ледок, была простота, очень привлекательная и обнадёживающая для юного школяра вроде меня. Повторяя «нет», и «ни малейшего», и другие краткие заверения того же смысла, доктор Стронг затрусил впереди нас странной, неровной походкой, а мы последовали за ним; мистер Уикфилд, как я заметил, выглядел серьёзным и качал головой про себя, не зная, что я это вижу.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0023",
+          "source_sha256": "fc170f539e8a9a0deeb557d47fc56bc73d8c1a110a22bc8ad4f94d6d816c5e9d",
+          "initial_target_sha256": "4b7792668bb4db6197ad3f21fd7ec1416df6adda6e84561c523464f968161e76",
+          "final_target_sha256": "4b7792668bb4db6197ad3f21fd7ec1416df6adda6e84561c523464f968161e76",
+          "final_target": "Классная комната оказалась довольно большим залом на самой тихой стороне дома; напротив неё величаво уставились с полдюжины больших урн, а из окон открывался вид на старый уединённый сад доктора, где на солнечной южной стене зрели персики. На траве за окнами стояли в кадках два больших алоэ; широкие жёсткие листья этого растения (казавшиеся сделанными из крашеной жести) с тех пор, по ассоциации, всегда были для меня символом тишины и уединения. Когда мы вошли, около двадцати пяти мальчиков усердно занимались над книгами, но они встали, чтобы пожелать доктору доброго утра, и остались стоять, увидев мистера Уикфилда и меня.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0024",
+          "source_sha256": "b6963cea6bbb7f1e94ad37b61f176d3a602a070d765cfe0a70e564925b3aaeb2",
+          "initial_target_sha256": "fd7317213b0ae833e4ecfecf900f90254d203a898f5b407b4b47f9f89b07c00e",
+          "final_target_sha256": "fd7317213b0ae833e4ecfecf900f90254d203a898f5b407b4b47f9f89b07c00e",
+          "final_target": "— Новый ученик, молодые джентльмены, — сказал доктор. — Тротвуд Копперфилд.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0025",
+          "source_sha256": "6c01cb45d410ca3c8b92300c64ab632eeee671a4942b4421df9a4ebae1fc536e",
+          "initial_target_sha256": "b5d75ce6830ff0bfd12834cec6fd99fca8d177d14fdb194e3328eba047aea3c5",
+          "final_target_sha256": "b5d75ce6830ff0bfd12834cec6fd99fca8d177d14fdb194e3328eba047aea3c5",
+          "final_target": "Тогда некий Адамс, старший ученик, вышел из строя и приветствовал меня. В своём белом галстуке он походил на молодого священника, но был очень любезен и добродушен; он показал мне моё место и представил меня учителям по-джентльменски, так, что я почувствовал бы себя свободно, если бы вообще что-нибудь могло этого достичь.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0026",
+          "source_sha256": "4d044016ffb3356fd20df90d88b9d0126f6ba006029a69cf34ff5db5e4ff8535",
+          "initial_target_sha256": "efce8785326391f607121507bfc7f0b3a8372da6bac434cedc9fb080b8fce254",
+          "final_target_sha256": "dc1c772f047ee55c3f5d927d369b4f8991c1df2aec0bfad75885314dba0c75f7",
+          "final_target": "Но мне казалось, что столько времени прошло с тех пор, как я бывал среди таких мальчиков или среди каких-либо сверстников, если не считать Мика Уокера и Мучнистой Картошки, что я чувствовал себя чужим, как никогда в жизни. Я так остро сознавал, что прошёл через картины, о которых они не могли иметь никакого понятия, и приобрёл опыт, чуждый моему возрасту, виду и положению одного из них, что наполовину верил, будто являться сюда обыкновенным маленьким школьником — обман. В пору службы у «Мэрдстона и Гринби», как бы коротка или длинна она ни была, я до того отвык от мальчишеских забав и игр, что знал: я неловок и неопытен в самых обычных вещах, к ним относящихся. Всё, чему я когда-либо учился, так выветрилось из моей головы в жалких заботах моей жизни с утра до ночи, что теперь, когда меня экзаменовали о том, что я знаю, я не знал ничего и был помещён в самый низший класс школы. Но как ни смущали меня недостаток мальчишеской сноровки и недостаток книжных знаний, ещё несравненно неуютнее мне делалось от мысли, что в том, что я знал, я отстоял от моих товарищей гораздо дальше, чем в том, чего не знал. Мысли мои вертелись вокруг того, что они подумают, если узнают о моём близком знакомстве с тюрьмой Королевской Скамьи. Нет ли во мне чего-нибудь, что помимо моей воли выдаст мои дела в связи с семейством Микоберов — все эти закладывания, и продажи, и ужины? Что, если кто-нибудь из мальчиков видел, как я шёл через Кентербери, измученный дорогой и оборванный, и меня разоблачат? Что скажут они, так легко относящиеся к деньгам, если узнают, как я наскребал свои полпенни на покупку ежедневной сосиски с пивом или ломтей пудинга? Как подействует на них, столь неискушённых в лондонской жизни и лондонских улицах, открытие, до чего хорошо я знал (и стыдился знать) некоторые самые жалкие стороны и той и другой? Всё это так вертелось у меня в голове в тот первый день у доктора Стронга, что я не доверял малейшему своему взгляду и жесту; съёживался всякий раз, когда ко мне приближался кто-нибудь из новых товарищей, и поспешно уходил, как только кончались занятия, боясь выдать себя в ответе на дружеское внимание или попытку сблизиться.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Reconcile accepted prison name; entire factory/prison/class-shame paragraph retained.",
+          "before": "Но мне казалось, что столько времени прошло с тех пор, как я бывал среди таких мальчиков или среди каких-либо сверстников, если не считать Мика Уокера и Мучнистой Картошки, что я чувствовал себя чужим, как никогда в жизни. Я так остро сознавал, что прошёл через картины, о которых они не могли иметь никакого понятия, и приобрёл опыт, чуждый моему возрасту, виду и положению одного из них, что наполовину верил, будто являться сюда обыкновенным маленьким школьником — обман. В пору службы у «Мэрдстона и Гринби», как бы коротка или длинна она ни была, я до того отвык от мальчишеских забав и игр, что знал: я неловок и неопытен в самых обычных вещах, к ним относящихся. Всё, чему я когда-либо учился, так выветрилось из моей головы в жалких заботах моей жизни с утра до ночи, что теперь, когда меня экзаменовали о том, что я знаю, я не знал ничего и был помещён в самый низший класс школы. Но как ни смущали меня недостаток мальчишеской сноровки и недостаток книжных знаний, ещё несравненно неуютнее мне делалось от мысли, что в том, что я знал, я отстоял от моих товарищей гораздо дальше, чем в том, чего не знал. Мысли мои вертелись вокруг того, что они подумают, если узнают о моём близком знакомстве с тюрьмой Кингс-Бенч. Нет ли во мне чего-нибудь, что помимо моей воли выдаст мои дела в связи с семейством Микоберов — все эти закладывания, и продажи, и ужины? Что, если кто-нибудь из мальчиков видел, как я шёл через Кентербери, измученный дорогой и оборванный, и меня разоблачат? Что скажут они, так легко относящиеся к деньгам, если узнают, как я наскребал свои полпенни на покупку ежедневной сосиски с пивом или ломтей пудинга? Как подействует на них, столь неискушённых в лондонской жизни и лондонских улицах, открытие, до чего хорошо я знал (и стыдился знать) некоторые самые жалкие стороны и той и другой? Всё это так вертелось у меня в голове в тот первый день у доктора Стронга, что я не доверял малейшему своему взгляду и жесту; съёживался всякий раз, когда ко мне приближался кто-нибудь из новых товарищей, и поспешно уходил, как только кончались занятия, боясь выдать себя в ответе на дружеское внимание или попытку сблизиться.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0027",
+          "source_sha256": "40af5b04aae9095364be008391e4fe6ab32f6e90f3b36019895cea2c72a43462",
+          "initial_target_sha256": "6cd8ce1539fcc69b6074142072d520be3cf5c3255283c0a22436404dcc9234b5",
+          "final_target_sha256": "fcbf5eac818fff55b933354727680229bc5b5bc44e27e967976723f173da0aa0",
+          "final_target": "Но старый дом мистера Уикфилда так на меня действовал, что, когда я постучал в его дверь, держа под мышкой новые школьные книги, я почувствовал, что моё беспокойство начинает смягчаться. Поднимаясь в свою просторную старую комнату, я словно ощутил, как строгая тень лестницы ложится на мои сомнения и страхи и делает прошлое менее отчётливым. Я сидел там, упорно занимаясь по книгам до обеда (занятия в школе у нас кончались ровно в три), и спустился вниз, с надеждой, что из меня всё же выйдет вполне сносный мальчик.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "House influence is calming effect, airy is spacious/airy rather than necessarily bright, and conning is diligent study without added mechanical rote.",
+          "before": "Но в старом доме мистера Уикфилда было нечто такое властное, что, когда я постучал в его дверь, держа под мышкой новые школьные книги, я почувствовал, что моё беспокойство начинает смягчаться. Поднимаясь в свою светлую старую комнату, я словно ощутил, как строгая тень лестницы ложится на мои сомнения и страхи и делает прошлое менее отчётливым. Я сидел там, упорно зубря свои книги до обеда (занятия в школе у нас кончались ровно в три), и спустился вниз, с надеждой, что из меня всё же выйдет вполне сносный мальчик.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0028",
+          "source_sha256": "ebbe7e1c9092a7ec233958129338eb3460f10d018813b3fb281a5cce89aad46c",
+          "initial_target_sha256": "b1ab5e9a0130aec8f30fd8e0d81be00653bd3b987a2599e765aa1272dc7ace73",
+          "final_target_sha256": "b1ab5e9a0130aec8f30fd8e0d81be00653bd3b987a2599e765aa1272dc7ace73",
+          "final_target": "Агнес была в гостиной и ждала отца, которого задержал кто-то в конторе. Она встретила меня своей приятной улыбкой и спросила, как мне понравилась школа. Я сказал ей, что она, надеюсь, мне очень понравится, но поначалу я чувствую себя в ней немного чужим.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0029",
+          "source_sha256": "3a88396026aeade30e673d48e9774feaba0842a454b0943fdda35b855726b149",
+          "initial_target_sha256": "dd90bd7c05361ca4fe9e13635439788bbf39b3a9a261f4a525824b84701969dc",
+          "final_target_sha256": "40ba1609101aa95070a934601479e3d424025918f1365852918694d9629e4603",
+          "final_target": "— Вы ведь никогда не ходили в школу, — сказал я, — не так ли? \n— О да! Каждый день.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Separate Agnes's answer from David's question inside unchanged single source row.",
+          "before": "— Вы ведь никогда не ходили в школу, — сказал я, — не так ли? — О да! Каждый день.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0030",
+          "source_sha256": "943e226c070acfd2e22628162d1ad523342edac86932fbf5868dd228e6ccf4c4",
+          "initial_target_sha256": "814f1a0164937bec353776d836c911288b7a9adbe4ab565b49b83ac5acf5064d",
+          "final_target_sha256": "814f1a0164937bec353776d836c911288b7a9adbe4ab565b49b83ac5acf5064d",
+          "final_target": "— Ах, но вы имеете в виду здесь, у себя дома?",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0031",
+          "source_sha256": "973469a959d0cbbbfaea74be080702ab4d5e44f8eb94815ab3b94394ea356e39",
+          "initial_target_sha256": "3be9f96e1e92917ffd8c3b314f165b68e50986f206cd182c5c2455fe0750bc4a",
+          "final_target_sha256": "249320c5a0aea5935ec86334d9a5c4162fb482ec56e2f7166055404bbccc0e68",
+          "final_target": "— Папа не мог обойтись без меня, чтобы я ходила куда-нибудь ещё, — ответила она, улыбаясь и качая головой. — Его хозяюшка должна быть в его доме, понимаете.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Housekeeper is affectionate organizing daughter, not proprietor; established nickname preserved.",
+          "before": "— Папа не мог обойтись без меня, чтобы я ходила куда-нибудь ещё, — ответила она, улыбаясь и качая головой. — Его хозяйка должна быть в его доме, понимаете.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0032",
+          "source_sha256": "de7694b79f38643cbdb0b348f93a7734923bfe81880363293c2cd94c9b9b6be8",
+          "initial_target_sha256": "ddb4381d2d431faf0cbddd8a3fc1532d8d0fea34b8e489d2eec4c0530a5c54a3",
+          "final_target_sha256": "ddb4381d2d431faf0cbddd8a3fc1532d8d0fea34b8e489d2eec4c0530a5c54a3",
+          "final_target": "— Он очень любит вас, я уверен, — сказал я.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0033",
+          "source_sha256": "9ccd2e0248bda006408f1faecb8acce7030fa98c724179542c71a4dfe05cef72",
+          "initial_target_sha256": "c3273131b2ed92045cb79b9f0ff4399118619a8338fbb89c56ef16060884c454",
+          "final_target_sha256": "c3273131b2ed92045cb79b9f0ff4399118619a8338fbb89c56ef16060884c454",
+          "final_target": "Она кивнула: «Да» — и пошла к двери прислушаться, не поднимается ли он, чтобы встретить его на лестнице. Но его там не оказалось, и она вернулась.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0034",
+          "source_sha256": "cc80e128f7c8bb05dee1d86d054bffceb57f23ac5c82377203d2b40e158ed885",
+          "initial_target_sha256": "82ed8d0fd827b2c77c032cb048908470318bfd219426b164697dfb85ec31e71b",
+          "final_target_sha256": "814d138906811f89042b769e50ac8295fb6611e71c0e424b9ecd9e2be327524e",
+          "final_target": "— Мамы нет на свете с тех пор, как я родилась, — сказала она своим тихим голосом. — Я знаю её только по портрету внизу. Я видела вчера, как вы на него смотрели. Вы подумали, чей он?",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Ever since birth does not add an explicit after-birth temporal sequence.",
+          "before": "— Мама умерла сразу после моего рождения, — сказала она своим тихим голосом. — Я знаю её только по портрету внизу. Я видела вчера, как вы на него смотрели. Вы подумали, чей он?",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0035",
+          "source_sha256": "30a41189b75920716f92dc1b206b93af6a0513410347a7498bbdf476f4e0a1bd",
+          "initial_target_sha256": "be9071a8c06174656370bbf89a7679fc5096079f36ab474a434bca7a73811871",
+          "final_target_sha256": "be9071a8c06174656370bbf89a7679fc5096079f36ab474a434bca7a73811871",
+          "final_target": "Я ответил, что да, подумал, потому что он так похож на неё саму.",
+          "fidelity": "PASS",
+          "literary_style": "PASS",
+          "reason": "Entire English source and Russian row actually read in foreground before environment failure; facts, speakers, negation, register, imagery and paragraph alignment reconciled.",
+          "before": null,
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0036",
+          "source_sha256": "b479872f91378c9201808f88396c080706a4732d870cec304ba5324c325ad49a",
+          "initial_target_sha256": "102db23e29f71e0211f5b2c794ad764009427d30f252a037be0267a067665c16",
+          "final_target_sha256": "6018fe44fcd6e9d990ca9a8dabe42214b84abf6f09c73fb226d095856cf03d03",
+          "final_target": "— Папа тоже так говорит, — сказала Агнес, обрадовавшись. — Послушайте! Вот и папа!",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Hark invites listening to arrival, not simply silence.",
+          "before": "— Папа тоже так говорит, — сказала Агнес, обрадовавшись. — Тише! Это папа!",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0037",
+          "source_sha256": "21a9ef1471553a56c14997f5e457357c96d41e515a556668100a9f20d8562a11",
+          "initial_target_sha256": "4d320e2f1e6109b27182adfa8f47f0565a5e3620da18db31af44b3e62b4563f4",
+          "final_target_sha256": "fb1813d23c88d6726f73b311995f148afc010c816098af006e93020f51c75f3a",
+          "final_target": "Её светлое спокойное лицо озарилось радостью, когда она пошла ему навстречу, и вот они вошли, держась за руки. Он сердечно поздоровался со мной и сказал, что мне непременно будет хорошо у доктора Стронга, одного из самых кротких людей на свете.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Hand in hand means holding hands, not linked arms.",
+          "before": "Её светлое спокойное лицо озарилось радостью, когда она пошла ему навстречу, и вот они вошли, рука об руку. Он сердечно поздоровался со мной и сказал, что мне непременно будет хорошо у доктора Стронга, одного из самых кротких людей на свете.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        },
+        {
+          "source_id": "en85-u018-b0038",
+          "source_sha256": "60d4bd6535d9cc5f5c6d02c1cdfe9ec01b3d094c3939194d0578b724544a59f2",
+          "initial_target_sha256": "2550722952860d0577124c421f7a5c552af80b9ced67f117e9faf1ef657a69ce",
+          "final_target_sha256": "0913d4a3147a9e1d2e8cf9a23914cb546e90a2cc1e7e3bdb444e3dd7aeec64c5",
+          "final_target": "— Возможно, найдутся и такие — не знаю, есть ли они, — кто злоупотребляет его добротой, — сказал мистер Уикфилд. — Никогда не будьте одним из них, Тротвуд, ни в чём. Он доверчивее всех людей на свете; и достоинство это или недостаток, оно заслуживает внимания во всех делах с доктором, больших и малых.",
+          "fidelity": "CORRECTED",
+          "literary_style": "CORRECTED",
+          "reason": "Critical suspicious distinction: Strong suspects others least, not that he himself is least suspect.",
+          "before": "— Возможно, найдутся и такие — не знаю, есть ли они, — кто злоупотребляет его добротой, — сказал мистер Уикфилд. — Никогда не будьте одним из них, Тротвуд, ни в чём. Он наименее подозрителен из всех людей; и достоинство это или недостаток, оно заслуживает внимания во всех делах с доктором, больших и малых.",
+          "correction_reconciliation": "Full English source and final Russian row read; save recovered through connected GitHub after platform execution environment became unavailable."
+        }
+      ],
+      "recovery_note": "Last local save command failed before process creation; actual already-performed foreground review and final corrections durably reconstructed here from verified immutable provider output."
+    }
+  ],
+  "correction_maps": [
+    {
+      "en85-u018-b0001": [
+        "На следующее утро после завтрака я снова вступил в школьную жизнь. В сопровождении мистера Уикфилда я отправился к месту моих будущих занятий — к серьёзному зданию во дворе, с учёным видом, который, казалось, очень подходил забредшим грачам и галкам, слетавшим с соборных башен, чтобы с учёной важностью прогуливаться по травяной лужайке, — и был представлен моему новому наставнику, доктору Стронгу.",
+        "Clerkly bearing matches learned/scholarly rooks and school surroundings, not added civil-service bureaucracy."
+      ],
+      "en85-u018-b0002": [
+        "Доктор Стронг, на мой взгляд, выглядел почти таким же ржавым, как высокие железные решётки и ворота снаружи дома, и почти таким же негнущимся и тяжёлым, как большие каменные урны, что стояли по сторонам от них и были водружены на красную кирпичную стену через равные промежутки вокруг всего двора, точно возвышенные кегли для игры Времени. Он был в своей библиотеке (я имею в виду доктора Стронга), одежда его была вычищена не слишком тщательно, волосы не слишком тщательно причёсаны; короткие панталоны были расстёгнуты, длинные чёрные гетры были расстёгнуты, а туфли зияли на коврике у камина, точно две пещеры. Обратив на меня тусклый глаз, напомнивший мне давно забытую слепую старую лошадь, которая когда-то щипала траву и спотыкалась о могилы на бландерстонском кладбище, он сказал, что рад меня видеть, и протянул мне руку; я не знал, что с нею делать, поскольку сама она ничего не делала.",
+        "Unbraced is loosened/unfastened breeches, not proof suspenders are absent; preserve authored rusty iron/stone urn similes."
+      ],
+      "en85-u018-b0007": [
+        "— Право слово, доктор, — отозвался мистер Уикфилд, — если бы доктор Уоттс знал людей, он с тою же правдивостью мог бы написать: «Для занятых рук всегда найдёт проказу сатана». Занятые люди вносят в мировые пакости свою полную долю, можете на это положиться. Чем занимались за последний век или два люди, которые больше всех были заняты добыванием денег и власти? Неужели обошлось без пакостей?",
+        "Busiest means most active/occupied, not most nimble; preceding century or two and busy/idle quotation contrast restored."
+      ],
+      "en85-u018-b0008": [
+        "— Джек Мэлдон, я полагаю, никогда не станет слишком усердствовать ни в том, ни в другом, — сказал доктор Стронг, задумчиво потирая подбородок.",
+        "Strong predicts little effort in wealth/power acquisition, not a lack of agility."
+      ],
+      "en85-u018-b0009": [
+        "— Возможно, что нет, — сказал мистер Уикфилд, — и вы возвращаете меня к вопросу, а я прошу прощения за отступление. Нет, мне пока не удалось пристроить мистера Джека Мэлдона. Я полагаю, — сказал он это с некоторой запинкой, — что я понимаю ваше побуждение, и это делает дело труднее.",
+        "Natural penetrate-motive phrasing and recurring motive noun; preserve hesitant belief without asserting an actual hidden affair."
+      ],
+      "en85-u018-b0010": [
+        "— Моё побуждение, — возразил доктор Стронг, — в том, чтобы найти подходящее место для кузена и старого товарища детских игр Энни.",
+        "Preserve repeated motive term."
+      ]
+    },
+    {
+      "en85-u018-b0019": [
+        "— И нет никакого побуждения, — сказал мистер Уикфилд, — предпочесть место за границей месту на родине?",
+        "Restore repeated motive motif; home/abroad is domestic/foreign employment."
+      ],
+      "en85-u018-b0022": [
+        "Доктор Стронг посмотрел на него озадаченным, полным сомнения взглядом, который почти тотчас растаял в улыбке, весьма меня ободрившей: она была полна доброты и мягкости, а в ней, да и во всей его манере, когда удавалось пробиться сквозь учёный, задумчивый ледок, была простота, очень привлекательная и обнадёживающая для юного школяра вроде меня. Повторяя «нет», и «ни малейшего», и другие краткие заверения того же смысла, доктор Стронг затрусил впереди нас странной, неровной походкой, а мы последовали за ним; мистер Уикфилд, как я заметил, выглядел серьёзным и качал головой про себя, не зная, что я это вижу.",
+        "Doubting is uncertainty about implication, not assertive distrust; kindly smile and studious frost preserved."
+      ],
+      "en85-u018-b0026": [
+        "Но мне казалось, что столько времени прошло с тех пор, как я бывал среди таких мальчиков или среди каких-либо сверстников, если не считать Мика Уокера и Мучнистой Картошки, что я чувствовал себя чужим, как никогда в жизни. Я так остро сознавал, что прошёл через картины, о которых они не могли иметь никакого понятия, и приобрёл опыт, чуждый моему возрасту, виду и положению одного из них, что наполовину верил, будто являться сюда обыкновенным маленьким школьником — обман. В пору службы у «Мэрдстона и Гринби», как бы коротка или длинна она ни была, я до того отвык от мальчишеских забав и игр, что знал: я неловок и неопытен в самых обычных вещах, к ним относящихся. Всё, чему я когда-либо учился, так выветрилось из моей головы в жалких заботах моей жизни с утра до ночи, что теперь, когда меня экзаменовали о том, что я знаю, я не знал ничего и был помещён в самый низший класс школы. Но как ни смущали меня недостаток мальчишеской сноровки и недостаток книжных знаний, ещё несравненно неуютнее мне делалось от мысли, что в том, что я знал, я отстоял от моих товарищей гораздо дальше, чем в том, чего не знал. Мысли мои вертелись вокруг того, что они подумают, если узнают о моём близком знакомстве с тюрьмой Королевской Скамьи. Нет ли во мне чего-нибудь, что помимо моей воли выдаст мои дела в связи с семейством Микоберов — все эти закладывания, и продажи, и ужины? Что, если кто-нибудь из мальчиков видел, как я шёл через Кентербери, измученный дорогой и оборванный, и меня разоблачат? Что скажут они, так легко относящиеся к деньгам, если узнают, как я наскребал свои полпенни на покупку ежедневной сосиски с пивом или ломтей пудинга? Как подействует на них, столь неискушённых в лондонской жизни и лондонских улицах, открытие, до чего хорошо я знал (и стыдился знать) некоторые самые жалкие стороны и той и другой? Всё это так вертелось у меня в голове в тот первый день у доктора Стронга, что я не доверял малейшему своему взгляду и жесту; съёживался всякий раз, когда ко мне приближался кто-нибудь из новых товарищей, и поспешно уходил, как только кончались занятия, боясь выдать себя в ответе на дружеское внимание или попытку сблизиться.",
+        "Reconcile accepted prison name; entire factory/prison/class-shame paragraph retained."
+      ],
+      "en85-u018-b0027": [
+        "Но старый дом мистера Уикфилда так на меня действовал, что, когда я постучал в его дверь, держа под мышкой новые школьные книги, я почувствовал, что моё беспокойство начинает смягчаться. Поднимаясь в свою просторную старую комнату, я словно ощутил, как строгая тень лестницы ложится на мои сомнения и страхи и делает прошлое менее отчётливым. Я сидел там, упорно занимаясь по книгам до обеда (занятия в школе у нас кончались ровно в три), и спустился вниз, с надеждой, что из меня всё же выйдет вполне сносный мальчик.",
+        "House influence is calming effect, airy is spacious/airy rather than necessarily bright, and conning is diligent study without added mechanical rote."
+      ],
+      "en85-u018-b0029": [
+        "— Вы ведь никогда не ходили в школу, — сказал я, — не так ли? \n— О да! Каждый день.",
+        "Separate Agnes's answer from David's question inside unchanged single source row."
+      ],
+      "en85-u018-b0031": [
+        "— Папа не мог обойтись без меня, чтобы я ходила куда-нибудь ещё, — ответила она, улыбаясь и качая головой. — Его хозяюшка должна быть в его доме, понимаете.",
+        "Housekeeper is affectionate organizing daughter, not proprietor; established nickname preserved."
+      ],
+      "en85-u018-b0034": [
+        "— Мамы нет на свете с тех пор, как я родилась, — сказала она своим тихим голосом. — Я знаю её только по портрету внизу. Я видела вчера, как вы на него смотрели. Вы подумали, чей он?",
+        "Ever since birth does not add an explicit after-birth temporal sequence."
+      ],
+      "en85-u018-b0036": [
+        "— Папа тоже так говорит, — сказала Агнес, обрадовавшись. — Послушайте! Вот и папа!",
+        "Hark invites listening to arrival, not simply silence."
+      ],
+      "en85-u018-b0037": [
+        "Её светлое спокойное лицо озарилось радостью, когда она пошла ему навстречу, и вот они вошли, держась за руки. Он сердечно поздоровался со мной и сказал, что мне непременно будет хорошо у доктора Стронга, одного из самых кротких людей на свете.",
+        "Hand in hand means holding hands, not linked arms."
+      ],
+      "en85-u018-b0038": [
+        "— Возможно, найдутся и такие — не знаю, есть ли они, — кто злоупотребляет его добротой, — сказал мистер Уикфилд. — Никогда не будьте одним из них, Тротвуд, ни в чём. Он доверчивее всех людей на свете; и достоинство это или недостаток, оно заслуживает внимания во всех делах с доктором, больших и малых.",
+        "Critical suspicious distinction: Strong suspects others least, not that he himself is least suspect."
+      ]
+    }
+  ],
+  "restore_files": [
+    "independent-review/018_Part01_Review.json",
+    "independent-review/018_Part01_Corrections.json",
+    "independent-review/018_Part02_Review.json",
+    "independent-review/018_Part02_Corrections.json"
+  ],
+  "restore_instruction": "Write each reports[k] and correction_maps[k] to matching Part01/02 file. If any local file exists, compare all source/target hashes and reuse matching work; do not overwrite divergent reviewed content without reconciliation. Exclude no new rows. Resume unit18 row39. No repeated review of rows0–38 is required."
+}
