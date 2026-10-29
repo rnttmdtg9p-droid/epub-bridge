@@ -1,0 +1,48 @@
+{
+  "unit": 23,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en85-u023-b0157",
+      "target": "— Ах, Стирфорт! Вам хорошо шутить над бедными людьми! Вы можете пикироваться с мисс Дартл или прятать от меня свои чувства за шуткой, но я-то знаю вас лучше. Когда я вижу, как прекрасно вы их понимаете, как тонко умеете войти в счастье вроде этого, простого рыбацкого, или потрафить любви вроде любви моей старой няни, я знаю, что нет такой радости или печали, нет такого чувства у этих людей, которое было бы вам безразлично. И за это я восхищаюсь вами и люблю вас, Стирфорт, в двадцать раз сильнее!",
+      "source_sha256": "8116baa0677afed34173329824ad384590ec763c09e44c26684b0761a7a52727",
+      "target_id": "ru-en85-u023-b0157",
+      "tag": "p",
+      "target_sha256": "780e4f202ed3c2c2a0c45e30bd7728a24863eaed118c9bd381c20d5f5e64d6da"
+    },
+    {
+      "source_id": "en85-u023-b0158",
+      "target": "Он остановился и, взглянув мне в лицо, сказал: — Дейзи, я верю, что вы говорите искренне и что вы добры. Хотел бы я, чтобы все мы были такими! — В следующую минуту он уже весело напевал песню мистера Пегготи, а мы быстрым шагом шли обратно в Ярмут.",
+      "source_sha256": "f33c4d109f3d720b15646b0e11f3ad0e8cca9b440db8d63ec6f7a717e2a3ed4e",
+      "target_id": "ru-en85-u023-b0158",
+      "tag": "p",
+      "target_sha256": "694d861b5bdd4e39ea4389beca89e14ae99fdaed126b97bd38d4dd18b0a7f7b0"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgWnTuvMRkNiW2TX2b4eH",
+    "usage": {
+      "input_tokens": 2573,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 398,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en85-u023-b0157",
+    "en85-u023-b0158"
+  ]
+}
