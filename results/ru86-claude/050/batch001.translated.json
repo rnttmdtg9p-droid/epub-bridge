@@ -1,0 +1,93 @@
+{
+  "unit": 50,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u050-b0032",
+      "target": "Она держала клинок высоко поднятым. Священник остановился в нерешимости. Она, без сомнения, ударила бы. «Ты больше не смеешь подойти, трус!» — крикнула она ему. Затем добавила с беспощадным выражением, прекрасно зная, что тысячью раскалённых клещей пронзает сердце священника: «Ах! Я знаю, что Феб не умер!»",
+      "source_sha256": "811af91c058f62c4e44cf7256f7ab5fea27196654e6819af233ea4ace19fb789",
+      "target_id": "ru-fr86-u050-b0032",
+      "tag": "p",
+      "target_sha256": "4dff836660f4c780dfb8c52807954ca0beedfce24d95ee3de502e5eac290cdd3"
+    },
+    {
+      "source_id": "fr86-u050-b0033",
+      "target": "Священник ударом ноги опрокинул Квазимодо на землю и, содрогаясь от ярости, снова нырнул под своды лестницы.",
+      "source_sha256": "526eaa83badfc39dfb1756879cde81df7fd94201b623965c1fb5cebb3357a3b7",
+      "target_id": "ru-fr86-u050-b0033",
+      "tag": "p",
+      "target_sha256": "884aec51b94a0d1e88b2c634196d6edcf96c137724a30b770602f11ac7d2cc29"
+    },
+    {
+      "source_id": "fr86-u050-b0034",
+      "target": "Когда он ушёл, Квазимодо подобрал свисток, только что спасший египтянку. «Он ржавел», — сказал он, возвращая его ей. Затем оставил её одну.",
+      "source_sha256": "41e750cf4aa1a02c51a3f3421403552ba01710aaf2bff7bcaf4c1f8236088c38",
+      "target_id": "ru-fr86-u050-b0034",
+      "tag": "p",
+      "target_sha256": "8ebb6da19a4148274cba05434ccaeffc3062143ca9701957beefe54f4d0fd3ce"
+    },
+    {
+      "source_id": "fr86-u050-b0035",
+      "target": "Девушка, потрясённая этой жестокой сценой, в изнеможении упала на постель и зарыдала. Её горизонт снова стал зловещим.",
+      "source_sha256": "74c0cd740287065e430ab9f9cf0bf546b5178853e2cbaeb4318061bc4b593728",
+      "target_id": "ru-fr86-u050-b0035",
+      "tag": "p",
+      "target_sha256": "e0449feec0be3d6c94c74f9337100f8e706822dbc84ef086f9056faaeca2feb5"
+    },
+    {
+      "source_id": "fr86-u050-b0036",
+      "target": "Священник же ощупью вернулся в свою келью.",
+      "source_sha256": "18ccabaa9323206bc71dc58dc68f86fdd6749156c90851b050846db1bfdc8431",
+      "target_id": "ru-fr86-u050-b0036",
+      "tag": "p",
+      "target_sha256": "86044e6ec9d85284331b071fba37a0c798ae329a91f6bf5470a816dca7e7bdb1"
+    },
+    {
+      "source_id": "fr86-u050-b0037",
+      "target": "Всё было кончено. Дом Клод ревновал к Квазимодо!",
+      "source_sha256": "89498241ebe63d169a6bf1acd202de96cf2e3730c5462dd1ad02f3bb243f3fee",
+      "target_id": "ru-fr86-u050-b0037",
+      "tag": "p",
+      "target_sha256": "5c627e9a17f78b93905042afb7ff34d9df403d4817fdb48ee29a25471843f5df"
+    },
+    {
+      "source_id": "fr86-u050-b0038",
+      "target": "Он задумчиво повторил своё роковое слово: «Никто не будет обладать ею!»",
+      "source_sha256": "f298a36f48142561bcc2727d11f2201674eb4b7f9bab91bc2aac1e964498602f",
+      "target_id": "ru-fr86-u050-b0038",
+      "tag": "p",
+      "target_sha256": "1d7f14639b802d25522a5c442d0db9488021b5507a2d4951bab5a7bf22e8b3ea"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYFpJGDgukyL59o9AkBk",
+    "usage": {
+      "input_tokens": 4022,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 549,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u050-b0032",
+    "fr86-u050-b0033",
+    "fr86-u050-b0034",
+    "fr86-u050-b0035",
+    "fr86-u050-b0036",
+    "fr86-u050-b0037",
+    "fr86-u050-b0038"
+  ]
+}
