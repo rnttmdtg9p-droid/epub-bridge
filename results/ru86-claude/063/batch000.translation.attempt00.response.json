@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgYHboL5G5w12BTkuUHyg",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr86-u063-b0000\",\"target\":\"ПРИМЕЧАНИЕ II.\"},{\"source_id\":\"fr86-u063-b0001\",\"target\":\"В рукописи [[I]]Собора Парижской Богоматери[[/I]] почти нет помарок. Отметить там какие-либо варианты можно разве что в некоторых названиях глав.\"},{\"source_id\":\"fr86-u063-b0002\",\"target\":\"Глава [[I]]История лепёшки на кукурузной закваске[[/I]] первоначально называлась: История ребёнка девицы лёгкого поведения.\"},{\"source_id\":\"fr86-u063-b0003\",\"target\":\"Глава [[I]]О том, что священник и философ — не одно и то же[[/I]]: Женатый философ.\"},{\"source_id\":\"fr86-u063-b0004\",\"target\":\"Глава [[I]]Башмачок[[/I]]: Коза спасена.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2932,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 322,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

@@ -1,0 +1,75 @@
+{
+  "unit": 63,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u063-b0000",
+      "target": "ПРИМЕЧАНИЕ II.",
+      "source_sha256": "d9bb7f3c4fb36a226811e9566c9ca57679c86e9eb3b65e3df4908aaa60a32d72",
+      "target_id": "ru-fr86-u063-b0000",
+      "tag": "h3",
+      "target_sha256": "210bcb6907faf9be4b6471dfec4b930c978a20d0e20b27671189b2ab7dddc285"
+    },
+    {
+      "source_id": "fr86-u063-b0001",
+      "target": "В рукописи [[I]]Собора Парижской Богоматери[[/I]] почти нет помарок. Отметить там какие-либо варианты можно разве что в некоторых названиях глав.",
+      "source_sha256": "0c7e7ac584211d3466e10a810e2e69550954da5ad5981d3765a1181ce4399b5e",
+      "target_id": "ru-fr86-u063-b0001",
+      "tag": "p",
+      "target_sha256": "0e32075108bea5caafca6f42d316cd24490bb702062cfb386e1df5cf7f13426e"
+    },
+    {
+      "source_id": "fr86-u063-b0002",
+      "target": "Глава [[I]]История лепёшки на кукурузной закваске[[/I]] первоначально называлась: История ребёнка девицы лёгкого поведения.",
+      "source_sha256": "bd1c25031987e3fe5869ecdbbf4a52d674f20bb29002bffb791a24ac2045d0e8",
+      "target_id": "ru-fr86-u063-b0002",
+      "tag": "p",
+      "target_sha256": "b39946e0aa0fe7ff917499e678f21c85cf46f554a53b0b42fb3638a83a263b0e"
+    },
+    {
+      "source_id": "fr86-u063-b0003",
+      "target": "Глава [[I]]О том, что священник и философ — не одно и то же[[/I]]: Женатый философ.",
+      "source_sha256": "1f8809e663393d20c8915749c10971d3037fa8980d5fca7fb4d82bae8a8999c8",
+      "target_id": "ru-fr86-u063-b0003",
+      "tag": "p",
+      "target_sha256": "ce01ccba7de5edba2e590c83b5cc1bf09a2023577884897af37d4677e261e3e2"
+    },
+    {
+      "source_id": "fr86-u063-b0004",
+      "target": "Глава [[I]]Башмачок[[/I]]: Коза спасена.",
+      "source_sha256": "7bef1404ea49accd5bdbefa0e48cdd094192bd9ea04523937a94dd8f893ab2d3",
+      "target_id": "ru-fr86-u063-b0004",
+      "tag": "p",
+      "target_sha256": "4e97ef81848e9e754ce5dd58e4dd61672f8f05740c89c83d9d3ee09e9f88a97a"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYHboL5G5w12BTkuUHyg",
+    "usage": {
+      "input_tokens": 2932,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u063-b0000",
+    "fr86-u063-b0001",
+    "fr86-u063-b0002",
+    "fr86-u063-b0003",
+    "fr86-u063-b0004"
+  ]
+}
