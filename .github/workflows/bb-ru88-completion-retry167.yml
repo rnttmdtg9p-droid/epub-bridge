@@ -1,0 +1,31 @@
+name: BB rank88 Claude INITIAL retry only failed167 only
+on:
+  push:
+    paths: ['.github/workflows/bb-ru88-completion-retry167.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-russian-rank88-initial-completion
+  cancel-in-progress: false
+jobs:
+  initial-translation-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: bb-ru88-completion-20261030
+      - name: Claude INITIAL translation only; NEVER literary review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru88_initial_retry167.py
+      - name: Preserve each completed unit and exact failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru88-initial-retry167
+          path: results/ru88-initial-retry167/
+          retention-days: 90
+          if-no-files-found: error
