@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgYAZa7y4ngSZeMJB6SkE",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr86-u006-b0064\",\"target\":\"Гренгуар хотел бы ответить. Изумление, гнев, негодование отняли у него дар речи. К тому же предложение народного чулочника было встречено с таким восторгом этими буржуа, польщёнными тем, что их назвали [[I]]дворянчиками[[/I]], что всякое сопротивление было бесполезно. Оставалось лишь отдаться потоку. Гренгуар закрыл лицо обеими руками: ему не посчастливилось иметь плаща, чтобы закутать голову, как Агамемнон Тиманфа.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3178,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 221,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
