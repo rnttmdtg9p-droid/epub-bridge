@@ -1,0 +1,64 @@
+name: Download German 168 and 171 source texts
+on:
+  push:
+    branches: [bb-german-168-171-sources-20261030]
+    paths: [.github/workflows/bb-german-168-171-download.yml]
+permissions:
+  contents: write
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install beautifulsoup4 --quiet
+      - name: Download and verify every source section
+        shell: python
+        run: |
+          import urllib.request, pathlib, concurrent.futures, hashlib, json, zipfile, time
+          from bs4 import BeautifulSoup
+          books=[
+            ('168_Nesthaekchen_und_ihre_Puppen','https://projekt-gutenberg.org/authors/else-ury/books/nesthaekchen-und-ihre-puppen'),
+            ('171_Die_vierzig_Tage_des_Musa_Dagh','https://projekt-gutenberg.org/authors/franz-werfel/books/die-vierzig-tage-des-musa-dagh')
+          ]
+          root=pathlib.Path('results/german-168-171-sources'); root.mkdir(exist_ok=True)
+          ledger=[]
+          for name,base in books:
+            folder=root/name;folder.mkdir(exist_ok=True)
+            def get(i):
+              u=base+'/chapter/'+str(i)
+              for attempt in range(3):
+                try:
+                  with urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=40) as r:
+                    body=r.read(); assert r.status==200
+                  soup=BeautifulSoup(body,'html.parser')
+                  main=soup.select_one('main.book-reader__chapter-content')
+                  wrapper=main.select_one('.book-reader__chapter-content-wrapper') if main else None
+                  assert wrapper is not None, 'missing source content'
+                  paras=wrapper.get_text('\n',strip=True)
+                  assert len(paras)>50, 'empty source section'
+                  (folder/(str(i).zfill(2)+'.html')).write_bytes(body)
+                  return i,paras,{'section':i,'url':u,'characters':len(paras),'html_sha256':hashlib.sha256(body).hexdigest()}
+                except Exception:
+                  if attempt==2: raise
+                  time.sleep(2)
+            got=sorted(concurrent.futures.ThreadPoolExecutor(max_workers=3).map(get,range(1,21)))
+            full='\n\n'.join(t for i,t,m in got)
+            (root/(name+'.txt')).write_text(full)
+            ledger.append({'rank':name[:3],'sections':len(got),'characters':len(full),'source_sha256':hashlib.sha256(full.encode()).hexdigest(),'first_text':got[1][1][:250],'last_text':got[-1][1][-500:],'section_evidence':[m for i,t,m in got]})
+          pathlib.Path('results/german-168-171-source-download-evidence.json').write_text(json.dumps(ledger,ensure_ascii=False,indent=2))
+          with zipfile.ZipFile('results/German_168_171_sources.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for p in sorted(root.rglob('*')):
+              if p.is_file():z.write(p,p.relative_to(root))
+          print(json.dumps(ledger,ensure_ascii=False))
+      - uses: actions/upload-artifact@v4
+        with:
+          name: German_168_171_sources
+          path: results/German_168_171_sources.zip
+      - name: Save source text and evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/german-168-171-sources results/german-168-171-source-download-evidence.json
+          git commit -m "Preserve complete German source texts for ranks 168 and 171"
+          git push origin HEAD:bb-german-168-171-sources-20261030
