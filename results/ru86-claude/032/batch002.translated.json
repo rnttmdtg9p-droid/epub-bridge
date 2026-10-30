@@ -1,0 +1,57 @@
+{
+  "unit": 32,
+  "batch": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u032-b0064",
+      "target": "И чело священника омрачилось.",
+      "source_sha256": "a2e9b8549081e570518ca34a8d828ecb7baf71ace69ab72d06fc9ff0c6356f1b",
+      "target_id": "ru-fr86-u032-b0064",
+      "tag": "p",
+      "target_sha256": "550b5f0acad07c6604f9c378c66d094b18fa1a2e86ead70fb833df68b5373983"
+    },
+    {
+      "source_id": "fr86-u032-b0065",
+      "target": "«В другой раз, — продолжал поэт с улыбкой, — я перед сном заглянул в её замочную скважину и увидел прелестнейшую даму в одной сорочке из всех, что когда-либо заставляли скрипеть ременную сетку кровати под своей босой ногой.",
+      "source_sha256": "77bbc334f7d56a359664ae0534e6eae5c409ba40363c87b237451bbac607bcd1",
+      "target_id": "ru-fr86-u032-b0065",
+      "tag": "p",
+      "target_sha256": "795f033b8f16a6476de975af15003d7edcdd2fdb62a294a54340cffd5cfa58d8"
+    },
+    {
+      "source_id": "fr86-u032-b0066",
+      "target": "— Убирайся к дьяволу! — закричал священник с ужасным взглядом и, толкнув за плечи изумлённого Гренгуара, big-шагами углубился под самые тёмные своды собора.",
+      "source_sha256": "4b24c86f046d2bd46201fd9fb1e1006fa101547dd80294135acf2a94c3324f07",
+      "target_id": "ru-fr86-u032-b0066",
+      "tag": "p",
+      "target_sha256": "37dac719d7f3b9c8951fc9339c93fb5d1acb4dfed7ecdc23954ef7f6b315e713"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYDQ68Kcpw3PyJP4QU63",
+    "usage": {
+      "input_tokens": 2923,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 254,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u032-b0064",
+    "fr86-u032-b0065",
+    "fr86-u032-b0066"
+  ]
+}
