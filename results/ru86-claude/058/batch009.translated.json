@@ -1,0 +1,48 @@
+{
+  "unit": 58,
+  "batch": 9,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u058-b0288",
+      "target": "В этот миг мать, скорчившаяся на мостовой, широко раскрыла глаза. Не издав ни крика, она выпрямилась с ужасным выражением на лице, затем, как зверь на добычу, бросилась на руку палача и впилась в неё зубами. Это было молниеносно. Палач завыл от боли. Люди подбежали. С трудом вырвали его окровавленную руку из зубов матери. Она хранила глубокое молчание. Её оттолкнули довольно грубо, и заметили, что голова её тяжело упала на мостовую. Её приподняли. Она снова бессильно упала. Она была мертва.",
+      "target_id": "ru-fr86-u058-b0288",
+      "source_sha256": "84c60ec5341023ebd888da9c6ef0cdb216b3c7c393770d5eaff0a258c169ff2b",
+      "tag": "p",
+      "target_sha256": "5ce28f1a8d3c00e49b8c2166d9163109fc7b0a258fd142794a230fce12c3bf42"
+    },
+    {
+      "source_id": "fr86-u058-b0289",
+      "target": "Палач, не выпускавший девушки, снова стал подниматься по лестнице.",
+      "target_id": "ru-fr86-u058-b0289",
+      "source_sha256": "b0552d525775d86f442fdb0e53b27e13ea531b92345c23dfb7b8bb59059a3239",
+      "tag": "p",
+      "target_sha256": "6154b0a84f74b5d541c1d62f5aee6f42b7353b29dc08d11cc3f646c2c4eb2cb8"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYHUM7ZJ2HVsxa73bUht",
+    "usage": {
+      "input_tokens": 3175,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 338,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u058-b0288",
+    "fr86-u058-b0289"
+  ]
+}
