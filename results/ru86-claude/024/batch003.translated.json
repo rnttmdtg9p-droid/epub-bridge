@@ -1,0 +1,57 @@
+{
+  "unit": 24,
+  "batch": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u024-b0096",
+      "target": "Наступил час, когда никто из посторонних не мог оставаться в монастыре. Оба посетителя удалились. «Учитель, — сказал кум из Тура, прощаясь с архидиаконом, — я люблю учёных и великие умы и питаю к вам особое уважение. Приходите завтра во дворец Турнель и спросите аббата Сен-Мартена Турского.»",
+      "source_sha256": "01c2fe62e8716094d12926b1d7caba2bcb55d4e4a1192f9b127848dd91092a36",
+      "target_id": "ru-fr86-u024-b0096",
+      "tag": "p",
+      "target_sha256": "fcffd62c408403d37713fe0f250351f3e92fa94a3496f67ed9633bb3263fe4de"
+    },
+    {
+      "source_id": "fr86-u024-b0097",
+      "target": "Архидиакон вернулся к себе в изумлении: он наконец понял, что за особа этот кум из Тура, и вспомнил то место из картулярия Сен-Мартена Турского: [[I]]Abbas beati Martini[[/I]], SCILICET REX FRANCIÆ, [[I]]est canonicus de consuetudine et habet parvam præbendam quam habet sanctus Venantius et debet sedere in sede thesaurarii[[/I]][[N59]].",
+      "source_sha256": "65a7ee98ccca5008abfcc7c62e4a4ddfeed73a46a45d696d6947d3a2372e0f85",
+      "target_id": "ru-fr86-u024-b0097",
+      "tag": "p",
+      "target_sha256": "935a6be16c2c0fafb6e23d33c8b3b5bfae35abaf8d25df8e42e68c9df3010745"
+    },
+    {
+      "source_id": "fr86-u024-b0098",
+      "target": "Утверждали, что с того времени архидиакон часто беседовал с Людовиком XI, когда Его Величество приезжал в Париж, и что влияние дома Клода затмевало Оливье ле Дэна и Жака Коактье, который, на свой лад, сильно помыкал королём.",
+      "source_sha256": "b418a557019a0974c98e122896c7fd5959c32ee50c301bd055245bdffef75d14",
+      "target_id": "ru-fr86-u024-b0098",
+      "tag": "p",
+      "target_sha256": "187acfffe7b22b52d332f623f858f1c0412fad955c49b60cb1ff8cf4df91ee14"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYCGuczPqKTCQ1N3iVES",
+    "usage": {
+      "input_tokens": 3355,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 470,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u024-b0096",
+    "fr86-u024-b0097",
+    "fr86-u024-b0098"
+  ]
+}
