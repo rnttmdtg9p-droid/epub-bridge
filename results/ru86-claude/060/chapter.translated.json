@@ -1,0 +1,96 @@
+{
+  "unit": 60,
+  "heading": {
+    "source_id": "fr86-u060-b0000",
+    "target": "III\nЖЕНИТЬБА ФЕБА",
+    "source_sha256": "9072a54bfd473869accddda6ab074aeca269cb0defadfd80c148474ff225582d",
+    "target_id": "ru-fr86-u060-b0000",
+    "tag": "h2",
+    "target_sha256": "f2ac934675b0f79dbb3f7ace0fb25a6ae7a0fe1b3667a3564989703b271fe0d1"
+  },
+  "rows": [
+    {
+      "source_id": "fr86-u060-b0000",
+      "target": "III\nЖЕНИТЬБА ФЕБА",
+      "source_sha256": "9072a54bfd473869accddda6ab074aeca269cb0defadfd80c148474ff225582d",
+      "target_id": "ru-fr86-u060-b0000",
+      "tag": "h2",
+      "target_sha256": "f2ac934675b0f79dbb3f7ace0fb25a6ae7a0fe1b3667a3564989703b271fe0d1"
+    },
+    {
+      "source_id": "fr86-u060-b0001",
+      "target": "Ближе к вечеру того дня, когда епископские судебные чины пришли подобрать с мостовой Паперти изломанный труп архидиакона, Квазимодо уже исчез из собора Парижской Богоматери.",
+      "source_sha256": "6018c5452f8a1a8bbc6e25ab1df9822db63351bb2443cc45703915366c5b1665",
+      "target_id": "ru-fr86-u060-b0001",
+      "tag": "p",
+      "target_sha256": "1d20d134c84324817ad662fd238962a5f59e904b757bd47f3b9356438fe9f77c"
+    },
+    {
+      "source_id": "fr86-u060-b0002",
+      "target": "Об этом происшествии ходило много толков. Никто не сомневался, что настал день, когда, согласно их договору, Квазимодо, то есть дьявол, должен был унести Клода Фролло, то есть колдуна. Предполагали, что он сломал тело, чтобы забрать душу, подобно обезьянам, которые разбивают скорлупу, чтобы съесть орех.",
+      "source_sha256": "f96be76a3712237ccef31b2751b6fb7ed8951c9ffb4e62d04b2f1ff4aa0f8c4a",
+      "target_id": "ru-fr86-u060-b0002",
+      "tag": "p",
+      "target_sha256": "698263c53cef56584b01ef30ea72959efce7a34f61251a99ee8cd628c58626fe"
+    },
+    {
+      "source_id": "fr86-u060-b0003",
+      "target": "Вот почему архидиакона не похоронили в освящённой земле.",
+      "source_sha256": "a2a78f571ae50255500902a28581786b0d1cd7edb69f489cfe018f48e2519bf6",
+      "target_id": "ru-fr86-u060-b0003",
+      "tag": "p",
+      "target_sha256": "f0a6328bc17934317b2330a58cb0ec52bb5fe379e2bf9ddebfaca6f301190e52"
+    },
+    {
+      "source_id": "fr86-u060-b0004",
+      "target": "Людовик XI умер годом позже, в августе 1483 года.",
+      "source_sha256": "b2502772aa5a6c018a61c1824f2e18f76f27f0f256a61a0b8c422b13194eb63c",
+      "target_id": "ru-fr86-u060-b0004",
+      "tag": "p",
+      "target_sha256": "dae115645ef434162a963fa022f5646166e276258c58bf74b2b3ae4173a6f495"
+    },
+    {
+      "source_id": "fr86-u060-b0005",
+      "target": "Что до Пьера Гренгуара, ему удалось спасти козу, и он добился успехов в трагедии. Похоже, отведав астрологии, философии, архитектуры, герметики — всех безумств на свете, — он вернулся к трагедии, самому безумному из них. Это он и называл [[I]]трагическим концом[[/I]]. Вот что о его драматических триумфах читаем уже в 1483 году в счетах обычных расходов: «Жеану Маршану и Пьеру Гренгуару, плотнику и сочинителю, которые сделали и сочинили мистерию, представленную в парижском Шатле по случаю въезда господина легата, распределили роли, облачили и нарядили лиц, как того требовала упомянутая мистерия, равно как соорудили подмостки, для того необходимые; и за сие — сто ливров».",
+      "source_sha256": "1b0f41bb500181b55a366254fa89881b28ad467a81b0c9e0f8dd408c816780e7",
+      "target_id": "ru-fr86-u060-b0005",
+      "tag": "p",
+      "target_sha256": "a797805715a11ae7aef1388f175604ba74a178d190156c2b0f1a4ab8acb0376a"
+    },
+    {
+      "source_id": "fr86-u060-b0006",
+      "target": "Феб де Шатопер тоже кончил трагически: он женился.",
+      "source_sha256": "4a2591d172022b5282c17ca88a36aa7562617f2b928666ab3f3d00a0457f4494",
+      "target_id": "ru-fr86-u060-b0006",
+      "tag": "p",
+      "target_sha256": "bcfe8bb678d7b168ff49f19d0918ebfa11114ccd2768b2e20c845aa4e1331141"
+    }
+  ],
+  "source_rows": 7,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgYHZbmkaPWEWnKy5WmYn",
+      "usage": {
+        "input_tokens": 3793,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 745,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
