@@ -1,0 +1,31 @@
+name: BB rank87 Claude INITIAL15captions only
+on:
+  push:
+    paths: ['.github/workflows/bb-ru87-captions.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bb-russian-rank87-initial-captions
+  cancel-in-progress: false
+jobs:
+  initial-caption-translation-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: bb-ru87-captions-20261030
+      - name: Claude INITIAL translation only; NEVER literary review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru87_initial_captions.py
+      - name: Preserve initial output or exact failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru87-initial-captions
+          path: results/ru87-initial-captions/
+          retention-days: 90
+          if-no-files-found: error
