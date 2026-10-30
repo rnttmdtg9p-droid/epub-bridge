@@ -1,0 +1,75 @@
+{
+  "unit": 28,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u028-b0151",
+      "target": "Маэтта, до сих пор задыхавшаяся так, что не могла вымолвить ни слова, сделала над собой усилие. «Погодите», — сказала она. Затем, наклонившись к оконцу, позвала: «Пакетта! Пакетта Шантфлери!»",
+      "source_sha256": "aa92f4866118740a9d2c3a0a1dce23fa299693c8ffb835588cb6cc060732fefb",
+      "target_id": "ru-fr86-u028-b0151",
+      "tag": "p",
+      "target_sha256": "d829de1c164401753a46637de1402cba2d45cec6b5deb0e48c3936b6c65f4b1f"
+    },
+    {
+      "source_id": "fr86-u028-b0152",
+      "target": "Ребёнок, который по простоте душевной дует на плохо зажжённый фитиль петарды и получает взрыв прямо в глаза, не бывает напуган сильнее, чем была напугана Маэтта действием этого имени, внезапно брошенного в келью сестры Гудулы.",
+      "source_sha256": "8fd35a78c9b617e3353617c11e3a7eb9962c9d8805f12a8b342ffa4184597194",
+      "target_id": "ru-fr86-u028-b0152",
+      "tag": "p",
+      "target_sha256": "6748871de26db9437cdbefd5531e4fb0045ee26ab44d2583dc1b23e9fabe24fd"
+    },
+    {
+      "source_id": "fr86-u028-b0153",
+      "target": "Затворница вздрогнула всем телом, вскочила на босые ноги и бросилась к оконцу, и глаза её так пылали, что Маэтта, Ударда, другая женщина и ребёнок отпрянули до самого парапета набережной.",
+      "source_sha256": "1182ff7fccff7ec55647ebfce247c3ad103a198e5368ec58db5f9b9a1ea834a6",
+      "target_id": "ru-fr86-u028-b0153",
+      "tag": "p",
+      "target_sha256": "f59f85be1cd1f0c56237a55a96351d3899b71db5801d38e37eefbca7c8544b4a"
+    },
+    {
+      "source_id": "fr86-u028-b0154",
+      "target": "Тем временем зловещее лицо затворницы показалось, прильнув к решётке отдушины. «О! о! — кричала она с жутким смехом. — Это египтянка зовёт меня!»",
+      "source_sha256": "5f39c23b451da22c341a9c72b60fe7c1de27a92fcc6b54d1603964f464206961",
+      "target_id": "ru-fr86-u028-b0154",
+      "tag": "p",
+      "target_sha256": "0ad233f7883ed51013ea0c3b2fe2905354278d6245836090a535c57d2f10ee0b"
+    },
+    {
+      "source_id": "fr86-u028-b0155",
+      "target": "В этот миг сцена, разыгравшаяся у позорного столба, остановила её блуждающий взгляд. Лоб её сморщился от ужаса, она высунула из своей клетки обе костлявые руки, похожие на руки скелета, и закричала голосом, похожим на хрип: «Так это опять ты, египетское отродье! Это ты зовёшь меня, воровка детей! Что ж! Будь ты проклята! Проклята! Проклята! Проклята!»",
+      "source_sha256": "2c633c0b0d151d2fd2d6df7789190411aa2b2638a95ab02eb43ac5dcc5682d20",
+      "target_id": "ru-fr86-u028-b0155",
+      "tag": "p",
+      "target_sha256": "d4192627cebd7a6de4b3f83d822f49fcad3f4b7ba185873bbc1489e875285c30"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYCxwWDKBocKnvvtcMsd",
+    "usage": {
+      "input_tokens": 3618,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 629,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u028-b0151",
+    "fr86-u028-b0152",
+    "fr86-u028-b0153",
+    "fr86-u028-b0154",
+    "fr86-u028-b0155"
+  ]
+}
