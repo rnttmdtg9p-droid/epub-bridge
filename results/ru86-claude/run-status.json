@@ -1,13 +1,8 @@
 {
-  "state": "PARTIAL_FAILURE",
-  "errors": [
-    {
-      "unit": 42,
-      "error": "STRICT_FORMAT_RETRIES_EXHAUSTED JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 4739 (char 4738)"
-    }
-  ],
+  "state": "INITIAL_TRANSLATION_COMPLETE_PENDING_INDEPENDENT_REVIEW_AND_BOOK_QA",
+  "errors": [],
   "source_units": 64,
   "source_rows": 4018,
   "claude_role": "INITIAL_TRANSLATION_ONLY",
-  "utc": "2026-10-30T10:04:07.492867+00:00"
+  "utc": "2026-10-30T10:47:58.601708+00:00"
 }
