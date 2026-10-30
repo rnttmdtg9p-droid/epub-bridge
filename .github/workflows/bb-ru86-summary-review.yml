@@ -1,4 +1,4 @@
-name: BB rank86 authorised abridged summaries independent OpenAI review
+name: BB rank86 authorised initial non-graphic summaries only
 on:
   push:
     paths: ['.github/workflows/bb-ru86-summary-review.yml']
@@ -9,22 +9,23 @@ concurrency:
   group: bb-russian-sequential-rank86-summary-review
   cancel-in-progress: false
 jobs:
-  independent-summary-review:
+  initial-summary-authoring-only:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           ref: bb-ru86-claude-20261030
-      - name: Independent OpenAI review only; never Claude
+      - name: Claude INITIAL authoring only; never literary review
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python3 scripts/bb_ru86_summary_review.py
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_WORKSPACE_ID: ${{ secrets.ANTHROPIC_WORKSPACE_ID }}
+        run: python3 scripts/bb_ru86_initial_summaries.py
       - name: Preserve review or exact failure without restricted source text
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ru86-summary-review
-          path: results/ru86-summary-review/
+          name: ru86-initial-summaries
+          path: results/ru86-initial-summaries/
           retention-days: 90
           if-no-files-found: error
