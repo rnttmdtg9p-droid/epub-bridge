@@ -1,0 +1,67 @@
+name: Verify German 168 and 171 source editions
+on:
+  push:
+    branches: [bb-german-168-171-sources-20261030]
+    paths: [.github/workflows/bb-german-168-171-verify.yml]
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify source witnesses
+        shell: python
+        run: |
+          import urllib.request, urllib.parse, json, concurrent.futures, pathlib, re, html
+          urls=[
+            'https://projekt-gutenberg.org/authors/else-ury/books/nesthaekchen-und-ihre-puppen/',
+            'https://projekt-gutenberg.org/authors/franz-werfel/books/die-vierzig-tage-des-musa-dagh/',
+            'https://archive.org/advancedsearch.php?output=json&rows=100&q='+urllib.parse.quote('creator:("Else Ury") AND (title:(Nesth*) OR title:(Puppen))')+'&fl[]=identifier&fl[]=title&fl[]=date',
+            'https://archive.org/advancedsearch.php?output=json&rows=100&q='+urllib.parse.quote('title:("Nesthäkchen und ihre Puppen")')+'&fl[]=identifier&fl[]=title&fl[]=date',
+          ]
+          ids=['dievierzigtagede0001fran','dievierzigtagede0000fran','dievierzigtagede02werf','dievierzigtagede0000fran_x2i5','dievierzigtagede0000fran_u4c2','dievierzigtagede0000werf','vierzig_tage_des_musa_dagh','die_vierzig_tage_des_musa_dagh_1']
+          urls += ['https://archive.org/metadata/'+i for i in ids]
+          def fetch(u):
+            try:
+              with urllib.request.urlopen(urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0'}),timeout=35) as r: return {'url':u,'status':r.status,'body':r.read(1500000).decode('utf-8','replace')}
+            except Exception as e: return {'url':u,'error':str(e)}
+          results=list(concurrent.futures.ThreadPoolExecutor(max_workers=8).map(fetch,urls))
+          summaries=[]
+          for x in results:
+            b=x.pop('body','')
+            if '/metadata/' in x['url'] and b:
+              j=json.loads(b)
+              x['metadata']=j.get('metadata',{})
+              x['files']=[{k:f.get(k) for k in ['name','format','size','private','source']} for f in j.get('files',[]) if any(s in f.get('name','') for s in ['.pdf','.epub','_djvu.txt','_meta.xml'])]
+              x['is_dark']=j.get('is_dark')
+            elif 'advancedsearch' in x['url']: x['search']=json.loads(b) if b else None
+            else:
+              x['links']=list(dict.fromkeys(html.unescape(s) for s in re.findall('href=["\x27]([^"\x27]+)',b) if '/chapter/' in s or '.pdf' in s or '.epub' in s))
+              clean=re.sub('<script[\\s\\S]*?</script>|<style[\\s\\S]*?</style>','',b,flags=re.I)
+              clean=html.unescape(re.sub('<[^>]+>',' ',clean))
+              x['text']=re.sub(r'\\s+',' ',clean)
+              if x['links']:
+                chapters=[u for u in x['links'] if '/chapter/' in u and '?' not in u]
+                if chapters:
+                  x['sample_chapters']=[]
+                  for u in [chapters[1] if len(chapters)>1 else chapters[0],chapters[-1]]:
+                    sample=fetch(u)
+                    t=sample.get('body','')
+                    # Preserve publicly served source HTML, without changing its wording.
+                    p=pathlib.Path('results/german-168-171-samples');p.mkdir(exist_ok=True)
+                    name=('168' if 'else-ury' in u else '171')+'_'+u.rstrip('/').split('/')[-1]+'.html'
+                    (p/name).write_text(t)
+                    clean=re.sub('<script[\\s\\S]*?</script>|<style[\\s\\S]*?</style>','',t,flags=re.I)
+                    clean=html.unescape(re.sub('<[^>]+>',' ',clean))
+                    x['sample_chapters'].append({'url':u,'status':sample.get('status'),'text':re.sub(r'\\s+',' ',clean)})
+            summaries.append(x)
+          pathlib.Path('results/german-168-171-verification.json').write_text(json.dumps(summaries,ensure_ascii=False,indent=2))
+      - name: Preserve findings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/german-168-171-verification.json results/german-168-171-samples
+          git commit -m "Verify German 168 and 171 source pages and archive editions"
+          git push origin HEAD:bb-german-168-171-sources-20261030
