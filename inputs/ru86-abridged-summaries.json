@@ -1,0 +1,234 @@
+{
+  "utc": "2026-10-30T19:38:05.879068+00:00",
+  "edition": "Сокращённое издание",
+  "authorisation": "User explicitly approved replacing16restricted passages with brief non-graphic plot summaries: proceed.",
+  "original_unabridged_release": false,
+  "original_source_sha256": "72254073aca5e662e9fb7dd680e53b477a0504393a8ec38e292682b59c4ca809",
+  "replaced_source_rows": 16,
+  "summary_blocks": 11,
+  "rows": [
+    {
+      "id": "bb86-summary-01",
+      "source_ids": [
+        "fr86-u038-b0050"
+      ],
+      "source_sha256": [
+        "b9abef940450df99a76738de6687ca7ac4a326f1836e6d79bf44a4ad206db4d4"
+      ],
+      "unit": 38,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Феб продолжил свои ухаживания; Эсмеральда, погружённая в свои мысли, почти не замечала происходившего.",
+      "target_sha256": "ac8e35dd8531850f4b4e83a4947896ca3c8e30485322c8c0f06ec39b9afa8471",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-02",
+      "source_ids": [
+        "fr86-u038-b0060",
+        "fr86-u038-b0061",
+        "fr86-u038-b0062"
+      ],
+      "source_sha256": [
+        "9a992d1c1ee9f8caffcf26f6c1e47864460a806168a82840267c49f10e7650d5",
+        "ee043b2e264c535d61756a95ef639e92b04c9b3a30d93721639b54ba5041b303",
+        "d30c161ad0063792df6259a2e6ab8c29a04e012aa0b74e5088cb44eecf078419"
+      ],
+      "unit": 38,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Феб стал настойчивее. Скрывавшийся Клод наблюдал за ними, терзаемый ревностью. Эсмеральда встрепенулась и отстранилась от капитана.",
+      "target_sha256": "7babb50a9d582fe02a8697329a60970e86d26046e38617307172fbca41816f37",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-03",
+      "source_ids": [
+        "fr86-u038-b0068"
+      ],
+      "source_sha256": [
+        "9ed6084219735ee7a7b92cce76a27446b74321a4e98c3ba68689d3f35b92df86"
+      ],
+      "unit": 38,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Эсмеральда обняла Феба и просила ответить на её любовь; он поцеловал её.",
+      "target_sha256": "f515a9ce207b7393073d2df5b61d1f5297407527d3241ed71d9deed6ff5b8804",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-04",
+      "source_ids": [
+        "fr86-u042-b0072"
+      ],
+      "source_sha256": [
+        "870320ad68f3980124a7bed54b2647b0a7d535b0c0fbbac583b417b3b47560a7"
+      ],
+      "unit": 42,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Клод признался, что навязчивая страсть лишила его покоя: он разыскивал Эсмеральду, следил за ней и с каждым днём всё глубже погружался в отчаяние.",
+      "target_sha256": "0d4999d591f6dc4644eafd94cf3824988635876e3fd08f467183b43554830867",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-05",
+      "source_ids": [
+        "fr86-u042-b0080"
+      ],
+      "source_sha256": [
+        "c52d314b089d278968069088bdfa62544c8f35c628ae28122e246fe5f2f60a35"
+      ],
+      "unit": 42,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Священник запретил ей произносить имя Феба. Он рассказал, как присутствовал на её суде и пытке и как, не выдержав её страданий, ранил себя кинжалом.",
+      "target_sha256": "010bd88cc5f30d39e4748b4271b1d33972bea81ecccd987479699e609d43b491",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-06",
+      "source_ids": [
+        "fr86-u042-b0083"
+      ],
+      "source_sha256": [
+        "013d023cc3ef069f58f94266af80165d9294adcf16b5b406d4bd5726f23462f4"
+      ],
+      "unit": 42,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Он умолял о жалости, говоря о своей ревности, о мучениях неразделённой любви и о том, как его поступки привели её к пытке.",
+      "target_sha256": "2c33378d8c518ed41adccca3f0d6c25b44e818538b28279edd19a895ceee7914",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-07",
+      "source_ids": [
+        "fr86-u045-b0007"
+      ],
+      "source_sha256": [
+        "f3ac52cdbe0f94bc7bc6ac3ec5c7eceec5de38bb49d5615ee0a0bf5eedeca17d"
+      ],
+      "unit": 45,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Мысль о публичном унижении Эсмеральды вызвала у Клода новую вспышку мучительной ревности.",
+      "target_sha256": "4fdd9c6ce7900875974b38f45da0b66d85db232276adc095e45efed104b0e15c",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-08",
+      "source_ids": [
+        "fr86-u045-b0029"
+      ],
+      "source_sha256": [
+        "6c4a41436042da5678adfad641e41e58fa65460db17b0fcb24bdbd0b4562dd54"
+      ],
+      "unit": 45,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Жеан посетовал, что бутылка пуста, а денег у него больше нет, и отпустил непристойную шутку.",
+      "target_sha256": "1a526e21e91c1f791895104c9faed962b964a1f45284a5eef81d3474d9fa9573",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-09",
+      "source_ids": [
+        "fr86-u049-b0007",
+        "fr86-u049-b0008",
+        "fr86-u049-b0009"
+      ],
+      "source_sha256": [
+        "183995c1f951631b842c4790532006611e8df37ecb350d2a5f3efee083308b71",
+        "ec06d7415ebc94094be33faddd5b18a6b304160ad858eb7209a671eeac2ae000",
+        "4e0fb57d1c176f0e63435c2bc0cfa8f2a4bf2f3c29434423ec2183688f3e32b4"
+      ],
+      "unit": 49,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "После известия, что Эсмеральда жива, Клод вновь утратил покой. Ночами его преследовали воспоминания о ней и о её страданиях. Однажды, не выдержав, он поднялся с постели, накинул стихарь и вышел из кельи с лампой в руке.",
+      "target_sha256": "98a0f68cd3d76c1ddade4ac223a0e90c72b27a6f7e65a39805ae0fed96f7226f",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    },
+    {
+      "id": "bb86-summary-10",
+      "source_ids": [
+        "fr86-u053-b0029",
+        "fr86-u053-b0030"
+      ],
+      "source_sha256": [
+        "c9d4ebda1b344c9ed7db9304c7af6f1b2cd070713176bcbacd0f7c288fd9b7a5",
+        "4b396d590c7466cd23b801c221a458670ca0f4daab6bf33f47fbee74222f0338"
+      ],
+      "unit": 53,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "За ужином Жеан шумно хвастался своим дворянством и родством с архидиаконом, задирал соседей и вмешивался в ссоры. Он расхваливал нос Батиста Крок-Уазона, приговаривая: [[I]]Non cuiquam datum est habere nasum[[/I]][[N123]]. Он заявил, что, став бродягой, отказался от обещанной братом половины дома в раю, и повторил это по-латыни: [[I]]Dimidiam domum in paradiso[[/I]]. Затем он продолжил свои похвальбы.",
+      "target_sha256": "5f59c22c75b3268d094d1eab0cc4a0d25bcf98a7366f4eb55b3a00daeeee21a4",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": [
+        "123"
+      ]
+    },
+    {
+      "id": "bb86-summary-11",
+      "source_ids": [
+        "fr86-u053-b0032"
+      ],
+      "source_sha256": [
+        "ac989cbec6dcc8fc5ab90cfce17a6bc1578774219510faa185dec0def4154959"
+      ],
+      "unit": 53,
+      "role": "editorial_summary",
+      "tag": "p",
+      "target": "Жеан указал спутнице на луну и облака, а затем стал бранить хозяйку за волосы в омлете и за беспорядок в её заведении.",
+      "target_sha256": "bed5d92ae998c9ab21d179f4ea865cd470974161784a1108bae9870de2540de8",
+      "visible_label": "Краткое изложение редакции:",
+      "treatment": "AUTHORISED_NON_GRAPHIC_PLOT_SUMMARY_NOT_A_LITERAL_TRANSLATION",
+      "factual_comparison": "Compared with the previously read source: character identities, chronology, actions and causal links retained without graphic detail.",
+      "independent_review": "PENDING",
+      "note_markers": []
+    }
+  ],
+  "retained_reviewed_rows": 4002,
+  "release_ready": false
+}
