@@ -1,0 +1,111 @@
+{
+  "unit": 62,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u062-b0000",
+      "target": "ПРИМЕЧАНИЯ:",
+      "source_sha256": "728eb6029dd7af6919f774a4d0def0755d5b1ca7a741c89c55486bbe8b95c80e",
+      "target_id": "ru-fr86-u062-b0000",
+      "tag": "h2",
+      "target_sha256": "703e80500330d45bbb597660047084de177f694554760b7cbd2adccff99142d6"
+    },
+    {
+      "source_id": "fr86-u062-b0001",
+      "target": "ПРИМЕЧАНИЕ I.",
+      "source_sha256": "83457f2320a107cf323a99fd6f5c9ca4949034b08d487868585b88b4854aa51d",
+      "target_id": "ru-fr86-u062-b0001",
+      "tag": "h3",
+      "target_sha256": "b491f05d8654cc0791e78d80ce398911d767a57ba6b092b16c5e08822de56549"
+    },
+    {
+      "source_id": "fr86-u062-b0002",
+      "target": "На титульном листе рукописи [[I]]Собора Парижской Богоматери[[/I]] читаем следующую заметку:",
+      "source_sha256": "9fe7ad4e24ee9e9ea05bd36929a1defb62685bf784cfab09877be7f7dfe9e8f3",
+      "target_id": "ru-fr86-u062-b0002",
+      "tag": "p",
+      "target_sha256": "43b5b92e3cd902df3ebd6dd1408a1c12900b5a1d70544c3963b141eab8fd9966"
+    },
+    {
+      "source_id": "fr86-u062-b0003",
+      "target": "Первые три или четыре страницы [[I]]Собора Парижской Богоматери[[/I]] я написал 25 июля 1830 года. Июльская революция прервала меня. Затем на свет появилась моя милая малютка Адель (да будет она благословенна!). Я вновь принялся писать [[I]]Собор Парижской Богоматери[[/I]] 1 сентября, и работа была закончена 15 января 1831 года.",
+      "source_sha256": "12b1f124bf26e4f0fa1196810cb702f0150e6756ddb905e566e298ee0f78aad1",
+      "target_id": "ru-fr86-u062-b0003",
+      "tag": "p",
+      "target_sha256": "1c06a4d80d4c9e28ab1ed737123cf8f3e4529682f662a2c65afec74b772a5114"
+    },
+    {
+      "source_id": "fr86-u062-b0004",
+      "target": "Глава I, [[I]]Большой зал[[/I]], начиналась в рукописи так:",
+      "source_sha256": "509763e3a301d50c0ba0cf84ccaca87a95beae4e9ff59d65798b6951ef2a7290",
+      "target_id": "ru-fr86-u062-b0004",
+      "tag": "p",
+      "target_sha256": "d9d12def21e7dbd8932a2f48c2d7c58a9c3c1512e83a3ef3e2af93f7d590d270"
+    },
+    {
+      "source_id": "fr86-u062-b0005",
+      "target": "«Сегодня, двадцать пятого июля 1830 года, прошло триста сорок восемь лет шесть месяцев и девятнадцать дней и т. д.»",
+      "source_sha256": "17eb42f21a333319724494e9e3c30f862886276850b38447106263abbaeb9df9",
+      "target_id": "ru-fr86-u062-b0005",
+      "tag": "p",
+      "target_sha256": "f6130cde878e6bbcbfedcf7cdd01d6ab5a1d0759c5d025d745c0d58da0b72e52"
+    },
+    {
+      "source_id": "fr86-u062-b0006",
+      "target": "Слова [[I]]двадцать пятого июля 1830 года[[/I]] зачёркнуты.",
+      "source_sha256": "dab84cda7b85cf2b4cfa4d342b954dd8380cc5f679454e5f978671afa5dae222",
+      "target_id": "ru-fr86-u062-b0006",
+      "tag": "p",
+      "target_sha256": "c8fbd5f6f32fb9c715002f9d1143311c4fc1ba97b2b2e2595e5bdbf79d88ce45"
+    },
+    {
+      "source_id": "fr86-u062-b0007",
+      "target": "Дата [[I]]1 сентября[[/I]] стоит перед абзацем: «Если бы нам, людям 1830 года, было дано и т. д.»",
+      "source_sha256": "8dbec0d997fd29a80cc8495082e6ae96e1299a8a988f02a0d3f3be306d804a88",
+      "target_id": "ru-fr86-u062-b0007",
+      "tag": "p",
+      "target_sha256": "4af122c2460649c51bfc22350a37f4e7457e954478583b9584b819c45744269a"
+    },
+    {
+      "source_id": "fr86-u062-b0008",
+      "target": "Внизу последней страницы читаем: [[I]]15 января 1831 года, 6 часов ½ вечера[[/I]].",
+      "source_sha256": "1c7e61a58391981e709721f6130a48e1564a66ee51d92200c3c6d3a611febbf0",
+      "target_id": "ru-fr86-u062-b0008",
+      "tag": "p",
+      "target_sha256": "65e9f02e5714d358f08f562ad60cc7d8ba1b227dd1b7ac9adf0d2b653ccb7197"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYHbJ6gEtegv2u1uuES7",
+    "usage": {
+      "input_tokens": 3979,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 660,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u062-b0000",
+    "fr86-u062-b0001",
+    "fr86-u062-b0002",
+    "fr86-u062-b0003",
+    "fr86-u062-b0004",
+    "fr86-u062-b0005",
+    "fr86-u062-b0006",
+    "fr86-u062-b0007",
+    "fr86-u062-b0008"
+  ]
+}
