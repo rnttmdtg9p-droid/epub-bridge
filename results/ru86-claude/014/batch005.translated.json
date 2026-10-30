@@ -1,0 +1,66 @@
+{
+  "unit": 14,
+  "batch": 5,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u014-b0160",
+      "target": "Петлю сняли, поэта спустили со скамеечки. Ему пришлось сесть — так сильно было потрясение.",
+      "source_sha256": "e900cad7248d6d7ba8802f0e267249ed61de7765612271965b93ac900d62ec38",
+      "target_id": "ru-fr86-u014-b0160",
+      "tag": "p",
+      "target_sha256": "3a54faabbb0ef3e2b9fb202f0c1b75c8105a52119b9d8815141e6a6b6917594e"
+    },
+    {
+      "source_id": "fr86-u014-b0161",
+      "target": "Герцог Египетский, не произнеся ни слова, принёс глиняный кувшин. Цыганка протянула его Гренгуару. — Бросьте его на землю, — сказала она.",
+      "source_sha256": "fd960745072c98e6eece8d754d3fed59a1cba269804bc0fde49235e7447d7daa",
+      "target_id": "ru-fr86-u014-b0161",
+      "tag": "p",
+      "target_sha256": "3c4673a6420dc8fcf13aa2c846ff76d6b03f189f25e7d69a7d71f1b7f80dd17a"
+    },
+    {
+      "source_id": "fr86-u014-b0162",
+      "target": "Кувшин разбился на четыре куска.",
+      "source_sha256": "c484a780685ac327ad37b00253c365e2f62732141188d43f71ffe8028b674092",
+      "target_id": "ru-fr86-u014-b0162",
+      "tag": "p",
+      "target_sha256": "24dfc3952b81592c9ff04165af919e97db5728c4261761ea1fcd7e6d2cad94f8"
+    },
+    {
+      "source_id": "fr86-u014-b0163",
+      "target": "— Брат, — сказал тогда герцог Египетский, возложив им руки на лоб, — она твоя жена; сестра, он твой муж. На четыре года. Ступайте.",
+      "source_sha256": "e00d2b000080621829daef072f778b1dcf6c2600789cef1587273dd27cc97f35",
+      "target_id": "ru-fr86-u014-b0163",
+      "tag": "p",
+      "target_sha256": "6c7ba9e68f22b98afaae63233c9658ae55d7d797278dad7695d9a473716c578b"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYBH6maqosiY4H6hog26",
+    "usage": {
+      "input_tokens": 3068,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u014-b0160",
+    "fr86-u014-b0161",
+    "fr86-u014-b0162",
+    "fr86-u014-b0163"
+  ]
+}
