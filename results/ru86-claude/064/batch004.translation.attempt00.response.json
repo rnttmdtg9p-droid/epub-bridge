@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CgYHkEQveH56sBYqmkeJV",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"fr86-u064-b0128\",\"target\":\"«Вино заставляет отступаться от веры даже мудрых.»\"},{\"source_id\":\"fr86-u064-b0129\",\"target\":\"Вооружённый десятью шпорами.\"},{\"source_id\":\"fr86-u064-b0130\",\"target\":\"«Без стольника и без виночерпия.»\"},{\"source_id\":\"fr86-u064-b0131\",\"target\":\"«Пульс частый, шумный, потрескивающий, неровный.»\"},{\"source_id\":\"fr86-u064-b0132\",\"target\":\"«От Турина, одновременно осаждающего и осаждённого.»\"},{\"source_id\":\"fr86-u064-b0133\",\"target\":\"«Как пчёлы — геометрию.»\"},{\"source_id\":\"fr86-u064-b0134\",\"target\":\"Против скупости.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 3689,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 289,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

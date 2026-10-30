@@ -1,0 +1,93 @@
+{
+  "unit": 64,
+  "batch": 4,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "fr86-u064-b0128",
+      "target": "«Вино заставляет отступаться от веры даже мудрых.»",
+      "source_sha256": "0ae23bb1f26a249496fa1c2a1179ac88bba242784ca76537bb2d182669f6ef6a",
+      "target_id": "ru-fr86-u064-b0128",
+      "tag": "p",
+      "target_sha256": "224f69d122a10f2763faa53d6258b239d15e470c818936fa4a46c4f7059ab4e4"
+    },
+    {
+      "source_id": "fr86-u064-b0129",
+      "target": "Вооружённый десятью шпорами.",
+      "source_sha256": "acd8992e3fa3b1b16328cd0d1c769d90ea47826b22f308c38f99a0b65e18bd72",
+      "target_id": "ru-fr86-u064-b0129",
+      "tag": "p",
+      "target_sha256": "95ba29dc2bb773bef27405d55be334cffe889fe0ba429cb7b041bd6bd9db756a"
+    },
+    {
+      "source_id": "fr86-u064-b0130",
+      "target": "«Без стольника и без виночерпия.»",
+      "source_sha256": "4f1eb398da36ed66b05bd187f0f1d81881cc7ee9642ca8a8197466aada0def56",
+      "target_id": "ru-fr86-u064-b0130",
+      "tag": "p",
+      "target_sha256": "a5fa5a3125994a10fcd60721ee28d6063b4a0eead0574748a84499442ee5f475"
+    },
+    {
+      "source_id": "fr86-u064-b0131",
+      "target": "«Пульс частый, шумный, потрескивающий, неровный.»",
+      "source_sha256": "584de5d53b216247c3c738cf63634fff91d87fbc0fb371d7cdaa67a71869abf3",
+      "target_id": "ru-fr86-u064-b0131",
+      "tag": "p",
+      "target_sha256": "9c30651a6704ebb512f5c68a2c9f46d5c5b3b9dcccc57b779cec2e2e9c2407f4"
+    },
+    {
+      "source_id": "fr86-u064-b0132",
+      "target": "«От Турина, одновременно осаждающего и осаждённого.»",
+      "source_sha256": "352df442904ac22785d15f587eefbaf8d09de87f5a0036cb447f70421bcbe01c",
+      "target_id": "ru-fr86-u064-b0132",
+      "tag": "p",
+      "target_sha256": "d620c8ba3be83aa99f3227b0bdf44e70930671199fac1bdf502b69b211060207"
+    },
+    {
+      "source_id": "fr86-u064-b0133",
+      "target": "«Как пчёлы — геометрию.»",
+      "source_sha256": "c25b1f4eb0729447864d347c7635c5a18ca6fd950ab92930be9e2ac7afc0b3f5",
+      "target_id": "ru-fr86-u064-b0133",
+      "tag": "p",
+      "target_sha256": "2f8a2ecac098f2ad6599f3c5b21fa5b08614f4bf680f8089c5f4415348b444d6"
+    },
+    {
+      "source_id": "fr86-u064-b0134",
+      "target": "Против скупости.",
+      "source_sha256": "8dbe27abc6a703e0436bfd90434d2fe09130a51833fae958671b0d8929c0602a",
+      "target_id": "ru-fr86-u064-b0134",
+      "tag": "p",
+      "target_sha256": "a03c811707631b521033c35ee47ca73c582c9ab8387c67b7be9620cdfda9ebc7"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgYHkEQveH56sBYqmkeJV",
+    "usage": {
+      "input_tokens": 3689,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 289,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "fr86-u064-b0128",
+    "fr86-u064-b0129",
+    "fr86-u064-b0130",
+    "fr86-u064-b0131",
+    "fr86-u064-b0132",
+    "fr86-u064-b0133",
+    "fr86-u064-b0134"
+  ]
+}
