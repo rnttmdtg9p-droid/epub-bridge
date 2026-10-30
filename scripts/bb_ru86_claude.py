@@ -61,7 +61,10 @@ def validate(rows,original):
 
 def checked_call(system,payload,path,source):
     last=None
-    for attempt in range(3):
+    existing_attempts=[int(p.name.split('.attempt')[1].split('.')[0]) for p in path.parent.glob(path.name+'.attempt*.response.json')]
+    offset=max(existing_attempts,default=-1)+1
+    for retry in range(3):
+        attempt=offset+retry
         request=dict(payload)
         if last:request['format_retry_instruction']='Previous response failed strict validation: '+last+'. Return only the requested JSON, with every source_id in supplied order. Do not invent or copy hashes; the host binds exact immutable source hashes.'
         try:
