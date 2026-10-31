@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cga6utDVwATWqLBUyGHG9",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"en94-05-032\",\"target\":\"Наступила пауза: мистер Аттерсон боролся с самим собой. — Зачем вы их сравнивали, Гест? — внезапно спросил он.\"},{\"source_id\":\"en94-05-033\",\"target\":\"— Видите ли, сэр, — отвечал клерк, — сходство тут довольно необычное: почерки во многом совпадают, только наклон разный.\"},{\"source_id\":\"en94-05-034\",\"target\":\"— Любопытно, — сказал Аттерсон.\"},{\"source_id\":\"en94-05-035\",\"target\":\"— Да, как вы говорите, весьма любопытно, — отозвался Гест.\"},{\"source_id\":\"en94-05-036\",\"target\":\"— Я бы не стал упоминать об этой записке, знаете ли, — сказал хозяин.\"},{\"source_id\":\"en94-05-037\",\"target\":\"— Нет, сэр, — сказал клерк. — Я понимаю.\"},{\"source_id\":\"en94-05-038\",\"target\":\"Но едва мистер Аттерсон остался в тот вечер один, как запер записку в сейф, где она и пролежала с тех пор. «Как! — подумал он. — Генри Джекил подделывает почерк ради убийцы!» И кровь заледенела у него в жилах.\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2897,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 439,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}

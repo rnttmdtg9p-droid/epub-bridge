@@ -1,0 +1,93 @@
+{
+  "unit": 5,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en94-05-032",
+      "target": "Наступила пауза: мистер Аттерсон боролся с самим собой. — Зачем вы их сравнивали, Гест? — внезапно спросил он.",
+      "source_sha256": "770ef4af8948af61276700e1f2c5b8264bcbe5cdf0f2ecef07df3f5173cdeaff",
+      "target_id": "ru-en94-05-032",
+      "tag": "p",
+      "target_sha256": "ced659c64f3a70c7e701c63286e5ac5343b981f0b34631b25bb92489c2282efb"
+    },
+    {
+      "source_id": "en94-05-033",
+      "target": "— Видите ли, сэр, — отвечал клерк, — сходство тут довольно необычное: почерки во многом совпадают, только наклон разный.",
+      "source_sha256": "be08c7d0a3d744111b6b0835f41a9a5921d9740e0ea9d57db6e3732ec6efc97b",
+      "target_id": "ru-en94-05-033",
+      "tag": "p",
+      "target_sha256": "198204e579c77e7c31f50068c9c17c2d58fe51261b7128dbc6385103212d442c"
+    },
+    {
+      "source_id": "en94-05-034",
+      "target": "— Любопытно, — сказал Аттерсон.",
+      "source_sha256": "f388fbe5a596e895a1a833ef865b691c8617445284475160d51445a5535eb55d",
+      "target_id": "ru-en94-05-034",
+      "tag": "p",
+      "target_sha256": "2fd79a1a2eb1f28b8fbcf30ccca3d4dd42de02463aed3b26b714da0b6108683f"
+    },
+    {
+      "source_id": "en94-05-035",
+      "target": "— Да, как вы говорите, весьма любопытно, — отозвался Гест.",
+      "source_sha256": "6b8c8a23c277b08847dbda0b4047cee69ff4c2d786c31ddd3d2e3570138c2bc1",
+      "target_id": "ru-en94-05-035",
+      "tag": "p",
+      "target_sha256": "9e0754031c1e675f74f9df52df2747abaa342c15875be217309af001a9129cbc"
+    },
+    {
+      "source_id": "en94-05-036",
+      "target": "— Я бы не стал упоминать об этой записке, знаете ли, — сказал хозяин.",
+      "source_sha256": "2620d11941b3e8b451a91d3b6e4be0fdff0885620f8a415182c65421d1b28f8f",
+      "target_id": "ru-en94-05-036",
+      "tag": "p",
+      "target_sha256": "f341f5a02031d373d9c7f9c6137f7536112536d0e411389bb5257698ea1d617a"
+    },
+    {
+      "source_id": "en94-05-037",
+      "target": "— Нет, сэр, — сказал клерк. — Я понимаю.",
+      "source_sha256": "a2771d98fdbafc319849be4ed795ed78a3ed885dedba2868300a79c8d8b02a06",
+      "target_id": "ru-en94-05-037",
+      "tag": "p",
+      "target_sha256": "3ecd5b3be82f38900d2dae5a6d69a4098e633779c2e2f2682ce53231841f011d"
+    },
+    {
+      "source_id": "en94-05-038",
+      "target": "Но едва мистер Аттерсон остался в тот вечер один, как запер записку в сейф, где она и пролежала с тех пор. «Как! — подумал он. — Генри Джекил подделывает почерк ради убийцы!» И кровь заледенела у него в жилах.",
+      "source_sha256": "caf0615a4b32f6c67193a691409ee6085cf6c21dd6ee6b2f8ad1897c99cb33cf",
+      "target_id": "ru-en94-05-038",
+      "tag": "p",
+      "target_sha256": "240eb60b341155f73d454394f0e0286c17ad0e1464ca688d4265a8e3d9fb4424"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011Cga6utDVwATWqLBUyGHG9",
+    "usage": {
+      "input_tokens": 2897,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 439,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en94-05-032",
+    "en94-05-033",
+    "en94-05-034",
+    "en94-05-035",
+    "en94-05-036",
+    "en94-05-037",
+    "en94-05-038"
+  ]
+}
