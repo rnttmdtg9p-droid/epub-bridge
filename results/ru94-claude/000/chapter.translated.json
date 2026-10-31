@@ -1,0 +1,56 @@
+{
+  "unit": 0,
+  "heading": {
+    "source_id": "en94-00-000",
+    "target": "ПОСВЯЩАЕТСЯ[[BR]] КЭТРИН ДЕ МАТТОС.",
+    "source_sha256": "e3d27ad70494cc02f4633b0ab328becce114686255e80ea50c1356b4fea0dc9f",
+    "target_id": "ru-en94-00-000",
+    "tag": "p",
+    "target_sha256": "9e7a5822370ff0a6563b6e977b18dc0532561639b06d1a1ab4053fa63c96115b"
+  },
+  "rows": [
+    {
+      "source_id": "en94-00-000",
+      "target": "ПОСВЯЩАЕТСЯ[[BR]] КЭТРИН ДЕ МАТТОС.",
+      "source_sha256": "e3d27ad70494cc02f4633b0ab328becce114686255e80ea50c1356b4fea0dc9f",
+      "target_id": "ru-en94-00-000",
+      "tag": "p",
+      "target_sha256": "9e7a5822370ff0a6563b6e977b18dc0532561639b06d1a1ab4053fa63c96115b"
+    },
+    {
+      "source_id": "en94-00-001",
+      "target": "Грешно рвать узы, что Бог повелел связать;\nМы остаёмся детьми вереска и ветра — нам иными не стать.\nВдали от дома — о, всё так же для тебя и для меня\nВ северном краю, прекрасный, дрок цветёт, маня.",
+      "source_sha256": "5fc2d7e7870b86feed67c1b7f9199321a937a5d55a2d8a1e431393eef1b45cf4",
+      "target_id": "ru-en94-00-001",
+      "tag": "p",
+      "target_sha256": "5e26e7d069cd355eda096aa5dec723f50a8f5ddc336affcf9b61ffb1be0c3903"
+    }
+  ],
+  "source_rows": 2,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011Cga6avNgvrrq3aykFi4XE",
+      "usage": {
+        "input_tokens": 1738,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1030,
+        "output_tokens_details": {
+          "thinking_tokens": 845
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
