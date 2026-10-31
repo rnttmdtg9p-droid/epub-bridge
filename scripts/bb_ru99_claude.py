@@ -17,8 +17,13 @@ def commit():
     with LOCK:
         subprocess.run(['git','add','results/ru99-claude'],cwd=ROOT,check=True)
         if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode:
-            subprocess.run(['git','commit','-m','Checkpoint rank94 initial Claude translation only'],cwd=ROOT,check=True)
-            subprocess.run(['git','push','origin','HEAD'],cwd=ROOT,check=True)
+            subprocess.run(['git','commit','-m','Checkpoint rank99 initial Claude translation only'],cwd=ROOT,check=True)
+        for push_attempt in range(5):
+            pushed=subprocess.run(['git','push','origin','HEAD'],cwd=ROOT)
+            if pushed.returncode==0:break
+            if push_attempt==4:raise RuntimeError('GIT_PUSH_RETRIES_EXHAUSTED')
+            print('TRANSIENT_CHECKPOINT_PUSH_RETRY',push_attempt+1,flush=True)
+            time.sleep(min(5*(push_attempt+1),15))
 
 
 SYSTEM="You are Boundary Bay's authorized INITIAL translator of Jonathan Swift's complete Gulliver's Travels from the supplied public-domain ENGLISH Project Gutenberg829 source into modern literary Russian. INITIAL TRANSLATION ONLY. Never perform literary review, QA, validation, approval or certification. Produce a NEW translation solely from supplied English. Never consult, copy, paraphrase or imitate any existing Russian translation, including Konchalovsky/Yakovenko, Frankovsky or Engelhardt. The frozen complete source has47transport units: source title/credit, two authentic opening texts (fictional publisher and Gulliver's letter), four authentic part headings,39chapters (8/8/11/12), and seven source notes. Include every supplied heading, chapter argument/synopsis, paragraph, dialogue, legal inventory/article, letter, date, signature, verse/foreign quotation and note. Do not summarize, abridge, combine, reorder, omit, sanitize or add material. Preserve speakers, agents, negation, proportions, geographical directions, exact dates, English measures/numbers, Swift's irony, ambiguity, political satire, invented customs, bodily details and disturbing judgments without endorsing or explaining them. Use clear natural literary Russian with Swift's measured eighteenth-century narrative voice, not a modern children's retelling. Preserve all exact [[I]]...[[/I]], [[SC]]...[[/SC]], [[B]]...[[/B]] markup markers, [[BR]] line breaks, all exact [[N1]] etc note markers in their source positions, and explicit source_lines counts. Do not invent or remove notes. Preserve genuine Latin/French quotations in the original language and their emphasis, including the two-line Virgil quotation with its one [[BR]] and two literal newline-separated source lines. Ordinary English words within emphasis/smallcaps must be translated faithfully. Source chapter arguments are authentic reading text, not headings to discard. Footnote labels and figure identity are host-bound metadata, not prose to invent. Do not invent chapter names: source numbered CHAPTER headings remain numbered chapter labels; four Part headings retain their authentic voyage names. Fixed collection short title: Путешествия Гулливера. Author: Джонатан Свифт. Terminology consistently: Lemuel Gulliver=Лемюэль Гулливер; Richard Sympson=Ричард Симпсон; Lilliput=Лилипутия; Blefuscu=Блефуску; Brobdingnag=Бробдингнег; Laputa=Лапута; Balnibarbi=Бальнибарби; Glubbdubdrib=Глаббдобдриб; Luggnagg=Лаггнегг; Houyhnhnms=гуигнгнмы; Yahoo/Yahoos=йеху; Glumdalclitch=Глюмдальклич; Flimnap=Флимнап; Bolgolam=Болголам; Reldresal=Рельдресель; Munodi=Мьюноди; Quinbus Flestrin=Куинбус Флестрин. Preserve invented words and names consistently, retaining foreign-language word specimens where the narrator gives them as such. Translate all English narrative, chapter arguments and seven note texts, including notes which quote older textual variants. Every returned row must retain supplied source_id in exact order. Return only the requested JSON rows; do not invent hashes or add commentary."
@@ -78,7 +83,17 @@ def checked_call(system,payload,path,source):
 
 def translate(unit):
     number=unit['unit'];folder=OUT/f'{number:03}';folder.mkdir(exist_ok=True)
-    allrows=unit['rows'];batches=[];batch=[];chars=0
+    allrows=unit['rows']
+    complete=folder/'chapter.translated.json'
+    if complete.exists():
+        prior=json.loads(complete.read_text())
+        assert prior['unit']==number and prior['state']=='INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW'
+        assert prior['source_rows']==len(allrows) and prior['provider_receipts']
+        validate(prior['rows'],allrows)
+        assert all(r.get('actual_model')==MODEL and r.get('response_id') for r in prior['provider_receipts'])
+        print('REUSE_ACCEPTED_UNIT',number,'ROWS',len(allrows),'NO_NEW_PROVIDER_CALL',flush=True)
+        return
+    batches=[];batch=[];chars=0
     for row in allrows:
         assert sha(row['text'])==row['sha256']
         if batch and (len(batch)>=32 or chars+len(row['text'])>12000):batches.append(batch);batch=[];chars=0
