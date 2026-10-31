@@ -1,0 +1,13 @@
+{
+  "state": "PARTIAL_FAILURE",
+  "errors": [
+    {
+      "unit": 33,
+      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
+    }
+  ],
+  "source_units": 47,
+  "source_rows": 681,
+  "claude_role": "INITIAL_TRANSLATION_ONLY",
+  "utc": "2026-10-31T14:34:13.336270+00:00"
+}
