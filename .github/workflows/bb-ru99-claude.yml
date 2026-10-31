@@ -1,4 +1,4 @@
-name: BB Russian rank99 initial Claude translation
+name: BB Russian rank99 Claude initial resume accepted units
 on:
   push:
     paths: ['.github/workflows/bb-ru99-claude.yml']
@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: bb-ru99-claude-20261031
       - name: Configure durable source-aligned checkpoints
         run: |
           git config user.name "github-actions[bot]"
