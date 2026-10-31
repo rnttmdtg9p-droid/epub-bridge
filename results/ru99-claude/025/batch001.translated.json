@@ -1,0 +1,39 @@
+{
+  "unit": 25,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en99-025-0016",
+      "target": "Через несколько дней мы вернулись в город; и его сиятельство, помня о дурной славе, которую имел в академии, не пожелал сам сопровождать меня, но поручил меня одному из своих друзей, чтобы тот составил мне там компанию. Милорд соизволил представить меня как великого почитателя прожектов, человека весьма любопытного и легковерного; что, по правде сказать, было не лишено основания, ибо и я сам в молодые годы был своего рода прожектёром.",
+      "source_sha256": "eb2a75a8b586ef310c3d2d1bd0f6a265a0bc763e8389999f446b072a4f3d00bc",
+      "target_id": "ru-en99-025-0016",
+      "tag": "p",
+      "target_sha256": "54d95535c8036e904a7df34fd9db50a154e9278c720cc7cdbff0816b38b2c9f9"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgaUMCqK74FmBV6XR9PFD",
+    "usage": {
+      "input_tokens": 3366,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 195,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en99-025-0016"
+  ]
+}
