@@ -1,0 +1,64 @@
+{
+  "unit": 0,
+  "heading": {
+    "source_id": "en99-000-0000",
+    "target": "ПУТЕШЕСТВИЯ ГУЛЛИВЕРА[[BR]] [[SC]]в несколько[[/SC]][[BR]] ОТДАЛЁННЫХ СТРАН МИРА",
+    "source_sha256": "5983abeadd8cf9639927c91e41ff39c7169a8b8bec771b4cac5c04ea48ff41c0",
+    "target_id": "ru-en99-000-0000",
+    "tag": "h1",
+    "target_sha256": "8e553423c3eb8b2a65f0228c1f8382643b703f912d572ed1bd74d21eef6c64cf"
+  },
+  "rows": [
+    {
+      "source_id": "en99-000-0000",
+      "target": "ПУТЕШЕСТВИЯ ГУЛЛИВЕРА[[BR]] [[SC]]в несколько[[/SC]][[BR]] ОТДАЛЁННЫХ СТРАН МИРА",
+      "source_sha256": "5983abeadd8cf9639927c91e41ff39c7169a8b8bec771b4cac5c04ea48ff41c0",
+      "target_id": "ru-en99-000-0000",
+      "tag": "h1",
+      "target_sha256": "8e553423c3eb8b2a65f0228c1f8382643b703f912d572ed1bd74d21eef6c64cf"
+    },
+    {
+      "source_id": "en99-000-0001",
+      "target": "СОЧИНЕНИЕ ДЖОНАТАНА СВИФТА, доктора богословия,[[BR]]\n [[SC]]настоятеля собора св. Патрика[[/SC]], [[SC]]в Дублине[[/SC]].",
+      "source_sha256": "33aa707e7ab6ea3ca08dcfedc0770f72d252f4c7247eb53cd671529f75f852f0",
+      "target_id": "ru-en99-000-0001",
+      "tag": "p",
+      "target_sha256": "98d75ba8ab38cc5497cbf108c94ce062abee26feb4e5b876cbb8f09f3a13a4ca"
+    },
+    {
+      "source_id": "en99-000-0002",
+      "target": "[[[I]]Впервые опубликовано в[[/I]] 1726–7 гг.]",
+      "source_sha256": "6b0dd369033a40b5ec70ca73bc6097429586cbe69246f7d70ec8d4cfc3e19ba9",
+      "target_id": "ru-en99-000-0002",
+      "tag": "p",
+      "target_sha256": "d76a6e75de14b6ebddf2892525696461594517c794fd5d0623e599aa6acd3416"
+    }
+  ],
+  "source_rows": 3,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgaSSSQJWzMyCvcJBwSch",
+      "usage": {
+        "input_tokens": 2381,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 972,
+        "output_tokens_details": {
+          "thinking_tokens": 700
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
