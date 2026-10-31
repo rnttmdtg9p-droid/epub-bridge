@@ -1,0 +1,48 @@
+{
+  "unit": 21,
+  "heading": {
+    "source_id": "en99-021-0000",
+    "target": "ЧАСТЬ III. ПУТЕШЕСТВИЕ В ЛАПУТУ, БАЛЬНИБАРБИ, ГЛАББДОБДРИБ, ЛАГГНЕГГ И ЯПОНИЮ.",
+    "source_sha256": "25e3b2b3b8193cb838f5d950118d3eb2e77b37cabadf1af936dc66637d000110",
+    "target_id": "ru-en99-021-0000",
+    "tag": "h2",
+    "target_sha256": "3e8c6a48c2ff9b5009a1cd8a3984539b9175ed982335509b8d03395f9ddf95b8"
+  },
+  "rows": [
+    {
+      "source_id": "en99-021-0000",
+      "target": "ЧАСТЬ III. ПУТЕШЕСТВИЕ В ЛАПУТУ, БАЛЬНИБАРБИ, ГЛАББДОБДРИБ, ЛАГГНЕГГ И ЯПОНИЮ.",
+      "source_sha256": "25e3b2b3b8193cb838f5d950118d3eb2e77b37cabadf1af936dc66637d000110",
+      "target_id": "ru-en99-021-0000",
+      "tag": "h2",
+      "target_sha256": "3e8c6a48c2ff9b5009a1cd8a3984539b9175ed982335509b8d03395f9ddf95b8"
+    }
+  ],
+  "source_rows": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgaU6JPWhAfJhzWpty6YF",
+      "usage": {
+        "input_tokens": 1770,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 121,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
