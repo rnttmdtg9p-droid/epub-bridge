@@ -1,0 +1,66 @@
+{
+  "unit": 1,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en94-01-026",
+      "target": "— Да, понимаю, — сказал Аттерсон. — Понимаю, как это должно вам казаться странным. Дело в том, что я не спрашиваю у вас имени другого лица лишь потому, что уже знаю его. Видите ли, Ричард, ваш рассказ попал в цель. Если вы в чём-нибудь были неточны, лучше вам это поправить.",
+      "source_sha256": "5e2aea4bf669500376a03932ec9d96487cb634cae8ba137d7c9ba7381fba1d52",
+      "target_id": "ru-en94-01-026",
+      "tag": "p",
+      "target_sha256": "6fbc9f0a5ec87e931b993a748656646151cb8ae91a9c6d4e772dd53e58f06fba"
+    },
+    {
+      "source_id": "en94-01-027",
+      "target": "— Думаю, вы могли бы меня предупредить, — отозвался тот с оттенком угрюмости. — Но я был педантично точен, как вы выражаетесь. У этого субъекта был ключ, и, более того, он у него до сих пор. Я видел, как он им воспользовался, не далее как неделю назад.",
+      "source_sha256": "0a62a50403f22a1154804e96bb8635d8b9b534a02db5c1e08ff69d7902f67ff0",
+      "target_id": "ru-en94-01-027",
+      "tag": "p",
+      "target_sha256": "98f9b6e2db4cdd5d16a7a7f601ded85a959b1eb9dd37939742f982c01f85a507"
+    },
+    {
+      "source_id": "en94-01-028",
+      "target": "Мистер Аттерсон глубоко вздохнул, но не проронил ни слова; а молодой человек немного погодя продолжил: — Вот ещё один урок — не болтать. Мне стыдно за мой длинный язык. Давайте условимся никогда больше не возвращаться к этому.",
+      "source_sha256": "8a9398b9a108ae37fdfb8d0ad7e0d3ba3e3d266a48d2ea5e81080bd3d9bccb24",
+      "target_id": "ru-en94-01-028",
+      "tag": "p",
+      "target_sha256": "3423b96a98ec88107b2b90d4a1c314039ac12dc1e680f35c8d8804448896fb9b"
+    },
+    {
+      "source_id": "en94-01-029",
+      "target": "— От всего сердца, — сказал адвокат. — Вот вам моя рука, Ричард.",
+      "source_sha256": "a7211772baf0d950d76fe253353be2e23a17648196cf88a542cf6b9fe58ce2a2",
+      "target_id": "ru-en94-01-029",
+      "tag": "p",
+      "target_sha256": "cf070d6acd4693bf206cf6fb30d88d0fa1ba885c2bab26fe3733fbb6b15190f7"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011Cga6gwu8fmVKuf9fyuZWM",
+    "usage": {
+      "input_tokens": 2435,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 452,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en94-01-026",
+    "en94-01-027",
+    "en94-01-028",
+    "en94-01-029"
+  ]
+}
