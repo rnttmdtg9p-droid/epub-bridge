@@ -102,7 +102,7 @@ def translate(unit):
         print('RANK94 UNIT',number,'BATCH',index+1,'OF',len(batches),'TRANSLATED',len(draft),'ROWS; REVIEW_PENDING',flush=True)
     assert len(final)==len(allrows)
     save(folder/'chapter.translated.json',{'unit':number,'heading':next(r for r in final if r['source_id']==unit['heading_id']),'rows':final,'source_rows':len(unit['rows']),'state':'INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW','translation_batches':len(batches),'provider_receipts':receipts,'master':'5.0.70'})
-    save(OUT/'progress.json',{'rank':86,'completed_unit':number,'source_units':11,'source_rows':350,'state':'INITIAL_TRANSLATION_RUNNING_REVIEW_NOT_RUN','utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+    save(OUT/'progress.json',{'rank':94,'completed_unit':number,'source_units':11,'source_rows':350,'state':'INITIAL_TRANSLATION_RUNNING_REVIEW_NOT_RUN','utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
     commit()
     print('UNIT_CHECKPOINT',number,'ROWS',len(unit['rows']),flush=True)
 
