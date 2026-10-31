@@ -1,13 +1,8 @@
 {
-  "state": "PARTIAL_FAILURE",
-  "errors": [
-    {
-      "unit": 33,
-      "error": "Command '['git', 'push', 'origin', 'HEAD']' returned non-zero exit status 1."
-    }
-  ],
+  "state": "INITIAL_TRANSLATION_COMPLETE_PENDING_INDEPENDENT_REVIEW_AND_BOOK_QA",
+  "errors": [],
   "source_units": 47,
   "source_rows": 681,
   "claude_role": "INITIAL_TRANSLATION_ONLY",
-  "utc": "2026-10-31T14:34:13.336270+00:00"
+  "utc": "2026-10-31T14:52:54.152745+00:00"
 }
