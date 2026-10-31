@@ -1,0 +1,104 @@
+{
+  "unit": 46,
+  "heading": {
+    "source_id": "en99-046-0000",
+    "target": "ПРИМЕЧАНИЯ:",
+    "source_sha256": "55ef8349ad07203ec2cca0f3d97640f57c9e65b07c838ffd97e6bcdc1006aed5",
+    "target_id": "ru-en99-046-0000",
+    "tag": "h3",
+    "target_sha256": "703e80500330d45bbb597660047084de177f694554760b7cbd2adccff99142d6"
+  },
+  "rows": [
+    {
+      "source_id": "en99-046-0000",
+      "target": "ПРИМЕЧАНИЯ:",
+      "source_sha256": "55ef8349ad07203ec2cca0f3d97640f57c9e65b07c838ffd97e6bcdc1006aed5",
+      "target_id": "ru-en99-046-0000",
+      "tag": "h3",
+      "target_sha256": "703e80500330d45bbb597660047084de177f694554760b7cbd2adccff99142d6"
+    },
+    {
+      "source_id": "en99-046-0001",
+      "target": "Станг — это шест, или жердь; шестнадцать с половиной футов.",
+      "source_sha256": "feac4ea19329c5cd93a2da124e36049488a095562826840b1a917487acb3e14e",
+      "target_id": "ru-en99-046-0001",
+      "tag": "p",
+      "target_sha256": "ca2573cad9978b9f4d0eea0d6250d089b2a84bd93270da032bf1aa1d12574f21"
+    },
+    {
+      "source_id": "en99-046-0002",
+      "target": "С тех пор был принят акт парламента, которым некоторые случаи злоупотребления доверием признаны наказуемыми смертью.",
+      "source_sha256": "7724cb791ccd7e2ae38c55cf57c1bf8b29d3b69a4ffbee69f67f366ca3893af5",
+      "target_id": "ru-en99-046-0002",
+      "tag": "p",
+      "target_sha256": "29f53e3e726ef25edb3b8fd9aa6a59e26846c51468bdd421b5d126c8e4de7df4"
+    },
+    {
+      "source_id": "en99-046-0003",
+      "target": "Британия.—[[I]]Сэр В. Скотт[[/I]].",
+      "source_sha256": "10e531387689cada06d40da5f862b84fc36bced97eded68c7e41678d4b16aed1",
+      "target_id": "ru-en99-046-0003",
+      "tag": "p",
+      "target_sha256": "ea76886fc47625a0bead8afc32897db4914eb1a38c085cdebbd424513f474c71"
+    },
+    {
+      "source_id": "en99-046-0004",
+      "target": "Лондон.—[[I]]Сэр В. Скотт[[/I]].",
+      "source_sha256": "5423b8f1359468d2bd4753c7af48dfe7fd7d4995ca6660cb041d167e62116c0d",
+      "target_id": "ru-en99-046-0004",
+      "tag": "p",
+      "target_sha256": "43688db179c0a006b457bc6293b059af4a0f6dc86c3c4fee56adead5ed69c03e"
+    },
+    {
+      "source_id": "en99-046-0005",
+      "target": "Это исправленный текст, принятый доктором Хоксвортом (1766). Приведённый выше абзац в первоначальных изданиях (1726) имеет иной вид и начинается так: «Я сказал ему, что если бы мне случилось жить в королевстве, где в ходу жребии», и так далее. Названия Трибния и Лангден не упоминаются, а «ночной горшок» и его значение не встречаются.",
+      "source_sha256": "75ee8e1c93333c5f210a4cee73a3bb7fd05806d62f46f72d0f313523d5207e2d",
+      "target_id": "ru-en99-046-0005",
+      "tag": "p",
+      "target_sha256": "7405b5fb3c767751a41e7d452f8cdb4e171ca6d16e5fa4892bf51cbb9355e71a"
+    },
+    {
+      "source_id": "en99-046-0006",
+      "target": "Этого абзаца нет в первоначальных изданиях.",
+      "source_sha256": "7744002a70b819e19fce820849cffa939c58799b9bc07f0535597c61411ed250",
+      "target_id": "ru-en99-046-0006",
+      "tag": "p",
+      "target_sha256": "e23b912336f9d51296b2046ef5174f95533c41267c488f121fbd96351d46b86e"
+    },
+    {
+      "source_id": "en99-046-0007",
+      "target": "В первоначальных изданиях и у Хоксворта здесь стоит Ротерхит, хотя ранее в сочинении говорится, что домом Гулливера в Англии был Редрифф.",
+      "source_sha256": "33a92334ecc62ad1b1b84c756d0f68d235549135b08694dfa354d7698c3ecf86",
+      "target_id": "ru-en99-046-0007",
+      "tag": "p",
+      "target_sha256": "fe63d83bd481dc7596d191fa23fa882a92678423f7da55b039fd59f73cdd4b0c"
+    }
+  ],
+  "source_rows": 8,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "translation_batches": 1,
+  "provider_receipts": [
+    {
+      "requested_model": "claude-sonnet-5-5",
+      "actual_model": "claude-sonnet-5-5",
+      "response_id": "msg_011CgaWELWimMFhqFyTJLU35",
+      "usage": {
+        "input_tokens": 3705,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 531,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "master": "5.0.70"
+}
