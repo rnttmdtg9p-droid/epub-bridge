@@ -1,0 +1,39 @@
+{
+  "unit": 41,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en99-041-0018",
+      "target": "Каждый четвёртый год, в день весеннего равноденствия, собирается представительный совет всего народа на равнине примерно в двадцати милях от нашего дома и заседает пять или шесть дней. Здесь расследуют положение и состояние отдельных округов: изобилуют ли они сеном или овсом, коровами или [[I]]йеху[[/I]], либо терпят в них недостаток; и где бы ни обнаружилась какая-либо нужда (что бывает лишь изредка), её тотчас восполняют по единодушному согласию и складчиной. Здесь же устанавливается и распределение детей: например, если у [[I]]гуигнгнма[[/I]] двое сыновей, он меняет одного из них на другого, у кого две дочери; а когда ребёнок был потерян по какому-либо несчастному случаю и мать уже вышла из возраста деторождения, определяют, какое семейство в округе должно произвести на свет другого, чтобы восполнить потерю.",
+      "source_sha256": "aa4b9c3fd5ce0a36d08e3951cba7ff81b7fe5db53e41887039a69a7095bf04ec",
+      "target_id": "ru-en99-041-0018",
+      "tag": "p",
+      "target_sha256": "ed7547f32963ce0c12bb295d536d9347a7bb801bb87774d7c70925347dd1f9ee"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgaVtXDqbTBbuJMPqMsnU",
+    "usage": {
+      "input_tokens": 2712,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 362,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en99-041-0018"
+  ]
+}
