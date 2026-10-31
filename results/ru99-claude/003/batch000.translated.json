@@ -1,0 +1,39 @@
+{
+  "unit": 3,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en99-003-0000",
+      "target": "ЧАСТЬ I. ПУТЕШЕСТВИЕ В ЛИЛИПУТИЮ.",
+      "source_sha256": "676f91a13509ace062eecd7c16885a018ddc4cfaa1254667f155b45c6b3e3ee3",
+      "target_id": "ru-en99-003-0000",
+      "tag": "h2",
+      "target_sha256": "4a20baa2c460186084e4959d639ac0977a7c6bbd50df5c3cbe2ac37c0d3a06a3"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgaSbq8mq4DJwnNwPveN7",
+    "usage": {
+      "input_tokens": 1695,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 72,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en99-003-0000"
+  ]
+}
