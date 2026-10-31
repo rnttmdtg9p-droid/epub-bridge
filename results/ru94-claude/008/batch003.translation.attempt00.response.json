@@ -1,0 +1,33 @@
+{
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cga78QFr9ymYaKaLURa7g",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"rows\":[{\"source_id\":\"en94-08-096\",\"target\":\"Адвокат спрятал пакет в карман. — Об этой бумаге я не скажу никому ни слова. Если ваш хозяин бежал или умер, мы по крайней мере можем спасти его доброе имя. Сейчас десять; мне надо вернуться домой и спокойно прочесть эти документы, но до полуночи я буду здесь, и тогда мы пошлём за полицией.\",\"target_id\":\"ru-en94-08-096\"},{\"source_id\":\"en94-08-097\",\"target\":\"Они вышли, заперев за собой дверь театра; и Аттерсон, вновь оставив слуг сидеть у камина в холле, побрёл обратно в свою контору, чтобы прочесть два повествования, в которых отныне предстояло объясниться этой тайне.\",\"target_id\":\"ru-en94-08-097\"}]}"
+    }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 2044,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 303,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "diagnostics": null
+}
