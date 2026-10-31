@@ -1,0 +1,39 @@
+{
+  "unit": 33,
+  "batch": 0,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en99-033-0000",
+      "target": "ЧАСТЬ IV. ПУТЕШЕСТВИЕ В СТРАНУ ГУИГНГНМОВ.",
+      "source_sha256": "024ee8fc9f29e444c9a32cb687a6981d66ace2465859725d19b32cbb080f65b5",
+      "target_id": "ru-en99-033-0000",
+      "tag": "h2",
+      "target_sha256": "08be588b30aafe9d5fa39e375d8b9a1e2df693105aac613a7832aeaef77eb910"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgaUoVYNkoF12czdT5BRo",
+    "usage": {
+      "input_tokens": 1728,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 78,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en99-033-0000"
+  ]
+}
