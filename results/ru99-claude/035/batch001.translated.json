@@ -1,0 +1,39 @@
+{
+  "unit": 35,
+  "batch": 1,
+  "state": "INITIAL_TRANSLATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "rows": [
+    {
+      "source_id": "en99-035-0011",
+      "target": "Когда стало приближаться к вечеру, конь-хозяин распорядился отвести мне место для ночлега; оно было всего в шести ярдах от дома и отделено от стойла [[I]]йеху[[/I]]. Здесь я раздобыл немного соломы и, укрывшись собственным платьем, спал очень крепко. Но вскоре я был устроен лучше, как узнает читатель далее, когда я стану говорить подробнее о моём образе жизни.",
+      "source_sha256": "361b4328736f43b44e6b4978ab70da9158649e9e1cd2abe3e0a2dad7746f385b",
+      "target_id": "ru-en99-035-0011",
+      "tag": "p",
+      "target_sha256": "5934d62c65ec5a9be61fbbe858e97c0d85c3a2a4315e1d2b1e2efe861b65729c"
+    }
+  ],
+  "translation_api": {
+    "requested_model": "claude-sonnet-5-5",
+    "actual_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgaVPr56xMskxwEMt5Cys",
+    "usage": {
+      "input_tokens": 3074,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 188,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    }
+  },
+  "source_row_ids": [
+    "en99-035-0011"
+  ]
+}
