@@ -1,0 +1,64 @@
+name: Rank 33 Final Literary Gate Evidence
+on:
+  push:
+    branches: [bb-ru33-french-claude-independent-review-20261105]
+    paths: ['.github/workflows/bb-ru33-final-literary-gate.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-literary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate complete first and second pass literary review evidence
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,re
+          full=pathlib.Path('reports/ru33_independent_review')
+          correction=pathlib.Path('reports/ru33_editorial_corrections')
+          post=pathlib.Path('reports/ru33_post_correction_review')
+          files=sorted(full.glob('chapter_*.json'))
+          assert len(files)==37 and len(list(correction.glob('chapter_*.json')))==37
+          initial={}
+          for n,f in enumerate(files,1):
+              x=json.loads(f.read_text());assert x['chapter']==n and x['review']['chapter']==n
+              initial[n]=x['review']
+          assert sum(x['checked_paragraphs'] for x in initial.values())==2117
+          second={}
+          ranges=['01-05','06-10','11-15','16-20','21-25','26-30','31-35','36-37']
+          for ran in ranges:
+              d=json.loads((post/f'recheck_{ran}.json').read_text())
+              for row in d['review']['chapters']:
+                  n=row['chapter'];assert n not in second
+                  second[n]=row
+          assert len(second)==37
+          total_corrected=0
+          for n in range(1,38):
+              x=json.loads((correction/f'chapter_{n:02d}.json').read_text())['corrections']['corrected']
+              total_corrected+=len(x)
+              assert second[n]['checked_paragraphs']==len(x)
+              if n!=9:assert second[n]['pass'] is True and not second[n]['remaining_issues']
+          assert total_corrected==196
+          nine=second[9];assert nine['pass'] is False and len(nine['remaining_issues'])==1 and nine['remaining_issues'][0]['id']=='c09-p0034'
+          revision=json.loads((correction/'chapter_09.json').read_text())
+          revised_row=next(x for x in revision['corrections']['corrected'] if x['id']=='c09-p0034')
+          assert 'огромную кофейную чашку' in revised_row['target'] and 'огромную половину чашки' not in revised_row['target']
+          recheck=json.loads((post/'recheck_09_final.json').read_text())
+          assert recheck['review_result']['pass'] is True and not recheck['review_result']['remaining_issues']
+          status={'rank':33,'isbn':'9781774965986','original_chapters':37,'all_original_paragraphs_reviewed':2117,'first_pass_critical_issues':sum(len(x['critical_issues']) for x in initial.values()),'first_pass_style_issues':sum(len(x['stylistic_issues']) for x in initial.values()),'corrected_paragraphs':total_corrected,'post_correction_reviewed_chapters':37,'post_correction_remaining_critical':0,'independent_models':['openai/gpt-6-sol','google/gemini-3.8-flash'],'translation_model':'claude-sonnet-5-5','literary_gate':'PASS','epub_release_gate':'NOT_YET_CHECKED'}
+          p=pathlib.Path('results/ru33_final_literary_gate');p.mkdir(parents=True,exist_ok=True)
+          (p/'final_literary_gate.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n')
+          print('FINAL_LITERARY_GATE',json.dumps(status,ensure_ascii=False))
+          PY
+      - name: Preserve full literary review and corrections evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru33-final-literary-review-gate-37-chapters
+          path: |
+            results/ru33_final_literary_gate/final_literary_gate.json
+            reports/ru33_independent_review/chapter_*.json
+            reports/ru33_editorial_corrections/chapter_*.json
+            reports/ru33_post_correction_review/recheck_*.json
+          if-no-files-found: error
+          retention-days: 90
