@@ -1,0 +1,55 @@
+name: Rank 33 Apply Independent Review Corrections (draft; never release)
+on:
+  push:
+    branches:
+      - bb-ru33-french-claude-independent-review-20261105
+    paths:
+      - '.github/workflows/bb-ru33-apply-editorial-corrections.yml'
+      - 'scripts/ru33_apply_review_edits.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: bb-ru33-editorial-draft
+  cancel-in-progress: false
+jobs:
+  prepare-revised-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch complete 37-chapter Claude translation checkpoint without re-translating
+        uses: actions/download-artifact@v4
+        with:
+          name: ru33-claude-french-original-draft-and-independent-review-resume
+          run-id: 42104369530
+          github-token: ${{ github.token }}
+          path: results/ru33-original-hash-verified/
+      - name: Apply independent editorial corrections and preserve source/target hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/ru33_apply_review_edits.py \
+            --translation-dir results/ru33-original-hash-verified \
+            --reviews-dir reports/ru33_independent_review \
+            --editorial-dir reports/ru33_editorial_corrections \
+            --output-dir results/ru33-revised-draft-20261105
+          python3 - <<'PY'
+          import json,pathlib
+          d=pathlib.Path('results/ru33-revised-draft-20261105')
+          j=json.loads((d/'editorial_checkpoint_status.json').read_text(encoding='utf-8'))
+          assert j['release']=='BLOCKED' and j['post_correction_independent_review']=='NOT_PERFORMED'
+          assert j['chapters']==37 and j['source_paragraphs']==2117
+          assert len(list(d.glob('chapter_*.json')))==37
+          print('REVISED_RU33_CHECKPOINT_VERIFIED',j['editorial_rows_changed'],'edited paragraphs')
+          print('RELEASE_GATES_HELD: fresh non-Claude review, editorial holds resolution, artwork and V3 cover, official EPUBCheck and render/rights/TOC checks')
+          PY
+      - name: Save all 37 corrected draft chapters plus immutable change ledger (not a release)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru33-37-chapter-revised-draft-needs-independent-re-review
+          path: results/ru33-revised-draft-20261105/
+          if-no-files-found: warn
+          retention-days: 90
