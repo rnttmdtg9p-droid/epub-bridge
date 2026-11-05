@@ -1,0 +1,60 @@
+{
+  "rank": 33,
+  "chapter": 27,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_27.txt",
+  "source_file_id": "file_00000000472881f5a5c0ea9781591c2b",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad92-e9e2-7a51-a7ee-61f3fd56c6af",
+  "review": {
+    "chapter": 27,
+    "checked_paragraphs": 32,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c27-p0020",
+        "problem": "Нарушена грамматика предложения о реке, впадающей в озеро.",
+        "french_quote": "dans laquelle se jette un Jourdain d'Amérique",
+        "russian_quote": "и впадает в которое американский Иордан",
+        "suggested_russian": "в которое впадает американский Иордан"
+      },
+      {
+        "id": "c27-p0027",
+        "problem": "«На вокзале» ошибочно передаёт возвращение на станцию ветки: основной поезд, согласно предыдущему абзацу, отправляется лишь в шесть часов.",
+        "french_quote": "les voyageurs se retrouvaient à la gare et reprenaient place dans leurs wagons",
+        "russian_quote": "путешественники снова были на вокзале и заняли свои места в вагонах",
+        "suggested_russian": "путешественники вновь оказались на станции и заняли места в вагонах поезда, шедшего обратно в Огден"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c27-p0015",
+        "problem": "«Honorable» передано словом «честным», хотя речь о почтенном положении, а не о честности.",
+        "suggested_russian": "ещё более почтенным и ещё более почитаемым, чем прежде"
+      },
+      {
+        "id": "c27-p0023",
+        "problem": "Игра слов «carrément» сведена к «прямоугольно», что не сочетается с «глупостями».",
+        "suggested_russian": "всё здесь делается «по квадрату»: города, дома и даже глупости"
+      },
+      {
+        "id": "c27-p0026",
+        "problem": "Название города оставлено латиницей посреди русского текста.",
+        "suggested_russian": "горожанки Грейт-Лейк-Сити"
+      }
+    ],
+    "summary": "Проверены все 32 абзаца. Перевод в целом следует оригиналу, но требует исправления грамматической ошибки и уточнения маршрута возвращения из Города Святых."
+  },
+  "usage": {
+    "prompt_tokens": 7425,
+    "completion_tokens": 447,
+    "total_tokens": 7872,
+    "cost": 0.023031,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 7422
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

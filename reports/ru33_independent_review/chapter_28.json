@@ -1,0 +1,62 @@
+{
+  "rank": 33,
+  "chapter": 28,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_28.txt",
+  "source_file_id": "file_000000001ccc81fbb8c1be6e46dbc42e",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad93-0dd6-7680-ae29-0d0a56c243fd",
+  "review": {
+    "chapter": 28,
+    "checked_paragraphs": 89,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c28-p0003",
+        "problem": "Название реки Muddy ошибочно передано как «Масси».",
+        "french_quote": "le Muddy, le Green",
+        "russian_quote": "через Масси, Грин",
+        "suggested_russian": "через Мадди, Грин"
+      },
+      {
+        "id": "c28-p0038",
+        "problem": "В русский текст попал посторонний иероглиф вместо слова.",
+        "french_quote": "descendre sur la voie",
+        "russian_quote": "сойти на路",
+        "suggested_russian": "выйти на железнодорожные пути"
+      },
+      {
+        "id": "c28-p0047",
+        "problem": "Указание времени изменено: поезд прибудет не раньше шести часов, а не через шесть часов.",
+        "french_quote": "il n'est pas probable qu'il arrive à Medicine-Bow avant six heures",
+        "russian_quote": "вряд ли он придёт в Медисин-Боу раньше чем через шесть часов",
+        "suggested_russian": "вряд ли он прибудет в Медисин-Боу раньше шести часов"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c28-p0029",
+        "problem": "«Un mort» — карточный термин; «мертвец» без пояснения выглядит как участник сцены.",
+        "suggested_russian": "Итак, нас трое, а четвёртым будет болван — открытая колода…"
+      },
+      {
+        "id": "c28-p0040",
+        "problem": "Имя полковника передано непоследовательно: ранее «Стампа В. Проктора».",
+        "suggested_russian": "полковник Стамп В. Проктор"
+      }
+    ],
+    "summary": "Проверены все 89 пронумерованных абзацев. Перевод в целом близок к оригиналу, но ошибка в названии реки, посторонний знак и искажение времени прибытия требуют исправления."
+  },
+  "usage": {
+    "prompt_tokens": 9993,
+    "completion_tokens": 420,
+    "total_tokens": 10413,
+    "cost": 0.029181,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 9990
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}
