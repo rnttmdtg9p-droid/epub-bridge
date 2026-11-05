@@ -1,0 +1,82 @@
+{
+  "rank": 33,
+  "chapter": 3,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_03.txt",
+  "source_file_id": "file_00000000413c81f5834dbf33c32d6a83",
+  "reviewer": "openai/gpt-6-sol",
+  "review_provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8a-8251-7f81-af98-7736815077f3",
+  "review": {
+    "chapter": 3,
+    "checked_paragraphs": 82,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c03-p0003",
+        "problem": "Способ получения чая заменён закупкой: в оригинале чай специально собирали для клуба.",
+        "french_quote": "spécialement recueilli pour l'office du Reform-Club",
+        "russian_quote": "особо закупаемого для буфета Реформ-клуба",
+        "suggested_russian": "специально собираемого для буфета Реформ-клуба"
+      },
+      {
+        "id": "c03-p0016",
+        "problem": "Фогг приветствовал членов клуба, а не своих собеседников: до этого он в разговоре не участвовал.",
+        "french_quote": "salua ses collègues",
+        "russian_quote": "поклонился своим собеседникам",
+        "suggested_russian": "поприветствовал своих товарищей по клубу"
+      },
+      {
+        "id": "c03-p0039",
+        "problem": "Неверно передано географическое название железнодорожного участка.",
+        "french_quote": "entre Rothal et Allahabad",
+        "russian_quote": "между Ротхалом и Аллахабадом",
+        "suggested_russian": "между Роталом и Аллахабадом"
+      },
+      {
+        "id": "c03-p0041",
+        "problem": "Добавлен козырь: в оригинале сказано лишь, что Стюарт побил старшую карту.",
+        "french_quote": "coupa une carte maîtresse",
+        "russian_quote": "побивший козырем старшую карту",
+        "suggested_russian": "по рассеянности побивший старшую карту"
+      },
+      {
+        "id": "c03-p0077",
+        "problem": "«Чек на соответствующую сумму» превращён в чек на «такую же» сумму, что допускает ошибочное прочтение как ещё двадцать тысяч сверх ставки.",
+        "french_quote": "un chèque de pareille somme",
+        "russian_quote": "чек на такую же сумму",
+        "suggested_russian": "чек на эту сумму"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c03-p0019",
+        "problem": "Оборот «нельзя заподозрить честность» неидиоматичен и затемняет иронию рассказчика.",
+        "suggested_russian": "Нельзя ставить под сомнение честность любого прохожего."
+      },
+      {
+        "id": "c03-p0042",
+        "problem": "«Спор уже не уважал виста» звучит неестественно для литературной прозы.",
+        "suggested_russian": "ибо на этот раз спор не прерывался даже ради виста."
+      },
+      {
+        "id": "c03-p0071",
+        "problem": "Буквальная калька «прыгну математически» не передаёт естественную русскую реплику Фогга.",
+        "suggested_russian": "Буду пересаживаться с математической точностью."
+      }
+    ],
+    "summary": "Проверены все 82 нумерованных фрагмента. Перевод в целом полон, но содержит отдельные смысловые и фактические неточности, а также неудачные кальки."
+  },
+  "usage": {
+    "prompt_tokens": 8647,
+    "completion_tokens": 642,
+    "total_tokens": 9289,
+    "cost": 0.028036,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 8644
+    }
+  },
+  "release_gate": "LITERARY_REVIEW_CORRECTIONS_REQUIRED"
+}

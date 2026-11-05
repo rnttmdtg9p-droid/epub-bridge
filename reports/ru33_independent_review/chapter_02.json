@@ -1,0 +1,61 @@
+{
+  "rank": 33,
+  "chapter": 2,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_02.txt",
+  "source_file_id": "file_00000000a09081fbbc2faba22d0a7d3e",
+  "reviewer": "openai/gpt-6-sol",
+  "review_provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8a-246d-7d01-aa23-99651fd27ec3",
+  "review": {
+    "chapter": 2,
+    "checked_paragraphs": 17,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c02-p0008",
+        "problem": "«Vagabonde» означает скитальческую жизнь, а не бурную юность; утрачена причина стремления Паспарту к оседлости.",
+        "french_quote": "une jeunesse assez vagabonde",
+        "russian_quote": "юность он провёл довольно бурную",
+        "suggested_russian": "юность он провёл в скитаниях"
+      },
+      {
+        "id": "c02-p0015",
+        "problem": "«Lettres» означает словесность шире художественной литературы; специализация библиотеки неоправданно сужена.",
+        "french_quote": "l'une consacrée aux lettres",
+        "russian_quote": "одну — художественной литературы",
+        "suggested_russian": "одну — посвящённую словесности"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c02-p0007",
+        "problem": "Сочетание «скулы своих щёк» неестественно для русского описания лица.",
+        "suggested_russian": "щёки у него были так полны, что он сам видел свои скулы"
+      },
+      {
+        "id": "c02-p0009",
+        "problem": "«Углеродистый водород» звучит как ошибочный химический термин вместо названия горючего газа.",
+        "suggested_russian": "светильного газа здесь хватало и для освещения, и для отопления"
+      },
+      {
+        "id": "c02-p0017",
+        "problem": "«Домовитый» скорее означает хозяйственный, тогда как здесь речь о домоседе.",
+        "suggested_russian": "Человек домашний и пунктуальный!"
+      }
+    ],
+    "summary": "Проверены все 17 фрагментов. Перевод в целом полон, но есть смысловые неточности и несколько неудачных русских формулировок."
+  },
+  "usage": {
+    "prompt_tokens": 4698,
+    "completion_tokens": 394,
+    "total_tokens": 5092,
+    "cost": 0.0156835,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 4695
+    }
+  },
+  "release_gate": "LITERARY_REVIEW_CORRECTIONS_REQUIRED"
+}

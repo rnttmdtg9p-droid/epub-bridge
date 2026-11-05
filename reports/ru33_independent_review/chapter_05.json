@@ -1,0 +1,56 @@
+{
+  "rank": 33,
+  "chapter": 5,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_05.txt",
+  "source_file_id": "file_00000000068081f5aae4a8b3a53090de",
+  "reviewer": "openai/gpt-6-sol",
+  "review_provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8a-3ea5-7881-a186-0cf49fee84a4",
+  "review": {
+    "chapter": 5,
+    "checked_paragraphs": 17,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c05-p0001",
+        "problem": "Заглавие говорит об одной новой биржевой ценности, а перевод — о множестве новых ценных бумаг; в тексте речь об условных «акциях» Фогга.",
+        "french_quote": "UNE NOUVELLE VALEUR",
+        "russian_quote": "НОВЫЕ ЦЕННЫЕ БУМАГИ",
+        "suggested_russian": "НОВАЯ БИРЖЕВАЯ ЦЕННОСТЬ"
+      },
+      {
+        "id": "c05-p0017",
+        "problem": "Фотография не «воспроизводила человека»: она точно соответствовала приметам человека, установленным следствием.",
+        "french_quote": "Elle reproduisait trait pour trait l'homme dont le signalement avait été fourni par l'enquête.",
+        "russian_quote": "Она до малейшей черты воспроизводила человека, приметы которого были установлены следствием.",
+        "suggested_russian": "Изображённый на ней человек до мельчайших черт совпадал с описанием, полученным в ходе расследования."
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c05-p0009",
+        "problem": "Буквальное «брали из пяти» не передаёт по-русски смысла ставок в этом контексте.",
+        "suggested_russian": "Сначала ставили на него при соотношении пять к одному, затем десять к одному, а потом — лишь двадцать, пятьдесят, сто к одному."
+      },
+      {
+        "id": "c05-p0011",
+        "problem": "Оборот «его брали ... из ста пятидесяти, из двухсот против одного» затемняет смысл ставок.",
+        "suggested_russian": "На него ставили уже лишь при соотношении сто пятьдесят или двести к одному."
+      }
+    ],
+    "summary": "Перевод в целом полон, но заглавие и описание фотографии искажают смысл; формулировки о ставках требуют прояснения."
+  },
+  "usage": {
+    "prompt_tokens": 3840,
+    "completion_tokens": 433,
+    "total_tokens": 4273,
+    "cost": 0.0139285,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3837
+    }
+  },
+  "release_gate": "LITERARY_REVIEW_CORRECTIONS_REQUIRED"
+}

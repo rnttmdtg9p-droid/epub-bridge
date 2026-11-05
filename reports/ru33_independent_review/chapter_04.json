@@ -1,0 +1,56 @@
+{
+  "rank": 33,
+  "chapter": 4,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_04.txt",
+  "source_file_id": "file_0000000082d481f4ab479537dcb389e8",
+  "reviewer": "openai/gpt-6-sol",
+  "review_provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8a-a552-7da2-94e3-1403a23a9504",
+  "review": {
+    "chapter": 4,
+    "checked_paragraphs": 55,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c04-p0037",
+        "problem": "Добавлено, что нищенка увязла в грязи; в оригинале сказано лишь, что она шла босиком по грязи.",
+        "french_quote": "pieds nus dans la boue",
+        "russian_quote": "босая, увязшая в грязи",
+        "suggested_russian": "босая, стоявшая в грязи"
+      },
+      {
+        "id": "c04-p0050",
+        "problem": "Отрицательная конструкция передаёт момент до того, как поезд миновал Сайденхем; перевод помещает крик после этого.",
+        "french_quote": "le train n'avait pas dépassé Sydenham",
+        "russian_quote": "поезд едва миновал Сайденхем",
+        "suggested_russian": "поезд ещё не успел миновать Сайденхем"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c04-p0024",
+        "problem": "Неестественное для литературного русского сочетание.",
+        "suggested_russian": "всё ещё в смятении"
+      },
+      {
+        "id": "c04-p0041",
+        "problem": "Буквальная калька затемняет эмоциональный смысл образа.",
+        "suggested_russian": "Его господин стал ему ближе."
+      }
+    ],
+    "summary": "Проверены все 55 фрагментов. Обнаружены добавленная деталь и ошибка в последовательности событий; перевод требует исправления."
+  },
+  "usage": {
+    "prompt_tokens": 4553,
+    "completion_tokens": 314,
+    "total_tokens": 4867,
+    "cost": 0.014521,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 4550
+    }
+  },
+  "release_gate": "LITERARY_REVIEW_CORRECTIONS_REQUIRED"
+}
