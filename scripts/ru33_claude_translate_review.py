@@ -64,7 +64,7 @@ def request_json(url,headers,payload,timeout=120):
     raise RuntimeError("API_RETRY_EXHAUSTED")
 def claude_translate(items):
     if not KEY:raise RuntimeError("MISSING_ANTHROPIC_API_KEY")
-    payload={"model":MODEL,"max_tokens":8192,"temperature":0,
+    payload={"model":MODEL,"max_tokens":8192,
         "system":"You are an expert literary translator. Translate Jules Verne's authentic 1873 French prose into fluent, elegant literary Russian. Maintain meaning and historical texture; avoid omissions, additions, censorship, simplification or modern retelling. Keep character names consistent: Phileas Fogg = Филеас Фогг, Passepartout = Паспарту, Fix = Фикс, Aouda = Ауда. Output ONLY a JSON object with a field translations: an array of {id, target} in EXACTLY the input order, preserving all paragraph IDs.",
         "messages":[{"role":"user","content":"Direct translation from French original. Each entry is a complete source paragraph. Return one complete Russian paragraph for each source entry and preserve headings as headings.\n"+json.dumps(items,ensure_ascii=False)}]}
     d=request_json("https://api.anthropic.com/v1/messages",{"x-api-key":KEY,"anthropic-version":"2023-06-01","content-type":"application/json"},payload)
