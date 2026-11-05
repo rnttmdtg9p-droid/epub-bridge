@@ -1,0 +1,56 @@
+{
+  "rank": 33,
+  "chapter": 10,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_10.txt",
+  "source_file_id": "file_00000000174c81fbb85a744e5565dd61",
+  "reviewer": "openai/gpt-6-sol",
+  "provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8d-d310-77e3-b56b-2dec755ed3ee",
+  "review": {
+    "chapter": 10,
+    "checked_paragraphs": 39,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c10-p0005",
+        "problem": "Изменён смысл: дорога не «приближает» города на три дня пути, а позволяет добраться из Бомбея в Калькутту всего за три дня.",
+        "french_quote": "met Bombay à trois jours seulement de Calcutta",
+        "russian_quote": "приближает Бомбей к Калькутте всего на три дня пути",
+        "suggested_russian": "позволяет добраться из Бомбея в Калькутту всего за три дня"
+      },
+      {
+        "id": "c10-p0038",
+        "problem": "Местоимение указывает на Фогга вместо Паспарту: Фикс рассчитывает воспользоваться проступком слуги, чтобы задержать хозяина.",
+        "french_quote": "Un délit commis sur le territoire indien... Je tiens mon homme.",
+        "russian_quote": "Преступление, совершённое на индийской земле... Теперь он у меня в руках",
+        "suggested_russian": "«Нет, я остаюсь, — сказал он себе. — Правонарушение на индийской территории... Теперь Фогг у меня в руках»."
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c10-p0005",
+        "problem": "«Стремятся измениться» приписывает облику и нравам намерение.",
+        "suggested_russian": "Поэтому облик, нравы и этнографический состав полуострова меняются с каждым днём."
+      },
+      {
+        "id": "c10-p0038",
+        "problem": "В конце реплики лишняя закрывающая кавычка.",
+        "suggested_russian": "Теперь Фогг у меня в руках»."
+      }
+    ],
+    "summary": "Проверены все 39 нумерованных фрагментов. Обнаружены смысловая неточность в описании времени поездки и неоднозначная передача мысли Фикса; остальные замечания стилистические."
+  },
+  "usage": {
+    "prompt_tokens": 6258,
+    "completion_tokens": 418,
+    "total_tokens": 6676,
+    "cost": 0.0198235,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 6255
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

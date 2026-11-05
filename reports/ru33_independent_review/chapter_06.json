@@ -1,0 +1,68 @@
+{
+  "rank": 33,
+  "chapter": 6,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_06.txt",
+  "source_file_id": "file_0000000095ec81f5b72908f42251b355",
+  "reviewer": "openai/gpt-6-sol",
+  "provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8d-4e3b-7c02-83b4-ac52c66f46ba",
+  "review": {
+    "chapter": 6,
+    "checked_paragraphs": 52,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c06-p0003",
+        "problem": "«Jaugeant» означает валовую вместимость (регистровый тоннаж), а не водоизмещение.",
+        "french_quote": "jaugeant deux mille huit cents tonnes",
+        "russian_quote": "водоизмещением в две тысячи восемьсот тонн",
+        "suggested_russian": "валовой вместимостью две тысячи восемьсот регистровых тонн"
+      },
+      {
+        "id": "c06-p0015",
+        "problem": "«La malle des Indes» — индийская почта, которую судно взяло на борт; в переводе сказано, что судно «село» на почту.",
+        "french_quote": "où il a pris la malle des Indes",
+        "russian_quote": "где он сел на индийскую почту",
+        "suggested_russian": "где он принял на борт почту, следовавшую в Индию"
+      },
+      {
+        "id": "c06-p0029",
+        "problem": "Четыре часа стоянки ошибочно превращены в указание времени суток.",
+        "french_quote": "—Quatre heures. Le temps d'embarquer son charbon.",
+        "russian_quote": "— В четыре часа. Как раз столько нужно, чтобы погрузить уголь.",
+        "suggested_russian": "— Четыре часа. Столько времени нужно, чтобы погрузить уголь."
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c06-p0026",
+        "problem": "Неестественный оборот «на порту бьют часы».",
+        "suggested_russian": "услышав бой портовых часов"
+      },
+      {
+        "id": "c06-p0034",
+        "problem": "Буквальное «должен был получить его предпочтение» звучит не по-русски.",
+        "suggested_russian": "он, вероятно, предпочёл бы путь через Индию менее охраняемому? Нет: путь через Индию, за которым следили меньше или следить было труднее, чем за атлантическим маршрутом, должен был показаться ему предпочтительнее."
+      },
+      {
+        "id": "c06-p0051",
+        "problem": "«Не понравится беспокоиться» не передаёт естественно нежелание хозяина идти в консульство.",
+        "suggested_russian": "хотя ему вряд ли понравится ради этого сходить на берег!"
+      }
+    ],
+    "summary": "Сверены все 52 пронумерованных фрагмента. Выявлены три смысловые ошибки: неверный морской термин, искажённое сообщение о приёме почты на борт и неверное время стоянки; есть также локальные стилистические шероховатости."
+  },
+  "usage": {
+    "prompt_tokens": 5728,
+    "completion_tokens": 577,
+    "total_tokens": 6305,
+    "cost": 0.0200885,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 5725
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

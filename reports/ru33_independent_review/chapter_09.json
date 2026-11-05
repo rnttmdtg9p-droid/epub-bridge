@@ -1,0 +1,78 @@
+{
+  "rank": 33,
+  "chapter": 9,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_09.txt",
+  "source_file_id": "file_0000000047d481f5addb89661acd31f2",
+  "reviewer": "openai/gpt-6-sol",
+  "provider": "fal OpenRouter",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8d-b20e-76e3-9c62-f87be27ae85f",
+  "review": {
+    "chapter": 9,
+    "checked_paragraphs": 49,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c09-p0010",
+        "problem": "Четыре приёма пищи ошибочно названы четырьмя обедами.",
+        "french_quote": "il faisait ses quatre repas par jour",
+        "russian_quote": "он четыре раза в день обедал",
+        "suggested_russian": "он ел четыре раза в день"
+      },
+      {
+        "id": "c09-p0036",
+        "problem": "В перевод добавлено постороннее англоязычное название компании.",
+        "french_quote": "Rien que pour la Compagnie péninsulaire",
+        "russian_quote": "Одной только Péninsulaire — Peninsular Company —",
+        "suggested_russian": "Одной только Пенинсулярной компании"
+      },
+      {
+        "id": "c09-p0040",
+        "problem": "«Индийское море» заменено «Индийским океаном», хотя далее в главе море названо морем.",
+        "french_quote": "le Gibraltar de la mer des Indes",
+        "russian_quote": "Гибралтаром Индийского моря",
+        "suggested_russian": "Гибралтаром Индийского моря"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c09-p0006",
+        "problem": "Неестественное сочетание «буфетные парохода».",
+        "suggested_russian": "судовые мясная лавка и буфеты"
+      },
+      {
+        "id": "c09-p0023",
+        "problem": "«Не хотел заходить слишком далеко» без уточнения звучит неясно применительно к ответу Фикса.",
+        "suggested_russian": "ответил Фикс, не желая утверждать лишнего"
+      },
+      {
+        "id": "c09-p0034",
+        "problem": "«Половинка чашки» слабо передаёт зрительный образ полукруглой чашки с ручкой.",
+        "suggested_russian": "он похож на огромную чашку в профиль"
+      },
+      {
+        "id": "c09-p0041",
+        "problem": "После закрывающей кавычки оставлен лишний знак.",
+        "suggested_russian": "«Очень любопытно, очень любопытно! — говорил себе Паспарту, возвращаясь на борт. — Я вижу, что путешествовать не бесполезно, если хочешь увидеть что-нибудь новое»."
+      },
+      {
+        "id": "c09-p0047",
+        "problem": "«Задний план холмов» — буквальная калька, затрудняющая описание пейзажа.",
+        "suggested_russian": "На горизонте на фоне неба гармонично вырисовывалась гряда холмов."
+      }
+    ],
+    "summary": "Проверены все 49 нумерованных фрагментов. Обнаружены смысловая неточность и посторонняя вставка; также отмечены локальные стилистические и пунктуационные недочёты."
+  },
+  "usage": {
+    "prompt_tokens": 7031,
+    "completion_tokens": 592,
+    "total_tokens": 7623,
+    "cost": 0.023496,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 7028
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}
