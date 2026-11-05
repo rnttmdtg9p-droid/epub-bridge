@@ -1,0 +1,151 @@
+{
+  "project": "Boundary Bay Russian Collection rank 33 pre-assembly inventory",
+  "isbn": "9781774965986",
+  "status": "STAGING_ONLY_NOT_FOR_RELEASE",
+  "live_translation_run": "https://github.com/rnttmdtg9p-droid/epub-bridge/actions/runs/42104369530",
+  "source_file": "033_Around_the_World_BB_Russian_FINAL_v5069.epub (Library copy; provenance not canonical release)",
+  "library_epub_sha256": "6f8f8d64bcd8082d976b8713b1cf7a5c74479e1ece4046c16689accb96042205",
+  "canonical_release_sha256_in_existing_checkpoint": "cae1f354d04f5c25a94ce129148dc440e643117e5b38a1d692fce6e1d2cef1d9",
+  "sha_mismatch": "Library candidate is not the currently approved released EPUB; do not assume cover version, image matching, or safe replacement.",
+  "verified_local_inventory": {
+    "zip_pass": true,
+    "chapters": 37,
+    "illustrations": 54,
+    "frontispiece": "plate-001.jpg",
+    "route_map": true,
+    "cover": true
+  },
+  "cover_asset_sha256": "9212f613c2a0ed8da950a12e012303a2cef482d83fb34de35aac1bd8df8ecd0d",
+  "route_map_sha256": "849d7e607ca749b4a3cd5fe9217ec9779762225dc9907806cd577a3386c37e77",
+  "illustrations_by_chapter": {
+    "0": [
+      1
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      4
+    ],
+    "5": [
+      5
+    ],
+    "6": [
+      6,
+      7
+    ],
+    "8": [
+      8
+    ],
+    "9": [
+      9,
+      10
+    ],
+    "10": [
+      11
+    ],
+    "11": [
+      12,
+      13
+    ],
+    "12": [
+      14,
+      15
+    ],
+    "13": [
+      16,
+      17
+    ],
+    "14": [
+      18,
+      19
+    ],
+    "15": [
+      20
+    ],
+    "16": [
+      21
+    ],
+    "17": [
+      22,
+      23
+    ],
+    "18": [
+      24
+    ],
+    "19": [
+      25,
+      26
+    ],
+    "20": [
+      27,
+      28
+    ],
+    "21": [
+      29,
+      30
+    ],
+    "22": [
+      31
+    ],
+    "23": [
+      32,
+      33,
+      34
+    ],
+    "25": [
+      35,
+      36
+    ],
+    "26": [
+      37,
+      38
+    ],
+    "27": [
+      39,
+      40
+    ],
+    "28": [
+      41
+    ],
+    "29": [
+      42,
+      43,
+      44
+    ],
+    "30": [
+      45,
+      46
+    ],
+    "31": [
+      47,
+      48
+    ],
+    "33": [
+      49,
+      50,
+      51
+    ],
+    "35": [
+      52
+    ],
+    "36": [
+      54
+    ],
+    "37": [
+      53
+    ]
+  },
+  "non_negotiable_release_gates": [
+    "37 chapters completely translated from authentic French by Claude, source and translated paragraph hashes valid",
+    "independent non-Claude literary review, issue fixes and re-review cryptographically bound to final text",
+    "obtain exact canonical released EPUB matching checkpoint SHA256 or independently verify replacement approved V3 cover and assets",
+    "retain 54 historic plates and route map with verified scene anchors (do not place using proportional estimates)",
+    "update copyright, colophon, credits, dc:source, dc:rights for new translation",
+    "check rights for every included illustration, translation, and territory",
+    "official EPUBCheck zero fatal/error/warning, XML/nav/TOC/render QA, 37 chapter inspection"
+  ]
+}
