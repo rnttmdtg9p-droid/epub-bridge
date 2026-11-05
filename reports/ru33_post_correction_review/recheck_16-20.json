@@ -1,0 +1,80 @@
+{
+  "rank": 33,
+  "ISBN": "9781774965986",
+  "review_type": "post_correction_independent",
+  "review_model": "google/gemini-3.8-flash",
+  "input_chapters": [
+    {
+      "chapter": 16,
+      "count": 3
+    },
+    {
+      "chapter": 17,
+      "count": 6
+    },
+    {
+      "chapter": 18,
+      "count": 5
+    },
+    {
+      "chapter": 19,
+      "count": 8
+    },
+    {
+      "chapter": 20,
+      "count": 5
+    }
+  ],
+  "request_id": "01a1adab-5505-7193-82e4-13dcb9b44634",
+  "review": {
+    "chapters": [
+      {
+        "chapter": 16,
+        "checked_paragraphs": 3,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все замечания устранены: исправлена опечатка в слове «саланганы», уточнены морской термин и указание на высадку Фогга."
+      },
+      {
+        "chapter": 17,
+        "checked_paragraphs": 6,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все правки корректны: исправлены грамматические формы предлогов («со»), морская терминология («массы воды»), географические описания и названия компаний."
+      },
+      {
+        "chapter": 18,
+        "checked_paragraphs": 5,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Исправления точны: выверены морской маневр «лечь в дрейф под малым ходом», идиома «скверная четверть часа», подпись к иллюстрации и единообразие названий."
+      },
+      {
+        "chapter": 19,
+        "checked_paragraphs": 8,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все ошибки успешно исправлены: восстановлен точный смысл исторического пояснения об опиуме, верно передан вопрос Фикса и диалоговые реплики."
+      },
+      {
+        "chapter": 20,
+        "checked_paragraphs": 5,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Правки полностью устранили технические искажения и опечатки (кодировка, латиница), корректно переданы морские и транспортные термины («лампа на карданном подвесе», «почтовый пароход»)."
+      }
+    ],
+    "overall": "Все исправления в главах 16–20 выполнены качественно, текст полностью соответствует французскому оригиналу и нормам литературного русского языка."
+  },
+  "usage": {
+    "prompt_tokens": 10689,
+    "completion_tokens": 2050,
+    "total_tokens": 12739,
+    "cost": 0.01570425,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  },
+  "release": "STILL_PENDING_ALL_CHAPTERS_AND_EPUB_QA"
+}

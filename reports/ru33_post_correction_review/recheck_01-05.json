@@ -1,0 +1,56 @@
+{
+  "rank": 33,
+  "ISBN": "9781774965986",
+  "review_type": "post_correction_independent",
+  "review_model": "google/gemini-3.8-flash",
+  "input_chapters": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "request_id": "01a1ada9-4c02-7093-9438-cea9b371b375",
+  "review": {
+    "chapters": [
+      {
+        "chapter": 1,
+        "checked_paragraphs": 4,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все исправления внесены корректно, смысловые искажения устранены, новых ошибок не возникло."
+      },
+      {
+        "chapter": 2,
+        "checked_paragraphs": 5,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Правки точно передают французский оригинал, фактологических и стилистических регрессий нет."
+      },
+      {
+        "chapter": 3,
+        "checked_paragraphs": 8,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все замечания учтены, терминология и реалии сверены с оригиналом, критических расхождений не выявлено."
+      },
+      {
+        "chapter": 4,
+        "checked_paragraphs": 4,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Исправления восстановили точную хронологию и образность оригинала без привнесения отсебятины."
+      },
+      {
+        "chapter": 5,
+        "checked_paragraphs": 4,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Биржевая и ипподромная терминология скорректирована верно, смысл передан точно."
+      }
+    ],
+    "overall": "Все отредактированные фрагменты глав 1–5 успешно прошли независимую верификацию по французскому оригиналу. Смысловые ошибки первого прохода устранены, точность передачи реалий и терминов соблюдена, новых искажений не обнаружено."
+  },
+  "validation": "RECHECKED_SOURCE_AGAINST_REVISED_TARGET",
+  "release": "STILL_PENDING_OTHER_CHAPTERS_AND_EPUB_QA"
+}
