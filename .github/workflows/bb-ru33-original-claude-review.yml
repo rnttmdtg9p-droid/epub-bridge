@@ -22,8 +22,8 @@ jobs:
       - name: Restore exact saved partial translations from failed original run
         uses: actions/download-artifact@v4
         with:
-          name: ru33-claude-french-original-draft-and-independent-review
-          run-id: 42102124525
+          name: ru33-claude-french-original-draft-and-independent-review-resume
+          run-id: 42104125218
           github-token: ${{ github.token }}
           path: results/ru33-french-claude-20261105/
       - name: Continue French to Russian Claude translation; independent OpenAI literary audit

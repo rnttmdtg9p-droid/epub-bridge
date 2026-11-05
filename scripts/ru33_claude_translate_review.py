@@ -65,19 +65,41 @@ def request_json(url,headers,payload,timeout=120):
 def claude_translate(items):
     if not KEY:raise RuntimeError("MISSING_ANTHROPIC_API_KEY")
     payload={"model":MODEL,"max_tokens":8192,
-        "system":"You are an expert literary translator. Translate Jules Verne's authentic 1873 French prose into fluent, elegant literary Russian. Maintain meaning and historical texture; avoid omissions, additions, censorship, simplification or modern retelling. Keep character names consistent: Phileas Fogg = Филеас Фогг, Passepartout = Паспарту, Fix = Фикс, Aouda = Ауда. Output ONLY a JSON object with a field translations: an array of {id, target} in EXACTLY the input order, preserving all paragraph IDs.",
+        "system":"You are an expert literary translator. Translate Jules Verne's authentic 1873 French prose into fluent, elegant literary Russian. Maintain meaning and historical texture; avoid omissions, additions, censorship, simplification or modern retelling. Keep character names consistent: Phileas Fogg = Филеас Фогг, Passepartout = Паспарту, Fix = Фикс, Aouda = Ауда. Use the emit_translations tool whenever possible. If the tool is unavailable, output ONLY a JSON object with translations: an array of {id, target} in EXACTLY the input order, preserving all paragraph IDs.",
         "messages":[{"role":"user","content":"Direct translation from French original. Each entry is a complete source paragraph. Return one complete Russian paragraph for each source entry and preserve headings as headings.\n"+json.dumps(items,ensure_ascii=False)}],
         "tools":[{"name":"emit_translations","description":"Submit the complete, accurately aligned Russian literary translation for every paragraph ID.",
                   "input_schema":{"type":"object","properties":{"translations":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string"},"target":{"type":"string"}},"required":["id","target"]}}},"required":["translations"]}}],
-        "tool_choice":{"type":"tool","name":"emit_translations"}}
+        "tool_choice":{"type":"auto"}}
     d=request_json("https://api.anthropic.com/v1/messages",{"x-api-key":KEY,"anthropic-version":"2023-06-01","content-type":"application/json"},payload)
     tool_outputs=[p.get("input",{}) for p in d.get("content",[]) if p.get("type")=="tool_use" and p.get("name")=="emit_translations"]
     if not tool_outputs:
         response="".join(p.get("text","") for p in d.get("content",[]) if p.get("type")=="text").strip()
-        try: obj=json.loads(response)
-        except json.JSONDecodeError as exc: raise RuntimeError("CLAUDE_NO_STRUCTURED_TOOL_OUTPUT") from exc
+        if response.startswith("```"):
+            response=re.sub(r"^\`{3}(?:json)?\\s*|\\s*\`{3}$","",response).strip()
+        try:
+            obj=json.loads(response)
+        except json.JSONDecodeError:
+            decoder=json.JSONDecoder()
+            parts=[]
+            remain=response
+            while remain.strip():
+                remain=remain.lstrip()
+                try: entry,end=decoder.raw_decode(remain)
+                except json.JSONDecodeError: break
+                if isinstance(entry,list): parts.extend(entry)
+                elif isinstance(entry,dict) and isinstance(entry.get("translations"),list): parts.extend(entry["translations"])
+                elif isinstance(entry,dict) and "id" in entry and "target" in entry: parts.append(entry)
+                else:break
+                remain=remain[end:]
+            if len(parts)==len(items):
+                obj={"translations":parts}
+            elif len(items)==1 and response and not response.startswith(("{","[","```")):
+                # Last-resort single paragraph direct translation; independently reviewed later.
+                obj={"translations":[{"id":items[0]["id"],"target":response}]}
+            else: raise RuntimeError("CLAUDE_NO_STRUCTURED_TOOL_OUTPUT")
     else:
         obj=tool_outputs[0]
+    if isinstance(obj,list): obj={"translations":obj}
     if not isinstance(obj,dict): raise RuntimeError("CLAUDE_TOOL_INPUT_INVALID")
     rows=obj.get("translations",[])
     if len(rows)!=len(items) or [r.get("id") for r in rows]!=[r["id"] for r in items]:
@@ -115,6 +137,8 @@ def translate(chapters):
                     except Exception as exc:
                         last_error=exc
                         print("RETRY_TRANSLATION_ALIGNMENT",ch["chapter"],len(rows),str(exc)[:150],flush=True)
+                        if "API_HTTP_400" in str(exc) or "MISSING_ANTHROPIC_API_KEY" in str(exc):
+                            raise
                         time.sleep(3)
                 if len(rows)>1:
                     middle=len(rows)//2
