@@ -25,7 +25,7 @@ def main(a):
  out.mkdir(parents=True,exist_ok=True)
  assert len(list(raw.glob('chapter_*.json')))==37,'Require exact 37 translated chapters'
  assert len(list(reviews.glob('chapter_*.json')))==37,'Require 37 independent reviews'
- assert len(list(corrections.glob('chapter_*.json')))==20,'Require 20 original full-paragraph correction records'
+ assert len(list(corrections.glob('chapter_*.json')))==37,'Require complete 37 chapter editorial correction records'
  status=load(raw/'status.json')
  assert status['isbn']=='9781774965986' and status['translation']=='COMPLETE'
  assert status['chapters']==37 and status['source_paragraphs']==2117
@@ -49,7 +49,7 @@ def main(a):
    assert SHA(p['source'])==p['source_sha256'],('SOURCE_HASH_CHANGED',p['id'])
    assert SHA(p['target'])==p['target_sha256'],('TARGET_HASH_CHANGED',p['id'])
    assert p['model']=='claude-sonnet-5-5'
-  if n<=20:
+  if n<=37:
    e=load(corrections/f'chapter_{n:02}.json')
    assert e['validation']=='NEEDS_INDEPENDENT_POST_CORRECTION_REVIEW' and e['editor_model'].startswith('openai/')
    for c in e['corrections']['corrected']:
@@ -57,6 +57,10 @@ def main(a):
     assert after.strip() and after!=before,(c['id'],'INVALID_EDIT')
     p['target']=after;p['target_sha256']=SHA(after);p['editorial_status']='PENDING_INDEPENDENT_RE_REVIEW'
     ledger.append({'id':c['id'],'original_sha256':SHA(before),'new_sha256':SHA(after),'basis':'curated_full_paragraph_openai','post_review':'PENDING'})
+   edited_ids={c['id'] for c in e['corrections']['corrected']}
+   summary['addressed_critical_ids'].extend(q['id'] for q in v['critical_issues'] if q['id'] in edited_ids and q['id'] not in EDITORIAL_HOLDS)
+   summary['unresolved_critical_ids'].extend(q['id'] for q in v['critical_issues'] if q['id'] not in edited_ids and q['id'] not in EDITORIAL_HOLDS)
+   summary['pending_style_ids'].extend(q['id'] for q in v['stylistic_issues'] if q['id'] not in edited_ids)
   else:
    for q in v['critical_issues']:
     rid=q['id'];p=byid[rid];before=p['target']
