@@ -1,0 +1,51 @@
+name: Rank 33 Independent Literary Review Export
+on:
+  push:
+    branches: [bb-ru33-french-claude-independent-review-20261105]
+    paths: ['.github/workflows/bb-ru33-review-export.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check and combine independent review reports
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,csv,glob,pathlib
+          d=pathlib.Path('reports/ru33_independent_review')
+          r=pathlib.Path('results/ru33_review_export');r.mkdir(parents=True,exist_ok=True)
+          fs=sorted(d.glob('chapter_*.json'))
+          assert len(fs)==37,f'Expected 37 review files, found {len(fs)}'
+          rows=[];summary={'rank':33,'isbn':'9781774965986','review_model':'openai/gpt-6-sol','reviewed_chapters':0,'reviewed_paragraphs':0,'critical_issues':0,'style_issues':0,'clean_chapters':[],'chapters_requiring_correction':[],'status':'INDEPENDENT_REVIEW_COMPLETE__CORRECTIONS_REQUIRED'}
+          for n,f in enumerate(fs,1):
+              o=json.loads(f.read_text(encoding='utf-8'));rv=o['review']
+              assert o['chapter']==n and rv['chapter']==n and rv['checked_paragraphs']>0
+              assert o['independent_from_claude'] is True
+              summary['reviewed_chapters']+=1;summary['reviewed_paragraphs']+=rv['checked_paragraphs']
+              for typ,k in [('critical','critical_issues'),('style','stylistic_issues')]:
+                  for q in rv[k]:
+                      assert str(q.get('id','')).startswith(f'c{n:02d}-p')
+                      row={'chapter':n,'severity':typ,'paragraph_id':q['id'],'problem':q.get('problem',''),'french_quote':q.get('french_quote',''),'russian_quote':q.get('russian_quote',''),'suggested_russian':q.get('suggested_russian','')}
+                      rows.append(row)
+                  summary['critical_issues' if typ=='critical' else 'style_issues']+=len(rv[k])
+              if rv['critical_issues']:summary['chapters_requiring_correction'].append(n)
+              else:summary['clean_chapters'].append(n)
+          (r/'review_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          with (r/'review_correction_register.csv').open('w',encoding='utf-8',newline='') as out:
+              w=csv.DictWriter(out,fieldnames=['chapter','severity','paragraph_id','problem','french_quote','russian_quote','suggested_russian']);w.writeheader();w.writerows(rows)
+          print('REVIEW_SUMMARY',json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Upload complete editorial review evidence and correction register
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru33-independent-literary-review-37-chapters
+          path: |
+            reports/ru33_independent_review/chapter_*.json
+            results/ru33_review_export/review_summary.json
+            results/ru33_review_export/review_correction_register.csv
+          if-no-files-found: error
+          retention-days: 90
