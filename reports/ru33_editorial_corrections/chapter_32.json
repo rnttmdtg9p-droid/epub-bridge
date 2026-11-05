@@ -1,0 +1,39 @@
+{
+  "rank": 33,
+  "chapter": 32,
+  "ISBN": "9781774965986",
+  "editor_model": "openai/gpt-6-sol",
+  "translation_model": "claude-sonnet-5-5",
+  "original_translation_preserved_except_revised_rows": true,
+  "request_id": "01a1ada4-a689-7850-9335-bd2349909803",
+  "source_file_id": "file_00000000592881f5981370fbc8061b94",
+  "corrections": {
+    "chapter": 32,
+    "corrected": [
+      {
+        "id": "c32-p0012",
+        "target": "Мистер Фогг один вышел из гостиницы, велев слуге ждать его и предупредить миссис Ауду, чтобы она была готова в любую минуту."
+      },
+      {
+        "id": "c32-p0027",
+        "target": "— Камни в трюме. Фрахта нет. Иду с балластом."
+      },
+      {
+        "id": "c32-p0057",
+        "target": "— Четыре."
+      }
+    ],
+    "editorial_summary": "Уточнено значение поручения слуге, сохранён морской смысл реплики, удалена лишняя кавычка; числительное оставлено без указания на людей, которого нет во французском тексте."
+  },
+  "validation": "NEEDS_INDEPENDENT_POST_CORRECTION_REVIEW",
+  "usage": {
+    "prompt_tokens": 615,
+    "completion_tokens": 162,
+    "total_tokens": 777,
+    "cost": 0.00285,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}
