@@ -1,0 +1,80 @@
+{
+  "rank": 33,
+  "ISBN": "9781774965986",
+  "review_type": "post_correction_independent",
+  "review_model": "google/gemini-3.8-flash",
+  "input_chapters": [
+    {
+      "chapter": 31,
+      "count": 7
+    },
+    {
+      "chapter": 32,
+      "count": 3
+    },
+    {
+      "chapter": 33,
+      "count": 4
+    },
+    {
+      "chapter": 34,
+      "count": 4
+    },
+    {
+      "chapter": 35,
+      "count": 3
+    }
+  ],
+  "request_id": "01a1adad-614e-7aa0-9645-c1359648480c",
+  "review": {
+    "chapters": [
+      {
+        "chapter": 31,
+        "checked_paragraphs": 7,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все замечания успешно учтены: морская терминология, географические названия и время исправлены корректно."
+      },
+      {
+        "chapter": 32,
+        "checked_paragraphs": 3,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Правки внесены верно, пунктуация и морской контекст выправлены."
+      },
+      {
+        "chapter": 33,
+        "checked_paragraphs": 4,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Маршрут поезда, стилистические шероховатости и морские обороты исправлены без искажения смысла."
+      },
+      {
+        "chapter": 34,
+        "checked_paragraphs": 4,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Игра слов Паспарту удачно адаптирована, неточности с вокзалом и боем часов устранены."
+      },
+      {
+        "chapter": 35,
+        "checked_paragraphs": 3,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Пунктуация, грамматические формы и реплика миссис Ауды приведены в соответствие с нормой."
+      }
+    ],
+    "overall": "Все исправления в главах 31–35 выполнены качественно, новые ошибки не внесены."
+  },
+  "usage": {
+    "prompt_tokens": 9478,
+    "completion_tokens": 5416,
+    "total_tokens": 14894,
+    "cost": 0.0274185,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  },
+  "release": "STILL_PENDING_ALL_CHAPTERS_AND_EPUB_QA"
+}

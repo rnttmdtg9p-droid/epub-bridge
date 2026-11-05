@@ -1,0 +1,80 @@
+{
+  "rank": 33,
+  "ISBN": "9781774965986",
+  "review_type": "post_correction_independent",
+  "review_model": "google/gemini-3.8-flash",
+  "input_chapters": [
+    {
+      "chapter": 26,
+      "count": 3
+    },
+    {
+      "chapter": 27,
+      "count": 5
+    },
+    {
+      "chapter": 28,
+      "count": 5
+    },
+    {
+      "chapter": 29,
+      "count": 9
+    },
+    {
+      "chapter": 30,
+      "count": 6
+    }
+  ],
+  "request_id": "01a1adac-db92-7ba1-a8dd-277d79258379",
+  "review": {
+    "chapters": [
+      {
+        "chapter": 26,
+        "checked_paragraphs": 3,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все замечания устранены: исправлен латинский артефакт, пояснены реалии («крики», «рака с мощами») и сглажен синтаксис."
+      },
+      {
+        "chapter": 27,
+        "checked_paragraphs": 5,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Исправления приняты: грамматика предложения о реке Иордан восстановлена, латиница заменена кириллицей, стилистические нюансы согласованы."
+      },
+      {
+        "chapter": 28,
+        "checked_paragraphs": 5,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Устранены критические огрехи: удалён случайный иероглиф, исправлена транскрипция реки Мадди, выправлены карточный термин и указание времени."
+      },
+      {
+        "chapter": 29,
+        "checked_paragraphs": 9,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Успешно исправлены терминология оружия (револьверы и дубинки вместо ружей и томагавков), географические названия и опечатки."
+      },
+      {
+        "chapter": 30,
+        "checked_paragraphs": 6,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Правки корректны: исправлены грамматические согласования («полное разорение», «река Арканзас»), устранены смысловые неточности («индейцы»)."
+      }
+    ],
+    "overall": "Редакторские правки в главах 26–30 полностью устранили выявленные дефекты без внесения новых ошибок."
+  },
+  "usage": {
+    "prompt_tokens": 10917,
+    "completion_tokens": 3102,
+    "total_tokens": 14019,
+    "cost": 0.01982025,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  },
+  "release": "STILL_PENDING_ALL_CHAPTERS_AND_EPUB_QA"
+}

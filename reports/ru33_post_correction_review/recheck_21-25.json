@@ -1,0 +1,80 @@
+{
+  "rank": 33,
+  "ISBN": "9781774965986",
+  "review_type": "post_correction_independent",
+  "review_model": "google/gemini-3.8-flash",
+  "input_chapters": [
+    {
+      "chapter": 21,
+      "count": 8
+    },
+    {
+      "chapter": 22,
+      "count": 4
+    },
+    {
+      "chapter": 23,
+      "count": 3
+    },
+    {
+      "chapter": 24,
+      "count": 7
+    },
+    {
+      "chapter": 25,
+      "count": 5
+    }
+  ],
+  "request_id": "01a1adac-78fa-7662-9977-ed228910a341",
+  "review": {
+    "chapters": [
+      {
+        "chapter": 21,
+        "checked_paragraphs": 8,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Все исправления морской терминологии (уборка парусов вместо взятия рифов, румпель, верхние паруса, стаксель) и юридических формулировок выполнены корректно."
+      },
+      {
+        "chapter": 22,
+        "checked_paragraphs": 4,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Устранены опечатка с латиницей, непереведённый термин («purser» -> «баталер») и стилистические шероховатости."
+      },
+      {
+        "chapter": 23,
+        "checked_paragraphs": 3,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Исправлены грамматическое согласование («скромный на вид „чайный дом“»), точность перевода («около дюжины») и синтаксис описания трюка с воланами."
+      },
+      {
+        "chapter": 24,
+        "checked_paragraphs": 7,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Устранены отсебятины и кальки («китайских кули», «вера угольщика»), уточнён морской термин («вместимость»), сохранён оригинальный текст Жюля Верна."
+      },
+      {
+        "chapter": 25,
+        "checked_paragraphs": 5,
+        "pass": true,
+        "remaining_issues": [],
+        "summary": "Исправлены контекстуальные значения («индейцы» вместо «индийцы», направление «Куда?», «кипевших деятельностью»), унифицирована транслитерация названия отеля."
+      }
+    ],
+    "overall": "Все исправления в главах 21–25 выполнены качественно и точно соответствуют французскому тексту, без внесения новых ошибок."
+  },
+  "usage": {
+    "prompt_tokens": 13083,
+    "completion_tokens": 3353,
+    "total_tokens": 16436,
+    "cost": 0.022386,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  },
+  "release": "STILL_PENDING_ALL_CHAPTERS_AND_EPUB_QA"
+}
