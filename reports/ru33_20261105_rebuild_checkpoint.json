@@ -1,0 +1,33 @@
+{
+  "project": "Boundary Bay Classics Russian Collection",
+  "rank": 33,
+  "isbn": "9781774965986",
+  "title_ru": "Вокруг света в восемьдесят дней",
+  "title_original": "Le Tour du monde en quatre-vingts jours",
+  "user_instruction": "Rebuild rank 33 from original French using Claude for initial translation; independently review Russian literature before release. Keep existing released EPUB unchanged until qualification.",
+  "active_run_id": 42102124525,
+  "workflow_url": "https://github.com/rnttmdtg9p-droid/epub-bridge/actions/runs/42102124525",
+  "workflow_branch": "bb-ru33-french-claude-independent-review-20261105",
+  "job_first_sha": "8234bc0adec3162844d150ac683223b725e69968",
+  "job_corrected_sha": "1241fba8d96a70a7b072c91fc181863dfb711ae6",
+  "french_source": "https://www.gutenberg.org/cache/epub/46541/pg46541.txt",
+  "original_chapters": 37,
+  "current_release_epub_sha256": "cae1f354d04f5c25a94ce129148dc440e643117e5b38a1d692fce6e1d2cef1d9",
+  "preserved_artwork": {
+    "historical_plates": 54,
+    "route_map": true,
+    "cover": "V3"
+  },
+  "assembly_script_local_sha256": "107a8d8140eddfa7af6643dbe2ebb484d296d679584600a9714074da8b5de952",
+  "gates": [
+    "Claude-translated new Russian text from 1873 French source complete and exact 37-chapter source/target paragraph mapping",
+    "Literary review performed by independent non-Claude model against the French original; all material edits applied and re-reviewed",
+    "Verify source credits and copyright labels replace historical translation credits",
+    "Preserve 54 historic plates, map, V3 cover, and original BB chapter template",
+    "Verify illustration placement is scene-correct; relative-only placement not sufficient for release",
+    "Run XHTML/XML, EPUB packaging and full official EPUBCheck with 0 fatal/errors/warnings",
+    "Perform final render/nav/TOC check and rights gating before release"
+  ],
+  "status": "TRANSLATION_RUN_ACTIVE; NO_NEW_EPUB_RELEASED; ASSEMBLY_SCRIPT_LOCALLY_TESTED_ONLY",
+  "note": "The Claude workflow preserves a partial or completed translation/review as GitHub Actions artifact on exit. It does not publish or release an EPUB. The local assembly script will not construct a candidate without 37 complete independently reviewed chapters."
+}
