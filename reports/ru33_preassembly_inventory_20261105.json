@@ -158,5 +158,13 @@
     "alternate_dimensions": "1950x2993",
     "alternate_v3_approval_status": "unverified; requires canonical approved V3 design comparison",
     "recommendation": "Use alternate BB Classics cover only after verifying it is approved V3; never reuse embedded legacy publishing logo without correction."
+  },
+  "library_copy_lineage_confirmed": {
+    "source": "BB_Russian_Collection_Production_Manifest_rank41_auto_verify_active_v5070_20261022.json, delivered Nov 4 2026",
+    "archived_delivery": "Russian_Collection_EPUBs_Part_02_of_08.zip (Nov 2 2026)",
+    "isbn_epub_name": "9781774965986.epub",
+    "sha256_matches_nov2_archive": "6f8f8d64bcd8082d976b8713b1cf7a5c74479e1ece4046c16689accb96042205",
+    "archive_epubcheck_record": "EPUBCheck 5.4.0 reported zero errors and warnings for historical edition",
+    "caution": "Archive's historic-translation EPUB is not proof of the approved new Claude translation or current Nov5 release SHA. Prior checks cannot substitute for new EPUB QA."
   }
 }
