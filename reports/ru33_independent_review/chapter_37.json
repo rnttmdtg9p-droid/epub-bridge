@@ -1,0 +1,53 @@
+{
+  "rank": 33,
+  "chapter": 37,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_37.txt",
+  "source_file_id": "file_00000000764c81fbb0a3a83f25dd47db",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad95-e0a5-7ad3-bf81-c7abe6772fb8",
+  "review": {
+    "chapter": 37,
+    "checked_paragraphs": 91,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c37-p0055",
+        "problem": "Единственная «новая ценность» превращена в несколько ценных бумаг; в заголовке речь о возросшей рыночной ценности Фогга, а не о выпуске бумаг.",
+        "french_quote": "une nouvelle valeur apparaît sur la place de Londres",
+        "russian_quote": "на лондонской бирже появляются новые ценные бумаги",
+        "suggested_russian": "на лондонском рынке появляется новая ценность"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c37-p0045",
+        "problem": "«Переезд» сужает смысл кругосветного путешествия.",
+        "suggested_russian": "Что он выиграл от этого путешествия?"
+      },
+      {
+        "id": "c37-p0066",
+        "problem": "«Делает вид» приписывает Фиксу сознательное притворство, которого заголовок прямо не утверждает.",
+        "suggested_russian": "Фикс, по-видимому, совершенно не знает того, о чём ему говорят"
+      },
+      {
+        "id": "c37-p0084",
+        "problem": "«Сострить ужасным каламбуром» неестественно для литературного русского.",
+        "suggested_russian": "произнести ужасный, но, быть может, ещё никем не придуманный каламбур"
+      }
+    ],
+    "summary": "Проверен 91 нумерованный фрагмент, включая оглавление и список исправлений. Основной текст передан точно; серьёзное смысловое искажение найдено в заголовке главы V в оглавлении."
+  },
+  "usage": {
+    "prompt_tokens": 7785,
+    "completion_tokens": 347,
+    "total_tokens": 8132,
+    "cost": 0.022931,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 7782
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

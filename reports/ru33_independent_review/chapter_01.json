@@ -1,0 +1,55 @@
+{
+  "rank": 33,
+  "chapter": 1,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_01.txt",
+  "source_file_id": "file_000000001d7c81fbaa09f0fc4fea56b8",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad95-9a63-7020-bb12-6b8670c2e51f",
+  "review": {
+    "chapter": 1,
+    "checked_paragraphs": 31,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c01-p0001",
+        "problem": "В заголовке перепутаны роли: по-русски получается, что первый принимает второго как хозяина.",
+        "french_quote": "l'un comme maître, l'autre comme domestique",
+        "russian_quote": "один как хозяина, другой как слугу",
+        "suggested_russian": "один — в качестве хозяина, другой — в качестве слуги"
+      },
+      {
+        "id": "c01-p0021",
+        "problem": "«Dans mon dossier» означает перечень заслуг самого Паспарту, а не заведённое на него дело.",
+        "french_quote": "J'ai même dans mon dossier des incendies remarquables.",
+        "russian_quote": "В моём деле есть даже весьма примечательные пожары.",
+        "suggested_russian": "На моём счету есть даже несколько примечательных пожаров."
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c01-p0008",
+        "problem": "Тавтология «не хватало недостающей суммы».",
+        "suggested_russian": "когда для благородного, полезного или великодушного дела не хватало средств"
+      },
+      {
+        "id": "c01-p0012",
+        "problem": "«Cristaux à moule perdu» — характеристика изготовления бокалов; «отлитый в неповторимых формах» звучит неестественно и неточно.",
+        "suggested_russian": "клубные хрустальные бокалы, изготовленные в одноразовых формах"
+      }
+    ],
+    "summary": "Проверен каждый из 31 нумерованного фрагмента. В целом перевод близок к оригиналу, но в заголовке перепутаны роли, а реплика Паспарту о пожарах передана с неверным смыслом."
+  },
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 379,
+    "total_tokens": 6247,
+    "cost": 0.0184585,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 5865
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}
