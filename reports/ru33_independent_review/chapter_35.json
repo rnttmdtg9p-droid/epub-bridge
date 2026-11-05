@@ -1,0 +1,45 @@
+{
+  "rank": 33,
+  "chapter": 35,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_35.txt",
+  "source_file_id": "file_000000002ce081fbb5d35ed90c83a645",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad94-c6e7-7081-9cc6-30d3c15f15ba",
+  "review": {
+    "chapter": 35,
+    "checked_paragraphs": 57,
+    "pass": true,
+    "critical_issues": [],
+    "stylistic_issues": [
+      {
+        "id": "c35-p0009",
+        "problem": "Неверная форма слова и неестественная конструкция.",
+        "suggested_russian": "Сам он довольствуется чашкой чая и гренком. Миссис Ауда, как он надеется, извинит его отсутствие за завтраком и обедом: всё его время уйдёт на приведение дел в порядок."
+      },
+      {
+        "id": "c35-p0019",
+        "problem": "Лишняя запятая между обстоятельством и подлежащим.",
+        "suggested_russian": "Так, в течение этого воскресного дня дом на Сэвил-роу казался нежилым…"
+      },
+      {
+        "id": "c35-p0045",
+        "problem": "«Друг» в обращённом к себе предложении Ауды звучит менее естественно, чем «подруга».",
+        "suggested_russian": "…хотите ли вы обрести разом и родственницу, и подругу?"
+      }
+    ],
+    "summary": "Все 57 нумерованных фрагментов проверены. Серьёзных расхождений с французским текстом не обнаружено; нужны лишь небольшие языковые правки."
+  },
+  "usage": {
+    "prompt_tokens": 6297,
+    "completion_tokens": 266,
+    "total_tokens": 6563,
+    "cost": 0.018401,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 6294
+    }
+  },
+  "release_gate": "PASS_PENDING_ALL"
+}

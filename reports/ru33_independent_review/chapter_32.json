@@ -1,0 +1,45 @@
+{
+  "rank": 33,
+  "chapter": 32,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_32.txt",
+  "source_file_id": "file_00000000e53c81f5805f214fa3dde7e2",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad94-6dbe-79d2-8973-da2cc8de1d79",
+  "review": {
+    "chapter": 32,
+    "checked_paragraphs": 65,
+    "pass": true,
+    "critical_issues": [],
+    "stylistic_issues": [
+      {
+        "id": "c32-p0012",
+        "problem": "«Recommander» здесь означает «велеть, поручить», а не «посоветовать».",
+        "suggested_russian": "Мистер Фогг один вышел из гостиницы, велев слуге ждать его и предупредить миссис Ауду, чтобы она была готова в любую минуту."
+      },
+      {
+        "id": "c32-p0027",
+        "problem": "«Je pars sur lest» естественнее передать морским выражением «иду порожняком, с балластом».",
+        "suggested_russian": "— Камни в трюме. Фрахта нет. Иду порожняком, с балластом."
+      },
+      {
+        "id": "c32-p0057",
+        "problem": "Закрывающая кавычка осталась от французского оформления диалога и не имеет пары в русском тексте.",
+        "suggested_russian": "— Четверо."
+      }
+    ],
+    "summary": "Все 65 нумерованных фрагментов сверены. Существенных смысловых расхождений, пропусков или искажений имён, дат и чисел не обнаружено; нужны лишь небольшие редакторские правки."
+  },
+  "usage": {
+    "prompt_tokens": 5237,
+    "completion_tokens": 280,
+    "total_tokens": 5517,
+    "cost": 0.015891,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 5234
+    }
+  },
+  "release_gate": "PASS_PENDING_ALL"
+}

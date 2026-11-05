@@ -1,0 +1,53 @@
+{
+  "rank": 33,
+  "chapter": 33,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_33.txt",
+  "source_file_id": "file_00000000aaf88230980962217fb29c21",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad94-880a-7e43-b544-96766288d726",
+  "review": {
+    "chapter": 33,
+    "checked_paragraphs": 90,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c33-p0085",
+        "problem": "После высадки в Куинстауне герои садятся в поезд, отправляющийся из Куинстауна, а не направляющийся туда.",
+        "french_quote": "il montait dans le train de Queenstown à une heure et demie du matin, arrivait à Dublin",
+        "russian_quote": "он сел в половине второго ночи в поезд на Куинстаун, на рассвете прибыл в Дублин",
+        "suggested_russian": "в половине второго ночи он сел в поезд из Куинстауна и на рассвете прибыл в Дублин"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c33-p0011",
+        "problem": "Неоправданный повтор в оценке гипотезы.",
+        "suggested_russian": "Эта гипотеза, надо признать, казалась в высшей степени правдоподобной."
+      },
+      {
+        "id": "c33-p0015",
+        "problem": "Неудачные буквальные образы: «держать голову перед морем» и «палубу заливало с головы до ног».",
+        "suggested_russian": "умевшим противостоять морю; волны прокатывались по всей палубе"
+      },
+      {
+        "id": "c33-p0074",
+        "problem": "«Остаться ни с чем» добавляет следствие, которого нет в оригинале.",
+        "suggested_russian": "И вот у отважного джентльмена должен был иссякнуть пар!"
+      }
+    ],
+    "summary": "Проверены все 90 пронумерованных фрагментов. Перевод в целом близок к оригиналу, но в описании поездки из Куинстауна допущена серьёзная ошибка направления."
+  },
+  "usage": {
+    "prompt_tokens": 10136,
+    "completion_tokens": 393,
+    "total_tokens": 10529,
+    "cost": 0.0292685,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 10133
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}
