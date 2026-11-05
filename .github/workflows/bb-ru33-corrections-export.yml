@@ -1,0 +1,44 @@
+name: Rank 33 Editorial Corrections Export
+on:
+  push:
+    branches: [bb-ru33-french-claude-independent-review-20261105]
+    paths: ['.github/workflows/bb-ru33-corrections-export.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate correction files and prepare summary
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,collections
+          root=pathlib.Path('reports/ru33_editorial_corrections')
+          files=sorted(root.glob('chapter_*.json'))
+          assert len(files)==37,len(files)
+          out=pathlib.Path('results/ru33_editorial_corrections');out.mkdir(parents=True,exist_ok=True)
+          seen=set();count=0;counts={}
+          for n,f in enumerate(files,1):
+              data=json.loads(f.read_text(encoding='utf-8'))
+              assert data['chapter']==n and data['ISBN']=='9781774965986'
+              rows=data['corrections']['corrected']
+              ids=[r['id'] for r in rows]
+              assert len(ids)==len(set(ids)) and all(i.startswith(f'c{n:02d}-p') for i in ids)
+              assert all(isinstance(r['target'],str) and r['target'].strip() for r in rows)
+              assert not set(ids)&seen;seen.update(ids);count+=len(ids);counts[n]=len(ids)
+          summary={'rank':33,'isbn':'9781774965986','corrected_chapters':37,'corrected_paragraphs':count,'chapter_counts':counts,'status':'EDITORIAL_CORRECTIONS_STAGED_NEEDS_INDEPENDENT_POST_CORRECTION_REVIEW'}
+          (out/'corrections_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('EDITORIAL_CORRECTIONS',json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Upload full correction evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru33-editorial-corrections-37-chapters
+          path: |
+            reports/ru33_editorial_corrections/chapter_*.json
+            results/ru33_editorial_corrections/corrections_summary.json
+          if-no-files-found: error
+          retention-days: 90
