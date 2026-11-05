@@ -1,0 +1,58 @@
+{
+  "rank": 33,
+  "chapter": 18,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_18.txt",
+  "source_file_id": "file_000000005c7881fb8c4b8d28f467e482",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad90-717e-7b71-8bf4-449775777882",
+  "review": {
+    "chapter": 18,
+    "checked_paragraphs": 43,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c18-p0015",
+        "problem": "В подписи изменено количество: «некоторое число» превращено в «множество».",
+        "french_quote": "un certain nombre d'indigènes",
+        "russian_quote": "множество туземцев",
+        "suggested_russian": "несколько туземцев"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c18-p0003",
+        "problem": "«Лежать в дрейфе» неточно передаёт морской манёвр mettre à la cape.",
+        "suggested_russian": "«Рангуну» пришлось на полсуток лечь в дрейф под малым ходом, удерживаясь на десяти оборотах винта и встречая волны под углом."
+      },
+      {
+        "id": "c18-p0007",
+        "problem": "Нарушена русская идиома «скверная четверть часа».",
+        "suggested_russian": "Фиксу пришлось бы пережить скверную четверть часа."
+      },
+      {
+        "id": "c18-p0014",
+        "problem": "«Всё равно придётся» ошибочно звучит как неизбежная дополнительная повинность; en serait quitte означает, что этим дело ограничится.",
+        "suggested_russian": "мистеру Фоггу всего лишь придётся сесть на следующий пароход"
+      },
+      {
+        "id": "c18-p0043",
+        "problem": "Название Hôtel du Club переведено иначе, чем при предыдущих упоминаниях.",
+        "suggested_russian": "тотчас же покинул «Отель клуба»."
+      }
+    ],
+    "summary": "Проверены все 43 нумерованных фрагмента. Перевод в целом близок к оригиналу, но подпись к иллюстрации искажает количество; имеются также локальные терминологические, смысловые и стилистические неточности."
+  },
+  "usage": {
+    "prompt_tokens": 5817,
+    "completion_tokens": 402,
+    "total_tokens": 6219,
+    "cost": 0.018561,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 5814
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

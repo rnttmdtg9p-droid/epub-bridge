@@ -1,0 +1,62 @@
+{
+  "rank": 33,
+  "chapter": 20,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_20.txt",
+  "source_file_id": "file_0000000027b881f5b4f80e3686e05065",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad90-bf71-7bf3-8622-734fc98c002e",
+  "review": {
+    "chapter": 20,
+    "checked_paragraphs": 90,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c20-p0039",
+        "problem": "Реплика Фогга повреждена нечитаемыми символами.",
+        "french_quote": "Vous chargez-vous de me conduire à Yokohama?",
+        "russian_quote": "Беâ��етесь ли вы доставить меня в Иокогаму?",
+        "suggested_russian": "Берётесь ли вы доставить меня в Иокогаму?"
+      },
+      {
+        "id": "c20-p0034",
+        "problem": "Добавлена единица скорости «в час», отсутствующая в оригинале; при указанном бейдевинде это меняет морской смысл оценки хода.",
+        "french_quote": "Entre huit et neuf milles, au plus près.",
+        "russian_quote": "От восьми до девяти миль в час, при крутом бейдевинде.",
+        "suggested_russian": "От восьми до девяти узлов при ходе круто к ветру."
+      },
+      {
+        "id": "c20-p0078",
+        "problem": "В русском тексте осталось латинское слово внутри русского слова.",
+        "french_quote": "Même formalité fut remplie chez l'agent consulaire français",
+        "russian_quote": "Та же formalность была выполнена и у французского консульского агента",
+        "suggested_russian": "То же самое было сделано у французского консульского агента."
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c20-p0061",
+        "problem": "«Американская почта» не передаёт здесь значение la malle américaine — почтового парохода.",
+        "suggested_russian": "мне нужно сесть на американский почтовый пароход в Иокогаме"
+      },
+      {
+        "id": "c20-p0082",
+        "problem": "«Качающаяся лампа» не передаёт устройство lampe de roulis, рассчитанной на качку.",
+        "suggested_russian": "Посередине стоял стол, освещённый лампой на карданном подвесе."
+      }
+    ],
+    "summary": "Проверены все 90 пронумерованных фрагментов. Перевод в целом близок к оригиналу, но содержит два явных сбоя набора и существенную неточность в морском описании; требуется исправление."
+  },
+  "usage": {
+    "prompt_tokens": 7757,
+    "completion_tokens": 478,
+    "total_tokens": 8235,
+    "cost": 0.024171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 7754
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

@@ -1,0 +1,45 @@
+{
+  "rank": 33,
+  "chapter": 16,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_16.txt",
+  "source_file_id": "file_00000000e2ec81fba94eb9b827a3c6bd",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad90-3494-7310-983e-cabab3a0b702",
+  "review": {
+    "chapter": 16,
+    "checked_paragraphs": 32,
+    "pass": true,
+    "critical_issues": [],
+    "stylistic_issues": [
+      {
+        "id": "c16-p0006",
+        "problem": "«Les brasses du Bengale» обозначает морские глубины, измеряемые саженями; «бенгальские глубины» звучит неясно.",
+        "suggested_russian": "«бенгальскими саженями»"
+      },
+      {
+        "id": "c16-p0008",
+        "problem": "В названии птиц явная опечатка: «саланг#аны».",
+        "suggested_russian": "саланганы"
+      },
+      {
+        "id": "c16-p0018",
+        "problem": "«До его высадки» допускает ошибочное отнесение к «Рангуну», а не к Фоггу.",
+        "suggested_russian": "предупредить английские власти о прибытии «Рангуна», прежде чем Фогг сойдёт на берег"
+      }
+    ],
+    "summary": "Проверены все 32 абзаца. Существенных расхождений с французским текстом нет; требуется исправить опечатку и несколько неточных формулировок."
+  },
+  "usage": {
+    "prompt_tokens": 6375,
+    "completion_tokens": 247,
+    "total_tokens": 6622,
+    "cost": 0.018406,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 6372
+    }
+  },
+  "release_gate": "PASS_PENDING_ALL"
+}
