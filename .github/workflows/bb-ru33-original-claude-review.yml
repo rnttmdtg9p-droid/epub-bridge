@@ -9,23 +9,34 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
+concurrency:
+  group: ru33-french-claude-independent-review
+  cancel-in-progress: false
 jobs:
   translate-review:
     runs-on: ubuntu-latest
     timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
-      - name: Original French to Claude Russian; independent OpenAI literary audit
+      - name: Restore exact saved partial translations from failed original run
+        uses: actions/download-artifact@v4
+        with:
+          name: ru33-claude-french-original-draft-and-independent-review
+          run-id: 42102124525
+          github-token: ${{ github.token }}
+          path: results/ru33-french-claude-20261105/
+      - name: Continue French to Russian Claude translation; independent OpenAI literary audit
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: claude-sonnet-5-5
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python3 scripts/ru33_claude_translate_review.py
-      - name: Preserve draft translation and review, including partial checkpoints
+      - name: Preserve translated draft and review, including partial checkpoints
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ru33-claude-french-original-draft-and-independent-review
+          name: ru33-claude-french-original-draft-and-independent-review-resume
           path: results/ru33-french-claude-20261105/
           if-no-files-found: warn
           retention-days: 90

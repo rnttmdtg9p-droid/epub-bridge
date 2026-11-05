@@ -66,14 +66,19 @@ def claude_translate(items):
     if not KEY:raise RuntimeError("MISSING_ANTHROPIC_API_KEY")
     payload={"model":MODEL,"max_tokens":8192,
         "system":"You are an expert literary translator. Translate Jules Verne's authentic 1873 French prose into fluent, elegant literary Russian. Maintain meaning and historical texture; avoid omissions, additions, censorship, simplification or modern retelling. Keep character names consistent: Phileas Fogg = Филеас Фогг, Passepartout = Паспарту, Fix = Фикс, Aouda = Ауда. Output ONLY a JSON object with a field translations: an array of {id, target} in EXACTLY the input order, preserving all paragraph IDs.",
-        "messages":[{"role":"user","content":"Direct translation from French original. Each entry is a complete source paragraph. Return one complete Russian paragraph for each source entry and preserve headings as headings.\n"+json.dumps(items,ensure_ascii=False)}]}
+        "messages":[{"role":"user","content":"Direct translation from French original. Each entry is a complete source paragraph. Return one complete Russian paragraph for each source entry and preserve headings as headings.\n"+json.dumps(items,ensure_ascii=False)}],
+        "tools":[{"name":"emit_translations","description":"Submit the complete, accurately aligned Russian literary translation for every paragraph ID.",
+                  "input_schema":{"type":"object","properties":{"translations":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string"},"target":{"type":"string"}},"required":["id","target"]}}},"required":["translations"]}}],
+        "tool_choice":{"type":"tool","name":"emit_translations"}}
     d=request_json("https://api.anthropic.com/v1/messages",{"x-api-key":KEY,"anthropic-version":"2023-06-01","content-type":"application/json"},payload)
-    response="".join(p.get("text","") for p in d.get("content",[]) if p.get("type")=="text").strip()
-    try: obj=json.loads(response)
-    except json.JSONDecodeError:
-        start=response.find("{");end=response.rfind("}")
-        if start<0 or end<=start:raise RuntimeError("CLAUDE_RESPONSE_NOT_JSON")
-        obj=json.loads(response[start:end+1])
+    tool_outputs=[p.get("input",{}) for p in d.get("content",[]) if p.get("type")=="tool_use" and p.get("name")=="emit_translations"]
+    if not tool_outputs:
+        response="".join(p.get("text","") for p in d.get("content",[]) if p.get("type")=="text").strip()
+        try: obj=json.loads(response)
+        except json.JSONDecodeError as exc: raise RuntimeError("CLAUDE_NO_STRUCTURED_TOOL_OUTPUT") from exc
+    else:
+        obj=tool_outputs[0]
+    if not isinstance(obj,dict): raise RuntimeError("CLAUDE_TOOL_INPUT_INVALID")
     rows=obj.get("translations",[])
     if len(rows)!=len(items) or [r.get("id") for r in rows]!=[r["id"] for r in items]:
         raise RuntimeError(f"CLAUDE_ALIGNMENT_FAILURE:{len(rows)}/{len(items)}")
@@ -93,21 +98,31 @@ def translate(chapters):
         path=ROOT/f"chapter_{ch['chapter']:02d}.json"
         if path.exists():
             saved=json.loads(path.read_text(encoding="utf-8"))
-            if len(saved["paragraphs"])==len(ch["paragraphs"]) and all(x["source_sha256"]==y["source_sha256"] for x,y in zip(saved["paragraphs"],ch["paragraphs"])):
+            if len(saved["paragraphs"])==len(ch["paragraphs"]) and all(x["id"]==y["id"] and x["source_sha256"]==y["source_sha256"] and (not x.get("target") or x.get("target_sha256")==digest(x["target"])) for x,y in zip(saved["paragraphs"],ch["paragraphs"])):
                 ch["paragraphs"]=saved["paragraphs"]
+            else:
+                raise RuntimeError("CHECKPOINT_LINEAGE_OR_TARGET_HASH_MISMATCH_"+str(ch["chapter"]))
         pending=[p for p in ch["paragraphs"] if not p.get("target")]
         if not pending:continue
         for g in batches(ch["paragraphs"]):
             todo=[p for p in g if not next(x for x in ch["paragraphs"] if x["id"]==p["id"]).get("target")]
             if not todo:continue
-            for attempt in range(3):
-                try:
-                    translated,request_id=claude_translate(todo)
-                    break
-                except Exception as e:
-                    if attempt==2:raise
-                    print("RETRY_TRANSLATION_ALIGNMENT",ch["chapter"],str(e)[:150],flush=True)
-                    time.sleep(4*(attempt+1))
+            def translate_robust(rows):
+                last_error=None
+                for attempt in range(2):
+                    try:
+                        return claude_translate(rows)
+                    except Exception as exc:
+                        last_error=exc
+                        print("RETRY_TRANSLATION_ALIGNMENT",ch["chapter"],len(rows),str(exc)[:150],flush=True)
+                        time.sleep(3)
+                if len(rows)>1:
+                    middle=len(rows)//2
+                    a,req_a=translate_robust(rows[:middle])
+                    b,req_b=translate_robust(rows[middle:])
+                    return a+b, req_a+";"+req_b
+                raise last_error
+            translated,request_id=translate_robust(todo)
             byid={p["id"]:p for p in ch["paragraphs"]}
             for row in translated:
                 p=byid[row["id"]];p["target"]=row["target"].strip();p["target_sha256"]=digest(p["target"]);p["model"]=MODEL;p["request_id"]=request_id
