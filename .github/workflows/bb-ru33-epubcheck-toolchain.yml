@@ -1,0 +1,34 @@
+name: Rank 33 Official EPUBCheck Toolchain
+on:
+  push:
+    branches: [bb-ru33-french-claude-independent-review-20261105]
+    paths: ['.github/workflows/bb-ru33-epubcheck-toolchain.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fetch-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retrieve official W3C EPUBCheck v5.4.0 package
+        run: |
+          set -euo pipefail
+          mkdir -p tool
+          curl --fail --location --retry 4 --silent --show-error \
+            'https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip' \
+            -o tool/epubcheck-5.4.0.zip
+          python3 - <<'PY'
+          from zipfile import ZipFile
+          p='tool/epubcheck-5.4.0.zip'
+          with ZipFile(p) as z:
+              assert z.testzip() is None
+              print('EPUBCHECK_JARS', [n for n in z.namelist() if n.endswith('.jar')][:10])
+          PY
+          sha256sum tool/epubcheck-5.4.0.zip | tee tool/sha256.txt
+      - name: Save official validator download to run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru33-official-epubcheck-540-package
+          path: tool/
+          if-no-files-found: error
+          retention-days: 7
