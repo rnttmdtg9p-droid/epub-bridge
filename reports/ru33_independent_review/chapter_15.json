@@ -1,0 +1,77 @@
+{
+  "rank": 33,
+  "chapter": 15,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_15.txt",
+  "source_file_id": "file_00000000903481f88ffac9d76738632b",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8f-389b-7bd1-8ad9-ed101a61ce05",
+  "review": {
+    "chapter": 15,
+    "checked_paragraphs": 91,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c15-p0054",
+        "problem": "В русском тексте осталось английское слово вместо перевода наречия.",
+        "french_quote": "s'écria impétueusement Passepartout",
+        "russian_quote": "impetuously воскликнул Паспарту",
+        "suggested_russian": "пылко воскликнул Паспарту"
+      },
+      {
+        "id": "c15-p0056",
+        "problem": "«En pleine ville» означает «посреди города», а не «среди бела дня»; добавлено указание на время суток.",
+        "french_quote": "En pleine ville de Bombay?",
+        "russian_quote": "Среди бела дня, в самом городе Бомбее?..",
+        "suggested_russian": "Посреди Бомбея?"
+      },
+      {
+        "id": "c15-p0089",
+        "problem": "В слове «топнул» вместо кириллической «о» стоит латинская буква.",
+        "french_quote": "Le détective frappa la terre du pied.",
+        "russian_quote": "Сыщик topнул ногой.",
+        "suggested_russian": "Сыщик топнул ногой."
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c15-p0002",
+        "problem": "Неидиоматичное «сошёл с вагона».",
+        "suggested_russian": "Паспарту первым вышел из вагона."
+      },
+      {
+        "id": "c15-p0018",
+        "problem": "Неестественное сочетание «волнение голоса».",
+        "suggested_russian": "сказала ему голосом, в котором тщетно пыталась скрыть волнение"
+      },
+      {
+        "id": "c15-p0043",
+        "problem": "Излишне тяжеловесная передача краткого вопроса.",
+        "suggested_russian": "С вами обошлись недостаточно почтительно?"
+      },
+      {
+        "id": "c15-p0048",
+        "problem": "Сочетание «жалоба в святотатстве» неидиоматично.",
+        "suggested_russian": "жалобу по обвинению в святотатстве"
+      },
+      {
+        "id": "c15-p0072",
+        "problem": "«Не доказано материально» звучит как калька.",
+        "suggested_russian": "нет убедительных доказательств того, что между слугой и господином не было сговора"
+      }
+    ],
+    "summary": "Проверена 91 пара абзацев. Выявлены три существенных дефекта, включая непереведённое слово и смысловое добавление; остальные замечания касаются стиля."
+  },
+  "usage": {
+    "prompt_tokens": 8019,
+    "completion_tokens": 530,
+    "total_tokens": 8549,
+    "cost": 0.025346,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 8016
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

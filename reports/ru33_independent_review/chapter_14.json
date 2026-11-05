@@ -1,0 +1,72 @@
+{
+  "rank": 33,
+  "chapter": 14,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_14.txt",
+  "source_file_id": "file_00000000b11881fbb045e6f67fcbcc35",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8f-173e-7ad3-a5ec-990cd6e61d57",
+  "review": {
+    "chapter": 14,
+    "checked_paragraphs": 45,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c14-p0026",
+        "problem": "В оригинале пол слона не указан; перевод добавляет, что Киуни — самка.",
+        "french_quote": "allant à la bête",
+        "russian_quote": "подойдя к слонихе",
+        "suggested_russian": "подойдя к слону"
+      },
+      {
+        "id": "c14-p0041",
+        "problem": "Добавлено пыхтение парохода, которого нет в оригинале.",
+        "french_quote": "quelque steam-boat passait en hennissant",
+        "russian_quote": "какой-нибудь пароходик проносился с пыхтеньем и ржаньем",
+        "suggested_russian": "какой-нибудь пароход проходил, словно ржа"
+      },
+      {
+        "id": "c14-p0042",
+        "problem": "«Importantes» означает значительные, крупные; известность заводов в оригинале не утверждается.",
+        "french_quote": "Ghazepour et ses importantes fabriques d'eau de rose",
+        "russian_quote": "Газипур с его знаменитыми заводами розовой воды",
+        "suggested_russian": "Газипур с его крупными предприятиями по производству розовой воды"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c14-p0003",
+        "problem": "«Завернувшись» подразумевает сознательное действие женщины, которая ещё не пришла в себя.",
+        "suggested_russian": "Укутанная дорожными одеялами, она лежала в одном из седел-корзин."
+      },
+      {
+        "id": "c14-p0032",
+        "problem": "«Сонные пары» звучит неестественно и неточно передаёт «vapeurs assoupissantes».",
+        "suggested_russian": "Одурманивающее действие хэнга прошло."
+      },
+      {
+        "id": "c14-p0039",
+        "problem": "Ошибка согласования: «этот „индийские Афины“».",
+        "suggested_russian": "Бенарес, эти «индийские Афины», как называют его востоковеды"
+      },
+      {
+        "id": "c14-p0041",
+        "problem": "«Несколько слонов и горбатых зебу приходили купаться ..., а также ... толпы индусов» — грамматически неловкое соединение.",
+        "suggested_russian": "В водах священной реки купались слоны и горбатые зебу; несмотря на позднее время года и уже холодную погоду, там же совершали священные омовения толпы индусов обоего пола."
+      }
+    ],
+    "summary": "Проверены все 45 пар. Обнаружены три смысловых добавления или искажения и несколько стилистических недочётов; прочих доказуемых существенных расхождений не выявлено."
+  },
+  "usage": {
+    "prompt_tokens": 8017,
+    "completion_tokens": 594,
+    "total_tokens": 8611,
+    "cost": 0.025981,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 8014
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

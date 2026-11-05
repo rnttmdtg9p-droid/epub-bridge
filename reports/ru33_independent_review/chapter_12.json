@@ -1,0 +1,77 @@
+{
+  "rank": 33,
+  "chapter": 12,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_12.txt",
+  "source_file_id": "file_000000006ba081fb93ac07d63dfb3b61",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad8e-d0b9-7030-afed-0258de47135e",
+  "review": {
+    "chapter": 12,
+    "checked_paragraphs": 69,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c12-p0018",
+        "problem": "«Sous-affluents» — притоки притоков Ганга; в переводе ошибочное «одном» и повтор.",
+        "french_quote": "un des sous-affluents du Gange",
+        "russian_quote": "одном из притоков притоков Ганга",
+        "suggested_russian": "одном из притоков второго порядка Ганга"
+      },
+      {
+        "id": "c12-p0025",
+        "problem": "Несколько минут без основания уточнены до двух-трёх.",
+        "french_quote": "Quelques minutes plus tard",
+        "russian_quote": "Минуты через две-три",
+        "suggested_russian": "Через несколько минут"
+      },
+      {
+        "id": "c12-p0029",
+        "problem": "«Cymbales» — тарелки, не литавры.",
+        "french_quote": "des coups de tam-tams et de cymbales",
+        "russian_quote": "ударами там-тамов и звоном литавр",
+        "suggested_russian": "ударами там-тамов и тарелок"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c12-p0004",
+        "problem": "«Прыжки карпа» звучит буквально: речь об акробатических кульбитах.",
+        "suggested_russian": "Но он шутил и смеялся, выделывая свои кульбиты."
+      },
+      {
+        "id": "c12-p0016",
+        "problem": "Неудачный повтор «в сне … во сне».",
+        "suggested_russian": "Паспарту в беспокойном сне вновь переживал вчерашние кувырки."
+      },
+      {
+        "id": "c12-p0024",
+        "problem": "«Превратился в зрение и слух» неестественно по-русски.",
+        "suggested_russian": "Паспарту весь обратился в слух и напряжённо всматривался."
+      },
+      {
+        "id": "c12-p0032",
+        "problem": "«Старуха» добавляет указание на возраст; в оригинале лишь пренебрежительное «женщина».",
+        "suggested_russian": "Ну и уродина!"
+      },
+      {
+        "id": "c12-p0040",
+        "problem": "Имя Cromarty в этой главе передано непоследовательно: «Френсис» и «Фрэнсис».",
+        "suggested_russian": "Сэр Френсис Кромарти смотрел на всю эту пышность с необычайно печальным видом и, обернувшись к проводнику, сказал:"
+      }
+    ],
+    "summary": "Проверены все 69 пронумерованных пар. Обнаружены три существенные неточности и несколько стилистических шероховатостей."
+  },
+  "usage": {
+    "prompt_tokens": 8457,
+    "completion_tokens": 570,
+    "total_tokens": 9027,
+    "cost": 0.026841,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 8454
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}
