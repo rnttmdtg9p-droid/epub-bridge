@@ -147,5 +147,16 @@
     "update copyright, colophon, credits, dc:source, dc:rights for new translation",
     "check rights for every included illustration, translation, and territory",
     "official EPUBCheck zero fatal/error/warning, XML/nav/TOC/render QA, 37 chapter inspection"
-  ]
+  ],
+  "cover_preflight": {
+    "legacy_embedded_cover_sha256": "9212f613c2a0ed8da950a12e012303a2cef482d83fb34de35aac1bd8df8ecd0d",
+    "legacy_cover_visible_signature": "boundary bay publishing",
+    "legacy_cover_approved": false,
+    "alternate_library_asset": "033_Around_the_World_BB_Russian_Cover.jpg",
+    "alternate_candidate_sha256": "42b3fe9bf238b930aef2cb085827501debf27cfd67f91cc76f210531011af8a6",
+    "alternate_signature": "boundary bay classics, centered",
+    "alternate_dimensions": "1950x2993",
+    "alternate_v3_approval_status": "unverified; requires canonical approved V3 design comparison",
+    "recommendation": "Use alternate BB Classics cover only after verifying it is approved V3; never reuse embedded legacy publishing logo without correction."
+  }
 }
