@@ -1,0 +1,51 @@
+{
+  "rank": 33,
+  "isbn": "9781774965986",
+  "title_ru": "Вокруг света за восемьдесят дней",
+  "author": "Жюль Верн",
+  "release_scope": "PROJECT_LIBRARY_DOWNLOAD_ONLY",
+  "archive_folder": "/Russian collection project/Rank33_Release_20261105",
+  "files": {
+    "epub": {
+      "filename": "9781774965986.epub",
+      "library_file_id": "libfile_e756c40b4d14819188d6fd09356acb2e",
+      "file_id": "file_0000000004f481f89099b373bd0e53db",
+      "bytes": 19554333,
+      "sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a"
+    },
+    "cover": {
+      "filename": "9781774965986.jpeg",
+      "library_file_id": "libfile_77543bf2456c8191b72aebedf6710f89",
+      "file_id": "file_000000001ecc81fb8f5bf639e95df835",
+      "bytes": 438642,
+      "sha256": "b2a0de7210d71d4c91155b2a0951a637348f9052abd5fc635ac757172bcd0e00"
+    },
+    "package": {
+      "filename": "033_9781774965986_Release_Package_20261105.zip",
+      "file_id": "file_00000000414081fb8cd81162c3573779"
+    }
+  },
+  "source_original": "Le Tour du monde en quatre-vingts jours; Project Gutenberg eBook 46541",
+  "translated_text": "Claude-based new translation from original French; independent non-Claude literary review complete",
+  "exact_cover_policy": "Image from user upload '9781774965986(5).jpeg'; embedded byte-for-byte without modification",
+  "edition_notes": "Removed mention of historical Russian translation and removed superseded synthetic-cover credit; original French source credits and new translation disclosure retained.",
+  "qa": {
+    "epubcheck": "5.4.0",
+    "fatal": 0,
+    "errors": 0,
+    "warnings": 0,
+    "chapters": 37,
+    "historical_plates": 54,
+    "relative_links_checked": 200,
+    "broken_links": 0,
+    "zip_crc": "PASS",
+    "exact_library_readback_sha256": "PASS",
+    "unmodified_translated_chapter_bytes": true
+  },
+  "constraints": {
+    "distribution_rights": "NOT_CERTIFIED_FOR_COMMERCIAL_RETAIL",
+    "root_project_attachment": "Existing ISBN-named Project attachment could not be mutated through Library; the new version is in the dedicated release folder and directly downloadable.",
+    "collection_archive": "Not yet repackaged into the global 200-title ZIP",
+    "public_distributor_upload": "NOT_PERFORMED"
+  }
+}
