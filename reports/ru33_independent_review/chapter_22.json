@@ -1,0 +1,55 @@
+{
+  "rank": 33,
+  "chapter": 22,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_22.txt",
+  "source_file_id": "file_00000000b0d481fb86a5ec3fb456ee6f",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad91-a20b-7153-a154-3bc852e1ef36",
+  "review": {
+    "chapter": 22,
+    "checked_paragraphs": 47,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c22-p0036",
+        "problem": "В слове оставлен латинский фрагмент.",
+        "french_quote": "caniches à jambes courtes",
+        "russian_quote": "короткоdu ногих пуделей",
+        "suggested_russian": "коротконогих пуделей"
+      },
+      {
+        "id": "c22-p0022",
+        "problem": "Непереведённое обозначение должности нарушает русскую реплику.",
+        "french_quote": "répondit le purser",
+        "russian_quote": "ответил purser",
+        "suggested_russian": "ответил баталер"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c22-p0006",
+        "problem": "«Перебежал через борт» неверно описывает посадку на судно.",
+        "suggested_russian": "Он бросился на сходни, пересёк переходной трап и без чувств упал на баке."
+      },
+      {
+        "id": "c22-p0045",
+        "problem": "«Baladins» — бродячие артисты, не обязательно плясуны.",
+        "suggested_russian": "глядя, как труппы бродячих артистов показывают свои удивительные номера"
+      }
+    ],
+    "summary": "Проверены все 47 абзацев. Перевод в целом близок к оригиналу, но два явных дефекта текста требуют исправления."
+  },
+  "usage": {
+    "prompt_tokens": 8153,
+    "completion_tokens": 302,
+    "total_tokens": 8455,
+    "cost": 0.023401,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 8150
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

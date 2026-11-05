@@ -1,0 +1,60 @@
+{
+  "rank": 33,
+  "chapter": 25,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_25.txt",
+  "source_file_id": "file_0000000090a481fba4a05c4f82af73a3",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad92-006b-7742-9804-ad3fef62ab5e",
+  "review": {
+    "chapter": 25,
+    "checked_paragraphs": 61,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c25-p0019",
+        "problem": "Bureau («контора», «стол») ошибочно превращено в трибуну; это меняет место действия.",
+        "french_quote": "un large bureau en plein vent",
+        "russian_quote": "широкая трибуна под открытым небом",
+        "suggested_russian": "большой стол под открытым небом"
+      },
+      {
+        "id": "c25-p0040",
+        "problem": "Indiens здесь — коренные жители Америки, а не жители Индии.",
+        "french_quote": "ces culottes dont certains Indiens ... ne se vêtent qu'après en avoir préalablement enlevé le fond",
+        "russian_quote": "штаны, которые некоторые индийцы ... надевают лишь после того, как предварительно выпорют из них заднюю часть",
+        "suggested_russian": "штаны, которые некоторые индейцы ... надевают, предварительно удалив у них заднюю часть"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c25-p0006",
+        "problem": "Буквальная калька «doués d'une activité dévorante» звучит неестественно.",
+        "suggested_russian": "джентльменов, кипевших деятельностью"
+      },
+      {
+        "id": "c25-p0043",
+        "problem": "«Где?» не соответствует вопросу о направлении.",
+        "suggested_russian": "— Куда?"
+      },
+      {
+        "id": "c25-p0046",
+        "problem": "Название гостиницы передано иначе, чем в предыдущих абзацах.",
+        "suggested_russian": "Затем они вернулись в «Интернешнл-отель»."
+      }
+    ],
+    "summary": "Проверен 61 пронумерованный фрагмент. Перевод в целом следует оригиналу, но две предметные ошибки требуют исправления; также есть отдельные стилистические и редакционные неточности."
+  },
+  "usage": {
+    "prompt_tokens": 8194,
+    "completion_tokens": 403,
+    "total_tokens": 8597,
+    "cost": 0.0245135,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 8191
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

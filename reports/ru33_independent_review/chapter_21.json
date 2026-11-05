@@ -1,0 +1,81 @@
+{
+  "rank": 33,
+  "chapter": 21,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_21.txt",
+  "source_file_id": "file_00000000e80481fba5e3aae460b22615",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad91-7723-7a83-9650-cec309412c19",
+  "review": {
+    "chapter": 21,
+    "checked_paragraphs": 79,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c21-p0012",
+        "problem": "Фикс намерен получить юридический акт об экстрадиции, а не просто ордер на выдачу.",
+        "french_quote": "un acte d'extradition",
+        "russian_quote": "ордера на выдачу",
+        "suggested_russian": "документа об экстрадиции"
+      },
+      {
+        "id": "c21-p0018",
+        "problem": "«Flèches» — верхние паруса; перевод вводит не упомянутые во французском лисели.",
+        "french_quote": "fit établir les flèches",
+        "russian_quote": "велел поставить лисели-топселя",
+        "suggested_russian": "велел поставить верхние паруса"
+      },
+      {
+        "id": "c21-p0041",
+        "problem": "В оригинале все паруса убирают, а не берут на них рифы; убирают выдвижной бушприт, а не весь бушприт; штормовой парус ставят вместо стакселя, не триселя.",
+        "french_quote": "fit serrer toutes les voiles ... On rentra le bout-dehors ... un tourmentin ... en guise de trinquette",
+        "russian_quote": "велел взять рифы на всех парусах ... Бушприт убрали ... вместо трисселя",
+        "suggested_russian": "велел убрать все паруса ... убрали выдвижной бушприт ... подняли штормовой парус вместо стакселя"
+      },
+      {
+        "id": "c21-p0064",
+        "problem": "«Flèches» и «contre-foc» ошибочно названы бом-брамселями и обычным кливером; изменён состав поставленных парусов.",
+        "french_quote": "Flèches, voiles d'étais, contre-foc",
+        "russian_quote": "Бом-брамсели, стаксели, кливер",
+        "suggested_russian": "Верхние паруса, стаксели, дополнительный кливер"
+      },
+      {
+        "id": "c21-p0072",
+        "problem": "«Barre» здесь румпель или рулевая рукоять; перевод вводит штурвальное колесо, которого в тексте нет.",
+        "french_quote": "repoussa la barre d'un bras désespéré",
+        "russian_quote": "оттолкнул штурвальное колесо",
+        "suggested_russian": "отчаянным движением руки оттолкнул румпель"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c21-p0040",
+        "problem": "«В менее поздний час года» неестественно передаёт время года.",
+        "suggested_russian": "В более раннее время года"
+      },
+      {
+        "id": "c21-p0045",
+        "problem": "«Три четверти румба» без оснований уточняет величину поворота ветра.",
+        "suggested_russian": "ветер, повернув на три четверти, зашёл с северо-запада"
+      },
+      {
+        "id": "c21-p0067",
+        "problem": "«Tous» относится к людям на борту, а не к одному сердцу.",
+        "suggested_russian": "у всех — кроме, разумеется, Филеаса Фогга — сердца бились от нетерпения"
+      }
+    ],
+    "summary": "Проверены все 79 пронумерованных фрагментов. Перевод в целом близок к оригиналу, но содержит существенные ошибки в морской терминологии и действиях экипажа; требуется исправление."
+  },
+  "usage": {
+    "prompt_tokens": 10293,
+    "completion_tokens": 736,
+    "total_tokens": 11029,
+    "cost": 0.033091,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 10290
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}

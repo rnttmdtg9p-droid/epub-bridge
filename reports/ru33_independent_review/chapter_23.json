@@ -1,0 +1,48 @@
+{
+  "rank": 33,
+  "chapter": 23,
+  "ISBN": "9781774965986",
+  "source_name": "ru33_review_packet_23.txt",
+  "source_file_id": "file_0000000059c081fbb8eef7ee9896679a",
+  "reviewer": "openai/gpt-6-sol",
+  "independent_from_claude": true,
+  "request_id": "01a1ad91-bb65-7ae3-a2b7-141bf02d9e7d",
+  "review": {
+    "chapter": 23,
+    "checked_paragraphs": 58,
+    "pass": false,
+    "critical_issues": [
+      {
+        "id": "c23-p0048",
+        "problem": "«Une douzaine» — около двенадцати человек, а не «десяток-другой», допускающий до двадцати.",
+        "french_quote": "Une douzaine de ces sectateurs du dieu Tingou",
+        "russian_quote": "Десяток-другой последователей бога Тингу",
+        "suggested_russian": "Около дюжины последователей бога Тингу"
+      }
+    ],
+    "stylistic_issues": [
+      {
+        "id": "c23-p0010",
+        "problem": "Нарушено согласование в сочетании «в скромную на вид „чайный дом“».",
+        "suggested_russian": "зайти в скромный на вид «чайный дом»"
+      },
+      {
+        "id": "c23-p0046",
+        "problem": "«Ils les lançaient comme des volants, avec des raquettes de bois» передано неудачной формой «как волан» и неясной связью с ракетками.",
+        "suggested_russian": "они подбрасывали их деревянными ракетками, словно воланы"
+      }
+    ],
+    "summary": "Проверены все 58 пронумерованных абзацев. Перевод в целом точен, но в описании номера существенно изменено число участников; также есть две локальные языковые шероховатости."
+  },
+  "usage": {
+    "prompt_tokens": 7586,
+    "completion_tokens": 307,
+    "total_tokens": 7893,
+    "cost": 0.0220335,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 7583
+    }
+  },
+  "release_gate": "CORRECTIONS_REQUIRED"
+}
