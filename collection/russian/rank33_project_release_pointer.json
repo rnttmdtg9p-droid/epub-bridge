@@ -131,6 +131,16 @@
       "claim": "EDItEUR NotificationType 03 means confirmed on publication, not automatically suitable for held edition",
       "url": "https://ns.editeur.org/onix/en/1/03",
       "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "EDItEUR ONIX List 1: 03 signals notification confirmed on publication, while 89 denotes a test record which recipients discard after testing and requires a RecordReference not matching a previously sent live product. Staged rank33 ONIX changed to 89 with unique test record reference; no live distribution.",
+      "url": "https://ns.editeur.org/onix/en/1",
+      "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "EDItEUR ONIX List 65: ProductAvailability 40 is not available (reason unspecified), consistent with no retail supply. List 64: PublishingStatus 00 is unspecified.",
+      "url": "https://ns.editeur.org/onix/en/65",
+      "verified_on": "2026-11-05"
     }
   ],
   "metadata_sync_gates": {
@@ -148,7 +158,7 @@
       "approved_title": "Вокруг света за восемьдесят дней",
       "observed_onix_publishing_status": "04",
       "observed_onix_product_availability": "20",
-      "state": "HOLD_SAFE_RANK33_OVERRIDE_STAGED_NOT_MERGED",
+      "state": "INTERNAL_TEST_ONLY_TITLE_CORRECTED_NOT_MERGED_COMBINED_FEED_STILL_OLD_AVAILABLE",
       "warning": "Those original codes mean Active and Available; they do NOT certify rights or current retail eligibility. Do not redistribute this old ONIX record for rank 33 unchanged.",
       "exact_title_field": "Product[ProductIdentifier/IDValue='9781774965986']/DescriptiveDetail/TitleDetail[TitleType='01']/TitleElement/TitleText",
       "proposed_title_text": "Вокруг света за восемьдесят дней",
@@ -164,7 +174,11 @@
         "commercial_release_approval": false,
         "merge_requires": "Documented rights clearance, sales territory approval, ONIX schema validation, coordinated archive roster/checkpoint change-control",
         "unsubstantiated_2026_fields": "Removed draft PublicationDate and CopyrightStatement claiming 2026; no commercial publication/rights signoff.",
-        "notification_type_gate": "Type 03 in draft means publication confirmed; draft remains INTERNAL-ONLY and is not safe for trade feed; reassess on release."
+        "notification_type_gate": "Resolved for INTERNAL-ONLY TEST: replaced 03 (confirmed on publication) with 89 (test record), and assigned a unique test RecordReference distinct from existing live-combined record. Conversion into commercial ONIX still requires new separately approved live record and rights clearance.",
+        "notification_type": "89",
+        "notification_type_note": "EDItEUR code 89 is a TEST record; NOT a confirmed-publication notification. Must be discarded after internal test; NEVER merge this test record or its special RecordReference into any commercial feed.",
+        "test_record_reference": "BB-RU-9781774965986-INTERNAL-TEST-HOLD-20261106",
+        "onix_test_hold_commit": "20361599c52af72fa7d1a921c20a799daa900ee6"
       }
     }
   },
@@ -178,7 +192,7 @@
     "Extend or document the Jamie Leigh photo's permission for this exact Rank 33 edition and proposed countries (earlier October 9 consent limited to rank 20 / USA); verify ownership or license of Boundary Bay logo.",
     "Provide cover asset/component commercial-use attestation for exact uploaded SHA b2a0de... and confirm translation production-account terms / reviewer-contributor agreement.",
     "Choose authorized distribution countries after jurisdiction checks. Exact final EPUB uses Project Gutenberg as a factual source credit only (official PG guidance distinguishes such credits from trademark sales use); confirm no marketing implies PG endorsement, and clear other commercial rights before retail.",
-    "After these rights gates and any required native reader check PASS or explicit authorized waiver, coordinate change-controlled frozen roster and 200-title ONIX correction; do not merge held staged record for retailers prematurely."
+    "After owner rights signoff and any required native reader quality gate, coordinate change-controlled frozen roster/archive checkpoints and the 200-title commercial ONIX. Current standalone staged rank33 file is strictly an ONIX test record (NotificationType 89, unique test RecordReference), and must NOT be sent or merged into commercial records; generate a new, approved live replacement only once rights, title, territories, status and effective date are verified."
   ],
   "rights_asset_inventory": {
     "inspected_asset_sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
