@@ -45,12 +45,13 @@
       "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW",
       "embedded_contemporary_assets": "OPEN: Jamie Leigh photo SHA eb005bcc... matches shared Boundary Bay image; October 9, 2026 USER_ATTESTED_PERMISSION record covers rank 20, USA ONLY and explicitly cannot be generalized to rank 33/Canada. Shared publisher logo SHA 4e8d3a... matches 2026-10-04 master evidence; obtain publisher ownership/licensing record for this edition.",
       "historical_portrait": "EVIDENCE_MATCH: exact embedded image SHA matches the durable original 2575x3590 Commons file in October 6 ledger; Commons identifies Bertrand work as public domain/PD-Art; this is evidence-backed for US/Canada historical-work reuse, not legal certification for other territories.",
-      "project_gutenberg_attribution_trademark_review": "SOURCE_CITATION_ONLY_LOW_RISK_NOT_AN_INDEPENDENT_CLEARANCE: SHA-256-verified final EPUB has one factual Project Gutenberg #46541 reference in EPUB/text/credits.xhtml plus one gutenberg.org source URL in EPUB/package.opf. Official Gutenberg License How-To says acknowledgments, references and colophons are not trademark use, unlike title, cover or promotional branding. Mere credit does not by itself trigger the commercial trademark-royalty rule. Other retail permissions, territorial issues, attribution and terms-compliance review remain pending; do not treat the book as retail authorized."
+      "project_gutenberg_attribution_trademark_review": "SOURCE_CITATION_ONLY_LOW_RISK_NOT_AN_INDEPENDENT_CLEARANCE: SHA-256-verified final EPUB has one factual Project Gutenberg #46541 reference in EPUB/text/credits.xhtml plus one gutenberg.org source URL in EPUB/package.opf. Official Gutenberg License How-To says acknowledgments, references and colophons are not trademark use, unlike title, cover or promotional branding. Mere credit does not by itself trigger the commercial trademark-royalty rule. Other retail permissions, territorial issues, attribution and terms-compliance review remain pending; do not treat the book as retail authorized.",
+      "project_gutenberg_license_citation_formal_review": "PENDING_PUBLISHER_REVIEW. The official explanatory PG license says acknowledgements/reference-section/colophon citations are NOT trademark use (https://www.gutenberg.org/policy/license.html); the normative license section 1.E uses broad 'unless you have removed all references' language. FAQ permits factual PG source credits even in commercial works. Confirm whether this independent derived edition's isolated factual credit and dc:source URL require any attached license notice or other action. Do not silently remove citations or alter the approved EPUB."
     },
     "additional_quality_note": "Historical pre-release gate lacked exhaustive native-reader certification; project release EPUBCheck and internal-link checks did pass. Do not silently turn into a retail gate PASS.",
     "documented_waiver": "NONE"
   },
-  "rights_research_as_of": "2026-11-05",
+  "rights_research_as_of": "2026-11-06",
   "rights_evidence": [
     {
       "claim": "Project Gutenberg item 46541 names illustrator Leon Benett (d. 1917) and Alphonse de Neuville (d. 1885) and declares original French book public domain in USA.",
@@ -141,6 +142,17 @@
       "claim": "EDItEUR ONIX List 65: ProductAvailability 40 is not available (reason unspecified), consistent with no retail supply. List 64: PublishingStatus 00 is unspecified.",
       "url": "https://ns.editeur.org/onix/en/65",
       "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "October 6 exact image lineage audit separately maps historical route-map.jpg to Project Gutenberg #46541 x-map.jpg, SHA-256 8b6c2da..., minimal JPEG recompression to embedded SHA-256 849d7e..., both 1200x966; exact scan reuse remains open in Canada.",
+      "library_file_id": "file_00000000aab48206b09c25db30c6e259",
+      "recorded_date": "2026-10-06",
+      "verified_on": "2026-11-06"
+    },
+    {
+      "claim": "PG license explanatory text excludes factual acknowledgments/colophons from trademark use but normative clause 1.E is broadly phrased; publisher to reconcile applicability with independently produced edition before commercial distribution.",
+      "url": "https://www.gutenberg.org/policy/license.html",
+      "verified_on": "2026-11-06"
     }
   ],
   "metadata_sync_gates": {
@@ -180,6 +192,16 @@
         "test_record_reference": "BB-RU-9781774965986-INTERNAL-TEST-HOLD-20261106",
         "onix_test_hold_commit": "20361599c52af72fa7d1a921c20a799daa900ee6"
       }
+    },
+    "secondary_library_isbn_title_map": {
+      "filename": "ISBN_Title_Map.csv",
+      "library_file_id": "libfile_c981ef4b332c8191bde07a8890af0b18",
+      "observed_rank33_title": "Вокруг света в восемьдесят дней",
+      "approved_title": "Вокруг света за восемьдесят дней",
+      "observed_sales_territories": "Unstated",
+      "observed_publication_date": "2026",
+      "state": "STALE_REFERENCE_METADATA_DO_NOT_TREAT_AS_COMMERCIAL_CLEARANCE",
+      "action": "Coordinate correction in the source catalog during authorized live ONIX/roster synchronization; do not overwrite unrelated shared catalog or infer publication approval."
     }
   },
   "exclusions": [
@@ -188,11 +210,13 @@
     "Does not imply commercial release"
   ],
   "next_owner_actions": [
-    "Review and sign off on the US/Canada scan-derived-image reuse basis: all 54 plates trace to Gutenberg #46541 and Gutenberg expressly allows commercial reuse of its US public-domain eBook images; check any independently authored modifications or access-site restrictions and target geography.",
+    "Review/sign off on US and Canadian scan-derived image reuse for 54 historical plates AND the traced route map (source x-map.jpg); underlying works have public-domain support, but exact scan/access terms, independent modifications and target geography still require publisher clearance.",
     "Extend or document the Jamie Leigh photo's permission for this exact Rank 33 edition and proposed countries (earlier October 9 consent limited to rank 20 / USA); verify ownership or license of Boundary Bay logo.",
     "Provide cover asset/component commercial-use attestation for exact uploaded SHA b2a0de... and confirm translation production-account terms / reviewer-contributor agreement.",
     "Choose authorized distribution countries after jurisdiction checks. Exact final EPUB uses Project Gutenberg as a factual source credit only (official PG guidance distinguishes such credits from trademark sales use); confirm no marketing implies PG endorsement, and clear other commercial rights before retail.",
-    "After owner rights signoff and any required native reader quality gate, coordinate change-controlled frozen roster/archive checkpoints and the 200-title commercial ONIX. Current standalone staged rank33 file is strictly an ONIX test record (NotificationType 89, unique test RecordReference), and must NOT be sent or merged into commercial records; generate a new, approved live replacement only once rights, title, territories, status and effective date are verified."
+    "After owner rights signoff and any required native reader quality gate, coordinate change-controlled frozen roster/archive checkpoints and the 200-title commercial ONIX. Current standalone staged rank33 file is strictly an ONIX test record (NotificationType 89, unique test RecordReference), and must NOT be sent or merged into commercial records; generate a new, approved live replacement only once rights, title, territories, status and effective date are verified.",
+    "Reconcile Project Gutenberg's source-credit guidance with its broader normative license clause 1.E for exact EPUB factual credits; do not modify the frozen edition unless the publisher determines an action is necessary.",
+    "At coordinated commercial metadata update, also correct stale ISBN_Title_Map.csv reference title (older 'в' rather than approved 'за') and remove unsupported 2026 publication assumptions; do not treat 'Unstated' territories as permission."
   ],
   "rights_asset_inventory": {
     "inspected_asset_sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
@@ -214,7 +238,13 @@
       },
       "EPUB/images/route-map.jpg": {
         "sha256": "849d7e607ca749b4a3cd5fe9217ec9779762225dc9907806cd577a3386c37e77",
-        "status": "EARLIER_ANCHOR_IN_20261006_AUDIT_AND_PRESERVED_IMAGE; EXACT_SCAN_USE_GATE_OPEN"
+        "status": "EARLIER_ANCHOR_IN_20261006_AUDIT_AND_PRESERVED_IMAGE; EXACT_SCAN_USE_GATE_OPEN",
+        "source_filename": "x-map.jpg",
+        "source_sha256": "8b6c2da00c2b951d336b38be7a97aaa88d1ab8e132f151f4b56ad82ad04c8b3b",
+        "source_dimensions": "1200x966",
+        "embedded_dimensions": "1200x966",
+        "lineage": "2026-10-06 historical audit: minimal JPEG recompression; mean channel difference 0.227; maximum pixel channel difference 5; source and candidate lineage PASS",
+        "rights_status": "Underlying historical edition: US/Canada public-domain support; exact scan/access conditions and Canadian commercial reuse still open pending publisher acceptance"
       },
       "EPUB/images/jamie-leigh.jpg": {
         "sha256": "eb005bccf1fafac0198be50db7fc0b6ad3e81147987ec3dd445a8902a5ee8ec8",
@@ -241,7 +271,10 @@
       "prior_ancestor_dimension_matches": "54/54",
       "prior_ancestor_image_transform": "minimal JPEG recompression",
       "release_inheritance": "Release QA states preserved images outside cover, edition notes and OPF; fresh side-by-side 54-asset source-vs-current comparison not performed in this audit.",
-      "commercial_exact_scan_reuse": "OPEN_FAIL_CLOSED_20261006_CARRIED_FORWARD"
+      "commercial_exact_scan_reuse": "OPEN_FAIL_CLOSED_20261006_CARRIED_FORWARD",
+      "route_map_also_mapped": true,
+      "route_map_source_filename": "x-map.jpg",
+      "route_map_source_sha256": "8b6c2da00c2b951d336b38be7a97aaa88d1ab8e132f151f4b56ad82ad04c8b3b"
     },
     "project_gutenberg_reference_audit": {
       "audited_final_epub_sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
