@@ -64,6 +64,14 @@
     {
       "claim": "Project Gutenberg permits commercial reuse of its public-domain text but trademark use and file terms require care.",
       "url": "https://www.gutenberg.org/policy/permission"
+    },
+    {
+      "claim": "Project Gutenberg eBook 46541 explicitly credits its transcription/images to scans made available by Internet Archive/Canadian Libraries. This identifies a likely source collection, but not the exact source/license of all 54 reproduced final bytes.",
+      "url": "https://www.gutenberg.org/ebooks/46541"
+    },
+    {
+      "claim": "Project Gutenberg explains commercial use of US public-domain source text is generally unrestricted, but commercial use of Project Gutenberg trademark has separate restrictions.",
+      "url": "https://www.gutenberg.org/policy/permission"
     }
   ],
   "metadata_sync_gates": {
@@ -81,10 +89,22 @@
       "approved_title": "Вокруг света за восемьдесят дней",
       "observed_onix_publishing_status": "04",
       "observed_onix_product_availability": "20",
-      "state": "NEEDS_HOLD_SAFE_METADATA_UPDATE_BEFORE_NEXT_COMMERCIAL_EXPORT",
+      "state": "HOLD_SAFE_RANK33_OVERRIDE_STAGED_NOT_MERGED",
       "warning": "Those original codes mean Active and Available; they do NOT certify rights or current retail eligibility. Do not redistribute this old ONIX record for rank 33 unchanged.",
       "exact_title_field": "Product[ProductIdentifier/IDValue='9781774965986']/DescriptiveDetail/TitleDetail[TitleType='01']/TitleElement/TitleText",
-      "proposed_title_text": "Вокруг света за восемьдесят дней"
+      "proposed_title_text": "Вокруг света за восемьдесят дней",
+      "staged_single_product_override": {
+        "path": "collection/russian/rank33_onix_hold_staged.xml",
+        "status": "INTERNAL_ONLY_NOT_FOR_RETAILERS",
+        "derived_from": "/Russian collection project/BB_Russian_Collection_Combined_ONIX3_200.xml",
+        "title": "Вокруг света за восемьдесят дней",
+        "publishing_status": "00",
+        "publishing_status_note": "Unspecified, not an assertion of active trade availability",
+        "product_availability": "40",
+        "product_availability_note": "Not available; no price included; territorial sales rights remain unknown",
+        "commercial_release_approval": false,
+        "merge_requires": "Documented rights clearance, sales territory approval, ONIX schema validation, coordinated archive roster/checkpoint change-control"
+      }
     }
   },
   "exclusions": [
@@ -96,6 +116,6 @@
     "Document exact scanned-art use terms/provenance for all reused image files or approve rights-safe substitutes",
     "Document cover artwork ownership or commercial license, and Russian translation rights chain",
     "Approve country-specific commercial distribution scope",
-    "Perform coordinated frozen roster and ONIX metadata update under the archive and release change-control, then republish only after rights and supply gate PASS"
+    "Merge the staged non-retail ONIX title/availability override into the appropriate 200-product master only after coordinated archival change control; authorize distribution only after rights and territory gates PASS."
   ]
 }
