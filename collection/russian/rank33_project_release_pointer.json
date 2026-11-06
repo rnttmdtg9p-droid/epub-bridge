@@ -45,7 +45,7 @@
       "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW",
       "embedded_contemporary_assets": "OPEN: Jamie Leigh photo SHA eb005bcc... matches shared Boundary Bay image; October 9, 2026 USER_ATTESTED_PERMISSION record covers rank 20, USA ONLY and explicitly cannot be generalized to rank 33/Canada. Shared publisher logo SHA 4e8d3a... matches 2026-10-04 master evidence; obtain publisher ownership/licensing record for this edition.",
       "historical_portrait": "EVIDENCE_MATCH: exact embedded image SHA matches the durable original 2575x3590 Commons file in October 6 ledger; Commons identifies Bertrand work as public domain/PD-Art; this is evidence-backed for US/Canada historical-work reuse, not legal certification for other territories.",
-      "project_gutenberg_attribution_trademark_review": "OPEN: credits.xhtml names Project Gutenberg #46541. Gutenberg trademark terms differ from public-domain text reuse; publisher must choose an attribution/redistribution compliance basis before any paid distribution. No EPUB edits authorized/performed."
+      "project_gutenberg_attribution_trademark_review": "SOURCE_CITATION_ONLY_LOW_RISK_NOT_AN_INDEPENDENT_CLEARANCE: SHA-256-verified final EPUB has one factual Project Gutenberg #46541 reference in EPUB/text/credits.xhtml plus one gutenberg.org source URL in EPUB/package.opf. Official Gutenberg License How-To says acknowledgments, references and colophons are not trademark use, unlike title, cover or promotional branding. Mere credit does not by itself trigger the commercial trademark-royalty rule. Other retail permissions, territorial issues, attribution and terms-compliance review remain pending; do not treat the book as retail authorized."
     },
     "additional_quality_note": "Historical pre-release gate lacked exhaustive native-reader certification; project release EPUBCheck and internal-link checks did pass. Do not silently turn into a retail gate PASS.",
     "documented_waiver": "NONE"
@@ -101,6 +101,16 @@
     {
       "claim": "Official EDItEUR ONIX codelist 46 supports ROWSalesRightsType 00, meaning unknown/unstated; safe to maintain internal ONIX hold while distribution scope awaits rights signoff.",
       "url": "https://ns.editeur.org/onix/en/46"
+    },
+    {
+      "claim": "Gutenberg's official License How-To distinguishes factual source citations in acknowledgments/reference sections/colophons (not trademark use) from branded use in product titles, covers or promotional material; commercial royalties apply when trading on the trademark, not automatically for factual credits.",
+      "url": "https://www.gutenberg.org/policy/license.html",
+      "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "Gutenberg Permission How-To says crediting the site as a source is allowed even in commercial works; distinguish this from using its trademark to market a product.",
+      "url": "https://www.gutenberg.org/policy/permission.html",
+      "verified_on": "2026-11-05"
     }
   ],
   "metadata_sync_gates": {
@@ -145,7 +155,7 @@
     "Obtain a written reuse basis or commercial permission for the exact 54 scan-derived plates and route map (October 6 ledger identifies source but leaves exact commercial scan rights OPEN).",
     "Extend or document the Jamie Leigh photo's permission for this exact Rank 33 edition and proposed countries (earlier October 9 consent limited to rank 20 / USA); verify ownership or license of Boundary Bay logo.",
     "Provide cover asset/component commercial-use attestation for exact uploaded SHA b2a0de... and confirm translation production-account terms / reviewer-contributor agreement.",
-    "Choose authorized distribution countries after jurisdiction checks; document any Gutenberg trademark/attribution compliance for publisher sale.",
+    "Choose authorized distribution countries after jurisdiction checks. Exact final EPUB uses Project Gutenberg as a factual source credit only (official PG guidance distinguishes such credits from trademark sales use); confirm no marketing implies PG endorsement, and clear other commercial rights before retail.",
     "After these rights gates and any required native reader check PASS or explicit authorized waiver, coordinate change-controlled frozen roster and 200-title ONIX correction; do not merge held staged record for retailers prematurely."
   ],
   "rights_asset_inventory": {
@@ -196,6 +206,21 @@
       "prior_ancestor_image_transform": "minimal JPEG recompression",
       "release_inheritance": "Release QA states preserved images outside cover, edition notes and OPF; fresh side-by-side 54-asset source-vs-current comparison not performed in this audit.",
       "commercial_exact_scan_reuse": "OPEN_FAIL_CLOSED_20261006_CARRIED_FORWARD"
+    },
+    "project_gutenberg_reference_audit": {
+      "audited_final_epub_sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
+      "method": "ZIP entry text search of XHTML, XML, OPF, NCX, CSS, SVG, and TXT; inspect credits.xhtml and colophon.xhtml text without modifying any bytes",
+      "findings": [
+        {
+          "EPUB/text/credits.xhtml": "One factual Project Gutenberg eBook 46541 source acknowledgment; no endorsement or promotional claim"
+        },
+        {
+          "EPUB/package.opf": "One https://www.gutenberg.org/ebooks/46541 source URL in dc:source metadata"
+        }
+      ],
+      "other_text_entries_no_project_gutenberg_mentions": true,
+      "assessment": "CREDIT_CITATION_DISTINGUISHED_FROM_TRADEMARK_USE_NOT_A_RETAIL_CLEARANCE",
+      "verified_on": "2026-11-05"
     }
   }
 }
