@@ -39,7 +39,7 @@
     "rights_gates": {
       "canada_original_french_text": "HISTORICAL_PUBLIC_DOMAIN_SUPPORT_CONFIRMED",
       "canada_1873_engravings": "HISTORICAL_PUBLIC_DOMAIN_SUPPORT_CONFIRMED",
-      "exact_digitization_reuse": "OPEN_NEEDS_SOURCE_TERMS_OR_DOCUMENTED_APPROVAL_FOR_FINAL_ART_BYTES",
+      "exact_digitization_reuse": "US: evidence-backed commercial reuse basis for 54/54 source-mapped PG #46541 public-domain images; Gutenberg Permission How-To expressly covers commercial use of images, and No Sweat of Brow says mechanical scans/recompression create no new US copyright. Canada: historical work PD, Canadian government supports PD reuse; exact access/license conditions and publisher signoff not established. RETAIL HOLD.",
       "uploaded_cover_rights": "OPEN_NEEDS_RIGHTS_OWNER_ATTESTATION_OF_IMAGE_AND_COMPONENTS",
       "new_russian_translation_commercial_rights": "PARTIAL PROVIDER TERMS SUPPORT: Anthropic's 2025-06-17 commercial terms and 2025-10-08 consumer terms assign any provider interest in outputs to the customer/user as applicable. Confirm which actual service/account terms applied, permitted use, owner rights chain and independent human-review contributor permissions; provider terms do not automatically establish originality or copyright subsistence.",
       "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW",
@@ -111,6 +111,26 @@
       "claim": "Gutenberg Permission How-To says crediting the site as a source is allowed even in commercial works; distinguish this from using its trademark to market a product.",
       "url": "https://www.gutenberg.org/policy/permission.html",
       "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "Gutenberg explicitly allows commercial reuse of public-domain eBook images without individual permission forms; its No Sweat guidance says faithful image digitization does not create US copyright.",
+      "url": "https://www.gutenberg.org/policy/permission.html",
+      "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "Project Gutenberg guidance on scanning, cropping and color adjustment of public domain images",
+      "url": "https://dev.gutenberg.org/help/no_sweat_copyright.html",
+      "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "Canada's Copyright Board confirms expired copyright makes material public domain, and new-edition original content can still be protected",
+      "url": "https://www.cb-cda.gc.ca/en/faq",
+      "verified_on": "2026-11-05"
+    },
+    {
+      "claim": "EDItEUR NotificationType 03 means confirmed on publication, not automatically suitable for held edition",
+      "url": "https://ns.editeur.org/onix/en/1/03",
+      "verified_on": "2026-11-05"
     }
   ],
   "metadata_sync_gates": {
@@ -142,7 +162,9 @@
         "product_availability": "40",
         "product_availability_note": "Not available; no price included; territorial sales rights remain unknown",
         "commercial_release_approval": false,
-        "merge_requires": "Documented rights clearance, sales territory approval, ONIX schema validation, coordinated archive roster/checkpoint change-control"
+        "merge_requires": "Documented rights clearance, sales territory approval, ONIX schema validation, coordinated archive roster/checkpoint change-control",
+        "unsubstantiated_2026_fields": "Removed draft PublicationDate and CopyrightStatement claiming 2026; no commercial publication/rights signoff.",
+        "notification_type_gate": "Type 03 in draft means publication confirmed; draft remains INTERNAL-ONLY and is not safe for trade feed; reassess on release."
       }
     }
   },
@@ -152,7 +174,7 @@
     "Does not imply commercial release"
   ],
   "next_owner_actions": [
-    "Obtain a written reuse basis or commercial permission for the exact 54 scan-derived plates and route map (October 6 ledger identifies source but leaves exact commercial scan rights OPEN).",
+    "Review and sign off on the US/Canada scan-derived-image reuse basis: all 54 plates trace to Gutenberg #46541 and Gutenberg expressly allows commercial reuse of its US public-domain eBook images; check any independently authored modifications or access-site restrictions and target geography.",
     "Extend or document the Jamie Leigh photo's permission for this exact Rank 33 edition and proposed countries (earlier October 9 consent limited to rank 20 / USA); verify ownership or license of Boundary Bay logo.",
     "Provide cover asset/component commercial-use attestation for exact uploaded SHA b2a0de... and confirm translation production-account terms / reviewer-contributor agreement.",
     "Choose authorized distribution countries after jurisdiction checks. Exact final EPUB uses Project Gutenberg as a factual source credit only (official PG guidance distinguishes such credits from trademark sales use); confirm no marketing implies PG endorsement, and clear other commercial rights before retail.",
