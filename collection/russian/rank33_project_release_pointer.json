@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "isbn13": "9781774965986",
+  "rank": 33,
+  "approved_title_ru": "Вокруг света за восемьдесят дней",
+  "author_ru": "Жюль Верн",
+  "edition_language": "rus",
+  "production_evidence": {
+    "repository": "rnttmdtg9p-droid/epub-bridge",
+    "translation_review_branch": "bb-ru33-french-claude-independent-review-20261105",
+    "qa_report": "reports/ru33_20261105_uploaded_cover_project_release.json",
+    "epubcheck": "5.4.0: 0 fatal, 0 errors, 0 warnings",
+    "independent_reviewed_chapters": 37,
+    "original_engravings": 54,
+    "internal_links_checked": 200
+  },
+  "project_download_release": {
+    "state": "RELEASED_FOR_PROJECT_LIBRARY_DOWNLOAD_ONLY",
+    "library_path": "/Russian collection project/Rank33_Release_20261105/",
+    "epub": {
+      "name": "9781774965986.epub",
+      "file_id": "file_0000000004f481f89099b373bd0e53db",
+      "library_file_id": "libfile_e756c40b4d14819188d6fd09356acb2e",
+      "sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
+      "size_bytes": 19554333
+    },
+    "cover": {
+      "name": "9781774965986.jpeg",
+      "file_id": "file_000000001ecc81fb8f5bf639e95df835",
+      "library_file_id": "libfile_77543bf2456c8191b72aebedf6710f89",
+      "sha256": "b2a0de7210d71d4c91155b2a0951a637348f9052abd5fc635ac757172bcd0e00",
+      "size_bytes": 438642
+    }
+  },
+  "retail": {
+    "state": "HOLD_NOT_CERTIFIED",
+    "distributor_upload": "NOT_AUTHORIZED_OR_PERFORMED_BY_THIS_POINTER",
+    "advertised_territories": [],
+    "rights_gates": {
+      "canada_original_french_text": "HISTORICAL_PUBLIC_DOMAIN_SUPPORT_CONFIRMED",
+      "canada_1873_engravings": "HISTORICAL_PUBLIC_DOMAIN_SUPPORT_CONFIRMED",
+      "exact_digitization_reuse": "OPEN_NEEDS_SOURCE_TERMS_OR_DOCUMENTED_APPROVAL_FOR_FINAL_ART_BYTES",
+      "uploaded_cover_rights": "OPEN_NEEDS_RIGHTS_OWNER_ATTESTATION_OF_IMAGE_AND_COMPONENTS",
+      "new_russian_translation_commercial_rights": "OPEN_NEEDS_BOUNDARY_BAY_OWNER_RIGHTS_CHAIN_CONFIRMATION",
+      "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW"
+    },
+    "additional_quality_note": "Historical pre-release gate lacked exhaustive native-reader certification; project release EPUBCheck and internal-link checks did pass. Do not silently turn into a retail gate PASS.",
+    "documented_waiver": "NONE"
+  },
+  "rights_research_as_of": "2026-11-05",
+  "rights_evidence": [
+    {
+      "claim": "Project Gutenberg item 46541 names illustrator Leon Benett (d. 1917) and Alphonse de Neuville (d. 1885) and declares original French book public domain in USA.",
+      "url": "https://www.gutenberg.org/ebooks/46541"
+    },
+    {
+      "claim": "In Canada works already public domain at end of 2022 remained so; historical creators died before 1972.",
+      "url": "https://copyright.ubc.ca/public-domain/"
+    },
+    {
+      "claim": "Mere scans generally do not create new Canadian copyright; site/license restrictions over digital files may nevertheless apply.",
+      "url": "https://www.canada.ca/en/heritage-information-network/services/intellectual-property-copyright/guide-developing-digital-licensing-agreement-strategy/questions-licensing.html"
+    },
+    {
+      "claim": "Project Gutenberg permits commercial reuse of its public-domain text but trademark use and file terms require care.",
+      "url": "https://www.gutenberg.org/policy/permission"
+    }
+  ],
+  "metadata_sync_gates": {
+    "frozen_archive_roster": {
+      "path": "collection/russian/roster.json",
+      "observed_rank33_title": "Вокруг света за 80 дней",
+      "approved_title": "Вокруг света за восемьдесят дней",
+      "state": "PENDING_COORDINATED_UPDATE",
+      "reason": "Roster frozen to manifest v1716 and separately SHA-pinned in collection archive checkpoints. Changing it alone would invalidate manifest/checkpoint hashes."
+    },
+    "combined_onix_200": {
+      "library_file_id": "libfile_60fc2129f09c8191bb37ad8410353116",
+      "filename": "Russian_Collection_Combined_ONIX_200.xml",
+      "observed_rank33_title": "Вокруг света в восемьдесят дней",
+      "approved_title": "Вокруг света за восемьдесят дней",
+      "observed_onix_publishing_status": "04",
+      "observed_onix_product_availability": "20",
+      "state": "NEEDS_HOLD_SAFE_METADATA_UPDATE_BEFORE_NEXT_COMMERCIAL_EXPORT",
+      "warning": "Those original codes mean Active and Available; they do NOT certify rights or current retail eligibility. Do not redistribute this old ONIX record for rank 33 unchanged.",
+      "exact_title_field": "Product[ProductIdentifier/IDValue='9781774965986']/DescriptiveDetail/TitleDetail[TitleType='01']/TitleElement/TitleText",
+      "proposed_title_text": "Вокруг света за восемьдесят дней"
+    }
+  },
+  "exclusions": [
+    "Does not supersede existing project-root attachment",
+    "Does not alter EPUB, uploaded cover, 200-title archive, frozen roster, or original combined ONIX",
+    "Does not imply commercial release"
+  ],
+  "next_owner_actions": [
+    "Document exact scanned-art use terms/provenance for all reused image files or approve rights-safe substitutes",
+    "Document cover artwork ownership or commercial license, and Russian translation rights chain",
+    "Approve country-specific commercial distribution scope",
+    "Perform coordinated frozen roster and ONIX metadata update under the archive and release change-control, then republish only after rights and supply gate PASS"
+  ]
+}
