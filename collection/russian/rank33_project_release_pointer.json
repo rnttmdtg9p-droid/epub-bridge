@@ -42,7 +42,9 @@
       "exact_digitization_reuse": "OPEN_NEEDS_SOURCE_TERMS_OR_DOCUMENTED_APPROVAL_FOR_FINAL_ART_BYTES",
       "uploaded_cover_rights": "OPEN_NEEDS_RIGHTS_OWNER_ATTESTATION_OF_IMAGE_AND_COMPONENTS",
       "new_russian_translation_commercial_rights": "OPEN_NEEDS_BOUNDARY_BAY_OWNER_RIGHTS_CHAIN_CONFIRMATION",
-      "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW"
+      "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW",
+      "embedded_contemporary_assets": "OPEN: verify commercial rights/consent for EPUB/images/jamie-leigh.jpg and publisher logo asset, in addition to the uploaded cover",
+      "historical_portrait": "PARTIAL: Wikimedia Commons File:Jules Verne by Bertrand.jpg is marked public domain/PD-Art, but exact embedded portrait byte provenance and local reuse conditions remain unverified"
     },
     "additional_quality_note": "Historical pre-release gate lacked exhaustive native-reader certification; project release EPUBCheck and internal-link checks did pass. Do not silently turn into a retail gate PASS.",
     "documented_waiver": "NONE"
@@ -72,6 +74,10 @@
     {
       "claim": "Project Gutenberg explains commercial use of US public-domain source text is generally unrestricted, but commercial use of Project Gutenberg trademark has separate restrictions.",
       "url": "https://www.gutenberg.org/policy/permission"
+    },
+    {
+      "claim": "Wikimedia Commons identifies File:Jules Verne by Bertrand.jpg as a 19th-century work and marks its faithful photographic reproduction public domain (PD-Art); its stated source is a 1976 volume.",
+      "url": "https://commons.wikimedia.org/wiki/File:Jules_Verne_by_Bertrand.jpg"
     }
   ],
   "metadata_sync_gates": {
@@ -114,8 +120,22 @@
   ],
   "next_owner_actions": [
     "Document exact scanned-art use terms/provenance for all reused image files or approve rights-safe substitutes",
+    "Verify image/license chain for contemporary Jamie Leigh portrait and publisher logo as used inside the EPUB; historical portrait Commons status is only partial support, not a final exact-asset clearance.",
     "Document cover artwork ownership or commercial license, and Russian translation rights chain",
     "Approve country-specific commercial distribution scope",
     "Merge the staged non-retail ONIX title/availability override into the appropriate 200-product master only after coordinated archival change control; authorize distribution only after rights and territory gates PASS."
-  ]
+  ],
+  "rights_asset_inventory": {
+    "inspected_asset_sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
+    "epub_images_count": 59,
+    "original_plates_count": 54,
+    "additional_images": [
+      "EPUB/images/cover.jpg",
+      "EPUB/images/route-map.jpg",
+      "EPUB/images/portrait.jpg",
+      "EPUB/images/jamie-leigh.jpg",
+      "EPUB/images/boundary-bay-logo-preview-hq.png"
+    ],
+    "note": "Image enumeration only; not a full image-by-image licensing certification. Rights hold unchanged."
+  }
 }
