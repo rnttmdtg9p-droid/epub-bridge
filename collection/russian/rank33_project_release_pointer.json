@@ -41,10 +41,11 @@
       "canada_1873_engravings": "HISTORICAL_PUBLIC_DOMAIN_SUPPORT_CONFIRMED",
       "exact_digitization_reuse": "OPEN_NEEDS_SOURCE_TERMS_OR_DOCUMENTED_APPROVAL_FOR_FINAL_ART_BYTES",
       "uploaded_cover_rights": "OPEN_NEEDS_RIGHTS_OWNER_ATTESTATION_OF_IMAGE_AND_COMPONENTS",
-      "new_russian_translation_commercial_rights": "OPEN_NEEDS_BOUNDARY_BAY_OWNER_RIGHTS_CHAIN_CONFIRMATION",
+      "new_russian_translation_commercial_rights": "PARTIAL PROVIDER TERMS SUPPORT: Anthropic's 2025-06-17 commercial terms and 2025-10-08 consumer terms assign any provider interest in outputs to the customer/user as applicable. Confirm which actual service/account terms applied, permitted use, owner rights chain and independent human-review contributor permissions; provider terms do not automatically establish originality or copyright subsistence.",
       "target_geographies": "OPEN_AUTHORIZE_COUNTRY_CODES_AFTER_JURISDICTION_REVIEW",
-      "embedded_contemporary_assets": "OPEN: verify commercial rights/consent for EPUB/images/jamie-leigh.jpg and publisher logo asset, in addition to the uploaded cover",
-      "historical_portrait": "PARTIAL: Wikimedia Commons File:Jules Verne by Bertrand.jpg is marked public domain/PD-Art, but exact embedded portrait byte provenance and local reuse conditions remain unverified"
+      "embedded_contemporary_assets": "OPEN: Jamie Leigh photo SHA eb005bcc... matches shared Boundary Bay image; October 9, 2026 USER_ATTESTED_PERMISSION record covers rank 20, USA ONLY and explicitly cannot be generalized to rank 33/Canada. Shared publisher logo SHA 4e8d3a... matches 2026-10-04 master evidence; obtain publisher ownership/licensing record for this edition.",
+      "historical_portrait": "EVIDENCE_MATCH: exact embedded image SHA matches the durable original 2575x3590 Commons file in October 6 ledger; Commons identifies Bertrand work as public domain/PD-Art; this is evidence-backed for US/Canada historical-work reuse, not legal certification for other territories.",
+      "project_gutenberg_attribution_trademark_review": "OPEN: credits.xhtml names Project Gutenberg #46541. Gutenberg trademark terms differ from public-domain text reuse; publisher must choose an attribution/redistribution compliance basis before any paid distribution. No EPUB edits authorized/performed."
     },
     "additional_quality_note": "Historical pre-release gate lacked exhaustive native-reader certification; project release EPUBCheck and internal-link checks did pass. Do not silently turn into a retail gate PASS.",
     "documented_waiver": "NONE"
@@ -78,6 +79,28 @@
     {
       "claim": "Wikimedia Commons identifies File:Jules Verne by Bertrand.jpg as a 19th-century work and marks its faithful photographic reproduction public domain (PD-Art); its stated source is a 1976 volume.",
       "url": "https://commons.wikimedia.org/wiki/File:Jules_Verne_by_Bertrand.jpg"
+    },
+    {
+      "claim": "Earlier rank33 image-lineage audit maps 54/54 plates to illustrated French Project Gutenberg #46541 source URLs/hashes, including near-exact JPEG recompression and source map; release artwork is represented as preserved by successor QA. Exact Canadian scan-file commercial reuse previously marked OPEN_FAIL_CLOSED.",
+      "library_file_id": "file_00000000aab48206b09c25db30c6e259",
+      "recorded_date": "2026-10-06"
+    },
+    {
+      "claim": "Rank 20 authorizes the identical Jamie Leigh photograph SHA eb005bccf1fafac0... only for rank 20 and USA: user-attested on October 9, 2026; the record expressly says not to generalize it to other titles or geographies.",
+      "library_file_id": "file_0000000088a4820cbd51ae0a21a720ac",
+      "recorded_date": "2026-10-09"
+    },
+    {
+      "claim": "Anthropic Commercial Terms assigns to customers rights (if any) in outputs under applicable terms, but separate account/product applicability and author/contract chain must be documented.",
+      "url": "https://www.anthropic.com/legal/commercial-terms"
+    },
+    {
+      "claim": "Anthropic Consumer Terms also assign Anthropic's rights (if any) in outputs to users subject to compliance; provider's assignment alone is not evidence of original copyrightable human authorship.",
+      "url": "https://www.anthropic.com/legal/consumer-terms"
+    },
+    {
+      "claim": "Official EDItEUR ONIX codelist 46 supports ROWSalesRightsType 00, meaning unknown/unstated; safe to maintain internal ONIX hold while distribution scope awaits rights signoff.",
+      "url": "https://ns.editeur.org/onix/en/46"
     }
   ],
   "metadata_sync_gates": {
@@ -119,11 +142,11 @@
     "Does not imply commercial release"
   ],
   "next_owner_actions": [
-    "Document exact scanned-art use terms/provenance for all reused image files or approve rights-safe substitutes",
-    "Verify image/license chain for contemporary Jamie Leigh portrait and publisher logo as used inside the EPUB; historical portrait Commons status is only partial support, not a final exact-asset clearance.",
-    "Document cover artwork ownership or commercial license, and Russian translation rights chain",
-    "Approve country-specific commercial distribution scope",
-    "Merge the staged non-retail ONIX title/availability override into the appropriate 200-product master only after coordinated archival change control; authorize distribution only after rights and territory gates PASS."
+    "Obtain a written reuse basis or commercial permission for the exact 54 scan-derived plates and route map (October 6 ledger identifies source but leaves exact commercial scan rights OPEN).",
+    "Extend or document the Jamie Leigh photo's permission for this exact Rank 33 edition and proposed countries (earlier October 9 consent limited to rank 20 / USA); verify ownership or license of Boundary Bay logo.",
+    "Provide cover asset/component commercial-use attestation for exact uploaded SHA b2a0de... and confirm translation production-account terms / reviewer-contributor agreement.",
+    "Choose authorized distribution countries after jurisdiction checks; document any Gutenberg trademark/attribution compliance for publisher sale.",
+    "After these rights gates and any required native reader check PASS or explicit authorized waiver, coordinate change-controlled frozen roster and 200-title ONIX correction; do not merge held staged record for retailers prematurely."
   ],
   "rights_asset_inventory": {
     "inspected_asset_sha256": "84e40f0ab28378fa8af5778f6e0c160281b37513571b36aabd290b3b083ba33a",
@@ -136,6 +159,43 @@
       "EPUB/images/jamie-leigh.jpg",
       "EPUB/images/boundary-bay-logo-preview-hq.png"
     ],
-    "note": "Image enumeration only; not a full image-by-image licensing certification. Rights hold unchanged."
+    "note": "Image enumeration only; not a full image-by-image licensing certification. Rights hold unchanged.",
+    "embedded_identifiers": {
+      "EPUB/images/portrait.jpg": {
+        "sha256": "3c8fe53fb02e0abd5d2a5b23ee9c76c98523539ca191a15cff7737bf08608737",
+        "bytes": 3127440,
+        "status": "MATCHES_ARCHIVED_COMMONS_SOURCE_ORIGINAL_SHA"
+      },
+      "EPUB/images/route-map.jpg": {
+        "sha256": "849d7e607ca749b4a3cd5fe9217ec9779762225dc9907806cd577a3386c37e77",
+        "status": "EARLIER_ANCHOR_IN_20261006_AUDIT_AND_PRESERVED_IMAGE; EXACT_SCAN_USE_GATE_OPEN"
+      },
+      "EPUB/images/jamie-leigh.jpg": {
+        "sha256": "eb005bccf1fafac0198be50db7fc0b6ad3e81147987ec3dd445a8902a5ee8ec8",
+        "bytes": 130434,
+        "status": "SHARED_PHOTO_IDENTITY_MATCH; ONLY_RANK20_USA_SPECIFIC_OWNER_ATTESTATION_FOUND"
+      },
+      "EPUB/images/boundary-bay-logo-preview-hq.png": {
+        "sha256": "4e8d3afa676b456a42316be6331d1f4d2224765ade527aed7ea3e5400f1e7219",
+        "bytes": 148023,
+        "status": "SHARED_MASTER_LOGO_IDENTITY_MATCH; COMMERCIAL_OWNERSHIP_RECORD_NOT_FOUND"
+      },
+      "EPUB/images/cover.jpg": {
+        "sha256": "b2a0de7210d71d4c91155b2a0951a637348f9052abd5fc635ac757172bcd0e00",
+        "bytes": 438642,
+        "status": "EXACT_OWNER_UPLOADED_COVER_BYTES_MATCH; COMPONENT_RIGHTS_UNATTESTED"
+      }
+    },
+    "prior_plate_scan_mapping": {
+      "reference_audit": "rank33_20261006_exact_roundtrip_portrait_and_art_rights_gate.json",
+      "reference_file_id": "file_00000000aab48206b09c25db30c6e259",
+      "source": "Project Gutenberg illustrated French item #46541 / Internet Archive-Canadian Libraries",
+      "historical_plates_source_urls": 54,
+      "historical_plates_source_sha256": 54,
+      "prior_ancestor_dimension_matches": "54/54",
+      "prior_ancestor_image_transform": "minimal JPEG recompression",
+      "release_inheritance": "Release QA states preserved images outside cover, edition notes and OPF; fresh side-by-side 54-asset source-vs-current comparison not performed in this audit.",
+      "commercial_exact_scan_reuse": "OPEN_FAIL_CLOSED_20261006_CARRIED_FORWARD"
+    }
   }
 }
